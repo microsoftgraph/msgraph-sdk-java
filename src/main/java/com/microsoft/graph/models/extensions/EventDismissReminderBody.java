@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class EventDismissReminderBody {
 
+    /**
+     * Instiaciates a new EventDismissReminderBody
+     */
+    public EventDismissReminderBody() {}
     private EventDismissReminderBody(@Nonnull final EventDismissReminderBodyBuilder builder) {
     }
     /**

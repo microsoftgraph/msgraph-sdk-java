@@ -41,6 +41,10 @@ public class CallUpdateRecordingStatusBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new CallUpdateRecordingStatusBody
+     */
+    public CallUpdateRecordingStatusBody() {}
     private CallUpdateRecordingStatusBody(@Nonnull final CallUpdateRecordingStatusBodyBuilder builder) {
         this.status = builder.status;
         this.clientContext = builder.clientContext;

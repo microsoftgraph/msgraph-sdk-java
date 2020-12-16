@@ -32,6 +32,10 @@ public class AttachmentCreateUploadSessionBody {
     public AttachmentItem attachmentItem;
 
 
+    /**
+     * Instiaciates a new AttachmentCreateUploadSessionBody
+     */
+    public AttachmentCreateUploadSessionBody() {}
     private AttachmentCreateUploadSessionBody(@Nonnull final AttachmentCreateUploadSessionBodyBuilder builder) {
         this.attachmentItem = builder.attachmentItem;
     }

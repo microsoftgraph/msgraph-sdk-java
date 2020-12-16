@@ -49,6 +49,10 @@ public class WorkbookFunctionsYearFracBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsYearFracBody
+     */
+    public WorkbookFunctionsYearFracBody() {}
     private WorkbookFunctionsYearFracBody(@Nonnull final WorkbookFunctionsYearFracBodyBuilder builder) {
         this.startDate = builder.startDate;
         this.endDate = builder.endDate;

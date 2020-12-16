@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DriveItemUnfollowBody {
 
+    /**
+     * Instiaciates a new DriveItemUnfollowBody
+     */
+    public DriveItemUnfollowBody() {}
     private DriveItemUnfollowBody(@Nonnull final DriveItemUnfollowBodyBuilder builder) {
     }
     /**

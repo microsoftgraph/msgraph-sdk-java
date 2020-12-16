@@ -31,6 +31,10 @@ public class WorkbookChartItemAtBody {
     public Integer index;
 
 
+    /**
+     * Instiaciates a new WorkbookChartItemAtBody
+     */
+    public WorkbookChartItemAtBody() {}
     private WorkbookChartItemAtBody(@Nonnull final WorkbookChartItemAtBodyBuilder builder) {
         this.index = builder.index;
     }

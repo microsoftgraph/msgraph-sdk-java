@@ -31,6 +31,10 @@ public class DirectoryObjectGetMemberGroupsBody {
     public Boolean securityEnabledOnly;
 
 
+    /**
+     * Instiaciates a new DirectoryObjectGetMemberGroupsBody
+     */
+    public DirectoryObjectGetMemberGroupsBody() {}
     private DirectoryObjectGetMemberGroupsBody(@Nonnull final DirectoryObjectGetMemberGroupsBodyBuilder builder) {
         this.securityEnabledOnly = builder.securityEnabledOnly;
     }

@@ -49,6 +49,10 @@ public class WorkbookFunctionsPoisson_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPoisson_DistBody
+     */
+    public WorkbookFunctionsPoisson_DistBody() {}
     private WorkbookFunctionsPoisson_DistBody(@Nonnull final WorkbookFunctionsPoisson_DistBodyBuilder builder) {
         this.x = builder.x;
         this.mean = builder.mean;

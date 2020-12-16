@@ -49,6 +49,10 @@ public class WorkbookFunctionsExpon_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsExpon_DistBody
+     */
+    public WorkbookFunctionsExpon_DistBody() {}
     private WorkbookFunctionsExpon_DistBody(@Nonnull final WorkbookFunctionsExpon_DistBodyBuilder builder) {
         this.x = builder.x;
         this.lambda = builder.lambda;

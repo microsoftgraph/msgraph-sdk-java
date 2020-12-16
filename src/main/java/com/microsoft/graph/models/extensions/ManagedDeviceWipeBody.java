@@ -49,6 +49,10 @@ public class ManagedDeviceWipeBody {
     public String macOsUnlockCode;
 
 
+    /**
+     * Instiaciates a new ManagedDeviceWipeBody
+     */
+    public ManagedDeviceWipeBody() {}
     private ManagedDeviceWipeBody(@Nonnull final ManagedDeviceWipeBodyBuilder builder) {
         this.keepEnrollmentData = builder.keepEnrollmentData;
         this.keepUserData = builder.keepUserData;

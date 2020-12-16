@@ -31,6 +31,10 @@ public class WorkbookRangeIntersectionBody {
     public String anotherRange;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeIntersectionBody
+     */
+    public WorkbookRangeIntersectionBody() {}
     private WorkbookRangeIntersectionBody(@Nonnull final WorkbookRangeIntersectionBodyBuilder builder) {
         this.anotherRange = builder.anotherRange;
     }

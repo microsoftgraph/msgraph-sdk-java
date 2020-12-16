@@ -58,6 +58,10 @@ public class WorkbookFunctionsCoupPcdBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCoupPcdBody
+     */
+    public WorkbookFunctionsCoupPcdBody() {}
     private WorkbookFunctionsCoupPcdBody(@Nonnull final WorkbookFunctionsCoupPcdBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

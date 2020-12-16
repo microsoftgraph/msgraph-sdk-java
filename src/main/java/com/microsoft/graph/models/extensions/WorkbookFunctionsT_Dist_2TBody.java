@@ -40,6 +40,10 @@ public class WorkbookFunctionsT_Dist_2TBody {
     public com.google.gson.JsonElement degFreedom;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsT_Dist_2TBody
+     */
+    public WorkbookFunctionsT_Dist_2TBody() {}
     private WorkbookFunctionsT_Dist_2TBody(@Nonnull final WorkbookFunctionsT_Dist_2TBodyBuilder builder) {
         this.x = builder.x;
         this.degFreedom = builder.degFreedom;

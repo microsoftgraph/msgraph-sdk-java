@@ -31,6 +31,10 @@ public class WorkbookFunctionsImaginaryBody {
     public com.google.gson.JsonElement inumber;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsImaginaryBody
+     */
+    public WorkbookFunctionsImaginaryBody() {}
     private WorkbookFunctionsImaginaryBody(@Nonnull final WorkbookFunctionsImaginaryBodyBuilder builder) {
         this.inumber = builder.inumber;
     }

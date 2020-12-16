@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceBypassActivationLockBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceBypassActivationLockBody
+     */
+    public ManagedDeviceBypassActivationLockBody() {}
     private ManagedDeviceBypassActivationLockBody(@Nonnull final ManagedDeviceBypassActivationLockBodyBuilder builder) {
     }
     /**

@@ -31,6 +31,10 @@ public class WorkbookFunctionsErfCBody {
     public com.google.gson.JsonElement x;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsErfCBody
+     */
+    public WorkbookFunctionsErfCBody() {}
     private WorkbookFunctionsErfCBody(@Nonnull final WorkbookFunctionsErfCBodyBuilder builder) {
         this.x = builder.x;
     }

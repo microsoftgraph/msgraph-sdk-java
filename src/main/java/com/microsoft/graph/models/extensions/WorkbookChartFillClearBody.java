@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookChartFillClearBody {
 
+    /**
+     * Instiaciates a new WorkbookChartFillClearBody
+     */
+    public WorkbookChartFillClearBody() {}
     private WorkbookChartFillClearBody(@Nonnull final WorkbookChartFillClearBodyBuilder builder) {
     }
     /**

@@ -31,6 +31,10 @@ public class WorkbookFunctionsImCosBody {
     public com.google.gson.JsonElement inumber;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsImCosBody
+     */
+    public WorkbookFunctionsImCosBody() {}
     private WorkbookFunctionsImCosBody(@Nonnull final WorkbookFunctionsImCosBodyBuilder builder) {
         this.inumber = builder.inumber;
     }

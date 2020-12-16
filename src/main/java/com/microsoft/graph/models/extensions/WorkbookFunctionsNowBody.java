@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookFunctionsNowBody {
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNowBody
+     */
+    public WorkbookFunctionsNowBody() {}
     private WorkbookFunctionsNowBody(@Nonnull final WorkbookFunctionsNowBodyBuilder builder) {
     }
     /**

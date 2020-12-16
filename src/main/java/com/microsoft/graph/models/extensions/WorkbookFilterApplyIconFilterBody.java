@@ -31,6 +31,10 @@ public class WorkbookFilterApplyIconFilterBody {
     public WorkbookIcon icon;
 
 
+    /**
+     * Instiaciates a new WorkbookFilterApplyIconFilterBody
+     */
+    public WorkbookFilterApplyIconFilterBody() {}
     private WorkbookFilterApplyIconFilterBody(@Nonnull final WorkbookFilterApplyIconFilterBodyBuilder builder) {
         this.icon = builder.icon;
     }

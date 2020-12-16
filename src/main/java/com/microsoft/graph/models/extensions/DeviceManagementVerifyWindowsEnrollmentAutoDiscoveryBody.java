@@ -31,6 +31,10 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryBody {
     public String domainName;
 
 
+    /**
+     * Instiaciates a new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryBody
+     */
+    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryBody() {}
     private DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryBody(@Nonnull final DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryBodyBuilder builder) {
         this.domainName = builder.domainName;
     }

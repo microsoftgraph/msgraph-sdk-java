@@ -31,6 +31,10 @@ public class WorkbookFunctionsLcmBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLcmBody
+     */
+    public WorkbookFunctionsLcmBody() {}
     private WorkbookFunctionsLcmBody(@Nonnull final WorkbookFunctionsLcmBodyBuilder builder) {
         this.values = builder.values;
     }

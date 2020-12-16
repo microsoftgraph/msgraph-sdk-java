@@ -31,6 +31,10 @@ public class ApplicationRemovePasswordBody {
     public java.util.UUID keyId;
 
 
+    /**
+     * Instiaciates a new ApplicationRemovePasswordBody
+     */
+    public ApplicationRemovePasswordBody() {}
     private ApplicationRemovePasswordBody(@Nonnull final ApplicationRemovePasswordBodyBuilder builder) {
         this.keyId = builder.keyId;
     }

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookTableConvertToRangeBody {
 
+    /**
+     * Instiaciates a new WorkbookTableConvertToRangeBody
+     */
+    public WorkbookTableConvertToRangeBody() {}
     private WorkbookTableConvertToRangeBody(@Nonnull final WorkbookTableConvertToRangeBodyBuilder builder) {
     }
     /**

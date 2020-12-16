@@ -31,6 +31,10 @@ public class DeviceManagementExchangeConnectorSyncBody {
     public DeviceManagementExchangeConnectorSyncType syncType;
 
 
+    /**
+     * Instiaciates a new DeviceManagementExchangeConnectorSyncBody
+     */
+    public DeviceManagementExchangeConnectorSyncBody() {}
     private DeviceManagementExchangeConnectorSyncBody(@Nonnull final DeviceManagementExchangeConnectorSyncBodyBuilder builder) {
         this.syncType = builder.syncType;
     }

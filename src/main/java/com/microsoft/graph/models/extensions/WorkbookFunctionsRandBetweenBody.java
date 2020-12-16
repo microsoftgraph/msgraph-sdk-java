@@ -40,6 +40,10 @@ public class WorkbookFunctionsRandBetweenBody {
     public com.google.gson.JsonElement top;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRandBetweenBody
+     */
+    public WorkbookFunctionsRandBetweenBody() {}
     private WorkbookFunctionsRandBetweenBody(@Nonnull final WorkbookFunctionsRandBetweenBodyBuilder builder) {
         this.bottom = builder.bottom;
         this.top = builder.top;

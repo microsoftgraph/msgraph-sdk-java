@@ -31,6 +31,10 @@ public class NotebookGetRecentNotebooksBody {
     public Boolean includePersonalNotebooks;
 
 
+    /**
+     * Instiaciates a new NotebookGetRecentNotebooksBody
+     */
+    public NotebookGetRecentNotebooksBody() {}
     private NotebookGetRecentNotebooksBody(@Nonnull final NotebookGetRecentNotebooksBodyBuilder builder) {
         this.includePersonalNotebooks = builder.includePersonalNotebooks;
     }

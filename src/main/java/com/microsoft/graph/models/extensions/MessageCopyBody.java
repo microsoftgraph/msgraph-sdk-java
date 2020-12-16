@@ -31,6 +31,10 @@ public class MessageCopyBody {
     public String destinationId;
 
 
+    /**
+     * Instiaciates a new MessageCopyBody
+     */
+    public MessageCopyBody() {}
     private MessageCopyBody(@Nonnull final MessageCopyBodyBuilder builder) {
         this.destinationId = builder.destinationId;
     }

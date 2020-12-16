@@ -67,6 +67,10 @@ public class NotebookCopyNotebookBody {
     public String siteId;
 
 
+    /**
+     * Instiaciates a new NotebookCopyNotebookBody
+     */
+    public NotebookCopyNotebookBody() {}
     private NotebookCopyNotebookBody(@Nonnull final NotebookCopyNotebookBodyBuilder builder) {
         this.groupId = builder.groupId;
         this.renameAs = builder.renameAs;

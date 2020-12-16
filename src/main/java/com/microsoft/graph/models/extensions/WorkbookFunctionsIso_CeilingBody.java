@@ -40,6 +40,10 @@ public class WorkbookFunctionsIso_CeilingBody {
     public com.google.gson.JsonElement significance;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIso_CeilingBody
+     */
+    public WorkbookFunctionsIso_CeilingBody() {}
     private WorkbookFunctionsIso_CeilingBody(@Nonnull final WorkbookFunctionsIso_CeilingBodyBuilder builder) {
         this.number = builder.number;
         this.significance = builder.significance;

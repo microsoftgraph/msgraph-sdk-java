@@ -49,6 +49,10 @@ public class WorkbookFunctionsDgetBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDgetBody
+     */
+    public WorkbookFunctionsDgetBody() {}
     private WorkbookFunctionsDgetBody(@Nonnull final WorkbookFunctionsDgetBodyBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;

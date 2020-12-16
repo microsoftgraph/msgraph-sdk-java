@@ -31,6 +31,10 @@ public class ReportRootGetOffice365GroupsActivityStorageBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOffice365GroupsActivityStorageBody
+     */
+    public ReportRootGetOffice365GroupsActivityStorageBody() {}
     private ReportRootGetOffice365GroupsActivityStorageBody(@Nonnull final ReportRootGetOffice365GroupsActivityStorageBodyBuilder builder) {
         this.period = builder.period;
     }

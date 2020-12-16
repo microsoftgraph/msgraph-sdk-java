@@ -40,6 +40,10 @@ public class WorkbookChartSetDataBody {
     public String seriesBy;
 
 
+    /**
+     * Instiaciates a new WorkbookChartSetDataBody
+     */
+    public WorkbookChartSetDataBody() {}
     private WorkbookChartSetDataBody(@Nonnull final WorkbookChartSetDataBodyBuilder builder) {
         this.sourceData = builder.sourceData;
         this.seriesBy = builder.seriesBy;

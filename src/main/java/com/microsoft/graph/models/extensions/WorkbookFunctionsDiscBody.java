@@ -67,6 +67,10 @@ public class WorkbookFunctionsDiscBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDiscBody
+     */
+    public WorkbookFunctionsDiscBody() {}
     private WorkbookFunctionsDiscBody(@Nonnull final WorkbookFunctionsDiscBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

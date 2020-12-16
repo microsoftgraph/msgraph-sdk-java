@@ -31,6 +31,10 @@ public class WorkbookFunctionsCoshBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCoshBody
+     */
+    public WorkbookFunctionsCoshBody() {}
     private WorkbookFunctionsCoshBody(@Nonnull final WorkbookFunctionsCoshBodyBuilder builder) {
         this.number = builder.number;
     }

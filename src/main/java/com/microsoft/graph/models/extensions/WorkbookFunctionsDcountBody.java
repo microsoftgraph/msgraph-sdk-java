@@ -49,6 +49,10 @@ public class WorkbookFunctionsDcountBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDcountBody
+     */
+    public WorkbookFunctionsDcountBody() {}
     private WorkbookFunctionsDcountBody(@Nonnull final WorkbookFunctionsDcountBodyBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;

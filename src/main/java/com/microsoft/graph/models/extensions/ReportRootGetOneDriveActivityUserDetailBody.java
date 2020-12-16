@@ -31,6 +31,10 @@ public class ReportRootGetOneDriveActivityUserDetailBody {
     public com.microsoft.graph.core.DateOnly date;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOneDriveActivityUserDetailBody
+     */
+    public ReportRootGetOneDriveActivityUserDetailBody() {}
     private ReportRootGetOneDriveActivityUserDetailBody(@Nonnull final ReportRootGetOneDriveActivityUserDetailBodyBuilder builder) {
         this.date = builder.date;
     }

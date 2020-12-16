@@ -40,6 +40,10 @@ public class WorkbookFunctionsIrrBody {
     public com.google.gson.JsonElement guess;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIrrBody
+     */
+    public WorkbookFunctionsIrrBody() {}
     private WorkbookFunctionsIrrBody(@Nonnull final WorkbookFunctionsIrrBodyBuilder builder) {
         this.values = builder.values;
         this.guess = builder.guess;

@@ -67,6 +67,10 @@ public class WorkbookFunctionsDdbBody {
     public com.google.gson.JsonElement factor;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDdbBody
+     */
+    public WorkbookFunctionsDdbBody() {}
     private WorkbookFunctionsDdbBody(@Nonnull final WorkbookFunctionsDdbBodyBuilder builder) {
         this.cost = builder.cost;
         this.salvage = builder.salvage;

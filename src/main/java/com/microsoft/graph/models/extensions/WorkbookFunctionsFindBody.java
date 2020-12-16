@@ -49,6 +49,10 @@ public class WorkbookFunctionsFindBody {
     public com.google.gson.JsonElement startNum;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsFindBody
+     */
+    public WorkbookFunctionsFindBody() {}
     private WorkbookFunctionsFindBody(@Nonnull final WorkbookFunctionsFindBodyBuilder builder) {
         this.findText = builder.findText;
         this.withinText = builder.withinText;

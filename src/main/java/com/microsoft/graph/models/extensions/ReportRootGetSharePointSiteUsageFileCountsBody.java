@@ -31,6 +31,10 @@ public class ReportRootGetSharePointSiteUsageFileCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetSharePointSiteUsageFileCountsBody
+     */
+    public ReportRootGetSharePointSiteUsageFileCountsBody() {}
     private ReportRootGetSharePointSiteUsageFileCountsBody(@Nonnull final ReportRootGetSharePointSiteUsageFileCountsBodyBuilder builder) {
         this.period = builder.period;
     }

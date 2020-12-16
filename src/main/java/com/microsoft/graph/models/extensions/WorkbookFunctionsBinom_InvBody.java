@@ -49,6 +49,10 @@ public class WorkbookFunctionsBinom_InvBody {
     public com.google.gson.JsonElement alpha;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBinom_InvBody
+     */
+    public WorkbookFunctionsBinom_InvBody() {}
     private WorkbookFunctionsBinom_InvBody(@Nonnull final WorkbookFunctionsBinom_InvBodyBuilder builder) {
         this.trials = builder.trials;
         this.probabilityS = builder.probabilityS;

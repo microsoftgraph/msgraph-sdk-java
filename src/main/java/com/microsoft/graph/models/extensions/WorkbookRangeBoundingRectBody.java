@@ -31,6 +31,10 @@ public class WorkbookRangeBoundingRectBody {
     public String anotherRange;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeBoundingRectBody
+     */
+    public WorkbookRangeBoundingRectBody() {}
     private WorkbookRangeBoundingRectBody(@Nonnull final WorkbookRangeBoundingRectBodyBuilder builder) {
         this.anotherRange = builder.anotherRange;
     }

@@ -31,6 +31,10 @@ public class ServicePrincipalAddPasswordBody {
     public PasswordCredential passwordCredential;
 
 
+    /**
+     * Instiaciates a new ServicePrincipalAddPasswordBody
+     */
+    public ServicePrincipalAddPasswordBody() {}
     private ServicePrincipalAddPasswordBody(@Nonnull final ServicePrincipalAddPasswordBodyBuilder builder) {
         this.passwordCredential = builder.passwordCredential;
     }

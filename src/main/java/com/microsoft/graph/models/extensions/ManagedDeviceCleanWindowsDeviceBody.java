@@ -31,6 +31,10 @@ public class ManagedDeviceCleanWindowsDeviceBody {
     public Boolean keepUserData;
 
 
+    /**
+     * Instiaciates a new ManagedDeviceCleanWindowsDeviceBody
+     */
+    public ManagedDeviceCleanWindowsDeviceBody() {}
     private ManagedDeviceCleanWindowsDeviceBody(@Nonnull final ManagedDeviceCleanWindowsDeviceBodyBuilder builder) {
         this.keepUserData = builder.keepUserData;
     }

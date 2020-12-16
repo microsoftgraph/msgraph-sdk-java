@@ -76,6 +76,10 @@ public class WorkbookFunctionsIpmtBody {
     public com.google.gson.JsonElement type;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIpmtBody
+     */
+    public WorkbookFunctionsIpmtBody() {}
     private WorkbookFunctionsIpmtBody(@Nonnull final WorkbookFunctionsIpmtBodyBuilder builder) {
         this.rate = builder.rate;
         this.per = builder.per;

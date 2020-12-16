@@ -49,6 +49,10 @@ public class WorkbookFunctionsDmaxBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDmaxBody
+     */
+    public WorkbookFunctionsDmaxBody() {}
     private WorkbookFunctionsDmaxBody(@Nonnull final WorkbookFunctionsDmaxBodyBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DriveRecentBody {
 
+    /**
+     * Instiaciates a new DriveRecentBody
+     */
+    public DriveRecentBody() {}
     private DriveRecentBody(@Nonnull final DriveRecentBodyBuilder builder) {
     }
     /**

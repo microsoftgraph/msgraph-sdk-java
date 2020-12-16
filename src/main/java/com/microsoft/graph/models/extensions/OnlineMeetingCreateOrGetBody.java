@@ -78,6 +78,10 @@ public class OnlineMeetingCreateOrGetBody {
     public String subject;
 
 
+    /**
+     * Instiaciates a new OnlineMeetingCreateOrGetBody
+     */
+    public OnlineMeetingCreateOrGetBody() {}
     private OnlineMeetingCreateOrGetBody(@Nonnull final OnlineMeetingCreateOrGetBodyBuilder builder) {
         this.chatInfo = builder.chatInfo;
         this.endDateTime = builder.endDateTime;

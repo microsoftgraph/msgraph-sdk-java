@@ -31,6 +31,10 @@ public class WorkbookFunctionsSignBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSignBody
+     */
+    public WorkbookFunctionsSignBody() {}
     private WorkbookFunctionsSignBody(@Nonnull final WorkbookFunctionsSignBodyBuilder builder) {
         this.number = builder.number;
     }

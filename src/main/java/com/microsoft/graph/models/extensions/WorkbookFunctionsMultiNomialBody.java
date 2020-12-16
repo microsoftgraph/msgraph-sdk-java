@@ -31,6 +31,10 @@ public class WorkbookFunctionsMultiNomialBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMultiNomialBody
+     */
+    public WorkbookFunctionsMultiNomialBody() {}
     private WorkbookFunctionsMultiNomialBody(@Nonnull final WorkbookFunctionsMultiNomialBodyBuilder builder) {
         this.values = builder.values;
     }

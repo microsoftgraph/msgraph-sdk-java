@@ -76,6 +76,10 @@ public class WorkbookFunctionsYieldMatBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsYieldMatBody
+     */
+    public WorkbookFunctionsYieldMatBody() {}
     private WorkbookFunctionsYieldMatBody(@Nonnull final WorkbookFunctionsYieldMatBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

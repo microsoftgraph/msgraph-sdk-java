@@ -31,6 +31,10 @@ public class WorkbookFunctionsGcdBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsGcdBody
+     */
+    public WorkbookFunctionsGcdBody() {}
     private WorkbookFunctionsGcdBody(@Nonnull final WorkbookFunctionsGcdBodyBuilder builder) {
         this.values = builder.values;
     }

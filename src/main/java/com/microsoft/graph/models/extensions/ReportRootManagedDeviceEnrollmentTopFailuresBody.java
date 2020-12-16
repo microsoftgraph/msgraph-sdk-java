@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ReportRootManagedDeviceEnrollmentTopFailuresBody {
 
+    /**
+     * Instiaciates a new ReportRootManagedDeviceEnrollmentTopFailuresBody
+     */
+    public ReportRootManagedDeviceEnrollmentTopFailuresBody() {}
     private ReportRootManagedDeviceEnrollmentTopFailuresBody(@Nonnull final ReportRootManagedDeviceEnrollmentTopFailuresBodyBuilder builder) {
     }
     /**

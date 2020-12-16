@@ -31,6 +31,10 @@ public class WorkbookFunctionsIsoWeekNumBody {
     public com.google.gson.JsonElement date;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIsoWeekNumBody
+     */
+    public WorkbookFunctionsIsoWeekNumBody() {}
     private WorkbookFunctionsIsoWeekNumBody(@Nonnull final WorkbookFunctionsIsoWeekNumBodyBuilder builder) {
         this.date = builder.date;
     }

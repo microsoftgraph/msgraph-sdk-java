@@ -31,6 +31,10 @@ public class GroupLifecyclePolicyRemoveGroupBody {
     public String groupId;
 
 
+    /**
+     * Instiaciates a new GroupLifecyclePolicyRemoveGroupBody
+     */
+    public GroupLifecyclePolicyRemoveGroupBody() {}
     private GroupLifecyclePolicyRemoveGroupBody(@Nonnull final GroupLifecyclePolicyRemoveGroupBodyBuilder builder) {
         this.groupId = builder.groupId;
     }

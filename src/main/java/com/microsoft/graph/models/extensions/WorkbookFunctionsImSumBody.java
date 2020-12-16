@@ -31,6 +31,10 @@ public class WorkbookFunctionsImSumBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsImSumBody
+     */
+    public WorkbookFunctionsImSumBody() {}
     private WorkbookFunctionsImSumBody(@Nonnull final WorkbookFunctionsImSumBodyBuilder builder) {
         this.values = builder.values;
     }

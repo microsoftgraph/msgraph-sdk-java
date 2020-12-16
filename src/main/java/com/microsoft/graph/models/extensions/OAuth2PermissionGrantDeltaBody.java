@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class OAuth2PermissionGrantDeltaBody {
 
+    /**
+     * Instiaciates a new OAuth2PermissionGrantDeltaBody
+     */
+    public OAuth2PermissionGrantDeltaBody() {}
     private OAuth2PermissionGrantDeltaBody(@Nonnull final OAuth2PermissionGrantDeltaBodyBuilder builder) {
     }
     /**

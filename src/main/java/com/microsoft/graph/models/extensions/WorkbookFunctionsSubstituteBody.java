@@ -58,6 +58,10 @@ public class WorkbookFunctionsSubstituteBody {
     public com.google.gson.JsonElement instanceNum;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSubstituteBody
+     */
+    public WorkbookFunctionsSubstituteBody() {}
     private WorkbookFunctionsSubstituteBody(@Nonnull final WorkbookFunctionsSubstituteBodyBuilder builder) {
         this.text = builder.text;
         this.oldText = builder.oldText;

@@ -41,6 +41,10 @@ public class ParticipantInviteBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new ParticipantInviteBody
+     */
+    public ParticipantInviteBody() {}
     private ParticipantInviteBody(@Nonnull final ParticipantInviteBodyBuilder builder) {
         this.participants = builder.participants;
         this.clientContext = builder.clientContext;

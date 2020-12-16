@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRangeFillClearBody {
 
+    /**
+     * Instiaciates a new WorkbookRangeFillClearBody
+     */
+    public WorkbookRangeFillClearBody() {}
     private WorkbookRangeFillClearBody(@Nonnull final WorkbookRangeFillClearBodyBuilder builder) {
     }
     /**

@@ -31,6 +31,10 @@ public class EventSnoozeReminderBody {
     public DateTimeTimeZone newReminderTime;
 
 
+    /**
+     * Instiaciates a new EventSnoozeReminderBody
+     */
+    public EventSnoozeReminderBody() {}
     private EventSnoozeReminderBody(@Nonnull final EventSnoozeReminderBodyBuilder builder) {
         this.newReminderTime = builder.newReminderTime;
     }

@@ -49,6 +49,10 @@ public class WorkbookFunctionsGamma_InvBody {
     public com.google.gson.JsonElement beta;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsGamma_InvBody
+     */
+    public WorkbookFunctionsGamma_InvBody() {}
     private WorkbookFunctionsGamma_InvBody(@Nonnull final WorkbookFunctionsGamma_InvBodyBuilder builder) {
         this.probability = builder.probability;
         this.alpha = builder.alpha;

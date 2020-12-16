@@ -31,6 +31,10 @@ public class CallSubscribeToToneBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new CallSubscribeToToneBody
+     */
+    public CallSubscribeToToneBody() {}
     private CallSubscribeToToneBody(@Nonnull final CallSubscribeToToneBodyBuilder builder) {
         this.clientContext = builder.clientContext;
     }

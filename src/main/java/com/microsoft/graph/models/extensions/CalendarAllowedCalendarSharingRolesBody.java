@@ -31,6 +31,10 @@ public class CalendarAllowedCalendarSharingRolesBody {
     public String user;
 
 
+    /**
+     * Instiaciates a new CalendarAllowedCalendarSharingRolesBody
+     */
+    public CalendarAllowedCalendarSharingRolesBody() {}
     private CalendarAllowedCalendarSharingRolesBody(@Nonnull final CalendarAllowedCalendarSharingRolesBodyBuilder builder) {
         this.user = builder.user;
     }

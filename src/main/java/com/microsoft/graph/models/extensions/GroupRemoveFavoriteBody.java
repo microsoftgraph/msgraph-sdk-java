@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class GroupRemoveFavoriteBody {
 
+    /**
+     * Instiaciates a new GroupRemoveFavoriteBody
+     */
+    public GroupRemoveFavoriteBody() {}
     private GroupRemoveFavoriteBody(@Nonnull final GroupRemoveFavoriteBodyBuilder builder) {
     }
     /**

@@ -67,6 +67,10 @@ public class WorkbookFunctionsPvBody {
     public com.google.gson.JsonElement type;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPvBody
+     */
+    public WorkbookFunctionsPvBody() {}
     private WorkbookFunctionsPvBody(@Nonnull final WorkbookFunctionsPvBodyBuilder builder) {
         this.rate = builder.rate;
         this.nper = builder.nper;

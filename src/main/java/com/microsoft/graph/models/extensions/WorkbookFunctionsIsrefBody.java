@@ -31,6 +31,10 @@ public class WorkbookFunctionsIsrefBody {
     public com.google.gson.JsonElement value;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIsrefBody
+     */
+    public WorkbookFunctionsIsrefBody() {}
     private WorkbookFunctionsIsrefBody(@Nonnull final WorkbookFunctionsIsrefBodyBuilder builder) {
         this.value = builder.value;
     }

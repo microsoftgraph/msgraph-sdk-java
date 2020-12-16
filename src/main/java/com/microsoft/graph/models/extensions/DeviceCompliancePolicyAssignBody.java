@@ -31,6 +31,10 @@ public class DeviceCompliancePolicyAssignBody {
     public java.util.List<DeviceCompliancePolicyAssignment> assignments;
 
 
+    /**
+     * Instiaciates a new DeviceCompliancePolicyAssignBody
+     */
+    public DeviceCompliancePolicyAssignBody() {}
     private DeviceCompliancePolicyAssignBody(@Nonnull final DeviceCompliancePolicyAssignBodyBuilder builder) {
         this.assignments = builder.assignments;
     }

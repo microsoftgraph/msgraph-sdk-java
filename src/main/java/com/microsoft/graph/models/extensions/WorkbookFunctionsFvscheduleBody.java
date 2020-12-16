@@ -40,6 +40,10 @@ public class WorkbookFunctionsFvscheduleBody {
     public com.google.gson.JsonElement schedule;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsFvscheduleBody
+     */
+    public WorkbookFunctionsFvscheduleBody() {}
     private WorkbookFunctionsFvscheduleBody(@Nonnull final WorkbookFunctionsFvscheduleBodyBuilder builder) {
         this.principal = builder.principal;
         this.schedule = builder.schedule;

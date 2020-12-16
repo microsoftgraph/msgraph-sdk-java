@@ -31,6 +31,10 @@ public class ConversationThreadReplyBody {
     public Post post;
 
 
+    /**
+     * Instiaciates a new ConversationThreadReplyBody
+     */
+    public ConversationThreadReplyBody() {}
     private ConversationThreadReplyBody(@Nonnull final ConversationThreadReplyBodyBuilder builder) {
         this.post = builder.post;
     }

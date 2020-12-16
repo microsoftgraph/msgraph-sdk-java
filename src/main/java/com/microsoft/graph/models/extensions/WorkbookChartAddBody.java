@@ -49,6 +49,10 @@ public class WorkbookChartAddBody {
     public String seriesBy;
 
 
+    /**
+     * Instiaciates a new WorkbookChartAddBody
+     */
+    public WorkbookChartAddBody() {}
     private WorkbookChartAddBody(@Nonnull final WorkbookChartAddBodyBuilder builder) {
         this.type = builder.type;
         this.sourceData = builder.sourceData;

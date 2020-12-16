@@ -40,6 +40,10 @@ public class WorkbookFunctionsBin2OctBody {
     public com.google.gson.JsonElement places;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBin2OctBody
+     */
+    public WorkbookFunctionsBin2OctBody() {}
     private WorkbookFunctionsBin2OctBody(@Nonnull final WorkbookFunctionsBin2OctBodyBuilder builder) {
         this.number = builder.number;
         this.places = builder.places;

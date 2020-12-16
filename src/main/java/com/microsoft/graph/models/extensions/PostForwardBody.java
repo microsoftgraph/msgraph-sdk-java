@@ -40,6 +40,10 @@ public class PostForwardBody {
     public java.util.List<Recipient> toRecipients;
 
 
+    /**
+     * Instiaciates a new PostForwardBody
+     */
+    public PostForwardBody() {}
     private PostForwardBody(@Nonnull final PostForwardBodyBuilder builder) {
         this.comment = builder.comment;
         this.toRecipients = builder.toRecipients;

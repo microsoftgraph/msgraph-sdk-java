@@ -31,6 +31,10 @@ public class DeviceCompliancePolicyScheduleActionsForRulesBody {
     public java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules;
 
 
+    /**
+     * Instiaciates a new DeviceCompliancePolicyScheduleActionsForRulesBody
+     */
+    public DeviceCompliancePolicyScheduleActionsForRulesBody() {}
     private DeviceCompliancePolicyScheduleActionsForRulesBody(@Nonnull final DeviceCompliancePolicyScheduleActionsForRulesBodyBuilder builder) {
         this.deviceComplianceScheduledActionForRules = builder.deviceComplianceScheduledActionForRules;
     }

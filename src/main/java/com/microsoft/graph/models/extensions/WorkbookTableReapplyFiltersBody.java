@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookTableReapplyFiltersBody {
 
+    /**
+     * Instiaciates a new WorkbookTableReapplyFiltersBody
+     */
+    public WorkbookTableReapplyFiltersBody() {}
     private WorkbookTableReapplyFiltersBody(@Nonnull final WorkbookTableReapplyFiltersBodyBuilder builder) {
     }
     /**

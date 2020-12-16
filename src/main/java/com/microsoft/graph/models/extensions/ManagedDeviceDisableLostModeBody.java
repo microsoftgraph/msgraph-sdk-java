@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceDisableLostModeBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceDisableLostModeBody
+     */
+    public ManagedDeviceDisableLostModeBody() {}
     private ManagedDeviceDisableLostModeBody(@Nonnull final ManagedDeviceDisableLostModeBodyBuilder builder) {
     }
     /**

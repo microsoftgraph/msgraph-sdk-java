@@ -31,6 +31,10 @@ public class ReportRootGetYammerGroupsActivityCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetYammerGroupsActivityCountsBody
+     */
+    public ReportRootGetYammerGroupsActivityCountsBody() {}
     private ReportRootGetYammerGroupsActivityCountsBody(@Nonnull final ReportRootGetYammerGroupsActivityCountsBodyBuilder builder) {
         this.period = builder.period;
     }

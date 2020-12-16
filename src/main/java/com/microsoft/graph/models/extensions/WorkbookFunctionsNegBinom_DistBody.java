@@ -58,6 +58,10 @@ public class WorkbookFunctionsNegBinom_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNegBinom_DistBody
+     */
+    public WorkbookFunctionsNegBinom_DistBody() {}
     private WorkbookFunctionsNegBinom_DistBody(@Nonnull final WorkbookFunctionsNegBinom_DistBodyBuilder builder) {
         this.numberF = builder.numberF;
         this.numberS = builder.numberS;

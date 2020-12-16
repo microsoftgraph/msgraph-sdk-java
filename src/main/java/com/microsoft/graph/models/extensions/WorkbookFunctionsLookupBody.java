@@ -49,6 +49,10 @@ public class WorkbookFunctionsLookupBody {
     public com.google.gson.JsonElement resultVector;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLookupBody
+     */
+    public WorkbookFunctionsLookupBody() {}
     private WorkbookFunctionsLookupBody(@Nonnull final WorkbookFunctionsLookupBodyBuilder builder) {
         this.lookupValue = builder.lookupValue;
         this.lookupVector = builder.lookupVector;

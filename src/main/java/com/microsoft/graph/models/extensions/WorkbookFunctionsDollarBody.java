@@ -40,6 +40,10 @@ public class WorkbookFunctionsDollarBody {
     public com.google.gson.JsonElement decimals;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDollarBody
+     */
+    public WorkbookFunctionsDollarBody() {}
     private WorkbookFunctionsDollarBody(@Nonnull final WorkbookFunctionsDollarBodyBuilder builder) {
         this.number = builder.number;
         this.decimals = builder.decimals;

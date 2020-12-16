@@ -31,6 +31,10 @@ public class WorkbookFunctionsIsFormulaBody {
     public com.google.gson.JsonElement reference;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIsFormulaBody
+     */
+    public WorkbookFunctionsIsFormulaBody() {}
     private WorkbookFunctionsIsFormulaBody(@Nonnull final WorkbookFunctionsIsFormulaBodyBuilder builder) {
         this.reference = builder.reference;
     }

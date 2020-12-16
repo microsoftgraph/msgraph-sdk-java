@@ -85,6 +85,10 @@ public class WorkbookFunctionsVdbBody {
     public com.google.gson.JsonElement noSwitch;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsVdbBody
+     */
+    public WorkbookFunctionsVdbBody() {}
     private WorkbookFunctionsVdbBody(@Nonnull final WorkbookFunctionsVdbBodyBuilder builder) {
         this.cost = builder.cost;
         this.salvage = builder.salvage;

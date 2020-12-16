@@ -31,6 +31,10 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceBody {
     public String userPrincipalName;
 
 
+    /**
+     * Instiaciates a new ManagedDeviceDeleteUserFromSharedAppleDeviceBody
+     */
+    public ManagedDeviceDeleteUserFromSharedAppleDeviceBody() {}
     private ManagedDeviceDeleteUserFromSharedAppleDeviceBody(@Nonnull final ManagedDeviceDeleteUserFromSharedAppleDeviceBodyBuilder builder) {
         this.userPrincipalName = builder.userPrincipalName;
     }

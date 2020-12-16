@@ -31,6 +31,10 @@ public class WorkbookFunctionsUnicodeBody {
     public com.google.gson.JsonElement text;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsUnicodeBody
+     */
+    public WorkbookFunctionsUnicodeBody() {}
     private WorkbookFunctionsUnicodeBody(@Nonnull final WorkbookFunctionsUnicodeBodyBuilder builder) {
         this.text = builder.text;
     }

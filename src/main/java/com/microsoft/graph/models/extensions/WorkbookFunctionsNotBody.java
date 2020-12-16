@@ -31,6 +31,10 @@ public class WorkbookFunctionsNotBody {
     public com.google.gson.JsonElement logical;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNotBody
+     */
+    public WorkbookFunctionsNotBody() {}
     private WorkbookFunctionsNotBody(@Nonnull final WorkbookFunctionsNotBodyBuilder builder) {
         this.logical = builder.logical;
     }

@@ -40,6 +40,10 @@ public class WorkbookFunctionsPermutBody {
     public com.google.gson.JsonElement numberChosen;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPermutBody
+     */
+    public WorkbookFunctionsPermutBody() {}
     private WorkbookFunctionsPermutBody(@Nonnull final WorkbookFunctionsPermutBodyBuilder builder) {
         this.number = builder.number;
         this.numberChosen = builder.numberChosen;

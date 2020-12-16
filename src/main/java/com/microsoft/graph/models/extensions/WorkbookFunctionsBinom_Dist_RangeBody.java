@@ -58,6 +58,10 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
     public com.google.gson.JsonElement numberS2;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBinom_Dist_RangeBody
+     */
+    public WorkbookFunctionsBinom_Dist_RangeBody() {}
     private WorkbookFunctionsBinom_Dist_RangeBody(@Nonnull final WorkbookFunctionsBinom_Dist_RangeBodyBuilder builder) {
         this.trials = builder.trials;
         this.probabilityS = builder.probabilityS;

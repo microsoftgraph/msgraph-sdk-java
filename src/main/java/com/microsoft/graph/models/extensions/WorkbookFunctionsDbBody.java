@@ -67,6 +67,10 @@ public class WorkbookFunctionsDbBody {
     public com.google.gson.JsonElement month;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDbBody
+     */
+    public WorkbookFunctionsDbBody() {}
     private WorkbookFunctionsDbBody(@Nonnull final WorkbookFunctionsDbBodyBuilder builder) {
         this.cost = builder.cost;
         this.salvage = builder.salvage;

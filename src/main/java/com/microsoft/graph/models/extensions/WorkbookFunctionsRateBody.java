@@ -76,6 +76,10 @@ public class WorkbookFunctionsRateBody {
     public com.google.gson.JsonElement guess;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRateBody
+     */
+    public WorkbookFunctionsRateBody() {}
     private WorkbookFunctionsRateBody(@Nonnull final WorkbookFunctionsRateBodyBuilder builder) {
         this.nper = builder.nper;
         this.pmt = builder.pmt;

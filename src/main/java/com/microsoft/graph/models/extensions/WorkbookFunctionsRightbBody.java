@@ -40,6 +40,10 @@ public class WorkbookFunctionsRightbBody {
     public com.google.gson.JsonElement numBytes;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRightbBody
+     */
+    public WorkbookFunctionsRightbBody() {}
     private WorkbookFunctionsRightbBody(@Nonnull final WorkbookFunctionsRightbBodyBuilder builder) {
         this.text = builder.text;
         this.numBytes = builder.numBytes;

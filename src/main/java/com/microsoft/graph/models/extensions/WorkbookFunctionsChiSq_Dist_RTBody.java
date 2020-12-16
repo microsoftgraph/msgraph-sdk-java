@@ -40,6 +40,10 @@ public class WorkbookFunctionsChiSq_Dist_RTBody {
     public com.google.gson.JsonElement degFreedom;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsChiSq_Dist_RTBody
+     */
+    public WorkbookFunctionsChiSq_Dist_RTBody() {}
     private WorkbookFunctionsChiSq_Dist_RTBody(@Nonnull final WorkbookFunctionsChiSq_Dist_RTBodyBuilder builder) {
         this.x = builder.x;
         this.degFreedom = builder.degFreedom;

@@ -31,6 +31,10 @@ public class DeviceEnrollmentConfigurationSetPriorityBody {
     public Integer priority;
 
 
+    /**
+     * Instiaciates a new DeviceEnrollmentConfigurationSetPriorityBody
+     */
+    public DeviceEnrollmentConfigurationSetPriorityBody() {}
     private DeviceEnrollmentConfigurationSetPriorityBody(@Nonnull final DeviceEnrollmentConfigurationSetPriorityBodyBuilder builder) {
         this.priority = builder.priority;
     }

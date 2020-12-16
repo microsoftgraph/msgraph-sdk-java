@@ -49,6 +49,10 @@ public class WorkbookNamedItemAddFormulaLocalBody {
     public String comment;
 
 
+    /**
+     * Instiaciates a new WorkbookNamedItemAddFormulaLocalBody
+     */
+    public WorkbookNamedItemAddFormulaLocalBody() {}
     private WorkbookNamedItemAddFormulaLocalBody(@Nonnull final WorkbookNamedItemAddFormulaLocalBodyBuilder builder) {
         this.name = builder.name;
         this.formula = builder.formula;

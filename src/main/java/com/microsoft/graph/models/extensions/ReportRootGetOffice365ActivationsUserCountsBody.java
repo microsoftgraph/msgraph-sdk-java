@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ReportRootGetOffice365ActivationsUserCountsBody {
 
+    /**
+     * Instiaciates a new ReportRootGetOffice365ActivationsUserCountsBody
+     */
+    public ReportRootGetOffice365ActivationsUserCountsBody() {}
     private ReportRootGetOffice365ActivationsUserCountsBody(@Nonnull final ReportRootGetOffice365ActivationsUserCountsBodyBuilder builder) {
     }
     /**

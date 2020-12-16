@@ -40,6 +40,10 @@ public class WorkbookFunctionsModBody {
     public com.google.gson.JsonElement divisor;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsModBody
+     */
+    public WorkbookFunctionsModBody() {}
     private WorkbookFunctionsModBody(@Nonnull final WorkbookFunctionsModBodyBuilder builder) {
         this.number = builder.number;
         this.divisor = builder.divisor;

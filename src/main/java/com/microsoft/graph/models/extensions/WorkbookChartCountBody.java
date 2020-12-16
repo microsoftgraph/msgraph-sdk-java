@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookChartCountBody {
 
+    /**
+     * Instiaciates a new WorkbookChartCountBody
+     */
+    public WorkbookChartCountBody() {}
     private WorkbookChartCountBody(@Nonnull final WorkbookChartCountBodyBuilder builder) {
     }
     /**

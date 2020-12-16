@@ -31,6 +31,10 @@ public class WorkbookRangeDeleteBody {
     public String shift;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeDeleteBody
+     */
+    public WorkbookRangeDeleteBody() {}
     private WorkbookRangeDeleteBody(@Nonnull final WorkbookRangeDeleteBodyBuilder builder) {
         this.shift = builder.shift;
     }

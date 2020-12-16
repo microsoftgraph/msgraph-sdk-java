@@ -31,6 +31,10 @@ public class WorkbookFunctionsAcothBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAcothBody
+     */
+    public WorkbookFunctionsAcothBody() {}
     private WorkbookFunctionsAcothBody(@Nonnull final WorkbookFunctionsAcothBodyBuilder builder) {
         this.number = builder.number;
     }

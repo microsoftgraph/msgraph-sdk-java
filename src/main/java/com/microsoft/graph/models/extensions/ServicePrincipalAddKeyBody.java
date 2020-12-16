@@ -50,6 +50,10 @@ public class ServicePrincipalAddKeyBody {
     public String proof;
 
 
+    /**
+     * Instiaciates a new ServicePrincipalAddKeyBody
+     */
+    public ServicePrincipalAddKeyBody() {}
     private ServicePrincipalAddKeyBody(@Nonnull final ServicePrincipalAddKeyBodyBuilder builder) {
         this.keyCredential = builder.keyCredential;
         this.passwordCredential = builder.passwordCredential;

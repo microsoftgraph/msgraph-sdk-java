@@ -40,6 +40,10 @@ public class WorkbookFunctionsSubtotalBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSubtotalBody
+     */
+    public WorkbookFunctionsSubtotalBody() {}
     private WorkbookFunctionsSubtotalBody(@Nonnull final WorkbookFunctionsSubtotalBodyBuilder builder) {
         this.functionNum = builder.functionNum;
         this.values = builder.values;

@@ -31,6 +31,10 @@ public class ReportRootGetEmailActivityUserDetailBody {
     public com.microsoft.graph.core.DateOnly date;
 
 
+    /**
+     * Instiaciates a new ReportRootGetEmailActivityUserDetailBody
+     */
+    public ReportRootGetEmailActivityUserDetailBody() {}
     private ReportRootGetEmailActivityUserDetailBody(@Nonnull final ReportRootGetEmailActivityUserDetailBodyBuilder builder) {
         this.date = builder.date;
     }

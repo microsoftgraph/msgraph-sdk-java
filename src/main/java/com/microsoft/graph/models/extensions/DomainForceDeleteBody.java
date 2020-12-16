@@ -31,6 +31,10 @@ public class DomainForceDeleteBody {
     public Boolean disableUserAccounts;
 
 
+    /**
+     * Instiaciates a new DomainForceDeleteBody
+     */
+    public DomainForceDeleteBody() {}
     private DomainForceDeleteBody(@Nonnull final DomainForceDeleteBodyBuilder builder) {
         this.disableUserAccounts = builder.disableUserAccounts;
     }

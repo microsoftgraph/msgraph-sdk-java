@@ -40,6 +40,10 @@ public class MessageReplyBody {
     public String comment;
 
 
+    /**
+     * Instiaciates a new MessageReplyBody
+     */
+    public MessageReplyBody() {}
     private MessageReplyBody(@Nonnull final MessageReplyBodyBuilder builder) {
         this.message = builder.message;
         this.comment = builder.comment;

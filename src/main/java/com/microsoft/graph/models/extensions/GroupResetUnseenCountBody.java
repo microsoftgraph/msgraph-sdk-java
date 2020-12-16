@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class GroupResetUnseenCountBody {
 
+    /**
+     * Instiaciates a new GroupResetUnseenCountBody
+     */
+    public GroupResetUnseenCountBody() {}
     private GroupResetUnseenCountBody(@Nonnull final GroupResetUnseenCountBodyBuilder builder) {
     }
     /**

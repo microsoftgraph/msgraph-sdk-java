@@ -40,6 +40,10 @@ public class WorkbookFunctionsRoundUpBody {
     public com.google.gson.JsonElement numDigits;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRoundUpBody
+     */
+    public WorkbookFunctionsRoundUpBody() {}
     private WorkbookFunctionsRoundUpBody(@Nonnull final WorkbookFunctionsRoundUpBodyBuilder builder) {
         this.number = builder.number;
         this.numDigits = builder.numDigits;

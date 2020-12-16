@@ -31,6 +31,10 @@ public class WorkbookRangeInsertBody {
     public String shift;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeInsertBody
+     */
+    public WorkbookRangeInsertBody() {}
     private WorkbookRangeInsertBody(@Nonnull final WorkbookRangeInsertBodyBuilder builder) {
         this.shift = builder.shift;
     }

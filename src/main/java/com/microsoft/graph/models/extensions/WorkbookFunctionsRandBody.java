@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookFunctionsRandBody {
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRandBody
+     */
+    public WorkbookFunctionsRandBody() {}
     private WorkbookFunctionsRandBody(@Nonnull final WorkbookFunctionsRandBodyBuilder builder) {
     }
     /**

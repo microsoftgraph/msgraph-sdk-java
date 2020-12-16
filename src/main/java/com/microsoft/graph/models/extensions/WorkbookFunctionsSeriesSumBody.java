@@ -58,6 +58,10 @@ public class WorkbookFunctionsSeriesSumBody {
     public com.google.gson.JsonElement coefficients;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSeriesSumBody
+     */
+    public WorkbookFunctionsSeriesSumBody() {}
     private WorkbookFunctionsSeriesSumBody(@Nonnull final WorkbookFunctionsSeriesSumBodyBuilder builder) {
         this.x = builder.x;
         this.n = builder.n;

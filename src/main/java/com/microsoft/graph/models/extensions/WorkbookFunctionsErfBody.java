@@ -40,6 +40,10 @@ public class WorkbookFunctionsErfBody {
     public com.google.gson.JsonElement upperLimit;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsErfBody
+     */
+    public WorkbookFunctionsErfBody() {}
     private WorkbookFunctionsErfBody(@Nonnull final WorkbookFunctionsErfBodyBuilder builder) {
         this.lowerLimit = builder.lowerLimit;
         this.upperLimit = builder.upperLimit;

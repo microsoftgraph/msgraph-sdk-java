@@ -31,6 +31,10 @@ public class WorkbookRangeMergeBody {
     public Boolean across;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeMergeBody
+     */
+    public WorkbookRangeMergeBody() {}
     private WorkbookRangeMergeBody(@Nonnull final WorkbookRangeMergeBodyBuilder builder) {
         this.across = builder.across;
     }

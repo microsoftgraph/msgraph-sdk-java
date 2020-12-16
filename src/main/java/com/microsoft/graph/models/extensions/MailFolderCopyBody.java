@@ -31,6 +31,10 @@ public class MailFolderCopyBody {
     public String destinationId;
 
 
+    /**
+     * Instiaciates a new MailFolderCopyBody
+     */
+    public MailFolderCopyBody() {}
     private MailFolderCopyBody(@Nonnull final MailFolderCopyBodyBuilder builder) {
         this.destinationId = builder.destinationId;
     }

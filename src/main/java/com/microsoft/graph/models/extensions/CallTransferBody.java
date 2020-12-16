@@ -31,6 +31,10 @@ public class CallTransferBody {
     public InvitationParticipantInfo transferTarget;
 
 
+    /**
+     * Instiaciates a new CallTransferBody
+     */
+    public CallTransferBody() {}
     private CallTransferBody(@Nonnull final CallTransferBodyBuilder builder) {
         this.transferTarget = builder.transferTarget;
     }

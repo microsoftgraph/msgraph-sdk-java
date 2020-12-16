@@ -40,6 +40,10 @@ public class DriveItemValidatePermissionBody {
     public String password;
 
 
+    /**
+     * Instiaciates a new DriveItemValidatePermissionBody
+     */
+    public DriveItemValidatePermissionBody() {}
     private DriveItemValidatePermissionBody(@Nonnull final DriveItemValidatePermissionBodyBuilder builder) {
         this.challengeToken = builder.challengeToken;
         this.password = builder.password;

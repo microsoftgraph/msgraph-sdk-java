@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookPivotTableRefreshBody {
 
+    /**
+     * Instiaciates a new WorkbookPivotTableRefreshBody
+     */
+    public WorkbookPivotTableRefreshBody() {}
     private WorkbookPivotTableRefreshBody(@Nonnull final WorkbookPivotTableRefreshBodyBuilder builder) {
     }
     /**

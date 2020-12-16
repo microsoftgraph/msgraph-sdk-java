@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookCloseSessionBody {
 
+    /**
+     * Instiaciates a new WorkbookCloseSessionBody
+     */
+    public WorkbookCloseSessionBody() {}
     private WorkbookCloseSessionBody(@Nonnull final WorkbookCloseSessionBodyBuilder builder) {
     }
     /**

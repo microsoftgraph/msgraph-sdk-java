@@ -31,6 +31,10 @@ public class ManagedDeviceWindowsDefenderScanBody {
     public Boolean quickScan;
 
 
+    /**
+     * Instiaciates a new ManagedDeviceWindowsDefenderScanBody
+     */
+    public ManagedDeviceWindowsDefenderScanBody() {}
     private ManagedDeviceWindowsDefenderScanBody(@Nonnull final ManagedDeviceWindowsDefenderScanBodyBuilder builder) {
         this.quickScan = builder.quickScan;
     }

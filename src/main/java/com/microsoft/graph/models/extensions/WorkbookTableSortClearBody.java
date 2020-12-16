@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookTableSortClearBody {
 
+    /**
+     * Instiaciates a new WorkbookTableSortClearBody
+     */
+    public WorkbookTableSortClearBody() {}
     private WorkbookTableSortClearBody(@Nonnull final WorkbookTableSortClearBodyBuilder builder) {
     }
     /**

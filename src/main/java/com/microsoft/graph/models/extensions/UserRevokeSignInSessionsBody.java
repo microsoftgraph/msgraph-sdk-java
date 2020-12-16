@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class UserRevokeSignInSessionsBody {
 
+    /**
+     * Instiaciates a new UserRevokeSignInSessionsBody
+     */
+    public UserRevokeSignInSessionsBody() {}
     private UserRevokeSignInSessionsBody(@Nonnull final UserRevokeSignInSessionsBodyBuilder builder) {
     }
     /**

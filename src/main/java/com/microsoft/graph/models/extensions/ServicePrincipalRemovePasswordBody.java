@@ -31,6 +31,10 @@ public class ServicePrincipalRemovePasswordBody {
     public java.util.UUID keyId;
 
 
+    /**
+     * Instiaciates a new ServicePrincipalRemovePasswordBody
+     */
+    public ServicePrincipalRemovePasswordBody() {}
     private ServicePrincipalRemovePasswordBody(@Nonnull final ServicePrincipalRemovePasswordBodyBuilder builder) {
         this.keyId = builder.keyId;
     }

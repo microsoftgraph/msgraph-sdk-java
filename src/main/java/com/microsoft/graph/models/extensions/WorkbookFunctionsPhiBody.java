@@ -31,6 +31,10 @@ public class WorkbookFunctionsPhiBody {
     public com.google.gson.JsonElement x;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPhiBody
+     */
+    public WorkbookFunctionsPhiBody() {}
     private WorkbookFunctionsPhiBody(@Nonnull final WorkbookFunctionsPhiBodyBuilder builder) {
         this.x = builder.x;
     }

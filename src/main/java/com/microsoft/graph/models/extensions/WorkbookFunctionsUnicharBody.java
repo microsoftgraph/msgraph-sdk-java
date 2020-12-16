@@ -31,6 +31,10 @@ public class WorkbookFunctionsUnicharBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsUnicharBody
+     */
+    public WorkbookFunctionsUnicharBody() {}
     private WorkbookFunctionsUnicharBody(@Nonnull final WorkbookFunctionsUnicharBodyBuilder builder) {
         this.number = builder.number;
     }

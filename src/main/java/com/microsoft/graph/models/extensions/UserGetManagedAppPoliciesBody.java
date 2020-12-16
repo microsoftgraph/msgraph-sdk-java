@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class UserGetManagedAppPoliciesBody {
 
+    /**
+     * Instiaciates a new UserGetManagedAppPoliciesBody
+     */
+    public UserGetManagedAppPoliciesBody() {}
     private UserGetManagedAppPoliciesBody(@Nonnull final UserGetManagedAppPoliciesBodyBuilder builder) {
     }
     /**

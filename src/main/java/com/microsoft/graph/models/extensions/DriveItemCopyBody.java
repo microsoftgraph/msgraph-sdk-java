@@ -41,6 +41,10 @@ public class DriveItemCopyBody {
     public ItemReference parentReference;
 
 
+    /**
+     * Instiaciates a new DriveItemCopyBody
+     */
+    public DriveItemCopyBody() {}
     private DriveItemCopyBody(@Nonnull final DriveItemCopyBodyBuilder builder) {
         this.name = builder.name;
         this.parentReference = builder.parentReference;

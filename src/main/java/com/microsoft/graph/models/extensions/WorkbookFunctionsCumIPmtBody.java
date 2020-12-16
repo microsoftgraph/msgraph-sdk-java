@@ -76,6 +76,10 @@ public class WorkbookFunctionsCumIPmtBody {
     public com.google.gson.JsonElement type;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCumIPmtBody
+     */
+    public WorkbookFunctionsCumIPmtBody() {}
     private WorkbookFunctionsCumIPmtBody(@Nonnull final WorkbookFunctionsCumIPmtBodyBuilder builder) {
         this.rate = builder.rate;
         this.nper = builder.nper;

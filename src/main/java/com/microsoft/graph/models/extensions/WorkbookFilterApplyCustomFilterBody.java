@@ -49,6 +49,10 @@ public class WorkbookFilterApplyCustomFilterBody {
     public String oper;
 
 
+    /**
+     * Instiaciates a new WorkbookFilterApplyCustomFilterBody
+     */
+    public WorkbookFilterApplyCustomFilterBody() {}
     private WorkbookFilterApplyCustomFilterBody(@Nonnull final WorkbookFilterApplyCustomFilterBodyBuilder builder) {
         this.criteria1 = builder.criteria1;
         this.criteria2 = builder.criteria2;

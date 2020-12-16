@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookChartImageBody {
 
+    /**
+     * Instiaciates a new WorkbookChartImageBody
+     */
+    public WorkbookChartImageBody() {}
     private WorkbookChartImageBody(@Nonnull final WorkbookChartImageBodyBuilder builder) {
     }
     /**

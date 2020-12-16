@@ -31,6 +31,10 @@ public class WorkbookApplicationCalculateBody {
     public String calculationType;
 
 
+    /**
+     * Instiaciates a new WorkbookApplicationCalculateBody
+     */
+    public WorkbookApplicationCalculateBody() {}
     private WorkbookApplicationCalculateBody(@Nonnull final WorkbookApplicationCalculateBodyBuilder builder) {
         this.calculationType = builder.calculationType;
     }

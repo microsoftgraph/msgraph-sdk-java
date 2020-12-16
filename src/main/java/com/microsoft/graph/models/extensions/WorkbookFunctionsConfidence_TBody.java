@@ -49,6 +49,10 @@ public class WorkbookFunctionsConfidence_TBody {
     public com.google.gson.JsonElement size;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsConfidence_TBody
+     */
+    public WorkbookFunctionsConfidence_TBody() {}
     private WorkbookFunctionsConfidence_TBody(@Nonnull final WorkbookFunctionsConfidence_TBodyBuilder builder) {
         this.alpha = builder.alpha;
         this.standardDev = builder.standardDev;

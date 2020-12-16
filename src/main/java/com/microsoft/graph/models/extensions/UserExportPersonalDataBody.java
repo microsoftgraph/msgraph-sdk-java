@@ -31,6 +31,10 @@ public class UserExportPersonalDataBody {
     public String storageLocation;
 
 
+    /**
+     * Instiaciates a new UserExportPersonalDataBody
+     */
+    public UserExportPersonalDataBody() {}
     private UserExportPersonalDataBody(@Nonnull final UserExportPersonalDataBodyBuilder builder) {
         this.storageLocation = builder.storageLocation;
     }

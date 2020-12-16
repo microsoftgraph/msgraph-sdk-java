@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceLogoutSharedAppleDeviceActiveUserBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceLogoutSharedAppleDeviceActiveUserBody
+     */
+    public ManagedDeviceLogoutSharedAppleDeviceActiveUserBody() {}
     private ManagedDeviceLogoutSharedAppleDeviceActiveUserBody(@Nonnull final ManagedDeviceLogoutSharedAppleDeviceActiveUserBodyBuilder builder) {
     }
     /**

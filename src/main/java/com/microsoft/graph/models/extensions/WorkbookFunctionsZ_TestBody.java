@@ -49,6 +49,10 @@ public class WorkbookFunctionsZ_TestBody {
     public com.google.gson.JsonElement sigma;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsZ_TestBody
+     */
+    public WorkbookFunctionsZ_TestBody() {}
     private WorkbookFunctionsZ_TestBody(@Nonnull final WorkbookFunctionsZ_TestBodyBuilder builder) {
         this.array = builder.array;
         this.x = builder.x;

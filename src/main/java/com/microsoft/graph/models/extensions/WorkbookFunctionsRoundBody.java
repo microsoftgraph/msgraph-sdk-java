@@ -40,6 +40,10 @@ public class WorkbookFunctionsRoundBody {
     public com.google.gson.JsonElement numDigits;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRoundBody
+     */
+    public WorkbookFunctionsRoundBody() {}
     private WorkbookFunctionsRoundBody(@Nonnull final WorkbookFunctionsRoundBodyBuilder builder) {
         this.number = builder.number;
         this.numDigits = builder.numDigits;

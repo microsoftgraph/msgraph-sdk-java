@@ -31,6 +31,10 @@ public class WorkbookFunctionsCleanBody {
     public com.google.gson.JsonElement text;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCleanBody
+     */
+    public WorkbookFunctionsCleanBody() {}
     private WorkbookFunctionsCleanBody(@Nonnull final WorkbookFunctionsCleanBodyBuilder builder) {
         this.text = builder.text;
     }

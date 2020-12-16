@@ -49,6 +49,10 @@ public class WorkbookFunctionsDstDevBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDstDevBody
+     */
+    public WorkbookFunctionsDstDevBody() {}
     private WorkbookFunctionsDstDevBody(@Nonnull final WorkbookFunctionsDstDevBodyBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;

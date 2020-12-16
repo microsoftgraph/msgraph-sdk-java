@@ -31,6 +31,10 @@ public class WorkbookFunctionsSqrtPiBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSqrtPiBody
+     */
+    public WorkbookFunctionsSqrtPiBody() {}
     private WorkbookFunctionsSqrtPiBody(@Nonnull final WorkbookFunctionsSqrtPiBodyBuilder builder) {
         this.number = builder.number;
     }

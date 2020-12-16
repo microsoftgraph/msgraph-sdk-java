@@ -31,6 +31,10 @@ public class EventCancelBody {
     public String comment;
 
 
+    /**
+     * Instiaciates a new EventCancelBody
+     */
+    public EventCancelBody() {}
     private EventCancelBody(@Nonnull final EventCancelBodyBuilder builder) {
         this.comment = builder.comment;
     }

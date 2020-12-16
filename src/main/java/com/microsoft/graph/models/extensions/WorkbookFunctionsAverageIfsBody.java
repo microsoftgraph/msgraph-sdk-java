@@ -40,6 +40,10 @@ public class WorkbookFunctionsAverageIfsBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAverageIfsBody
+     */
+    public WorkbookFunctionsAverageIfsBody() {}
     private WorkbookFunctionsAverageIfsBody(@Nonnull final WorkbookFunctionsAverageIfsBodyBuilder builder) {
         this.averageRange = builder.averageRange;
         this.values = builder.values;

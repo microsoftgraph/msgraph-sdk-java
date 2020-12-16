@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRangeVisibleViewBody {
 
+    /**
+     * Instiaciates a new WorkbookRangeVisibleViewBody
+     */
+    public WorkbookRangeVisibleViewBody() {}
     private WorkbookRangeVisibleViewBody(@Nonnull final WorkbookRangeVisibleViewBodyBuilder builder) {
     }
     /**

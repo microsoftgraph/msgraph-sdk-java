@@ -31,6 +31,10 @@ public class ParticipantMuteBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new ParticipantMuteBody
+     */
+    public ParticipantMuteBody() {}
     private ParticipantMuteBody(@Nonnull final ParticipantMuteBodyBuilder builder) {
         this.clientContext = builder.clientContext;
     }

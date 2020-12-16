@@ -40,6 +40,10 @@ public class DirectoryObjectGetByIdsBody {
     public java.util.List<String> types;
 
 
+    /**
+     * Instiaciates a new DirectoryObjectGetByIdsBody
+     */
+    public DirectoryObjectGetByIdsBody() {}
     private DirectoryObjectGetByIdsBody(@Nonnull final DirectoryObjectGetByIdsBodyBuilder builder) {
         this.ids = builder.ids;
         this.types = builder.types;

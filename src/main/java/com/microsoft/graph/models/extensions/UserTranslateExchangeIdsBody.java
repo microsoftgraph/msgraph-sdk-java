@@ -50,6 +50,10 @@ public class UserTranslateExchangeIdsBody {
     public ExchangeIdFormat sourceIdType;
 
 
+    /**
+     * Instiaciates a new UserTranslateExchangeIdsBody
+     */
+    public UserTranslateExchangeIdsBody() {}
     private UserTranslateExchangeIdsBody(@Nonnull final UserTranslateExchangeIdsBodyBuilder builder) {
         this.inputIds = builder.inputIds;
         this.targetIdType = builder.targetIdType;

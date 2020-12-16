@@ -31,6 +31,10 @@ public class WorkbookFunctionsSkew_pBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSkew_pBody
+     */
+    public WorkbookFunctionsSkew_pBody() {}
     private WorkbookFunctionsSkew_pBody(@Nonnull final WorkbookFunctionsSkew_pBodyBuilder builder) {
         this.values = builder.values;
     }

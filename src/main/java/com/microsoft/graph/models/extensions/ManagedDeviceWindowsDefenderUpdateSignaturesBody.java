@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceWindowsDefenderUpdateSignaturesBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceWindowsDefenderUpdateSignaturesBody
+     */
+    public ManagedDeviceWindowsDefenderUpdateSignaturesBody() {}
     private ManagedDeviceWindowsDefenderUpdateSignaturesBody(@Nonnull final ManagedDeviceWindowsDefenderUpdateSignaturesBodyBuilder builder) {
     }
     /**

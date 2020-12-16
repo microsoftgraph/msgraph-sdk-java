@@ -31,6 +31,10 @@ public class ReportRootGetSharePointActivityUserCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetSharePointActivityUserCountsBody
+     */
+    public ReportRootGetSharePointActivityUserCountsBody() {}
     private ReportRootGetSharePointActivityUserCountsBody(@Nonnull final ReportRootGetSharePointActivityUserCountsBodyBuilder builder) {
         this.period = builder.period;
     }

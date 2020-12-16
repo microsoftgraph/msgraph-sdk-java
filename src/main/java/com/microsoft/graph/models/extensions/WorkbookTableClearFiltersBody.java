@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookTableClearFiltersBody {
 
+    /**
+     * Instiaciates a new WorkbookTableClearFiltersBody
+     */
+    public WorkbookTableClearFiltersBody() {}
     private WorkbookTableClearFiltersBody(@Nonnull final WorkbookTableClearFiltersBodyBuilder builder) {
     }
     /**

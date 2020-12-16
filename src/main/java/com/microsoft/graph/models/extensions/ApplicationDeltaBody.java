@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ApplicationDeltaBody {
 
+    /**
+     * Instiaciates a new ApplicationDeltaBody
+     */
+    public ApplicationDeltaBody() {}
     private ApplicationDeltaBody(@Nonnull final ApplicationDeltaBodyBuilder builder) {
     }
     /**

@@ -49,6 +49,10 @@ public class WorkbookFunctionsRank_EqBody {
     public com.google.gson.JsonElement order;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRank_EqBody
+     */
+    public WorkbookFunctionsRank_EqBody() {}
     private WorkbookFunctionsRank_EqBody(@Nonnull final WorkbookFunctionsRank_EqBodyBuilder builder) {
         this.number = builder.number;
         this.ref = builder.ref;

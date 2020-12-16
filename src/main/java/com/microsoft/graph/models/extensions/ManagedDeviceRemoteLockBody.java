@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceRemoteLockBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceRemoteLockBody
+     */
+    public ManagedDeviceRemoteLockBody() {}
     private ManagedDeviceRemoteLockBody(@Nonnull final ManagedDeviceRemoteLockBodyBuilder builder) {
     }
     /**

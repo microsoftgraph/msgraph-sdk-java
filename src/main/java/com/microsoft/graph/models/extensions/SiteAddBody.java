@@ -31,6 +31,10 @@ public class SiteAddBody {
     public java.util.List<Site> value;
 
 
+    /**
+     * Instiaciates a new SiteAddBody
+     */
+    public SiteAddBody() {}
     private SiteAddBody(@Nonnull final SiteAddBodyBuilder builder) {
         this.value = builder.value;
     }

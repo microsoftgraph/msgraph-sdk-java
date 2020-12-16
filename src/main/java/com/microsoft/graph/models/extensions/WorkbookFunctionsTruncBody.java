@@ -40,6 +40,10 @@ public class WorkbookFunctionsTruncBody {
     public com.google.gson.JsonElement numDigits;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTruncBody
+     */
+    public WorkbookFunctionsTruncBody() {}
     private WorkbookFunctionsTruncBody(@Nonnull final WorkbookFunctionsTruncBodyBuilder builder) {
         this.number = builder.number;
         this.numDigits = builder.numDigits;

@@ -94,6 +94,10 @@ public class WorkbookFunctionsAccrIntBody {
     public com.google.gson.JsonElement calcMethod;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAccrIntBody
+     */
+    public WorkbookFunctionsAccrIntBody() {}
     private WorkbookFunctionsAccrIntBody(@Nonnull final WorkbookFunctionsAccrIntBodyBuilder builder) {
         this.issue = builder.issue;
         this.firstInterest = builder.firstInterest;

@@ -40,6 +40,10 @@ public class ServicePrincipalRemoveKeyBody {
     public String proof;
 
 
+    /**
+     * Instiaciates a new ServicePrincipalRemoveKeyBody
+     */
+    public ServicePrincipalRemoveKeyBody() {}
     private ServicePrincipalRemoveKeyBody(@Nonnull final ServicePrincipalRemoveKeyBodyBuilder builder) {
         this.keyId = builder.keyId;
         this.proof = builder.proof;

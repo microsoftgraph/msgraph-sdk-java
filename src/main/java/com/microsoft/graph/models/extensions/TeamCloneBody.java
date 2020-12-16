@@ -78,6 +78,10 @@ public class TeamCloneBody {
     public EnumSet<ClonableTeamParts> partsToClone;
 
 
+    /**
+     * Instiaciates a new TeamCloneBody
+     */
+    public TeamCloneBody() {}
     private TeamCloneBody(@Nonnull final TeamCloneBodyBuilder builder) {
         this.displayName = builder.displayName;
         this.description = builder.description;

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookChartLineFormatClearBody {
 
+    /**
+     * Instiaciates a new WorkbookChartLineFormatClearBody
+     */
+    public WorkbookChartLineFormatClearBody() {}
     private WorkbookChartLineFormatClearBody(@Nonnull final WorkbookChartLineFormatClearBodyBuilder builder) {
     }
     /**

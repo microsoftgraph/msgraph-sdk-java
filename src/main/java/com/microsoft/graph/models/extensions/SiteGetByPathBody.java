@@ -31,6 +31,10 @@ public class SiteGetByPathBody {
     public String path;
 
 
+    /**
+     * Instiaciates a new SiteGetByPathBody
+     */
+    public SiteGetByPathBody() {}
     private SiteGetByPathBody(@Nonnull final SiteGetByPathBodyBuilder builder) {
         this.path = builder.path;
     }

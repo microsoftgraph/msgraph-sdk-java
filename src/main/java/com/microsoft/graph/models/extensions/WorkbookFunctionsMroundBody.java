@@ -40,6 +40,10 @@ public class WorkbookFunctionsMroundBody {
     public com.google.gson.JsonElement multiple;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMroundBody
+     */
+    public WorkbookFunctionsMroundBody() {}
     private WorkbookFunctionsMroundBody(@Nonnull final WorkbookFunctionsMroundBodyBuilder builder) {
         this.number = builder.number;
         this.multiple = builder.multiple;

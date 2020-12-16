@@ -67,6 +67,10 @@ public class WorkbookFunctionsAccrIntMBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAccrIntMBody
+     */
+    public WorkbookFunctionsAccrIntMBody() {}
     private WorkbookFunctionsAccrIntMBody(@Nonnull final WorkbookFunctionsAccrIntMBodyBuilder builder) {
         this.issue = builder.issue;
         this.settlement = builder.settlement;

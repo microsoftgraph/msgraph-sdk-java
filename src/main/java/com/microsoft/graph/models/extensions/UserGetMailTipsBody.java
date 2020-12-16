@@ -42,6 +42,10 @@ public class UserGetMailTipsBody {
     public EnumSet<MailTipsType> mailTipsOptions;
 
 
+    /**
+     * Instiaciates a new UserGetMailTipsBody
+     */
+    public UserGetMailTipsBody() {}
     private UserGetMailTipsBody(@Nonnull final UserGetMailTipsBodyBuilder builder) {
         this.emailAddresses = builder.emailAddresses;
         this.mailTipsOptions = builder.mailTipsOptions;

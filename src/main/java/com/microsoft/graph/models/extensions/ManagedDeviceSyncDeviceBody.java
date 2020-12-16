@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceSyncDeviceBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceSyncDeviceBody
+     */
+    public ManagedDeviceSyncDeviceBody() {}
     private ManagedDeviceSyncDeviceBody(@Nonnull final ManagedDeviceSyncDeviceBodyBuilder builder) {
     }
     /**

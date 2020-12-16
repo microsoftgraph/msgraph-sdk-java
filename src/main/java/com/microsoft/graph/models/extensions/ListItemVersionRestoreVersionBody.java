@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ListItemVersionRestoreVersionBody {
 
+    /**
+     * Instiaciates a new ListItemVersionRestoreVersionBody
+     */
+    public ListItemVersionRestoreVersionBody() {}
     private ListItemVersionRestoreVersionBody(@Nonnull final ListItemVersionRestoreVersionBodyBuilder builder) {
     }
     /**

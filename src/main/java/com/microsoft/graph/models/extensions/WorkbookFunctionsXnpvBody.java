@@ -49,6 +49,10 @@ public class WorkbookFunctionsXnpvBody {
     public com.google.gson.JsonElement dates;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsXnpvBody
+     */
+    public WorkbookFunctionsXnpvBody() {}
     private WorkbookFunctionsXnpvBody(@Nonnull final WorkbookFunctionsXnpvBodyBuilder builder) {
         this.rate = builder.rate;
         this.values = builder.values;

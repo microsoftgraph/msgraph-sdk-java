@@ -59,6 +59,10 @@ public class CalendarGetScheduleBody {
     public Integer availabilityViewInterval;
 
 
+    /**
+     * Instiaciates a new CalendarGetScheduleBody
+     */
+    public CalendarGetScheduleBody() {}
     private CalendarGetScheduleBody(@Nonnull final CalendarGetScheduleBodyBuilder builder) {
         this.schedules = builder.schedules;
         this.endTime = builder.endTime;

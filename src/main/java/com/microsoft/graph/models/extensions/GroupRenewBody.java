@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class GroupRenewBody {
 
+    /**
+     * Instiaciates a new GroupRenewBody
+     */
+    public GroupRenewBody() {}
     private GroupRenewBody(@Nonnull final GroupRenewBodyBuilder builder) {
     }
     /**

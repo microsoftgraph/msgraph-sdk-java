@@ -49,6 +49,10 @@ public class WorkbookFunctionsT_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsT_DistBody
+     */
+    public WorkbookFunctionsT_DistBody() {}
     private WorkbookFunctionsT_DistBody(@Nonnull final WorkbookFunctionsT_DistBodyBuilder builder) {
         this.x = builder.x;
         this.degFreedom = builder.degFreedom;

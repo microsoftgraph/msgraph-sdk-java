@@ -31,6 +31,10 @@ public class WindowsInformationProtectionAssignBody {
     public java.util.List<TargetedManagedAppPolicyAssignment> assignments;
 
 
+    /**
+     * Instiaciates a new WindowsInformationProtectionAssignBody
+     */
+    public WindowsInformationProtectionAssignBody() {}
     private WindowsInformationProtectionAssignBody(@Nonnull final WindowsInformationProtectionAssignBodyBuilder builder) {
         this.assignments = builder.assignments;
     }

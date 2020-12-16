@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class NotificationMessageTemplateSendTestMessageBody {
 
+    /**
+     * Instiaciates a new NotificationMessageTemplateSendTestMessageBody
+     */
+    public NotificationMessageTemplateSendTestMessageBody() {}
     private NotificationMessageTemplateSendTestMessageBody(@Nonnull final NotificationMessageTemplateSendTestMessageBodyBuilder builder) {
     }
     /**

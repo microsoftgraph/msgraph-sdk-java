@@ -31,6 +31,10 @@ public class CallUnmuteBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new CallUnmuteBody
+     */
+    public CallUnmuteBody() {}
     private CallUnmuteBody(@Nonnull final CallUnmuteBodyBuilder builder) {
         this.clientContext = builder.clientContext;
     }

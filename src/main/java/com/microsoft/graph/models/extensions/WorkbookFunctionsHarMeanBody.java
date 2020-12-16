@@ -31,6 +31,10 @@ public class WorkbookFunctionsHarMeanBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsHarMeanBody
+     */
+    public WorkbookFunctionsHarMeanBody() {}
     private WorkbookFunctionsHarMeanBody(@Nonnull final WorkbookFunctionsHarMeanBodyBuilder builder) {
         this.values = builder.values;
     }

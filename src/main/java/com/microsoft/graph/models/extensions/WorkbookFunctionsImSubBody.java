@@ -40,6 +40,10 @@ public class WorkbookFunctionsImSubBody {
     public com.google.gson.JsonElement inumber2;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsImSubBody
+     */
+    public WorkbookFunctionsImSubBody() {}
     private WorkbookFunctionsImSubBody(@Nonnull final WorkbookFunctionsImSubBodyBuilder builder) {
         this.inumber1 = builder.inumber1;
         this.inumber2 = builder.inumber2;

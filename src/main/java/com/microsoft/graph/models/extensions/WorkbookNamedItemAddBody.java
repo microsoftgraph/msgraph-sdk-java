@@ -49,6 +49,10 @@ public class WorkbookNamedItemAddBody {
     public String comment;
 
 
+    /**
+     * Instiaciates a new WorkbookNamedItemAddBody
+     */
+    public WorkbookNamedItemAddBody() {}
     private WorkbookNamedItemAddBody(@Nonnull final WorkbookNamedItemAddBodyBuilder builder) {
         this.name = builder.name;
         this.reference = builder.reference;

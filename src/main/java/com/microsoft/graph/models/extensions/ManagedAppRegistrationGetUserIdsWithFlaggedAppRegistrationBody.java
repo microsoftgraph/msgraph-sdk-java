@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationBody {
 
+    /**
+     * Instiaciates a new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationBody
+     */
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationBody() {}
     private ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationBody(@Nonnull final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationBodyBuilder builder) {
     }
     /**

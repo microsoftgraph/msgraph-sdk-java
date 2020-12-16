@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceRebootNowBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceRebootNowBody
+     */
+    public ManagedDeviceRebootNowBody() {}
     private ManagedDeviceRebootNowBody(@Nonnull final ManagedDeviceRebootNowBodyBuilder builder) {
     }
     /**

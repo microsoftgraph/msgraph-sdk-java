@@ -67,6 +67,10 @@ public class WorkbookFunctionsIntRateBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIntRateBody
+     */
+    public WorkbookFunctionsIntRateBody() {}
     private WorkbookFunctionsIntRateBody(@Nonnull final WorkbookFunctionsIntRateBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

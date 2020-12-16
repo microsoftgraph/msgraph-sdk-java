@@ -86,6 +86,10 @@ public class DriveItemInviteBody {
     public String password;
 
 
+    /**
+     * Instiaciates a new DriveItemInviteBody
+     */
+    public DriveItemInviteBody() {}
     private DriveItemInviteBody(@Nonnull final DriveItemInviteBodyBuilder builder) {
         this.requireSignIn = builder.requireSignIn;
         this.roles = builder.roles;

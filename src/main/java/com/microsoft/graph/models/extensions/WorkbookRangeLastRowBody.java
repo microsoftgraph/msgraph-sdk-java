@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRangeLastRowBody {
 
+    /**
+     * Instiaciates a new WorkbookRangeLastRowBody
+     */
+    public WorkbookRangeLastRowBody() {}
     private WorkbookRangeLastRowBody(@Nonnull final WorkbookRangeLastRowBodyBuilder builder) {
     }
     /**

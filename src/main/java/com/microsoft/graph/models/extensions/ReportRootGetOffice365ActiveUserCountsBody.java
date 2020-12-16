@@ -31,6 +31,10 @@ public class ReportRootGetOffice365ActiveUserCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOffice365ActiveUserCountsBody
+     */
+    public ReportRootGetOffice365ActiveUserCountsBody() {}
     private ReportRootGetOffice365ActiveUserCountsBody(@Nonnull final ReportRootGetOffice365ActiveUserCountsBodyBuilder builder) {
         this.period = builder.period;
     }

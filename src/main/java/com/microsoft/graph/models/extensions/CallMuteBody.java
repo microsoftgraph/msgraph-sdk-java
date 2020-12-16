@@ -31,6 +31,10 @@ public class CallMuteBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new CallMuteBody
+     */
+    public CallMuteBody() {}
     private CallMuteBody(@Nonnull final CallMuteBodyBuilder builder) {
         this.clientContext = builder.clientContext;
     }

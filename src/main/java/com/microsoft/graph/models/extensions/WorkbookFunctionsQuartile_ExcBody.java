@@ -40,6 +40,10 @@ public class WorkbookFunctionsQuartile_ExcBody {
     public com.google.gson.JsonElement quart;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsQuartile_ExcBody
+     */
+    public WorkbookFunctionsQuartile_ExcBody() {}
     private WorkbookFunctionsQuartile_ExcBody(@Nonnull final WorkbookFunctionsQuartile_ExcBodyBuilder builder) {
         this.array = builder.array;
         this.quart = builder.quart;

@@ -31,6 +31,10 @@ public class WorkbookFunctionsKurtBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsKurtBody
+     */
+    public WorkbookFunctionsKurtBody() {}
     private WorkbookFunctionsKurtBody(@Nonnull final WorkbookFunctionsKurtBodyBuilder builder) {
         this.values = builder.values;
     }

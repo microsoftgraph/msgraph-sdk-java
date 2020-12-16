@@ -31,6 +31,10 @@ public class PostReplyBody {
     public Post post;
 
 
+    /**
+     * Instiaciates a new PostReplyBody
+     */
+    public PostReplyBody() {}
     private PostReplyBody(@Nonnull final PostReplyBodyBuilder builder) {
         this.post = builder.post;
     }

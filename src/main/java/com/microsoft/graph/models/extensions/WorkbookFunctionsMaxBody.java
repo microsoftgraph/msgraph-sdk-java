@@ -31,6 +31,10 @@ public class WorkbookFunctionsMaxBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMaxBody
+     */
+    public WorkbookFunctionsMaxBody() {}
     private WorkbookFunctionsMaxBody(@Nonnull final WorkbookFunctionsMaxBodyBuilder builder) {
         this.values = builder.values;
     }

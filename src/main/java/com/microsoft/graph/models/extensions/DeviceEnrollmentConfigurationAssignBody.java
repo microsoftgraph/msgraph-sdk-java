@@ -31,6 +31,10 @@ public class DeviceEnrollmentConfigurationAssignBody {
     public java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments;
 
 
+    /**
+     * Instiaciates a new DeviceEnrollmentConfigurationAssignBody
+     */
+    public DeviceEnrollmentConfigurationAssignBody() {}
     private DeviceEnrollmentConfigurationAssignBody(@Nonnull final DeviceEnrollmentConfigurationAssignBodyBuilder builder) {
         this.enrollmentConfigurationAssignments = builder.enrollmentConfigurationAssignments;
     }

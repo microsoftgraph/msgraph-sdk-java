@@ -49,6 +49,10 @@ public class WorkbookFunctionsF_Dist_RTBody {
     public com.google.gson.JsonElement degFreedom2;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsF_Dist_RTBody
+     */
+    public WorkbookFunctionsF_Dist_RTBody() {}
     private WorkbookFunctionsF_Dist_RTBody(@Nonnull final WorkbookFunctionsF_Dist_RTBodyBuilder builder) {
         this.x = builder.x;
         this.degFreedom1 = builder.degFreedom1;

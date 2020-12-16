@@ -40,6 +40,10 @@ public class WorkbookFunctionsBitorBody {
     public com.google.gson.JsonElement number2;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBitorBody
+     */
+    public WorkbookFunctionsBitorBody() {}
     private WorkbookFunctionsBitorBody(@Nonnull final WorkbookFunctionsBitorBodyBuilder builder) {
         this.number1 = builder.number1;
         this.number2 = builder.number2;

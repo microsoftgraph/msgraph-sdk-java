@@ -49,6 +49,10 @@ public class WorkbookFunctionsFloor_MathBody {
     public com.google.gson.JsonElement mode;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsFloor_MathBody
+     */
+    public WorkbookFunctionsFloor_MathBody() {}
     private WorkbookFunctionsFloor_MathBody(@Nonnull final WorkbookFunctionsFloor_MathBodyBuilder builder) {
         this.number = builder.number;
         this.significance = builder.significance;

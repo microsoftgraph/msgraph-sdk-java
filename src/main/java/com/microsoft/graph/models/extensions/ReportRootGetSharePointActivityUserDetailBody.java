@@ -31,6 +31,10 @@ public class ReportRootGetSharePointActivityUserDetailBody {
     public com.microsoft.graph.core.DateOnly date;
 
 
+    /**
+     * Instiaciates a new ReportRootGetSharePointActivityUserDetailBody
+     */
+    public ReportRootGetSharePointActivityUserDetailBody() {}
     private ReportRootGetSharePointActivityUserDetailBody(@Nonnull final ReportRootGetSharePointActivityUserDetailBodyBuilder builder) {
         this.date = builder.date;
     }

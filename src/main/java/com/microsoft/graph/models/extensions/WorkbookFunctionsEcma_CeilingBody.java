@@ -40,6 +40,10 @@ public class WorkbookFunctionsEcma_CeilingBody {
     public com.google.gson.JsonElement significance;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsEcma_CeilingBody
+     */
+    public WorkbookFunctionsEcma_CeilingBody() {}
     private WorkbookFunctionsEcma_CeilingBody(@Nonnull final WorkbookFunctionsEcma_CeilingBodyBuilder builder) {
         this.number = builder.number;
         this.significance = builder.significance;

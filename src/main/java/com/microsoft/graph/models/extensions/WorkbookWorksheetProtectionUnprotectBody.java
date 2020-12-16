@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookWorksheetProtectionUnprotectBody {
 
+    /**
+     * Instiaciates a new WorkbookWorksheetProtectionUnprotectBody
+     */
+    public WorkbookWorksheetProtectionUnprotectBody() {}
     private WorkbookWorksheetProtectionUnprotectBody(@Nonnull final WorkbookWorksheetProtectionUnprotectBodyBuilder builder) {
     }
     /**

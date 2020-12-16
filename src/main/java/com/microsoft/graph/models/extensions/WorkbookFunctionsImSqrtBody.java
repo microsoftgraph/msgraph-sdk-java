@@ -31,6 +31,10 @@ public class WorkbookFunctionsImSqrtBody {
     public com.google.gson.JsonElement inumber;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsImSqrtBody
+     */
+    public WorkbookFunctionsImSqrtBody() {}
     private WorkbookFunctionsImSqrtBody(@Nonnull final WorkbookFunctionsImSqrtBodyBuilder builder) {
         this.inumber = builder.inumber;
     }

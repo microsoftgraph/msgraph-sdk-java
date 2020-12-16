@@ -40,6 +40,10 @@ public class WorkbookFunctionsQuotientBody {
     public com.google.gson.JsonElement denominator;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsQuotientBody
+     */
+    public WorkbookFunctionsQuotientBody() {}
     private WorkbookFunctionsQuotientBody(@Nonnull final WorkbookFunctionsQuotientBodyBuilder builder) {
         this.numerator = builder.numerator;
         this.denominator = builder.denominator;

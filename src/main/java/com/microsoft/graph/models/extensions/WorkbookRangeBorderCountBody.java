@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRangeBorderCountBody {
 
+    /**
+     * Instiaciates a new WorkbookRangeBorderCountBody
+     */
+    public WorkbookRangeBorderCountBody() {}
     private WorkbookRangeBorderCountBody(@Nonnull final WorkbookRangeBorderCountBodyBuilder builder) {
     }
     /**

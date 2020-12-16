@@ -31,6 +31,10 @@ public class WorkbookFunctionsSecBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSecBody
+     */
+    public WorkbookFunctionsSecBody() {}
     private WorkbookFunctionsSecBody(@Nonnull final WorkbookFunctionsSecBodyBuilder builder) {
         this.number = builder.number;
     }

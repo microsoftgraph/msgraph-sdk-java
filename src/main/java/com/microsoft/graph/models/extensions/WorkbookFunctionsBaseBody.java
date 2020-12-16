@@ -49,6 +49,10 @@ public class WorkbookFunctionsBaseBody {
     public com.google.gson.JsonElement minLength;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBaseBody
+     */
+    public WorkbookFunctionsBaseBody() {}
     private WorkbookFunctionsBaseBody(@Nonnull final WorkbookFunctionsBaseBodyBuilder builder) {
         this.number = builder.number;
         this.radix = builder.radix;

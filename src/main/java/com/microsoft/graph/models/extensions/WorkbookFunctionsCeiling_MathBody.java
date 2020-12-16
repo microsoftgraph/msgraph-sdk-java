@@ -49,6 +49,10 @@ public class WorkbookFunctionsCeiling_MathBody {
     public com.google.gson.JsonElement mode;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCeiling_MathBody
+     */
+    public WorkbookFunctionsCeiling_MathBody() {}
     private WorkbookFunctionsCeiling_MathBody(@Nonnull final WorkbookFunctionsCeiling_MathBodyBuilder builder) {
         this.number = builder.number;
         this.significance = builder.significance;

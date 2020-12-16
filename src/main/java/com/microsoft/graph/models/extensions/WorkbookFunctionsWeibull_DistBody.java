@@ -58,6 +58,10 @@ public class WorkbookFunctionsWeibull_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsWeibull_DistBody
+     */
+    public WorkbookFunctionsWeibull_DistBody() {}
     private WorkbookFunctionsWeibull_DistBody(@Nonnull final WorkbookFunctionsWeibull_DistBodyBuilder builder) {
         this.x = builder.x;
         this.alpha = builder.alpha;

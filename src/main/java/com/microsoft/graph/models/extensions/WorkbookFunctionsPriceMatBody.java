@@ -76,6 +76,10 @@ public class WorkbookFunctionsPriceMatBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPriceMatBody
+     */
+    public WorkbookFunctionsPriceMatBody() {}
     private WorkbookFunctionsPriceMatBody(@Nonnull final WorkbookFunctionsPriceMatBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

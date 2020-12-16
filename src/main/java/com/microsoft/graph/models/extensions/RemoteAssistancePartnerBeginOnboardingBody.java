@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class RemoteAssistancePartnerBeginOnboardingBody {
 
+    /**
+     * Instiaciates a new RemoteAssistancePartnerBeginOnboardingBody
+     */
+    public RemoteAssistancePartnerBeginOnboardingBody() {}
     private RemoteAssistancePartnerBeginOnboardingBody(@Nonnull final RemoteAssistancePartnerBeginOnboardingBodyBuilder builder) {
     }
     /**

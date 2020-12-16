@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookFunctionsNaBody {
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNaBody
+     */
+    public WorkbookFunctionsNaBody() {}
     private WorkbookFunctionsNaBody(@Nonnull final WorkbookFunctionsNaBodyBuilder builder) {
     }
     /**

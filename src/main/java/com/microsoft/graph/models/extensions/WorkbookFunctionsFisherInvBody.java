@@ -31,6 +31,10 @@ public class WorkbookFunctionsFisherInvBody {
     public com.google.gson.JsonElement y;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsFisherInvBody
+     */
+    public WorkbookFunctionsFisherInvBody() {}
     private WorkbookFunctionsFisherInvBody(@Nonnull final WorkbookFunctionsFisherInvBodyBuilder builder) {
         this.y = builder.y;
     }

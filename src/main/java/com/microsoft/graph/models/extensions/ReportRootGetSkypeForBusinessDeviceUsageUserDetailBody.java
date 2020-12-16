@@ -31,6 +31,10 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailBody {
     public com.microsoft.graph.core.DateOnly date;
 
 
+    /**
+     * Instiaciates a new ReportRootGetSkypeForBusinessDeviceUsageUserDetailBody
+     */
+    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailBody() {}
     private ReportRootGetSkypeForBusinessDeviceUsageUserDetailBody(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageUserDetailBodyBuilder builder) {
         this.date = builder.date;
     }

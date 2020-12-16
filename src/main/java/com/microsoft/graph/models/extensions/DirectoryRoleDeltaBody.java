@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DirectoryRoleDeltaBody {
 
+    /**
+     * Instiaciates a new DirectoryRoleDeltaBody
+     */
+    public DirectoryRoleDeltaBody() {}
     private DirectoryRoleDeltaBody(@Nonnull final DirectoryRoleDeltaBodyBuilder builder) {
     }
     /**

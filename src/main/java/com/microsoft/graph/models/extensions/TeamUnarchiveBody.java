@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class TeamUnarchiveBody {
 
+    /**
+     * Instiaciates a new TeamUnarchiveBody
+     */
+    public TeamUnarchiveBody() {}
     private TeamUnarchiveBody(@Nonnull final TeamUnarchiveBodyBuilder builder) {
     }
     /**

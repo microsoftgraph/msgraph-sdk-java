@@ -40,6 +40,10 @@ public class WorkbookFunctionsBitrshiftBody {
     public com.google.gson.JsonElement shiftAmount;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBitrshiftBody
+     */
+    public WorkbookFunctionsBitrshiftBody() {}
     private WorkbookFunctionsBitrshiftBody(@Nonnull final WorkbookFunctionsBitrshiftBodyBuilder builder) {
         this.number = builder.number;
         this.shiftAmount = builder.shiftAmount;

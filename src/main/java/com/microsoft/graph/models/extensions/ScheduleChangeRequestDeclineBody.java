@@ -31,6 +31,10 @@ public class ScheduleChangeRequestDeclineBody {
     public String message;
 
 
+    /**
+     * Instiaciates a new ScheduleChangeRequestDeclineBody
+     */
+    public ScheduleChangeRequestDeclineBody() {}
     private ScheduleChangeRequestDeclineBody(@Nonnull final ScheduleChangeRequestDeclineBodyBuilder builder) {
         this.message = builder.message;
     }

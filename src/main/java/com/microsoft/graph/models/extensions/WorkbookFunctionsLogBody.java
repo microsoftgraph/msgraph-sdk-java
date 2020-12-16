@@ -40,6 +40,10 @@ public class WorkbookFunctionsLogBody {
     public com.google.gson.JsonElement base;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLogBody
+     */
+    public WorkbookFunctionsLogBody() {}
     private WorkbookFunctionsLogBody(@Nonnull final WorkbookFunctionsLogBodyBuilder builder) {
         this.number = builder.number;
         this.base = builder.base;

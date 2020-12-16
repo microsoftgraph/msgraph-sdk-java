@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class UserRemoveAllDevicesFromManagementBody {
 
+    /**
+     * Instiaciates a new UserRemoveAllDevicesFromManagementBody
+     */
+    public UserRemoveAllDevicesFromManagementBody() {}
     private UserRemoveAllDevicesFromManagementBody(@Nonnull final UserRemoveAllDevicesFromManagementBodyBuilder builder) {
     }
     /**

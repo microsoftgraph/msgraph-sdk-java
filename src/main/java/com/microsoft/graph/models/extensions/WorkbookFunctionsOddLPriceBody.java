@@ -94,6 +94,10 @@ public class WorkbookFunctionsOddLPriceBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsOddLPriceBody
+     */
+    public WorkbookFunctionsOddLPriceBody() {}
     private WorkbookFunctionsOddLPriceBody(@Nonnull final WorkbookFunctionsOddLPriceBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

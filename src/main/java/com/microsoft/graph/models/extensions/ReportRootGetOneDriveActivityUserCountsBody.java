@@ -31,6 +31,10 @@ public class ReportRootGetOneDriveActivityUserCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOneDriveActivityUserCountsBody
+     */
+    public ReportRootGetOneDriveActivityUserCountsBody() {}
     private ReportRootGetOneDriveActivityUserCountsBody(@Nonnull final ReportRootGetOneDriveActivityUserCountsBodyBuilder builder) {
         this.period = builder.period;
     }

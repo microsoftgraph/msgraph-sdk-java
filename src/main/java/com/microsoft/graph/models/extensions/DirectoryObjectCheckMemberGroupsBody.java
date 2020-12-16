@@ -31,6 +31,10 @@ public class DirectoryObjectCheckMemberGroupsBody {
     public java.util.List<String> groupIds;
 
 
+    /**
+     * Instiaciates a new DirectoryObjectCheckMemberGroupsBody
+     */
+    public DirectoryObjectCheckMemberGroupsBody() {}
     private DirectoryObjectCheckMemberGroupsBody(@Nonnull final DirectoryObjectCheckMemberGroupsBodyBuilder builder) {
         this.groupIds = builder.groupIds;
     }

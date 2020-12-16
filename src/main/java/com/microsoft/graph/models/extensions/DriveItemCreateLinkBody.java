@@ -67,6 +67,10 @@ public class DriveItemCreateLinkBody {
     public String message;
 
 
+    /**
+     * Instiaciates a new DriveItemCreateLinkBody
+     */
+    public DriveItemCreateLinkBody() {}
     private DriveItemCreateLinkBody(@Nonnull final DriveItemCreateLinkBodyBuilder builder) {
         this.type = builder.type;
         this.scope = builder.scope;

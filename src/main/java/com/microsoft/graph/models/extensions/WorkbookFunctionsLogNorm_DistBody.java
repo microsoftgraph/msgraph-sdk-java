@@ -58,6 +58,10 @@ public class WorkbookFunctionsLogNorm_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLogNorm_DistBody
+     */
+    public WorkbookFunctionsLogNorm_DistBody() {}
     private WorkbookFunctionsLogNorm_DistBody(@Nonnull final WorkbookFunctionsLogNorm_DistBodyBuilder builder) {
         this.x = builder.x;
         this.mean = builder.mean;

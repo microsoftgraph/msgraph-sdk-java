@@ -49,6 +49,10 @@ public class WorkbookFunctionsComplexBody {
     public com.google.gson.JsonElement suffix;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsComplexBody
+     */
+    public WorkbookFunctionsComplexBody() {}
     private WorkbookFunctionsComplexBody(@Nonnull final WorkbookFunctionsComplexBodyBuilder builder) {
         this.realNum = builder.realNum;
         this.iNum = builder.iNum;

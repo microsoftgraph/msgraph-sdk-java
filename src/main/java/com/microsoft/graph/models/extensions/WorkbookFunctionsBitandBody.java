@@ -40,6 +40,10 @@ public class WorkbookFunctionsBitandBody {
     public com.google.gson.JsonElement number2;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBitandBody
+     */
+    public WorkbookFunctionsBitandBody() {}
     private WorkbookFunctionsBitandBody(@Nonnull final WorkbookFunctionsBitandBodyBuilder builder) {
         this.number1 = builder.number1;
         this.number2 = builder.number2;

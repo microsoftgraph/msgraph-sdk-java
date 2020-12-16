@@ -58,6 +58,10 @@ public class WorkbookFunctionsVlookupBody {
     public com.google.gson.JsonElement rangeLookup;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsVlookupBody
+     */
+    public WorkbookFunctionsVlookupBody() {}
     private WorkbookFunctionsVlookupBody(@Nonnull final WorkbookFunctionsVlookupBodyBuilder builder) {
         this.lookupValue = builder.lookupValue;
         this.tableArray = builder.tableArray;

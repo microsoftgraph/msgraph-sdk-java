@@ -31,6 +31,10 @@ public class WorkbookFunctionsSecondBody {
     public com.google.gson.JsonElement serialNumber;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSecondBody
+     */
+    public WorkbookFunctionsSecondBody() {}
     private WorkbookFunctionsSecondBody(@Nonnull final WorkbookFunctionsSecondBodyBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }

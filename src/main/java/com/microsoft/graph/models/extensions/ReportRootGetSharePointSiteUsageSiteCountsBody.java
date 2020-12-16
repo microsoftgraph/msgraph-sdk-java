@@ -31,6 +31,10 @@ public class ReportRootGetSharePointSiteUsageSiteCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetSharePointSiteUsageSiteCountsBody
+     */
+    public ReportRootGetSharePointSiteUsageSiteCountsBody() {}
     private ReportRootGetSharePointSiteUsageSiteCountsBody(@Nonnull final ReportRootGetSharePointSiteUsageSiteCountsBodyBuilder builder) {
         this.period = builder.period;
     }

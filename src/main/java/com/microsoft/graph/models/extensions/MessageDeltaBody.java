@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class MessageDeltaBody {
 
+    /**
+     * Instiaciates a new MessageDeltaBody
+     */
+    public MessageDeltaBody() {}
     private MessageDeltaBody(@Nonnull final MessageDeltaBodyBuilder builder) {
     }
     /**

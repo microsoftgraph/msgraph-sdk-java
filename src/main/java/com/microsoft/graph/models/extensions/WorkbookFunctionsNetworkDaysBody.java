@@ -49,6 +49,10 @@ public class WorkbookFunctionsNetworkDaysBody {
     public com.google.gson.JsonElement holidays;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNetworkDaysBody
+     */
+    public WorkbookFunctionsNetworkDaysBody() {}
     private WorkbookFunctionsNetworkDaysBody(@Nonnull final WorkbookFunctionsNetworkDaysBodyBuilder builder) {
         this.startDate = builder.startDate;
         this.endDate = builder.endDate;

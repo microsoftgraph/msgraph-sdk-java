@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceRetireBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceRetireBody
+     */
+    public ManagedDeviceRetireBody() {}
     private ManagedDeviceRetireBody(@Nonnull final ManagedDeviceRetireBodyBuilder builder) {
     }
     /**

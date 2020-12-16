@@ -31,6 +31,10 @@ public class ManagedAppPolicyTargetAppsBody {
     public java.util.List<ManagedMobileApp> apps;
 
 
+    /**
+     * Instiaciates a new ManagedAppPolicyTargetAppsBody
+     */
+    public ManagedAppPolicyTargetAppsBody() {}
     private ManagedAppPolicyTargetAppsBody(@Nonnull final ManagedAppPolicyTargetAppsBodyBuilder builder) {
         this.apps = builder.apps;
     }

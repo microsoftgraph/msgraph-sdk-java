@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class TodoTaskListDeltaBody {
 
+    /**
+     * Instiaciates a new TodoTaskListDeltaBody
+     */
+    public TodoTaskListDeltaBody() {}
     private TodoTaskListDeltaBody(@Nonnull final TodoTaskListDeltaBodyBuilder builder) {
     }
     /**

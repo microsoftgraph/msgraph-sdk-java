@@ -31,6 +31,10 @@ public class DeviceManagementGetEffectivePermissionsBody {
     public String scope;
 
 
+    /**
+     * Instiaciates a new DeviceManagementGetEffectivePermissionsBody
+     */
+    public DeviceManagementGetEffectivePermissionsBody() {}
     private DeviceManagementGetEffectivePermissionsBody(@Nonnull final DeviceManagementGetEffectivePermissionsBodyBuilder builder) {
         this.scope = builder.scope;
     }

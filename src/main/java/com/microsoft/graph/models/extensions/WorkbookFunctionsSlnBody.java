@@ -49,6 +49,10 @@ public class WorkbookFunctionsSlnBody {
     public com.google.gson.JsonElement life;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSlnBody
+     */
+    public WorkbookFunctionsSlnBody() {}
     private WorkbookFunctionsSlnBody(@Nonnull final WorkbookFunctionsSlnBodyBuilder builder) {
         this.cost = builder.cost;
         this.salvage = builder.salvage;

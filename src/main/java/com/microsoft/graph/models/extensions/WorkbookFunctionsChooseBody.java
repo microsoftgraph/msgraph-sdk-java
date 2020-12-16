@@ -40,6 +40,10 @@ public class WorkbookFunctionsChooseBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsChooseBody
+     */
+    public WorkbookFunctionsChooseBody() {}
     private WorkbookFunctionsChooseBody(@Nonnull final WorkbookFunctionsChooseBodyBuilder builder) {
         this.indexNum = builder.indexNum;
         this.values = builder.values;

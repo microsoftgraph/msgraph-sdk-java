@@ -31,6 +31,10 @@ public class DirectoryObjectGetAvailableExtensionPropertiesBody {
     public Boolean isSyncedFromOnPremises;
 
 
+    /**
+     * Instiaciates a new DirectoryObjectGetAvailableExtensionPropertiesBody
+     */
+    public DirectoryObjectGetAvailableExtensionPropertiesBody() {}
     private DirectoryObjectGetAvailableExtensionPropertiesBody(@Nonnull final DirectoryObjectGetAvailableExtensionPropertiesBodyBuilder builder) {
         this.isSyncedFromOnPremises = builder.isSyncedFromOnPremises;
     }

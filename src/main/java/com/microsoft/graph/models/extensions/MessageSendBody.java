@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class MessageSendBody {
 
+    /**
+     * Instiaciates a new MessageSendBody
+     */
+    public MessageSendBody() {}
     private MessageSendBody(@Nonnull final MessageSendBodyBuilder builder) {
     }
     /**

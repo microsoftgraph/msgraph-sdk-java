@@ -40,6 +40,10 @@ public class ApplicationRemoveKeyBody {
     public String proof;
 
 
+    /**
+     * Instiaciates a new ApplicationRemoveKeyBody
+     */
+    public ApplicationRemoveKeyBody() {}
     private ApplicationRemoveKeyBody(@Nonnull final ApplicationRemoveKeyBodyBuilder builder) {
         this.keyId = builder.keyId;
         this.proof = builder.proof;

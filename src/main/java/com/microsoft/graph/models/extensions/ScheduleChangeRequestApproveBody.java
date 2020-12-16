@@ -31,6 +31,10 @@ public class ScheduleChangeRequestApproveBody {
     public String message;
 
 
+    /**
+     * Instiaciates a new ScheduleChangeRequestApproveBody
+     */
+    public ScheduleChangeRequestApproveBody() {}
     private ScheduleChangeRequestApproveBody(@Nonnull final ScheduleChangeRequestApproveBodyBuilder builder) {
         this.message = builder.message;
     }

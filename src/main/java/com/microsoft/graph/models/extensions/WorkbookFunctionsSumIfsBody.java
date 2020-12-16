@@ -40,6 +40,10 @@ public class WorkbookFunctionsSumIfsBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSumIfsBody
+     */
+    public WorkbookFunctionsSumIfsBody() {}
     private WorkbookFunctionsSumIfsBody(@Nonnull final WorkbookFunctionsSumIfsBodyBuilder builder) {
         this.sumRange = builder.sumRange;
         this.values = builder.values;

@@ -31,6 +31,10 @@ public class OnenotePageOnenotePatchContentBody {
     public java.util.List<OnenotePatchContentCommand> commands;
 
 
+    /**
+     * Instiaciates a new OnenotePageOnenotePatchContentBody
+     */
+    public OnenotePageOnenotePatchContentBody() {}
     private OnenotePageOnenotePatchContentBody(@Nonnull final OnenotePageOnenotePatchContentBodyBuilder builder) {
         this.commands = builder.commands;
     }

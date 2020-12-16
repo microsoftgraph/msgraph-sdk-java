@@ -49,6 +49,10 @@ public class WorkbookFunctionsDateBody {
     public com.google.gson.JsonElement day;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDateBody
+     */
+    public WorkbookFunctionsDateBody() {}
     private WorkbookFunctionsDateBody(@Nonnull final WorkbookFunctionsDateBodyBuilder builder) {
         this.year = builder.year;
         this.month = builder.month;

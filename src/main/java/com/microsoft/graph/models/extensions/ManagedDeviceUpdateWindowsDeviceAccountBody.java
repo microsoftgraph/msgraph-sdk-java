@@ -31,6 +31,10 @@ public class ManagedDeviceUpdateWindowsDeviceAccountBody {
     public UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter;
 
 
+    /**
+     * Instiaciates a new ManagedDeviceUpdateWindowsDeviceAccountBody
+     */
+    public ManagedDeviceUpdateWindowsDeviceAccountBody() {}
     private ManagedDeviceUpdateWindowsDeviceAccountBody(@Nonnull final ManagedDeviceUpdateWindowsDeviceAccountBodyBuilder builder) {
         this.updateWindowsDeviceAccountActionParameter = builder.updateWindowsDeviceAccountActionParameter;
     }

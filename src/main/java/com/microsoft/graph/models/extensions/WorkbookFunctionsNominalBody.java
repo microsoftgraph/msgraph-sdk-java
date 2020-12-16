@@ -40,6 +40,10 @@ public class WorkbookFunctionsNominalBody {
     public com.google.gson.JsonElement npery;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNominalBody
+     */
+    public WorkbookFunctionsNominalBody() {}
     private WorkbookFunctionsNominalBody(@Nonnull final WorkbookFunctionsNominalBodyBuilder builder) {
         this.effectRate = builder.effectRate;
         this.npery = builder.npery;

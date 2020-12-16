@@ -95,6 +95,10 @@ public class CallRecordResponseBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new CallRecordResponseBody
+     */
+    public CallRecordResponseBody() {}
     private CallRecordResponseBody(@Nonnull final CallRecordResponseBodyBuilder builder) {
         this.prompts = builder.prompts;
         this.bargeInAllowed = builder.bargeInAllowed;

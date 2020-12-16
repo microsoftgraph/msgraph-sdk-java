@@ -31,6 +31,10 @@ public class WorkbookFunctionsStDevPABody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsStDevPABody
+     */
+    public WorkbookFunctionsStDevPABody() {}
     private WorkbookFunctionsStDevPABody(@Nonnull final WorkbookFunctionsStDevPABodyBuilder builder) {
         this.values = builder.values;
     }

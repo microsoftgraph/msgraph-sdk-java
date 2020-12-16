@@ -40,6 +40,10 @@ public class WorkbookFunctionsNorm_S_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNorm_S_DistBody
+     */
+    public WorkbookFunctionsNorm_S_DistBody() {}
     private WorkbookFunctionsNorm_S_DistBody(@Nonnull final WorkbookFunctionsNorm_S_DistBodyBuilder builder) {
         this.z = builder.z;
         this.cumulative = builder.cumulative;

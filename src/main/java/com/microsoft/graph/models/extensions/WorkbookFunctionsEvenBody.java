@@ -31,6 +31,10 @@ public class WorkbookFunctionsEvenBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsEvenBody
+     */
+    public WorkbookFunctionsEvenBody() {}
     private WorkbookFunctionsEvenBody(@Nonnull final WorkbookFunctionsEvenBodyBuilder builder) {
         this.number = builder.number;
     }

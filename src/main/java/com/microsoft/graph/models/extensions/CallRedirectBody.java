@@ -49,6 +49,10 @@ public class CallRedirectBody {
     public String callbackUri;
 
 
+    /**
+     * Instiaciates a new CallRedirectBody
+     */
+    public CallRedirectBody() {}
     private CallRedirectBody(@Nonnull final CallRedirectBodyBuilder builder) {
         this.targets = builder.targets;
         this.timeout = builder.timeout;

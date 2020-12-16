@@ -58,6 +58,10 @@ public class OnenotePageCopyToSectionBody {
     public String siteId;
 
 
+    /**
+     * Instiaciates a new OnenotePageCopyToSectionBody
+     */
+    public OnenotePageCopyToSectionBody() {}
     private OnenotePageCopyToSectionBody(@Nonnull final OnenotePageCopyToSectionBodyBuilder builder) {
         this.id = builder.id;
         this.groupId = builder.groupId;

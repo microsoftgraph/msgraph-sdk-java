@@ -31,6 +31,10 @@ public class ReportRootGetMailboxUsageDetailBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetMailboxUsageDetailBody
+     */
+    public ReportRootGetMailboxUsageDetailBody() {}
     private ReportRootGetMailboxUsageDetailBody(@Nonnull final ReportRootGetMailboxUsageDetailBodyBuilder builder) {
         this.period = builder.period;
     }

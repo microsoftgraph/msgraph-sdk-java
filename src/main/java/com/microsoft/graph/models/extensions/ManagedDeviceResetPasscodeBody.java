@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceResetPasscodeBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceResetPasscodeBody
+     */
+    public ManagedDeviceResetPasscodeBody() {}
     private ManagedDeviceResetPasscodeBody(@Nonnull final ManagedDeviceResetPasscodeBodyBuilder builder) {
     }
     /**

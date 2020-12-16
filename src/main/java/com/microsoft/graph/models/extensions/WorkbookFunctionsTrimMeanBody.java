@@ -40,6 +40,10 @@ public class WorkbookFunctionsTrimMeanBody {
     public com.google.gson.JsonElement percent;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTrimMeanBody
+     */
+    public WorkbookFunctionsTrimMeanBody() {}
     private WorkbookFunctionsTrimMeanBody(@Nonnull final WorkbookFunctionsTrimMeanBodyBuilder builder) {
         this.array = builder.array;
         this.percent = builder.percent;

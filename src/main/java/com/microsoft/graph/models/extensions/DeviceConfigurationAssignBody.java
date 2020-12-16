@@ -31,6 +31,10 @@ public class DeviceConfigurationAssignBody {
     public java.util.List<DeviceConfigurationAssignment> assignments;
 
 
+    /**
+     * Instiaciates a new DeviceConfigurationAssignBody
+     */
+    public DeviceConfigurationAssignBody() {}
     private DeviceConfigurationAssignBody(@Nonnull final DeviceConfigurationAssignBodyBuilder builder) {
         this.assignments = builder.assignments;
     }

@@ -40,6 +40,10 @@ public class WorkbookRangeResizedRangeBody {
     public Integer deltaColumns;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeResizedRangeBody
+     */
+    public WorkbookRangeResizedRangeBody() {}
     private WorkbookRangeResizedRangeBody(@Nonnull final WorkbookRangeResizedRangeBodyBuilder builder) {
         this.deltaRows = builder.deltaRows;
         this.deltaColumns = builder.deltaColumns;

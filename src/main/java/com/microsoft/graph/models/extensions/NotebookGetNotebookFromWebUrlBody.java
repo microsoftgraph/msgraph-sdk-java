@@ -31,6 +31,10 @@ public class NotebookGetNotebookFromWebUrlBody {
     public String webUrl;
 
 
+    /**
+     * Instiaciates a new NotebookGetNotebookFromWebUrlBody
+     */
+    public NotebookGetNotebookFromWebUrlBody() {}
     private NotebookGetNotebookFromWebUrlBody(@Nonnull final NotebookGetNotebookFromWebUrlBodyBuilder builder) {
         this.webUrl = builder.webUrl;
     }

@@ -31,6 +31,10 @@ public class WorkbookFunctionsTypeBody {
     public com.google.gson.JsonElement value;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTypeBody
+     */
+    public WorkbookFunctionsTypeBody() {}
     private WorkbookFunctionsTypeBody(@Nonnull final WorkbookFunctionsTypeBodyBuilder builder) {
         this.value = builder.value;
     }

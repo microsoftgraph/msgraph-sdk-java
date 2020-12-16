@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DirectoryObjectRestoreBody {
 
+    /**
+     * Instiaciates a new DirectoryObjectRestoreBody
+     */
+    public DirectoryObjectRestoreBody() {}
     private DirectoryObjectRestoreBody(@Nonnull final DirectoryObjectRestoreBodyBuilder builder) {
     }
     /**

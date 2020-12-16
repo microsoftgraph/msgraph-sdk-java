@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ChatGetAllMessagesBody {
 
+    /**
+     * Instiaciates a new ChatGetAllMessagesBody
+     */
+    public ChatGetAllMessagesBody() {}
     private ChatGetAllMessagesBody(@Nonnull final ChatGetAllMessagesBodyBuilder builder) {
     }
     /**

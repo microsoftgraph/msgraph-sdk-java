@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class TeamGetAllMessagesBody {
 
+    /**
+     * Instiaciates a new TeamGetAllMessagesBody
+     */
+    public TeamGetAllMessagesBody() {}
     private TeamGetAllMessagesBody(@Nonnull final TeamGetAllMessagesBodyBuilder builder) {
     }
     /**

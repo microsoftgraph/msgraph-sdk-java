@@ -31,6 +31,10 @@ public class WorkbookFunctionsMinBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMinBody
+     */
+    public WorkbookFunctionsMinBody() {}
     private WorkbookFunctionsMinBody(@Nonnull final WorkbookFunctionsMinBodyBuilder builder) {
         this.values = builder.values;
     }

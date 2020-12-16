@@ -31,6 +31,10 @@ public class WorkbookFunctionsLnBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLnBody
+     */
+    public WorkbookFunctionsLnBody() {}
     private WorkbookFunctionsLnBody(@Nonnull final WorkbookFunctionsLnBodyBuilder builder) {
         this.number = builder.number;
     }

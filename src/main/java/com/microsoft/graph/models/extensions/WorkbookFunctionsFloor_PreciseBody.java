@@ -40,6 +40,10 @@ public class WorkbookFunctionsFloor_PreciseBody {
     public com.google.gson.JsonElement significance;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsFloor_PreciseBody
+     */
+    public WorkbookFunctionsFloor_PreciseBody() {}
     private WorkbookFunctionsFloor_PreciseBody(@Nonnull final WorkbookFunctionsFloor_PreciseBodyBuilder builder) {
         this.number = builder.number;
         this.significance = builder.significance;

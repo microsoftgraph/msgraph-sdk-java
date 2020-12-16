@@ -49,6 +49,10 @@ public class WorkbookFunctionsDsumBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDsumBody
+     */
+    public WorkbookFunctionsDsumBody() {}
     private WorkbookFunctionsDsumBody(@Nonnull final WorkbookFunctionsDsumBodyBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;

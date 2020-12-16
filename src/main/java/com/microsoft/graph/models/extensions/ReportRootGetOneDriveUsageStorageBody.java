@@ -31,6 +31,10 @@ public class ReportRootGetOneDriveUsageStorageBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOneDriveUsageStorageBody
+     */
+    public ReportRootGetOneDriveUsageStorageBody() {}
     private ReportRootGetOneDriveUsageStorageBody(@Nonnull final ReportRootGetOneDriveUsageStorageBodyBuilder builder) {
         this.period = builder.period;
     }

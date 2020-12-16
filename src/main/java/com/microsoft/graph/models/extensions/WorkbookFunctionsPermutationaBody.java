@@ -40,6 +40,10 @@ public class WorkbookFunctionsPermutationaBody {
     public com.google.gson.JsonElement numberChosen;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPermutationaBody
+     */
+    public WorkbookFunctionsPermutationaBody() {}
     private WorkbookFunctionsPermutationaBody(@Nonnull final WorkbookFunctionsPermutationaBodyBuilder builder) {
         this.number = builder.number;
         this.numberChosen = builder.numberChosen;

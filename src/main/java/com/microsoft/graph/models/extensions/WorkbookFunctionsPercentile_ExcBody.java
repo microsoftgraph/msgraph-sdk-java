@@ -40,6 +40,10 @@ public class WorkbookFunctionsPercentile_ExcBody {
     public com.google.gson.JsonElement k;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPercentile_ExcBody
+     */
+    public WorkbookFunctionsPercentile_ExcBody() {}
     private WorkbookFunctionsPercentile_ExcBody(@Nonnull final WorkbookFunctionsPercentile_ExcBodyBuilder builder) {
         this.array = builder.array;
         this.k = builder.k;

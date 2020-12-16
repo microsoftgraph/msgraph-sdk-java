@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DriveSharedWithMeBody {
 
+    /**
+     * Instiaciates a new DriveSharedWithMeBody
+     */
+    public DriveSharedWithMeBody() {}
     private DriveSharedWithMeBody(@Nonnull final DriveSharedWithMeBodyBuilder builder) {
     }
     /**

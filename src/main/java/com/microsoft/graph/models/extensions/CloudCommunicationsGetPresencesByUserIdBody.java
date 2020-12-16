@@ -31,6 +31,10 @@ public class CloudCommunicationsGetPresencesByUserIdBody {
     public java.util.List<String> ids;
 
 
+    /**
+     * Instiaciates a new CloudCommunicationsGetPresencesByUserIdBody
+     */
+    public CloudCommunicationsGetPresencesByUserIdBody() {}
     private CloudCommunicationsGetPresencesByUserIdBody(@Nonnull final CloudCommunicationsGetPresencesByUserIdBodyBuilder builder) {
         this.ids = builder.ids;
     }

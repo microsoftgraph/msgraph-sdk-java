@@ -41,6 +41,10 @@ public class UserAssignLicenseBody {
     public java.util.List<java.util.UUID> removeLicenses;
 
 
+    /**
+     * Instiaciates a new UserAssignLicenseBody
+     */
+    public UserAssignLicenseBody() {}
     private UserAssignLicenseBody(@Nonnull final UserAssignLicenseBodyBuilder builder) {
         this.addLicenses = builder.addLicenses;
         this.removeLicenses = builder.removeLicenses;

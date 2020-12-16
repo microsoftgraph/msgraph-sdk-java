@@ -49,6 +49,10 @@ public class WorkbookFunctionsRriBody {
     public com.google.gson.JsonElement fv;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRriBody
+     */
+    public WorkbookFunctionsRriBody() {}
     private WorkbookFunctionsRriBody(@Nonnull final WorkbookFunctionsRriBodyBuilder builder) {
         this.nper = builder.nper;
         this.pv = builder.pv;

@@ -40,6 +40,10 @@ public class WorkbookFunctionsDollarDeBody {
     public com.google.gson.JsonElement fraction;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDollarDeBody
+     */
+    public WorkbookFunctionsDollarDeBody() {}
     private WorkbookFunctionsDollarDeBody(@Nonnull final WorkbookFunctionsDollarDeBodyBuilder builder) {
         this.fractionalDollar = builder.fractionalDollar;
         this.fraction = builder.fraction;

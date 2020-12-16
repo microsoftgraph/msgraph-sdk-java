@@ -67,6 +67,10 @@ public class WorkbookFunctionsPriceDiscBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPriceDiscBody
+     */
+    public WorkbookFunctionsPriceDiscBody() {}
     private WorkbookFunctionsPriceDiscBody(@Nonnull final WorkbookFunctionsPriceDiscBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

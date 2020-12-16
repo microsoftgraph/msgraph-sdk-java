@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class UserActivityRecentBody {
 
+    /**
+     * Instiaciates a new UserActivityRecentBody
+     */
+    public UserActivityRecentBody() {}
     private UserActivityRecentBody(@Nonnull final UserActivityRecentBodyBuilder builder) {
     }
     /**

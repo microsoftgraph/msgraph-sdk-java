@@ -31,6 +31,10 @@ public class UserWipeManagedAppRegistrationsByDeviceTagBody {
     public String deviceTag;
 
 
+    /**
+     * Instiaciates a new UserWipeManagedAppRegistrationsByDeviceTagBody
+     */
+    public UserWipeManagedAppRegistrationsByDeviceTagBody() {}
     private UserWipeManagedAppRegistrationsByDeviceTagBody(@Nonnull final UserWipeManagedAppRegistrationsByDeviceTagBodyBuilder builder) {
         this.deviceTag = builder.deviceTag;
     }

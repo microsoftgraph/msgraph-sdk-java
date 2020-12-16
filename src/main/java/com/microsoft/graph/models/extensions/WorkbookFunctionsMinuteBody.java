@@ -31,6 +31,10 @@ public class WorkbookFunctionsMinuteBody {
     public com.google.gson.JsonElement serialNumber;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMinuteBody
+     */
+    public WorkbookFunctionsMinuteBody() {}
     private WorkbookFunctionsMinuteBody(@Nonnull final WorkbookFunctionsMinuteBodyBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }

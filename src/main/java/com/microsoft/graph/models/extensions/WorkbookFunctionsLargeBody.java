@@ -40,6 +40,10 @@ public class WorkbookFunctionsLargeBody {
     public com.google.gson.JsonElement k;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLargeBody
+     */
+    public WorkbookFunctionsLargeBody() {}
     private WorkbookFunctionsLargeBody(@Nonnull final WorkbookFunctionsLargeBodyBuilder builder) {
         this.array = builder.array;
         this.k = builder.k;

@@ -40,6 +40,10 @@ public class WorkbookFunctionsGeStepBody {
     public com.google.gson.JsonElement step;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsGeStepBody
+     */
+    public WorkbookFunctionsGeStepBody() {}
     private WorkbookFunctionsGeStepBody(@Nonnull final WorkbookFunctionsGeStepBodyBuilder builder) {
         this.number = builder.number;
         this.step = builder.step;

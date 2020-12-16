@@ -31,6 +31,10 @@ public class WorkbookFunctionsErfC_PreciseBody {
     public com.google.gson.JsonElement x;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsErfC_PreciseBody
+     */
+    public WorkbookFunctionsErfC_PreciseBody() {}
     private WorkbookFunctionsErfC_PreciseBody(@Nonnull final WorkbookFunctionsErfC_PreciseBodyBuilder builder) {
         this.x = builder.x;
     }

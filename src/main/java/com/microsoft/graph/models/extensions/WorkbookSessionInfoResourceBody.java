@@ -31,6 +31,10 @@ public class WorkbookSessionInfoResourceBody {
     public String key;
 
 
+    /**
+     * Instiaciates a new WorkbookSessionInfoResourceBody
+     */
+    public WorkbookSessionInfoResourceBody() {}
     private WorkbookSessionInfoResourceBody(@Nonnull final WorkbookSessionInfoResourceBodyBuilder builder) {
         this.key = builder.key;
     }

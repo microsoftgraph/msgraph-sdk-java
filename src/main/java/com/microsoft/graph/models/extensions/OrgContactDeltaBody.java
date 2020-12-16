@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class OrgContactDeltaBody {
 
+    /**
+     * Instiaciates a new OrgContactDeltaBody
+     */
+    public OrgContactDeltaBody() {}
     private OrgContactDeltaBody(@Nonnull final OrgContactDeltaBodyBuilder builder) {
     }
     /**

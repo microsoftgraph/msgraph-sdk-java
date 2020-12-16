@@ -50,6 +50,10 @@ public class CallAnswerBody {
     public java.util.List<Modality> acceptedModalities;
 
 
+    /**
+     * Instiaciates a new CallAnswerBody
+     */
+    public CallAnswerBody() {}
     private CallAnswerBody(@Nonnull final CallAnswerBodyBuilder builder) {
         this.callbackUri = builder.callbackUri;
         this.mediaConfig = builder.mediaConfig;

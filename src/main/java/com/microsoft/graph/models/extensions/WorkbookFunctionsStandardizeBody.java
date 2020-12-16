@@ -49,6 +49,10 @@ public class WorkbookFunctionsStandardizeBody {
     public com.google.gson.JsonElement standardDev;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsStandardizeBody
+     */
+    public WorkbookFunctionsStandardizeBody() {}
     private WorkbookFunctionsStandardizeBody(@Nonnull final WorkbookFunctionsStandardizeBodyBuilder builder) {
         this.x = builder.x;
         this.mean = builder.mean;

@@ -40,6 +40,10 @@ public class WorkbookFunctionsLeftBody {
     public com.google.gson.JsonElement numChars;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLeftBody
+     */
+    public WorkbookFunctionsLeftBody() {}
     private WorkbookFunctionsLeftBody(@Nonnull final WorkbookFunctionsLeftBodyBuilder builder) {
         this.text = builder.text;
         this.numChars = builder.numChars;

@@ -58,6 +58,10 @@ public class WorkbookFunctionsSydBody {
     public com.google.gson.JsonElement per;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSydBody
+     */
+    public WorkbookFunctionsSydBody() {}
     private WorkbookFunctionsSydBody(@Nonnull final WorkbookFunctionsSydBodyBuilder builder) {
         this.cost = builder.cost;
         this.salvage = builder.salvage;

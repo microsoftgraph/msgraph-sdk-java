@@ -49,6 +49,10 @@ public class GroupValidatePropertiesBody {
     public java.util.UUID onBehalfOfUserId;
 
 
+    /**
+     * Instiaciates a new GroupValidatePropertiesBody
+     */
+    public GroupValidatePropertiesBody() {}
     private GroupValidatePropertiesBody(@Nonnull final GroupValidatePropertiesBodyBuilder builder) {
         this.displayName = builder.displayName;
         this.mailNickname = builder.mailNickname;

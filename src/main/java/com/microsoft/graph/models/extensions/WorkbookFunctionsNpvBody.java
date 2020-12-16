@@ -40,6 +40,10 @@ public class WorkbookFunctionsNpvBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNpvBody
+     */
+    public WorkbookFunctionsNpvBody() {}
     private WorkbookFunctionsNpvBody(@Nonnull final WorkbookFunctionsNpvBodyBuilder builder) {
         this.rate = builder.rate;
         this.values = builder.values;

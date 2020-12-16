@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestBody {
 
+    /**
+     * Instiaciates a new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestBody
+     */
+    public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestBody() {}
     private ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestBody(@Nonnull final ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestBodyBuilder builder) {
     }
     /**

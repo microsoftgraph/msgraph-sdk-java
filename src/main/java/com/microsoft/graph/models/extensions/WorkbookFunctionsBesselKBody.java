@@ -40,6 +40,10 @@ public class WorkbookFunctionsBesselKBody {
     public com.google.gson.JsonElement n;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBesselKBody
+     */
+    public WorkbookFunctionsBesselKBody() {}
     private WorkbookFunctionsBesselKBody(@Nonnull final WorkbookFunctionsBesselKBodyBuilder builder) {
         this.x = builder.x;
         this.n = builder.n;

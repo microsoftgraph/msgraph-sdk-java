@@ -31,6 +31,10 @@ public class TeamArchiveBody {
     public Boolean shouldSetSpoSiteReadOnlyForMembers;
 
 
+    /**
+     * Instiaciates a new TeamArchiveBody
+     */
+    public TeamArchiveBody() {}
     private TeamArchiveBody(@Nonnull final TeamArchiveBodyBuilder builder) {
         this.shouldSetSpoSiteReadOnlyForMembers = builder.shouldSetSpoSiteReadOnlyForMembers;
     }

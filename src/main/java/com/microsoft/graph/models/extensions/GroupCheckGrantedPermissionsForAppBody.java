@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class GroupCheckGrantedPermissionsForAppBody {
 
+    /**
+     * Instiaciates a new GroupCheckGrantedPermissionsForAppBody
+     */
+    public GroupCheckGrantedPermissionsForAppBody() {}
     private GroupCheckGrantedPermissionsForAppBody(@Nonnull final GroupCheckGrantedPermissionsForAppBodyBuilder builder) {
     }
     /**

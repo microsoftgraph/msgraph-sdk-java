@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class UserReprocessLicenseAssignmentBody {
 
+    /**
+     * Instiaciates a new UserReprocessLicenseAssignmentBody
+     */
+    public UserReprocessLicenseAssignmentBody() {}
     private UserReprocessLicenseAssignmentBody(@Nonnull final UserReprocessLicenseAssignmentBodyBuilder builder) {
     }
     /**

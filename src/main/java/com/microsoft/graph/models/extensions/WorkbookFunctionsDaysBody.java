@@ -40,6 +40,10 @@ public class WorkbookFunctionsDaysBody {
     public com.google.gson.JsonElement startDate;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDaysBody
+     */
+    public WorkbookFunctionsDaysBody() {}
     private WorkbookFunctionsDaysBody(@Nonnull final WorkbookFunctionsDaysBodyBuilder builder) {
         this.endDate = builder.endDate;
         this.startDate = builder.startDate;

@@ -76,6 +76,10 @@ public class WorkbookFunctionsDurationBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDurationBody
+     */
+    public WorkbookFunctionsDurationBody() {}
     private WorkbookFunctionsDurationBody(@Nonnull final WorkbookFunctionsDurationBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

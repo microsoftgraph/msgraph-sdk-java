@@ -67,6 +67,10 @@ public class WorkbookFunctionsHypGeom_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsHypGeom_DistBody
+     */
+    public WorkbookFunctionsHypGeom_DistBody() {}
     private WorkbookFunctionsHypGeom_DistBody(@Nonnull final WorkbookFunctionsHypGeom_DistBodyBuilder builder) {
         this.sampleS = builder.sampleS;
         this.numberSample = builder.numberSample;

@@ -40,6 +40,10 @@ public class WorkbookTableAddBody {
     public Boolean hasHeaders;
 
 
+    /**
+     * Instiaciates a new WorkbookTableAddBody
+     */
+    public WorkbookTableAddBody() {}
     private WorkbookTableAddBody(@Nonnull final WorkbookTableAddBodyBuilder builder) {
         this.address = builder.address;
         this.hasHeaders = builder.hasHeaders;

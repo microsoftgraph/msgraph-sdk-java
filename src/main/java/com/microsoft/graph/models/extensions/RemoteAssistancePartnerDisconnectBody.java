@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class RemoteAssistancePartnerDisconnectBody {
 
+    /**
+     * Instiaciates a new RemoteAssistancePartnerDisconnectBody
+     */
+    public RemoteAssistancePartnerDisconnectBody() {}
     private RemoteAssistancePartnerDisconnectBody(@Nonnull final RemoteAssistancePartnerDisconnectBodyBuilder builder) {
     }
     /**

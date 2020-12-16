@@ -40,6 +40,10 @@ public class WorkbookFunctionsExactBody {
     public com.google.gson.JsonElement text2;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsExactBody
+     */
+    public WorkbookFunctionsExactBody() {}
     private WorkbookFunctionsExactBody(@Nonnull final WorkbookFunctionsExactBodyBuilder builder) {
         this.text1 = builder.text1;
         this.text2 = builder.text2;

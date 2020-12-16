@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class GroupDeltaBody {
 
+    /**
+     * Instiaciates a new GroupDeltaBody
+     */
+    public GroupDeltaBody() {}
     private GroupDeltaBody(@Nonnull final GroupDeltaBodyBuilder builder) {
     }
     /**

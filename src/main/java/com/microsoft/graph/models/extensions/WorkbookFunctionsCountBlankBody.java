@@ -31,6 +31,10 @@ public class WorkbookFunctionsCountBlankBody {
     public com.google.gson.JsonElement range;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCountBlankBody
+     */
+    public WorkbookFunctionsCountBlankBody() {}
     private WorkbookFunctionsCountBlankBody(@Nonnull final WorkbookFunctionsCountBlankBodyBuilder builder) {
         this.range = builder.range;
     }

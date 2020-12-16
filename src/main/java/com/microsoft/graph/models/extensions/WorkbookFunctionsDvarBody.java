@@ -49,6 +49,10 @@ public class WorkbookFunctionsDvarBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDvarBody
+     */
+    public WorkbookFunctionsDvarBody() {}
     private WorkbookFunctionsDvarBody(@Nonnull final WorkbookFunctionsDvarBodyBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;

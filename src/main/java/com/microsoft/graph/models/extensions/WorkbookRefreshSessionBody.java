@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRefreshSessionBody {
 
+    /**
+     * Instiaciates a new WorkbookRefreshSessionBody
+     */
+    public WorkbookRefreshSessionBody() {}
     private WorkbookRefreshSessionBody(@Nonnull final WorkbookRefreshSessionBodyBuilder builder) {
     }
     /**

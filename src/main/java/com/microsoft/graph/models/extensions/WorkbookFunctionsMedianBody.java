@@ -31,6 +31,10 @@ public class WorkbookFunctionsMedianBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMedianBody
+     */
+    public WorkbookFunctionsMedianBody() {}
     private WorkbookFunctionsMedianBody(@Nonnull final WorkbookFunctionsMedianBodyBuilder builder) {
         this.values = builder.values;
     }

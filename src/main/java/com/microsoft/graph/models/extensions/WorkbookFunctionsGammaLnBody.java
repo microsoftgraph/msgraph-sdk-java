@@ -31,6 +31,10 @@ public class WorkbookFunctionsGammaLnBody {
     public com.google.gson.JsonElement x;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsGammaLnBody
+     */
+    public WorkbookFunctionsGammaLnBody() {}
     private WorkbookFunctionsGammaLnBody(@Nonnull final WorkbookFunctionsGammaLnBodyBuilder builder) {
         this.x = builder.x;
     }

@@ -31,6 +31,10 @@ public class MobileAppContentFileCommitBody {
     public FileEncryptionInfo fileEncryptionInfo;
 
 
+    /**
+     * Instiaciates a new MobileAppContentFileCommitBody
+     */
+    public MobileAppContentFileCommitBody() {}
     private MobileAppContentFileCommitBody(@Nonnull final MobileAppContentFileCommitBodyBuilder builder) {
         this.fileEncryptionInfo = builder.fileEncryptionInfo;
     }

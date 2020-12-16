@@ -49,6 +49,10 @@ public class WorkbookFunctionsDaverageBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDaverageBody
+     */
+    public WorkbookFunctionsDaverageBody() {}
     private WorkbookFunctionsDaverageBody(@Nonnull final WorkbookFunctionsDaverageBodyBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;

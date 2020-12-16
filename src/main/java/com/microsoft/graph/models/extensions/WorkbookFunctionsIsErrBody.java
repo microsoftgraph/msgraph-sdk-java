@@ -31,6 +31,10 @@ public class WorkbookFunctionsIsErrBody {
     public com.google.gson.JsonElement value;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIsErrBody
+     */
+    public WorkbookFunctionsIsErrBody() {}
     private WorkbookFunctionsIsErrBody(@Nonnull final WorkbookFunctionsIsErrBodyBuilder builder) {
         this.value = builder.value;
     }

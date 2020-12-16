@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DriveItemVersionRestoreVersionBody {
 
+    /**
+     * Instiaciates a new DriveItemVersionRestoreVersionBody
+     */
+    public DriveItemVersionRestoreVersionBody() {}
     private DriveItemVersionRestoreVersionBody(@Nonnull final DriveItemVersionRestoreVersionBodyBuilder builder) {
     }
     /**

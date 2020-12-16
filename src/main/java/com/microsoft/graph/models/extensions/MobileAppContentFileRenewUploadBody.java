@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class MobileAppContentFileRenewUploadBody {
 
+    /**
+     * Instiaciates a new MobileAppContentFileRenewUploadBody
+     */
+    public MobileAppContentFileRenewUploadBody() {}
     private MobileAppContentFileRenewUploadBody(@Nonnull final MobileAppContentFileRenewUploadBodyBuilder builder) {
     }
     /**

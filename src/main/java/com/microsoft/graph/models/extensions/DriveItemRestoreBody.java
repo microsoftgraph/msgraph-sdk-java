@@ -41,6 +41,10 @@ public class DriveItemRestoreBody {
     public String name;
 
 
+    /**
+     * Instiaciates a new DriveItemRestoreBody
+     */
+    public DriveItemRestoreBody() {}
     private DriveItemRestoreBody(@Nonnull final DriveItemRestoreBodyBuilder builder) {
         this.parentReference = builder.parentReference;
         this.name = builder.name;

@@ -31,6 +31,10 @@ public class WorkbookChartItemBody {
     public String name;
 
 
+    /**
+     * Instiaciates a new WorkbookChartItemBody
+     */
+    public WorkbookChartItemBody() {}
     private WorkbookChartItemBody(@Nonnull final WorkbookChartItemBodyBuilder builder) {
         this.name = builder.name;
     }

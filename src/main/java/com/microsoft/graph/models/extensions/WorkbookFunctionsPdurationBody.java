@@ -49,6 +49,10 @@ public class WorkbookFunctionsPdurationBody {
     public com.google.gson.JsonElement fv;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPdurationBody
+     */
+    public WorkbookFunctionsPdurationBody() {}
     private WorkbookFunctionsPdurationBody(@Nonnull final WorkbookFunctionsPdurationBodyBuilder builder) {
         this.rate = builder.rate;
         this.pv = builder.pv;

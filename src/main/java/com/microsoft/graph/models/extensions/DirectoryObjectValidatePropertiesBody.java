@@ -58,6 +58,10 @@ public class DirectoryObjectValidatePropertiesBody {
     public java.util.UUID onBehalfOfUserId;
 
 
+    /**
+     * Instiaciates a new DirectoryObjectValidatePropertiesBody
+     */
+    public DirectoryObjectValidatePropertiesBody() {}
     private DirectoryObjectValidatePropertiesBody(@Nonnull final DirectoryObjectValidatePropertiesBodyBuilder builder) {
         this.entityType = builder.entityType;
         this.displayName = builder.displayName;

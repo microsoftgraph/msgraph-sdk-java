@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class VppTokenSyncLicensesBody {
 
+    /**
+     * Instiaciates a new VppTokenSyncLicensesBody
+     */
+    public VppTokenSyncLicensesBody() {}
     private VppTokenSyncLicensesBody(@Nonnull final VppTokenSyncLicensesBodyBuilder builder) {
     }
     /**

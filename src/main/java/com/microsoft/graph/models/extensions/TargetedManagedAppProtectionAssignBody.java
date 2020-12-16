@@ -31,6 +31,10 @@ public class TargetedManagedAppProtectionAssignBody {
     public java.util.List<TargetedManagedAppPolicyAssignment> assignments;
 
 
+    /**
+     * Instiaciates a new TargetedManagedAppProtectionAssignBody
+     */
+    public TargetedManagedAppProtectionAssignBody() {}
     private TargetedManagedAppProtectionAssignBody(@Nonnull final TargetedManagedAppProtectionAssignBodyBuilder builder) {
         this.assignments = builder.assignments;
     }

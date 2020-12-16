@@ -31,6 +31,10 @@ public class WorkbookFunctionsLowerBody {
     public com.google.gson.JsonElement text;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLowerBody
+     */
+    public WorkbookFunctionsLowerBody() {}
     private WorkbookFunctionsLowerBody(@Nonnull final WorkbookFunctionsLowerBodyBuilder builder) {
         this.text = builder.text;
     }

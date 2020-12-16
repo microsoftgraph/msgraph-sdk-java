@@ -41,6 +41,10 @@ public class CallPlayPromptBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new CallPlayPromptBody
+     */
+    public CallPlayPromptBody() {}
     private CallPlayPromptBody(@Nonnull final CallPlayPromptBodyBuilder builder) {
         this.prompts = builder.prompts;
         this.clientContext = builder.clientContext;

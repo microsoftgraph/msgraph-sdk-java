@@ -40,6 +40,10 @@ public class DriveItemPreviewBody {
     public Double zoom;
 
 
+    /**
+     * Instiaciates a new DriveItemPreviewBody
+     */
+    public DriveItemPreviewBody() {}
     private DriveItemPreviewBody(@Nonnull final DriveItemPreviewBodyBuilder builder) {
         this.page = builder.page;
         this.zoom = builder.zoom;

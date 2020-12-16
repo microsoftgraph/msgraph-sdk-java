@@ -97,6 +97,10 @@ public class UserFindMeetingTimesBody {
     public Double minimumAttendeePercentage;
 
 
+    /**
+     * Instiaciates a new UserFindMeetingTimesBody
+     */
+    public UserFindMeetingTimesBody() {}
     private UserFindMeetingTimesBody(@Nonnull final UserFindMeetingTimesBodyBuilder builder) {
         this.attendees = builder.attendees;
         this.locationConstraint = builder.locationConstraint;

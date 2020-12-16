@@ -40,6 +40,10 @@ public class WorkbookFunctionsReptBody {
     public com.google.gson.JsonElement numberTimes;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsReptBody
+     */
+    public WorkbookFunctionsReptBody() {}
     private WorkbookFunctionsReptBody(@Nonnull final WorkbookFunctionsReptBodyBuilder builder) {
         this.text = builder.text;
         this.numberTimes = builder.numberTimes;

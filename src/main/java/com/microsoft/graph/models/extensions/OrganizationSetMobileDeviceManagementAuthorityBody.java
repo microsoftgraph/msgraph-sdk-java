@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class OrganizationSetMobileDeviceManagementAuthorityBody {
 
+    /**
+     * Instiaciates a new OrganizationSetMobileDeviceManagementAuthorityBody
+     */
+    public OrganizationSetMobileDeviceManagementAuthorityBody() {}
     private OrganizationSetMobileDeviceManagementAuthorityBody(@Nonnull final OrganizationSetMobileDeviceManagementAuthorityBodyBuilder builder) {
     }
     /**

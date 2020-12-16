@@ -31,6 +31,10 @@ public class WorkbookFunctionsGeoMeanBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsGeoMeanBody
+     */
+    public WorkbookFunctionsGeoMeanBody() {}
     private WorkbookFunctionsGeoMeanBody(@Nonnull final WorkbookFunctionsGeoMeanBodyBuilder builder) {
         this.values = builder.values;
     }

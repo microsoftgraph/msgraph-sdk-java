@@ -31,6 +31,10 @@ public class ReportRootGetEmailActivityCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetEmailActivityCountsBody
+     */
+    public ReportRootGetEmailActivityCountsBody() {}
     private ReportRootGetEmailActivityCountsBody(@Nonnull final ReportRootGetEmailActivityCountsBodyBuilder builder) {
         this.period = builder.period;
     }

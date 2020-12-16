@@ -49,6 +49,10 @@ public class WorkbookFunctionsSumIfBody {
     public com.google.gson.JsonElement sumRange;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSumIfBody
+     */
+    public WorkbookFunctionsSumIfBody() {}
     private WorkbookFunctionsSumIfBody(@Nonnull final WorkbookFunctionsSumIfBodyBuilder builder) {
         this.range = builder.range;
         this.criteria = builder.criteria;

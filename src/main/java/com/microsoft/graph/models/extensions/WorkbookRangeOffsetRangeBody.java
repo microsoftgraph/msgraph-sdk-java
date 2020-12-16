@@ -40,6 +40,10 @@ public class WorkbookRangeOffsetRangeBody {
     public Integer columnOffset;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeOffsetRangeBody
+     */
+    public WorkbookRangeOffsetRangeBody() {}
     private WorkbookRangeOffsetRangeBody(@Nonnull final WorkbookRangeOffsetRangeBodyBuilder builder) {
         this.rowOffset = builder.rowOffset;
         this.columnOffset = builder.columnOffset;

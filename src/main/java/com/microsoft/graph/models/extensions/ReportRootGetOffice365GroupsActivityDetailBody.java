@@ -31,6 +31,10 @@ public class ReportRootGetOffice365GroupsActivityDetailBody {
     public com.microsoft.graph.core.DateOnly date;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOffice365GroupsActivityDetailBody
+     */
+    public ReportRootGetOffice365GroupsActivityDetailBody() {}
     private ReportRootGetOffice365GroupsActivityDetailBody(@Nonnull final ReportRootGetOffice365GroupsActivityDetailBodyBuilder builder) {
         this.date = builder.date;
     }

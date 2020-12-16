@@ -31,6 +31,10 @@ public class WorkbookFunctionsIsLogicalBody {
     public com.google.gson.JsonElement value;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIsLogicalBody
+     */
+    public WorkbookFunctionsIsLogicalBody() {}
     private WorkbookFunctionsIsLogicalBody(@Nonnull final WorkbookFunctionsIsLogicalBodyBuilder builder) {
         this.value = builder.value;
     }

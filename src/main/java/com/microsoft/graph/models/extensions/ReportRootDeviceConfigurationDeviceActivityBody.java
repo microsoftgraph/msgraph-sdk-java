@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ReportRootDeviceConfigurationDeviceActivityBody {
 
+    /**
+     * Instiaciates a new ReportRootDeviceConfigurationDeviceActivityBody
+     */
+    public ReportRootDeviceConfigurationDeviceActivityBody() {}
     private ReportRootDeviceConfigurationDeviceActivityBody(@Nonnull final ReportRootDeviceConfigurationDeviceActivityBodyBuilder builder) {
     }
     /**

@@ -40,6 +40,10 @@ public class EventDeclineBody {
     public Boolean sendResponse;
 
 
+    /**
+     * Instiaciates a new EventDeclineBody
+     */
+    public EventDeclineBody() {}
     private EventDeclineBody(@Nonnull final EventDeclineBodyBuilder builder) {
         this.comment = builder.comment;
         this.sendResponse = builder.sendResponse;

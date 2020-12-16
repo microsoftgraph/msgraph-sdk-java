@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceShutDownBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceShutDownBody
+     */
+    public ManagedDeviceShutDownBody() {}
     private ManagedDeviceShutDownBody(@Nonnull final ManagedDeviceShutDownBodyBuilder builder) {
     }
     /**

@@ -31,6 +31,10 @@ public class WorkbookFunctionsMonthBody {
     public com.google.gson.JsonElement serialNumber;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMonthBody
+     */
+    public WorkbookFunctionsMonthBody() {}
     private WorkbookFunctionsMonthBody(@Nonnull final WorkbookFunctionsMonthBodyBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }

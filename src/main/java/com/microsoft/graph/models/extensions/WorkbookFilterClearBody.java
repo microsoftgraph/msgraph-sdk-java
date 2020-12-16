@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookFilterClearBody {
 
+    /**
+     * Instiaciates a new WorkbookFilterClearBody
+     */
+    public WorkbookFilterClearBody() {}
     private WorkbookFilterClearBody(@Nonnull final WorkbookFilterClearBodyBuilder builder) {
     }
     /**

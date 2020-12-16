@@ -40,6 +40,10 @@ public class WorkbookFunctionsLeftbBody {
     public com.google.gson.JsonElement numBytes;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLeftbBody
+     */
+    public WorkbookFunctionsLeftbBody() {}
     private WorkbookFunctionsLeftbBody(@Nonnull final WorkbookFunctionsLeftbBodyBuilder builder) {
         this.text = builder.text;
         this.numBytes = builder.numBytes;

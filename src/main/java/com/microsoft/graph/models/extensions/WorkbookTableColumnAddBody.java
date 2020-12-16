@@ -49,6 +49,10 @@ public class WorkbookTableColumnAddBody {
     public String name;
 
 
+    /**
+     * Instiaciates a new WorkbookTableColumnAddBody
+     */
+    public WorkbookTableColumnAddBody() {}
     private WorkbookTableColumnAddBody(@Nonnull final WorkbookTableColumnAddBodyBuilder builder) {
         this.index = builder.index;
         this.values = builder.values;

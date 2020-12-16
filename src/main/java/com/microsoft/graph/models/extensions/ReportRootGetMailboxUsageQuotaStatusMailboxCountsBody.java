@@ -31,6 +31,10 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetMailboxUsageQuotaStatusMailboxCountsBody
+     */
+    public ReportRootGetMailboxUsageQuotaStatusMailboxCountsBody() {}
     private ReportRootGetMailboxUsageQuotaStatusMailboxCountsBody(@Nonnull final ReportRootGetMailboxUsageQuotaStatusMailboxCountsBodyBuilder builder) {
         this.period = builder.period;
     }

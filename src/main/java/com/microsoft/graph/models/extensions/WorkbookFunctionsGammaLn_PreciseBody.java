@@ -31,6 +31,10 @@ public class WorkbookFunctionsGammaLn_PreciseBody {
     public com.google.gson.JsonElement x;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsGammaLn_PreciseBody
+     */
+    public WorkbookFunctionsGammaLn_PreciseBody() {}
     private WorkbookFunctionsGammaLn_PreciseBody(@Nonnull final WorkbookFunctionsGammaLn_PreciseBodyBuilder builder) {
         this.x = builder.x;
     }

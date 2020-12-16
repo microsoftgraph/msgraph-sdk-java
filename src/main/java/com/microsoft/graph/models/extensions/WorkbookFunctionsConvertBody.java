@@ -49,6 +49,10 @@ public class WorkbookFunctionsConvertBody {
     public com.google.gson.JsonElement toUnit;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsConvertBody
+     */
+    public WorkbookFunctionsConvertBody() {}
     private WorkbookFunctionsConvertBody(@Nonnull final WorkbookFunctionsConvertBodyBuilder builder) {
         this.number = builder.number;
         this.fromUnit = builder.fromUnit;

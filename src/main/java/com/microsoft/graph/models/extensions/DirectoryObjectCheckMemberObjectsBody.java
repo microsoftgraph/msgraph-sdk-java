@@ -31,6 +31,10 @@ public class DirectoryObjectCheckMemberObjectsBody {
     public java.util.List<String> ids;
 
 
+    /**
+     * Instiaciates a new DirectoryObjectCheckMemberObjectsBody
+     */
+    public DirectoryObjectCheckMemberObjectsBody() {}
     private DirectoryObjectCheckMemberObjectsBody(@Nonnull final DirectoryObjectCheckMemberObjectsBodyBuilder builder) {
         this.ids = builder.ids;
     }

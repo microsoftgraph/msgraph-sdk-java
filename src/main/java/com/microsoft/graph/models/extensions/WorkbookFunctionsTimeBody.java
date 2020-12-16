@@ -49,6 +49,10 @@ public class WorkbookFunctionsTimeBody {
     public com.google.gson.JsonElement second;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTimeBody
+     */
+    public WorkbookFunctionsTimeBody() {}
     private WorkbookFunctionsTimeBody(@Nonnull final WorkbookFunctionsTimeBodyBuilder builder) {
         this.hour = builder.hour;
         this.minute = builder.minute;

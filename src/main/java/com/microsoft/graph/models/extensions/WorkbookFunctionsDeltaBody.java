@@ -40,6 +40,10 @@ public class WorkbookFunctionsDeltaBody {
     public com.google.gson.JsonElement number2;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDeltaBody
+     */
+    public WorkbookFunctionsDeltaBody() {}
     private WorkbookFunctionsDeltaBody(@Nonnull final WorkbookFunctionsDeltaBodyBuilder builder) {
         this.number1 = builder.number1;
         this.number2 = builder.number2;

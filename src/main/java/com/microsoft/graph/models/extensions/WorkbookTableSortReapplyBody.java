@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookTableSortReapplyBody {
 
+    /**
+     * Instiaciates a new WorkbookTableSortReapplyBody
+     */
+    public WorkbookTableSortReapplyBody() {}
     private WorkbookTableSortReapplyBody(@Nonnull final WorkbookTableSortReapplyBodyBuilder builder) {
     }
     /**

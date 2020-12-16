@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRangeRowsBelowBody {
 
+    /**
+     * Instiaciates a new WorkbookRangeRowsBelowBody
+     */
+    public WorkbookRangeRowsBelowBody() {}
     private WorkbookRangeRowsBelowBody(@Nonnull final WorkbookRangeRowsBelowBodyBuilder builder) {
     }
     /**

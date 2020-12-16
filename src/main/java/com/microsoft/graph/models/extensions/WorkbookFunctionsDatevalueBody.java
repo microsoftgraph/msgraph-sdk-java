@@ -31,6 +31,10 @@ public class WorkbookFunctionsDatevalueBody {
     public com.google.gson.JsonElement dateText;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDatevalueBody
+     */
+    public WorkbookFunctionsDatevalueBody() {}
     private WorkbookFunctionsDatevalueBody(@Nonnull final WorkbookFunctionsDatevalueBodyBuilder builder) {
         this.dateText = builder.dateText;
     }

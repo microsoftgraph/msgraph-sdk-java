@@ -31,6 +31,10 @@ public class WorkbookFunctionsRadiansBody {
     public com.google.gson.JsonElement angle;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRadiansBody
+     */
+    public WorkbookFunctionsRadiansBody() {}
     private WorkbookFunctionsRadiansBody(@Nonnull final WorkbookFunctionsRadiansBodyBuilder builder) {
         this.angle = builder.angle;
     }

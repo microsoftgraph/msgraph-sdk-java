@@ -31,6 +31,10 @@ public class WorkbookFunctionsIsTextBody {
     public com.google.gson.JsonElement value;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIsTextBody
+     */
+    public WorkbookFunctionsIsTextBody() {}
     private WorkbookFunctionsIsTextBody(@Nonnull final WorkbookFunctionsIsTextBodyBuilder builder) {
         this.value = builder.value;
     }

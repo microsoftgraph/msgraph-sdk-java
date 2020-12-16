@@ -40,6 +40,10 @@ public class WorkbookFunctionsBin2HexBody {
     public com.google.gson.JsonElement places;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBin2HexBody
+     */
+    public WorkbookFunctionsBin2HexBody() {}
     private WorkbookFunctionsBin2HexBody(@Nonnull final WorkbookFunctionsBin2HexBodyBuilder builder) {
         this.number = builder.number;
         this.places = builder.places;

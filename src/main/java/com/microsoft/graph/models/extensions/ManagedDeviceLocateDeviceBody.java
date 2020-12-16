@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceLocateDeviceBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceLocateDeviceBody
+     */
+    public ManagedDeviceLocateDeviceBody() {}
     private ManagedDeviceLocateDeviceBody(@Nonnull final ManagedDeviceLocateDeviceBodyBuilder builder) {
     }
     /**

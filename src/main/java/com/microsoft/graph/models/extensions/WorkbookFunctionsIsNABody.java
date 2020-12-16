@@ -31,6 +31,10 @@ public class WorkbookFunctionsIsNABody {
     public com.google.gson.JsonElement value;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIsNABody
+     */
+    public WorkbookFunctionsIsNABody() {}
     private WorkbookFunctionsIsNABody(@Nonnull final WorkbookFunctionsIsNABodyBuilder builder) {
         this.value = builder.value;
     }

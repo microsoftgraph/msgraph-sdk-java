@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class UserGetManagedAppDiagnosticStatusesBody {
 
+    /**
+     * Instiaciates a new UserGetManagedAppDiagnosticStatusesBody
+     */
+    public UserGetManagedAppDiagnosticStatusesBody() {}
     private UserGetManagedAppDiagnosticStatusesBody(@Nonnull final UserGetManagedAppDiagnosticStatusesBodyBuilder builder) {
     }
     /**

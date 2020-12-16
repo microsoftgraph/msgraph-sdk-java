@@ -40,6 +40,10 @@ public class WorkbookRangeCellBody {
     public Integer column;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeCellBody
+     */
+    public WorkbookRangeCellBody() {}
     private WorkbookRangeCellBody(@Nonnull final WorkbookRangeCellBodyBuilder builder) {
         this.row = builder.row;
         this.column = builder.column;

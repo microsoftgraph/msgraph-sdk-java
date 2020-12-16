@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DriveItemCheckoutBody {
 
+    /**
+     * Instiaciates a new DriveItemCheckoutBody
+     */
+    public DriveItemCheckoutBody() {}
     private DriveItemCheckoutBody(@Nonnull final DriveItemCheckoutBodyBuilder builder) {
     }
     /**

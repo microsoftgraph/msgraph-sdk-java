@@ -49,6 +49,10 @@ public class ScheduleShareBody {
     public java.util.Calendar endDateTime;
 
 
+    /**
+     * Instiaciates a new ScheduleShareBody
+     */
+    public ScheduleShareBody() {}
     private ScheduleShareBody(@Nonnull final ScheduleShareBodyBuilder builder) {
         this.notifyTeam = builder.notifyTeam;
         this.startDateTime = builder.startDateTime;

@@ -31,6 +31,10 @@ public class WorkbookFilterApplyBody {
     public WorkbookFilterCriteria criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFilterApplyBody
+     */
+    public WorkbookFilterApplyBody() {}
     private WorkbookFilterApplyBody(@Nonnull final WorkbookFilterApplyBodyBuilder builder) {
         this.criteria = builder.criteria;
     }

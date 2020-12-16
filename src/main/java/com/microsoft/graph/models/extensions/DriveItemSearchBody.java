@@ -31,6 +31,10 @@ public class DriveItemSearchBody {
     public String q;
 
 
+    /**
+     * Instiaciates a new DriveItemSearchBody
+     */
+    public DriveItemSearchBody() {}
     private DriveItemSearchBody(@Nonnull final DriveItemSearchBodyBuilder builder) {
         this.q = builder.q;
     }

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class CallKeepAliveBody {
 
+    /**
+     * Instiaciates a new CallKeepAliveBody
+     */
+    public CallKeepAliveBody() {}
     private CallKeepAliveBody(@Nonnull final CallKeepAliveBodyBuilder builder) {
     }
     /**

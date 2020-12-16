@@ -32,6 +32,10 @@ public class SearchEntityQueryBody {
     public java.util.List<SearchRequest> requests;
 
 
+    /**
+     * Instiaciates a new SearchEntityQueryBody
+     */
+    public SearchEntityQueryBody() {}
     private SearchEntityQueryBody(@Nonnull final SearchEntityQueryBodyBuilder builder) {
         this.requests = builder.requests;
     }

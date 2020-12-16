@@ -31,6 +31,10 @@ public class WorkbookFunctionsYearBody {
     public com.google.gson.JsonElement serialNumber;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsYearBody
+     */
+    public WorkbookFunctionsYearBody() {}
     private WorkbookFunctionsYearBody(@Nonnull final WorkbookFunctionsYearBodyBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }

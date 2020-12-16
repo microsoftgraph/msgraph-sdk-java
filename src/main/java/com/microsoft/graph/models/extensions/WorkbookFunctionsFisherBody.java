@@ -31,6 +31,10 @@ public class WorkbookFunctionsFisherBody {
     public com.google.gson.JsonElement x;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsFisherBody
+     */
+    public WorkbookFunctionsFisherBody() {}
     private WorkbookFunctionsFisherBody(@Nonnull final WorkbookFunctionsFisherBodyBuilder builder) {
         this.x = builder.x;
     }

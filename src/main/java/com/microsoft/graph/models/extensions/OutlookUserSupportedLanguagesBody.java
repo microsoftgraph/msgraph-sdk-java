@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class OutlookUserSupportedLanguagesBody {
 
+    /**
+     * Instiaciates a new OutlookUserSupportedLanguagesBody
+     */
+    public OutlookUserSupportedLanguagesBody() {}
     private OutlookUserSupportedLanguagesBody(@Nonnull final OutlookUserSupportedLanguagesBodyBuilder builder) {
     }
     /**

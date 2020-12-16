@@ -49,6 +49,10 @@ public class WorkbookFunctionsIfBody {
     public com.google.gson.JsonElement valueIfFalse;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIfBody
+     */
+    public WorkbookFunctionsIfBody() {}
     private WorkbookFunctionsIfBody(@Nonnull final WorkbookFunctionsIfBodyBuilder builder) {
         this.logicalTest = builder.logicalTest;
         this.valueIfTrue = builder.valueIfTrue;

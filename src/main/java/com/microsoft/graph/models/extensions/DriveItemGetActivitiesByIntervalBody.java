@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DriveItemGetActivitiesByIntervalBody {
 
+    /**
+     * Instiaciates a new DriveItemGetActivitiesByIntervalBody
+     */
+    public DriveItemGetActivitiesByIntervalBody() {}
     private DriveItemGetActivitiesByIntervalBody(@Nonnull final DriveItemGetActivitiesByIntervalBodyBuilder builder) {
     }
     /**

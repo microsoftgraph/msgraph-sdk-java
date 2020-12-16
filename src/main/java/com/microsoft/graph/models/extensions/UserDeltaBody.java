@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class UserDeltaBody {
 
+    /**
+     * Instiaciates a new UserDeltaBody
+     */
+    public UserDeltaBody() {}
     private UserDeltaBody(@Nonnull final UserDeltaBodyBuilder builder) {
     }
     /**

@@ -40,6 +40,10 @@ public class WorkbookFunctionsEoMonthBody {
     public com.google.gson.JsonElement months;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsEoMonthBody
+     */
+    public WorkbookFunctionsEoMonthBody() {}
     private WorkbookFunctionsEoMonthBody(@Nonnull final WorkbookFunctionsEoMonthBodyBuilder builder) {
         this.startDate = builder.startDate;
         this.months = builder.months;

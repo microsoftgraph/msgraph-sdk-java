@@ -49,6 +49,10 @@ public class WorkbookFunctionsConfidence_NormBody {
     public com.google.gson.JsonElement size;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsConfidence_NormBody
+     */
+    public WorkbookFunctionsConfidence_NormBody() {}
     private WorkbookFunctionsConfidence_NormBody(@Nonnull final WorkbookFunctionsConfidence_NormBodyBuilder builder) {
         this.alpha = builder.alpha;
         this.standardDev = builder.standardDev;

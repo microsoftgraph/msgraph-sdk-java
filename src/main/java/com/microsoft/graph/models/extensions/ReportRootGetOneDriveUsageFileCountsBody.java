@@ -31,6 +31,10 @@ public class ReportRootGetOneDriveUsageFileCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOneDriveUsageFileCountsBody
+     */
+    public ReportRootGetOneDriveUsageFileCountsBody() {}
     private ReportRootGetOneDriveUsageFileCountsBody(@Nonnull final ReportRootGetOneDriveUsageFileCountsBodyBuilder builder) {
         this.period = builder.period;
     }

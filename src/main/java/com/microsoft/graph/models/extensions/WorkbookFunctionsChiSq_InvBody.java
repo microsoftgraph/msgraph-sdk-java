@@ -40,6 +40,10 @@ public class WorkbookFunctionsChiSq_InvBody {
     public com.google.gson.JsonElement degFreedom;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsChiSq_InvBody
+     */
+    public WorkbookFunctionsChiSq_InvBody() {}
     private WorkbookFunctionsChiSq_InvBody(@Nonnull final WorkbookFunctionsChiSq_InvBodyBuilder builder) {
         this.probability = builder.probability;
         this.degFreedom = builder.degFreedom;

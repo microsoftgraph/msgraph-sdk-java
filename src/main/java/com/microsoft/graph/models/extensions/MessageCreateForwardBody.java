@@ -50,6 +50,10 @@ public class MessageCreateForwardBody {
     public String comment;
 
 
+    /**
+     * Instiaciates a new MessageCreateForwardBody
+     */
+    public MessageCreateForwardBody() {}
     private MessageCreateForwardBody(@Nonnull final MessageCreateForwardBodyBuilder builder) {
         this.toRecipients = builder.toRecipients;
         this.message = builder.message;

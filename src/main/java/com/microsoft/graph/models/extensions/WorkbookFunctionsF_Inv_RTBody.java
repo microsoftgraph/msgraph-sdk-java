@@ -49,6 +49,10 @@ public class WorkbookFunctionsF_Inv_RTBody {
     public com.google.gson.JsonElement degFreedom2;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsF_Inv_RTBody
+     */
+    public WorkbookFunctionsF_Inv_RTBody() {}
     private WorkbookFunctionsF_Inv_RTBody(@Nonnull final WorkbookFunctionsF_Inv_RTBodyBuilder builder) {
         this.probability = builder.probability;
         this.degFreedom1 = builder.degFreedom1;

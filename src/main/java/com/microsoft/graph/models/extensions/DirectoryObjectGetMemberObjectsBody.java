@@ -31,6 +31,10 @@ public class DirectoryObjectGetMemberObjectsBody {
     public Boolean securityEnabledOnly;
 
 
+    /**
+     * Instiaciates a new DirectoryObjectGetMemberObjectsBody
+     */
+    public DirectoryObjectGetMemberObjectsBody() {}
     private DirectoryObjectGetMemberObjectsBody(@Nonnull final DirectoryObjectGetMemberObjectsBodyBuilder builder) {
         this.securityEnabledOnly = builder.securityEnabledOnly;
     }

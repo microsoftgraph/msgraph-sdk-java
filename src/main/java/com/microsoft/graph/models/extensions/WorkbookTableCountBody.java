@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookTableCountBody {
 
+    /**
+     * Instiaciates a new WorkbookTableCountBody
+     */
+    public WorkbookTableCountBody() {}
     private WorkbookTableCountBody(@Nonnull final WorkbookTableCountBodyBuilder builder) {
     }
     /**

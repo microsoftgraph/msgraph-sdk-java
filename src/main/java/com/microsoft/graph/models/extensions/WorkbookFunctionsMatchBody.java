@@ -49,6 +49,10 @@ public class WorkbookFunctionsMatchBody {
     public com.google.gson.JsonElement matchType;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMatchBody
+     */
+    public WorkbookFunctionsMatchBody() {}
     private WorkbookFunctionsMatchBody(@Nonnull final WorkbookFunctionsMatchBodyBuilder builder) {
         this.lookupValue = builder.lookupValue;
         this.lookupArray = builder.lookupArray;

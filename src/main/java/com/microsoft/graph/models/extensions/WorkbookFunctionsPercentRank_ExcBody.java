@@ -49,6 +49,10 @@ public class WorkbookFunctionsPercentRank_ExcBody {
     public com.google.gson.JsonElement significance;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPercentRank_ExcBody
+     */
+    public WorkbookFunctionsPercentRank_ExcBody() {}
     private WorkbookFunctionsPercentRank_ExcBody(@Nonnull final WorkbookFunctionsPercentRank_ExcBodyBuilder builder) {
         this.array = builder.array;
         this.x = builder.x;

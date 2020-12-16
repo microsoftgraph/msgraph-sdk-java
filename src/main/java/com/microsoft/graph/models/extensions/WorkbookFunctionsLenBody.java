@@ -31,6 +31,10 @@ public class WorkbookFunctionsLenBody {
     public com.google.gson.JsonElement text;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLenBody
+     */
+    public WorkbookFunctionsLenBody() {}
     private WorkbookFunctionsLenBody(@Nonnull final WorkbookFunctionsLenBodyBuilder builder) {
         this.text = builder.text;
     }

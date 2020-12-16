@@ -40,6 +40,10 @@ public class UserChangePasswordBody {
     public String newPassword;
 
 
+    /**
+     * Instiaciates a new UserChangePasswordBody
+     */
+    public UserChangePasswordBody() {}
     private UserChangePasswordBody(@Nonnull final UserChangePasswordBodyBuilder builder) {
         this.currentPassword = builder.currentPassword;
         this.newPassword = builder.newPassword;

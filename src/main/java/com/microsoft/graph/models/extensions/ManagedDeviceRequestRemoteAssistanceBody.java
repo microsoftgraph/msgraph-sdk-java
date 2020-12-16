@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ManagedDeviceRequestRemoteAssistanceBody {
 
+    /**
+     * Instiaciates a new ManagedDeviceRequestRemoteAssistanceBody
+     */
+    public ManagedDeviceRequestRemoteAssistanceBody() {}
     private ManagedDeviceRequestRemoteAssistanceBody(@Nonnull final ManagedDeviceRequestRemoteAssistanceBodyBuilder builder) {
     }
     /**

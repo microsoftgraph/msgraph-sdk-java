@@ -40,6 +40,10 @@ public class WorkbookChartSetPositionBody {
     public com.google.gson.JsonElement endCell;
 
 
+    /**
+     * Instiaciates a new WorkbookChartSetPositionBody
+     */
+    public WorkbookChartSetPositionBody() {}
     private WorkbookChartSetPositionBody(@Nonnull final WorkbookChartSetPositionBodyBuilder builder) {
         this.startCell = builder.startCell;
         this.endCell = builder.endCell;

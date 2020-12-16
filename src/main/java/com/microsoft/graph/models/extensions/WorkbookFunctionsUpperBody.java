@@ -31,6 +31,10 @@ public class WorkbookFunctionsUpperBody {
     public com.google.gson.JsonElement text;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsUpperBody
+     */
+    public WorkbookFunctionsUpperBody() {}
     private WorkbookFunctionsUpperBody(@Nonnull final WorkbookFunctionsUpperBodyBuilder builder) {
         this.text = builder.text;
     }

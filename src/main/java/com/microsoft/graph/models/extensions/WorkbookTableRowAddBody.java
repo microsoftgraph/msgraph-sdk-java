@@ -40,6 +40,10 @@ public class WorkbookTableRowAddBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookTableRowAddBody
+     */
+    public WorkbookTableRowAddBody() {}
     private WorkbookTableRowAddBody(@Nonnull final WorkbookTableRowAddBodyBuilder builder) {
         this.index = builder.index;
         this.values = builder.values;

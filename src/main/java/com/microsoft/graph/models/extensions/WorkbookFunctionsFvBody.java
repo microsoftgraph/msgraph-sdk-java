@@ -67,6 +67,10 @@ public class WorkbookFunctionsFvBody {
     public com.google.gson.JsonElement type;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsFvBody
+     */
+    public WorkbookFunctionsFvBody() {}
     private WorkbookFunctionsFvBody(@Nonnull final WorkbookFunctionsFvBodyBuilder builder) {
         this.rate = builder.rate;
         this.nper = builder.nper;

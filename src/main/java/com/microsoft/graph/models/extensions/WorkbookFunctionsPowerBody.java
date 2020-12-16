@@ -40,6 +40,10 @@ public class WorkbookFunctionsPowerBody {
     public com.google.gson.JsonElement power;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPowerBody
+     */
+    public WorkbookFunctionsPowerBody() {}
     private WorkbookFunctionsPowerBody(@Nonnull final WorkbookFunctionsPowerBodyBuilder builder) {
         this.number = builder.number;
         this.power = builder.power;

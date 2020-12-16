@@ -40,6 +40,10 @@ public class WorkbookFunctionsDecimalBody {
     public com.google.gson.JsonElement radix;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDecimalBody
+     */
+    public WorkbookFunctionsDecimalBody() {}
     private WorkbookFunctionsDecimalBody(@Nonnull final WorkbookFunctionsDecimalBodyBuilder builder) {
         this.number = builder.number;
         this.radix = builder.radix;

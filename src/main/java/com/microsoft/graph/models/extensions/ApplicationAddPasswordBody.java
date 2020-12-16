@@ -31,6 +31,10 @@ public class ApplicationAddPasswordBody {
     public PasswordCredential passwordCredential;
 
 
+    /**
+     * Instiaciates a new ApplicationAddPasswordBody
+     */
+    public ApplicationAddPasswordBody() {}
     private ApplicationAddPasswordBody(@Nonnull final ApplicationAddPasswordBodyBuilder builder) {
         this.passwordCredential = builder.passwordCredential;
     }

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class GroupSubscribeByMailBody {
 
+    /**
+     * Instiaciates a new GroupSubscribeByMailBody
+     */
+    public GroupSubscribeByMailBody() {}
     private GroupSubscribeByMailBody(@Nonnull final GroupSubscribeByMailBodyBuilder builder) {
     }
     /**

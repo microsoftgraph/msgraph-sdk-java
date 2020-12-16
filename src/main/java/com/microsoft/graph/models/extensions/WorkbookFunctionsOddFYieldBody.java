@@ -103,6 +103,10 @@ public class WorkbookFunctionsOddFYieldBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsOddFYieldBody
+     */
+    public WorkbookFunctionsOddFYieldBody() {}
     private WorkbookFunctionsOddFYieldBody(@Nonnull final WorkbookFunctionsOddFYieldBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

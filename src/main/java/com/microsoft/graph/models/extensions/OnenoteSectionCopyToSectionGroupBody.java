@@ -67,6 +67,10 @@ public class OnenoteSectionCopyToSectionGroupBody {
     public String siteId;
 
 
+    /**
+     * Instiaciates a new OnenoteSectionCopyToSectionGroupBody
+     */
+    public OnenoteSectionCopyToSectionGroupBody() {}
     private OnenoteSectionCopyToSectionGroupBody(@Nonnull final OnenoteSectionCopyToSectionGroupBodyBuilder builder) {
         this.id = builder.id;
         this.groupId = builder.groupId;

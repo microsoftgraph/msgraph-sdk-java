@@ -40,6 +40,10 @@ public class UserReminderViewBody {
     public String endDateTime;
 
 
+    /**
+     * Instiaciates a new UserReminderViewBody
+     */
+    public UserReminderViewBody() {}
     private UserReminderViewBody(@Nonnull final UserReminderViewBodyBuilder builder) {
         this.startDateTime = builder.startDateTime;
         this.endDateTime = builder.endDateTime;

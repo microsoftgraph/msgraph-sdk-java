@@ -41,6 +41,10 @@ public class PermissionGrantBody {
     public java.util.List<DriveRecipient> recipients;
 
 
+    /**
+     * Instiaciates a new PermissionGrantBody
+     */
+    public PermissionGrantBody() {}
     private PermissionGrantBody(@Nonnull final PermissionGrantBodyBuilder builder) {
         this.roles = builder.roles;
         this.recipients = builder.recipients;

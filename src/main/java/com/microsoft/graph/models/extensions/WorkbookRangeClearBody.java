@@ -31,6 +31,10 @@ public class WorkbookRangeClearBody {
     public String applyTo;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeClearBody
+     */
+    public WorkbookRangeClearBody() {}
     private WorkbookRangeClearBody(@Nonnull final WorkbookRangeClearBodyBuilder builder) {
         this.applyTo = builder.applyTo;
     }

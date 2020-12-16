@@ -76,6 +76,10 @@ public class WorkbookFunctionsCumPrincBody {
     public com.google.gson.JsonElement type;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCumPrincBody
+     */
+    public WorkbookFunctionsCumPrincBody() {}
     private WorkbookFunctionsCumPrincBody(@Nonnull final WorkbookFunctionsCumPrincBodyBuilder builder) {
         this.rate = builder.rate;
         this.nper = builder.nper;

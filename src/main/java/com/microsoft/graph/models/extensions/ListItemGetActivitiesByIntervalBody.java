@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ListItemGetActivitiesByIntervalBody {
 
+    /**
+     * Instiaciates a new ListItemGetActivitiesByIntervalBody
+     */
+    public ListItemGetActivitiesByIntervalBody() {}
     private ListItemGetActivitiesByIntervalBody(@Nonnull final ListItemGetActivitiesByIntervalBodyBuilder builder) {
     }
     /**

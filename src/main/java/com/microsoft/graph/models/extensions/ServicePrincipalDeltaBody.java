@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ServicePrincipalDeltaBody {
 
+    /**
+     * Instiaciates a new ServicePrincipalDeltaBody
+     */
+    public ServicePrincipalDeltaBody() {}
     private ServicePrincipalDeltaBody(@Nonnull final ServicePrincipalDeltaBodyBuilder builder) {
     }
     /**

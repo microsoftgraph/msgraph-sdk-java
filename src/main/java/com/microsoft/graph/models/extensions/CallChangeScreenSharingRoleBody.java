@@ -31,6 +31,10 @@ public class CallChangeScreenSharingRoleBody {
     public ScreenSharingRole role;
 
 
+    /**
+     * Instiaciates a new CallChangeScreenSharingRoleBody
+     */
+    public CallChangeScreenSharingRoleBody() {}
     private CallChangeScreenSharingRoleBody(@Nonnull final CallChangeScreenSharingRoleBodyBuilder builder) {
         this.role = builder.role;
     }

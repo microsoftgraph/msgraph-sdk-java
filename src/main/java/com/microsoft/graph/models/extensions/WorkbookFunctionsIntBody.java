@@ -31,6 +31,10 @@ public class WorkbookFunctionsIntBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsIntBody
+     */
+    public WorkbookFunctionsIntBody() {}
     private WorkbookFunctionsIntBody(@Nonnull final WorkbookFunctionsIntBodyBuilder builder) {
         this.number = builder.number;
     }

@@ -49,6 +49,10 @@ public class WorkbookFunctionsMidBody {
     public com.google.gson.JsonElement numChars;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMidBody
+     */
+    public WorkbookFunctionsMidBody() {}
     private WorkbookFunctionsMidBody(@Nonnull final WorkbookFunctionsMidBodyBuilder builder) {
         this.text = builder.text;
         this.startNum = builder.startNum;

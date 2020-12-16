@@ -85,6 +85,10 @@ public class WorkbookFunctionsAmorLincBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAmorLincBody
+     */
+    public WorkbookFunctionsAmorLincBody() {}
     private WorkbookFunctionsAmorLincBody(@Nonnull final WorkbookFunctionsAmorLincBodyBuilder builder) {
         this.cost = builder.cost;
         this.datePurchased = builder.datePurchased;

@@ -31,6 +31,10 @@ public class WorkbookFilterApplyDynamicFilterBody {
     public String criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFilterApplyDynamicFilterBody
+     */
+    public WorkbookFilterApplyDynamicFilterBody() {}
     private WorkbookFilterApplyDynamicFilterBody(@Nonnull final WorkbookFilterApplyDynamicFilterBodyBuilder builder) {
         this.criteria = builder.criteria;
     }

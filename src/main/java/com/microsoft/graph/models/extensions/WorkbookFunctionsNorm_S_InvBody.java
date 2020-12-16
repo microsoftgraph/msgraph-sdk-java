@@ -31,6 +31,10 @@ public class WorkbookFunctionsNorm_S_InvBody {
     public com.google.gson.JsonElement probability;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNorm_S_InvBody
+     */
+    public WorkbookFunctionsNorm_S_InvBody() {}
     private WorkbookFunctionsNorm_S_InvBody(@Nonnull final WorkbookFunctionsNorm_S_InvBodyBuilder builder) {
         this.probability = builder.probability;
     }

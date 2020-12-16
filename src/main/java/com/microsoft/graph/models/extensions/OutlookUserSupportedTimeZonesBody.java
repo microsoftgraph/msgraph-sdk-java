@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class OutlookUserSupportedTimeZonesBody {
 
+    /**
+     * Instiaciates a new OutlookUserSupportedTimeZonesBody
+     */
+    public OutlookUserSupportedTimeZonesBody() {}
     private OutlookUserSupportedTimeZonesBody(@Nonnull final OutlookUserSupportedTimeZonesBodyBuilder builder) {
     }
     /**

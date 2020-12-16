@@ -31,6 +31,10 @@ public class MobileAppAssignBody {
     public java.util.List<MobileAppAssignment> mobileAppAssignments;
 
 
+    /**
+     * Instiaciates a new MobileAppAssignBody
+     */
+    public MobileAppAssignBody() {}
     private MobileAppAssignBody(@Nonnull final MobileAppAssignBodyBuilder builder) {
         this.mobileAppAssignments = builder.mobileAppAssignments;
     }

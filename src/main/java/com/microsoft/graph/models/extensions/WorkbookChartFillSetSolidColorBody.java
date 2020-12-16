@@ -31,6 +31,10 @@ public class WorkbookChartFillSetSolidColorBody {
     public String color;
 
 
+    /**
+     * Instiaciates a new WorkbookChartFillSetSolidColorBody
+     */
+    public WorkbookChartFillSetSolidColorBody() {}
     private WorkbookChartFillSetSolidColorBody(@Nonnull final WorkbookChartFillSetSolidColorBodyBuilder builder) {
         this.color = builder.color;
     }

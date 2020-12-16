@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class EventDeltaBody {
 
+    /**
+     * Instiaciates a new EventDeltaBody
+     */
+    public EventDeltaBody() {}
     private EventDeltaBody(@Nonnull final EventDeltaBodyBuilder builder) {
     }
     /**

@@ -31,6 +31,10 @@ public class WorkbookFunctionsArabicBody {
     public com.google.gson.JsonElement text;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsArabicBody
+     */
+    public WorkbookFunctionsArabicBody() {}
     private WorkbookFunctionsArabicBody(@Nonnull final WorkbookFunctionsArabicBodyBuilder builder) {
         this.text = builder.text;
     }

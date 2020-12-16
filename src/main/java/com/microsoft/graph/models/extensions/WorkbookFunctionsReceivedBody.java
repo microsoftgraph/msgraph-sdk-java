@@ -67,6 +67,10 @@ public class WorkbookFunctionsReceivedBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsReceivedBody
+     */
+    public WorkbookFunctionsReceivedBody() {}
     private WorkbookFunctionsReceivedBody(@Nonnull final WorkbookFunctionsReceivedBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

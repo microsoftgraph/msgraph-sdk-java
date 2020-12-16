@@ -40,6 +40,10 @@ public class WorkbookFunctionsWeekNumBody {
     public com.google.gson.JsonElement returnType;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsWeekNumBody
+     */
+    public WorkbookFunctionsWeekNumBody() {}
     private WorkbookFunctionsWeekNumBody(@Nonnull final WorkbookFunctionsWeekNumBodyBuilder builder) {
         this.serialNumber = builder.serialNumber;
         this.returnType = builder.returnType;

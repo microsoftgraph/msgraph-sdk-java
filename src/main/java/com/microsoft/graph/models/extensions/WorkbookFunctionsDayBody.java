@@ -31,6 +31,10 @@ public class WorkbookFunctionsDayBody {
     public com.google.gson.JsonElement serialNumber;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDayBody
+     */
+    public WorkbookFunctionsDayBody() {}
     private WorkbookFunctionsDayBody(@Nonnull final WorkbookFunctionsDayBodyBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }

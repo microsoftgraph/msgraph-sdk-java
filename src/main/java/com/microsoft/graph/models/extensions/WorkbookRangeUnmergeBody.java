@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRangeUnmergeBody {
 
+    /**
+     * Instiaciates a new WorkbookRangeUnmergeBody
+     */
+    public WorkbookRangeUnmergeBody() {}
     private WorkbookRangeUnmergeBody(@Nonnull final WorkbookRangeUnmergeBodyBuilder builder) {
     }
     /**

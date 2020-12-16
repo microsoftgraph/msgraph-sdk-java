@@ -31,6 +31,10 @@ public class ReportRootGetOffice365ActiveUserDetailBody {
     public com.microsoft.graph.core.DateOnly date;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOffice365ActiveUserDetailBody
+     */
+    public ReportRootGetOffice365ActiveUserDetailBody() {}
     private ReportRootGetOffice365ActiveUserDetailBody(@Nonnull final ReportRootGetOffice365ActiveUserDetailBodyBuilder builder) {
         this.date = builder.date;
     }

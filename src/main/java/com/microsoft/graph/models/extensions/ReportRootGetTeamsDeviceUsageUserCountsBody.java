@@ -31,6 +31,10 @@ public class ReportRootGetTeamsDeviceUsageUserCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetTeamsDeviceUsageUserCountsBody
+     */
+    public ReportRootGetTeamsDeviceUsageUserCountsBody() {}
     private ReportRootGetTeamsDeviceUsageUserCountsBody(@Nonnull final ReportRootGetTeamsDeviceUsageUserCountsBodyBuilder builder) {
         this.period = builder.period;
     }

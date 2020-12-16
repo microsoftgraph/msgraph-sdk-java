@@ -40,6 +40,10 @@ public class EventTentativelyAcceptBody {
     public Boolean sendResponse;
 
 
+    /**
+     * Instiaciates a new EventTentativelyAcceptBody
+     */
+    public EventTentativelyAcceptBody() {}
     private EventTentativelyAcceptBody(@Nonnull final EventTentativelyAcceptBodyBuilder builder) {
         this.comment = builder.comment;
         this.sendResponse = builder.sendResponse;

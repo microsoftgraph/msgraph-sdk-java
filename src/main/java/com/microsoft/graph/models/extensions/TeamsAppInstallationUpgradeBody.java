@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class TeamsAppInstallationUpgradeBody {
 
+    /**
+     * Instiaciates a new TeamsAppInstallationUpgradeBody
+     */
+    public TeamsAppInstallationUpgradeBody() {}
     private TeamsAppInstallationUpgradeBody(@Nonnull final TeamsAppInstallationUpgradeBodyBuilder builder) {
     }
     /**

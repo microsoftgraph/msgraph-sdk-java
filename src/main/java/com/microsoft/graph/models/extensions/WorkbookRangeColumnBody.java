@@ -31,6 +31,10 @@ public class WorkbookRangeColumnBody {
     public Integer column;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeColumnBody
+     */
+    public WorkbookRangeColumnBody() {}
     private WorkbookRangeColumnBody(@Nonnull final WorkbookRangeColumnBodyBuilder builder) {
         this.column = builder.column;
     }

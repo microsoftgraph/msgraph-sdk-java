@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsBody {
 
+    /**
+     * Instiaciates a new DeviceAppManagementSyncMicrosoftStoreForBusinessAppsBody
+     */
+    public DeviceAppManagementSyncMicrosoftStoreForBusinessAppsBody() {}
     private DeviceAppManagementSyncMicrosoftStoreForBusinessAppsBody(@Nonnull final DeviceAppManagementSyncMicrosoftStoreForBusinessAppsBodyBuilder builder) {
     }
     /**

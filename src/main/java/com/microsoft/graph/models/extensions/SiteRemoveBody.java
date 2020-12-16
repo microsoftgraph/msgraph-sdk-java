@@ -31,6 +31,10 @@ public class SiteRemoveBody {
     public java.util.List<Site> value;
 
 
+    /**
+     * Instiaciates a new SiteRemoveBody
+     */
+    public SiteRemoveBody() {}
     private SiteRemoveBody(@Nonnull final SiteRemoveBodyBuilder builder) {
         this.value = builder.value;
     }

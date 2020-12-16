@@ -40,6 +40,10 @@ public class WorkbookFunctionsCombinBody {
     public com.google.gson.JsonElement numberChosen;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCombinBody
+     */
+    public WorkbookFunctionsCombinBody() {}
     private WorkbookFunctionsCombinBody(@Nonnull final WorkbookFunctionsCombinBodyBuilder builder) {
         this.number = builder.number;
         this.numberChosen = builder.numberChosen;

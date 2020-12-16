@@ -31,6 +31,10 @@ public class WorkbookWorksheetAddBody {
     public String name;
 
 
+    /**
+     * Instiaciates a new WorkbookWorksheetAddBody
+     */
+    public WorkbookWorksheetAddBody() {}
     private WorkbookWorksheetAddBody(@Nonnull final WorkbookWorksheetAddBodyBuilder builder) {
         this.name = builder.name;
     }

@@ -49,6 +49,10 @@ public class WorkbookFunctionsTbillYieldBody {
     public com.google.gson.JsonElement pr;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTbillYieldBody
+     */
+    public WorkbookFunctionsTbillYieldBody() {}
     private WorkbookFunctionsTbillYieldBody(@Nonnull final WorkbookFunctionsTbillYieldBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

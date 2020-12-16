@@ -31,6 +31,10 @@ public class WorkbookFunctionsAscBody {
     public com.google.gson.JsonElement text;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAscBody
+     */
+    public WorkbookFunctionsAscBody() {}
     private WorkbookFunctionsAscBody(@Nonnull final WorkbookFunctionsAscBodyBuilder builder) {
         this.text = builder.text;
     }

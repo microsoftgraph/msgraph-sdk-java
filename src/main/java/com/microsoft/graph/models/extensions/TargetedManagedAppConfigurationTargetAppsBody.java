@@ -31,6 +31,10 @@ public class TargetedManagedAppConfigurationTargetAppsBody {
     public java.util.List<ManagedMobileApp> apps;
 
 
+    /**
+     * Instiaciates a new TargetedManagedAppConfigurationTargetAppsBody
+     */
+    public TargetedManagedAppConfigurationTargetAppsBody() {}
     private TargetedManagedAppConfigurationTargetAppsBody(@Nonnull final TargetedManagedAppConfigurationTargetAppsBodyBuilder builder) {
         this.apps = builder.apps;
     }

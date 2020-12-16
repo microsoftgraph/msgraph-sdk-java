@@ -58,6 +58,10 @@ public class WorkbookFunctionsGamma_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsGamma_DistBody
+     */
+    public WorkbookFunctionsGamma_DistBody() {}
     private WorkbookFunctionsGamma_DistBody(@Nonnull final WorkbookFunctionsGamma_DistBodyBuilder builder) {
         this.x = builder.x;
         this.alpha = builder.alpha;

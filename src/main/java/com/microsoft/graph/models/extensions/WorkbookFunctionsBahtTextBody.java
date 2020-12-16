@@ -31,6 +31,10 @@ public class WorkbookFunctionsBahtTextBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBahtTextBody
+     */
+    public WorkbookFunctionsBahtTextBody() {}
     private WorkbookFunctionsBahtTextBody(@Nonnull final WorkbookFunctionsBahtTextBodyBuilder builder) {
         this.number = builder.number;
     }

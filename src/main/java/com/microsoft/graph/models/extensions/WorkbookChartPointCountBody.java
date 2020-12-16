@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookChartPointCountBody {
 
+    /**
+     * Instiaciates a new WorkbookChartPointCountBody
+     */
+    public WorkbookChartPointCountBody() {}
     private WorkbookChartPointCountBody(@Nonnull final WorkbookChartPointCountBodyBuilder builder) {
     }
     /**

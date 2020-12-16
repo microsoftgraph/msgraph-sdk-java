@@ -58,6 +58,10 @@ public class WorkbookFunctionsReplaceBBody {
     public com.google.gson.JsonElement newText;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsReplaceBBody
+     */
+    public WorkbookFunctionsReplaceBBody() {}
     private WorkbookFunctionsReplaceBBody(@Nonnull final WorkbookFunctionsReplaceBBodyBuilder builder) {
         this.oldText = builder.oldText;
         this.startNum = builder.startNum;

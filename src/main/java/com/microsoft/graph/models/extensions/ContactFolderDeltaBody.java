@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class ContactFolderDeltaBody {
 
+    /**
+     * Instiaciates a new ContactFolderDeltaBody
+     */
+    public ContactFolderDeltaBody() {}
     private ContactFolderDeltaBody(@Nonnull final ContactFolderDeltaBodyBuilder builder) {
     }
     /**

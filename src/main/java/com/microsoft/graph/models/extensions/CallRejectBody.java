@@ -40,6 +40,10 @@ public class CallRejectBody {
     public String callbackUri;
 
 
+    /**
+     * Instiaciates a new CallRejectBody
+     */
+    public CallRejectBody() {}
     private CallRejectBody(@Nonnull final CallRejectBodyBuilder builder) {
         this.reason = builder.reason;
         this.callbackUri = builder.callbackUri;

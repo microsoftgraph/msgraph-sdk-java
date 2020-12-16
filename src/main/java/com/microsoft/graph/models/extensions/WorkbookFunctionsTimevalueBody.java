@@ -31,6 +31,10 @@ public class WorkbookFunctionsTimevalueBody {
     public com.google.gson.JsonElement timeText;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTimevalueBody
+     */
+    public WorkbookFunctionsTimevalueBody() {}
     private WorkbookFunctionsTimevalueBody(@Nonnull final WorkbookFunctionsTimevalueBodyBuilder builder) {
         this.timeText = builder.timeText;
     }

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class SiteGetActivitiesByIntervalBody {
 
+    /**
+     * Instiaciates a new SiteGetActivitiesByIntervalBody
+     */
+    public SiteGetActivitiesByIntervalBody() {}
     private SiteGetActivitiesByIntervalBody(@Nonnull final SiteGetActivitiesByIntervalBodyBuilder builder) {
     }
     /**

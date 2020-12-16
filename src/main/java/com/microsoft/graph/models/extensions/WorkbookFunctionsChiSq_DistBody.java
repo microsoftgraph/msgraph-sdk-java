@@ -49,6 +49,10 @@ public class WorkbookFunctionsChiSq_DistBody {
     public com.google.gson.JsonElement cumulative;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsChiSq_DistBody
+     */
+    public WorkbookFunctionsChiSq_DistBody() {}
     private WorkbookFunctionsChiSq_DistBody(@Nonnull final WorkbookFunctionsChiSq_DistBodyBuilder builder) {
         this.x = builder.x;
         this.degFreedom = builder.degFreedom;

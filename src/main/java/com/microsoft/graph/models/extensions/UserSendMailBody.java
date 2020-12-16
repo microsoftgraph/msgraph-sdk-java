@@ -40,6 +40,10 @@ public class UserSendMailBody {
     public Boolean saveToSentItems;
 
 
+    /**
+     * Instiaciates a new UserSendMailBody
+     */
+    public UserSendMailBody() {}
     private UserSendMailBody(@Nonnull final UserSendMailBodyBuilder builder) {
         this.message = builder.message;
         this.saveToSentItems = builder.saveToSentItems;

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRangeFormatAutofitRowsBody {
 
+    /**
+     * Instiaciates a new WorkbookRangeFormatAutofitRowsBody
+     */
+    public WorkbookRangeFormatAutofitRowsBody() {}
     private WorkbookRangeFormatAutofitRowsBody(@Nonnull final WorkbookRangeFormatAutofitRowsBodyBuilder builder) {
     }
     /**

@@ -31,6 +31,10 @@ public class WorkbookFunctionsTrimBody {
     public com.google.gson.JsonElement text;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTrimBody
+     */
+    public WorkbookFunctionsTrimBody() {}
     private WorkbookFunctionsTrimBody(@Nonnull final WorkbookFunctionsTrimBodyBuilder builder) {
         this.text = builder.text;
     }

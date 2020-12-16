@@ -40,6 +40,10 @@ public class WorkbookFunctionsTextBody {
     public com.google.gson.JsonElement formatText;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTextBody
+     */
+    public WorkbookFunctionsTextBody() {}
     private WorkbookFunctionsTextBody(@Nonnull final WorkbookFunctionsTextBodyBuilder builder) {
         this.value = builder.value;
         this.formatText = builder.formatText;

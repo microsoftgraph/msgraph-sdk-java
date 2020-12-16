@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookRangeColumnsBeforeBody {
 
+    /**
+     * Instiaciates a new WorkbookRangeColumnsBeforeBody
+     */
+    public WorkbookRangeColumnsBeforeBody() {}
     private WorkbookRangeColumnsBeforeBody(@Nonnull final WorkbookRangeColumnsBeforeBodyBuilder builder) {
     }
     /**

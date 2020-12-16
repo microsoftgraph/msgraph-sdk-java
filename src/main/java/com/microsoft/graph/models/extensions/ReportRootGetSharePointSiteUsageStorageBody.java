@@ -31,6 +31,10 @@ public class ReportRootGetSharePointSiteUsageStorageBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetSharePointSiteUsageStorageBody
+     */
+    public ReportRootGetSharePointSiteUsageStorageBody() {}
     private ReportRootGetSharePointSiteUsageStorageBody(@Nonnull final ReportRootGetSharePointSiteUsageStorageBodyBuilder builder) {
         this.period = builder.period;
     }

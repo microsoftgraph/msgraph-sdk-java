@@ -31,6 +31,10 @@ public class WorkbookFunctionsError_TypeBody {
     public com.google.gson.JsonElement errorVal;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsError_TypeBody
+     */
+    public WorkbookFunctionsError_TypeBody() {}
     private WorkbookFunctionsError_TypeBody(@Nonnull final WorkbookFunctionsError_TypeBodyBuilder builder) {
         this.errorVal = builder.errorVal;
     }

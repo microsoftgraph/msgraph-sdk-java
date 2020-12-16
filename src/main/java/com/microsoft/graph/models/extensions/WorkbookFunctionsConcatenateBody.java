@@ -31,6 +31,10 @@ public class WorkbookFunctionsConcatenateBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsConcatenateBody
+     */
+    public WorkbookFunctionsConcatenateBody() {}
     private WorkbookFunctionsConcatenateBody(@Nonnull final WorkbookFunctionsConcatenateBodyBuilder builder) {
         this.values = builder.values;
     }

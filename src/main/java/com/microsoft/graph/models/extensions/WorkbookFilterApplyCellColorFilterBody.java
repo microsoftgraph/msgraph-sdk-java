@@ -31,6 +31,10 @@ public class WorkbookFilterApplyCellColorFilterBody {
     public String color;
 
 
+    /**
+     * Instiaciates a new WorkbookFilterApplyCellColorFilterBody
+     */
+    public WorkbookFilterApplyCellColorFilterBody() {}
     private WorkbookFilterApplyCellColorFilterBody(@Nonnull final WorkbookFilterApplyCellColorFilterBodyBuilder builder) {
         this.color = builder.color;
     }

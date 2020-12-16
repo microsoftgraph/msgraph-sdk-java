@@ -49,6 +49,10 @@ public class WorkbookFunctionsXirrBody {
     public com.google.gson.JsonElement guess;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsXirrBody
+     */
+    public WorkbookFunctionsXirrBody() {}
     private WorkbookFunctionsXirrBody(@Nonnull final WorkbookFunctionsXirrBodyBuilder builder) {
         this.values = builder.values;
         this.dates = builder.dates;

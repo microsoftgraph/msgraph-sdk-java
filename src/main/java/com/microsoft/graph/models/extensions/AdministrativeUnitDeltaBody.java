@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class AdministrativeUnitDeltaBody {
 
+    /**
+     * Instiaciates a new AdministrativeUnitDeltaBody
+     */
+    public AdministrativeUnitDeltaBody() {}
     private AdministrativeUnitDeltaBody(@Nonnull final AdministrativeUnitDeltaBodyBuilder builder) {
     }
     /**

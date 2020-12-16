@@ -31,6 +31,10 @@ public class WorkbookFunctionsAveDevBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAveDevBody
+     */
+    public WorkbookFunctionsAveDevBody() {}
     private WorkbookFunctionsAveDevBody(@Nonnull final WorkbookFunctionsAveDevBodyBuilder builder) {
         this.values = builder.values;
     }

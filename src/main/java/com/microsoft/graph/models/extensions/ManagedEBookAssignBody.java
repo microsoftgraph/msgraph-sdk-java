@@ -31,6 +31,10 @@ public class ManagedEBookAssignBody {
     public java.util.List<ManagedEBookAssignment> managedEBookAssignments;
 
 
+    /**
+     * Instiaciates a new ManagedEBookAssignBody
+     */
+    public ManagedEBookAssignBody() {}
     private ManagedEBookAssignBody(@Nonnull final ManagedEBookAssignBodyBuilder builder) {
         this.managedEBookAssignments = builder.managedEBookAssignments;
     }

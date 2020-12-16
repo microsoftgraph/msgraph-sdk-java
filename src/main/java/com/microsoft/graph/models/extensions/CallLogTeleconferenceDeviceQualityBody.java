@@ -31,6 +31,10 @@ public class CallLogTeleconferenceDeviceQualityBody {
     public TeleconferenceDeviceQuality quality;
 
 
+    /**
+     * Instiaciates a new CallLogTeleconferenceDeviceQualityBody
+     */
+    public CallLogTeleconferenceDeviceQualityBody() {}
     private CallLogTeleconferenceDeviceQualityBody(@Nonnull final CallLogTeleconferenceDeviceQualityBodyBuilder builder) {
         this.quality = builder.quality;
     }

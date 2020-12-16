@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class CalendarSharingMessageAcceptBody {
 
+    /**
+     * Instiaciates a new CalendarSharingMessageAcceptBody
+     */
+    public CalendarSharingMessageAcceptBody() {}
     private CalendarSharingMessageAcceptBody(@Nonnull final CalendarSharingMessageAcceptBodyBuilder builder) {
     }
     /**

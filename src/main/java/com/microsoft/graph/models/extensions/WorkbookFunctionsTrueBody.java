@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookFunctionsTrueBody {
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTrueBody
+     */
+    public WorkbookFunctionsTrueBody() {}
     private WorkbookFunctionsTrueBody(@Nonnull final WorkbookFunctionsTrueBodyBuilder builder) {
     }
     /**

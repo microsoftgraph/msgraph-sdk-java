@@ -31,6 +31,10 @@ public class ReportRootGetSkypeForBusinessParticipantActivityCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetSkypeForBusinessParticipantActivityCountsBody
+     */
+    public ReportRootGetSkypeForBusinessParticipantActivityCountsBody() {}
     private ReportRootGetSkypeForBusinessParticipantActivityCountsBody(@Nonnull final ReportRootGetSkypeForBusinessParticipantActivityCountsBodyBuilder builder) {
         this.period = builder.period;
     }

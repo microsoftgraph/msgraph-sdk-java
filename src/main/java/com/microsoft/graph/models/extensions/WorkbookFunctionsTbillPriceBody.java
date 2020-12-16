@@ -49,6 +49,10 @@ public class WorkbookFunctionsTbillPriceBody {
     public com.google.gson.JsonElement discount;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTbillPriceBody
+     */
+    public WorkbookFunctionsTbillPriceBody() {}
     private WorkbookFunctionsTbillPriceBody(@Nonnull final WorkbookFunctionsTbillPriceBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

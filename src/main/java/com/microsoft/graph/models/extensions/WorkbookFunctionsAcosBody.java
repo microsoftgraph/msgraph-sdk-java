@@ -31,6 +31,10 @@ public class WorkbookFunctionsAcosBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAcosBody
+     */
+    public WorkbookFunctionsAcosBody() {}
     private WorkbookFunctionsAcosBody(@Nonnull final WorkbookFunctionsAcosBodyBuilder builder) {
         this.number = builder.number;
     }

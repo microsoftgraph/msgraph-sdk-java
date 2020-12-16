@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class OnenotePagePreviewBody {
 
+    /**
+     * Instiaciates a new OnenotePagePreviewBody
+     */
+    public OnenotePagePreviewBody() {}
     private OnenotePagePreviewBody(@Nonnull final OnenotePagePreviewBodyBuilder builder) {
     }
     /**

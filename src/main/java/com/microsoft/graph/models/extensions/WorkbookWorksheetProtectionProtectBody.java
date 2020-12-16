@@ -31,6 +31,10 @@ public class WorkbookWorksheetProtectionProtectBody {
     public WorkbookWorksheetProtectionOptions options;
 
 
+    /**
+     * Instiaciates a new WorkbookWorksheetProtectionProtectBody
+     */
+    public WorkbookWorksheetProtectionProtectBody() {}
     private WorkbookWorksheetProtectionProtectBody(@Nonnull final WorkbookWorksheetProtectionProtectBodyBuilder builder) {
         this.options = builder.options;
     }

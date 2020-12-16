@@ -40,6 +40,10 @@ public class WorkbookFunctionsBesselJBody {
     public com.google.gson.JsonElement n;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBesselJBody
+     */
+    public WorkbookFunctionsBesselJBody() {}
     private WorkbookFunctionsBesselJBody(@Nonnull final WorkbookFunctionsBesselJBodyBuilder builder) {
         this.x = builder.x;
         this.n = builder.n;

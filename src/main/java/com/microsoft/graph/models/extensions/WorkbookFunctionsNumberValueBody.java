@@ -49,6 +49,10 @@ public class WorkbookFunctionsNumberValueBody {
     public com.google.gson.JsonElement groupSeparator;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsNumberValueBody
+     */
+    public WorkbookFunctionsNumberValueBody() {}
     private WorkbookFunctionsNumberValueBody(@Nonnull final WorkbookFunctionsNumberValueBodyBuilder builder) {
         this.text = builder.text;
         this.decimalSeparator = builder.decimalSeparator;

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookTableRowRangeBody {
 
+    /**
+     * Instiaciates a new WorkbookTableRowRangeBody
+     */
+    public WorkbookTableRowRangeBody() {}
     private WorkbookTableRowRangeBody(@Nonnull final WorkbookTableRowRangeBodyBuilder builder) {
     }
     /**

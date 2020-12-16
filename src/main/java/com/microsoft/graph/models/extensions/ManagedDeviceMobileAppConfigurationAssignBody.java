@@ -31,6 +31,10 @@ public class ManagedDeviceMobileAppConfigurationAssignBody {
     public java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments;
 
 
+    /**
+     * Instiaciates a new ManagedDeviceMobileAppConfigurationAssignBody
+     */
+    public ManagedDeviceMobileAppConfigurationAssignBody() {}
     private ManagedDeviceMobileAppConfigurationAssignBody(@Nonnull final ManagedDeviceMobileAppConfigurationAssignBodyBuilder builder) {
         this.assignments = builder.assignments;
     }

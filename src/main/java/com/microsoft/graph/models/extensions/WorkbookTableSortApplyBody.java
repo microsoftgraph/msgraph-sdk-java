@@ -49,6 +49,10 @@ public class WorkbookTableSortApplyBody {
     public String method;
 
 
+    /**
+     * Instiaciates a new WorkbookTableSortApplyBody
+     */
+    public WorkbookTableSortApplyBody() {}
     private WorkbookTableSortApplyBody(@Nonnull final WorkbookTableSortApplyBodyBuilder builder) {
         this.fields = builder.fields;
         this.matchCase = builder.matchCase;

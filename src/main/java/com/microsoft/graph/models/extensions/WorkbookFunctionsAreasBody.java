@@ -31,6 +31,10 @@ public class WorkbookFunctionsAreasBody {
     public com.google.gson.JsonElement reference;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAreasBody
+     */
+    public WorkbookFunctionsAreasBody() {}
     private WorkbookFunctionsAreasBody(@Nonnull final WorkbookFunctionsAreasBodyBuilder builder) {
         this.reference = builder.reference;
     }

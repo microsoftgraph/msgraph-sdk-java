@@ -31,6 +31,10 @@ public class WorkbookFunctionsVarPABody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsVarPABody
+     */
+    public WorkbookFunctionsVarPABody() {}
     private WorkbookFunctionsVarPABody(@Nonnull final WorkbookFunctionsVarPABodyBuilder builder) {
         this.values = builder.values;
     }

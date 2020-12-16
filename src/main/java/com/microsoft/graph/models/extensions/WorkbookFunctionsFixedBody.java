@@ -49,6 +49,10 @@ public class WorkbookFunctionsFixedBody {
     public com.google.gson.JsonElement noCommas;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsFixedBody
+     */
+    public WorkbookFunctionsFixedBody() {}
     private WorkbookFunctionsFixedBody(@Nonnull final WorkbookFunctionsFixedBodyBuilder builder) {
         this.number = builder.number;
         this.decimals = builder.decimals;

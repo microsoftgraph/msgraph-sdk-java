@@ -31,6 +31,10 @@ public class ReportRootGetTeamsDeviceUsageUserDetailBody {
     public com.microsoft.graph.core.DateOnly date;
 
 
+    /**
+     * Instiaciates a new ReportRootGetTeamsDeviceUsageUserDetailBody
+     */
+    public ReportRootGetTeamsDeviceUsageUserDetailBody() {}
     private ReportRootGetTeamsDeviceUsageUserDetailBody(@Nonnull final ReportRootGetTeamsDeviceUsageUserDetailBodyBuilder builder) {
         this.date = builder.date;
     }

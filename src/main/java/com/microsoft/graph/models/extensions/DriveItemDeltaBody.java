@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DriveItemDeltaBody {
 
+    /**
+     * Instiaciates a new DriveItemDeltaBody
+     */
+    public DriveItemDeltaBody() {}
     private DriveItemDeltaBody(@Nonnull final DriveItemDeltaBodyBuilder builder) {
     }
     /**

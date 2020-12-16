@@ -40,6 +40,10 @@ public class WorkbookFunctionsCountIfBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCountIfBody
+     */
+    public WorkbookFunctionsCountIfBody() {}
     private WorkbookFunctionsCountIfBody(@Nonnull final WorkbookFunctionsCountIfBodyBuilder builder) {
         this.range = builder.range;
         this.criteria = builder.criteria;

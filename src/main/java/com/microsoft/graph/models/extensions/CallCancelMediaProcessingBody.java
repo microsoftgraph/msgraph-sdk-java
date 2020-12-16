@@ -31,6 +31,10 @@ public class CallCancelMediaProcessingBody {
     public String clientContext;
 
 
+    /**
+     * Instiaciates a new CallCancelMediaProcessingBody
+     */
+    public CallCancelMediaProcessingBody() {}
     private CallCancelMediaProcessingBody(@Nonnull final CallCancelMediaProcessingBodyBuilder builder) {
         this.clientContext = builder.clientContext;
     }

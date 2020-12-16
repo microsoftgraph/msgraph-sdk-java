@@ -31,6 +31,10 @@ public class MailFolderMoveBody {
     public String destinationId;
 
 
+    /**
+     * Instiaciates a new MailFolderMoveBody
+     */
+    public MailFolderMoveBody() {}
     private MailFolderMoveBody(@Nonnull final MailFolderMoveBodyBuilder builder) {
         this.destinationId = builder.destinationId;
     }

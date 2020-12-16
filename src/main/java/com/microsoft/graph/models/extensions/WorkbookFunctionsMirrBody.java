@@ -49,6 +49,10 @@ public class WorkbookFunctionsMirrBody {
     public com.google.gson.JsonElement reinvestRate;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsMirrBody
+     */
+    public WorkbookFunctionsMirrBody() {}
     private WorkbookFunctionsMirrBody(@Nonnull final WorkbookFunctionsMirrBodyBuilder builder) {
         this.values = builder.values;
         this.financeRate = builder.financeRate;

@@ -58,6 +58,10 @@ public class WorkbookFunctionsCoupDayBsBody {
     public com.google.gson.JsonElement basis;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCoupDayBsBody
+     */
+    public WorkbookFunctionsCoupDayBsBody() {}
     private WorkbookFunctionsCoupDayBsBody(@Nonnull final WorkbookFunctionsCoupDayBsBodyBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;

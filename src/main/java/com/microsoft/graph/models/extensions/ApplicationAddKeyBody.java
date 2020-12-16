@@ -50,6 +50,10 @@ public class ApplicationAddKeyBody {
     public String proof;
 
 
+    /**
+     * Instiaciates a new ApplicationAddKeyBody
+     */
+    public ApplicationAddKeyBody() {}
     private ApplicationAddKeyBody(@Nonnull final ApplicationAddKeyBodyBuilder builder) {
         this.keyCredential = builder.keyCredential;
         this.passwordCredential = builder.passwordCredential;

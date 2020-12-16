@@ -31,6 +31,10 @@ public class ReportRootGetSharePointActivityPagesBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetSharePointActivityPagesBody
+     */
+    public ReportRootGetSharePointActivityPagesBody() {}
     private ReportRootGetSharePointActivityPagesBody(@Nonnull final ReportRootGetSharePointActivityPagesBodyBuilder builder) {
         this.period = builder.period;
     }

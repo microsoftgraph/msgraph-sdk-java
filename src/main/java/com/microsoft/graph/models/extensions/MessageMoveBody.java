@@ -31,6 +31,10 @@ public class MessageMoveBody {
     public String destinationId;
 
 
+    /**
+     * Instiaciates a new MessageMoveBody
+     */
+    public MessageMoveBody() {}
     private MessageMoveBody(@Nonnull final MessageMoveBodyBuilder builder) {
         this.destinationId = builder.destinationId;
     }

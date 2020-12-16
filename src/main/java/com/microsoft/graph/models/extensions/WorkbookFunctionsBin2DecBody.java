@@ -31,6 +31,10 @@ public class WorkbookFunctionsBin2DecBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBin2DecBody
+     */
+    public WorkbookFunctionsBin2DecBody() {}
     private WorkbookFunctionsBin2DecBody(@Nonnull final WorkbookFunctionsBin2DecBodyBuilder builder) {
         this.number = builder.number;
     }

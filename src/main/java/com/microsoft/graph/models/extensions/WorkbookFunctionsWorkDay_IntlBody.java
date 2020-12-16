@@ -58,6 +58,10 @@ public class WorkbookFunctionsWorkDay_IntlBody {
     public com.google.gson.JsonElement holidays;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsWorkDay_IntlBody
+     */
+    public WorkbookFunctionsWorkDay_IntlBody() {}
     private WorkbookFunctionsWorkDay_IntlBody(@Nonnull final WorkbookFunctionsWorkDay_IntlBodyBuilder builder) {
         this.startDate = builder.startDate;
         this.days = builder.days;

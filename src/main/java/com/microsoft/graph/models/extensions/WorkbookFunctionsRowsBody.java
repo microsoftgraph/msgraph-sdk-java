@@ -31,6 +31,10 @@ public class WorkbookFunctionsRowsBody {
     public com.google.gson.JsonElement array;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRowsBody
+     */
+    public WorkbookFunctionsRowsBody() {}
     private WorkbookFunctionsRowsBody(@Nonnull final WorkbookFunctionsRowsBodyBuilder builder) {
         this.array = builder.array;
     }

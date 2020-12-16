@@ -31,6 +31,10 @@ public class WorkbookFunctionsColumnsBody {
     public com.google.gson.JsonElement array;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsColumnsBody
+     */
+    public WorkbookFunctionsColumnsBody() {}
     private WorkbookFunctionsColumnsBody(@Nonnull final WorkbookFunctionsColumnsBodyBuilder builder) {
         this.array = builder.array;
     }

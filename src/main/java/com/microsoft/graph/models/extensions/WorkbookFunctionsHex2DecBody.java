@@ -31,6 +31,10 @@ public class WorkbookFunctionsHex2DecBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsHex2DecBody
+     */
+    public WorkbookFunctionsHex2DecBody() {}
     private WorkbookFunctionsHex2DecBody(@Nonnull final WorkbookFunctionsHex2DecBodyBuilder builder) {
         this.number = builder.number;
     }

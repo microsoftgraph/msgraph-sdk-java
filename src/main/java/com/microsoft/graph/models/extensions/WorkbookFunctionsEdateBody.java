@@ -40,6 +40,10 @@ public class WorkbookFunctionsEdateBody {
     public com.google.gson.JsonElement months;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsEdateBody
+     */
+    public WorkbookFunctionsEdateBody() {}
     private WorkbookFunctionsEdateBody(@Nonnull final WorkbookFunctionsEdateBodyBuilder builder) {
         this.startDate = builder.startDate;
         this.months = builder.months;

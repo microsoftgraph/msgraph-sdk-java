@@ -40,6 +40,10 @@ public class DriveItemCheckinBody {
     public String comment;
 
 
+    /**
+     * Instiaciates a new DriveItemCheckinBody
+     */
+    public DriveItemCheckinBody() {}
     private DriveItemCheckinBody(@Nonnull final DriveItemCheckinBodyBuilder builder) {
         this.checkInAs = builder.checkInAs;
         this.comment = builder.comment;

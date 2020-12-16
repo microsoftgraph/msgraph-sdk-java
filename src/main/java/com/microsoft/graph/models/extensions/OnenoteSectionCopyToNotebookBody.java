@@ -67,6 +67,10 @@ public class OnenoteSectionCopyToNotebookBody {
     public String siteId;
 
 
+    /**
+     * Instiaciates a new OnenoteSectionCopyToNotebookBody
+     */
+    public OnenoteSectionCopyToNotebookBody() {}
     private OnenoteSectionCopyToNotebookBody(@Nonnull final OnenoteSectionCopyToNotebookBodyBuilder builder) {
         this.id = builder.id;
         this.groupId = builder.groupId;

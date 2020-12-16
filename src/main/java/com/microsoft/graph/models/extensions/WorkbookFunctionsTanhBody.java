@@ -31,6 +31,10 @@ public class WorkbookFunctionsTanhBody {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsTanhBody
+     */
+    public WorkbookFunctionsTanhBody() {}
     private WorkbookFunctionsTanhBody(@Nonnull final WorkbookFunctionsTanhBodyBuilder builder) {
         this.number = builder.number;
     }

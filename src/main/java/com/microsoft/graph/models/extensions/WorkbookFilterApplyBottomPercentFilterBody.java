@@ -31,6 +31,10 @@ public class WorkbookFilterApplyBottomPercentFilterBody {
     public Integer percent;
 
 
+    /**
+     * Instiaciates a new WorkbookFilterApplyBottomPercentFilterBody
+     */
+    public WorkbookFilterApplyBottomPercentFilterBody() {}
     private WorkbookFilterApplyBottomPercentFilterBody(@Nonnull final WorkbookFilterApplyBottomPercentFilterBodyBuilder builder) {
         this.percent = builder.percent;
     }

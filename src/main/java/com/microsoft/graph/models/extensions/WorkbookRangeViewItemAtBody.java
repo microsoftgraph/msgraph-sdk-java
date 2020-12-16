@@ -31,6 +31,10 @@ public class WorkbookRangeViewItemAtBody {
     public Integer index;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeViewItemAtBody
+     */
+    public WorkbookRangeViewItemAtBody() {}
     private WorkbookRangeViewItemAtBody(@Nonnull final WorkbookRangeViewItemAtBodyBuilder builder) {
         this.index = builder.index;
     }

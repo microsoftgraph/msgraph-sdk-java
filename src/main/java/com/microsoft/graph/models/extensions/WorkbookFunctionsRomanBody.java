@@ -40,6 +40,10 @@ public class WorkbookFunctionsRomanBody {
     public com.google.gson.JsonElement form;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRomanBody
+     */
+    public WorkbookFunctionsRomanBody() {}
     private WorkbookFunctionsRomanBody(@Nonnull final WorkbookFunctionsRomanBodyBuilder builder) {
         this.number = builder.number;
         this.form = builder.form;

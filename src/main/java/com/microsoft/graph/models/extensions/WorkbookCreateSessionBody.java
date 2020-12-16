@@ -31,6 +31,10 @@ public class WorkbookCreateSessionBody {
     public Boolean persistChanges;
 
 
+    /**
+     * Instiaciates a new WorkbookCreateSessionBody
+     */
+    public WorkbookCreateSessionBody() {}
     private WorkbookCreateSessionBody(@Nonnull final WorkbookCreateSessionBodyBuilder builder) {
         this.persistChanges = builder.persistChanges;
     }

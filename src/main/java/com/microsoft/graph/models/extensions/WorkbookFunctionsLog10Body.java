@@ -31,6 +31,10 @@ public class WorkbookFunctionsLog10Body {
     public com.google.gson.JsonElement number;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsLog10Body
+     */
+    public WorkbookFunctionsLog10Body() {}
     private WorkbookFunctionsLog10Body(@Nonnull final WorkbookFunctionsLog10BodyBuilder builder) {
         this.number = builder.number;
     }

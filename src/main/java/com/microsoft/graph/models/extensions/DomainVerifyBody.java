@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class DomainVerifyBody {
 
+    /**
+     * Instiaciates a new DomainVerifyBody
+     */
+    public DomainVerifyBody() {}
     private DomainVerifyBody(@Nonnull final DomainVerifyBodyBuilder builder) {
     }
     /**

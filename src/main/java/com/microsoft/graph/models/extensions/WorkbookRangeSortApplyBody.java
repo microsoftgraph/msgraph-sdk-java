@@ -67,6 +67,10 @@ public class WorkbookRangeSortApplyBody {
     public String method;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeSortApplyBody
+     */
+    public WorkbookRangeSortApplyBody() {}
     private WorkbookRangeSortApplyBody(@Nonnull final WorkbookRangeSortApplyBodyBuilder builder) {
         this.fields = builder.fields;
         this.matchCase = builder.matchCase;

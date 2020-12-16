@@ -31,6 +31,10 @@ public class ReportRootGetYammerDeviceUsageDistributionUserCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetYammerDeviceUsageDistributionUserCountsBody
+     */
+    public ReportRootGetYammerDeviceUsageDistributionUserCountsBody() {}
     private ReportRootGetYammerDeviceUsageDistributionUserCountsBody(@Nonnull final ReportRootGetYammerDeviceUsageDistributionUserCountsBodyBuilder builder) {
         this.period = builder.period;
     }

@@ -31,6 +31,10 @@ public class ReportRootGetEmailAppUsageVersionsUserCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetEmailAppUsageVersionsUserCountsBody
+     */
+    public ReportRootGetEmailAppUsageVersionsUserCountsBody() {}
     private ReportRootGetEmailAppUsageVersionsUserCountsBody(@Nonnull final ReportRootGetEmailAppUsageVersionsUserCountsBodyBuilder builder) {
         this.period = builder.period;
     }

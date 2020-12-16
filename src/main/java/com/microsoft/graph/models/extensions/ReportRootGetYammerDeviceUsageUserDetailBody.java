@@ -31,6 +31,10 @@ public class ReportRootGetYammerDeviceUsageUserDetailBody {
     public com.microsoft.graph.core.DateOnly date;
 
 
+    /**
+     * Instiaciates a new ReportRootGetYammerDeviceUsageUserDetailBody
+     */
+    public ReportRootGetYammerDeviceUsageUserDetailBody() {}
     private ReportRootGetYammerDeviceUsageUserDetailBody(@Nonnull final ReportRootGetYammerDeviceUsageUserDetailBodyBuilder builder) {
         this.date = builder.date;
     }

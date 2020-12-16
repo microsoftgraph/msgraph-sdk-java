@@ -31,6 +31,10 @@ public class WorkbookFunctionsCountBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsCountBody
+     */
+    public WorkbookFunctionsCountBody() {}
     private WorkbookFunctionsCountBody(@Nonnull final WorkbookFunctionsCountBodyBuilder builder) {
         this.values = builder.values;
     }

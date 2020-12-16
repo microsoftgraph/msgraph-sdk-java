@@ -40,6 +40,10 @@ public class WorkbookFunctionsHyperlinkBody {
     public com.google.gson.JsonElement friendlyName;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsHyperlinkBody
+     */
+    public WorkbookFunctionsHyperlinkBody() {}
     private WorkbookFunctionsHyperlinkBody(@Nonnull final WorkbookFunctionsHyperlinkBodyBuilder builder) {
         this.linkLocation = builder.linkLocation;
         this.friendlyName = builder.friendlyName;

@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class MailFolderDeltaBody {
 
+    /**
+     * Instiaciates a new MailFolderDeltaBody
+     */
+    public MailFolderDeltaBody() {}
     private MailFolderDeltaBody(@Nonnull final MailFolderDeltaBodyBuilder builder) {
     }
     /**

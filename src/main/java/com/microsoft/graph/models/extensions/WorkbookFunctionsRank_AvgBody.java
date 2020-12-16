@@ -49,6 +49,10 @@ public class WorkbookFunctionsRank_AvgBody {
     public com.google.gson.JsonElement order;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsRank_AvgBody
+     */
+    public WorkbookFunctionsRank_AvgBody() {}
     private WorkbookFunctionsRank_AvgBody(@Nonnull final WorkbookFunctionsRank_AvgBodyBuilder builder) {
         this.number = builder.number;
         this.ref = builder.ref;

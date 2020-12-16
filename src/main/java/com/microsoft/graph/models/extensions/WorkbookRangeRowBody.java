@@ -31,6 +31,10 @@ public class WorkbookRangeRowBody {
     public Integer row;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeRowBody
+     */
+    public WorkbookRangeRowBody() {}
     private WorkbookRangeRowBody(@Nonnull final WorkbookRangeRowBodyBuilder builder) {
         this.row = builder.row;
     }

@@ -31,6 +31,10 @@ public class WorkbookFunctionsGaussBody {
     public com.google.gson.JsonElement x;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsGaussBody
+     */
+    public WorkbookFunctionsGaussBody() {}
     private WorkbookFunctionsGaussBody(@Nonnull final WorkbookFunctionsGaussBodyBuilder builder) {
         this.x = builder.x;
     }

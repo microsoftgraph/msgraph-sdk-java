@@ -31,6 +31,10 @@ public class WorkbookFilterApplyValuesFilterBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFilterApplyValuesFilterBody
+     */
+    public WorkbookFilterApplyValuesFilterBody() {}
     private WorkbookFilterApplyValuesFilterBody(@Nonnull final WorkbookFilterApplyValuesFilterBodyBuilder builder) {
         this.values = builder.values;
     }

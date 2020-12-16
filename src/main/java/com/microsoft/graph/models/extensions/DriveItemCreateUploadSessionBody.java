@@ -32,6 +32,10 @@ public class DriveItemCreateUploadSessionBody {
     public DriveItemUploadableProperties item;
 
 
+    /**
+     * Instiaciates a new DriveItemCreateUploadSessionBody
+     */
+    public DriveItemCreateUploadSessionBody() {}
     private DriveItemCreateUploadSessionBody(@Nonnull final DriveItemCreateUploadSessionBodyBuilder builder) {
         this.item = builder.item;
     }

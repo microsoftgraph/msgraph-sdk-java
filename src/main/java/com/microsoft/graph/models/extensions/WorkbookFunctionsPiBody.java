@@ -22,6 +22,10 @@ import java.util.ArrayList;
  */
 public class WorkbookFunctionsPiBody {
 
+    /**
+     * Instiaciates a new WorkbookFunctionsPiBody
+     */
+    public WorkbookFunctionsPiBody() {}
     private WorkbookFunctionsPiBody(@Nonnull final WorkbookFunctionsPiBodyBuilder builder) {
     }
     /**

@@ -31,6 +31,10 @@ public class WorkbookFilterApplyTopItemsFilterBody {
     public Integer count;
 
 
+    /**
+     * Instiaciates a new WorkbookFilterApplyTopItemsFilterBody
+     */
+    public WorkbookFilterApplyTopItemsFilterBody() {}
     private WorkbookFilterApplyTopItemsFilterBody(@Nonnull final WorkbookFilterApplyTopItemsFilterBodyBuilder builder) {
         this.count = builder.count;
     }

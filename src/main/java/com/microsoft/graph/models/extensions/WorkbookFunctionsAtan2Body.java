@@ -40,6 +40,10 @@ public class WorkbookFunctionsAtan2Body {
     public com.google.gson.JsonElement yNum;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAtan2Body
+     */
+    public WorkbookFunctionsAtan2Body() {}
     private WorkbookFunctionsAtan2Body(@Nonnull final WorkbookFunctionsAtan2BodyBuilder builder) {
         this.xNum = builder.xNum;
         this.yNum = builder.yNum;

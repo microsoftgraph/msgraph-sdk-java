@@ -31,6 +31,10 @@ public class WorkbookTableRowItemAtBody {
     public Integer index;
 
 
+    /**
+     * Instiaciates a new WorkbookTableRowItemAtBody
+     */
+    public WorkbookTableRowItemAtBody() {}
     private WorkbookTableRowItemAtBody(@Nonnull final WorkbookTableRowItemAtBodyBuilder builder) {
         this.index = builder.index;
     }

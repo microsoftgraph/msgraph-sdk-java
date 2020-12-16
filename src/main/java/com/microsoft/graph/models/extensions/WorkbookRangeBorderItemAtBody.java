@@ -31,6 +31,10 @@ public class WorkbookRangeBorderItemAtBody {
     public Integer index;
 
 
+    /**
+     * Instiaciates a new WorkbookRangeBorderItemAtBody
+     */
+    public WorkbookRangeBorderItemAtBody() {}
     private WorkbookRangeBorderItemAtBody(@Nonnull final WorkbookRangeBorderItemAtBodyBuilder builder) {
         this.index = builder.index;
     }

@@ -76,6 +76,10 @@ public class WorkbookFunctionsBeta_DistBody {
     public com.google.gson.JsonElement b;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsBeta_DistBody
+     */
+    public WorkbookFunctionsBeta_DistBody() {}
     private WorkbookFunctionsBeta_DistBody(@Nonnull final WorkbookFunctionsBeta_DistBodyBuilder builder) {
         this.x = builder.x;
         this.alpha = builder.alpha;

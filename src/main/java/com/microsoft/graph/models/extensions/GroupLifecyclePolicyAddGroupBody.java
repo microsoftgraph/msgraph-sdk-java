@@ -31,6 +31,10 @@ public class GroupLifecyclePolicyAddGroupBody {
     public String groupId;
 
 
+    /**
+     * Instiaciates a new GroupLifecyclePolicyAddGroupBody
+     */
+    public GroupLifecyclePolicyAddGroupBody() {}
     private GroupLifecyclePolicyAddGroupBody(@Nonnull final GroupLifecyclePolicyAddGroupBodyBuilder builder) {
         this.groupId = builder.groupId;
     }

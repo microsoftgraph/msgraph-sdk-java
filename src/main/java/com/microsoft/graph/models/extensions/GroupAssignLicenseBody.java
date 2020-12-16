@@ -41,6 +41,10 @@ public class GroupAssignLicenseBody {
     public java.util.List<java.util.UUID> removeLicenses;
 
 
+    /**
+     * Instiaciates a new GroupAssignLicenseBody
+     */
+    public GroupAssignLicenseBody() {}
     private GroupAssignLicenseBody(@Nonnull final GroupAssignLicenseBodyBuilder builder) {
         this.addLicenses = builder.addLicenses;
         this.removeLicenses = builder.removeLicenses;

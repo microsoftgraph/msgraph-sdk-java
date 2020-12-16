@@ -31,6 +31,10 @@ public class ReportRootGetOffice365GroupsActivityFileCountsBody {
     public String period;
 
 
+    /**
+     * Instiaciates a new ReportRootGetOffice365GroupsActivityFileCountsBody
+     */
+    public ReportRootGetOffice365GroupsActivityFileCountsBody() {}
     private ReportRootGetOffice365GroupsActivityFileCountsBody(@Nonnull final ReportRootGetOffice365GroupsActivityFileCountsBodyBuilder builder) {
         this.period = builder.period;
     }

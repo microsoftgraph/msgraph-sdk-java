@@ -31,6 +31,10 @@ public class WorkbookFunctionsSumSqBody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsSumSqBody
+     */
+    public WorkbookFunctionsSumSqBody() {}
     private WorkbookFunctionsSumSqBody(@Nonnull final WorkbookFunctionsSumSqBodyBuilder builder) {
         this.values = builder.values;
     }

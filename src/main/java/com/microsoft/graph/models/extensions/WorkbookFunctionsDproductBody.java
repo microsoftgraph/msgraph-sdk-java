@@ -49,6 +49,10 @@ public class WorkbookFunctionsDproductBody {
     public com.google.gson.JsonElement criteria;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsDproductBody
+     */
+    public WorkbookFunctionsDproductBody() {}
     private WorkbookFunctionsDproductBody(@Nonnull final WorkbookFunctionsDproductBodyBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;

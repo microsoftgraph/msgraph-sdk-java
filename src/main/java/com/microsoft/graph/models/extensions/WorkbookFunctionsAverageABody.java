@@ -31,6 +31,10 @@ public class WorkbookFunctionsAverageABody {
     public com.google.gson.JsonElement values;
 
 
+    /**
+     * Instiaciates a new WorkbookFunctionsAverageABody
+     */
+    public WorkbookFunctionsAverageABody() {}
     private WorkbookFunctionsAverageABody(@Nonnull final WorkbookFunctionsAverageABodyBuilder builder) {
         this.values = builder.values;
     }

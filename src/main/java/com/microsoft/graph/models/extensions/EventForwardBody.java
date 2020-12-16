@@ -40,6 +40,10 @@ public class EventForwardBody {
     public String comment;
 
 
+    /**
+     * Instiaciates a new EventForwardBody
+     */
+    public EventForwardBody() {}
     private EventForwardBody(@Nonnull final EventForwardBodyBuilder builder) {
         this.toRecipients = builder.toRecipients;
         this.comment = builder.comment;
