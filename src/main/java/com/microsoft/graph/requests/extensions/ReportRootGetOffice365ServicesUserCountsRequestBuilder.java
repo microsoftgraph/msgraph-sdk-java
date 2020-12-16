@@ -31,7 +31,9 @@ public class ReportRootGetOffice365ServicesUserCountsRequestBuilder extends Base
      */
     public ReportRootGetOffice365ServicesUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetOffice365ServicesUserCountsBody parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**

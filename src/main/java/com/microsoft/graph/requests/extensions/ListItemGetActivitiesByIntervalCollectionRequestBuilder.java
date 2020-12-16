@@ -49,7 +49,9 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      */
     public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ListItemGetActivitiesByIntervalBody parameters) {
         super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
     
     /**

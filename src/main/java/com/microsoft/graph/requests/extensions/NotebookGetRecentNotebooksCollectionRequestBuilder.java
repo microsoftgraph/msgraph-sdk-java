@@ -39,7 +39,9 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
      */
     public NotebookGetRecentNotebooksCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookGetRecentNotebooksBody parameters) {
         super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionRequestBuilder.class, NotebookGetRecentNotebooksCollectionRequest.class);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
     
     /**

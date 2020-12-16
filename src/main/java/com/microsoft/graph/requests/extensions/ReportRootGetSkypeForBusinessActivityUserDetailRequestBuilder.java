@@ -32,7 +32,9 @@ public class ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder exten
      */
     public ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSkypeForBusinessActivityUserDetailBody parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**

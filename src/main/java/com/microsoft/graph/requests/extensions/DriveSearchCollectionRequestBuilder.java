@@ -39,7 +39,9 @@ public class DriveSearchCollectionRequestBuilder extends BaseFunctionCollectionR
      */
     public DriveSearchCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveSearchBody parameters) {
         super(requestUrl, client, requestOptions, DriveSearchCollectionRequestBuilder.class, DriveSearchCollectionRequest.class);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
     
     /**

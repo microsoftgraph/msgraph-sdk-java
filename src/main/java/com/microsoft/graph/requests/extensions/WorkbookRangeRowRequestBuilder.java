@@ -30,7 +30,9 @@ public class WorkbookRangeRowRequestBuilder extends BaseFunctionRequestBuilder<W
      */
     public WorkbookRangeRowRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeRowBody parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**

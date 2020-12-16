@@ -39,7 +39,9 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
      */
     public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceManagementGetEffectivePermissionsBody parameters) {
         super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionRequestBuilder.class, DeviceManagementGetEffectivePermissionsCollectionRequest.class);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
     
     /**

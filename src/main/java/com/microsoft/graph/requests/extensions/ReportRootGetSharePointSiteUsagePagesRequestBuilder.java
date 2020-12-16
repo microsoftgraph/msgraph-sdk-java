@@ -31,7 +31,9 @@ public class ReportRootGetSharePointSiteUsagePagesRequestBuilder extends BaseFun
      */
     public ReportRootGetSharePointSiteUsagePagesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSharePointSiteUsagePagesBody parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**

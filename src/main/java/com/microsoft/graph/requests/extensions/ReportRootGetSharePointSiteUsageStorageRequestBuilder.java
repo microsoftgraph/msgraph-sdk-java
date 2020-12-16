@@ -31,7 +31,9 @@ public class ReportRootGetSharePointSiteUsageStorageRequestBuilder extends BaseF
      */
     public ReportRootGetSharePointSiteUsageStorageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSharePointSiteUsageStorageBody parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**

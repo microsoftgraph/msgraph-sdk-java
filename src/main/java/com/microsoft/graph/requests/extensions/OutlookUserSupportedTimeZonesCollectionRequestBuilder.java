@@ -50,7 +50,9 @@ public class OutlookUserSupportedTimeZonesCollectionRequestBuilder extends BaseF
      */
     public OutlookUserSupportedTimeZonesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OutlookUserSupportedTimeZonesBody parameters) {
         super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionRequestBuilder.class, OutlookUserSupportedTimeZonesCollectionRequest.class);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
     
     /**

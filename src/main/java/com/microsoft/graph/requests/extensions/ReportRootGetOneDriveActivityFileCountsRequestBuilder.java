@@ -31,7 +31,9 @@ public class ReportRootGetOneDriveActivityFileCountsRequestBuilder extends BaseF
      */
     public ReportRootGetOneDriveActivityFileCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetOneDriveActivityFileCountsBody parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions = parameters.getFunctionOptions();
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**
