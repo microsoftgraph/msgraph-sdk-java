@@ -24,7 +24,7 @@ import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.extensions.RecurrenceRange;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
+import com.microsoft.graph.models.extensions.UserGetMailTipsParameterSet;
 import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
@@ -211,12 +211,12 @@ public class DefaultSerializerTests {
         final ArrayList<String> users = new ArrayList<String>();
         users.add("michael@chambele.onmicrosoft.com");
         final EnumSet<MailTipsType> mailtips = EnumSet.of(MailTipsType.MAILBOX_FULL_STATUS, MailTipsType.MAX_MESSAGE_SIZE);
-        final UserGetMailTipsBody body = UserGetMailTipsBody.newBuilder().withEmailAddresses(users).withMailTipsOptions(mailtips).build();
+        final UserGetMailTipsParameterSet body = UserGetMailTipsParameterSet.newBuilder().withEmailAddresses(users).withMailTipsOptions(mailtips).build();
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         final String serialized = serializer.serializeObject(body);
         Assert.assertTrue("result contains camelCasedValues", serialized.contains("mailboxFullStatus"));
 
-        final UserGetMailTipsBody deserialized = serializer.deserializeObject(serialized, UserGetMailTipsBody.class);
+        final UserGetMailTipsParameterSet deserialized = serializer.deserializeObject(serialized, UserGetMailTipsParameterSet.class);
 
         Assert.assertEquals(2, deserialized.mailTipsOptions.size());
     }

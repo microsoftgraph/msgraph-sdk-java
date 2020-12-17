@@ -53,9 +53,9 @@ import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.models.extensions.UserSendMailBody;
-import com.microsoft.graph.models.extensions.AttachmentCreateUploadSessionBody;
-import com.microsoft.graph.models.extensions.UserFindMeetingTimesBody;
+import com.microsoft.graph.models.extensions.UserSendMailParameterSet;
+import com.microsoft.graph.models.extensions.AttachmentCreateUploadSessionParameterSet;
+import com.microsoft.graph.models.extensions.UserFindMeetingTimesParameterSet;
 
 @Ignore
 public class OutlookTests {
@@ -74,7 +74,7 @@ public class OutlookTests {
         ArrayList<Recipient> recipients = new ArrayList<Recipient>();
         recipients.add(r);
         message.toRecipients = recipients;
-        testBase.graphClient.me().sendMail(UserSendMailBody.newBuilder().withMessage(message).withSaveToSentItems(true).build()).buildRequest().post();
+        testBase.graphClient.me().sendMail(UserSendMailParameterSet.newBuilder().withMessage(message).withSaveToSentItems(true).build()).buildRequest().post();
     }
 
     @Test
@@ -101,7 +101,7 @@ public class OutlookTests {
         	DatatypeFactory.newInstance().newDuration("PT30M");
             Duration duration = DatatypeFactory.newInstance().newDuration("PT30M");
             MeetingTimeSuggestionsResult result = testBase.graphClient.me()
-                                                    .findMeetingTimes(UserFindMeetingTimesBody.newBuilder()
+                                                    .findMeetingTimes(UserFindMeetingTimesParameterSet.newBuilder()
                                                                         .withAttendees(attendees)
                                                                         .withMeetingDuration(duration)
                                                                         .withMaxCandidates(10)
@@ -156,7 +156,7 @@ public class OutlookTests {
     	AttachmentCollectionResponse response = new AttachmentCollectionResponse();
     	response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
 		message.attachments = new AttachmentCollectionPage(response, null);
-		testBase.graphClient.me().sendMail(UserSendMailBody.newBuilder().withMessage(message).withSaveToSentItems(true).build()).buildRequest().post();
+		testBase.graphClient.me().sendMail(UserSendMailParameterSet.newBuilder().withMessage(message).withSaveToSentItems(true).build()).buildRequest().post();
     }
 
     @Test
@@ -318,7 +318,7 @@ public class OutlookTests {
 		UploadSession uploadSession = testBase.graphClient.me()
 									.messages(newMessage.id)
 									.attachments()
-									.createUploadSession(AttachmentCreateUploadSessionBody.newBuilder().withAttachmentItem(attachmentItem).build())
+									.createUploadSession(AttachmentCreateUploadSessionParameterSet.newBuilder().withAttachmentItem(attachmentItem).build())
 									.buildRequest()
 									.post();
 

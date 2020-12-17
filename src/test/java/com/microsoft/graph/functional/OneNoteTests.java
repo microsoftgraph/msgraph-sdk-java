@@ -45,11 +45,11 @@ import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionPage;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.NotebookCollectionPage;
-import com.microsoft.graph.models.extensions.NotebookGetRecentNotebooksBody;
-import com.microsoft.graph.models.extensions.OnenoteSectionCopyToSectionGroupBody;
-import com.microsoft.graph.models.extensions.OnenoteSectionCopyToNotebookBody;
-import com.microsoft.graph.models.extensions.OnenotePageCopyToSectionBody;
-import com.microsoft.graph.models.extensions.OnenotePageOnenotePatchContentBody;
+import com.microsoft.graph.models.extensions.NotebookGetRecentNotebooksParameterSet;
+import com.microsoft.graph.models.extensions.OnenoteSectionCopyToSectionGroupParameterSet;
+import com.microsoft.graph.models.extensions.OnenoteSectionCopyToNotebookParameterSet;
+import com.microsoft.graph.models.extensions.OnenotePageCopyToSectionParameterSet;
+import com.microsoft.graph.models.extensions.OnenotePageOnenotePatchContentParameterSet;
 
 /**
  * Tests for OneNote API functionality
@@ -232,14 +232,14 @@ public class OneNoteTests {
     public void testRecentNotebooks() {
         NotebookGetRecentNotebooksCollectionPage books = orb
         		.notebooks()
-        		.getRecentNotebooks(NotebookGetRecentNotebooksBody.newBuilder().withIncludePersonalNotebooks(true).build())
+        		.getRecentNotebooks(NotebookGetRecentNotebooksParameterSet.newBuilder().withIncludePersonalNotebooks(true).build())
         		.buildRequest()
         		.get();
         assertNotNull(books);
 
         NotebookGetRecentNotebooksCollectionPage noPersonalBooks = orb
         		.notebooks()
-        		.getRecentNotebooks(NotebookGetRecentNotebooksBody.newBuilder().withIncludePersonalNotebooks(false).build())
+        		.getRecentNotebooks(NotebookGetRecentNotebooksParameterSet.newBuilder().withIncludePersonalNotebooks(false).build())
         		.buildRequest()
         		.get();
         assertNotNull(noPersonalBooks);
@@ -368,7 +368,7 @@ public class OneNoteTests {
     	// Test copy to notebook
         OnenoteOperation notebookCopy = orb
         		.sections(testSection.id)
-        		.copyToNotebook(OnenoteSectionCopyToNotebookBody.newBuilder().withId(testNotebook2.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
+        		.copyToNotebook(OnenoteSectionCopyToNotebookParameterSet.newBuilder().withId(testNotebook2.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
         		.buildRequest()
         		.post();
         assertNotNull(notebookCopy);
@@ -383,7 +383,7 @@ public class OneNoteTests {
         // Test copy to section group
         OnenoteOperation copySectionGroup = orb
         		.sections(testSection.id)
-        		.copyToSectionGroup(OnenoteSectionCopyToSectionGroupBody.newBuilder().withGroupId(testSectionGroup2.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
+        		.copyToSectionGroup(OnenoteSectionCopyToSectionGroupParameterSet.newBuilder().withGroupId(testSectionGroup2.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
         		.buildRequest()
         		.post();
         assertNotNull(copySectionGroup);
@@ -400,7 +400,7 @@ public class OneNoteTests {
 
         OnenoteOperation copySection = orb
         		.pages(testPage.id)
-        		.copyToSection(OnenotePageCopyToSectionBody.newBuilder().withId(section.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
+        		.copyToSection(OnenotePageCopyToSectionParameterSet.newBuilder().withId(section.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
         		.buildRequest()
         		.post();
         assertNotNull(copySection);
@@ -528,7 +528,7 @@ public class OneNoteTests {
         commands.add(command);
         orb
         .pages(testPage.id)
-        .onenotePatchContent(OnenotePageOnenotePatchContentBody.newBuilder().withCommands(commands).build())
+        .onenotePatchContent(OnenotePageOnenotePatchContentParameterSet.newBuilder().withCommands(commands).build())
         .buildRequest()
         .post();
     }

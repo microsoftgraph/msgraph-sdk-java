@@ -21,7 +21,7 @@ import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.ChatMessageMention;
 import com.microsoft.graph.models.extensions.Drive;
-import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionBody;
+import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionParameterSet;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.models.extensions.IdentitySet;
@@ -87,7 +87,7 @@ public class AdditionalDataTests {
 		final DriveItemUploadableProperties upProps = new DriveItemUploadableProperties();
         upProps.name = "vacation.gif";
 		upProps.additionalDataManager().put("@microsoft.graph.conflictBehavior", new JsonPrimitive("rename"));
-		final DriveItemCreateUploadSessionBody body = DriveItemCreateUploadSessionBody.newBuilder().withItem(upProps).build();
+		final DriveItemCreateUploadSessionParameterSet body = DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(upProps).build();
 		String serializedObject = serializer.serializeObject(body);
 		assertEquals("{\"item\":{\"name\":\"vacation.gif\",\"@microsoft.graph.conflictBehavior\":\"rename\"}}", serializedObject);
 	}

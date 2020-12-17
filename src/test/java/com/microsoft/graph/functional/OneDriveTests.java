@@ -21,7 +21,7 @@ import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
-import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionBody;
+import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionParameterSet;
 
 @Ignore
 public class OneDriveTests {
@@ -69,7 +69,7 @@ public class OneDriveTests {
 				.drive()
 				.root()
 				.itemWithPath("largefile10M.blob")
-				.createUploadSession(DriveItemCreateUploadSessionBody.newBuilder().withItem(new DriveItemUploadableProperties()).build())
+				.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(new DriveItemUploadableProperties()).build())
 				.buildRequest()
 				.post();
 		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
@@ -102,7 +102,7 @@ public class OneDriveTests {
 			.drive()
 			.root()
 			.itemWithPath(item.name)
-			.createUploadSession(DriveItemCreateUploadSessionBody.newBuilder().withItem(item).build())
+			.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(item).build())
 			.buildRequest()
 			.post();
 

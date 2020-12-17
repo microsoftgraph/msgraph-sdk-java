@@ -17,7 +17,7 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.ExtensionSchemaProperty;
 import com.microsoft.graph.models.extensions.SchemaExtension;
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionPage;
-import com.microsoft.graph.models.extensions.GroupDeltaBody;
+import com.microsoft.graph.models.extensions.GroupDeltaParameterSet;
 
 @Ignore
 public class ODataTests {
@@ -144,7 +144,7 @@ public class ODataTests {
            assertNotNull(deltas.getCurrentPage());
        }
 
-       final GroupDeltaCollectionPage deltas2 = testBase.graphClient.groups().delta(GroupDeltaBody.newBuilder().withDeltaLink(deltas.deltaLink()).build()).buildRequest().get();
+       final GroupDeltaCollectionPage deltas2 = testBase.graphClient.groups().delta().buildRequest().deltaLink(deltas.deltaLink()).get();
        assertNotNull(deltas2);
     }
 }
