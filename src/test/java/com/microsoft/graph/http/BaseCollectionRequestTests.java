@@ -47,18 +47,18 @@ public class BaseCollectionRequestTests {
     @SuppressWarnings("unchecked")
     private Class<BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>> jsonObjectCollectionPageMockClass = (Class<BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>>)mock(BaseCollectionPage.class).getClass();
     @SuppressWarnings("unchecked")
-    private Class<BaseCollectionRequestBuilder<JsonObject, 
-                                        BaseRequestBuilder<JsonObject>, 
-                                        ICollectionResponse<JsonObject>, 
-                                        BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>, 
-                                        BaseCollectionRequest<JsonObject, ICollectionResponse<JsonObject>, BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>>>> jsonObjectCollectionRequestBuilderMockClass = 
-                                        (Class<BaseCollectionRequestBuilder<JsonObject, 
-                                        BaseRequestBuilder<JsonObject>, 
-                                        ICollectionResponse<JsonObject>, 
-                                        BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>, 
+    private Class<BaseCollectionRequestBuilder<JsonObject,
+                                        BaseRequestBuilder<JsonObject>,
+                                        ICollectionResponse<JsonObject>,
+                                        BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>,
+                                        BaseCollectionRequest<JsonObject, ICollectionResponse<JsonObject>, BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>>>> jsonObjectCollectionRequestBuilderMockClass =
+                                        (Class<BaseCollectionRequestBuilder<JsonObject,
+                                        BaseRequestBuilder<JsonObject>,
+                                        ICollectionResponse<JsonObject>,
+                                        BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>,
                                         BaseCollectionRequest<JsonObject, ICollectionResponse<JsonObject>, BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>>>>)
                                         mock(BaseCollectionRequestBuilder.class).getClass();
-    private BaseCollectionRequest<JsonObject, ICollectionResponse<JsonObject>, BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>> mRequest;
+    private BaseEntityCollectionRequest<JsonObject, ICollectionResponse<JsonObject>, BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>> mRequest;
 
     @Before
     public void setUp() throws Exception {
@@ -84,7 +84,7 @@ public class BaseCollectionRequestTests {
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
-        mRequest = new BaseCollectionRequest<JsonObject,ICollectionResponse<JsonObject>, BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>>("https://a.b.c/", mBaseClient, null, jsonObjectCollectionResponseMockClass, jsonObjectCollectionPageMockClass, jsonObjectCollectionRequestBuilderMockClass){};
+        mRequest = new BaseEntityCollectionRequest<JsonObject,ICollectionResponse<JsonObject>, BaseCollectionPage<JsonObject, BaseRequestBuilder<JsonObject>>>("https://a.b.c/", mBaseClient, null, jsonObjectCollectionResponseMockClass, jsonObjectCollectionPageMockClass, jsonObjectCollectionRequestBuilderMockClass){};
     }
 
     @Test
@@ -106,15 +106,15 @@ public class BaseCollectionRequestTests {
     @SuppressWarnings("unchecked")
     private Class<BaseCollectionPage<String, BaseRequestBuilder<String>>> stringCollectionPageMockClass = (Class<BaseCollectionPage<String, BaseRequestBuilder<String>>>)mock(BaseCollectionPage.class).getClass();
     @SuppressWarnings("unchecked")
-    private Class<BaseCollectionRequestBuilder<String, 
-                                        BaseRequestBuilder<String>, 
-                                        ICollectionResponse<String>, 
-                                        BaseCollectionPage<String, BaseRequestBuilder<String>>, 
-                                        BaseCollectionRequest<String, ICollectionResponse<String>, BaseCollectionPage<String, BaseRequestBuilder<String>>>>> stringCollectionRequestBuilderMockClass = 
-                                        (Class<BaseCollectionRequestBuilder<String, 
-                                        BaseRequestBuilder<String>, 
-                                        ICollectionResponse<String>, 
-                                        BaseCollectionPage<String, BaseRequestBuilder<String>>, 
+    private Class<BaseCollectionRequestBuilder<String,
+                                        BaseRequestBuilder<String>,
+                                        ICollectionResponse<String>,
+                                        BaseCollectionPage<String, BaseRequestBuilder<String>>,
+                                        BaseCollectionRequest<String, ICollectionResponse<String>, BaseCollectionPage<String, BaseRequestBuilder<String>>>>> stringCollectionRequestBuilderMockClass =
+                                        (Class<BaseCollectionRequestBuilder<String,
+                                        BaseRequestBuilder<String>,
+                                        ICollectionResponse<String>,
+                                        BaseCollectionPage<String, BaseRequestBuilder<String>>,
                                         BaseCollectionRequest<String, ICollectionResponse<String>, BaseCollectionPage<String, BaseRequestBuilder<String>>>>>)
                                         mock(BaseCollectionRequestBuilder.class).getClass();
     @Test
