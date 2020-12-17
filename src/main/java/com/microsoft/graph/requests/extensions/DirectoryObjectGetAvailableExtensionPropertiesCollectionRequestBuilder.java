@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse;
-import com.microsoft.graph.models.extensions.DirectoryObjectGetAvailableExtensionPropertiesBody;
+import com.microsoft.graph.models.extensions.DirectoryObjectGetAvailableExtensionPropertiesParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<ExtensionProperty, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest> {
 
-    private DirectoryObjectGetAvailableExtensionPropertiesBody body;
+    private DirectoryObjectGetAvailableExtensionPropertiesParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject
      *
@@ -38,7 +38,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetAvailableExtensionPropertiesBody parameters) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetAvailableExtensionPropertiesParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest.class);
         this.body = parameters;
     }

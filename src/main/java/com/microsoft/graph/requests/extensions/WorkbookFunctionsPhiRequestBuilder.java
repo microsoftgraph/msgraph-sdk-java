@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPhiRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPhiBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPhiParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsPhiRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsPhiBody body;
+    private WorkbookFunctionsPhiParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsPhi
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsPhiRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPhiRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPhiBody parameters) {
+    public WorkbookFunctionsPhiRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPhiParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

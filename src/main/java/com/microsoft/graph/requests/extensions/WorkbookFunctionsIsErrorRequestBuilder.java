@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsErrorRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsErrorBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsErrorParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsIsErrorRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsIsErrorBody body;
+    private WorkbookFunctionsIsErrorParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsIsError
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsIsErrorRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsIsErrorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIsErrorBody parameters) {
+    public WorkbookFunctionsIsErrorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIsErrorParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

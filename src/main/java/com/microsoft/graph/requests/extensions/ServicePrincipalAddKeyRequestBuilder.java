@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ServicePrincipalAddKeyBody;
+import com.microsoft.graph.models.extensions.ServicePrincipalAddKeyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuilder<KeyCredential> {
 
-    private ServicePrincipalAddKeyBody body;
+    private ServicePrincipalAddKeyParameterSet body;
     /**
      * The request builder for this ServicePrincipalAddKey
      *
@@ -31,7 +31,7 @@ public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ServicePrincipalAddKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalAddKeyBody parameters) {
+    public ServicePrincipalAddKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalAddKeyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

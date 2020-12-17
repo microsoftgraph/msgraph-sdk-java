@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsFisherRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFisherBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFisherParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsFisherRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsFisherBody body;
+    private WorkbookFunctionsFisherParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsFisher
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsFisherRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsFisherRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFisherBody parameters) {
+    public WorkbookFunctionsFisherRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFisherParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

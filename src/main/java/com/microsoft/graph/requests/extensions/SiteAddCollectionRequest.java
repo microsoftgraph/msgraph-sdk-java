@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionResponse;
 import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.models.extensions.SiteAddBody;
+import com.microsoft.graph.models.extensions.SiteAddParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -32,7 +32,7 @@ public class SiteAddCollectionRequest extends BaseActionCollectionRequest<Site, 
 
 
     /** The body for the method */
-    protected SiteAddBody body;
+    protected SiteAddParameterSet body;
 
 
     /**
@@ -43,7 +43,7 @@ public class SiteAddCollectionRequest extends BaseActionCollectionRequest<Site, 
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public SiteAddCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteAddBody parameters) {
+    public SiteAddCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteAddParameterSet parameters) {
         super(requestUrl, client, requestOptions, SiteAddCollectionResponse.class, SiteAddCollectionPage.class, SiteAddCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -115,6 +115,16 @@ public class SiteAddCollectionRequest extends BaseActionCollectionRequest<Site, 
     @Nonnull
     public SiteAddCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public SiteAddCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

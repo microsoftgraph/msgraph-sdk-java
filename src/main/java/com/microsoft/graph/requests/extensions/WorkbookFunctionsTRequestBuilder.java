@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsTRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsTRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsTBody body;
+    private WorkbookFunctionsTParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsT
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsTRequestBuilder extends BaseActionRequestBuilder<W
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsTBody parameters) {
+    public WorkbookFunctionsTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsTParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

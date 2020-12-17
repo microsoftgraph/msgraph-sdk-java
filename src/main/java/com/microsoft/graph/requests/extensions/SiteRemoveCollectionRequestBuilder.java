@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequest;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionResponse;
-import com.microsoft.graph.models.extensions.SiteRemoveBody;
+import com.microsoft.graph.models.extensions.SiteRemoveParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class SiteRemoveCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<Site, SiteRemoveCollectionRequestBuilder, SiteRemoveCollectionResponse, SiteRemoveCollectionPage, SiteRemoveCollectionRequest> {
 
-    private SiteRemoveBody body;
+    private SiteRemoveParameterSet body;
     /**
      * The request builder for this collection of Site
      *
@@ -38,7 +38,7 @@ public class SiteRemoveCollectionRequestBuilder extends BaseActionCollectionRequ
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public SiteRemoveCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteRemoveBody parameters) {
+    public SiteRemoveCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteRemoveParameterSet parameters) {
         super(requestUrl, client, requestOptions, SiteRemoveCollectionRequestBuilder.class, SiteRemoveCollectionRequest.class);
         this.body = parameters;
     }

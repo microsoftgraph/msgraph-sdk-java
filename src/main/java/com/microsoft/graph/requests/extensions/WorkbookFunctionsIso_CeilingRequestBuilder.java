@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsIso_CeilingReque
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIso_CeilingBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIso_CeilingParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsIso_CeilingBody body;
+    private WorkbookFunctionsIso_CeilingParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsIso_Ceiling
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsIso_CeilingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIso_CeilingBody parameters) {
+    public WorkbookFunctionsIso_CeilingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIso_CeilingParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

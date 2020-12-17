@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionBody;
+import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class DriveItemCreateUploadSessionRequestBuilder extends BaseActionRequestBuilder<UploadSession> {
 
-    private DriveItemCreateUploadSessionBody body;
+    private DriveItemCreateUploadSessionParameterSet body;
     /**
      * The request builder for this DriveItemCreateUploadSession
      *
@@ -31,7 +31,7 @@ public class DriveItemCreateUploadSessionRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveItemCreateUploadSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemCreateUploadSessionBody parameters) {
+    public DriveItemCreateUploadSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemCreateUploadSessionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

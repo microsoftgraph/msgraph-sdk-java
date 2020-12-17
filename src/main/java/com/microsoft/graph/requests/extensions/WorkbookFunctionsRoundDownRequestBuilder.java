@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsRoundDownRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRoundDownBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRoundDownParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsRoundDownRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsRoundDownBody body;
+    private WorkbookFunctionsRoundDownParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsRoundDown
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsRoundDownRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsRoundDownRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRoundDownBody parameters) {
+    public WorkbookFunctionsRoundDownRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRoundDownParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

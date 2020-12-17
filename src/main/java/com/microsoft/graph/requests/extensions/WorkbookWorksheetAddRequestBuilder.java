@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetAddRequest;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookWorksheetAddBody;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetAddParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookWorksheetAddRequestBuilder extends BaseActionRequestBuilder<WorkbookWorksheet> {
 
-    private WorkbookWorksheetAddBody body;
+    private WorkbookWorksheetAddParameterSet body;
     /**
      * The request builder for this WorkbookWorksheetAdd
      *
@@ -29,7 +29,7 @@ public class WorkbookWorksheetAddRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookWorksheetAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookWorksheetAddBody parameters) {
+    public WorkbookWorksheetAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookWorksheetAddParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

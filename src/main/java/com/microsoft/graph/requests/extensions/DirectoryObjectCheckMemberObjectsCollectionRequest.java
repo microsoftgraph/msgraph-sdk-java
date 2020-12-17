@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionResponse;
-import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberObjectsBody;
+import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberObjectsParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -31,7 +31,7 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseActi
 
 
     /** The body for the method */
-    protected DirectoryObjectCheckMemberObjectsBody body;
+    protected DirectoryObjectCheckMemberObjectsParameterSet body;
 
 
     /**
@@ -42,7 +42,7 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseActi
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public DirectoryObjectCheckMemberObjectsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectCheckMemberObjectsBody parameters) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectCheckMemberObjectsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionResponse.class, DirectoryObjectCheckMemberObjectsCollectionPage.class, DirectoryObjectCheckMemberObjectsCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -114,6 +114,16 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseActi
     @Nonnull
     public DirectoryObjectCheckMemberObjectsCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public DirectoryObjectCheckMemberObjectsCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

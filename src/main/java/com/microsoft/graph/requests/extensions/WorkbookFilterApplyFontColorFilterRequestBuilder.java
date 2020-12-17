@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyFontColorFilte
 import com.microsoft.graph.models.extensions.WorkbookFilter;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFilterApplyFontColorFilterBody;
+import com.microsoft.graph.models.extensions.WorkbookFilterApplyFontColorFilterParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseActionRequestBuilder<WorkbookFilter> {
 
-    private WorkbookFilterApplyFontColorFilterBody body;
+    private WorkbookFilterApplyFontColorFilterParameterSet body;
     /**
      * The request builder for this WorkbookFilterApplyFontColorFilter
      *
@@ -30,7 +30,7 @@ public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyFontColorFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyFontColorFilterBody parameters) {
+    public WorkbookFilterApplyFontColorFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyFontColorFilterParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

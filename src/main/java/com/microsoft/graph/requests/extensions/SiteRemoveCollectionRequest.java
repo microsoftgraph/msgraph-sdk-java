@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionResponse;
 import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.models.extensions.SiteRemoveBody;
+import com.microsoft.graph.models.extensions.SiteRemoveParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -32,7 +32,7 @@ public class SiteRemoveCollectionRequest extends BaseActionCollectionRequest<Sit
 
 
     /** The body for the method */
-    protected SiteRemoveBody body;
+    protected SiteRemoveParameterSet body;
 
 
     /**
@@ -43,7 +43,7 @@ public class SiteRemoveCollectionRequest extends BaseActionCollectionRequest<Sit
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public SiteRemoveCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteRemoveBody parameters) {
+    public SiteRemoveCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteRemoveParameterSet parameters) {
         super(requestUrl, client, requestOptions, SiteRemoveCollectionResponse.class, SiteRemoveCollectionPage.class, SiteRemoveCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -115,6 +115,16 @@ public class SiteRemoveCollectionRequest extends BaseActionCollectionRequest<Sit
     @Nonnull
     public SiteRemoveCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public SiteRemoveCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

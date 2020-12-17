@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsNetworkDays_Intl
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNetworkDays_IntlBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNetworkDays_IntlParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsNetworkDays_IntlRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsNetworkDays_IntlBody body;
+    private WorkbookFunctionsNetworkDays_IntlParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsNetworkDays_Intl
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsNetworkDays_IntlRequestBuilder extends BaseActionR
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsNetworkDays_IntlRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsNetworkDays_IntlBody parameters) {
+    public WorkbookFunctionsNetworkDays_IntlRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsNetworkDays_IntlParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

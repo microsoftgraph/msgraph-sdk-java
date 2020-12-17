@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountBlankReques
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCountBlankBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCountBlankParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsCountBlankBody body;
+    private WorkbookFunctionsCountBlankParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsCountBlank
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsCountBlankRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCountBlankBody parameters) {
+    public WorkbookFunctionsCountBlankRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCountBlankParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

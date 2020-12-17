@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentile_ExcRe
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentile_ExcBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentile_ExcParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsPercentile_ExcRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsPercentile_ExcBody body;
+    private WorkbookFunctionsPercentile_ExcParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsPercentile_Exc
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsPercentile_ExcRequestBuilder extends BaseActionReq
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPercentile_ExcRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPercentile_ExcBody parameters) {
+    public WorkbookFunctionsPercentile_ExcRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPercentile_ExcParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

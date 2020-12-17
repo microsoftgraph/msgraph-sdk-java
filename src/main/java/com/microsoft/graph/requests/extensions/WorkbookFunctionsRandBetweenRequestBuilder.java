@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsRandBetweenReque
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRandBetweenBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRandBetweenParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsRandBetweenBody body;
+    private WorkbookFunctionsRandBetweenParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsRandBetween
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsRandBetweenRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRandBetweenBody parameters) {
+    public WorkbookFunctionsRandBetweenRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRandBetweenParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

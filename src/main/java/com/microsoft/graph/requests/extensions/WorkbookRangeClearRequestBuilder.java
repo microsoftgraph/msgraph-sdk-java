@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeClearRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookRangeClearBody;
+import com.microsoft.graph.models.extensions.WorkbookRangeClearParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookRangeClearRequestBuilder extends BaseActionRequestBuilder<WorkbookRange> {
 
-    private WorkbookRangeClearBody body;
+    private WorkbookRangeClearParameterSet body;
     /**
      * The request builder for this WorkbookRangeClear
      *
@@ -30,7 +30,7 @@ public class WorkbookRangeClearRequestBuilder extends BaseActionRequestBuilder<W
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeClearRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeClearBody parameters) {
+    public WorkbookRangeClearRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeClearParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

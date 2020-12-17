@@ -134,5 +134,15 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseFunct
         addSkipOption(value);
         return this;
     }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public DriveItemGetActivitiesByIntervalCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
+        return this;
+    }
 
 }

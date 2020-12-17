@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.UserFindMeetingTimesBody;
+import com.microsoft.graph.models.extensions.UserFindMeetingTimesParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ import javax.annotation.Nonnull;
  */
 public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder<MeetingTimeSuggestionsResult> {
 
-    private UserFindMeetingTimesBody body;
+    private UserFindMeetingTimesParameterSet body;
     /**
      * The request builder for this UserFindMeetingTimes
      *
@@ -33,7 +33,7 @@ public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserFindMeetingTimesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserFindMeetingTimesBody parameters) {
+    public UserFindMeetingTimesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserFindMeetingTimesParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUs
 import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
-import com.microsoft.graph.models.extensions.ReportRootGetSharePointActivityUserCountsBody;
+import com.microsoft.graph.models.extensions.ReportRootGetSharePointActivityUserCountsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ public class ReportRootGetSharePointActivityUserCountsRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetSharePointActivityUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSharePointActivityUserCountsBody parameters) {
+    public ReportRootGetSharePointActivityUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSharePointActivityUserCountsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

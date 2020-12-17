@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.CallTransferRequest;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.CallTransferBody;
+import com.microsoft.graph.models.extensions.CallTransferParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class CallTransferRequestBuilder extends BaseActionRequestBuilder<Call> {
 
-    private CallTransferBody body;
+    private CallTransferParameterSet body;
     /**
      * The request builder for this CallTransfer
      *
@@ -30,7 +30,7 @@ public class CallTransferRequestBuilder extends BaseActionRequestBuilder<Call> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallTransferRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallTransferBody parameters) {
+    public CallTransferRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallTransferParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

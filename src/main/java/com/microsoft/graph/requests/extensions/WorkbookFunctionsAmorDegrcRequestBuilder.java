@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsAmorDegrcRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAmorDegrcBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAmorDegrcParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsAmorDegrcBody body;
+    private WorkbookFunctionsAmorDegrcParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsAmorDegrc
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsAmorDegrcRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAmorDegrcBody parameters) {
+    public WorkbookFunctionsAmorDegrcRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAmorDegrcParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

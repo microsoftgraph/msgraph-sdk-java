@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionResponse;
-import com.microsoft.graph.models.extensions.DriveItemGetActivitiesByIntervalBody;
+import com.microsoft.graph.models.extensions.DriveItemGetActivitiesByIntervalParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -47,7 +47,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemGetActivitiesByIntervalBody parameters) {
+    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemGetActivitiesByIntervalParameterSet parameters) {
         super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionRequestBuilder.class, DriveItemGetActivitiesByIntervalCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

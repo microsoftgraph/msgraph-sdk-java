@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SearchEntityQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SearchEntityQueryCollectionResponse;
 import com.microsoft.graph.models.extensions.SearchResponse;
-import com.microsoft.graph.models.extensions.SearchEntityQueryBody;
+import com.microsoft.graph.models.extensions.SearchEntityQueryParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -33,7 +33,7 @@ public class SearchEntityQueryCollectionRequest extends BaseActionCollectionRequ
 
 
     /** The body for the method */
-    protected SearchEntityQueryBody body;
+    protected SearchEntityQueryParameterSet body;
 
 
     /**
@@ -44,7 +44,7 @@ public class SearchEntityQueryCollectionRequest extends BaseActionCollectionRequ
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public SearchEntityQueryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SearchEntityQueryBody parameters) {
+    public SearchEntityQueryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SearchEntityQueryParameterSet parameters) {
         super(requestUrl, client, requestOptions, SearchEntityQueryCollectionResponse.class, SearchEntityQueryCollectionPage.class, SearchEntityQueryCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -116,6 +116,16 @@ public class SearchEntityQueryCollectionRequest extends BaseActionCollectionRequ
     @Nonnull
     public SearchEntityQueryCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public SearchEntityQueryCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

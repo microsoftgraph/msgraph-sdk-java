@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
-import com.microsoft.graph.models.extensions.ReportRootManagedDeviceEnrollmentTopFailuresBody;
+import com.microsoft.graph.models.extensions.ReportRootManagedDeviceEnrollmentTopFailuresParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -40,7 +40,7 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder extends 
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootManagedDeviceEnrollmentTopFailuresBody parameters) {
+    public ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootManagedDeviceEnrollmentTopFailuresParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

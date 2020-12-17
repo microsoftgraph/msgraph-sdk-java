@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ReportRootGetYammerDeviceUsageUse
 import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
-import com.microsoft.graph.models.extensions.ReportRootGetYammerDeviceUsageUserCountsBody;
+import com.microsoft.graph.models.extensions.ReportRootGetYammerDeviceUsageUserCountsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ public class ReportRootGetYammerDeviceUsageUserCountsRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetYammerDeviceUsageUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetYammerDeviceUsageUserCountsBody parameters) {
+    public ReportRootGetYammerDeviceUsageUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetYammerDeviceUsageUserCountsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

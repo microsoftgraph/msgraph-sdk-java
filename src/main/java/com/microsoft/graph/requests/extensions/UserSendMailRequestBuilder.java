@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.UserSendMailRequest;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.UserSendMailBody;
+import com.microsoft.graph.models.extensions.UserSendMailParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class UserSendMailRequestBuilder extends BaseActionRequestBuilder<User> {
 
-    private UserSendMailBody body;
+    private UserSendMailParameterSet body;
     /**
      * The request builder for this UserSendMail
      *
@@ -30,7 +30,7 @@ public class UserSendMailRequestBuilder extends BaseActionRequestBuilder<User> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserSendMailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserSendMailBody parameters) {
+    public UserSendMailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserSendMailParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

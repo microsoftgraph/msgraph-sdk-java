@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ParticipantInviteBody;
+import com.microsoft.graph.models.extensions.ParticipantInviteParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class ParticipantInviteRequestBuilder extends BaseActionRequestBuilder<InviteParticipantsOperation> {
 
-    private ParticipantInviteBody body;
+    private ParticipantInviteParameterSet body;
     /**
      * The request builder for this ParticipantInvite
      *
@@ -31,7 +31,7 @@ public class ParticipantInviteRequestBuilder extends BaseActionRequestBuilder<In
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ParticipantInviteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ParticipantInviteBody parameters) {
+    public ParticipantInviteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ParticipantInviteParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

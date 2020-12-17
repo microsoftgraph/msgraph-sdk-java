@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.DriveItemPreviewRequest;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.DriveItemPreviewBody;
+import com.microsoft.graph.models.extensions.DriveItemPreviewParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class DriveItemPreviewRequestBuilder extends BaseActionRequestBuilder<ItemPreviewInfo> {
 
-    private DriveItemPreviewBody body;
+    private DriveItemPreviewParameterSet body;
     /**
      * The request builder for this DriveItemPreview
      *
@@ -30,7 +30,7 @@ public class DriveItemPreviewRequestBuilder extends BaseActionRequestBuilder<Ite
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveItemPreviewRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemPreviewBody parameters) {
+    public DriveItemPreviewRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemPreviewParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

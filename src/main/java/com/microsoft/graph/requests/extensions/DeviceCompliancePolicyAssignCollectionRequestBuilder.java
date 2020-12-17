@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequest;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionResponse;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignBody;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignCollectionRequestBuilder, DeviceCompliancePolicyAssignCollectionResponse, DeviceCompliancePolicyAssignCollectionPage, DeviceCompliancePolicyAssignCollectionRequest> {
 
-    private DeviceCompliancePolicyAssignBody body;
+    private DeviceCompliancePolicyAssignParameterSet body;
     /**
      * The request builder for this collection of DeviceCompliancePolicy
      *
@@ -38,7 +38,7 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DeviceCompliancePolicyAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyAssignBody parameters) {
+    public DeviceCompliancePolicyAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionRequestBuilder.class, DeviceCompliancePolicyAssignCollectionRequest.class);
         this.body = parameters;
     }

@@ -56,7 +56,7 @@ public class ContactCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ContactDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.ContactDeltaBody parameters) {
+    public ContactDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.ContactDeltaParameterSet parameters) {
         return new ContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 

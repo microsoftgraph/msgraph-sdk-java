@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionResponse;
-import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberGroupsBody;
+import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberGroupsParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -31,7 +31,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseActionC
 
 
     /** The body for the method */
-    protected DirectoryObjectGetMemberGroupsBody body;
+    protected DirectoryObjectGetMemberGroupsParameterSet body;
 
 
     /**
@@ -42,7 +42,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseActionC
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsBody parameters) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionResponse.class, DirectoryObjectGetMemberGroupsCollectionPage.class, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -114,6 +114,16 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseActionC
     @Nonnull
     public DirectoryObjectGetMemberGroupsCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public DirectoryObjectGetMemberGroupsCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

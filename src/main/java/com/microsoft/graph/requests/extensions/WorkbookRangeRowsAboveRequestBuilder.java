@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeRowsAboveRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookRangeRowsAboveBody;
+import com.microsoft.graph.models.extensions.WorkbookRangeRowsAboveParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -39,7 +39,7 @@ public class WorkbookRangeRowsAboveRequestBuilder extends BaseFunctionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeRowsAboveRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeRowsAboveBody parameters) {
+    public WorkbookRangeRowsAboveRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeRowsAboveParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUse
 import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
-import com.microsoft.graph.models.extensions.ReportRootGetTeamsUserActivityUserCountsBody;
+import com.microsoft.graph.models.extensions.ReportRootGetTeamsUserActivityUserCountsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ public class ReportRootGetTeamsUserActivityUserCountsRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetTeamsUserActivityUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetTeamsUserActivityUserCountsBody parameters) {
+    public ReportRootGetTeamsUserActivityUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetTeamsUserActivityUserCountsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

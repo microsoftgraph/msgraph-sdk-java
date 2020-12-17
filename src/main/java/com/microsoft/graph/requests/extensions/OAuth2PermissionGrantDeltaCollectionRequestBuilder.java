@@ -46,7 +46,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OAuth2PermissionGrantDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.OAuth2PermissionGrantDeltaBody parameters) {
+    public OAuth2PermissionGrantDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.OAuth2PermissionGrantDeltaParameterSet parameters) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionRequestBuilder.class, OAuth2PermissionGrantDeltaCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

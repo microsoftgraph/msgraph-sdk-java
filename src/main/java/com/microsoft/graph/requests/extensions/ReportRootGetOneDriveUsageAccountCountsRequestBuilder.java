@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageAccount
 import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
-import com.microsoft.graph.models.extensions.ReportRootGetOneDriveUsageAccountCountsBody;
+import com.microsoft.graph.models.extensions.ReportRootGetOneDriveUsageAccountCountsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ public class ReportRootGetOneDriveUsageAccountCountsRequestBuilder extends BaseF
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetOneDriveUsageAccountCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetOneDriveUsageAccountCountsBody parameters) {
+    public ReportRootGetOneDriveUsageAccountCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetOneDriveUsageAccountCountsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

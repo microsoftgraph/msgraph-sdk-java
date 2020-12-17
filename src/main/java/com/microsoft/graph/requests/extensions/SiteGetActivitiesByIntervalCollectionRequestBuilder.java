@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequest;
 import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionResponse;
-import com.microsoft.graph.models.extensions.SiteGetActivitiesByIntervalBody;
+import com.microsoft.graph.models.extensions.SiteGetActivitiesByIntervalParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -47,7 +47,7 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public SiteGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteGetActivitiesByIntervalBody parameters) {
+    public SiteGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteGetActivitiesByIntervalParameterSet parameters) {
         super(requestUrl, client, requestOptions, SiteGetActivitiesByIntervalCollectionRequestBuilder.class, SiteGetActivitiesByIntervalCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

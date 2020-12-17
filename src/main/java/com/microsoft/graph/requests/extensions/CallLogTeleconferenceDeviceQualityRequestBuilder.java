@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.CallLogTeleconferenceDeviceQualit
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.CallLogTeleconferenceDeviceQualityBody;
+import com.microsoft.graph.models.extensions.CallLogTeleconferenceDeviceQualityParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class CallLogTeleconferenceDeviceQualityRequestBuilder extends BaseActionRequestBuilder<Call> {
 
-    private CallLogTeleconferenceDeviceQualityBody body;
+    private CallLogTeleconferenceDeviceQualityParameterSet body;
     /**
      * The request builder for this CallLogTeleconferenceDeviceQuality
      *
@@ -30,7 +30,7 @@ public class CallLogTeleconferenceDeviceQualityRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallLogTeleconferenceDeviceQualityRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallLogTeleconferenceDeviceQualityBody parameters) {
+    public CallLogTeleconferenceDeviceQualityRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallLogTeleconferenceDeviceQualityParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

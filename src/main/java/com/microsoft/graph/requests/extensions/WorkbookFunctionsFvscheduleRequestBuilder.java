@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsFvscheduleReques
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFvscheduleBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFvscheduleParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsFvscheduleRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsFvscheduleBody body;
+    private WorkbookFunctionsFvscheduleParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsFvschedule
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsFvscheduleRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsFvscheduleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFvscheduleBody parameters) {
+    public WorkbookFunctionsFvscheduleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFvscheduleParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

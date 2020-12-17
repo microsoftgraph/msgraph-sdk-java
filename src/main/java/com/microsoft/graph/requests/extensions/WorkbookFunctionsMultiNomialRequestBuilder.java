@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsMultiNomialReque
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMultiNomialBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMultiNomialParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsMultiNomialRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsMultiNomialBody body;
+    private WorkbookFunctionsMultiNomialParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsMultiNomial
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsMultiNomialRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsMultiNomialRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsMultiNomialBody parameters) {
+    public WorkbookFunctionsMultiNomialRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsMultiNomialParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

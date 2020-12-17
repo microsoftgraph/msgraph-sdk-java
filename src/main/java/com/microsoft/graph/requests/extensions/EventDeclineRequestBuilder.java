@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.EventDeclineRequest;
 import com.microsoft.graph.models.extensions.Event;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.EventDeclineBody;
+import com.microsoft.graph.models.extensions.EventDeclineParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class EventDeclineRequestBuilder extends BaseActionRequestBuilder<Event> {
 
-    private EventDeclineBody body;
+    private EventDeclineParameterSet body;
     /**
      * The request builder for this EventDecline
      *
@@ -30,7 +30,7 @@ public class EventDeclineRequestBuilder extends BaseActionRequestBuilder<Event> 
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public EventDeclineRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final EventDeclineBody parameters) {
+    public EventDeclineRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final EventDeclineParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

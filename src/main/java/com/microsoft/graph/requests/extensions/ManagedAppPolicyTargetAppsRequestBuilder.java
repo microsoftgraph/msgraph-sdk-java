@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppPolicyTargetAppsRequest
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedAppPolicyTargetAppsBody;
+import com.microsoft.graph.models.extensions.ManagedAppPolicyTargetAppsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ManagedAppPolicyTargetAppsRequestBuilder extends BaseActionRequestBuilder<ManagedAppPolicy> {
 
-    private ManagedAppPolicyTargetAppsBody body;
+    private ManagedAppPolicyTargetAppsParameterSet body;
     /**
      * The request builder for this ManagedAppPolicyTargetApps
      *
@@ -30,7 +30,7 @@ public class ManagedAppPolicyTargetAppsRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedAppPolicyTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedAppPolicyTargetAppsBody parameters) {
+    public ManagedAppPolicyTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedAppPolicyTargetAppsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

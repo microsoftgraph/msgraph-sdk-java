@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.MessageCopyRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.MessageCopyBody;
+import com.microsoft.graph.models.extensions.MessageCopyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
  */
 public class MessageCopyRequestBuilder extends BaseActionRequestBuilder<Message> {
 
-    private MessageCopyBody body;
+    private MessageCopyParameterSet body;
     /**
      * The request builder for this MessageCopy
      *
@@ -29,7 +29,7 @@ public class MessageCopyRequestBuilder extends BaseActionRequestBuilder<Message>
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public MessageCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCopyBody parameters) {
+    public MessageCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCopyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

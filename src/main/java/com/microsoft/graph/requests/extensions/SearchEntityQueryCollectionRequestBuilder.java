@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SearchEntityQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SearchEntityQueryCollectionRequest;
 import com.microsoft.graph.requests.extensions.SearchEntityQueryCollectionResponse;
-import com.microsoft.graph.models.extensions.SearchEntityQueryBody;
+import com.microsoft.graph.models.extensions.SearchEntityQueryParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -30,7 +30,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class SearchEntityQueryCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<SearchResponse, SearchEntityQueryCollectionRequestBuilder, SearchEntityQueryCollectionResponse, SearchEntityQueryCollectionPage, SearchEntityQueryCollectionRequest> {
 
-    private SearchEntityQueryBody body;
+    private SearchEntityQueryParameterSet body;
     /**
      * The request builder for this collection of SearchEntity
      *
@@ -39,7 +39,7 @@ public class SearchEntityQueryCollectionRequestBuilder extends BaseActionCollect
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public SearchEntityQueryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SearchEntityQueryBody parameters) {
+    public SearchEntityQueryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SearchEntityQueryParameterSet parameters) {
         super(requestUrl, client, requestOptions, SearchEntityQueryCollectionRequestBuilder.class, SearchEntityQueryCollectionRequest.class);
         this.body = parameters;
     }

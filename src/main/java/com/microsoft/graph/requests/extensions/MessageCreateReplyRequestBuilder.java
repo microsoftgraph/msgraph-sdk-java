@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.MessageCreateReplyRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.MessageCreateReplyBody;
+import com.microsoft.graph.models.extensions.MessageCreateReplyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
  */
 public class MessageCreateReplyRequestBuilder extends BaseActionRequestBuilder<Message> {
 
-    private MessageCreateReplyBody body;
+    private MessageCreateReplyParameterSet body;
     /**
      * The request builder for this MessageCreateReply
      *
@@ -29,7 +29,7 @@ public class MessageCreateReplyRequestBuilder extends BaseActionRequestBuilder<M
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public MessageCreateReplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCreateReplyBody parameters) {
+    public MessageCreateReplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCreateReplyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

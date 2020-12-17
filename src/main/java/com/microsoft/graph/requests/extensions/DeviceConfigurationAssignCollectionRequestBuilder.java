@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequest;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionResponse;
-import com.microsoft.graph.models.extensions.DeviceConfigurationAssignBody;
+import com.microsoft.graph.models.extensions.DeviceConfigurationAssignParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<DeviceConfigurationAssignment, DeviceConfigurationAssignCollectionRequestBuilder, DeviceConfigurationAssignCollectionResponse, DeviceConfigurationAssignCollectionPage, DeviceConfigurationAssignCollectionRequest> {
 
-    private DeviceConfigurationAssignBody body;
+    private DeviceConfigurationAssignParameterSet body;
     /**
      * The request builder for this collection of DeviceConfiguration
      *
@@ -38,7 +38,7 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DeviceConfigurationAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceConfigurationAssignBody parameters) {
+    public DeviceConfigurationAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceConfigurationAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionRequestBuilder.class, DeviceConfigurationAssignCollectionRequest.class);
         this.body = parameters;
     }

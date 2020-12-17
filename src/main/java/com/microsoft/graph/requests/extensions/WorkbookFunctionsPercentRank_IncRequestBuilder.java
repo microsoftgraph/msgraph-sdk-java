@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentRank_IncR
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentRank_IncBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentRank_IncParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsPercentRank_IncBody body;
+    private WorkbookFunctionsPercentRank_IncParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsPercentRank_Inc
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRe
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPercentRank_IncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPercentRank_IncBody parameters) {
+    public WorkbookFunctionsPercentRank_IncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPercentRank_IncParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionResponse;
-import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberGroupsBody;
+import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<String, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder, DirectoryObjectCheckMemberGroupsCollectionResponse, DirectoryObjectCheckMemberGroupsCollectionPage, DirectoryObjectCheckMemberGroupsCollectionRequest> {
 
-    private DirectoryObjectCheckMemberGroupsBody body;
+    private DirectoryObjectCheckMemberGroupsParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject
      *
@@ -38,7 +38,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectCheckMemberGroupsBody parameters) {
+    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectCheckMemberGroupsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder.class, DirectoryObjectCheckMemberGroupsCollectionRequest.class);
         this.body = parameters;
     }

@@ -46,7 +46,7 @@ public class ApplicationDeltaCollectionRequestBuilder extends BaseFunctionCollec
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ApplicationDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.ApplicationDeltaBody parameters) {
+    public ApplicationDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.ApplicationDeltaParameterSet parameters) {
         super(requestUrl, client, requestOptions, ApplicationDeltaCollectionRequestBuilder.class, ApplicationDeltaCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeDeleteRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookRangeDeleteBody;
+import com.microsoft.graph.models.extensions.WorkbookRangeDeleteParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuilder<WorkbookRange> {
 
-    private WorkbookRangeDeleteBody body;
+    private WorkbookRangeDeleteParameterSet body;
     /**
      * The request builder for this WorkbookRangeDelete
      *
@@ -30,7 +30,7 @@ public class WorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuilder<
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeDeleteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeDeleteBody parameters) {
+    public WorkbookRangeDeleteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeDeleteParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

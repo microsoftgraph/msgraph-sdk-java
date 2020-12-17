@@ -16,365 +16,365 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDeltaBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAbsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAccrIntBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAccrIntMBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAcosBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAcoshBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAcotBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAcothBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAmorDegrcBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAmorLincBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAndBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsArabicBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAreasBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAscBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAsinBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAsinhBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAtanBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAtan2Body;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAtanhBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAveDevBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageIfBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageIfsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBahtTextBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBaseBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBesselIBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBesselJBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBesselKBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBesselYBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBeta_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBeta_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBin2DecBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBin2HexBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBin2OctBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_Dist_RangeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBitandBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBitlshiftBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBitorBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBitrshiftBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBitxorBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCeiling_MathBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCeiling_PreciseBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCharBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_Dist_RTBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_Inv_RTBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsChooseBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCleanBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCodeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsColumnsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCombinBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCombinaBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsComplexBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsConcatenateBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsConfidence_NormBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsConfidence_TBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsConvertBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCosBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCoshBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCotBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCothBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCountBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCountABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCountBlankBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCountIfBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCountIfsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupDayBsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupDaysBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupDaysNcBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupNcdBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupNumBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupPcdBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCscBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCschBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCumIPmtBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCumPrincBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDateBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDatevalueBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDaverageBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDayBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDaysBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDays360Body;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDbBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDbcsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDcountBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDcountABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDdbBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDec2BinBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDec2HexBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDec2OctBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDecimalBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDegreesBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDevSqBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDgetBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDiscBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDmaxBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDminBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDollarBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDollarDeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDollarFrBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDproductBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDstDevBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDstDevPBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDsumBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDurationBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDvarBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsDvarPBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsEcma_CeilingBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsEdateBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsEffectBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsEoMonthBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsErfBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsErfCBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsErfC_PreciseBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsErf_PreciseBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsError_TypeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsEvenBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsExactBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsExpBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsExpon_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFactBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFactDoubleBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFindBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFindBBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFisherBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFisherInvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFixedBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFloor_MathBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFloor_PreciseBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsFvscheduleBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsF_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsF_Dist_RTBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsF_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsF_Inv_RTBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGammaBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGammaLnBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGammaLn_PreciseBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGamma_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGamma_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGaussBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGcdBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGeoMeanBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsGeStepBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsHarMeanBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsHex2BinBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsHex2DecBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsHex2OctBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsHlookupBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsHourBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsHyperlinkBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsHypGeom_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIfBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImAbsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImaginaryBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImArgumentBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImConjugateBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImCosBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImCoshBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImCotBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImCscBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImCschBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImDivBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImExpBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImLnBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImLog10Body;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImLog2Body;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImPowerBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImProductBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImRealBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImSecBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImSechBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImSinBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImSinhBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImSqrtBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImSubBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImSumBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsImTanBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIntBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIntRateBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIpmtBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIrrBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsErrBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsErrorBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsEvenBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsFormulaBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsLogicalBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsNABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsNonTextBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsNumberBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsOddBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsoWeekNumBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIso_CeilingBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIspmtBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsrefBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsIsTextBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsKurtBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLargeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLcmBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLeftBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLeftbBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLenBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLenbBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLnBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLogBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLog10Body;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLogNorm_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLogNorm_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLookupBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLowerBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMatchBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMaxBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMaxABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMdurationBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMedianBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMidBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMidbBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMinBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMinABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMinuteBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMirrBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsModBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMonthBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMroundBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsMultiNomialBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNegBinom_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNetworkDaysBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNetworkDays_IntlBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNominalBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_S_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_S_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNotBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNperBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNpvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsNumberValueBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOct2BinBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOct2DecBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOct2HexBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOddBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOddFPriceBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOddFYieldBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOddLPriceBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOddLYieldBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsOrBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPdurationBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentile_ExcBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentile_IncBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentRank_ExcBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentRank_IncBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPermutBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPermutationaBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPhiBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPmtBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPoisson_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPowerBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPpmtBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPriceBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPriceDiscBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPriceMatBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsProductBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsProperBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsPvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsQuartile_ExcBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsQuartile_IncBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsQuotientBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRadiansBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRandBetweenBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRank_AvgBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRank_EqBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRateBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsReceivedBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsReplaceBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsReplaceBBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsReptBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRightBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRightbBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRomanBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRoundBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRoundDownBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRoundUpBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRowsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsRriBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSecBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSechBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSecondBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSeriesSumBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSheetBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSheetsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSignBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSinBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSinhBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSkewBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSkew_pBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSlnBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSmallBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSqrtBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSqrtPiBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsStandardizeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsStDevABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsStDevPABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsStDev_PBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsStDev_SBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSubstituteBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSubtotalBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSumBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSumIfBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSumIfsBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSumSqBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsSydBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTanBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTanhBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTbillEqBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTbillPriceBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTbillYieldBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTextBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTimeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTimevalueBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTrimBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTrimMeanBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTruncBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsTypeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsT_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Dist_2TBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Dist_RTBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsT_InvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Inv_2TBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsUnicharBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsUnicodeBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsUpperBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsUsdollarBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsValueBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsVarABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsVarPABody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsVar_PBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsVar_SBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsVdbBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsVlookupBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsWeekdayBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsWeekNumBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsWeibull_DistBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsWorkDayBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsWorkDay_IntlBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsXirrBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsXnpvBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsXorBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsYearBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsYearFracBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsYieldBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsYieldDiscBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsYieldMatBody;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsZ_TestBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDeltaParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAbsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAccrIntParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAccrIntMParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAcosParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAcoshParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAcotParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAcothParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAmorDegrcParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAmorLincParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAndParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsArabicParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAreasParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAscParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAsinParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAsinhParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAtanParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAtan2ParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAtanhParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAveDevParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageIfParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAverageIfsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBahtTextParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBaseParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBesselIParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBesselJParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBesselKParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBesselYParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBeta_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBeta_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBin2DecParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBin2HexParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBin2OctParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_Dist_RangeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBitandParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBitlshiftParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBitorParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBitrshiftParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBitxorParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCeiling_MathParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCeiling_PreciseParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCharParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_Dist_RTParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_Inv_RTParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsChooseParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCleanParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCodeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsColumnsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCombinParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCombinaParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsComplexParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsConcatenateParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsConfidence_NormParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsConfidence_TParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsConvertParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCosParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCoshParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCotParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCothParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCountParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCountAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCountBlankParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCountIfParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCountIfsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupDayBsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupDaysParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupDaysNcParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupNcdParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupNumParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupPcdParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCscParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCschParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCumIPmtParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCumPrincParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDateParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDatevalueParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDaverageParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDayParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDaysParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDays360ParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDbParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDbcsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDcountParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDcountAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDdbParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDec2BinParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDec2HexParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDec2OctParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDecimalParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDegreesParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDevSqParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDgetParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDiscParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDmaxParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDminParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDollarParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDollarDeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDollarFrParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDproductParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDstDevParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDstDevPParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDsumParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDurationParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDvarParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDvarPParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsEcma_CeilingParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsEdateParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsEffectParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsEoMonthParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsErfParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsErfCParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsErfC_PreciseParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsErf_PreciseParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsError_TypeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsEvenParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsExactParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsExpParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsExpon_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFactParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFactDoubleParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFindParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFindBParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFisherParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFisherInvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFixedParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFloor_MathParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFloor_PreciseParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFvscheduleParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsF_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsF_Dist_RTParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsF_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsF_Inv_RTParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGammaParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGammaLnParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGammaLn_PreciseParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGamma_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGamma_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGaussParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGcdParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGeoMeanParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGeStepParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHarMeanParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHex2BinParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHex2DecParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHex2OctParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHlookupParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHourParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHyperlinkParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHypGeom_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIfParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImAbsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImaginaryParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImArgumentParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImConjugateParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImCosParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImCoshParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImCotParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImCscParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImCschParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImDivParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImExpParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImLnParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImLog10ParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImLog2ParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImPowerParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImProductParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImRealParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImSecParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImSechParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImSinParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImSinhParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImSqrtParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImSubParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImSumParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImTanParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIntParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIntRateParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIpmtParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIrrParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsErrParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsErrorParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsEvenParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsFormulaParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsLogicalParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsNAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsNonTextParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsNumberParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsOddParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsoWeekNumParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIso_CeilingParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIspmtParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsrefParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIsTextParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsKurtParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLargeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLcmParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLeftParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLeftbParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLenParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLenbParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLnParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLogParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLog10ParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLogNorm_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLogNorm_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLookupParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLowerParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMatchParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMaxParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMaxAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMdurationParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMedianParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMidParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMidbParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMinParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMinAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMinuteParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMirrParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsModParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMonthParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMroundParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMultiNomialParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNegBinom_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNetworkDaysParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNetworkDays_IntlParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNominalParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_S_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_S_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNotParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNperParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNpvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNumberValueParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOct2BinParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOct2DecParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOct2HexParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOddParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOddFPriceParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOddFYieldParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOddLPriceParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOddLYieldParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsOrParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPdurationParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentile_ExcParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentile_IncParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentRank_ExcParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentRank_IncParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPermutParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPermutationaParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPhiParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPmtParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPoisson_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPowerParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPpmtParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPriceParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPriceDiscParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPriceMatParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsProductParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsProperParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsQuartile_ExcParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsQuartile_IncParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsQuotientParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRadiansParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRandBetweenParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRank_AvgParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRank_EqParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRateParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsReceivedParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsReplaceParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsReplaceBParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsReptParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRightParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRightbParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRomanParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRoundParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRoundDownParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRoundUpParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRowsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRriParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSecParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSechParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSecondParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSeriesSumParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSheetParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSheetsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSignParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSinParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSinhParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSkewParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSkew_pParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSlnParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSmallParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSqrtParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSqrtPiParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsStandardizeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsStDevAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsStDevPAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsStDev_PParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsStDev_SParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSubstituteParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSubtotalParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSumParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSumIfParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSumIfsParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSumSqParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsSydParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTanParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTanhParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTbillEqParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTbillPriceParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTbillYieldParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTextParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTimeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTimevalueParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTrimParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTrimMeanParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTruncParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsTypeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsT_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Dist_2TParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Dist_RTParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsT_InvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Inv_2TParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsUnicharParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsUnicodeParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsUpperParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsUsdollarParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsValueParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsVarAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsVarPAParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsVar_PParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsVar_SParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsVdbParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsVlookupParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsWeekdayParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsWeekNumParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsWeibull_DistParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsWorkDayParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsWorkDay_IntlParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsXirrParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsXnpvParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsXorParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsYearParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsYearFracParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsYieldParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsYieldDiscParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsYieldMatParameterSet;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsZ_TestParameterSet;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -424,7 +424,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDeltaRequestBuilder delta(@Nonnull final WorkbookFunctionsDeltaBody parameters) {
+    public WorkbookFunctionsDeltaRequestBuilder delta(@Nonnull final WorkbookFunctionsDeltaParameterSet parameters) {
         return new WorkbookFunctionsDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 
@@ -434,7 +434,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAbsRequestBuilder abs(@Nonnull final WorkbookFunctionsAbsBody parameters) {
+    public WorkbookFunctionsAbsRequestBuilder abs(@Nonnull final WorkbookFunctionsAbsParameterSet parameters) {
         return new WorkbookFunctionsAbsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.abs"), getClient(), null, parameters);
     }
 
@@ -444,7 +444,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAccrIntRequestBuilder accrInt(@Nonnull final WorkbookFunctionsAccrIntBody parameters) {
+    public WorkbookFunctionsAccrIntRequestBuilder accrInt(@Nonnull final WorkbookFunctionsAccrIntParameterSet parameters) {
         return new WorkbookFunctionsAccrIntRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accrInt"), getClient(), null, parameters);
     }
 
@@ -454,7 +454,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAccrIntMRequestBuilder accrIntM(@Nonnull final WorkbookFunctionsAccrIntMBody parameters) {
+    public WorkbookFunctionsAccrIntMRequestBuilder accrIntM(@Nonnull final WorkbookFunctionsAccrIntMParameterSet parameters) {
         return new WorkbookFunctionsAccrIntMRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accrIntM"), getClient(), null, parameters);
     }
 
@@ -464,7 +464,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAcosRequestBuilder acos(@Nonnull final WorkbookFunctionsAcosBody parameters) {
+    public WorkbookFunctionsAcosRequestBuilder acos(@Nonnull final WorkbookFunctionsAcosParameterSet parameters) {
         return new WorkbookFunctionsAcosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acos"), getClient(), null, parameters);
     }
 
@@ -474,7 +474,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAcoshRequestBuilder acosh(@Nonnull final WorkbookFunctionsAcoshBody parameters) {
+    public WorkbookFunctionsAcoshRequestBuilder acosh(@Nonnull final WorkbookFunctionsAcoshParameterSet parameters) {
         return new WorkbookFunctionsAcoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acosh"), getClient(), null, parameters);
     }
 
@@ -484,7 +484,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAcotRequestBuilder acot(@Nonnull final WorkbookFunctionsAcotBody parameters) {
+    public WorkbookFunctionsAcotRequestBuilder acot(@Nonnull final WorkbookFunctionsAcotParameterSet parameters) {
         return new WorkbookFunctionsAcotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acot"), getClient(), null, parameters);
     }
 
@@ -494,7 +494,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAcothRequestBuilder acoth(@Nonnull final WorkbookFunctionsAcothBody parameters) {
+    public WorkbookFunctionsAcothRequestBuilder acoth(@Nonnull final WorkbookFunctionsAcothParameterSet parameters) {
         return new WorkbookFunctionsAcothRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acoth"), getClient(), null, parameters);
     }
 
@@ -504,7 +504,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAmorDegrcRequestBuilder amorDegrc(@Nonnull final WorkbookFunctionsAmorDegrcBody parameters) {
+    public WorkbookFunctionsAmorDegrcRequestBuilder amorDegrc(@Nonnull final WorkbookFunctionsAmorDegrcParameterSet parameters) {
         return new WorkbookFunctionsAmorDegrcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.amorDegrc"), getClient(), null, parameters);
     }
 
@@ -514,7 +514,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAmorLincRequestBuilder amorLinc(@Nonnull final WorkbookFunctionsAmorLincBody parameters) {
+    public WorkbookFunctionsAmorLincRequestBuilder amorLinc(@Nonnull final WorkbookFunctionsAmorLincParameterSet parameters) {
         return new WorkbookFunctionsAmorLincRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.amorLinc"), getClient(), null, parameters);
     }
 
@@ -524,7 +524,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAndRequestBuilder and(@Nonnull final WorkbookFunctionsAndBody parameters) {
+    public WorkbookFunctionsAndRequestBuilder and(@Nonnull final WorkbookFunctionsAndParameterSet parameters) {
         return new WorkbookFunctionsAndRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.and"), getClient(), null, parameters);
     }
 
@@ -534,7 +534,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsArabicRequestBuilder arabic(@Nonnull final WorkbookFunctionsArabicBody parameters) {
+    public WorkbookFunctionsArabicRequestBuilder arabic(@Nonnull final WorkbookFunctionsArabicParameterSet parameters) {
         return new WorkbookFunctionsArabicRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.arabic"), getClient(), null, parameters);
     }
 
@@ -544,7 +544,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAreasRequestBuilder areas(@Nonnull final WorkbookFunctionsAreasBody parameters) {
+    public WorkbookFunctionsAreasRequestBuilder areas(@Nonnull final WorkbookFunctionsAreasParameterSet parameters) {
         return new WorkbookFunctionsAreasRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.areas"), getClient(), null, parameters);
     }
 
@@ -554,7 +554,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAscRequestBuilder asc(@Nonnull final WorkbookFunctionsAscBody parameters) {
+    public WorkbookFunctionsAscRequestBuilder asc(@Nonnull final WorkbookFunctionsAscParameterSet parameters) {
         return new WorkbookFunctionsAscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asc"), getClient(), null, parameters);
     }
 
@@ -564,7 +564,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAsinRequestBuilder asin(@Nonnull final WorkbookFunctionsAsinBody parameters) {
+    public WorkbookFunctionsAsinRequestBuilder asin(@Nonnull final WorkbookFunctionsAsinParameterSet parameters) {
         return new WorkbookFunctionsAsinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asin"), getClient(), null, parameters);
     }
 
@@ -574,7 +574,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAsinhRequestBuilder asinh(@Nonnull final WorkbookFunctionsAsinhBody parameters) {
+    public WorkbookFunctionsAsinhRequestBuilder asinh(@Nonnull final WorkbookFunctionsAsinhParameterSet parameters) {
         return new WorkbookFunctionsAsinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asinh"), getClient(), null, parameters);
     }
 
@@ -584,7 +584,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAtanRequestBuilder atan(@Nonnull final WorkbookFunctionsAtanBody parameters) {
+    public WorkbookFunctionsAtanRequestBuilder atan(@Nonnull final WorkbookFunctionsAtanParameterSet parameters) {
         return new WorkbookFunctionsAtanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atan"), getClient(), null, parameters);
     }
 
@@ -594,7 +594,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAtan2RequestBuilder atan2(@Nonnull final WorkbookFunctionsAtan2Body parameters) {
+    public WorkbookFunctionsAtan2RequestBuilder atan2(@Nonnull final WorkbookFunctionsAtan2ParameterSet parameters) {
         return new WorkbookFunctionsAtan2RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atan2"), getClient(), null, parameters);
     }
 
@@ -604,7 +604,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAtanhRequestBuilder atanh(@Nonnull final WorkbookFunctionsAtanhBody parameters) {
+    public WorkbookFunctionsAtanhRequestBuilder atanh(@Nonnull final WorkbookFunctionsAtanhParameterSet parameters) {
         return new WorkbookFunctionsAtanhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atanh"), getClient(), null, parameters);
     }
 
@@ -614,7 +614,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAveDevRequestBuilder aveDev(@Nonnull final WorkbookFunctionsAveDevBody parameters) {
+    public WorkbookFunctionsAveDevRequestBuilder aveDev(@Nonnull final WorkbookFunctionsAveDevParameterSet parameters) {
         return new WorkbookFunctionsAveDevRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.aveDev"), getClient(), null, parameters);
     }
 
@@ -624,7 +624,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAverageRequestBuilder average(@Nonnull final WorkbookFunctionsAverageBody parameters) {
+    public WorkbookFunctionsAverageRequestBuilder average(@Nonnull final WorkbookFunctionsAverageParameterSet parameters) {
         return new WorkbookFunctionsAverageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.average"), getClient(), null, parameters);
     }
 
@@ -634,7 +634,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAverageARequestBuilder averageA(@Nonnull final WorkbookFunctionsAverageABody parameters) {
+    public WorkbookFunctionsAverageARequestBuilder averageA(@Nonnull final WorkbookFunctionsAverageAParameterSet parameters) {
         return new WorkbookFunctionsAverageARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageA"), getClient(), null, parameters);
     }
 
@@ -644,7 +644,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAverageIfRequestBuilder averageIf(@Nonnull final WorkbookFunctionsAverageIfBody parameters) {
+    public WorkbookFunctionsAverageIfRequestBuilder averageIf(@Nonnull final WorkbookFunctionsAverageIfParameterSet parameters) {
         return new WorkbookFunctionsAverageIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageIf"), getClient(), null, parameters);
     }
 
@@ -654,7 +654,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsAverageIfsRequestBuilder averageIfs(@Nonnull final WorkbookFunctionsAverageIfsBody parameters) {
+    public WorkbookFunctionsAverageIfsRequestBuilder averageIfs(@Nonnull final WorkbookFunctionsAverageIfsParameterSet parameters) {
         return new WorkbookFunctionsAverageIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageIfs"), getClient(), null, parameters);
     }
 
@@ -664,7 +664,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBahtTextRequestBuilder bahtText(@Nonnull final WorkbookFunctionsBahtTextBody parameters) {
+    public WorkbookFunctionsBahtTextRequestBuilder bahtText(@Nonnull final WorkbookFunctionsBahtTextParameterSet parameters) {
         return new WorkbookFunctionsBahtTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bahtText"), getClient(), null, parameters);
     }
 
@@ -674,7 +674,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBaseRequestBuilder base(@Nonnull final WorkbookFunctionsBaseBody parameters) {
+    public WorkbookFunctionsBaseRequestBuilder base(@Nonnull final WorkbookFunctionsBaseParameterSet parameters) {
         return new WorkbookFunctionsBaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.base"), getClient(), null, parameters);
     }
 
@@ -684,7 +684,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBesselIRequestBuilder besselI(@Nonnull final WorkbookFunctionsBesselIBody parameters) {
+    public WorkbookFunctionsBesselIRequestBuilder besselI(@Nonnull final WorkbookFunctionsBesselIParameterSet parameters) {
         return new WorkbookFunctionsBesselIRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselI"), getClient(), null, parameters);
     }
 
@@ -694,7 +694,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBesselJRequestBuilder besselJ(@Nonnull final WorkbookFunctionsBesselJBody parameters) {
+    public WorkbookFunctionsBesselJRequestBuilder besselJ(@Nonnull final WorkbookFunctionsBesselJParameterSet parameters) {
         return new WorkbookFunctionsBesselJRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselJ"), getClient(), null, parameters);
     }
 
@@ -704,7 +704,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBesselKRequestBuilder besselK(@Nonnull final WorkbookFunctionsBesselKBody parameters) {
+    public WorkbookFunctionsBesselKRequestBuilder besselK(@Nonnull final WorkbookFunctionsBesselKParameterSet parameters) {
         return new WorkbookFunctionsBesselKRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselK"), getClient(), null, parameters);
     }
 
@@ -714,7 +714,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBesselYRequestBuilder besselY(@Nonnull final WorkbookFunctionsBesselYBody parameters) {
+    public WorkbookFunctionsBesselYRequestBuilder besselY(@Nonnull final WorkbookFunctionsBesselYParameterSet parameters) {
         return new WorkbookFunctionsBesselYRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselY"), getClient(), null, parameters);
     }
 
@@ -724,7 +724,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBeta_DistRequestBuilder beta_Dist(@Nonnull final WorkbookFunctionsBeta_DistBody parameters) {
+    public WorkbookFunctionsBeta_DistRequestBuilder beta_Dist(@Nonnull final WorkbookFunctionsBeta_DistParameterSet parameters) {
         return new WorkbookFunctionsBeta_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beta_Dist"), getClient(), null, parameters);
     }
 
@@ -734,7 +734,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBeta_InvRequestBuilder beta_Inv(@Nonnull final WorkbookFunctionsBeta_InvBody parameters) {
+    public WorkbookFunctionsBeta_InvRequestBuilder beta_Inv(@Nonnull final WorkbookFunctionsBeta_InvParameterSet parameters) {
         return new WorkbookFunctionsBeta_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beta_Inv"), getClient(), null, parameters);
     }
 
@@ -744,7 +744,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBin2DecRequestBuilder bin2Dec(@Nonnull final WorkbookFunctionsBin2DecBody parameters) {
+    public WorkbookFunctionsBin2DecRequestBuilder bin2Dec(@Nonnull final WorkbookFunctionsBin2DecParameterSet parameters) {
         return new WorkbookFunctionsBin2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Dec"), getClient(), null, parameters);
     }
 
@@ -754,7 +754,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBin2HexRequestBuilder bin2Hex(@Nonnull final WorkbookFunctionsBin2HexBody parameters) {
+    public WorkbookFunctionsBin2HexRequestBuilder bin2Hex(@Nonnull final WorkbookFunctionsBin2HexParameterSet parameters) {
         return new WorkbookFunctionsBin2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Hex"), getClient(), null, parameters);
     }
 
@@ -764,7 +764,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBin2OctRequestBuilder bin2Oct(@Nonnull final WorkbookFunctionsBin2OctBody parameters) {
+    public WorkbookFunctionsBin2OctRequestBuilder bin2Oct(@Nonnull final WorkbookFunctionsBin2OctParameterSet parameters) {
         return new WorkbookFunctionsBin2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Oct"), getClient(), null, parameters);
     }
 
@@ -774,7 +774,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBinom_DistRequestBuilder binom_Dist(@Nonnull final WorkbookFunctionsBinom_DistBody parameters) {
+    public WorkbookFunctionsBinom_DistRequestBuilder binom_Dist(@Nonnull final WorkbookFunctionsBinom_DistParameterSet parameters) {
         return new WorkbookFunctionsBinom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Dist"), getClient(), null, parameters);
     }
 
@@ -784,7 +784,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBinom_Dist_RangeRequestBuilder binom_Dist_Range(@Nonnull final WorkbookFunctionsBinom_Dist_RangeBody parameters) {
+    public WorkbookFunctionsBinom_Dist_RangeRequestBuilder binom_Dist_Range(@Nonnull final WorkbookFunctionsBinom_Dist_RangeParameterSet parameters) {
         return new WorkbookFunctionsBinom_Dist_RangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Dist_Range"), getClient(), null, parameters);
     }
 
@@ -794,7 +794,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBinom_InvRequestBuilder binom_Inv(@Nonnull final WorkbookFunctionsBinom_InvBody parameters) {
+    public WorkbookFunctionsBinom_InvRequestBuilder binom_Inv(@Nonnull final WorkbookFunctionsBinom_InvParameterSet parameters) {
         return new WorkbookFunctionsBinom_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Inv"), getClient(), null, parameters);
     }
 
@@ -804,7 +804,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBitandRequestBuilder bitand(@Nonnull final WorkbookFunctionsBitandBody parameters) {
+    public WorkbookFunctionsBitandRequestBuilder bitand(@Nonnull final WorkbookFunctionsBitandParameterSet parameters) {
         return new WorkbookFunctionsBitandRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitand"), getClient(), null, parameters);
     }
 
@@ -814,7 +814,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBitlshiftRequestBuilder bitlshift(@Nonnull final WorkbookFunctionsBitlshiftBody parameters) {
+    public WorkbookFunctionsBitlshiftRequestBuilder bitlshift(@Nonnull final WorkbookFunctionsBitlshiftParameterSet parameters) {
         return new WorkbookFunctionsBitlshiftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitlshift"), getClient(), null, parameters);
     }
 
@@ -824,7 +824,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBitorRequestBuilder bitor(@Nonnull final WorkbookFunctionsBitorBody parameters) {
+    public WorkbookFunctionsBitorRequestBuilder bitor(@Nonnull final WorkbookFunctionsBitorParameterSet parameters) {
         return new WorkbookFunctionsBitorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitor"), getClient(), null, parameters);
     }
 
@@ -834,7 +834,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBitrshiftRequestBuilder bitrshift(@Nonnull final WorkbookFunctionsBitrshiftBody parameters) {
+    public WorkbookFunctionsBitrshiftRequestBuilder bitrshift(@Nonnull final WorkbookFunctionsBitrshiftParameterSet parameters) {
         return new WorkbookFunctionsBitrshiftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitrshift"), getClient(), null, parameters);
     }
 
@@ -844,7 +844,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsBitxorRequestBuilder bitxor(@Nonnull final WorkbookFunctionsBitxorBody parameters) {
+    public WorkbookFunctionsBitxorRequestBuilder bitxor(@Nonnull final WorkbookFunctionsBitxorParameterSet parameters) {
         return new WorkbookFunctionsBitxorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitxor"), getClient(), null, parameters);
     }
 
@@ -854,7 +854,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCeiling_MathRequestBuilder ceiling_Math(@Nonnull final WorkbookFunctionsCeiling_MathBody parameters) {
+    public WorkbookFunctionsCeiling_MathRequestBuilder ceiling_Math(@Nonnull final WorkbookFunctionsCeiling_MathParameterSet parameters) {
         return new WorkbookFunctionsCeiling_MathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ceiling_Math"), getClient(), null, parameters);
     }
 
@@ -864,7 +864,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCeiling_PreciseRequestBuilder ceiling_Precise(@Nonnull final WorkbookFunctionsCeiling_PreciseBody parameters) {
+    public WorkbookFunctionsCeiling_PreciseRequestBuilder ceiling_Precise(@Nonnull final WorkbookFunctionsCeiling_PreciseParameterSet parameters) {
         return new WorkbookFunctionsCeiling_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ceiling_Precise"), getClient(), null, parameters);
     }
 
@@ -874,7 +874,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCharRequestBuilder msgraphChar(@Nonnull final WorkbookFunctionsCharBody parameters) {
+    public WorkbookFunctionsCharRequestBuilder msgraphChar(@Nonnull final WorkbookFunctionsCharParameterSet parameters) {
         return new WorkbookFunctionsCharRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.char"), getClient(), null, parameters);
     }
 
@@ -884,7 +884,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsChiSq_DistRequestBuilder chiSq_Dist(@Nonnull final WorkbookFunctionsChiSq_DistBody parameters) {
+    public WorkbookFunctionsChiSq_DistRequestBuilder chiSq_Dist(@Nonnull final WorkbookFunctionsChiSq_DistParameterSet parameters) {
         return new WorkbookFunctionsChiSq_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Dist"), getClient(), null, parameters);
     }
 
@@ -894,7 +894,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsChiSq_Dist_RTRequestBuilder chiSq_Dist_RT(@Nonnull final WorkbookFunctionsChiSq_Dist_RTBody parameters) {
+    public WorkbookFunctionsChiSq_Dist_RTRequestBuilder chiSq_Dist_RT(@Nonnull final WorkbookFunctionsChiSq_Dist_RTParameterSet parameters) {
         return new WorkbookFunctionsChiSq_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Dist_RT"), getClient(), null, parameters);
     }
 
@@ -904,7 +904,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsChiSq_InvRequestBuilder chiSq_Inv(@Nonnull final WorkbookFunctionsChiSq_InvBody parameters) {
+    public WorkbookFunctionsChiSq_InvRequestBuilder chiSq_Inv(@Nonnull final WorkbookFunctionsChiSq_InvParameterSet parameters) {
         return new WorkbookFunctionsChiSq_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Inv"), getClient(), null, parameters);
     }
 
@@ -914,7 +914,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsChiSq_Inv_RTRequestBuilder chiSq_Inv_RT(@Nonnull final WorkbookFunctionsChiSq_Inv_RTBody parameters) {
+    public WorkbookFunctionsChiSq_Inv_RTRequestBuilder chiSq_Inv_RT(@Nonnull final WorkbookFunctionsChiSq_Inv_RTParameterSet parameters) {
         return new WorkbookFunctionsChiSq_Inv_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Inv_RT"), getClient(), null, parameters);
     }
 
@@ -924,7 +924,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsChooseRequestBuilder choose(@Nonnull final WorkbookFunctionsChooseBody parameters) {
+    public WorkbookFunctionsChooseRequestBuilder choose(@Nonnull final WorkbookFunctionsChooseParameterSet parameters) {
         return new WorkbookFunctionsChooseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.choose"), getClient(), null, parameters);
     }
 
@@ -934,7 +934,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCleanRequestBuilder clean(@Nonnull final WorkbookFunctionsCleanBody parameters) {
+    public WorkbookFunctionsCleanRequestBuilder clean(@Nonnull final WorkbookFunctionsCleanParameterSet parameters) {
         return new WorkbookFunctionsCleanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clean"), getClient(), null, parameters);
     }
 
@@ -944,7 +944,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCodeRequestBuilder code(@Nonnull final WorkbookFunctionsCodeBody parameters) {
+    public WorkbookFunctionsCodeRequestBuilder code(@Nonnull final WorkbookFunctionsCodeParameterSet parameters) {
         return new WorkbookFunctionsCodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.code"), getClient(), null, parameters);
     }
 
@@ -954,7 +954,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsColumnsRequestBuilder columns(@Nonnull final WorkbookFunctionsColumnsBody parameters) {
+    public WorkbookFunctionsColumnsRequestBuilder columns(@Nonnull final WorkbookFunctionsColumnsParameterSet parameters) {
         return new WorkbookFunctionsColumnsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columns"), getClient(), null, parameters);
     }
 
@@ -964,7 +964,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCombinRequestBuilder combin(@Nonnull final WorkbookFunctionsCombinBody parameters) {
+    public WorkbookFunctionsCombinRequestBuilder combin(@Nonnull final WorkbookFunctionsCombinParameterSet parameters) {
         return new WorkbookFunctionsCombinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.combin"), getClient(), null, parameters);
     }
 
@@ -974,7 +974,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCombinaRequestBuilder combina(@Nonnull final WorkbookFunctionsCombinaBody parameters) {
+    public WorkbookFunctionsCombinaRequestBuilder combina(@Nonnull final WorkbookFunctionsCombinaParameterSet parameters) {
         return new WorkbookFunctionsCombinaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.combina"), getClient(), null, parameters);
     }
 
@@ -984,7 +984,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsComplexRequestBuilder complex(@Nonnull final WorkbookFunctionsComplexBody parameters) {
+    public WorkbookFunctionsComplexRequestBuilder complex(@Nonnull final WorkbookFunctionsComplexParameterSet parameters) {
         return new WorkbookFunctionsComplexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.complex"), getClient(), null, parameters);
     }
 
@@ -994,7 +994,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsConcatenateRequestBuilder concatenate(@Nonnull final WorkbookFunctionsConcatenateBody parameters) {
+    public WorkbookFunctionsConcatenateRequestBuilder concatenate(@Nonnull final WorkbookFunctionsConcatenateParameterSet parameters) {
         return new WorkbookFunctionsConcatenateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.concatenate"), getClient(), null, parameters);
     }
 
@@ -1004,7 +1004,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsConfidence_NormRequestBuilder confidence_Norm(@Nonnull final WorkbookFunctionsConfidence_NormBody parameters) {
+    public WorkbookFunctionsConfidence_NormRequestBuilder confidence_Norm(@Nonnull final WorkbookFunctionsConfidence_NormParameterSet parameters) {
         return new WorkbookFunctionsConfidence_NormRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.confidence_Norm"), getClient(), null, parameters);
     }
 
@@ -1014,7 +1014,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsConfidence_TRequestBuilder confidence_T(@Nonnull final WorkbookFunctionsConfidence_TBody parameters) {
+    public WorkbookFunctionsConfidence_TRequestBuilder confidence_T(@Nonnull final WorkbookFunctionsConfidence_TParameterSet parameters) {
         return new WorkbookFunctionsConfidence_TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.confidence_T"), getClient(), null, parameters);
     }
 
@@ -1024,7 +1024,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsConvertRequestBuilder convert(@Nonnull final WorkbookFunctionsConvertBody parameters) {
+    public WorkbookFunctionsConvertRequestBuilder convert(@Nonnull final WorkbookFunctionsConvertParameterSet parameters) {
         return new WorkbookFunctionsConvertRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.convert"), getClient(), null, parameters);
     }
 
@@ -1034,7 +1034,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCosRequestBuilder cos(@Nonnull final WorkbookFunctionsCosBody parameters) {
+    public WorkbookFunctionsCosRequestBuilder cos(@Nonnull final WorkbookFunctionsCosParameterSet parameters) {
         return new WorkbookFunctionsCosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cos"), getClient(), null, parameters);
     }
 
@@ -1044,7 +1044,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCoshRequestBuilder cosh(@Nonnull final WorkbookFunctionsCoshBody parameters) {
+    public WorkbookFunctionsCoshRequestBuilder cosh(@Nonnull final WorkbookFunctionsCoshParameterSet parameters) {
         return new WorkbookFunctionsCoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cosh"), getClient(), null, parameters);
     }
 
@@ -1054,7 +1054,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCotRequestBuilder cot(@Nonnull final WorkbookFunctionsCotBody parameters) {
+    public WorkbookFunctionsCotRequestBuilder cot(@Nonnull final WorkbookFunctionsCotParameterSet parameters) {
         return new WorkbookFunctionsCotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cot"), getClient(), null, parameters);
     }
 
@@ -1064,7 +1064,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCothRequestBuilder coth(@Nonnull final WorkbookFunctionsCothBody parameters) {
+    public WorkbookFunctionsCothRequestBuilder coth(@Nonnull final WorkbookFunctionsCothParameterSet parameters) {
         return new WorkbookFunctionsCothRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coth"), getClient(), null, parameters);
     }
 
@@ -1074,7 +1074,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCountRequestBuilder count(@Nonnull final WorkbookFunctionsCountBody parameters) {
+    public WorkbookFunctionsCountRequestBuilder count(@Nonnull final WorkbookFunctionsCountParameterSet parameters) {
         return new WorkbookFunctionsCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null, parameters);
     }
 
@@ -1084,7 +1084,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCountARequestBuilder countA(@Nonnull final WorkbookFunctionsCountABody parameters) {
+    public WorkbookFunctionsCountARequestBuilder countA(@Nonnull final WorkbookFunctionsCountAParameterSet parameters) {
         return new WorkbookFunctionsCountARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countA"), getClient(), null, parameters);
     }
 
@@ -1094,7 +1094,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCountBlankRequestBuilder countBlank(@Nonnull final WorkbookFunctionsCountBlankBody parameters) {
+    public WorkbookFunctionsCountBlankRequestBuilder countBlank(@Nonnull final WorkbookFunctionsCountBlankParameterSet parameters) {
         return new WorkbookFunctionsCountBlankRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countBlank"), getClient(), null, parameters);
     }
 
@@ -1104,7 +1104,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCountIfRequestBuilder countIf(@Nonnull final WorkbookFunctionsCountIfBody parameters) {
+    public WorkbookFunctionsCountIfRequestBuilder countIf(@Nonnull final WorkbookFunctionsCountIfParameterSet parameters) {
         return new WorkbookFunctionsCountIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countIf"), getClient(), null, parameters);
     }
 
@@ -1114,7 +1114,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCountIfsRequestBuilder countIfs(@Nonnull final WorkbookFunctionsCountIfsBody parameters) {
+    public WorkbookFunctionsCountIfsRequestBuilder countIfs(@Nonnull final WorkbookFunctionsCountIfsParameterSet parameters) {
         return new WorkbookFunctionsCountIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countIfs"), getClient(), null, parameters);
     }
 
@@ -1124,7 +1124,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCoupDayBsRequestBuilder coupDayBs(@Nonnull final WorkbookFunctionsCoupDayBsBody parameters) {
+    public WorkbookFunctionsCoupDayBsRequestBuilder coupDayBs(@Nonnull final WorkbookFunctionsCoupDayBsParameterSet parameters) {
         return new WorkbookFunctionsCoupDayBsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDayBs"), getClient(), null, parameters);
     }
 
@@ -1134,7 +1134,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCoupDaysRequestBuilder coupDays(@Nonnull final WorkbookFunctionsCoupDaysBody parameters) {
+    public WorkbookFunctionsCoupDaysRequestBuilder coupDays(@Nonnull final WorkbookFunctionsCoupDaysParameterSet parameters) {
         return new WorkbookFunctionsCoupDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDays"), getClient(), null, parameters);
     }
 
@@ -1144,7 +1144,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCoupDaysNcRequestBuilder coupDaysNc(@Nonnull final WorkbookFunctionsCoupDaysNcBody parameters) {
+    public WorkbookFunctionsCoupDaysNcRequestBuilder coupDaysNc(@Nonnull final WorkbookFunctionsCoupDaysNcParameterSet parameters) {
         return new WorkbookFunctionsCoupDaysNcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDaysNc"), getClient(), null, parameters);
     }
 
@@ -1154,7 +1154,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCoupNcdRequestBuilder coupNcd(@Nonnull final WorkbookFunctionsCoupNcdBody parameters) {
+    public WorkbookFunctionsCoupNcdRequestBuilder coupNcd(@Nonnull final WorkbookFunctionsCoupNcdParameterSet parameters) {
         return new WorkbookFunctionsCoupNcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupNcd"), getClient(), null, parameters);
     }
 
@@ -1164,7 +1164,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCoupNumRequestBuilder coupNum(@Nonnull final WorkbookFunctionsCoupNumBody parameters) {
+    public WorkbookFunctionsCoupNumRequestBuilder coupNum(@Nonnull final WorkbookFunctionsCoupNumParameterSet parameters) {
         return new WorkbookFunctionsCoupNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupNum"), getClient(), null, parameters);
     }
 
@@ -1174,7 +1174,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCoupPcdRequestBuilder coupPcd(@Nonnull final WorkbookFunctionsCoupPcdBody parameters) {
+    public WorkbookFunctionsCoupPcdRequestBuilder coupPcd(@Nonnull final WorkbookFunctionsCoupPcdParameterSet parameters) {
         return new WorkbookFunctionsCoupPcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupPcd"), getClient(), null, parameters);
     }
 
@@ -1184,7 +1184,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCscRequestBuilder csc(@Nonnull final WorkbookFunctionsCscBody parameters) {
+    public WorkbookFunctionsCscRequestBuilder csc(@Nonnull final WorkbookFunctionsCscParameterSet parameters) {
         return new WorkbookFunctionsCscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.csc"), getClient(), null, parameters);
     }
 
@@ -1194,7 +1194,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCschRequestBuilder csch(@Nonnull final WorkbookFunctionsCschBody parameters) {
+    public WorkbookFunctionsCschRequestBuilder csch(@Nonnull final WorkbookFunctionsCschParameterSet parameters) {
         return new WorkbookFunctionsCschRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.csch"), getClient(), null, parameters);
     }
 
@@ -1204,7 +1204,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCumIPmtRequestBuilder cumIPmt(@Nonnull final WorkbookFunctionsCumIPmtBody parameters) {
+    public WorkbookFunctionsCumIPmtRequestBuilder cumIPmt(@Nonnull final WorkbookFunctionsCumIPmtParameterSet parameters) {
         return new WorkbookFunctionsCumIPmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cumIPmt"), getClient(), null, parameters);
     }
 
@@ -1214,7 +1214,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsCumPrincRequestBuilder cumPrinc(@Nonnull final WorkbookFunctionsCumPrincBody parameters) {
+    public WorkbookFunctionsCumPrincRequestBuilder cumPrinc(@Nonnull final WorkbookFunctionsCumPrincParameterSet parameters) {
         return new WorkbookFunctionsCumPrincRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cumPrinc"), getClient(), null, parameters);
     }
 
@@ -1224,7 +1224,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDateRequestBuilder date(@Nonnull final WorkbookFunctionsDateBody parameters) {
+    public WorkbookFunctionsDateRequestBuilder date(@Nonnull final WorkbookFunctionsDateParameterSet parameters) {
         return new WorkbookFunctionsDateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.date"), getClient(), null, parameters);
     }
 
@@ -1234,7 +1234,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDatevalueRequestBuilder datevalue(@Nonnull final WorkbookFunctionsDatevalueBody parameters) {
+    public WorkbookFunctionsDatevalueRequestBuilder datevalue(@Nonnull final WorkbookFunctionsDatevalueParameterSet parameters) {
         return new WorkbookFunctionsDatevalueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.datevalue"), getClient(), null, parameters);
     }
 
@@ -1244,7 +1244,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDaverageRequestBuilder daverage(@Nonnull final WorkbookFunctionsDaverageBody parameters) {
+    public WorkbookFunctionsDaverageRequestBuilder daverage(@Nonnull final WorkbookFunctionsDaverageParameterSet parameters) {
         return new WorkbookFunctionsDaverageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.daverage"), getClient(), null, parameters);
     }
 
@@ -1254,7 +1254,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDayRequestBuilder day(@Nonnull final WorkbookFunctionsDayBody parameters) {
+    public WorkbookFunctionsDayRequestBuilder day(@Nonnull final WorkbookFunctionsDayParameterSet parameters) {
         return new WorkbookFunctionsDayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.day"), getClient(), null, parameters);
     }
 
@@ -1264,7 +1264,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDaysRequestBuilder days(@Nonnull final WorkbookFunctionsDaysBody parameters) {
+    public WorkbookFunctionsDaysRequestBuilder days(@Nonnull final WorkbookFunctionsDaysParameterSet parameters) {
         return new WorkbookFunctionsDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.days"), getClient(), null, parameters);
     }
 
@@ -1274,7 +1274,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDays360RequestBuilder days360(@Nonnull final WorkbookFunctionsDays360Body parameters) {
+    public WorkbookFunctionsDays360RequestBuilder days360(@Nonnull final WorkbookFunctionsDays360ParameterSet parameters) {
         return new WorkbookFunctionsDays360RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.days360"), getClient(), null, parameters);
     }
 
@@ -1284,7 +1284,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDbRequestBuilder db(@Nonnull final WorkbookFunctionsDbBody parameters) {
+    public WorkbookFunctionsDbRequestBuilder db(@Nonnull final WorkbookFunctionsDbParameterSet parameters) {
         return new WorkbookFunctionsDbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.db"), getClient(), null, parameters);
     }
 
@@ -1294,7 +1294,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDbcsRequestBuilder dbcs(@Nonnull final WorkbookFunctionsDbcsBody parameters) {
+    public WorkbookFunctionsDbcsRequestBuilder dbcs(@Nonnull final WorkbookFunctionsDbcsParameterSet parameters) {
         return new WorkbookFunctionsDbcsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dbcs"), getClient(), null, parameters);
     }
 
@@ -1304,7 +1304,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDcountRequestBuilder dcount(@Nonnull final WorkbookFunctionsDcountBody parameters) {
+    public WorkbookFunctionsDcountRequestBuilder dcount(@Nonnull final WorkbookFunctionsDcountParameterSet parameters) {
         return new WorkbookFunctionsDcountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dcount"), getClient(), null, parameters);
     }
 
@@ -1314,7 +1314,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDcountARequestBuilder dcountA(@Nonnull final WorkbookFunctionsDcountABody parameters) {
+    public WorkbookFunctionsDcountARequestBuilder dcountA(@Nonnull final WorkbookFunctionsDcountAParameterSet parameters) {
         return new WorkbookFunctionsDcountARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dcountA"), getClient(), null, parameters);
     }
 
@@ -1324,7 +1324,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDdbRequestBuilder ddb(@Nonnull final WorkbookFunctionsDdbBody parameters) {
+    public WorkbookFunctionsDdbRequestBuilder ddb(@Nonnull final WorkbookFunctionsDdbParameterSet parameters) {
         return new WorkbookFunctionsDdbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ddb"), getClient(), null, parameters);
     }
 
@@ -1334,7 +1334,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDec2BinRequestBuilder dec2Bin(@Nonnull final WorkbookFunctionsDec2BinBody parameters) {
+    public WorkbookFunctionsDec2BinRequestBuilder dec2Bin(@Nonnull final WorkbookFunctionsDec2BinParameterSet parameters) {
         return new WorkbookFunctionsDec2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Bin"), getClient(), null, parameters);
     }
 
@@ -1344,7 +1344,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDec2HexRequestBuilder dec2Hex(@Nonnull final WorkbookFunctionsDec2HexBody parameters) {
+    public WorkbookFunctionsDec2HexRequestBuilder dec2Hex(@Nonnull final WorkbookFunctionsDec2HexParameterSet parameters) {
         return new WorkbookFunctionsDec2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Hex"), getClient(), null, parameters);
     }
 
@@ -1354,7 +1354,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDec2OctRequestBuilder dec2Oct(@Nonnull final WorkbookFunctionsDec2OctBody parameters) {
+    public WorkbookFunctionsDec2OctRequestBuilder dec2Oct(@Nonnull final WorkbookFunctionsDec2OctParameterSet parameters) {
         return new WorkbookFunctionsDec2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Oct"), getClient(), null, parameters);
     }
 
@@ -1364,7 +1364,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDecimalRequestBuilder decimal(@Nonnull final WorkbookFunctionsDecimalBody parameters) {
+    public WorkbookFunctionsDecimalRequestBuilder decimal(@Nonnull final WorkbookFunctionsDecimalParameterSet parameters) {
         return new WorkbookFunctionsDecimalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decimal"), getClient(), null, parameters);
     }
 
@@ -1374,7 +1374,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDegreesRequestBuilder degrees(@Nonnull final WorkbookFunctionsDegreesBody parameters) {
+    public WorkbookFunctionsDegreesRequestBuilder degrees(@Nonnull final WorkbookFunctionsDegreesParameterSet parameters) {
         return new WorkbookFunctionsDegreesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.degrees"), getClient(), null, parameters);
     }
 
@@ -1384,7 +1384,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDevSqRequestBuilder devSq(@Nonnull final WorkbookFunctionsDevSqBody parameters) {
+    public WorkbookFunctionsDevSqRequestBuilder devSq(@Nonnull final WorkbookFunctionsDevSqParameterSet parameters) {
         return new WorkbookFunctionsDevSqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.devSq"), getClient(), null, parameters);
     }
 
@@ -1394,7 +1394,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDgetRequestBuilder dget(@Nonnull final WorkbookFunctionsDgetBody parameters) {
+    public WorkbookFunctionsDgetRequestBuilder dget(@Nonnull final WorkbookFunctionsDgetParameterSet parameters) {
         return new WorkbookFunctionsDgetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dget"), getClient(), null, parameters);
     }
 
@@ -1404,7 +1404,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDiscRequestBuilder disc(@Nonnull final WorkbookFunctionsDiscBody parameters) {
+    public WorkbookFunctionsDiscRequestBuilder disc(@Nonnull final WorkbookFunctionsDiscParameterSet parameters) {
         return new WorkbookFunctionsDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disc"), getClient(), null, parameters);
     }
 
@@ -1414,7 +1414,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDmaxRequestBuilder dmax(@Nonnull final WorkbookFunctionsDmaxBody parameters) {
+    public WorkbookFunctionsDmaxRequestBuilder dmax(@Nonnull final WorkbookFunctionsDmaxParameterSet parameters) {
         return new WorkbookFunctionsDmaxRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dmax"), getClient(), null, parameters);
     }
 
@@ -1424,7 +1424,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDminRequestBuilder dmin(@Nonnull final WorkbookFunctionsDminBody parameters) {
+    public WorkbookFunctionsDminRequestBuilder dmin(@Nonnull final WorkbookFunctionsDminParameterSet parameters) {
         return new WorkbookFunctionsDminRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dmin"), getClient(), null, parameters);
     }
 
@@ -1434,7 +1434,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDollarRequestBuilder dollar(@Nonnull final WorkbookFunctionsDollarBody parameters) {
+    public WorkbookFunctionsDollarRequestBuilder dollar(@Nonnull final WorkbookFunctionsDollarParameterSet parameters) {
         return new WorkbookFunctionsDollarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollar"), getClient(), null, parameters);
     }
 
@@ -1444,7 +1444,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDollarDeRequestBuilder dollarDe(@Nonnull final WorkbookFunctionsDollarDeBody parameters) {
+    public WorkbookFunctionsDollarDeRequestBuilder dollarDe(@Nonnull final WorkbookFunctionsDollarDeParameterSet parameters) {
         return new WorkbookFunctionsDollarDeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollarDe"), getClient(), null, parameters);
     }
 
@@ -1454,7 +1454,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDollarFrRequestBuilder dollarFr(@Nonnull final WorkbookFunctionsDollarFrBody parameters) {
+    public WorkbookFunctionsDollarFrRequestBuilder dollarFr(@Nonnull final WorkbookFunctionsDollarFrParameterSet parameters) {
         return new WorkbookFunctionsDollarFrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollarFr"), getClient(), null, parameters);
     }
 
@@ -1464,7 +1464,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDproductRequestBuilder dproduct(@Nonnull final WorkbookFunctionsDproductBody parameters) {
+    public WorkbookFunctionsDproductRequestBuilder dproduct(@Nonnull final WorkbookFunctionsDproductParameterSet parameters) {
         return new WorkbookFunctionsDproductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dproduct"), getClient(), null, parameters);
     }
 
@@ -1474,7 +1474,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDstDevRequestBuilder dstDev(@Nonnull final WorkbookFunctionsDstDevBody parameters) {
+    public WorkbookFunctionsDstDevRequestBuilder dstDev(@Nonnull final WorkbookFunctionsDstDevParameterSet parameters) {
         return new WorkbookFunctionsDstDevRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dstDev"), getClient(), null, parameters);
     }
 
@@ -1484,7 +1484,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDstDevPRequestBuilder dstDevP(@Nonnull final WorkbookFunctionsDstDevPBody parameters) {
+    public WorkbookFunctionsDstDevPRequestBuilder dstDevP(@Nonnull final WorkbookFunctionsDstDevPParameterSet parameters) {
         return new WorkbookFunctionsDstDevPRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dstDevP"), getClient(), null, parameters);
     }
 
@@ -1494,7 +1494,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDsumRequestBuilder dsum(@Nonnull final WorkbookFunctionsDsumBody parameters) {
+    public WorkbookFunctionsDsumRequestBuilder dsum(@Nonnull final WorkbookFunctionsDsumParameterSet parameters) {
         return new WorkbookFunctionsDsumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dsum"), getClient(), null, parameters);
     }
 
@@ -1504,7 +1504,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDurationRequestBuilder duration(@Nonnull final WorkbookFunctionsDurationBody parameters) {
+    public WorkbookFunctionsDurationRequestBuilder duration(@Nonnull final WorkbookFunctionsDurationParameterSet parameters) {
         return new WorkbookFunctionsDurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.duration"), getClient(), null, parameters);
     }
 
@@ -1514,7 +1514,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDvarRequestBuilder dvar(@Nonnull final WorkbookFunctionsDvarBody parameters) {
+    public WorkbookFunctionsDvarRequestBuilder dvar(@Nonnull final WorkbookFunctionsDvarParameterSet parameters) {
         return new WorkbookFunctionsDvarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dvar"), getClient(), null, parameters);
     }
 
@@ -1524,7 +1524,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsDvarPRequestBuilder dvarP(@Nonnull final WorkbookFunctionsDvarPBody parameters) {
+    public WorkbookFunctionsDvarPRequestBuilder dvarP(@Nonnull final WorkbookFunctionsDvarPParameterSet parameters) {
         return new WorkbookFunctionsDvarPRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dvarP"), getClient(), null, parameters);
     }
 
@@ -1534,7 +1534,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsEcma_CeilingRequestBuilder ecma_Ceiling(@Nonnull final WorkbookFunctionsEcma_CeilingBody parameters) {
+    public WorkbookFunctionsEcma_CeilingRequestBuilder ecma_Ceiling(@Nonnull final WorkbookFunctionsEcma_CeilingParameterSet parameters) {
         return new WorkbookFunctionsEcma_CeilingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ecma_Ceiling"), getClient(), null, parameters);
     }
 
@@ -1544,7 +1544,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsEdateRequestBuilder edate(@Nonnull final WorkbookFunctionsEdateBody parameters) {
+    public WorkbookFunctionsEdateRequestBuilder edate(@Nonnull final WorkbookFunctionsEdateParameterSet parameters) {
         return new WorkbookFunctionsEdateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.edate"), getClient(), null, parameters);
     }
 
@@ -1554,7 +1554,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsEffectRequestBuilder effect(@Nonnull final WorkbookFunctionsEffectBody parameters) {
+    public WorkbookFunctionsEffectRequestBuilder effect(@Nonnull final WorkbookFunctionsEffectParameterSet parameters) {
         return new WorkbookFunctionsEffectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.effect"), getClient(), null, parameters);
     }
 
@@ -1564,7 +1564,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsEoMonthRequestBuilder eoMonth(@Nonnull final WorkbookFunctionsEoMonthBody parameters) {
+    public WorkbookFunctionsEoMonthRequestBuilder eoMonth(@Nonnull final WorkbookFunctionsEoMonthParameterSet parameters) {
         return new WorkbookFunctionsEoMonthRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eoMonth"), getClient(), null, parameters);
     }
 
@@ -1574,7 +1574,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsErfRequestBuilder erf(@Nonnull final WorkbookFunctionsErfBody parameters) {
+    public WorkbookFunctionsErfRequestBuilder erf(@Nonnull final WorkbookFunctionsErfParameterSet parameters) {
         return new WorkbookFunctionsErfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf"), getClient(), null, parameters);
     }
 
@@ -1584,7 +1584,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsErfCRequestBuilder erfC(@Nonnull final WorkbookFunctionsErfCBody parameters) {
+    public WorkbookFunctionsErfCRequestBuilder erfC(@Nonnull final WorkbookFunctionsErfCParameterSet parameters) {
         return new WorkbookFunctionsErfCRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erfC"), getClient(), null, parameters);
     }
 
@@ -1594,7 +1594,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsErfC_PreciseRequestBuilder erfC_Precise(@Nonnull final WorkbookFunctionsErfC_PreciseBody parameters) {
+    public WorkbookFunctionsErfC_PreciseRequestBuilder erfC_Precise(@Nonnull final WorkbookFunctionsErfC_PreciseParameterSet parameters) {
         return new WorkbookFunctionsErfC_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erfC_Precise"), getClient(), null, parameters);
     }
 
@@ -1604,7 +1604,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsErf_PreciseRequestBuilder erf_Precise(@Nonnull final WorkbookFunctionsErf_PreciseBody parameters) {
+    public WorkbookFunctionsErf_PreciseRequestBuilder erf_Precise(@Nonnull final WorkbookFunctionsErf_PreciseParameterSet parameters) {
         return new WorkbookFunctionsErf_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf_Precise"), getClient(), null, parameters);
     }
 
@@ -1614,7 +1614,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsError_TypeRequestBuilder error_Type(@Nonnull final WorkbookFunctionsError_TypeBody parameters) {
+    public WorkbookFunctionsError_TypeRequestBuilder error_Type(@Nonnull final WorkbookFunctionsError_TypeParameterSet parameters) {
         return new WorkbookFunctionsError_TypeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.error_Type"), getClient(), null, parameters);
     }
 
@@ -1624,7 +1624,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsEvenRequestBuilder even(@Nonnull final WorkbookFunctionsEvenBody parameters) {
+    public WorkbookFunctionsEvenRequestBuilder even(@Nonnull final WorkbookFunctionsEvenParameterSet parameters) {
         return new WorkbookFunctionsEvenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.even"), getClient(), null, parameters);
     }
 
@@ -1634,7 +1634,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsExactRequestBuilder exact(@Nonnull final WorkbookFunctionsExactBody parameters) {
+    public WorkbookFunctionsExactRequestBuilder exact(@Nonnull final WorkbookFunctionsExactParameterSet parameters) {
         return new WorkbookFunctionsExactRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exact"), getClient(), null, parameters);
     }
 
@@ -1644,7 +1644,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsExpRequestBuilder exp(@Nonnull final WorkbookFunctionsExpBody parameters) {
+    public WorkbookFunctionsExpRequestBuilder exp(@Nonnull final WorkbookFunctionsExpParameterSet parameters) {
         return new WorkbookFunctionsExpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exp"), getClient(), null, parameters);
     }
 
@@ -1654,7 +1654,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsExpon_DistRequestBuilder expon_Dist(@Nonnull final WorkbookFunctionsExpon_DistBody parameters) {
+    public WorkbookFunctionsExpon_DistRequestBuilder expon_Dist(@Nonnull final WorkbookFunctionsExpon_DistParameterSet parameters) {
         return new WorkbookFunctionsExpon_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.expon_Dist"), getClient(), null, parameters);
     }
 
@@ -1664,7 +1664,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFactRequestBuilder fact(@Nonnull final WorkbookFunctionsFactBody parameters) {
+    public WorkbookFunctionsFactRequestBuilder fact(@Nonnull final WorkbookFunctionsFactParameterSet parameters) {
         return new WorkbookFunctionsFactRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fact"), getClient(), null, parameters);
     }
 
@@ -1674,7 +1674,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFactDoubleRequestBuilder factDouble(@Nonnull final WorkbookFunctionsFactDoubleBody parameters) {
+    public WorkbookFunctionsFactDoubleRequestBuilder factDouble(@Nonnull final WorkbookFunctionsFactDoubleParameterSet parameters) {
         return new WorkbookFunctionsFactDoubleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.factDouble"), getClient(), null, parameters);
     }
 
@@ -1693,7 +1693,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFindRequestBuilder find(@Nonnull final WorkbookFunctionsFindBody parameters) {
+    public WorkbookFunctionsFindRequestBuilder find(@Nonnull final WorkbookFunctionsFindParameterSet parameters) {
         return new WorkbookFunctionsFindRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.find"), getClient(), null, parameters);
     }
 
@@ -1703,7 +1703,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFindBRequestBuilder findB(@Nonnull final WorkbookFunctionsFindBBody parameters) {
+    public WorkbookFunctionsFindBRequestBuilder findB(@Nonnull final WorkbookFunctionsFindBParameterSet parameters) {
         return new WorkbookFunctionsFindBRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findB"), getClient(), null, parameters);
     }
 
@@ -1713,7 +1713,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFisherRequestBuilder fisher(@Nonnull final WorkbookFunctionsFisherBody parameters) {
+    public WorkbookFunctionsFisherRequestBuilder fisher(@Nonnull final WorkbookFunctionsFisherParameterSet parameters) {
         return new WorkbookFunctionsFisherRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fisher"), getClient(), null, parameters);
     }
 
@@ -1723,7 +1723,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFisherInvRequestBuilder fisherInv(@Nonnull final WorkbookFunctionsFisherInvBody parameters) {
+    public WorkbookFunctionsFisherInvRequestBuilder fisherInv(@Nonnull final WorkbookFunctionsFisherInvParameterSet parameters) {
         return new WorkbookFunctionsFisherInvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fisherInv"), getClient(), null, parameters);
     }
 
@@ -1733,7 +1733,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFixedRequestBuilder fixed(@Nonnull final WorkbookFunctionsFixedBody parameters) {
+    public WorkbookFunctionsFixedRequestBuilder fixed(@Nonnull final WorkbookFunctionsFixedParameterSet parameters) {
         return new WorkbookFunctionsFixedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fixed"), getClient(), null, parameters);
     }
 
@@ -1743,7 +1743,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFloor_MathRequestBuilder floor_Math(@Nonnull final WorkbookFunctionsFloor_MathBody parameters) {
+    public WorkbookFunctionsFloor_MathRequestBuilder floor_Math(@Nonnull final WorkbookFunctionsFloor_MathParameterSet parameters) {
         return new WorkbookFunctionsFloor_MathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.floor_Math"), getClient(), null, parameters);
     }
 
@@ -1753,7 +1753,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFloor_PreciseRequestBuilder floor_Precise(@Nonnull final WorkbookFunctionsFloor_PreciseBody parameters) {
+    public WorkbookFunctionsFloor_PreciseRequestBuilder floor_Precise(@Nonnull final WorkbookFunctionsFloor_PreciseParameterSet parameters) {
         return new WorkbookFunctionsFloor_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.floor_Precise"), getClient(), null, parameters);
     }
 
@@ -1763,7 +1763,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFvRequestBuilder fv(@Nonnull final WorkbookFunctionsFvBody parameters) {
+    public WorkbookFunctionsFvRequestBuilder fv(@Nonnull final WorkbookFunctionsFvParameterSet parameters) {
         return new WorkbookFunctionsFvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fv"), getClient(), null, parameters);
     }
 
@@ -1773,7 +1773,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsFvscheduleRequestBuilder fvschedule(@Nonnull final WorkbookFunctionsFvscheduleBody parameters) {
+    public WorkbookFunctionsFvscheduleRequestBuilder fvschedule(@Nonnull final WorkbookFunctionsFvscheduleParameterSet parameters) {
         return new WorkbookFunctionsFvscheduleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fvschedule"), getClient(), null, parameters);
     }
 
@@ -1783,7 +1783,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsF_DistRequestBuilder f_Dist(@Nonnull final WorkbookFunctionsF_DistBody parameters) {
+    public WorkbookFunctionsF_DistRequestBuilder f_Dist(@Nonnull final WorkbookFunctionsF_DistParameterSet parameters) {
         return new WorkbookFunctionsF_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist"), getClient(), null, parameters);
     }
 
@@ -1793,7 +1793,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsF_Dist_RTRequestBuilder f_Dist_RT(@Nonnull final WorkbookFunctionsF_Dist_RTBody parameters) {
+    public WorkbookFunctionsF_Dist_RTRequestBuilder f_Dist_RT(@Nonnull final WorkbookFunctionsF_Dist_RTParameterSet parameters) {
         return new WorkbookFunctionsF_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist_RT"), getClient(), null, parameters);
     }
 
@@ -1803,7 +1803,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsF_InvRequestBuilder f_Inv(@Nonnull final WorkbookFunctionsF_InvBody parameters) {
+    public WorkbookFunctionsF_InvRequestBuilder f_Inv(@Nonnull final WorkbookFunctionsF_InvParameterSet parameters) {
         return new WorkbookFunctionsF_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv"), getClient(), null, parameters);
     }
 
@@ -1813,7 +1813,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsF_Inv_RTRequestBuilder f_Inv_RT(@Nonnull final WorkbookFunctionsF_Inv_RTBody parameters) {
+    public WorkbookFunctionsF_Inv_RTRequestBuilder f_Inv_RT(@Nonnull final WorkbookFunctionsF_Inv_RTParameterSet parameters) {
         return new WorkbookFunctionsF_Inv_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv_RT"), getClient(), null, parameters);
     }
 
@@ -1823,7 +1823,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGammaRequestBuilder gamma(@Nonnull final WorkbookFunctionsGammaBody parameters) {
+    public WorkbookFunctionsGammaRequestBuilder gamma(@Nonnull final WorkbookFunctionsGammaParameterSet parameters) {
         return new WorkbookFunctionsGammaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma"), getClient(), null, parameters);
     }
 
@@ -1833,7 +1833,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGammaLnRequestBuilder gammaLn(@Nonnull final WorkbookFunctionsGammaLnBody parameters) {
+    public WorkbookFunctionsGammaLnRequestBuilder gammaLn(@Nonnull final WorkbookFunctionsGammaLnParameterSet parameters) {
         return new WorkbookFunctionsGammaLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gammaLn"), getClient(), null, parameters);
     }
 
@@ -1843,7 +1843,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGammaLn_PreciseRequestBuilder gammaLn_Precise(@Nonnull final WorkbookFunctionsGammaLn_PreciseBody parameters) {
+    public WorkbookFunctionsGammaLn_PreciseRequestBuilder gammaLn_Precise(@Nonnull final WorkbookFunctionsGammaLn_PreciseParameterSet parameters) {
         return new WorkbookFunctionsGammaLn_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gammaLn_Precise"), getClient(), null, parameters);
     }
 
@@ -1853,7 +1853,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGamma_DistRequestBuilder gamma_Dist(@Nonnull final WorkbookFunctionsGamma_DistBody parameters) {
+    public WorkbookFunctionsGamma_DistRequestBuilder gamma_Dist(@Nonnull final WorkbookFunctionsGamma_DistParameterSet parameters) {
         return new WorkbookFunctionsGamma_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Dist"), getClient(), null, parameters);
     }
 
@@ -1863,7 +1863,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGamma_InvRequestBuilder gamma_Inv(@Nonnull final WorkbookFunctionsGamma_InvBody parameters) {
+    public WorkbookFunctionsGamma_InvRequestBuilder gamma_Inv(@Nonnull final WorkbookFunctionsGamma_InvParameterSet parameters) {
         return new WorkbookFunctionsGamma_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Inv"), getClient(), null, parameters);
     }
 
@@ -1873,7 +1873,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGaussRequestBuilder gauss(@Nonnull final WorkbookFunctionsGaussBody parameters) {
+    public WorkbookFunctionsGaussRequestBuilder gauss(@Nonnull final WorkbookFunctionsGaussParameterSet parameters) {
         return new WorkbookFunctionsGaussRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gauss"), getClient(), null, parameters);
     }
 
@@ -1883,7 +1883,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGcdRequestBuilder gcd(@Nonnull final WorkbookFunctionsGcdBody parameters) {
+    public WorkbookFunctionsGcdRequestBuilder gcd(@Nonnull final WorkbookFunctionsGcdParameterSet parameters) {
         return new WorkbookFunctionsGcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gcd"), getClient(), null, parameters);
     }
 
@@ -1893,7 +1893,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGeoMeanRequestBuilder geoMean(@Nonnull final WorkbookFunctionsGeoMeanBody parameters) {
+    public WorkbookFunctionsGeoMeanRequestBuilder geoMean(@Nonnull final WorkbookFunctionsGeoMeanParameterSet parameters) {
         return new WorkbookFunctionsGeoMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.geoMean"), getClient(), null, parameters);
     }
 
@@ -1903,7 +1903,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsGeStepRequestBuilder geStep(@Nonnull final WorkbookFunctionsGeStepBody parameters) {
+    public WorkbookFunctionsGeStepRequestBuilder geStep(@Nonnull final WorkbookFunctionsGeStepParameterSet parameters) {
         return new WorkbookFunctionsGeStepRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.geStep"), getClient(), null, parameters);
     }
 
@@ -1913,7 +1913,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsHarMeanRequestBuilder harMean(@Nonnull final WorkbookFunctionsHarMeanBody parameters) {
+    public WorkbookFunctionsHarMeanRequestBuilder harMean(@Nonnull final WorkbookFunctionsHarMeanParameterSet parameters) {
         return new WorkbookFunctionsHarMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.harMean"), getClient(), null, parameters);
     }
 
@@ -1923,7 +1923,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsHex2BinRequestBuilder hex2Bin(@Nonnull final WorkbookFunctionsHex2BinBody parameters) {
+    public WorkbookFunctionsHex2BinRequestBuilder hex2Bin(@Nonnull final WorkbookFunctionsHex2BinParameterSet parameters) {
         return new WorkbookFunctionsHex2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Bin"), getClient(), null, parameters);
     }
 
@@ -1933,7 +1933,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsHex2DecRequestBuilder hex2Dec(@Nonnull final WorkbookFunctionsHex2DecBody parameters) {
+    public WorkbookFunctionsHex2DecRequestBuilder hex2Dec(@Nonnull final WorkbookFunctionsHex2DecParameterSet parameters) {
         return new WorkbookFunctionsHex2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Dec"), getClient(), null, parameters);
     }
 
@@ -1943,7 +1943,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsHex2OctRequestBuilder hex2Oct(@Nonnull final WorkbookFunctionsHex2OctBody parameters) {
+    public WorkbookFunctionsHex2OctRequestBuilder hex2Oct(@Nonnull final WorkbookFunctionsHex2OctParameterSet parameters) {
         return new WorkbookFunctionsHex2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Oct"), getClient(), null, parameters);
     }
 
@@ -1953,7 +1953,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsHlookupRequestBuilder hlookup(@Nonnull final WorkbookFunctionsHlookupBody parameters) {
+    public WorkbookFunctionsHlookupRequestBuilder hlookup(@Nonnull final WorkbookFunctionsHlookupParameterSet parameters) {
         return new WorkbookFunctionsHlookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hlookup"), getClient(), null, parameters);
     }
 
@@ -1963,7 +1963,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsHourRequestBuilder hour(@Nonnull final WorkbookFunctionsHourBody parameters) {
+    public WorkbookFunctionsHourRequestBuilder hour(@Nonnull final WorkbookFunctionsHourParameterSet parameters) {
         return new WorkbookFunctionsHourRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hour"), getClient(), null, parameters);
     }
 
@@ -1973,7 +1973,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsHyperlinkRequestBuilder hyperlink(@Nonnull final WorkbookFunctionsHyperlinkBody parameters) {
+    public WorkbookFunctionsHyperlinkRequestBuilder hyperlink(@Nonnull final WorkbookFunctionsHyperlinkParameterSet parameters) {
         return new WorkbookFunctionsHyperlinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hyperlink"), getClient(), null, parameters);
     }
 
@@ -1983,7 +1983,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsHypGeom_DistRequestBuilder hypGeom_Dist(@Nonnull final WorkbookFunctionsHypGeom_DistBody parameters) {
+    public WorkbookFunctionsHypGeom_DistRequestBuilder hypGeom_Dist(@Nonnull final WorkbookFunctionsHypGeom_DistParameterSet parameters) {
         return new WorkbookFunctionsHypGeom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hypGeom_Dist"), getClient(), null, parameters);
     }
 
@@ -1993,7 +1993,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIfRequestBuilder msgraphIf(@Nonnull final WorkbookFunctionsIfBody parameters) {
+    public WorkbookFunctionsIfRequestBuilder msgraphIf(@Nonnull final WorkbookFunctionsIfParameterSet parameters) {
         return new WorkbookFunctionsIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.if"), getClient(), null, parameters);
     }
 
@@ -2003,7 +2003,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImAbsRequestBuilder imAbs(@Nonnull final WorkbookFunctionsImAbsBody parameters) {
+    public WorkbookFunctionsImAbsRequestBuilder imAbs(@Nonnull final WorkbookFunctionsImAbsParameterSet parameters) {
         return new WorkbookFunctionsImAbsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imAbs"), getClient(), null, parameters);
     }
 
@@ -2013,7 +2013,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImaginaryRequestBuilder imaginary(@Nonnull final WorkbookFunctionsImaginaryBody parameters) {
+    public WorkbookFunctionsImaginaryRequestBuilder imaginary(@Nonnull final WorkbookFunctionsImaginaryParameterSet parameters) {
         return new WorkbookFunctionsImaginaryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imaginary"), getClient(), null, parameters);
     }
 
@@ -2023,7 +2023,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImArgumentRequestBuilder imArgument(@Nonnull final WorkbookFunctionsImArgumentBody parameters) {
+    public WorkbookFunctionsImArgumentRequestBuilder imArgument(@Nonnull final WorkbookFunctionsImArgumentParameterSet parameters) {
         return new WorkbookFunctionsImArgumentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imArgument"), getClient(), null, parameters);
     }
 
@@ -2033,7 +2033,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImConjugateRequestBuilder imConjugate(@Nonnull final WorkbookFunctionsImConjugateBody parameters) {
+    public WorkbookFunctionsImConjugateRequestBuilder imConjugate(@Nonnull final WorkbookFunctionsImConjugateParameterSet parameters) {
         return new WorkbookFunctionsImConjugateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imConjugate"), getClient(), null, parameters);
     }
 
@@ -2043,7 +2043,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImCosRequestBuilder imCos(@Nonnull final WorkbookFunctionsImCosBody parameters) {
+    public WorkbookFunctionsImCosRequestBuilder imCos(@Nonnull final WorkbookFunctionsImCosParameterSet parameters) {
         return new WorkbookFunctionsImCosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCos"), getClient(), null, parameters);
     }
 
@@ -2053,7 +2053,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImCoshRequestBuilder imCosh(@Nonnull final WorkbookFunctionsImCoshBody parameters) {
+    public WorkbookFunctionsImCoshRequestBuilder imCosh(@Nonnull final WorkbookFunctionsImCoshParameterSet parameters) {
         return new WorkbookFunctionsImCoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCosh"), getClient(), null, parameters);
     }
 
@@ -2063,7 +2063,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImCotRequestBuilder imCot(@Nonnull final WorkbookFunctionsImCotBody parameters) {
+    public WorkbookFunctionsImCotRequestBuilder imCot(@Nonnull final WorkbookFunctionsImCotParameterSet parameters) {
         return new WorkbookFunctionsImCotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCot"), getClient(), null, parameters);
     }
 
@@ -2073,7 +2073,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImCscRequestBuilder imCsc(@Nonnull final WorkbookFunctionsImCscBody parameters) {
+    public WorkbookFunctionsImCscRequestBuilder imCsc(@Nonnull final WorkbookFunctionsImCscParameterSet parameters) {
         return new WorkbookFunctionsImCscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCsc"), getClient(), null, parameters);
     }
 
@@ -2083,7 +2083,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImCschRequestBuilder imCsch(@Nonnull final WorkbookFunctionsImCschBody parameters) {
+    public WorkbookFunctionsImCschRequestBuilder imCsch(@Nonnull final WorkbookFunctionsImCschParameterSet parameters) {
         return new WorkbookFunctionsImCschRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCsch"), getClient(), null, parameters);
     }
 
@@ -2093,7 +2093,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImDivRequestBuilder imDiv(@Nonnull final WorkbookFunctionsImDivBody parameters) {
+    public WorkbookFunctionsImDivRequestBuilder imDiv(@Nonnull final WorkbookFunctionsImDivParameterSet parameters) {
         return new WorkbookFunctionsImDivRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imDiv"), getClient(), null, parameters);
     }
 
@@ -2103,7 +2103,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImExpRequestBuilder imExp(@Nonnull final WorkbookFunctionsImExpBody parameters) {
+    public WorkbookFunctionsImExpRequestBuilder imExp(@Nonnull final WorkbookFunctionsImExpParameterSet parameters) {
         return new WorkbookFunctionsImExpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imExp"), getClient(), null, parameters);
     }
 
@@ -2113,7 +2113,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImLnRequestBuilder imLn(@Nonnull final WorkbookFunctionsImLnBody parameters) {
+    public WorkbookFunctionsImLnRequestBuilder imLn(@Nonnull final WorkbookFunctionsImLnParameterSet parameters) {
         return new WorkbookFunctionsImLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLn"), getClient(), null, parameters);
     }
 
@@ -2123,7 +2123,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImLog10RequestBuilder imLog10(@Nonnull final WorkbookFunctionsImLog10Body parameters) {
+    public WorkbookFunctionsImLog10RequestBuilder imLog10(@Nonnull final WorkbookFunctionsImLog10ParameterSet parameters) {
         return new WorkbookFunctionsImLog10RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLog10"), getClient(), null, parameters);
     }
 
@@ -2133,7 +2133,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImLog2RequestBuilder imLog2(@Nonnull final WorkbookFunctionsImLog2Body parameters) {
+    public WorkbookFunctionsImLog2RequestBuilder imLog2(@Nonnull final WorkbookFunctionsImLog2ParameterSet parameters) {
         return new WorkbookFunctionsImLog2RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLog2"), getClient(), null, parameters);
     }
 
@@ -2143,7 +2143,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImPowerRequestBuilder imPower(@Nonnull final WorkbookFunctionsImPowerBody parameters) {
+    public WorkbookFunctionsImPowerRequestBuilder imPower(@Nonnull final WorkbookFunctionsImPowerParameterSet parameters) {
         return new WorkbookFunctionsImPowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imPower"), getClient(), null, parameters);
     }
 
@@ -2153,7 +2153,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImProductRequestBuilder imProduct(@Nonnull final WorkbookFunctionsImProductBody parameters) {
+    public WorkbookFunctionsImProductRequestBuilder imProduct(@Nonnull final WorkbookFunctionsImProductParameterSet parameters) {
         return new WorkbookFunctionsImProductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imProduct"), getClient(), null, parameters);
     }
 
@@ -2163,7 +2163,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImRealRequestBuilder imReal(@Nonnull final WorkbookFunctionsImRealBody parameters) {
+    public WorkbookFunctionsImRealRequestBuilder imReal(@Nonnull final WorkbookFunctionsImRealParameterSet parameters) {
         return new WorkbookFunctionsImRealRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imReal"), getClient(), null, parameters);
     }
 
@@ -2173,7 +2173,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImSecRequestBuilder imSec(@Nonnull final WorkbookFunctionsImSecBody parameters) {
+    public WorkbookFunctionsImSecRequestBuilder imSec(@Nonnull final WorkbookFunctionsImSecParameterSet parameters) {
         return new WorkbookFunctionsImSecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSec"), getClient(), null, parameters);
     }
 
@@ -2183,7 +2183,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImSechRequestBuilder imSech(@Nonnull final WorkbookFunctionsImSechBody parameters) {
+    public WorkbookFunctionsImSechRequestBuilder imSech(@Nonnull final WorkbookFunctionsImSechParameterSet parameters) {
         return new WorkbookFunctionsImSechRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSech"), getClient(), null, parameters);
     }
 
@@ -2193,7 +2193,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImSinRequestBuilder imSin(@Nonnull final WorkbookFunctionsImSinBody parameters) {
+    public WorkbookFunctionsImSinRequestBuilder imSin(@Nonnull final WorkbookFunctionsImSinParameterSet parameters) {
         return new WorkbookFunctionsImSinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSin"), getClient(), null, parameters);
     }
 
@@ -2203,7 +2203,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImSinhRequestBuilder imSinh(@Nonnull final WorkbookFunctionsImSinhBody parameters) {
+    public WorkbookFunctionsImSinhRequestBuilder imSinh(@Nonnull final WorkbookFunctionsImSinhParameterSet parameters) {
         return new WorkbookFunctionsImSinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSinh"), getClient(), null, parameters);
     }
 
@@ -2213,7 +2213,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImSqrtRequestBuilder imSqrt(@Nonnull final WorkbookFunctionsImSqrtBody parameters) {
+    public WorkbookFunctionsImSqrtRequestBuilder imSqrt(@Nonnull final WorkbookFunctionsImSqrtParameterSet parameters) {
         return new WorkbookFunctionsImSqrtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSqrt"), getClient(), null, parameters);
     }
 
@@ -2223,7 +2223,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImSubRequestBuilder imSub(@Nonnull final WorkbookFunctionsImSubBody parameters) {
+    public WorkbookFunctionsImSubRequestBuilder imSub(@Nonnull final WorkbookFunctionsImSubParameterSet parameters) {
         return new WorkbookFunctionsImSubRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSub"), getClient(), null, parameters);
     }
 
@@ -2233,7 +2233,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImSumRequestBuilder imSum(@Nonnull final WorkbookFunctionsImSumBody parameters) {
+    public WorkbookFunctionsImSumRequestBuilder imSum(@Nonnull final WorkbookFunctionsImSumParameterSet parameters) {
         return new WorkbookFunctionsImSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSum"), getClient(), null, parameters);
     }
 
@@ -2243,7 +2243,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsImTanRequestBuilder imTan(@Nonnull final WorkbookFunctionsImTanBody parameters) {
+    public WorkbookFunctionsImTanRequestBuilder imTan(@Nonnull final WorkbookFunctionsImTanParameterSet parameters) {
         return new WorkbookFunctionsImTanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imTan"), getClient(), null, parameters);
     }
 
@@ -2253,7 +2253,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIntRequestBuilder msgraphInt(@Nonnull final WorkbookFunctionsIntBody parameters) {
+    public WorkbookFunctionsIntRequestBuilder msgraphInt(@Nonnull final WorkbookFunctionsIntParameterSet parameters) {
         return new WorkbookFunctionsIntRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.int"), getClient(), null, parameters);
     }
 
@@ -2263,7 +2263,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIntRateRequestBuilder intRate(@Nonnull final WorkbookFunctionsIntRateBody parameters) {
+    public WorkbookFunctionsIntRateRequestBuilder intRate(@Nonnull final WorkbookFunctionsIntRateParameterSet parameters) {
         return new WorkbookFunctionsIntRateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.intRate"), getClient(), null, parameters);
     }
 
@@ -2273,7 +2273,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIpmtRequestBuilder ipmt(@Nonnull final WorkbookFunctionsIpmtBody parameters) {
+    public WorkbookFunctionsIpmtRequestBuilder ipmt(@Nonnull final WorkbookFunctionsIpmtParameterSet parameters) {
         return new WorkbookFunctionsIpmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ipmt"), getClient(), null, parameters);
     }
 
@@ -2283,7 +2283,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIrrRequestBuilder irr(@Nonnull final WorkbookFunctionsIrrBody parameters) {
+    public WorkbookFunctionsIrrRequestBuilder irr(@Nonnull final WorkbookFunctionsIrrParameterSet parameters) {
         return new WorkbookFunctionsIrrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.irr"), getClient(), null, parameters);
     }
 
@@ -2293,7 +2293,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsErrRequestBuilder isErr(@Nonnull final WorkbookFunctionsIsErrBody parameters) {
+    public WorkbookFunctionsIsErrRequestBuilder isErr(@Nonnull final WorkbookFunctionsIsErrParameterSet parameters) {
         return new WorkbookFunctionsIsErrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isErr"), getClient(), null, parameters);
     }
 
@@ -2303,7 +2303,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsErrorRequestBuilder isError(@Nonnull final WorkbookFunctionsIsErrorBody parameters) {
+    public WorkbookFunctionsIsErrorRequestBuilder isError(@Nonnull final WorkbookFunctionsIsErrorParameterSet parameters) {
         return new WorkbookFunctionsIsErrorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isError"), getClient(), null, parameters);
     }
 
@@ -2313,7 +2313,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsEvenRequestBuilder isEven(@Nonnull final WorkbookFunctionsIsEvenBody parameters) {
+    public WorkbookFunctionsIsEvenRequestBuilder isEven(@Nonnull final WorkbookFunctionsIsEvenParameterSet parameters) {
         return new WorkbookFunctionsIsEvenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isEven"), getClient(), null, parameters);
     }
 
@@ -2323,7 +2323,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsFormulaRequestBuilder isFormula(@Nonnull final WorkbookFunctionsIsFormulaBody parameters) {
+    public WorkbookFunctionsIsFormulaRequestBuilder isFormula(@Nonnull final WorkbookFunctionsIsFormulaParameterSet parameters) {
         return new WorkbookFunctionsIsFormulaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isFormula"), getClient(), null, parameters);
     }
 
@@ -2333,7 +2333,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsLogicalRequestBuilder isLogical(@Nonnull final WorkbookFunctionsIsLogicalBody parameters) {
+    public WorkbookFunctionsIsLogicalRequestBuilder isLogical(@Nonnull final WorkbookFunctionsIsLogicalParameterSet parameters) {
         return new WorkbookFunctionsIsLogicalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isLogical"), getClient(), null, parameters);
     }
 
@@ -2343,7 +2343,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsNARequestBuilder isNA(@Nonnull final WorkbookFunctionsIsNABody parameters) {
+    public WorkbookFunctionsIsNARequestBuilder isNA(@Nonnull final WorkbookFunctionsIsNAParameterSet parameters) {
         return new WorkbookFunctionsIsNARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNA"), getClient(), null, parameters);
     }
 
@@ -2353,7 +2353,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsNonTextRequestBuilder isNonText(@Nonnull final WorkbookFunctionsIsNonTextBody parameters) {
+    public WorkbookFunctionsIsNonTextRequestBuilder isNonText(@Nonnull final WorkbookFunctionsIsNonTextParameterSet parameters) {
         return new WorkbookFunctionsIsNonTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNonText"), getClient(), null, parameters);
     }
 
@@ -2363,7 +2363,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsNumberRequestBuilder isNumber(@Nonnull final WorkbookFunctionsIsNumberBody parameters) {
+    public WorkbookFunctionsIsNumberRequestBuilder isNumber(@Nonnull final WorkbookFunctionsIsNumberParameterSet parameters) {
         return new WorkbookFunctionsIsNumberRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNumber"), getClient(), null, parameters);
     }
 
@@ -2373,7 +2373,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsOddRequestBuilder isOdd(@Nonnull final WorkbookFunctionsIsOddBody parameters) {
+    public WorkbookFunctionsIsOddRequestBuilder isOdd(@Nonnull final WorkbookFunctionsIsOddParameterSet parameters) {
         return new WorkbookFunctionsIsOddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isOdd"), getClient(), null, parameters);
     }
 
@@ -2383,7 +2383,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsoWeekNumRequestBuilder isoWeekNum(@Nonnull final WorkbookFunctionsIsoWeekNumBody parameters) {
+    public WorkbookFunctionsIsoWeekNumRequestBuilder isoWeekNum(@Nonnull final WorkbookFunctionsIsoWeekNumParameterSet parameters) {
         return new WorkbookFunctionsIsoWeekNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isoWeekNum"), getClient(), null, parameters);
     }
 
@@ -2393,7 +2393,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIso_CeilingRequestBuilder iso_Ceiling(@Nonnull final WorkbookFunctionsIso_CeilingBody parameters) {
+    public WorkbookFunctionsIso_CeilingRequestBuilder iso_Ceiling(@Nonnull final WorkbookFunctionsIso_CeilingParameterSet parameters) {
         return new WorkbookFunctionsIso_CeilingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iso_Ceiling"), getClient(), null, parameters);
     }
 
@@ -2403,7 +2403,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIspmtRequestBuilder ispmt(@Nonnull final WorkbookFunctionsIspmtBody parameters) {
+    public WorkbookFunctionsIspmtRequestBuilder ispmt(@Nonnull final WorkbookFunctionsIspmtParameterSet parameters) {
         return new WorkbookFunctionsIspmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ispmt"), getClient(), null, parameters);
     }
 
@@ -2413,7 +2413,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsrefRequestBuilder isref(@Nonnull final WorkbookFunctionsIsrefBody parameters) {
+    public WorkbookFunctionsIsrefRequestBuilder isref(@Nonnull final WorkbookFunctionsIsrefParameterSet parameters) {
         return new WorkbookFunctionsIsrefRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isref"), getClient(), null, parameters);
     }
 
@@ -2423,7 +2423,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsIsTextRequestBuilder isText(@Nonnull final WorkbookFunctionsIsTextBody parameters) {
+    public WorkbookFunctionsIsTextRequestBuilder isText(@Nonnull final WorkbookFunctionsIsTextParameterSet parameters) {
         return new WorkbookFunctionsIsTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isText"), getClient(), null, parameters);
     }
 
@@ -2433,7 +2433,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsKurtRequestBuilder kurt(@Nonnull final WorkbookFunctionsKurtBody parameters) {
+    public WorkbookFunctionsKurtRequestBuilder kurt(@Nonnull final WorkbookFunctionsKurtParameterSet parameters) {
         return new WorkbookFunctionsKurtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.kurt"), getClient(), null, parameters);
     }
 
@@ -2443,7 +2443,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLargeRequestBuilder large(@Nonnull final WorkbookFunctionsLargeBody parameters) {
+    public WorkbookFunctionsLargeRequestBuilder large(@Nonnull final WorkbookFunctionsLargeParameterSet parameters) {
         return new WorkbookFunctionsLargeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.large"), getClient(), null, parameters);
     }
 
@@ -2453,7 +2453,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLcmRequestBuilder lcm(@Nonnull final WorkbookFunctionsLcmBody parameters) {
+    public WorkbookFunctionsLcmRequestBuilder lcm(@Nonnull final WorkbookFunctionsLcmParameterSet parameters) {
         return new WorkbookFunctionsLcmRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lcm"), getClient(), null, parameters);
     }
 
@@ -2463,7 +2463,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLeftRequestBuilder left(@Nonnull final WorkbookFunctionsLeftBody parameters) {
+    public WorkbookFunctionsLeftRequestBuilder left(@Nonnull final WorkbookFunctionsLeftParameterSet parameters) {
         return new WorkbookFunctionsLeftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.left"), getClient(), null, parameters);
     }
 
@@ -2473,7 +2473,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLeftbRequestBuilder leftb(@Nonnull final WorkbookFunctionsLeftbBody parameters) {
+    public WorkbookFunctionsLeftbRequestBuilder leftb(@Nonnull final WorkbookFunctionsLeftbParameterSet parameters) {
         return new WorkbookFunctionsLeftbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.leftb"), getClient(), null, parameters);
     }
 
@@ -2483,7 +2483,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLenRequestBuilder len(@Nonnull final WorkbookFunctionsLenBody parameters) {
+    public WorkbookFunctionsLenRequestBuilder len(@Nonnull final WorkbookFunctionsLenParameterSet parameters) {
         return new WorkbookFunctionsLenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.len"), getClient(), null, parameters);
     }
 
@@ -2493,7 +2493,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLenbRequestBuilder lenb(@Nonnull final WorkbookFunctionsLenbBody parameters) {
+    public WorkbookFunctionsLenbRequestBuilder lenb(@Nonnull final WorkbookFunctionsLenbParameterSet parameters) {
         return new WorkbookFunctionsLenbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lenb"), getClient(), null, parameters);
     }
 
@@ -2503,7 +2503,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLnRequestBuilder ln(@Nonnull final WorkbookFunctionsLnBody parameters) {
+    public WorkbookFunctionsLnRequestBuilder ln(@Nonnull final WorkbookFunctionsLnParameterSet parameters) {
         return new WorkbookFunctionsLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ln"), getClient(), null, parameters);
     }
 
@@ -2513,7 +2513,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLogRequestBuilder log(@Nonnull final WorkbookFunctionsLogBody parameters) {
+    public WorkbookFunctionsLogRequestBuilder log(@Nonnull final WorkbookFunctionsLogParameterSet parameters) {
         return new WorkbookFunctionsLogRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.log"), getClient(), null, parameters);
     }
 
@@ -2523,7 +2523,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLog10RequestBuilder log10(@Nonnull final WorkbookFunctionsLog10Body parameters) {
+    public WorkbookFunctionsLog10RequestBuilder log10(@Nonnull final WorkbookFunctionsLog10ParameterSet parameters) {
         return new WorkbookFunctionsLog10RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.log10"), getClient(), null, parameters);
     }
 
@@ -2533,7 +2533,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLogNorm_DistRequestBuilder logNorm_Dist(@Nonnull final WorkbookFunctionsLogNorm_DistBody parameters) {
+    public WorkbookFunctionsLogNorm_DistRequestBuilder logNorm_Dist(@Nonnull final WorkbookFunctionsLogNorm_DistParameterSet parameters) {
         return new WorkbookFunctionsLogNorm_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logNorm_Dist"), getClient(), null, parameters);
     }
 
@@ -2543,7 +2543,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLogNorm_InvRequestBuilder logNorm_Inv(@Nonnull final WorkbookFunctionsLogNorm_InvBody parameters) {
+    public WorkbookFunctionsLogNorm_InvRequestBuilder logNorm_Inv(@Nonnull final WorkbookFunctionsLogNorm_InvParameterSet parameters) {
         return new WorkbookFunctionsLogNorm_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logNorm_Inv"), getClient(), null, parameters);
     }
 
@@ -2553,7 +2553,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLookupRequestBuilder lookup(@Nonnull final WorkbookFunctionsLookupBody parameters) {
+    public WorkbookFunctionsLookupRequestBuilder lookup(@Nonnull final WorkbookFunctionsLookupParameterSet parameters) {
         return new WorkbookFunctionsLookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lookup"), getClient(), null, parameters);
     }
 
@@ -2563,7 +2563,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsLowerRequestBuilder lower(@Nonnull final WorkbookFunctionsLowerBody parameters) {
+    public WorkbookFunctionsLowerRequestBuilder lower(@Nonnull final WorkbookFunctionsLowerParameterSet parameters) {
         return new WorkbookFunctionsLowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lower"), getClient(), null, parameters);
     }
 
@@ -2573,7 +2573,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMatchRequestBuilder match(@Nonnull final WorkbookFunctionsMatchBody parameters) {
+    public WorkbookFunctionsMatchRequestBuilder match(@Nonnull final WorkbookFunctionsMatchParameterSet parameters) {
         return new WorkbookFunctionsMatchRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.match"), getClient(), null, parameters);
     }
 
@@ -2583,7 +2583,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMaxRequestBuilder max(@Nonnull final WorkbookFunctionsMaxBody parameters) {
+    public WorkbookFunctionsMaxRequestBuilder max(@Nonnull final WorkbookFunctionsMaxParameterSet parameters) {
         return new WorkbookFunctionsMaxRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.max"), getClient(), null, parameters);
     }
 
@@ -2593,7 +2593,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMaxARequestBuilder maxA(@Nonnull final WorkbookFunctionsMaxABody parameters) {
+    public WorkbookFunctionsMaxARequestBuilder maxA(@Nonnull final WorkbookFunctionsMaxAParameterSet parameters) {
         return new WorkbookFunctionsMaxARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.maxA"), getClient(), null, parameters);
     }
 
@@ -2603,7 +2603,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMdurationRequestBuilder mduration(@Nonnull final WorkbookFunctionsMdurationBody parameters) {
+    public WorkbookFunctionsMdurationRequestBuilder mduration(@Nonnull final WorkbookFunctionsMdurationParameterSet parameters) {
         return new WorkbookFunctionsMdurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mduration"), getClient(), null, parameters);
     }
 
@@ -2613,7 +2613,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMedianRequestBuilder median(@Nonnull final WorkbookFunctionsMedianBody parameters) {
+    public WorkbookFunctionsMedianRequestBuilder median(@Nonnull final WorkbookFunctionsMedianParameterSet parameters) {
         return new WorkbookFunctionsMedianRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.median"), getClient(), null, parameters);
     }
 
@@ -2623,7 +2623,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMidRequestBuilder mid(@Nonnull final WorkbookFunctionsMidBody parameters) {
+    public WorkbookFunctionsMidRequestBuilder mid(@Nonnull final WorkbookFunctionsMidParameterSet parameters) {
         return new WorkbookFunctionsMidRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mid"), getClient(), null, parameters);
     }
 
@@ -2633,7 +2633,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMidbRequestBuilder midb(@Nonnull final WorkbookFunctionsMidbBody parameters) {
+    public WorkbookFunctionsMidbRequestBuilder midb(@Nonnull final WorkbookFunctionsMidbParameterSet parameters) {
         return new WorkbookFunctionsMidbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.midb"), getClient(), null, parameters);
     }
 
@@ -2643,7 +2643,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMinRequestBuilder min(@Nonnull final WorkbookFunctionsMinBody parameters) {
+    public WorkbookFunctionsMinRequestBuilder min(@Nonnull final WorkbookFunctionsMinParameterSet parameters) {
         return new WorkbookFunctionsMinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.min"), getClient(), null, parameters);
     }
 
@@ -2653,7 +2653,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMinARequestBuilder minA(@Nonnull final WorkbookFunctionsMinABody parameters) {
+    public WorkbookFunctionsMinARequestBuilder minA(@Nonnull final WorkbookFunctionsMinAParameterSet parameters) {
         return new WorkbookFunctionsMinARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.minA"), getClient(), null, parameters);
     }
 
@@ -2663,7 +2663,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMinuteRequestBuilder minute(@Nonnull final WorkbookFunctionsMinuteBody parameters) {
+    public WorkbookFunctionsMinuteRequestBuilder minute(@Nonnull final WorkbookFunctionsMinuteParameterSet parameters) {
         return new WorkbookFunctionsMinuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.minute"), getClient(), null, parameters);
     }
 
@@ -2673,7 +2673,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMirrRequestBuilder mirr(@Nonnull final WorkbookFunctionsMirrBody parameters) {
+    public WorkbookFunctionsMirrRequestBuilder mirr(@Nonnull final WorkbookFunctionsMirrParameterSet parameters) {
         return new WorkbookFunctionsMirrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mirr"), getClient(), null, parameters);
     }
 
@@ -2683,7 +2683,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsModRequestBuilder mod(@Nonnull final WorkbookFunctionsModBody parameters) {
+    public WorkbookFunctionsModRequestBuilder mod(@Nonnull final WorkbookFunctionsModParameterSet parameters) {
         return new WorkbookFunctionsModRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mod"), getClient(), null, parameters);
     }
 
@@ -2693,7 +2693,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMonthRequestBuilder month(@Nonnull final WorkbookFunctionsMonthBody parameters) {
+    public WorkbookFunctionsMonthRequestBuilder month(@Nonnull final WorkbookFunctionsMonthParameterSet parameters) {
         return new WorkbookFunctionsMonthRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.month"), getClient(), null, parameters);
     }
 
@@ -2703,7 +2703,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMroundRequestBuilder mround(@Nonnull final WorkbookFunctionsMroundBody parameters) {
+    public WorkbookFunctionsMroundRequestBuilder mround(@Nonnull final WorkbookFunctionsMroundParameterSet parameters) {
         return new WorkbookFunctionsMroundRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mround"), getClient(), null, parameters);
     }
 
@@ -2713,7 +2713,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsMultiNomialRequestBuilder multiNomial(@Nonnull final WorkbookFunctionsMultiNomialBody parameters) {
+    public WorkbookFunctionsMultiNomialRequestBuilder multiNomial(@Nonnull final WorkbookFunctionsMultiNomialParameterSet parameters) {
         return new WorkbookFunctionsMultiNomialRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.multiNomial"), getClient(), null, parameters);
     }
 
@@ -2723,7 +2723,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNRequestBuilder n(@Nonnull final WorkbookFunctionsNBody parameters) {
+    public WorkbookFunctionsNRequestBuilder n(@Nonnull final WorkbookFunctionsNParameterSet parameters) {
         return new WorkbookFunctionsNRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.n"), getClient(), null, parameters);
     }
 
@@ -2742,7 +2742,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNegBinom_DistRequestBuilder negBinom_Dist(@Nonnull final WorkbookFunctionsNegBinom_DistBody parameters) {
+    public WorkbookFunctionsNegBinom_DistRequestBuilder negBinom_Dist(@Nonnull final WorkbookFunctionsNegBinom_DistParameterSet parameters) {
         return new WorkbookFunctionsNegBinom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.negBinom_Dist"), getClient(), null, parameters);
     }
 
@@ -2752,7 +2752,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNetworkDaysRequestBuilder networkDays(@Nonnull final WorkbookFunctionsNetworkDaysBody parameters) {
+    public WorkbookFunctionsNetworkDaysRequestBuilder networkDays(@Nonnull final WorkbookFunctionsNetworkDaysParameterSet parameters) {
         return new WorkbookFunctionsNetworkDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.networkDays"), getClient(), null, parameters);
     }
 
@@ -2762,7 +2762,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNetworkDays_IntlRequestBuilder networkDays_Intl(@Nonnull final WorkbookFunctionsNetworkDays_IntlBody parameters) {
+    public WorkbookFunctionsNetworkDays_IntlRequestBuilder networkDays_Intl(@Nonnull final WorkbookFunctionsNetworkDays_IntlParameterSet parameters) {
         return new WorkbookFunctionsNetworkDays_IntlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.networkDays_Intl"), getClient(), null, parameters);
     }
 
@@ -2772,7 +2772,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNominalRequestBuilder nominal(@Nonnull final WorkbookFunctionsNominalBody parameters) {
+    public WorkbookFunctionsNominalRequestBuilder nominal(@Nonnull final WorkbookFunctionsNominalParameterSet parameters) {
         return new WorkbookFunctionsNominalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.nominal"), getClient(), null, parameters);
     }
 
@@ -2782,7 +2782,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNorm_DistRequestBuilder norm_Dist(@Nonnull final WorkbookFunctionsNorm_DistBody parameters) {
+    public WorkbookFunctionsNorm_DistRequestBuilder norm_Dist(@Nonnull final WorkbookFunctionsNorm_DistParameterSet parameters) {
         return new WorkbookFunctionsNorm_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_Dist"), getClient(), null, parameters);
     }
 
@@ -2792,7 +2792,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNorm_InvRequestBuilder norm_Inv(@Nonnull final WorkbookFunctionsNorm_InvBody parameters) {
+    public WorkbookFunctionsNorm_InvRequestBuilder norm_Inv(@Nonnull final WorkbookFunctionsNorm_InvParameterSet parameters) {
         return new WorkbookFunctionsNorm_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_Inv"), getClient(), null, parameters);
     }
 
@@ -2802,7 +2802,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNorm_S_DistRequestBuilder norm_S_Dist(@Nonnull final WorkbookFunctionsNorm_S_DistBody parameters) {
+    public WorkbookFunctionsNorm_S_DistRequestBuilder norm_S_Dist(@Nonnull final WorkbookFunctionsNorm_S_DistParameterSet parameters) {
         return new WorkbookFunctionsNorm_S_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_S_Dist"), getClient(), null, parameters);
     }
 
@@ -2812,7 +2812,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNorm_S_InvRequestBuilder norm_S_Inv(@Nonnull final WorkbookFunctionsNorm_S_InvBody parameters) {
+    public WorkbookFunctionsNorm_S_InvRequestBuilder norm_S_Inv(@Nonnull final WorkbookFunctionsNorm_S_InvParameterSet parameters) {
         return new WorkbookFunctionsNorm_S_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_S_Inv"), getClient(), null, parameters);
     }
 
@@ -2822,7 +2822,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNotRequestBuilder not(@Nonnull final WorkbookFunctionsNotBody parameters) {
+    public WorkbookFunctionsNotRequestBuilder not(@Nonnull final WorkbookFunctionsNotParameterSet parameters) {
         return new WorkbookFunctionsNotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.not"), getClient(), null, parameters);
     }
 
@@ -2841,7 +2841,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNperRequestBuilder nper(@Nonnull final WorkbookFunctionsNperBody parameters) {
+    public WorkbookFunctionsNperRequestBuilder nper(@Nonnull final WorkbookFunctionsNperParameterSet parameters) {
         return new WorkbookFunctionsNperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.nper"), getClient(), null, parameters);
     }
 
@@ -2851,7 +2851,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNpvRequestBuilder npv(@Nonnull final WorkbookFunctionsNpvBody parameters) {
+    public WorkbookFunctionsNpvRequestBuilder npv(@Nonnull final WorkbookFunctionsNpvParameterSet parameters) {
         return new WorkbookFunctionsNpvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.npv"), getClient(), null, parameters);
     }
 
@@ -2861,7 +2861,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsNumberValueRequestBuilder numberValue(@Nonnull final WorkbookFunctionsNumberValueBody parameters) {
+    public WorkbookFunctionsNumberValueRequestBuilder numberValue(@Nonnull final WorkbookFunctionsNumberValueParameterSet parameters) {
         return new WorkbookFunctionsNumberValueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.numberValue"), getClient(), null, parameters);
     }
 
@@ -2871,7 +2871,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOct2BinRequestBuilder oct2Bin(@Nonnull final WorkbookFunctionsOct2BinBody parameters) {
+    public WorkbookFunctionsOct2BinRequestBuilder oct2Bin(@Nonnull final WorkbookFunctionsOct2BinParameterSet parameters) {
         return new WorkbookFunctionsOct2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Bin"), getClient(), null, parameters);
     }
 
@@ -2881,7 +2881,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOct2DecRequestBuilder oct2Dec(@Nonnull final WorkbookFunctionsOct2DecBody parameters) {
+    public WorkbookFunctionsOct2DecRequestBuilder oct2Dec(@Nonnull final WorkbookFunctionsOct2DecParameterSet parameters) {
         return new WorkbookFunctionsOct2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Dec"), getClient(), null, parameters);
     }
 
@@ -2891,7 +2891,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOct2HexRequestBuilder oct2Hex(@Nonnull final WorkbookFunctionsOct2HexBody parameters) {
+    public WorkbookFunctionsOct2HexRequestBuilder oct2Hex(@Nonnull final WorkbookFunctionsOct2HexParameterSet parameters) {
         return new WorkbookFunctionsOct2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Hex"), getClient(), null, parameters);
     }
 
@@ -2901,7 +2901,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOddRequestBuilder odd(@Nonnull final WorkbookFunctionsOddBody parameters) {
+    public WorkbookFunctionsOddRequestBuilder odd(@Nonnull final WorkbookFunctionsOddParameterSet parameters) {
         return new WorkbookFunctionsOddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.odd"), getClient(), null, parameters);
     }
 
@@ -2911,7 +2911,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOddFPriceRequestBuilder oddFPrice(@Nonnull final WorkbookFunctionsOddFPriceBody parameters) {
+    public WorkbookFunctionsOddFPriceRequestBuilder oddFPrice(@Nonnull final WorkbookFunctionsOddFPriceParameterSet parameters) {
         return new WorkbookFunctionsOddFPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddFPrice"), getClient(), null, parameters);
     }
 
@@ -2921,7 +2921,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOddFYieldRequestBuilder oddFYield(@Nonnull final WorkbookFunctionsOddFYieldBody parameters) {
+    public WorkbookFunctionsOddFYieldRequestBuilder oddFYield(@Nonnull final WorkbookFunctionsOddFYieldParameterSet parameters) {
         return new WorkbookFunctionsOddFYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddFYield"), getClient(), null, parameters);
     }
 
@@ -2931,7 +2931,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOddLPriceRequestBuilder oddLPrice(@Nonnull final WorkbookFunctionsOddLPriceBody parameters) {
+    public WorkbookFunctionsOddLPriceRequestBuilder oddLPrice(@Nonnull final WorkbookFunctionsOddLPriceParameterSet parameters) {
         return new WorkbookFunctionsOddLPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddLPrice"), getClient(), null, parameters);
     }
 
@@ -2941,7 +2941,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOddLYieldRequestBuilder oddLYield(@Nonnull final WorkbookFunctionsOddLYieldBody parameters) {
+    public WorkbookFunctionsOddLYieldRequestBuilder oddLYield(@Nonnull final WorkbookFunctionsOddLYieldParameterSet parameters) {
         return new WorkbookFunctionsOddLYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddLYield"), getClient(), null, parameters);
     }
 
@@ -2951,7 +2951,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsOrRequestBuilder or(@Nonnull final WorkbookFunctionsOrBody parameters) {
+    public WorkbookFunctionsOrRequestBuilder or(@Nonnull final WorkbookFunctionsOrParameterSet parameters) {
         return new WorkbookFunctionsOrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.or"), getClient(), null, parameters);
     }
 
@@ -2961,7 +2961,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPdurationRequestBuilder pduration(@Nonnull final WorkbookFunctionsPdurationBody parameters) {
+    public WorkbookFunctionsPdurationRequestBuilder pduration(@Nonnull final WorkbookFunctionsPdurationParameterSet parameters) {
         return new WorkbookFunctionsPdurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pduration"), getClient(), null, parameters);
     }
 
@@ -2971,7 +2971,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPercentile_ExcRequestBuilder percentile_Exc(@Nonnull final WorkbookFunctionsPercentile_ExcBody parameters) {
+    public WorkbookFunctionsPercentile_ExcRequestBuilder percentile_Exc(@Nonnull final WorkbookFunctionsPercentile_ExcParameterSet parameters) {
         return new WorkbookFunctionsPercentile_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentile_Exc"), getClient(), null, parameters);
     }
 
@@ -2981,7 +2981,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPercentile_IncRequestBuilder percentile_Inc(@Nonnull final WorkbookFunctionsPercentile_IncBody parameters) {
+    public WorkbookFunctionsPercentile_IncRequestBuilder percentile_Inc(@Nonnull final WorkbookFunctionsPercentile_IncParameterSet parameters) {
         return new WorkbookFunctionsPercentile_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentile_Inc"), getClient(), null, parameters);
     }
 
@@ -2991,7 +2991,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPercentRank_ExcRequestBuilder percentRank_Exc(@Nonnull final WorkbookFunctionsPercentRank_ExcBody parameters) {
+    public WorkbookFunctionsPercentRank_ExcRequestBuilder percentRank_Exc(@Nonnull final WorkbookFunctionsPercentRank_ExcParameterSet parameters) {
         return new WorkbookFunctionsPercentRank_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentRank_Exc"), getClient(), null, parameters);
     }
 
@@ -3001,7 +3001,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPercentRank_IncRequestBuilder percentRank_Inc(@Nonnull final WorkbookFunctionsPercentRank_IncBody parameters) {
+    public WorkbookFunctionsPercentRank_IncRequestBuilder percentRank_Inc(@Nonnull final WorkbookFunctionsPercentRank_IncParameterSet parameters) {
         return new WorkbookFunctionsPercentRank_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentRank_Inc"), getClient(), null, parameters);
     }
 
@@ -3011,7 +3011,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPermutRequestBuilder permut(@Nonnull final WorkbookFunctionsPermutBody parameters) {
+    public WorkbookFunctionsPermutRequestBuilder permut(@Nonnull final WorkbookFunctionsPermutParameterSet parameters) {
         return new WorkbookFunctionsPermutRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permut"), getClient(), null, parameters);
     }
 
@@ -3021,7 +3021,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPermutationaRequestBuilder permutationa(@Nonnull final WorkbookFunctionsPermutationaBody parameters) {
+    public WorkbookFunctionsPermutationaRequestBuilder permutationa(@Nonnull final WorkbookFunctionsPermutationaParameterSet parameters) {
         return new WorkbookFunctionsPermutationaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permutationa"), getClient(), null, parameters);
     }
 
@@ -3031,7 +3031,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPhiRequestBuilder phi(@Nonnull final WorkbookFunctionsPhiBody parameters) {
+    public WorkbookFunctionsPhiRequestBuilder phi(@Nonnull final WorkbookFunctionsPhiParameterSet parameters) {
         return new WorkbookFunctionsPhiRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.phi"), getClient(), null, parameters);
     }
 
@@ -3050,7 +3050,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPmtRequestBuilder pmt(@Nonnull final WorkbookFunctionsPmtBody parameters) {
+    public WorkbookFunctionsPmtRequestBuilder pmt(@Nonnull final WorkbookFunctionsPmtParameterSet parameters) {
         return new WorkbookFunctionsPmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pmt"), getClient(), null, parameters);
     }
 
@@ -3060,7 +3060,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPoisson_DistRequestBuilder poisson_Dist(@Nonnull final WorkbookFunctionsPoisson_DistBody parameters) {
+    public WorkbookFunctionsPoisson_DistRequestBuilder poisson_Dist(@Nonnull final WorkbookFunctionsPoisson_DistParameterSet parameters) {
         return new WorkbookFunctionsPoisson_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.poisson_Dist"), getClient(), null, parameters);
     }
 
@@ -3070,7 +3070,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPowerRequestBuilder power(@Nonnull final WorkbookFunctionsPowerBody parameters) {
+    public WorkbookFunctionsPowerRequestBuilder power(@Nonnull final WorkbookFunctionsPowerParameterSet parameters) {
         return new WorkbookFunctionsPowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.power"), getClient(), null, parameters);
     }
 
@@ -3080,7 +3080,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPpmtRequestBuilder ppmt(@Nonnull final WorkbookFunctionsPpmtBody parameters) {
+    public WorkbookFunctionsPpmtRequestBuilder ppmt(@Nonnull final WorkbookFunctionsPpmtParameterSet parameters) {
         return new WorkbookFunctionsPpmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ppmt"), getClient(), null, parameters);
     }
 
@@ -3090,7 +3090,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPriceRequestBuilder price(@Nonnull final WorkbookFunctionsPriceBody parameters) {
+    public WorkbookFunctionsPriceRequestBuilder price(@Nonnull final WorkbookFunctionsPriceParameterSet parameters) {
         return new WorkbookFunctionsPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.price"), getClient(), null, parameters);
     }
 
@@ -3100,7 +3100,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPriceDiscRequestBuilder priceDisc(@Nonnull final WorkbookFunctionsPriceDiscBody parameters) {
+    public WorkbookFunctionsPriceDiscRequestBuilder priceDisc(@Nonnull final WorkbookFunctionsPriceDiscParameterSet parameters) {
         return new WorkbookFunctionsPriceDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.priceDisc"), getClient(), null, parameters);
     }
 
@@ -3110,7 +3110,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPriceMatRequestBuilder priceMat(@Nonnull final WorkbookFunctionsPriceMatBody parameters) {
+    public WorkbookFunctionsPriceMatRequestBuilder priceMat(@Nonnull final WorkbookFunctionsPriceMatParameterSet parameters) {
         return new WorkbookFunctionsPriceMatRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.priceMat"), getClient(), null, parameters);
     }
 
@@ -3120,7 +3120,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsProductRequestBuilder product(@Nonnull final WorkbookFunctionsProductBody parameters) {
+    public WorkbookFunctionsProductRequestBuilder product(@Nonnull final WorkbookFunctionsProductParameterSet parameters) {
         return new WorkbookFunctionsProductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.product"), getClient(), null, parameters);
     }
 
@@ -3130,7 +3130,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsProperRequestBuilder proper(@Nonnull final WorkbookFunctionsProperBody parameters) {
+    public WorkbookFunctionsProperRequestBuilder proper(@Nonnull final WorkbookFunctionsProperParameterSet parameters) {
         return new WorkbookFunctionsProperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.proper"), getClient(), null, parameters);
     }
 
@@ -3140,7 +3140,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsPvRequestBuilder pv(@Nonnull final WorkbookFunctionsPvBody parameters) {
+    public WorkbookFunctionsPvRequestBuilder pv(@Nonnull final WorkbookFunctionsPvParameterSet parameters) {
         return new WorkbookFunctionsPvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pv"), getClient(), null, parameters);
     }
 
@@ -3150,7 +3150,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsQuartile_ExcRequestBuilder quartile_Exc(@Nonnull final WorkbookFunctionsQuartile_ExcBody parameters) {
+    public WorkbookFunctionsQuartile_ExcRequestBuilder quartile_Exc(@Nonnull final WorkbookFunctionsQuartile_ExcParameterSet parameters) {
         return new WorkbookFunctionsQuartile_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quartile_Exc"), getClient(), null, parameters);
     }
 
@@ -3160,7 +3160,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsQuartile_IncRequestBuilder quartile_Inc(@Nonnull final WorkbookFunctionsQuartile_IncBody parameters) {
+    public WorkbookFunctionsQuartile_IncRequestBuilder quartile_Inc(@Nonnull final WorkbookFunctionsQuartile_IncParameterSet parameters) {
         return new WorkbookFunctionsQuartile_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quartile_Inc"), getClient(), null, parameters);
     }
 
@@ -3170,7 +3170,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsQuotientRequestBuilder quotient(@Nonnull final WorkbookFunctionsQuotientBody parameters) {
+    public WorkbookFunctionsQuotientRequestBuilder quotient(@Nonnull final WorkbookFunctionsQuotientParameterSet parameters) {
         return new WorkbookFunctionsQuotientRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quotient"), getClient(), null, parameters);
     }
 
@@ -3180,7 +3180,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRadiansRequestBuilder radians(@Nonnull final WorkbookFunctionsRadiansBody parameters) {
+    public WorkbookFunctionsRadiansRequestBuilder radians(@Nonnull final WorkbookFunctionsRadiansParameterSet parameters) {
         return new WorkbookFunctionsRadiansRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.radians"), getClient(), null, parameters);
     }
 
@@ -3199,7 +3199,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRandBetweenRequestBuilder randBetween(@Nonnull final WorkbookFunctionsRandBetweenBody parameters) {
+    public WorkbookFunctionsRandBetweenRequestBuilder randBetween(@Nonnull final WorkbookFunctionsRandBetweenParameterSet parameters) {
         return new WorkbookFunctionsRandBetweenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.randBetween"), getClient(), null, parameters);
     }
 
@@ -3209,7 +3209,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRank_AvgRequestBuilder rank_Avg(@Nonnull final WorkbookFunctionsRank_AvgBody parameters) {
+    public WorkbookFunctionsRank_AvgRequestBuilder rank_Avg(@Nonnull final WorkbookFunctionsRank_AvgParameterSet parameters) {
         return new WorkbookFunctionsRank_AvgRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rank_Avg"), getClient(), null, parameters);
     }
 
@@ -3219,7 +3219,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRank_EqRequestBuilder rank_Eq(@Nonnull final WorkbookFunctionsRank_EqBody parameters) {
+    public WorkbookFunctionsRank_EqRequestBuilder rank_Eq(@Nonnull final WorkbookFunctionsRank_EqParameterSet parameters) {
         return new WorkbookFunctionsRank_EqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rank_Eq"), getClient(), null, parameters);
     }
 
@@ -3229,7 +3229,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRateRequestBuilder rate(@Nonnull final WorkbookFunctionsRateBody parameters) {
+    public WorkbookFunctionsRateRequestBuilder rate(@Nonnull final WorkbookFunctionsRateParameterSet parameters) {
         return new WorkbookFunctionsRateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rate"), getClient(), null, parameters);
     }
 
@@ -3239,7 +3239,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsReceivedRequestBuilder received(@Nonnull final WorkbookFunctionsReceivedBody parameters) {
+    public WorkbookFunctionsReceivedRequestBuilder received(@Nonnull final WorkbookFunctionsReceivedParameterSet parameters) {
         return new WorkbookFunctionsReceivedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.received"), getClient(), null, parameters);
     }
 
@@ -3249,7 +3249,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsReplaceRequestBuilder replace(@Nonnull final WorkbookFunctionsReplaceBody parameters) {
+    public WorkbookFunctionsReplaceRequestBuilder replace(@Nonnull final WorkbookFunctionsReplaceParameterSet parameters) {
         return new WorkbookFunctionsReplaceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replace"), getClient(), null, parameters);
     }
 
@@ -3259,7 +3259,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsReplaceBRequestBuilder replaceB(@Nonnull final WorkbookFunctionsReplaceBBody parameters) {
+    public WorkbookFunctionsReplaceBRequestBuilder replaceB(@Nonnull final WorkbookFunctionsReplaceBParameterSet parameters) {
         return new WorkbookFunctionsReplaceBRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replaceB"), getClient(), null, parameters);
     }
 
@@ -3269,7 +3269,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsReptRequestBuilder rept(@Nonnull final WorkbookFunctionsReptBody parameters) {
+    public WorkbookFunctionsReptRequestBuilder rept(@Nonnull final WorkbookFunctionsReptParameterSet parameters) {
         return new WorkbookFunctionsReptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rept"), getClient(), null, parameters);
     }
 
@@ -3279,7 +3279,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRightRequestBuilder right(@Nonnull final WorkbookFunctionsRightBody parameters) {
+    public WorkbookFunctionsRightRequestBuilder right(@Nonnull final WorkbookFunctionsRightParameterSet parameters) {
         return new WorkbookFunctionsRightRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.right"), getClient(), null, parameters);
     }
 
@@ -3289,7 +3289,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRightbRequestBuilder rightb(@Nonnull final WorkbookFunctionsRightbBody parameters) {
+    public WorkbookFunctionsRightbRequestBuilder rightb(@Nonnull final WorkbookFunctionsRightbParameterSet parameters) {
         return new WorkbookFunctionsRightbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rightb"), getClient(), null, parameters);
     }
 
@@ -3299,7 +3299,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRomanRequestBuilder roman(@Nonnull final WorkbookFunctionsRomanBody parameters) {
+    public WorkbookFunctionsRomanRequestBuilder roman(@Nonnull final WorkbookFunctionsRomanParameterSet parameters) {
         return new WorkbookFunctionsRomanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roman"), getClient(), null, parameters);
     }
 
@@ -3309,7 +3309,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRoundRequestBuilder round(@Nonnull final WorkbookFunctionsRoundBody parameters) {
+    public WorkbookFunctionsRoundRequestBuilder round(@Nonnull final WorkbookFunctionsRoundParameterSet parameters) {
         return new WorkbookFunctionsRoundRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.round"), getClient(), null, parameters);
     }
 
@@ -3319,7 +3319,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRoundDownRequestBuilder roundDown(@Nonnull final WorkbookFunctionsRoundDownBody parameters) {
+    public WorkbookFunctionsRoundDownRequestBuilder roundDown(@Nonnull final WorkbookFunctionsRoundDownParameterSet parameters) {
         return new WorkbookFunctionsRoundDownRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roundDown"), getClient(), null, parameters);
     }
 
@@ -3329,7 +3329,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRoundUpRequestBuilder roundUp(@Nonnull final WorkbookFunctionsRoundUpBody parameters) {
+    public WorkbookFunctionsRoundUpRequestBuilder roundUp(@Nonnull final WorkbookFunctionsRoundUpParameterSet parameters) {
         return new WorkbookFunctionsRoundUpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roundUp"), getClient(), null, parameters);
     }
 
@@ -3339,7 +3339,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRowsRequestBuilder rows(@Nonnull final WorkbookFunctionsRowsBody parameters) {
+    public WorkbookFunctionsRowsRequestBuilder rows(@Nonnull final WorkbookFunctionsRowsParameterSet parameters) {
         return new WorkbookFunctionsRowsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rows"), getClient(), null, parameters);
     }
 
@@ -3349,7 +3349,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsRriRequestBuilder rri(@Nonnull final WorkbookFunctionsRriBody parameters) {
+    public WorkbookFunctionsRriRequestBuilder rri(@Nonnull final WorkbookFunctionsRriParameterSet parameters) {
         return new WorkbookFunctionsRriRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rri"), getClient(), null, parameters);
     }
 
@@ -3359,7 +3359,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSecRequestBuilder sec(@Nonnull final WorkbookFunctionsSecBody parameters) {
+    public WorkbookFunctionsSecRequestBuilder sec(@Nonnull final WorkbookFunctionsSecParameterSet parameters) {
         return new WorkbookFunctionsSecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sec"), getClient(), null, parameters);
     }
 
@@ -3369,7 +3369,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSechRequestBuilder sech(@Nonnull final WorkbookFunctionsSechBody parameters) {
+    public WorkbookFunctionsSechRequestBuilder sech(@Nonnull final WorkbookFunctionsSechParameterSet parameters) {
         return new WorkbookFunctionsSechRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sech"), getClient(), null, parameters);
     }
 
@@ -3379,7 +3379,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSecondRequestBuilder second(@Nonnull final WorkbookFunctionsSecondBody parameters) {
+    public WorkbookFunctionsSecondRequestBuilder second(@Nonnull final WorkbookFunctionsSecondParameterSet parameters) {
         return new WorkbookFunctionsSecondRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.second"), getClient(), null, parameters);
     }
 
@@ -3389,7 +3389,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSeriesSumRequestBuilder seriesSum(@Nonnull final WorkbookFunctionsSeriesSumBody parameters) {
+    public WorkbookFunctionsSeriesSumRequestBuilder seriesSum(@Nonnull final WorkbookFunctionsSeriesSumParameterSet parameters) {
         return new WorkbookFunctionsSeriesSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.seriesSum"), getClient(), null, parameters);
     }
 
@@ -3399,7 +3399,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSheetRequestBuilder sheet(@Nonnull final WorkbookFunctionsSheetBody parameters) {
+    public WorkbookFunctionsSheetRequestBuilder sheet(@Nonnull final WorkbookFunctionsSheetParameterSet parameters) {
         return new WorkbookFunctionsSheetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sheet"), getClient(), null, parameters);
     }
 
@@ -3409,7 +3409,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSheetsRequestBuilder sheets(@Nonnull final WorkbookFunctionsSheetsBody parameters) {
+    public WorkbookFunctionsSheetsRequestBuilder sheets(@Nonnull final WorkbookFunctionsSheetsParameterSet parameters) {
         return new WorkbookFunctionsSheetsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sheets"), getClient(), null, parameters);
     }
 
@@ -3419,7 +3419,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSignRequestBuilder sign(@Nonnull final WorkbookFunctionsSignBody parameters) {
+    public WorkbookFunctionsSignRequestBuilder sign(@Nonnull final WorkbookFunctionsSignParameterSet parameters) {
         return new WorkbookFunctionsSignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sign"), getClient(), null, parameters);
     }
 
@@ -3429,7 +3429,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSinRequestBuilder sin(@Nonnull final WorkbookFunctionsSinBody parameters) {
+    public WorkbookFunctionsSinRequestBuilder sin(@Nonnull final WorkbookFunctionsSinParameterSet parameters) {
         return new WorkbookFunctionsSinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sin"), getClient(), null, parameters);
     }
 
@@ -3439,7 +3439,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSinhRequestBuilder sinh(@Nonnull final WorkbookFunctionsSinhBody parameters) {
+    public WorkbookFunctionsSinhRequestBuilder sinh(@Nonnull final WorkbookFunctionsSinhParameterSet parameters) {
         return new WorkbookFunctionsSinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sinh"), getClient(), null, parameters);
     }
 
@@ -3449,7 +3449,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSkewRequestBuilder skew(@Nonnull final WorkbookFunctionsSkewBody parameters) {
+    public WorkbookFunctionsSkewRequestBuilder skew(@Nonnull final WorkbookFunctionsSkewParameterSet parameters) {
         return new WorkbookFunctionsSkewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.skew"), getClient(), null, parameters);
     }
 
@@ -3459,7 +3459,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSkew_pRequestBuilder skew_p(@Nonnull final WorkbookFunctionsSkew_pBody parameters) {
+    public WorkbookFunctionsSkew_pRequestBuilder skew_p(@Nonnull final WorkbookFunctionsSkew_pParameterSet parameters) {
         return new WorkbookFunctionsSkew_pRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.skew_p"), getClient(), null, parameters);
     }
 
@@ -3469,7 +3469,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSlnRequestBuilder sln(@Nonnull final WorkbookFunctionsSlnBody parameters) {
+    public WorkbookFunctionsSlnRequestBuilder sln(@Nonnull final WorkbookFunctionsSlnParameterSet parameters) {
         return new WorkbookFunctionsSlnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sln"), getClient(), null, parameters);
     }
 
@@ -3479,7 +3479,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSmallRequestBuilder small(@Nonnull final WorkbookFunctionsSmallBody parameters) {
+    public WorkbookFunctionsSmallRequestBuilder small(@Nonnull final WorkbookFunctionsSmallParameterSet parameters) {
         return new WorkbookFunctionsSmallRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.small"), getClient(), null, parameters);
     }
 
@@ -3489,7 +3489,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSqrtRequestBuilder sqrt(@Nonnull final WorkbookFunctionsSqrtBody parameters) {
+    public WorkbookFunctionsSqrtRequestBuilder sqrt(@Nonnull final WorkbookFunctionsSqrtParameterSet parameters) {
         return new WorkbookFunctionsSqrtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sqrt"), getClient(), null, parameters);
     }
 
@@ -3499,7 +3499,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSqrtPiRequestBuilder sqrtPi(@Nonnull final WorkbookFunctionsSqrtPiBody parameters) {
+    public WorkbookFunctionsSqrtPiRequestBuilder sqrtPi(@Nonnull final WorkbookFunctionsSqrtPiParameterSet parameters) {
         return new WorkbookFunctionsSqrtPiRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sqrtPi"), getClient(), null, parameters);
     }
 
@@ -3509,7 +3509,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsStandardizeRequestBuilder standardize(@Nonnull final WorkbookFunctionsStandardizeBody parameters) {
+    public WorkbookFunctionsStandardizeRequestBuilder standardize(@Nonnull final WorkbookFunctionsStandardizeParameterSet parameters) {
         return new WorkbookFunctionsStandardizeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.standardize"), getClient(), null, parameters);
     }
 
@@ -3519,7 +3519,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsStDevARequestBuilder stDevA(@Nonnull final WorkbookFunctionsStDevABody parameters) {
+    public WorkbookFunctionsStDevARequestBuilder stDevA(@Nonnull final WorkbookFunctionsStDevAParameterSet parameters) {
         return new WorkbookFunctionsStDevARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDevA"), getClient(), null, parameters);
     }
 
@@ -3529,7 +3529,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsStDevPARequestBuilder stDevPA(@Nonnull final WorkbookFunctionsStDevPABody parameters) {
+    public WorkbookFunctionsStDevPARequestBuilder stDevPA(@Nonnull final WorkbookFunctionsStDevPAParameterSet parameters) {
         return new WorkbookFunctionsStDevPARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDevPA"), getClient(), null, parameters);
     }
 
@@ -3539,7 +3539,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsStDev_PRequestBuilder stDev_P(@Nonnull final WorkbookFunctionsStDev_PBody parameters) {
+    public WorkbookFunctionsStDev_PRequestBuilder stDev_P(@Nonnull final WorkbookFunctionsStDev_PParameterSet parameters) {
         return new WorkbookFunctionsStDev_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_P"), getClient(), null, parameters);
     }
 
@@ -3549,7 +3549,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsStDev_SRequestBuilder stDev_S(@Nonnull final WorkbookFunctionsStDev_SBody parameters) {
+    public WorkbookFunctionsStDev_SRequestBuilder stDev_S(@Nonnull final WorkbookFunctionsStDev_SParameterSet parameters) {
         return new WorkbookFunctionsStDev_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_S"), getClient(), null, parameters);
     }
 
@@ -3559,7 +3559,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSubstituteRequestBuilder substitute(@Nonnull final WorkbookFunctionsSubstituteBody parameters) {
+    public WorkbookFunctionsSubstituteRequestBuilder substitute(@Nonnull final WorkbookFunctionsSubstituteParameterSet parameters) {
         return new WorkbookFunctionsSubstituteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.substitute"), getClient(), null, parameters);
     }
 
@@ -3569,7 +3569,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSubtotalRequestBuilder subtotal(@Nonnull final WorkbookFunctionsSubtotalBody parameters) {
+    public WorkbookFunctionsSubtotalRequestBuilder subtotal(@Nonnull final WorkbookFunctionsSubtotalParameterSet parameters) {
         return new WorkbookFunctionsSubtotalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subtotal"), getClient(), null, parameters);
     }
 
@@ -3579,7 +3579,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSumRequestBuilder sum(@Nonnull final WorkbookFunctionsSumBody parameters) {
+    public WorkbookFunctionsSumRequestBuilder sum(@Nonnull final WorkbookFunctionsSumParameterSet parameters) {
         return new WorkbookFunctionsSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sum"), getClient(), null, parameters);
     }
 
@@ -3589,7 +3589,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSumIfRequestBuilder sumIf(@Nonnull final WorkbookFunctionsSumIfBody parameters) {
+    public WorkbookFunctionsSumIfRequestBuilder sumIf(@Nonnull final WorkbookFunctionsSumIfParameterSet parameters) {
         return new WorkbookFunctionsSumIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumIf"), getClient(), null, parameters);
     }
 
@@ -3599,7 +3599,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSumIfsRequestBuilder sumIfs(@Nonnull final WorkbookFunctionsSumIfsBody parameters) {
+    public WorkbookFunctionsSumIfsRequestBuilder sumIfs(@Nonnull final WorkbookFunctionsSumIfsParameterSet parameters) {
         return new WorkbookFunctionsSumIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumIfs"), getClient(), null, parameters);
     }
 
@@ -3609,7 +3609,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSumSqRequestBuilder sumSq(@Nonnull final WorkbookFunctionsSumSqBody parameters) {
+    public WorkbookFunctionsSumSqRequestBuilder sumSq(@Nonnull final WorkbookFunctionsSumSqParameterSet parameters) {
         return new WorkbookFunctionsSumSqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumSq"), getClient(), null, parameters);
     }
 
@@ -3619,7 +3619,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsSydRequestBuilder syd(@Nonnull final WorkbookFunctionsSydBody parameters) {
+    public WorkbookFunctionsSydRequestBuilder syd(@Nonnull final WorkbookFunctionsSydParameterSet parameters) {
         return new WorkbookFunctionsSydRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syd"), getClient(), null, parameters);
     }
 
@@ -3629,7 +3629,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTRequestBuilder t(@Nonnull final WorkbookFunctionsTBody parameters) {
+    public WorkbookFunctionsTRequestBuilder t(@Nonnull final WorkbookFunctionsTParameterSet parameters) {
         return new WorkbookFunctionsTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t"), getClient(), null, parameters);
     }
 
@@ -3639,7 +3639,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTanRequestBuilder tan(@Nonnull final WorkbookFunctionsTanBody parameters) {
+    public WorkbookFunctionsTanRequestBuilder tan(@Nonnull final WorkbookFunctionsTanParameterSet parameters) {
         return new WorkbookFunctionsTanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tan"), getClient(), null, parameters);
     }
 
@@ -3649,7 +3649,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTanhRequestBuilder tanh(@Nonnull final WorkbookFunctionsTanhBody parameters) {
+    public WorkbookFunctionsTanhRequestBuilder tanh(@Nonnull final WorkbookFunctionsTanhParameterSet parameters) {
         return new WorkbookFunctionsTanhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tanh"), getClient(), null, parameters);
     }
 
@@ -3659,7 +3659,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTbillEqRequestBuilder tbillEq(@Nonnull final WorkbookFunctionsTbillEqBody parameters) {
+    public WorkbookFunctionsTbillEqRequestBuilder tbillEq(@Nonnull final WorkbookFunctionsTbillEqParameterSet parameters) {
         return new WorkbookFunctionsTbillEqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillEq"), getClient(), null, parameters);
     }
 
@@ -3669,7 +3669,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTbillPriceRequestBuilder tbillPrice(@Nonnull final WorkbookFunctionsTbillPriceBody parameters) {
+    public WorkbookFunctionsTbillPriceRequestBuilder tbillPrice(@Nonnull final WorkbookFunctionsTbillPriceParameterSet parameters) {
         return new WorkbookFunctionsTbillPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillPrice"), getClient(), null, parameters);
     }
 
@@ -3679,7 +3679,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTbillYieldRequestBuilder tbillYield(@Nonnull final WorkbookFunctionsTbillYieldBody parameters) {
+    public WorkbookFunctionsTbillYieldRequestBuilder tbillYield(@Nonnull final WorkbookFunctionsTbillYieldParameterSet parameters) {
         return new WorkbookFunctionsTbillYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillYield"), getClient(), null, parameters);
     }
 
@@ -3689,7 +3689,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTextRequestBuilder text(@Nonnull final WorkbookFunctionsTextBody parameters) {
+    public WorkbookFunctionsTextRequestBuilder text(@Nonnull final WorkbookFunctionsTextParameterSet parameters) {
         return new WorkbookFunctionsTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.text"), getClient(), null, parameters);
     }
 
@@ -3699,7 +3699,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTimeRequestBuilder time(@Nonnull final WorkbookFunctionsTimeBody parameters) {
+    public WorkbookFunctionsTimeRequestBuilder time(@Nonnull final WorkbookFunctionsTimeParameterSet parameters) {
         return new WorkbookFunctionsTimeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.time"), getClient(), null, parameters);
     }
 
@@ -3709,7 +3709,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTimevalueRequestBuilder timevalue(@Nonnull final WorkbookFunctionsTimevalueBody parameters) {
+    public WorkbookFunctionsTimevalueRequestBuilder timevalue(@Nonnull final WorkbookFunctionsTimevalueParameterSet parameters) {
         return new WorkbookFunctionsTimevalueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.timevalue"), getClient(), null, parameters);
     }
 
@@ -3728,7 +3728,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTrimRequestBuilder trim(@Nonnull final WorkbookFunctionsTrimBody parameters) {
+    public WorkbookFunctionsTrimRequestBuilder trim(@Nonnull final WorkbookFunctionsTrimParameterSet parameters) {
         return new WorkbookFunctionsTrimRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trim"), getClient(), null, parameters);
     }
 
@@ -3738,7 +3738,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTrimMeanRequestBuilder trimMean(@Nonnull final WorkbookFunctionsTrimMeanBody parameters) {
+    public WorkbookFunctionsTrimMeanRequestBuilder trimMean(@Nonnull final WorkbookFunctionsTrimMeanParameterSet parameters) {
         return new WorkbookFunctionsTrimMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trimMean"), getClient(), null, parameters);
     }
 
@@ -3757,7 +3757,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTruncRequestBuilder trunc(@Nonnull final WorkbookFunctionsTruncBody parameters) {
+    public WorkbookFunctionsTruncRequestBuilder trunc(@Nonnull final WorkbookFunctionsTruncParameterSet parameters) {
         return new WorkbookFunctionsTruncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trunc"), getClient(), null, parameters);
     }
 
@@ -3767,7 +3767,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsTypeRequestBuilder type(@Nonnull final WorkbookFunctionsTypeBody parameters) {
+    public WorkbookFunctionsTypeRequestBuilder type(@Nonnull final WorkbookFunctionsTypeParameterSet parameters) {
         return new WorkbookFunctionsTypeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.type"), getClient(), null, parameters);
     }
 
@@ -3777,7 +3777,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsT_DistRequestBuilder t_Dist(@Nonnull final WorkbookFunctionsT_DistBody parameters) {
+    public WorkbookFunctionsT_DistRequestBuilder t_Dist(@Nonnull final WorkbookFunctionsT_DistParameterSet parameters) {
         return new WorkbookFunctionsT_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist"), getClient(), null, parameters);
     }
 
@@ -3787,7 +3787,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsT_Dist_2TRequestBuilder t_Dist_2T(@Nonnull final WorkbookFunctionsT_Dist_2TBody parameters) {
+    public WorkbookFunctionsT_Dist_2TRequestBuilder t_Dist_2T(@Nonnull final WorkbookFunctionsT_Dist_2TParameterSet parameters) {
         return new WorkbookFunctionsT_Dist_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_2T"), getClient(), null, parameters);
     }
 
@@ -3797,7 +3797,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsT_Dist_RTRequestBuilder t_Dist_RT(@Nonnull final WorkbookFunctionsT_Dist_RTBody parameters) {
+    public WorkbookFunctionsT_Dist_RTRequestBuilder t_Dist_RT(@Nonnull final WorkbookFunctionsT_Dist_RTParameterSet parameters) {
         return new WorkbookFunctionsT_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_RT"), getClient(), null, parameters);
     }
 
@@ -3807,7 +3807,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsT_InvRequestBuilder t_Inv(@Nonnull final WorkbookFunctionsT_InvBody parameters) {
+    public WorkbookFunctionsT_InvRequestBuilder t_Inv(@Nonnull final WorkbookFunctionsT_InvParameterSet parameters) {
         return new WorkbookFunctionsT_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv"), getClient(), null, parameters);
     }
 
@@ -3817,7 +3817,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsT_Inv_2TRequestBuilder t_Inv_2T(@Nonnull final WorkbookFunctionsT_Inv_2TBody parameters) {
+    public WorkbookFunctionsT_Inv_2TRequestBuilder t_Inv_2T(@Nonnull final WorkbookFunctionsT_Inv_2TParameterSet parameters) {
         return new WorkbookFunctionsT_Inv_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv_2T"), getClient(), null, parameters);
     }
 
@@ -3827,7 +3827,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsUnicharRequestBuilder unichar(@Nonnull final WorkbookFunctionsUnicharBody parameters) {
+    public WorkbookFunctionsUnicharRequestBuilder unichar(@Nonnull final WorkbookFunctionsUnicharParameterSet parameters) {
         return new WorkbookFunctionsUnicharRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unichar"), getClient(), null, parameters);
     }
 
@@ -3837,7 +3837,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsUnicodeRequestBuilder unicode(@Nonnull final WorkbookFunctionsUnicodeBody parameters) {
+    public WorkbookFunctionsUnicodeRequestBuilder unicode(@Nonnull final WorkbookFunctionsUnicodeParameterSet parameters) {
         return new WorkbookFunctionsUnicodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unicode"), getClient(), null, parameters);
     }
 
@@ -3847,7 +3847,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsUpperRequestBuilder upper(@Nonnull final WorkbookFunctionsUpperBody parameters) {
+    public WorkbookFunctionsUpperRequestBuilder upper(@Nonnull final WorkbookFunctionsUpperParameterSet parameters) {
         return new WorkbookFunctionsUpperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.upper"), getClient(), null, parameters);
     }
 
@@ -3857,7 +3857,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsUsdollarRequestBuilder usdollar(@Nonnull final WorkbookFunctionsUsdollarBody parameters) {
+    public WorkbookFunctionsUsdollarRequestBuilder usdollar(@Nonnull final WorkbookFunctionsUsdollarParameterSet parameters) {
         return new WorkbookFunctionsUsdollarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usdollar"), getClient(), null, parameters);
     }
 
@@ -3867,7 +3867,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsValueRequestBuilder value(@Nonnull final WorkbookFunctionsValueBody parameters) {
+    public WorkbookFunctionsValueRequestBuilder value(@Nonnull final WorkbookFunctionsValueParameterSet parameters) {
         return new WorkbookFunctionsValueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.value"), getClient(), null, parameters);
     }
 
@@ -3877,7 +3877,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsVarARequestBuilder varA(@Nonnull final WorkbookFunctionsVarABody parameters) {
+    public WorkbookFunctionsVarARequestBuilder varA(@Nonnull final WorkbookFunctionsVarAParameterSet parameters) {
         return new WorkbookFunctionsVarARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.varA"), getClient(), null, parameters);
     }
 
@@ -3887,7 +3887,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsVarPARequestBuilder varPA(@Nonnull final WorkbookFunctionsVarPABody parameters) {
+    public WorkbookFunctionsVarPARequestBuilder varPA(@Nonnull final WorkbookFunctionsVarPAParameterSet parameters) {
         return new WorkbookFunctionsVarPARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.varPA"), getClient(), null, parameters);
     }
 
@@ -3897,7 +3897,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsVar_PRequestBuilder var_P(@Nonnull final WorkbookFunctionsVar_PBody parameters) {
+    public WorkbookFunctionsVar_PRequestBuilder var_P(@Nonnull final WorkbookFunctionsVar_PParameterSet parameters) {
         return new WorkbookFunctionsVar_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_P"), getClient(), null, parameters);
     }
 
@@ -3907,7 +3907,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsVar_SRequestBuilder var_S(@Nonnull final WorkbookFunctionsVar_SBody parameters) {
+    public WorkbookFunctionsVar_SRequestBuilder var_S(@Nonnull final WorkbookFunctionsVar_SParameterSet parameters) {
         return new WorkbookFunctionsVar_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_S"), getClient(), null, parameters);
     }
 
@@ -3917,7 +3917,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsVdbRequestBuilder vdb(@Nonnull final WorkbookFunctionsVdbBody parameters) {
+    public WorkbookFunctionsVdbRequestBuilder vdb(@Nonnull final WorkbookFunctionsVdbParameterSet parameters) {
         return new WorkbookFunctionsVdbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.vdb"), getClient(), null, parameters);
     }
 
@@ -3927,7 +3927,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsVlookupRequestBuilder vlookup(@Nonnull final WorkbookFunctionsVlookupBody parameters) {
+    public WorkbookFunctionsVlookupRequestBuilder vlookup(@Nonnull final WorkbookFunctionsVlookupParameterSet parameters) {
         return new WorkbookFunctionsVlookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.vlookup"), getClient(), null, parameters);
     }
 
@@ -3937,7 +3937,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsWeekdayRequestBuilder weekday(@Nonnull final WorkbookFunctionsWeekdayBody parameters) {
+    public WorkbookFunctionsWeekdayRequestBuilder weekday(@Nonnull final WorkbookFunctionsWeekdayParameterSet parameters) {
         return new WorkbookFunctionsWeekdayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weekday"), getClient(), null, parameters);
     }
 
@@ -3947,7 +3947,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsWeekNumRequestBuilder weekNum(@Nonnull final WorkbookFunctionsWeekNumBody parameters) {
+    public WorkbookFunctionsWeekNumRequestBuilder weekNum(@Nonnull final WorkbookFunctionsWeekNumParameterSet parameters) {
         return new WorkbookFunctionsWeekNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weekNum"), getClient(), null, parameters);
     }
 
@@ -3957,7 +3957,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsWeibull_DistRequestBuilder weibull_Dist(@Nonnull final WorkbookFunctionsWeibull_DistBody parameters) {
+    public WorkbookFunctionsWeibull_DistRequestBuilder weibull_Dist(@Nonnull final WorkbookFunctionsWeibull_DistParameterSet parameters) {
         return new WorkbookFunctionsWeibull_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weibull_Dist"), getClient(), null, parameters);
     }
 
@@ -3967,7 +3967,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsWorkDayRequestBuilder workDay(@Nonnull final WorkbookFunctionsWorkDayBody parameters) {
+    public WorkbookFunctionsWorkDayRequestBuilder workDay(@Nonnull final WorkbookFunctionsWorkDayParameterSet parameters) {
         return new WorkbookFunctionsWorkDayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.workDay"), getClient(), null, parameters);
     }
 
@@ -3977,7 +3977,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsWorkDay_IntlRequestBuilder workDay_Intl(@Nonnull final WorkbookFunctionsWorkDay_IntlBody parameters) {
+    public WorkbookFunctionsWorkDay_IntlRequestBuilder workDay_Intl(@Nonnull final WorkbookFunctionsWorkDay_IntlParameterSet parameters) {
         return new WorkbookFunctionsWorkDay_IntlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.workDay_Intl"), getClient(), null, parameters);
     }
 
@@ -3987,7 +3987,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsXirrRequestBuilder xirr(@Nonnull final WorkbookFunctionsXirrBody parameters) {
+    public WorkbookFunctionsXirrRequestBuilder xirr(@Nonnull final WorkbookFunctionsXirrParameterSet parameters) {
         return new WorkbookFunctionsXirrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xirr"), getClient(), null, parameters);
     }
 
@@ -3997,7 +3997,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsXnpvRequestBuilder xnpv(@Nonnull final WorkbookFunctionsXnpvBody parameters) {
+    public WorkbookFunctionsXnpvRequestBuilder xnpv(@Nonnull final WorkbookFunctionsXnpvParameterSet parameters) {
         return new WorkbookFunctionsXnpvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xnpv"), getClient(), null, parameters);
     }
 
@@ -4007,7 +4007,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsXorRequestBuilder xor(@Nonnull final WorkbookFunctionsXorBody parameters) {
+    public WorkbookFunctionsXorRequestBuilder xor(@Nonnull final WorkbookFunctionsXorParameterSet parameters) {
         return new WorkbookFunctionsXorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xor"), getClient(), null, parameters);
     }
 
@@ -4017,7 +4017,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsYearRequestBuilder year(@Nonnull final WorkbookFunctionsYearBody parameters) {
+    public WorkbookFunctionsYearRequestBuilder year(@Nonnull final WorkbookFunctionsYearParameterSet parameters) {
         return new WorkbookFunctionsYearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.year"), getClient(), null, parameters);
     }
 
@@ -4027,7 +4027,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsYearFracRequestBuilder yearFrac(@Nonnull final WorkbookFunctionsYearFracBody parameters) {
+    public WorkbookFunctionsYearFracRequestBuilder yearFrac(@Nonnull final WorkbookFunctionsYearFracParameterSet parameters) {
         return new WorkbookFunctionsYearFracRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yearFrac"), getClient(), null, parameters);
     }
 
@@ -4037,7 +4037,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsYieldRequestBuilder yield(@Nonnull final WorkbookFunctionsYieldBody parameters) {
+    public WorkbookFunctionsYieldRequestBuilder yield(@Nonnull final WorkbookFunctionsYieldParameterSet parameters) {
         return new WorkbookFunctionsYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yield"), getClient(), null, parameters);
     }
 
@@ -4047,7 +4047,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsYieldDiscRequestBuilder yieldDisc(@Nonnull final WorkbookFunctionsYieldDiscBody parameters) {
+    public WorkbookFunctionsYieldDiscRequestBuilder yieldDisc(@Nonnull final WorkbookFunctionsYieldDiscParameterSet parameters) {
         return new WorkbookFunctionsYieldDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yieldDisc"), getClient(), null, parameters);
     }
 
@@ -4057,7 +4057,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsYieldMatRequestBuilder yieldMat(@Nonnull final WorkbookFunctionsYieldMatBody parameters) {
+    public WorkbookFunctionsYieldMatRequestBuilder yieldMat(@Nonnull final WorkbookFunctionsYieldMatParameterSet parameters) {
         return new WorkbookFunctionsYieldMatRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yieldMat"), getClient(), null, parameters);
     }
 
@@ -4067,7 +4067,7 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder<Workbook
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public WorkbookFunctionsZ_TestRequestBuilder z_Test(@Nonnull final WorkbookFunctionsZ_TestBody parameters) {
+    public WorkbookFunctionsZ_TestRequestBuilder z_Test(@Nonnull final WorkbookFunctionsZ_TestParameterSet parameters) {
         return new WorkbookFunctionsZ_TestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.z_Test"), getClient(), null, parameters);
     }
 }

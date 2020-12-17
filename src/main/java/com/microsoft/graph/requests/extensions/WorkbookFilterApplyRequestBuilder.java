@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyRequest;
 import com.microsoft.graph.models.extensions.WorkbookFilter;
 import com.microsoft.graph.models.extensions.WorkbookFilterCriteria;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFilterApplyBody;
+import com.microsoft.graph.models.extensions.WorkbookFilterApplyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFilterApplyRequestBuilder extends BaseActionRequestBuilder<WorkbookFilter> {
 
-    private WorkbookFilterApplyBody body;
+    private WorkbookFilterApplyParameterSet body;
     /**
      * The request builder for this WorkbookFilterApply
      *
@@ -30,7 +30,7 @@ public class WorkbookFilterApplyRequestBuilder extends BaseActionRequestBuilder<
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyBody parameters) {
+    public WorkbookFilterApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

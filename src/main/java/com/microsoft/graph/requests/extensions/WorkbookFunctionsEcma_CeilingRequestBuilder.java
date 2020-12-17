@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsEcma_CeilingRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsEcma_CeilingBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsEcma_CeilingParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsEcma_CeilingRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsEcma_CeilingBody body;
+    private WorkbookFunctionsEcma_CeilingParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsEcma_Ceiling
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsEcma_CeilingRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsEcma_CeilingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEcma_CeilingBody parameters) {
+    public WorkbookFunctionsEcma_CeilingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEcma_CeilingParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

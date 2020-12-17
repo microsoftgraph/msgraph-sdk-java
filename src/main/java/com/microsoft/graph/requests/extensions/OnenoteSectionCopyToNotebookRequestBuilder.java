@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.OnenoteSectionCopyToNotebookReque
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.OnenoteSectionCopyToNotebookBody;
+import com.microsoft.graph.models.extensions.OnenoteSectionCopyToNotebookParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRequestBuilder<OnenoteOperation> {
 
-    private OnenoteSectionCopyToNotebookBody body;
+    private OnenoteSectionCopyToNotebookParameterSet body;
     /**
      * The request builder for this OnenoteSectionCopyToNotebook
      *
@@ -30,7 +30,7 @@ public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OnenoteSectionCopyToNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenoteSectionCopyToNotebookBody parameters) {
+    public OnenoteSectionCopyToNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenoteSectionCopyToNotebookParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

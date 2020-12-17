@@ -55,7 +55,7 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseCollectio
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.OAuth2PermissionGrantDeltaBody parameters) {
+    public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.OAuth2PermissionGrantDeltaParameterSet parameters) {
         return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 

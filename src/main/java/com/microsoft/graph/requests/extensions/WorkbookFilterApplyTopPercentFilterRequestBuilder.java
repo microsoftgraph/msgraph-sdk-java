@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyTopPercentFilt
 import com.microsoft.graph.models.extensions.WorkbookFilter;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFilterApplyTopPercentFilterBody;
+import com.microsoft.graph.models.extensions.WorkbookFilterApplyTopPercentFilterParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFilterApplyTopPercentFilterRequestBuilder extends BaseActionRequestBuilder<WorkbookFilter> {
 
-    private WorkbookFilterApplyTopPercentFilterBody body;
+    private WorkbookFilterApplyTopPercentFilterParameterSet body;
     /**
      * The request builder for this WorkbookFilterApplyTopPercentFilter
      *
@@ -30,7 +30,7 @@ public class WorkbookFilterApplyTopPercentFilterRequestBuilder extends BaseActio
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyTopPercentFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyTopPercentFilterBody parameters) {
+    public WorkbookFilterApplyTopPercentFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyTopPercentFilterParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

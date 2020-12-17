@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.MobileAppContentFileCommitRequest
 import com.microsoft.graph.models.extensions.MobileAppContentFile;
 import com.microsoft.graph.models.extensions.FileEncryptionInfo;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.MobileAppContentFileCommitBody;
+import com.microsoft.graph.models.extensions.MobileAppContentFileCommitParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class MobileAppContentFileCommitRequestBuilder extends BaseActionRequestBuilder<MobileAppContentFile> {
 
-    private MobileAppContentFileCommitBody body;
+    private MobileAppContentFileCommitParameterSet body;
     /**
      * The request builder for this MobileAppContentFileCommit
      *
@@ -30,7 +30,7 @@ public class MobileAppContentFileCommitRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public MobileAppContentFileCommitRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MobileAppContentFileCommitBody parameters) {
+    public MobileAppContentFileCommitRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MobileAppContentFileCommitParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

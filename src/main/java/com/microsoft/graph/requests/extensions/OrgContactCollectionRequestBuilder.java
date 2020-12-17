@@ -55,7 +55,7 @@ public class OrgContactCollectionRequestBuilder extends BaseCollectionRequestBui
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public OrgContactDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.OrgContactDeltaBody parameters) {
+    public OrgContactDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.OrgContactDeltaParameterSet parameters) {
         return new OrgContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 

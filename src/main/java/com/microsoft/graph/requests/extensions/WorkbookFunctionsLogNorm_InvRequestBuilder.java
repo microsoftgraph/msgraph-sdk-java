@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsLogNorm_InvReque
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsLogNorm_InvBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLogNorm_InvParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsLogNorm_InvBody body;
+    private WorkbookFunctionsLogNorm_InvParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsLogNorm_Inv
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsLogNorm_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsLogNorm_InvBody parameters) {
+    public WorkbookFunctionsLogNorm_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsLogNorm_InvParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

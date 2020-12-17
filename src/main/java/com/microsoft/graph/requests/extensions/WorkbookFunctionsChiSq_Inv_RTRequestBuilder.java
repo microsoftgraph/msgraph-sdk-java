@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_Inv_RTRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_Inv_RTBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsChiSq_Inv_RTParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsChiSq_Inv_RTRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsChiSq_Inv_RTBody body;
+    private WorkbookFunctionsChiSq_Inv_RTParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsChiSq_Inv_RT
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsChiSq_Inv_RTRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsChiSq_Inv_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsChiSq_Inv_RTBody parameters) {
+    public WorkbookFunctionsChiSq_Inv_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsChiSq_Inv_RTParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

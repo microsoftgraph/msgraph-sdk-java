@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAssig
 import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WindowsInformationProtectionAssignBody;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionAssignParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WindowsInformationProtectionAssignRequestBuilder extends BaseActionRequestBuilder<WindowsInformationProtection> {
 
-    private WindowsInformationProtectionAssignBody body;
+    private WindowsInformationProtectionAssignParameterSet body;
     /**
      * The request builder for this WindowsInformationProtectionAssign
      *
@@ -30,7 +30,7 @@ public class WindowsInformationProtectionAssignRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WindowsInformationProtectionAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WindowsInformationProtectionAssignBody parameters) {
+    public WindowsInformationProtectionAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WindowsInformationProtectionAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

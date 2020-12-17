@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.OnlineMeetingCreateOrGetBody;
+import com.microsoft.graph.models.extensions.OnlineMeetingCreateOrGetParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBuilder<OnlineMeeting> {
 
-    private OnlineMeetingCreateOrGetBody body;
+    private OnlineMeetingCreateOrGetParameterSet body;
     /**
      * The request builder for this OnlineMeetingCreateOrGet
      *
@@ -31,7 +31,7 @@ public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OnlineMeetingCreateOrGetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnlineMeetingCreateOrGetBody parameters) {
+    public OnlineMeetingCreateOrGetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnlineMeetingCreateOrGetParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

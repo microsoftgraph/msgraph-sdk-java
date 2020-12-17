@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ServicePrincipalRemovePasswordReq
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ServicePrincipalRemovePasswordBody;
+import com.microsoft.graph.models.extensions.ServicePrincipalRemovePasswordParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ServicePrincipalRemovePasswordRequestBuilder extends BaseActionRequestBuilder<ServicePrincipal> {
 
-    private ServicePrincipalRemovePasswordBody body;
+    private ServicePrincipalRemovePasswordParameterSet body;
     /**
      * The request builder for this ServicePrincipalRemovePassword
      *
@@ -30,7 +30,7 @@ public class ServicePrincipalRemovePasswordRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ServicePrincipalRemovePasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalRemovePasswordBody parameters) {
+    public ServicePrincipalRemovePasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalRemovePasswordParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

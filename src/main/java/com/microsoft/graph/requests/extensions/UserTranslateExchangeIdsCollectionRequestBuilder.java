@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionResponse;
-import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsBody;
+import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -30,7 +30,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<ConvertIdResult, UserTranslateExchangeIdsCollectionRequestBuilder, UserTranslateExchangeIdsCollectionResponse, UserTranslateExchangeIdsCollectionPage, UserTranslateExchangeIdsCollectionRequest> {
 
-    private UserTranslateExchangeIdsBody body;
+    private UserTranslateExchangeIdsParameterSet body;
     /**
      * The request builder for this collection of User
      *
@@ -39,7 +39,7 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserTranslateExchangeIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserTranslateExchangeIdsBody parameters) {
+    public UserTranslateExchangeIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserTranslateExchangeIdsParameterSet parameters) {
         super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionRequestBuilder.class, UserTranslateExchangeIdsCollectionRequest.class);
         this.body = parameters;
     }

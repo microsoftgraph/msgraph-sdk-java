@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ParticipantMuteRequest;
 import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ParticipantMuteBody;
+import com.microsoft.graph.models.extensions.ParticipantMuteParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder<MuteParticipantOperation> {
 
-    private ParticipantMuteBody body;
+    private ParticipantMuteParameterSet body;
     /**
      * The request builder for this ParticipantMute
      *
@@ -30,7 +30,7 @@ public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder<Mute
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ParticipantMuteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ParticipantMuteBody parameters) {
+    public ParticipantMuteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ParticipantMuteParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

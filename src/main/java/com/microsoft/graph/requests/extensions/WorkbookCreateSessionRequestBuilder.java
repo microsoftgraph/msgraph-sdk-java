@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookCreateSessionRequest;
 import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookCreateSessionBody;
+import com.microsoft.graph.models.extensions.WorkbookCreateSessionParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilder<WorkbookSessionInfo> {
 
-    private WorkbookCreateSessionBody body;
+    private WorkbookCreateSessionParameterSet body;
     /**
      * The request builder for this WorkbookCreateSession
      *
@@ -30,7 +30,7 @@ public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookCreateSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookCreateSessionBody parameters) {
+    public WorkbookCreateSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookCreateSessionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

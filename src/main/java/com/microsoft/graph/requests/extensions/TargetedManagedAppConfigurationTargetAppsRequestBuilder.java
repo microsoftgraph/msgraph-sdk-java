@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationTa
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.TargetedManagedAppConfigurationTargetAppsBody;
+import com.microsoft.graph.models.extensions.TargetedManagedAppConfigurationTargetAppsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class TargetedManagedAppConfigurationTargetAppsRequestBuilder extends BaseActionRequestBuilder<TargetedManagedAppConfiguration> {
 
-    private TargetedManagedAppConfigurationTargetAppsBody body;
+    private TargetedManagedAppConfigurationTargetAppsParameterSet body;
     /**
      * The request builder for this TargetedManagedAppConfigurationTargetApps
      *
@@ -30,7 +30,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public TargetedManagedAppConfigurationTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TargetedManagedAppConfigurationTargetAppsBody parameters) {
+    public TargetedManagedAppConfigurationTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TargetedManagedAppConfigurationTargetAppsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

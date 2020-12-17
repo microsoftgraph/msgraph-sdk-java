@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.MessageCreateForwardRequest;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.MessageCreateForwardBody;
+import com.microsoft.graph.models.extensions.MessageCreateForwardParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class MessageCreateForwardRequestBuilder extends BaseActionRequestBuilder<Message> {
 
-    private MessageCreateForwardBody body;
+    private MessageCreateForwardParameterSet body;
     /**
      * The request builder for this MessageCreateForward
      *
@@ -30,7 +30,7 @@ public class MessageCreateForwardRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public MessageCreateForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCreateForwardBody parameters) {
+    public MessageCreateForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCreateForwardParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

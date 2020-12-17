@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ApplicationAddKeyBody;
+import com.microsoft.graph.models.extensions.ApplicationAddKeyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class ApplicationAddKeyRequestBuilder extends BaseActionRequestBuilder<KeyCredential> {
 
-    private ApplicationAddKeyBody body;
+    private ApplicationAddKeyParameterSet body;
     /**
      * The request builder for this ApplicationAddKey
      *
@@ -31,7 +31,7 @@ public class ApplicationAddKeyRequestBuilder extends BaseActionRequestBuilder<Ke
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ApplicationAddKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ApplicationAddKeyBody parameters) {
+    public ApplicationAddKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ApplicationAddKeyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

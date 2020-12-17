@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
-import com.microsoft.graph.models.extensions.DirectoryObjectGetAvailableExtensionPropertiesBody;
+import com.microsoft.graph.models.extensions.DirectoryObjectGetAvailableExtensionPropertiesParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -32,7 +32,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
 
 
     /** The body for the method */
-    protected DirectoryObjectGetAvailableExtensionPropertiesBody body;
+    protected DirectoryObjectGetAvailableExtensionPropertiesParameterSet body;
 
 
     /**
@@ -43,7 +43,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetAvailableExtensionPropertiesBody parameters) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetAvailableExtensionPropertiesParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -115,6 +115,16 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
     @Nonnull
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

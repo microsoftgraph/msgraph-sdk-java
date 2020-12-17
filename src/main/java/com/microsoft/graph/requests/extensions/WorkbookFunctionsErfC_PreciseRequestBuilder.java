@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsErfC_PreciseRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsErfC_PreciseBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsErfC_PreciseParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsErfC_PreciseRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsErfC_PreciseBody body;
+    private WorkbookFunctionsErfC_PreciseParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsErfC_Precise
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsErfC_PreciseRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsErfC_PreciseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsErfC_PreciseBody parameters) {
+    public WorkbookFunctionsErfC_PreciseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsErfC_PreciseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

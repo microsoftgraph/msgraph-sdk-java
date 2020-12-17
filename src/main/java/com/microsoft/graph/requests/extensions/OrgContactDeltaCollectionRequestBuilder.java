@@ -46,7 +46,7 @@ public class OrgContactDeltaCollectionRequestBuilder extends BaseFunctionCollect
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OrgContactDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.OrgContactDeltaBody parameters) {
+    public OrgContactDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.OrgContactDeltaParameterSet parameters) {
         super(requestUrl, client, requestOptions, OrgContactDeltaCollectionRequestBuilder.class, OrgContactDeltaCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

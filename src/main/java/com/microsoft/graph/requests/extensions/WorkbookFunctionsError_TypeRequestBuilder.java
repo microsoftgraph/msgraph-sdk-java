@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsError_TypeReques
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsError_TypeBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsError_TypeParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsError_TypeRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsError_TypeBody body;
+    private WorkbookFunctionsError_TypeParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsError_Type
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsError_TypeRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsError_TypeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsError_TypeBody parameters) {
+    public WorkbookFunctionsError_TypeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsError_TypeParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

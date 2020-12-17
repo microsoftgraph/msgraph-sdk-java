@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceUpdateWindowsDeviceA
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedDeviceUpdateWindowsDeviceAccountBody;
+import com.microsoft.graph.models.extensions.ManagedDeviceUpdateWindowsDeviceAccountParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder extends BaseActionRequestBuilder<ManagedDevice> {
 
-    private ManagedDeviceUpdateWindowsDeviceAccountBody body;
+    private ManagedDeviceUpdateWindowsDeviceAccountParameterSet body;
     /**
      * The request builder for this ManagedDeviceUpdateWindowsDeviceAccount
      *
@@ -30,7 +30,7 @@ public class ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder extends BaseA
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceUpdateWindowsDeviceAccountBody parameters) {
+    public ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceUpdateWindowsDeviceAccountParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

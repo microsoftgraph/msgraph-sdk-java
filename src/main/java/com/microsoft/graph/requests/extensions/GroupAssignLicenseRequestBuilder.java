@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.GroupAssignLicenseRequest;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.GroupAssignLicenseBody;
+import com.microsoft.graph.models.extensions.GroupAssignLicenseParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder<Group> {
 
-    private GroupAssignLicenseBody body;
+    private GroupAssignLicenseParameterSet body;
     /**
      * The request builder for this GroupAssignLicense
      *
@@ -30,7 +30,7 @@ public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder<G
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public GroupAssignLicenseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupAssignLicenseBody parameters) {
+    public GroupAssignLicenseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupAssignLicenseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

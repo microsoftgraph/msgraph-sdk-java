@@ -134,5 +134,15 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseFu
         addSkipOption(value);
         return this;
     }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public UserGetManagedAppDiagnosticStatusesCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
+        return this;
+    }
 
 }

@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.CallRejectRequest;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.generated.RejectReason;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.CallRejectBody;
+import com.microsoft.graph.models.extensions.CallRejectParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class CallRejectRequestBuilder extends BaseActionRequestBuilder<Call> {
 
-    private CallRejectBody body;
+    private CallRejectParameterSet body;
     /**
      * The request builder for this CallReject
      *
@@ -30,7 +30,7 @@ public class CallRejectRequestBuilder extends BaseActionRequestBuilder<Call> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallRejectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRejectBody parameters) {
+    public CallRejectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRejectParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

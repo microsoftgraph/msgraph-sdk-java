@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ScheduleChangeRequestDeclineReque
 import com.microsoft.graph.models.extensions.ScheduleChangeRequest;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ScheduleChangeRequestDeclineBody;
+import com.microsoft.graph.models.extensions.ScheduleChangeRequestDeclineParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ScheduleChangeRequestDeclineRequestBuilder extends BaseActionRequestBuilder<ScheduleChangeRequest> {
 
-    private ScheduleChangeRequestDeclineBody body;
+    private ScheduleChangeRequestDeclineParameterSet body;
     /**
      * The request builder for this ScheduleChangeRequestDecline
      *
@@ -30,7 +30,7 @@ public class ScheduleChangeRequestDeclineRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ScheduleChangeRequestDeclineRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ScheduleChangeRequestDeclineBody parameters) {
+    public ScheduleChangeRequestDeclineRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ScheduleChangeRequestDeclineParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionResponse;
 import com.microsoft.graph.models.extensions.ConvertIdResult;
-import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsBody;
+import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -33,7 +33,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseActionCollect
 
 
     /** The body for the method */
-    protected UserTranslateExchangeIdsBody body;
+    protected UserTranslateExchangeIdsParameterSet body;
 
 
     /**
@@ -44,7 +44,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseActionCollect
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public UserTranslateExchangeIdsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserTranslateExchangeIdsBody parameters) {
+    public UserTranslateExchangeIdsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserTranslateExchangeIdsParameterSet parameters) {
         super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionResponse.class, UserTranslateExchangeIdsCollectionPage.class, UserTranslateExchangeIdsCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -116,6 +116,16 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseActionCollect
     @Nonnull
     public UserTranslateExchangeIdsCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public UserTranslateExchangeIdsCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

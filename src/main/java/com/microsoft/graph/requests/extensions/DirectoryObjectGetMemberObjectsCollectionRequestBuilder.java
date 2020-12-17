@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionResponse;
-import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberObjectsBody;
+import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberObjectsParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<String, DirectoryObjectGetMemberObjectsCollectionRequestBuilder, DirectoryObjectGetMemberObjectsCollectionResponse, DirectoryObjectGetMemberObjectsCollectionPage, DirectoryObjectGetMemberObjectsCollectionRequest> {
 
-    private DirectoryObjectGetMemberObjectsBody body;
+    private DirectoryObjectGetMemberObjectsParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject
      *
@@ -38,7 +38,7 @@ public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetMemberObjectsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberObjectsBody parameters) {
+    public DirectoryObjectGetMemberObjectsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberObjectsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberObjectsCollectionRequestBuilder.class, DirectoryObjectGetMemberObjectsCollectionRequest.class);
         this.body = parameters;
     }

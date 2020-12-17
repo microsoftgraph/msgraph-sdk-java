@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.OnenotePageOnenotePatchContentReq
 import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.OnenotePageOnenotePatchContentBody;
+import com.microsoft.graph.models.extensions.OnenotePageOnenotePatchContentParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequestBuilder<OnenotePage> {
 
-    private OnenotePageOnenotePatchContentBody body;
+    private OnenotePageOnenotePatchContentParameterSet body;
     /**
      * The request builder for this OnenotePageOnenotePatchContent
      *
@@ -30,7 +30,7 @@ public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OnenotePageOnenotePatchContentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenotePageOnenotePatchContentBody parameters) {
+    public OnenotePageOnenotePatchContentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenotePageOnenotePatchContentParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

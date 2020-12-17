@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ServicePrincipalRemoveKeyRequest;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ServicePrincipalRemoveKeyBody;
+import com.microsoft.graph.models.extensions.ServicePrincipalRemoveKeyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ServicePrincipalRemoveKeyRequestBuilder extends BaseActionRequestBuilder<ServicePrincipal> {
 
-    private ServicePrincipalRemoveKeyBody body;
+    private ServicePrincipalRemoveKeyParameterSet body;
     /**
      * The request builder for this ServicePrincipalRemoveKey
      *
@@ -30,7 +30,7 @@ public class ServicePrincipalRemoveKeyRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ServicePrincipalRemoveKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalRemoveKeyBody parameters) {
+    public ServicePrincipalRemoveKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalRemoveKeyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

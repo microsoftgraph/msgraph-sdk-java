@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsQuartile_IncRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsQuartile_IncBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsQuartile_IncParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsQuartile_IncBody body;
+    private WorkbookFunctionsQuartile_IncParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsQuartile_Inc
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsQuartile_IncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsQuartile_IncBody parameters) {
+    public WorkbookFunctionsQuartile_IncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsQuartile_IncParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

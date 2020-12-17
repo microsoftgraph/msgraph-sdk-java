@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionResponse;
-import com.microsoft.graph.models.extensions.DriveItemInviteBody;
+import com.microsoft.graph.models.extensions.DriveItemInviteParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -30,7 +30,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DriveItemInviteCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<Permission, DriveItemInviteCollectionRequestBuilder, DriveItemInviteCollectionResponse, DriveItemInviteCollectionPage, DriveItemInviteCollectionRequest> {
 
-    private DriveItemInviteBody body;
+    private DriveItemInviteParameterSet body;
     /**
      * The request builder for this collection of DriveItem
      *
@@ -39,7 +39,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionCollectio
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveItemInviteCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemInviteBody parameters) {
+    public DriveItemInviteCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemInviteParameterSet parameters) {
         super(requestUrl, client, requestOptions, DriveItemInviteCollectionRequestBuilder.class, DriveItemInviteCollectionRequest.class);
         this.body = parameters;
     }

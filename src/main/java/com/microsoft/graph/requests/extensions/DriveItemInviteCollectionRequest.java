@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionResponse;
 import com.microsoft.graph.models.extensions.Permission;
-import com.microsoft.graph.models.extensions.DriveItemInviteBody;
+import com.microsoft.graph.models.extensions.DriveItemInviteParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -33,7 +33,7 @@ public class DriveItemInviteCollectionRequest extends BaseActionCollectionReques
 
 
     /** The body for the method */
-    protected DriveItemInviteBody body;
+    protected DriveItemInviteParameterSet body;
 
 
     /**
@@ -44,7 +44,7 @@ public class DriveItemInviteCollectionRequest extends BaseActionCollectionReques
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public DriveItemInviteCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemInviteBody parameters) {
+    public DriveItemInviteCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemInviteParameterSet parameters) {
         super(requestUrl, client, requestOptions, DriveItemInviteCollectionResponse.class, DriveItemInviteCollectionPage.class, DriveItemInviteCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -116,6 +116,16 @@ public class DriveItemInviteCollectionRequest extends BaseActionCollectionReques
     @Nonnull
     public DriveItemInviteCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public DriveItemInviteCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

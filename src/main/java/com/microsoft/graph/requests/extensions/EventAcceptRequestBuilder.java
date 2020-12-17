@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.EventAcceptRequest;
 import com.microsoft.graph.models.extensions.Event;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.EventAcceptBody;
+import com.microsoft.graph.models.extensions.EventAcceptParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class EventAcceptRequestBuilder extends BaseActionRequestBuilder<Event> {
 
-    private EventAcceptBody body;
+    private EventAcceptParameterSet body;
     /**
      * The request builder for this EventAccept
      *
@@ -30,7 +30,7 @@ public class EventAcceptRequestBuilder extends BaseActionRequestBuilder<Event> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public EventAcceptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final EventAcceptBody parameters) {
+    public EventAcceptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final EventAcceptParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

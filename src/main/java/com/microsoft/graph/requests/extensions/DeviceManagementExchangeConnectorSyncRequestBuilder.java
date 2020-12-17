@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnector
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorSyncType;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnectorSyncBody;
+import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnectorSyncParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class DeviceManagementExchangeConnectorSyncRequestBuilder extends BaseActionRequestBuilder<DeviceManagementExchangeConnector> {
 
-    private DeviceManagementExchangeConnectorSyncBody body;
+    private DeviceManagementExchangeConnectorSyncParameterSet body;
     /**
      * The request builder for this DeviceManagementExchangeConnectorSync
      *
@@ -30,7 +30,7 @@ public class DeviceManagementExchangeConnectorSyncRequestBuilder extends BaseAct
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DeviceManagementExchangeConnectorSyncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceManagementExchangeConnectorSyncBody parameters) {
+    public DeviceManagementExchangeConnectorSyncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceManagementExchangeConnectorSyncParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

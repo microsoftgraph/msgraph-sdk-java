@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookChartFillSetSolidColorReq
 import com.microsoft.graph.models.extensions.WorkbookChartFill;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookChartFillSetSolidColorBody;
+import com.microsoft.graph.models.extensions.WorkbookChartFillSetSolidColorParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookChartFillSetSolidColorRequestBuilder extends BaseActionRequestBuilder<WorkbookChartFill> {
 
-    private WorkbookChartFillSetSolidColorBody body;
+    private WorkbookChartFillSetSolidColorParameterSet body;
     /**
      * The request builder for this WorkbookChartFillSetSolidColor
      *
@@ -30,7 +30,7 @@ public class WorkbookChartFillSetSolidColorRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookChartFillSetSolidColorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartFillSetSolidColorBody parameters) {
+    public WorkbookChartFillSetSolidColorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartFillSetSolidColorParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

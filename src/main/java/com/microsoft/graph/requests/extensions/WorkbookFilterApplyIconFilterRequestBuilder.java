@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFilterApplyIconFilterRequ
 import com.microsoft.graph.models.extensions.WorkbookFilter;
 import com.microsoft.graph.models.extensions.WorkbookIcon;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFilterApplyIconFilterBody;
+import com.microsoft.graph.models.extensions.WorkbookFilterApplyIconFilterParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionRequestBuilder<WorkbookFilter> {
 
-    private WorkbookFilterApplyIconFilterBody body;
+    private WorkbookFilterApplyIconFilterParameterSet body;
     /**
      * The request builder for this WorkbookFilterApplyIconFilter
      *
@@ -30,7 +30,7 @@ public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyIconFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyIconFilterBody parameters) {
+    public WorkbookFilterApplyIconFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyIconFilterParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

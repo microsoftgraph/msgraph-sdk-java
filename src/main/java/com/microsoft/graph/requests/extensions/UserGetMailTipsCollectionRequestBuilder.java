@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse;
-import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
+import com.microsoft.graph.models.extensions.UserGetMailTipsParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -31,7 +31,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class UserGetMailTipsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<MailTips, UserGetMailTipsCollectionRequestBuilder, UserGetMailTipsCollectionResponse, UserGetMailTipsCollectionPage, UserGetMailTipsCollectionRequest> {
 
-    private UserGetMailTipsBody body;
+    private UserGetMailTipsParameterSet body;
     /**
      * The request builder for this collection of User
      *
@@ -40,7 +40,7 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionCollectio
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserGetMailTipsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserGetMailTipsBody parameters) {
+    public UserGetMailTipsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserGetMailTipsParameterSet parameters) {
         super(requestUrl, client, requestOptions, UserGetMailTipsCollectionRequestBuilder.class, UserGetMailTipsCollectionRequest.class);
         this.body = parameters;
     }

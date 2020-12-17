@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionResponse;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.extensions.DeviceConfigurationAssignBody;
+import com.microsoft.graph.models.extensions.DeviceConfigurationAssignParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -32,7 +32,7 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseActionCollec
 
 
     /** The body for the method */
-    protected DeviceConfigurationAssignBody body;
+    protected DeviceConfigurationAssignParameterSet body;
 
 
     /**
@@ -43,7 +43,7 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseActionCollec
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public DeviceConfigurationAssignCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceConfigurationAssignBody parameters) {
+    public DeviceConfigurationAssignCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceConfigurationAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionResponse.class, DeviceConfigurationAssignCollectionPage.class, DeviceConfigurationAssignCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -115,6 +115,16 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseActionCollec
     @Nonnull
     public DeviceConfigurationAssignCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public DeviceConfigurationAssignCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

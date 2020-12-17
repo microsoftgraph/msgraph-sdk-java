@@ -56,7 +56,7 @@ public class TodoTaskCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public TodoTaskDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.TodoTaskDeltaBody parameters) {
+    public TodoTaskDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.TodoTaskDeltaParameterSet parameters) {
         return new TodoTaskDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 

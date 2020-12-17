@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_Dist_RTRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Dist_RTBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Dist_RTParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsT_Dist_RTRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsT_Dist_RTBody body;
+    private WorkbookFunctionsT_Dist_RTParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsT_Dist_RT
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsT_Dist_RTRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsT_Dist_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsT_Dist_RTBody parameters) {
+    public WorkbookFunctionsT_Dist_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsT_Dist_RTParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

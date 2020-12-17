@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ServicePrincipalAddPasswordReques
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ServicePrincipalAddPasswordBody;
+import com.microsoft.graph.models.extensions.ServicePrincipalAddPasswordParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ServicePrincipalAddPasswordRequestBuilder extends BaseActionRequestBuilder<PasswordCredential> {
 
-    private ServicePrincipalAddPasswordBody body;
+    private ServicePrincipalAddPasswordParameterSet body;
     /**
      * The request builder for this ServicePrincipalAddPassword
      *
@@ -30,7 +30,7 @@ public class ServicePrincipalAddPasswordRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ServicePrincipalAddPasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalAddPasswordBody parameters) {
+    public ServicePrincipalAddPasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalAddPasswordParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

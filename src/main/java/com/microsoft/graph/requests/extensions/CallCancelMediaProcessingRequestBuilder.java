@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.CallCancelMediaProcessingRequest;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.CallCancelMediaProcessingBody;
+import com.microsoft.graph.models.extensions.CallCancelMediaProcessingParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class CallCancelMediaProcessingRequestBuilder extends BaseActionRequestBuilder<CancelMediaProcessingOperation> {
 
-    private CallCancelMediaProcessingBody body;
+    private CallCancelMediaProcessingParameterSet body;
     /**
      * The request builder for this CallCancelMediaProcessing
      *
@@ -30,7 +30,7 @@ public class CallCancelMediaProcessingRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallCancelMediaProcessingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallCancelMediaProcessingBody parameters) {
+    public CallCancelMediaProcessingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallCancelMediaProcessingParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

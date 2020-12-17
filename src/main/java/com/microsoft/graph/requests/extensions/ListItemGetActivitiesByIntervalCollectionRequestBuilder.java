@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequest;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionResponse;
-import com.microsoft.graph.models.extensions.ListItemGetActivitiesByIntervalBody;
+import com.microsoft.graph.models.extensions.ListItemGetActivitiesByIntervalParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -47,7 +47,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ListItemGetActivitiesByIntervalBody parameters) {
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ListItemGetActivitiesByIntervalParameterSet parameters) {
         super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

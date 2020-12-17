@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionResponse;
-import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberGroupsBody;
+import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberGroupsParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<String, DirectoryObjectGetMemberGroupsCollectionRequestBuilder, DirectoryObjectGetMemberGroupsCollectionResponse, DirectoryObjectGetMemberGroupsCollectionPage, DirectoryObjectGetMemberGroupsCollectionRequest> {
 
-    private DirectoryObjectGetMemberGroupsBody body;
+    private DirectoryObjectGetMemberGroupsParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject
      *
@@ -38,7 +38,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsBody parameters) {
+    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class, DirectoryObjectGetMemberGroupsCollectionRequest.class);
         this.body = parameters;
     }

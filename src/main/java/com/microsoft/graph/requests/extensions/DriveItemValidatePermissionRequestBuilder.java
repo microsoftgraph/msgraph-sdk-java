@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.DriveItemValidatePermissionReques
 import com.microsoft.graph.models.extensions.DriveItem;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.DriveItemValidatePermissionBody;
+import com.microsoft.graph.models.extensions.DriveItemValidatePermissionParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class DriveItemValidatePermissionRequestBuilder extends BaseActionRequestBuilder<DriveItem> {
 
-    private DriveItemValidatePermissionBody body;
+    private DriveItemValidatePermissionParameterSet body;
     /**
      * The request builder for this DriveItemValidatePermission
      *
@@ -30,7 +30,7 @@ public class DriveItemValidatePermissionRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveItemValidatePermissionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemValidatePermissionBody parameters) {
+    public DriveItemValidatePermissionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemValidatePermissionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.CallPlayPromptBody;
+import com.microsoft.graph.models.extensions.CallPlayPromptParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder<PlayPromptOperation> {
 
-    private CallPlayPromptBody body;
+    private CallPlayPromptParameterSet body;
     /**
      * The request builder for this CallPlayPrompt
      *
@@ -31,7 +31,7 @@ public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder<PlayP
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallPlayPromptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallPlayPromptBody parameters) {
+    public CallPlayPromptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallPlayPromptParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

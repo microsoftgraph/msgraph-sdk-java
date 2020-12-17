@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequest;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionResponse;
-import com.microsoft.graph.models.extensions.CalendarAllowedCalendarSharingRolesBody;
+import com.microsoft.graph.models.extensions.CalendarAllowedCalendarSharingRolesParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -37,7 +37,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarAllowedCalendarSharingRolesBody parameters) {
+    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarAllowedCalendarSharingRolesParameterSet parameters) {
         super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder.class, CalendarAllowedCalendarSharingRolesCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

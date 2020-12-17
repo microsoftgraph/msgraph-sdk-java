@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.PostForwardRequest;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.PostForwardBody;
+import com.microsoft.graph.models.extensions.PostForwardParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class PostForwardRequestBuilder extends BaseActionRequestBuilder<Post> {
 
-    private PostForwardBody body;
+    private PostForwardParameterSet body;
     /**
      * The request builder for this PostForward
      *
@@ -30,7 +30,7 @@ public class PostForwardRequestBuilder extends BaseActionRequestBuilder<Post> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public PostForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PostForwardBody parameters) {
+    public PostForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PostForwardParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

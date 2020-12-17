@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ScheduleShareRequest;
 import com.microsoft.graph.models.extensions.Schedule;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ScheduleShareBody;
+import com.microsoft.graph.models.extensions.ScheduleShareParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder<Schedule> {
 
-    private ScheduleShareBody body;
+    private ScheduleShareParameterSet body;
     /**
      * The request builder for this ScheduleShare
      *
@@ -30,7 +30,7 @@ public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder<Schedu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ScheduleShareRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ScheduleShareBody parameters) {
+    public ScheduleShareRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ScheduleShareParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

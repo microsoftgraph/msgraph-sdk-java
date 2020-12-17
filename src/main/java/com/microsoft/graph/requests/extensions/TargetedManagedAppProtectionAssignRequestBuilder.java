@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.TargetedManagedAppProtectionAssig
 import com.microsoft.graph.models.extensions.TargetedManagedAppProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.TargetedManagedAppProtectionAssignBody;
+import com.microsoft.graph.models.extensions.TargetedManagedAppProtectionAssignParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class TargetedManagedAppProtectionAssignRequestBuilder extends BaseActionRequestBuilder<TargetedManagedAppProtection> {
 
-    private TargetedManagedAppProtectionAssignBody body;
+    private TargetedManagedAppProtectionAssignParameterSet body;
     /**
      * The request builder for this TargetedManagedAppProtectionAssign
      *
@@ -30,7 +30,7 @@ public class TargetedManagedAppProtectionAssignRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public TargetedManagedAppProtectionAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TargetedManagedAppProtectionAssignBody parameters) {
+    public TargetedManagedAppProtectionAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TargetedManagedAppProtectionAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequest;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionResponse;
-import com.microsoft.graph.models.extensions.NotebookGetRecentNotebooksBody;
+import com.microsoft.graph.models.extensions.NotebookGetRecentNotebooksParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -37,7 +37,7 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public NotebookGetRecentNotebooksCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookGetRecentNotebooksBody parameters) {
+    public NotebookGetRecentNotebooksCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookGetRecentNotebooksParameterSet parameters) {
         super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionRequestBuilder.class, NotebookGetRecentNotebooksCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

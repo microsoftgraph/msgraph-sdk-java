@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.CallChangeScreenSharingRoleReques
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.generated.ScreenSharingRole;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.CallChangeScreenSharingRoleBody;
+import com.microsoft.graph.models.extensions.CallChangeScreenSharingRoleParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequestBuilder<Call> {
 
-    private CallChangeScreenSharingRoleBody body;
+    private CallChangeScreenSharingRoleParameterSet body;
     /**
      * The request builder for this CallChangeScreenSharingRole
      *
@@ -30,7 +30,7 @@ public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallChangeScreenSharingRoleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallChangeScreenSharingRoleBody parameters) {
+    public CallChangeScreenSharingRoleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallChangeScreenSharingRoleParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -56,7 +56,7 @@ public class AdministrativeUnitCollectionRequestBuilder extends BaseCollectionRe
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public AdministrativeUnitDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.AdministrativeUnitDeltaBody parameters) {
+    public AdministrativeUnitDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.AdministrativeUnitDeltaParameterSet parameters) {
         return new AdministrativeUnitDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 

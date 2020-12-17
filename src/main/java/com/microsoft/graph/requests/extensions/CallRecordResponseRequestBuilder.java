@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.RecordOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.CallRecordResponseBody;
+import com.microsoft.graph.models.extensions.CallRecordResponseParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder<RecordOperation> {
 
-    private CallRecordResponseBody body;
+    private CallRecordResponseParameterSet body;
     /**
      * The request builder for this CallRecordResponse
      *
@@ -31,7 +31,7 @@ public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder<R
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallRecordResponseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRecordResponseBody parameters) {
+    public CallRecordResponseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRecordResponseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

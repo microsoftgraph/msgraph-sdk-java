@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationAssi
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.DeviceEnrollmentConfigurationAssignBody;
+import com.microsoft.graph.models.extensions.DeviceEnrollmentConfigurationAssignParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActionRequestBuilder<DeviceEnrollmentConfiguration> {
 
-    private DeviceEnrollmentConfigurationAssignBody body;
+    private DeviceEnrollmentConfigurationAssignParameterSet body;
     /**
      * The request builder for this DeviceEnrollmentConfigurationAssign
      *
@@ -30,7 +30,7 @@ public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActio
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DeviceEnrollmentConfigurationAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceEnrollmentConfigurationAssignBody parameters) {
+    public DeviceEnrollmentConfigurationAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceEnrollmentConfigurationAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

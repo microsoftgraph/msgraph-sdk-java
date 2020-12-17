@@ -55,7 +55,7 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseCollectionRequest
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public DirectoryRoleDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.DirectoryRoleDeltaBody parameters) {
+    public DirectoryRoleDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.DirectoryRoleDeltaParameterSet parameters) {
         return new DirectoryRoleDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
     }
 

@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsConfidence_TRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsConfidence_TBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsConfidence_TParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsConfidence_TRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsConfidence_TBody body;
+    private WorkbookFunctionsConfidence_TParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsConfidence_T
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsConfidence_TRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsConfidence_TRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsConfidence_TBody parameters) {
+    public WorkbookFunctionsConfidence_TRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsConfidence_TParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ManagedEBookAssignRequest;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedEBookAssignBody;
+import com.microsoft.graph.models.extensions.ManagedEBookAssignParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ManagedEBookAssignRequestBuilder extends BaseActionRequestBuilder<ManagedEBook> {
 
-    private ManagedEBookAssignBody body;
+    private ManagedEBookAssignParameterSet body;
     /**
      * The request builder for this ManagedEBookAssign
      *
@@ -30,7 +30,7 @@ public class ManagedEBookAssignRequestBuilder extends BaseActionRequestBuilder<M
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedEBookAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedEBookAssignBody parameters) {
+    public ManagedEBookAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedEBookAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

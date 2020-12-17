@@ -9,7 +9,7 @@ import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.AttachmentCreateUploadSessionBody;
+import com.microsoft.graph.models.extensions.AttachmentCreateUploadSessionParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
  */
 public class AttachmentCreateUploadSessionRequestBuilder extends BaseActionRequestBuilder<UploadSession> {
 
-    private AttachmentCreateUploadSessionBody body;
+    private AttachmentCreateUploadSessionParameterSet body;
     /**
      * The request builder for this AttachmentCreateUploadSession
      *
@@ -31,7 +31,7 @@ public class AttachmentCreateUploadSessionRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public AttachmentCreateUploadSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final AttachmentCreateUploadSessionBody parameters) {
+    public AttachmentCreateUploadSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final AttachmentCreateUploadSessionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

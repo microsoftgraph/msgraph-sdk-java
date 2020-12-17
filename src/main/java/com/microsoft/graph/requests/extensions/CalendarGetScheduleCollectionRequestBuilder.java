@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequest;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResponse;
-import com.microsoft.graph.models.extensions.CalendarGetScheduleBody;
+import com.microsoft.graph.models.extensions.CalendarGetScheduleParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -30,7 +30,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<ScheduleInformation, CalendarGetScheduleCollectionRequestBuilder, CalendarGetScheduleCollectionResponse, CalendarGetScheduleCollectionPage, CalendarGetScheduleCollectionRequest> {
 
-    private CalendarGetScheduleBody body;
+    private CalendarGetScheduleParameterSet body;
     /**
      * The request builder for this collection of Calendar
      *
@@ -39,7 +39,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionColle
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CalendarGetScheduleCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarGetScheduleBody parameters) {
+    public CalendarGetScheduleCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarGetScheduleParameterSet parameters) {
         super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionRequestBuilder.class, CalendarGetScheduleCollectionRequest.class);
         this.body = parameters;
     }

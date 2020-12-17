@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeSortApplyRequest;
 import com.microsoft.graph.models.extensions.WorkbookRangeSort;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookRangeSortApplyBody;
+import com.microsoft.graph.models.extensions.WorkbookRangeSortApplyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookRangeSortApplyRequestBuilder extends BaseActionRequestBuilder<WorkbookRangeSort> {
 
-    private WorkbookRangeSortApplyBody body;
+    private WorkbookRangeSortApplyParameterSet body;
     /**
      * The request builder for this WorkbookRangeSortApply
      *
@@ -30,7 +30,7 @@ public class WorkbookRangeSortApplyRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeSortApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeSortApplyBody parameters) {
+    public WorkbookRangeSortApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeSortApplyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeMergeRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookRangeMergeBody;
+import com.microsoft.graph.models.extensions.WorkbookRangeMergeParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookRangeMergeRequestBuilder extends BaseActionRequestBuilder<WorkbookRange> {
 
-    private WorkbookRangeMergeBody body;
+    private WorkbookRangeMergeParameterSet body;
     /**
      * The request builder for this WorkbookRangeMerge
      *
@@ -30,7 +30,7 @@ public class WorkbookRangeMergeRequestBuilder extends BaseActionRequestBuilder<W
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeMergeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeMergeBody parameters) {
+    public WorkbookRangeMergeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeMergeParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

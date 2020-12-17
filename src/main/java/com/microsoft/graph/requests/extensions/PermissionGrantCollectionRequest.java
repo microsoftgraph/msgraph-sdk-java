@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionResponse;
 import com.microsoft.graph.models.extensions.Permission;
-import com.microsoft.graph.models.extensions.PermissionGrantBody;
+import com.microsoft.graph.models.extensions.PermissionGrantParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -33,7 +33,7 @@ public class PermissionGrantCollectionRequest extends BaseActionCollectionReques
 
 
     /** The body for the method */
-    protected PermissionGrantBody body;
+    protected PermissionGrantParameterSet body;
 
 
     /**
@@ -44,7 +44,7 @@ public class PermissionGrantCollectionRequest extends BaseActionCollectionReques
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PermissionGrantBody parameters) {
+    public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PermissionGrantParameterSet parameters) {
         super(requestUrl, client, requestOptions, PermissionGrantCollectionResponse.class, PermissionGrantCollectionPage.class, PermissionGrantCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -116,6 +116,16 @@ public class PermissionGrantCollectionRequest extends BaseActionCollectionReques
     @Nonnull
     public PermissionGrantCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public PermissionGrantCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

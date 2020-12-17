@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionRequest;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionResponse;
-import com.microsoft.graph.models.extensions.OutlookUserSupportedTimeZonesBody;
+import com.microsoft.graph.models.extensions.OutlookUserSupportedTimeZonesParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -48,7 +48,7 @@ public class OutlookUserSupportedTimeZonesCollectionRequestBuilder extends BaseF
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OutlookUserSupportedTimeZonesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OutlookUserSupportedTimeZonesBody parameters) {
+    public OutlookUserSupportedTimeZonesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OutlookUserSupportedTimeZonesParameterSet parameters) {
         super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionRequestBuilder.class, OutlookUserSupportedTimeZonesCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

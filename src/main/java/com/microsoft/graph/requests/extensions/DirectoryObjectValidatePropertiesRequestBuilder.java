@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectValidateProperties
 import com.microsoft.graph.models.extensions.DirectoryObject;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.DirectoryObjectValidatePropertiesBody;
+import com.microsoft.graph.models.extensions.DirectoryObjectValidatePropertiesParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionRequestBuilder<DirectoryObject> {
 
-    private DirectoryObjectValidatePropertiesBody body;
+    private DirectoryObjectValidatePropertiesParameterSet body;
     /**
      * The request builder for this DirectoryObjectValidateProperties
      *
@@ -30,7 +30,7 @@ public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionR
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectValidatePropertiesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectValidatePropertiesBody parameters) {
+    public DirectoryObjectValidatePropertiesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectValidatePropertiesParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

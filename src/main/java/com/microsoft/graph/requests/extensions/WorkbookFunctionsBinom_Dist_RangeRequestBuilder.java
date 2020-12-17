@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsBinom_Dist_Range
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_Dist_RangeBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_Dist_RangeParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsBinom_Dist_RangeBody body;
+    private WorkbookFunctionsBinom_Dist_RangeParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsBinom_Dist_Range
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseActionR
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBinom_Dist_RangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBinom_Dist_RangeBody parameters) {
+    public WorkbookFunctionsBinom_Dist_RangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBinom_Dist_RangeParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

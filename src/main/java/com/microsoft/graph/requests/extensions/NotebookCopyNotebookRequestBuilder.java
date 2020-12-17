@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.NotebookCopyNotebookRequest;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.NotebookCopyNotebookBody;
+import com.microsoft.graph.models.extensions.NotebookCopyNotebookParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class NotebookCopyNotebookRequestBuilder extends BaseActionRequestBuilder<OnenoteOperation> {
 
-    private NotebookCopyNotebookBody body;
+    private NotebookCopyNotebookParameterSet body;
     /**
      * The request builder for this NotebookCopyNotebook
      *
@@ -30,7 +30,7 @@ public class NotebookCopyNotebookRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public NotebookCopyNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookCopyNotebookBody parameters) {
+    public NotebookCopyNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookCopyNotebookParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

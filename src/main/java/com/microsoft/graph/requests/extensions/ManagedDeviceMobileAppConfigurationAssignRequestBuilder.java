@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignBody;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ManagedDeviceMobileAppConfigurationAssignRequestBuilder extends BaseActionRequestBuilder<ManagedDeviceMobileAppConfiguration> {
 
-    private ManagedDeviceMobileAppConfigurationAssignBody body;
+    private ManagedDeviceMobileAppConfigurationAssignParameterSet body;
     /**
      * The request builder for this ManagedDeviceMobileAppConfigurationAssign
      *
@@ -30,7 +30,7 @@ public class ManagedDeviceMobileAppConfigurationAssignRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedDeviceMobileAppConfigurationAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceMobileAppConfigurationAssignBody parameters) {
+    public ManagedDeviceMobileAppConfigurationAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceMobileAppConfigurationAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

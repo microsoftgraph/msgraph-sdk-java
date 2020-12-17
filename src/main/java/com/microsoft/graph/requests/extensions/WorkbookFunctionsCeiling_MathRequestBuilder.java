@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsCeiling_MathRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCeiling_MathBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCeiling_MathParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsCeiling_MathBody body;
+    private WorkbookFunctionsCeiling_MathParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsCeiling_Math
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsCeiling_MathRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCeiling_MathBody parameters) {
+    public WorkbookFunctionsCeiling_MathRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCeiling_MathParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

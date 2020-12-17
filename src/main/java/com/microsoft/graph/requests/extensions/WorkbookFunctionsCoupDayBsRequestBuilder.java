@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupDayBsRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupDayBsBody;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsCoupDayBsParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
-    private WorkbookFunctionsCoupDayBsBody body;
+    private WorkbookFunctionsCoupDayBsParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsCoupDayBs
      *
@@ -30,7 +30,7 @@ public class WorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsCoupDayBsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCoupDayBsBody parameters) {
+    public WorkbookFunctionsCoupDayBsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCoupDayBsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

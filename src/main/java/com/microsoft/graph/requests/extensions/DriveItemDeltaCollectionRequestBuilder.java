@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
-import com.microsoft.graph.models.extensions.DriveItemDeltaBody;
+import com.microsoft.graph.models.extensions.DriveItemDeltaParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -47,7 +47,7 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionCollecti
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveItemDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemDeltaBody parameters) {
+    public DriveItemDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemDeltaParameterSet parameters) {
         super(requestUrl, client, requestOptions, DriveItemDeltaCollectionRequestBuilder.class, DriveItemDeltaCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

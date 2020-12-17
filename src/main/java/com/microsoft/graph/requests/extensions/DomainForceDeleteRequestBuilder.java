@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.DomainForceDeleteRequest;
 import com.microsoft.graph.models.extensions.Domain;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.DomainForceDeleteBody;
+import com.microsoft.graph.models.extensions.DomainForceDeleteParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder<Domain> {
 
-    private DomainForceDeleteBody body;
+    private DomainForceDeleteParameterSet body;
     /**
      * The request builder for this DomainForceDelete
      *
@@ -30,7 +30,7 @@ public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder<Do
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DomainForceDeleteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DomainForceDeleteBody parameters) {
+    public DomainForceDeleteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DomainForceDeleteParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

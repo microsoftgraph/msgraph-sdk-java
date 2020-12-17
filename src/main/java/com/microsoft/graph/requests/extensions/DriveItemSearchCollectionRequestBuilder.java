@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionResponse;
-import com.microsoft.graph.models.extensions.DriveItemSearchBody;
+import com.microsoft.graph.models.extensions.DriveItemSearchParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -37,7 +37,7 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseFunctionCollect
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveItemSearchCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemSearchBody parameters) {
+    public DriveItemSearchCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemSearchParameterSet parameters) {
         super(requestUrl, client, requestOptions, DriveItemSearchCollectionRequestBuilder.class, DriveItemSearchCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

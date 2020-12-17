@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceCleanWindowsDeviceRe
 import com.microsoft.graph.models.extensions.ManagedDevice;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.ManagedDeviceCleanWindowsDeviceBody;
+import com.microsoft.graph.models.extensions.ManagedDeviceCleanWindowsDeviceParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionRequestBuilder<ManagedDevice> {
 
-    private ManagedDeviceCleanWindowsDeviceBody body;
+    private ManagedDeviceCleanWindowsDeviceParameterSet body;
     /**
      * The request builder for this ManagedDeviceCleanWindowsDevice
      *
@@ -30,7 +30,7 @@ public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionReq
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedDeviceCleanWindowsDeviceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceCleanWindowsDeviceBody parameters) {
+    public ManagedDeviceCleanWindowsDeviceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceCleanWindowsDeviceParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -8,7 +8,7 @@ import com.microsoft.graph.requests.extensions.UserExportPersonalDataRequest;
 import com.microsoft.graph.models.extensions.User;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.UserExportPersonalDataBody;
+import com.microsoft.graph.models.extensions.UserExportPersonalDataParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuilder<User> {
 
-    private UserExportPersonalDataBody body;
+    private UserExportPersonalDataParameterSet body;
     /**
      * The request builder for this UserExportPersonalData
      *
@@ -30,7 +30,7 @@ public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserExportPersonalDataRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserExportPersonalDataBody parameters) {
+    public UserExportPersonalDataRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserExportPersonalDataParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

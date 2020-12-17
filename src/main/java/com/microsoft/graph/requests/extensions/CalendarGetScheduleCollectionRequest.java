@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResponse;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
-import com.microsoft.graph.models.extensions.CalendarGetScheduleBody;
+import com.microsoft.graph.models.extensions.CalendarGetScheduleParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -33,7 +33,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseActionCollectionRe
 
 
     /** The body for the method */
-    protected CalendarGetScheduleBody body;
+    protected CalendarGetScheduleParameterSet body;
 
 
     /**
@@ -44,7 +44,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseActionCollectionRe
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public CalendarGetScheduleCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarGetScheduleBody parameters) {
+    public CalendarGetScheduleCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarGetScheduleParameterSet parameters) {
         super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionResponse.class, CalendarGetScheduleCollectionPage.class, CalendarGetScheduleCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -116,6 +116,16 @@ public class CalendarGetScheduleCollectionRequest extends BaseActionCollectionRe
     @Nonnull
     public CalendarGetScheduleCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public CalendarGetScheduleCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 

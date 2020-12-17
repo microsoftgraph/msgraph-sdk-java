@@ -7,7 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.MailFolderMoveRequest;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
-import com.microsoft.graph.models.extensions.MailFolderMoveBody;
+import com.microsoft.graph.models.extensions.MailFolderMoveParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
  */
 public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder<MailFolder> {
 
-    private MailFolderMoveBody body;
+    private MailFolderMoveParameterSet body;
     /**
      * The request builder for this MailFolderMove
      *
@@ -29,7 +29,7 @@ public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder<MailF
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public MailFolderMoveRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MailFolderMoveBody parameters) {
+    public MailFolderMoveRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MailFolderMoveParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

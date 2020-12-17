@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequest;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionResponse;
-import com.microsoft.graph.models.extensions.PermissionGrantBody;
+import com.microsoft.graph.models.extensions.PermissionGrantParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -30,7 +30,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class PermissionGrantCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<Permission, PermissionGrantCollectionRequestBuilder, PermissionGrantCollectionResponse, PermissionGrantCollectionPage, PermissionGrantCollectionRequest> {
 
-    private PermissionGrantBody body;
+    private PermissionGrantParameterSet body;
     /**
      * The request builder for this collection of Permission
      *
@@ -39,7 +39,7 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionCollectio
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public PermissionGrantCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PermissionGrantBody parameters) {
+    public PermissionGrantCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PermissionGrantParameterSet parameters) {
         super(requestUrl, client, requestOptions, PermissionGrantCollectionRequestBuilder.class, PermissionGrantCollectionRequest.class);
         this.body = parameters;
     }

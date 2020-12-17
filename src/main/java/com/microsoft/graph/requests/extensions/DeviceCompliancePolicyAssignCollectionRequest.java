@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionResponse;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignBody;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequest;
@@ -32,7 +32,7 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseActionCol
 
 
     /** The body for the method */
-    protected DeviceCompliancePolicyAssignBody body;
+    protected DeviceCompliancePolicyAssignParameterSet body;
 
 
     /**
@@ -43,7 +43,7 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseActionCol
      * @param requestOptions the options for this request
      * @param parameters the parameters for the service method
      */
-    public DeviceCompliancePolicyAssignCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyAssignBody parameters) {
+    public DeviceCompliancePolicyAssignCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionResponse.class, DeviceCompliancePolicyAssignCollectionPage.class, DeviceCompliancePolicyAssignCollectionRequestBuilder.class);
         body = parameters;
     }
@@ -115,6 +115,16 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseActionCol
     @Nonnull
     public DeviceCompliancePolicyAssignCollectionRequest skip(final int value) {
         addSkipOption(value);
+        return this;
+    }
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    @Nonnull
+    public DeviceCompliancePolicyAssignCollectionRequest skipToken(@Nonnull final String skipToken) {
+    	addSkipTokenOption(skipToken);
         return this;
     }
 
