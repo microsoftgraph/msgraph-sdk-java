@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookFilterApplyFontColorFilterParameterSet {
     /**
      * Fluent builder for the WorkbookFilterApplyFontColorFilterParameterSet
      */
-    public static final class WorkbookFilterApplyFontColorFilterParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFilterApplyFontColorFilterParameterSetBuilder {
         private String color;
         /**
          * Sets the Color

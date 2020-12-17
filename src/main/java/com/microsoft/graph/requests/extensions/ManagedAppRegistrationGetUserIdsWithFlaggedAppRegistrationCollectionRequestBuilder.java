@@ -38,7 +38,6 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *

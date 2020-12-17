@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -40,7 +39,7 @@ public class WorkbookTableCountParameterSet {
     /**
      * Fluent builder for the WorkbookTableCountParameterSet
      */
-    public static final class WorkbookTableCountParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookTableCountParameterSetBuilder {
         private WorkbookTableCountParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request

@@ -43,7 +43,6 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionCollectio
         super(requestUrl, client, requestOptions, PermissionGrantCollectionRequestBuilder.class, PermissionGrantCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

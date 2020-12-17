@@ -42,7 +42,6 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
         super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

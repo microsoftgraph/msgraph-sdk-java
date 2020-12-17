@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -130,7 +129,7 @@ public class WorkbookFunctionsOddFPriceParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsOddFPriceParameterSet
      */
-    public static final class WorkbookFunctionsOddFPriceParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsOddFPriceParameterSetBuilder {
         private com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement

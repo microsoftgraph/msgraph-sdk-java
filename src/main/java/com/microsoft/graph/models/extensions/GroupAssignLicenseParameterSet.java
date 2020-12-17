@@ -13,7 +13,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -61,7 +60,7 @@ public class GroupAssignLicenseParameterSet {
     /**
      * Fluent builder for the GroupAssignLicenseParameterSet
      */
-    public static final class GroupAssignLicenseParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class GroupAssignLicenseParameterSetBuilder {
         private java.util.List<AssignedLicense> addLicenses;
         /**
          * Sets the AddLicenses

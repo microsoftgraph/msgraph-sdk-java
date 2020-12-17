@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookWorksheetProtectionProtectParameterSet {
     /**
      * Fluent builder for the WorkbookWorksheetProtectionProtectParameterSet
      */
-    public static final class WorkbookWorksheetProtectionProtectParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookWorksheetProtectionProtectParameterSetBuilder {
         private WorkbookWorksheetProtectionOptions options;
         /**
          * Sets the Options

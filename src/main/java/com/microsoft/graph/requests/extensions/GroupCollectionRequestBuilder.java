@@ -53,15 +53,6 @@ public class GroupCollectionRequestBuilder extends BaseCollectionRequestBuilder<
     public GroupDeltaCollectionRequestBuilder delta() {
         return new GroupDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public GroupDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.GroupDeltaParameterSet parameters) {
-        return new GroupDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

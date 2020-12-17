@@ -43,7 +43,6 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

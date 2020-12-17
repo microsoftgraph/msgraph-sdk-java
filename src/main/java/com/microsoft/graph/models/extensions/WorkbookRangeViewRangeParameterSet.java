@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -40,7 +39,7 @@ public class WorkbookRangeViewRangeParameterSet {
     /**
      * Fluent builder for the WorkbookRangeViewRangeParameterSet
      */
-    public static final class WorkbookRangeViewRangeParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookRangeViewRangeParameterSetBuilder {
         private WorkbookRangeViewRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request

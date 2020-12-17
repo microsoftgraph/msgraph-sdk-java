@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookFunctionsFisherParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsFisherParameterSet
      */
-    public static final class WorkbookFunctionsFisherParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsFisherParameterSetBuilder {
         private com.google.gson.JsonElement x;
         /**
          * Sets the X

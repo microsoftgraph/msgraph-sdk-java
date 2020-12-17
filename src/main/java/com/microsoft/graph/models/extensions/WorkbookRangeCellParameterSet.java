@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -60,7 +59,7 @@ public class WorkbookRangeCellParameterSet {
     /**
      * Fluent builder for the WorkbookRangeCellParameterSet
      */
-    public static final class WorkbookRangeCellParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookRangeCellParameterSetBuilder {
         private Integer row;
         /**
          * Sets the Row

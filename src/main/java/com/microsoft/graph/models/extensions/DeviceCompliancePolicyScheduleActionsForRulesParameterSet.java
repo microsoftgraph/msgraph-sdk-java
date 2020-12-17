@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesParameterSet {
     /**
      * Fluent builder for the DeviceCompliancePolicyScheduleActionsForRulesParameterSet
      */
-    public static final class DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder {
         private java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules;
         /**
          * Sets the DeviceComplianceScheduledActionForRules

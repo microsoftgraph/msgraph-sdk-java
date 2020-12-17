@@ -38,7 +38,6 @@ public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionColl
     public UserActivityRecentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserActivityRecentCollectionRequestBuilder.class, UserActivityRecentCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *

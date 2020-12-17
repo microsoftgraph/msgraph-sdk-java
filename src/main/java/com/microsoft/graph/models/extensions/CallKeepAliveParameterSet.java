@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -40,7 +39,7 @@ public class CallKeepAliveParameterSet {
     /**
      * Fluent builder for the CallKeepAliveParameterSet
      */
-    public static final class CallKeepAliveParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class CallKeepAliveParameterSetBuilder {
         private CallKeepAliveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request

@@ -54,7 +54,6 @@ public class OutlookUserSupportedTimeZonesCollectionRequestBuilder extends BaseF
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

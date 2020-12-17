@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -60,7 +59,7 @@ public class WorkbookFunctionsHex2OctParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsHex2OctParameterSet
      */
-    public static final class WorkbookFunctionsHex2OctParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsHex2OctParameterSetBuilder {
         private com.google.gson.JsonElement number;
         /**
          * Sets the Number

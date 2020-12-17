@@ -51,15 +51,6 @@ public class MailFolderCollectionRequestBuilder extends BaseCollectionRequestBui
     public MailFolderDeltaCollectionRequestBuilder delta() {
         return new MailFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public MailFolderDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.MailFolderDeltaParameterSet parameters) {
-        return new MailFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

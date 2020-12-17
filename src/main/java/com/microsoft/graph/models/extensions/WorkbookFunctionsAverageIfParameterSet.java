@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -70,7 +69,7 @@ public class WorkbookFunctionsAverageIfParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsAverageIfParameterSet
      */
-    public static final class WorkbookFunctionsAverageIfParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsAverageIfParameterSetBuilder {
         private com.google.gson.JsonElement range;
         /**
          * Sets the Range

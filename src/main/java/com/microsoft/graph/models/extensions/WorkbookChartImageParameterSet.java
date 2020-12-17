@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -40,7 +39,7 @@ public class WorkbookChartImageParameterSet {
     /**
      * Fluent builder for the WorkbookChartImageParameterSet
      */
-    public static final class WorkbookChartImageParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookChartImageParameterSetBuilder {
         private WorkbookChartImageParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request

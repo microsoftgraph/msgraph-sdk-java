@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -80,7 +79,7 @@ public class WorkbookFunctionsHlookupParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsHlookupParameterSet
      */
-    public static final class WorkbookFunctionsHlookupParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsHlookupParameterSetBuilder {
         private com.google.gson.JsonElement lookupValue;
         /**
          * Sets the LookupValue

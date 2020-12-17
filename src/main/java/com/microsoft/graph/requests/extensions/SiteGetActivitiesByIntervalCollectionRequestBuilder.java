@@ -53,7 +53,6 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

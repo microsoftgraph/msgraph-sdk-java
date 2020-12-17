@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class ReportRootGetOffice365GroupsActivityCountsParameterSet {
     /**
      * Fluent builder for the ReportRootGetOffice365GroupsActivityCountsParameterSet
      */
-    public static final class ReportRootGetOffice365GroupsActivityCountsParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class ReportRootGetOffice365GroupsActivityCountsParameterSetBuilder {
         private String period;
         /**
          * Sets the Period

@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -60,7 +59,7 @@ public class WorkbookFunctionsNorm_S_DistParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsNorm_S_DistParameterSet
      */
-    public static final class WorkbookFunctionsNorm_S_DistParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsNorm_S_DistParameterSetBuilder {
         private com.google.gson.JsonElement z;
         /**
          * Sets the Z

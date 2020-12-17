@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -42,16 +41,10 @@ public class WorkbookFunctionsDeltaParameterSet {
 
 
     /**
-     * The delta token.
-     */
-    @Nullable
-    public String deltaToken;
-    /**
      * Instiaciates a new WorkbookFunctionsDeltaParameterSet
      */
     public WorkbookFunctionsDeltaParameterSet() {}
     private WorkbookFunctionsDeltaParameterSet(@Nonnull final WorkbookFunctionsDeltaParameterSetBuilder builder) {
-        this.deltaToken = builder.deltaToken;
         this.number1 = builder.number1;
         this.number2 = builder.number2;
     }
@@ -66,28 +59,7 @@ public class WorkbookFunctionsDeltaParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsDeltaParameterSet
      */
-    public static final class WorkbookFunctionsDeltaParameterSetBuilder extends BaseMethodParameterSetBuilder {
-        private String deltaToken;
-        /**
-         * Sets the deltaToken
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public WorkbookFunctionsDeltaParameterSetBuilder withDeltaToken(@Nullable final String val) {
-            this.deltaToken = val;
-            return this;
-        }
-        /**
-         * Sets the deltaToken from the returned deltalink from the previous request
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public WorkbookFunctionsDeltaParameterSetBuilder withDeltaLink(@Nullable final String val) {
-            this.deltaToken = this.getDeltaTokenFromLink(val);
-            return this;
-        }
+    public static final class WorkbookFunctionsDeltaParameterSetBuilder {
         private com.google.gson.JsonElement number1;
         /**
          * Sets the Number1
@@ -127,9 +99,6 @@ public class WorkbookFunctionsDeltaParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
-        if(this.deltaToken != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("$deltaToken", deltaToken));
-        }
         if(this.number1 != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("number1", number1));
         }

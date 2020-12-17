@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -60,7 +59,7 @@ public class WorkbookTableRowAddParameterSet {
     /**
      * Fluent builder for the WorkbookTableRowAddParameterSet
      */
-    public static final class WorkbookTableRowAddParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookTableRowAddParameterSetBuilder {
         private Integer index;
         /**
          * Sets the Index

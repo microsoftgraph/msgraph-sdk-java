@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class ReportRootGetTeamsUserActivityUserDetailParameterSet {
     /**
      * Fluent builder for the ReportRootGetTeamsUserActivityUserDetailParameterSet
      */
-    public static final class ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder {
         private com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date

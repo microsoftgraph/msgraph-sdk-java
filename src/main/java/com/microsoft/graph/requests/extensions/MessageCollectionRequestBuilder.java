@@ -59,15 +59,6 @@ public class MessageCollectionRequestBuilder extends BaseCollectionRequestBuilde
     public MessageDeltaCollectionRequestBuilder delta() {
         return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public MessageDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.MessageDeltaParameterSet parameters) {
-        return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

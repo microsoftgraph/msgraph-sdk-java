@@ -43,7 +43,6 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseFunctionCollect
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

@@ -14,7 +14,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -62,7 +61,7 @@ public class UserGetMailTipsParameterSet {
     /**
      * Fluent builder for the UserGetMailTipsParameterSet
      */
-    public static final class UserGetMailTipsParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class UserGetMailTipsParameterSetBuilder {
         private java.util.List<String> emailAddresses;
         /**
          * Sets the EmailAddresses

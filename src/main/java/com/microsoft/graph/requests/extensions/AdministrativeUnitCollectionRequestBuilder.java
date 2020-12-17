@@ -50,15 +50,6 @@ public class AdministrativeUnitCollectionRequestBuilder extends BaseCollectionRe
     public AdministrativeUnitDeltaCollectionRequestBuilder delta() {
         return new AdministrativeUnitDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public AdministrativeUnitDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.AdministrativeUnitDeltaParameterSet parameters) {
-        return new AdministrativeUnitDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

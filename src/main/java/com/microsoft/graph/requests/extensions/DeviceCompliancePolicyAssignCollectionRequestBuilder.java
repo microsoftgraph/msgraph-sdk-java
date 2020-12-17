@@ -42,7 +42,6 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionRequestBuilder.class, DeviceCompliancePolicyAssignCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

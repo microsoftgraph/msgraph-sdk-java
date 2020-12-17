@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -70,7 +69,7 @@ public class WorkbookFunctionsConfidence_NormParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsConfidence_NormParameterSet
      */
-    public static final class WorkbookFunctionsConfidence_NormParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsConfidence_NormParameterSetBuilder {
         private com.google.gson.JsonElement alpha;
         /**
          * Sets the Alpha

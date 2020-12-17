@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -70,7 +69,7 @@ public class WorkbookFunctionsDcountParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsDcountParameterSet
      */
-    public static final class WorkbookFunctionsDcountParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsDcountParameterSetBuilder {
         private com.google.gson.JsonElement database;
         /**
          * Sets the Database

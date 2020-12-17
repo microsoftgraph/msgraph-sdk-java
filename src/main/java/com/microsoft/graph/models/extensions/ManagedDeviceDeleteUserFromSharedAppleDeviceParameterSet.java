@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet {
     /**
      * Fluent builder for the ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet
      */
-    public static final class ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder {
         private String userPrincipalName;
         /**
          * Sets the UserPrincipalName

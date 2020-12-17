@@ -38,7 +38,6 @@ public class GroupCheckGrantedPermissionsForAppCollectionRequestBuilder extends 
     public GroupCheckGrantedPermissionsForAppCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupCheckGrantedPermissionsForAppCollectionRequestBuilder.class, GroupCheckGrantedPermissionsForAppCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *

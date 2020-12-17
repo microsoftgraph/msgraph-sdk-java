@@ -42,7 +42,6 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder ext
         super(requestUrl, client, requestOptions, CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder.class, CloudCommunicationsGetPresencesByUserIdCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

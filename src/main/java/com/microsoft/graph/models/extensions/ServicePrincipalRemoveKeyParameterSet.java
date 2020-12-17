@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -60,7 +59,7 @@ public class ServicePrincipalRemoveKeyParameterSet {
     /**
      * Fluent builder for the ServicePrincipalRemoveKeyParameterSet
      */
-    public static final class ServicePrincipalRemoveKeyParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class ServicePrincipalRemoveKeyParameterSetBuilder {
         private java.util.UUID keyId;
         /**
          * Sets the KeyId

@@ -38,7 +38,6 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends
     public UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder.class, UserGetManagedAppDiagnosticStatusesCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *

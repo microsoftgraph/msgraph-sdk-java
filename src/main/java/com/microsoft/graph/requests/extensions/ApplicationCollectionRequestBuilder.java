@@ -55,15 +55,6 @@ public class ApplicationCollectionRequestBuilder extends BaseCollectionRequestBu
     public ApplicationDeltaCollectionRequestBuilder delta() {
         return new ApplicationDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public ApplicationDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.ApplicationDeltaParameterSet parameters) {
-        return new ApplicationDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

@@ -38,7 +38,6 @@ public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionColl
     public ChatGetAllMessagesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionRequestBuilder.class, ChatGetAllMessagesCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *

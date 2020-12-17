@@ -13,7 +13,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -121,7 +120,7 @@ public class CallRecordResponseParameterSet {
     /**
      * Fluent builder for the CallRecordResponseParameterSet
      */
-    public static final class CallRecordResponseParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class CallRecordResponseParameterSetBuilder {
         private java.util.List<Prompt> prompts;
         /**
          * Sets the Prompts

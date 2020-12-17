@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookApplicationCalculateParameterSet {
     /**
      * Fluent builder for the WorkbookApplicationCalculateParameterSet
      */
-    public static final class WorkbookApplicationCalculateParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookApplicationCalculateParameterSetBuilder {
         private String calculationType;
         /**
          * Sets the CalculationType

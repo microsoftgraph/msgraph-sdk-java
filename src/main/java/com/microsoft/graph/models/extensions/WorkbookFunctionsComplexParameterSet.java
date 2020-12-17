@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -70,7 +69,7 @@ public class WorkbookFunctionsComplexParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsComplexParameterSet
      */
-    public static final class WorkbookFunctionsComplexParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsComplexParameterSetBuilder {
         private com.google.gson.JsonElement realNum;
         /**
          * Sets the RealNum

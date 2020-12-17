@@ -42,7 +42,6 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequestBuilder extends B
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionRequestBuilder.class, DirectoryObjectCheckMemberObjectsCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

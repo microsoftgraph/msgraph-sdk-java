@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -60,7 +59,7 @@ public class WorkbookFunctionsQuartile_ExcParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsQuartile_ExcParameterSet
      */
-    public static final class WorkbookFunctionsQuartile_ExcParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsQuartile_ExcParameterSetBuilder {
         private com.google.gson.JsonElement array;
         /**
          * Sets the Array

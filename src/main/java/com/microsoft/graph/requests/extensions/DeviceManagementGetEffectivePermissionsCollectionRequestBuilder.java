@@ -43,7 +43,6 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

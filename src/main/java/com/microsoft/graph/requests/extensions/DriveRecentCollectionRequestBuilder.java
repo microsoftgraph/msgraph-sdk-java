@@ -38,7 +38,6 @@ public class DriveRecentCollectionRequestBuilder extends BaseFunctionCollectionR
     public DriveRecentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveRecentCollectionRequestBuilder.class, DriveRecentCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *

@@ -44,7 +44,6 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionCollectio
         super(requestUrl, client, requestOptions, UserGetMailTipsCollectionRequestBuilder.class, UserGetMailTipsCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

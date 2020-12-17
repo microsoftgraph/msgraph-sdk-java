@@ -14,7 +14,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -102,7 +101,7 @@ public class OnlineMeetingCreateOrGetParameterSet {
     /**
      * Fluent builder for the OnlineMeetingCreateOrGetParameterSet
      */
-    public static final class OnlineMeetingCreateOrGetParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class OnlineMeetingCreateOrGetParameterSetBuilder {
         private ChatInfo chatInfo;
         /**
          * Sets the ChatInfo

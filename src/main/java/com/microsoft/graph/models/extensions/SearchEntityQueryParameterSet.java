@@ -13,7 +13,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -51,7 +50,7 @@ public class SearchEntityQueryParameterSet {
     /**
      * Fluent builder for the SearchEntityQueryParameterSet
      */
-    public static final class SearchEntityQueryParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class SearchEntityQueryParameterSetBuilder {
         private java.util.List<SearchRequest> requests;
         /**
          * Sets the Requests

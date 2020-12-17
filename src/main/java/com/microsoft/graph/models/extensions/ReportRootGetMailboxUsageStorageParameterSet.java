@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class ReportRootGetMailboxUsageStorageParameterSet {
     /**
      * Fluent builder for the ReportRootGetMailboxUsageStorageParameterSet
      */
-    public static final class ReportRootGetMailboxUsageStorageParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class ReportRootGetMailboxUsageStorageParameterSetBuilder {
         private String period;
         /**
          * Sets the Period

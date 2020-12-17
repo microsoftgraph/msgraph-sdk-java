@@ -42,7 +42,6 @@ public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends Bas
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberObjectsCollectionRequestBuilder.class, DirectoryObjectGetMemberObjectsCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

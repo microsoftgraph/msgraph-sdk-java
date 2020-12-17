@@ -42,7 +42,6 @@ public class SiteAddCollectionRequestBuilder extends BaseActionCollectionRequest
         super(requestUrl, client, requestOptions, SiteAddCollectionRequestBuilder.class, SiteAddCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

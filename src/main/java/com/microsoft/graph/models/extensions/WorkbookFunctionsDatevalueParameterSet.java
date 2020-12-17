@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookFunctionsDatevalueParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsDatevalueParameterSet
      */
-    public static final class WorkbookFunctionsDatevalueParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsDatevalueParameterSetBuilder {
         private com.google.gson.JsonElement dateText;
         /**
          * Sets the DateText

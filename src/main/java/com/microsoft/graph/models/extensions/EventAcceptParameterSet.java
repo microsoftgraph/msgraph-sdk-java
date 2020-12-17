@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -60,7 +59,7 @@ public class EventAcceptParameterSet {
     /**
      * Fluent builder for the EventAcceptParameterSet
      */
-    public static final class EventAcceptParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class EventAcceptParameterSetBuilder {
         private String comment;
         /**
          * Sets the Comment

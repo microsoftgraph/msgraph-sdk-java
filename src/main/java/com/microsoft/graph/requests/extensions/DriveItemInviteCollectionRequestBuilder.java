@@ -43,7 +43,6 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionCollectio
         super(requestUrl, client, requestOptions, DriveItemInviteCollectionRequestBuilder.class, DriveItemInviteCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

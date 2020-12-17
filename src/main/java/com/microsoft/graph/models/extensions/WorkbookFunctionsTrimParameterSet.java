@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookFunctionsTrimParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsTrimParameterSet
      */
-    public static final class WorkbookFunctionsTrimParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsTrimParameterSetBuilder {
         private com.google.gson.JsonElement text;
         /**
          * Sets the Text

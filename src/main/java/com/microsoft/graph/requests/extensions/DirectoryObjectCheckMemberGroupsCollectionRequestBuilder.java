@@ -42,7 +42,6 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder.class, DirectoryObjectCheckMemberGroupsCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

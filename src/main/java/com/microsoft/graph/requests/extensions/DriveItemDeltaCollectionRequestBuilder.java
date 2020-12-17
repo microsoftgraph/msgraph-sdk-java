@@ -53,7 +53,6 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionCollecti
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

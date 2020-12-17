@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookFilterApplyIconFilterParameterSet {
     /**
      * Fluent builder for the WorkbookFilterApplyIconFilterParameterSet
      */
-    public static final class WorkbookFilterApplyIconFilterParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFilterApplyIconFilterParameterSetBuilder {
         private WorkbookIcon icon;
         /**
          * Sets the Icon

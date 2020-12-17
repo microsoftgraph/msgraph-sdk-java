@@ -38,7 +38,6 @@ public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunct
     public UserGetManagedAppPoliciesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionRequestBuilder.class, UserGetManagedAppPoliciesCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *

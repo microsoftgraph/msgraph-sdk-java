@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class DirectoryObjectCheckMemberGroupsParameterSet {
     /**
      * Fluent builder for the DirectoryObjectCheckMemberGroupsParameterSet
      */
-    public static final class DirectoryObjectCheckMemberGroupsParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class DirectoryObjectCheckMemberGroupsParameterSetBuilder {
         private java.util.List<String> groupIds;
         /**
          * Sets the GroupIds

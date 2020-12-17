@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -90,7 +89,7 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsHypGeom_DistParameterSet
      */
-    public static final class WorkbookFunctionsHypGeom_DistParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsHypGeom_DistParameterSetBuilder {
         private com.google.gson.JsonElement sampleS;
         /**
          * Sets the SampleS

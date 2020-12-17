@@ -53,7 +53,6 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

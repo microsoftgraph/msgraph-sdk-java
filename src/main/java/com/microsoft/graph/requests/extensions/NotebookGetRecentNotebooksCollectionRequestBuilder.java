@@ -43,7 +43,6 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

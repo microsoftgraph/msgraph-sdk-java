@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class TargetedManagedAppConfigurationAssignParameterSet {
     /**
      * Fluent builder for the TargetedManagedAppConfigurationAssignParameterSet
      */
-    public static final class TargetedManagedAppConfigurationAssignParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class TargetedManagedAppConfigurationAssignParameterSetBuilder {
         private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
         /**
          * Sets the Assignments

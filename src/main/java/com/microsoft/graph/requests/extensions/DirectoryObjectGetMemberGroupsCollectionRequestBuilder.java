@@ -42,7 +42,6 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class, DirectoryObjectGetMemberGroupsCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

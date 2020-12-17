@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -24,16 +23,10 @@ import java.util.ArrayList;
 public class OrgContactDeltaParameterSet {
 
     /**
-     * The delta token.
-     */
-    @Nullable
-    public String deltaToken;
-    /**
      * Instiaciates a new OrgContactDeltaParameterSet
      */
     public OrgContactDeltaParameterSet() {}
     private OrgContactDeltaParameterSet(@Nonnull final OrgContactDeltaParameterSetBuilder builder) {
-        this.deltaToken = builder.deltaToken;
     }
     /**
      * Gets a new builder for the body
@@ -46,28 +39,7 @@ public class OrgContactDeltaParameterSet {
     /**
      * Fluent builder for the OrgContactDeltaParameterSet
      */
-    public static final class OrgContactDeltaParameterSetBuilder extends BaseMethodParameterSetBuilder {
-        private String deltaToken;
-        /**
-         * Sets the deltaToken
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public OrgContactDeltaParameterSetBuilder withDeltaToken(@Nullable final String val) {
-            this.deltaToken = val;
-            return this;
-        }
-        /**
-         * Sets the deltaToken from the returned deltalink from the previous request
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public OrgContactDeltaParameterSetBuilder withDeltaLink(@Nullable final String val) {
-            this.deltaToken = this.getDeltaTokenFromLink(val);
-            return this;
-        }
+    public static final class OrgContactDeltaParameterSetBuilder {
         private OrgContactDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
@@ -85,9 +57,6 @@ public class OrgContactDeltaParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
-        if(this.deltaToken != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("$deltaToken", deltaToken));
-        }
         return result;
     }
     /**

@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -80,7 +79,7 @@ public class WorkbookFunctionsBinom_Dist_RangeParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsBinom_Dist_RangeParameterSet
      */
-    public static final class WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder {
         private com.google.gson.JsonElement trials;
         /**
          * Sets the Trials

@@ -43,7 +43,6 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionCollec
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

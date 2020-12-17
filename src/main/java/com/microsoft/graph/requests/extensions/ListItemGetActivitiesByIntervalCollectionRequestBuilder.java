@@ -53,7 +53,6 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
             functionOptions = parameters.getFunctionOptions();
         }
     }
-    
     /**
      * Creates the request
      *

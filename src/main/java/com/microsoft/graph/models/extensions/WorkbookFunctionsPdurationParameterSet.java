@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -70,7 +69,7 @@ public class WorkbookFunctionsPdurationParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsPdurationParameterSet
      */
-    public static final class WorkbookFunctionsPdurationParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsPdurationParameterSetBuilder {
         private com.google.gson.JsonElement rate;
         /**
          * Sets the Rate

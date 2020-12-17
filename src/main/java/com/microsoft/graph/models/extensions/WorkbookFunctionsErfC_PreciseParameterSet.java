@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookFunctionsErfC_PreciseParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsErfC_PreciseParameterSet
      */
-    public static final class WorkbookFunctionsErfC_PreciseParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsErfC_PreciseParameterSetBuilder {
         private com.google.gson.JsonElement x;
         /**
          * Sets the X

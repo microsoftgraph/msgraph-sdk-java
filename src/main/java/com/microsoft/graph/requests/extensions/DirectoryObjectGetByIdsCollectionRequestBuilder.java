@@ -42,7 +42,6 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionC
         super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionRequestBuilder.class, DirectoryObjectGetByIdsCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

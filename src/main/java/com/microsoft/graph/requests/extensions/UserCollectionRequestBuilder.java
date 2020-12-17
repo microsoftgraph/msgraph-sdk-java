@@ -72,15 +72,6 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
     public UserDeltaCollectionRequestBuilder delta() {
         return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public UserDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.UserDeltaParameterSet parameters) {
-        return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

@@ -43,7 +43,6 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
         super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionRequestBuilder.class, UserTranslateExchangeIdsCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

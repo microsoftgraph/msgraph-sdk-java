@@ -49,15 +49,6 @@ public class OrgContactCollectionRequestBuilder extends BaseCollectionRequestBui
     public OrgContactDeltaCollectionRequestBuilder delta() {
         return new OrgContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public OrgContactDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.OrgContactDeltaParameterSet parameters) {
-        return new OrgContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

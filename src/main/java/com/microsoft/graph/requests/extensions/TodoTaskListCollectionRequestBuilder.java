@@ -50,15 +50,6 @@ public class TodoTaskListCollectionRequestBuilder extends BaseCollectionRequestB
     public TodoTaskListDeltaCollectionRequestBuilder delta() {
         return new TodoTaskListDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public TodoTaskListDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.TodoTaskListDeltaParameterSet parameters) {
-        return new TodoTaskListDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

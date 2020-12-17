@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -60,7 +59,7 @@ public class WorkbookChartSetDataParameterSet {
     /**
      * Fluent builder for the WorkbookChartSetDataParameterSet
      */
-    public static final class WorkbookChartSetDataParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookChartSetDataParameterSetBuilder {
         private com.google.gson.JsonElement sourceData;
         /**
          * Sets the SourceData

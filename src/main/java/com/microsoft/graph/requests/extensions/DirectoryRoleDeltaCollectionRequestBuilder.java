@@ -39,21 +39,6 @@ public class DirectoryRoleDeltaCollectionRequestBuilder extends BaseFunctionColl
         super(requestUrl, client, requestOptions, DirectoryRoleDeltaCollectionRequestBuilder.class, DirectoryRoleDeltaCollectionRequest.class);
     }
     /**
-     * The request builder for this collection of DirectoryRole
-     *
-     * @param requestUrl     the request URL
-     * @param client         the service client
-     * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
-     */
-    public DirectoryRoleDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final com.microsoft.graph.models.extensions.DirectoryRoleDeltaParameterSet parameters) {
-        super(requestUrl, client, requestOptions, DirectoryRoleDeltaCollectionRequestBuilder.class, DirectoryRoleDeltaCollectionRequest.class);
-        if(parameters != null) {
-            functionOptions = parameters.getFunctionOptions();
-        }
-    }
-    
-    /**
      * Creates the request
      *
      * @param requestOptions the options for this request

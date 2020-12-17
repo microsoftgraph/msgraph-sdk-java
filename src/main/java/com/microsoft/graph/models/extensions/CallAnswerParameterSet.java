@@ -13,7 +13,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -71,7 +70,7 @@ public class CallAnswerParameterSet {
     /**
      * Fluent builder for the CallAnswerParameterSet
      */
-    public static final class CallAnswerParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class CallAnswerParameterSetBuilder {
         private String callbackUri;
         /**
          * Sets the CallbackUri

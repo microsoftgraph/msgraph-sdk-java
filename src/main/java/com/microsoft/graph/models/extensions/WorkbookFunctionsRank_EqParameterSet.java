@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -70,7 +69,7 @@ public class WorkbookFunctionsRank_EqParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsRank_EqParameterSet
      */
-    public static final class WorkbookFunctionsRank_EqParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsRank_EqParameterSetBuilder {
         private com.google.gson.JsonElement number;
         /**
          * Sets the Number

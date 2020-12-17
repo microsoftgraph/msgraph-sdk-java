@@ -42,7 +42,6 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionRequestBuilder.class, DeviceConfigurationAssignCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

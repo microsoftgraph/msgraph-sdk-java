@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -90,7 +89,7 @@ public class WorkbookFunctionsBeta_InvParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsBeta_InvParameterSet
      */
-    public static final class WorkbookFunctionsBeta_InvParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsBeta_InvParameterSetBuilder {
         private com.google.gson.JsonElement probability;
         /**
          * Sets the Probability

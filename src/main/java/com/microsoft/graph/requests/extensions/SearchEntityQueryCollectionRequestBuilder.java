@@ -43,7 +43,6 @@ public class SearchEntityQueryCollectionRequestBuilder extends BaseActionCollect
         super(requestUrl, client, requestOptions, SearchEntityQueryCollectionRequestBuilder.class, SearchEntityQueryCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

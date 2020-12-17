@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -110,7 +109,7 @@ public class WorkbookFunctionsAmorDegrcParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsAmorDegrcParameterSet
      */
-    public static final class WorkbookFunctionsAmorDegrcParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsAmorDegrcParameterSetBuilder {
         private com.google.gson.JsonElement cost;
         /**
          * Sets the Cost

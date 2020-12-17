@@ -13,7 +13,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -61,7 +60,7 @@ public class PermissionGrantParameterSet {
     /**
      * Fluent builder for the PermissionGrantParameterSet
      */
-    public static final class PermissionGrantParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class PermissionGrantParameterSetBuilder {
         private java.util.List<String> roles;
         /**
          * Sets the Roles

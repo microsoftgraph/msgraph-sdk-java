@@ -43,7 +43,6 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionColle
         super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionRequestBuilder.class, CalendarGetScheduleCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *

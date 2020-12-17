@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class WorkbookFunctionsSkew_pParameterSet {
     /**
      * Fluent builder for the WorkbookFunctionsSkew_pParameterSet
      */
-    public static final class WorkbookFunctionsSkew_pParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class WorkbookFunctionsSkew_pParameterSetBuilder {
         private com.google.gson.JsonElement values;
         /**
          * Sets the Values

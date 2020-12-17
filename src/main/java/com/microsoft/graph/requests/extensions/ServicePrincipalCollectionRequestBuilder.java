@@ -55,15 +55,6 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseCollectionRequ
     public ServicePrincipalDeltaCollectionRequestBuilder delta() {
         return new ServicePrincipalDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public ServicePrincipalDeltaCollectionRequestBuilder delta(@Nonnull final com.microsoft.graph.models.extensions.ServicePrincipalDeltaParameterSet parameters) {
-        return new ServicePrincipalDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

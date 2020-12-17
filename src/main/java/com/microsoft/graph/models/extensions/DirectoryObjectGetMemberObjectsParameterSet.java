@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -50,7 +49,7 @@ public class DirectoryObjectGetMemberObjectsParameterSet {
     /**
      * Fluent builder for the DirectoryObjectGetMemberObjectsParameterSet
      */
-    public static final class DirectoryObjectGetMemberObjectsParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class DirectoryObjectGetMemberObjectsParameterSetBuilder {
         private Boolean securityEnabledOnly;
         /**
          * Sets the SecurityEnabledOnly

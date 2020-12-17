@@ -13,7 +13,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.http.BaseMethodParameterSetBuilder;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -71,7 +70,7 @@ public class ApplicationAddKeyParameterSet {
     /**
      * Fluent builder for the ApplicationAddKeyParameterSet
      */
-    public static final class ApplicationAddKeyParameterSetBuilder extends BaseMethodParameterSetBuilder {
+    public static final class ApplicationAddKeyParameterSetBuilder {
         private KeyCredential keyCredential;
         /**
          * Sets the KeyCredential

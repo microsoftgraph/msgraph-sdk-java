@@ -42,7 +42,6 @@ public class SiteRemoveCollectionRequestBuilder extends BaseActionCollectionRequ
         super(requestUrl, client, requestOptions, SiteRemoveCollectionRequestBuilder.class, SiteRemoveCollectionRequest.class);
         this.body = parameters;
     }
-    
     /**
      * Creates the request
      *
