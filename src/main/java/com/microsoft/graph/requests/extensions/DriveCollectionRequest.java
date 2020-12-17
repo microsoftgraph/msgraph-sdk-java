@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DriveCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.DriveCollectionRequest;
 /**
  * The class for the Drive Collection Request.
  */
-public class DriveCollectionRequest extends BaseCollectionRequest<Drive, DriveCollectionResponse, DriveCollectionPage> {
+public class DriveCollectionRequest extends BaseEntityCollectionRequest<Drive, DriveCollectionResponse, DriveCollectionPage> {
 
     /**
      * The request builder for this collection of Drive

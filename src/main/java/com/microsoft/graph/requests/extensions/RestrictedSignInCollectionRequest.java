@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionResponse;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequest
 /**
  * The class for the Restricted Sign In Collection Request.
  */
-public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<RestrictedSignIn, RestrictedSignInCollectionResponse, RestrictedSignInCollectionPage> {
+public class RestrictedSignInCollectionRequest extends BaseEntityCollectionRequest<RestrictedSignIn, RestrictedSignInCollectionResponse, RestrictedSignInCollectionPage> {
 
     /**
      * The request builder for this collection of RestrictedSignIn

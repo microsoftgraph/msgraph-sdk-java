@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStat
 /**
  * The class for the Device Compliance Policy Setting State Summary Collection Request.
  */
-public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicySettingStateSummary, DeviceCompliancePolicySettingStateSummaryCollectionResponse, DeviceCompliancePolicySettingStateSummaryCollectionPage> {
+public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends BaseEntityCollectionRequest<DeviceCompliancePolicySettingStateSummary, DeviceCompliancePolicySettingStateSummaryCollectionResponse, DeviceCompliancePolicySettingStateSummaryCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceCompliancePolicySettingStateSummary

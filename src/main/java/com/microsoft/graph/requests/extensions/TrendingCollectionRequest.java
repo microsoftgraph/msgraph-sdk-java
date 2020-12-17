@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
 import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TrendingCollectionRequest;
 /**
  * The class for the Trending Collection Request.
  */
-public class TrendingCollectionRequest extends BaseCollectionRequest<Trending, TrendingCollectionResponse, TrendingCollectionPage> {
+public class TrendingCollectionRequest extends BaseEntityCollectionRequest<Trending, TrendingCollectionResponse, TrendingCollectionPage> {
 
     /**
      * The request builder for this collection of Trending

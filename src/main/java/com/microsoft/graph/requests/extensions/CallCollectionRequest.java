@@ -32,7 +32,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CallCollectionResponse;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
@@ -43,7 +43,7 @@ import com.microsoft.graph.requests.extensions.CallCollectionRequest;
 /**
  * The class for the Call Collection Request.
  */
-public class CallCollectionRequest extends BaseCollectionRequest<Call, CallCollectionResponse, CallCollectionPage> {
+public class CallCollectionRequest extends BaseEntityCollectionRequest<Call, CallCollectionResponse, CallCollectionPage> {
 
     /**
      * The request builder for this collection of Call

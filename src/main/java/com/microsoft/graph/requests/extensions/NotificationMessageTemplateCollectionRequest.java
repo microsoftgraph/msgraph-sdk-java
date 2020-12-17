@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollec
 /**
  * The class for the Notification Message Template Collection Request.
  */
-public class NotificationMessageTemplateCollectionRequest extends BaseCollectionRequest<NotificationMessageTemplate, NotificationMessageTemplateCollectionResponse, NotificationMessageTemplateCollectionPage> {
+public class NotificationMessageTemplateCollectionRequest extends BaseEntityCollectionRequest<NotificationMessageTemplate, NotificationMessageTemplateCollectionResponse, NotificationMessageTemplateCollectionPage> {
 
     /**
      * The request builder for this collection of NotificationMessageTemplate

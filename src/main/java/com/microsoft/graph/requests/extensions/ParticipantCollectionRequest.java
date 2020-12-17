@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ParticipantCollectionResponse;
 import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
@@ -31,7 +31,7 @@ import com.microsoft.graph.requests.extensions.ParticipantCollectionRequest;
 /**
  * The class for the Participant Collection Request.
  */
-public class ParticipantCollectionRequest extends BaseCollectionRequest<Participant, ParticipantCollectionResponse, ParticipantCollectionPage> {
+public class ParticipantCollectionRequest extends BaseEntityCollectionRequest<Participant, ParticipantCollectionResponse, ParticipantCollectionPage> {
 
     /**
      * The request builder for this collection of Participant

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignment
 /**
  * The class for the Enrollment Configuration Assignment Collection Request.
  */
-public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseCollectionRequest<EnrollmentConfigurationAssignment, EnrollmentConfigurationAssignmentCollectionResponse, EnrollmentConfigurationAssignmentCollectionPage> {
+public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseEntityCollectionRequest<EnrollmentConfigurationAssignment, EnrollmentConfigurationAssignmentCollectionResponse, EnrollmentConfigurationAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of EnrollmentConfigurationAssignment

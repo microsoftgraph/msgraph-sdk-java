@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnector
 /**
  * The class for the Device Management Exchange Connector Collection Request.
  */
-public class DeviceManagementExchangeConnectorCollectionRequest extends BaseCollectionRequest<DeviceManagementExchangeConnector, DeviceManagementExchangeConnectorCollectionResponse, DeviceManagementExchangeConnectorCollectionPage> {
+public class DeviceManagementExchangeConnectorCollectionRequest extends BaseEntityCollectionRequest<DeviceManagementExchangeConnector, DeviceManagementExchangeConnectorCollectionResponse, DeviceManagementExchangeConnectorCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceManagementExchangeConnector

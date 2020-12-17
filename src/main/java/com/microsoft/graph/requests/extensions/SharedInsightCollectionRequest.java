@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequest;
 /**
  * The class for the Shared Insight Collection Request.
  */
-public class SharedInsightCollectionRequest extends BaseCollectionRequest<SharedInsight, SharedInsightCollectionResponse, SharedInsightCollectionPage> {
+public class SharedInsightCollectionRequest extends BaseEntityCollectionRequest<SharedInsight, SharedInsightCollectionResponse, SharedInsightCollectionPage> {
 
     /**
      * The request builder for this collection of SharedInsight

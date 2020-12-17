@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequ
 /**
  * The class for the Managed App Operation Collection Request.
  */
-public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<ManagedAppOperation, ManagedAppOperationCollectionResponse, ManagedAppOperationCollectionPage> {
+public class ManagedAppOperationCollectionRequest extends BaseEntityCollectionRequest<ManagedAppOperation, ManagedAppOperationCollectionResponse, ManagedAppOperationCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedAppOperation

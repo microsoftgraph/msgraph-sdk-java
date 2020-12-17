@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ConversationMemberCollectionReque
 /**
  * The class for the Conversation Member Collection Request.
  */
-public class ConversationMemberCollectionRequest extends BaseCollectionRequest<ConversationMember, ConversationMemberCollectionResponse, ConversationMemberCollectionPage> {
+public class ConversationMemberCollectionRequest extends BaseEntityCollectionRequest<ConversationMember, ConversationMemberCollectionResponse, ConversationMemberCollectionPage> {
 
     /**
      * The request builder for this collection of ConversationMember

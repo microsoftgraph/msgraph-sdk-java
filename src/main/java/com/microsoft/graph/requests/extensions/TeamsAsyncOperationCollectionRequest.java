@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequ
 /**
  * The class for the Teams Async Operation Collection Request.
  */
-public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<TeamsAsyncOperation, TeamsAsyncOperationCollectionResponse, TeamsAsyncOperationCollectionPage> {
+public class TeamsAsyncOperationCollectionRequest extends BaseEntityCollectionRequest<TeamsAsyncOperation, TeamsAsyncOperationCollectionResponse, TeamsAsyncOperationCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsAsyncOperation

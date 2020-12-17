@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PlaceCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlaceCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.PlaceCollectionRequest;
 /**
  * The class for the Place Collection Request.
  */
-public class PlaceCollectionRequest extends BaseCollectionRequest<Place, PlaceCollectionResponse, PlaceCollectionPage> {
+public class PlaceCollectionRequest extends BaseEntityCollectionRequest<Place, PlaceCollectionResponse, PlaceCollectionPage> {
 
     /**
      * The request builder for this collection of Place

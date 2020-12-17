@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLo
 /**
  * The class for the Windows Information Protection App Locker File Collection Request.
  */
-public class WindowsInformationProtectionAppLockerFileCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionAppLockerFile, WindowsInformationProtectionAppLockerFileCollectionResponse, WindowsInformationProtectionAppLockerFileCollectionPage> {
+public class WindowsInformationProtectionAppLockerFileCollectionRequest extends BaseEntityCollectionRequest<WindowsInformationProtectionAppLockerFile, WindowsInformationProtectionAppLockerFileCollectionResponse, WindowsInformationProtectionAppLockerFileCollectionPage> {
 
     /**
      * The request builder for this collection of WindowsInformationProtectionAppLockerFile

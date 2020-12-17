@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.MobileAppCollectionRequest;
 /**
  * The class for the Mobile App Collection Request.
  */
-public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileApp, MobileAppCollectionResponse, MobileAppCollectionPage> {
+public class MobileAppCollectionRequest extends BaseEntityCollectionRequest<MobileApp, MobileAppCollectionResponse, MobileAppCollectionPage> {
 
     /**
      * The request builder for this collection of MobileApp

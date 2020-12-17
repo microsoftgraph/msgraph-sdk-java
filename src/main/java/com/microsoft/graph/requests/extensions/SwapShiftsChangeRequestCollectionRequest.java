@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollection
 /**
  * The class for the Swap Shifts Change Request Collection Request.
  */
-public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequest<SwapShiftsChangeRequest, SwapShiftsChangeRequestCollectionResponse, SwapShiftsChangeRequestCollectionPage> {
+public class SwapShiftsChangeRequestCollectionRequest extends BaseEntityCollectionRequest<SwapShiftsChangeRequest, SwapShiftsChangeRequestCollectionResponse, SwapShiftsChangeRequestCollectionPage> {
 
     /**
      * The request builder for this collection of SwapShiftsChangeRequest

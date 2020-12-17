@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequest;
 /**
  * The class for the Group Setting Collection Request.
  */
-public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSetting, GroupSettingCollectionResponse, GroupSettingCollectionPage> {
+public class GroupSettingCollectionRequest extends BaseEntityCollectionRequest<GroupSetting, GroupSettingCollectionResponse, GroupSettingCollectionPage> {
 
     /**
      * The request builder for this collection of GroupSetting

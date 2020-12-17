@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequest
 /**
  * The class for the Managed App Status Collection Request.
  */
-public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<ManagedAppStatus, ManagedAppStatusCollectionResponse, ManagedAppStatusCollectionPage> {
+public class ManagedAppStatusCollectionRequest extends BaseEntityCollectionRequest<ManagedAppStatus, ManagedAppStatusCollectionResponse, ManagedAppStatusCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedAppStatus

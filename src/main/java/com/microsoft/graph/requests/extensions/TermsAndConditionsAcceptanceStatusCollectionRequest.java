@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatu
 /**
  * The class for the Terms And Conditions Acceptance Status Collection Request.
  */
-public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCollectionRequest<TermsAndConditionsAcceptanceStatus, TermsAndConditionsAcceptanceStatusCollectionResponse, TermsAndConditionsAcceptanceStatusCollectionPage> {
+public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseEntityCollectionRequest<TermsAndConditionsAcceptanceStatus, TermsAndConditionsAcceptanceStatusCollectionResponse, TermsAndConditionsAcceptanceStatusCollectionPage> {
 
     /**
      * The request builder for this collection of TermsAndConditionsAcceptanceStatus

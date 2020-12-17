@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequest;
 /**
  * The class for the Role Assignment Collection Request.
  */
-public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleAssignment, RoleAssignmentCollectionResponse, RoleAssignmentCollectionPage> {
+public class RoleAssignmentCollectionRequest extends BaseEntityCollectionRequest<RoleAssignment, RoleAssignmentCollectionResponse, RoleAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of RoleAssignment

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollec
 /**
  * The class for the Default Managed App Protection Collection Request.
  */
-public class DefaultManagedAppProtectionCollectionRequest extends BaseCollectionRequest<DefaultManagedAppProtection, DefaultManagedAppProtectionCollectionResponse, DefaultManagedAppProtectionCollectionPage> {
+public class DefaultManagedAppProtectionCollectionRequest extends BaseEntityCollectionRequest<DefaultManagedAppProtection, DefaultManagedAppProtectionCollectionResponse, DefaultManagedAppProtectionCollectionPage> {
 
     /**
      * The request builder for this collection of DefaultManagedAppProtection

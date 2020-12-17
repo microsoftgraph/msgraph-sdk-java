@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequest;
 /**
  * The class for the Teams Template Collection Request.
  */
-public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsTemplate, TeamsTemplateCollectionResponse, TeamsTemplateCollectionPage> {
+public class TeamsTemplateCollectionRequest extends BaseEntityCollectionRequest<TeamsTemplate, TeamsTemplateCollectionResponse, TeamsTemplateCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsTemplate

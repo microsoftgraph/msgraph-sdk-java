@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionReques
 /**
  * The class for the App Role Assignment Collection Request.
  */
-public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<AppRoleAssignment, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage> {
+public class AppRoleAssignmentCollectionRequest extends BaseEntityCollectionRequest<AppRoleAssignment, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of AppRoleAssignment

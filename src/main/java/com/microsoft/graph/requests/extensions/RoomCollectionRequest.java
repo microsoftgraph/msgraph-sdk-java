@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RoomCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.RoomCollectionRequest;
 /**
  * The class for the Room Collection Request.
  */
-public class RoomCollectionRequest extends BaseCollectionRequest<Room, RoomCollectionResponse, RoomCollectionPage> {
+public class RoomCollectionRequest extends BaseEntityCollectionRequest<Room, RoomCollectionResponse, RoomCollectionPage> {
 
     /**
      * The request builder for this collection of Room

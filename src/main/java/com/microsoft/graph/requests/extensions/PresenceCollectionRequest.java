@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PresenceCollectionResponse;
 import com.microsoft.graph.requests.extensions.PresenceCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.PresenceCollectionRequest;
 /**
  * The class for the Presence Collection Request.
  */
-public class PresenceCollectionRequest extends BaseCollectionRequest<Presence, PresenceCollectionResponse, PresenceCollectionPage> {
+public class PresenceCollectionRequest extends BaseEntityCollectionRequest<Presence, PresenceCollectionResponse, PresenceCollectionPage> {
 
     /**
      * The request builder for this collection of Presence

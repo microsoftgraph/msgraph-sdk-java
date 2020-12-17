@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.InvitationCollectionResponse;
 import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.InvitationCollectionRequest;
 /**
  * The class for the Invitation Collection Request.
  */
-public class InvitationCollectionRequest extends BaseCollectionRequest<Invitation, InvitationCollectionResponse, InvitationCollectionPage> {
+public class InvitationCollectionRequest extends BaseEntityCollectionRequest<Invitation, InvitationCollectionResponse, InvitationCollectionPage> {
 
     /**
      * The request builder for this collection of Invitation

@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRe
 /**
  * The class for the Directory Role Template Collection Request.
  */
-public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionRequest<DirectoryRoleTemplate, DirectoryRoleTemplateCollectionResponse, DirectoryRoleTemplateCollectionPage> {
+public class DirectoryRoleTemplateCollectionRequest extends BaseEntityCollectionRequest<DirectoryRoleTemplate, DirectoryRoleTemplateCollectionResponse, DirectoryRoleTemplateCollectionPage> {
 
     /**
      * The request builder for this collection of DirectoryRoleTemplate

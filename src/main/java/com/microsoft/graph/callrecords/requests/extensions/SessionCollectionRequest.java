@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequ
 /**
  * The class for the Session Collection Request.
  */
-public class SessionCollectionRequest extends BaseCollectionRequest<Session, SessionCollectionResponse, SessionCollectionPage> {
+public class SessionCollectionRequest extends BaseEntityCollectionRequest<Session, SessionCollectionResponse, SessionCollectionPage> {
 
     /**
      * The request builder for this collection of Session

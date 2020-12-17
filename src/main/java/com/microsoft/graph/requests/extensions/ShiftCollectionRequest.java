@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ShiftCollectionResponse;
 import com.microsoft.graph.requests.extensions.ShiftCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ShiftCollectionRequest;
 /**
  * The class for the Shift Collection Request.
  */
-public class ShiftCollectionRequest extends BaseCollectionRequest<Shift, ShiftCollectionResponse, ShiftCollectionPage> {
+public class ShiftCollectionRequest extends BaseEntityCollectionRequest<Shift, ShiftCollectionResponse, ShiftCollectionPage> {
 
     /**
      * The request builder for this collection of Shift

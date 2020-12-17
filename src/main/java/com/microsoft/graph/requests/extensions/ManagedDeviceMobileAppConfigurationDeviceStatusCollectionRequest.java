@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 /**
  * The class for the Managed Device Mobile App Configuration Device Status Collection Request.
  */
-public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest extends BaseCollectionRequest<ManagedDeviceMobileAppConfigurationDeviceStatus, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage> {
+public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest extends BaseEntityCollectionRequest<ManagedDeviceMobileAppConfigurationDeviceStatus, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedDeviceMobileAppConfigurationDeviceStatus

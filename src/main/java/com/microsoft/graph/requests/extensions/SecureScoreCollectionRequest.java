@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequest;
 /**
  * The class for the Secure Score Collection Request.
  */
-public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureScore, SecureScoreCollectionResponse, SecureScoreCollectionPage> {
+public class SecureScoreCollectionRequest extends BaseEntityCollectionRequest<SecureScore, SecureScoreCollectionResponse, SecureScoreCollectionPage> {
 
     /**
      * The request builder for this collection of SecureScore

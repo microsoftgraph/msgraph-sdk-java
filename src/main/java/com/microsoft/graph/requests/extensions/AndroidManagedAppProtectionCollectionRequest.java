@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollec
 /**
  * The class for the Android Managed App Protection Collection Request.
  */
-public class AndroidManagedAppProtectionCollectionRequest extends BaseCollectionRequest<AndroidManagedAppProtection, AndroidManagedAppProtectionCollectionResponse, AndroidManagedAppProtectionCollectionPage> {
+public class AndroidManagedAppProtectionCollectionRequest extends BaseEntityCollectionRequest<AndroidManagedAppProtection, AndroidManagedAppProtectionCollectionResponse, AndroidManagedAppProtectionCollectionPage> {
 
     /**
      * The request builder for this collection of AndroidManagedAppProtection

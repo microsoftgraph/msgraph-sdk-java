@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.EducationUserCollectionRequest;
 /**
  * The class for the Education User Collection Request.
  */
-public class EducationUserCollectionRequest extends BaseCollectionRequest<EducationUser, EducationUserCollectionResponse, EducationUserCollectionPage> {
+public class EducationUserCollectionRequest extends BaseEntityCollectionRequest<EducationUser, EducationUserCollectionResponse, EducationUserCollectionPage> {
 
     /**
      * The request builder for this collection of EducationUser

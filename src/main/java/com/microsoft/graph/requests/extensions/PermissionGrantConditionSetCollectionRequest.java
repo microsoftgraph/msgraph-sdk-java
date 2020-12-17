@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionResponse;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollec
 /**
  * The class for the Permission Grant Condition Set Collection Request.
  */
-public class PermissionGrantConditionSetCollectionRequest extends BaseCollectionRequest<PermissionGrantConditionSet, PermissionGrantConditionSetCollectionResponse, PermissionGrantConditionSetCollectionPage> {
+public class PermissionGrantConditionSetCollectionRequest extends BaseEntityCollectionRequest<PermissionGrantConditionSet, PermissionGrantConditionSetCollectionResponse, PermissionGrantConditionSetCollectionPage> {
 
     /**
      * The request builder for this collection of PermissionGrantConditionSet

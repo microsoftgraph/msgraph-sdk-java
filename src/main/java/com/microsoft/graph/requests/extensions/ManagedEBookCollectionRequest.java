@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequest;
 /**
  * The class for the Managed EBook Collection Request.
  */
-public class ManagedEBookCollectionRequest extends BaseCollectionRequest<ManagedEBook, ManagedEBookCollectionResponse, ManagedEBookCollectionPage> {
+public class ManagedEBookCollectionRequest extends BaseEntityCollectionRequest<ManagedEBook, ManagedEBookCollectionResponse, ManagedEBookCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedEBook

@@ -19,7 +19,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
@@ -30,7 +30,7 @@ import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequest;
 /**
  * The class for the Online Meeting Collection Request.
  */
-public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<OnlineMeeting, OnlineMeetingCollectionResponse, OnlineMeetingCollectionPage> {
+public class OnlineMeetingCollectionRequest extends BaseEntityCollectionRequest<OnlineMeeting, OnlineMeetingCollectionResponse, OnlineMeetingCollectionPage> {
 
     /**
      * The request builder for this collection of OnlineMeeting

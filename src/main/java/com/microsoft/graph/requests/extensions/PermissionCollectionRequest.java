@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PermissionCollectionResponse;
 import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.PermissionCollectionRequest;
 /**
  * The class for the Permission Collection Request.
  */
-public class PermissionCollectionRequest extends BaseCollectionRequest<Permission, PermissionCollectionResponse, PermissionCollectionPage> {
+public class PermissionCollectionRequest extends BaseEntityCollectionRequest<Permission, PermissionCollectionResponse, PermissionCollectionPage> {
 
     /**
      * The request builder for this collection of Permission

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionReq
 /**
  * The class for the Workforce Integration Collection Request.
  */
-public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest<WorkforceIntegration, WorkforceIntegrationCollectionResponse, WorkforceIntegrationCollectionPage> {
+public class WorkforceIntegrationCollectionRequest extends BaseEntityCollectionRequest<WorkforceIntegration, WorkforceIntegrationCollectionResponse, WorkforceIntegrationCollectionPage> {
 
     /**
      * The request builder for this collection of WorkforceIntegration

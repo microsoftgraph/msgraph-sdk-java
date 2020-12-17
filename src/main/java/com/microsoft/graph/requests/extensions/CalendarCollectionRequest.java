@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
@@ -31,7 +31,7 @@ import com.microsoft.graph.requests.extensions.CalendarCollectionRequest;
 /**
  * The class for the Calendar Collection Request.
  */
-public class CalendarCollectionRequest extends BaseCollectionRequest<Calendar, CalendarCollectionResponse, CalendarCollectionPage> {
+public class CalendarCollectionRequest extends BaseEntityCollectionRequest<Calendar, CalendarCollectionResponse, CalendarCollectionPage> {
 
     /**
      * The request builder for this collection of Calendar

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionResponse;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequest;
 /**
  * The class for the Message Rule Collection Request.
  */
-public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageRule, MessageRuleCollectionResponse, MessageRuleCollectionPage> {
+public class MessageRuleCollectionRequest extends BaseEntityCollectionRequest<MessageRule, MessageRuleCollectionResponse, MessageRuleCollectionPage> {
 
     /**
      * The request builder for this collection of MessageRule

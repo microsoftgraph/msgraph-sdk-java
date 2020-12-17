@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TodoTaskListCollectionResponse;
 import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequest;
 /**
  * The class for the Todo Task List Collection Request.
  */
-public class TodoTaskListCollectionRequest extends BaseCollectionRequest<TodoTaskList, TodoTaskListCollectionResponse, TodoTaskListCollectionPage> {
+public class TodoTaskListCollectionRequest extends BaseEntityCollectionRequest<TodoTaskList, TodoTaskListCollectionResponse, TodoTaskListCollectionPage> {
 
     /**
      * The request builder for this collection of TodoTaskList

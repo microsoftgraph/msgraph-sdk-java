@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectio
 /**
  * The class for the Home Realm Discovery Policy Collection Request.
  */
-public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage> {
+public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseEntityCollectionRequest<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy

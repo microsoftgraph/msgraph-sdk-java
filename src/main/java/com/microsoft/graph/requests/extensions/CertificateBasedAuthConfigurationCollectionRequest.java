@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfiguration
 /**
  * The class for the Certificate Based Auth Configuration Collection Request.
  */
-public class CertificateBasedAuthConfigurationCollectionRequest extends BaseCollectionRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage> {
+public class CertificateBasedAuthConfigurationCollectionRequest extends BaseEntityCollectionRequest<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration

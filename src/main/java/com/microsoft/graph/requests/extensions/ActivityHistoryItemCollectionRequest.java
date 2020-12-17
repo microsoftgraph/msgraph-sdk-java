@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequ
 /**
  * The class for the Activity History Item Collection Request.
  */
-public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<ActivityHistoryItem, ActivityHistoryItemCollectionResponse, ActivityHistoryItemCollectionPage> {
+public class ActivityHistoryItemCollectionRequest extends BaseEntityCollectionRequest<ActivityHistoryItem, ActivityHistoryItemCollectionResponse, ActivityHistoryItemCollectionPage> {
 
     /**
      * The request builder for this collection of ActivityHistoryItem

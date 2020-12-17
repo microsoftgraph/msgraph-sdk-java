@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ResourceOperationCollectionReques
 /**
  * The class for the Resource Operation Collection Request.
  */
-public class ResourceOperationCollectionRequest extends BaseCollectionRequest<ResourceOperation, ResourceOperationCollectionResponse, ResourceOperationCollectionPage> {
+public class ResourceOperationCollectionRequest extends BaseEntityCollectionRequest<ResourceOperation, ResourceOperationCollectionResponse, ResourceOperationCollectionPage> {
 
     /**
      * The request builder for this collection of ResourceOperation

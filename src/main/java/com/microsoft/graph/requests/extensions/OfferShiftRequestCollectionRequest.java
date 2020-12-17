@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionReques
 /**
  * The class for the Offer Shift Request Collection Request.
  */
-public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<OfferShiftRequest, OfferShiftRequestCollectionResponse, OfferShiftRequestCollectionPage> {
+public class OfferShiftRequestCollectionRequest extends BaseEntityCollectionRequest<OfferShiftRequest, OfferShiftRequestCollectionResponse, OfferShiftRequestCollectionPage> {
 
     /**
      * The request builder for this collection of OfferShiftRequest

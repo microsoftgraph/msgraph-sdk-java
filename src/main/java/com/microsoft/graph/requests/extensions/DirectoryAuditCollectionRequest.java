@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequest;
 /**
  * The class for the Directory Audit Collection Request.
  */
-public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<DirectoryAudit, DirectoryAuditCollectionResponse, DirectoryAuditCollectionPage> {
+public class DirectoryAuditCollectionRequest extends BaseEntityCollectionRequest<DirectoryAudit, DirectoryAuditCollectionResponse, DirectoryAuditCollectionPage> {
 
     /**
      * The request builder for this collection of DirectoryAudit

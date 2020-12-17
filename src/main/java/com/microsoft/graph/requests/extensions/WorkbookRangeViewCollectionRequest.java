@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionReques
 /**
  * The class for the Workbook Range View Collection Request.
  */
-public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<WorkbookRangeView, WorkbookRangeViewCollectionResponse, WorkbookRangeViewCollectionPage> {
+public class WorkbookRangeViewCollectionRequest extends BaseEntityCollectionRequest<WorkbookRangeView, WorkbookRangeViewCollectionResponse, WorkbookRangeViewCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookRangeView

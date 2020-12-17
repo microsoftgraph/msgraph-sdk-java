@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionResponse;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequest
 /**
  * The class for the Item Activity Stat Collection Request.
  */
-public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<ItemActivityStat, ItemActivityStatCollectionResponse, ItemActivityStatCollectionPage> {
+public class ItemActivityStatCollectionRequest extends BaseEntityCollectionRequest<ItemActivityStat, ItemActivityStatCollectionResponse, ItemActivityStatCollectionPage> {
 
     /**
      * The request builder for this collection of ItemActivityStat

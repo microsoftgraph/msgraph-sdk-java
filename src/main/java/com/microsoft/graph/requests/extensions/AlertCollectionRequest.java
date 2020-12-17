@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.AlertCollectionRequest;
 /**
  * The class for the Alert Collection Request.
  */
-public class AlertCollectionRequest extends BaseCollectionRequest<Alert, AlertCollectionResponse, AlertCollectionPage> {
+public class AlertCollectionRequest extends BaseEntityCollectionRequest<Alert, AlertCollectionResponse, AlertCollectionPage> {
 
     /**
      * The request builder for this collection of Alert

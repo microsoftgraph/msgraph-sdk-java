@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequest;
 /**
  * The class for the Planner Task Collection Request.
  */
-public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerTask, PlannerTaskCollectionResponse, PlannerTaskCollectionPage> {
+public class PlannerTaskCollectionRequest extends BaseEntityCollectionRequest<PlannerTask, PlannerTaskCollectionResponse, PlannerTaskCollectionPage> {
 
     /**
      * The request builder for this collection of PlannerTask

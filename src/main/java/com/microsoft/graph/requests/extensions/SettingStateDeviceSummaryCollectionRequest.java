@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollecti
 /**
  * The class for the Setting State Device Summary Collection Request.
  */
-public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRequest<SettingStateDeviceSummary, SettingStateDeviceSummaryCollectionResponse, SettingStateDeviceSummaryCollectionPage> {
+public class SettingStateDeviceSummaryCollectionRequest extends BaseEntityCollectionRequest<SettingStateDeviceSummary, SettingStateDeviceSummaryCollectionResponse, SettingStateDeviceSummaryCollectionPage> {
 
     /**
      * The request builder for this collection of SettingStateDeviceSummary

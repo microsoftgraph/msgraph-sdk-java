@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionResponse;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequest;
 /**
  * The class for the Column Link Collection Request.
  */
-public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLink, ColumnLinkCollectionResponse, ColumnLinkCollectionPage> {
+public class ColumnLinkCollectionRequest extends BaseEntityCollectionRequest<ColumnLink, ColumnLinkCollectionResponse, ColumnLinkCollectionPage> {
 
     /**
      * The request builder for this collection of ColumnLink

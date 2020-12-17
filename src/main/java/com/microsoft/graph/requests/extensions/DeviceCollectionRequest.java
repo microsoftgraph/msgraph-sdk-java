@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.DeviceCollectionRequest;
 /**
  * The class for the Device Collection Request.
  */
-public class DeviceCollectionRequest extends BaseCollectionRequest<Device, DeviceCollectionResponse, DeviceCollectionPage> {
+public class DeviceCollectionRequest extends BaseEntityCollectionRequest<Device, DeviceCollectionResponse, DeviceCollectionPage> {
 
     /**
      * The request builder for this collection of Device

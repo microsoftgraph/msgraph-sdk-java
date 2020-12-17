@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionReque
 /**
  * The class for the Workbook Pivot Table Collection Request.
  */
-public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<WorkbookPivotTable, WorkbookPivotTableCollectionResponse, WorkbookPivotTableCollectionPage> {
+public class WorkbookPivotTableCollectionRequest extends BaseEntityCollectionRequest<WorkbookPivotTable, WorkbookPivotTableCollectionResponse, WorkbookPivotTableCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookPivotTable

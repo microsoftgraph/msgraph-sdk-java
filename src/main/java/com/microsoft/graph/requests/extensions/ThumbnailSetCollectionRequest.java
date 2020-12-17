@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequest;
 /**
  * The class for the Thumbnail Set Collection Request.
  */
-public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<ThumbnailSet, ThumbnailSetCollectionResponse, ThumbnailSetCollectionPage> {
+public class ThumbnailSetCollectionRequest extends BaseEntityCollectionRequest<ThumbnailSet, ThumbnailSetCollectionResponse, ThumbnailSetCollectionPage> {
 
     /**
      * The request builder for this collection of ThumbnailSet

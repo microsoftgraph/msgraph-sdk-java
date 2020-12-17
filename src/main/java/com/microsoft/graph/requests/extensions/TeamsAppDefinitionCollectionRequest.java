@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionReque
 /**
  * The class for the Teams App Definition Collection Request.
  */
-public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<TeamsAppDefinition, TeamsAppDefinitionCollectionResponse, TeamsAppDefinitionCollectionPage> {
+public class TeamsAppDefinitionCollectionRequest extends BaseEntityCollectionRequest<TeamsAppDefinition, TeamsAppDefinitionCollectionResponse, TeamsAppDefinitionCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsAppDefinition

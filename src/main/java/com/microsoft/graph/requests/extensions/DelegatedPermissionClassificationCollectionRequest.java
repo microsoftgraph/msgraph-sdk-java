@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.DelegatedPermissionClassification
 /**
  * The class for the Delegated Permission Classification Collection Request.
  */
-public class DelegatedPermissionClassificationCollectionRequest extends BaseCollectionRequest<DelegatedPermissionClassification, DelegatedPermissionClassificationCollectionResponse, DelegatedPermissionClassificationCollectionPage> {
+public class DelegatedPermissionClassificationCollectionRequest extends BaseEntityCollectionRequest<DelegatedPermissionClassification, DelegatedPermissionClassificationCollectionResponse, DelegatedPermissionClassificationCollectionPage> {
 
     /**
      * The request builder for this collection of DelegatedPermissionClassification

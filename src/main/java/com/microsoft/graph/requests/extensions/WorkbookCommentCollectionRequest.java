@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequest;
 /**
  * The class for the Workbook Comment Collection Request.
  */
-public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<WorkbookComment, WorkbookCommentCollectionResponse, WorkbookCommentCollectionPage> {
+public class WorkbookCommentCollectionRequest extends BaseEntityCollectionRequest<WorkbookComment, WorkbookCommentCollectionResponse, WorkbookCommentCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookComment

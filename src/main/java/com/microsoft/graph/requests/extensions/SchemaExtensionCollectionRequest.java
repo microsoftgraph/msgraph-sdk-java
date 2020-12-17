@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequest;
 /**
  * The class for the Schema Extension Collection Request.
  */
-public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<SchemaExtension, SchemaExtensionCollectionResponse, SchemaExtensionCollectionPage> {
+public class SchemaExtensionCollectionRequest extends BaseEntityCollectionRequest<SchemaExtension, SchemaExtensionCollectionResponse, SchemaExtensionCollectionPage> {
 
     /**
      * The request builder for this collection of SchemaExtension

@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionReq
 /**
  * The class for the Group Lifecycle Policy Collection Request.
  */
-public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest<GroupLifecyclePolicy, GroupLifecyclePolicyCollectionResponse, GroupLifecyclePolicyCollectionPage> {
+public class GroupLifecyclePolicyCollectionRequest extends BaseEntityCollectionRequest<GroupLifecyclePolicy, GroupLifecyclePolicyCollectionResponse, GroupLifecyclePolicyCollectionPage> {
 
     /**
      * The request builder for this collection of GroupLifecyclePolicy

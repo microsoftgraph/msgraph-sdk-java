@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequest;
 /**
  * The class for the Chat Message Collection Request.
  */
-public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMessage, ChatMessageCollectionResponse, ChatMessageCollectionPage> {
+public class ChatMessageCollectionRequest extends BaseEntityCollectionRequest<ChatMessage, ChatMessageCollectionResponse, ChatMessageCollectionPage> {
 
     /**
      * The request builder for this collection of ChatMessage

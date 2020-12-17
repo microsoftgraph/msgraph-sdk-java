@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ContractCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.ContractCollectionRequest;
 /**
  * The class for the Contract Collection Request.
  */
-public class ContractCollectionRequest extends BaseCollectionRequest<Contract, ContractCollectionResponse, ContractCollectionPage> {
+public class ContractCollectionRequest extends BaseEntityCollectionRequest<Contract, ContractCollectionResponse, ContractCollectionPage> {
 
     /**
      * The request builder for this collection of Contract

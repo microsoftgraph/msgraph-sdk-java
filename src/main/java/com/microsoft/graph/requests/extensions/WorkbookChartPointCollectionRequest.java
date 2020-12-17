@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionReque
 /**
  * The class for the Workbook Chart Point Collection Request.
  */
-public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<WorkbookChartPoint, WorkbookChartPointCollectionResponse, WorkbookChartPointCollectionPage> {
+public class WorkbookChartPointCollectionRequest extends BaseEntityCollectionRequest<WorkbookChartPoint, WorkbookChartPointCollectionResponse, WorkbookChartPointCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookChartPoint

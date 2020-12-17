@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionReque
 /**
  * The class for the Device Install State Collection Request.
  */
-public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<DeviceInstallState, DeviceInstallStateCollectionResponse, DeviceInstallStateCollectionPage> {
+public class DeviceInstallStateCollectionRequest extends BaseEntityCollectionRequest<DeviceInstallState, DeviceInstallStateCollectionResponse, DeviceInstallStateCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceInstallState

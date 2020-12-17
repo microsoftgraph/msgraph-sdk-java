@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionRequest;
 /**
  * The class for the Role Definition Collection Request.
  */
-public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleDefinition, RoleDefinitionCollectionResponse, RoleDefinitionCollectionPage> {
+public class RoleDefinitionCollectionRequest extends BaseEntityCollectionRequest<RoleDefinition, RoleDefinitionCollectionResponse, RoleDefinitionCollectionPage> {
 
     /**
      * The request builder for this collection of RoleDefinition

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorColle
 /**
  * The class for the Mobile Threat Defense Connector Collection Request.
  */
-public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectionRequest<MobileThreatDefenseConnector, MobileThreatDefenseConnectorCollectionResponse, MobileThreatDefenseConnectorCollectionPage> {
+public class MobileThreatDefenseConnectorCollectionRequest extends BaseEntityCollectionRequest<MobileThreatDefenseConnector, MobileThreatDefenseConnectorCollectionResponse, MobileThreatDefenseConnectorCollectionPage> {
 
     /**
      * The request builder for this collection of MobileThreatDefenseConnector

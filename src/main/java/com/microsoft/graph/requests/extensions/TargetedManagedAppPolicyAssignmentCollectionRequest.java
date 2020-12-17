@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmen
 /**
  * The class for the Targeted Managed App Policy Assignment Collection Request.
  */
-public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCollectionRequest<TargetedManagedAppPolicyAssignment, TargetedManagedAppPolicyAssignmentCollectionResponse, TargetedManagedAppPolicyAssignmentCollectionPage> {
+public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseEntityCollectionRequest<TargetedManagedAppPolicyAssignment, TargetedManagedAppPolicyAssignmentCollectionResponse, TargetedManagedAppPolicyAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of TargetedManagedAppPolicyAssignment

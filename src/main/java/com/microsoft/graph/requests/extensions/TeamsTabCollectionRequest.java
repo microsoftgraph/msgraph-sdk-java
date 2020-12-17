@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequest;
 /**
  * The class for the Teams Tab Collection Request.
  */
-public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, TeamsTabCollectionResponse, TeamsTabCollectionPage> {
+public class TeamsTabCollectionRequest extends BaseEntityCollectionRequest<TeamsTab, TeamsTabCollectionResponse, TeamsTabCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsTab

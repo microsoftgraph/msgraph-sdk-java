@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationColl
 /**
  * The class for the User Scope Teams App Installation Collection Request.
  */
-public class UserScopeTeamsAppInstallationCollectionRequest extends BaseCollectionRequest<UserScopeTeamsAppInstallation, UserScopeTeamsAppInstallationCollectionResponse, UserScopeTeamsAppInstallationCollectionPage> {
+public class UserScopeTeamsAppInstallationCollectionRequest extends BaseEntityCollectionRequest<UserScopeTeamsAppInstallation, UserScopeTeamsAppInstallationCollectionResponse, UserScopeTeamsAppInstallationCollectionPage> {
 
     /**
      * The request builder for this collection of UserScopeTeamsAppInstallation

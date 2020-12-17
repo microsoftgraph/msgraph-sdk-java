@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionReque
 /**
  * The class for the Calendar Permission Collection Request.
  */
-public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<CalendarPermission, CalendarPermissionCollectionResponse, CalendarPermissionCollectionPage> {
+public class CalendarPermissionCollectionRequest extends BaseEntityCollectionRequest<CalendarPermission, CalendarPermissionCollectionResponse, CalendarPermissionCollectionPage> {
 
     /**
      * The request builder for this collection of CalendarPermission

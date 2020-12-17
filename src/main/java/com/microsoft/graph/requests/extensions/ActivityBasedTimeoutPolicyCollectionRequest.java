@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollect
 /**
  * The class for the Activity Based Timeout Policy Collection Request.
  */
-public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionRequest<ActivityBasedTimeoutPolicy, ActivityBasedTimeoutPolicyCollectionResponse, ActivityBasedTimeoutPolicyCollectionPage> {
+public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseEntityCollectionRequest<ActivityBasedTimeoutPolicy, ActivityBasedTimeoutPolicyCollectionResponse, ActivityBasedTimeoutPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of ActivityBasedTimeoutPolicy

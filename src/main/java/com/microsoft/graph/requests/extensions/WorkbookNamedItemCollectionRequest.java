@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionReques
 /**
  * The class for the Workbook Named Item Collection Request.
  */
-public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<WorkbookNamedItem, WorkbookNamedItemCollectionResponse, WorkbookNamedItemCollectionPage> {
+public class WorkbookNamedItemCollectionRequest extends BaseEntityCollectionRequest<WorkbookNamedItem, WorkbookNamedItemCollectionResponse, WorkbookNamedItemCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookNamedItem

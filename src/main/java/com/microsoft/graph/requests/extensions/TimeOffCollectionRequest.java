@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionResponse;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TimeOffCollectionRequest;
 /**
  * The class for the Time Off Collection Request.
  */
-public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOff, TimeOffCollectionResponse, TimeOffCollectionPage> {
+public class TimeOffCollectionRequest extends BaseEntityCollectionRequest<TimeOff, TimeOffCollectionResponse, TimeOffCollectionPage> {
 
     /**
      * The request builder for this collection of TimeOff

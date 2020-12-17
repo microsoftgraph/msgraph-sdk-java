@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetwo
 /**
  * The class for the Windows Information Protection Network Learning Summary Collection Request.
  */
-public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionNetworkLearningSummary, WindowsInformationProtectionNetworkLearningSummaryCollectionResponse, WindowsInformationProtectionNetworkLearningSummaryCollectionPage> {
+public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest extends BaseEntityCollectionRequest<WindowsInformationProtectionNetworkLearningSummary, WindowsInformationProtectionNetworkLearningSummaryCollectionResponse, WindowsInformationProtectionNetworkLearningSummaryCollectionPage> {
 
     /**
      * The request builder for this collection of WindowsInformationProtectionNetworkLearningSummary

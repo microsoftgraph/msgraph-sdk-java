@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequest;
 /**
  * The class for the Used Insight Collection Request.
  */
-public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsight, UsedInsightCollectionResponse, UsedInsightCollectionPage> {
+public class UsedInsightCollectionRequest extends BaseEntityCollectionRequest<UsedInsight, UsedInsightCollectionResponse, UsedInsightCollectionPage> {
 
     /**
      * The request builder for this collection of UsedInsight

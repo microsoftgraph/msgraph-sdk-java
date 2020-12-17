@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignm
 /**
  * The class for the Device And App Management Role Assignment Collection Request.
  */
-public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseCollectionRequest<DeviceAndAppManagementRoleAssignment, DeviceAndAppManagementRoleAssignmentCollectionResponse, DeviceAndAppManagementRoleAssignmentCollectionPage> {
+public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseEntityCollectionRequest<DeviceAndAppManagementRoleAssignment, DeviceAndAppManagementRoleAssignmentCollectionResponse, DeviceAndAppManagementRoleAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceAndAppManagementRoleAssignment

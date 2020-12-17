@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollection
 /**
  * The class for the Threat Assessment Request Collection Request.
  */
-public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequest<ThreatAssessmentRequest, ThreatAssessmentRequestCollectionResponse, ThreatAssessmentRequestCollectionPage> {
+public class ThreatAssessmentRequestCollectionRequest extends BaseEntityCollectionRequest<ThreatAssessmentRequest, ThreatAssessmentRequestCollectionResponse, ThreatAssessmentRequestCollectionPage> {
 
     /**
      * The request builder for this collection of ThreatAssessmentRequest

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequ
 /**
  * The class for the Claims Mapping Policy Collection Request.
  */
-public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionPage> {
+public class ClaimsMappingPolicyCollectionRequest extends BaseEntityCollectionRequest<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of ClaimsMappingPolicy

@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionResponse;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionReq
 /**
  * The class for the Scoped Role Membership Collection Request.
  */
-public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest<ScopedRoleMembership, ScopedRoleMembershipCollectionResponse, ScopedRoleMembershipCollectionPage> {
+public class ScopedRoleMembershipCollectionRequest extends BaseEntityCollectionRequest<ScopedRoleMembership, ScopedRoleMembershipCollectionResponse, ScopedRoleMembershipCollectionPage> {
 
     /**
      * The request builder for this collection of ScopedRoleMembership

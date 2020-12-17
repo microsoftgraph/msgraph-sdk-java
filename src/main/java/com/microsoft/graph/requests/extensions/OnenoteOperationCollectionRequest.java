@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequest
 /**
  * The class for the Onenote Operation Collection Request.
  */
-public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<OnenoteOperation, OnenoteOperationCollectionResponse, OnenoteOperationCollectionPage> {
+public class OnenoteOperationCollectionRequest extends BaseEntityCollectionRequest<OnenoteOperation, OnenoteOperationCollectionResponse, OnenoteOperationCollectionPage> {
 
     /**
      * The request builder for this collection of OnenoteOperation

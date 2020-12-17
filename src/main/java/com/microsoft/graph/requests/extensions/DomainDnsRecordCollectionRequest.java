@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionResponse;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequest;
 /**
  * The class for the Domain Dns Record Collection Request.
  */
-public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<DomainDnsRecord, DomainDnsRecordCollectionResponse, DomainDnsRecordCollectionPage> {
+public class DomainDnsRecordCollectionRequest extends BaseEntityCollectionRequest<DomainDnsRecord, DomainDnsRecordCollectionResponse, DomainDnsRecordCollectionPage> {
 
     /**
      * The request builder for this collection of DomainDnsRecord

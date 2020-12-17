@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionResponse;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.OrgContactCollectionRequest;
 /**
  * The class for the Org Contact Collection Request.
  */
-public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContact, OrgContactCollectionResponse, OrgContactCollectionPage> {
+public class OrgContactCollectionRequest extends BaseEntityCollectionRequest<OrgContact, OrgContactCollectionResponse, OrgContactCollectionPage> {
 
     /**
      * The request builder for this collection of OrgContact

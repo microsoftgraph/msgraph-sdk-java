@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollection
 /**
  * The class for the Ios Managed App Protection Collection Request.
  */
-public class IosManagedAppProtectionCollectionRequest extends BaseCollectionRequest<IosManagedAppProtection, IosManagedAppProtectionCollectionResponse, IosManagedAppProtectionCollectionPage> {
+public class IosManagedAppProtectionCollectionRequest extends BaseEntityCollectionRequest<IosManagedAppProtection, IosManagedAppProtectionCollectionResponse, IosManagedAppProtectionCollectionPage> {
 
     /**
      * The request builder for this collection of IosManagedAppProtection

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageColle
 /**
  * The class for the Localized Notification Message Collection Request.
  */
-public class LocalizedNotificationMessageCollectionRequest extends BaseCollectionRequest<LocalizedNotificationMessage, LocalizedNotificationMessageCollectionResponse, LocalizedNotificationMessageCollectionPage> {
+public class LocalizedNotificationMessageCollectionRequest extends BaseEntityCollectionRequest<LocalizedNotificationMessage, LocalizedNotificationMessageCollectionResponse, LocalizedNotificationMessageCollectionPage> {
 
     /**
      * The request builder for this collection of LocalizedNotificationMessage
