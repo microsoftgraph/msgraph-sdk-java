@@ -35,7 +35,11 @@ public class WorkbookFunctionsGeoMeanParameterSet {
      * Instiaciates a new WorkbookFunctionsGeoMeanParameterSet
      */
     public WorkbookFunctionsGeoMeanParameterSet() {}
-    private WorkbookFunctionsGeoMeanParameterSet(@Nonnull final WorkbookFunctionsGeoMeanParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsGeoMeanParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsGeoMeanParameterSet(@Nonnull final WorkbookFunctionsGeoMeanParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsGeoMeanParameterSet {
      * Fluent builder for the WorkbookFunctionsGeoMeanParameterSet
      */
     public static final class WorkbookFunctionsGeoMeanParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsGeoMeanParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsGeoMeanParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsGeoMeanParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

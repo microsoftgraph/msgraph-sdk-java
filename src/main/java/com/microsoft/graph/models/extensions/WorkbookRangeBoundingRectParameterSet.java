@@ -35,7 +35,11 @@ public class WorkbookRangeBoundingRectParameterSet {
      * Instiaciates a new WorkbookRangeBoundingRectParameterSet
      */
     public WorkbookRangeBoundingRectParameterSet() {}
-    private WorkbookRangeBoundingRectParameterSet(@Nonnull final WorkbookRangeBoundingRectParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeBoundingRectParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeBoundingRectParameterSet(@Nonnull final WorkbookRangeBoundingRectParameterSetBuilder builder) {
         this.anotherRange = builder.anotherRange;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookRangeBoundingRectParameterSet {
      * Fluent builder for the WorkbookRangeBoundingRectParameterSet
      */
     public static final class WorkbookRangeBoundingRectParameterSetBuilder {
-        private String anotherRange;
+        /**
+         * The anotherRange parameter value
+         */
+        @Nullable
+        protected String anotherRange;
         /**
          * Sets the AnotherRange
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookRangeBoundingRectParameterSet {
             this.anotherRange = val;
             return this;
         }
-        private WorkbookRangeBoundingRectParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeBoundingRectParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

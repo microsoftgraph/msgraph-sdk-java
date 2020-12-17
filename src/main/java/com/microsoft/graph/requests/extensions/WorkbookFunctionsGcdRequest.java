@@ -38,6 +38,7 @@ public class WorkbookFunctionsGcdRequest extends BaseRequest<WorkbookFunctionRes
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsGcdParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

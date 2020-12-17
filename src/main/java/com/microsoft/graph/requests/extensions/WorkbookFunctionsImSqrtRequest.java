@@ -38,6 +38,7 @@ public class WorkbookFunctionsImSqrtRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsImSqrtParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

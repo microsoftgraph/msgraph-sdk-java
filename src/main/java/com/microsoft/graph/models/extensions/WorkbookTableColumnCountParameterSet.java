@@ -26,7 +26,11 @@ public class WorkbookTableColumnCountParameterSet {
      * Instiaciates a new WorkbookTableColumnCountParameterSet
      */
     public WorkbookTableColumnCountParameterSet() {}
-    private WorkbookTableColumnCountParameterSet(@Nonnull final WorkbookTableColumnCountParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableColumnCountParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableColumnCountParameterSet(@Nonnull final WorkbookTableColumnCountParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableColumnCountParameterSet {
      * Fluent builder for the WorkbookTableColumnCountParameterSet
      */
     public static final class WorkbookTableColumnCountParameterSetBuilder {
-        private WorkbookTableColumnCountParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableColumnCountParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

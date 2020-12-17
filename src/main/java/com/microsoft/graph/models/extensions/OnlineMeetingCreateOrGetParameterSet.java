@@ -82,7 +82,11 @@ public class OnlineMeetingCreateOrGetParameterSet {
      * Instiaciates a new OnlineMeetingCreateOrGetParameterSet
      */
     public OnlineMeetingCreateOrGetParameterSet() {}
-    private OnlineMeetingCreateOrGetParameterSet(@Nonnull final OnlineMeetingCreateOrGetParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OnlineMeetingCreateOrGetParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OnlineMeetingCreateOrGetParameterSet(@Nonnull final OnlineMeetingCreateOrGetParameterSetBuilder builder) {
         this.chatInfo = builder.chatInfo;
         this.endDateTime = builder.endDateTime;
         this.externalId = builder.externalId;
@@ -102,7 +106,11 @@ public class OnlineMeetingCreateOrGetParameterSet {
      * Fluent builder for the OnlineMeetingCreateOrGetParameterSet
      */
     public static final class OnlineMeetingCreateOrGetParameterSetBuilder {
-        private ChatInfo chatInfo;
+        /**
+         * The chatInfo parameter value
+         */
+        @Nullable
+        protected ChatInfo chatInfo;
         /**
          * Sets the ChatInfo
          * @param val the value to set it to
@@ -113,7 +121,11 @@ public class OnlineMeetingCreateOrGetParameterSet {
             this.chatInfo = val;
             return this;
         }
-        private java.util.Calendar endDateTime;
+        /**
+         * The endDateTime parameter value
+         */
+        @Nullable
+        protected java.util.Calendar endDateTime;
         /**
          * Sets the EndDateTime
          * @param val the value to set it to
@@ -124,7 +136,11 @@ public class OnlineMeetingCreateOrGetParameterSet {
             this.endDateTime = val;
             return this;
         }
-        private String externalId;
+        /**
+         * The externalId parameter value
+         */
+        @Nullable
+        protected String externalId;
         /**
          * Sets the ExternalId
          * @param val the value to set it to
@@ -135,7 +151,11 @@ public class OnlineMeetingCreateOrGetParameterSet {
             this.externalId = val;
             return this;
         }
-        private MeetingParticipants participants;
+        /**
+         * The participants parameter value
+         */
+        @Nullable
+        protected MeetingParticipants participants;
         /**
          * Sets the Participants
          * @param val the value to set it to
@@ -146,7 +166,11 @@ public class OnlineMeetingCreateOrGetParameterSet {
             this.participants = val;
             return this;
         }
-        private java.util.Calendar startDateTime;
+        /**
+         * The startDateTime parameter value
+         */
+        @Nullable
+        protected java.util.Calendar startDateTime;
         /**
          * Sets the StartDateTime
          * @param val the value to set it to
@@ -157,7 +181,11 @@ public class OnlineMeetingCreateOrGetParameterSet {
             this.startDateTime = val;
             return this;
         }
-        private String subject;
+        /**
+         * The subject parameter value
+         */
+        @Nullable
+        protected String subject;
         /**
          * Sets the Subject
          * @param val the value to set it to
@@ -168,7 +196,8 @@ public class OnlineMeetingCreateOrGetParameterSet {
             this.subject = val;
             return this;
         }
-        private OnlineMeetingCreateOrGetParameterSetBuilder(){}
+        @Nullable
+        protected OnlineMeetingCreateOrGetParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

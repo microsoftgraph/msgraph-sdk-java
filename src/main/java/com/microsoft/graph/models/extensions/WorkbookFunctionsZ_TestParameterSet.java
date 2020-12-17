@@ -53,7 +53,11 @@ public class WorkbookFunctionsZ_TestParameterSet {
      * Instiaciates a new WorkbookFunctionsZ_TestParameterSet
      */
     public WorkbookFunctionsZ_TestParameterSet() {}
-    private WorkbookFunctionsZ_TestParameterSet(@Nonnull final WorkbookFunctionsZ_TestParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsZ_TestParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsZ_TestParameterSet(@Nonnull final WorkbookFunctionsZ_TestParameterSetBuilder builder) {
         this.array = builder.array;
         this.x = builder.x;
         this.sigma = builder.sigma;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsZ_TestParameterSet {
      * Fluent builder for the WorkbookFunctionsZ_TestParameterSet
      */
     public static final class WorkbookFunctionsZ_TestParameterSetBuilder {
-        private com.google.gson.JsonElement array;
+        /**
+         * The array parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement array;
         /**
          * Sets the Array
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsZ_TestParameterSet {
             this.array = val;
             return this;
         }
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsZ_TestParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement sigma;
+        /**
+         * The sigma parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement sigma;
         /**
          * Sets the Sigma
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsZ_TestParameterSet {
             this.sigma = val;
             return this;
         }
-        private WorkbookFunctionsZ_TestParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsZ_TestParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

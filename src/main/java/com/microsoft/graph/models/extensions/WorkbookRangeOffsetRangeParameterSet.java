@@ -44,7 +44,11 @@ public class WorkbookRangeOffsetRangeParameterSet {
      * Instiaciates a new WorkbookRangeOffsetRangeParameterSet
      */
     public WorkbookRangeOffsetRangeParameterSet() {}
-    private WorkbookRangeOffsetRangeParameterSet(@Nonnull final WorkbookRangeOffsetRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeOffsetRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeOffsetRangeParameterSet(@Nonnull final WorkbookRangeOffsetRangeParameterSetBuilder builder) {
         this.rowOffset = builder.rowOffset;
         this.columnOffset = builder.columnOffset;
     }
@@ -60,7 +64,11 @@ public class WorkbookRangeOffsetRangeParameterSet {
      * Fluent builder for the WorkbookRangeOffsetRangeParameterSet
      */
     public static final class WorkbookRangeOffsetRangeParameterSetBuilder {
-        private Integer rowOffset;
+        /**
+         * The rowOffset parameter value
+         */
+        @Nullable
+        protected Integer rowOffset;
         /**
          * Sets the RowOffset
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookRangeOffsetRangeParameterSet {
             this.rowOffset = val;
             return this;
         }
-        private Integer columnOffset;
+        /**
+         * The columnOffset parameter value
+         */
+        @Nullable
+        protected Integer columnOffset;
         /**
          * Sets the ColumnOffset
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookRangeOffsetRangeParameterSet {
             this.columnOffset = val;
             return this;
         }
-        private WorkbookRangeOffsetRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeOffsetRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

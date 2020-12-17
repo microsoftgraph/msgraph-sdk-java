@@ -38,6 +38,7 @@ public class WorkbookFunctionsLookupRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsLookupParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

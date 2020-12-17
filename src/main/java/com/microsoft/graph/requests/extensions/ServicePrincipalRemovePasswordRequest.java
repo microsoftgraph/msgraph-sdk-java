@@ -37,6 +37,7 @@ public class ServicePrincipalRemovePasswordRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ServicePrincipalRemovePasswordParameterSet body;
     /**
      * Creates the ServicePrincipalRemovePassword

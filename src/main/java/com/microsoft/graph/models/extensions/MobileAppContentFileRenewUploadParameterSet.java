@@ -26,7 +26,11 @@ public class MobileAppContentFileRenewUploadParameterSet {
      * Instiaciates a new MobileAppContentFileRenewUploadParameterSet
      */
     public MobileAppContentFileRenewUploadParameterSet() {}
-    private MobileAppContentFileRenewUploadParameterSet(@Nonnull final MobileAppContentFileRenewUploadParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MobileAppContentFileRenewUploadParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MobileAppContentFileRenewUploadParameterSet(@Nonnull final MobileAppContentFileRenewUploadParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class MobileAppContentFileRenewUploadParameterSet {
      * Fluent builder for the MobileAppContentFileRenewUploadParameterSet
      */
     public static final class MobileAppContentFileRenewUploadParameterSetBuilder {
-        private MobileAppContentFileRenewUploadParameterSetBuilder(){}
+        @Nullable
+        protected MobileAppContentFileRenewUploadParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

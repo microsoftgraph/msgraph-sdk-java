@@ -37,6 +37,7 @@ public class TeamCloneRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected TeamCloneParameterSet body;
     /**
      * Creates the TeamClone

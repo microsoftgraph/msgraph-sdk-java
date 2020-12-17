@@ -35,7 +35,11 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsParameterSet {
      * Instiaciates a new ReportRootGetOffice365GroupsActivityGroupCountsParameterSet
      */
     public ReportRootGetOffice365GroupsActivityGroupCountsParameterSet() {}
-    private ReportRootGetOffice365GroupsActivityGroupCountsParameterSet(@Nonnull final ReportRootGetOffice365GroupsActivityGroupCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOffice365GroupsActivityGroupCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOffice365GroupsActivityGroupCountsParameterSet(@Nonnull final ReportRootGetOffice365GroupsActivityGroupCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsParameterSet {
      * Fluent builder for the ReportRootGetOffice365GroupsActivityGroupCountsParameterSet
      */
     public static final class ReportRootGetOffice365GroupsActivityGroupCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetOffice365GroupsActivityGroupCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOffice365GroupsActivityGroupCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

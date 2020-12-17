@@ -53,7 +53,11 @@ public class WorkbookTableColumnAddParameterSet {
      * Instiaciates a new WorkbookTableColumnAddParameterSet
      */
     public WorkbookTableColumnAddParameterSet() {}
-    private WorkbookTableColumnAddParameterSet(@Nonnull final WorkbookTableColumnAddParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableColumnAddParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableColumnAddParameterSet(@Nonnull final WorkbookTableColumnAddParameterSetBuilder builder) {
         this.index = builder.index;
         this.values = builder.values;
         this.name = builder.name;
@@ -70,7 +74,11 @@ public class WorkbookTableColumnAddParameterSet {
      * Fluent builder for the WorkbookTableColumnAddParameterSet
      */
     public static final class WorkbookTableColumnAddParameterSetBuilder {
-        private Integer index;
+        /**
+         * The index parameter value
+         */
+        @Nullable
+        protected Integer index;
         /**
          * Sets the Index
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookTableColumnAddParameterSet {
             this.index = val;
             return this;
         }
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookTableColumnAddParameterSet {
             this.values = val;
             return this;
         }
-        private String name;
+        /**
+         * The name parameter value
+         */
+        @Nullable
+        protected String name;
         /**
          * Sets the Name
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookTableColumnAddParameterSet {
             this.name = val;
             return this;
         }
-        private WorkbookTableColumnAddParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableColumnAddParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

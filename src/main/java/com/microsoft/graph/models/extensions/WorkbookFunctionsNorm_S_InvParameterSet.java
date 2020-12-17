@@ -35,7 +35,11 @@ public class WorkbookFunctionsNorm_S_InvParameterSet {
      * Instiaciates a new WorkbookFunctionsNorm_S_InvParameterSet
      */
     public WorkbookFunctionsNorm_S_InvParameterSet() {}
-    private WorkbookFunctionsNorm_S_InvParameterSet(@Nonnull final WorkbookFunctionsNorm_S_InvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNorm_S_InvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNorm_S_InvParameterSet(@Nonnull final WorkbookFunctionsNorm_S_InvParameterSetBuilder builder) {
         this.probability = builder.probability;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsNorm_S_InvParameterSet {
      * Fluent builder for the WorkbookFunctionsNorm_S_InvParameterSet
      */
     public static final class WorkbookFunctionsNorm_S_InvParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsNorm_S_InvParameterSet {
             this.probability = val;
             return this;
         }
-        private WorkbookFunctionsNorm_S_InvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNorm_S_InvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookRangeClearParameterSet {
      * Instiaciates a new WorkbookRangeClearParameterSet
      */
     public WorkbookRangeClearParameterSet() {}
-    private WorkbookRangeClearParameterSet(@Nonnull final WorkbookRangeClearParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeClearParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeClearParameterSet(@Nonnull final WorkbookRangeClearParameterSetBuilder builder) {
         this.applyTo = builder.applyTo;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookRangeClearParameterSet {
      * Fluent builder for the WorkbookRangeClearParameterSet
      */
     public static final class WorkbookRangeClearParameterSetBuilder {
-        private String applyTo;
+        /**
+         * The applyTo parameter value
+         */
+        @Nullable
+        protected String applyTo;
         /**
          * Sets the ApplyTo
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookRangeClearParameterSet {
             this.applyTo = val;
             return this;
         }
-        private WorkbookRangeClearParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeClearParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

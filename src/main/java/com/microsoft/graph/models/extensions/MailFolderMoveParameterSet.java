@@ -35,7 +35,11 @@ public class MailFolderMoveParameterSet {
      * Instiaciates a new MailFolderMoveParameterSet
      */
     public MailFolderMoveParameterSet() {}
-    private MailFolderMoveParameterSet(@Nonnull final MailFolderMoveParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MailFolderMoveParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MailFolderMoveParameterSet(@Nonnull final MailFolderMoveParameterSetBuilder builder) {
         this.destinationId = builder.destinationId;
     }
     /**
@@ -50,7 +54,11 @@ public class MailFolderMoveParameterSet {
      * Fluent builder for the MailFolderMoveParameterSet
      */
     public static final class MailFolderMoveParameterSetBuilder {
-        private String destinationId;
+        /**
+         * The destinationId parameter value
+         */
+        @Nullable
+        protected String destinationId;
         /**
          * Sets the DestinationId
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class MailFolderMoveParameterSet {
             this.destinationId = val;
             return this;
         }
-        private MailFolderMoveParameterSetBuilder(){}
+        @Nullable
+        protected MailFolderMoveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

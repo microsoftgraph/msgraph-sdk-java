@@ -35,7 +35,11 @@ public class WorkbookFunctionsLcmParameterSet {
      * Instiaciates a new WorkbookFunctionsLcmParameterSet
      */
     public WorkbookFunctionsLcmParameterSet() {}
-    private WorkbookFunctionsLcmParameterSet(@Nonnull final WorkbookFunctionsLcmParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLcmParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLcmParameterSet(@Nonnull final WorkbookFunctionsLcmParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsLcmParameterSet {
      * Fluent builder for the WorkbookFunctionsLcmParameterSet
      */
     public static final class WorkbookFunctionsLcmParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsLcmParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsLcmParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLcmParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

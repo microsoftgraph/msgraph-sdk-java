@@ -38,6 +38,7 @@ public class ServicePrincipalAddPasswordRequest extends BaseRequest<PasswordCred
     }
 
 	/** The body for the method */
+    @Nullable
     protected ServicePrincipalAddPasswordParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

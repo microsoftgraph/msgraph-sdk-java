@@ -26,7 +26,11 @@ public class ManagedDeviceDisableLostModeParameterSet {
      * Instiaciates a new ManagedDeviceDisableLostModeParameterSet
      */
     public ManagedDeviceDisableLostModeParameterSet() {}
-    private ManagedDeviceDisableLostModeParameterSet(@Nonnull final ManagedDeviceDisableLostModeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceDisableLostModeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceDisableLostModeParameterSet(@Nonnull final ManagedDeviceDisableLostModeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceDisableLostModeParameterSet {
      * Fluent builder for the ManagedDeviceDisableLostModeParameterSet
      */
     public static final class ManagedDeviceDisableLostModeParameterSetBuilder {
-        private ManagedDeviceDisableLostModeParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceDisableLostModeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

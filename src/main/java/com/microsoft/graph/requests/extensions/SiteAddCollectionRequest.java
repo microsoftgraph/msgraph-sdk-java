@@ -32,6 +32,7 @@ public class SiteAddCollectionRequest extends BaseActionCollectionRequest<Site, 
 
 
     /** The body for the method */
+    @Nullable
     protected SiteAddParameterSet body;
 
 

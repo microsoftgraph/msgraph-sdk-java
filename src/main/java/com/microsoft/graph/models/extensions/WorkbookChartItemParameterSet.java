@@ -35,7 +35,11 @@ public class WorkbookChartItemParameterSet {
      * Instiaciates a new WorkbookChartItemParameterSet
      */
     public WorkbookChartItemParameterSet() {}
-    private WorkbookChartItemParameterSet(@Nonnull final WorkbookChartItemParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartItemParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartItemParameterSet(@Nonnull final WorkbookChartItemParameterSetBuilder builder) {
         this.name = builder.name;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookChartItemParameterSet {
      * Fluent builder for the WorkbookChartItemParameterSet
      */
     public static final class WorkbookChartItemParameterSetBuilder {
-        private String name;
+        /**
+         * The name parameter value
+         */
+        @Nullable
+        protected String name;
         /**
          * Sets the Name
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookChartItemParameterSet {
             this.name = val;
             return this;
         }
-        private WorkbookChartItemParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartItemParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class ReportRootGetMailboxUsageStorageParameterSet {
      * Instiaciates a new ReportRootGetMailboxUsageStorageParameterSet
      */
     public ReportRootGetMailboxUsageStorageParameterSet() {}
-    private ReportRootGetMailboxUsageStorageParameterSet(@Nonnull final ReportRootGetMailboxUsageStorageParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetMailboxUsageStorageParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetMailboxUsageStorageParameterSet(@Nonnull final ReportRootGetMailboxUsageStorageParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetMailboxUsageStorageParameterSet {
      * Fluent builder for the ReportRootGetMailboxUsageStorageParameterSet
      */
     public static final class ReportRootGetMailboxUsageStorageParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetMailboxUsageStorageParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetMailboxUsageStorageParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetMailboxUsageStorageParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

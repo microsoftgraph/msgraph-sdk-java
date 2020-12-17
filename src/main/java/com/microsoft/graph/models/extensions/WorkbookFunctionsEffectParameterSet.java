@@ -44,7 +44,11 @@ public class WorkbookFunctionsEffectParameterSet {
      * Instiaciates a new WorkbookFunctionsEffectParameterSet
      */
     public WorkbookFunctionsEffectParameterSet() {}
-    private WorkbookFunctionsEffectParameterSet(@Nonnull final WorkbookFunctionsEffectParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsEffectParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsEffectParameterSet(@Nonnull final WorkbookFunctionsEffectParameterSetBuilder builder) {
         this.nominalRate = builder.nominalRate;
         this.npery = builder.npery;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsEffectParameterSet {
      * Fluent builder for the WorkbookFunctionsEffectParameterSet
      */
     public static final class WorkbookFunctionsEffectParameterSetBuilder {
-        private com.google.gson.JsonElement nominalRate;
+        /**
+         * The nominalRate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement nominalRate;
         /**
          * Sets the NominalRate
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsEffectParameterSet {
             this.nominalRate = val;
             return this;
         }
-        private com.google.gson.JsonElement npery;
+        /**
+         * The npery parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement npery;
         /**
          * Sets the Npery
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsEffectParameterSet {
             this.npery = val;
             return this;
         }
-        private WorkbookFunctionsEffectParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsEffectParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

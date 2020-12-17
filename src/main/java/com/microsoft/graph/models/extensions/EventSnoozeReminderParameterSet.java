@@ -35,7 +35,11 @@ public class EventSnoozeReminderParameterSet {
      * Instiaciates a new EventSnoozeReminderParameterSet
      */
     public EventSnoozeReminderParameterSet() {}
-    private EventSnoozeReminderParameterSet(@Nonnull final EventSnoozeReminderParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new EventSnoozeReminderParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected EventSnoozeReminderParameterSet(@Nonnull final EventSnoozeReminderParameterSetBuilder builder) {
         this.newReminderTime = builder.newReminderTime;
     }
     /**
@@ -50,7 +54,11 @@ public class EventSnoozeReminderParameterSet {
      * Fluent builder for the EventSnoozeReminderParameterSet
      */
     public static final class EventSnoozeReminderParameterSetBuilder {
-        private DateTimeTimeZone newReminderTime;
+        /**
+         * The newReminderTime parameter value
+         */
+        @Nullable
+        protected DateTimeTimeZone newReminderTime;
         /**
          * Sets the NewReminderTime
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class EventSnoozeReminderParameterSet {
             this.newReminderTime = val;
             return this;
         }
-        private EventSnoozeReminderParameterSetBuilder(){}
+        @Nullable
+        protected EventSnoozeReminderParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

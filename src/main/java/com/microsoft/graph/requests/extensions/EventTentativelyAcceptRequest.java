@@ -37,6 +37,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected EventTentativelyAcceptParameterSet body;
     /**
      * Creates the EventTentativelyAccept

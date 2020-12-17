@@ -54,7 +54,11 @@ public class CallAnswerParameterSet {
      * Instiaciates a new CallAnswerParameterSet
      */
     public CallAnswerParameterSet() {}
-    private CallAnswerParameterSet(@Nonnull final CallAnswerParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallAnswerParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallAnswerParameterSet(@Nonnull final CallAnswerParameterSetBuilder builder) {
         this.callbackUri = builder.callbackUri;
         this.mediaConfig = builder.mediaConfig;
         this.acceptedModalities = builder.acceptedModalities;
@@ -71,7 +75,11 @@ public class CallAnswerParameterSet {
      * Fluent builder for the CallAnswerParameterSet
      */
     public static final class CallAnswerParameterSetBuilder {
-        private String callbackUri;
+        /**
+         * The callbackUri parameter value
+         */
+        @Nullable
+        protected String callbackUri;
         /**
          * Sets the CallbackUri
          * @param val the value to set it to
@@ -82,7 +90,11 @@ public class CallAnswerParameterSet {
             this.callbackUri = val;
             return this;
         }
-        private MediaConfig mediaConfig;
+        /**
+         * The mediaConfig parameter value
+         */
+        @Nullable
+        protected MediaConfig mediaConfig;
         /**
          * Sets the MediaConfig
          * @param val the value to set it to
@@ -93,7 +105,11 @@ public class CallAnswerParameterSet {
             this.mediaConfig = val;
             return this;
         }
-        private java.util.List<Modality> acceptedModalities;
+        /**
+         * The acceptedModalities parameter value
+         */
+        @Nullable
+        protected java.util.List<Modality> acceptedModalities;
         /**
          * Sets the AcceptedModalities
          * @param val the value to set it to
@@ -104,7 +120,8 @@ public class CallAnswerParameterSet {
             this.acceptedModalities = val;
             return this;
         }
-        private CallAnswerParameterSetBuilder(){}
+        @Nullable
+        protected CallAnswerParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

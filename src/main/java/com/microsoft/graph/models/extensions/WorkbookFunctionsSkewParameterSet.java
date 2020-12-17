@@ -35,7 +35,11 @@ public class WorkbookFunctionsSkewParameterSet {
      * Instiaciates a new WorkbookFunctionsSkewParameterSet
      */
     public WorkbookFunctionsSkewParameterSet() {}
-    private WorkbookFunctionsSkewParameterSet(@Nonnull final WorkbookFunctionsSkewParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSkewParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSkewParameterSet(@Nonnull final WorkbookFunctionsSkewParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsSkewParameterSet {
      * Fluent builder for the WorkbookFunctionsSkewParameterSet
      */
     public static final class WorkbookFunctionsSkewParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsSkewParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsSkewParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSkewParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

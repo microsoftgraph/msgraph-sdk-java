@@ -44,7 +44,11 @@ public class DriveItemPreviewParameterSet {
      * Instiaciates a new DriveItemPreviewParameterSet
      */
     public DriveItemPreviewParameterSet() {}
-    private DriveItemPreviewParameterSet(@Nonnull final DriveItemPreviewParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemPreviewParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemPreviewParameterSet(@Nonnull final DriveItemPreviewParameterSetBuilder builder) {
         this.page = builder.page;
         this.zoom = builder.zoom;
     }
@@ -60,7 +64,11 @@ public class DriveItemPreviewParameterSet {
      * Fluent builder for the DriveItemPreviewParameterSet
      */
     public static final class DriveItemPreviewParameterSetBuilder {
-        private String page;
+        /**
+         * The page parameter value
+         */
+        @Nullable
+        protected String page;
         /**
          * Sets the Page
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class DriveItemPreviewParameterSet {
             this.page = val;
             return this;
         }
-        private Double zoom;
+        /**
+         * The zoom parameter value
+         */
+        @Nullable
+        protected Double zoom;
         /**
          * Sets the Zoom
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class DriveItemPreviewParameterSet {
             this.zoom = val;
             return this;
         }
-        private DriveItemPreviewParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemPreviewParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class DirectoryObjectGetAvailableExtensionPropertiesParameterSet {
      * Instiaciates a new DirectoryObjectGetAvailableExtensionPropertiesParameterSet
      */
     public DirectoryObjectGetAvailableExtensionPropertiesParameterSet() {}
-    private DirectoryObjectGetAvailableExtensionPropertiesParameterSet(@Nonnull final DirectoryObjectGetAvailableExtensionPropertiesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DirectoryObjectGetAvailableExtensionPropertiesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DirectoryObjectGetAvailableExtensionPropertiesParameterSet(@Nonnull final DirectoryObjectGetAvailableExtensionPropertiesParameterSetBuilder builder) {
         this.isSyncedFromOnPremises = builder.isSyncedFromOnPremises;
     }
     /**
@@ -50,7 +54,11 @@ public class DirectoryObjectGetAvailableExtensionPropertiesParameterSet {
      * Fluent builder for the DirectoryObjectGetAvailableExtensionPropertiesParameterSet
      */
     public static final class DirectoryObjectGetAvailableExtensionPropertiesParameterSetBuilder {
-        private Boolean isSyncedFromOnPremises;
+        /**
+         * The isSyncedFromOnPremises parameter value
+         */
+        @Nullable
+        protected Boolean isSyncedFromOnPremises;
         /**
          * Sets the IsSyncedFromOnPremises
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DirectoryObjectGetAvailableExtensionPropertiesParameterSet {
             this.isSyncedFromOnPremises = val;
             return this;
         }
-        private DirectoryObjectGetAvailableExtensionPropertiesParameterSetBuilder(){}
+        @Nullable
+        protected DirectoryObjectGetAvailableExtensionPropertiesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

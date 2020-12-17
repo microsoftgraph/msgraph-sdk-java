@@ -37,6 +37,7 @@ public class EventAcceptRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected EventAcceptParameterSet body;
     /**
      * Creates the EventAccept

@@ -53,7 +53,11 @@ public class WorkbookFunctionsDateParameterSet {
      * Instiaciates a new WorkbookFunctionsDateParameterSet
      */
     public WorkbookFunctionsDateParameterSet() {}
-    private WorkbookFunctionsDateParameterSet(@Nonnull final WorkbookFunctionsDateParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDateParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDateParameterSet(@Nonnull final WorkbookFunctionsDateParameterSetBuilder builder) {
         this.year = builder.year;
         this.month = builder.month;
         this.day = builder.day;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsDateParameterSet {
      * Fluent builder for the WorkbookFunctionsDateParameterSet
      */
     public static final class WorkbookFunctionsDateParameterSetBuilder {
-        private com.google.gson.JsonElement year;
+        /**
+         * The year parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement year;
         /**
          * Sets the Year
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsDateParameterSet {
             this.year = val;
             return this;
         }
-        private com.google.gson.JsonElement month;
+        /**
+         * The month parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement month;
         /**
          * Sets the Month
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsDateParameterSet {
             this.month = val;
             return this;
         }
-        private com.google.gson.JsonElement day;
+        /**
+         * The day parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement day;
         /**
          * Sets the Day
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsDateParameterSet {
             this.day = val;
             return this;
         }
-        private WorkbookFunctionsDateParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDateParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

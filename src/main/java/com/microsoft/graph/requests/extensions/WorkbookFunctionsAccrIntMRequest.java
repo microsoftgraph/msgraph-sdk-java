@@ -38,6 +38,7 @@ public class WorkbookFunctionsAccrIntMRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsAccrIntMParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

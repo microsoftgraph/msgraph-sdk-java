@@ -44,7 +44,11 @@ public class WorkbookFunctionsCombinParameterSet {
      * Instiaciates a new WorkbookFunctionsCombinParameterSet
      */
     public WorkbookFunctionsCombinParameterSet() {}
-    private WorkbookFunctionsCombinParameterSet(@Nonnull final WorkbookFunctionsCombinParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCombinParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCombinParameterSet(@Nonnull final WorkbookFunctionsCombinParameterSetBuilder builder) {
         this.number = builder.number;
         this.numberChosen = builder.numberChosen;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsCombinParameterSet {
      * Fluent builder for the WorkbookFunctionsCombinParameterSet
      */
     public static final class WorkbookFunctionsCombinParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsCombinParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement numberChosen;
+        /**
+         * The numberChosen parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberChosen;
         /**
          * Sets the NumberChosen
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsCombinParameterSet {
             this.numberChosen = val;
             return this;
         }
-        private WorkbookFunctionsCombinParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCombinParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

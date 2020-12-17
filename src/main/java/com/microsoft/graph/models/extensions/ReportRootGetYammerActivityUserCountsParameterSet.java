@@ -35,7 +35,11 @@ public class ReportRootGetYammerActivityUserCountsParameterSet {
      * Instiaciates a new ReportRootGetYammerActivityUserCountsParameterSet
      */
     public ReportRootGetYammerActivityUserCountsParameterSet() {}
-    private ReportRootGetYammerActivityUserCountsParameterSet(@Nonnull final ReportRootGetYammerActivityUserCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetYammerActivityUserCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetYammerActivityUserCountsParameterSet(@Nonnull final ReportRootGetYammerActivityUserCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetYammerActivityUserCountsParameterSet {
      * Fluent builder for the ReportRootGetYammerActivityUserCountsParameterSet
      */
     public static final class ReportRootGetYammerActivityUserCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetYammerActivityUserCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetYammerActivityUserCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetYammerActivityUserCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

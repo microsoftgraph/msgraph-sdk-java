@@ -35,7 +35,11 @@ public class WorkbookFunctionsSecondParameterSet {
      * Instiaciates a new WorkbookFunctionsSecondParameterSet
      */
     public WorkbookFunctionsSecondParameterSet() {}
-    private WorkbookFunctionsSecondParameterSet(@Nonnull final WorkbookFunctionsSecondParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSecondParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSecondParameterSet(@Nonnull final WorkbookFunctionsSecondParameterSetBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsSecondParameterSet {
      * Fluent builder for the WorkbookFunctionsSecondParameterSet
      */
     public static final class WorkbookFunctionsSecondParameterSetBuilder {
-        private com.google.gson.JsonElement serialNumber;
+        /**
+         * The serialNumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement serialNumber;
         /**
          * Sets the SerialNumber
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsSecondParameterSet {
             this.serialNumber = val;
             return this;
         }
-        private WorkbookFunctionsSecondParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSecondParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsArabicParameterSet {
      * Instiaciates a new WorkbookFunctionsArabicParameterSet
      */
     public WorkbookFunctionsArabicParameterSet() {}
-    private WorkbookFunctionsArabicParameterSet(@Nonnull final WorkbookFunctionsArabicParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsArabicParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsArabicParameterSet(@Nonnull final WorkbookFunctionsArabicParameterSetBuilder builder) {
         this.text = builder.text;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsArabicParameterSet {
      * Fluent builder for the WorkbookFunctionsArabicParameterSet
      */
     public static final class WorkbookFunctionsArabicParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsArabicParameterSet {
             this.text = val;
             return this;
         }
-        private WorkbookFunctionsArabicParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsArabicParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsFloor_PreciseRequest extends BaseRequest<WorkbookF
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsFloor_PreciseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

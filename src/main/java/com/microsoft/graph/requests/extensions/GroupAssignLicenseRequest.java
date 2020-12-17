@@ -37,6 +37,7 @@ public class GroupAssignLicenseRequest extends BaseRequest<Group> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected GroupAssignLicenseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

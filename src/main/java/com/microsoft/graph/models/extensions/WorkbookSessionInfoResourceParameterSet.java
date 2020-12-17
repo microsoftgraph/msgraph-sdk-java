@@ -35,7 +35,11 @@ public class WorkbookSessionInfoResourceParameterSet {
      * Instiaciates a new WorkbookSessionInfoResourceParameterSet
      */
     public WorkbookSessionInfoResourceParameterSet() {}
-    private WorkbookSessionInfoResourceParameterSet(@Nonnull final WorkbookSessionInfoResourceParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookSessionInfoResourceParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookSessionInfoResourceParameterSet(@Nonnull final WorkbookSessionInfoResourceParameterSetBuilder builder) {
         this.key = builder.key;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookSessionInfoResourceParameterSet {
      * Fluent builder for the WorkbookSessionInfoResourceParameterSet
      */
     public static final class WorkbookSessionInfoResourceParameterSetBuilder {
-        private String key;
+        /**
+         * The key parameter value
+         */
+        @Nullable
+        protected String key;
         /**
          * Sets the Key
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookSessionInfoResourceParameterSet {
             this.key = val;
             return this;
         }
-        private WorkbookSessionInfoResourceParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookSessionInfoResourceParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

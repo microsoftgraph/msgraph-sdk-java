@@ -38,6 +38,7 @@ public class WorkbookFunctionsAcotRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsAcotParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

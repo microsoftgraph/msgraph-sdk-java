@@ -35,7 +35,11 @@ public class WorkbookFunctionsGammaParameterSet {
      * Instiaciates a new WorkbookFunctionsGammaParameterSet
      */
     public WorkbookFunctionsGammaParameterSet() {}
-    private WorkbookFunctionsGammaParameterSet(@Nonnull final WorkbookFunctionsGammaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsGammaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsGammaParameterSet(@Nonnull final WorkbookFunctionsGammaParameterSetBuilder builder) {
         this.x = builder.x;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsGammaParameterSet {
      * Fluent builder for the WorkbookFunctionsGammaParameterSet
      */
     public static final class WorkbookFunctionsGammaParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsGammaParameterSet {
             this.x = val;
             return this;
         }
-        private WorkbookFunctionsGammaParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsGammaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -71,7 +71,11 @@ public class WorkbookFunctionsAccrIntMParameterSet {
      * Instiaciates a new WorkbookFunctionsAccrIntMParameterSet
      */
     public WorkbookFunctionsAccrIntMParameterSet() {}
-    private WorkbookFunctionsAccrIntMParameterSet(@Nonnull final WorkbookFunctionsAccrIntMParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAccrIntMParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAccrIntMParameterSet(@Nonnull final WorkbookFunctionsAccrIntMParameterSetBuilder builder) {
         this.issue = builder.issue;
         this.settlement = builder.settlement;
         this.rate = builder.rate;
@@ -90,7 +94,11 @@ public class WorkbookFunctionsAccrIntMParameterSet {
      * Fluent builder for the WorkbookFunctionsAccrIntMParameterSet
      */
     public static final class WorkbookFunctionsAccrIntMParameterSetBuilder {
-        private com.google.gson.JsonElement issue;
+        /**
+         * The issue parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement issue;
         /**
          * Sets the Issue
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class WorkbookFunctionsAccrIntMParameterSet {
             this.issue = val;
             return this;
         }
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class WorkbookFunctionsAccrIntMParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class WorkbookFunctionsAccrIntMParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement par;
+        /**
+         * The par parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement par;
         /**
          * Sets the Par
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class WorkbookFunctionsAccrIntMParameterSet {
             this.par = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class WorkbookFunctionsAccrIntMParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsAccrIntMParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAccrIntMParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

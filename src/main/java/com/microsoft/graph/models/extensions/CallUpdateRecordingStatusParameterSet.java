@@ -45,7 +45,11 @@ public class CallUpdateRecordingStatusParameterSet {
      * Instiaciates a new CallUpdateRecordingStatusParameterSet
      */
     public CallUpdateRecordingStatusParameterSet() {}
-    private CallUpdateRecordingStatusParameterSet(@Nonnull final CallUpdateRecordingStatusParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallUpdateRecordingStatusParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallUpdateRecordingStatusParameterSet(@Nonnull final CallUpdateRecordingStatusParameterSetBuilder builder) {
         this.status = builder.status;
         this.clientContext = builder.clientContext;
     }
@@ -61,7 +65,11 @@ public class CallUpdateRecordingStatusParameterSet {
      * Fluent builder for the CallUpdateRecordingStatusParameterSet
      */
     public static final class CallUpdateRecordingStatusParameterSetBuilder {
-        private RecordingStatus status;
+        /**
+         * The status parameter value
+         */
+        @Nullable
+        protected RecordingStatus status;
         /**
          * Sets the Status
          * @param val the value to set it to
@@ -72,7 +80,11 @@ public class CallUpdateRecordingStatusParameterSet {
             this.status = val;
             return this;
         }
-        private String clientContext;
+        /**
+         * The clientContext parameter value
+         */
+        @Nullable
+        protected String clientContext;
         /**
          * Sets the ClientContext
          * @param val the value to set it to
@@ -83,7 +95,8 @@ public class CallUpdateRecordingStatusParameterSet {
             this.clientContext = val;
             return this;
         }
-        private CallUpdateRecordingStatusParameterSetBuilder(){}
+        @Nullable
+        protected CallUpdateRecordingStatusParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

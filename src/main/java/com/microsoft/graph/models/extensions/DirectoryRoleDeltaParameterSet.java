@@ -26,7 +26,11 @@ public class DirectoryRoleDeltaParameterSet {
      * Instiaciates a new DirectoryRoleDeltaParameterSet
      */
     public DirectoryRoleDeltaParameterSet() {}
-    private DirectoryRoleDeltaParameterSet(@Nonnull final DirectoryRoleDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DirectoryRoleDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DirectoryRoleDeltaParameterSet(@Nonnull final DirectoryRoleDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DirectoryRoleDeltaParameterSet {
      * Fluent builder for the DirectoryRoleDeltaParameterSet
      */
     public static final class DirectoryRoleDeltaParameterSetBuilder {
-        private DirectoryRoleDeltaParameterSetBuilder(){}
+        @Nullable
+        protected DirectoryRoleDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

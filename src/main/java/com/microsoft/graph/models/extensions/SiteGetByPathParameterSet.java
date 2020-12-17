@@ -35,7 +35,11 @@ public class SiteGetByPathParameterSet {
      * Instiaciates a new SiteGetByPathParameterSet
      */
     public SiteGetByPathParameterSet() {}
-    private SiteGetByPathParameterSet(@Nonnull final SiteGetByPathParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new SiteGetByPathParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected SiteGetByPathParameterSet(@Nonnull final SiteGetByPathParameterSetBuilder builder) {
         this.path = builder.path;
     }
     /**
@@ -50,7 +54,11 @@ public class SiteGetByPathParameterSet {
      * Fluent builder for the SiteGetByPathParameterSet
      */
     public static final class SiteGetByPathParameterSetBuilder {
-        private String path;
+        /**
+         * The path parameter value
+         */
+        @Nullable
+        protected String path;
         /**
          * Sets the Path
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class SiteGetByPathParameterSet {
             this.path = val;
             return this;
         }
-        private SiteGetByPathParameterSetBuilder(){}
+        @Nullable
+        protected SiteGetByPathParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -53,7 +53,11 @@ public class WorkbookFunctionsNetworkDaysParameterSet {
      * Instiaciates a new WorkbookFunctionsNetworkDaysParameterSet
      */
     public WorkbookFunctionsNetworkDaysParameterSet() {}
-    private WorkbookFunctionsNetworkDaysParameterSet(@Nonnull final WorkbookFunctionsNetworkDaysParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNetworkDaysParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNetworkDaysParameterSet(@Nonnull final WorkbookFunctionsNetworkDaysParameterSetBuilder builder) {
         this.startDate = builder.startDate;
         this.endDate = builder.endDate;
         this.holidays = builder.holidays;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsNetworkDaysParameterSet {
      * Fluent builder for the WorkbookFunctionsNetworkDaysParameterSet
      */
     public static final class WorkbookFunctionsNetworkDaysParameterSetBuilder {
-        private com.google.gson.JsonElement startDate;
+        /**
+         * The startDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startDate;
         /**
          * Sets the StartDate
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsNetworkDaysParameterSet {
             this.startDate = val;
             return this;
         }
-        private com.google.gson.JsonElement endDate;
+        /**
+         * The endDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement endDate;
         /**
          * Sets the EndDate
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsNetworkDaysParameterSet {
             this.endDate = val;
             return this;
         }
-        private com.google.gson.JsonElement holidays;
+        /**
+         * The holidays parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement holidays;
         /**
          * Sets the Holidays
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsNetworkDaysParameterSet {
             this.holidays = val;
             return this;
         }
-        private WorkbookFunctionsNetworkDaysParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNetworkDaysParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

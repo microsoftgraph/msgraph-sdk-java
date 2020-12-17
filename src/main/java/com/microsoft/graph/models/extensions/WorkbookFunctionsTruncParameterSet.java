@@ -44,7 +44,11 @@ public class WorkbookFunctionsTruncParameterSet {
      * Instiaciates a new WorkbookFunctionsTruncParameterSet
      */
     public WorkbookFunctionsTruncParameterSet() {}
-    private WorkbookFunctionsTruncParameterSet(@Nonnull final WorkbookFunctionsTruncParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTruncParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTruncParameterSet(@Nonnull final WorkbookFunctionsTruncParameterSetBuilder builder) {
         this.number = builder.number;
         this.numDigits = builder.numDigits;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsTruncParameterSet {
      * Fluent builder for the WorkbookFunctionsTruncParameterSet
      */
     public static final class WorkbookFunctionsTruncParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsTruncParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement numDigits;
+        /**
+         * The numDigits parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numDigits;
         /**
          * Sets the NumDigits
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsTruncParameterSet {
             this.numDigits = val;
             return this;
         }
-        private WorkbookFunctionsTruncParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTruncParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

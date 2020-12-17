@@ -35,7 +35,11 @@ public class ManagedDeviceCleanWindowsDeviceParameterSet {
      * Instiaciates a new ManagedDeviceCleanWindowsDeviceParameterSet
      */
     public ManagedDeviceCleanWindowsDeviceParameterSet() {}
-    private ManagedDeviceCleanWindowsDeviceParameterSet(@Nonnull final ManagedDeviceCleanWindowsDeviceParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceCleanWindowsDeviceParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceCleanWindowsDeviceParameterSet(@Nonnull final ManagedDeviceCleanWindowsDeviceParameterSetBuilder builder) {
         this.keepUserData = builder.keepUserData;
     }
     /**
@@ -50,7 +54,11 @@ public class ManagedDeviceCleanWindowsDeviceParameterSet {
      * Fluent builder for the ManagedDeviceCleanWindowsDeviceParameterSet
      */
     public static final class ManagedDeviceCleanWindowsDeviceParameterSetBuilder {
-        private Boolean keepUserData;
+        /**
+         * The keepUserData parameter value
+         */
+        @Nullable
+        protected Boolean keepUserData;
         /**
          * Sets the KeepUserData
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ManagedDeviceCleanWindowsDeviceParameterSet {
             this.keepUserData = val;
             return this;
         }
-        private ManagedDeviceCleanWindowsDeviceParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceCleanWindowsDeviceParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

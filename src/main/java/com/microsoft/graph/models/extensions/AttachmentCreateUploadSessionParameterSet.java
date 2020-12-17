@@ -36,7 +36,11 @@ public class AttachmentCreateUploadSessionParameterSet {
      * Instiaciates a new AttachmentCreateUploadSessionParameterSet
      */
     public AttachmentCreateUploadSessionParameterSet() {}
-    private AttachmentCreateUploadSessionParameterSet(@Nonnull final AttachmentCreateUploadSessionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new AttachmentCreateUploadSessionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected AttachmentCreateUploadSessionParameterSet(@Nonnull final AttachmentCreateUploadSessionParameterSetBuilder builder) {
         this.attachmentItem = builder.attachmentItem;
     }
     /**
@@ -51,7 +55,11 @@ public class AttachmentCreateUploadSessionParameterSet {
      * Fluent builder for the AttachmentCreateUploadSessionParameterSet
      */
     public static final class AttachmentCreateUploadSessionParameterSetBuilder {
-        private AttachmentItem attachmentItem;
+        /**
+         * The attachmentItem parameter value
+         */
+        @Nullable
+        protected AttachmentItem attachmentItem;
         /**
          * Sets the AttachmentItem
          * @param val the value to set it to
@@ -62,7 +70,8 @@ public class AttachmentCreateUploadSessionParameterSet {
             this.attachmentItem = val;
             return this;
         }
-        private AttachmentCreateUploadSessionParameterSetBuilder(){}
+        @Nullable
+        protected AttachmentCreateUploadSessionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsSignParameterSet {
      * Instiaciates a new WorkbookFunctionsSignParameterSet
      */
     public WorkbookFunctionsSignParameterSet() {}
-    private WorkbookFunctionsSignParameterSet(@Nonnull final WorkbookFunctionsSignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSignParameterSet(@Nonnull final WorkbookFunctionsSignParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsSignParameterSet {
      * Fluent builder for the WorkbookFunctionsSignParameterSet
      */
     public static final class WorkbookFunctionsSignParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsSignParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsSignParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

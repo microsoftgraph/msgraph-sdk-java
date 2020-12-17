@@ -35,7 +35,11 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet {
      * Instiaciates a new ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet
      */
     public ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet() {}
-    private ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet(@Nonnull final ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet(@Nonnull final ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet {
      * Fluent builder for the ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet
      */
     public static final class ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

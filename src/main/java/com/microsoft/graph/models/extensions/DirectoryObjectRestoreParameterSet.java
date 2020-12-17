@@ -26,7 +26,11 @@ public class DirectoryObjectRestoreParameterSet {
      * Instiaciates a new DirectoryObjectRestoreParameterSet
      */
     public DirectoryObjectRestoreParameterSet() {}
-    private DirectoryObjectRestoreParameterSet(@Nonnull final DirectoryObjectRestoreParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DirectoryObjectRestoreParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DirectoryObjectRestoreParameterSet(@Nonnull final DirectoryObjectRestoreParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DirectoryObjectRestoreParameterSet {
      * Fluent builder for the DirectoryObjectRestoreParameterSet
      */
     public static final class DirectoryObjectRestoreParameterSetBuilder {
-        private DirectoryObjectRestoreParameterSetBuilder(){}
+        @Nullable
+        protected DirectoryObjectRestoreParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookTableAddParameterSet {
      * Instiaciates a new WorkbookTableAddParameterSet
      */
     public WorkbookTableAddParameterSet() {}
-    private WorkbookTableAddParameterSet(@Nonnull final WorkbookTableAddParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableAddParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableAddParameterSet(@Nonnull final WorkbookTableAddParameterSetBuilder builder) {
         this.address = builder.address;
         this.hasHeaders = builder.hasHeaders;
     }
@@ -60,7 +64,11 @@ public class WorkbookTableAddParameterSet {
      * Fluent builder for the WorkbookTableAddParameterSet
      */
     public static final class WorkbookTableAddParameterSetBuilder {
-        private String address;
+        /**
+         * The address parameter value
+         */
+        @Nullable
+        protected String address;
         /**
          * Sets the Address
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookTableAddParameterSet {
             this.address = val;
             return this;
         }
-        private Boolean hasHeaders;
+        /**
+         * The hasHeaders parameter value
+         */
+        @Nullable
+        protected Boolean hasHeaders;
         /**
          * Sets the HasHeaders
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookTableAddParameterSet {
             this.hasHeaders = val;
             return this;
         }
-        private WorkbookTableAddParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableAddParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

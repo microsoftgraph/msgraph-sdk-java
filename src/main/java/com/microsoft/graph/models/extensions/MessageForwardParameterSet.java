@@ -54,7 +54,11 @@ public class MessageForwardParameterSet {
      * Instiaciates a new MessageForwardParameterSet
      */
     public MessageForwardParameterSet() {}
-    private MessageForwardParameterSet(@Nonnull final MessageForwardParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MessageForwardParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MessageForwardParameterSet(@Nonnull final MessageForwardParameterSetBuilder builder) {
         this.toRecipients = builder.toRecipients;
         this.message = builder.message;
         this.comment = builder.comment;
@@ -71,7 +75,11 @@ public class MessageForwardParameterSet {
      * Fluent builder for the MessageForwardParameterSet
      */
     public static final class MessageForwardParameterSetBuilder {
-        private java.util.List<Recipient> toRecipients;
+        /**
+         * The toRecipients parameter value
+         */
+        @Nullable
+        protected java.util.List<Recipient> toRecipients;
         /**
          * Sets the ToRecipients
          * @param val the value to set it to
@@ -82,7 +90,11 @@ public class MessageForwardParameterSet {
             this.toRecipients = val;
             return this;
         }
-        private Message message;
+        /**
+         * The message parameter value
+         */
+        @Nullable
+        protected Message message;
         /**
          * Sets the Message
          * @param val the value to set it to
@@ -93,7 +105,11 @@ public class MessageForwardParameterSet {
             this.message = val;
             return this;
         }
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -104,7 +120,8 @@ public class MessageForwardParameterSet {
             this.comment = val;
             return this;
         }
-        private MessageForwardParameterSetBuilder(){}
+        @Nullable
+        protected MessageForwardParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

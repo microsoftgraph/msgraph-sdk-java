@@ -26,7 +26,11 @@ public class WorkbookTableSortReapplyParameterSet {
      * Instiaciates a new WorkbookTableSortReapplyParameterSet
      */
     public WorkbookTableSortReapplyParameterSet() {}
-    private WorkbookTableSortReapplyParameterSet(@Nonnull final WorkbookTableSortReapplyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableSortReapplyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableSortReapplyParameterSet(@Nonnull final WorkbookTableSortReapplyParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableSortReapplyParameterSet {
      * Fluent builder for the WorkbookTableSortReapplyParameterSet
      */
     public static final class WorkbookTableSortReapplyParameterSetBuilder {
-        private WorkbookTableSortReapplyParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableSortReapplyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

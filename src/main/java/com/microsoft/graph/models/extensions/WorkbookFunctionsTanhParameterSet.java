@@ -35,7 +35,11 @@ public class WorkbookFunctionsTanhParameterSet {
      * Instiaciates a new WorkbookFunctionsTanhParameterSet
      */
     public WorkbookFunctionsTanhParameterSet() {}
-    private WorkbookFunctionsTanhParameterSet(@Nonnull final WorkbookFunctionsTanhParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTanhParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTanhParameterSet(@Nonnull final WorkbookFunctionsTanhParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsTanhParameterSet {
      * Fluent builder for the WorkbookFunctionsTanhParameterSet
      */
     public static final class WorkbookFunctionsTanhParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsTanhParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsTanhParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTanhParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

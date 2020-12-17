@@ -44,7 +44,11 @@ public class WorkbookFunctionsExactParameterSet {
      * Instiaciates a new WorkbookFunctionsExactParameterSet
      */
     public WorkbookFunctionsExactParameterSet() {}
-    private WorkbookFunctionsExactParameterSet(@Nonnull final WorkbookFunctionsExactParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsExactParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsExactParameterSet(@Nonnull final WorkbookFunctionsExactParameterSetBuilder builder) {
         this.text1 = builder.text1;
         this.text2 = builder.text2;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsExactParameterSet {
      * Fluent builder for the WorkbookFunctionsExactParameterSet
      */
     public static final class WorkbookFunctionsExactParameterSetBuilder {
-        private com.google.gson.JsonElement text1;
+        /**
+         * The text1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text1;
         /**
          * Sets the Text1
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsExactParameterSet {
             this.text1 = val;
             return this;
         }
-        private com.google.gson.JsonElement text2;
+        /**
+         * The text2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text2;
         /**
          * Sets the Text2
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsExactParameterSet {
             this.text2 = val;
             return this;
         }
-        private WorkbookFunctionsExactParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsExactParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

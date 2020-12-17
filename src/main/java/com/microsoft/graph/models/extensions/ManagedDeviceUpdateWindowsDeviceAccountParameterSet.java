@@ -35,7 +35,11 @@ public class ManagedDeviceUpdateWindowsDeviceAccountParameterSet {
      * Instiaciates a new ManagedDeviceUpdateWindowsDeviceAccountParameterSet
      */
     public ManagedDeviceUpdateWindowsDeviceAccountParameterSet() {}
-    private ManagedDeviceUpdateWindowsDeviceAccountParameterSet(@Nonnull final ManagedDeviceUpdateWindowsDeviceAccountParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceUpdateWindowsDeviceAccountParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceUpdateWindowsDeviceAccountParameterSet(@Nonnull final ManagedDeviceUpdateWindowsDeviceAccountParameterSetBuilder builder) {
         this.updateWindowsDeviceAccountActionParameter = builder.updateWindowsDeviceAccountActionParameter;
     }
     /**
@@ -50,7 +54,11 @@ public class ManagedDeviceUpdateWindowsDeviceAccountParameterSet {
      * Fluent builder for the ManagedDeviceUpdateWindowsDeviceAccountParameterSet
      */
     public static final class ManagedDeviceUpdateWindowsDeviceAccountParameterSetBuilder {
-        private UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter;
+        /**
+         * The updateWindowsDeviceAccountActionParameter parameter value
+         */
+        @Nullable
+        protected UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter;
         /**
          * Sets the UpdateWindowsDeviceAccountActionParameter
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ManagedDeviceUpdateWindowsDeviceAccountParameterSet {
             this.updateWindowsDeviceAccountActionParameter = val;
             return this;
         }
-        private ManagedDeviceUpdateWindowsDeviceAccountParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceUpdateWindowsDeviceAccountParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

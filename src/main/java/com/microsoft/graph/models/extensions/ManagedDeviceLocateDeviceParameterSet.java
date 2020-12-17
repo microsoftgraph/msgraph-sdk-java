@@ -26,7 +26,11 @@ public class ManagedDeviceLocateDeviceParameterSet {
      * Instiaciates a new ManagedDeviceLocateDeviceParameterSet
      */
     public ManagedDeviceLocateDeviceParameterSet() {}
-    private ManagedDeviceLocateDeviceParameterSet(@Nonnull final ManagedDeviceLocateDeviceParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceLocateDeviceParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceLocateDeviceParameterSet(@Nonnull final ManagedDeviceLocateDeviceParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceLocateDeviceParameterSet {
      * Fluent builder for the ManagedDeviceLocateDeviceParameterSet
      */
     public static final class ManagedDeviceLocateDeviceParameterSetBuilder {
-        private ManagedDeviceLocateDeviceParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceLocateDeviceParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

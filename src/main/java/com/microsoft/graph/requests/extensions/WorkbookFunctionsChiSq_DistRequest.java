@@ -38,6 +38,7 @@ public class WorkbookFunctionsChiSq_DistRequest extends BaseRequest<WorkbookFunc
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsChiSq_DistParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

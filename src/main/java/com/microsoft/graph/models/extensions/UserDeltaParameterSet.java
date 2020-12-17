@@ -26,7 +26,11 @@ public class UserDeltaParameterSet {
      * Instiaciates a new UserDeltaParameterSet
      */
     public UserDeltaParameterSet() {}
-    private UserDeltaParameterSet(@Nonnull final UserDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserDeltaParameterSet(@Nonnull final UserDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class UserDeltaParameterSet {
      * Fluent builder for the UserDeltaParameterSet
      */
     public static final class UserDeltaParameterSetBuilder {
-        private UserDeltaParameterSetBuilder(){}
+        @Nullable
+        protected UserDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

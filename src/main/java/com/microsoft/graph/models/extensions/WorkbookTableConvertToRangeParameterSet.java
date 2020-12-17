@@ -26,7 +26,11 @@ public class WorkbookTableConvertToRangeParameterSet {
      * Instiaciates a new WorkbookTableConvertToRangeParameterSet
      */
     public WorkbookTableConvertToRangeParameterSet() {}
-    private WorkbookTableConvertToRangeParameterSet(@Nonnull final WorkbookTableConvertToRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableConvertToRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableConvertToRangeParameterSet(@Nonnull final WorkbookTableConvertToRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableConvertToRangeParameterSet {
      * Fluent builder for the WorkbookTableConvertToRangeParameterSet
      */
     public static final class WorkbookTableConvertToRangeParameterSetBuilder {
-        private WorkbookTableConvertToRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableConvertToRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

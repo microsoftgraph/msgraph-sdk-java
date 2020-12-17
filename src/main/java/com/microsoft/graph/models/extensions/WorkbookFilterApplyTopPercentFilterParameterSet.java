@@ -35,7 +35,11 @@ public class WorkbookFilterApplyTopPercentFilterParameterSet {
      * Instiaciates a new WorkbookFilterApplyTopPercentFilterParameterSet
      */
     public WorkbookFilterApplyTopPercentFilterParameterSet() {}
-    private WorkbookFilterApplyTopPercentFilterParameterSet(@Nonnull final WorkbookFilterApplyTopPercentFilterParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyTopPercentFilterParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyTopPercentFilterParameterSet(@Nonnull final WorkbookFilterApplyTopPercentFilterParameterSetBuilder builder) {
         this.percent = builder.percent;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFilterApplyTopPercentFilterParameterSet {
      * Fluent builder for the WorkbookFilterApplyTopPercentFilterParameterSet
      */
     public static final class WorkbookFilterApplyTopPercentFilterParameterSetBuilder {
-        private Integer percent;
+        /**
+         * The percent parameter value
+         */
+        @Nullable
+        protected Integer percent;
         /**
          * Sets the Percent
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFilterApplyTopPercentFilterParameterSet {
             this.percent = val;
             return this;
         }
-        private WorkbookFilterApplyTopPercentFilterParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyTopPercentFilterParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

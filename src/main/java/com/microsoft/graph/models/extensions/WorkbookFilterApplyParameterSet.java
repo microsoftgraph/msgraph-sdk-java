@@ -35,7 +35,11 @@ public class WorkbookFilterApplyParameterSet {
      * Instiaciates a new WorkbookFilterApplyParameterSet
      */
     public WorkbookFilterApplyParameterSet() {}
-    private WorkbookFilterApplyParameterSet(@Nonnull final WorkbookFilterApplyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyParameterSet(@Nonnull final WorkbookFilterApplyParameterSetBuilder builder) {
         this.criteria = builder.criteria;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFilterApplyParameterSet {
      * Fluent builder for the WorkbookFilterApplyParameterSet
      */
     public static final class WorkbookFilterApplyParameterSetBuilder {
-        private WorkbookFilterCriteria criteria;
+        /**
+         * The criteria parameter value
+         */
+        @Nullable
+        protected WorkbookFilterCriteria criteria;
         /**
          * Sets the Criteria
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFilterApplyParameterSet {
             this.criteria = val;
             return this;
         }
-        private WorkbookFilterApplyParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

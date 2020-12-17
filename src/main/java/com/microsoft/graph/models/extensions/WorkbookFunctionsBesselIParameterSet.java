@@ -44,7 +44,11 @@ public class WorkbookFunctionsBesselIParameterSet {
      * Instiaciates a new WorkbookFunctionsBesselIParameterSet
      */
     public WorkbookFunctionsBesselIParameterSet() {}
-    private WorkbookFunctionsBesselIParameterSet(@Nonnull final WorkbookFunctionsBesselIParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBesselIParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBesselIParameterSet(@Nonnull final WorkbookFunctionsBesselIParameterSetBuilder builder) {
         this.x = builder.x;
         this.n = builder.n;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsBesselIParameterSet {
      * Fluent builder for the WorkbookFunctionsBesselIParameterSet
      */
     public static final class WorkbookFunctionsBesselIParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsBesselIParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement n;
+        /**
+         * The n parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement n;
         /**
          * Sets the N
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsBesselIParameterSet {
             this.n = val;
             return this;
         }
-        private WorkbookFunctionsBesselIParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBesselIParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

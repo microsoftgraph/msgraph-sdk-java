@@ -44,7 +44,11 @@ public class EventTentativelyAcceptParameterSet {
      * Instiaciates a new EventTentativelyAcceptParameterSet
      */
     public EventTentativelyAcceptParameterSet() {}
-    private EventTentativelyAcceptParameterSet(@Nonnull final EventTentativelyAcceptParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new EventTentativelyAcceptParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected EventTentativelyAcceptParameterSet(@Nonnull final EventTentativelyAcceptParameterSetBuilder builder) {
         this.comment = builder.comment;
         this.sendResponse = builder.sendResponse;
     }
@@ -60,7 +64,11 @@ public class EventTentativelyAcceptParameterSet {
      * Fluent builder for the EventTentativelyAcceptParameterSet
      */
     public static final class EventTentativelyAcceptParameterSetBuilder {
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class EventTentativelyAcceptParameterSet {
             this.comment = val;
             return this;
         }
-        private Boolean sendResponse;
+        /**
+         * The sendResponse parameter value
+         */
+        @Nullable
+        protected Boolean sendResponse;
         /**
          * Sets the SendResponse
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class EventTentativelyAcceptParameterSet {
             this.sendResponse = val;
             return this;
         }
-        private EventTentativelyAcceptParameterSetBuilder(){}
+        @Nullable
+        protected EventTentativelyAcceptParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

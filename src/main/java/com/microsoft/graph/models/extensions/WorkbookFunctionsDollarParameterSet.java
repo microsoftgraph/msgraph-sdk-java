@@ -44,7 +44,11 @@ public class WorkbookFunctionsDollarParameterSet {
      * Instiaciates a new WorkbookFunctionsDollarParameterSet
      */
     public WorkbookFunctionsDollarParameterSet() {}
-    private WorkbookFunctionsDollarParameterSet(@Nonnull final WorkbookFunctionsDollarParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDollarParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDollarParameterSet(@Nonnull final WorkbookFunctionsDollarParameterSetBuilder builder) {
         this.number = builder.number;
         this.decimals = builder.decimals;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsDollarParameterSet {
      * Fluent builder for the WorkbookFunctionsDollarParameterSet
      */
     public static final class WorkbookFunctionsDollarParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsDollarParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement decimals;
+        /**
+         * The decimals parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement decimals;
         /**
          * Sets the Decimals
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsDollarParameterSet {
             this.decimals = val;
             return this;
         }
-        private WorkbookFunctionsDollarParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDollarParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

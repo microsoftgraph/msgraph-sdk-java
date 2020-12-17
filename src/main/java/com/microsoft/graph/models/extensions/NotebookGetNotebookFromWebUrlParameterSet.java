@@ -35,7 +35,11 @@ public class NotebookGetNotebookFromWebUrlParameterSet {
      * Instiaciates a new NotebookGetNotebookFromWebUrlParameterSet
      */
     public NotebookGetNotebookFromWebUrlParameterSet() {}
-    private NotebookGetNotebookFromWebUrlParameterSet(@Nonnull final NotebookGetNotebookFromWebUrlParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new NotebookGetNotebookFromWebUrlParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected NotebookGetNotebookFromWebUrlParameterSet(@Nonnull final NotebookGetNotebookFromWebUrlParameterSetBuilder builder) {
         this.webUrl = builder.webUrl;
     }
     /**
@@ -50,7 +54,11 @@ public class NotebookGetNotebookFromWebUrlParameterSet {
      * Fluent builder for the NotebookGetNotebookFromWebUrlParameterSet
      */
     public static final class NotebookGetNotebookFromWebUrlParameterSetBuilder {
-        private String webUrl;
+        /**
+         * The webUrl parameter value
+         */
+        @Nullable
+        protected String webUrl;
         /**
          * Sets the WebUrl
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class NotebookGetNotebookFromWebUrlParameterSet {
             this.webUrl = val;
             return this;
         }
-        private NotebookGetNotebookFromWebUrlParameterSetBuilder(){}
+        @Nullable
+        protected NotebookGetNotebookFromWebUrlParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

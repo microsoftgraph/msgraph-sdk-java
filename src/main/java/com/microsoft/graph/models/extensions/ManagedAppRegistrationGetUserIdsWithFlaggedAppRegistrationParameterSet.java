@@ -26,7 +26,11 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameter
      * Instiaciates a new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSet
      */
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSet() {}
-    private ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSet(@Nonnull final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSet(@Nonnull final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameter
      * Fluent builder for the ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSet
      */
     public static final class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSetBuilder {
-        private ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSetBuilder(){}
+        @Nullable
+        protected ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

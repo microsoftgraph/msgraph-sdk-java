@@ -44,7 +44,11 @@ public class WorkbookFunctionsRoundDownParameterSet {
      * Instiaciates a new WorkbookFunctionsRoundDownParameterSet
      */
     public WorkbookFunctionsRoundDownParameterSet() {}
-    private WorkbookFunctionsRoundDownParameterSet(@Nonnull final WorkbookFunctionsRoundDownParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRoundDownParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRoundDownParameterSet(@Nonnull final WorkbookFunctionsRoundDownParameterSetBuilder builder) {
         this.number = builder.number;
         this.numDigits = builder.numDigits;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsRoundDownParameterSet {
      * Fluent builder for the WorkbookFunctionsRoundDownParameterSet
      */
     public static final class WorkbookFunctionsRoundDownParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsRoundDownParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement numDigits;
+        /**
+         * The numDigits parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numDigits;
         /**
          * Sets the NumDigits
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsRoundDownParameterSet {
             this.numDigits = val;
             return this;
         }
-        private WorkbookFunctionsRoundDownParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRoundDownParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class WorkbookFilterApplyTopItemsFilterRequest extends BaseRequest<Void> 
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFilterApplyTopItemsFilterParameterSet body;
     /**
      * Creates the WorkbookFilterApplyTopItemsFilter

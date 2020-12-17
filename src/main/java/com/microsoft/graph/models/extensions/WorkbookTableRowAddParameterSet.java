@@ -44,7 +44,11 @@ public class WorkbookTableRowAddParameterSet {
      * Instiaciates a new WorkbookTableRowAddParameterSet
      */
     public WorkbookTableRowAddParameterSet() {}
-    private WorkbookTableRowAddParameterSet(@Nonnull final WorkbookTableRowAddParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableRowAddParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableRowAddParameterSet(@Nonnull final WorkbookTableRowAddParameterSetBuilder builder) {
         this.index = builder.index;
         this.values = builder.values;
     }
@@ -60,7 +64,11 @@ public class WorkbookTableRowAddParameterSet {
      * Fluent builder for the WorkbookTableRowAddParameterSet
      */
     public static final class WorkbookTableRowAddParameterSetBuilder {
-        private Integer index;
+        /**
+         * The index parameter value
+         */
+        @Nullable
+        protected Integer index;
         /**
          * Sets the Index
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookTableRowAddParameterSet {
             this.index = val;
             return this;
         }
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookTableRowAddParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookTableRowAddParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableRowAddParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookFunctionsHex2OctParameterSet {
      * Instiaciates a new WorkbookFunctionsHex2OctParameterSet
      */
     public WorkbookFunctionsHex2OctParameterSet() {}
-    private WorkbookFunctionsHex2OctParameterSet(@Nonnull final WorkbookFunctionsHex2OctParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsHex2OctParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsHex2OctParameterSet(@Nonnull final WorkbookFunctionsHex2OctParameterSetBuilder builder) {
         this.number = builder.number;
         this.places = builder.places;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsHex2OctParameterSet {
      * Fluent builder for the WorkbookFunctionsHex2OctParameterSet
      */
     public static final class WorkbookFunctionsHex2OctParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsHex2OctParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement places;
+        /**
+         * The places parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement places;
         /**
          * Sets the Places
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsHex2OctParameterSet {
             this.places = val;
             return this;
         }
-        private WorkbookFunctionsHex2OctParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsHex2OctParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsCountParameterSet {
      * Instiaciates a new WorkbookFunctionsCountParameterSet
      */
     public WorkbookFunctionsCountParameterSet() {}
-    private WorkbookFunctionsCountParameterSet(@Nonnull final WorkbookFunctionsCountParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCountParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCountParameterSet(@Nonnull final WorkbookFunctionsCountParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsCountParameterSet {
      * Fluent builder for the WorkbookFunctionsCountParameterSet
      */
     public static final class WorkbookFunctionsCountParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsCountParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsCountParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCountParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

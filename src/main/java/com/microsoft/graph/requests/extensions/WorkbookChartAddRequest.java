@@ -37,6 +37,7 @@ public class WorkbookChartAddRequest extends BaseRequest<WorkbookChart> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookChartAddParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

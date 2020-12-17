@@ -35,7 +35,11 @@ public class ReportRootGetOneDriveUsageFileCountsParameterSet {
      * Instiaciates a new ReportRootGetOneDriveUsageFileCountsParameterSet
      */
     public ReportRootGetOneDriveUsageFileCountsParameterSet() {}
-    private ReportRootGetOneDriveUsageFileCountsParameterSet(@Nonnull final ReportRootGetOneDriveUsageFileCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOneDriveUsageFileCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOneDriveUsageFileCountsParameterSet(@Nonnull final ReportRootGetOneDriveUsageFileCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetOneDriveUsageFileCountsParameterSet {
      * Fluent builder for the ReportRootGetOneDriveUsageFileCountsParameterSet
      */
     public static final class ReportRootGetOneDriveUsageFileCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetOneDriveUsageFileCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetOneDriveUsageFileCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOneDriveUsageFileCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsIsoWeekNumParameterSet {
      * Instiaciates a new WorkbookFunctionsIsoWeekNumParameterSet
      */
     public WorkbookFunctionsIsoWeekNumParameterSet() {}
-    private WorkbookFunctionsIsoWeekNumParameterSet(@Nonnull final WorkbookFunctionsIsoWeekNumParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIsoWeekNumParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIsoWeekNumParameterSet(@Nonnull final WorkbookFunctionsIsoWeekNumParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsIsoWeekNumParameterSet {
      * Fluent builder for the WorkbookFunctionsIsoWeekNumParameterSet
      */
     public static final class WorkbookFunctionsIsoWeekNumParameterSetBuilder {
-        private com.google.gson.JsonElement date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsIsoWeekNumParameterSet {
             this.date = val;
             return this;
         }
-        private WorkbookFunctionsIsoWeekNumParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIsoWeekNumParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

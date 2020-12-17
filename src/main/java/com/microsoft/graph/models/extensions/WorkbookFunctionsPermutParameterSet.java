@@ -44,7 +44,11 @@ public class WorkbookFunctionsPermutParameterSet {
      * Instiaciates a new WorkbookFunctionsPermutParameterSet
      */
     public WorkbookFunctionsPermutParameterSet() {}
-    private WorkbookFunctionsPermutParameterSet(@Nonnull final WorkbookFunctionsPermutParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPermutParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPermutParameterSet(@Nonnull final WorkbookFunctionsPermutParameterSetBuilder builder) {
         this.number = builder.number;
         this.numberChosen = builder.numberChosen;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsPermutParameterSet {
      * Fluent builder for the WorkbookFunctionsPermutParameterSet
      */
     public static final class WorkbookFunctionsPermutParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsPermutParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement numberChosen;
+        /**
+         * The numberChosen parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberChosen;
         /**
          * Sets the NumberChosen
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsPermutParameterSet {
             this.numberChosen = val;
             return this;
         }
-        private WorkbookFunctionsPermutParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPermutParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

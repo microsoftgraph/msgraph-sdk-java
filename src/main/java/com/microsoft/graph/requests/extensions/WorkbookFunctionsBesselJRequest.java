@@ -38,6 +38,7 @@ public class WorkbookFunctionsBesselJRequest extends BaseRequest<WorkbookFunctio
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsBesselJParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

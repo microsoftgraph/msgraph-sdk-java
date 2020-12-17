@@ -26,7 +26,11 @@ public class WorkbookRangeUnmergeParameterSet {
      * Instiaciates a new WorkbookRangeUnmergeParameterSet
      */
     public WorkbookRangeUnmergeParameterSet() {}
-    private WorkbookRangeUnmergeParameterSet(@Nonnull final WorkbookRangeUnmergeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeUnmergeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeUnmergeParameterSet(@Nonnull final WorkbookRangeUnmergeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeUnmergeParameterSet {
      * Fluent builder for the WorkbookRangeUnmergeParameterSet
      */
     public static final class WorkbookRangeUnmergeParameterSetBuilder {
-        private WorkbookRangeUnmergeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeUnmergeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

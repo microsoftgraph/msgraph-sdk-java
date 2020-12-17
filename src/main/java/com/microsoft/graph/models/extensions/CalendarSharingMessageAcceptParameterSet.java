@@ -26,7 +26,11 @@ public class CalendarSharingMessageAcceptParameterSet {
      * Instiaciates a new CalendarSharingMessageAcceptParameterSet
      */
     public CalendarSharingMessageAcceptParameterSet() {}
-    private CalendarSharingMessageAcceptParameterSet(@Nonnull final CalendarSharingMessageAcceptParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CalendarSharingMessageAcceptParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CalendarSharingMessageAcceptParameterSet(@Nonnull final CalendarSharingMessageAcceptParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class CalendarSharingMessageAcceptParameterSet {
      * Fluent builder for the CalendarSharingMessageAcceptParameterSet
      */
     public static final class CalendarSharingMessageAcceptParameterSetBuilder {
-        private CalendarSharingMessageAcceptParameterSetBuilder(){}
+        @Nullable
+        protected CalendarSharingMessageAcceptParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

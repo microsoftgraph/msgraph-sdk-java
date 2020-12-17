@@ -35,7 +35,11 @@ public class WorkbookRangeInsertParameterSet {
      * Instiaciates a new WorkbookRangeInsertParameterSet
      */
     public WorkbookRangeInsertParameterSet() {}
-    private WorkbookRangeInsertParameterSet(@Nonnull final WorkbookRangeInsertParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeInsertParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeInsertParameterSet(@Nonnull final WorkbookRangeInsertParameterSetBuilder builder) {
         this.shift = builder.shift;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookRangeInsertParameterSet {
      * Fluent builder for the WorkbookRangeInsertParameterSet
      */
     public static final class WorkbookRangeInsertParameterSetBuilder {
-        private String shift;
+        /**
+         * The shift parameter value
+         */
+        @Nullable
+        protected String shift;
         /**
          * Sets the Shift
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookRangeInsertParameterSet {
             this.shift = val;
             return this;
         }
-        private WorkbookRangeInsertParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeInsertParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

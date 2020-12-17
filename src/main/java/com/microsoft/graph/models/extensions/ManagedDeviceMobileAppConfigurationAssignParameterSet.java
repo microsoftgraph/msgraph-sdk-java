@@ -35,7 +35,11 @@ public class ManagedDeviceMobileAppConfigurationAssignParameterSet {
      * Instiaciates a new ManagedDeviceMobileAppConfigurationAssignParameterSet
      */
     public ManagedDeviceMobileAppConfigurationAssignParameterSet() {}
-    private ManagedDeviceMobileAppConfigurationAssignParameterSet(@Nonnull final ManagedDeviceMobileAppConfigurationAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceMobileAppConfigurationAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceMobileAppConfigurationAssignParameterSet(@Nonnull final ManagedDeviceMobileAppConfigurationAssignParameterSetBuilder builder) {
         this.assignments = builder.assignments;
     }
     /**
@@ -50,7 +54,11 @@ public class ManagedDeviceMobileAppConfigurationAssignParameterSet {
      * Fluent builder for the ManagedDeviceMobileAppConfigurationAssignParameterSet
      */
     public static final class ManagedDeviceMobileAppConfigurationAssignParameterSetBuilder {
-        private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments;
+        /**
+         * The assignments parameter value
+         */
+        @Nullable
+        protected java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments;
         /**
          * Sets the Assignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ManagedDeviceMobileAppConfigurationAssignParameterSet {
             this.assignments = val;
             return this;
         }
-        private ManagedDeviceMobileAppConfigurationAssignParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceMobileAppConfigurationAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

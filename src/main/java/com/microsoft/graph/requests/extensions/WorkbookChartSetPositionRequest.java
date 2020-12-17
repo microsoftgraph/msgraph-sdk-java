@@ -37,6 +37,7 @@ public class WorkbookChartSetPositionRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookChartSetPositionParameterSet body;
     /**
      * Creates the WorkbookChartSetPosition

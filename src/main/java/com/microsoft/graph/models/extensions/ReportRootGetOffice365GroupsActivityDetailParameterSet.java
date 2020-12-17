@@ -35,7 +35,11 @@ public class ReportRootGetOffice365GroupsActivityDetailParameterSet {
      * Instiaciates a new ReportRootGetOffice365GroupsActivityDetailParameterSet
      */
     public ReportRootGetOffice365GroupsActivityDetailParameterSet() {}
-    private ReportRootGetOffice365GroupsActivityDetailParameterSet(@Nonnull final ReportRootGetOffice365GroupsActivityDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOffice365GroupsActivityDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOffice365GroupsActivityDetailParameterSet(@Nonnull final ReportRootGetOffice365GroupsActivityDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetOffice365GroupsActivityDetailParameterSet {
      * Fluent builder for the ReportRootGetOffice365GroupsActivityDetailParameterSet
      */
     public static final class ReportRootGetOffice365GroupsActivityDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetOffice365GroupsActivityDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetOffice365GroupsActivityDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOffice365GroupsActivityDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

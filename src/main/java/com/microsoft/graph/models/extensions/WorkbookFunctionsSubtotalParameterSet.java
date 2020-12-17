@@ -44,7 +44,11 @@ public class WorkbookFunctionsSubtotalParameterSet {
      * Instiaciates a new WorkbookFunctionsSubtotalParameterSet
      */
     public WorkbookFunctionsSubtotalParameterSet() {}
-    private WorkbookFunctionsSubtotalParameterSet(@Nonnull final WorkbookFunctionsSubtotalParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSubtotalParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSubtotalParameterSet(@Nonnull final WorkbookFunctionsSubtotalParameterSetBuilder builder) {
         this.functionNum = builder.functionNum;
         this.values = builder.values;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsSubtotalParameterSet {
      * Fluent builder for the WorkbookFunctionsSubtotalParameterSet
      */
     public static final class WorkbookFunctionsSubtotalParameterSetBuilder {
-        private com.google.gson.JsonElement functionNum;
+        /**
+         * The functionNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement functionNum;
         /**
          * Sets the FunctionNum
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsSubtotalParameterSet {
             this.functionNum = val;
             return this;
         }
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsSubtotalParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsSubtotalParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSubtotalParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

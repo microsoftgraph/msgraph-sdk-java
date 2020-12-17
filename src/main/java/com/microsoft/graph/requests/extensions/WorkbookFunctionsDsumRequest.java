@@ -38,6 +38,7 @@ public class WorkbookFunctionsDsumRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsDsumParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

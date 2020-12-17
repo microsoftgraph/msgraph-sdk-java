@@ -53,7 +53,11 @@ public class WorkbookChartAddParameterSet {
      * Instiaciates a new WorkbookChartAddParameterSet
      */
     public WorkbookChartAddParameterSet() {}
-    private WorkbookChartAddParameterSet(@Nonnull final WorkbookChartAddParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartAddParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartAddParameterSet(@Nonnull final WorkbookChartAddParameterSetBuilder builder) {
         this.type = builder.type;
         this.sourceData = builder.sourceData;
         this.seriesBy = builder.seriesBy;
@@ -70,7 +74,11 @@ public class WorkbookChartAddParameterSet {
      * Fluent builder for the WorkbookChartAddParameterSet
      */
     public static final class WorkbookChartAddParameterSetBuilder {
-        private String type;
+        /**
+         * The type parameter value
+         */
+        @Nullable
+        protected String type;
         /**
          * Sets the Type
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookChartAddParameterSet {
             this.type = val;
             return this;
         }
-        private com.google.gson.JsonElement sourceData;
+        /**
+         * The sourceData parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement sourceData;
         /**
          * Sets the SourceData
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookChartAddParameterSet {
             this.sourceData = val;
             return this;
         }
-        private String seriesBy;
+        /**
+         * The seriesBy parameter value
+         */
+        @Nullable
+        protected String seriesBy;
         /**
          * Sets the SeriesBy
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookChartAddParameterSet {
             this.seriesBy = val;
             return this;
         }
-        private WorkbookChartAddParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartAddParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

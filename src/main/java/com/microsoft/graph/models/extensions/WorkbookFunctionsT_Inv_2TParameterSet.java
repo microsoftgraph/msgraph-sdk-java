@@ -44,7 +44,11 @@ public class WorkbookFunctionsT_Inv_2TParameterSet {
      * Instiaciates a new WorkbookFunctionsT_Inv_2TParameterSet
      */
     public WorkbookFunctionsT_Inv_2TParameterSet() {}
-    private WorkbookFunctionsT_Inv_2TParameterSet(@Nonnull final WorkbookFunctionsT_Inv_2TParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsT_Inv_2TParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsT_Inv_2TParameterSet(@Nonnull final WorkbookFunctionsT_Inv_2TParameterSetBuilder builder) {
         this.probability = builder.probability;
         this.degFreedom = builder.degFreedom;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsT_Inv_2TParameterSet {
      * Fluent builder for the WorkbookFunctionsT_Inv_2TParameterSet
      */
     public static final class WorkbookFunctionsT_Inv_2TParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsT_Inv_2TParameterSet {
             this.probability = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom;
+        /**
+         * The degFreedom parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom;
         /**
          * Sets the DegFreedom
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsT_Inv_2TParameterSet {
             this.degFreedom = val;
             return this;
         }
-        private WorkbookFunctionsT_Inv_2TParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsT_Inv_2TParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequest extends BaseRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected DeviceCompliancePolicyScheduleActionsForRulesParameterSet body;
     /**
      * Creates the DeviceCompliancePolicyScheduleActionsForRules

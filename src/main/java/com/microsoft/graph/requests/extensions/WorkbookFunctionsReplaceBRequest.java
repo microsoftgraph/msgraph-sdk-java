@@ -38,6 +38,7 @@ public class WorkbookFunctionsReplaceBRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsReplaceBParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -37,6 +37,7 @@ public class WorkbookFilterApplyRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFilterApplyParameterSet body;
     /**
      * Creates the WorkbookFilterApply

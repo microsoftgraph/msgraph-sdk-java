@@ -44,7 +44,11 @@ public class WorkbookFunctionsImPowerParameterSet {
      * Instiaciates a new WorkbookFunctionsImPowerParameterSet
      */
     public WorkbookFunctionsImPowerParameterSet() {}
-    private WorkbookFunctionsImPowerParameterSet(@Nonnull final WorkbookFunctionsImPowerParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsImPowerParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsImPowerParameterSet(@Nonnull final WorkbookFunctionsImPowerParameterSetBuilder builder) {
         this.inumber = builder.inumber;
         this.number = builder.number;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsImPowerParameterSet {
      * Fluent builder for the WorkbookFunctionsImPowerParameterSet
      */
     public static final class WorkbookFunctionsImPowerParameterSetBuilder {
-        private com.google.gson.JsonElement inumber;
+        /**
+         * The inumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement inumber;
         /**
          * Sets the Inumber
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsImPowerParameterSet {
             this.inumber = val;
             return this;
         }
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsImPowerParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsImPowerParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsImPowerParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class CallRedirectRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallRedirectParameterSet body;
     /**
      * Creates the CallRedirect

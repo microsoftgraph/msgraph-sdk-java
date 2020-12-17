@@ -37,6 +37,7 @@ public class ManagedEBookAssignRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedEBookAssignParameterSet body;
     /**
      * Creates the ManagedEBookAssign

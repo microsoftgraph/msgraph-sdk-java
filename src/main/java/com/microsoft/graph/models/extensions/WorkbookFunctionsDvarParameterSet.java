@@ -53,7 +53,11 @@ public class WorkbookFunctionsDvarParameterSet {
      * Instiaciates a new WorkbookFunctionsDvarParameterSet
      */
     public WorkbookFunctionsDvarParameterSet() {}
-    private WorkbookFunctionsDvarParameterSet(@Nonnull final WorkbookFunctionsDvarParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDvarParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDvarParameterSet(@Nonnull final WorkbookFunctionsDvarParameterSetBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;
         this.criteria = builder.criteria;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsDvarParameterSet {
      * Fluent builder for the WorkbookFunctionsDvarParameterSet
      */
     public static final class WorkbookFunctionsDvarParameterSetBuilder {
-        private com.google.gson.JsonElement database;
+        /**
+         * The database parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement database;
         /**
          * Sets the Database
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsDvarParameterSet {
             this.database = val;
             return this;
         }
-        private com.google.gson.JsonElement field;
+        /**
+         * The field parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement field;
         /**
          * Sets the Field
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsDvarParameterSet {
             this.field = val;
             return this;
         }
-        private com.google.gson.JsonElement criteria;
+        /**
+         * The criteria parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement criteria;
         /**
          * Sets the Criteria
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsDvarParameterSet {
             this.criteria = val;
             return this;
         }
-        private WorkbookFunctionsDvarParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDvarParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

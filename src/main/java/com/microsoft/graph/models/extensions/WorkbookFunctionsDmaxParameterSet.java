@@ -53,7 +53,11 @@ public class WorkbookFunctionsDmaxParameterSet {
      * Instiaciates a new WorkbookFunctionsDmaxParameterSet
      */
     public WorkbookFunctionsDmaxParameterSet() {}
-    private WorkbookFunctionsDmaxParameterSet(@Nonnull final WorkbookFunctionsDmaxParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDmaxParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDmaxParameterSet(@Nonnull final WorkbookFunctionsDmaxParameterSetBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;
         this.criteria = builder.criteria;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsDmaxParameterSet {
      * Fluent builder for the WorkbookFunctionsDmaxParameterSet
      */
     public static final class WorkbookFunctionsDmaxParameterSetBuilder {
-        private com.google.gson.JsonElement database;
+        /**
+         * The database parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement database;
         /**
          * Sets the Database
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsDmaxParameterSet {
             this.database = val;
             return this;
         }
-        private com.google.gson.JsonElement field;
+        /**
+         * The field parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement field;
         /**
          * Sets the Field
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsDmaxParameterSet {
             this.field = val;
             return this;
         }
-        private com.google.gson.JsonElement criteria;
+        /**
+         * The criteria parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement criteria;
         /**
          * Sets the Criteria
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsDmaxParameterSet {
             this.criteria = val;
             return this;
         }
-        private WorkbookFunctionsDmaxParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDmaxParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

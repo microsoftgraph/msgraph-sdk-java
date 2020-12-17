@@ -26,7 +26,11 @@ public class OutlookUserSupportedTimeZonesParameterSet {
      * Instiaciates a new OutlookUserSupportedTimeZonesParameterSet
      */
     public OutlookUserSupportedTimeZonesParameterSet() {}
-    private OutlookUserSupportedTimeZonesParameterSet(@Nonnull final OutlookUserSupportedTimeZonesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OutlookUserSupportedTimeZonesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OutlookUserSupportedTimeZonesParameterSet(@Nonnull final OutlookUserSupportedTimeZonesParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class OutlookUserSupportedTimeZonesParameterSet {
      * Fluent builder for the OutlookUserSupportedTimeZonesParameterSet
      */
     public static final class OutlookUserSupportedTimeZonesParameterSetBuilder {
-        private OutlookUserSupportedTimeZonesParameterSetBuilder(){}
+        @Nullable
+        protected OutlookUserSupportedTimeZonesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

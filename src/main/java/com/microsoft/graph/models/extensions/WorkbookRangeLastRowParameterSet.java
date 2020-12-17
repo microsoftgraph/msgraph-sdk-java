@@ -26,7 +26,11 @@ public class WorkbookRangeLastRowParameterSet {
      * Instiaciates a new WorkbookRangeLastRowParameterSet
      */
     public WorkbookRangeLastRowParameterSet() {}
-    private WorkbookRangeLastRowParameterSet(@Nonnull final WorkbookRangeLastRowParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeLastRowParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeLastRowParameterSet(@Nonnull final WorkbookRangeLastRowParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeLastRowParameterSet {
      * Fluent builder for the WorkbookRangeLastRowParameterSet
      */
     public static final class WorkbookRangeLastRowParameterSetBuilder {
-        private WorkbookRangeLastRowParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeLastRowParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

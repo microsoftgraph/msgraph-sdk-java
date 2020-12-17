@@ -26,7 +26,11 @@ public class UserActivityRecentParameterSet {
      * Instiaciates a new UserActivityRecentParameterSet
      */
     public UserActivityRecentParameterSet() {}
-    private UserActivityRecentParameterSet(@Nonnull final UserActivityRecentParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserActivityRecentParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserActivityRecentParameterSet(@Nonnull final UserActivityRecentParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class UserActivityRecentParameterSet {
      * Fluent builder for the UserActivityRecentParameterSet
      */
     public static final class UserActivityRecentParameterSetBuilder {
-        private UserActivityRecentParameterSetBuilder(){}
+        @Nullable
+        protected UserActivityRecentParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

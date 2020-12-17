@@ -35,7 +35,11 @@ public class CallTransferParameterSet {
      * Instiaciates a new CallTransferParameterSet
      */
     public CallTransferParameterSet() {}
-    private CallTransferParameterSet(@Nonnull final CallTransferParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallTransferParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallTransferParameterSet(@Nonnull final CallTransferParameterSetBuilder builder) {
         this.transferTarget = builder.transferTarget;
     }
     /**
@@ -50,7 +54,11 @@ public class CallTransferParameterSet {
      * Fluent builder for the CallTransferParameterSet
      */
     public static final class CallTransferParameterSetBuilder {
-        private InvitationParticipantInfo transferTarget;
+        /**
+         * The transferTarget parameter value
+         */
+        @Nullable
+        protected InvitationParticipantInfo transferTarget;
         /**
          * Sets the TransferTarget
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class CallTransferParameterSet {
             this.transferTarget = val;
             return this;
         }
-        private CallTransferParameterSetBuilder(){}
+        @Nullable
+        protected CallTransferParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

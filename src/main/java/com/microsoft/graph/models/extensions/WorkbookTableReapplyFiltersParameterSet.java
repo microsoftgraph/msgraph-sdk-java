@@ -26,7 +26,11 @@ public class WorkbookTableReapplyFiltersParameterSet {
      * Instiaciates a new WorkbookTableReapplyFiltersParameterSet
      */
     public WorkbookTableReapplyFiltersParameterSet() {}
-    private WorkbookTableReapplyFiltersParameterSet(@Nonnull final WorkbookTableReapplyFiltersParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableReapplyFiltersParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableReapplyFiltersParameterSet(@Nonnull final WorkbookTableReapplyFiltersParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableReapplyFiltersParameterSet {
      * Fluent builder for the WorkbookTableReapplyFiltersParameterSet
      */
     public static final class WorkbookTableReapplyFiltersParameterSetBuilder {
-        private WorkbookTableReapplyFiltersParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableReapplyFiltersParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

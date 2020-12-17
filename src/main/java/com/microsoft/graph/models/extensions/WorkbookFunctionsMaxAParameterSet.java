@@ -35,7 +35,11 @@ public class WorkbookFunctionsMaxAParameterSet {
      * Instiaciates a new WorkbookFunctionsMaxAParameterSet
      */
     public WorkbookFunctionsMaxAParameterSet() {}
-    private WorkbookFunctionsMaxAParameterSet(@Nonnull final WorkbookFunctionsMaxAParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMaxAParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMaxAParameterSet(@Nonnull final WorkbookFunctionsMaxAParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsMaxAParameterSet {
      * Fluent builder for the WorkbookFunctionsMaxAParameterSet
      */
     public static final class WorkbookFunctionsMaxAParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsMaxAParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsMaxAParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMaxAParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

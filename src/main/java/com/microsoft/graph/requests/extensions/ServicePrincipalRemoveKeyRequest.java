@@ -37,6 +37,7 @@ public class ServicePrincipalRemoveKeyRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ServicePrincipalRemoveKeyParameterSet body;
     /**
      * Creates the ServicePrincipalRemoveKey

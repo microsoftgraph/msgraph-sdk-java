@@ -53,7 +53,11 @@ public class CallRedirectParameterSet {
      * Instiaciates a new CallRedirectParameterSet
      */
     public CallRedirectParameterSet() {}
-    private CallRedirectParameterSet(@Nonnull final CallRedirectParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallRedirectParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallRedirectParameterSet(@Nonnull final CallRedirectParameterSetBuilder builder) {
         this.targets = builder.targets;
         this.timeout = builder.timeout;
         this.callbackUri = builder.callbackUri;
@@ -70,7 +74,11 @@ public class CallRedirectParameterSet {
      * Fluent builder for the CallRedirectParameterSet
      */
     public static final class CallRedirectParameterSetBuilder {
-        private java.util.List<InvitationParticipantInfo> targets;
+        /**
+         * The targets parameter value
+         */
+        @Nullable
+        protected java.util.List<InvitationParticipantInfo> targets;
         /**
          * Sets the Targets
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class CallRedirectParameterSet {
             this.targets = val;
             return this;
         }
-        private Integer timeout;
+        /**
+         * The timeout parameter value
+         */
+        @Nullable
+        protected Integer timeout;
         /**
          * Sets the Timeout
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class CallRedirectParameterSet {
             this.timeout = val;
             return this;
         }
-        private String callbackUri;
+        /**
+         * The callbackUri parameter value
+         */
+        @Nullable
+        protected String callbackUri;
         /**
          * Sets the CallbackUri
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class CallRedirectParameterSet {
             this.callbackUri = val;
             return this;
         }
-        private CallRedirectParameterSetBuilder(){}
+        @Nullable
+        protected CallRedirectParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

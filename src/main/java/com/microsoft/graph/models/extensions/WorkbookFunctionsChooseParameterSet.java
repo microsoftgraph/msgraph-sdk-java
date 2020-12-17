@@ -44,7 +44,11 @@ public class WorkbookFunctionsChooseParameterSet {
      * Instiaciates a new WorkbookFunctionsChooseParameterSet
      */
     public WorkbookFunctionsChooseParameterSet() {}
-    private WorkbookFunctionsChooseParameterSet(@Nonnull final WorkbookFunctionsChooseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsChooseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsChooseParameterSet(@Nonnull final WorkbookFunctionsChooseParameterSetBuilder builder) {
         this.indexNum = builder.indexNum;
         this.values = builder.values;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsChooseParameterSet {
      * Fluent builder for the WorkbookFunctionsChooseParameterSet
      */
     public static final class WorkbookFunctionsChooseParameterSetBuilder {
-        private com.google.gson.JsonElement indexNum;
+        /**
+         * The indexNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement indexNum;
         /**
          * Sets the IndexNum
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsChooseParameterSet {
             this.indexNum = val;
             return this;
         }
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsChooseParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsChooseParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsChooseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

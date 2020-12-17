@@ -35,7 +35,11 @@ public class WorkbookFunctionsMinuteParameterSet {
      * Instiaciates a new WorkbookFunctionsMinuteParameterSet
      */
     public WorkbookFunctionsMinuteParameterSet() {}
-    private WorkbookFunctionsMinuteParameterSet(@Nonnull final WorkbookFunctionsMinuteParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMinuteParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMinuteParameterSet(@Nonnull final WorkbookFunctionsMinuteParameterSetBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsMinuteParameterSet {
      * Fluent builder for the WorkbookFunctionsMinuteParameterSet
      */
     public static final class WorkbookFunctionsMinuteParameterSetBuilder {
-        private com.google.gson.JsonElement serialNumber;
+        /**
+         * The serialNumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement serialNumber;
         /**
          * Sets the SerialNumber
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsMinuteParameterSet {
             this.serialNumber = val;
             return this;
         }
-        private WorkbookFunctionsMinuteParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMinuteParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

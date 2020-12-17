@@ -38,6 +38,7 @@ public class WorkbookFunctionsPpmtRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsPpmtParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

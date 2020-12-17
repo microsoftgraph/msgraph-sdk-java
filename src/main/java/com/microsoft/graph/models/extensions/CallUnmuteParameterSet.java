@@ -35,7 +35,11 @@ public class CallUnmuteParameterSet {
      * Instiaciates a new CallUnmuteParameterSet
      */
     public CallUnmuteParameterSet() {}
-    private CallUnmuteParameterSet(@Nonnull final CallUnmuteParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallUnmuteParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallUnmuteParameterSet(@Nonnull final CallUnmuteParameterSetBuilder builder) {
         this.clientContext = builder.clientContext;
     }
     /**
@@ -50,7 +54,11 @@ public class CallUnmuteParameterSet {
      * Fluent builder for the CallUnmuteParameterSet
      */
     public static final class CallUnmuteParameterSetBuilder {
-        private String clientContext;
+        /**
+         * The clientContext parameter value
+         */
+        @Nullable
+        protected String clientContext;
         /**
          * Sets the ClientContext
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class CallUnmuteParameterSet {
             this.clientContext = val;
             return this;
         }
-        private CallUnmuteParameterSetBuilder(){}
+        @Nullable
+        protected CallUnmuteParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

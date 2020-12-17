@@ -35,7 +35,11 @@ public class WorkbookFunctionsAscParameterSet {
      * Instiaciates a new WorkbookFunctionsAscParameterSet
      */
     public WorkbookFunctionsAscParameterSet() {}
-    private WorkbookFunctionsAscParameterSet(@Nonnull final WorkbookFunctionsAscParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAscParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAscParameterSet(@Nonnull final WorkbookFunctionsAscParameterSetBuilder builder) {
         this.text = builder.text;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAscParameterSet {
      * Fluent builder for the WorkbookFunctionsAscParameterSet
      */
     public static final class WorkbookFunctionsAscParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAscParameterSet {
             this.text = val;
             return this;
         }
-        private WorkbookFunctionsAscParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAscParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

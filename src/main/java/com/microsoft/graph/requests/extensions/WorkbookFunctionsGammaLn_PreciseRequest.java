@@ -38,6 +38,7 @@ public class WorkbookFunctionsGammaLn_PreciseRequest extends BaseRequest<Workboo
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsGammaLn_PreciseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

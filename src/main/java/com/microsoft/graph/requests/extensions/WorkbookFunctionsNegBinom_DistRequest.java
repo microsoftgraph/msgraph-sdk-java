@@ -38,6 +38,7 @@ public class WorkbookFunctionsNegBinom_DistRequest extends BaseRequest<WorkbookF
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsNegBinom_DistParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

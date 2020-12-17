@@ -35,7 +35,11 @@ public class WorkbookFilterApplyIconFilterParameterSet {
      * Instiaciates a new WorkbookFilterApplyIconFilterParameterSet
      */
     public WorkbookFilterApplyIconFilterParameterSet() {}
-    private WorkbookFilterApplyIconFilterParameterSet(@Nonnull final WorkbookFilterApplyIconFilterParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyIconFilterParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyIconFilterParameterSet(@Nonnull final WorkbookFilterApplyIconFilterParameterSetBuilder builder) {
         this.icon = builder.icon;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFilterApplyIconFilterParameterSet {
      * Fluent builder for the WorkbookFilterApplyIconFilterParameterSet
      */
     public static final class WorkbookFilterApplyIconFilterParameterSetBuilder {
-        private WorkbookIcon icon;
+        /**
+         * The icon parameter value
+         */
+        @Nullable
+        protected WorkbookIcon icon;
         /**
          * Sets the Icon
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFilterApplyIconFilterParameterSet {
             this.icon = val;
             return this;
         }
-        private WorkbookFilterApplyIconFilterParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyIconFilterParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

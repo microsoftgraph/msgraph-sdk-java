@@ -44,7 +44,11 @@ public class UserReminderViewParameterSet {
      * Instiaciates a new UserReminderViewParameterSet
      */
     public UserReminderViewParameterSet() {}
-    private UserReminderViewParameterSet(@Nonnull final UserReminderViewParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserReminderViewParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserReminderViewParameterSet(@Nonnull final UserReminderViewParameterSetBuilder builder) {
         this.startDateTime = builder.startDateTime;
         this.endDateTime = builder.endDateTime;
     }
@@ -60,7 +64,11 @@ public class UserReminderViewParameterSet {
      * Fluent builder for the UserReminderViewParameterSet
      */
     public static final class UserReminderViewParameterSetBuilder {
-        private String startDateTime;
+        /**
+         * The startDateTime parameter value
+         */
+        @Nullable
+        protected String startDateTime;
         /**
          * Sets the StartDateTime
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class UserReminderViewParameterSet {
             this.startDateTime = val;
             return this;
         }
-        private String endDateTime;
+        /**
+         * The endDateTime parameter value
+         */
+        @Nullable
+        protected String endDateTime;
         /**
          * Sets the EndDateTime
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class UserReminderViewParameterSet {
             this.endDateTime = val;
             return this;
         }
-        private UserReminderViewParameterSetBuilder(){}
+        @Nullable
+        protected UserReminderViewParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsSeriesSumRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsSeriesSumParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

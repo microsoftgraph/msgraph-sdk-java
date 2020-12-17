@@ -35,7 +35,11 @@ public class WorkbookFunctionsErfCParameterSet {
      * Instiaciates a new WorkbookFunctionsErfCParameterSet
      */
     public WorkbookFunctionsErfCParameterSet() {}
-    private WorkbookFunctionsErfCParameterSet(@Nonnull final WorkbookFunctionsErfCParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsErfCParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsErfCParameterSet(@Nonnull final WorkbookFunctionsErfCParameterSetBuilder builder) {
         this.x = builder.x;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsErfCParameterSet {
      * Fluent builder for the WorkbookFunctionsErfCParameterSet
      */
     public static final class WorkbookFunctionsErfCParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsErfCParameterSet {
             this.x = val;
             return this;
         }
-        private WorkbookFunctionsErfCParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsErfCParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

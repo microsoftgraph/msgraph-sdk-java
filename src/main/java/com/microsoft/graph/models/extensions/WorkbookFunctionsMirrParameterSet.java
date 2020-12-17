@@ -53,7 +53,11 @@ public class WorkbookFunctionsMirrParameterSet {
      * Instiaciates a new WorkbookFunctionsMirrParameterSet
      */
     public WorkbookFunctionsMirrParameterSet() {}
-    private WorkbookFunctionsMirrParameterSet(@Nonnull final WorkbookFunctionsMirrParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMirrParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMirrParameterSet(@Nonnull final WorkbookFunctionsMirrParameterSetBuilder builder) {
         this.values = builder.values;
         this.financeRate = builder.financeRate;
         this.reinvestRate = builder.reinvestRate;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsMirrParameterSet {
      * Fluent builder for the WorkbookFunctionsMirrParameterSet
      */
     public static final class WorkbookFunctionsMirrParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsMirrParameterSet {
             this.values = val;
             return this;
         }
-        private com.google.gson.JsonElement financeRate;
+        /**
+         * The financeRate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement financeRate;
         /**
          * Sets the FinanceRate
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsMirrParameterSet {
             this.financeRate = val;
             return this;
         }
-        private com.google.gson.JsonElement reinvestRate;
+        /**
+         * The reinvestRate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement reinvestRate;
         /**
          * Sets the ReinvestRate
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsMirrParameterSet {
             this.reinvestRate = val;
             return this;
         }
-        private WorkbookFunctionsMirrParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMirrParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

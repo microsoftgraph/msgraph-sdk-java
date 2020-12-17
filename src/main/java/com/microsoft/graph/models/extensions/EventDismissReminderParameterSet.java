@@ -26,7 +26,11 @@ public class EventDismissReminderParameterSet {
      * Instiaciates a new EventDismissReminderParameterSet
      */
     public EventDismissReminderParameterSet() {}
-    private EventDismissReminderParameterSet(@Nonnull final EventDismissReminderParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new EventDismissReminderParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected EventDismissReminderParameterSet(@Nonnull final EventDismissReminderParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class EventDismissReminderParameterSet {
      * Fluent builder for the EventDismissReminderParameterSet
      */
     public static final class EventDismissReminderParameterSetBuilder {
-        private EventDismissReminderParameterSetBuilder(){}
+        @Nullable
+        protected EventDismissReminderParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

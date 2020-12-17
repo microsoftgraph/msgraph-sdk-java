@@ -35,7 +35,11 @@ public class ReportRootGetTeamsDeviceUsageUserCountsParameterSet {
      * Instiaciates a new ReportRootGetTeamsDeviceUsageUserCountsParameterSet
      */
     public ReportRootGetTeamsDeviceUsageUserCountsParameterSet() {}
-    private ReportRootGetTeamsDeviceUsageUserCountsParameterSet(@Nonnull final ReportRootGetTeamsDeviceUsageUserCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetTeamsDeviceUsageUserCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetTeamsDeviceUsageUserCountsParameterSet(@Nonnull final ReportRootGetTeamsDeviceUsageUserCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetTeamsDeviceUsageUserCountsParameterSet {
      * Fluent builder for the ReportRootGetTeamsDeviceUsageUserCountsParameterSet
      */
     public static final class ReportRootGetTeamsDeviceUsageUserCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetTeamsDeviceUsageUserCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetTeamsDeviceUsageUserCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetTeamsDeviceUsageUserCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

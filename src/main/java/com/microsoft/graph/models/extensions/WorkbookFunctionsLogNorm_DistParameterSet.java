@@ -62,7 +62,11 @@ public class WorkbookFunctionsLogNorm_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsLogNorm_DistParameterSet
      */
     public WorkbookFunctionsLogNorm_DistParameterSet() {}
-    private WorkbookFunctionsLogNorm_DistParameterSet(@Nonnull final WorkbookFunctionsLogNorm_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLogNorm_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLogNorm_DistParameterSet(@Nonnull final WorkbookFunctionsLogNorm_DistParameterSetBuilder builder) {
         this.x = builder.x;
         this.mean = builder.mean;
         this.standardDev = builder.standardDev;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsLogNorm_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsLogNorm_DistParameterSet
      */
     public static final class WorkbookFunctionsLogNorm_DistParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsLogNorm_DistParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement mean;
+        /**
+         * The mean parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement mean;
         /**
          * Sets the Mean
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsLogNorm_DistParameterSet {
             this.mean = val;
             return this;
         }
-        private com.google.gson.JsonElement standardDev;
+        /**
+         * The standardDev parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement standardDev;
         /**
          * Sets the StandardDev
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsLogNorm_DistParameterSet {
             this.standardDev = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsLogNorm_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsLogNorm_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLogNorm_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

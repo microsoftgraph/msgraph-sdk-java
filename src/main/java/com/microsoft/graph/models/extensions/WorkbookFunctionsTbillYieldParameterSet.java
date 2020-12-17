@@ -53,7 +53,11 @@ public class WorkbookFunctionsTbillYieldParameterSet {
      * Instiaciates a new WorkbookFunctionsTbillYieldParameterSet
      */
     public WorkbookFunctionsTbillYieldParameterSet() {}
-    private WorkbookFunctionsTbillYieldParameterSet(@Nonnull final WorkbookFunctionsTbillYieldParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTbillYieldParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTbillYieldParameterSet(@Nonnull final WorkbookFunctionsTbillYieldParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.pr = builder.pr;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsTbillYieldParameterSet {
      * Fluent builder for the WorkbookFunctionsTbillYieldParameterSet
      */
     public static final class WorkbookFunctionsTbillYieldParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsTbillYieldParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsTbillYieldParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement pr;
+        /**
+         * The pr parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement pr;
         /**
          * Sets the Pr
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsTbillYieldParameterSet {
             this.pr = val;
             return this;
         }
-        private WorkbookFunctionsTbillYieldParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTbillYieldParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

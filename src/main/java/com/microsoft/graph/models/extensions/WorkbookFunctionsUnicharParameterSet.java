@@ -35,7 +35,11 @@ public class WorkbookFunctionsUnicharParameterSet {
      * Instiaciates a new WorkbookFunctionsUnicharParameterSet
      */
     public WorkbookFunctionsUnicharParameterSet() {}
-    private WorkbookFunctionsUnicharParameterSet(@Nonnull final WorkbookFunctionsUnicharParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsUnicharParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsUnicharParameterSet(@Nonnull final WorkbookFunctionsUnicharParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsUnicharParameterSet {
      * Fluent builder for the WorkbookFunctionsUnicharParameterSet
      */
     public static final class WorkbookFunctionsUnicharParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsUnicharParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsUnicharParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsUnicharParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

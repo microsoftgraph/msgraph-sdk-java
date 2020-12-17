@@ -38,6 +38,7 @@ public class WorkbookFunctionsBinom_Dist_RangeRequest extends BaseRequest<Workbo
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsBinom_Dist_RangeParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

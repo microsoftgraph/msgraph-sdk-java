@@ -26,7 +26,11 @@ public class WorkbookChartPointCountParameterSet {
      * Instiaciates a new WorkbookChartPointCountParameterSet
      */
     public WorkbookChartPointCountParameterSet() {}
-    private WorkbookChartPointCountParameterSet(@Nonnull final WorkbookChartPointCountParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartPointCountParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartPointCountParameterSet(@Nonnull final WorkbookChartPointCountParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookChartPointCountParameterSet {
      * Fluent builder for the WorkbookChartPointCountParameterSet
      */
     public static final class WorkbookChartPointCountParameterSetBuilder {
-        private WorkbookChartPointCountParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartPointCountParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

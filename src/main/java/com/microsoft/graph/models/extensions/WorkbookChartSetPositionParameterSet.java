@@ -44,7 +44,11 @@ public class WorkbookChartSetPositionParameterSet {
      * Instiaciates a new WorkbookChartSetPositionParameterSet
      */
     public WorkbookChartSetPositionParameterSet() {}
-    private WorkbookChartSetPositionParameterSet(@Nonnull final WorkbookChartSetPositionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartSetPositionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartSetPositionParameterSet(@Nonnull final WorkbookChartSetPositionParameterSetBuilder builder) {
         this.startCell = builder.startCell;
         this.endCell = builder.endCell;
     }
@@ -60,7 +64,11 @@ public class WorkbookChartSetPositionParameterSet {
      * Fluent builder for the WorkbookChartSetPositionParameterSet
      */
     public static final class WorkbookChartSetPositionParameterSetBuilder {
-        private com.google.gson.JsonElement startCell;
+        /**
+         * The startCell parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startCell;
         /**
          * Sets the StartCell
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookChartSetPositionParameterSet {
             this.startCell = val;
             return this;
         }
-        private com.google.gson.JsonElement endCell;
+        /**
+         * The endCell parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement endCell;
         /**
          * Sets the EndCell
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookChartSetPositionParameterSet {
             this.endCell = val;
             return this;
         }
-        private WorkbookChartSetPositionParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartSetPositionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

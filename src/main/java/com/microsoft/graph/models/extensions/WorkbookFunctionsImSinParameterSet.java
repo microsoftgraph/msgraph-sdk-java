@@ -35,7 +35,11 @@ public class WorkbookFunctionsImSinParameterSet {
      * Instiaciates a new WorkbookFunctionsImSinParameterSet
      */
     public WorkbookFunctionsImSinParameterSet() {}
-    private WorkbookFunctionsImSinParameterSet(@Nonnull final WorkbookFunctionsImSinParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsImSinParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsImSinParameterSet(@Nonnull final WorkbookFunctionsImSinParameterSetBuilder builder) {
         this.inumber = builder.inumber;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsImSinParameterSet {
      * Fluent builder for the WorkbookFunctionsImSinParameterSet
      */
     public static final class WorkbookFunctionsImSinParameterSetBuilder {
-        private com.google.gson.JsonElement inumber;
+        /**
+         * The inumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement inumber;
         /**
          * Sets the Inumber
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsImSinParameterSet {
             this.inumber = val;
             return this;
         }
-        private WorkbookFunctionsImSinParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsImSinParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

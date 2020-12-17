@@ -26,7 +26,11 @@ public class UserRemoveAllDevicesFromManagementParameterSet {
      * Instiaciates a new UserRemoveAllDevicesFromManagementParameterSet
      */
     public UserRemoveAllDevicesFromManagementParameterSet() {}
-    private UserRemoveAllDevicesFromManagementParameterSet(@Nonnull final UserRemoveAllDevicesFromManagementParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserRemoveAllDevicesFromManagementParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserRemoveAllDevicesFromManagementParameterSet(@Nonnull final UserRemoveAllDevicesFromManagementParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class UserRemoveAllDevicesFromManagementParameterSet {
      * Fluent builder for the UserRemoveAllDevicesFromManagementParameterSet
      */
     public static final class UserRemoveAllDevicesFromManagementParameterSetBuilder {
-        private UserRemoveAllDevicesFromManagementParameterSetBuilder(){}
+        @Nullable
+        protected UserRemoveAllDevicesFromManagementParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class DirectoryObjectGetByIdsParameterSet {
      * Instiaciates a new DirectoryObjectGetByIdsParameterSet
      */
     public DirectoryObjectGetByIdsParameterSet() {}
-    private DirectoryObjectGetByIdsParameterSet(@Nonnull final DirectoryObjectGetByIdsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DirectoryObjectGetByIdsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DirectoryObjectGetByIdsParameterSet(@Nonnull final DirectoryObjectGetByIdsParameterSetBuilder builder) {
         this.ids = builder.ids;
         this.types = builder.types;
     }
@@ -60,7 +64,11 @@ public class DirectoryObjectGetByIdsParameterSet {
      * Fluent builder for the DirectoryObjectGetByIdsParameterSet
      */
     public static final class DirectoryObjectGetByIdsParameterSetBuilder {
-        private java.util.List<String> ids;
+        /**
+         * The ids parameter value
+         */
+        @Nullable
+        protected java.util.List<String> ids;
         /**
          * Sets the Ids
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class DirectoryObjectGetByIdsParameterSet {
             this.ids = val;
             return this;
         }
-        private java.util.List<String> types;
+        /**
+         * The types parameter value
+         */
+        @Nullable
+        protected java.util.List<String> types;
         /**
          * Sets the Types
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class DirectoryObjectGetByIdsParameterSet {
             this.types = val;
             return this;
         }
-        private DirectoryObjectGetByIdsParameterSetBuilder(){}
+        @Nullable
+        protected DirectoryObjectGetByIdsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

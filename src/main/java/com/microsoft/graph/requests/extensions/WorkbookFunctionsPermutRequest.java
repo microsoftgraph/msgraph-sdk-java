@@ -38,6 +38,7 @@ public class WorkbookFunctionsPermutRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsPermutParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

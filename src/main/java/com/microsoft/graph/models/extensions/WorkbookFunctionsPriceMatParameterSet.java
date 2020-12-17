@@ -80,7 +80,11 @@ public class WorkbookFunctionsPriceMatParameterSet {
      * Instiaciates a new WorkbookFunctionsPriceMatParameterSet
      */
     public WorkbookFunctionsPriceMatParameterSet() {}
-    private WorkbookFunctionsPriceMatParameterSet(@Nonnull final WorkbookFunctionsPriceMatParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPriceMatParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPriceMatParameterSet(@Nonnull final WorkbookFunctionsPriceMatParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.issue = builder.issue;
@@ -100,7 +104,11 @@ public class WorkbookFunctionsPriceMatParameterSet {
      * Fluent builder for the WorkbookFunctionsPriceMatParameterSet
      */
     public static final class WorkbookFunctionsPriceMatParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -111,7 +119,11 @@ public class WorkbookFunctionsPriceMatParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -122,7 +134,11 @@ public class WorkbookFunctionsPriceMatParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement issue;
+        /**
+         * The issue parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement issue;
         /**
          * Sets the Issue
          * @param val the value to set it to
@@ -133,7 +149,11 @@ public class WorkbookFunctionsPriceMatParameterSet {
             this.issue = val;
             return this;
         }
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -144,7 +164,11 @@ public class WorkbookFunctionsPriceMatParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement yld;
+        /**
+         * The yld parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement yld;
         /**
          * Sets the Yld
          * @param val the value to set it to
@@ -155,7 +179,11 @@ public class WorkbookFunctionsPriceMatParameterSet {
             this.yld = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -166,7 +194,8 @@ public class WorkbookFunctionsPriceMatParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsPriceMatParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPriceMatParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

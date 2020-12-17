@@ -44,7 +44,11 @@ public class WorkbookFunctionsRandBetweenParameterSet {
      * Instiaciates a new WorkbookFunctionsRandBetweenParameterSet
      */
     public WorkbookFunctionsRandBetweenParameterSet() {}
-    private WorkbookFunctionsRandBetweenParameterSet(@Nonnull final WorkbookFunctionsRandBetweenParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRandBetweenParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRandBetweenParameterSet(@Nonnull final WorkbookFunctionsRandBetweenParameterSetBuilder builder) {
         this.bottom = builder.bottom;
         this.top = builder.top;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsRandBetweenParameterSet {
      * Fluent builder for the WorkbookFunctionsRandBetweenParameterSet
      */
     public static final class WorkbookFunctionsRandBetweenParameterSetBuilder {
-        private com.google.gson.JsonElement bottom;
+        /**
+         * The bottom parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement bottom;
         /**
          * Sets the Bottom
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsRandBetweenParameterSet {
             this.bottom = val;
             return this;
         }
-        private com.google.gson.JsonElement top;
+        /**
+         * The top parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement top;
         /**
          * Sets the Top
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsRandBetweenParameterSet {
             this.top = val;
             return this;
         }
-        private WorkbookFunctionsRandBetweenParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRandBetweenParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

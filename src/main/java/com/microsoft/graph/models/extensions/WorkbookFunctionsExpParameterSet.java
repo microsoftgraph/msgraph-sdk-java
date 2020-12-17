@@ -35,7 +35,11 @@ public class WorkbookFunctionsExpParameterSet {
      * Instiaciates a new WorkbookFunctionsExpParameterSet
      */
     public WorkbookFunctionsExpParameterSet() {}
-    private WorkbookFunctionsExpParameterSet(@Nonnull final WorkbookFunctionsExpParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsExpParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsExpParameterSet(@Nonnull final WorkbookFunctionsExpParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsExpParameterSet {
      * Fluent builder for the WorkbookFunctionsExpParameterSet
      */
     public static final class WorkbookFunctionsExpParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsExpParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsExpParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsExpParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

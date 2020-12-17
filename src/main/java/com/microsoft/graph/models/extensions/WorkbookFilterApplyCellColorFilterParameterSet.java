@@ -35,7 +35,11 @@ public class WorkbookFilterApplyCellColorFilterParameterSet {
      * Instiaciates a new WorkbookFilterApplyCellColorFilterParameterSet
      */
     public WorkbookFilterApplyCellColorFilterParameterSet() {}
-    private WorkbookFilterApplyCellColorFilterParameterSet(@Nonnull final WorkbookFilterApplyCellColorFilterParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyCellColorFilterParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyCellColorFilterParameterSet(@Nonnull final WorkbookFilterApplyCellColorFilterParameterSetBuilder builder) {
         this.color = builder.color;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFilterApplyCellColorFilterParameterSet {
      * Fluent builder for the WorkbookFilterApplyCellColorFilterParameterSet
      */
     public static final class WorkbookFilterApplyCellColorFilterParameterSetBuilder {
-        private String color;
+        /**
+         * The color parameter value
+         */
+        @Nullable
+        protected String color;
         /**
          * Sets the Color
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFilterApplyCellColorFilterParameterSet {
             this.color = val;
             return this;
         }
-        private WorkbookFilterApplyCellColorFilterParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyCellColorFilterParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

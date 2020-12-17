@@ -37,6 +37,7 @@ public class DeviceEnrollmentConfigurationSetPriorityRequest extends BaseRequest
     }
 
 	/** The body for the method */
+    @Nullable
     protected DeviceEnrollmentConfigurationSetPriorityParameterSet body;
     /**
      * Creates the DeviceEnrollmentConfigurationSetPriority

@@ -38,6 +38,7 @@ public class WorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest<Workbo
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsNetworkDays_IntlParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

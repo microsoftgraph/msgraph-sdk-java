@@ -26,7 +26,11 @@ public class OrgContactDeltaParameterSet {
      * Instiaciates a new OrgContactDeltaParameterSet
      */
     public OrgContactDeltaParameterSet() {}
-    private OrgContactDeltaParameterSet(@Nonnull final OrgContactDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OrgContactDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OrgContactDeltaParameterSet(@Nonnull final OrgContactDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class OrgContactDeltaParameterSet {
      * Fluent builder for the OrgContactDeltaParameterSet
      */
     public static final class OrgContactDeltaParameterSetBuilder {
-        private OrgContactDeltaParameterSetBuilder(){}
+        @Nullable
+        protected OrgContactDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

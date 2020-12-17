@@ -44,7 +44,11 @@ public class WorkbookFunctionsIso_CeilingParameterSet {
      * Instiaciates a new WorkbookFunctionsIso_CeilingParameterSet
      */
     public WorkbookFunctionsIso_CeilingParameterSet() {}
-    private WorkbookFunctionsIso_CeilingParameterSet(@Nonnull final WorkbookFunctionsIso_CeilingParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIso_CeilingParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIso_CeilingParameterSet(@Nonnull final WorkbookFunctionsIso_CeilingParameterSetBuilder builder) {
         this.number = builder.number;
         this.significance = builder.significance;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsIso_CeilingParameterSet {
      * Fluent builder for the WorkbookFunctionsIso_CeilingParameterSet
      */
     public static final class WorkbookFunctionsIso_CeilingParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsIso_CeilingParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement significance;
+        /**
+         * The significance parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement significance;
         /**
          * Sets the Significance
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsIso_CeilingParameterSet {
             this.significance = val;
             return this;
         }
-        private WorkbookFunctionsIso_CeilingParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIso_CeilingParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

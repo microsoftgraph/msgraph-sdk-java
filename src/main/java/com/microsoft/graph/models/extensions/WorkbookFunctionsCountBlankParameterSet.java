@@ -35,7 +35,11 @@ public class WorkbookFunctionsCountBlankParameterSet {
      * Instiaciates a new WorkbookFunctionsCountBlankParameterSet
      */
     public WorkbookFunctionsCountBlankParameterSet() {}
-    private WorkbookFunctionsCountBlankParameterSet(@Nonnull final WorkbookFunctionsCountBlankParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCountBlankParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCountBlankParameterSet(@Nonnull final WorkbookFunctionsCountBlankParameterSetBuilder builder) {
         this.range = builder.range;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsCountBlankParameterSet {
      * Fluent builder for the WorkbookFunctionsCountBlankParameterSet
      */
     public static final class WorkbookFunctionsCountBlankParameterSetBuilder {
-        private com.google.gson.JsonElement range;
+        /**
+         * The range parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement range;
         /**
          * Sets the Range
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsCountBlankParameterSet {
             this.range = val;
             return this;
         }
-        private WorkbookFunctionsCountBlankParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCountBlankParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookFunctionsAtan2ParameterSet {
      * Instiaciates a new WorkbookFunctionsAtan2ParameterSet
      */
     public WorkbookFunctionsAtan2ParameterSet() {}
-    private WorkbookFunctionsAtan2ParameterSet(@Nonnull final WorkbookFunctionsAtan2ParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAtan2ParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAtan2ParameterSet(@Nonnull final WorkbookFunctionsAtan2ParameterSetBuilder builder) {
         this.xNum = builder.xNum;
         this.yNum = builder.yNum;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsAtan2ParameterSet {
      * Fluent builder for the WorkbookFunctionsAtan2ParameterSet
      */
     public static final class WorkbookFunctionsAtan2ParameterSetBuilder {
-        private com.google.gson.JsonElement xNum;
+        /**
+         * The xNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement xNum;
         /**
          * Sets the XNum
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsAtan2ParameterSet {
             this.xNum = val;
             return this;
         }
-        private com.google.gson.JsonElement yNum;
+        /**
+         * The yNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement yNum;
         /**
          * Sets the YNum
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsAtan2ParameterSet {
             this.yNum = val;
             return this;
         }
-        private WorkbookFunctionsAtan2ParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAtan2ParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookFunctionsGeStepParameterSet {
      * Instiaciates a new WorkbookFunctionsGeStepParameterSet
      */
     public WorkbookFunctionsGeStepParameterSet() {}
-    private WorkbookFunctionsGeStepParameterSet(@Nonnull final WorkbookFunctionsGeStepParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsGeStepParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsGeStepParameterSet(@Nonnull final WorkbookFunctionsGeStepParameterSetBuilder builder) {
         this.number = builder.number;
         this.step = builder.step;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsGeStepParameterSet {
      * Fluent builder for the WorkbookFunctionsGeStepParameterSet
      */
     public static final class WorkbookFunctionsGeStepParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsGeStepParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement step;
+        /**
+         * The step parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement step;
         /**
          * Sets the Step
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsGeStepParameterSet {
             this.step = val;
             return this;
         }
-        private WorkbookFunctionsGeStepParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsGeStepParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

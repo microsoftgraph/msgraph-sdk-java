@@ -37,6 +37,7 @@ public class CallTransferRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallTransferParameterSet body;
     /**
      * Creates the CallTransfer

@@ -35,7 +35,11 @@ public class WorkbookFunctionsRadiansParameterSet {
      * Instiaciates a new WorkbookFunctionsRadiansParameterSet
      */
     public WorkbookFunctionsRadiansParameterSet() {}
-    private WorkbookFunctionsRadiansParameterSet(@Nonnull final WorkbookFunctionsRadiansParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRadiansParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRadiansParameterSet(@Nonnull final WorkbookFunctionsRadiansParameterSetBuilder builder) {
         this.angle = builder.angle;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsRadiansParameterSet {
      * Fluent builder for the WorkbookFunctionsRadiansParameterSet
      */
     public static final class WorkbookFunctionsRadiansParameterSetBuilder {
-        private com.google.gson.JsonElement angle;
+        /**
+         * The angle parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement angle;
         /**
          * Sets the Angle
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsRadiansParameterSet {
             this.angle = val;
             return this;
         }
-        private WorkbookFunctionsRadiansParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRadiansParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

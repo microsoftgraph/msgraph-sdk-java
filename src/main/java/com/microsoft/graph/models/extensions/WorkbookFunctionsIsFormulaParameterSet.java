@@ -35,7 +35,11 @@ public class WorkbookFunctionsIsFormulaParameterSet {
      * Instiaciates a new WorkbookFunctionsIsFormulaParameterSet
      */
     public WorkbookFunctionsIsFormulaParameterSet() {}
-    private WorkbookFunctionsIsFormulaParameterSet(@Nonnull final WorkbookFunctionsIsFormulaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIsFormulaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIsFormulaParameterSet(@Nonnull final WorkbookFunctionsIsFormulaParameterSetBuilder builder) {
         this.reference = builder.reference;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsIsFormulaParameterSet {
      * Fluent builder for the WorkbookFunctionsIsFormulaParameterSet
      */
     public static final class WorkbookFunctionsIsFormulaParameterSetBuilder {
-        private com.google.gson.JsonElement reference;
+        /**
+         * The reference parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement reference;
         /**
          * Sets the Reference
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsIsFormulaParameterSet {
             this.reference = val;
             return this;
         }
-        private WorkbookFunctionsIsFormulaParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIsFormulaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

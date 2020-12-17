@@ -35,7 +35,11 @@ public class UserExportPersonalDataParameterSet {
      * Instiaciates a new UserExportPersonalDataParameterSet
      */
     public UserExportPersonalDataParameterSet() {}
-    private UserExportPersonalDataParameterSet(@Nonnull final UserExportPersonalDataParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserExportPersonalDataParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserExportPersonalDataParameterSet(@Nonnull final UserExportPersonalDataParameterSetBuilder builder) {
         this.storageLocation = builder.storageLocation;
     }
     /**
@@ -50,7 +54,11 @@ public class UserExportPersonalDataParameterSet {
      * Fluent builder for the UserExportPersonalDataParameterSet
      */
     public static final class UserExportPersonalDataParameterSetBuilder {
-        private String storageLocation;
+        /**
+         * The storageLocation parameter value
+         */
+        @Nullable
+        protected String storageLocation;
         /**
          * Sets the StorageLocation
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class UserExportPersonalDataParameterSet {
             this.storageLocation = val;
             return this;
         }
-        private UserExportPersonalDataParameterSetBuilder(){}
+        @Nullable
+        protected UserExportPersonalDataParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class TeamArchiveParameterSet {
      * Instiaciates a new TeamArchiveParameterSet
      */
     public TeamArchiveParameterSet() {}
-    private TeamArchiveParameterSet(@Nonnull final TeamArchiveParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new TeamArchiveParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected TeamArchiveParameterSet(@Nonnull final TeamArchiveParameterSetBuilder builder) {
         this.shouldSetSpoSiteReadOnlyForMembers = builder.shouldSetSpoSiteReadOnlyForMembers;
     }
     /**
@@ -50,7 +54,11 @@ public class TeamArchiveParameterSet {
      * Fluent builder for the TeamArchiveParameterSet
      */
     public static final class TeamArchiveParameterSetBuilder {
-        private Boolean shouldSetSpoSiteReadOnlyForMembers;
+        /**
+         * The shouldSetSpoSiteReadOnlyForMembers parameter value
+         */
+        @Nullable
+        protected Boolean shouldSetSpoSiteReadOnlyForMembers;
         /**
          * Sets the ShouldSetSpoSiteReadOnlyForMembers
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class TeamArchiveParameterSet {
             this.shouldSetSpoSiteReadOnlyForMembers = val;
             return this;
         }
-        private TeamArchiveParameterSetBuilder(){}
+        @Nullable
+        protected TeamArchiveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

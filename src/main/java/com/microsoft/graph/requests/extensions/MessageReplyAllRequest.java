@@ -37,6 +37,7 @@ public class MessageReplyAllRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MessageReplyAllParameterSet body;
     /**
      * Creates the MessageReplyAll

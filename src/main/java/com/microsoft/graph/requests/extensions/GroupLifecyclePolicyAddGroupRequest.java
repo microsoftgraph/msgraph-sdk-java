@@ -37,6 +37,7 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest<Boolean> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected GroupLifecyclePolicyAddGroupParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

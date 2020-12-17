@@ -53,7 +53,11 @@ public class WorkbookFunctionsAverageIfParameterSet {
      * Instiaciates a new WorkbookFunctionsAverageIfParameterSet
      */
     public WorkbookFunctionsAverageIfParameterSet() {}
-    private WorkbookFunctionsAverageIfParameterSet(@Nonnull final WorkbookFunctionsAverageIfParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAverageIfParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAverageIfParameterSet(@Nonnull final WorkbookFunctionsAverageIfParameterSetBuilder builder) {
         this.range = builder.range;
         this.criteria = builder.criteria;
         this.averageRange = builder.averageRange;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsAverageIfParameterSet {
      * Fluent builder for the WorkbookFunctionsAverageIfParameterSet
      */
     public static final class WorkbookFunctionsAverageIfParameterSetBuilder {
-        private com.google.gson.JsonElement range;
+        /**
+         * The range parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement range;
         /**
          * Sets the Range
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsAverageIfParameterSet {
             this.range = val;
             return this;
         }
-        private com.google.gson.JsonElement criteria;
+        /**
+         * The criteria parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement criteria;
         /**
          * Sets the Criteria
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsAverageIfParameterSet {
             this.criteria = val;
             return this;
         }
-        private com.google.gson.JsonElement averageRange;
+        /**
+         * The averageRange parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement averageRange;
         /**
          * Sets the AverageRange
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsAverageIfParameterSet {
             this.averageRange = val;
             return this;
         }
-        private WorkbookFunctionsAverageIfParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAverageIfParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

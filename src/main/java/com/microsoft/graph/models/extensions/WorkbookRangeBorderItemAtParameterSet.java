@@ -35,7 +35,11 @@ public class WorkbookRangeBorderItemAtParameterSet {
      * Instiaciates a new WorkbookRangeBorderItemAtParameterSet
      */
     public WorkbookRangeBorderItemAtParameterSet() {}
-    private WorkbookRangeBorderItemAtParameterSet(@Nonnull final WorkbookRangeBorderItemAtParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeBorderItemAtParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeBorderItemAtParameterSet(@Nonnull final WorkbookRangeBorderItemAtParameterSetBuilder builder) {
         this.index = builder.index;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookRangeBorderItemAtParameterSet {
      * Fluent builder for the WorkbookRangeBorderItemAtParameterSet
      */
     public static final class WorkbookRangeBorderItemAtParameterSetBuilder {
-        private Integer index;
+        /**
+         * The index parameter value
+         */
+        @Nullable
+        protected Integer index;
         /**
          * Sets the Index
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookRangeBorderItemAtParameterSet {
             this.index = val;
             return this;
         }
-        private WorkbookRangeBorderItemAtParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeBorderItemAtParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

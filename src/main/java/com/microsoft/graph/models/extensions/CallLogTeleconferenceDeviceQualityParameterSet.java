@@ -35,7 +35,11 @@ public class CallLogTeleconferenceDeviceQualityParameterSet {
      * Instiaciates a new CallLogTeleconferenceDeviceQualityParameterSet
      */
     public CallLogTeleconferenceDeviceQualityParameterSet() {}
-    private CallLogTeleconferenceDeviceQualityParameterSet(@Nonnull final CallLogTeleconferenceDeviceQualityParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallLogTeleconferenceDeviceQualityParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallLogTeleconferenceDeviceQualityParameterSet(@Nonnull final CallLogTeleconferenceDeviceQualityParameterSetBuilder builder) {
         this.quality = builder.quality;
     }
     /**
@@ -50,7 +54,11 @@ public class CallLogTeleconferenceDeviceQualityParameterSet {
      * Fluent builder for the CallLogTeleconferenceDeviceQualityParameterSet
      */
     public static final class CallLogTeleconferenceDeviceQualityParameterSetBuilder {
-        private TeleconferenceDeviceQuality quality;
+        /**
+         * The quality parameter value
+         */
+        @Nullable
+        protected TeleconferenceDeviceQuality quality;
         /**
          * Sets the Quality
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class CallLogTeleconferenceDeviceQualityParameterSet {
             this.quality = val;
             return this;
         }
-        private CallLogTeleconferenceDeviceQualityParameterSetBuilder(){}
+        @Nullable
+        protected CallLogTeleconferenceDeviceQualityParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

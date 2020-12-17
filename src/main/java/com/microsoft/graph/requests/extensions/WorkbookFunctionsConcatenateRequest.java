@@ -38,6 +38,7 @@ public class WorkbookFunctionsConcatenateRequest extends BaseRequest<WorkbookFun
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsConcatenateParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

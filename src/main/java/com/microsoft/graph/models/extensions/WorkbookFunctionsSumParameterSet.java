@@ -35,7 +35,11 @@ public class WorkbookFunctionsSumParameterSet {
      * Instiaciates a new WorkbookFunctionsSumParameterSet
      */
     public WorkbookFunctionsSumParameterSet() {}
-    private WorkbookFunctionsSumParameterSet(@Nonnull final WorkbookFunctionsSumParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSumParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSumParameterSet(@Nonnull final WorkbookFunctionsSumParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsSumParameterSet {
      * Fluent builder for the WorkbookFunctionsSumParameterSet
      */
     public static final class WorkbookFunctionsSumParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsSumParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsSumParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSumParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

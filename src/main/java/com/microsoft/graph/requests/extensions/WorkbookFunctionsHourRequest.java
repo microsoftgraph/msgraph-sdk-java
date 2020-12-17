@@ -38,6 +38,7 @@ public class WorkbookFunctionsHourRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsHourParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

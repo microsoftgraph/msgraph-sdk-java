@@ -32,6 +32,7 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseActionCollecti
 
 
     /** The body for the method */
+    @Nullable
     protected DirectoryObjectGetByIdsParameterSet body;
 
 

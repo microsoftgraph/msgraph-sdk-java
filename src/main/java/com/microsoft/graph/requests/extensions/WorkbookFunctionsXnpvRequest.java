@@ -38,6 +38,7 @@ public class WorkbookFunctionsXnpvRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsXnpvParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

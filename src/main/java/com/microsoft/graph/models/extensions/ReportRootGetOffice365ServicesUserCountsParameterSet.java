@@ -35,7 +35,11 @@ public class ReportRootGetOffice365ServicesUserCountsParameterSet {
      * Instiaciates a new ReportRootGetOffice365ServicesUserCountsParameterSet
      */
     public ReportRootGetOffice365ServicesUserCountsParameterSet() {}
-    private ReportRootGetOffice365ServicesUserCountsParameterSet(@Nonnull final ReportRootGetOffice365ServicesUserCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOffice365ServicesUserCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOffice365ServicesUserCountsParameterSet(@Nonnull final ReportRootGetOffice365ServicesUserCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetOffice365ServicesUserCountsParameterSet {
      * Fluent builder for the ReportRootGetOffice365ServicesUserCountsParameterSet
      */
     public static final class ReportRootGetOffice365ServicesUserCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetOffice365ServicesUserCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetOffice365ServicesUserCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOffice365ServicesUserCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

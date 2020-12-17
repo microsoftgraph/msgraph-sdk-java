@@ -82,7 +82,11 @@ public class TeamCloneParameterSet {
      * Instiaciates a new TeamCloneParameterSet
      */
     public TeamCloneParameterSet() {}
-    private TeamCloneParameterSet(@Nonnull final TeamCloneParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new TeamCloneParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected TeamCloneParameterSet(@Nonnull final TeamCloneParameterSetBuilder builder) {
         this.displayName = builder.displayName;
         this.description = builder.description;
         this.mailNickname = builder.mailNickname;
@@ -102,7 +106,11 @@ public class TeamCloneParameterSet {
      * Fluent builder for the TeamCloneParameterSet
      */
     public static final class TeamCloneParameterSetBuilder {
-        private String displayName;
+        /**
+         * The displayName parameter value
+         */
+        @Nullable
+        protected String displayName;
         /**
          * Sets the DisplayName
          * @param val the value to set it to
@@ -113,7 +121,11 @@ public class TeamCloneParameterSet {
             this.displayName = val;
             return this;
         }
-        private String description;
+        /**
+         * The description parameter value
+         */
+        @Nullable
+        protected String description;
         /**
          * Sets the Description
          * @param val the value to set it to
@@ -124,7 +136,11 @@ public class TeamCloneParameterSet {
             this.description = val;
             return this;
         }
-        private String mailNickname;
+        /**
+         * The mailNickname parameter value
+         */
+        @Nullable
+        protected String mailNickname;
         /**
          * Sets the MailNickname
          * @param val the value to set it to
@@ -135,7 +151,11 @@ public class TeamCloneParameterSet {
             this.mailNickname = val;
             return this;
         }
-        private String classification;
+        /**
+         * The classification parameter value
+         */
+        @Nullable
+        protected String classification;
         /**
          * Sets the Classification
          * @param val the value to set it to
@@ -146,7 +166,11 @@ public class TeamCloneParameterSet {
             this.classification = val;
             return this;
         }
-        private TeamVisibilityType visibility;
+        /**
+         * The visibility parameter value
+         */
+        @Nullable
+        protected TeamVisibilityType visibility;
         /**
          * Sets the Visibility
          * @param val the value to set it to
@@ -157,7 +181,11 @@ public class TeamCloneParameterSet {
             this.visibility = val;
             return this;
         }
-        private EnumSet<ClonableTeamParts> partsToClone;
+        /**
+         * The partsToClone parameter value
+         */
+        @Nullable
+        protected EnumSet<ClonableTeamParts> partsToClone;
         /**
          * Sets the PartsToClone
          * @param val the value to set it to
@@ -168,7 +196,8 @@ public class TeamCloneParameterSet {
             this.partsToClone = val;
             return this;
         }
-        private TeamCloneParameterSetBuilder(){}
+        @Nullable
+        protected TeamCloneParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

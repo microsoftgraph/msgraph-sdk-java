@@ -37,6 +37,7 @@ public class ManagedDeviceWindowsDefenderScanRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedDeviceWindowsDefenderScanParameterSet body;
     /**
      * Creates the ManagedDeviceWindowsDefenderScan

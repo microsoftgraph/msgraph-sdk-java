@@ -38,6 +38,7 @@ public class WorkbookFunctionsConfidence_NormRequest extends BaseRequest<Workboo
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsConfidence_NormParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -26,7 +26,11 @@ public class MessageDeltaParameterSet {
      * Instiaciates a new MessageDeltaParameterSet
      */
     public MessageDeltaParameterSet() {}
-    private MessageDeltaParameterSet(@Nonnull final MessageDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MessageDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MessageDeltaParameterSet(@Nonnull final MessageDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class MessageDeltaParameterSet {
      * Fluent builder for the MessageDeltaParameterSet
      */
     public static final class MessageDeltaParameterSetBuilder {
-        private MessageDeltaParameterSetBuilder(){}
+        @Nullable
+        protected MessageDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -26,7 +26,11 @@ public class MailFolderDeltaParameterSet {
      * Instiaciates a new MailFolderDeltaParameterSet
      */
     public MailFolderDeltaParameterSet() {}
-    private MailFolderDeltaParameterSet(@Nonnull final MailFolderDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MailFolderDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MailFolderDeltaParameterSet(@Nonnull final MailFolderDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class MailFolderDeltaParameterSet {
      * Fluent builder for the MailFolderDeltaParameterSet
      */
     public static final class MailFolderDeltaParameterSetBuilder {
-        private MailFolderDeltaParameterSetBuilder(){}
+        @Nullable
+        protected MailFolderDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

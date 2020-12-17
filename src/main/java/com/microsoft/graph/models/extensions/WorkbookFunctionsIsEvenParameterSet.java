@@ -35,7 +35,11 @@ public class WorkbookFunctionsIsEvenParameterSet {
      * Instiaciates a new WorkbookFunctionsIsEvenParameterSet
      */
     public WorkbookFunctionsIsEvenParameterSet() {}
-    private WorkbookFunctionsIsEvenParameterSet(@Nonnull final WorkbookFunctionsIsEvenParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIsEvenParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIsEvenParameterSet(@Nonnull final WorkbookFunctionsIsEvenParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsIsEvenParameterSet {
      * Fluent builder for the WorkbookFunctionsIsEvenParameterSet
      */
     public static final class WorkbookFunctionsIsEvenParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsIsEvenParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsIsEvenParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIsEvenParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

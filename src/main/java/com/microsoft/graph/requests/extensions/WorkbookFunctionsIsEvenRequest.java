@@ -38,6 +38,7 @@ public class WorkbookFunctionsIsEvenRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsIsEvenParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

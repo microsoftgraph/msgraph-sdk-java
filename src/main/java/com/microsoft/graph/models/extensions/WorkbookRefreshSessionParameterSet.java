@@ -26,7 +26,11 @@ public class WorkbookRefreshSessionParameterSet {
      * Instiaciates a new WorkbookRefreshSessionParameterSet
      */
     public WorkbookRefreshSessionParameterSet() {}
-    private WorkbookRefreshSessionParameterSet(@Nonnull final WorkbookRefreshSessionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRefreshSessionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRefreshSessionParameterSet(@Nonnull final WorkbookRefreshSessionParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRefreshSessionParameterSet {
      * Fluent builder for the WorkbookRefreshSessionParameterSet
      */
     public static final class WorkbookRefreshSessionParameterSetBuilder {
-        private WorkbookRefreshSessionParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRefreshSessionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

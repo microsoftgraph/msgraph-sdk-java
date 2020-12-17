@@ -35,7 +35,11 @@ public class TargetedManagedAppProtectionAssignParameterSet {
      * Instiaciates a new TargetedManagedAppProtectionAssignParameterSet
      */
     public TargetedManagedAppProtectionAssignParameterSet() {}
-    private TargetedManagedAppProtectionAssignParameterSet(@Nonnull final TargetedManagedAppProtectionAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new TargetedManagedAppProtectionAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected TargetedManagedAppProtectionAssignParameterSet(@Nonnull final TargetedManagedAppProtectionAssignParameterSetBuilder builder) {
         this.assignments = builder.assignments;
     }
     /**
@@ -50,7 +54,11 @@ public class TargetedManagedAppProtectionAssignParameterSet {
      * Fluent builder for the TargetedManagedAppProtectionAssignParameterSet
      */
     public static final class TargetedManagedAppProtectionAssignParameterSetBuilder {
-        private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
+        /**
+         * The assignments parameter value
+         */
+        @Nullable
+        protected java.util.List<TargetedManagedAppPolicyAssignment> assignments;
         /**
          * Sets the Assignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class TargetedManagedAppProtectionAssignParameterSet {
             this.assignments = val;
             return this;
         }
-        private TargetedManagedAppProtectionAssignParameterSetBuilder(){}
+        @Nullable
+        protected TargetedManagedAppProtectionAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

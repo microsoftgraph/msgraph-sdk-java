@@ -35,7 +35,11 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParam
      * Instiaciates a new ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet
      */
     public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet() {}
-    private ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParam
      * Fluent builder for the ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet
      */
     public static final class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParam
             this.period = val;
             return this;
         }
-        private ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

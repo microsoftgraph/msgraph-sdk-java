@@ -53,7 +53,11 @@ public class WorkbookFunctionsStandardizeParameterSet {
      * Instiaciates a new WorkbookFunctionsStandardizeParameterSet
      */
     public WorkbookFunctionsStandardizeParameterSet() {}
-    private WorkbookFunctionsStandardizeParameterSet(@Nonnull final WorkbookFunctionsStandardizeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsStandardizeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsStandardizeParameterSet(@Nonnull final WorkbookFunctionsStandardizeParameterSetBuilder builder) {
         this.x = builder.x;
         this.mean = builder.mean;
         this.standardDev = builder.standardDev;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsStandardizeParameterSet {
      * Fluent builder for the WorkbookFunctionsStandardizeParameterSet
      */
     public static final class WorkbookFunctionsStandardizeParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsStandardizeParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement mean;
+        /**
+         * The mean parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement mean;
         /**
          * Sets the Mean
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsStandardizeParameterSet {
             this.mean = val;
             return this;
         }
-        private com.google.gson.JsonElement standardDev;
+        /**
+         * The standardDev parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement standardDev;
         /**
          * Sets the StandardDev
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsStandardizeParameterSet {
             this.standardDev = val;
             return this;
         }
-        private WorkbookFunctionsStandardizeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsStandardizeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

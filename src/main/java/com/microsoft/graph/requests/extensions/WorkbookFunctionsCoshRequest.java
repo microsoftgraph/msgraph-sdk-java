@@ -38,6 +38,7 @@ public class WorkbookFunctionsCoshRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCoshParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -38,6 +38,7 @@ public class WorkbookFunctionsLeftbRequest extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsLeftbParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -37,6 +37,7 @@ public class WorkbookTableAddRequest extends BaseRequest<WorkbookTable> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookTableAddParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

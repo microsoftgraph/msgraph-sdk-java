@@ -38,6 +38,7 @@ public class WorkbookFunctionsTbillYieldRequest extends BaseRequest<WorkbookFunc
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsTbillYieldParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

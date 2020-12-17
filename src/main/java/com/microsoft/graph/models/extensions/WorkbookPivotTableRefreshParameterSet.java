@@ -26,7 +26,11 @@ public class WorkbookPivotTableRefreshParameterSet {
      * Instiaciates a new WorkbookPivotTableRefreshParameterSet
      */
     public WorkbookPivotTableRefreshParameterSet() {}
-    private WorkbookPivotTableRefreshParameterSet(@Nonnull final WorkbookPivotTableRefreshParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookPivotTableRefreshParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookPivotTableRefreshParameterSet(@Nonnull final WorkbookPivotTableRefreshParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookPivotTableRefreshParameterSet {
      * Fluent builder for the WorkbookPivotTableRefreshParameterSet
      */
     public static final class WorkbookPivotTableRefreshParameterSetBuilder {
-        private WorkbookPivotTableRefreshParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookPivotTableRefreshParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class ScheduleChangeRequestDeclineRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ScheduleChangeRequestDeclineParameterSet body;
     /**
      * Creates the ScheduleChangeRequestDecline

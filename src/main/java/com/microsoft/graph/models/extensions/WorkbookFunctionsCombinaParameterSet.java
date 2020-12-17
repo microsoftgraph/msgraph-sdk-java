@@ -44,7 +44,11 @@ public class WorkbookFunctionsCombinaParameterSet {
      * Instiaciates a new WorkbookFunctionsCombinaParameterSet
      */
     public WorkbookFunctionsCombinaParameterSet() {}
-    private WorkbookFunctionsCombinaParameterSet(@Nonnull final WorkbookFunctionsCombinaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCombinaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCombinaParameterSet(@Nonnull final WorkbookFunctionsCombinaParameterSetBuilder builder) {
         this.number = builder.number;
         this.numberChosen = builder.numberChosen;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsCombinaParameterSet {
      * Fluent builder for the WorkbookFunctionsCombinaParameterSet
      */
     public static final class WorkbookFunctionsCombinaParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsCombinaParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement numberChosen;
+        /**
+         * The numberChosen parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberChosen;
         /**
          * Sets the NumberChosen
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsCombinaParameterSet {
             this.numberChosen = val;
             return this;
         }
-        private WorkbookFunctionsCombinaParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCombinaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

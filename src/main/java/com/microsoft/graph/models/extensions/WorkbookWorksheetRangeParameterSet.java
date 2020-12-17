@@ -26,7 +26,11 @@ public class WorkbookWorksheetRangeParameterSet {
      * Instiaciates a new WorkbookWorksheetRangeParameterSet
      */
     public WorkbookWorksheetRangeParameterSet() {}
-    private WorkbookWorksheetRangeParameterSet(@Nonnull final WorkbookWorksheetRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookWorksheetRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookWorksheetRangeParameterSet(@Nonnull final WorkbookWorksheetRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookWorksheetRangeParameterSet {
      * Fluent builder for the WorkbookWorksheetRangeParameterSet
      */
     public static final class WorkbookWorksheetRangeParameterSetBuilder {
-        private WorkbookWorksheetRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookWorksheetRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

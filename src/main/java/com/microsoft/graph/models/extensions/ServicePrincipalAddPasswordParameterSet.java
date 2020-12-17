@@ -35,7 +35,11 @@ public class ServicePrincipalAddPasswordParameterSet {
      * Instiaciates a new ServicePrincipalAddPasswordParameterSet
      */
     public ServicePrincipalAddPasswordParameterSet() {}
-    private ServicePrincipalAddPasswordParameterSet(@Nonnull final ServicePrincipalAddPasswordParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ServicePrincipalAddPasswordParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ServicePrincipalAddPasswordParameterSet(@Nonnull final ServicePrincipalAddPasswordParameterSetBuilder builder) {
         this.passwordCredential = builder.passwordCredential;
     }
     /**
@@ -50,7 +54,11 @@ public class ServicePrincipalAddPasswordParameterSet {
      * Fluent builder for the ServicePrincipalAddPasswordParameterSet
      */
     public static final class ServicePrincipalAddPasswordParameterSetBuilder {
-        private PasswordCredential passwordCredential;
+        /**
+         * The passwordCredential parameter value
+         */
+        @Nullable
+        protected PasswordCredential passwordCredential;
         /**
          * Sets the PasswordCredential
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ServicePrincipalAddPasswordParameterSet {
             this.passwordCredential = val;
             return this;
         }
-        private ServicePrincipalAddPasswordParameterSetBuilder(){}
+        @Nullable
+        protected ServicePrincipalAddPasswordParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

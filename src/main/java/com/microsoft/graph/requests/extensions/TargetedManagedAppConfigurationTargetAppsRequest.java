@@ -37,6 +37,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequest extends BaseReques
     }
 
 	/** The body for the method */
+    @Nullable
     protected TargetedManagedAppConfigurationTargetAppsParameterSet body;
     /**
      * Creates the TargetedManagedAppConfigurationTargetApps

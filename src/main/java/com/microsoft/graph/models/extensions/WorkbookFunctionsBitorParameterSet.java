@@ -44,7 +44,11 @@ public class WorkbookFunctionsBitorParameterSet {
      * Instiaciates a new WorkbookFunctionsBitorParameterSet
      */
     public WorkbookFunctionsBitorParameterSet() {}
-    private WorkbookFunctionsBitorParameterSet(@Nonnull final WorkbookFunctionsBitorParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBitorParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBitorParameterSet(@Nonnull final WorkbookFunctionsBitorParameterSetBuilder builder) {
         this.number1 = builder.number1;
         this.number2 = builder.number2;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsBitorParameterSet {
      * Fluent builder for the WorkbookFunctionsBitorParameterSet
      */
     public static final class WorkbookFunctionsBitorParameterSetBuilder {
-        private com.google.gson.JsonElement number1;
+        /**
+         * The number1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number1;
         /**
          * Sets the Number1
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsBitorParameterSet {
             this.number1 = val;
             return this;
         }
-        private com.google.gson.JsonElement number2;
+        /**
+         * The number2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number2;
         /**
          * Sets the Number2
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsBitorParameterSet {
             this.number2 = val;
             return this;
         }
-        private WorkbookFunctionsBitorParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBitorParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

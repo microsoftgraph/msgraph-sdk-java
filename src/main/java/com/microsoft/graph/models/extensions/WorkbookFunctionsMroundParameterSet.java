@@ -44,7 +44,11 @@ public class WorkbookFunctionsMroundParameterSet {
      * Instiaciates a new WorkbookFunctionsMroundParameterSet
      */
     public WorkbookFunctionsMroundParameterSet() {}
-    private WorkbookFunctionsMroundParameterSet(@Nonnull final WorkbookFunctionsMroundParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMroundParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMroundParameterSet(@Nonnull final WorkbookFunctionsMroundParameterSetBuilder builder) {
         this.number = builder.number;
         this.multiple = builder.multiple;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsMroundParameterSet {
      * Fluent builder for the WorkbookFunctionsMroundParameterSet
      */
     public static final class WorkbookFunctionsMroundParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsMroundParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement multiple;
+        /**
+         * The multiple parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement multiple;
         /**
          * Sets the Multiple
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsMroundParameterSet {
             this.multiple = val;
             return this;
         }
-        private WorkbookFunctionsMroundParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMroundParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

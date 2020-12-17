@@ -38,6 +38,7 @@ public class AttachmentCreateUploadSessionRequest extends BaseRequest<UploadSess
     }
 
 	/** The body for the method */
+    @Nullable
     protected AttachmentCreateUploadSessionParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -32,6 +32,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
 
 
     /** The body for the method */
+    @Nullable
     protected DirectoryObjectGetAvailableExtensionPropertiesParameterSet body;
 
 

@@ -44,7 +44,11 @@ public class WorkbookFunctionsIrrParameterSet {
      * Instiaciates a new WorkbookFunctionsIrrParameterSet
      */
     public WorkbookFunctionsIrrParameterSet() {}
-    private WorkbookFunctionsIrrParameterSet(@Nonnull final WorkbookFunctionsIrrParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIrrParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIrrParameterSet(@Nonnull final WorkbookFunctionsIrrParameterSetBuilder builder) {
         this.values = builder.values;
         this.guess = builder.guess;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsIrrParameterSet {
      * Fluent builder for the WorkbookFunctionsIrrParameterSet
      */
     public static final class WorkbookFunctionsIrrParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsIrrParameterSet {
             this.values = val;
             return this;
         }
-        private com.google.gson.JsonElement guess;
+        /**
+         * The guess parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement guess;
         /**
          * Sets the Guess
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsIrrParameterSet {
             this.guess = val;
             return this;
         }
-        private WorkbookFunctionsIrrParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIrrParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

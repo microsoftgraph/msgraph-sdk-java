@@ -38,6 +38,7 @@ public class WorkbookFunctionsXorRequest extends BaseRequest<WorkbookFunctionRes
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsXorParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

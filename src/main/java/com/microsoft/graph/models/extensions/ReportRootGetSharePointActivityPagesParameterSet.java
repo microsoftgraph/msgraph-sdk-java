@@ -35,7 +35,11 @@ public class ReportRootGetSharePointActivityPagesParameterSet {
      * Instiaciates a new ReportRootGetSharePointActivityPagesParameterSet
      */
     public ReportRootGetSharePointActivityPagesParameterSet() {}
-    private ReportRootGetSharePointActivityPagesParameterSet(@Nonnull final ReportRootGetSharePointActivityPagesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSharePointActivityPagesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSharePointActivityPagesParameterSet(@Nonnull final ReportRootGetSharePointActivityPagesParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSharePointActivityPagesParameterSet {
      * Fluent builder for the ReportRootGetSharePointActivityPagesParameterSet
      */
     public static final class ReportRootGetSharePointActivityPagesParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSharePointActivityPagesParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetSharePointActivityPagesParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSharePointActivityPagesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

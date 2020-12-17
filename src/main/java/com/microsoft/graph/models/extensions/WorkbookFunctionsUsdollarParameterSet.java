@@ -44,7 +44,11 @@ public class WorkbookFunctionsUsdollarParameterSet {
      * Instiaciates a new WorkbookFunctionsUsdollarParameterSet
      */
     public WorkbookFunctionsUsdollarParameterSet() {}
-    private WorkbookFunctionsUsdollarParameterSet(@Nonnull final WorkbookFunctionsUsdollarParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsUsdollarParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsUsdollarParameterSet(@Nonnull final WorkbookFunctionsUsdollarParameterSetBuilder builder) {
         this.number = builder.number;
         this.decimals = builder.decimals;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsUsdollarParameterSet {
      * Fluent builder for the WorkbookFunctionsUsdollarParameterSet
      */
     public static final class WorkbookFunctionsUsdollarParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsUsdollarParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement decimals;
+        /**
+         * The decimals parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement decimals;
         /**
          * Sets the Decimals
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsUsdollarParameterSet {
             this.decimals = val;
             return this;
         }
-        private WorkbookFunctionsUsdollarParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsUsdollarParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

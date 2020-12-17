@@ -35,7 +35,11 @@ public class CallSubscribeToToneParameterSet {
      * Instiaciates a new CallSubscribeToToneParameterSet
      */
     public CallSubscribeToToneParameterSet() {}
-    private CallSubscribeToToneParameterSet(@Nonnull final CallSubscribeToToneParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallSubscribeToToneParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallSubscribeToToneParameterSet(@Nonnull final CallSubscribeToToneParameterSetBuilder builder) {
         this.clientContext = builder.clientContext;
     }
     /**
@@ -50,7 +54,11 @@ public class CallSubscribeToToneParameterSet {
      * Fluent builder for the CallSubscribeToToneParameterSet
      */
     public static final class CallSubscribeToToneParameterSetBuilder {
-        private String clientContext;
+        /**
+         * The clientContext parameter value
+         */
+        @Nullable
+        protected String clientContext;
         /**
          * Sets the ClientContext
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class CallSubscribeToToneParameterSet {
             this.clientContext = val;
             return this;
         }
-        private CallSubscribeToToneParameterSetBuilder(){}
+        @Nullable
+        protected CallSubscribeToToneParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

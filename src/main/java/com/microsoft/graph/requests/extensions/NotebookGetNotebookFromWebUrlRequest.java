@@ -38,6 +38,7 @@ public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest<CopyNotebo
     }
 
 	/** The body for the method */
+    @Nullable
     protected NotebookGetNotebookFromWebUrlParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

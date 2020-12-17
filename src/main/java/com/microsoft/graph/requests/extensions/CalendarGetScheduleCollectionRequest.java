@@ -33,6 +33,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseActionCollectionRe
 
 
     /** The body for the method */
+    @Nullable
     protected CalendarGetScheduleParameterSet body;
 
 

@@ -26,7 +26,11 @@ public class GroupRenewParameterSet {
      * Instiaciates a new GroupRenewParameterSet
      */
     public GroupRenewParameterSet() {}
-    private GroupRenewParameterSet(@Nonnull final GroupRenewParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupRenewParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupRenewParameterSet(@Nonnull final GroupRenewParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class GroupRenewParameterSet {
      * Fluent builder for the GroupRenewParameterSet
      */
     public static final class GroupRenewParameterSetBuilder {
-        private GroupRenewParameterSetBuilder(){}
+        @Nullable
+        protected GroupRenewParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

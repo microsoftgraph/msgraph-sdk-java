@@ -35,7 +35,11 @@ public class WorkbookFunctionsIsNAParameterSet {
      * Instiaciates a new WorkbookFunctionsIsNAParameterSet
      */
     public WorkbookFunctionsIsNAParameterSet() {}
-    private WorkbookFunctionsIsNAParameterSet(@Nonnull final WorkbookFunctionsIsNAParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIsNAParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIsNAParameterSet(@Nonnull final WorkbookFunctionsIsNAParameterSetBuilder builder) {
         this.value = builder.value;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsIsNAParameterSet {
      * Fluent builder for the WorkbookFunctionsIsNAParameterSet
      */
     public static final class WorkbookFunctionsIsNAParameterSetBuilder {
-        private com.google.gson.JsonElement value;
+        /**
+         * The value parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement value;
         /**
          * Sets the Value
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsIsNAParameterSet {
             this.value = val;
             return this;
         }
-        private WorkbookFunctionsIsNAParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIsNAParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

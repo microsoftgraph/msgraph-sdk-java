@@ -53,7 +53,11 @@ public class WorkbookFunctionsXirrParameterSet {
      * Instiaciates a new WorkbookFunctionsXirrParameterSet
      */
     public WorkbookFunctionsXirrParameterSet() {}
-    private WorkbookFunctionsXirrParameterSet(@Nonnull final WorkbookFunctionsXirrParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsXirrParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsXirrParameterSet(@Nonnull final WorkbookFunctionsXirrParameterSetBuilder builder) {
         this.values = builder.values;
         this.dates = builder.dates;
         this.guess = builder.guess;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsXirrParameterSet {
      * Fluent builder for the WorkbookFunctionsXirrParameterSet
      */
     public static final class WorkbookFunctionsXirrParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsXirrParameterSet {
             this.values = val;
             return this;
         }
-        private com.google.gson.JsonElement dates;
+        /**
+         * The dates parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement dates;
         /**
          * Sets the Dates
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsXirrParameterSet {
             this.dates = val;
             return this;
         }
-        private com.google.gson.JsonElement guess;
+        /**
+         * The guess parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement guess;
         /**
          * Sets the Guess
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsXirrParameterSet {
             this.guess = val;
             return this;
         }
-        private WorkbookFunctionsXirrParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsXirrParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

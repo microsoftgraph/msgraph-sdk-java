@@ -26,7 +26,11 @@ public class WorkbookRangeEntireRowParameterSet {
      * Instiaciates a new WorkbookRangeEntireRowParameterSet
      */
     public WorkbookRangeEntireRowParameterSet() {}
-    private WorkbookRangeEntireRowParameterSet(@Nonnull final WorkbookRangeEntireRowParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeEntireRowParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeEntireRowParameterSet(@Nonnull final WorkbookRangeEntireRowParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeEntireRowParameterSet {
      * Fluent builder for the WorkbookRangeEntireRowParameterSet
      */
     public static final class WorkbookRangeEntireRowParameterSetBuilder {
-        private WorkbookRangeEntireRowParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeEntireRowParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

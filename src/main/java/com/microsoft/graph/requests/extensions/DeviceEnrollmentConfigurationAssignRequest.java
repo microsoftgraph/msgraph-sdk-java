@@ -37,6 +37,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest<Void
     }
 
 	/** The body for the method */
+    @Nullable
     protected DeviceEnrollmentConfigurationAssignParameterSet body;
     /**
      * Creates the DeviceEnrollmentConfigurationAssign

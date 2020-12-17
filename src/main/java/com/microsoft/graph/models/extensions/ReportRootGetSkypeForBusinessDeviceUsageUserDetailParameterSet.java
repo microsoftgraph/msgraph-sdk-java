@@ -35,7 +35,11 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet {
      * Instiaciates a new ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet
      */
     public ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet() {}
-    private ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet(@Nonnull final ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet {
      * Fluent builder for the ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet
      */
     public static final class ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

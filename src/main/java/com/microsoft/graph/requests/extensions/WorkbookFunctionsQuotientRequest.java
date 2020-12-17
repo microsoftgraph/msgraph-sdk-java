@@ -38,6 +38,7 @@ public class WorkbookFunctionsQuotientRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsQuotientParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

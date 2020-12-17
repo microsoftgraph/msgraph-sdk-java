@@ -45,7 +45,11 @@ public class ParticipantInviteParameterSet {
      * Instiaciates a new ParticipantInviteParameterSet
      */
     public ParticipantInviteParameterSet() {}
-    private ParticipantInviteParameterSet(@Nonnull final ParticipantInviteParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ParticipantInviteParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ParticipantInviteParameterSet(@Nonnull final ParticipantInviteParameterSetBuilder builder) {
         this.participants = builder.participants;
         this.clientContext = builder.clientContext;
     }
@@ -61,7 +65,11 @@ public class ParticipantInviteParameterSet {
      * Fluent builder for the ParticipantInviteParameterSet
      */
     public static final class ParticipantInviteParameterSetBuilder {
-        private java.util.List<InvitationParticipantInfo> participants;
+        /**
+         * The participants parameter value
+         */
+        @Nullable
+        protected java.util.List<InvitationParticipantInfo> participants;
         /**
          * Sets the Participants
          * @param val the value to set it to
@@ -72,7 +80,11 @@ public class ParticipantInviteParameterSet {
             this.participants = val;
             return this;
         }
-        private String clientContext;
+        /**
+         * The clientContext parameter value
+         */
+        @Nullable
+        protected String clientContext;
         /**
          * Sets the ClientContext
          * @param val the value to set it to
@@ -83,7 +95,8 @@ public class ParticipantInviteParameterSet {
             this.clientContext = val;
             return this;
         }
-        private ParticipantInviteParameterSetBuilder(){}
+        @Nullable
+        protected ParticipantInviteParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

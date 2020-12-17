@@ -26,7 +26,11 @@ public class WorkbookTableColumnTotalRowRangeParameterSet {
      * Instiaciates a new WorkbookTableColumnTotalRowRangeParameterSet
      */
     public WorkbookTableColumnTotalRowRangeParameterSet() {}
-    private WorkbookTableColumnTotalRowRangeParameterSet(@Nonnull final WorkbookTableColumnTotalRowRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableColumnTotalRowRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableColumnTotalRowRangeParameterSet(@Nonnull final WorkbookTableColumnTotalRowRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableColumnTotalRowRangeParameterSet {
      * Fluent builder for the WorkbookTableColumnTotalRowRangeParameterSet
      */
     public static final class WorkbookTableColumnTotalRowRangeParameterSetBuilder {
-        private WorkbookTableColumnTotalRowRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableColumnTotalRowRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

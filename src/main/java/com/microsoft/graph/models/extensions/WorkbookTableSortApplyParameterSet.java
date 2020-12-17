@@ -53,7 +53,11 @@ public class WorkbookTableSortApplyParameterSet {
      * Instiaciates a new WorkbookTableSortApplyParameterSet
      */
     public WorkbookTableSortApplyParameterSet() {}
-    private WorkbookTableSortApplyParameterSet(@Nonnull final WorkbookTableSortApplyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableSortApplyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableSortApplyParameterSet(@Nonnull final WorkbookTableSortApplyParameterSetBuilder builder) {
         this.fields = builder.fields;
         this.matchCase = builder.matchCase;
         this.method = builder.method;
@@ -70,7 +74,11 @@ public class WorkbookTableSortApplyParameterSet {
      * Fluent builder for the WorkbookTableSortApplyParameterSet
      */
     public static final class WorkbookTableSortApplyParameterSetBuilder {
-        private java.util.List<WorkbookSortField> fields;
+        /**
+         * The fields parameter value
+         */
+        @Nullable
+        protected java.util.List<WorkbookSortField> fields;
         /**
          * Sets the Fields
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookTableSortApplyParameterSet {
             this.fields = val;
             return this;
         }
-        private Boolean matchCase;
+        /**
+         * The matchCase parameter value
+         */
+        @Nullable
+        protected Boolean matchCase;
         /**
          * Sets the MatchCase
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookTableSortApplyParameterSet {
             this.matchCase = val;
             return this;
         }
-        private String method;
+        /**
+         * The method parameter value
+         */
+        @Nullable
+        protected String method;
         /**
          * Sets the Method
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookTableSortApplyParameterSet {
             this.method = val;
             return this;
         }
-        private WorkbookTableSortApplyParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableSortApplyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -33,6 +33,7 @@ public class SearchEntityQueryCollectionRequest extends BaseActionCollectionRequ
 
 
     /** The body for the method */
+    @Nullable
     protected SearchEntityQueryParameterSet body;
 
 

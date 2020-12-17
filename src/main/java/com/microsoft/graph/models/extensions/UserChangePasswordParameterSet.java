@@ -44,7 +44,11 @@ public class UserChangePasswordParameterSet {
      * Instiaciates a new UserChangePasswordParameterSet
      */
     public UserChangePasswordParameterSet() {}
-    private UserChangePasswordParameterSet(@Nonnull final UserChangePasswordParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserChangePasswordParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserChangePasswordParameterSet(@Nonnull final UserChangePasswordParameterSetBuilder builder) {
         this.currentPassword = builder.currentPassword;
         this.newPassword = builder.newPassword;
     }
@@ -60,7 +64,11 @@ public class UserChangePasswordParameterSet {
      * Fluent builder for the UserChangePasswordParameterSet
      */
     public static final class UserChangePasswordParameterSetBuilder {
-        private String currentPassword;
+        /**
+         * The currentPassword parameter value
+         */
+        @Nullable
+        protected String currentPassword;
         /**
          * Sets the CurrentPassword
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class UserChangePasswordParameterSet {
             this.currentPassword = val;
             return this;
         }
-        private String newPassword;
+        /**
+         * The newPassword parameter value
+         */
+        @Nullable
+        protected String newPassword;
         /**
          * Sets the NewPassword
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class UserChangePasswordParameterSet {
             this.newPassword = val;
             return this;
         }
-        private UserChangePasswordParameterSetBuilder(){}
+        @Nullable
+        protected UserChangePasswordParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

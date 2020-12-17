@@ -38,6 +38,7 @@ public class WorkbookCreateSessionRequest extends BaseRequest<WorkbookSessionInf
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookCreateSessionParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

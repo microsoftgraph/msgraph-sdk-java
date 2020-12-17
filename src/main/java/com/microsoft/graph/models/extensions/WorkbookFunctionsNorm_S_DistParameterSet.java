@@ -44,7 +44,11 @@ public class WorkbookFunctionsNorm_S_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsNorm_S_DistParameterSet
      */
     public WorkbookFunctionsNorm_S_DistParameterSet() {}
-    private WorkbookFunctionsNorm_S_DistParameterSet(@Nonnull final WorkbookFunctionsNorm_S_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNorm_S_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNorm_S_DistParameterSet(@Nonnull final WorkbookFunctionsNorm_S_DistParameterSetBuilder builder) {
         this.z = builder.z;
         this.cumulative = builder.cumulative;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsNorm_S_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsNorm_S_DistParameterSet
      */
     public static final class WorkbookFunctionsNorm_S_DistParameterSetBuilder {
-        private com.google.gson.JsonElement z;
+        /**
+         * The z parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement z;
         /**
          * Sets the Z
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsNorm_S_DistParameterSet {
             this.z = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsNorm_S_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsNorm_S_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNorm_S_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -62,7 +62,11 @@ public class WorkbookFunctionsSydParameterSet {
      * Instiaciates a new WorkbookFunctionsSydParameterSet
      */
     public WorkbookFunctionsSydParameterSet() {}
-    private WorkbookFunctionsSydParameterSet(@Nonnull final WorkbookFunctionsSydParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSydParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSydParameterSet(@Nonnull final WorkbookFunctionsSydParameterSetBuilder builder) {
         this.cost = builder.cost;
         this.salvage = builder.salvage;
         this.life = builder.life;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsSydParameterSet {
      * Fluent builder for the WorkbookFunctionsSydParameterSet
      */
     public static final class WorkbookFunctionsSydParameterSetBuilder {
-        private com.google.gson.JsonElement cost;
+        /**
+         * The cost parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cost;
         /**
          * Sets the Cost
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsSydParameterSet {
             this.cost = val;
             return this;
         }
-        private com.google.gson.JsonElement salvage;
+        /**
+         * The salvage parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement salvage;
         /**
          * Sets the Salvage
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsSydParameterSet {
             this.salvage = val;
             return this;
         }
-        private com.google.gson.JsonElement life;
+        /**
+         * The life parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement life;
         /**
          * Sets the Life
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsSydParameterSet {
             this.life = val;
             return this;
         }
-        private com.google.gson.JsonElement per;
+        /**
+         * The per parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement per;
         /**
          * Sets the Per
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsSydParameterSet {
             this.per = val;
             return this;
         }
-        private WorkbookFunctionsSydParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSydParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

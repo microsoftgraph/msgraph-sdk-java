@@ -37,6 +37,7 @@ public class PostReplyRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected PostReplyParameterSet body;
     /**
      * Creates the PostReply

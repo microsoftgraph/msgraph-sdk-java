@@ -35,7 +35,11 @@ public class WorkbookFilterApplyTopItemsFilterParameterSet {
      * Instiaciates a new WorkbookFilterApplyTopItemsFilterParameterSet
      */
     public WorkbookFilterApplyTopItemsFilterParameterSet() {}
-    private WorkbookFilterApplyTopItemsFilterParameterSet(@Nonnull final WorkbookFilterApplyTopItemsFilterParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyTopItemsFilterParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyTopItemsFilterParameterSet(@Nonnull final WorkbookFilterApplyTopItemsFilterParameterSetBuilder builder) {
         this.count = builder.count;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFilterApplyTopItemsFilterParameterSet {
      * Fluent builder for the WorkbookFilterApplyTopItemsFilterParameterSet
      */
     public static final class WorkbookFilterApplyTopItemsFilterParameterSetBuilder {
-        private Integer count;
+        /**
+         * The count parameter value
+         */
+        @Nullable
+        protected Integer count;
         /**
          * Sets the Count
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFilterApplyTopItemsFilterParameterSet {
             this.count = val;
             return this;
         }
-        private WorkbookFilterApplyTopItemsFilterParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyTopItemsFilterParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

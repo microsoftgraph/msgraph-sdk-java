@@ -26,7 +26,11 @@ public class WorkbookRangeFillClearParameterSet {
      * Instiaciates a new WorkbookRangeFillClearParameterSet
      */
     public WorkbookRangeFillClearParameterSet() {}
-    private WorkbookRangeFillClearParameterSet(@Nonnull final WorkbookRangeFillClearParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeFillClearParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeFillClearParameterSet(@Nonnull final WorkbookRangeFillClearParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeFillClearParameterSet {
      * Fluent builder for the WorkbookRangeFillClearParameterSet
      */
     public static final class WorkbookRangeFillClearParameterSetBuilder {
-        private WorkbookRangeFillClearParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeFillClearParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

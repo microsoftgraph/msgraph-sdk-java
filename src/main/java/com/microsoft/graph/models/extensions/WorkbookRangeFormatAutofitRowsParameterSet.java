@@ -26,7 +26,11 @@ public class WorkbookRangeFormatAutofitRowsParameterSet {
      * Instiaciates a new WorkbookRangeFormatAutofitRowsParameterSet
      */
     public WorkbookRangeFormatAutofitRowsParameterSet() {}
-    private WorkbookRangeFormatAutofitRowsParameterSet(@Nonnull final WorkbookRangeFormatAutofitRowsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeFormatAutofitRowsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeFormatAutofitRowsParameterSet(@Nonnull final WorkbookRangeFormatAutofitRowsParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeFormatAutofitRowsParameterSet {
      * Fluent builder for the WorkbookRangeFormatAutofitRowsParameterSet
      */
     public static final class WorkbookRangeFormatAutofitRowsParameterSetBuilder {
-        private WorkbookRangeFormatAutofitRowsParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeFormatAutofitRowsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

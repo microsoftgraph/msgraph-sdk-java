@@ -37,6 +37,7 @@ public class OnlineMeetingCreateOrGetRequest extends BaseRequest<OnlineMeeting> 
     }
 
 	/** The body for the method */
+    @Nullable
     protected OnlineMeetingCreateOrGetParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

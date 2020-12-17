@@ -26,7 +26,11 @@ public class ManagedDeviceRemoteLockParameterSet {
      * Instiaciates a new ManagedDeviceRemoteLockParameterSet
      */
     public ManagedDeviceRemoteLockParameterSet() {}
-    private ManagedDeviceRemoteLockParameterSet(@Nonnull final ManagedDeviceRemoteLockParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceRemoteLockParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceRemoteLockParameterSet(@Nonnull final ManagedDeviceRemoteLockParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceRemoteLockParameterSet {
      * Fluent builder for the ManagedDeviceRemoteLockParameterSet
      */
     public static final class ManagedDeviceRemoteLockParameterSetBuilder {
-        private ManagedDeviceRemoteLockParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceRemoteLockParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

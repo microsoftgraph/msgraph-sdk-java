@@ -26,7 +26,11 @@ public class OnenotePagePreviewParameterSet {
      * Instiaciates a new OnenotePagePreviewParameterSet
      */
     public OnenotePagePreviewParameterSet() {}
-    private OnenotePagePreviewParameterSet(@Nonnull final OnenotePagePreviewParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OnenotePagePreviewParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OnenotePagePreviewParameterSet(@Nonnull final OnenotePagePreviewParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class OnenotePagePreviewParameterSet {
      * Fluent builder for the OnenotePagePreviewParameterSet
      */
     public static final class OnenotePagePreviewParameterSetBuilder {
-        private OnenotePagePreviewParameterSetBuilder(){}
+        @Nullable
+        protected OnenotePagePreviewParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

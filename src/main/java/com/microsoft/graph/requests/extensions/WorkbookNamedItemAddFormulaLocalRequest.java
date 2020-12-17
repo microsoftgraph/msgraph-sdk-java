@@ -37,6 +37,7 @@ public class WorkbookNamedItemAddFormulaLocalRequest extends BaseRequest<Workboo
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookNamedItemAddFormulaLocalParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

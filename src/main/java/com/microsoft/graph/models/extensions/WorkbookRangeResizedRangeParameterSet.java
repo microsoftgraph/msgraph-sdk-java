@@ -44,7 +44,11 @@ public class WorkbookRangeResizedRangeParameterSet {
      * Instiaciates a new WorkbookRangeResizedRangeParameterSet
      */
     public WorkbookRangeResizedRangeParameterSet() {}
-    private WorkbookRangeResizedRangeParameterSet(@Nonnull final WorkbookRangeResizedRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeResizedRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeResizedRangeParameterSet(@Nonnull final WorkbookRangeResizedRangeParameterSetBuilder builder) {
         this.deltaRows = builder.deltaRows;
         this.deltaColumns = builder.deltaColumns;
     }
@@ -60,7 +64,11 @@ public class WorkbookRangeResizedRangeParameterSet {
      * Fluent builder for the WorkbookRangeResizedRangeParameterSet
      */
     public static final class WorkbookRangeResizedRangeParameterSetBuilder {
-        private Integer deltaRows;
+        /**
+         * The deltaRows parameter value
+         */
+        @Nullable
+        protected Integer deltaRows;
         /**
          * Sets the DeltaRows
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookRangeResizedRangeParameterSet {
             this.deltaRows = val;
             return this;
         }
-        private Integer deltaColumns;
+        /**
+         * The deltaColumns parameter value
+         */
+        @Nullable
+        protected Integer deltaColumns;
         /**
          * Sets the DeltaColumns
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookRangeResizedRangeParameterSet {
             this.deltaColumns = val;
             return this;
         }
-        private WorkbookRangeResizedRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeResizedRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

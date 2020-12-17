@@ -53,7 +53,11 @@ public class WorkbookFunctionsIfParameterSet {
      * Instiaciates a new WorkbookFunctionsIfParameterSet
      */
     public WorkbookFunctionsIfParameterSet() {}
-    private WorkbookFunctionsIfParameterSet(@Nonnull final WorkbookFunctionsIfParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIfParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIfParameterSet(@Nonnull final WorkbookFunctionsIfParameterSetBuilder builder) {
         this.logicalTest = builder.logicalTest;
         this.valueIfTrue = builder.valueIfTrue;
         this.valueIfFalse = builder.valueIfFalse;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsIfParameterSet {
      * Fluent builder for the WorkbookFunctionsIfParameterSet
      */
     public static final class WorkbookFunctionsIfParameterSetBuilder {
-        private com.google.gson.JsonElement logicalTest;
+        /**
+         * The logicalTest parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement logicalTest;
         /**
          * Sets the LogicalTest
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsIfParameterSet {
             this.logicalTest = val;
             return this;
         }
-        private com.google.gson.JsonElement valueIfTrue;
+        /**
+         * The valueIfTrue parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement valueIfTrue;
         /**
          * Sets the ValueIfTrue
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsIfParameterSet {
             this.valueIfTrue = val;
             return this;
         }
-        private com.google.gson.JsonElement valueIfFalse;
+        /**
+         * The valueIfFalse parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement valueIfFalse;
         /**
          * Sets the ValueIfFalse
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsIfParameterSet {
             this.valueIfFalse = val;
             return this;
         }
-        private WorkbookFunctionsIfParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIfParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

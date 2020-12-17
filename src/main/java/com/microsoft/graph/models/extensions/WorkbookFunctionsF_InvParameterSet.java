@@ -53,7 +53,11 @@ public class WorkbookFunctionsF_InvParameterSet {
      * Instiaciates a new WorkbookFunctionsF_InvParameterSet
      */
     public WorkbookFunctionsF_InvParameterSet() {}
-    private WorkbookFunctionsF_InvParameterSet(@Nonnull final WorkbookFunctionsF_InvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsF_InvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsF_InvParameterSet(@Nonnull final WorkbookFunctionsF_InvParameterSetBuilder builder) {
         this.probability = builder.probability;
         this.degFreedom1 = builder.degFreedom1;
         this.degFreedom2 = builder.degFreedom2;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsF_InvParameterSet {
      * Fluent builder for the WorkbookFunctionsF_InvParameterSet
      */
     public static final class WorkbookFunctionsF_InvParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsF_InvParameterSet {
             this.probability = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom1;
+        /**
+         * The degFreedom1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom1;
         /**
          * Sets the DegFreedom1
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsF_InvParameterSet {
             this.degFreedom1 = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom2;
+        /**
+         * The degFreedom2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom2;
         /**
          * Sets the DegFreedom2
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsF_InvParameterSet {
             this.degFreedom2 = val;
             return this;
         }
-        private WorkbookFunctionsF_InvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsF_InvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

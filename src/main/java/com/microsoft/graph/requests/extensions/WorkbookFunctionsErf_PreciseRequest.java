@@ -38,6 +38,7 @@ public class WorkbookFunctionsErf_PreciseRequest extends BaseRequest<WorkbookFun
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsErf_PreciseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

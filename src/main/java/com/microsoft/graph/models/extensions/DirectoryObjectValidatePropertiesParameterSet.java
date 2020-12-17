@@ -62,7 +62,11 @@ public class DirectoryObjectValidatePropertiesParameterSet {
      * Instiaciates a new DirectoryObjectValidatePropertiesParameterSet
      */
     public DirectoryObjectValidatePropertiesParameterSet() {}
-    private DirectoryObjectValidatePropertiesParameterSet(@Nonnull final DirectoryObjectValidatePropertiesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DirectoryObjectValidatePropertiesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DirectoryObjectValidatePropertiesParameterSet(@Nonnull final DirectoryObjectValidatePropertiesParameterSetBuilder builder) {
         this.entityType = builder.entityType;
         this.displayName = builder.displayName;
         this.mailNickname = builder.mailNickname;
@@ -80,7 +84,11 @@ public class DirectoryObjectValidatePropertiesParameterSet {
      * Fluent builder for the DirectoryObjectValidatePropertiesParameterSet
      */
     public static final class DirectoryObjectValidatePropertiesParameterSetBuilder {
-        private String entityType;
+        /**
+         * The entityType parameter value
+         */
+        @Nullable
+        protected String entityType;
         /**
          * Sets the EntityType
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class DirectoryObjectValidatePropertiesParameterSet {
             this.entityType = val;
             return this;
         }
-        private String displayName;
+        /**
+         * The displayName parameter value
+         */
+        @Nullable
+        protected String displayName;
         /**
          * Sets the DisplayName
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class DirectoryObjectValidatePropertiesParameterSet {
             this.displayName = val;
             return this;
         }
-        private String mailNickname;
+        /**
+         * The mailNickname parameter value
+         */
+        @Nullable
+        protected String mailNickname;
         /**
          * Sets the MailNickname
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class DirectoryObjectValidatePropertiesParameterSet {
             this.mailNickname = val;
             return this;
         }
-        private java.util.UUID onBehalfOfUserId;
+        /**
+         * The onBehalfOfUserId parameter value
+         */
+        @Nullable
+        protected java.util.UUID onBehalfOfUserId;
         /**
          * Sets the OnBehalfOfUserId
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class DirectoryObjectValidatePropertiesParameterSet {
             this.onBehalfOfUserId = val;
             return this;
         }
-        private DirectoryObjectValidatePropertiesParameterSetBuilder(){}
+        @Nullable
+        protected DirectoryObjectValidatePropertiesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

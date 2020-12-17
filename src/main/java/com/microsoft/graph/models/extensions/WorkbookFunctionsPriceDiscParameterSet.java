@@ -71,7 +71,11 @@ public class WorkbookFunctionsPriceDiscParameterSet {
      * Instiaciates a new WorkbookFunctionsPriceDiscParameterSet
      */
     public WorkbookFunctionsPriceDiscParameterSet() {}
-    private WorkbookFunctionsPriceDiscParameterSet(@Nonnull final WorkbookFunctionsPriceDiscParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPriceDiscParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPriceDiscParameterSet(@Nonnull final WorkbookFunctionsPriceDiscParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.discount = builder.discount;
@@ -90,7 +94,11 @@ public class WorkbookFunctionsPriceDiscParameterSet {
      * Fluent builder for the WorkbookFunctionsPriceDiscParameterSet
      */
     public static final class WorkbookFunctionsPriceDiscParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class WorkbookFunctionsPriceDiscParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class WorkbookFunctionsPriceDiscParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement discount;
+        /**
+         * The discount parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement discount;
         /**
          * Sets the Discount
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class WorkbookFunctionsPriceDiscParameterSet {
             this.discount = val;
             return this;
         }
-        private com.google.gson.JsonElement redemption;
+        /**
+         * The redemption parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement redemption;
         /**
          * Sets the Redemption
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class WorkbookFunctionsPriceDiscParameterSet {
             this.redemption = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class WorkbookFunctionsPriceDiscParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsPriceDiscParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPriceDiscParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

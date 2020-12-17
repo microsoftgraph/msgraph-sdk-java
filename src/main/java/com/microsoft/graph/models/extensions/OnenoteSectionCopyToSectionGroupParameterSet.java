@@ -71,7 +71,11 @@ public class OnenoteSectionCopyToSectionGroupParameterSet {
      * Instiaciates a new OnenoteSectionCopyToSectionGroupParameterSet
      */
     public OnenoteSectionCopyToSectionGroupParameterSet() {}
-    private OnenoteSectionCopyToSectionGroupParameterSet(@Nonnull final OnenoteSectionCopyToSectionGroupParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OnenoteSectionCopyToSectionGroupParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OnenoteSectionCopyToSectionGroupParameterSet(@Nonnull final OnenoteSectionCopyToSectionGroupParameterSetBuilder builder) {
         this.id = builder.id;
         this.groupId = builder.groupId;
         this.renameAs = builder.renameAs;
@@ -90,7 +94,11 @@ public class OnenoteSectionCopyToSectionGroupParameterSet {
      * Fluent builder for the OnenoteSectionCopyToSectionGroupParameterSet
      */
     public static final class OnenoteSectionCopyToSectionGroupParameterSetBuilder {
-        private String id;
+        /**
+         * The id parameter value
+         */
+        @Nullable
+        protected String id;
         /**
          * Sets the Id
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class OnenoteSectionCopyToSectionGroupParameterSet {
             this.id = val;
             return this;
         }
-        private String groupId;
+        /**
+         * The groupId parameter value
+         */
+        @Nullable
+        protected String groupId;
         /**
          * Sets the GroupId
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class OnenoteSectionCopyToSectionGroupParameterSet {
             this.groupId = val;
             return this;
         }
-        private String renameAs;
+        /**
+         * The renameAs parameter value
+         */
+        @Nullable
+        protected String renameAs;
         /**
          * Sets the RenameAs
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class OnenoteSectionCopyToSectionGroupParameterSet {
             this.renameAs = val;
             return this;
         }
-        private String siteCollectionId;
+        /**
+         * The siteCollectionId parameter value
+         */
+        @Nullable
+        protected String siteCollectionId;
         /**
          * Sets the SiteCollectionId
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class OnenoteSectionCopyToSectionGroupParameterSet {
             this.siteCollectionId = val;
             return this;
         }
-        private String siteId;
+        /**
+         * The siteId parameter value
+         */
+        @Nullable
+        protected String siteId;
         /**
          * Sets the SiteId
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class OnenoteSectionCopyToSectionGroupParameterSet {
             this.siteId = val;
             return this;
         }
-        private OnenoteSectionCopyToSectionGroupParameterSetBuilder(){}
+        @Nullable
+        protected OnenoteSectionCopyToSectionGroupParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

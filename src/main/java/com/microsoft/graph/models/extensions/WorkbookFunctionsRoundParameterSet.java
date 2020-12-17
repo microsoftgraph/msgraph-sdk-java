@@ -44,7 +44,11 @@ public class WorkbookFunctionsRoundParameterSet {
      * Instiaciates a new WorkbookFunctionsRoundParameterSet
      */
     public WorkbookFunctionsRoundParameterSet() {}
-    private WorkbookFunctionsRoundParameterSet(@Nonnull final WorkbookFunctionsRoundParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRoundParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRoundParameterSet(@Nonnull final WorkbookFunctionsRoundParameterSetBuilder builder) {
         this.number = builder.number;
         this.numDigits = builder.numDigits;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsRoundParameterSet {
      * Fluent builder for the WorkbookFunctionsRoundParameterSet
      */
     public static final class WorkbookFunctionsRoundParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsRoundParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement numDigits;
+        /**
+         * The numDigits parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numDigits;
         /**
          * Sets the NumDigits
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsRoundParameterSet {
             this.numDigits = val;
             return this;
         }
-        private WorkbookFunctionsRoundParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRoundParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

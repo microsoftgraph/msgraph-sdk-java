@@ -38,6 +38,7 @@ public class WorkbookFunctionsAtanRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsAtanParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

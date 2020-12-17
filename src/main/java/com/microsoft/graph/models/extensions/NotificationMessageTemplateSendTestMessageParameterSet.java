@@ -26,7 +26,11 @@ public class NotificationMessageTemplateSendTestMessageParameterSet {
      * Instiaciates a new NotificationMessageTemplateSendTestMessageParameterSet
      */
     public NotificationMessageTemplateSendTestMessageParameterSet() {}
-    private NotificationMessageTemplateSendTestMessageParameterSet(@Nonnull final NotificationMessageTemplateSendTestMessageParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new NotificationMessageTemplateSendTestMessageParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected NotificationMessageTemplateSendTestMessageParameterSet(@Nonnull final NotificationMessageTemplateSendTestMessageParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class NotificationMessageTemplateSendTestMessageParameterSet {
      * Fluent builder for the NotificationMessageTemplateSendTestMessageParameterSet
      */
     public static final class NotificationMessageTemplateSendTestMessageParameterSetBuilder {
-        private NotificationMessageTemplateSendTestMessageParameterSetBuilder(){}
+        @Nullable
+        protected NotificationMessageTemplateSendTestMessageParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

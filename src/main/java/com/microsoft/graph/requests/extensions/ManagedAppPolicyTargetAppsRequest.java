@@ -37,6 +37,7 @@ public class ManagedAppPolicyTargetAppsRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedAppPolicyTargetAppsParameterSet body;
     /**
      * Creates the ManagedAppPolicyTargetApps

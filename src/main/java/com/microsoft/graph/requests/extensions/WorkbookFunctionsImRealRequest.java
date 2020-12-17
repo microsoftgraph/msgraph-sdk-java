@@ -38,6 +38,7 @@ public class WorkbookFunctionsImRealRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsImRealParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

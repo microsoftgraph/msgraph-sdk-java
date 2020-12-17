@@ -26,7 +26,11 @@ public class CallKeepAliveParameterSet {
      * Instiaciates a new CallKeepAliveParameterSet
      */
     public CallKeepAliveParameterSet() {}
-    private CallKeepAliveParameterSet(@Nonnull final CallKeepAliveParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallKeepAliveParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallKeepAliveParameterSet(@Nonnull final CallKeepAliveParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class CallKeepAliveParameterSet {
      * Fluent builder for the CallKeepAliveParameterSet
      */
     public static final class CallKeepAliveParameterSetBuilder {
-        private CallKeepAliveParameterSetBuilder(){}
+        @Nullable
+        protected CallKeepAliveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

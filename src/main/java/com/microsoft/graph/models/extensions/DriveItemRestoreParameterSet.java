@@ -45,7 +45,11 @@ public class DriveItemRestoreParameterSet {
      * Instiaciates a new DriveItemRestoreParameterSet
      */
     public DriveItemRestoreParameterSet() {}
-    private DriveItemRestoreParameterSet(@Nonnull final DriveItemRestoreParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemRestoreParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemRestoreParameterSet(@Nonnull final DriveItemRestoreParameterSetBuilder builder) {
         this.parentReference = builder.parentReference;
         this.name = builder.name;
     }
@@ -61,7 +65,11 @@ public class DriveItemRestoreParameterSet {
      * Fluent builder for the DriveItemRestoreParameterSet
      */
     public static final class DriveItemRestoreParameterSetBuilder {
-        private ItemReference parentReference;
+        /**
+         * The parentReference parameter value
+         */
+        @Nullable
+        protected ItemReference parentReference;
         /**
          * Sets the ParentReference
          * @param val the value to set it to
@@ -72,7 +80,11 @@ public class DriveItemRestoreParameterSet {
             this.parentReference = val;
             return this;
         }
-        private String name;
+        /**
+         * The name parameter value
+         */
+        @Nullable
+        protected String name;
         /**
          * Sets the Name
          * @param val the value to set it to
@@ -83,7 +95,8 @@ public class DriveItemRestoreParameterSet {
             this.name = val;
             return this;
         }
-        private DriveItemRestoreParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemRestoreParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

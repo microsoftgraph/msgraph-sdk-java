@@ -26,7 +26,11 @@ public class DriveRecentParameterSet {
      * Instiaciates a new DriveRecentParameterSet
      */
     public DriveRecentParameterSet() {}
-    private DriveRecentParameterSet(@Nonnull final DriveRecentParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveRecentParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveRecentParameterSet(@Nonnull final DriveRecentParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DriveRecentParameterSet {
      * Fluent builder for the DriveRecentParameterSet
      */
     public static final class DriveRecentParameterSetBuilder {
-        private DriveRecentParameterSetBuilder(){}
+        @Nullable
+        protected DriveRecentParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

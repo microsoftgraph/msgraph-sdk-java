@@ -71,7 +71,11 @@ public class WorkbookFunctionsPvParameterSet {
      * Instiaciates a new WorkbookFunctionsPvParameterSet
      */
     public WorkbookFunctionsPvParameterSet() {}
-    private WorkbookFunctionsPvParameterSet(@Nonnull final WorkbookFunctionsPvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPvParameterSet(@Nonnull final WorkbookFunctionsPvParameterSetBuilder builder) {
         this.rate = builder.rate;
         this.nper = builder.nper;
         this.pmt = builder.pmt;
@@ -90,7 +94,11 @@ public class WorkbookFunctionsPvParameterSet {
      * Fluent builder for the WorkbookFunctionsPvParameterSet
      */
     public static final class WorkbookFunctionsPvParameterSetBuilder {
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class WorkbookFunctionsPvParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement nper;
+        /**
+         * The nper parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement nper;
         /**
          * Sets the Nper
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class WorkbookFunctionsPvParameterSet {
             this.nper = val;
             return this;
         }
-        private com.google.gson.JsonElement pmt;
+        /**
+         * The pmt parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement pmt;
         /**
          * Sets the Pmt
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class WorkbookFunctionsPvParameterSet {
             this.pmt = val;
             return this;
         }
-        private com.google.gson.JsonElement fv;
+        /**
+         * The fv parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement fv;
         /**
          * Sets the Fv
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class WorkbookFunctionsPvParameterSet {
             this.fv = val;
             return this;
         }
-        private com.google.gson.JsonElement type;
+        /**
+         * The type parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement type;
         /**
          * Sets the Type
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class WorkbookFunctionsPvParameterSet {
             this.type = val;
             return this;
         }
-        private WorkbookFunctionsPvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

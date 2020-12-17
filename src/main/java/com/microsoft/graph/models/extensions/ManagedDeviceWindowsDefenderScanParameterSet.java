@@ -35,7 +35,11 @@ public class ManagedDeviceWindowsDefenderScanParameterSet {
      * Instiaciates a new ManagedDeviceWindowsDefenderScanParameterSet
      */
     public ManagedDeviceWindowsDefenderScanParameterSet() {}
-    private ManagedDeviceWindowsDefenderScanParameterSet(@Nonnull final ManagedDeviceWindowsDefenderScanParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceWindowsDefenderScanParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceWindowsDefenderScanParameterSet(@Nonnull final ManagedDeviceWindowsDefenderScanParameterSetBuilder builder) {
         this.quickScan = builder.quickScan;
     }
     /**
@@ -50,7 +54,11 @@ public class ManagedDeviceWindowsDefenderScanParameterSet {
      * Fluent builder for the ManagedDeviceWindowsDefenderScanParameterSet
      */
     public static final class ManagedDeviceWindowsDefenderScanParameterSetBuilder {
-        private Boolean quickScan;
+        /**
+         * The quickScan parameter value
+         */
+        @Nullable
+        protected Boolean quickScan;
         /**
          * Sets the QuickScan
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ManagedDeviceWindowsDefenderScanParameterSet {
             this.quickScan = val;
             return this;
         }
-        private ManagedDeviceWindowsDefenderScanParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceWindowsDefenderScanParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

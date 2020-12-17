@@ -90,7 +90,11 @@ public class DriveItemInviteParameterSet {
      * Instiaciates a new DriveItemInviteParameterSet
      */
     public DriveItemInviteParameterSet() {}
-    private DriveItemInviteParameterSet(@Nonnull final DriveItemInviteParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemInviteParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemInviteParameterSet(@Nonnull final DriveItemInviteParameterSetBuilder builder) {
         this.requireSignIn = builder.requireSignIn;
         this.roles = builder.roles;
         this.sendInvitation = builder.sendInvitation;
@@ -111,7 +115,11 @@ public class DriveItemInviteParameterSet {
      * Fluent builder for the DriveItemInviteParameterSet
      */
     public static final class DriveItemInviteParameterSetBuilder {
-        private Boolean requireSignIn;
+        /**
+         * The requireSignIn parameter value
+         */
+        @Nullable
+        protected Boolean requireSignIn;
         /**
          * Sets the RequireSignIn
          * @param val the value to set it to
@@ -122,7 +130,11 @@ public class DriveItemInviteParameterSet {
             this.requireSignIn = val;
             return this;
         }
-        private java.util.List<String> roles;
+        /**
+         * The roles parameter value
+         */
+        @Nullable
+        protected java.util.List<String> roles;
         /**
          * Sets the Roles
          * @param val the value to set it to
@@ -133,7 +145,11 @@ public class DriveItemInviteParameterSet {
             this.roles = val;
             return this;
         }
-        private Boolean sendInvitation;
+        /**
+         * The sendInvitation parameter value
+         */
+        @Nullable
+        protected Boolean sendInvitation;
         /**
          * Sets the SendInvitation
          * @param val the value to set it to
@@ -144,7 +160,11 @@ public class DriveItemInviteParameterSet {
             this.sendInvitation = val;
             return this;
         }
-        private String message;
+        /**
+         * The message parameter value
+         */
+        @Nullable
+        protected String message;
         /**
          * Sets the Message
          * @param val the value to set it to
@@ -155,7 +175,11 @@ public class DriveItemInviteParameterSet {
             this.message = val;
             return this;
         }
-        private java.util.List<DriveRecipient> recipients;
+        /**
+         * The recipients parameter value
+         */
+        @Nullable
+        protected java.util.List<DriveRecipient> recipients;
         /**
          * Sets the Recipients
          * @param val the value to set it to
@@ -166,7 +190,11 @@ public class DriveItemInviteParameterSet {
             this.recipients = val;
             return this;
         }
-        private String expirationDateTime;
+        /**
+         * The expirationDateTime parameter value
+         */
+        @Nullable
+        protected String expirationDateTime;
         /**
          * Sets the ExpirationDateTime
          * @param val the value to set it to
@@ -177,7 +205,11 @@ public class DriveItemInviteParameterSet {
             this.expirationDateTime = val;
             return this;
         }
-        private String password;
+        /**
+         * The password parameter value
+         */
+        @Nullable
+        protected String password;
         /**
          * Sets the Password
          * @param val the value to set it to
@@ -188,7 +220,8 @@ public class DriveItemInviteParameterSet {
             this.password = val;
             return this;
         }
-        private DriveItemInviteParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemInviteParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

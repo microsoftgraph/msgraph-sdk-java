@@ -26,7 +26,11 @@ public class ListItemVersionRestoreVersionParameterSet {
      * Instiaciates a new ListItemVersionRestoreVersionParameterSet
      */
     public ListItemVersionRestoreVersionParameterSet() {}
-    private ListItemVersionRestoreVersionParameterSet(@Nonnull final ListItemVersionRestoreVersionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ListItemVersionRestoreVersionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ListItemVersionRestoreVersionParameterSet(@Nonnull final ListItemVersionRestoreVersionParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ListItemVersionRestoreVersionParameterSet {
      * Fluent builder for the ListItemVersionRestoreVersionParameterSet
      */
     public static final class ListItemVersionRestoreVersionParameterSetBuilder {
-        private ListItemVersionRestoreVersionParameterSetBuilder(){}
+        @Nullable
+        protected ListItemVersionRestoreVersionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

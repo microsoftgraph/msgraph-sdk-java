@@ -71,7 +71,11 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsHypGeom_DistParameterSet
      */
     public WorkbookFunctionsHypGeom_DistParameterSet() {}
-    private WorkbookFunctionsHypGeom_DistParameterSet(@Nonnull final WorkbookFunctionsHypGeom_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsHypGeom_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsHypGeom_DistParameterSet(@Nonnull final WorkbookFunctionsHypGeom_DistParameterSetBuilder builder) {
         this.sampleS = builder.sampleS;
         this.numberSample = builder.numberSample;
         this.populationS = builder.populationS;
@@ -90,7 +94,11 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsHypGeom_DistParameterSet
      */
     public static final class WorkbookFunctionsHypGeom_DistParameterSetBuilder {
-        private com.google.gson.JsonElement sampleS;
+        /**
+         * The sampleS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement sampleS;
         /**
          * Sets the SampleS
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
             this.sampleS = val;
             return this;
         }
-        private com.google.gson.JsonElement numberSample;
+        /**
+         * The numberSample parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberSample;
         /**
          * Sets the NumberSample
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
             this.numberSample = val;
             return this;
         }
-        private com.google.gson.JsonElement populationS;
+        /**
+         * The populationS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement populationS;
         /**
          * Sets the PopulationS
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
             this.populationS = val;
             return this;
         }
-        private com.google.gson.JsonElement numberPop;
+        /**
+         * The numberPop parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberPop;
         /**
          * Sets the NumberPop
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
             this.numberPop = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsHypGeom_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsHypGeom_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -26,7 +26,11 @@ public class TeamGetAllMessagesParameterSet {
      * Instiaciates a new TeamGetAllMessagesParameterSet
      */
     public TeamGetAllMessagesParameterSet() {}
-    private TeamGetAllMessagesParameterSet(@Nonnull final TeamGetAllMessagesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new TeamGetAllMessagesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected TeamGetAllMessagesParameterSet(@Nonnull final TeamGetAllMessagesParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class TeamGetAllMessagesParameterSet {
      * Fluent builder for the TeamGetAllMessagesParameterSet
      */
     public static final class TeamGetAllMessagesParameterSetBuilder {
-        private TeamGetAllMessagesParameterSetBuilder(){}
+        @Nullable
+        protected TeamGetAllMessagesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

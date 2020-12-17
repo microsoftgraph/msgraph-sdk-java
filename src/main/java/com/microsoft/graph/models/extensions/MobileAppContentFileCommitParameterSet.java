@@ -35,7 +35,11 @@ public class MobileAppContentFileCommitParameterSet {
      * Instiaciates a new MobileAppContentFileCommitParameterSet
      */
     public MobileAppContentFileCommitParameterSet() {}
-    private MobileAppContentFileCommitParameterSet(@Nonnull final MobileAppContentFileCommitParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MobileAppContentFileCommitParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MobileAppContentFileCommitParameterSet(@Nonnull final MobileAppContentFileCommitParameterSetBuilder builder) {
         this.fileEncryptionInfo = builder.fileEncryptionInfo;
     }
     /**
@@ -50,7 +54,11 @@ public class MobileAppContentFileCommitParameterSet {
      * Fluent builder for the MobileAppContentFileCommitParameterSet
      */
     public static final class MobileAppContentFileCommitParameterSetBuilder {
-        private FileEncryptionInfo fileEncryptionInfo;
+        /**
+         * The fileEncryptionInfo parameter value
+         */
+        @Nullable
+        protected FileEncryptionInfo fileEncryptionInfo;
         /**
          * Sets the FileEncryptionInfo
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class MobileAppContentFileCommitParameterSet {
             this.fileEncryptionInfo = val;
             return this;
         }
-        private MobileAppContentFileCommitParameterSetBuilder(){}
+        @Nullable
+        protected MobileAppContentFileCommitParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

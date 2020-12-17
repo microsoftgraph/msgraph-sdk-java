@@ -63,7 +63,11 @@ public class CalendarGetScheduleParameterSet {
      * Instiaciates a new CalendarGetScheduleParameterSet
      */
     public CalendarGetScheduleParameterSet() {}
-    private CalendarGetScheduleParameterSet(@Nonnull final CalendarGetScheduleParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CalendarGetScheduleParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CalendarGetScheduleParameterSet(@Nonnull final CalendarGetScheduleParameterSetBuilder builder) {
         this.schedules = builder.schedules;
         this.endTime = builder.endTime;
         this.startTime = builder.startTime;
@@ -81,7 +85,11 @@ public class CalendarGetScheduleParameterSet {
      * Fluent builder for the CalendarGetScheduleParameterSet
      */
     public static final class CalendarGetScheduleParameterSetBuilder {
-        private java.util.List<String> schedules;
+        /**
+         * The schedules parameter value
+         */
+        @Nullable
+        protected java.util.List<String> schedules;
         /**
          * Sets the Schedules
          * @param val the value to set it to
@@ -92,7 +100,11 @@ public class CalendarGetScheduleParameterSet {
             this.schedules = val;
             return this;
         }
-        private DateTimeTimeZone endTime;
+        /**
+         * The endTime parameter value
+         */
+        @Nullable
+        protected DateTimeTimeZone endTime;
         /**
          * Sets the EndTime
          * @param val the value to set it to
@@ -103,7 +115,11 @@ public class CalendarGetScheduleParameterSet {
             this.endTime = val;
             return this;
         }
-        private DateTimeTimeZone startTime;
+        /**
+         * The startTime parameter value
+         */
+        @Nullable
+        protected DateTimeTimeZone startTime;
         /**
          * Sets the StartTime
          * @param val the value to set it to
@@ -114,7 +130,11 @@ public class CalendarGetScheduleParameterSet {
             this.startTime = val;
             return this;
         }
-        private Integer availabilityViewInterval;
+        /**
+         * The availabilityViewInterval parameter value
+         */
+        @Nullable
+        protected Integer availabilityViewInterval;
         /**
          * Sets the AvailabilityViewInterval
          * @param val the value to set it to
@@ -125,7 +145,8 @@ public class CalendarGetScheduleParameterSet {
             this.availabilityViewInterval = val;
             return this;
         }
-        private CalendarGetScheduleParameterSetBuilder(){}
+        @Nullable
+        protected CalendarGetScheduleParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

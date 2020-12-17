@@ -37,6 +37,7 @@ public class MobileAppAssignRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MobileAppAssignParameterSet body;
     /**
      * Creates the MobileAppAssign

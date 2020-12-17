@@ -98,7 +98,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
      * Instiaciates a new WorkbookFunctionsAccrIntParameterSet
      */
     public WorkbookFunctionsAccrIntParameterSet() {}
-    private WorkbookFunctionsAccrIntParameterSet(@Nonnull final WorkbookFunctionsAccrIntParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAccrIntParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAccrIntParameterSet(@Nonnull final WorkbookFunctionsAccrIntParameterSetBuilder builder) {
         this.issue = builder.issue;
         this.firstInterest = builder.firstInterest;
         this.settlement = builder.settlement;
@@ -120,7 +124,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
      * Fluent builder for the WorkbookFunctionsAccrIntParameterSet
      */
     public static final class WorkbookFunctionsAccrIntParameterSetBuilder {
-        private com.google.gson.JsonElement issue;
+        /**
+         * The issue parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement issue;
         /**
          * Sets the Issue
          * @param val the value to set it to
@@ -131,7 +139,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.issue = val;
             return this;
         }
-        private com.google.gson.JsonElement firstInterest;
+        /**
+         * The firstInterest parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement firstInterest;
         /**
          * Sets the FirstInterest
          * @param val the value to set it to
@@ -142,7 +154,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.firstInterest = val;
             return this;
         }
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -153,7 +169,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -164,7 +184,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement par;
+        /**
+         * The par parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement par;
         /**
          * Sets the Par
          * @param val the value to set it to
@@ -175,7 +199,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.par = val;
             return this;
         }
-        private com.google.gson.JsonElement frequency;
+        /**
+         * The frequency parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement frequency;
         /**
          * Sets the Frequency
          * @param val the value to set it to
@@ -186,7 +214,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.frequency = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -197,7 +229,11 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.basis = val;
             return this;
         }
-        private com.google.gson.JsonElement calcMethod;
+        /**
+         * The calcMethod parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement calcMethod;
         /**
          * Sets the CalcMethod
          * @param val the value to set it to
@@ -208,7 +244,8 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.calcMethod = val;
             return this;
         }
-        private WorkbookFunctionsAccrIntParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAccrIntParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

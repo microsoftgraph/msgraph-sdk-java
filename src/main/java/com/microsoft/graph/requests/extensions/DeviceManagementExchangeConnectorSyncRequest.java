@@ -37,6 +37,7 @@ public class DeviceManagementExchangeConnectorSyncRequest extends BaseRequest<Vo
     }
 
 	/** The body for the method */
+    @Nullable
     protected DeviceManagementExchangeConnectorSyncParameterSet body;
     /**
      * Creates the DeviceManagementExchangeConnectorSync

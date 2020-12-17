@@ -37,6 +37,7 @@ public class ScheduleChangeRequestApproveRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ScheduleChangeRequestApproveParameterSet body;
     /**
      * Creates the ScheduleChangeRequestApprove

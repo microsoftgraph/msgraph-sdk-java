@@ -35,7 +35,11 @@ public class WorkbookFunctionsGcdParameterSet {
      * Instiaciates a new WorkbookFunctionsGcdParameterSet
      */
     public WorkbookFunctionsGcdParameterSet() {}
-    private WorkbookFunctionsGcdParameterSet(@Nonnull final WorkbookFunctionsGcdParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsGcdParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsGcdParameterSet(@Nonnull final WorkbookFunctionsGcdParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsGcdParameterSet {
      * Fluent builder for the WorkbookFunctionsGcdParameterSet
      */
     public static final class WorkbookFunctionsGcdParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsGcdParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsGcdParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsGcdParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

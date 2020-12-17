@@ -37,6 +37,7 @@ public class DriveItemRestoreRequest extends BaseRequest<DriveItem> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected DriveItemRestoreParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -38,6 +38,7 @@ public class WorkbookFunctionsEcma_CeilingRequest extends BaseRequest<WorkbookFu
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsEcma_CeilingParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

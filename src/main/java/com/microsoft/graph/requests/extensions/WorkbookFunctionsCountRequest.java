@@ -38,6 +38,7 @@ public class WorkbookFunctionsCountRequest extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCountParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

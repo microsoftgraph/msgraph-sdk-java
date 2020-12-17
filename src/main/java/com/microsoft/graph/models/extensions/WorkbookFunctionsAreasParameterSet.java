@@ -35,7 +35,11 @@ public class WorkbookFunctionsAreasParameterSet {
      * Instiaciates a new WorkbookFunctionsAreasParameterSet
      */
     public WorkbookFunctionsAreasParameterSet() {}
-    private WorkbookFunctionsAreasParameterSet(@Nonnull final WorkbookFunctionsAreasParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAreasParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAreasParameterSet(@Nonnull final WorkbookFunctionsAreasParameterSetBuilder builder) {
         this.reference = builder.reference;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAreasParameterSet {
      * Fluent builder for the WorkbookFunctionsAreasParameterSet
      */
     public static final class WorkbookFunctionsAreasParameterSetBuilder {
-        private com.google.gson.JsonElement reference;
+        /**
+         * The reference parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement reference;
         /**
          * Sets the Reference
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAreasParameterSet {
             this.reference = val;
             return this;
         }
-        private WorkbookFunctionsAreasParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAreasParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

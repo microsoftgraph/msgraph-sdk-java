@@ -53,7 +53,11 @@ public class WorkbookFunctionsPdurationParameterSet {
      * Instiaciates a new WorkbookFunctionsPdurationParameterSet
      */
     public WorkbookFunctionsPdurationParameterSet() {}
-    private WorkbookFunctionsPdurationParameterSet(@Nonnull final WorkbookFunctionsPdurationParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPdurationParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPdurationParameterSet(@Nonnull final WorkbookFunctionsPdurationParameterSetBuilder builder) {
         this.rate = builder.rate;
         this.pv = builder.pv;
         this.fv = builder.fv;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsPdurationParameterSet {
      * Fluent builder for the WorkbookFunctionsPdurationParameterSet
      */
     public static final class WorkbookFunctionsPdurationParameterSetBuilder {
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsPdurationParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement pv;
+        /**
+         * The pv parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement pv;
         /**
          * Sets the Pv
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsPdurationParameterSet {
             this.pv = val;
             return this;
         }
-        private com.google.gson.JsonElement fv;
+        /**
+         * The fv parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement fv;
         /**
          * Sets the Fv
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsPdurationParameterSet {
             this.fv = val;
             return this;
         }
-        private WorkbookFunctionsPdurationParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPdurationParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

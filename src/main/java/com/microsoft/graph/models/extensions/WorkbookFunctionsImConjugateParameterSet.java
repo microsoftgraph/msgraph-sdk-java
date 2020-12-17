@@ -35,7 +35,11 @@ public class WorkbookFunctionsImConjugateParameterSet {
      * Instiaciates a new WorkbookFunctionsImConjugateParameterSet
      */
     public WorkbookFunctionsImConjugateParameterSet() {}
-    private WorkbookFunctionsImConjugateParameterSet(@Nonnull final WorkbookFunctionsImConjugateParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsImConjugateParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsImConjugateParameterSet(@Nonnull final WorkbookFunctionsImConjugateParameterSetBuilder builder) {
         this.inumber = builder.inumber;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsImConjugateParameterSet {
      * Fluent builder for the WorkbookFunctionsImConjugateParameterSet
      */
     public static final class WorkbookFunctionsImConjugateParameterSetBuilder {
-        private com.google.gson.JsonElement inumber;
+        /**
+         * The inumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement inumber;
         /**
          * Sets the Inumber
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsImConjugateParameterSet {
             this.inumber = val;
             return this;
         }
-        private WorkbookFunctionsImConjugateParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsImConjugateParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

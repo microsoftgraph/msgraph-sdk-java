@@ -26,7 +26,11 @@ public class WorkbookWorksheetProtectionUnprotectParameterSet {
      * Instiaciates a new WorkbookWorksheetProtectionUnprotectParameterSet
      */
     public WorkbookWorksheetProtectionUnprotectParameterSet() {}
-    private WorkbookWorksheetProtectionUnprotectParameterSet(@Nonnull final WorkbookWorksheetProtectionUnprotectParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookWorksheetProtectionUnprotectParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookWorksheetProtectionUnprotectParameterSet(@Nonnull final WorkbookWorksheetProtectionUnprotectParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookWorksheetProtectionUnprotectParameterSet {
      * Fluent builder for the WorkbookWorksheetProtectionUnprotectParameterSet
      */
     public static final class WorkbookWorksheetProtectionUnprotectParameterSetBuilder {
-        private WorkbookWorksheetProtectionUnprotectParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookWorksheetProtectionUnprotectParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

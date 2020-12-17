@@ -26,7 +26,11 @@ public class WorkbookTableDataBodyRangeParameterSet {
      * Instiaciates a new WorkbookTableDataBodyRangeParameterSet
      */
     public WorkbookTableDataBodyRangeParameterSet() {}
-    private WorkbookTableDataBodyRangeParameterSet(@Nonnull final WorkbookTableDataBodyRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableDataBodyRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableDataBodyRangeParameterSet(@Nonnull final WorkbookTableDataBodyRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableDataBodyRangeParameterSet {
      * Fluent builder for the WorkbookTableDataBodyRangeParameterSet
      */
     public static final class WorkbookTableDataBodyRangeParameterSetBuilder {
-        private WorkbookTableDataBodyRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableDataBodyRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class UserAssignLicenseRequest extends BaseRequest<User> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected UserAssignLicenseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

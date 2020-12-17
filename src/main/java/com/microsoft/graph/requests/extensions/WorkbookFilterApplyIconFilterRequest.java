@@ -37,6 +37,7 @@ public class WorkbookFilterApplyIconFilterRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFilterApplyIconFilterParameterSet body;
     /**
      * Creates the WorkbookFilterApplyIconFilter

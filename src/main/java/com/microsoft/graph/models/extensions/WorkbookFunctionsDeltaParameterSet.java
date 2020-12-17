@@ -44,7 +44,11 @@ public class WorkbookFunctionsDeltaParameterSet {
      * Instiaciates a new WorkbookFunctionsDeltaParameterSet
      */
     public WorkbookFunctionsDeltaParameterSet() {}
-    private WorkbookFunctionsDeltaParameterSet(@Nonnull final WorkbookFunctionsDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDeltaParameterSet(@Nonnull final WorkbookFunctionsDeltaParameterSetBuilder builder) {
         this.number1 = builder.number1;
         this.number2 = builder.number2;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsDeltaParameterSet {
      * Fluent builder for the WorkbookFunctionsDeltaParameterSet
      */
     public static final class WorkbookFunctionsDeltaParameterSetBuilder {
-        private com.google.gson.JsonElement number1;
+        /**
+         * The number1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number1;
         /**
          * Sets the Number1
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsDeltaParameterSet {
             this.number1 = val;
             return this;
         }
-        private com.google.gson.JsonElement number2;
+        /**
+         * The number2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number2;
         /**
          * Sets the Number2
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsDeltaParameterSet {
             this.number2 = val;
             return this;
         }
-        private WorkbookFunctionsDeltaParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

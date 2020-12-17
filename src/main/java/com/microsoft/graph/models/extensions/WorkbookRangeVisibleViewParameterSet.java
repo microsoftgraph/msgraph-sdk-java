@@ -26,7 +26,11 @@ public class WorkbookRangeVisibleViewParameterSet {
      * Instiaciates a new WorkbookRangeVisibleViewParameterSet
      */
     public WorkbookRangeVisibleViewParameterSet() {}
-    private WorkbookRangeVisibleViewParameterSet(@Nonnull final WorkbookRangeVisibleViewParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeVisibleViewParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeVisibleViewParameterSet(@Nonnull final WorkbookRangeVisibleViewParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeVisibleViewParameterSet {
      * Fluent builder for the WorkbookRangeVisibleViewParameterSet
      */
     public static final class WorkbookRangeVisibleViewParameterSetBuilder {
-        private WorkbookRangeVisibleViewParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeVisibleViewParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

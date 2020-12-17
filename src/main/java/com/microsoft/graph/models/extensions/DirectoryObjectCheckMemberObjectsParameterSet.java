@@ -35,7 +35,11 @@ public class DirectoryObjectCheckMemberObjectsParameterSet {
      * Instiaciates a new DirectoryObjectCheckMemberObjectsParameterSet
      */
     public DirectoryObjectCheckMemberObjectsParameterSet() {}
-    private DirectoryObjectCheckMemberObjectsParameterSet(@Nonnull final DirectoryObjectCheckMemberObjectsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DirectoryObjectCheckMemberObjectsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DirectoryObjectCheckMemberObjectsParameterSet(@Nonnull final DirectoryObjectCheckMemberObjectsParameterSetBuilder builder) {
         this.ids = builder.ids;
     }
     /**
@@ -50,7 +54,11 @@ public class DirectoryObjectCheckMemberObjectsParameterSet {
      * Fluent builder for the DirectoryObjectCheckMemberObjectsParameterSet
      */
     public static final class DirectoryObjectCheckMemberObjectsParameterSetBuilder {
-        private java.util.List<String> ids;
+        /**
+         * The ids parameter value
+         */
+        @Nullable
+        protected java.util.List<String> ids;
         /**
          * Sets the Ids
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DirectoryObjectCheckMemberObjectsParameterSet {
             this.ids = val;
             return this;
         }
-        private DirectoryObjectCheckMemberObjectsParameterSetBuilder(){}
+        @Nullable
+        protected DirectoryObjectCheckMemberObjectsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

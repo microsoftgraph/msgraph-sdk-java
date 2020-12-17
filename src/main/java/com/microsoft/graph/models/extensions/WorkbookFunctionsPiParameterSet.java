@@ -26,7 +26,11 @@ public class WorkbookFunctionsPiParameterSet {
      * Instiaciates a new WorkbookFunctionsPiParameterSet
      */
     public WorkbookFunctionsPiParameterSet() {}
-    private WorkbookFunctionsPiParameterSet(@Nonnull final WorkbookFunctionsPiParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPiParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPiParameterSet(@Nonnull final WorkbookFunctionsPiParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookFunctionsPiParameterSet {
      * Fluent builder for the WorkbookFunctionsPiParameterSet
      */
     public static final class WorkbookFunctionsPiParameterSetBuilder {
-        private WorkbookFunctionsPiParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPiParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

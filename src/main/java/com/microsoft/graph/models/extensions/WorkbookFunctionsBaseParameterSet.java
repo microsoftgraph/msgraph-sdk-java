@@ -53,7 +53,11 @@ public class WorkbookFunctionsBaseParameterSet {
      * Instiaciates a new WorkbookFunctionsBaseParameterSet
      */
     public WorkbookFunctionsBaseParameterSet() {}
-    private WorkbookFunctionsBaseParameterSet(@Nonnull final WorkbookFunctionsBaseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBaseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBaseParameterSet(@Nonnull final WorkbookFunctionsBaseParameterSetBuilder builder) {
         this.number = builder.number;
         this.radix = builder.radix;
         this.minLength = builder.minLength;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsBaseParameterSet {
      * Fluent builder for the WorkbookFunctionsBaseParameterSet
      */
     public static final class WorkbookFunctionsBaseParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsBaseParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement radix;
+        /**
+         * The radix parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement radix;
         /**
          * Sets the Radix
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsBaseParameterSet {
             this.radix = val;
             return this;
         }
-        private com.google.gson.JsonElement minLength;
+        /**
+         * The minLength parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement minLength;
         /**
          * Sets the MinLength
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsBaseParameterSet {
             this.minLength = val;
             return this;
         }
-        private WorkbookFunctionsBaseParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBaseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookFunctionsErfParameterSet {
      * Instiaciates a new WorkbookFunctionsErfParameterSet
      */
     public WorkbookFunctionsErfParameterSet() {}
-    private WorkbookFunctionsErfParameterSet(@Nonnull final WorkbookFunctionsErfParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsErfParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsErfParameterSet(@Nonnull final WorkbookFunctionsErfParameterSetBuilder builder) {
         this.lowerLimit = builder.lowerLimit;
         this.upperLimit = builder.upperLimit;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsErfParameterSet {
      * Fluent builder for the WorkbookFunctionsErfParameterSet
      */
     public static final class WorkbookFunctionsErfParameterSetBuilder {
-        private com.google.gson.JsonElement lowerLimit;
+        /**
+         * The lowerLimit parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement lowerLimit;
         /**
          * Sets the LowerLimit
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsErfParameterSet {
             this.lowerLimit = val;
             return this;
         }
-        private com.google.gson.JsonElement upperLimit;
+        /**
+         * The upperLimit parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement upperLimit;
         /**
          * Sets the UpperLimit
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsErfParameterSet {
             this.upperLimit = val;
             return this;
         }
-        private WorkbookFunctionsErfParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsErfParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

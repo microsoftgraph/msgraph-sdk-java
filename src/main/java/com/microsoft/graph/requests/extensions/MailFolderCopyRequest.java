@@ -37,6 +37,7 @@ public class MailFolderCopyRequest extends BaseRequest<MailFolder> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MailFolderCopyParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

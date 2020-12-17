@@ -26,7 +26,11 @@ public class ServicePrincipalDeltaParameterSet {
      * Instiaciates a new ServicePrincipalDeltaParameterSet
      */
     public ServicePrincipalDeltaParameterSet() {}
-    private ServicePrincipalDeltaParameterSet(@Nonnull final ServicePrincipalDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ServicePrincipalDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ServicePrincipalDeltaParameterSet(@Nonnull final ServicePrincipalDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ServicePrincipalDeltaParameterSet {
      * Fluent builder for the ServicePrincipalDeltaParameterSet
      */
     public static final class ServicePrincipalDeltaParameterSetBuilder {
-        private ServicePrincipalDeltaParameterSetBuilder(){}
+        @Nullable
+        protected ServicePrincipalDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

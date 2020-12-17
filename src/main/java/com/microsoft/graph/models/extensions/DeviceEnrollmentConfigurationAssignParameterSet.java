@@ -35,7 +35,11 @@ public class DeviceEnrollmentConfigurationAssignParameterSet {
      * Instiaciates a new DeviceEnrollmentConfigurationAssignParameterSet
      */
     public DeviceEnrollmentConfigurationAssignParameterSet() {}
-    private DeviceEnrollmentConfigurationAssignParameterSet(@Nonnull final DeviceEnrollmentConfigurationAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DeviceEnrollmentConfigurationAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DeviceEnrollmentConfigurationAssignParameterSet(@Nonnull final DeviceEnrollmentConfigurationAssignParameterSetBuilder builder) {
         this.enrollmentConfigurationAssignments = builder.enrollmentConfigurationAssignments;
     }
     /**
@@ -50,7 +54,11 @@ public class DeviceEnrollmentConfigurationAssignParameterSet {
      * Fluent builder for the DeviceEnrollmentConfigurationAssignParameterSet
      */
     public static final class DeviceEnrollmentConfigurationAssignParameterSetBuilder {
-        private java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments;
+        /**
+         * The enrollmentConfigurationAssignments parameter value
+         */
+        @Nullable
+        protected java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments;
         /**
          * Sets the EnrollmentConfigurationAssignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DeviceEnrollmentConfigurationAssignParameterSet {
             this.enrollmentConfigurationAssignments = val;
             return this;
         }
-        private DeviceEnrollmentConfigurationAssignParameterSetBuilder(){}
+        @Nullable
+        protected DeviceEnrollmentConfigurationAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

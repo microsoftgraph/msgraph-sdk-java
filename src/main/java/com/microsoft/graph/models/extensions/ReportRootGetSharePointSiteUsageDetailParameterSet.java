@@ -35,7 +35,11 @@ public class ReportRootGetSharePointSiteUsageDetailParameterSet {
      * Instiaciates a new ReportRootGetSharePointSiteUsageDetailParameterSet
      */
     public ReportRootGetSharePointSiteUsageDetailParameterSet() {}
-    private ReportRootGetSharePointSiteUsageDetailParameterSet(@Nonnull final ReportRootGetSharePointSiteUsageDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSharePointSiteUsageDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSharePointSiteUsageDetailParameterSet(@Nonnull final ReportRootGetSharePointSiteUsageDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSharePointSiteUsageDetailParameterSet {
      * Fluent builder for the ReportRootGetSharePointSiteUsageDetailParameterSet
      */
     public static final class ReportRootGetSharePointSiteUsageDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSharePointSiteUsageDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetSharePointSiteUsageDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSharePointSiteUsageDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

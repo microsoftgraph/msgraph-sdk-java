@@ -38,6 +38,7 @@ public class WorkbookFunctionsLenRequest extends BaseRequest<WorkbookFunctionRes
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsLenParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

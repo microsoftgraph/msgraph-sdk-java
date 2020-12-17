@@ -53,7 +53,11 @@ public class WorkbookFunctionsComplexParameterSet {
      * Instiaciates a new WorkbookFunctionsComplexParameterSet
      */
     public WorkbookFunctionsComplexParameterSet() {}
-    private WorkbookFunctionsComplexParameterSet(@Nonnull final WorkbookFunctionsComplexParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsComplexParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsComplexParameterSet(@Nonnull final WorkbookFunctionsComplexParameterSetBuilder builder) {
         this.realNum = builder.realNum;
         this.iNum = builder.iNum;
         this.suffix = builder.suffix;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsComplexParameterSet {
      * Fluent builder for the WorkbookFunctionsComplexParameterSet
      */
     public static final class WorkbookFunctionsComplexParameterSetBuilder {
-        private com.google.gson.JsonElement realNum;
+        /**
+         * The realNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement realNum;
         /**
          * Sets the RealNum
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsComplexParameterSet {
             this.realNum = val;
             return this;
         }
-        private com.google.gson.JsonElement iNum;
+        /**
+         * The iNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement iNum;
         /**
          * Sets the INum
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsComplexParameterSet {
             this.iNum = val;
             return this;
         }
-        private com.google.gson.JsonElement suffix;
+        /**
+         * The suffix parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement suffix;
         /**
          * Sets the Suffix
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsComplexParameterSet {
             this.suffix = val;
             return this;
         }
-        private WorkbookFunctionsComplexParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsComplexParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

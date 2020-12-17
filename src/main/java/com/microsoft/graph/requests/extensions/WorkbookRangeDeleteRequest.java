@@ -37,6 +37,7 @@ public class WorkbookRangeDeleteRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookRangeDeleteParameterSet body;
     /**
      * Creates the WorkbookRangeDelete

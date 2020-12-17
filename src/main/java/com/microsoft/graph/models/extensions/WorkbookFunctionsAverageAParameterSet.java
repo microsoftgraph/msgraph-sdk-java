@@ -35,7 +35,11 @@ public class WorkbookFunctionsAverageAParameterSet {
      * Instiaciates a new WorkbookFunctionsAverageAParameterSet
      */
     public WorkbookFunctionsAverageAParameterSet() {}
-    private WorkbookFunctionsAverageAParameterSet(@Nonnull final WorkbookFunctionsAverageAParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAverageAParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAverageAParameterSet(@Nonnull final WorkbookFunctionsAverageAParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAverageAParameterSet {
      * Fluent builder for the WorkbookFunctionsAverageAParameterSet
      */
     public static final class WorkbookFunctionsAverageAParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAverageAParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsAverageAParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAverageAParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

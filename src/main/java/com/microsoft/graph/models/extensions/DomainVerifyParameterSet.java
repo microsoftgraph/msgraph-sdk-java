@@ -26,7 +26,11 @@ public class DomainVerifyParameterSet {
      * Instiaciates a new DomainVerifyParameterSet
      */
     public DomainVerifyParameterSet() {}
-    private DomainVerifyParameterSet(@Nonnull final DomainVerifyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DomainVerifyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DomainVerifyParameterSet(@Nonnull final DomainVerifyParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DomainVerifyParameterSet {
      * Fluent builder for the DomainVerifyParameterSet
      */
     public static final class DomainVerifyParameterSetBuilder {
-        private DomainVerifyParameterSetBuilder(){}
+        @Nullable
+        protected DomainVerifyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

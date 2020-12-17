@@ -31,6 +31,7 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseActi
 
 
     /** The body for the method */
+    @Nullable
     protected DirectoryObjectCheckMemberObjectsParameterSet body;
 
 

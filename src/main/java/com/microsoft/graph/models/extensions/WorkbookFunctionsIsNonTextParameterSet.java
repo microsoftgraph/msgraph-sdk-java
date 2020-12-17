@@ -35,7 +35,11 @@ public class WorkbookFunctionsIsNonTextParameterSet {
      * Instiaciates a new WorkbookFunctionsIsNonTextParameterSet
      */
     public WorkbookFunctionsIsNonTextParameterSet() {}
-    private WorkbookFunctionsIsNonTextParameterSet(@Nonnull final WorkbookFunctionsIsNonTextParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIsNonTextParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIsNonTextParameterSet(@Nonnull final WorkbookFunctionsIsNonTextParameterSetBuilder builder) {
         this.value = builder.value;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsIsNonTextParameterSet {
      * Fluent builder for the WorkbookFunctionsIsNonTextParameterSet
      */
     public static final class WorkbookFunctionsIsNonTextParameterSetBuilder {
-        private com.google.gson.JsonElement value;
+        /**
+         * The value parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement value;
         /**
          * Sets the Value
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsIsNonTextParameterSet {
             this.value = val;
             return this;
         }
-        private WorkbookFunctionsIsNonTextParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIsNonTextParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

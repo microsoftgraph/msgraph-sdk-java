@@ -35,7 +35,11 @@ public class WorkbookTableItemAtParameterSet {
      * Instiaciates a new WorkbookTableItemAtParameterSet
      */
     public WorkbookTableItemAtParameterSet() {}
-    private WorkbookTableItemAtParameterSet(@Nonnull final WorkbookTableItemAtParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableItemAtParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableItemAtParameterSet(@Nonnull final WorkbookTableItemAtParameterSetBuilder builder) {
         this.index = builder.index;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookTableItemAtParameterSet {
      * Fluent builder for the WorkbookTableItemAtParameterSet
      */
     public static final class WorkbookTableItemAtParameterSetBuilder {
-        private Integer index;
+        /**
+         * The index parameter value
+         */
+        @Nullable
+        protected Integer index;
         /**
          * Sets the Index
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookTableItemAtParameterSet {
             this.index = val;
             return this;
         }
-        private WorkbookTableItemAtParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableItemAtParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

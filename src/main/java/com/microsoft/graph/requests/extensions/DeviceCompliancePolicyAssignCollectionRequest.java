@@ -32,6 +32,7 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseActionCol
 
 
     /** The body for the method */
+    @Nullable
     protected DeviceCompliancePolicyAssignParameterSet body;
 
 

@@ -35,7 +35,11 @@ public class WorkbookChartPointItemAtParameterSet {
      * Instiaciates a new WorkbookChartPointItemAtParameterSet
      */
     public WorkbookChartPointItemAtParameterSet() {}
-    private WorkbookChartPointItemAtParameterSet(@Nonnull final WorkbookChartPointItemAtParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartPointItemAtParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartPointItemAtParameterSet(@Nonnull final WorkbookChartPointItemAtParameterSetBuilder builder) {
         this.index = builder.index;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookChartPointItemAtParameterSet {
      * Fluent builder for the WorkbookChartPointItemAtParameterSet
      */
     public static final class WorkbookChartPointItemAtParameterSetBuilder {
-        private Integer index;
+        /**
+         * The index parameter value
+         */
+        @Nullable
+        protected Integer index;
         /**
          * Sets the Index
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookChartPointItemAtParameterSet {
             this.index = val;
             return this;
         }
-        private WorkbookChartPointItemAtParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartPointItemAtParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

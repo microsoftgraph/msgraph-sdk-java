@@ -37,6 +37,7 @@ public class DriveItemCopyRequest extends BaseRequest<DriveItem> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected DriveItemCopyParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

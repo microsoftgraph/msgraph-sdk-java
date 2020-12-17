@@ -37,6 +37,7 @@ public class WorkbookChartSetDataRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookChartSetDataParameterSet body;
     /**
      * Creates the WorkbookChartSetData

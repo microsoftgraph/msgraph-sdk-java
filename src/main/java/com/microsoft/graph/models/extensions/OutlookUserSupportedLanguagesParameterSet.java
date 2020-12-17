@@ -26,7 +26,11 @@ public class OutlookUserSupportedLanguagesParameterSet {
      * Instiaciates a new OutlookUserSupportedLanguagesParameterSet
      */
     public OutlookUserSupportedLanguagesParameterSet() {}
-    private OutlookUserSupportedLanguagesParameterSet(@Nonnull final OutlookUserSupportedLanguagesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OutlookUserSupportedLanguagesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OutlookUserSupportedLanguagesParameterSet(@Nonnull final OutlookUserSupportedLanguagesParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class OutlookUserSupportedLanguagesParameterSet {
      * Fluent builder for the OutlookUserSupportedLanguagesParameterSet
      */
     public static final class OutlookUserSupportedLanguagesParameterSetBuilder {
-        private OutlookUserSupportedLanguagesParameterSetBuilder(){}
+        @Nullable
+        protected OutlookUserSupportedLanguagesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

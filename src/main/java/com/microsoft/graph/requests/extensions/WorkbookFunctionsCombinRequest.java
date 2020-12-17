@@ -38,6 +38,7 @@ public class WorkbookFunctionsCombinRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCombinParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

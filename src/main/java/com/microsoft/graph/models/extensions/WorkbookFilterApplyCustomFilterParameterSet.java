@@ -53,7 +53,11 @@ public class WorkbookFilterApplyCustomFilterParameterSet {
      * Instiaciates a new WorkbookFilterApplyCustomFilterParameterSet
      */
     public WorkbookFilterApplyCustomFilterParameterSet() {}
-    private WorkbookFilterApplyCustomFilterParameterSet(@Nonnull final WorkbookFilterApplyCustomFilterParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyCustomFilterParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyCustomFilterParameterSet(@Nonnull final WorkbookFilterApplyCustomFilterParameterSetBuilder builder) {
         this.criteria1 = builder.criteria1;
         this.criteria2 = builder.criteria2;
         this.oper = builder.oper;
@@ -70,7 +74,11 @@ public class WorkbookFilterApplyCustomFilterParameterSet {
      * Fluent builder for the WorkbookFilterApplyCustomFilterParameterSet
      */
     public static final class WorkbookFilterApplyCustomFilterParameterSetBuilder {
-        private String criteria1;
+        /**
+         * The criteria1 parameter value
+         */
+        @Nullable
+        protected String criteria1;
         /**
          * Sets the Criteria1
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFilterApplyCustomFilterParameterSet {
             this.criteria1 = val;
             return this;
         }
-        private String criteria2;
+        /**
+         * The criteria2 parameter value
+         */
+        @Nullable
+        protected String criteria2;
         /**
          * Sets the Criteria2
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFilterApplyCustomFilterParameterSet {
             this.criteria2 = val;
             return this;
         }
-        private String oper;
+        /**
+         * The oper parameter value
+         */
+        @Nullable
+        protected String oper;
         /**
          * Sets the Oper
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFilterApplyCustomFilterParameterSet {
             this.oper = val;
             return this;
         }
-        private WorkbookFilterApplyCustomFilterParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyCustomFilterParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookCreateSessionParameterSet {
      * Instiaciates a new WorkbookCreateSessionParameterSet
      */
     public WorkbookCreateSessionParameterSet() {}
-    private WorkbookCreateSessionParameterSet(@Nonnull final WorkbookCreateSessionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookCreateSessionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookCreateSessionParameterSet(@Nonnull final WorkbookCreateSessionParameterSetBuilder builder) {
         this.persistChanges = builder.persistChanges;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookCreateSessionParameterSet {
      * Fluent builder for the WorkbookCreateSessionParameterSet
      */
     public static final class WorkbookCreateSessionParameterSetBuilder {
-        private Boolean persistChanges;
+        /**
+         * The persistChanges parameter value
+         */
+        @Nullable
+        protected Boolean persistChanges;
         /**
          * Sets the PersistChanges
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookCreateSessionParameterSet {
             this.persistChanges = val;
             return this;
         }
-        private WorkbookCreateSessionParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookCreateSessionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

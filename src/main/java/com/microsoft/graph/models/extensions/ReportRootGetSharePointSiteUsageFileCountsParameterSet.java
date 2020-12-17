@@ -35,7 +35,11 @@ public class ReportRootGetSharePointSiteUsageFileCountsParameterSet {
      * Instiaciates a new ReportRootGetSharePointSiteUsageFileCountsParameterSet
      */
     public ReportRootGetSharePointSiteUsageFileCountsParameterSet() {}
-    private ReportRootGetSharePointSiteUsageFileCountsParameterSet(@Nonnull final ReportRootGetSharePointSiteUsageFileCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSharePointSiteUsageFileCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSharePointSiteUsageFileCountsParameterSet(@Nonnull final ReportRootGetSharePointSiteUsageFileCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSharePointSiteUsageFileCountsParameterSet {
      * Fluent builder for the ReportRootGetSharePointSiteUsageFileCountsParameterSet
      */
     public static final class ReportRootGetSharePointSiteUsageFileCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSharePointSiteUsageFileCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetSharePointSiteUsageFileCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSharePointSiteUsageFileCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

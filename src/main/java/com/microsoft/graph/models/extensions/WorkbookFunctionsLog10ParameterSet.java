@@ -35,7 +35,11 @@ public class WorkbookFunctionsLog10ParameterSet {
      * Instiaciates a new WorkbookFunctionsLog10ParameterSet
      */
     public WorkbookFunctionsLog10ParameterSet() {}
-    private WorkbookFunctionsLog10ParameterSet(@Nonnull final WorkbookFunctionsLog10ParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLog10ParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLog10ParameterSet(@Nonnull final WorkbookFunctionsLog10ParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsLog10ParameterSet {
      * Fluent builder for the WorkbookFunctionsLog10ParameterSet
      */
     public static final class WorkbookFunctionsLog10ParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsLog10ParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsLog10ParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLog10ParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

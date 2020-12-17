@@ -26,7 +26,11 @@ public class ReportRootGetOffice365ActivationCountsParameterSet {
      * Instiaciates a new ReportRootGetOffice365ActivationCountsParameterSet
      */
     public ReportRootGetOffice365ActivationCountsParameterSet() {}
-    private ReportRootGetOffice365ActivationCountsParameterSet(@Nonnull final ReportRootGetOffice365ActivationCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOffice365ActivationCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOffice365ActivationCountsParameterSet(@Nonnull final ReportRootGetOffice365ActivationCountsParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ReportRootGetOffice365ActivationCountsParameterSet {
      * Fluent builder for the ReportRootGetOffice365ActivationCountsParameterSet
      */
     public static final class ReportRootGetOffice365ActivationCountsParameterSetBuilder {
-        private ReportRootGetOffice365ActivationCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOffice365ActivationCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

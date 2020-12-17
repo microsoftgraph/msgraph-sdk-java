@@ -35,7 +35,11 @@ public class ParticipantMuteParameterSet {
      * Instiaciates a new ParticipantMuteParameterSet
      */
     public ParticipantMuteParameterSet() {}
-    private ParticipantMuteParameterSet(@Nonnull final ParticipantMuteParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ParticipantMuteParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ParticipantMuteParameterSet(@Nonnull final ParticipantMuteParameterSetBuilder builder) {
         this.clientContext = builder.clientContext;
     }
     /**
@@ -50,7 +54,11 @@ public class ParticipantMuteParameterSet {
      * Fluent builder for the ParticipantMuteParameterSet
      */
     public static final class ParticipantMuteParameterSetBuilder {
-        private String clientContext;
+        /**
+         * The clientContext parameter value
+         */
+        @Nullable
+        protected String clientContext;
         /**
          * Sets the ClientContext
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ParticipantMuteParameterSet {
             this.clientContext = val;
             return this;
         }
-        private ParticipantMuteParameterSetBuilder(){}
+        @Nullable
+        protected ParticipantMuteParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

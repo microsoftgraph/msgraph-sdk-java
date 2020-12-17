@@ -26,7 +26,11 @@ public class WorkbookFilterClearParameterSet {
      * Instiaciates a new WorkbookFilterClearParameterSet
      */
     public WorkbookFilterClearParameterSet() {}
-    private WorkbookFilterClearParameterSet(@Nonnull final WorkbookFilterClearParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterClearParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterClearParameterSet(@Nonnull final WorkbookFilterClearParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookFilterClearParameterSet {
      * Fluent builder for the WorkbookFilterClearParameterSet
      */
     public static final class WorkbookFilterClearParameterSetBuilder {
-        private WorkbookFilterClearParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterClearParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

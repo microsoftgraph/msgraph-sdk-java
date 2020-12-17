@@ -37,6 +37,7 @@ public class WorkbookChartFillSetSolidColorRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookChartFillSetSolidColorParameterSet body;
     /**
      * Creates the WorkbookChartFillSetSolidColor

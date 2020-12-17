@@ -44,7 +44,11 @@ public class WorkbookFunctionsLogParameterSet {
      * Instiaciates a new WorkbookFunctionsLogParameterSet
      */
     public WorkbookFunctionsLogParameterSet() {}
-    private WorkbookFunctionsLogParameterSet(@Nonnull final WorkbookFunctionsLogParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLogParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLogParameterSet(@Nonnull final WorkbookFunctionsLogParameterSetBuilder builder) {
         this.number = builder.number;
         this.base = builder.base;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsLogParameterSet {
      * Fluent builder for the WorkbookFunctionsLogParameterSet
      */
     public static final class WorkbookFunctionsLogParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsLogParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement base;
+        /**
+         * The base parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement base;
         /**
          * Sets the Base
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsLogParameterSet {
             this.base = val;
             return this;
         }
-        private WorkbookFunctionsLogParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLogParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsChiSq_InvParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

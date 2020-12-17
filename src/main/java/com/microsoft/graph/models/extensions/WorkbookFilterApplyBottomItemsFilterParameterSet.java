@@ -35,7 +35,11 @@ public class WorkbookFilterApplyBottomItemsFilterParameterSet {
      * Instiaciates a new WorkbookFilterApplyBottomItemsFilterParameterSet
      */
     public WorkbookFilterApplyBottomItemsFilterParameterSet() {}
-    private WorkbookFilterApplyBottomItemsFilterParameterSet(@Nonnull final WorkbookFilterApplyBottomItemsFilterParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyBottomItemsFilterParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyBottomItemsFilterParameterSet(@Nonnull final WorkbookFilterApplyBottomItemsFilterParameterSetBuilder builder) {
         this.count = builder.count;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFilterApplyBottomItemsFilterParameterSet {
      * Fluent builder for the WorkbookFilterApplyBottomItemsFilterParameterSet
      */
     public static final class WorkbookFilterApplyBottomItemsFilterParameterSetBuilder {
-        private Integer count;
+        /**
+         * The count parameter value
+         */
+        @Nullable
+        protected Integer count;
         /**
          * Sets the Count
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFilterApplyBottomItemsFilterParameterSet {
             this.count = val;
             return this;
         }
-        private WorkbookFilterApplyBottomItemsFilterParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyBottomItemsFilterParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

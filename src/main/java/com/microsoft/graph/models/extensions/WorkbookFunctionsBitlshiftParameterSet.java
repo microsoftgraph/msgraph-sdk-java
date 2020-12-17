@@ -44,7 +44,11 @@ public class WorkbookFunctionsBitlshiftParameterSet {
      * Instiaciates a new WorkbookFunctionsBitlshiftParameterSet
      */
     public WorkbookFunctionsBitlshiftParameterSet() {}
-    private WorkbookFunctionsBitlshiftParameterSet(@Nonnull final WorkbookFunctionsBitlshiftParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBitlshiftParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBitlshiftParameterSet(@Nonnull final WorkbookFunctionsBitlshiftParameterSetBuilder builder) {
         this.number = builder.number;
         this.shiftAmount = builder.shiftAmount;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsBitlshiftParameterSet {
      * Fluent builder for the WorkbookFunctionsBitlshiftParameterSet
      */
     public static final class WorkbookFunctionsBitlshiftParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsBitlshiftParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement shiftAmount;
+        /**
+         * The shiftAmount parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement shiftAmount;
         /**
          * Sets the ShiftAmount
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsBitlshiftParameterSet {
             this.shiftAmount = val;
             return this;
         }
-        private WorkbookFunctionsBitlshiftParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBitlshiftParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

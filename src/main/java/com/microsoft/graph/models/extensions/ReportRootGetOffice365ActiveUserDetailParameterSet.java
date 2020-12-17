@@ -35,7 +35,11 @@ public class ReportRootGetOffice365ActiveUserDetailParameterSet {
      * Instiaciates a new ReportRootGetOffice365ActiveUserDetailParameterSet
      */
     public ReportRootGetOffice365ActiveUserDetailParameterSet() {}
-    private ReportRootGetOffice365ActiveUserDetailParameterSet(@Nonnull final ReportRootGetOffice365ActiveUserDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOffice365ActiveUserDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOffice365ActiveUserDetailParameterSet(@Nonnull final ReportRootGetOffice365ActiveUserDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetOffice365ActiveUserDetailParameterSet {
      * Fluent builder for the ReportRootGetOffice365ActiveUserDetailParameterSet
      */
     public static final class ReportRootGetOffice365ActiveUserDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetOffice365ActiveUserDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetOffice365ActiveUserDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOffice365ActiveUserDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

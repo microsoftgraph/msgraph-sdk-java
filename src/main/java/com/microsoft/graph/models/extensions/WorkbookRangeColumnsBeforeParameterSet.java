@@ -26,7 +26,11 @@ public class WorkbookRangeColumnsBeforeParameterSet {
      * Instiaciates a new WorkbookRangeColumnsBeforeParameterSet
      */
     public WorkbookRangeColumnsBeforeParameterSet() {}
-    private WorkbookRangeColumnsBeforeParameterSet(@Nonnull final WorkbookRangeColumnsBeforeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeColumnsBeforeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeColumnsBeforeParameterSet(@Nonnull final WorkbookRangeColumnsBeforeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeColumnsBeforeParameterSet {
      * Fluent builder for the WorkbookRangeColumnsBeforeParameterSet
      */
     public static final class WorkbookRangeColumnsBeforeParameterSetBuilder {
-        private WorkbookRangeColumnsBeforeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeColumnsBeforeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

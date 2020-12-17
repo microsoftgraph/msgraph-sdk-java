@@ -38,6 +38,7 @@ public class WorkbookFunctionsIsErrRequest extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsIsErrParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

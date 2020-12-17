@@ -37,6 +37,7 @@ public class DriveItemCheckinRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected DriveItemCheckinParameterSet body;
     /**
      * Creates the DriveItemCheckin

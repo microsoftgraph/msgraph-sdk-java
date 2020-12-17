@@ -38,6 +38,7 @@ public class WorkbookFunctionsLog10Request extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsLog10ParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

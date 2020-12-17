@@ -62,7 +62,11 @@ public class WorkbookFunctionsBinom_Dist_RangeParameterSet {
      * Instiaciates a new WorkbookFunctionsBinom_Dist_RangeParameterSet
      */
     public WorkbookFunctionsBinom_Dist_RangeParameterSet() {}
-    private WorkbookFunctionsBinom_Dist_RangeParameterSet(@Nonnull final WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBinom_Dist_RangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBinom_Dist_RangeParameterSet(@Nonnull final WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder builder) {
         this.trials = builder.trials;
         this.probabilityS = builder.probabilityS;
         this.numberS = builder.numberS;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsBinom_Dist_RangeParameterSet {
      * Fluent builder for the WorkbookFunctionsBinom_Dist_RangeParameterSet
      */
     public static final class WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder {
-        private com.google.gson.JsonElement trials;
+        /**
+         * The trials parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement trials;
         /**
          * Sets the Trials
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsBinom_Dist_RangeParameterSet {
             this.trials = val;
             return this;
         }
-        private com.google.gson.JsonElement probabilityS;
+        /**
+         * The probabilityS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probabilityS;
         /**
          * Sets the ProbabilityS
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsBinom_Dist_RangeParameterSet {
             this.probabilityS = val;
             return this;
         }
-        private com.google.gson.JsonElement numberS;
+        /**
+         * The numberS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberS;
         /**
          * Sets the NumberS
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsBinom_Dist_RangeParameterSet {
             this.numberS = val;
             return this;
         }
-        private com.google.gson.JsonElement numberS2;
+        /**
+         * The numberS2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberS2;
         /**
          * Sets the NumberS2
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsBinom_Dist_RangeParameterSet {
             this.numberS2 = val;
             return this;
         }
-        private WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

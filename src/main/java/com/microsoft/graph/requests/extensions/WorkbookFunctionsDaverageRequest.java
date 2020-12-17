@@ -38,6 +38,7 @@ public class WorkbookFunctionsDaverageRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsDaverageParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

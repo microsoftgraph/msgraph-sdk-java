@@ -37,6 +37,7 @@ public class EventDeclineRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected EventDeclineParameterSet body;
     /**
      * Creates the EventDecline

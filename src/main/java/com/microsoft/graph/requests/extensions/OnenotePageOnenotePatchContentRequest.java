@@ -37,6 +37,7 @@ public class OnenotePageOnenotePatchContentRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected OnenotePageOnenotePatchContentParameterSet body;
     /**
      * Creates the OnenotePageOnenotePatchContent

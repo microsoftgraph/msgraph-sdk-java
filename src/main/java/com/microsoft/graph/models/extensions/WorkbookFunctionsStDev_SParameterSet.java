@@ -35,7 +35,11 @@ public class WorkbookFunctionsStDev_SParameterSet {
      * Instiaciates a new WorkbookFunctionsStDev_SParameterSet
      */
     public WorkbookFunctionsStDev_SParameterSet() {}
-    private WorkbookFunctionsStDev_SParameterSet(@Nonnull final WorkbookFunctionsStDev_SParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsStDev_SParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsStDev_SParameterSet(@Nonnull final WorkbookFunctionsStDev_SParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsStDev_SParameterSet {
      * Fluent builder for the WorkbookFunctionsStDev_SParameterSet
      */
     public static final class WorkbookFunctionsStDev_SParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsStDev_SParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsStDev_SParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsStDev_SParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

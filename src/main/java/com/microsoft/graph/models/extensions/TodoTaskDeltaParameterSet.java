@@ -26,7 +26,11 @@ public class TodoTaskDeltaParameterSet {
      * Instiaciates a new TodoTaskDeltaParameterSet
      */
     public TodoTaskDeltaParameterSet() {}
-    private TodoTaskDeltaParameterSet(@Nonnull final TodoTaskDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new TodoTaskDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected TodoTaskDeltaParameterSet(@Nonnull final TodoTaskDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class TodoTaskDeltaParameterSet {
      * Fluent builder for the TodoTaskDeltaParameterSet
      */
     public static final class TodoTaskDeltaParameterSetBuilder {
-        private TodoTaskDeltaParameterSetBuilder(){}
+        @Nullable
+        protected TodoTaskDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

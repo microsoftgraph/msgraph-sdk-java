@@ -35,7 +35,11 @@ public class DriveItemSearchParameterSet {
      * Instiaciates a new DriveItemSearchParameterSet
      */
     public DriveItemSearchParameterSet() {}
-    private DriveItemSearchParameterSet(@Nonnull final DriveItemSearchParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemSearchParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemSearchParameterSet(@Nonnull final DriveItemSearchParameterSetBuilder builder) {
         this.q = builder.q;
     }
     /**
@@ -50,7 +54,11 @@ public class DriveItemSearchParameterSet {
      * Fluent builder for the DriveItemSearchParameterSet
      */
     public static final class DriveItemSearchParameterSetBuilder {
-        private String q;
+        /**
+         * The q parameter value
+         */
+        @Nullable
+        protected String q;
         /**
          * Sets the Q
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DriveItemSearchParameterSet {
             this.q = val;
             return this;
         }
-        private DriveItemSearchParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemSearchParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

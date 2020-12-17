@@ -26,7 +26,11 @@ public class ManagedDeviceRetireParameterSet {
      * Instiaciates a new ManagedDeviceRetireParameterSet
      */
     public ManagedDeviceRetireParameterSet() {}
-    private ManagedDeviceRetireParameterSet(@Nonnull final ManagedDeviceRetireParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceRetireParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceRetireParameterSet(@Nonnull final ManagedDeviceRetireParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceRetireParameterSet {
      * Fluent builder for the ManagedDeviceRetireParameterSet
      */
     public static final class ManagedDeviceRetireParameterSetBuilder {
-        private ManagedDeviceRetireParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceRetireParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

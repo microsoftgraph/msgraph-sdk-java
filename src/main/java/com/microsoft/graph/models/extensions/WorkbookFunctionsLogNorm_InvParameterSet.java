@@ -53,7 +53,11 @@ public class WorkbookFunctionsLogNorm_InvParameterSet {
      * Instiaciates a new WorkbookFunctionsLogNorm_InvParameterSet
      */
     public WorkbookFunctionsLogNorm_InvParameterSet() {}
-    private WorkbookFunctionsLogNorm_InvParameterSet(@Nonnull final WorkbookFunctionsLogNorm_InvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLogNorm_InvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLogNorm_InvParameterSet(@Nonnull final WorkbookFunctionsLogNorm_InvParameterSetBuilder builder) {
         this.probability = builder.probability;
         this.mean = builder.mean;
         this.standardDev = builder.standardDev;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsLogNorm_InvParameterSet {
      * Fluent builder for the WorkbookFunctionsLogNorm_InvParameterSet
      */
     public static final class WorkbookFunctionsLogNorm_InvParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsLogNorm_InvParameterSet {
             this.probability = val;
             return this;
         }
-        private com.google.gson.JsonElement mean;
+        /**
+         * The mean parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement mean;
         /**
          * Sets the Mean
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsLogNorm_InvParameterSet {
             this.mean = val;
             return this;
         }
-        private com.google.gson.JsonElement standardDev;
+        /**
+         * The standardDev parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement standardDev;
         /**
          * Sets the StandardDev
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsLogNorm_InvParameterSet {
             this.standardDev = val;
             return this;
         }
-        private WorkbookFunctionsLogNorm_InvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLogNorm_InvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

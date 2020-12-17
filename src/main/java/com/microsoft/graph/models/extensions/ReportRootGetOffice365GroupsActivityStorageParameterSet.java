@@ -35,7 +35,11 @@ public class ReportRootGetOffice365GroupsActivityStorageParameterSet {
      * Instiaciates a new ReportRootGetOffice365GroupsActivityStorageParameterSet
      */
     public ReportRootGetOffice365GroupsActivityStorageParameterSet() {}
-    private ReportRootGetOffice365GroupsActivityStorageParameterSet(@Nonnull final ReportRootGetOffice365GroupsActivityStorageParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOffice365GroupsActivityStorageParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOffice365GroupsActivityStorageParameterSet(@Nonnull final ReportRootGetOffice365GroupsActivityStorageParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetOffice365GroupsActivityStorageParameterSet {
      * Fluent builder for the ReportRootGetOffice365GroupsActivityStorageParameterSet
      */
     public static final class ReportRootGetOffice365GroupsActivityStorageParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetOffice365GroupsActivityStorageParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetOffice365GroupsActivityStorageParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOffice365GroupsActivityStorageParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

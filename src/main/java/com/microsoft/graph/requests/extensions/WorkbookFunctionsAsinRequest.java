@@ -38,6 +38,7 @@ public class WorkbookFunctionsAsinRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsAsinParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

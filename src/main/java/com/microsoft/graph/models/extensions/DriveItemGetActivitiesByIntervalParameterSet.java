@@ -26,7 +26,11 @@ public class DriveItemGetActivitiesByIntervalParameterSet {
      * Instiaciates a new DriveItemGetActivitiesByIntervalParameterSet
      */
     public DriveItemGetActivitiesByIntervalParameterSet() {}
-    private DriveItemGetActivitiesByIntervalParameterSet(@Nonnull final DriveItemGetActivitiesByIntervalParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemGetActivitiesByIntervalParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemGetActivitiesByIntervalParameterSet(@Nonnull final DriveItemGetActivitiesByIntervalParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DriveItemGetActivitiesByIntervalParameterSet {
      * Fluent builder for the DriveItemGetActivitiesByIntervalParameterSet
      */
     public static final class DriveItemGetActivitiesByIntervalParameterSetBuilder {
-        private DriveItemGetActivitiesByIntervalParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemGetActivitiesByIntervalParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

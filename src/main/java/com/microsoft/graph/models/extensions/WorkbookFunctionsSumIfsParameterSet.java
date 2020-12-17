@@ -44,7 +44,11 @@ public class WorkbookFunctionsSumIfsParameterSet {
      * Instiaciates a new WorkbookFunctionsSumIfsParameterSet
      */
     public WorkbookFunctionsSumIfsParameterSet() {}
-    private WorkbookFunctionsSumIfsParameterSet(@Nonnull final WorkbookFunctionsSumIfsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSumIfsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSumIfsParameterSet(@Nonnull final WorkbookFunctionsSumIfsParameterSetBuilder builder) {
         this.sumRange = builder.sumRange;
         this.values = builder.values;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsSumIfsParameterSet {
      * Fluent builder for the WorkbookFunctionsSumIfsParameterSet
      */
     public static final class WorkbookFunctionsSumIfsParameterSetBuilder {
-        private com.google.gson.JsonElement sumRange;
+        /**
+         * The sumRange parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement sumRange;
         /**
          * Sets the SumRange
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsSumIfsParameterSet {
             this.sumRange = val;
             return this;
         }
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsSumIfsParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsSumIfsParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSumIfsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

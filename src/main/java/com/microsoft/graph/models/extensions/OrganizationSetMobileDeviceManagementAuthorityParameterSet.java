@@ -26,7 +26,11 @@ public class OrganizationSetMobileDeviceManagementAuthorityParameterSet {
      * Instiaciates a new OrganizationSetMobileDeviceManagementAuthorityParameterSet
      */
     public OrganizationSetMobileDeviceManagementAuthorityParameterSet() {}
-    private OrganizationSetMobileDeviceManagementAuthorityParameterSet(@Nonnull final OrganizationSetMobileDeviceManagementAuthorityParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OrganizationSetMobileDeviceManagementAuthorityParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OrganizationSetMobileDeviceManagementAuthorityParameterSet(@Nonnull final OrganizationSetMobileDeviceManagementAuthorityParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class OrganizationSetMobileDeviceManagementAuthorityParameterSet {
      * Fluent builder for the OrganizationSetMobileDeviceManagementAuthorityParameterSet
      */
     public static final class OrganizationSetMobileDeviceManagementAuthorityParameterSetBuilder {
-        private OrganizationSetMobileDeviceManagementAuthorityParameterSetBuilder(){}
+        @Nullable
+        protected OrganizationSetMobileDeviceManagementAuthorityParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

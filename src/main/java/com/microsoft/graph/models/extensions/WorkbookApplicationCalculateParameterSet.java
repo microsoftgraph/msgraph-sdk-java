@@ -35,7 +35,11 @@ public class WorkbookApplicationCalculateParameterSet {
      * Instiaciates a new WorkbookApplicationCalculateParameterSet
      */
     public WorkbookApplicationCalculateParameterSet() {}
-    private WorkbookApplicationCalculateParameterSet(@Nonnull final WorkbookApplicationCalculateParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookApplicationCalculateParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookApplicationCalculateParameterSet(@Nonnull final WorkbookApplicationCalculateParameterSetBuilder builder) {
         this.calculationType = builder.calculationType;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookApplicationCalculateParameterSet {
      * Fluent builder for the WorkbookApplicationCalculateParameterSet
      */
     public static final class WorkbookApplicationCalculateParameterSetBuilder {
-        private String calculationType;
+        /**
+         * The calculationType parameter value
+         */
+        @Nullable
+        protected String calculationType;
         /**
          * Sets the CalculationType
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookApplicationCalculateParameterSet {
             this.calculationType = val;
             return this;
         }
-        private WorkbookApplicationCalculateParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookApplicationCalculateParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

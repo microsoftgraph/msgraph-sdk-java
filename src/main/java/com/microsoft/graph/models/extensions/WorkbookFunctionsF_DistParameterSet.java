@@ -62,7 +62,11 @@ public class WorkbookFunctionsF_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsF_DistParameterSet
      */
     public WorkbookFunctionsF_DistParameterSet() {}
-    private WorkbookFunctionsF_DistParameterSet(@Nonnull final WorkbookFunctionsF_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsF_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsF_DistParameterSet(@Nonnull final WorkbookFunctionsF_DistParameterSetBuilder builder) {
         this.x = builder.x;
         this.degFreedom1 = builder.degFreedom1;
         this.degFreedom2 = builder.degFreedom2;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsF_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsF_DistParameterSet
      */
     public static final class WorkbookFunctionsF_DistParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsF_DistParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom1;
+        /**
+         * The degFreedom1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom1;
         /**
          * Sets the DegFreedom1
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsF_DistParameterSet {
             this.degFreedom1 = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom2;
+        /**
+         * The degFreedom2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom2;
         /**
          * Sets the DegFreedom2
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsF_DistParameterSet {
             this.degFreedom2 = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsF_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsF_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsF_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

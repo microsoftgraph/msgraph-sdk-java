@@ -53,7 +53,11 @@ public class WorkbookNamedItemAddFormulaLocalParameterSet {
      * Instiaciates a new WorkbookNamedItemAddFormulaLocalParameterSet
      */
     public WorkbookNamedItemAddFormulaLocalParameterSet() {}
-    private WorkbookNamedItemAddFormulaLocalParameterSet(@Nonnull final WorkbookNamedItemAddFormulaLocalParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookNamedItemAddFormulaLocalParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookNamedItemAddFormulaLocalParameterSet(@Nonnull final WorkbookNamedItemAddFormulaLocalParameterSetBuilder builder) {
         this.name = builder.name;
         this.formula = builder.formula;
         this.comment = builder.comment;
@@ -70,7 +74,11 @@ public class WorkbookNamedItemAddFormulaLocalParameterSet {
      * Fluent builder for the WorkbookNamedItemAddFormulaLocalParameterSet
      */
     public static final class WorkbookNamedItemAddFormulaLocalParameterSetBuilder {
-        private String name;
+        /**
+         * The name parameter value
+         */
+        @Nullable
+        protected String name;
         /**
          * Sets the Name
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookNamedItemAddFormulaLocalParameterSet {
             this.name = val;
             return this;
         }
-        private String formula;
+        /**
+         * The formula parameter value
+         */
+        @Nullable
+        protected String formula;
         /**
          * Sets the Formula
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookNamedItemAddFormulaLocalParameterSet {
             this.formula = val;
             return this;
         }
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookNamedItemAddFormulaLocalParameterSet {
             this.comment = val;
             return this;
         }
-        private WorkbookNamedItemAddFormulaLocalParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookNamedItemAddFormulaLocalParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

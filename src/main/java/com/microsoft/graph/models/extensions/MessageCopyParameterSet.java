@@ -35,7 +35,11 @@ public class MessageCopyParameterSet {
      * Instiaciates a new MessageCopyParameterSet
      */
     public MessageCopyParameterSet() {}
-    private MessageCopyParameterSet(@Nonnull final MessageCopyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MessageCopyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MessageCopyParameterSet(@Nonnull final MessageCopyParameterSetBuilder builder) {
         this.destinationId = builder.destinationId;
     }
     /**
@@ -50,7 +54,11 @@ public class MessageCopyParameterSet {
      * Fluent builder for the MessageCopyParameterSet
      */
     public static final class MessageCopyParameterSetBuilder {
-        private String destinationId;
+        /**
+         * The destinationId parameter value
+         */
+        @Nullable
+        protected String destinationId;
         /**
          * Sets the DestinationId
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class MessageCopyParameterSet {
             this.destinationId = val;
             return this;
         }
-        private MessageCopyParameterSetBuilder(){}
+        @Nullable
+        protected MessageCopyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

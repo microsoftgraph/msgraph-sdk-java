@@ -53,7 +53,11 @@ public class WorkbookFunctionsDstDevPParameterSet {
      * Instiaciates a new WorkbookFunctionsDstDevPParameterSet
      */
     public WorkbookFunctionsDstDevPParameterSet() {}
-    private WorkbookFunctionsDstDevPParameterSet(@Nonnull final WorkbookFunctionsDstDevPParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDstDevPParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDstDevPParameterSet(@Nonnull final WorkbookFunctionsDstDevPParameterSetBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;
         this.criteria = builder.criteria;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsDstDevPParameterSet {
      * Fluent builder for the WorkbookFunctionsDstDevPParameterSet
      */
     public static final class WorkbookFunctionsDstDevPParameterSetBuilder {
-        private com.google.gson.JsonElement database;
+        /**
+         * The database parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement database;
         /**
          * Sets the Database
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsDstDevPParameterSet {
             this.database = val;
             return this;
         }
-        private com.google.gson.JsonElement field;
+        /**
+         * The field parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement field;
         /**
          * Sets the Field
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsDstDevPParameterSet {
             this.field = val;
             return this;
         }
-        private com.google.gson.JsonElement criteria;
+        /**
+         * The criteria parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement criteria;
         /**
          * Sets the Criteria
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsDstDevPParameterSet {
             this.criteria = val;
             return this;
         }
-        private WorkbookFunctionsDstDevPParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDstDevPParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

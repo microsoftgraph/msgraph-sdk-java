@@ -35,7 +35,11 @@ public class DeviceManagementExchangeConnectorSyncParameterSet {
      * Instiaciates a new DeviceManagementExchangeConnectorSyncParameterSet
      */
     public DeviceManagementExchangeConnectorSyncParameterSet() {}
-    private DeviceManagementExchangeConnectorSyncParameterSet(@Nonnull final DeviceManagementExchangeConnectorSyncParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DeviceManagementExchangeConnectorSyncParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DeviceManagementExchangeConnectorSyncParameterSet(@Nonnull final DeviceManagementExchangeConnectorSyncParameterSetBuilder builder) {
         this.syncType = builder.syncType;
     }
     /**
@@ -50,7 +54,11 @@ public class DeviceManagementExchangeConnectorSyncParameterSet {
      * Fluent builder for the DeviceManagementExchangeConnectorSyncParameterSet
      */
     public static final class DeviceManagementExchangeConnectorSyncParameterSetBuilder {
-        private DeviceManagementExchangeConnectorSyncType syncType;
+        /**
+         * The syncType parameter value
+         */
+        @Nullable
+        protected DeviceManagementExchangeConnectorSyncType syncType;
         /**
          * Sets the SyncType
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DeviceManagementExchangeConnectorSyncParameterSet {
             this.syncType = val;
             return this;
         }
-        private DeviceManagementExchangeConnectorSyncParameterSetBuilder(){}
+        @Nullable
+        protected DeviceManagementExchangeConnectorSyncParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

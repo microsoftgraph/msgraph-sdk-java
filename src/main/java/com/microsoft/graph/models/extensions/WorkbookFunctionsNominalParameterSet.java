@@ -44,7 +44,11 @@ public class WorkbookFunctionsNominalParameterSet {
      * Instiaciates a new WorkbookFunctionsNominalParameterSet
      */
     public WorkbookFunctionsNominalParameterSet() {}
-    private WorkbookFunctionsNominalParameterSet(@Nonnull final WorkbookFunctionsNominalParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNominalParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNominalParameterSet(@Nonnull final WorkbookFunctionsNominalParameterSetBuilder builder) {
         this.effectRate = builder.effectRate;
         this.npery = builder.npery;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsNominalParameterSet {
      * Fluent builder for the WorkbookFunctionsNominalParameterSet
      */
     public static final class WorkbookFunctionsNominalParameterSetBuilder {
-        private com.google.gson.JsonElement effectRate;
+        /**
+         * The effectRate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement effectRate;
         /**
          * Sets the EffectRate
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsNominalParameterSet {
             this.effectRate = val;
             return this;
         }
-        private com.google.gson.JsonElement npery;
+        /**
+         * The npery parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement npery;
         /**
          * Sets the Npery
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsNominalParameterSet {
             this.npery = val;
             return this;
         }
-        private WorkbookFunctionsNominalParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNominalParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

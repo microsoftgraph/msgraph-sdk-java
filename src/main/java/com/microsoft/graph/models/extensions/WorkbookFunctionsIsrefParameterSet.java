@@ -35,7 +35,11 @@ public class WorkbookFunctionsIsrefParameterSet {
      * Instiaciates a new WorkbookFunctionsIsrefParameterSet
      */
     public WorkbookFunctionsIsrefParameterSet() {}
-    private WorkbookFunctionsIsrefParameterSet(@Nonnull final WorkbookFunctionsIsrefParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIsrefParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIsrefParameterSet(@Nonnull final WorkbookFunctionsIsrefParameterSetBuilder builder) {
         this.value = builder.value;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsIsrefParameterSet {
      * Fluent builder for the WorkbookFunctionsIsrefParameterSet
      */
     public static final class WorkbookFunctionsIsrefParameterSetBuilder {
-        private com.google.gson.JsonElement value;
+        /**
+         * The value parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement value;
         /**
          * Sets the Value
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsIsrefParameterSet {
             this.value = val;
             return this;
         }
-        private WorkbookFunctionsIsrefParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIsrefParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

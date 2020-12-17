@@ -35,7 +35,11 @@ public class WorkbookFunctionsUnicodeParameterSet {
      * Instiaciates a new WorkbookFunctionsUnicodeParameterSet
      */
     public WorkbookFunctionsUnicodeParameterSet() {}
-    private WorkbookFunctionsUnicodeParameterSet(@Nonnull final WorkbookFunctionsUnicodeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsUnicodeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsUnicodeParameterSet(@Nonnull final WorkbookFunctionsUnicodeParameterSetBuilder builder) {
         this.text = builder.text;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsUnicodeParameterSet {
      * Fluent builder for the WorkbookFunctionsUnicodeParameterSet
      */
     public static final class WorkbookFunctionsUnicodeParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsUnicodeParameterSet {
             this.text = val;
             return this;
         }
-        private WorkbookFunctionsUnicodeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsUnicodeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

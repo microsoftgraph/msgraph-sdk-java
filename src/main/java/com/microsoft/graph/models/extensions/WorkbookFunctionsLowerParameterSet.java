@@ -35,7 +35,11 @@ public class WorkbookFunctionsLowerParameterSet {
      * Instiaciates a new WorkbookFunctionsLowerParameterSet
      */
     public WorkbookFunctionsLowerParameterSet() {}
-    private WorkbookFunctionsLowerParameterSet(@Nonnull final WorkbookFunctionsLowerParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLowerParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLowerParameterSet(@Nonnull final WorkbookFunctionsLowerParameterSetBuilder builder) {
         this.text = builder.text;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsLowerParameterSet {
      * Fluent builder for the WorkbookFunctionsLowerParameterSet
      */
     public static final class WorkbookFunctionsLowerParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsLowerParameterSet {
             this.text = val;
             return this;
         }
-        private WorkbookFunctionsLowerParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLowerParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsQuartile_ExcRequest extends BaseRequest<WorkbookFu
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsQuartile_ExcParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

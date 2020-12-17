@@ -35,7 +35,11 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet {
      * Instiaciates a new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet
      */
     public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet() {}
-    private DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet(@Nonnull final DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet(@Nonnull final DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSetBuilder builder) {
         this.domainName = builder.domainName;
     }
     /**
@@ -50,7 +54,11 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet {
      * Fluent builder for the DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet
      */
     public static final class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSetBuilder {
-        private String domainName;
+        /**
+         * The domainName parameter value
+         */
+        @Nullable
+        protected String domainName;
         /**
          * Sets the DomainName
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet {
             this.domainName = val;
             return this;
         }
-        private DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSetBuilder(){}
+        @Nullable
+        protected DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

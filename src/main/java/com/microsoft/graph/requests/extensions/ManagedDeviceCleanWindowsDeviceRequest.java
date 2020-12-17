@@ -37,6 +37,7 @@ public class ManagedDeviceCleanWindowsDeviceRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedDeviceCleanWindowsDeviceParameterSet body;
     /**
      * Creates the ManagedDeviceCleanWindowsDevice

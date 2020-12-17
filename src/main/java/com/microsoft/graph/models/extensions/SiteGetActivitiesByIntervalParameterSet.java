@@ -26,7 +26,11 @@ public class SiteGetActivitiesByIntervalParameterSet {
      * Instiaciates a new SiteGetActivitiesByIntervalParameterSet
      */
     public SiteGetActivitiesByIntervalParameterSet() {}
-    private SiteGetActivitiesByIntervalParameterSet(@Nonnull final SiteGetActivitiesByIntervalParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new SiteGetActivitiesByIntervalParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected SiteGetActivitiesByIntervalParameterSet(@Nonnull final SiteGetActivitiesByIntervalParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class SiteGetActivitiesByIntervalParameterSet {
      * Fluent builder for the SiteGetActivitiesByIntervalParameterSet
      */
     public static final class SiteGetActivitiesByIntervalParameterSetBuilder {
-        private SiteGetActivitiesByIntervalParameterSetBuilder(){}
+        @Nullable
+        protected SiteGetActivitiesByIntervalParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

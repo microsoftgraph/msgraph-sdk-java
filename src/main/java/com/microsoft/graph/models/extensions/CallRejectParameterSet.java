@@ -44,7 +44,11 @@ public class CallRejectParameterSet {
      * Instiaciates a new CallRejectParameterSet
      */
     public CallRejectParameterSet() {}
-    private CallRejectParameterSet(@Nonnull final CallRejectParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallRejectParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallRejectParameterSet(@Nonnull final CallRejectParameterSetBuilder builder) {
         this.reason = builder.reason;
         this.callbackUri = builder.callbackUri;
     }
@@ -60,7 +64,11 @@ public class CallRejectParameterSet {
      * Fluent builder for the CallRejectParameterSet
      */
     public static final class CallRejectParameterSetBuilder {
-        private RejectReason reason;
+        /**
+         * The reason parameter value
+         */
+        @Nullable
+        protected RejectReason reason;
         /**
          * Sets the Reason
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class CallRejectParameterSet {
             this.reason = val;
             return this;
         }
-        private String callbackUri;
+        /**
+         * The callbackUri parameter value
+         */
+        @Nullable
+        protected String callbackUri;
         /**
          * Sets the CallbackUri
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class CallRejectParameterSet {
             this.callbackUri = val;
             return this;
         }
-        private CallRejectParameterSetBuilder(){}
+        @Nullable
+        protected CallRejectParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -26,7 +26,11 @@ public class WorkbookRangeBorderCountParameterSet {
      * Instiaciates a new WorkbookRangeBorderCountParameterSet
      */
     public WorkbookRangeBorderCountParameterSet() {}
-    private WorkbookRangeBorderCountParameterSet(@Nonnull final WorkbookRangeBorderCountParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeBorderCountParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeBorderCountParameterSet(@Nonnull final WorkbookRangeBorderCountParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeBorderCountParameterSet {
      * Fluent builder for the WorkbookRangeBorderCountParameterSet
      */
     public static final class WorkbookRangeBorderCountParameterSetBuilder {
-        private WorkbookRangeBorderCountParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeBorderCountParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

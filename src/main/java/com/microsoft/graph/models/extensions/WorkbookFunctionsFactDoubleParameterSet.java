@@ -35,7 +35,11 @@ public class WorkbookFunctionsFactDoubleParameterSet {
      * Instiaciates a new WorkbookFunctionsFactDoubleParameterSet
      */
     public WorkbookFunctionsFactDoubleParameterSet() {}
-    private WorkbookFunctionsFactDoubleParameterSet(@Nonnull final WorkbookFunctionsFactDoubleParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsFactDoubleParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsFactDoubleParameterSet(@Nonnull final WorkbookFunctionsFactDoubleParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsFactDoubleParameterSet {
      * Fluent builder for the WorkbookFunctionsFactDoubleParameterSet
      */
     public static final class WorkbookFunctionsFactDoubleParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsFactDoubleParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsFactDoubleParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsFactDoubleParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

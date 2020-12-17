@@ -35,7 +35,11 @@ public class WorkbookFunctionsAcosParameterSet {
      * Instiaciates a new WorkbookFunctionsAcosParameterSet
      */
     public WorkbookFunctionsAcosParameterSet() {}
-    private WorkbookFunctionsAcosParameterSet(@Nonnull final WorkbookFunctionsAcosParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAcosParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAcosParameterSet(@Nonnull final WorkbookFunctionsAcosParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAcosParameterSet {
      * Fluent builder for the WorkbookFunctionsAcosParameterSet
      */
     public static final class WorkbookFunctionsAcosParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAcosParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsAcosParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAcosParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

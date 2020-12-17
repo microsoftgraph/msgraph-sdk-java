@@ -62,7 +62,11 @@ public class WorkbookFunctionsReplaceBParameterSet {
      * Instiaciates a new WorkbookFunctionsReplaceBParameterSet
      */
     public WorkbookFunctionsReplaceBParameterSet() {}
-    private WorkbookFunctionsReplaceBParameterSet(@Nonnull final WorkbookFunctionsReplaceBParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsReplaceBParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsReplaceBParameterSet(@Nonnull final WorkbookFunctionsReplaceBParameterSetBuilder builder) {
         this.oldText = builder.oldText;
         this.startNum = builder.startNum;
         this.numBytes = builder.numBytes;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsReplaceBParameterSet {
      * Fluent builder for the WorkbookFunctionsReplaceBParameterSet
      */
     public static final class WorkbookFunctionsReplaceBParameterSetBuilder {
-        private com.google.gson.JsonElement oldText;
+        /**
+         * The oldText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement oldText;
         /**
          * Sets the OldText
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsReplaceBParameterSet {
             this.oldText = val;
             return this;
         }
-        private com.google.gson.JsonElement startNum;
+        /**
+         * The startNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startNum;
         /**
          * Sets the StartNum
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsReplaceBParameterSet {
             this.startNum = val;
             return this;
         }
-        private com.google.gson.JsonElement numBytes;
+        /**
+         * The numBytes parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numBytes;
         /**
          * Sets the NumBytes
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsReplaceBParameterSet {
             this.numBytes = val;
             return this;
         }
-        private com.google.gson.JsonElement newText;
+        /**
+         * The newText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement newText;
         /**
          * Sets the NewText
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsReplaceBParameterSet {
             this.newText = val;
             return this;
         }
-        private WorkbookFunctionsReplaceBParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsReplaceBParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

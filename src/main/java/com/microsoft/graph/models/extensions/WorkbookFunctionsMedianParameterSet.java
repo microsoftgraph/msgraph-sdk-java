@@ -35,7 +35,11 @@ public class WorkbookFunctionsMedianParameterSet {
      * Instiaciates a new WorkbookFunctionsMedianParameterSet
      */
     public WorkbookFunctionsMedianParameterSet() {}
-    private WorkbookFunctionsMedianParameterSet(@Nonnull final WorkbookFunctionsMedianParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMedianParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMedianParameterSet(@Nonnull final WorkbookFunctionsMedianParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsMedianParameterSet {
      * Fluent builder for the WorkbookFunctionsMedianParameterSet
      */
     public static final class WorkbookFunctionsMedianParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsMedianParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsMedianParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMedianParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

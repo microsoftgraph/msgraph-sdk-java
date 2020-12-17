@@ -45,7 +45,11 @@ public class CallPlayPromptParameterSet {
      * Instiaciates a new CallPlayPromptParameterSet
      */
     public CallPlayPromptParameterSet() {}
-    private CallPlayPromptParameterSet(@Nonnull final CallPlayPromptParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallPlayPromptParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallPlayPromptParameterSet(@Nonnull final CallPlayPromptParameterSetBuilder builder) {
         this.prompts = builder.prompts;
         this.clientContext = builder.clientContext;
     }
@@ -61,7 +65,11 @@ public class CallPlayPromptParameterSet {
      * Fluent builder for the CallPlayPromptParameterSet
      */
     public static final class CallPlayPromptParameterSetBuilder {
-        private java.util.List<Prompt> prompts;
+        /**
+         * The prompts parameter value
+         */
+        @Nullable
+        protected java.util.List<Prompt> prompts;
         /**
          * Sets the Prompts
          * @param val the value to set it to
@@ -72,7 +80,11 @@ public class CallPlayPromptParameterSet {
             this.prompts = val;
             return this;
         }
-        private String clientContext;
+        /**
+         * The clientContext parameter value
+         */
+        @Nullable
+        protected String clientContext;
         /**
          * Sets the ClientContext
          * @param val the value to set it to
@@ -83,7 +95,8 @@ public class CallPlayPromptParameterSet {
             this.clientContext = val;
             return this;
         }
-        private CallPlayPromptParameterSetBuilder(){}
+        @Nullable
+        protected CallPlayPromptParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

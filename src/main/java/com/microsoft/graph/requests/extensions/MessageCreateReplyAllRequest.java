@@ -37,6 +37,7 @@ public class MessageCreateReplyAllRequest extends BaseRequest<Message> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MessageCreateReplyAllParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

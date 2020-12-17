@@ -35,7 +35,11 @@ public class WorkbookFunctionsIsLogicalParameterSet {
      * Instiaciates a new WorkbookFunctionsIsLogicalParameterSet
      */
     public WorkbookFunctionsIsLogicalParameterSet() {}
-    private WorkbookFunctionsIsLogicalParameterSet(@Nonnull final WorkbookFunctionsIsLogicalParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIsLogicalParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIsLogicalParameterSet(@Nonnull final WorkbookFunctionsIsLogicalParameterSetBuilder builder) {
         this.value = builder.value;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsIsLogicalParameterSet {
      * Fluent builder for the WorkbookFunctionsIsLogicalParameterSet
      */
     public static final class WorkbookFunctionsIsLogicalParameterSetBuilder {
-        private com.google.gson.JsonElement value;
+        /**
+         * The value parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement value;
         /**
          * Sets the Value
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsIsLogicalParameterSet {
             this.value = val;
             return this;
         }
-        private WorkbookFunctionsIsLogicalParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIsLogicalParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

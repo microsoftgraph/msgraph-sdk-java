@@ -35,7 +35,11 @@ public class WorkbookFunctionsUpperParameterSet {
      * Instiaciates a new WorkbookFunctionsUpperParameterSet
      */
     public WorkbookFunctionsUpperParameterSet() {}
-    private WorkbookFunctionsUpperParameterSet(@Nonnull final WorkbookFunctionsUpperParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsUpperParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsUpperParameterSet(@Nonnull final WorkbookFunctionsUpperParameterSetBuilder builder) {
         this.text = builder.text;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsUpperParameterSet {
      * Fluent builder for the WorkbookFunctionsUpperParameterSet
      */
     public static final class WorkbookFunctionsUpperParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsUpperParameterSet {
             this.text = val;
             return this;
         }
-        private WorkbookFunctionsUpperParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsUpperParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

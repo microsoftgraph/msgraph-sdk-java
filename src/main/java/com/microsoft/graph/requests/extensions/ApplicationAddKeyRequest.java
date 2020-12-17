@@ -38,6 +38,7 @@ public class ApplicationAddKeyRequest extends BaseRequest<KeyCredential> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ApplicationAddKeyParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

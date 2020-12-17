@@ -53,7 +53,11 @@ public class WorkbookFunctionsYearFracParameterSet {
      * Instiaciates a new WorkbookFunctionsYearFracParameterSet
      */
     public WorkbookFunctionsYearFracParameterSet() {}
-    private WorkbookFunctionsYearFracParameterSet(@Nonnull final WorkbookFunctionsYearFracParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsYearFracParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsYearFracParameterSet(@Nonnull final WorkbookFunctionsYearFracParameterSetBuilder builder) {
         this.startDate = builder.startDate;
         this.endDate = builder.endDate;
         this.basis = builder.basis;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsYearFracParameterSet {
      * Fluent builder for the WorkbookFunctionsYearFracParameterSet
      */
     public static final class WorkbookFunctionsYearFracParameterSetBuilder {
-        private com.google.gson.JsonElement startDate;
+        /**
+         * The startDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startDate;
         /**
          * Sets the StartDate
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsYearFracParameterSet {
             this.startDate = val;
             return this;
         }
-        private com.google.gson.JsonElement endDate;
+        /**
+         * The endDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement endDate;
         /**
          * Sets the EndDate
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsYearFracParameterSet {
             this.endDate = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsYearFracParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsYearFracParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsYearFracParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookFunctionsPercentile_IncParameterSet {
      * Instiaciates a new WorkbookFunctionsPercentile_IncParameterSet
      */
     public WorkbookFunctionsPercentile_IncParameterSet() {}
-    private WorkbookFunctionsPercentile_IncParameterSet(@Nonnull final WorkbookFunctionsPercentile_IncParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPercentile_IncParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPercentile_IncParameterSet(@Nonnull final WorkbookFunctionsPercentile_IncParameterSetBuilder builder) {
         this.array = builder.array;
         this.k = builder.k;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsPercentile_IncParameterSet {
      * Fluent builder for the WorkbookFunctionsPercentile_IncParameterSet
      */
     public static final class WorkbookFunctionsPercentile_IncParameterSetBuilder {
-        private com.google.gson.JsonElement array;
+        /**
+         * The array parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement array;
         /**
          * Sets the Array
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsPercentile_IncParameterSet {
             this.array = val;
             return this;
         }
-        private com.google.gson.JsonElement k;
+        /**
+         * The k parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement k;
         /**
          * Sets the K
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsPercentile_IncParameterSet {
             this.k = val;
             return this;
         }
-        private WorkbookFunctionsPercentile_IncParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPercentile_IncParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

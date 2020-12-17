@@ -35,7 +35,11 @@ public class WorkbookFunctionsPhiParameterSet {
      * Instiaciates a new WorkbookFunctionsPhiParameterSet
      */
     public WorkbookFunctionsPhiParameterSet() {}
-    private WorkbookFunctionsPhiParameterSet(@Nonnull final WorkbookFunctionsPhiParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPhiParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPhiParameterSet(@Nonnull final WorkbookFunctionsPhiParameterSetBuilder builder) {
         this.x = builder.x;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsPhiParameterSet {
      * Fluent builder for the WorkbookFunctionsPhiParameterSet
      */
     public static final class WorkbookFunctionsPhiParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsPhiParameterSet {
             this.x = val;
             return this;
         }
-        private WorkbookFunctionsPhiParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPhiParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

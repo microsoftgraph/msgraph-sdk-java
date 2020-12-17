@@ -35,7 +35,11 @@ public class ConversationThreadReplyParameterSet {
      * Instiaciates a new ConversationThreadReplyParameterSet
      */
     public ConversationThreadReplyParameterSet() {}
-    private ConversationThreadReplyParameterSet(@Nonnull final ConversationThreadReplyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ConversationThreadReplyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ConversationThreadReplyParameterSet(@Nonnull final ConversationThreadReplyParameterSetBuilder builder) {
         this.post = builder.post;
     }
     /**
@@ -50,7 +54,11 @@ public class ConversationThreadReplyParameterSet {
      * Fluent builder for the ConversationThreadReplyParameterSet
      */
     public static final class ConversationThreadReplyParameterSetBuilder {
-        private Post post;
+        /**
+         * The post parameter value
+         */
+        @Nullable
+        protected Post post;
         /**
          * Sets the Post
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ConversationThreadReplyParameterSet {
             this.post = val;
             return this;
         }
-        private ConversationThreadReplyParameterSetBuilder(){}
+        @Nullable
+        protected ConversationThreadReplyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -107,7 +107,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
      * Instiaciates a new WorkbookFunctionsOddFYieldParameterSet
      */
     public WorkbookFunctionsOddFYieldParameterSet() {}
-    private WorkbookFunctionsOddFYieldParameterSet(@Nonnull final WorkbookFunctionsOddFYieldParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsOddFYieldParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsOddFYieldParameterSet(@Nonnull final WorkbookFunctionsOddFYieldParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.issue = builder.issue;
@@ -130,7 +134,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
      * Fluent builder for the WorkbookFunctionsOddFYieldParameterSet
      */
     public static final class WorkbookFunctionsOddFYieldParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -141,7 +149,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -152,7 +164,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement issue;
+        /**
+         * The issue parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement issue;
         /**
          * Sets the Issue
          * @param val the value to set it to
@@ -163,7 +179,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.issue = val;
             return this;
         }
-        private com.google.gson.JsonElement firstCoupon;
+        /**
+         * The firstCoupon parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement firstCoupon;
         /**
          * Sets the FirstCoupon
          * @param val the value to set it to
@@ -174,7 +194,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.firstCoupon = val;
             return this;
         }
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -185,7 +209,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement pr;
+        /**
+         * The pr parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement pr;
         /**
          * Sets the Pr
          * @param val the value to set it to
@@ -196,7 +224,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.pr = val;
             return this;
         }
-        private com.google.gson.JsonElement redemption;
+        /**
+         * The redemption parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement redemption;
         /**
          * Sets the Redemption
          * @param val the value to set it to
@@ -207,7 +239,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.redemption = val;
             return this;
         }
-        private com.google.gson.JsonElement frequency;
+        /**
+         * The frequency parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement frequency;
         /**
          * Sets the Frequency
          * @param val the value to set it to
@@ -218,7 +254,11 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.frequency = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -229,7 +269,8 @@ public class WorkbookFunctionsOddFYieldParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsOddFYieldParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsOddFYieldParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

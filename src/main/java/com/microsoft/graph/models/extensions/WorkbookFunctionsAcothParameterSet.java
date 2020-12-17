@@ -35,7 +35,11 @@ public class WorkbookFunctionsAcothParameterSet {
      * Instiaciates a new WorkbookFunctionsAcothParameterSet
      */
     public WorkbookFunctionsAcothParameterSet() {}
-    private WorkbookFunctionsAcothParameterSet(@Nonnull final WorkbookFunctionsAcothParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAcothParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAcothParameterSet(@Nonnull final WorkbookFunctionsAcothParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAcothParameterSet {
      * Fluent builder for the WorkbookFunctionsAcothParameterSet
      */
     public static final class WorkbookFunctionsAcothParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAcothParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsAcothParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAcothParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

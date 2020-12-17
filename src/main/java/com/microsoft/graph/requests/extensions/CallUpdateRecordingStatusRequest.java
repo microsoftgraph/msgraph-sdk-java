@@ -38,6 +38,7 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest<UpdateRecordin
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallUpdateRecordingStatusParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

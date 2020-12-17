@@ -26,7 +26,11 @@ public class ChatGetAllMessagesParameterSet {
      * Instiaciates a new ChatGetAllMessagesParameterSet
      */
     public ChatGetAllMessagesParameterSet() {}
-    private ChatGetAllMessagesParameterSet(@Nonnull final ChatGetAllMessagesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ChatGetAllMessagesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ChatGetAllMessagesParameterSet(@Nonnull final ChatGetAllMessagesParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ChatGetAllMessagesParameterSet {
      * Fluent builder for the ChatGetAllMessagesParameterSet
      */
     public static final class ChatGetAllMessagesParameterSetBuilder {
-        private ChatGetAllMessagesParameterSetBuilder(){}
+        @Nullable
+        protected ChatGetAllMessagesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

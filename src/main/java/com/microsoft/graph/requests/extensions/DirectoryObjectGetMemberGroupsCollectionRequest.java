@@ -31,6 +31,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseActionC
 
 
     /** The body for the method */
+    @Nullable
     protected DirectoryObjectGetMemberGroupsParameterSet body;
 
 

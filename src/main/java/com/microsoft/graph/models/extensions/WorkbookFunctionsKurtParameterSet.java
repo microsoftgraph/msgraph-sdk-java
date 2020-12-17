@@ -35,7 +35,11 @@ public class WorkbookFunctionsKurtParameterSet {
      * Instiaciates a new WorkbookFunctionsKurtParameterSet
      */
     public WorkbookFunctionsKurtParameterSet() {}
-    private WorkbookFunctionsKurtParameterSet(@Nonnull final WorkbookFunctionsKurtParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsKurtParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsKurtParameterSet(@Nonnull final WorkbookFunctionsKurtParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsKurtParameterSet {
      * Fluent builder for the WorkbookFunctionsKurtParameterSet
      */
     public static final class WorkbookFunctionsKurtParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsKurtParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsKurtParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsKurtParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

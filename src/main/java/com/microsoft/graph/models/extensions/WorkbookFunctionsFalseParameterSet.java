@@ -26,7 +26,11 @@ public class WorkbookFunctionsFalseParameterSet {
      * Instiaciates a new WorkbookFunctionsFalseParameterSet
      */
     public WorkbookFunctionsFalseParameterSet() {}
-    private WorkbookFunctionsFalseParameterSet(@Nonnull final WorkbookFunctionsFalseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsFalseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsFalseParameterSet(@Nonnull final WorkbookFunctionsFalseParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookFunctionsFalseParameterSet {
      * Fluent builder for the WorkbookFunctionsFalseParameterSet
      */
     public static final class WorkbookFunctionsFalseParameterSetBuilder {
-        private WorkbookFunctionsFalseParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsFalseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

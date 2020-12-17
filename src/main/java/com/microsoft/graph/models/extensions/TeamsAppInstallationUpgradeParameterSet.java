@@ -26,7 +26,11 @@ public class TeamsAppInstallationUpgradeParameterSet {
      * Instiaciates a new TeamsAppInstallationUpgradeParameterSet
      */
     public TeamsAppInstallationUpgradeParameterSet() {}
-    private TeamsAppInstallationUpgradeParameterSet(@Nonnull final TeamsAppInstallationUpgradeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new TeamsAppInstallationUpgradeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected TeamsAppInstallationUpgradeParameterSet(@Nonnull final TeamsAppInstallationUpgradeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class TeamsAppInstallationUpgradeParameterSet {
      * Fluent builder for the TeamsAppInstallationUpgradeParameterSet
      */
     public static final class TeamsAppInstallationUpgradeParameterSetBuilder {
-        private TeamsAppInstallationUpgradeParameterSetBuilder(){}
+        @Nullable
+        protected TeamsAppInstallationUpgradeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

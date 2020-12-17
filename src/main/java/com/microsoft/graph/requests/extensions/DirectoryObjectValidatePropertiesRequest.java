@@ -37,6 +37,7 @@ public class DirectoryObjectValidatePropertiesRequest extends BaseRequest<Void> 
     }
 
 	/** The body for the method */
+    @Nullable
     protected DirectoryObjectValidatePropertiesParameterSet body;
     /**
      * Creates the DirectoryObjectValidateProperties

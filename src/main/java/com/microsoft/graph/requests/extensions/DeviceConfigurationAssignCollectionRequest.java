@@ -32,6 +32,7 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseActionCollec
 
 
     /** The body for the method */
+    @Nullable
     protected DeviceConfigurationAssignParameterSet body;
 
 

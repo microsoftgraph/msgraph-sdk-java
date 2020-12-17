@@ -35,7 +35,11 @@ public class WorkbookFunctionsTrimParameterSet {
      * Instiaciates a new WorkbookFunctionsTrimParameterSet
      */
     public WorkbookFunctionsTrimParameterSet() {}
-    private WorkbookFunctionsTrimParameterSet(@Nonnull final WorkbookFunctionsTrimParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTrimParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTrimParameterSet(@Nonnull final WorkbookFunctionsTrimParameterSetBuilder builder) {
         this.text = builder.text;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsTrimParameterSet {
      * Fluent builder for the WorkbookFunctionsTrimParameterSet
      */
     public static final class WorkbookFunctionsTrimParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsTrimParameterSet {
             this.text = val;
             return this;
         }
-        private WorkbookFunctionsTrimParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTrimParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

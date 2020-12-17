@@ -35,7 +35,11 @@ public class CalendarAllowedCalendarSharingRolesParameterSet {
      * Instiaciates a new CalendarAllowedCalendarSharingRolesParameterSet
      */
     public CalendarAllowedCalendarSharingRolesParameterSet() {}
-    private CalendarAllowedCalendarSharingRolesParameterSet(@Nonnull final CalendarAllowedCalendarSharingRolesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CalendarAllowedCalendarSharingRolesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CalendarAllowedCalendarSharingRolesParameterSet(@Nonnull final CalendarAllowedCalendarSharingRolesParameterSetBuilder builder) {
         this.user = builder.user;
     }
     /**
@@ -50,7 +54,11 @@ public class CalendarAllowedCalendarSharingRolesParameterSet {
      * Fluent builder for the CalendarAllowedCalendarSharingRolesParameterSet
      */
     public static final class CalendarAllowedCalendarSharingRolesParameterSetBuilder {
-        private String user;
+        /**
+         * The user parameter value
+         */
+        @Nullable
+        protected String user;
         /**
          * Sets the User
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class CalendarAllowedCalendarSharingRolesParameterSet {
             this.user = val;
             return this;
         }
-        private CalendarAllowedCalendarSharingRolesParameterSetBuilder(){}
+        @Nullable
+        protected CalendarAllowedCalendarSharingRolesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

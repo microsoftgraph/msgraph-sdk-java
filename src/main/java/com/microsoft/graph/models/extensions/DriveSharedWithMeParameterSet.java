@@ -26,7 +26,11 @@ public class DriveSharedWithMeParameterSet {
      * Instiaciates a new DriveSharedWithMeParameterSet
      */
     public DriveSharedWithMeParameterSet() {}
-    private DriveSharedWithMeParameterSet(@Nonnull final DriveSharedWithMeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveSharedWithMeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveSharedWithMeParameterSet(@Nonnull final DriveSharedWithMeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DriveSharedWithMeParameterSet {
      * Fluent builder for the DriveSharedWithMeParameterSet
      */
     public static final class DriveSharedWithMeParameterSetBuilder {
-        private DriveSharedWithMeParameterSetBuilder(){}
+        @Nullable
+        protected DriveSharedWithMeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

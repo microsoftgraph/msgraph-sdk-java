@@ -35,7 +35,11 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet {
      * Instiaciates a new ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet
      */
     public ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet() {}
-    private ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet(@Nonnull final ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet(@Nonnull final ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder builder) {
         this.userPrincipalName = builder.userPrincipalName;
     }
     /**
@@ -50,7 +54,11 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet {
      * Fluent builder for the ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet
      */
     public static final class ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder {
-        private String userPrincipalName;
+        /**
+         * The userPrincipalName parameter value
+         */
+        @Nullable
+        protected String userPrincipalName;
         /**
          * Sets the UserPrincipalName
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet {
             this.userPrincipalName = val;
             return this;
         }
-        private ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

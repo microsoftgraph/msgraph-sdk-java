@@ -53,7 +53,11 @@ public class WorkbookFunctionsF_Inv_RTParameterSet {
      * Instiaciates a new WorkbookFunctionsF_Inv_RTParameterSet
      */
     public WorkbookFunctionsF_Inv_RTParameterSet() {}
-    private WorkbookFunctionsF_Inv_RTParameterSet(@Nonnull final WorkbookFunctionsF_Inv_RTParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsF_Inv_RTParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsF_Inv_RTParameterSet(@Nonnull final WorkbookFunctionsF_Inv_RTParameterSetBuilder builder) {
         this.probability = builder.probability;
         this.degFreedom1 = builder.degFreedom1;
         this.degFreedom2 = builder.degFreedom2;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsF_Inv_RTParameterSet {
      * Fluent builder for the WorkbookFunctionsF_Inv_RTParameterSet
      */
     public static final class WorkbookFunctionsF_Inv_RTParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsF_Inv_RTParameterSet {
             this.probability = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom1;
+        /**
+         * The degFreedom1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom1;
         /**
          * Sets the DegFreedom1
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsF_Inv_RTParameterSet {
             this.degFreedom1 = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom2;
+        /**
+         * The degFreedom2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom2;
         /**
          * Sets the DegFreedom2
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsF_Inv_RTParameterSet {
             this.degFreedom2 = val;
             return this;
         }
-        private WorkbookFunctionsF_Inv_RTParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsF_Inv_RTParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

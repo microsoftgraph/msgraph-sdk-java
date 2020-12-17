@@ -53,7 +53,11 @@ public class ManagedDeviceWipeParameterSet {
      * Instiaciates a new ManagedDeviceWipeParameterSet
      */
     public ManagedDeviceWipeParameterSet() {}
-    private ManagedDeviceWipeParameterSet(@Nonnull final ManagedDeviceWipeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceWipeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceWipeParameterSet(@Nonnull final ManagedDeviceWipeParameterSetBuilder builder) {
         this.keepEnrollmentData = builder.keepEnrollmentData;
         this.keepUserData = builder.keepUserData;
         this.macOsUnlockCode = builder.macOsUnlockCode;
@@ -70,7 +74,11 @@ public class ManagedDeviceWipeParameterSet {
      * Fluent builder for the ManagedDeviceWipeParameterSet
      */
     public static final class ManagedDeviceWipeParameterSetBuilder {
-        private Boolean keepEnrollmentData;
+        /**
+         * The keepEnrollmentData parameter value
+         */
+        @Nullable
+        protected Boolean keepEnrollmentData;
         /**
          * Sets the KeepEnrollmentData
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class ManagedDeviceWipeParameterSet {
             this.keepEnrollmentData = val;
             return this;
         }
-        private Boolean keepUserData;
+        /**
+         * The keepUserData parameter value
+         */
+        @Nullable
+        protected Boolean keepUserData;
         /**
          * Sets the KeepUserData
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class ManagedDeviceWipeParameterSet {
             this.keepUserData = val;
             return this;
         }
-        private String macOsUnlockCode;
+        /**
+         * The macOsUnlockCode parameter value
+         */
+        @Nullable
+        protected String macOsUnlockCode;
         /**
          * Sets the MacOsUnlockCode
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class ManagedDeviceWipeParameterSet {
             this.macOsUnlockCode = val;
             return this;
         }
-        private ManagedDeviceWipeParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceWipeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

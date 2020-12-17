@@ -26,7 +26,11 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
      * Instiaciates a new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSet
      */
     public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSet() {}
-    private ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSet(@Nonnull final ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSet(@Nonnull final ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
      * Fluent builder for the ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSet
      */
     public static final class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSetBuilder {
-        private ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSetBuilder(){}
+        @Nullable
+        protected ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

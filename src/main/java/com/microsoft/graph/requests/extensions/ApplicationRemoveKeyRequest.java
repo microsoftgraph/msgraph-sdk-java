@@ -37,6 +37,7 @@ public class ApplicationRemoveKeyRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ApplicationRemoveKeyParameterSet body;
     /**
      * Creates the ApplicationRemoveKey

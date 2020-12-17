@@ -33,6 +33,7 @@ public class DriveItemInviteCollectionRequest extends BaseActionCollectionReques
 
 
     /** The body for the method */
+    @Nullable
     protected DriveItemInviteParameterSet body;
 
 

@@ -26,7 +26,11 @@ public class EventDeltaParameterSet {
      * Instiaciates a new EventDeltaParameterSet
      */
     public EventDeltaParameterSet() {}
-    private EventDeltaParameterSet(@Nonnull final EventDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new EventDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected EventDeltaParameterSet(@Nonnull final EventDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class EventDeltaParameterSet {
      * Fluent builder for the EventDeltaParameterSet
      */
     public static final class EventDeltaParameterSetBuilder {
-        private EventDeltaParameterSetBuilder(){}
+        @Nullable
+        protected EventDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsErfRequest extends BaseRequest<WorkbookFunctionRes
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsErfParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

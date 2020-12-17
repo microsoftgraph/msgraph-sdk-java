@@ -38,6 +38,7 @@ public class WorkbookFunctionsConfidence_TRequest extends BaseRequest<WorkbookFu
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsConfidence_TParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

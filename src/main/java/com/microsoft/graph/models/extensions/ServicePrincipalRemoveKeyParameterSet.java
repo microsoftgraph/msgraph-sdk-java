@@ -44,7 +44,11 @@ public class ServicePrincipalRemoveKeyParameterSet {
      * Instiaciates a new ServicePrincipalRemoveKeyParameterSet
      */
     public ServicePrincipalRemoveKeyParameterSet() {}
-    private ServicePrincipalRemoveKeyParameterSet(@Nonnull final ServicePrincipalRemoveKeyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ServicePrincipalRemoveKeyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ServicePrincipalRemoveKeyParameterSet(@Nonnull final ServicePrincipalRemoveKeyParameterSetBuilder builder) {
         this.keyId = builder.keyId;
         this.proof = builder.proof;
     }
@@ -60,7 +64,11 @@ public class ServicePrincipalRemoveKeyParameterSet {
      * Fluent builder for the ServicePrincipalRemoveKeyParameterSet
      */
     public static final class ServicePrincipalRemoveKeyParameterSetBuilder {
-        private java.util.UUID keyId;
+        /**
+         * The keyId parameter value
+         */
+        @Nullable
+        protected java.util.UUID keyId;
         /**
          * Sets the KeyId
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class ServicePrincipalRemoveKeyParameterSet {
             this.keyId = val;
             return this;
         }
-        private String proof;
+        /**
+         * The proof parameter value
+         */
+        @Nullable
+        protected String proof;
         /**
          * Sets the Proof
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class ServicePrincipalRemoveKeyParameterSet {
             this.proof = val;
             return this;
         }
-        private ServicePrincipalRemoveKeyParameterSetBuilder(){}
+        @Nullable
+        protected ServicePrincipalRemoveKeyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

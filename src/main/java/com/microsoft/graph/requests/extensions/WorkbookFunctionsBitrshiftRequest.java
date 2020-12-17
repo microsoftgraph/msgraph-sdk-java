@@ -38,6 +38,7 @@ public class WorkbookFunctionsBitrshiftRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsBitrshiftParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

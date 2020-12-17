@@ -44,7 +44,11 @@ public class WorkbookFunctionsRomanParameterSet {
      * Instiaciates a new WorkbookFunctionsRomanParameterSet
      */
     public WorkbookFunctionsRomanParameterSet() {}
-    private WorkbookFunctionsRomanParameterSet(@Nonnull final WorkbookFunctionsRomanParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRomanParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRomanParameterSet(@Nonnull final WorkbookFunctionsRomanParameterSetBuilder builder) {
         this.number = builder.number;
         this.form = builder.form;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsRomanParameterSet {
      * Fluent builder for the WorkbookFunctionsRomanParameterSet
      */
     public static final class WorkbookFunctionsRomanParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsRomanParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement form;
+        /**
+         * The form parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement form;
         /**
          * Sets the Form
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsRomanParameterSet {
             this.form = val;
             return this;
         }
-        private WorkbookFunctionsRomanParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRomanParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

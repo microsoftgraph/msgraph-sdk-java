@@ -37,6 +37,7 @@ public class WorkbookFilterApplyFontColorFilterRequest extends BaseRequest<Void>
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFilterApplyFontColorFilterParameterSet body;
     /**
      * Creates the WorkbookFilterApplyFontColorFilter

@@ -26,7 +26,11 @@ public class RemoteAssistancePartnerBeginOnboardingParameterSet {
      * Instiaciates a new RemoteAssistancePartnerBeginOnboardingParameterSet
      */
     public RemoteAssistancePartnerBeginOnboardingParameterSet() {}
-    private RemoteAssistancePartnerBeginOnboardingParameterSet(@Nonnull final RemoteAssistancePartnerBeginOnboardingParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new RemoteAssistancePartnerBeginOnboardingParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected RemoteAssistancePartnerBeginOnboardingParameterSet(@Nonnull final RemoteAssistancePartnerBeginOnboardingParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class RemoteAssistancePartnerBeginOnboardingParameterSet {
      * Fluent builder for the RemoteAssistancePartnerBeginOnboardingParameterSet
      */
     public static final class RemoteAssistancePartnerBeginOnboardingParameterSetBuilder {
-        private RemoteAssistancePartnerBeginOnboardingParameterSetBuilder(){}
+        @Nullable
+        protected RemoteAssistancePartnerBeginOnboardingParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class EventAcceptParameterSet {
      * Instiaciates a new EventAcceptParameterSet
      */
     public EventAcceptParameterSet() {}
-    private EventAcceptParameterSet(@Nonnull final EventAcceptParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new EventAcceptParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected EventAcceptParameterSet(@Nonnull final EventAcceptParameterSetBuilder builder) {
         this.comment = builder.comment;
         this.sendResponse = builder.sendResponse;
     }
@@ -60,7 +64,11 @@ public class EventAcceptParameterSet {
      * Fluent builder for the EventAcceptParameterSet
      */
     public static final class EventAcceptParameterSetBuilder {
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class EventAcceptParameterSet {
             this.comment = val;
             return this;
         }
-        private Boolean sendResponse;
+        /**
+         * The sendResponse parameter value
+         */
+        @Nullable
+        protected Boolean sendResponse;
         /**
          * Sets the SendResponse
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class EventAcceptParameterSet {
             this.sendResponse = val;
             return this;
         }
-        private EventAcceptParameterSetBuilder(){}
+        @Nullable
+        protected EventAcceptParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

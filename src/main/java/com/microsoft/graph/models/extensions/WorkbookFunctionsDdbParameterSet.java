@@ -71,7 +71,11 @@ public class WorkbookFunctionsDdbParameterSet {
      * Instiaciates a new WorkbookFunctionsDdbParameterSet
      */
     public WorkbookFunctionsDdbParameterSet() {}
-    private WorkbookFunctionsDdbParameterSet(@Nonnull final WorkbookFunctionsDdbParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDdbParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDdbParameterSet(@Nonnull final WorkbookFunctionsDdbParameterSetBuilder builder) {
         this.cost = builder.cost;
         this.salvage = builder.salvage;
         this.life = builder.life;
@@ -90,7 +94,11 @@ public class WorkbookFunctionsDdbParameterSet {
      * Fluent builder for the WorkbookFunctionsDdbParameterSet
      */
     public static final class WorkbookFunctionsDdbParameterSetBuilder {
-        private com.google.gson.JsonElement cost;
+        /**
+         * The cost parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cost;
         /**
          * Sets the Cost
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class WorkbookFunctionsDdbParameterSet {
             this.cost = val;
             return this;
         }
-        private com.google.gson.JsonElement salvage;
+        /**
+         * The salvage parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement salvage;
         /**
          * Sets the Salvage
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class WorkbookFunctionsDdbParameterSet {
             this.salvage = val;
             return this;
         }
-        private com.google.gson.JsonElement life;
+        /**
+         * The life parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement life;
         /**
          * Sets the Life
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class WorkbookFunctionsDdbParameterSet {
             this.life = val;
             return this;
         }
-        private com.google.gson.JsonElement period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class WorkbookFunctionsDdbParameterSet {
             this.period = val;
             return this;
         }
-        private com.google.gson.JsonElement factor;
+        /**
+         * The factor parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement factor;
         /**
          * Sets the Factor
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class WorkbookFunctionsDdbParameterSet {
             this.factor = val;
             return this;
         }
-        private WorkbookFunctionsDdbParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDdbParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

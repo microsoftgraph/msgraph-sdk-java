@@ -34,6 +34,7 @@ public class UserGetMailTipsCollectionRequest extends BaseActionCollectionReques
 
 
     /** The body for the method */
+    @Nullable
     protected UserGetMailTipsParameterSet body;
 
 

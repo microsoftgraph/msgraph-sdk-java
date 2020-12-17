@@ -35,7 +35,11 @@ public class DirectoryObjectCheckMemberGroupsParameterSet {
      * Instiaciates a new DirectoryObjectCheckMemberGroupsParameterSet
      */
     public DirectoryObjectCheckMemberGroupsParameterSet() {}
-    private DirectoryObjectCheckMemberGroupsParameterSet(@Nonnull final DirectoryObjectCheckMemberGroupsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DirectoryObjectCheckMemberGroupsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DirectoryObjectCheckMemberGroupsParameterSet(@Nonnull final DirectoryObjectCheckMemberGroupsParameterSetBuilder builder) {
         this.groupIds = builder.groupIds;
     }
     /**
@@ -50,7 +54,11 @@ public class DirectoryObjectCheckMemberGroupsParameterSet {
      * Fluent builder for the DirectoryObjectCheckMemberGroupsParameterSet
      */
     public static final class DirectoryObjectCheckMemberGroupsParameterSetBuilder {
-        private java.util.List<String> groupIds;
+        /**
+         * The groupIds parameter value
+         */
+        @Nullable
+        protected java.util.List<String> groupIds;
         /**
          * Sets the GroupIds
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DirectoryObjectCheckMemberGroupsParameterSet {
             this.groupIds = val;
             return this;
         }
-        private DirectoryObjectCheckMemberGroupsParameterSetBuilder(){}
+        @Nullable
+        protected DirectoryObjectCheckMemberGroupsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class ApplicationRemoveKeyParameterSet {
      * Instiaciates a new ApplicationRemoveKeyParameterSet
      */
     public ApplicationRemoveKeyParameterSet() {}
-    private ApplicationRemoveKeyParameterSet(@Nonnull final ApplicationRemoveKeyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ApplicationRemoveKeyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ApplicationRemoveKeyParameterSet(@Nonnull final ApplicationRemoveKeyParameterSetBuilder builder) {
         this.keyId = builder.keyId;
         this.proof = builder.proof;
     }
@@ -60,7 +64,11 @@ public class ApplicationRemoveKeyParameterSet {
      * Fluent builder for the ApplicationRemoveKeyParameterSet
      */
     public static final class ApplicationRemoveKeyParameterSetBuilder {
-        private java.util.UUID keyId;
+        /**
+         * The keyId parameter value
+         */
+        @Nullable
+        protected java.util.UUID keyId;
         /**
          * Sets the KeyId
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class ApplicationRemoveKeyParameterSet {
             this.keyId = val;
             return this;
         }
-        private String proof;
+        /**
+         * The proof parameter value
+         */
+        @Nullable
+        protected String proof;
         /**
          * Sets the Proof
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class ApplicationRemoveKeyParameterSet {
             this.proof = val;
             return this;
         }
-        private ApplicationRemoveKeyParameterSetBuilder(){}
+        @Nullable
+        protected ApplicationRemoveKeyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -53,7 +53,11 @@ public class WorkbookFunctionsDcountAParameterSet {
      * Instiaciates a new WorkbookFunctionsDcountAParameterSet
      */
     public WorkbookFunctionsDcountAParameterSet() {}
-    private WorkbookFunctionsDcountAParameterSet(@Nonnull final WorkbookFunctionsDcountAParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDcountAParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDcountAParameterSet(@Nonnull final WorkbookFunctionsDcountAParameterSetBuilder builder) {
         this.database = builder.database;
         this.field = builder.field;
         this.criteria = builder.criteria;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsDcountAParameterSet {
      * Fluent builder for the WorkbookFunctionsDcountAParameterSet
      */
     public static final class WorkbookFunctionsDcountAParameterSetBuilder {
-        private com.google.gson.JsonElement database;
+        /**
+         * The database parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement database;
         /**
          * Sets the Database
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsDcountAParameterSet {
             this.database = val;
             return this;
         }
-        private com.google.gson.JsonElement field;
+        /**
+         * The field parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement field;
         /**
          * Sets the Field
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsDcountAParameterSet {
             this.field = val;
             return this;
         }
-        private com.google.gson.JsonElement criteria;
+        /**
+         * The criteria parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement criteria;
         /**
          * Sets the Criteria
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsDcountAParameterSet {
             this.criteria = val;
             return this;
         }
-        private WorkbookFunctionsDcountAParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDcountAParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

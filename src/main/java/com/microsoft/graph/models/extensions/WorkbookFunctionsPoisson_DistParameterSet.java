@@ -53,7 +53,11 @@ public class WorkbookFunctionsPoisson_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsPoisson_DistParameterSet
      */
     public WorkbookFunctionsPoisson_DistParameterSet() {}
-    private WorkbookFunctionsPoisson_DistParameterSet(@Nonnull final WorkbookFunctionsPoisson_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPoisson_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPoisson_DistParameterSet(@Nonnull final WorkbookFunctionsPoisson_DistParameterSetBuilder builder) {
         this.x = builder.x;
         this.mean = builder.mean;
         this.cumulative = builder.cumulative;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsPoisson_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsPoisson_DistParameterSet
      */
     public static final class WorkbookFunctionsPoisson_DistParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsPoisson_DistParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement mean;
+        /**
+         * The mean parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement mean;
         /**
          * Sets the Mean
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsPoisson_DistParameterSet {
             this.mean = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsPoisson_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsPoisson_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPoisson_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

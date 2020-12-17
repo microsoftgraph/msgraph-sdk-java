@@ -38,6 +38,7 @@ public class WorkbookFunctionsImAbsRequest extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsImAbsParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

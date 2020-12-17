@@ -26,7 +26,11 @@ public class GroupDeltaParameterSet {
      * Instiaciates a new GroupDeltaParameterSet
      */
     public GroupDeltaParameterSet() {}
-    private GroupDeltaParameterSet(@Nonnull final GroupDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupDeltaParameterSet(@Nonnull final GroupDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class GroupDeltaParameterSet {
      * Fluent builder for the GroupDeltaParameterSet
      */
     public static final class GroupDeltaParameterSetBuilder {
-        private GroupDeltaParameterSetBuilder(){}
+        @Nullable
+        protected GroupDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

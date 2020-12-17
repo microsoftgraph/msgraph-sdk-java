@@ -37,6 +37,7 @@ public class UserWipeManagedAppRegistrationsByDeviceTagRequest extends BaseReque
     }
 
 	/** The body for the method */
+    @Nullable
     protected UserWipeManagedAppRegistrationsByDeviceTagParameterSet body;
     /**
      * Creates the UserWipeManagedAppRegistrationsByDeviceTag

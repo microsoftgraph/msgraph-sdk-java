@@ -44,7 +44,11 @@ public class WorkbookFunctionsTextParameterSet {
      * Instiaciates a new WorkbookFunctionsTextParameterSet
      */
     public WorkbookFunctionsTextParameterSet() {}
-    private WorkbookFunctionsTextParameterSet(@Nonnull final WorkbookFunctionsTextParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTextParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTextParameterSet(@Nonnull final WorkbookFunctionsTextParameterSetBuilder builder) {
         this.value = builder.value;
         this.formatText = builder.formatText;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsTextParameterSet {
      * Fluent builder for the WorkbookFunctionsTextParameterSet
      */
     public static final class WorkbookFunctionsTextParameterSetBuilder {
-        private com.google.gson.JsonElement value;
+        /**
+         * The value parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement value;
         /**
          * Sets the Value
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsTextParameterSet {
             this.value = val;
             return this;
         }
-        private com.google.gson.JsonElement formatText;
+        /**
+         * The formatText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement formatText;
         /**
          * Sets the FormatText
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsTextParameterSet {
             this.formatText = val;
             return this;
         }
-        private WorkbookFunctionsTextParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTextParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

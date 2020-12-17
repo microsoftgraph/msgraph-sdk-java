@@ -38,6 +38,7 @@ public class WorkbookFunctionsDays360Request extends BaseRequest<WorkbookFunctio
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsDays360ParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

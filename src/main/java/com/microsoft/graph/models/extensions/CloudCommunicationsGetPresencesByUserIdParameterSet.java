@@ -35,7 +35,11 @@ public class CloudCommunicationsGetPresencesByUserIdParameterSet {
      * Instiaciates a new CloudCommunicationsGetPresencesByUserIdParameterSet
      */
     public CloudCommunicationsGetPresencesByUserIdParameterSet() {}
-    private CloudCommunicationsGetPresencesByUserIdParameterSet(@Nonnull final CloudCommunicationsGetPresencesByUserIdParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CloudCommunicationsGetPresencesByUserIdParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CloudCommunicationsGetPresencesByUserIdParameterSet(@Nonnull final CloudCommunicationsGetPresencesByUserIdParameterSetBuilder builder) {
         this.ids = builder.ids;
     }
     /**
@@ -50,7 +54,11 @@ public class CloudCommunicationsGetPresencesByUserIdParameterSet {
      * Fluent builder for the CloudCommunicationsGetPresencesByUserIdParameterSet
      */
     public static final class CloudCommunicationsGetPresencesByUserIdParameterSetBuilder {
-        private java.util.List<String> ids;
+        /**
+         * The ids parameter value
+         */
+        @Nullable
+        protected java.util.List<String> ids;
         /**
          * Sets the Ids
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class CloudCommunicationsGetPresencesByUserIdParameterSet {
             this.ids = val;
             return this;
         }
-        private CloudCommunicationsGetPresencesByUserIdParameterSetBuilder(){}
+        @Nullable
+        protected CloudCommunicationsGetPresencesByUserIdParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

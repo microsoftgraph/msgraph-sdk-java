@@ -35,7 +35,11 @@ public class WorkbookFilterApplyValuesFilterParameterSet {
      * Instiaciates a new WorkbookFilterApplyValuesFilterParameterSet
      */
     public WorkbookFilterApplyValuesFilterParameterSet() {}
-    private WorkbookFilterApplyValuesFilterParameterSet(@Nonnull final WorkbookFilterApplyValuesFilterParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyValuesFilterParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyValuesFilterParameterSet(@Nonnull final WorkbookFilterApplyValuesFilterParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFilterApplyValuesFilterParameterSet {
      * Fluent builder for the WorkbookFilterApplyValuesFilterParameterSet
      */
     public static final class WorkbookFilterApplyValuesFilterParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFilterApplyValuesFilterParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFilterApplyValuesFilterParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyValuesFilterParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

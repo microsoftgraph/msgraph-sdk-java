@@ -26,7 +26,11 @@ public class WorkbookTableColumnHeaderRowRangeParameterSet {
      * Instiaciates a new WorkbookTableColumnHeaderRowRangeParameterSet
      */
     public WorkbookTableColumnHeaderRowRangeParameterSet() {}
-    private WorkbookTableColumnHeaderRowRangeParameterSet(@Nonnull final WorkbookTableColumnHeaderRowRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableColumnHeaderRowRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableColumnHeaderRowRangeParameterSet(@Nonnull final WorkbookTableColumnHeaderRowRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableColumnHeaderRowRangeParameterSet {
      * Fluent builder for the WorkbookTableColumnHeaderRowRangeParameterSet
      */
     public static final class WorkbookTableColumnHeaderRowRangeParameterSetBuilder {
-        private WorkbookTableColumnHeaderRowRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableColumnHeaderRowRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

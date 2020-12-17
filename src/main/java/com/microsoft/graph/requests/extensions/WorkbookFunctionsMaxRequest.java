@@ -38,6 +38,7 @@ public class WorkbookFunctionsMaxRequest extends BaseRequest<WorkbookFunctionRes
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsMaxParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

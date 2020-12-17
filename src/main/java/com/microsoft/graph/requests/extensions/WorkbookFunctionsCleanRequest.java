@@ -38,6 +38,7 @@ public class WorkbookFunctionsCleanRequest extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCleanParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

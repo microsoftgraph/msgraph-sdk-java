@@ -44,7 +44,11 @@ public class WorkbookFunctionsEdateParameterSet {
      * Instiaciates a new WorkbookFunctionsEdateParameterSet
      */
     public WorkbookFunctionsEdateParameterSet() {}
-    private WorkbookFunctionsEdateParameterSet(@Nonnull final WorkbookFunctionsEdateParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsEdateParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsEdateParameterSet(@Nonnull final WorkbookFunctionsEdateParameterSetBuilder builder) {
         this.startDate = builder.startDate;
         this.months = builder.months;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsEdateParameterSet {
      * Fluent builder for the WorkbookFunctionsEdateParameterSet
      */
     public static final class WorkbookFunctionsEdateParameterSetBuilder {
-        private com.google.gson.JsonElement startDate;
+        /**
+         * The startDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startDate;
         /**
          * Sets the StartDate
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsEdateParameterSet {
             this.startDate = val;
             return this;
         }
-        private com.google.gson.JsonElement months;
+        /**
+         * The months parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement months;
         /**
          * Sets the Months
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsEdateParameterSet {
             this.months = val;
             return this;
         }
-        private WorkbookFunctionsEdateParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsEdateParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallPlayPromptParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

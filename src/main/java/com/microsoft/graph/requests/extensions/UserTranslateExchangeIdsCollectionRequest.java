@@ -33,6 +33,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseActionCollect
 
 
     /** The body for the method */
+    @Nullable
     protected UserTranslateExchangeIdsParameterSet body;
 
 

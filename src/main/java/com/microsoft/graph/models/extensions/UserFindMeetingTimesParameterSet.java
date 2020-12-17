@@ -101,7 +101,11 @@ public class UserFindMeetingTimesParameterSet {
      * Instiaciates a new UserFindMeetingTimesParameterSet
      */
     public UserFindMeetingTimesParameterSet() {}
-    private UserFindMeetingTimesParameterSet(@Nonnull final UserFindMeetingTimesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserFindMeetingTimesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserFindMeetingTimesParameterSet(@Nonnull final UserFindMeetingTimesParameterSetBuilder builder) {
         this.attendees = builder.attendees;
         this.locationConstraint = builder.locationConstraint;
         this.timeConstraint = builder.timeConstraint;
@@ -123,7 +127,11 @@ public class UserFindMeetingTimesParameterSet {
      * Fluent builder for the UserFindMeetingTimesParameterSet
      */
     public static final class UserFindMeetingTimesParameterSetBuilder {
-        private java.util.List<AttendeeBase> attendees;
+        /**
+         * The attendees parameter value
+         */
+        @Nullable
+        protected java.util.List<AttendeeBase> attendees;
         /**
          * Sets the Attendees
          * @param val the value to set it to
@@ -134,7 +142,11 @@ public class UserFindMeetingTimesParameterSet {
             this.attendees = val;
             return this;
         }
-        private LocationConstraint locationConstraint;
+        /**
+         * The locationConstraint parameter value
+         */
+        @Nullable
+        protected LocationConstraint locationConstraint;
         /**
          * Sets the LocationConstraint
          * @param val the value to set it to
@@ -145,7 +157,11 @@ public class UserFindMeetingTimesParameterSet {
             this.locationConstraint = val;
             return this;
         }
-        private TimeConstraint timeConstraint;
+        /**
+         * The timeConstraint parameter value
+         */
+        @Nullable
+        protected TimeConstraint timeConstraint;
         /**
          * Sets the TimeConstraint
          * @param val the value to set it to
@@ -156,7 +172,11 @@ public class UserFindMeetingTimesParameterSet {
             this.timeConstraint = val;
             return this;
         }
-        private javax.xml.datatype.Duration meetingDuration;
+        /**
+         * The meetingDuration parameter value
+         */
+        @Nullable
+        protected javax.xml.datatype.Duration meetingDuration;
         /**
          * Sets the MeetingDuration
          * @param val the value to set it to
@@ -167,7 +187,11 @@ public class UserFindMeetingTimesParameterSet {
             this.meetingDuration = val;
             return this;
         }
-        private Integer maxCandidates;
+        /**
+         * The maxCandidates parameter value
+         */
+        @Nullable
+        protected Integer maxCandidates;
         /**
          * Sets the MaxCandidates
          * @param val the value to set it to
@@ -178,7 +202,11 @@ public class UserFindMeetingTimesParameterSet {
             this.maxCandidates = val;
             return this;
         }
-        private Boolean isOrganizerOptional;
+        /**
+         * The isOrganizerOptional parameter value
+         */
+        @Nullable
+        protected Boolean isOrganizerOptional;
         /**
          * Sets the IsOrganizerOptional
          * @param val the value to set it to
@@ -189,7 +217,11 @@ public class UserFindMeetingTimesParameterSet {
             this.isOrganizerOptional = val;
             return this;
         }
-        private Boolean returnSuggestionReasons;
+        /**
+         * The returnSuggestionReasons parameter value
+         */
+        @Nullable
+        protected Boolean returnSuggestionReasons;
         /**
          * Sets the ReturnSuggestionReasons
          * @param val the value to set it to
@@ -200,7 +232,11 @@ public class UserFindMeetingTimesParameterSet {
             this.returnSuggestionReasons = val;
             return this;
         }
-        private Double minimumAttendeePercentage;
+        /**
+         * The minimumAttendeePercentage parameter value
+         */
+        @Nullable
+        protected Double minimumAttendeePercentage;
         /**
          * Sets the MinimumAttendeePercentage
          * @param val the value to set it to
@@ -211,7 +247,8 @@ public class UserFindMeetingTimesParameterSet {
             this.minimumAttendeePercentage = val;
             return this;
         }
-        private UserFindMeetingTimesParameterSetBuilder(){}
+        @Nullable
+        protected UserFindMeetingTimesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

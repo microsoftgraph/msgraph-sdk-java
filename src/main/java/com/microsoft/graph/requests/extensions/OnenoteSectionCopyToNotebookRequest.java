@@ -38,6 +38,7 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest<OnenoteOper
     }
 
 	/** The body for the method */
+    @Nullable
     protected OnenoteSectionCopyToNotebookParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -38,6 +38,7 @@ public class CallSubscribeToToneRequest extends BaseRequest<SubscribeToToneOpera
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallSubscribeToToneParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

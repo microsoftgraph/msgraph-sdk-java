@@ -26,7 +26,11 @@ public class ContactFolderDeltaParameterSet {
      * Instiaciates a new ContactFolderDeltaParameterSet
      */
     public ContactFolderDeltaParameterSet() {}
-    private ContactFolderDeltaParameterSet(@Nonnull final ContactFolderDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ContactFolderDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ContactFolderDeltaParameterSet(@Nonnull final ContactFolderDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ContactFolderDeltaParameterSet {
      * Fluent builder for the ContactFolderDeltaParameterSet
      */
     public static final class ContactFolderDeltaParameterSetBuilder {
-        private ContactFolderDeltaParameterSetBuilder(){}
+        @Nullable
+        protected ContactFolderDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

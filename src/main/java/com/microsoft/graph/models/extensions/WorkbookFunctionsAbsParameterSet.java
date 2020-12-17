@@ -35,7 +35,11 @@ public class WorkbookFunctionsAbsParameterSet {
      * Instiaciates a new WorkbookFunctionsAbsParameterSet
      */
     public WorkbookFunctionsAbsParameterSet() {}
-    private WorkbookFunctionsAbsParameterSet(@Nonnull final WorkbookFunctionsAbsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAbsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAbsParameterSet(@Nonnull final WorkbookFunctionsAbsParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAbsParameterSet {
      * Fluent builder for the WorkbookFunctionsAbsParameterSet
      */
     public static final class WorkbookFunctionsAbsParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAbsParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsAbsParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAbsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

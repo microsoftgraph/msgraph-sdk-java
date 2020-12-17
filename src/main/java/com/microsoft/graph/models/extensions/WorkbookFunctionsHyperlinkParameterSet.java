@@ -44,7 +44,11 @@ public class WorkbookFunctionsHyperlinkParameterSet {
      * Instiaciates a new WorkbookFunctionsHyperlinkParameterSet
      */
     public WorkbookFunctionsHyperlinkParameterSet() {}
-    private WorkbookFunctionsHyperlinkParameterSet(@Nonnull final WorkbookFunctionsHyperlinkParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsHyperlinkParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsHyperlinkParameterSet(@Nonnull final WorkbookFunctionsHyperlinkParameterSetBuilder builder) {
         this.linkLocation = builder.linkLocation;
         this.friendlyName = builder.friendlyName;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsHyperlinkParameterSet {
      * Fluent builder for the WorkbookFunctionsHyperlinkParameterSet
      */
     public static final class WorkbookFunctionsHyperlinkParameterSetBuilder {
-        private com.google.gson.JsonElement linkLocation;
+        /**
+         * The linkLocation parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement linkLocation;
         /**
          * Sets the LinkLocation
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsHyperlinkParameterSet {
             this.linkLocation = val;
             return this;
         }
-        private com.google.gson.JsonElement friendlyName;
+        /**
+         * The friendlyName parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement friendlyName;
         /**
          * Sets the FriendlyName
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsHyperlinkParameterSet {
             this.friendlyName = val;
             return this;
         }
-        private WorkbookFunctionsHyperlinkParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsHyperlinkParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

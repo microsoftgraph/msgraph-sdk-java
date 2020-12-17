@@ -26,7 +26,11 @@ public class VppTokenSyncLicensesParameterSet {
      * Instiaciates a new VppTokenSyncLicensesParameterSet
      */
     public VppTokenSyncLicensesParameterSet() {}
-    private VppTokenSyncLicensesParameterSet(@Nonnull final VppTokenSyncLicensesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new VppTokenSyncLicensesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected VppTokenSyncLicensesParameterSet(@Nonnull final VppTokenSyncLicensesParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class VppTokenSyncLicensesParameterSet {
      * Fluent builder for the VppTokenSyncLicensesParameterSet
      */
     public static final class VppTokenSyncLicensesParameterSetBuilder {
-        private VppTokenSyncLicensesParameterSetBuilder(){}
+        @Nullable
+        protected VppTokenSyncLicensesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

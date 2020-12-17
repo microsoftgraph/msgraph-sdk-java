@@ -44,7 +44,11 @@ public class WorkbookFunctionsDaysParameterSet {
      * Instiaciates a new WorkbookFunctionsDaysParameterSet
      */
     public WorkbookFunctionsDaysParameterSet() {}
-    private WorkbookFunctionsDaysParameterSet(@Nonnull final WorkbookFunctionsDaysParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDaysParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDaysParameterSet(@Nonnull final WorkbookFunctionsDaysParameterSetBuilder builder) {
         this.endDate = builder.endDate;
         this.startDate = builder.startDate;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsDaysParameterSet {
      * Fluent builder for the WorkbookFunctionsDaysParameterSet
      */
     public static final class WorkbookFunctionsDaysParameterSetBuilder {
-        private com.google.gson.JsonElement endDate;
+        /**
+         * The endDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement endDate;
         /**
          * Sets the EndDate
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsDaysParameterSet {
             this.endDate = val;
             return this;
         }
-        private com.google.gson.JsonElement startDate;
+        /**
+         * The startDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startDate;
         /**
          * Sets the StartDate
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsDaysParameterSet {
             this.startDate = val;
             return this;
         }
-        private WorkbookFunctionsDaysParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDaysParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsCeiling_MathRequest extends BaseRequest<WorkbookFu
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCeiling_MathParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -38,6 +38,7 @@ public class WorkbookFunctionsWeibull_DistRequest extends BaseRequest<WorkbookFu
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsWeibull_DistParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

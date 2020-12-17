@@ -35,7 +35,11 @@ public class WorkbookFunctionsHex2DecParameterSet {
      * Instiaciates a new WorkbookFunctionsHex2DecParameterSet
      */
     public WorkbookFunctionsHex2DecParameterSet() {}
-    private WorkbookFunctionsHex2DecParameterSet(@Nonnull final WorkbookFunctionsHex2DecParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsHex2DecParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsHex2DecParameterSet(@Nonnull final WorkbookFunctionsHex2DecParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsHex2DecParameterSet {
      * Fluent builder for the WorkbookFunctionsHex2DecParameterSet
      */
     public static final class WorkbookFunctionsHex2DecParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsHex2DecParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsHex2DecParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsHex2DecParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

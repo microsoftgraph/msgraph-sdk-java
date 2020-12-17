@@ -36,7 +36,11 @@ public class DriveItemCreateUploadSessionParameterSet {
      * Instiaciates a new DriveItemCreateUploadSessionParameterSet
      */
     public DriveItemCreateUploadSessionParameterSet() {}
-    private DriveItemCreateUploadSessionParameterSet(@Nonnull final DriveItemCreateUploadSessionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemCreateUploadSessionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemCreateUploadSessionParameterSet(@Nonnull final DriveItemCreateUploadSessionParameterSetBuilder builder) {
         this.item = builder.item;
     }
     /**
@@ -51,7 +55,11 @@ public class DriveItemCreateUploadSessionParameterSet {
      * Fluent builder for the DriveItemCreateUploadSessionParameterSet
      */
     public static final class DriveItemCreateUploadSessionParameterSetBuilder {
-        private DriveItemUploadableProperties item;
+        /**
+         * The item parameter value
+         */
+        @Nullable
+        protected DriveItemUploadableProperties item;
         /**
          * Sets the Item
          * @param val the value to set it to
@@ -62,7 +70,8 @@ public class DriveItemCreateUploadSessionParameterSet {
             this.item = val;
             return this;
         }
-        private DriveItemCreateUploadSessionParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemCreateUploadSessionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

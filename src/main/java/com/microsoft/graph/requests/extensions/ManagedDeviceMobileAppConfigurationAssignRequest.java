@@ -37,6 +37,7 @@ public class ManagedDeviceMobileAppConfigurationAssignRequest extends BaseReques
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedDeviceMobileAppConfigurationAssignParameterSet body;
     /**
      * Creates the ManagedDeviceMobileAppConfigurationAssign

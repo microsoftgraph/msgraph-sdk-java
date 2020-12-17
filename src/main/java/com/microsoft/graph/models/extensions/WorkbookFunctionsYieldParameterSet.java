@@ -89,7 +89,11 @@ public class WorkbookFunctionsYieldParameterSet {
      * Instiaciates a new WorkbookFunctionsYieldParameterSet
      */
     public WorkbookFunctionsYieldParameterSet() {}
-    private WorkbookFunctionsYieldParameterSet(@Nonnull final WorkbookFunctionsYieldParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsYieldParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsYieldParameterSet(@Nonnull final WorkbookFunctionsYieldParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.rate = builder.rate;
@@ -110,7 +114,11 @@ public class WorkbookFunctionsYieldParameterSet {
      * Fluent builder for the WorkbookFunctionsYieldParameterSet
      */
     public static final class WorkbookFunctionsYieldParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -121,7 +129,11 @@ public class WorkbookFunctionsYieldParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -132,7 +144,11 @@ public class WorkbookFunctionsYieldParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -143,7 +159,11 @@ public class WorkbookFunctionsYieldParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement pr;
+        /**
+         * The pr parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement pr;
         /**
          * Sets the Pr
          * @param val the value to set it to
@@ -154,7 +174,11 @@ public class WorkbookFunctionsYieldParameterSet {
             this.pr = val;
             return this;
         }
-        private com.google.gson.JsonElement redemption;
+        /**
+         * The redemption parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement redemption;
         /**
          * Sets the Redemption
          * @param val the value to set it to
@@ -165,7 +189,11 @@ public class WorkbookFunctionsYieldParameterSet {
             this.redemption = val;
             return this;
         }
-        private com.google.gson.JsonElement frequency;
+        /**
+         * The frequency parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement frequency;
         /**
          * Sets the Frequency
          * @param val the value to set it to
@@ -176,7 +204,11 @@ public class WorkbookFunctionsYieldParameterSet {
             this.frequency = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -187,7 +219,8 @@ public class WorkbookFunctionsYieldParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsYieldParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsYieldParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

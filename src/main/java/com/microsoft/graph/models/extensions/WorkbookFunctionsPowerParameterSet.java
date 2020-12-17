@@ -44,7 +44,11 @@ public class WorkbookFunctionsPowerParameterSet {
      * Instiaciates a new WorkbookFunctionsPowerParameterSet
      */
     public WorkbookFunctionsPowerParameterSet() {}
-    private WorkbookFunctionsPowerParameterSet(@Nonnull final WorkbookFunctionsPowerParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPowerParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPowerParameterSet(@Nonnull final WorkbookFunctionsPowerParameterSetBuilder builder) {
         this.number = builder.number;
         this.power = builder.power;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsPowerParameterSet {
      * Fluent builder for the WorkbookFunctionsPowerParameterSet
      */
     public static final class WorkbookFunctionsPowerParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsPowerParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement power;
+        /**
+         * The power parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement power;
         /**
          * Sets the Power
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsPowerParameterSet {
             this.power = val;
             return this;
         }
-        private WorkbookFunctionsPowerParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPowerParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

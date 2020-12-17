@@ -38,6 +38,7 @@ public class WorkbookFunctionsYieldMatRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsYieldMatParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

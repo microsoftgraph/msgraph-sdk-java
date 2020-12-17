@@ -54,7 +54,11 @@ public class ApplicationAddKeyParameterSet {
      * Instiaciates a new ApplicationAddKeyParameterSet
      */
     public ApplicationAddKeyParameterSet() {}
-    private ApplicationAddKeyParameterSet(@Nonnull final ApplicationAddKeyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ApplicationAddKeyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ApplicationAddKeyParameterSet(@Nonnull final ApplicationAddKeyParameterSetBuilder builder) {
         this.keyCredential = builder.keyCredential;
         this.passwordCredential = builder.passwordCredential;
         this.proof = builder.proof;
@@ -71,7 +75,11 @@ public class ApplicationAddKeyParameterSet {
      * Fluent builder for the ApplicationAddKeyParameterSet
      */
     public static final class ApplicationAddKeyParameterSetBuilder {
-        private KeyCredential keyCredential;
+        /**
+         * The keyCredential parameter value
+         */
+        @Nullable
+        protected KeyCredential keyCredential;
         /**
          * Sets the KeyCredential
          * @param val the value to set it to
@@ -82,7 +90,11 @@ public class ApplicationAddKeyParameterSet {
             this.keyCredential = val;
             return this;
         }
-        private PasswordCredential passwordCredential;
+        /**
+         * The passwordCredential parameter value
+         */
+        @Nullable
+        protected PasswordCredential passwordCredential;
         /**
          * Sets the PasswordCredential
          * @param val the value to set it to
@@ -93,7 +105,11 @@ public class ApplicationAddKeyParameterSet {
             this.passwordCredential = val;
             return this;
         }
-        private String proof;
+        /**
+         * The proof parameter value
+         */
+        @Nullable
+        protected String proof;
         /**
          * Sets the Proof
          * @param val the value to set it to
@@ -104,7 +120,8 @@ public class ApplicationAddKeyParameterSet {
             this.proof = val;
             return this;
         }
-        private ApplicationAddKeyParameterSetBuilder(){}
+        @Nullable
+        protected ApplicationAddKeyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

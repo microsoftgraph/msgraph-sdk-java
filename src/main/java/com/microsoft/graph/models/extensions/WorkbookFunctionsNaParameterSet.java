@@ -26,7 +26,11 @@ public class WorkbookFunctionsNaParameterSet {
      * Instiaciates a new WorkbookFunctionsNaParameterSet
      */
     public WorkbookFunctionsNaParameterSet() {}
-    private WorkbookFunctionsNaParameterSet(@Nonnull final WorkbookFunctionsNaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNaParameterSet(@Nonnull final WorkbookFunctionsNaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookFunctionsNaParameterSet {
      * Fluent builder for the WorkbookFunctionsNaParameterSet
      */
     public static final class WorkbookFunctionsNaParameterSetBuilder {
-        private WorkbookFunctionsNaParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

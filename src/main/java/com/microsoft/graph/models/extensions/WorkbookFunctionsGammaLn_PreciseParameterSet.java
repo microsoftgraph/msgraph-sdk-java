@@ -35,7 +35,11 @@ public class WorkbookFunctionsGammaLn_PreciseParameterSet {
      * Instiaciates a new WorkbookFunctionsGammaLn_PreciseParameterSet
      */
     public WorkbookFunctionsGammaLn_PreciseParameterSet() {}
-    private WorkbookFunctionsGammaLn_PreciseParameterSet(@Nonnull final WorkbookFunctionsGammaLn_PreciseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsGammaLn_PreciseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsGammaLn_PreciseParameterSet(@Nonnull final WorkbookFunctionsGammaLn_PreciseParameterSetBuilder builder) {
         this.x = builder.x;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsGammaLn_PreciseParameterSet {
      * Fluent builder for the WorkbookFunctionsGammaLn_PreciseParameterSet
      */
     public static final class WorkbookFunctionsGammaLn_PreciseParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsGammaLn_PreciseParameterSet {
             this.x = val;
             return this;
         }
-        private WorkbookFunctionsGammaLn_PreciseParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsGammaLn_PreciseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsMultiNomialParameterSet {
      * Instiaciates a new WorkbookFunctionsMultiNomialParameterSet
      */
     public WorkbookFunctionsMultiNomialParameterSet() {}
-    private WorkbookFunctionsMultiNomialParameterSet(@Nonnull final WorkbookFunctionsMultiNomialParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMultiNomialParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMultiNomialParameterSet(@Nonnull final WorkbookFunctionsMultiNomialParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsMultiNomialParameterSet {
      * Fluent builder for the WorkbookFunctionsMultiNomialParameterSet
      */
     public static final class WorkbookFunctionsMultiNomialParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsMultiNomialParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsMultiNomialParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMultiNomialParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

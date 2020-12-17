@@ -26,7 +26,11 @@ public class ManagedDeviceResetPasscodeParameterSet {
      * Instiaciates a new ManagedDeviceResetPasscodeParameterSet
      */
     public ManagedDeviceResetPasscodeParameterSet() {}
-    private ManagedDeviceResetPasscodeParameterSet(@Nonnull final ManagedDeviceResetPasscodeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceResetPasscodeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceResetPasscodeParameterSet(@Nonnull final ManagedDeviceResetPasscodeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceResetPasscodeParameterSet {
      * Fluent builder for the ManagedDeviceResetPasscodeParameterSet
      */
     public static final class ManagedDeviceResetPasscodeParameterSetBuilder {
-        private ManagedDeviceResetPasscodeParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceResetPasscodeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

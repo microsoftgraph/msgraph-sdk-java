@@ -89,7 +89,11 @@ public class WorkbookFunctionsAmorLincParameterSet {
      * Instiaciates a new WorkbookFunctionsAmorLincParameterSet
      */
     public WorkbookFunctionsAmorLincParameterSet() {}
-    private WorkbookFunctionsAmorLincParameterSet(@Nonnull final WorkbookFunctionsAmorLincParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAmorLincParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAmorLincParameterSet(@Nonnull final WorkbookFunctionsAmorLincParameterSetBuilder builder) {
         this.cost = builder.cost;
         this.datePurchased = builder.datePurchased;
         this.firstPeriod = builder.firstPeriod;
@@ -110,7 +114,11 @@ public class WorkbookFunctionsAmorLincParameterSet {
      * Fluent builder for the WorkbookFunctionsAmorLincParameterSet
      */
     public static final class WorkbookFunctionsAmorLincParameterSetBuilder {
-        private com.google.gson.JsonElement cost;
+        /**
+         * The cost parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cost;
         /**
          * Sets the Cost
          * @param val the value to set it to
@@ -121,7 +129,11 @@ public class WorkbookFunctionsAmorLincParameterSet {
             this.cost = val;
             return this;
         }
-        private com.google.gson.JsonElement datePurchased;
+        /**
+         * The datePurchased parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement datePurchased;
         /**
          * Sets the DatePurchased
          * @param val the value to set it to
@@ -132,7 +144,11 @@ public class WorkbookFunctionsAmorLincParameterSet {
             this.datePurchased = val;
             return this;
         }
-        private com.google.gson.JsonElement firstPeriod;
+        /**
+         * The firstPeriod parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement firstPeriod;
         /**
          * Sets the FirstPeriod
          * @param val the value to set it to
@@ -143,7 +159,11 @@ public class WorkbookFunctionsAmorLincParameterSet {
             this.firstPeriod = val;
             return this;
         }
-        private com.google.gson.JsonElement salvage;
+        /**
+         * The salvage parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement salvage;
         /**
          * Sets the Salvage
          * @param val the value to set it to
@@ -154,7 +174,11 @@ public class WorkbookFunctionsAmorLincParameterSet {
             this.salvage = val;
             return this;
         }
-        private com.google.gson.JsonElement period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -165,7 +189,11 @@ public class WorkbookFunctionsAmorLincParameterSet {
             this.period = val;
             return this;
         }
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -176,7 +204,11 @@ public class WorkbookFunctionsAmorLincParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -187,7 +219,8 @@ public class WorkbookFunctionsAmorLincParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsAmorLincParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAmorLincParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

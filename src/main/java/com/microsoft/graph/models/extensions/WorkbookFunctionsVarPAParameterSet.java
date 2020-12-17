@@ -35,7 +35,11 @@ public class WorkbookFunctionsVarPAParameterSet {
      * Instiaciates a new WorkbookFunctionsVarPAParameterSet
      */
     public WorkbookFunctionsVarPAParameterSet() {}
-    private WorkbookFunctionsVarPAParameterSet(@Nonnull final WorkbookFunctionsVarPAParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsVarPAParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsVarPAParameterSet(@Nonnull final WorkbookFunctionsVarPAParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsVarPAParameterSet {
      * Fluent builder for the WorkbookFunctionsVarPAParameterSet
      */
     public static final class WorkbookFunctionsVarPAParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsVarPAParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsVarPAParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsVarPAParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

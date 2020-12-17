@@ -38,6 +38,7 @@ public class WorkbookFunctionsRightbRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsRightbParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

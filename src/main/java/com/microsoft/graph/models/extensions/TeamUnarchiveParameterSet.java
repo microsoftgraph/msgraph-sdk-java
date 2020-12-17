@@ -26,7 +26,11 @@ public class TeamUnarchiveParameterSet {
      * Instiaciates a new TeamUnarchiveParameterSet
      */
     public TeamUnarchiveParameterSet() {}
-    private TeamUnarchiveParameterSet(@Nonnull final TeamUnarchiveParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new TeamUnarchiveParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected TeamUnarchiveParameterSet(@Nonnull final TeamUnarchiveParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class TeamUnarchiveParameterSet {
      * Fluent builder for the TeamUnarchiveParameterSet
      */
     public static final class TeamUnarchiveParameterSetBuilder {
-        private TeamUnarchiveParameterSetBuilder(){}
+        @Nullable
+        protected TeamUnarchiveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

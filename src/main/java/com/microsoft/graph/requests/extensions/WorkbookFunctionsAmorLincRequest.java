@@ -38,6 +38,7 @@ public class WorkbookFunctionsAmorLincRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsAmorLincParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

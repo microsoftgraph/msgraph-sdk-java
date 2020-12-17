@@ -35,7 +35,11 @@ public class SiteAddParameterSet {
      * Instiaciates a new SiteAddParameterSet
      */
     public SiteAddParameterSet() {}
-    private SiteAddParameterSet(@Nonnull final SiteAddParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new SiteAddParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected SiteAddParameterSet(@Nonnull final SiteAddParameterSetBuilder builder) {
         this.value = builder.value;
     }
     /**
@@ -50,7 +54,11 @@ public class SiteAddParameterSet {
      * Fluent builder for the SiteAddParameterSet
      */
     public static final class SiteAddParameterSetBuilder {
-        private java.util.List<Site> value;
+        /**
+         * The value parameter value
+         */
+        @Nullable
+        protected java.util.List<Site> value;
         /**
          * Sets the Value
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class SiteAddParameterSet {
             this.value = val;
             return this;
         }
-        private SiteAddParameterSetBuilder(){}
+        @Nullable
+        protected SiteAddParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

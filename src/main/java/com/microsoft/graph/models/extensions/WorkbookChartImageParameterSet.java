@@ -26,7 +26,11 @@ public class WorkbookChartImageParameterSet {
      * Instiaciates a new WorkbookChartImageParameterSet
      */
     public WorkbookChartImageParameterSet() {}
-    private WorkbookChartImageParameterSet(@Nonnull final WorkbookChartImageParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartImageParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartImageParameterSet(@Nonnull final WorkbookChartImageParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookChartImageParameterSet {
      * Fluent builder for the WorkbookChartImageParameterSet
      */
     public static final class WorkbookChartImageParameterSetBuilder {
-        private WorkbookChartImageParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartImageParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

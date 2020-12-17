@@ -35,7 +35,11 @@ public class WorkbookFunctionsIsErrParameterSet {
      * Instiaciates a new WorkbookFunctionsIsErrParameterSet
      */
     public WorkbookFunctionsIsErrParameterSet() {}
-    private WorkbookFunctionsIsErrParameterSet(@Nonnull final WorkbookFunctionsIsErrParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIsErrParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIsErrParameterSet(@Nonnull final WorkbookFunctionsIsErrParameterSetBuilder builder) {
         this.value = builder.value;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsIsErrParameterSet {
      * Fluent builder for the WorkbookFunctionsIsErrParameterSet
      */
     public static final class WorkbookFunctionsIsErrParameterSetBuilder {
-        private com.google.gson.JsonElement value;
+        /**
+         * The value parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement value;
         /**
          * Sets the Value
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsIsErrParameterSet {
             this.value = val;
             return this;
         }
-        private WorkbookFunctionsIsErrParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIsErrParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

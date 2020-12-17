@@ -38,6 +38,7 @@ public class WorkbookFunctionsDollarDeRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsDollarDeParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -35,7 +35,11 @@ public class WorkbookFilterApplyDynamicFilterParameterSet {
      * Instiaciates a new WorkbookFilterApplyDynamicFilterParameterSet
      */
     public WorkbookFilterApplyDynamicFilterParameterSet() {}
-    private WorkbookFilterApplyDynamicFilterParameterSet(@Nonnull final WorkbookFilterApplyDynamicFilterParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFilterApplyDynamicFilterParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFilterApplyDynamicFilterParameterSet(@Nonnull final WorkbookFilterApplyDynamicFilterParameterSetBuilder builder) {
         this.criteria = builder.criteria;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFilterApplyDynamicFilterParameterSet {
      * Fluent builder for the WorkbookFilterApplyDynamicFilterParameterSet
      */
     public static final class WorkbookFilterApplyDynamicFilterParameterSetBuilder {
-        private String criteria;
+        /**
+         * The criteria parameter value
+         */
+        @Nullable
+        protected String criteria;
         /**
          * Sets the Criteria
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFilterApplyDynamicFilterParameterSet {
             this.criteria = val;
             return this;
         }
-        private WorkbookFilterApplyDynamicFilterParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFilterApplyDynamicFilterParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class MessageCreateReplyAllParameterSet {
      * Instiaciates a new MessageCreateReplyAllParameterSet
      */
     public MessageCreateReplyAllParameterSet() {}
-    private MessageCreateReplyAllParameterSet(@Nonnull final MessageCreateReplyAllParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MessageCreateReplyAllParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MessageCreateReplyAllParameterSet(@Nonnull final MessageCreateReplyAllParameterSetBuilder builder) {
         this.message = builder.message;
         this.comment = builder.comment;
     }
@@ -60,7 +64,11 @@ public class MessageCreateReplyAllParameterSet {
      * Fluent builder for the MessageCreateReplyAllParameterSet
      */
     public static final class MessageCreateReplyAllParameterSetBuilder {
-        private Message message;
+        /**
+         * The message parameter value
+         */
+        @Nullable
+        protected Message message;
         /**
          * Sets the Message
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class MessageCreateReplyAllParameterSet {
             this.message = val;
             return this;
         }
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class MessageCreateReplyAllParameterSet {
             this.comment = val;
             return this;
         }
-        private MessageCreateReplyAllParameterSetBuilder(){}
+        @Nullable
+        protected MessageCreateReplyAllParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

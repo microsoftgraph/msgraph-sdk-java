@@ -44,7 +44,11 @@ public class UserSendMailParameterSet {
      * Instiaciates a new UserSendMailParameterSet
      */
     public UserSendMailParameterSet() {}
-    private UserSendMailParameterSet(@Nonnull final UserSendMailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserSendMailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserSendMailParameterSet(@Nonnull final UserSendMailParameterSetBuilder builder) {
         this.message = builder.message;
         this.saveToSentItems = builder.saveToSentItems;
     }
@@ -60,7 +64,11 @@ public class UserSendMailParameterSet {
      * Fluent builder for the UserSendMailParameterSet
      */
     public static final class UserSendMailParameterSetBuilder {
-        private Message message;
+        /**
+         * The message parameter value
+         */
+        @Nullable
+        protected Message message;
         /**
          * Sets the Message
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class UserSendMailParameterSet {
             this.message = val;
             return this;
         }
-        private Boolean saveToSentItems;
+        /**
+         * The saveToSentItems parameter value
+         */
+        @Nullable
+        protected Boolean saveToSentItems;
         /**
          * Sets the SaveToSentItems
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class UserSendMailParameterSet {
             this.saveToSentItems = val;
             return this;
         }
-        private UserSendMailParameterSetBuilder(){}
+        @Nullable
+        protected UserSendMailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

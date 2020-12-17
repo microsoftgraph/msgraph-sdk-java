@@ -53,7 +53,11 @@ public class WorkbookFunctionsBinom_InvParameterSet {
      * Instiaciates a new WorkbookFunctionsBinom_InvParameterSet
      */
     public WorkbookFunctionsBinom_InvParameterSet() {}
-    private WorkbookFunctionsBinom_InvParameterSet(@Nonnull final WorkbookFunctionsBinom_InvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBinom_InvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBinom_InvParameterSet(@Nonnull final WorkbookFunctionsBinom_InvParameterSetBuilder builder) {
         this.trials = builder.trials;
         this.probabilityS = builder.probabilityS;
         this.alpha = builder.alpha;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsBinom_InvParameterSet {
      * Fluent builder for the WorkbookFunctionsBinom_InvParameterSet
      */
     public static final class WorkbookFunctionsBinom_InvParameterSetBuilder {
-        private com.google.gson.JsonElement trials;
+        /**
+         * The trials parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement trials;
         /**
          * Sets the Trials
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsBinom_InvParameterSet {
             this.trials = val;
             return this;
         }
-        private com.google.gson.JsonElement probabilityS;
+        /**
+         * The probabilityS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probabilityS;
         /**
          * Sets the ProbabilityS
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsBinom_InvParameterSet {
             this.probabilityS = val;
             return this;
         }
-        private com.google.gson.JsonElement alpha;
+        /**
+         * The alpha parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement alpha;
         /**
          * Sets the Alpha
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsBinom_InvParameterSet {
             this.alpha = val;
             return this;
         }
-        private WorkbookFunctionsBinom_InvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBinom_InvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

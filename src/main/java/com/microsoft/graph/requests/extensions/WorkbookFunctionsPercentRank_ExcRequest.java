@@ -38,6 +38,7 @@ public class WorkbookFunctionsPercentRank_ExcRequest extends BaseRequest<Workboo
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsPercentRank_ExcParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -38,6 +38,7 @@ public class WorkbookFunctionsMultiNomialRequest extends BaseRequest<WorkbookFun
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsMultiNomialParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

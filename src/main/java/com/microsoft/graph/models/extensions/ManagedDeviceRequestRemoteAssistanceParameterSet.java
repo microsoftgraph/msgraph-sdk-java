@@ -26,7 +26,11 @@ public class ManagedDeviceRequestRemoteAssistanceParameterSet {
      * Instiaciates a new ManagedDeviceRequestRemoteAssistanceParameterSet
      */
     public ManagedDeviceRequestRemoteAssistanceParameterSet() {}
-    private ManagedDeviceRequestRemoteAssistanceParameterSet(@Nonnull final ManagedDeviceRequestRemoteAssistanceParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceRequestRemoteAssistanceParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceRequestRemoteAssistanceParameterSet(@Nonnull final ManagedDeviceRequestRemoteAssistanceParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceRequestRemoteAssistanceParameterSet {
      * Fluent builder for the ManagedDeviceRequestRemoteAssistanceParameterSet
      */
     public static final class ManagedDeviceRequestRemoteAssistanceParameterSetBuilder {
-        private ManagedDeviceRequestRemoteAssistanceParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceRequestRemoteAssistanceParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

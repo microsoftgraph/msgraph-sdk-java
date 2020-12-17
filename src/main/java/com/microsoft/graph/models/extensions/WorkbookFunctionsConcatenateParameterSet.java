@@ -35,7 +35,11 @@ public class WorkbookFunctionsConcatenateParameterSet {
      * Instiaciates a new WorkbookFunctionsConcatenateParameterSet
      */
     public WorkbookFunctionsConcatenateParameterSet() {}
-    private WorkbookFunctionsConcatenateParameterSet(@Nonnull final WorkbookFunctionsConcatenateParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsConcatenateParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsConcatenateParameterSet(@Nonnull final WorkbookFunctionsConcatenateParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsConcatenateParameterSet {
      * Fluent builder for the WorkbookFunctionsConcatenateParameterSet
      */
     public static final class WorkbookFunctionsConcatenateParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsConcatenateParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsConcatenateParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsConcatenateParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookFunctionsCountIfParameterSet {
      * Instiaciates a new WorkbookFunctionsCountIfParameterSet
      */
     public WorkbookFunctionsCountIfParameterSet() {}
-    private WorkbookFunctionsCountIfParameterSet(@Nonnull final WorkbookFunctionsCountIfParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCountIfParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCountIfParameterSet(@Nonnull final WorkbookFunctionsCountIfParameterSetBuilder builder) {
         this.range = builder.range;
         this.criteria = builder.criteria;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsCountIfParameterSet {
      * Fluent builder for the WorkbookFunctionsCountIfParameterSet
      */
     public static final class WorkbookFunctionsCountIfParameterSetBuilder {
-        private com.google.gson.JsonElement range;
+        /**
+         * The range parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement range;
         /**
          * Sets the Range
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsCountIfParameterSet {
             this.range = val;
             return this;
         }
-        private com.google.gson.JsonElement criteria;
+        /**
+         * The criteria parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement criteria;
         /**
          * Sets the Criteria
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsCountIfParameterSet {
             this.criteria = val;
             return this;
         }
-        private WorkbookFunctionsCountIfParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCountIfParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

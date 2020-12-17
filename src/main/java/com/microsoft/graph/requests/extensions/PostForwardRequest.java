@@ -37,6 +37,7 @@ public class PostForwardRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected PostForwardParameterSet body;
     /**
      * Creates the PostForward

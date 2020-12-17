@@ -35,7 +35,11 @@ public class WorkbookFunctionsDevSqParameterSet {
      * Instiaciates a new WorkbookFunctionsDevSqParameterSet
      */
     public WorkbookFunctionsDevSqParameterSet() {}
-    private WorkbookFunctionsDevSqParameterSet(@Nonnull final WorkbookFunctionsDevSqParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDevSqParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDevSqParameterSet(@Nonnull final WorkbookFunctionsDevSqParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsDevSqParameterSet {
      * Fluent builder for the WorkbookFunctionsDevSqParameterSet
      */
     public static final class WorkbookFunctionsDevSqParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsDevSqParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsDevSqParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDevSqParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

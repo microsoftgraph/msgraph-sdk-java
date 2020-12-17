@@ -38,6 +38,7 @@ public class WorkbookFunctionsCscRequest extends BaseRequest<WorkbookFunctionRes
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCscParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

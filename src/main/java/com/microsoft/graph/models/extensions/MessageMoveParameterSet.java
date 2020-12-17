@@ -35,7 +35,11 @@ public class MessageMoveParameterSet {
      * Instiaciates a new MessageMoveParameterSet
      */
     public MessageMoveParameterSet() {}
-    private MessageMoveParameterSet(@Nonnull final MessageMoveParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MessageMoveParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MessageMoveParameterSet(@Nonnull final MessageMoveParameterSetBuilder builder) {
         this.destinationId = builder.destinationId;
     }
     /**
@@ -50,7 +54,11 @@ public class MessageMoveParameterSet {
      * Fluent builder for the MessageMoveParameterSet
      */
     public static final class MessageMoveParameterSetBuilder {
-        private String destinationId;
+        /**
+         * The destinationId parameter value
+         */
+        @Nullable
+        protected String destinationId;
         /**
          * Sets the DestinationId
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class MessageMoveParameterSet {
             this.destinationId = val;
             return this;
         }
-        private MessageMoveParameterSetBuilder(){}
+        @Nullable
+        protected MessageMoveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

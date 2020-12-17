@@ -36,7 +36,11 @@ public class SearchEntityQueryParameterSet {
      * Instiaciates a new SearchEntityQueryParameterSet
      */
     public SearchEntityQueryParameterSet() {}
-    private SearchEntityQueryParameterSet(@Nonnull final SearchEntityQueryParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new SearchEntityQueryParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected SearchEntityQueryParameterSet(@Nonnull final SearchEntityQueryParameterSetBuilder builder) {
         this.requests = builder.requests;
     }
     /**
@@ -51,7 +55,11 @@ public class SearchEntityQueryParameterSet {
      * Fluent builder for the SearchEntityQueryParameterSet
      */
     public static final class SearchEntityQueryParameterSetBuilder {
-        private java.util.List<SearchRequest> requests;
+        /**
+         * The requests parameter value
+         */
+        @Nullable
+        protected java.util.List<SearchRequest> requests;
         /**
          * Sets the Requests
          * @param val the value to set it to
@@ -62,7 +70,8 @@ public class SearchEntityQueryParameterSet {
             this.requests = val;
             return this;
         }
-        private SearchEntityQueryParameterSetBuilder(){}
+        @Nullable
+        protected SearchEntityQueryParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsBaseRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsBaseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

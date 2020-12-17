@@ -35,7 +35,11 @@ public class ReportRootGetYammerActivityUserDetailParameterSet {
      * Instiaciates a new ReportRootGetYammerActivityUserDetailParameterSet
      */
     public ReportRootGetYammerActivityUserDetailParameterSet() {}
-    private ReportRootGetYammerActivityUserDetailParameterSet(@Nonnull final ReportRootGetYammerActivityUserDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetYammerActivityUserDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetYammerActivityUserDetailParameterSet(@Nonnull final ReportRootGetYammerActivityUserDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetYammerActivityUserDetailParameterSet {
      * Fluent builder for the ReportRootGetYammerActivityUserDetailParameterSet
      */
     public static final class ReportRootGetYammerActivityUserDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetYammerActivityUserDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetYammerActivityUserDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetYammerActivityUserDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

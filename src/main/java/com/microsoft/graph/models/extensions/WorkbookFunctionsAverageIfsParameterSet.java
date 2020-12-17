@@ -44,7 +44,11 @@ public class WorkbookFunctionsAverageIfsParameterSet {
      * Instiaciates a new WorkbookFunctionsAverageIfsParameterSet
      */
     public WorkbookFunctionsAverageIfsParameterSet() {}
-    private WorkbookFunctionsAverageIfsParameterSet(@Nonnull final WorkbookFunctionsAverageIfsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAverageIfsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAverageIfsParameterSet(@Nonnull final WorkbookFunctionsAverageIfsParameterSetBuilder builder) {
         this.averageRange = builder.averageRange;
         this.values = builder.values;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsAverageIfsParameterSet {
      * Fluent builder for the WorkbookFunctionsAverageIfsParameterSet
      */
     public static final class WorkbookFunctionsAverageIfsParameterSetBuilder {
-        private com.google.gson.JsonElement averageRange;
+        /**
+         * The averageRange parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement averageRange;
         /**
          * Sets the AverageRange
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsAverageIfsParameterSet {
             this.averageRange = val;
             return this;
         }
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsAverageIfsParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsAverageIfsParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAverageIfsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

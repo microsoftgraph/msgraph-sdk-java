@@ -53,7 +53,11 @@ public class WorkbookFunctionsConvertParameterSet {
      * Instiaciates a new WorkbookFunctionsConvertParameterSet
      */
     public WorkbookFunctionsConvertParameterSet() {}
-    private WorkbookFunctionsConvertParameterSet(@Nonnull final WorkbookFunctionsConvertParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsConvertParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsConvertParameterSet(@Nonnull final WorkbookFunctionsConvertParameterSetBuilder builder) {
         this.number = builder.number;
         this.fromUnit = builder.fromUnit;
         this.toUnit = builder.toUnit;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsConvertParameterSet {
      * Fluent builder for the WorkbookFunctionsConvertParameterSet
      */
     public static final class WorkbookFunctionsConvertParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsConvertParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement fromUnit;
+        /**
+         * The fromUnit parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement fromUnit;
         /**
          * Sets the FromUnit
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsConvertParameterSet {
             this.fromUnit = val;
             return this;
         }
-        private com.google.gson.JsonElement toUnit;
+        /**
+         * The toUnit parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement toUnit;
         /**
          * Sets the ToUnit
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsConvertParameterSet {
             this.toUnit = val;
             return this;
         }
-        private WorkbookFunctionsConvertParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsConvertParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

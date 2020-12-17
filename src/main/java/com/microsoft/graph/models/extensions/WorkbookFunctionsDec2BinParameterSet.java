@@ -44,7 +44,11 @@ public class WorkbookFunctionsDec2BinParameterSet {
      * Instiaciates a new WorkbookFunctionsDec2BinParameterSet
      */
     public WorkbookFunctionsDec2BinParameterSet() {}
-    private WorkbookFunctionsDec2BinParameterSet(@Nonnull final WorkbookFunctionsDec2BinParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDec2BinParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDec2BinParameterSet(@Nonnull final WorkbookFunctionsDec2BinParameterSetBuilder builder) {
         this.number = builder.number;
         this.places = builder.places;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsDec2BinParameterSet {
      * Fluent builder for the WorkbookFunctionsDec2BinParameterSet
      */
     public static final class WorkbookFunctionsDec2BinParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsDec2BinParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement places;
+        /**
+         * The places parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement places;
         /**
          * Sets the Places
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsDec2BinParameterSet {
             this.places = val;
             return this;
         }
-        private WorkbookFunctionsDec2BinParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDec2BinParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

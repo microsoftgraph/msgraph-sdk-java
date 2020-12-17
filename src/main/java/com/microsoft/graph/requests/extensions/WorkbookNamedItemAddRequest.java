@@ -37,6 +37,7 @@ public class WorkbookNamedItemAddRequest extends BaseRequest<WorkbookNamedItem> 
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookNamedItemAddParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

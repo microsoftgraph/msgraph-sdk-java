@@ -53,7 +53,11 @@ public class WorkbookFunctionsDays360ParameterSet {
      * Instiaciates a new WorkbookFunctionsDays360ParameterSet
      */
     public WorkbookFunctionsDays360ParameterSet() {}
-    private WorkbookFunctionsDays360ParameterSet(@Nonnull final WorkbookFunctionsDays360ParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDays360ParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDays360ParameterSet(@Nonnull final WorkbookFunctionsDays360ParameterSetBuilder builder) {
         this.startDate = builder.startDate;
         this.endDate = builder.endDate;
         this.method = builder.method;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsDays360ParameterSet {
      * Fluent builder for the WorkbookFunctionsDays360ParameterSet
      */
     public static final class WorkbookFunctionsDays360ParameterSetBuilder {
-        private com.google.gson.JsonElement startDate;
+        /**
+         * The startDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startDate;
         /**
          * Sets the StartDate
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsDays360ParameterSet {
             this.startDate = val;
             return this;
         }
-        private com.google.gson.JsonElement endDate;
+        /**
+         * The endDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement endDate;
         /**
          * Sets the EndDate
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsDays360ParameterSet {
             this.endDate = val;
             return this;
         }
-        private com.google.gson.JsonElement method;
+        /**
+         * The method parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement method;
         /**
          * Sets the Method
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsDays360ParameterSet {
             this.method = val;
             return this;
         }
-        private WorkbookFunctionsDays360ParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDays360ParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -26,7 +26,11 @@ public class ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet {
      * Instiaciates a new ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet
      */
     public ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet() {}
-    private ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet(@Nonnull final ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet(@Nonnull final ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet {
      * Fluent builder for the ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet
      */
     public static final class ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSetBuilder {
-        private ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

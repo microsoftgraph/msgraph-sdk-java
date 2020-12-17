@@ -26,7 +26,11 @@ public class OAuth2PermissionGrantDeltaParameterSet {
      * Instiaciates a new OAuth2PermissionGrantDeltaParameterSet
      */
     public OAuth2PermissionGrantDeltaParameterSet() {}
-    private OAuth2PermissionGrantDeltaParameterSet(@Nonnull final OAuth2PermissionGrantDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OAuth2PermissionGrantDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OAuth2PermissionGrantDeltaParameterSet(@Nonnull final OAuth2PermissionGrantDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class OAuth2PermissionGrantDeltaParameterSet {
      * Fluent builder for the OAuth2PermissionGrantDeltaParameterSet
      */
     public static final class OAuth2PermissionGrantDeltaParameterSetBuilder {
-        private OAuth2PermissionGrantDeltaParameterSetBuilder(){}
+        @Nullable
+        protected OAuth2PermissionGrantDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -26,7 +26,11 @@ public class ManagedDeviceShutDownParameterSet {
      * Instiaciates a new ManagedDeviceShutDownParameterSet
      */
     public ManagedDeviceShutDownParameterSet() {}
-    private ManagedDeviceShutDownParameterSet(@Nonnull final ManagedDeviceShutDownParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceShutDownParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceShutDownParameterSet(@Nonnull final ManagedDeviceShutDownParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceShutDownParameterSet {
      * Fluent builder for the ManagedDeviceShutDownParameterSet
      */
     public static final class ManagedDeviceShutDownParameterSetBuilder {
-        private ManagedDeviceShutDownParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceShutDownParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

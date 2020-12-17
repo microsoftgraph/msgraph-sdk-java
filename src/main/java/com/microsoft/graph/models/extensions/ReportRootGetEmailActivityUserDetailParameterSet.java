@@ -35,7 +35,11 @@ public class ReportRootGetEmailActivityUserDetailParameterSet {
      * Instiaciates a new ReportRootGetEmailActivityUserDetailParameterSet
      */
     public ReportRootGetEmailActivityUserDetailParameterSet() {}
-    private ReportRootGetEmailActivityUserDetailParameterSet(@Nonnull final ReportRootGetEmailActivityUserDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetEmailActivityUserDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetEmailActivityUserDetailParameterSet(@Nonnull final ReportRootGetEmailActivityUserDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetEmailActivityUserDetailParameterSet {
      * Fluent builder for the ReportRootGetEmailActivityUserDetailParameterSet
      */
     public static final class ReportRootGetEmailActivityUserDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetEmailActivityUserDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetEmailActivityUserDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetEmailActivityUserDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class PostForwardParameterSet {
      * Instiaciates a new PostForwardParameterSet
      */
     public PostForwardParameterSet() {}
-    private PostForwardParameterSet(@Nonnull final PostForwardParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new PostForwardParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected PostForwardParameterSet(@Nonnull final PostForwardParameterSetBuilder builder) {
         this.comment = builder.comment;
         this.toRecipients = builder.toRecipients;
     }
@@ -60,7 +64,11 @@ public class PostForwardParameterSet {
      * Fluent builder for the PostForwardParameterSet
      */
     public static final class PostForwardParameterSetBuilder {
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class PostForwardParameterSet {
             this.comment = val;
             return this;
         }
-        private java.util.List<Recipient> toRecipients;
+        /**
+         * The toRecipients parameter value
+         */
+        @Nullable
+        protected java.util.List<Recipient> toRecipients;
         /**
          * Sets the ToRecipients
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class PostForwardParameterSet {
             this.toRecipients = val;
             return this;
         }
-        private PostForwardParameterSetBuilder(){}
+        @Nullable
+        protected PostForwardParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

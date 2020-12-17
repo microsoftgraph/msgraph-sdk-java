@@ -53,7 +53,11 @@ public class WorkbookFunctionsNumberValueParameterSet {
      * Instiaciates a new WorkbookFunctionsNumberValueParameterSet
      */
     public WorkbookFunctionsNumberValueParameterSet() {}
-    private WorkbookFunctionsNumberValueParameterSet(@Nonnull final WorkbookFunctionsNumberValueParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNumberValueParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNumberValueParameterSet(@Nonnull final WorkbookFunctionsNumberValueParameterSetBuilder builder) {
         this.text = builder.text;
         this.decimalSeparator = builder.decimalSeparator;
         this.groupSeparator = builder.groupSeparator;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsNumberValueParameterSet {
      * Fluent builder for the WorkbookFunctionsNumberValueParameterSet
      */
     public static final class WorkbookFunctionsNumberValueParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsNumberValueParameterSet {
             this.text = val;
             return this;
         }
-        private com.google.gson.JsonElement decimalSeparator;
+        /**
+         * The decimalSeparator parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement decimalSeparator;
         /**
          * Sets the DecimalSeparator
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsNumberValueParameterSet {
             this.decimalSeparator = val;
             return this;
         }
-        private com.google.gson.JsonElement groupSeparator;
+        /**
+         * The groupSeparator parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement groupSeparator;
         /**
          * Sets the GroupSeparator
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsNumberValueParameterSet {
             this.groupSeparator = val;
             return this;
         }
-        private WorkbookFunctionsNumberValueParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNumberValueParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

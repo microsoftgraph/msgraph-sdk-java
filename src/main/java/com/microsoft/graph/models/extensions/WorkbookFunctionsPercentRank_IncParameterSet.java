@@ -53,7 +53,11 @@ public class WorkbookFunctionsPercentRank_IncParameterSet {
      * Instiaciates a new WorkbookFunctionsPercentRank_IncParameterSet
      */
     public WorkbookFunctionsPercentRank_IncParameterSet() {}
-    private WorkbookFunctionsPercentRank_IncParameterSet(@Nonnull final WorkbookFunctionsPercentRank_IncParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPercentRank_IncParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPercentRank_IncParameterSet(@Nonnull final WorkbookFunctionsPercentRank_IncParameterSetBuilder builder) {
         this.array = builder.array;
         this.x = builder.x;
         this.significance = builder.significance;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsPercentRank_IncParameterSet {
      * Fluent builder for the WorkbookFunctionsPercentRank_IncParameterSet
      */
     public static final class WorkbookFunctionsPercentRank_IncParameterSetBuilder {
-        private com.google.gson.JsonElement array;
+        /**
+         * The array parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement array;
         /**
          * Sets the Array
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsPercentRank_IncParameterSet {
             this.array = val;
             return this;
         }
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsPercentRank_IncParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement significance;
+        /**
+         * The significance parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement significance;
         /**
          * Sets the Significance
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsPercentRank_IncParameterSet {
             this.significance = val;
             return this;
         }
-        private WorkbookFunctionsPercentRank_IncParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPercentRank_IncParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookFunctionsLargeParameterSet {
      * Instiaciates a new WorkbookFunctionsLargeParameterSet
      */
     public WorkbookFunctionsLargeParameterSet() {}
-    private WorkbookFunctionsLargeParameterSet(@Nonnull final WorkbookFunctionsLargeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLargeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLargeParameterSet(@Nonnull final WorkbookFunctionsLargeParameterSetBuilder builder) {
         this.array = builder.array;
         this.k = builder.k;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsLargeParameterSet {
      * Fluent builder for the WorkbookFunctionsLargeParameterSet
      */
     public static final class WorkbookFunctionsLargeParameterSetBuilder {
-        private com.google.gson.JsonElement array;
+        /**
+         * The array parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement array;
         /**
          * Sets the Array
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsLargeParameterSet {
             this.array = val;
             return this;
         }
-        private com.google.gson.JsonElement k;
+        /**
+         * The k parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement k;
         /**
          * Sets the K
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsLargeParameterSet {
             this.k = val;
             return this;
         }
-        private WorkbookFunctionsLargeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLargeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

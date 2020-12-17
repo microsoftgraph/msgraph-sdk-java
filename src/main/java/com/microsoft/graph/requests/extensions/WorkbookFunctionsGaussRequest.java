@@ -38,6 +38,7 @@ public class WorkbookFunctionsGaussRequest extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsGaussParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

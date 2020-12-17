@@ -44,7 +44,11 @@ public class EventDeclineParameterSet {
      * Instiaciates a new EventDeclineParameterSet
      */
     public EventDeclineParameterSet() {}
-    private EventDeclineParameterSet(@Nonnull final EventDeclineParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new EventDeclineParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected EventDeclineParameterSet(@Nonnull final EventDeclineParameterSetBuilder builder) {
         this.comment = builder.comment;
         this.sendResponse = builder.sendResponse;
     }
@@ -60,7 +64,11 @@ public class EventDeclineParameterSet {
      * Fluent builder for the EventDeclineParameterSet
      */
     public static final class EventDeclineParameterSetBuilder {
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class EventDeclineParameterSet {
             this.comment = val;
             return this;
         }
-        private Boolean sendResponse;
+        /**
+         * The sendResponse parameter value
+         */
+        @Nullable
+        protected Boolean sendResponse;
         /**
          * Sets the SendResponse
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class EventDeclineParameterSet {
             this.sendResponse = val;
             return this;
         }
-        private EventDeclineParameterSetBuilder(){}
+        @Nullable
+        protected EventDeclineParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookRangeViewItemAtParameterSet {
      * Instiaciates a new WorkbookRangeViewItemAtParameterSet
      */
     public WorkbookRangeViewItemAtParameterSet() {}
-    private WorkbookRangeViewItemAtParameterSet(@Nonnull final WorkbookRangeViewItemAtParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeViewItemAtParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeViewItemAtParameterSet(@Nonnull final WorkbookRangeViewItemAtParameterSetBuilder builder) {
         this.index = builder.index;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookRangeViewItemAtParameterSet {
      * Fluent builder for the WorkbookRangeViewItemAtParameterSet
      */
     public static final class WorkbookRangeViewItemAtParameterSetBuilder {
-        private Integer index;
+        /**
+         * The index parameter value
+         */
+        @Nullable
+        protected Integer index;
         /**
          * Sets the Index
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookRangeViewItemAtParameterSet {
             this.index = val;
             return this;
         }
-        private WorkbookRangeViewItemAtParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeViewItemAtParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

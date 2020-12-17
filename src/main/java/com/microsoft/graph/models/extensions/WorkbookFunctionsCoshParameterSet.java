@@ -35,7 +35,11 @@ public class WorkbookFunctionsCoshParameterSet {
      * Instiaciates a new WorkbookFunctionsCoshParameterSet
      */
     public WorkbookFunctionsCoshParameterSet() {}
-    private WorkbookFunctionsCoshParameterSet(@Nonnull final WorkbookFunctionsCoshParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCoshParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCoshParameterSet(@Nonnull final WorkbookFunctionsCoshParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsCoshParameterSet {
      * Fluent builder for the WorkbookFunctionsCoshParameterSet
      */
     public static final class WorkbookFunctionsCoshParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsCoshParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsCoshParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCoshParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

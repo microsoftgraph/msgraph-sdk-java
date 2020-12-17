@@ -44,7 +44,11 @@ public class WorkbookFunctionsBitxorParameterSet {
      * Instiaciates a new WorkbookFunctionsBitxorParameterSet
      */
     public WorkbookFunctionsBitxorParameterSet() {}
-    private WorkbookFunctionsBitxorParameterSet(@Nonnull final WorkbookFunctionsBitxorParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBitxorParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBitxorParameterSet(@Nonnull final WorkbookFunctionsBitxorParameterSetBuilder builder) {
         this.number1 = builder.number1;
         this.number2 = builder.number2;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsBitxorParameterSet {
      * Fluent builder for the WorkbookFunctionsBitxorParameterSet
      */
     public static final class WorkbookFunctionsBitxorParameterSetBuilder {
-        private com.google.gson.JsonElement number1;
+        /**
+         * The number1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number1;
         /**
          * Sets the Number1
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsBitxorParameterSet {
             this.number1 = val;
             return this;
         }
-        private com.google.gson.JsonElement number2;
+        /**
+         * The number2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number2;
         /**
          * Sets the Number2
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsBitxorParameterSet {
             this.number2 = val;
             return this;
         }
-        private WorkbookFunctionsBitxorParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBitxorParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsOct2HexRequest extends BaseRequest<WorkbookFunctio
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsOct2HexParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

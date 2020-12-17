@@ -32,6 +32,7 @@ public class SiteRemoveCollectionRequest extends BaseActionCollectionRequest<Sit
 
 
     /** The body for the method */
+    @Nullable
     protected SiteRemoveParameterSet body;
 
 

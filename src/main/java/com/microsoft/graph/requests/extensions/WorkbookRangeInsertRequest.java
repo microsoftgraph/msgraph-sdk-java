@@ -37,6 +37,7 @@ public class WorkbookRangeInsertRequest extends BaseRequest<WorkbookRange> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookRangeInsertParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

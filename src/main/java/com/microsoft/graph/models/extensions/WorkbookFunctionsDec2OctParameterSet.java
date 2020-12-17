@@ -44,7 +44,11 @@ public class WorkbookFunctionsDec2OctParameterSet {
      * Instiaciates a new WorkbookFunctionsDec2OctParameterSet
      */
     public WorkbookFunctionsDec2OctParameterSet() {}
-    private WorkbookFunctionsDec2OctParameterSet(@Nonnull final WorkbookFunctionsDec2OctParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDec2OctParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDec2OctParameterSet(@Nonnull final WorkbookFunctionsDec2OctParameterSetBuilder builder) {
         this.number = builder.number;
         this.places = builder.places;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsDec2OctParameterSet {
      * Fluent builder for the WorkbookFunctionsDec2OctParameterSet
      */
     public static final class WorkbookFunctionsDec2OctParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsDec2OctParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement places;
+        /**
+         * The places parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement places;
         /**
          * Sets the Places
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsDec2OctParameterSet {
             this.places = val;
             return this;
         }
-        private WorkbookFunctionsDec2OctParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDec2OctParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

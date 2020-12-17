@@ -37,6 +37,7 @@ public class UserChangePasswordRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected UserChangePasswordParameterSet body;
     /**
      * Creates the UserChangePassword

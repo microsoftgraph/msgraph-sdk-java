@@ -38,6 +38,7 @@ public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest<WorkbookFunc
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsIsoWeekNumParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

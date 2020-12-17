@@ -35,7 +35,11 @@ public class WorkbookFunctionsAcoshParameterSet {
      * Instiaciates a new WorkbookFunctionsAcoshParameterSet
      */
     public WorkbookFunctionsAcoshParameterSet() {}
-    private WorkbookFunctionsAcoshParameterSet(@Nonnull final WorkbookFunctionsAcoshParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAcoshParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAcoshParameterSet(@Nonnull final WorkbookFunctionsAcoshParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAcoshParameterSet {
      * Fluent builder for the WorkbookFunctionsAcoshParameterSet
      */
     public static final class WorkbookFunctionsAcoshParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAcoshParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsAcoshParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAcoshParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

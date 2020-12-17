@@ -38,6 +38,7 @@ public class WorkbookFunctionsBitxorRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsBitxorParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

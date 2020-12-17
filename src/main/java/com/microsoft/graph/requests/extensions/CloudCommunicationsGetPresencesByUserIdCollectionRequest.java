@@ -32,6 +32,7 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionRequest extends Ba
 
 
     /** The body for the method */
+    @Nullable
     protected CloudCommunicationsGetPresencesByUserIdParameterSet body;
 
 

@@ -26,7 +26,11 @@ public class GroupResetUnseenCountParameterSet {
      * Instiaciates a new GroupResetUnseenCountParameterSet
      */
     public GroupResetUnseenCountParameterSet() {}
-    private GroupResetUnseenCountParameterSet(@Nonnull final GroupResetUnseenCountParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupResetUnseenCountParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupResetUnseenCountParameterSet(@Nonnull final GroupResetUnseenCountParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class GroupResetUnseenCountParameterSet {
      * Fluent builder for the GroupResetUnseenCountParameterSet
      */
     public static final class GroupResetUnseenCountParameterSetBuilder {
-        private GroupResetUnseenCountParameterSetBuilder(){}
+        @Nullable
+        protected GroupResetUnseenCountParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsLenbParameterSet {
      * Instiaciates a new WorkbookFunctionsLenbParameterSet
      */
     public WorkbookFunctionsLenbParameterSet() {}
-    private WorkbookFunctionsLenbParameterSet(@Nonnull final WorkbookFunctionsLenbParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLenbParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLenbParameterSet(@Nonnull final WorkbookFunctionsLenbParameterSetBuilder builder) {
         this.text = builder.text;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsLenbParameterSet {
      * Fluent builder for the WorkbookFunctionsLenbParameterSet
      */
     public static final class WorkbookFunctionsLenbParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsLenbParameterSet {
             this.text = val;
             return this;
         }
-        private WorkbookFunctionsLenbParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLenbParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

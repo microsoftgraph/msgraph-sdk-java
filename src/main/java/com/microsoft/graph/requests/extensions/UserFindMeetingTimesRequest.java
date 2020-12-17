@@ -38,6 +38,7 @@ public class UserFindMeetingTimesRequest extends BaseRequest<MeetingTimeSuggesti
     }
 
 	/** The body for the method */
+    @Nullable
     protected UserFindMeetingTimesParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

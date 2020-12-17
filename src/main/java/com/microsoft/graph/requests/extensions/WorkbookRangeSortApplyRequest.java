@@ -37,6 +37,7 @@ public class WorkbookRangeSortApplyRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookRangeSortApplyParameterSet body;
     /**
      * Creates the WorkbookRangeSortApply

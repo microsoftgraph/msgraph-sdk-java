@@ -35,7 +35,11 @@ public class ManagedAppPolicyTargetAppsParameterSet {
      * Instiaciates a new ManagedAppPolicyTargetAppsParameterSet
      */
     public ManagedAppPolicyTargetAppsParameterSet() {}
-    private ManagedAppPolicyTargetAppsParameterSet(@Nonnull final ManagedAppPolicyTargetAppsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedAppPolicyTargetAppsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedAppPolicyTargetAppsParameterSet(@Nonnull final ManagedAppPolicyTargetAppsParameterSetBuilder builder) {
         this.apps = builder.apps;
     }
     /**
@@ -50,7 +54,11 @@ public class ManagedAppPolicyTargetAppsParameterSet {
      * Fluent builder for the ManagedAppPolicyTargetAppsParameterSet
      */
     public static final class ManagedAppPolicyTargetAppsParameterSetBuilder {
-        private java.util.List<ManagedMobileApp> apps;
+        /**
+         * The apps parameter value
+         */
+        @Nullable
+        protected java.util.List<ManagedMobileApp> apps;
         /**
          * Sets the Apps
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ManagedAppPolicyTargetAppsParameterSet {
             this.apps = val;
             return this;
         }
-        private ManagedAppPolicyTargetAppsParameterSetBuilder(){}
+        @Nullable
+        protected ManagedAppPolicyTargetAppsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

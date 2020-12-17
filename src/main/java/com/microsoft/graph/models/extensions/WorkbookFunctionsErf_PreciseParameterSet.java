@@ -35,7 +35,11 @@ public class WorkbookFunctionsErf_PreciseParameterSet {
      * Instiaciates a new WorkbookFunctionsErf_PreciseParameterSet
      */
     public WorkbookFunctionsErf_PreciseParameterSet() {}
-    private WorkbookFunctionsErf_PreciseParameterSet(@Nonnull final WorkbookFunctionsErf_PreciseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsErf_PreciseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsErf_PreciseParameterSet(@Nonnull final WorkbookFunctionsErf_PreciseParameterSetBuilder builder) {
         this.x = builder.x;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsErf_PreciseParameterSet {
      * Fluent builder for the WorkbookFunctionsErf_PreciseParameterSet
      */
     public static final class WorkbookFunctionsErf_PreciseParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsErf_PreciseParameterSet {
             this.x = val;
             return this;
         }
-        private WorkbookFunctionsErf_PreciseParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsErf_PreciseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

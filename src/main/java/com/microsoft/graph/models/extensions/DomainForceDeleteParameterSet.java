@@ -35,7 +35,11 @@ public class DomainForceDeleteParameterSet {
      * Instiaciates a new DomainForceDeleteParameterSet
      */
     public DomainForceDeleteParameterSet() {}
-    private DomainForceDeleteParameterSet(@Nonnull final DomainForceDeleteParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DomainForceDeleteParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DomainForceDeleteParameterSet(@Nonnull final DomainForceDeleteParameterSetBuilder builder) {
         this.disableUserAccounts = builder.disableUserAccounts;
     }
     /**
@@ -50,7 +54,11 @@ public class DomainForceDeleteParameterSet {
      * Fluent builder for the DomainForceDeleteParameterSet
      */
     public static final class DomainForceDeleteParameterSetBuilder {
-        private Boolean disableUserAccounts;
+        /**
+         * The disableUserAccounts parameter value
+         */
+        @Nullable
+        protected Boolean disableUserAccounts;
         /**
          * Sets the DisableUserAccounts
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DomainForceDeleteParameterSet {
             this.disableUserAccounts = val;
             return this;
         }
-        private DomainForceDeleteParameterSetBuilder(){}
+        @Nullable
+        protected DomainForceDeleteParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

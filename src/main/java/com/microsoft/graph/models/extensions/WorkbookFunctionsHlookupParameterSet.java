@@ -62,7 +62,11 @@ public class WorkbookFunctionsHlookupParameterSet {
      * Instiaciates a new WorkbookFunctionsHlookupParameterSet
      */
     public WorkbookFunctionsHlookupParameterSet() {}
-    private WorkbookFunctionsHlookupParameterSet(@Nonnull final WorkbookFunctionsHlookupParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsHlookupParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsHlookupParameterSet(@Nonnull final WorkbookFunctionsHlookupParameterSetBuilder builder) {
         this.lookupValue = builder.lookupValue;
         this.tableArray = builder.tableArray;
         this.rowIndexNum = builder.rowIndexNum;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsHlookupParameterSet {
      * Fluent builder for the WorkbookFunctionsHlookupParameterSet
      */
     public static final class WorkbookFunctionsHlookupParameterSetBuilder {
-        private com.google.gson.JsonElement lookupValue;
+        /**
+         * The lookupValue parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement lookupValue;
         /**
          * Sets the LookupValue
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsHlookupParameterSet {
             this.lookupValue = val;
             return this;
         }
-        private com.google.gson.JsonElement tableArray;
+        /**
+         * The tableArray parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement tableArray;
         /**
          * Sets the TableArray
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsHlookupParameterSet {
             this.tableArray = val;
             return this;
         }
-        private com.google.gson.JsonElement rowIndexNum;
+        /**
+         * The rowIndexNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rowIndexNum;
         /**
          * Sets the RowIndexNum
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsHlookupParameterSet {
             this.rowIndexNum = val;
             return this;
         }
-        private com.google.gson.JsonElement rangeLookup;
+        /**
+         * The rangeLookup parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rangeLookup;
         /**
          * Sets the RangeLookup
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsHlookupParameterSet {
             this.rangeLookup = val;
             return this;
         }
-        private WorkbookFunctionsHlookupParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsHlookupParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

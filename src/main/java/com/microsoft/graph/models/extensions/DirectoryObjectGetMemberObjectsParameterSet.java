@@ -35,7 +35,11 @@ public class DirectoryObjectGetMemberObjectsParameterSet {
      * Instiaciates a new DirectoryObjectGetMemberObjectsParameterSet
      */
     public DirectoryObjectGetMemberObjectsParameterSet() {}
-    private DirectoryObjectGetMemberObjectsParameterSet(@Nonnull final DirectoryObjectGetMemberObjectsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DirectoryObjectGetMemberObjectsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DirectoryObjectGetMemberObjectsParameterSet(@Nonnull final DirectoryObjectGetMemberObjectsParameterSetBuilder builder) {
         this.securityEnabledOnly = builder.securityEnabledOnly;
     }
     /**
@@ -50,7 +54,11 @@ public class DirectoryObjectGetMemberObjectsParameterSet {
      * Fluent builder for the DirectoryObjectGetMemberObjectsParameterSet
      */
     public static final class DirectoryObjectGetMemberObjectsParameterSetBuilder {
-        private Boolean securityEnabledOnly;
+        /**
+         * The securityEnabledOnly parameter value
+         */
+        @Nullable
+        protected Boolean securityEnabledOnly;
         /**
          * Sets the SecurityEnabledOnly
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DirectoryObjectGetMemberObjectsParameterSet {
             this.securityEnabledOnly = val;
             return this;
         }
-        private DirectoryObjectGetMemberObjectsParameterSetBuilder(){}
+        @Nullable
+        protected DirectoryObjectGetMemberObjectsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

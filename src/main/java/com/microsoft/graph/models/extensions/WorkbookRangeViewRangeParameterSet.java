@@ -26,7 +26,11 @@ public class WorkbookRangeViewRangeParameterSet {
      * Instiaciates a new WorkbookRangeViewRangeParameterSet
      */
     public WorkbookRangeViewRangeParameterSet() {}
-    private WorkbookRangeViewRangeParameterSet(@Nonnull final WorkbookRangeViewRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeViewRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeViewRangeParameterSet(@Nonnull final WorkbookRangeViewRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeViewRangeParameterSet {
      * Fluent builder for the WorkbookRangeViewRangeParameterSet
      */
     public static final class WorkbookRangeViewRangeParameterSetBuilder {
-        private WorkbookRangeViewRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeViewRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

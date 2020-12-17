@@ -45,7 +45,11 @@ public class PermissionGrantParameterSet {
      * Instiaciates a new PermissionGrantParameterSet
      */
     public PermissionGrantParameterSet() {}
-    private PermissionGrantParameterSet(@Nonnull final PermissionGrantParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new PermissionGrantParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected PermissionGrantParameterSet(@Nonnull final PermissionGrantParameterSetBuilder builder) {
         this.roles = builder.roles;
         this.recipients = builder.recipients;
     }
@@ -61,7 +65,11 @@ public class PermissionGrantParameterSet {
      * Fluent builder for the PermissionGrantParameterSet
      */
     public static final class PermissionGrantParameterSetBuilder {
-        private java.util.List<String> roles;
+        /**
+         * The roles parameter value
+         */
+        @Nullable
+        protected java.util.List<String> roles;
         /**
          * Sets the Roles
          * @param val the value to set it to
@@ -72,7 +80,11 @@ public class PermissionGrantParameterSet {
             this.roles = val;
             return this;
         }
-        private java.util.List<DriveRecipient> recipients;
+        /**
+         * The recipients parameter value
+         */
+        @Nullable
+        protected java.util.List<DriveRecipient> recipients;
         /**
          * Sets the Recipients
          * @param val the value to set it to
@@ -83,7 +95,8 @@ public class PermissionGrantParameterSet {
             this.recipients = val;
             return this;
         }
-        private PermissionGrantParameterSetBuilder(){}
+        @Nullable
+        protected PermissionGrantParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

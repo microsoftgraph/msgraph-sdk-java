@@ -38,6 +38,7 @@ public class WorkbookFunctionsRateRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsRateParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

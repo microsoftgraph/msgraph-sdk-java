@@ -26,7 +26,11 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresParameterSet {
      * Instiaciates a new ReportRootManagedDeviceEnrollmentTopFailuresParameterSet
      */
     public ReportRootManagedDeviceEnrollmentTopFailuresParameterSet() {}
-    private ReportRootManagedDeviceEnrollmentTopFailuresParameterSet(@Nonnull final ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootManagedDeviceEnrollmentTopFailuresParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootManagedDeviceEnrollmentTopFailuresParameterSet(@Nonnull final ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresParameterSet {
      * Fluent builder for the ReportRootManagedDeviceEnrollmentTopFailuresParameterSet
      */
     public static final class ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder {
-        private ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class CallAnswerRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallAnswerParameterSet body;
     /**
      * Creates the CallAnswer

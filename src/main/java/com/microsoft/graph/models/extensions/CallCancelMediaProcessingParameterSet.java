@@ -35,7 +35,11 @@ public class CallCancelMediaProcessingParameterSet {
      * Instiaciates a new CallCancelMediaProcessingParameterSet
      */
     public CallCancelMediaProcessingParameterSet() {}
-    private CallCancelMediaProcessingParameterSet(@Nonnull final CallCancelMediaProcessingParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallCancelMediaProcessingParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallCancelMediaProcessingParameterSet(@Nonnull final CallCancelMediaProcessingParameterSetBuilder builder) {
         this.clientContext = builder.clientContext;
     }
     /**
@@ -50,7 +54,11 @@ public class CallCancelMediaProcessingParameterSet {
      * Fluent builder for the CallCancelMediaProcessingParameterSet
      */
     public static final class CallCancelMediaProcessingParameterSetBuilder {
-        private String clientContext;
+        /**
+         * The clientContext parameter value
+         */
+        @Nullable
+        protected String clientContext;
         /**
          * Sets the ClientContext
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class CallCancelMediaProcessingParameterSet {
             this.clientContext = val;
             return this;
         }
-        private CallCancelMediaProcessingParameterSetBuilder(){}
+        @Nullable
+        protected CallCancelMediaProcessingParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

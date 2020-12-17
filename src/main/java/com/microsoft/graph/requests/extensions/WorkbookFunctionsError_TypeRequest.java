@@ -38,6 +38,7 @@ public class WorkbookFunctionsError_TypeRequest extends BaseRequest<WorkbookFunc
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsError_TypeParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

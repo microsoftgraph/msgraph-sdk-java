@@ -38,6 +38,7 @@ public class WorkbookFunctionsNorm_InvRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsNorm_InvParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

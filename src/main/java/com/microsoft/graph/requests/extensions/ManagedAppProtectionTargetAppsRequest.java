@@ -37,6 +37,7 @@ public class ManagedAppProtectionTargetAppsRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedAppProtectionTargetAppsParameterSet body;
     /**
      * Creates the ManagedAppProtectionTargetApps

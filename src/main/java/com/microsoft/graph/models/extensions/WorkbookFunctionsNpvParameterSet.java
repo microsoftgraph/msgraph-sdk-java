@@ -44,7 +44,11 @@ public class WorkbookFunctionsNpvParameterSet {
      * Instiaciates a new WorkbookFunctionsNpvParameterSet
      */
     public WorkbookFunctionsNpvParameterSet() {}
-    private WorkbookFunctionsNpvParameterSet(@Nonnull final WorkbookFunctionsNpvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNpvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNpvParameterSet(@Nonnull final WorkbookFunctionsNpvParameterSetBuilder builder) {
         this.rate = builder.rate;
         this.values = builder.values;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsNpvParameterSet {
      * Fluent builder for the WorkbookFunctionsNpvParameterSet
      */
     public static final class WorkbookFunctionsNpvParameterSetBuilder {
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsNpvParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsNpvParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsNpvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNpvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

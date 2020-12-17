@@ -37,6 +37,7 @@ public class TeamArchiveRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected TeamArchiveParameterSet body;
     /**
      * Creates the TeamArchive

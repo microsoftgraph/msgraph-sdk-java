@@ -53,7 +53,11 @@ public class WorkbookFunctionsFixedParameterSet {
      * Instiaciates a new WorkbookFunctionsFixedParameterSet
      */
     public WorkbookFunctionsFixedParameterSet() {}
-    private WorkbookFunctionsFixedParameterSet(@Nonnull final WorkbookFunctionsFixedParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsFixedParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsFixedParameterSet(@Nonnull final WorkbookFunctionsFixedParameterSetBuilder builder) {
         this.number = builder.number;
         this.decimals = builder.decimals;
         this.noCommas = builder.noCommas;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsFixedParameterSet {
      * Fluent builder for the WorkbookFunctionsFixedParameterSet
      */
     public static final class WorkbookFunctionsFixedParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsFixedParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement decimals;
+        /**
+         * The decimals parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement decimals;
         /**
          * Sets the Decimals
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsFixedParameterSet {
             this.decimals = val;
             return this;
         }
-        private com.google.gson.JsonElement noCommas;
+        /**
+         * The noCommas parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement noCommas;
         /**
          * Sets the NoCommas
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsFixedParameterSet {
             this.noCommas = val;
             return this;
         }
-        private WorkbookFunctionsFixedParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsFixedParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

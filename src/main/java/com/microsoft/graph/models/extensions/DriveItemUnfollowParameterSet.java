@@ -26,7 +26,11 @@ public class DriveItemUnfollowParameterSet {
      * Instiaciates a new DriveItemUnfollowParameterSet
      */
     public DriveItemUnfollowParameterSet() {}
-    private DriveItemUnfollowParameterSet(@Nonnull final DriveItemUnfollowParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemUnfollowParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemUnfollowParameterSet(@Nonnull final DriveItemUnfollowParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DriveItemUnfollowParameterSet {
      * Fluent builder for the DriveItemUnfollowParameterSet
      */
     public static final class DriveItemUnfollowParameterSetBuilder {
-        private DriveItemUnfollowParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemUnfollowParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

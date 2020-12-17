@@ -37,6 +37,7 @@ public class UserExportPersonalDataRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected UserExportPersonalDataParameterSet body;
     /**
      * Creates the UserExportPersonalData

@@ -35,7 +35,11 @@ public class WorkbookFunctionsYearParameterSet {
      * Instiaciates a new WorkbookFunctionsYearParameterSet
      */
     public WorkbookFunctionsYearParameterSet() {}
-    private WorkbookFunctionsYearParameterSet(@Nonnull final WorkbookFunctionsYearParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsYearParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsYearParameterSet(@Nonnull final WorkbookFunctionsYearParameterSetBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsYearParameterSet {
      * Fluent builder for the WorkbookFunctionsYearParameterSet
      */
     public static final class WorkbookFunctionsYearParameterSetBuilder {
-        private com.google.gson.JsonElement serialNumber;
+        /**
+         * The serialNumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement serialNumber;
         /**
          * Sets the SerialNumber
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsYearParameterSet {
             this.serialNumber = val;
             return this;
         }
-        private WorkbookFunctionsYearParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsYearParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

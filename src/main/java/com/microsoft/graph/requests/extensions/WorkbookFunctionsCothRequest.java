@@ -38,6 +38,7 @@ public class WorkbookFunctionsCothRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCothParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

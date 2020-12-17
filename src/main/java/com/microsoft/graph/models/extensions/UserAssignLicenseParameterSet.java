@@ -45,7 +45,11 @@ public class UserAssignLicenseParameterSet {
      * Instiaciates a new UserAssignLicenseParameterSet
      */
     public UserAssignLicenseParameterSet() {}
-    private UserAssignLicenseParameterSet(@Nonnull final UserAssignLicenseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserAssignLicenseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserAssignLicenseParameterSet(@Nonnull final UserAssignLicenseParameterSetBuilder builder) {
         this.addLicenses = builder.addLicenses;
         this.removeLicenses = builder.removeLicenses;
     }
@@ -61,7 +65,11 @@ public class UserAssignLicenseParameterSet {
      * Fluent builder for the UserAssignLicenseParameterSet
      */
     public static final class UserAssignLicenseParameterSetBuilder {
-        private java.util.List<AssignedLicense> addLicenses;
+        /**
+         * The addLicenses parameter value
+         */
+        @Nullable
+        protected java.util.List<AssignedLicense> addLicenses;
         /**
          * Sets the AddLicenses
          * @param val the value to set it to
@@ -72,7 +80,11 @@ public class UserAssignLicenseParameterSet {
             this.addLicenses = val;
             return this;
         }
-        private java.util.List<java.util.UUID> removeLicenses;
+        /**
+         * The removeLicenses parameter value
+         */
+        @Nullable
+        protected java.util.List<java.util.UUID> removeLicenses;
         /**
          * Sets the RemoveLicenses
          * @param val the value to set it to
@@ -83,7 +95,8 @@ public class UserAssignLicenseParameterSet {
             this.removeLicenses = val;
             return this;
         }
-        private UserAssignLicenseParameterSetBuilder(){}
+        @Nullable
+        protected UserAssignLicenseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

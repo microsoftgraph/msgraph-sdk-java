@@ -37,6 +37,7 @@ public class DriveItemValidatePermissionRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected DriveItemValidatePermissionParameterSet body;
     /**
      * Creates the DriveItemValidatePermission

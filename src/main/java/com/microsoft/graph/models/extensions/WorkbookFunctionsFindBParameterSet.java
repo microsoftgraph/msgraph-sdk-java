@@ -53,7 +53,11 @@ public class WorkbookFunctionsFindBParameterSet {
      * Instiaciates a new WorkbookFunctionsFindBParameterSet
      */
     public WorkbookFunctionsFindBParameterSet() {}
-    private WorkbookFunctionsFindBParameterSet(@Nonnull final WorkbookFunctionsFindBParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsFindBParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsFindBParameterSet(@Nonnull final WorkbookFunctionsFindBParameterSetBuilder builder) {
         this.findText = builder.findText;
         this.withinText = builder.withinText;
         this.startNum = builder.startNum;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsFindBParameterSet {
      * Fluent builder for the WorkbookFunctionsFindBParameterSet
      */
     public static final class WorkbookFunctionsFindBParameterSetBuilder {
-        private com.google.gson.JsonElement findText;
+        /**
+         * The findText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement findText;
         /**
          * Sets the FindText
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsFindBParameterSet {
             this.findText = val;
             return this;
         }
-        private com.google.gson.JsonElement withinText;
+        /**
+         * The withinText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement withinText;
         /**
          * Sets the WithinText
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsFindBParameterSet {
             this.withinText = val;
             return this;
         }
-        private com.google.gson.JsonElement startNum;
+        /**
+         * The startNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startNum;
         /**
          * Sets the StartNum
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsFindBParameterSet {
             this.startNum = val;
             return this;
         }
-        private WorkbookFunctionsFindBParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsFindBParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsNotParameterSet {
      * Instiaciates a new WorkbookFunctionsNotParameterSet
      */
     public WorkbookFunctionsNotParameterSet() {}
-    private WorkbookFunctionsNotParameterSet(@Nonnull final WorkbookFunctionsNotParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNotParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNotParameterSet(@Nonnull final WorkbookFunctionsNotParameterSetBuilder builder) {
         this.logical = builder.logical;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsNotParameterSet {
      * Fluent builder for the WorkbookFunctionsNotParameterSet
      */
     public static final class WorkbookFunctionsNotParameterSetBuilder {
-        private com.google.gson.JsonElement logical;
+        /**
+         * The logical parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement logical;
         /**
          * Sets the Logical
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsNotParameterSet {
             this.logical = val;
             return this;
         }
-        private WorkbookFunctionsNotParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNotParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

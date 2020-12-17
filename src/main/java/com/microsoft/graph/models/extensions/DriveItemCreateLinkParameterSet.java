@@ -71,7 +71,11 @@ public class DriveItemCreateLinkParameterSet {
      * Instiaciates a new DriveItemCreateLinkParameterSet
      */
     public DriveItemCreateLinkParameterSet() {}
-    private DriveItemCreateLinkParameterSet(@Nonnull final DriveItemCreateLinkParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemCreateLinkParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemCreateLinkParameterSet(@Nonnull final DriveItemCreateLinkParameterSetBuilder builder) {
         this.type = builder.type;
         this.scope = builder.scope;
         this.expirationDateTime = builder.expirationDateTime;
@@ -90,7 +94,11 @@ public class DriveItemCreateLinkParameterSet {
      * Fluent builder for the DriveItemCreateLinkParameterSet
      */
     public static final class DriveItemCreateLinkParameterSetBuilder {
-        private String type;
+        /**
+         * The type parameter value
+         */
+        @Nullable
+        protected String type;
         /**
          * Sets the Type
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class DriveItemCreateLinkParameterSet {
             this.type = val;
             return this;
         }
-        private String scope;
+        /**
+         * The scope parameter value
+         */
+        @Nullable
+        protected String scope;
         /**
          * Sets the Scope
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class DriveItemCreateLinkParameterSet {
             this.scope = val;
             return this;
         }
-        private java.util.Calendar expirationDateTime;
+        /**
+         * The expirationDateTime parameter value
+         */
+        @Nullable
+        protected java.util.Calendar expirationDateTime;
         /**
          * Sets the ExpirationDateTime
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class DriveItemCreateLinkParameterSet {
             this.expirationDateTime = val;
             return this;
         }
-        private String password;
+        /**
+         * The password parameter value
+         */
+        @Nullable
+        protected String password;
         /**
          * Sets the Password
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class DriveItemCreateLinkParameterSet {
             this.password = val;
             return this;
         }
-        private String message;
+        /**
+         * The message parameter value
+         */
+        @Nullable
+        protected String message;
         /**
          * Sets the Message
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class DriveItemCreateLinkParameterSet {
             this.message = val;
             return this;
         }
-        private DriveItemCreateLinkParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemCreateLinkParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

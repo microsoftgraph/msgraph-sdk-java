@@ -54,7 +54,11 @@ public class MessageCreateForwardParameterSet {
      * Instiaciates a new MessageCreateForwardParameterSet
      */
     public MessageCreateForwardParameterSet() {}
-    private MessageCreateForwardParameterSet(@Nonnull final MessageCreateForwardParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MessageCreateForwardParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MessageCreateForwardParameterSet(@Nonnull final MessageCreateForwardParameterSetBuilder builder) {
         this.toRecipients = builder.toRecipients;
         this.message = builder.message;
         this.comment = builder.comment;
@@ -71,7 +75,11 @@ public class MessageCreateForwardParameterSet {
      * Fluent builder for the MessageCreateForwardParameterSet
      */
     public static final class MessageCreateForwardParameterSetBuilder {
-        private java.util.List<Recipient> toRecipients;
+        /**
+         * The toRecipients parameter value
+         */
+        @Nullable
+        protected java.util.List<Recipient> toRecipients;
         /**
          * Sets the ToRecipients
          * @param val the value to set it to
@@ -82,7 +90,11 @@ public class MessageCreateForwardParameterSet {
             this.toRecipients = val;
             return this;
         }
-        private Message message;
+        /**
+         * The message parameter value
+         */
+        @Nullable
+        protected Message message;
         /**
          * Sets the Message
          * @param val the value to set it to
@@ -93,7 +105,11 @@ public class MessageCreateForwardParameterSet {
             this.message = val;
             return this;
         }
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -104,7 +120,8 @@ public class MessageCreateForwardParameterSet {
             this.comment = val;
             return this;
         }
-        private MessageCreateForwardParameterSetBuilder(){}
+        @Nullable
+        protected MessageCreateForwardParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -53,7 +53,11 @@ public class WorkbookFunctionsF_Dist_RTParameterSet {
      * Instiaciates a new WorkbookFunctionsF_Dist_RTParameterSet
      */
     public WorkbookFunctionsF_Dist_RTParameterSet() {}
-    private WorkbookFunctionsF_Dist_RTParameterSet(@Nonnull final WorkbookFunctionsF_Dist_RTParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsF_Dist_RTParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsF_Dist_RTParameterSet(@Nonnull final WorkbookFunctionsF_Dist_RTParameterSetBuilder builder) {
         this.x = builder.x;
         this.degFreedom1 = builder.degFreedom1;
         this.degFreedom2 = builder.degFreedom2;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsF_Dist_RTParameterSet {
      * Fluent builder for the WorkbookFunctionsF_Dist_RTParameterSet
      */
     public static final class WorkbookFunctionsF_Dist_RTParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsF_Dist_RTParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom1;
+        /**
+         * The degFreedom1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom1;
         /**
          * Sets the DegFreedom1
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsF_Dist_RTParameterSet {
             this.degFreedom1 = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom2;
+        /**
+         * The degFreedom2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom2;
         /**
          * Sets the DegFreedom2
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsF_Dist_RTParameterSet {
             this.degFreedom2 = val;
             return this;
         }
-        private WorkbookFunctionsF_Dist_RTParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsF_Dist_RTParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

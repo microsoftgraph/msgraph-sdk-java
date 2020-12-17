@@ -38,6 +38,7 @@ public class WorkbookFunctionsPercentile_ExcRequest extends BaseRequest<Workbook
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsPercentile_ExcParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -35,7 +35,11 @@ public class WorkbookFunctionsMonthParameterSet {
      * Instiaciates a new WorkbookFunctionsMonthParameterSet
      */
     public WorkbookFunctionsMonthParameterSet() {}
-    private WorkbookFunctionsMonthParameterSet(@Nonnull final WorkbookFunctionsMonthParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMonthParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMonthParameterSet(@Nonnull final WorkbookFunctionsMonthParameterSetBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsMonthParameterSet {
      * Fluent builder for the WorkbookFunctionsMonthParameterSet
      */
     public static final class WorkbookFunctionsMonthParameterSetBuilder {
-        private com.google.gson.JsonElement serialNumber;
+        /**
+         * The serialNumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement serialNumber;
         /**
          * Sets the SerialNumber
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsMonthParameterSet {
             this.serialNumber = val;
             return this;
         }
-        private WorkbookFunctionsMonthParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMonthParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

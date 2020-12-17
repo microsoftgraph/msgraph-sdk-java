@@ -38,6 +38,7 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsOddFPriceParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

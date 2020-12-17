@@ -37,6 +37,7 @@ public class MessageForwardRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MessageForwardParameterSet body;
     /**
      * Creates the MessageForward

@@ -53,7 +53,11 @@ public class WorkbookFunctionsConfidence_NormParameterSet {
      * Instiaciates a new WorkbookFunctionsConfidence_NormParameterSet
      */
     public WorkbookFunctionsConfidence_NormParameterSet() {}
-    private WorkbookFunctionsConfidence_NormParameterSet(@Nonnull final WorkbookFunctionsConfidence_NormParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsConfidence_NormParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsConfidence_NormParameterSet(@Nonnull final WorkbookFunctionsConfidence_NormParameterSetBuilder builder) {
         this.alpha = builder.alpha;
         this.standardDev = builder.standardDev;
         this.size = builder.size;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsConfidence_NormParameterSet {
      * Fluent builder for the WorkbookFunctionsConfidence_NormParameterSet
      */
     public static final class WorkbookFunctionsConfidence_NormParameterSetBuilder {
-        private com.google.gson.JsonElement alpha;
+        /**
+         * The alpha parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement alpha;
         /**
          * Sets the Alpha
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsConfidence_NormParameterSet {
             this.alpha = val;
             return this;
         }
-        private com.google.gson.JsonElement standardDev;
+        /**
+         * The standardDev parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement standardDev;
         /**
          * Sets the StandardDev
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsConfidence_NormParameterSet {
             this.standardDev = val;
             return this;
         }
-        private com.google.gson.JsonElement size;
+        /**
+         * The size parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement size;
         /**
          * Sets the Size
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsConfidence_NormParameterSet {
             this.size = val;
             return this;
         }
-        private WorkbookFunctionsConfidence_NormParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsConfidence_NormParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

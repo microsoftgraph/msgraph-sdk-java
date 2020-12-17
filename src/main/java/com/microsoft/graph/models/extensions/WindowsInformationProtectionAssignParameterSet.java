@@ -35,7 +35,11 @@ public class WindowsInformationProtectionAssignParameterSet {
      * Instiaciates a new WindowsInformationProtectionAssignParameterSet
      */
     public WindowsInformationProtectionAssignParameterSet() {}
-    private WindowsInformationProtectionAssignParameterSet(@Nonnull final WindowsInformationProtectionAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WindowsInformationProtectionAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WindowsInformationProtectionAssignParameterSet(@Nonnull final WindowsInformationProtectionAssignParameterSetBuilder builder) {
         this.assignments = builder.assignments;
     }
     /**
@@ -50,7 +54,11 @@ public class WindowsInformationProtectionAssignParameterSet {
      * Fluent builder for the WindowsInformationProtectionAssignParameterSet
      */
     public static final class WindowsInformationProtectionAssignParameterSetBuilder {
-        private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
+        /**
+         * The assignments parameter value
+         */
+        @Nullable
+        protected java.util.List<TargetedManagedAppPolicyAssignment> assignments;
         /**
          * Sets the Assignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WindowsInformationProtectionAssignParameterSet {
             this.assignments = val;
             return this;
         }
-        private WindowsInformationProtectionAssignParameterSetBuilder(){}
+        @Nullable
+        protected WindowsInformationProtectionAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

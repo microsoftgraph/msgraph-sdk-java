@@ -35,7 +35,11 @@ public class GroupLifecyclePolicyAddGroupParameterSet {
      * Instiaciates a new GroupLifecyclePolicyAddGroupParameterSet
      */
     public GroupLifecyclePolicyAddGroupParameterSet() {}
-    private GroupLifecyclePolicyAddGroupParameterSet(@Nonnull final GroupLifecyclePolicyAddGroupParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupLifecyclePolicyAddGroupParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupLifecyclePolicyAddGroupParameterSet(@Nonnull final GroupLifecyclePolicyAddGroupParameterSetBuilder builder) {
         this.groupId = builder.groupId;
     }
     /**
@@ -50,7 +54,11 @@ public class GroupLifecyclePolicyAddGroupParameterSet {
      * Fluent builder for the GroupLifecyclePolicyAddGroupParameterSet
      */
     public static final class GroupLifecyclePolicyAddGroupParameterSetBuilder {
-        private String groupId;
+        /**
+         * The groupId parameter value
+         */
+        @Nullable
+        protected String groupId;
         /**
          * Sets the GroupId
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class GroupLifecyclePolicyAddGroupParameterSet {
             this.groupId = val;
             return this;
         }
-        private GroupLifecyclePolicyAddGroupParameterSetBuilder(){}
+        @Nullable
+        protected GroupLifecyclePolicyAddGroupParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

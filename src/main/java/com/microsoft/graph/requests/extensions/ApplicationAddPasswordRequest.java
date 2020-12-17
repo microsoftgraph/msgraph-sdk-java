@@ -38,6 +38,7 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
     }
 
 	/** The body for the method */
+    @Nullable
     protected ApplicationAddPasswordParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

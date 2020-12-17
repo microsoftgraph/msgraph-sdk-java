@@ -35,7 +35,11 @@ public class DeviceEnrollmentConfigurationSetPriorityParameterSet {
      * Instiaciates a new DeviceEnrollmentConfigurationSetPriorityParameterSet
      */
     public DeviceEnrollmentConfigurationSetPriorityParameterSet() {}
-    private DeviceEnrollmentConfigurationSetPriorityParameterSet(@Nonnull final DeviceEnrollmentConfigurationSetPriorityParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DeviceEnrollmentConfigurationSetPriorityParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DeviceEnrollmentConfigurationSetPriorityParameterSet(@Nonnull final DeviceEnrollmentConfigurationSetPriorityParameterSetBuilder builder) {
         this.priority = builder.priority;
     }
     /**
@@ -50,7 +54,11 @@ public class DeviceEnrollmentConfigurationSetPriorityParameterSet {
      * Fluent builder for the DeviceEnrollmentConfigurationSetPriorityParameterSet
      */
     public static final class DeviceEnrollmentConfigurationSetPriorityParameterSetBuilder {
-        private Integer priority;
+        /**
+         * The priority parameter value
+         */
+        @Nullable
+        protected Integer priority;
         /**
          * Sets the Priority
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DeviceEnrollmentConfigurationSetPriorityParameterSet {
             this.priority = val;
             return this;
         }
-        private DeviceEnrollmentConfigurationSetPriorityParameterSetBuilder(){}
+        @Nullable
+        protected DeviceEnrollmentConfigurationSetPriorityParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

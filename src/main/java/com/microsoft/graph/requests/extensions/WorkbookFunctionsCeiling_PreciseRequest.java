@@ -38,6 +38,7 @@ public class WorkbookFunctionsCeiling_PreciseRequest extends BaseRequest<Workboo
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCeiling_PreciseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

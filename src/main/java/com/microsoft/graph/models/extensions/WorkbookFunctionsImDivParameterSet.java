@@ -44,7 +44,11 @@ public class WorkbookFunctionsImDivParameterSet {
      * Instiaciates a new WorkbookFunctionsImDivParameterSet
      */
     public WorkbookFunctionsImDivParameterSet() {}
-    private WorkbookFunctionsImDivParameterSet(@Nonnull final WorkbookFunctionsImDivParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsImDivParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsImDivParameterSet(@Nonnull final WorkbookFunctionsImDivParameterSetBuilder builder) {
         this.inumber1 = builder.inumber1;
         this.inumber2 = builder.inumber2;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsImDivParameterSet {
      * Fluent builder for the WorkbookFunctionsImDivParameterSet
      */
     public static final class WorkbookFunctionsImDivParameterSetBuilder {
-        private com.google.gson.JsonElement inumber1;
+        /**
+         * The inumber1 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement inumber1;
         /**
          * Sets the Inumber1
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsImDivParameterSet {
             this.inumber1 = val;
             return this;
         }
-        private com.google.gson.JsonElement inumber2;
+        /**
+         * The inumber2 parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement inumber2;
         /**
          * Sets the Inumber2
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsImDivParameterSet {
             this.inumber2 = val;
             return this;
         }
-        private WorkbookFunctionsImDivParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsImDivParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

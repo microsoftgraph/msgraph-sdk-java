@@ -26,7 +26,11 @@ public class GroupCheckGrantedPermissionsForAppParameterSet {
      * Instiaciates a new GroupCheckGrantedPermissionsForAppParameterSet
      */
     public GroupCheckGrantedPermissionsForAppParameterSet() {}
-    private GroupCheckGrantedPermissionsForAppParameterSet(@Nonnull final GroupCheckGrantedPermissionsForAppParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupCheckGrantedPermissionsForAppParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupCheckGrantedPermissionsForAppParameterSet(@Nonnull final GroupCheckGrantedPermissionsForAppParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class GroupCheckGrantedPermissionsForAppParameterSet {
      * Fluent builder for the GroupCheckGrantedPermissionsForAppParameterSet
      */
     public static final class GroupCheckGrantedPermissionsForAppParameterSetBuilder {
-        private GroupCheckGrantedPermissionsForAppParameterSetBuilder(){}
+        @Nullable
+        protected GroupCheckGrantedPermissionsForAppParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

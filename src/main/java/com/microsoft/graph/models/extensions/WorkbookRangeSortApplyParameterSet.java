@@ -71,7 +71,11 @@ public class WorkbookRangeSortApplyParameterSet {
      * Instiaciates a new WorkbookRangeSortApplyParameterSet
      */
     public WorkbookRangeSortApplyParameterSet() {}
-    private WorkbookRangeSortApplyParameterSet(@Nonnull final WorkbookRangeSortApplyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeSortApplyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeSortApplyParameterSet(@Nonnull final WorkbookRangeSortApplyParameterSetBuilder builder) {
         this.fields = builder.fields;
         this.matchCase = builder.matchCase;
         this.hasHeaders = builder.hasHeaders;
@@ -90,7 +94,11 @@ public class WorkbookRangeSortApplyParameterSet {
      * Fluent builder for the WorkbookRangeSortApplyParameterSet
      */
     public static final class WorkbookRangeSortApplyParameterSetBuilder {
-        private java.util.List<WorkbookSortField> fields;
+        /**
+         * The fields parameter value
+         */
+        @Nullable
+        protected java.util.List<WorkbookSortField> fields;
         /**
          * Sets the Fields
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class WorkbookRangeSortApplyParameterSet {
             this.fields = val;
             return this;
         }
-        private Boolean matchCase;
+        /**
+         * The matchCase parameter value
+         */
+        @Nullable
+        protected Boolean matchCase;
         /**
          * Sets the MatchCase
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class WorkbookRangeSortApplyParameterSet {
             this.matchCase = val;
             return this;
         }
-        private Boolean hasHeaders;
+        /**
+         * The hasHeaders parameter value
+         */
+        @Nullable
+        protected Boolean hasHeaders;
         /**
          * Sets the HasHeaders
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class WorkbookRangeSortApplyParameterSet {
             this.hasHeaders = val;
             return this;
         }
-        private String orientation;
+        /**
+         * The orientation parameter value
+         */
+        @Nullable
+        protected String orientation;
         /**
          * Sets the Orientation
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class WorkbookRangeSortApplyParameterSet {
             this.orientation = val;
             return this;
         }
-        private String method;
+        /**
+         * The method parameter value
+         */
+        @Nullable
+        protected String method;
         /**
          * Sets the Method
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class WorkbookRangeSortApplyParameterSet {
             this.method = val;
             return this;
         }
-        private WorkbookRangeSortApplyParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeSortApplyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

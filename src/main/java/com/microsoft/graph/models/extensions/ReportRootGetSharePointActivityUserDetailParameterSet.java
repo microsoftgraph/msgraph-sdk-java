@@ -35,7 +35,11 @@ public class ReportRootGetSharePointActivityUserDetailParameterSet {
      * Instiaciates a new ReportRootGetSharePointActivityUserDetailParameterSet
      */
     public ReportRootGetSharePointActivityUserDetailParameterSet() {}
-    private ReportRootGetSharePointActivityUserDetailParameterSet(@Nonnull final ReportRootGetSharePointActivityUserDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSharePointActivityUserDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSharePointActivityUserDetailParameterSet(@Nonnull final ReportRootGetSharePointActivityUserDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSharePointActivityUserDetailParameterSet {
      * Fluent builder for the ReportRootGetSharePointActivityUserDetailParameterSet
      */
     public static final class ReportRootGetSharePointActivityUserDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSharePointActivityUserDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetSharePointActivityUserDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSharePointActivityUserDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

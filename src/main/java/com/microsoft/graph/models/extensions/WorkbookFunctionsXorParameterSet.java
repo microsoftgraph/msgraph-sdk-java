@@ -35,7 +35,11 @@ public class WorkbookFunctionsXorParameterSet {
      * Instiaciates a new WorkbookFunctionsXorParameterSet
      */
     public WorkbookFunctionsXorParameterSet() {}
-    private WorkbookFunctionsXorParameterSet(@Nonnull final WorkbookFunctionsXorParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsXorParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsXorParameterSet(@Nonnull final WorkbookFunctionsXorParameterSetBuilder builder) {
         this.values = builder.values;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsXorParameterSet {
      * Fluent builder for the WorkbookFunctionsXorParameterSet
      */
     public static final class WorkbookFunctionsXorParameterSetBuilder {
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsXorParameterSet {
             this.values = val;
             return this;
         }
-        private WorkbookFunctionsXorParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsXorParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsAsinParameterSet {
      * Instiaciates a new WorkbookFunctionsAsinParameterSet
      */
     public WorkbookFunctionsAsinParameterSet() {}
-    private WorkbookFunctionsAsinParameterSet(@Nonnull final WorkbookFunctionsAsinParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAsinParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAsinParameterSet(@Nonnull final WorkbookFunctionsAsinParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAsinParameterSet {
      * Fluent builder for the WorkbookFunctionsAsinParameterSet
      */
     public static final class WorkbookFunctionsAsinParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAsinParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsAsinParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAsinParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

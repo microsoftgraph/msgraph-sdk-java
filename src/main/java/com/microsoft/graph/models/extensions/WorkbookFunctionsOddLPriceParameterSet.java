@@ -98,7 +98,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
      * Instiaciates a new WorkbookFunctionsOddLPriceParameterSet
      */
     public WorkbookFunctionsOddLPriceParameterSet() {}
-    private WorkbookFunctionsOddLPriceParameterSet(@Nonnull final WorkbookFunctionsOddLPriceParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsOddLPriceParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsOddLPriceParameterSet(@Nonnull final WorkbookFunctionsOddLPriceParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.lastInterest = builder.lastInterest;
@@ -120,7 +124,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
      * Fluent builder for the WorkbookFunctionsOddLPriceParameterSet
      */
     public static final class WorkbookFunctionsOddLPriceParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -131,7 +139,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -142,7 +154,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement lastInterest;
+        /**
+         * The lastInterest parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement lastInterest;
         /**
          * Sets the LastInterest
          * @param val the value to set it to
@@ -153,7 +169,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
             this.lastInterest = val;
             return this;
         }
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -164,7 +184,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement yld;
+        /**
+         * The yld parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement yld;
         /**
          * Sets the Yld
          * @param val the value to set it to
@@ -175,7 +199,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
             this.yld = val;
             return this;
         }
-        private com.google.gson.JsonElement redemption;
+        /**
+         * The redemption parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement redemption;
         /**
          * Sets the Redemption
          * @param val the value to set it to
@@ -186,7 +214,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
             this.redemption = val;
             return this;
         }
-        private com.google.gson.JsonElement frequency;
+        /**
+         * The frequency parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement frequency;
         /**
          * Sets the Frequency
          * @param val the value to set it to
@@ -197,7 +229,11 @@ public class WorkbookFunctionsOddLPriceParameterSet {
             this.frequency = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -208,7 +244,8 @@ public class WorkbookFunctionsOddLPriceParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsOddLPriceParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsOddLPriceParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

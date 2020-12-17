@@ -35,7 +35,11 @@ public class ApplicationRemovePasswordParameterSet {
      * Instiaciates a new ApplicationRemovePasswordParameterSet
      */
     public ApplicationRemovePasswordParameterSet() {}
-    private ApplicationRemovePasswordParameterSet(@Nonnull final ApplicationRemovePasswordParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ApplicationRemovePasswordParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ApplicationRemovePasswordParameterSet(@Nonnull final ApplicationRemovePasswordParameterSetBuilder builder) {
         this.keyId = builder.keyId;
     }
     /**
@@ -50,7 +54,11 @@ public class ApplicationRemovePasswordParameterSet {
      * Fluent builder for the ApplicationRemovePasswordParameterSet
      */
     public static final class ApplicationRemovePasswordParameterSetBuilder {
-        private java.util.UUID keyId;
+        /**
+         * The keyId parameter value
+         */
+        @Nullable
+        protected java.util.UUID keyId;
         /**
          * Sets the KeyId
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ApplicationRemovePasswordParameterSet {
             this.keyId = val;
             return this;
         }
-        private ApplicationRemovePasswordParameterSetBuilder(){}
+        @Nullable
+        protected ApplicationRemovePasswordParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

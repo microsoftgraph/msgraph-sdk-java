@@ -53,7 +53,11 @@ public class ScheduleShareParameterSet {
      * Instiaciates a new ScheduleShareParameterSet
      */
     public ScheduleShareParameterSet() {}
-    private ScheduleShareParameterSet(@Nonnull final ScheduleShareParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ScheduleShareParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ScheduleShareParameterSet(@Nonnull final ScheduleShareParameterSetBuilder builder) {
         this.notifyTeam = builder.notifyTeam;
         this.startDateTime = builder.startDateTime;
         this.endDateTime = builder.endDateTime;
@@ -70,7 +74,11 @@ public class ScheduleShareParameterSet {
      * Fluent builder for the ScheduleShareParameterSet
      */
     public static final class ScheduleShareParameterSetBuilder {
-        private Boolean notifyTeam;
+        /**
+         * The notifyTeam parameter value
+         */
+        @Nullable
+        protected Boolean notifyTeam;
         /**
          * Sets the NotifyTeam
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class ScheduleShareParameterSet {
             this.notifyTeam = val;
             return this;
         }
-        private java.util.Calendar startDateTime;
+        /**
+         * The startDateTime parameter value
+         */
+        @Nullable
+        protected java.util.Calendar startDateTime;
         /**
          * Sets the StartDateTime
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class ScheduleShareParameterSet {
             this.startDateTime = val;
             return this;
         }
-        private java.util.Calendar endDateTime;
+        /**
+         * The endDateTime parameter value
+         */
+        @Nullable
+        protected java.util.Calendar endDateTime;
         /**
          * Sets the EndDateTime
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class ScheduleShareParameterSet {
             this.endDateTime = val;
             return this;
         }
-        private ScheduleShareParameterSetBuilder(){}
+        @Nullable
+        protected ScheduleShareParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -44,7 +44,11 @@ public class WorkbookFunctionsRightbParameterSet {
      * Instiaciates a new WorkbookFunctionsRightbParameterSet
      */
     public WorkbookFunctionsRightbParameterSet() {}
-    private WorkbookFunctionsRightbParameterSet(@Nonnull final WorkbookFunctionsRightbParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRightbParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRightbParameterSet(@Nonnull final WorkbookFunctionsRightbParameterSetBuilder builder) {
         this.text = builder.text;
         this.numBytes = builder.numBytes;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsRightbParameterSet {
      * Fluent builder for the WorkbookFunctionsRightbParameterSet
      */
     public static final class WorkbookFunctionsRightbParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsRightbParameterSet {
             this.text = val;
             return this;
         }
-        private com.google.gson.JsonElement numBytes;
+        /**
+         * The numBytes parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numBytes;
         /**
          * Sets the NumBytes
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsRightbParameterSet {
             this.numBytes = val;
             return this;
         }
-        private WorkbookFunctionsRightbParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRightbParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

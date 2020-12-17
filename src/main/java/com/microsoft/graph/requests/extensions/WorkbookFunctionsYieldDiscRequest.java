@@ -38,6 +38,7 @@ public class WorkbookFunctionsYieldDiscRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsYieldDiscParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

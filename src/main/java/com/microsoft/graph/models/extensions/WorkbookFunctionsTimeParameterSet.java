@@ -53,7 +53,11 @@ public class WorkbookFunctionsTimeParameterSet {
      * Instiaciates a new WorkbookFunctionsTimeParameterSet
      */
     public WorkbookFunctionsTimeParameterSet() {}
-    private WorkbookFunctionsTimeParameterSet(@Nonnull final WorkbookFunctionsTimeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTimeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTimeParameterSet(@Nonnull final WorkbookFunctionsTimeParameterSetBuilder builder) {
         this.hour = builder.hour;
         this.minute = builder.minute;
         this.second = builder.second;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsTimeParameterSet {
      * Fluent builder for the WorkbookFunctionsTimeParameterSet
      */
     public static final class WorkbookFunctionsTimeParameterSetBuilder {
-        private com.google.gson.JsonElement hour;
+        /**
+         * The hour parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement hour;
         /**
          * Sets the Hour
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsTimeParameterSet {
             this.hour = val;
             return this;
         }
-        private com.google.gson.JsonElement minute;
+        /**
+         * The minute parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement minute;
         /**
          * Sets the Minute
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsTimeParameterSet {
             this.minute = val;
             return this;
         }
-        private com.google.gson.JsonElement second;
+        /**
+         * The second parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement second;
         /**
          * Sets the Second
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsTimeParameterSet {
             this.second = val;
             return this;
         }
-        private WorkbookFunctionsTimeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTimeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

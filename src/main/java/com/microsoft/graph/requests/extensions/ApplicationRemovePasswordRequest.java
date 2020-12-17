@@ -37,6 +37,7 @@ public class ApplicationRemovePasswordRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ApplicationRemovePasswordParameterSet body;
     /**
      * Creates the ApplicationRemovePassword

@@ -26,7 +26,11 @@ public class GroupRemoveFavoriteParameterSet {
      * Instiaciates a new GroupRemoveFavoriteParameterSet
      */
     public GroupRemoveFavoriteParameterSet() {}
-    private GroupRemoveFavoriteParameterSet(@Nonnull final GroupRemoveFavoriteParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupRemoveFavoriteParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupRemoveFavoriteParameterSet(@Nonnull final GroupRemoveFavoriteParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class GroupRemoveFavoriteParameterSet {
      * Fluent builder for the GroupRemoveFavoriteParameterSet
      */
     public static final class GroupRemoveFavoriteParameterSetBuilder {
-        private GroupRemoveFavoriteParameterSetBuilder(){}
+        @Nullable
+        protected GroupRemoveFavoriteParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

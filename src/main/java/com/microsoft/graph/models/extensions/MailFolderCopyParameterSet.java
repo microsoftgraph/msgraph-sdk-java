@@ -35,7 +35,11 @@ public class MailFolderCopyParameterSet {
      * Instiaciates a new MailFolderCopyParameterSet
      */
     public MailFolderCopyParameterSet() {}
-    private MailFolderCopyParameterSet(@Nonnull final MailFolderCopyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MailFolderCopyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MailFolderCopyParameterSet(@Nonnull final MailFolderCopyParameterSetBuilder builder) {
         this.destinationId = builder.destinationId;
     }
     /**
@@ -50,7 +54,11 @@ public class MailFolderCopyParameterSet {
      * Fluent builder for the MailFolderCopyParameterSet
      */
     public static final class MailFolderCopyParameterSetBuilder {
-        private String destinationId;
+        /**
+         * The destinationId parameter value
+         */
+        @Nullable
+        protected String destinationId;
         /**
          * Sets the DestinationId
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class MailFolderCopyParameterSet {
             this.destinationId = val;
             return this;
         }
-        private MailFolderCopyParameterSetBuilder(){}
+        @Nullable
+        protected MailFolderCopyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

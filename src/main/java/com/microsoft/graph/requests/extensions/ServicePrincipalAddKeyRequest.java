@@ -38,6 +38,7 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest<KeyCredential> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ServicePrincipalAddKeyParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

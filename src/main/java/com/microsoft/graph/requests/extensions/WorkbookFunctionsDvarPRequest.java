@@ -38,6 +38,7 @@ public class WorkbookFunctionsDvarPRequest extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsDvarPParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

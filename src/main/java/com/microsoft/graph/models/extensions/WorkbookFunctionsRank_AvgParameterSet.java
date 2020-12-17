@@ -53,7 +53,11 @@ public class WorkbookFunctionsRank_AvgParameterSet {
      * Instiaciates a new WorkbookFunctionsRank_AvgParameterSet
      */
     public WorkbookFunctionsRank_AvgParameterSet() {}
-    private WorkbookFunctionsRank_AvgParameterSet(@Nonnull final WorkbookFunctionsRank_AvgParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRank_AvgParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRank_AvgParameterSet(@Nonnull final WorkbookFunctionsRank_AvgParameterSetBuilder builder) {
         this.number = builder.number;
         this.ref = builder.ref;
         this.order = builder.order;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsRank_AvgParameterSet {
      * Fluent builder for the WorkbookFunctionsRank_AvgParameterSet
      */
     public static final class WorkbookFunctionsRank_AvgParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsRank_AvgParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement ref;
+        /**
+         * The ref parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement ref;
         /**
          * Sets the Ref
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsRank_AvgParameterSet {
             this.ref = val;
             return this;
         }
-        private com.google.gson.JsonElement order;
+        /**
+         * The order parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement order;
         /**
          * Sets the Order
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsRank_AvgParameterSet {
             this.order = val;
             return this;
         }
-        private WorkbookFunctionsRank_AvgParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRank_AvgParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class WorkbookFunctionsGaussParameterSet {
      * Instiaciates a new WorkbookFunctionsGaussParameterSet
      */
     public WorkbookFunctionsGaussParameterSet() {}
-    private WorkbookFunctionsGaussParameterSet(@Nonnull final WorkbookFunctionsGaussParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsGaussParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsGaussParameterSet(@Nonnull final WorkbookFunctionsGaussParameterSetBuilder builder) {
         this.x = builder.x;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsGaussParameterSet {
      * Fluent builder for the WorkbookFunctionsGaussParameterSet
      */
     public static final class WorkbookFunctionsGaussParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsGaussParameterSet {
             this.x = val;
             return this;
         }
-        private WorkbookFunctionsGaussParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsGaussParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

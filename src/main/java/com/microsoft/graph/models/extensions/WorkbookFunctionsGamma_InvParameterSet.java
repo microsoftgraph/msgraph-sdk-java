@@ -53,7 +53,11 @@ public class WorkbookFunctionsGamma_InvParameterSet {
      * Instiaciates a new WorkbookFunctionsGamma_InvParameterSet
      */
     public WorkbookFunctionsGamma_InvParameterSet() {}
-    private WorkbookFunctionsGamma_InvParameterSet(@Nonnull final WorkbookFunctionsGamma_InvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsGamma_InvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsGamma_InvParameterSet(@Nonnull final WorkbookFunctionsGamma_InvParameterSetBuilder builder) {
         this.probability = builder.probability;
         this.alpha = builder.alpha;
         this.beta = builder.beta;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsGamma_InvParameterSet {
      * Fluent builder for the WorkbookFunctionsGamma_InvParameterSet
      */
     public static final class WorkbookFunctionsGamma_InvParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsGamma_InvParameterSet {
             this.probability = val;
             return this;
         }
-        private com.google.gson.JsonElement alpha;
+        /**
+         * The alpha parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement alpha;
         /**
          * Sets the Alpha
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsGamma_InvParameterSet {
             this.alpha = val;
             return this;
         }
-        private com.google.gson.JsonElement beta;
+        /**
+         * The beta parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement beta;
         /**
          * Sets the Beta
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsGamma_InvParameterSet {
             this.beta = val;
             return this;
         }
-        private WorkbookFunctionsGamma_InvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsGamma_InvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

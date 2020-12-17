@@ -62,7 +62,11 @@ public class WorkbookFunctionsBinom_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsBinom_DistParameterSet
      */
     public WorkbookFunctionsBinom_DistParameterSet() {}
-    private WorkbookFunctionsBinom_DistParameterSet(@Nonnull final WorkbookFunctionsBinom_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBinom_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBinom_DistParameterSet(@Nonnull final WorkbookFunctionsBinom_DistParameterSetBuilder builder) {
         this.numberS = builder.numberS;
         this.trials = builder.trials;
         this.probabilityS = builder.probabilityS;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsBinom_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsBinom_DistParameterSet
      */
     public static final class WorkbookFunctionsBinom_DistParameterSetBuilder {
-        private com.google.gson.JsonElement numberS;
+        /**
+         * The numberS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberS;
         /**
          * Sets the NumberS
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsBinom_DistParameterSet {
             this.numberS = val;
             return this;
         }
-        private com.google.gson.JsonElement trials;
+        /**
+         * The trials parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement trials;
         /**
          * Sets the Trials
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsBinom_DistParameterSet {
             this.trials = val;
             return this;
         }
-        private com.google.gson.JsonElement probabilityS;
+        /**
+         * The probabilityS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probabilityS;
         /**
          * Sets the ProbabilityS
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsBinom_DistParameterSet {
             this.probabilityS = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsBinom_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsBinom_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBinom_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

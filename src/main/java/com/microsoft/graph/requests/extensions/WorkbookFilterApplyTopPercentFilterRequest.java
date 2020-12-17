@@ -37,6 +37,7 @@ public class WorkbookFilterApplyTopPercentFilterRequest extends BaseRequest<Void
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFilterApplyTopPercentFilterParameterSet body;
     /**
      * Creates the WorkbookFilterApplyTopPercentFilter

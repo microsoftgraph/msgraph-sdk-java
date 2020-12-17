@@ -46,7 +46,11 @@ public class UserGetMailTipsParameterSet {
      * Instiaciates a new UserGetMailTipsParameterSet
      */
     public UserGetMailTipsParameterSet() {}
-    private UserGetMailTipsParameterSet(@Nonnull final UserGetMailTipsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserGetMailTipsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserGetMailTipsParameterSet(@Nonnull final UserGetMailTipsParameterSetBuilder builder) {
         this.emailAddresses = builder.emailAddresses;
         this.mailTipsOptions = builder.mailTipsOptions;
     }
@@ -62,7 +66,11 @@ public class UserGetMailTipsParameterSet {
      * Fluent builder for the UserGetMailTipsParameterSet
      */
     public static final class UserGetMailTipsParameterSetBuilder {
-        private java.util.List<String> emailAddresses;
+        /**
+         * The emailAddresses parameter value
+         */
+        @Nullable
+        protected java.util.List<String> emailAddresses;
         /**
          * Sets the EmailAddresses
          * @param val the value to set it to
@@ -73,7 +81,11 @@ public class UserGetMailTipsParameterSet {
             this.emailAddresses = val;
             return this;
         }
-        private EnumSet<MailTipsType> mailTipsOptions;
+        /**
+         * The mailTipsOptions parameter value
+         */
+        @Nullable
+        protected EnumSet<MailTipsType> mailTipsOptions;
         /**
          * Sets the MailTipsOptions
          * @param val the value to set it to
@@ -84,7 +96,8 @@ public class UserGetMailTipsParameterSet {
             this.mailTipsOptions = val;
             return this;
         }
-        private UserGetMailTipsParameterSetBuilder(){}
+        @Nullable
+        protected UserGetMailTipsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class ScheduleShareRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ScheduleShareParameterSet body;
     /**
      * Creates the ScheduleShare

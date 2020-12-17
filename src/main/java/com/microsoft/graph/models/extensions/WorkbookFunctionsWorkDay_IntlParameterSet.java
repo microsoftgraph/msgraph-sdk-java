@@ -62,7 +62,11 @@ public class WorkbookFunctionsWorkDay_IntlParameterSet {
      * Instiaciates a new WorkbookFunctionsWorkDay_IntlParameterSet
      */
     public WorkbookFunctionsWorkDay_IntlParameterSet() {}
-    private WorkbookFunctionsWorkDay_IntlParameterSet(@Nonnull final WorkbookFunctionsWorkDay_IntlParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsWorkDay_IntlParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsWorkDay_IntlParameterSet(@Nonnull final WorkbookFunctionsWorkDay_IntlParameterSetBuilder builder) {
         this.startDate = builder.startDate;
         this.days = builder.days;
         this.weekend = builder.weekend;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsWorkDay_IntlParameterSet {
      * Fluent builder for the WorkbookFunctionsWorkDay_IntlParameterSet
      */
     public static final class WorkbookFunctionsWorkDay_IntlParameterSetBuilder {
-        private com.google.gson.JsonElement startDate;
+        /**
+         * The startDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startDate;
         /**
          * Sets the StartDate
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsWorkDay_IntlParameterSet {
             this.startDate = val;
             return this;
         }
-        private com.google.gson.JsonElement days;
+        /**
+         * The days parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement days;
         /**
          * Sets the Days
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsWorkDay_IntlParameterSet {
             this.days = val;
             return this;
         }
-        private com.google.gson.JsonElement weekend;
+        /**
+         * The weekend parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement weekend;
         /**
          * Sets the Weekend
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsWorkDay_IntlParameterSet {
             this.weekend = val;
             return this;
         }
-        private com.google.gson.JsonElement holidays;
+        /**
+         * The holidays parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement holidays;
         /**
          * Sets the Holidays
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsWorkDay_IntlParameterSet {
             this.holidays = val;
             return this;
         }
-        private WorkbookFunctionsWorkDay_IntlParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsWorkDay_IntlParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

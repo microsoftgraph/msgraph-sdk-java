@@ -26,7 +26,11 @@ public class WorkbookFunctionsTrueParameterSet {
      * Instiaciates a new WorkbookFunctionsTrueParameterSet
      */
     public WorkbookFunctionsTrueParameterSet() {}
-    private WorkbookFunctionsTrueParameterSet(@Nonnull final WorkbookFunctionsTrueParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTrueParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTrueParameterSet(@Nonnull final WorkbookFunctionsTrueParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookFunctionsTrueParameterSet {
      * Fluent builder for the WorkbookFunctionsTrueParameterSet
      */
     public static final class WorkbookFunctionsTrueParameterSetBuilder {
-        private WorkbookFunctionsTrueParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTrueParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

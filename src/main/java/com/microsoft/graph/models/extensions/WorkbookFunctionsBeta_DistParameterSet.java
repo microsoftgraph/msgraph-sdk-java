@@ -80,7 +80,11 @@ public class WorkbookFunctionsBeta_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsBeta_DistParameterSet
      */
     public WorkbookFunctionsBeta_DistParameterSet() {}
-    private WorkbookFunctionsBeta_DistParameterSet(@Nonnull final WorkbookFunctionsBeta_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBeta_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBeta_DistParameterSet(@Nonnull final WorkbookFunctionsBeta_DistParameterSetBuilder builder) {
         this.x = builder.x;
         this.alpha = builder.alpha;
         this.beta = builder.beta;
@@ -100,7 +104,11 @@ public class WorkbookFunctionsBeta_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsBeta_DistParameterSet
      */
     public static final class WorkbookFunctionsBeta_DistParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -111,7 +119,11 @@ public class WorkbookFunctionsBeta_DistParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement alpha;
+        /**
+         * The alpha parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement alpha;
         /**
          * Sets the Alpha
          * @param val the value to set it to
@@ -122,7 +134,11 @@ public class WorkbookFunctionsBeta_DistParameterSet {
             this.alpha = val;
             return this;
         }
-        private com.google.gson.JsonElement beta;
+        /**
+         * The beta parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement beta;
         /**
          * Sets the Beta
          * @param val the value to set it to
@@ -133,7 +149,11 @@ public class WorkbookFunctionsBeta_DistParameterSet {
             this.beta = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -144,7 +164,11 @@ public class WorkbookFunctionsBeta_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private com.google.gson.JsonElement a;
+        /**
+         * The a parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement a;
         /**
          * Sets the A
          * @param val the value to set it to
@@ -155,7 +179,11 @@ public class WorkbookFunctionsBeta_DistParameterSet {
             this.a = val;
             return this;
         }
-        private com.google.gson.JsonElement b;
+        /**
+         * The b parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement b;
         /**
          * Sets the B
          * @param val the value to set it to
@@ -166,7 +194,8 @@ public class WorkbookFunctionsBeta_DistParameterSet {
             this.b = val;
             return this;
         }
-        private WorkbookFunctionsBeta_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBeta_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

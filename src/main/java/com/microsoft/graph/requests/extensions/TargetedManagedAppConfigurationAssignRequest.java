@@ -37,6 +37,7 @@ public class TargetedManagedAppConfigurationAssignRequest extends BaseRequest<Vo
     }
 
 	/** The body for the method */
+    @Nullable
     protected TargetedManagedAppConfigurationAssignParameterSet body;
     /**
      * Creates the TargetedManagedAppConfigurationAssign

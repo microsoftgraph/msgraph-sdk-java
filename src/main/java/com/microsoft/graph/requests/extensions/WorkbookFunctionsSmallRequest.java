@@ -38,6 +38,7 @@ public class WorkbookFunctionsSmallRequest extends BaseRequest<WorkbookFunctionR
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsSmallParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

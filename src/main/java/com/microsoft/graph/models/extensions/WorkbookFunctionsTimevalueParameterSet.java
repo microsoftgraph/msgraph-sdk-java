@@ -35,7 +35,11 @@ public class WorkbookFunctionsTimevalueParameterSet {
      * Instiaciates a new WorkbookFunctionsTimevalueParameterSet
      */
     public WorkbookFunctionsTimevalueParameterSet() {}
-    private WorkbookFunctionsTimevalueParameterSet(@Nonnull final WorkbookFunctionsTimevalueParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTimevalueParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTimevalueParameterSet(@Nonnull final WorkbookFunctionsTimevalueParameterSetBuilder builder) {
         this.timeText = builder.timeText;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsTimevalueParameterSet {
      * Fluent builder for the WorkbookFunctionsTimevalueParameterSet
      */
     public static final class WorkbookFunctionsTimevalueParameterSetBuilder {
-        private com.google.gson.JsonElement timeText;
+        /**
+         * The timeText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement timeText;
         /**
          * Sets the TimeText
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsTimevalueParameterSet {
             this.timeText = val;
             return this;
         }
-        private WorkbookFunctionsTimevalueParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTimevalueParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class DeviceManagementGetEffectivePermissionsParameterSet {
      * Instiaciates a new DeviceManagementGetEffectivePermissionsParameterSet
      */
     public DeviceManagementGetEffectivePermissionsParameterSet() {}
-    private DeviceManagementGetEffectivePermissionsParameterSet(@Nonnull final DeviceManagementGetEffectivePermissionsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DeviceManagementGetEffectivePermissionsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DeviceManagementGetEffectivePermissionsParameterSet(@Nonnull final DeviceManagementGetEffectivePermissionsParameterSetBuilder builder) {
         this.scope = builder.scope;
     }
     /**
@@ -50,7 +54,11 @@ public class DeviceManagementGetEffectivePermissionsParameterSet {
      * Fluent builder for the DeviceManagementGetEffectivePermissionsParameterSet
      */
     public static final class DeviceManagementGetEffectivePermissionsParameterSetBuilder {
-        private String scope;
+        /**
+         * The scope parameter value
+         */
+        @Nullable
+        protected String scope;
         /**
          * Sets the Scope
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DeviceManagementGetEffectivePermissionsParameterSet {
             this.scope = val;
             return this;
         }
-        private DeviceManagementGetEffectivePermissionsParameterSetBuilder(){}
+        @Nullable
+        protected DeviceManagementGetEffectivePermissionsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

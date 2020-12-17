@@ -26,7 +26,11 @@ public class WorkbookTableSortClearParameterSet {
      * Instiaciates a new WorkbookTableSortClearParameterSet
      */
     public WorkbookTableSortClearParameterSet() {}
-    private WorkbookTableSortClearParameterSet(@Nonnull final WorkbookTableSortClearParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableSortClearParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableSortClearParameterSet(@Nonnull final WorkbookTableSortClearParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableSortClearParameterSet {
      * Fluent builder for the WorkbookTableSortClearParameterSet
      */
     public static final class WorkbookTableSortClearParameterSetBuilder {
-        private WorkbookTableSortClearParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableSortClearParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

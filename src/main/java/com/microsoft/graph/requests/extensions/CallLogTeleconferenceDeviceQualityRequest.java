@@ -37,6 +37,7 @@ public class CallLogTeleconferenceDeviceQualityRequest extends BaseRequest<Void>
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallLogTeleconferenceDeviceQualityParameterSet body;
     /**
      * Creates the CallLogTeleconferenceDeviceQuality

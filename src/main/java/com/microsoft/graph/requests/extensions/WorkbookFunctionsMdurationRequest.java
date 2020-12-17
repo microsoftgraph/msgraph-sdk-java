@@ -38,6 +38,7 @@ public class WorkbookFunctionsMdurationRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsMdurationParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

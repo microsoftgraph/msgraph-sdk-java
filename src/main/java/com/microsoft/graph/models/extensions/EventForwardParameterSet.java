@@ -44,7 +44,11 @@ public class EventForwardParameterSet {
      * Instiaciates a new EventForwardParameterSet
      */
     public EventForwardParameterSet() {}
-    private EventForwardParameterSet(@Nonnull final EventForwardParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new EventForwardParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected EventForwardParameterSet(@Nonnull final EventForwardParameterSetBuilder builder) {
         this.toRecipients = builder.toRecipients;
         this.comment = builder.comment;
     }
@@ -60,7 +64,11 @@ public class EventForwardParameterSet {
      * Fluent builder for the EventForwardParameterSet
      */
     public static final class EventForwardParameterSetBuilder {
-        private java.util.List<Recipient> toRecipients;
+        /**
+         * The toRecipients parameter value
+         */
+        @Nullable
+        protected java.util.List<Recipient> toRecipients;
         /**
          * Sets the ToRecipients
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class EventForwardParameterSet {
             this.toRecipients = val;
             return this;
         }
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class EventForwardParameterSet {
             this.comment = val;
             return this;
         }
-        private EventForwardParameterSetBuilder(){}
+        @Nullable
+        protected EventForwardParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

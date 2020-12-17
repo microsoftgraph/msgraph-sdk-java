@@ -53,7 +53,11 @@ public class WorkbookFunctionsLookupParameterSet {
      * Instiaciates a new WorkbookFunctionsLookupParameterSet
      */
     public WorkbookFunctionsLookupParameterSet() {}
-    private WorkbookFunctionsLookupParameterSet(@Nonnull final WorkbookFunctionsLookupParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsLookupParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsLookupParameterSet(@Nonnull final WorkbookFunctionsLookupParameterSetBuilder builder) {
         this.lookupValue = builder.lookupValue;
         this.lookupVector = builder.lookupVector;
         this.resultVector = builder.resultVector;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsLookupParameterSet {
      * Fluent builder for the WorkbookFunctionsLookupParameterSet
      */
     public static final class WorkbookFunctionsLookupParameterSetBuilder {
-        private com.google.gson.JsonElement lookupValue;
+        /**
+         * The lookupValue parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement lookupValue;
         /**
          * Sets the LookupValue
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsLookupParameterSet {
             this.lookupValue = val;
             return this;
         }
-        private com.google.gson.JsonElement lookupVector;
+        /**
+         * The lookupVector parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement lookupVector;
         /**
          * Sets the LookupVector
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsLookupParameterSet {
             this.lookupVector = val;
             return this;
         }
-        private com.google.gson.JsonElement resultVector;
+        /**
+         * The resultVector parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement resultVector;
         /**
          * Sets the ResultVector
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsLookupParameterSet {
             this.resultVector = val;
             return this;
         }
-        private WorkbookFunctionsLookupParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsLookupParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

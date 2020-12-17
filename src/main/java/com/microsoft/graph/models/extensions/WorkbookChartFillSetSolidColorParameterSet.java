@@ -35,7 +35,11 @@ public class WorkbookChartFillSetSolidColorParameterSet {
      * Instiaciates a new WorkbookChartFillSetSolidColorParameterSet
      */
     public WorkbookChartFillSetSolidColorParameterSet() {}
-    private WorkbookChartFillSetSolidColorParameterSet(@Nonnull final WorkbookChartFillSetSolidColorParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartFillSetSolidColorParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartFillSetSolidColorParameterSet(@Nonnull final WorkbookChartFillSetSolidColorParameterSetBuilder builder) {
         this.color = builder.color;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookChartFillSetSolidColorParameterSet {
      * Fluent builder for the WorkbookChartFillSetSolidColorParameterSet
      */
     public static final class WorkbookChartFillSetSolidColorParameterSetBuilder {
-        private String color;
+        /**
+         * The color parameter value
+         */
+        @Nullable
+        protected String color;
         /**
          * Sets the Color
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookChartFillSetSolidColorParameterSet {
             this.color = val;
             return this;
         }
-        private WorkbookChartFillSetSolidColorParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartFillSetSolidColorParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

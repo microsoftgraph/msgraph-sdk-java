@@ -35,7 +35,11 @@ public class CallChangeScreenSharingRoleParameterSet {
      * Instiaciates a new CallChangeScreenSharingRoleParameterSet
      */
     public CallChangeScreenSharingRoleParameterSet() {}
-    private CallChangeScreenSharingRoleParameterSet(@Nonnull final CallChangeScreenSharingRoleParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallChangeScreenSharingRoleParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallChangeScreenSharingRoleParameterSet(@Nonnull final CallChangeScreenSharingRoleParameterSetBuilder builder) {
         this.role = builder.role;
     }
     /**
@@ -50,7 +54,11 @@ public class CallChangeScreenSharingRoleParameterSet {
      * Fluent builder for the CallChangeScreenSharingRoleParameterSet
      */
     public static final class CallChangeScreenSharingRoleParameterSetBuilder {
-        private ScreenSharingRole role;
+        /**
+         * The role parameter value
+         */
+        @Nullable
+        protected ScreenSharingRole role;
         /**
          * Sets the Role
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class CallChangeScreenSharingRoleParameterSet {
             this.role = val;
             return this;
         }
-        private CallChangeScreenSharingRoleParameterSetBuilder(){}
+        @Nullable
+        protected CallChangeScreenSharingRoleParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

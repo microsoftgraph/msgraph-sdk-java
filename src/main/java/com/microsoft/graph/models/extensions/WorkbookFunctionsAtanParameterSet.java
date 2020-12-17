@@ -35,7 +35,11 @@ public class WorkbookFunctionsAtanParameterSet {
      * Instiaciates a new WorkbookFunctionsAtanParameterSet
      */
     public WorkbookFunctionsAtanParameterSet() {}
-    private WorkbookFunctionsAtanParameterSet(@Nonnull final WorkbookFunctionsAtanParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsAtanParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsAtanParameterSet(@Nonnull final WorkbookFunctionsAtanParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsAtanParameterSet {
      * Fluent builder for the WorkbookFunctionsAtanParameterSet
      */
     public static final class WorkbookFunctionsAtanParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsAtanParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsAtanParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsAtanParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -26,7 +26,11 @@ public class ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet {
      * Instiaciates a new ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet
      */
     public ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet() {}
-    private ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet(@Nonnull final ManagedDeviceWindowsDefenderUpdateSignaturesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet(@Nonnull final ManagedDeviceWindowsDefenderUpdateSignaturesParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet {
      * Fluent builder for the ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet
      */
     public static final class ManagedDeviceWindowsDefenderUpdateSignaturesParameterSetBuilder {
-        private ManagedDeviceWindowsDefenderUpdateSignaturesParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceWindowsDefenderUpdateSignaturesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

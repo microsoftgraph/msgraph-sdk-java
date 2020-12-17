@@ -53,7 +53,11 @@ public class WorkbookFunctionsFloor_MathParameterSet {
      * Instiaciates a new WorkbookFunctionsFloor_MathParameterSet
      */
     public WorkbookFunctionsFloor_MathParameterSet() {}
-    private WorkbookFunctionsFloor_MathParameterSet(@Nonnull final WorkbookFunctionsFloor_MathParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsFloor_MathParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsFloor_MathParameterSet(@Nonnull final WorkbookFunctionsFloor_MathParameterSetBuilder builder) {
         this.number = builder.number;
         this.significance = builder.significance;
         this.mode = builder.mode;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsFloor_MathParameterSet {
      * Fluent builder for the WorkbookFunctionsFloor_MathParameterSet
      */
     public static final class WorkbookFunctionsFloor_MathParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsFloor_MathParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement significance;
+        /**
+         * The significance parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement significance;
         /**
          * Sets the Significance
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsFloor_MathParameterSet {
             this.significance = val;
             return this;
         }
-        private com.google.gson.JsonElement mode;
+        /**
+         * The mode parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement mode;
         /**
          * Sets the Mode
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsFloor_MathParameterSet {
             this.mode = val;
             return this;
         }
-        private WorkbookFunctionsFloor_MathParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsFloor_MathParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

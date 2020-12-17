@@ -26,7 +26,11 @@ public class UserGetManagedAppDiagnosticStatusesParameterSet {
      * Instiaciates a new UserGetManagedAppDiagnosticStatusesParameterSet
      */
     public UserGetManagedAppDiagnosticStatusesParameterSet() {}
-    private UserGetManagedAppDiagnosticStatusesParameterSet(@Nonnull final UserGetManagedAppDiagnosticStatusesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserGetManagedAppDiagnosticStatusesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserGetManagedAppDiagnosticStatusesParameterSet(@Nonnull final UserGetManagedAppDiagnosticStatusesParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class UserGetManagedAppDiagnosticStatusesParameterSet {
      * Fluent builder for the UserGetManagedAppDiagnosticStatusesParameterSet
      */
     public static final class UserGetManagedAppDiagnosticStatusesParameterSetBuilder {
-        private UserGetManagedAppDiagnosticStatusesParameterSetBuilder(){}
+        @Nullable
+        protected UserGetManagedAppDiagnosticStatusesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

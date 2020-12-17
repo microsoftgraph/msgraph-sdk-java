@@ -44,7 +44,11 @@ public class WorkbookFunctionsT_Dist_RTParameterSet {
      * Instiaciates a new WorkbookFunctionsT_Dist_RTParameterSet
      */
     public WorkbookFunctionsT_Dist_RTParameterSet() {}
-    private WorkbookFunctionsT_Dist_RTParameterSet(@Nonnull final WorkbookFunctionsT_Dist_RTParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsT_Dist_RTParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsT_Dist_RTParameterSet(@Nonnull final WorkbookFunctionsT_Dist_RTParameterSetBuilder builder) {
         this.x = builder.x;
         this.degFreedom = builder.degFreedom;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsT_Dist_RTParameterSet {
      * Fluent builder for the WorkbookFunctionsT_Dist_RTParameterSet
      */
     public static final class WorkbookFunctionsT_Dist_RTParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsT_Dist_RTParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom;
+        /**
+         * The degFreedom parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom;
         /**
          * Sets the DegFreedom
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsT_Dist_RTParameterSet {
             this.degFreedom = val;
             return this;
         }
-        private WorkbookFunctionsT_Dist_RTParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsT_Dist_RTParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

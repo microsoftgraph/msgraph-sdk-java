@@ -54,7 +54,11 @@ public class UserTranslateExchangeIdsParameterSet {
      * Instiaciates a new UserTranslateExchangeIdsParameterSet
      */
     public UserTranslateExchangeIdsParameterSet() {}
-    private UserTranslateExchangeIdsParameterSet(@Nonnull final UserTranslateExchangeIdsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserTranslateExchangeIdsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserTranslateExchangeIdsParameterSet(@Nonnull final UserTranslateExchangeIdsParameterSetBuilder builder) {
         this.inputIds = builder.inputIds;
         this.targetIdType = builder.targetIdType;
         this.sourceIdType = builder.sourceIdType;
@@ -71,7 +75,11 @@ public class UserTranslateExchangeIdsParameterSet {
      * Fluent builder for the UserTranslateExchangeIdsParameterSet
      */
     public static final class UserTranslateExchangeIdsParameterSetBuilder {
-        private java.util.List<String> inputIds;
+        /**
+         * The inputIds parameter value
+         */
+        @Nullable
+        protected java.util.List<String> inputIds;
         /**
          * Sets the InputIds
          * @param val the value to set it to
@@ -82,7 +90,11 @@ public class UserTranslateExchangeIdsParameterSet {
             this.inputIds = val;
             return this;
         }
-        private ExchangeIdFormat targetIdType;
+        /**
+         * The targetIdType parameter value
+         */
+        @Nullable
+        protected ExchangeIdFormat targetIdType;
         /**
          * Sets the TargetIdType
          * @param val the value to set it to
@@ -93,7 +105,11 @@ public class UserTranslateExchangeIdsParameterSet {
             this.targetIdType = val;
             return this;
         }
-        private ExchangeIdFormat sourceIdType;
+        /**
+         * The sourceIdType parameter value
+         */
+        @Nullable
+        protected ExchangeIdFormat sourceIdType;
         /**
          * Sets the SourceIdType
          * @param val the value to set it to
@@ -104,7 +120,8 @@ public class UserTranslateExchangeIdsParameterSet {
             this.sourceIdType = val;
             return this;
         }
-        private UserTranslateExchangeIdsParameterSetBuilder(){}
+        @Nullable
+        protected UserTranslateExchangeIdsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

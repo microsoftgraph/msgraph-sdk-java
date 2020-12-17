@@ -44,7 +44,11 @@ public class WorkbookFunctionsTrimMeanParameterSet {
      * Instiaciates a new WorkbookFunctionsTrimMeanParameterSet
      */
     public WorkbookFunctionsTrimMeanParameterSet() {}
-    private WorkbookFunctionsTrimMeanParameterSet(@Nonnull final WorkbookFunctionsTrimMeanParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTrimMeanParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTrimMeanParameterSet(@Nonnull final WorkbookFunctionsTrimMeanParameterSetBuilder builder) {
         this.array = builder.array;
         this.percent = builder.percent;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsTrimMeanParameterSet {
      * Fluent builder for the WorkbookFunctionsTrimMeanParameterSet
      */
     public static final class WorkbookFunctionsTrimMeanParameterSetBuilder {
-        private com.google.gson.JsonElement array;
+        /**
+         * The array parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement array;
         /**
          * Sets the Array
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsTrimMeanParameterSet {
             this.array = val;
             return this;
         }
-        private com.google.gson.JsonElement percent;
+        /**
+         * The percent parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement percent;
         /**
          * Sets the Percent
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsTrimMeanParameterSet {
             this.percent = val;
             return this;
         }
-        private WorkbookFunctionsTrimMeanParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTrimMeanParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

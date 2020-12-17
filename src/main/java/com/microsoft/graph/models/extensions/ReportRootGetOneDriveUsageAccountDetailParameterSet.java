@@ -35,7 +35,11 @@ public class ReportRootGetOneDriveUsageAccountDetailParameterSet {
      * Instiaciates a new ReportRootGetOneDriveUsageAccountDetailParameterSet
      */
     public ReportRootGetOneDriveUsageAccountDetailParameterSet() {}
-    private ReportRootGetOneDriveUsageAccountDetailParameterSet(@Nonnull final ReportRootGetOneDriveUsageAccountDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOneDriveUsageAccountDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOneDriveUsageAccountDetailParameterSet(@Nonnull final ReportRootGetOneDriveUsageAccountDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetOneDriveUsageAccountDetailParameterSet {
      * Fluent builder for the ReportRootGetOneDriveUsageAccountDetailParameterSet
      */
     public static final class ReportRootGetOneDriveUsageAccountDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetOneDriveUsageAccountDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetOneDriveUsageAccountDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOneDriveUsageAccountDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

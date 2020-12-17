@@ -35,7 +35,11 @@ public class WorkbookChartItemAtParameterSet {
      * Instiaciates a new WorkbookChartItemAtParameterSet
      */
     public WorkbookChartItemAtParameterSet() {}
-    private WorkbookChartItemAtParameterSet(@Nonnull final WorkbookChartItemAtParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartItemAtParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartItemAtParameterSet(@Nonnull final WorkbookChartItemAtParameterSetBuilder builder) {
         this.index = builder.index;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookChartItemAtParameterSet {
      * Fluent builder for the WorkbookChartItemAtParameterSet
      */
     public static final class WorkbookChartItemAtParameterSetBuilder {
-        private Integer index;
+        /**
+         * The index parameter value
+         */
+        @Nullable
+        protected Integer index;
         /**
          * Sets the Index
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookChartItemAtParameterSet {
             this.index = val;
             return this;
         }
-        private WorkbookChartItemAtParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartItemAtParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

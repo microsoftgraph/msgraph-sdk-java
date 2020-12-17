@@ -35,7 +35,11 @@ public class SiteRemoveParameterSet {
      * Instiaciates a new SiteRemoveParameterSet
      */
     public SiteRemoveParameterSet() {}
-    private SiteRemoveParameterSet(@Nonnull final SiteRemoveParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new SiteRemoveParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected SiteRemoveParameterSet(@Nonnull final SiteRemoveParameterSetBuilder builder) {
         this.value = builder.value;
     }
     /**
@@ -50,7 +54,11 @@ public class SiteRemoveParameterSet {
      * Fluent builder for the SiteRemoveParameterSet
      */
     public static final class SiteRemoveParameterSetBuilder {
-        private java.util.List<Site> value;
+        /**
+         * The value parameter value
+         */
+        @Nullable
+        protected java.util.List<Site> value;
         /**
          * Sets the Value
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class SiteRemoveParameterSet {
             this.value = val;
             return this;
         }
-        private SiteRemoveParameterSetBuilder(){}
+        @Nullable
+        protected SiteRemoveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

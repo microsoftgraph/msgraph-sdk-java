@@ -44,7 +44,11 @@ public class WorkbookFunctionsWeekNumParameterSet {
      * Instiaciates a new WorkbookFunctionsWeekNumParameterSet
      */
     public WorkbookFunctionsWeekNumParameterSet() {}
-    private WorkbookFunctionsWeekNumParameterSet(@Nonnull final WorkbookFunctionsWeekNumParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsWeekNumParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsWeekNumParameterSet(@Nonnull final WorkbookFunctionsWeekNumParameterSetBuilder builder) {
         this.serialNumber = builder.serialNumber;
         this.returnType = builder.returnType;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsWeekNumParameterSet {
      * Fluent builder for the WorkbookFunctionsWeekNumParameterSet
      */
     public static final class WorkbookFunctionsWeekNumParameterSetBuilder {
-        private com.google.gson.JsonElement serialNumber;
+        /**
+         * The serialNumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement serialNumber;
         /**
          * Sets the SerialNumber
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsWeekNumParameterSet {
             this.serialNumber = val;
             return this;
         }
-        private com.google.gson.JsonElement returnType;
+        /**
+         * The returnType parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement returnType;
         /**
          * Sets the ReturnType
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsWeekNumParameterSet {
             this.returnType = val;
             return this;
         }
-        private WorkbookFunctionsWeekNumParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsWeekNumParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

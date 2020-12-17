@@ -37,6 +37,7 @@ public class CallRejectRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallRejectParameterSet body;
     /**
      * Creates the CallReject

@@ -37,6 +37,7 @@ public class MailFolderMoveRequest extends BaseRequest<MailFolder> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MailFolderMoveParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

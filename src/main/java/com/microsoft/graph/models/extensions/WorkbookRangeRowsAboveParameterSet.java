@@ -26,7 +26,11 @@ public class WorkbookRangeRowsAboveParameterSet {
      * Instiaciates a new WorkbookRangeRowsAboveParameterSet
      */
     public WorkbookRangeRowsAboveParameterSet() {}
-    private WorkbookRangeRowsAboveParameterSet(@Nonnull final WorkbookRangeRowsAboveParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeRowsAboveParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeRowsAboveParameterSet(@Nonnull final WorkbookRangeRowsAboveParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeRowsAboveParameterSet {
      * Fluent builder for the WorkbookRangeRowsAboveParameterSet
      */
     public static final class WorkbookRangeRowsAboveParameterSetBuilder {
-        private WorkbookRangeRowsAboveParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeRowsAboveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

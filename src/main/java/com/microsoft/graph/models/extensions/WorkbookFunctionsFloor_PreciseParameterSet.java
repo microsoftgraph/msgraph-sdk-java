@@ -44,7 +44,11 @@ public class WorkbookFunctionsFloor_PreciseParameterSet {
      * Instiaciates a new WorkbookFunctionsFloor_PreciseParameterSet
      */
     public WorkbookFunctionsFloor_PreciseParameterSet() {}
-    private WorkbookFunctionsFloor_PreciseParameterSet(@Nonnull final WorkbookFunctionsFloor_PreciseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsFloor_PreciseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsFloor_PreciseParameterSet(@Nonnull final WorkbookFunctionsFloor_PreciseParameterSetBuilder builder) {
         this.number = builder.number;
         this.significance = builder.significance;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsFloor_PreciseParameterSet {
      * Fluent builder for the WorkbookFunctionsFloor_PreciseParameterSet
      */
     public static final class WorkbookFunctionsFloor_PreciseParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsFloor_PreciseParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement significance;
+        /**
+         * The significance parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement significance;
         /**
          * Sets the Significance
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsFloor_PreciseParameterSet {
             this.significance = val;
             return this;
         }
-        private WorkbookFunctionsFloor_PreciseParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsFloor_PreciseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

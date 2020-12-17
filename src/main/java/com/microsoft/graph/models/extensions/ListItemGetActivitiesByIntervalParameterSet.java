@@ -26,7 +26,11 @@ public class ListItemGetActivitiesByIntervalParameterSet {
      * Instiaciates a new ListItemGetActivitiesByIntervalParameterSet
      */
     public ListItemGetActivitiesByIntervalParameterSet() {}
-    private ListItemGetActivitiesByIntervalParameterSet(@Nonnull final ListItemGetActivitiesByIntervalParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ListItemGetActivitiesByIntervalParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ListItemGetActivitiesByIntervalParameterSet(@Nonnull final ListItemGetActivitiesByIntervalParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ListItemGetActivitiesByIntervalParameterSet {
      * Fluent builder for the ListItemGetActivitiesByIntervalParameterSet
      */
     public static final class ListItemGetActivitiesByIntervalParameterSetBuilder {
-        private ListItemGetActivitiesByIntervalParameterSetBuilder(){}
+        @Nullable
+        protected ListItemGetActivitiesByIntervalParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

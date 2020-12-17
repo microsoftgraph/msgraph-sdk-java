@@ -35,7 +35,11 @@ public class WorkbookFunctionsFisherParameterSet {
      * Instiaciates a new WorkbookFunctionsFisherParameterSet
      */
     public WorkbookFunctionsFisherParameterSet() {}
-    private WorkbookFunctionsFisherParameterSet(@Nonnull final WorkbookFunctionsFisherParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsFisherParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsFisherParameterSet(@Nonnull final WorkbookFunctionsFisherParameterSetBuilder builder) {
         this.x = builder.x;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsFisherParameterSet {
      * Fluent builder for the WorkbookFunctionsFisherParameterSet
      */
     public static final class WorkbookFunctionsFisherParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsFisherParameterSet {
             this.x = val;
             return this;
         }
-        private WorkbookFunctionsFisherParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsFisherParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

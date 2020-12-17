@@ -26,7 +26,11 @@ public class UserGetManagedAppPoliciesParameterSet {
      * Instiaciates a new UserGetManagedAppPoliciesParameterSet
      */
     public UserGetManagedAppPoliciesParameterSet() {}
-    private UserGetManagedAppPoliciesParameterSet(@Nonnull final UserGetManagedAppPoliciesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserGetManagedAppPoliciesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserGetManagedAppPoliciesParameterSet(@Nonnull final UserGetManagedAppPoliciesParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class UserGetManagedAppPoliciesParameterSet {
      * Fluent builder for the UserGetManagedAppPoliciesParameterSet
      */
     public static final class UserGetManagedAppPoliciesParameterSetBuilder {
-        private UserGetManagedAppPoliciesParameterSetBuilder(){}
+        @Nullable
+        protected UserGetManagedAppPoliciesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -99,7 +99,11 @@ public class CallRecordResponseParameterSet {
      * Instiaciates a new CallRecordResponseParameterSet
      */
     public CallRecordResponseParameterSet() {}
-    private CallRecordResponseParameterSet(@Nonnull final CallRecordResponseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new CallRecordResponseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected CallRecordResponseParameterSet(@Nonnull final CallRecordResponseParameterSetBuilder builder) {
         this.prompts = builder.prompts;
         this.bargeInAllowed = builder.bargeInAllowed;
         this.initialSilenceTimeoutInSeconds = builder.initialSilenceTimeoutInSeconds;
@@ -121,7 +125,11 @@ public class CallRecordResponseParameterSet {
      * Fluent builder for the CallRecordResponseParameterSet
      */
     public static final class CallRecordResponseParameterSetBuilder {
-        private java.util.List<Prompt> prompts;
+        /**
+         * The prompts parameter value
+         */
+        @Nullable
+        protected java.util.List<Prompt> prompts;
         /**
          * Sets the Prompts
          * @param val the value to set it to
@@ -132,7 +140,11 @@ public class CallRecordResponseParameterSet {
             this.prompts = val;
             return this;
         }
-        private Boolean bargeInAllowed;
+        /**
+         * The bargeInAllowed parameter value
+         */
+        @Nullable
+        protected Boolean bargeInAllowed;
         /**
          * Sets the BargeInAllowed
          * @param val the value to set it to
@@ -143,7 +155,11 @@ public class CallRecordResponseParameterSet {
             this.bargeInAllowed = val;
             return this;
         }
-        private Integer initialSilenceTimeoutInSeconds;
+        /**
+         * The initialSilenceTimeoutInSeconds parameter value
+         */
+        @Nullable
+        protected Integer initialSilenceTimeoutInSeconds;
         /**
          * Sets the InitialSilenceTimeoutInSeconds
          * @param val the value to set it to
@@ -154,7 +170,11 @@ public class CallRecordResponseParameterSet {
             this.initialSilenceTimeoutInSeconds = val;
             return this;
         }
-        private Integer maxSilenceTimeoutInSeconds;
+        /**
+         * The maxSilenceTimeoutInSeconds parameter value
+         */
+        @Nullable
+        protected Integer maxSilenceTimeoutInSeconds;
         /**
          * Sets the MaxSilenceTimeoutInSeconds
          * @param val the value to set it to
@@ -165,7 +185,11 @@ public class CallRecordResponseParameterSet {
             this.maxSilenceTimeoutInSeconds = val;
             return this;
         }
-        private Integer maxRecordDurationInSeconds;
+        /**
+         * The maxRecordDurationInSeconds parameter value
+         */
+        @Nullable
+        protected Integer maxRecordDurationInSeconds;
         /**
          * Sets the MaxRecordDurationInSeconds
          * @param val the value to set it to
@@ -176,7 +200,11 @@ public class CallRecordResponseParameterSet {
             this.maxRecordDurationInSeconds = val;
             return this;
         }
-        private Boolean playBeep;
+        /**
+         * The playBeep parameter value
+         */
+        @Nullable
+        protected Boolean playBeep;
         /**
          * Sets the PlayBeep
          * @param val the value to set it to
@@ -187,7 +215,11 @@ public class CallRecordResponseParameterSet {
             this.playBeep = val;
             return this;
         }
-        private java.util.List<String> stopTones;
+        /**
+         * The stopTones parameter value
+         */
+        @Nullable
+        protected java.util.List<String> stopTones;
         /**
          * Sets the StopTones
          * @param val the value to set it to
@@ -198,7 +230,11 @@ public class CallRecordResponseParameterSet {
             this.stopTones = val;
             return this;
         }
-        private String clientContext;
+        /**
+         * The clientContext parameter value
+         */
+        @Nullable
+        protected String clientContext;
         /**
          * Sets the ClientContext
          * @param val the value to set it to
@@ -209,7 +245,8 @@ public class CallRecordResponseParameterSet {
             this.clientContext = val;
             return this;
         }
-        private CallRecordResponseParameterSetBuilder(){}
+        @Nullable
+        protected CallRecordResponseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

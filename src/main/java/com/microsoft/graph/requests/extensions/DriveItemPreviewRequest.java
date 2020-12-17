@@ -38,6 +38,7 @@ public class DriveItemPreviewRequest extends BaseRequest<ItemPreviewInfo> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected DriveItemPreviewParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

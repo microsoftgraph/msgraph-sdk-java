@@ -44,7 +44,11 @@ public class WorkbookFunctionsEoMonthParameterSet {
      * Instiaciates a new WorkbookFunctionsEoMonthParameterSet
      */
     public WorkbookFunctionsEoMonthParameterSet() {}
-    private WorkbookFunctionsEoMonthParameterSet(@Nonnull final WorkbookFunctionsEoMonthParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsEoMonthParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsEoMonthParameterSet(@Nonnull final WorkbookFunctionsEoMonthParameterSetBuilder builder) {
         this.startDate = builder.startDate;
         this.months = builder.months;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsEoMonthParameterSet {
      * Fluent builder for the WorkbookFunctionsEoMonthParameterSet
      */
     public static final class WorkbookFunctionsEoMonthParameterSetBuilder {
-        private com.google.gson.JsonElement startDate;
+        /**
+         * The startDate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startDate;
         /**
          * Sets the StartDate
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsEoMonthParameterSet {
             this.startDate = val;
             return this;
         }
-        private com.google.gson.JsonElement months;
+        /**
+         * The months parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement months;
         /**
          * Sets the Months
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsEoMonthParameterSet {
             this.months = val;
             return this;
         }
-        private WorkbookFunctionsEoMonthParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsEoMonthParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

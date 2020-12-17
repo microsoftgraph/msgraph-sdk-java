@@ -38,6 +38,7 @@ public class WorkbookFunctionsOddFYieldRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsOddFYieldParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

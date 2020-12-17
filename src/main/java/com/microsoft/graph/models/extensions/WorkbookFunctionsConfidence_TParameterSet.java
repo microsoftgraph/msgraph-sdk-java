@@ -53,7 +53,11 @@ public class WorkbookFunctionsConfidence_TParameterSet {
      * Instiaciates a new WorkbookFunctionsConfidence_TParameterSet
      */
     public WorkbookFunctionsConfidence_TParameterSet() {}
-    private WorkbookFunctionsConfidence_TParameterSet(@Nonnull final WorkbookFunctionsConfidence_TParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsConfidence_TParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsConfidence_TParameterSet(@Nonnull final WorkbookFunctionsConfidence_TParameterSetBuilder builder) {
         this.alpha = builder.alpha;
         this.standardDev = builder.standardDev;
         this.size = builder.size;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsConfidence_TParameterSet {
      * Fluent builder for the WorkbookFunctionsConfidence_TParameterSet
      */
     public static final class WorkbookFunctionsConfidence_TParameterSetBuilder {
-        private com.google.gson.JsonElement alpha;
+        /**
+         * The alpha parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement alpha;
         /**
          * Sets the Alpha
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsConfidence_TParameterSet {
             this.alpha = val;
             return this;
         }
-        private com.google.gson.JsonElement standardDev;
+        /**
+         * The standardDev parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement standardDev;
         /**
          * Sets the StandardDev
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsConfidence_TParameterSet {
             this.standardDev = val;
             return this;
         }
-        private com.google.gson.JsonElement size;
+        /**
+         * The size parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement size;
         /**
          * Sets the Size
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsConfidence_TParameterSet {
             this.size = val;
             return this;
         }
-        private WorkbookFunctionsConfidence_TParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsConfidence_TParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

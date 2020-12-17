@@ -89,7 +89,11 @@ public class WorkbookFunctionsVdbParameterSet {
      * Instiaciates a new WorkbookFunctionsVdbParameterSet
      */
     public WorkbookFunctionsVdbParameterSet() {}
-    private WorkbookFunctionsVdbParameterSet(@Nonnull final WorkbookFunctionsVdbParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsVdbParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsVdbParameterSet(@Nonnull final WorkbookFunctionsVdbParameterSetBuilder builder) {
         this.cost = builder.cost;
         this.salvage = builder.salvage;
         this.life = builder.life;
@@ -110,7 +114,11 @@ public class WorkbookFunctionsVdbParameterSet {
      * Fluent builder for the WorkbookFunctionsVdbParameterSet
      */
     public static final class WorkbookFunctionsVdbParameterSetBuilder {
-        private com.google.gson.JsonElement cost;
+        /**
+         * The cost parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cost;
         /**
          * Sets the Cost
          * @param val the value to set it to
@@ -121,7 +129,11 @@ public class WorkbookFunctionsVdbParameterSet {
             this.cost = val;
             return this;
         }
-        private com.google.gson.JsonElement salvage;
+        /**
+         * The salvage parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement salvage;
         /**
          * Sets the Salvage
          * @param val the value to set it to
@@ -132,7 +144,11 @@ public class WorkbookFunctionsVdbParameterSet {
             this.salvage = val;
             return this;
         }
-        private com.google.gson.JsonElement life;
+        /**
+         * The life parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement life;
         /**
          * Sets the Life
          * @param val the value to set it to
@@ -143,7 +159,11 @@ public class WorkbookFunctionsVdbParameterSet {
             this.life = val;
             return this;
         }
-        private com.google.gson.JsonElement startPeriod;
+        /**
+         * The startPeriod parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startPeriod;
         /**
          * Sets the StartPeriod
          * @param val the value to set it to
@@ -154,7 +174,11 @@ public class WorkbookFunctionsVdbParameterSet {
             this.startPeriod = val;
             return this;
         }
-        private com.google.gson.JsonElement endPeriod;
+        /**
+         * The endPeriod parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement endPeriod;
         /**
          * Sets the EndPeriod
          * @param val the value to set it to
@@ -165,7 +189,11 @@ public class WorkbookFunctionsVdbParameterSet {
             this.endPeriod = val;
             return this;
         }
-        private com.google.gson.JsonElement factor;
+        /**
+         * The factor parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement factor;
         /**
          * Sets the Factor
          * @param val the value to set it to
@@ -176,7 +204,11 @@ public class WorkbookFunctionsVdbParameterSet {
             this.factor = val;
             return this;
         }
-        private com.google.gson.JsonElement noSwitch;
+        /**
+         * The noSwitch parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement noSwitch;
         /**
          * Sets the NoSwitch
          * @param val the value to set it to
@@ -187,7 +219,8 @@ public class WorkbookFunctionsVdbParameterSet {
             this.noSwitch = val;
             return this;
         }
-        private WorkbookFunctionsVdbParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsVdbParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

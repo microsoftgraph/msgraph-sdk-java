@@ -53,7 +53,11 @@ public class WorkbookFunctionsTbillPriceParameterSet {
      * Instiaciates a new WorkbookFunctionsTbillPriceParameterSet
      */
     public WorkbookFunctionsTbillPriceParameterSet() {}
-    private WorkbookFunctionsTbillPriceParameterSet(@Nonnull final WorkbookFunctionsTbillPriceParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTbillPriceParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTbillPriceParameterSet(@Nonnull final WorkbookFunctionsTbillPriceParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.discount = builder.discount;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsTbillPriceParameterSet {
      * Fluent builder for the WorkbookFunctionsTbillPriceParameterSet
      */
     public static final class WorkbookFunctionsTbillPriceParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsTbillPriceParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsTbillPriceParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement discount;
+        /**
+         * The discount parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement discount;
         /**
          * Sets the Discount
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsTbillPriceParameterSet {
             this.discount = val;
             return this;
         }
-        private WorkbookFunctionsTbillPriceParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTbillPriceParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

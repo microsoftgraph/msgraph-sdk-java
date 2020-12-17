@@ -26,7 +26,11 @@ public class DriveItemFollowParameterSet {
      * Instiaciates a new DriveItemFollowParameterSet
      */
     public DriveItemFollowParameterSet() {}
-    private DriveItemFollowParameterSet(@Nonnull final DriveItemFollowParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemFollowParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemFollowParameterSet(@Nonnull final DriveItemFollowParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DriveItemFollowParameterSet {
      * Fluent builder for the DriveItemFollowParameterSet
      */
     public static final class DriveItemFollowParameterSetBuilder {
-        private DriveItemFollowParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemFollowParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

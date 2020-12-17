@@ -38,6 +38,7 @@ public class WorkbookFunctionsPhiRequest extends BaseRequest<WorkbookFunctionRes
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsPhiParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

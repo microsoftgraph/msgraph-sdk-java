@@ -35,7 +35,11 @@ public class WorkbookFunctionsDayParameterSet {
      * Instiaciates a new WorkbookFunctionsDayParameterSet
      */
     public WorkbookFunctionsDayParameterSet() {}
-    private WorkbookFunctionsDayParameterSet(@Nonnull final WorkbookFunctionsDayParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDayParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDayParameterSet(@Nonnull final WorkbookFunctionsDayParameterSetBuilder builder) {
         this.serialNumber = builder.serialNumber;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsDayParameterSet {
      * Fluent builder for the WorkbookFunctionsDayParameterSet
      */
     public static final class WorkbookFunctionsDayParameterSetBuilder {
-        private com.google.gson.JsonElement serialNumber;
+        /**
+         * The serialNumber parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement serialNumber;
         /**
          * Sets the SerialNumber
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsDayParameterSet {
             this.serialNumber = val;
             return this;
         }
-        private WorkbookFunctionsDayParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDayParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

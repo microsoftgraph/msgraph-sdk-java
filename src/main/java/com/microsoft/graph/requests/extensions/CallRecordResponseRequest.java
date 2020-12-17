@@ -38,6 +38,7 @@ public class CallRecordResponseRequest extends BaseRequest<RecordOperation> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallRecordResponseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

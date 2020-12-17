@@ -35,7 +35,11 @@ public class WorkbookRangeRowParameterSet {
      * Instiaciates a new WorkbookRangeRowParameterSet
      */
     public WorkbookRangeRowParameterSet() {}
-    private WorkbookRangeRowParameterSet(@Nonnull final WorkbookRangeRowParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeRowParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeRowParameterSet(@Nonnull final WorkbookRangeRowParameterSetBuilder builder) {
         this.row = builder.row;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookRangeRowParameterSet {
      * Fluent builder for the WorkbookRangeRowParameterSet
      */
     public static final class WorkbookRangeRowParameterSetBuilder {
-        private Integer row;
+        /**
+         * The row parameter value
+         */
+        @Nullable
+        protected Integer row;
         /**
          * Sets the Row
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookRangeRowParameterSet {
             this.row = val;
             return this;
         }
-        private WorkbookRangeRowParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeRowParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

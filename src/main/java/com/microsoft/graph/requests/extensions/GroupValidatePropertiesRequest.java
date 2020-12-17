@@ -37,6 +37,7 @@ public class GroupValidatePropertiesRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected GroupValidatePropertiesParameterSet body;
     /**
      * Creates the GroupValidateProperties

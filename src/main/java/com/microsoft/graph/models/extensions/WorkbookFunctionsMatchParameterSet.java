@@ -53,7 +53,11 @@ public class WorkbookFunctionsMatchParameterSet {
      * Instiaciates a new WorkbookFunctionsMatchParameterSet
      */
     public WorkbookFunctionsMatchParameterSet() {}
-    private WorkbookFunctionsMatchParameterSet(@Nonnull final WorkbookFunctionsMatchParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMatchParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMatchParameterSet(@Nonnull final WorkbookFunctionsMatchParameterSetBuilder builder) {
         this.lookupValue = builder.lookupValue;
         this.lookupArray = builder.lookupArray;
         this.matchType = builder.matchType;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsMatchParameterSet {
      * Fluent builder for the WorkbookFunctionsMatchParameterSet
      */
     public static final class WorkbookFunctionsMatchParameterSetBuilder {
-        private com.google.gson.JsonElement lookupValue;
+        /**
+         * The lookupValue parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement lookupValue;
         /**
          * Sets the LookupValue
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsMatchParameterSet {
             this.lookupValue = val;
             return this;
         }
-        private com.google.gson.JsonElement lookupArray;
+        /**
+         * The lookupArray parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement lookupArray;
         /**
          * Sets the LookupArray
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsMatchParameterSet {
             this.lookupArray = val;
             return this;
         }
-        private com.google.gson.JsonElement matchType;
+        /**
+         * The matchType parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement matchType;
         /**
          * Sets the MatchType
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsMatchParameterSet {
             this.matchType = val;
             return this;
         }
-        private WorkbookFunctionsMatchParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMatchParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

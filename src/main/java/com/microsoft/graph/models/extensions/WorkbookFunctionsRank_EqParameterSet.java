@@ -53,7 +53,11 @@ public class WorkbookFunctionsRank_EqParameterSet {
      * Instiaciates a new WorkbookFunctionsRank_EqParameterSet
      */
     public WorkbookFunctionsRank_EqParameterSet() {}
-    private WorkbookFunctionsRank_EqParameterSet(@Nonnull final WorkbookFunctionsRank_EqParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRank_EqParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRank_EqParameterSet(@Nonnull final WorkbookFunctionsRank_EqParameterSetBuilder builder) {
         this.number = builder.number;
         this.ref = builder.ref;
         this.order = builder.order;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsRank_EqParameterSet {
      * Fluent builder for the WorkbookFunctionsRank_EqParameterSet
      */
     public static final class WorkbookFunctionsRank_EqParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsRank_EqParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement ref;
+        /**
+         * The ref parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement ref;
         /**
          * Sets the Ref
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsRank_EqParameterSet {
             this.ref = val;
             return this;
         }
-        private com.google.gson.JsonElement order;
+        /**
+         * The order parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement order;
         /**
          * Sets the Order
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsRank_EqParameterSet {
             this.order = val;
             return this;
         }
-        private WorkbookFunctionsRank_EqParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRank_EqParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

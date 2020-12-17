@@ -38,6 +38,7 @@ public class DriveItemCreateUploadSessionRequest extends BaseRequest<UploadSessi
     }
 
 	/** The body for the method */
+    @Nullable
     protected DriveItemCreateUploadSessionParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

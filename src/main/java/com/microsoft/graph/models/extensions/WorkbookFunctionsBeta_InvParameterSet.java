@@ -71,7 +71,11 @@ public class WorkbookFunctionsBeta_InvParameterSet {
      * Instiaciates a new WorkbookFunctionsBeta_InvParameterSet
      */
     public WorkbookFunctionsBeta_InvParameterSet() {}
-    private WorkbookFunctionsBeta_InvParameterSet(@Nonnull final WorkbookFunctionsBeta_InvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBeta_InvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBeta_InvParameterSet(@Nonnull final WorkbookFunctionsBeta_InvParameterSetBuilder builder) {
         this.probability = builder.probability;
         this.alpha = builder.alpha;
         this.beta = builder.beta;
@@ -90,7 +94,11 @@ public class WorkbookFunctionsBeta_InvParameterSet {
      * Fluent builder for the WorkbookFunctionsBeta_InvParameterSet
      */
     public static final class WorkbookFunctionsBeta_InvParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class WorkbookFunctionsBeta_InvParameterSet {
             this.probability = val;
             return this;
         }
-        private com.google.gson.JsonElement alpha;
+        /**
+         * The alpha parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement alpha;
         /**
          * Sets the Alpha
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class WorkbookFunctionsBeta_InvParameterSet {
             this.alpha = val;
             return this;
         }
-        private com.google.gson.JsonElement beta;
+        /**
+         * The beta parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement beta;
         /**
          * Sets the Beta
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class WorkbookFunctionsBeta_InvParameterSet {
             this.beta = val;
             return this;
         }
-        private com.google.gson.JsonElement a;
+        /**
+         * The a parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement a;
         /**
          * Sets the A
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class WorkbookFunctionsBeta_InvParameterSet {
             this.a = val;
             return this;
         }
-        private com.google.gson.JsonElement b;
+        /**
+         * The b parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement b;
         /**
          * Sets the B
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class WorkbookFunctionsBeta_InvParameterSet {
             this.b = val;
             return this;
         }
-        private WorkbookFunctionsBeta_InvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBeta_InvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

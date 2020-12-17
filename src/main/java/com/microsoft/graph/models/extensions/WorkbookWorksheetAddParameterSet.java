@@ -35,7 +35,11 @@ public class WorkbookWorksheetAddParameterSet {
      * Instiaciates a new WorkbookWorksheetAddParameterSet
      */
     public WorkbookWorksheetAddParameterSet() {}
-    private WorkbookWorksheetAddParameterSet(@Nonnull final WorkbookWorksheetAddParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookWorksheetAddParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookWorksheetAddParameterSet(@Nonnull final WorkbookWorksheetAddParameterSetBuilder builder) {
         this.name = builder.name;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookWorksheetAddParameterSet {
      * Fluent builder for the WorkbookWorksheetAddParameterSet
      */
     public static final class WorkbookWorksheetAddParameterSetBuilder {
-        private String name;
+        /**
+         * The name parameter value
+         */
+        @Nullable
+        protected String name;
         /**
          * Sets the Name
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookWorksheetAddParameterSet {
             this.name = val;
             return this;
         }
-        private WorkbookWorksheetAddParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookWorksheetAddParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

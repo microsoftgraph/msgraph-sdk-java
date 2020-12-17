@@ -37,6 +37,7 @@ public class CallChangeScreenSharingRoleRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected CallChangeScreenSharingRoleParameterSet body;
     /**
      * Creates the CallChangeScreenSharingRole

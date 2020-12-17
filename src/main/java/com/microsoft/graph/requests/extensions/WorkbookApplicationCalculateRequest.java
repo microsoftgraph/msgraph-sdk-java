@@ -37,6 +37,7 @@ public class WorkbookApplicationCalculateRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookApplicationCalculateParameterSet body;
     /**
      * Creates the WorkbookApplicationCalculate

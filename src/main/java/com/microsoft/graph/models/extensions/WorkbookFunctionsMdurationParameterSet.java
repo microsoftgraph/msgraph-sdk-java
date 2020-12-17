@@ -80,7 +80,11 @@ public class WorkbookFunctionsMdurationParameterSet {
      * Instiaciates a new WorkbookFunctionsMdurationParameterSet
      */
     public WorkbookFunctionsMdurationParameterSet() {}
-    private WorkbookFunctionsMdurationParameterSet(@Nonnull final WorkbookFunctionsMdurationParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMdurationParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMdurationParameterSet(@Nonnull final WorkbookFunctionsMdurationParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.coupon = builder.coupon;
@@ -100,7 +104,11 @@ public class WorkbookFunctionsMdurationParameterSet {
      * Fluent builder for the WorkbookFunctionsMdurationParameterSet
      */
     public static final class WorkbookFunctionsMdurationParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -111,7 +119,11 @@ public class WorkbookFunctionsMdurationParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -122,7 +134,11 @@ public class WorkbookFunctionsMdurationParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement coupon;
+        /**
+         * The coupon parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement coupon;
         /**
          * Sets the Coupon
          * @param val the value to set it to
@@ -133,7 +149,11 @@ public class WorkbookFunctionsMdurationParameterSet {
             this.coupon = val;
             return this;
         }
-        private com.google.gson.JsonElement yld;
+        /**
+         * The yld parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement yld;
         /**
          * Sets the Yld
          * @param val the value to set it to
@@ -144,7 +164,11 @@ public class WorkbookFunctionsMdurationParameterSet {
             this.yld = val;
             return this;
         }
-        private com.google.gson.JsonElement frequency;
+        /**
+         * The frequency parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement frequency;
         /**
          * Sets the Frequency
          * @param val the value to set it to
@@ -155,7 +179,11 @@ public class WorkbookFunctionsMdurationParameterSet {
             this.frequency = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -166,7 +194,8 @@ public class WorkbookFunctionsMdurationParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsMdurationParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMdurationParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

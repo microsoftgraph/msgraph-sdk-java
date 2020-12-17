@@ -26,7 +26,11 @@ public class AdministrativeUnitDeltaParameterSet {
      * Instiaciates a new AdministrativeUnitDeltaParameterSet
      */
     public AdministrativeUnitDeltaParameterSet() {}
-    private AdministrativeUnitDeltaParameterSet(@Nonnull final AdministrativeUnitDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new AdministrativeUnitDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected AdministrativeUnitDeltaParameterSet(@Nonnull final AdministrativeUnitDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class AdministrativeUnitDeltaParameterSet {
      * Fluent builder for the AdministrativeUnitDeltaParameterSet
      */
     public static final class AdministrativeUnitDeltaParameterSetBuilder {
-        private AdministrativeUnitDeltaParameterSetBuilder(){}
+        @Nullable
+        protected AdministrativeUnitDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

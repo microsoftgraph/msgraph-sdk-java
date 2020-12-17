@@ -62,7 +62,11 @@ public class WorkbookFunctionsReplaceParameterSet {
      * Instiaciates a new WorkbookFunctionsReplaceParameterSet
      */
     public WorkbookFunctionsReplaceParameterSet() {}
-    private WorkbookFunctionsReplaceParameterSet(@Nonnull final WorkbookFunctionsReplaceParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsReplaceParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsReplaceParameterSet(@Nonnull final WorkbookFunctionsReplaceParameterSetBuilder builder) {
         this.oldText = builder.oldText;
         this.startNum = builder.startNum;
         this.numChars = builder.numChars;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsReplaceParameterSet {
      * Fluent builder for the WorkbookFunctionsReplaceParameterSet
      */
     public static final class WorkbookFunctionsReplaceParameterSetBuilder {
-        private com.google.gson.JsonElement oldText;
+        /**
+         * The oldText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement oldText;
         /**
          * Sets the OldText
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsReplaceParameterSet {
             this.oldText = val;
             return this;
         }
-        private com.google.gson.JsonElement startNum;
+        /**
+         * The startNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startNum;
         /**
          * Sets the StartNum
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsReplaceParameterSet {
             this.startNum = val;
             return this;
         }
-        private com.google.gson.JsonElement numChars;
+        /**
+         * The numChars parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numChars;
         /**
          * Sets the NumChars
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsReplaceParameterSet {
             this.numChars = val;
             return this;
         }
-        private com.google.gson.JsonElement newText;
+        /**
+         * The newText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement newText;
         /**
          * Sets the NewText
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsReplaceParameterSet {
             this.newText = val;
             return this;
         }
-        private WorkbookFunctionsReplaceParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsReplaceParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

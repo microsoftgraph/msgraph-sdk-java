@@ -44,7 +44,11 @@ public class WorkbookFunctionsChiSq_InvParameterSet {
      * Instiaciates a new WorkbookFunctionsChiSq_InvParameterSet
      */
     public WorkbookFunctionsChiSq_InvParameterSet() {}
-    private WorkbookFunctionsChiSq_InvParameterSet(@Nonnull final WorkbookFunctionsChiSq_InvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsChiSq_InvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsChiSq_InvParameterSet(@Nonnull final WorkbookFunctionsChiSq_InvParameterSetBuilder builder) {
         this.probability = builder.probability;
         this.degFreedom = builder.degFreedom;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsChiSq_InvParameterSet {
      * Fluent builder for the WorkbookFunctionsChiSq_InvParameterSet
      */
     public static final class WorkbookFunctionsChiSq_InvParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsChiSq_InvParameterSet {
             this.probability = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom;
+        /**
+         * The degFreedom parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom;
         /**
          * Sets the DegFreedom
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsChiSq_InvParameterSet {
             this.degFreedom = val;
             return this;
         }
-        private WorkbookFunctionsChiSq_InvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsChiSq_InvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

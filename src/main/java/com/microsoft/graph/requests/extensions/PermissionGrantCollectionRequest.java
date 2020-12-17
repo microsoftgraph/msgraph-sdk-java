@@ -33,6 +33,7 @@ public class PermissionGrantCollectionRequest extends BaseActionCollectionReques
 
 
     /** The body for the method */
+    @Nullable
     protected PermissionGrantParameterSet body;
 
 

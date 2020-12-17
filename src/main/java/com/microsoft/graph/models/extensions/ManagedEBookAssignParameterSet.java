@@ -35,7 +35,11 @@ public class ManagedEBookAssignParameterSet {
      * Instiaciates a new ManagedEBookAssignParameterSet
      */
     public ManagedEBookAssignParameterSet() {}
-    private ManagedEBookAssignParameterSet(@Nonnull final ManagedEBookAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedEBookAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedEBookAssignParameterSet(@Nonnull final ManagedEBookAssignParameterSetBuilder builder) {
         this.managedEBookAssignments = builder.managedEBookAssignments;
     }
     /**
@@ -50,7 +54,11 @@ public class ManagedEBookAssignParameterSet {
      * Fluent builder for the ManagedEBookAssignParameterSet
      */
     public static final class ManagedEBookAssignParameterSetBuilder {
-        private java.util.List<ManagedEBookAssignment> managedEBookAssignments;
+        /**
+         * The managedEBookAssignments parameter value
+         */
+        @Nullable
+        protected java.util.List<ManagedEBookAssignment> managedEBookAssignments;
         /**
          * Sets the ManagedEBookAssignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ManagedEBookAssignParameterSet {
             this.managedEBookAssignments = val;
             return this;
         }
-        private ManagedEBookAssignParameterSetBuilder(){}
+        @Nullable
+        protected ManagedEBookAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

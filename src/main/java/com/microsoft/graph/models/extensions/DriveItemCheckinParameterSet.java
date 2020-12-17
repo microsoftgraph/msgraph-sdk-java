@@ -44,7 +44,11 @@ public class DriveItemCheckinParameterSet {
      * Instiaciates a new DriveItemCheckinParameterSet
      */
     public DriveItemCheckinParameterSet() {}
-    private DriveItemCheckinParameterSet(@Nonnull final DriveItemCheckinParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemCheckinParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemCheckinParameterSet(@Nonnull final DriveItemCheckinParameterSetBuilder builder) {
         this.checkInAs = builder.checkInAs;
         this.comment = builder.comment;
     }
@@ -60,7 +64,11 @@ public class DriveItemCheckinParameterSet {
      * Fluent builder for the DriveItemCheckinParameterSet
      */
     public static final class DriveItemCheckinParameterSetBuilder {
-        private String checkInAs;
+        /**
+         * The checkInAs parameter value
+         */
+        @Nullable
+        protected String checkInAs;
         /**
          * Sets the CheckInAs
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class DriveItemCheckinParameterSet {
             this.checkInAs = val;
             return this;
         }
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class DriveItemCheckinParameterSet {
             this.comment = val;
             return this;
         }
-        private DriveItemCheckinParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemCheckinParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

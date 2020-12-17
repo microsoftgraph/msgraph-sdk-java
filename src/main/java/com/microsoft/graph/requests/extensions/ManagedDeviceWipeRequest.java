@@ -37,6 +37,7 @@ public class ManagedDeviceWipeRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedDeviceWipeParameterSet body;
     /**
      * Creates the ManagedDeviceWipe

@@ -62,7 +62,11 @@ public class WorkbookFunctionsNegBinom_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsNegBinom_DistParameterSet
      */
     public WorkbookFunctionsNegBinom_DistParameterSet() {}
-    private WorkbookFunctionsNegBinom_DistParameterSet(@Nonnull final WorkbookFunctionsNegBinom_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsNegBinom_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsNegBinom_DistParameterSet(@Nonnull final WorkbookFunctionsNegBinom_DistParameterSetBuilder builder) {
         this.numberF = builder.numberF;
         this.numberS = builder.numberS;
         this.probabilityS = builder.probabilityS;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsNegBinom_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsNegBinom_DistParameterSet
      */
     public static final class WorkbookFunctionsNegBinom_DistParameterSetBuilder {
-        private com.google.gson.JsonElement numberF;
+        /**
+         * The numberF parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberF;
         /**
          * Sets the NumberF
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsNegBinom_DistParameterSet {
             this.numberF = val;
             return this;
         }
-        private com.google.gson.JsonElement numberS;
+        /**
+         * The numberS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberS;
         /**
          * Sets the NumberS
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsNegBinom_DistParameterSet {
             this.numberS = val;
             return this;
         }
-        private com.google.gson.JsonElement probabilityS;
+        /**
+         * The probabilityS parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probabilityS;
         /**
          * Sets the ProbabilityS
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsNegBinom_DistParameterSet {
             this.probabilityS = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsNegBinom_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsNegBinom_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsNegBinom_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

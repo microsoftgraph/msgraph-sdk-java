@@ -35,7 +35,11 @@ public class WorkbookFunctionsSqrtPiParameterSet {
      * Instiaciates a new WorkbookFunctionsSqrtPiParameterSet
      */
     public WorkbookFunctionsSqrtPiParameterSet() {}
-    private WorkbookFunctionsSqrtPiParameterSet(@Nonnull final WorkbookFunctionsSqrtPiParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSqrtPiParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSqrtPiParameterSet(@Nonnull final WorkbookFunctionsSqrtPiParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsSqrtPiParameterSet {
      * Fluent builder for the WorkbookFunctionsSqrtPiParameterSet
      */
     public static final class WorkbookFunctionsSqrtPiParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsSqrtPiParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsSqrtPiParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSqrtPiParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

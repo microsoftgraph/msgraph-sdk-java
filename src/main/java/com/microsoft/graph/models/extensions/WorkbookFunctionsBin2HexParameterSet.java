@@ -44,7 +44,11 @@ public class WorkbookFunctionsBin2HexParameterSet {
      * Instiaciates a new WorkbookFunctionsBin2HexParameterSet
      */
     public WorkbookFunctionsBin2HexParameterSet() {}
-    private WorkbookFunctionsBin2HexParameterSet(@Nonnull final WorkbookFunctionsBin2HexParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBin2HexParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBin2HexParameterSet(@Nonnull final WorkbookFunctionsBin2HexParameterSetBuilder builder) {
         this.number = builder.number;
         this.places = builder.places;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsBin2HexParameterSet {
      * Fluent builder for the WorkbookFunctionsBin2HexParameterSet
      */
     public static final class WorkbookFunctionsBin2HexParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsBin2HexParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement places;
+        /**
+         * The places parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement places;
         /**
          * Sets the Places
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsBin2HexParameterSet {
             this.places = val;
             return this;
         }
-        private WorkbookFunctionsBin2HexParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBin2HexParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

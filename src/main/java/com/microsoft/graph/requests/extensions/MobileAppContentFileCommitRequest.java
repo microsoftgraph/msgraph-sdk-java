@@ -37,6 +37,7 @@ public class MobileAppContentFileCommitRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MobileAppContentFileCommitParameterSet body;
     /**
      * Creates the MobileAppContentFileCommit

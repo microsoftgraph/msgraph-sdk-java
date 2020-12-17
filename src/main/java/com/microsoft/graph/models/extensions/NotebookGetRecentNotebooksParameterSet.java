@@ -35,7 +35,11 @@ public class NotebookGetRecentNotebooksParameterSet {
      * Instiaciates a new NotebookGetRecentNotebooksParameterSet
      */
     public NotebookGetRecentNotebooksParameterSet() {}
-    private NotebookGetRecentNotebooksParameterSet(@Nonnull final NotebookGetRecentNotebooksParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new NotebookGetRecentNotebooksParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected NotebookGetRecentNotebooksParameterSet(@Nonnull final NotebookGetRecentNotebooksParameterSetBuilder builder) {
         this.includePersonalNotebooks = builder.includePersonalNotebooks;
     }
     /**
@@ -50,7 +54,11 @@ public class NotebookGetRecentNotebooksParameterSet {
      * Fluent builder for the NotebookGetRecentNotebooksParameterSet
      */
     public static final class NotebookGetRecentNotebooksParameterSetBuilder {
-        private Boolean includePersonalNotebooks;
+        /**
+         * The includePersonalNotebooks parameter value
+         */
+        @Nullable
+        protected Boolean includePersonalNotebooks;
         /**
          * Sets the IncludePersonalNotebooks
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class NotebookGetRecentNotebooksParameterSet {
             this.includePersonalNotebooks = val;
             return this;
         }
-        private NotebookGetRecentNotebooksParameterSetBuilder(){}
+        @Nullable
+        protected NotebookGetRecentNotebooksParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

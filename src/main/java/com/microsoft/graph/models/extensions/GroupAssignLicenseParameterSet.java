@@ -45,7 +45,11 @@ public class GroupAssignLicenseParameterSet {
      * Instiaciates a new GroupAssignLicenseParameterSet
      */
     public GroupAssignLicenseParameterSet() {}
-    private GroupAssignLicenseParameterSet(@Nonnull final GroupAssignLicenseParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupAssignLicenseParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupAssignLicenseParameterSet(@Nonnull final GroupAssignLicenseParameterSetBuilder builder) {
         this.addLicenses = builder.addLicenses;
         this.removeLicenses = builder.removeLicenses;
     }
@@ -61,7 +65,11 @@ public class GroupAssignLicenseParameterSet {
      * Fluent builder for the GroupAssignLicenseParameterSet
      */
     public static final class GroupAssignLicenseParameterSetBuilder {
-        private java.util.List<AssignedLicense> addLicenses;
+        /**
+         * The addLicenses parameter value
+         */
+        @Nullable
+        protected java.util.List<AssignedLicense> addLicenses;
         /**
          * Sets the AddLicenses
          * @param val the value to set it to
@@ -72,7 +80,11 @@ public class GroupAssignLicenseParameterSet {
             this.addLicenses = val;
             return this;
         }
-        private java.util.List<java.util.UUID> removeLicenses;
+        /**
+         * The removeLicenses parameter value
+         */
+        @Nullable
+        protected java.util.List<java.util.UUID> removeLicenses;
         /**
          * Sets the RemoveLicenses
          * @param val the value to set it to
@@ -83,7 +95,8 @@ public class GroupAssignLicenseParameterSet {
             this.removeLicenses = val;
             return this;
         }
-        private GroupAssignLicenseParameterSetBuilder(){}
+        @Nullable
+        protected GroupAssignLicenseParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

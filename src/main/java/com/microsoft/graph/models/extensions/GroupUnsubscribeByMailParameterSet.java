@@ -26,7 +26,11 @@ public class GroupUnsubscribeByMailParameterSet {
      * Instiaciates a new GroupUnsubscribeByMailParameterSet
      */
     public GroupUnsubscribeByMailParameterSet() {}
-    private GroupUnsubscribeByMailParameterSet(@Nonnull final GroupUnsubscribeByMailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupUnsubscribeByMailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupUnsubscribeByMailParameterSet(@Nonnull final GroupUnsubscribeByMailParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class GroupUnsubscribeByMailParameterSet {
      * Fluent builder for the GroupUnsubscribeByMailParameterSet
      */
     public static final class GroupUnsubscribeByMailParameterSetBuilder {
-        private GroupUnsubscribeByMailParameterSetBuilder(){}
+        @Nullable
+        protected GroupUnsubscribeByMailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

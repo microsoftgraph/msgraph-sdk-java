@@ -35,7 +35,11 @@ public class TargetedManagedAppConfigurationAssignParameterSet {
      * Instiaciates a new TargetedManagedAppConfigurationAssignParameterSet
      */
     public TargetedManagedAppConfigurationAssignParameterSet() {}
-    private TargetedManagedAppConfigurationAssignParameterSet(@Nonnull final TargetedManagedAppConfigurationAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new TargetedManagedAppConfigurationAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected TargetedManagedAppConfigurationAssignParameterSet(@Nonnull final TargetedManagedAppConfigurationAssignParameterSetBuilder builder) {
         this.assignments = builder.assignments;
     }
     /**
@@ -50,7 +54,11 @@ public class TargetedManagedAppConfigurationAssignParameterSet {
      * Fluent builder for the TargetedManagedAppConfigurationAssignParameterSet
      */
     public static final class TargetedManagedAppConfigurationAssignParameterSetBuilder {
-        private java.util.List<TargetedManagedAppPolicyAssignment> assignments;
+        /**
+         * The assignments parameter value
+         */
+        @Nullable
+        protected java.util.List<TargetedManagedAppPolicyAssignment> assignments;
         /**
          * Sets the Assignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class TargetedManagedAppConfigurationAssignParameterSet {
             this.assignments = val;
             return this;
         }
-        private TargetedManagedAppConfigurationAssignParameterSetBuilder(){}
+        @Nullable
+        protected TargetedManagedAppConfigurationAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

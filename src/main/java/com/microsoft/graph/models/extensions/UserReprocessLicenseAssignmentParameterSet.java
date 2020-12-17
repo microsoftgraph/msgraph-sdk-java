@@ -26,7 +26,11 @@ public class UserReprocessLicenseAssignmentParameterSet {
      * Instiaciates a new UserReprocessLicenseAssignmentParameterSet
      */
     public UserReprocessLicenseAssignmentParameterSet() {}
-    private UserReprocessLicenseAssignmentParameterSet(@Nonnull final UserReprocessLicenseAssignmentParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new UserReprocessLicenseAssignmentParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected UserReprocessLicenseAssignmentParameterSet(@Nonnull final UserReprocessLicenseAssignmentParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class UserReprocessLicenseAssignmentParameterSet {
      * Fluent builder for the UserReprocessLicenseAssignmentParameterSet
      */
     public static final class UserReprocessLicenseAssignmentParameterSetBuilder {
-        private UserReprocessLicenseAssignmentParameterSetBuilder(){}
+        @Nullable
+        protected UserReprocessLicenseAssignmentParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

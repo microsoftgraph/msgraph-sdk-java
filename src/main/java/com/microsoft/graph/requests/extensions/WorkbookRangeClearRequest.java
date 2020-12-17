@@ -37,6 +37,7 @@ public class WorkbookRangeClearRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookRangeClearParameterSet body;
     /**
      * Creates the WorkbookRangeClear

@@ -44,7 +44,11 @@ public class WorkbookFunctionsModParameterSet {
      * Instiaciates a new WorkbookFunctionsModParameterSet
      */
     public WorkbookFunctionsModParameterSet() {}
-    private WorkbookFunctionsModParameterSet(@Nonnull final WorkbookFunctionsModParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsModParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsModParameterSet(@Nonnull final WorkbookFunctionsModParameterSetBuilder builder) {
         this.number = builder.number;
         this.divisor = builder.divisor;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsModParameterSet {
      * Fluent builder for the WorkbookFunctionsModParameterSet
      */
     public static final class WorkbookFunctionsModParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsModParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement divisor;
+        /**
+         * The divisor parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement divisor;
         /**
          * Sets the Divisor
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsModParameterSet {
             this.divisor = val;
             return this;
         }
-        private WorkbookFunctionsModParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsModParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

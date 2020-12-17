@@ -31,6 +31,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseActio
 
 
     /** The body for the method */
+    @Nullable
     protected DirectoryObjectCheckMemberGroupsParameterSet body;
 
 

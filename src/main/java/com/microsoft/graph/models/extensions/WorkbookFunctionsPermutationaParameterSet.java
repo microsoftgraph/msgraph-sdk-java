@@ -44,7 +44,11 @@ public class WorkbookFunctionsPermutationaParameterSet {
      * Instiaciates a new WorkbookFunctionsPermutationaParameterSet
      */
     public WorkbookFunctionsPermutationaParameterSet() {}
-    private WorkbookFunctionsPermutationaParameterSet(@Nonnull final WorkbookFunctionsPermutationaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsPermutationaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsPermutationaParameterSet(@Nonnull final WorkbookFunctionsPermutationaParameterSetBuilder builder) {
         this.number = builder.number;
         this.numberChosen = builder.numberChosen;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsPermutationaParameterSet {
      * Fluent builder for the WorkbookFunctionsPermutationaParameterSet
      */
     public static final class WorkbookFunctionsPermutationaParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsPermutationaParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement numberChosen;
+        /**
+         * The numberChosen parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberChosen;
         /**
          * Sets the NumberChosen
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsPermutationaParameterSet {
             this.numberChosen = val;
             return this;
         }
-        private WorkbookFunctionsPermutationaParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsPermutationaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

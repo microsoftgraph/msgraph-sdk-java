@@ -53,7 +53,11 @@ public class WorkbookFunctionsExpon_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsExpon_DistParameterSet
      */
     public WorkbookFunctionsExpon_DistParameterSet() {}
-    private WorkbookFunctionsExpon_DistParameterSet(@Nonnull final WorkbookFunctionsExpon_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsExpon_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsExpon_DistParameterSet(@Nonnull final WorkbookFunctionsExpon_DistParameterSetBuilder builder) {
         this.x = builder.x;
         this.lambda = builder.lambda;
         this.cumulative = builder.cumulative;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsExpon_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsExpon_DistParameterSet
      */
     public static final class WorkbookFunctionsExpon_DistParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsExpon_DistParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement lambda;
+        /**
+         * The lambda parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement lambda;
         /**
          * Sets the Lambda
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsExpon_DistParameterSet {
             this.lambda = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsExpon_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsExpon_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsExpon_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

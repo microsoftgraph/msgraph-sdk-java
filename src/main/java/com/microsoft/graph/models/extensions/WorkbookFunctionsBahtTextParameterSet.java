@@ -35,7 +35,11 @@ public class WorkbookFunctionsBahtTextParameterSet {
      * Instiaciates a new WorkbookFunctionsBahtTextParameterSet
      */
     public WorkbookFunctionsBahtTextParameterSet() {}
-    private WorkbookFunctionsBahtTextParameterSet(@Nonnull final WorkbookFunctionsBahtTextParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsBahtTextParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsBahtTextParameterSet(@Nonnull final WorkbookFunctionsBahtTextParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsBahtTextParameterSet {
      * Fluent builder for the WorkbookFunctionsBahtTextParameterSet
      */
     public static final class WorkbookFunctionsBahtTextParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsBahtTextParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsBahtTextParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsBahtTextParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

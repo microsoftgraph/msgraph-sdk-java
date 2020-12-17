@@ -38,6 +38,7 @@ public class WorkbookFunctionsImSechRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsImSechParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

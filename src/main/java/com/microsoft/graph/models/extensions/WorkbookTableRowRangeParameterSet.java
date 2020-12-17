@@ -26,7 +26,11 @@ public class WorkbookTableRowRangeParameterSet {
      * Instiaciates a new WorkbookTableRowRangeParameterSet
      */
     public WorkbookTableRowRangeParameterSet() {}
-    private WorkbookTableRowRangeParameterSet(@Nonnull final WorkbookTableRowRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookTableRowRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookTableRowRangeParameterSet(@Nonnull final WorkbookTableRowRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookTableRowRangeParameterSet {
      * Fluent builder for the WorkbookTableRowRangeParameterSet
      */
     public static final class WorkbookTableRowRangeParameterSetBuilder {
-        private WorkbookTableRowRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookTableRowRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

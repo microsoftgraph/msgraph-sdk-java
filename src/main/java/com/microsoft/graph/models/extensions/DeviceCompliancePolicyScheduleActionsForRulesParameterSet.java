@@ -35,7 +35,11 @@ public class DeviceCompliancePolicyScheduleActionsForRulesParameterSet {
      * Instiaciates a new DeviceCompliancePolicyScheduleActionsForRulesParameterSet
      */
     public DeviceCompliancePolicyScheduleActionsForRulesParameterSet() {}
-    private DeviceCompliancePolicyScheduleActionsForRulesParameterSet(@Nonnull final DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DeviceCompliancePolicyScheduleActionsForRulesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DeviceCompliancePolicyScheduleActionsForRulesParameterSet(@Nonnull final DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder builder) {
         this.deviceComplianceScheduledActionForRules = builder.deviceComplianceScheduledActionForRules;
     }
     /**
@@ -50,7 +54,11 @@ public class DeviceCompliancePolicyScheduleActionsForRulesParameterSet {
      * Fluent builder for the DeviceCompliancePolicyScheduleActionsForRulesParameterSet
      */
     public static final class DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder {
-        private java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules;
+        /**
+         * The deviceComplianceScheduledActionForRules parameter value
+         */
+        @Nullable
+        protected java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules;
         /**
          * Sets the DeviceComplianceScheduledActionForRules
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DeviceCompliancePolicyScheduleActionsForRulesParameterSet {
             this.deviceComplianceScheduledActionForRules = val;
             return this;
         }
-        private DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder(){}
+        @Nullable
+        protected DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

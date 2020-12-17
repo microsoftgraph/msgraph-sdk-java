@@ -38,6 +38,7 @@ public class WorkbookFunctionsChooseRequest extends BaseRequest<WorkbookFunction
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsChooseParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

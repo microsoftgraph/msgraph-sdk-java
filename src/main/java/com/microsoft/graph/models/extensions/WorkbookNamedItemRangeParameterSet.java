@@ -26,7 +26,11 @@ public class WorkbookNamedItemRangeParameterSet {
      * Instiaciates a new WorkbookNamedItemRangeParameterSet
      */
     public WorkbookNamedItemRangeParameterSet() {}
-    private WorkbookNamedItemRangeParameterSet(@Nonnull final WorkbookNamedItemRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookNamedItemRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookNamedItemRangeParameterSet(@Nonnull final WorkbookNamedItemRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookNamedItemRangeParameterSet {
      * Fluent builder for the WorkbookNamedItemRangeParameterSet
      */
     public static final class WorkbookNamedItemRangeParameterSetBuilder {
-        private WorkbookNamedItemRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookNamedItemRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

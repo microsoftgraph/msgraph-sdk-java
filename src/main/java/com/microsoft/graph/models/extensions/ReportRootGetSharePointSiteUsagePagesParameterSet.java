@@ -35,7 +35,11 @@ public class ReportRootGetSharePointSiteUsagePagesParameterSet {
      * Instiaciates a new ReportRootGetSharePointSiteUsagePagesParameterSet
      */
     public ReportRootGetSharePointSiteUsagePagesParameterSet() {}
-    private ReportRootGetSharePointSiteUsagePagesParameterSet(@Nonnull final ReportRootGetSharePointSiteUsagePagesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSharePointSiteUsagePagesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSharePointSiteUsagePagesParameterSet(@Nonnull final ReportRootGetSharePointSiteUsagePagesParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSharePointSiteUsagePagesParameterSet {
      * Fluent builder for the ReportRootGetSharePointSiteUsagePagesParameterSet
      */
     public static final class ReportRootGetSharePointSiteUsagePagesParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSharePointSiteUsagePagesParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetSharePointSiteUsagePagesParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSharePointSiteUsagePagesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

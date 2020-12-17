@@ -35,7 +35,11 @@ public class WorkbookFunctionsCschParameterSet {
      * Instiaciates a new WorkbookFunctionsCschParameterSet
      */
     public WorkbookFunctionsCschParameterSet() {}
-    private WorkbookFunctionsCschParameterSet(@Nonnull final WorkbookFunctionsCschParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCschParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCschParameterSet(@Nonnull final WorkbookFunctionsCschParameterSetBuilder builder) {
         this.number = builder.number;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsCschParameterSet {
      * Fluent builder for the WorkbookFunctionsCschParameterSet
      */
     public static final class WorkbookFunctionsCschParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsCschParameterSet {
             this.number = val;
             return this;
         }
-        private WorkbookFunctionsCschParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCschParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

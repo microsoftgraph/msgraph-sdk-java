@@ -37,6 +37,7 @@ public class MessageMoveRequest extends BaseRequest<Message> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MessageMoveParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

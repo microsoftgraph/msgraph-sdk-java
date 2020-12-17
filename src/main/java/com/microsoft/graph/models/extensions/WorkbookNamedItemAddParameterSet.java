@@ -53,7 +53,11 @@ public class WorkbookNamedItemAddParameterSet {
      * Instiaciates a new WorkbookNamedItemAddParameterSet
      */
     public WorkbookNamedItemAddParameterSet() {}
-    private WorkbookNamedItemAddParameterSet(@Nonnull final WorkbookNamedItemAddParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookNamedItemAddParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookNamedItemAddParameterSet(@Nonnull final WorkbookNamedItemAddParameterSetBuilder builder) {
         this.name = builder.name;
         this.reference = builder.reference;
         this.comment = builder.comment;
@@ -70,7 +74,11 @@ public class WorkbookNamedItemAddParameterSet {
      * Fluent builder for the WorkbookNamedItemAddParameterSet
      */
     public static final class WorkbookNamedItemAddParameterSetBuilder {
-        private String name;
+        /**
+         * The name parameter value
+         */
+        @Nullable
+        protected String name;
         /**
          * Sets the Name
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookNamedItemAddParameterSet {
             this.name = val;
             return this;
         }
-        private com.google.gson.JsonElement reference;
+        /**
+         * The reference parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement reference;
         /**
          * Sets the Reference
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookNamedItemAddParameterSet {
             this.reference = val;
             return this;
         }
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookNamedItemAddParameterSet {
             this.comment = val;
             return this;
         }
-        private WorkbookNamedItemAddParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookNamedItemAddParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

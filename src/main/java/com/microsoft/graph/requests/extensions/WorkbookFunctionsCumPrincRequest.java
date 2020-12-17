@@ -38,6 +38,7 @@ public class WorkbookFunctionsCumPrincRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsCumPrincParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

@@ -35,7 +35,11 @@ public class ReportRootGetEmailAppUsageAppsUserCountsParameterSet {
      * Instiaciates a new ReportRootGetEmailAppUsageAppsUserCountsParameterSet
      */
     public ReportRootGetEmailAppUsageAppsUserCountsParameterSet() {}
-    private ReportRootGetEmailAppUsageAppsUserCountsParameterSet(@Nonnull final ReportRootGetEmailAppUsageAppsUserCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetEmailAppUsageAppsUserCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetEmailAppUsageAppsUserCountsParameterSet(@Nonnull final ReportRootGetEmailAppUsageAppsUserCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetEmailAppUsageAppsUserCountsParameterSet {
      * Fluent builder for the ReportRootGetEmailAppUsageAppsUserCountsParameterSet
      */
     public static final class ReportRootGetEmailAppUsageAppsUserCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetEmailAppUsageAppsUserCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetEmailAppUsageAppsUserCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetEmailAppUsageAppsUserCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

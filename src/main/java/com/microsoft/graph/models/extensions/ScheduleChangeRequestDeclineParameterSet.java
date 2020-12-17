@@ -35,7 +35,11 @@ public class ScheduleChangeRequestDeclineParameterSet {
      * Instiaciates a new ScheduleChangeRequestDeclineParameterSet
      */
     public ScheduleChangeRequestDeclineParameterSet() {}
-    private ScheduleChangeRequestDeclineParameterSet(@Nonnull final ScheduleChangeRequestDeclineParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ScheduleChangeRequestDeclineParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ScheduleChangeRequestDeclineParameterSet(@Nonnull final ScheduleChangeRequestDeclineParameterSetBuilder builder) {
         this.message = builder.message;
     }
     /**
@@ -50,7 +54,11 @@ public class ScheduleChangeRequestDeclineParameterSet {
      * Fluent builder for the ScheduleChangeRequestDeclineParameterSet
      */
     public static final class ScheduleChangeRequestDeclineParameterSetBuilder {
-        private String message;
+        /**
+         * The message parameter value
+         */
+        @Nullable
+        protected String message;
         /**
          * Sets the Message
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ScheduleChangeRequestDeclineParameterSet {
             this.message = val;
             return this;
         }
-        private ScheduleChangeRequestDeclineParameterSetBuilder(){}
+        @Nullable
+        protected ScheduleChangeRequestDeclineParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

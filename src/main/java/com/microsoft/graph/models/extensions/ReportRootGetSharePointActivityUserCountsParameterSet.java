@@ -35,7 +35,11 @@ public class ReportRootGetSharePointActivityUserCountsParameterSet {
      * Instiaciates a new ReportRootGetSharePointActivityUserCountsParameterSet
      */
     public ReportRootGetSharePointActivityUserCountsParameterSet() {}
-    private ReportRootGetSharePointActivityUserCountsParameterSet(@Nonnull final ReportRootGetSharePointActivityUserCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSharePointActivityUserCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSharePointActivityUserCountsParameterSet(@Nonnull final ReportRootGetSharePointActivityUserCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSharePointActivityUserCountsParameterSet {
      * Fluent builder for the ReportRootGetSharePointActivityUserCountsParameterSet
      */
     public static final class ReportRootGetSharePointActivityUserCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSharePointActivityUserCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetSharePointActivityUserCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSharePointActivityUserCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -35,7 +35,11 @@ public class ReportRootGetSharePointActivityFileCountsParameterSet {
      * Instiaciates a new ReportRootGetSharePointActivityFileCountsParameterSet
      */
     public ReportRootGetSharePointActivityFileCountsParameterSet() {}
-    private ReportRootGetSharePointActivityFileCountsParameterSet(@Nonnull final ReportRootGetSharePointActivityFileCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSharePointActivityFileCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSharePointActivityFileCountsParameterSet(@Nonnull final ReportRootGetSharePointActivityFileCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSharePointActivityFileCountsParameterSet {
      * Fluent builder for the ReportRootGetSharePointActivityFileCountsParameterSet
      */
     public static final class ReportRootGetSharePointActivityFileCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSharePointActivityFileCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetSharePointActivityFileCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSharePointActivityFileCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class WorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest<Voi
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFilterApplyBottomItemsFilterParameterSet body;
     /**
      * Creates the WorkbookFilterApplyBottomItemsFilter

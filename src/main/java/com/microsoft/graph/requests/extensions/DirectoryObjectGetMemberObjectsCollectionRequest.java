@@ -31,6 +31,7 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseAction
 
 
     /** The body for the method */
+    @Nullable
     protected DirectoryObjectGetMemberObjectsParameterSet body;
 
 

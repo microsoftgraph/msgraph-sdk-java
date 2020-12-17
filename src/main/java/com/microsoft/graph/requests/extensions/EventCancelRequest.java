@@ -37,6 +37,7 @@ public class EventCancelRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected EventCancelParameterSet body;
     /**
      * Creates the EventCancel

@@ -44,7 +44,11 @@ public class WorkbookFunctionsSmallParameterSet {
      * Instiaciates a new WorkbookFunctionsSmallParameterSet
      */
     public WorkbookFunctionsSmallParameterSet() {}
-    private WorkbookFunctionsSmallParameterSet(@Nonnull final WorkbookFunctionsSmallParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSmallParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSmallParameterSet(@Nonnull final WorkbookFunctionsSmallParameterSetBuilder builder) {
         this.array = builder.array;
         this.k = builder.k;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsSmallParameterSet {
      * Fluent builder for the WorkbookFunctionsSmallParameterSet
      */
     public static final class WorkbookFunctionsSmallParameterSetBuilder {
-        private com.google.gson.JsonElement array;
+        /**
+         * The array parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement array;
         /**
          * Sets the Array
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsSmallParameterSet {
             this.array = val;
             return this;
         }
-        private com.google.gson.JsonElement k;
+        /**
+         * The k parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement k;
         /**
          * Sets the K
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsSmallParameterSet {
             this.k = val;
             return this;
         }
-        private WorkbookFunctionsSmallParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSmallParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

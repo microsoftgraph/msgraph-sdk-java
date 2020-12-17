@@ -80,7 +80,11 @@ public class WorkbookFunctionsCumPrincParameterSet {
      * Instiaciates a new WorkbookFunctionsCumPrincParameterSet
      */
     public WorkbookFunctionsCumPrincParameterSet() {}
-    private WorkbookFunctionsCumPrincParameterSet(@Nonnull final WorkbookFunctionsCumPrincParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCumPrincParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCumPrincParameterSet(@Nonnull final WorkbookFunctionsCumPrincParameterSetBuilder builder) {
         this.rate = builder.rate;
         this.nper = builder.nper;
         this.pv = builder.pv;
@@ -100,7 +104,11 @@ public class WorkbookFunctionsCumPrincParameterSet {
      * Fluent builder for the WorkbookFunctionsCumPrincParameterSet
      */
     public static final class WorkbookFunctionsCumPrincParameterSetBuilder {
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -111,7 +119,11 @@ public class WorkbookFunctionsCumPrincParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement nper;
+        /**
+         * The nper parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement nper;
         /**
          * Sets the Nper
          * @param val the value to set it to
@@ -122,7 +134,11 @@ public class WorkbookFunctionsCumPrincParameterSet {
             this.nper = val;
             return this;
         }
-        private com.google.gson.JsonElement pv;
+        /**
+         * The pv parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement pv;
         /**
          * Sets the Pv
          * @param val the value to set it to
@@ -133,7 +149,11 @@ public class WorkbookFunctionsCumPrincParameterSet {
             this.pv = val;
             return this;
         }
-        private com.google.gson.JsonElement startPeriod;
+        /**
+         * The startPeriod parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startPeriod;
         /**
          * Sets the StartPeriod
          * @param val the value to set it to
@@ -144,7 +164,11 @@ public class WorkbookFunctionsCumPrincParameterSet {
             this.startPeriod = val;
             return this;
         }
-        private com.google.gson.JsonElement endPeriod;
+        /**
+         * The endPeriod parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement endPeriod;
         /**
          * Sets the EndPeriod
          * @param val the value to set it to
@@ -155,7 +179,11 @@ public class WorkbookFunctionsCumPrincParameterSet {
             this.endPeriod = val;
             return this;
         }
-        private com.google.gson.JsonElement type;
+        /**
+         * The type parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement type;
         /**
          * Sets the Type
          * @param val the value to set it to
@@ -166,7 +194,8 @@ public class WorkbookFunctionsCumPrincParameterSet {
             this.type = val;
             return this;
         }
-        private WorkbookFunctionsCumPrincParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCumPrincParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

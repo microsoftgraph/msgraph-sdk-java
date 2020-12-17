@@ -26,7 +26,11 @@ public class DriveItemVersionRestoreVersionParameterSet {
      * Instiaciates a new DriveItemVersionRestoreVersionParameterSet
      */
     public DriveItemVersionRestoreVersionParameterSet() {}
-    private DriveItemVersionRestoreVersionParameterSet(@Nonnull final DriveItemVersionRestoreVersionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemVersionRestoreVersionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemVersionRestoreVersionParameterSet(@Nonnull final DriveItemVersionRestoreVersionParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DriveItemVersionRestoreVersionParameterSet {
      * Fluent builder for the DriveItemVersionRestoreVersionParameterSet
      */
     public static final class DriveItemVersionRestoreVersionParameterSetBuilder {
-        private DriveItemVersionRestoreVersionParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemVersionRestoreVersionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

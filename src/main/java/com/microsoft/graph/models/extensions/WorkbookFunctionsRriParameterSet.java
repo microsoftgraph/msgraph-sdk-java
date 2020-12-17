@@ -53,7 +53,11 @@ public class WorkbookFunctionsRriParameterSet {
      * Instiaciates a new WorkbookFunctionsRriParameterSet
      */
     public WorkbookFunctionsRriParameterSet() {}
-    private WorkbookFunctionsRriParameterSet(@Nonnull final WorkbookFunctionsRriParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRriParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRriParameterSet(@Nonnull final WorkbookFunctionsRriParameterSetBuilder builder) {
         this.nper = builder.nper;
         this.pv = builder.pv;
         this.fv = builder.fv;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsRriParameterSet {
      * Fluent builder for the WorkbookFunctionsRriParameterSet
      */
     public static final class WorkbookFunctionsRriParameterSetBuilder {
-        private com.google.gson.JsonElement nper;
+        /**
+         * The nper parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement nper;
         /**
          * Sets the Nper
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsRriParameterSet {
             this.nper = val;
             return this;
         }
-        private com.google.gson.JsonElement pv;
+        /**
+         * The pv parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement pv;
         /**
          * Sets the Pv
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsRriParameterSet {
             this.pv = val;
             return this;
         }
-        private com.google.gson.JsonElement fv;
+        /**
+         * The fv parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement fv;
         /**
          * Sets the Fv
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsRriParameterSet {
             this.fv = val;
             return this;
         }
-        private WorkbookFunctionsRriParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRriParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

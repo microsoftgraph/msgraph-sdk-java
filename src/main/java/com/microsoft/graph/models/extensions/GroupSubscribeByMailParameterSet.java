@@ -26,7 +26,11 @@ public class GroupSubscribeByMailParameterSet {
      * Instiaciates a new GroupSubscribeByMailParameterSet
      */
     public GroupSubscribeByMailParameterSet() {}
-    private GroupSubscribeByMailParameterSet(@Nonnull final GroupSubscribeByMailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupSubscribeByMailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupSubscribeByMailParameterSet(@Nonnull final GroupSubscribeByMailParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class GroupSubscribeByMailParameterSet {
      * Fluent builder for the GroupSubscribeByMailParameterSet
      */
     public static final class GroupSubscribeByMailParameterSetBuilder {
-        private GroupSubscribeByMailParameterSetBuilder(){}
+        @Nullable
+        protected GroupSubscribeByMailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

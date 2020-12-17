@@ -35,7 +35,11 @@ public class WorkbookWorksheetProtectionProtectParameterSet {
      * Instiaciates a new WorkbookWorksheetProtectionProtectParameterSet
      */
     public WorkbookWorksheetProtectionProtectParameterSet() {}
-    private WorkbookWorksheetProtectionProtectParameterSet(@Nonnull final WorkbookWorksheetProtectionProtectParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookWorksheetProtectionProtectParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookWorksheetProtectionProtectParameterSet(@Nonnull final WorkbookWorksheetProtectionProtectParameterSetBuilder builder) {
         this.options = builder.options;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookWorksheetProtectionProtectParameterSet {
      * Fluent builder for the WorkbookWorksheetProtectionProtectParameterSet
      */
     public static final class WorkbookWorksheetProtectionProtectParameterSetBuilder {
-        private WorkbookWorksheetProtectionOptions options;
+        /**
+         * The options parameter value
+         */
+        @Nullable
+        protected WorkbookWorksheetProtectionOptions options;
         /**
          * Sets the Options
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookWorksheetProtectionProtectParameterSet {
             this.options = val;
             return this;
         }
-        private WorkbookWorksheetProtectionProtectParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookWorksheetProtectionProtectParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

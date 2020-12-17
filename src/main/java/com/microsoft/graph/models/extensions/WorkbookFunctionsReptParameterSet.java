@@ -44,7 +44,11 @@ public class WorkbookFunctionsReptParameterSet {
      * Instiaciates a new WorkbookFunctionsReptParameterSet
      */
     public WorkbookFunctionsReptParameterSet() {}
-    private WorkbookFunctionsReptParameterSet(@Nonnull final WorkbookFunctionsReptParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsReptParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsReptParameterSet(@Nonnull final WorkbookFunctionsReptParameterSetBuilder builder) {
         this.text = builder.text;
         this.numberTimes = builder.numberTimes;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsReptParameterSet {
      * Fluent builder for the WorkbookFunctionsReptParameterSet
      */
     public static final class WorkbookFunctionsReptParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsReptParameterSet {
             this.text = val;
             return this;
         }
-        private com.google.gson.JsonElement numberTimes;
+        /**
+         * The numberTimes parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numberTimes;
         /**
          * Sets the NumberTimes
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsReptParameterSet {
             this.numberTimes = val;
             return this;
         }
-        private WorkbookFunctionsReptParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsReptParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

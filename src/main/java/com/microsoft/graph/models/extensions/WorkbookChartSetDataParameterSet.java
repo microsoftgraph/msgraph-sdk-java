@@ -44,7 +44,11 @@ public class WorkbookChartSetDataParameterSet {
      * Instiaciates a new WorkbookChartSetDataParameterSet
      */
     public WorkbookChartSetDataParameterSet() {}
-    private WorkbookChartSetDataParameterSet(@Nonnull final WorkbookChartSetDataParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartSetDataParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartSetDataParameterSet(@Nonnull final WorkbookChartSetDataParameterSetBuilder builder) {
         this.sourceData = builder.sourceData;
         this.seriesBy = builder.seriesBy;
     }
@@ -60,7 +64,11 @@ public class WorkbookChartSetDataParameterSet {
      * Fluent builder for the WorkbookChartSetDataParameterSet
      */
     public static final class WorkbookChartSetDataParameterSetBuilder {
-        private com.google.gson.JsonElement sourceData;
+        /**
+         * The sourceData parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement sourceData;
         /**
          * Sets the SourceData
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookChartSetDataParameterSet {
             this.sourceData = val;
             return this;
         }
-        private String seriesBy;
+        /**
+         * The seriesBy parameter value
+         */
+        @Nullable
+        protected String seriesBy;
         /**
          * Sets the SeriesBy
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookChartSetDataParameterSet {
             this.seriesBy = val;
             return this;
         }
-        private WorkbookChartSetDataParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartSetDataParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

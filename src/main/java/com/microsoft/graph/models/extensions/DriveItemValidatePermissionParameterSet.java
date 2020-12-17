@@ -44,7 +44,11 @@ public class DriveItemValidatePermissionParameterSet {
      * Instiaciates a new DriveItemValidatePermissionParameterSet
      */
     public DriveItemValidatePermissionParameterSet() {}
-    private DriveItemValidatePermissionParameterSet(@Nonnull final DriveItemValidatePermissionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemValidatePermissionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemValidatePermissionParameterSet(@Nonnull final DriveItemValidatePermissionParameterSetBuilder builder) {
         this.challengeToken = builder.challengeToken;
         this.password = builder.password;
     }
@@ -60,7 +64,11 @@ public class DriveItemValidatePermissionParameterSet {
      * Fluent builder for the DriveItemValidatePermissionParameterSet
      */
     public static final class DriveItemValidatePermissionParameterSetBuilder {
-        private String challengeToken;
+        /**
+         * The challengeToken parameter value
+         */
+        @Nullable
+        protected String challengeToken;
         /**
          * Sets the ChallengeToken
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class DriveItemValidatePermissionParameterSet {
             this.challengeToken = val;
             return this;
         }
-        private String password;
+        /**
+         * The password parameter value
+         */
+        @Nullable
+        protected String password;
         /**
          * Sets the Password
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class DriveItemValidatePermissionParameterSet {
             this.password = val;
             return this;
         }
-        private DriveItemValidatePermissionParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemValidatePermissionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -38,6 +38,7 @@ public class WorkbookFunctionsT_Dist_RTRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsT_Dist_RTParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

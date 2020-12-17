@@ -35,7 +35,11 @@ public class OnenotePageOnenotePatchContentParameterSet {
      * Instiaciates a new OnenotePageOnenotePatchContentParameterSet
      */
     public OnenotePageOnenotePatchContentParameterSet() {}
-    private OnenotePageOnenotePatchContentParameterSet(@Nonnull final OnenotePageOnenotePatchContentParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OnenotePageOnenotePatchContentParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OnenotePageOnenotePatchContentParameterSet(@Nonnull final OnenotePageOnenotePatchContentParameterSetBuilder builder) {
         this.commands = builder.commands;
     }
     /**
@@ -50,7 +54,11 @@ public class OnenotePageOnenotePatchContentParameterSet {
      * Fluent builder for the OnenotePageOnenotePatchContentParameterSet
      */
     public static final class OnenotePageOnenotePatchContentParameterSetBuilder {
-        private java.util.List<OnenotePatchContentCommand> commands;
+        /**
+         * The commands parameter value
+         */
+        @Nullable
+        protected java.util.List<OnenotePatchContentCommand> commands;
         /**
          * Sets the Commands
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class OnenotePageOnenotePatchContentParameterSet {
             this.commands = val;
             return this;
         }
-        private OnenotePageOnenotePatchContentParameterSetBuilder(){}
+        @Nullable
+        protected OnenotePageOnenotePatchContentParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -26,7 +26,11 @@ public class ApplicationDeltaParameterSet {
      * Instiaciates a new ApplicationDeltaParameterSet
      */
     public ApplicationDeltaParameterSet() {}
-    private ApplicationDeltaParameterSet(@Nonnull final ApplicationDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ApplicationDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ApplicationDeltaParameterSet(@Nonnull final ApplicationDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ApplicationDeltaParameterSet {
      * Fluent builder for the ApplicationDeltaParameterSet
      */
     public static final class ApplicationDeltaParameterSetBuilder {
-        private ApplicationDeltaParameterSetBuilder(){}
+        @Nullable
+        protected ApplicationDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

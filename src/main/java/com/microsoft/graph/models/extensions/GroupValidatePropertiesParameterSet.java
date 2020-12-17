@@ -53,7 +53,11 @@ public class GroupValidatePropertiesParameterSet {
      * Instiaciates a new GroupValidatePropertiesParameterSet
      */
     public GroupValidatePropertiesParameterSet() {}
-    private GroupValidatePropertiesParameterSet(@Nonnull final GroupValidatePropertiesParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new GroupValidatePropertiesParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected GroupValidatePropertiesParameterSet(@Nonnull final GroupValidatePropertiesParameterSetBuilder builder) {
         this.displayName = builder.displayName;
         this.mailNickname = builder.mailNickname;
         this.onBehalfOfUserId = builder.onBehalfOfUserId;
@@ -70,7 +74,11 @@ public class GroupValidatePropertiesParameterSet {
      * Fluent builder for the GroupValidatePropertiesParameterSet
      */
     public static final class GroupValidatePropertiesParameterSetBuilder {
-        private String displayName;
+        /**
+         * The displayName parameter value
+         */
+        @Nullable
+        protected String displayName;
         /**
          * Sets the DisplayName
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class GroupValidatePropertiesParameterSet {
             this.displayName = val;
             return this;
         }
-        private String mailNickname;
+        /**
+         * The mailNickname parameter value
+         */
+        @Nullable
+        protected String mailNickname;
         /**
          * Sets the MailNickname
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class GroupValidatePropertiesParameterSet {
             this.mailNickname = val;
             return this;
         }
-        private java.util.UUID onBehalfOfUserId;
+        /**
+         * The onBehalfOfUserId parameter value
+         */
+        @Nullable
+        protected java.util.UUID onBehalfOfUserId;
         /**
          * Sets the OnBehalfOfUserId
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class GroupValidatePropertiesParameterSet {
             this.onBehalfOfUserId = val;
             return this;
         }
-        private GroupValidatePropertiesParameterSetBuilder(){}
+        @Nullable
+        protected GroupValidatePropertiesParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

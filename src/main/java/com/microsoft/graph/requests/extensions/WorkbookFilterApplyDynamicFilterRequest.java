@@ -37,6 +37,7 @@ public class WorkbookFilterApplyDynamicFilterRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFilterApplyDynamicFilterParameterSet body;
     /**
      * Creates the WorkbookFilterApplyDynamicFilter

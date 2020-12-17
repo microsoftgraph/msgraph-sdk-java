@@ -38,6 +38,7 @@ public class WorkbookFunctionsAverageIfsRequest extends BaseRequest<WorkbookFunc
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsAverageIfsParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

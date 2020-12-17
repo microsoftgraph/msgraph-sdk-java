@@ -38,6 +38,7 @@ public class WorkbookFunctionsKurtRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsKurtParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

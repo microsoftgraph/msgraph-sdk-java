@@ -62,7 +62,11 @@ public class WorkbookFunctionsCoupDaysParameterSet {
      * Instiaciates a new WorkbookFunctionsCoupDaysParameterSet
      */
     public WorkbookFunctionsCoupDaysParameterSet() {}
-    private WorkbookFunctionsCoupDaysParameterSet(@Nonnull final WorkbookFunctionsCoupDaysParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsCoupDaysParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsCoupDaysParameterSet(@Nonnull final WorkbookFunctionsCoupDaysParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.frequency = builder.frequency;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsCoupDaysParameterSet {
      * Fluent builder for the WorkbookFunctionsCoupDaysParameterSet
      */
     public static final class WorkbookFunctionsCoupDaysParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsCoupDaysParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsCoupDaysParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement frequency;
+        /**
+         * The frequency parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement frequency;
         /**
          * Sets the Frequency
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsCoupDaysParameterSet {
             this.frequency = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsCoupDaysParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsCoupDaysParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsCoupDaysParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

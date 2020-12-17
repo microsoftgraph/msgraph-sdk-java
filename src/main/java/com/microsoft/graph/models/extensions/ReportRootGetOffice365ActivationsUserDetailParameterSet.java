@@ -26,7 +26,11 @@ public class ReportRootGetOffice365ActivationsUserDetailParameterSet {
      * Instiaciates a new ReportRootGetOffice365ActivationsUserDetailParameterSet
      */
     public ReportRootGetOffice365ActivationsUserDetailParameterSet() {}
-    private ReportRootGetOffice365ActivationsUserDetailParameterSet(@Nonnull final ReportRootGetOffice365ActivationsUserDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetOffice365ActivationsUserDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetOffice365ActivationsUserDetailParameterSet(@Nonnull final ReportRootGetOffice365ActivationsUserDetailParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ReportRootGetOffice365ActivationsUserDetailParameterSet {
      * Fluent builder for the ReportRootGetOffice365ActivationsUserDetailParameterSet
      */
     public static final class ReportRootGetOffice365ActivationsUserDetailParameterSetBuilder {
-        private ReportRootGetOffice365ActivationsUserDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetOffice365ActivationsUserDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

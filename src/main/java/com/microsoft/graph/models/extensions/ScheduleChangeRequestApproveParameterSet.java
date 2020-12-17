@@ -35,7 +35,11 @@ public class ScheduleChangeRequestApproveParameterSet {
      * Instiaciates a new ScheduleChangeRequestApproveParameterSet
      */
     public ScheduleChangeRequestApproveParameterSet() {}
-    private ScheduleChangeRequestApproveParameterSet(@Nonnull final ScheduleChangeRequestApproveParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ScheduleChangeRequestApproveParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ScheduleChangeRequestApproveParameterSet(@Nonnull final ScheduleChangeRequestApproveParameterSetBuilder builder) {
         this.message = builder.message;
     }
     /**
@@ -50,7 +54,11 @@ public class ScheduleChangeRequestApproveParameterSet {
      * Fluent builder for the ScheduleChangeRequestApproveParameterSet
      */
     public static final class ScheduleChangeRequestApproveParameterSetBuilder {
-        private String message;
+        /**
+         * The message parameter value
+         */
+        @Nullable
+        protected String message;
         /**
          * Sets the Message
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ScheduleChangeRequestApproveParameterSet {
             this.message = val;
             return this;
         }
-        private ScheduleChangeRequestApproveParameterSetBuilder(){}
+        @Nullable
+        protected ScheduleChangeRequestApproveParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

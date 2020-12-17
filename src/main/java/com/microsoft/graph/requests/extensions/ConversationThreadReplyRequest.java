@@ -37,6 +37,7 @@ public class ConversationThreadReplyRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected ConversationThreadReplyParameterSet body;
     /**
      * Creates the ConversationThreadReply

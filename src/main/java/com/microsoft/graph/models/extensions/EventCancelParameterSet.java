@@ -35,7 +35,11 @@ public class EventCancelParameterSet {
      * Instiaciates a new EventCancelParameterSet
      */
     public EventCancelParameterSet() {}
-    private EventCancelParameterSet(@Nonnull final EventCancelParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new EventCancelParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected EventCancelParameterSet(@Nonnull final EventCancelParameterSetBuilder builder) {
         this.comment = builder.comment;
     }
     /**
@@ -50,7 +54,11 @@ public class EventCancelParameterSet {
      * Fluent builder for the EventCancelParameterSet
      */
     public static final class EventCancelParameterSetBuilder {
-        private String comment;
+        /**
+         * The comment parameter value
+         */
+        @Nullable
+        protected String comment;
         /**
          * Sets the Comment
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class EventCancelParameterSet {
             this.comment = val;
             return this;
         }
-        private EventCancelParameterSetBuilder(){}
+        @Nullable
+        protected EventCancelParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

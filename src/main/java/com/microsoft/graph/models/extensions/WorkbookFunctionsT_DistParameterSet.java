@@ -53,7 +53,11 @@ public class WorkbookFunctionsT_DistParameterSet {
      * Instiaciates a new WorkbookFunctionsT_DistParameterSet
      */
     public WorkbookFunctionsT_DistParameterSet() {}
-    private WorkbookFunctionsT_DistParameterSet(@Nonnull final WorkbookFunctionsT_DistParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsT_DistParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsT_DistParameterSet(@Nonnull final WorkbookFunctionsT_DistParameterSetBuilder builder) {
         this.x = builder.x;
         this.degFreedom = builder.degFreedom;
         this.cumulative = builder.cumulative;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsT_DistParameterSet {
      * Fluent builder for the WorkbookFunctionsT_DistParameterSet
      */
     public static final class WorkbookFunctionsT_DistParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsT_DistParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom;
+        /**
+         * The degFreedom parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom;
         /**
          * Sets the DegFreedom
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsT_DistParameterSet {
             this.degFreedom = val;
             return this;
         }
-        private com.google.gson.JsonElement cumulative;
+        /**
+         * The cumulative parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement cumulative;
         /**
          * Sets the Cumulative
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsT_DistParameterSet {
             this.cumulative = val;
             return this;
         }
-        private WorkbookFunctionsT_DistParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsT_DistParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

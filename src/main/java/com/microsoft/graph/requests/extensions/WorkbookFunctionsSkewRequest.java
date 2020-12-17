@@ -38,6 +38,7 @@ public class WorkbookFunctionsSkewRequest extends BaseRequest<WorkbookFunctionRe
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsSkewParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

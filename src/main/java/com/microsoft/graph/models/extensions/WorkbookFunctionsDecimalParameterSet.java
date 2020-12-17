@@ -44,7 +44,11 @@ public class WorkbookFunctionsDecimalParameterSet {
      * Instiaciates a new WorkbookFunctionsDecimalParameterSet
      */
     public WorkbookFunctionsDecimalParameterSet() {}
-    private WorkbookFunctionsDecimalParameterSet(@Nonnull final WorkbookFunctionsDecimalParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDecimalParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDecimalParameterSet(@Nonnull final WorkbookFunctionsDecimalParameterSetBuilder builder) {
         this.number = builder.number;
         this.radix = builder.radix;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsDecimalParameterSet {
      * Fluent builder for the WorkbookFunctionsDecimalParameterSet
      */
     public static final class WorkbookFunctionsDecimalParameterSetBuilder {
-        private com.google.gson.JsonElement number;
+        /**
+         * The number parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement number;
         /**
          * Sets the Number
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsDecimalParameterSet {
             this.number = val;
             return this;
         }
-        private com.google.gson.JsonElement radix;
+        /**
+         * The radix parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement radix;
         /**
          * Sets the Radix
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsDecimalParameterSet {
             this.radix = val;
             return this;
         }
-        private WorkbookFunctionsDecimalParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDecimalParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

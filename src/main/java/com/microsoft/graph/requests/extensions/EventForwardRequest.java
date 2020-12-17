@@ -37,6 +37,7 @@ public class EventForwardRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected EventForwardParameterSet body;
     /**
      * Creates the EventForward

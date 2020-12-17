@@ -35,7 +35,11 @@ public class ReportRootGetTeamsUserActivityUserDetailParameterSet {
      * Instiaciates a new ReportRootGetTeamsUserActivityUserDetailParameterSet
      */
     public ReportRootGetTeamsUserActivityUserDetailParameterSet() {}
-    private ReportRootGetTeamsUserActivityUserDetailParameterSet(@Nonnull final ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetTeamsUserActivityUserDetailParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetTeamsUserActivityUserDetailParameterSet(@Nonnull final ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder builder) {
         this.date = builder.date;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetTeamsUserActivityUserDetailParameterSet {
      * Fluent builder for the ReportRootGetTeamsUserActivityUserDetailParameterSet
      */
     public static final class ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder {
-        private com.microsoft.graph.core.DateOnly date;
+        /**
+         * The date parameter value
+         */
+        @Nullable
+        protected com.microsoft.graph.core.DateOnly date;
         /**
          * Sets the Date
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetTeamsUserActivityUserDetailParameterSet {
             this.date = val;
             return this;
         }
-        private ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

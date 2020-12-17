@@ -37,6 +37,7 @@ public class UserSendMailRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected UserSendMailParameterSet body;
     /**
      * Creates the UserSendMail

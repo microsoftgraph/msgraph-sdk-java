@@ -37,6 +37,7 @@ public class ManagedDeviceUpdateWindowsDeviceAccountRequest extends BaseRequest<
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedDeviceUpdateWindowsDeviceAccountParameterSet body;
     /**
      * Creates the ManagedDeviceUpdateWindowsDeviceAccount

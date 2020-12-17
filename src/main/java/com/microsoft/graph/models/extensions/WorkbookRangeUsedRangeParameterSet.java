@@ -26,7 +26,11 @@ public class WorkbookRangeUsedRangeParameterSet {
      * Instiaciates a new WorkbookRangeUsedRangeParameterSet
      */
     public WorkbookRangeUsedRangeParameterSet() {}
-    private WorkbookRangeUsedRangeParameterSet(@Nonnull final WorkbookRangeUsedRangeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeUsedRangeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeUsedRangeParameterSet(@Nonnull final WorkbookRangeUsedRangeParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeUsedRangeParameterSet {
      * Fluent builder for the WorkbookRangeUsedRangeParameterSet
      */
     public static final class WorkbookRangeUsedRangeParameterSetBuilder {
-        private WorkbookRangeUsedRangeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeUsedRangeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

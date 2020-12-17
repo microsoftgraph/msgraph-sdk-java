@@ -44,7 +44,11 @@ public class WorkbookFunctionsChiSq_Inv_RTParameterSet {
      * Instiaciates a new WorkbookFunctionsChiSq_Inv_RTParameterSet
      */
     public WorkbookFunctionsChiSq_Inv_RTParameterSet() {}
-    private WorkbookFunctionsChiSq_Inv_RTParameterSet(@Nonnull final WorkbookFunctionsChiSq_Inv_RTParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsChiSq_Inv_RTParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsChiSq_Inv_RTParameterSet(@Nonnull final WorkbookFunctionsChiSq_Inv_RTParameterSetBuilder builder) {
         this.probability = builder.probability;
         this.degFreedom = builder.degFreedom;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsChiSq_Inv_RTParameterSet {
      * Fluent builder for the WorkbookFunctionsChiSq_Inv_RTParameterSet
      */
     public static final class WorkbookFunctionsChiSq_Inv_RTParameterSetBuilder {
-        private com.google.gson.JsonElement probability;
+        /**
+         * The probability parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement probability;
         /**
          * Sets the Probability
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsChiSq_Inv_RTParameterSet {
             this.probability = val;
             return this;
         }
-        private com.google.gson.JsonElement degFreedom;
+        /**
+         * The degFreedom parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement degFreedom;
         /**
          * Sets the DegFreedom
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsChiSq_Inv_RTParameterSet {
             this.degFreedom = val;
             return this;
         }
-        private WorkbookFunctionsChiSq_Inv_RTParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsChiSq_Inv_RTParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class MessageCopyRequest extends BaseRequest<Message> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MessageCopyParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

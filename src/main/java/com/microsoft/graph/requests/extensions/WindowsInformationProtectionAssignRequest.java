@@ -37,6 +37,7 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest<Void>
     }
 
 	/** The body for the method */
+    @Nullable
     protected WindowsInformationProtectionAssignParameterSet body;
     /**
      * Creates the WindowsInformationProtectionAssign

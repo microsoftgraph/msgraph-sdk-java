@@ -35,7 +35,11 @@ public class ReportRootGetSharePointSiteUsageStorageParameterSet {
      * Instiaciates a new ReportRootGetSharePointSiteUsageStorageParameterSet
      */
     public ReportRootGetSharePointSiteUsageStorageParameterSet() {}
-    private ReportRootGetSharePointSiteUsageStorageParameterSet(@Nonnull final ReportRootGetSharePointSiteUsageStorageParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetSharePointSiteUsageStorageParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetSharePointSiteUsageStorageParameterSet(@Nonnull final ReportRootGetSharePointSiteUsageStorageParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetSharePointSiteUsageStorageParameterSet {
      * Fluent builder for the ReportRootGetSharePointSiteUsageStorageParameterSet
      */
     public static final class ReportRootGetSharePointSiteUsageStorageParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetSharePointSiteUsageStorageParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetSharePointSiteUsageStorageParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetSharePointSiteUsageStorageParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

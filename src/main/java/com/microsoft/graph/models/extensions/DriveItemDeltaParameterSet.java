@@ -26,7 +26,11 @@ public class DriveItemDeltaParameterSet {
      * Instiaciates a new DriveItemDeltaParameterSet
      */
     public DriveItemDeltaParameterSet() {}
-    private DriveItemDeltaParameterSet(@Nonnull final DriveItemDeltaParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemDeltaParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemDeltaParameterSet(@Nonnull final DriveItemDeltaParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DriveItemDeltaParameterSet {
      * Fluent builder for the DriveItemDeltaParameterSet
      */
     public static final class DriveItemDeltaParameterSetBuilder {
-        private DriveItemDeltaParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemDeltaParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

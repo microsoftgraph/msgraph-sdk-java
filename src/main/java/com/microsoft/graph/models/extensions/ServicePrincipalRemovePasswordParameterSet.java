@@ -35,7 +35,11 @@ public class ServicePrincipalRemovePasswordParameterSet {
      * Instiaciates a new ServicePrincipalRemovePasswordParameterSet
      */
     public ServicePrincipalRemovePasswordParameterSet() {}
-    private ServicePrincipalRemovePasswordParameterSet(@Nonnull final ServicePrincipalRemovePasswordParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ServicePrincipalRemovePasswordParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ServicePrincipalRemovePasswordParameterSet(@Nonnull final ServicePrincipalRemovePasswordParameterSetBuilder builder) {
         this.keyId = builder.keyId;
     }
     /**
@@ -50,7 +54,11 @@ public class ServicePrincipalRemovePasswordParameterSet {
      * Fluent builder for the ServicePrincipalRemovePasswordParameterSet
      */
     public static final class ServicePrincipalRemovePasswordParameterSetBuilder {
-        private java.util.UUID keyId;
+        /**
+         * The keyId parameter value
+         */
+        @Nullable
+        protected java.util.UUID keyId;
         /**
          * Sets the KeyId
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ServicePrincipalRemovePasswordParameterSet {
             this.keyId = val;
             return this;
         }
-        private ServicePrincipalRemovePasswordParameterSetBuilder(){}
+        @Nullable
+        protected ServicePrincipalRemovePasswordParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

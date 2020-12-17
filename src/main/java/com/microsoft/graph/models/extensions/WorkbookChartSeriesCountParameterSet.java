@@ -26,7 +26,11 @@ public class WorkbookChartSeriesCountParameterSet {
      * Instiaciates a new WorkbookChartSeriesCountParameterSet
      */
     public WorkbookChartSeriesCountParameterSet() {}
-    private WorkbookChartSeriesCountParameterSet(@Nonnull final WorkbookChartSeriesCountParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartSeriesCountParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartSeriesCountParameterSet(@Nonnull final WorkbookChartSeriesCountParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookChartSeriesCountParameterSet {
      * Fluent builder for the WorkbookChartSeriesCountParameterSet
      */
     public static final class WorkbookChartSeriesCountParameterSetBuilder {
-        private WorkbookChartSeriesCountParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartSeriesCountParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

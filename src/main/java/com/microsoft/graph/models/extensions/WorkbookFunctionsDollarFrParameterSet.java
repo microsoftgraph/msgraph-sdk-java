@@ -44,7 +44,11 @@ public class WorkbookFunctionsDollarFrParameterSet {
      * Instiaciates a new WorkbookFunctionsDollarFrParameterSet
      */
     public WorkbookFunctionsDollarFrParameterSet() {}
-    private WorkbookFunctionsDollarFrParameterSet(@Nonnull final WorkbookFunctionsDollarFrParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDollarFrParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDollarFrParameterSet(@Nonnull final WorkbookFunctionsDollarFrParameterSetBuilder builder) {
         this.decimalDollar = builder.decimalDollar;
         this.fraction = builder.fraction;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsDollarFrParameterSet {
      * Fluent builder for the WorkbookFunctionsDollarFrParameterSet
      */
     public static final class WorkbookFunctionsDollarFrParameterSetBuilder {
-        private com.google.gson.JsonElement decimalDollar;
+        /**
+         * The decimalDollar parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement decimalDollar;
         /**
          * Sets the DecimalDollar
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsDollarFrParameterSet {
             this.decimalDollar = val;
             return this;
         }
-        private com.google.gson.JsonElement fraction;
+        /**
+         * The fraction parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement fraction;
         /**
          * Sets the Fraction
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsDollarFrParameterSet {
             this.fraction = val;
             return this;
         }
-        private WorkbookFunctionsDollarFrParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDollarFrParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

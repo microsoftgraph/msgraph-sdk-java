@@ -38,6 +38,7 @@ public class WorkbookFunctionsImConjugateRequest extends BaseRequest<WorkbookFun
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsImConjugateParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

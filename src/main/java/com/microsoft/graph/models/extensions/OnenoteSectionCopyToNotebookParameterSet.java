@@ -71,7 +71,11 @@ public class OnenoteSectionCopyToNotebookParameterSet {
      * Instiaciates a new OnenoteSectionCopyToNotebookParameterSet
      */
     public OnenoteSectionCopyToNotebookParameterSet() {}
-    private OnenoteSectionCopyToNotebookParameterSet(@Nonnull final OnenoteSectionCopyToNotebookParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OnenoteSectionCopyToNotebookParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OnenoteSectionCopyToNotebookParameterSet(@Nonnull final OnenoteSectionCopyToNotebookParameterSetBuilder builder) {
         this.id = builder.id;
         this.groupId = builder.groupId;
         this.renameAs = builder.renameAs;
@@ -90,7 +94,11 @@ public class OnenoteSectionCopyToNotebookParameterSet {
      * Fluent builder for the OnenoteSectionCopyToNotebookParameterSet
      */
     public static final class OnenoteSectionCopyToNotebookParameterSetBuilder {
-        private String id;
+        /**
+         * The id parameter value
+         */
+        @Nullable
+        protected String id;
         /**
          * Sets the Id
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class OnenoteSectionCopyToNotebookParameterSet {
             this.id = val;
             return this;
         }
-        private String groupId;
+        /**
+         * The groupId parameter value
+         */
+        @Nullable
+        protected String groupId;
         /**
          * Sets the GroupId
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class OnenoteSectionCopyToNotebookParameterSet {
             this.groupId = val;
             return this;
         }
-        private String renameAs;
+        /**
+         * The renameAs parameter value
+         */
+        @Nullable
+        protected String renameAs;
         /**
          * Sets the RenameAs
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class OnenoteSectionCopyToNotebookParameterSet {
             this.renameAs = val;
             return this;
         }
-        private String siteCollectionId;
+        /**
+         * The siteCollectionId parameter value
+         */
+        @Nullable
+        protected String siteCollectionId;
         /**
          * Sets the SiteCollectionId
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class OnenoteSectionCopyToNotebookParameterSet {
             this.siteCollectionId = val;
             return this;
         }
-        private String siteId;
+        /**
+         * The siteId parameter value
+         */
+        @Nullable
+        protected String siteId;
         /**
          * Sets the SiteId
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class OnenoteSectionCopyToNotebookParameterSet {
             this.siteId = val;
             return this;
         }
-        private OnenoteSectionCopyToNotebookParameterSetBuilder(){}
+        @Nullable
+        protected OnenoteSectionCopyToNotebookParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

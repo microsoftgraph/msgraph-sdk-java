@@ -37,6 +37,7 @@ public class MessageReplyRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected MessageReplyParameterSet body;
     /**
      * Creates the MessageReply

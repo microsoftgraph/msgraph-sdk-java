@@ -62,7 +62,11 @@ public class WorkbookFunctionsSeriesSumParameterSet {
      * Instiaciates a new WorkbookFunctionsSeriesSumParameterSet
      */
     public WorkbookFunctionsSeriesSumParameterSet() {}
-    private WorkbookFunctionsSeriesSumParameterSet(@Nonnull final WorkbookFunctionsSeriesSumParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsSeriesSumParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsSeriesSumParameterSet(@Nonnull final WorkbookFunctionsSeriesSumParameterSetBuilder builder) {
         this.x = builder.x;
         this.n = builder.n;
         this.m = builder.m;
@@ -80,7 +84,11 @@ public class WorkbookFunctionsSeriesSumParameterSet {
      * Fluent builder for the WorkbookFunctionsSeriesSumParameterSet
      */
     public static final class WorkbookFunctionsSeriesSumParameterSetBuilder {
-        private com.google.gson.JsonElement x;
+        /**
+         * The x parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement x;
         /**
          * Sets the X
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class WorkbookFunctionsSeriesSumParameterSet {
             this.x = val;
             return this;
         }
-        private com.google.gson.JsonElement n;
+        /**
+         * The n parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement n;
         /**
          * Sets the N
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class WorkbookFunctionsSeriesSumParameterSet {
             this.n = val;
             return this;
         }
-        private com.google.gson.JsonElement m;
+        /**
+         * The m parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement m;
         /**
          * Sets the M
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class WorkbookFunctionsSeriesSumParameterSet {
             this.m = val;
             return this;
         }
-        private com.google.gson.JsonElement coefficients;
+        /**
+         * The coefficients parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement coefficients;
         /**
          * Sets the Coefficients
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class WorkbookFunctionsSeriesSumParameterSet {
             this.coefficients = val;
             return this;
         }
-        private WorkbookFunctionsSeriesSumParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsSeriesSumParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

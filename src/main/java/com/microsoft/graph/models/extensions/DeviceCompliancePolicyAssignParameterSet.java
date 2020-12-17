@@ -35,7 +35,11 @@ public class DeviceCompliancePolicyAssignParameterSet {
      * Instiaciates a new DeviceCompliancePolicyAssignParameterSet
      */
     public DeviceCompliancePolicyAssignParameterSet() {}
-    private DeviceCompliancePolicyAssignParameterSet(@Nonnull final DeviceCompliancePolicyAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DeviceCompliancePolicyAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DeviceCompliancePolicyAssignParameterSet(@Nonnull final DeviceCompliancePolicyAssignParameterSetBuilder builder) {
         this.assignments = builder.assignments;
     }
     /**
@@ -50,7 +54,11 @@ public class DeviceCompliancePolicyAssignParameterSet {
      * Fluent builder for the DeviceCompliancePolicyAssignParameterSet
      */
     public static final class DeviceCompliancePolicyAssignParameterSetBuilder {
-        private java.util.List<DeviceCompliancePolicyAssignment> assignments;
+        /**
+         * The assignments parameter value
+         */
+        @Nullable
+        protected java.util.List<DeviceCompliancePolicyAssignment> assignments;
         /**
          * Sets the Assignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DeviceCompliancePolicyAssignParameterSet {
             this.assignments = val;
             return this;
         }
-        private DeviceCompliancePolicyAssignParameterSetBuilder(){}
+        @Nullable
+        protected DeviceCompliancePolicyAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

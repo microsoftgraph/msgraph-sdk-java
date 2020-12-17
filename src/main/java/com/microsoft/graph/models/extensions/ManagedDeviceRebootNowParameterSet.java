@@ -26,7 +26,11 @@ public class ManagedDeviceRebootNowParameterSet {
      * Instiaciates a new ManagedDeviceRebootNowParameterSet
      */
     public ManagedDeviceRebootNowParameterSet() {}
-    private ManagedDeviceRebootNowParameterSet(@Nonnull final ManagedDeviceRebootNowParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ManagedDeviceRebootNowParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ManagedDeviceRebootNowParameterSet(@Nonnull final ManagedDeviceRebootNowParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ManagedDeviceRebootNowParameterSet {
      * Fluent builder for the ManagedDeviceRebootNowParameterSet
      */
     public static final class ManagedDeviceRebootNowParameterSetBuilder {
-        private ManagedDeviceRebootNowParameterSetBuilder(){}
+        @Nullable
+        protected ManagedDeviceRebootNowParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

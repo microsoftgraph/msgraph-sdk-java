@@ -35,7 +35,11 @@ public class DeviceConfigurationAssignParameterSet {
      * Instiaciates a new DeviceConfigurationAssignParameterSet
      */
     public DeviceConfigurationAssignParameterSet() {}
-    private DeviceConfigurationAssignParameterSet(@Nonnull final DeviceConfigurationAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DeviceConfigurationAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DeviceConfigurationAssignParameterSet(@Nonnull final DeviceConfigurationAssignParameterSetBuilder builder) {
         this.assignments = builder.assignments;
     }
     /**
@@ -50,7 +54,11 @@ public class DeviceConfigurationAssignParameterSet {
      * Fluent builder for the DeviceConfigurationAssignParameterSet
      */
     public static final class DeviceConfigurationAssignParameterSetBuilder {
-        private java.util.List<DeviceConfigurationAssignment> assignments;
+        /**
+         * The assignments parameter value
+         */
+        @Nullable
+        protected java.util.List<DeviceConfigurationAssignment> assignments;
         /**
          * Sets the Assignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class DeviceConfigurationAssignParameterSet {
             this.assignments = val;
             return this;
         }
-        private DeviceConfigurationAssignParameterSetBuilder(){}
+        @Nullable
+        protected DeviceConfigurationAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

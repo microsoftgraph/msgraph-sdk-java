@@ -26,7 +26,11 @@ public class DriveItemCheckoutParameterSet {
      * Instiaciates a new DriveItemCheckoutParameterSet
      */
     public DriveItemCheckoutParameterSet() {}
-    private DriveItemCheckoutParameterSet(@Nonnull final DriveItemCheckoutParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemCheckoutParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemCheckoutParameterSet(@Nonnull final DriveItemCheckoutParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class DriveItemCheckoutParameterSet {
      * Fluent builder for the DriveItemCheckoutParameterSet
      */
     public static final class DriveItemCheckoutParameterSetBuilder {
-        private DriveItemCheckoutParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemCheckoutParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

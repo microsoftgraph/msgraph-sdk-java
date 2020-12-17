@@ -26,7 +26,11 @@ public class WorkbookFunctionsTodayParameterSet {
      * Instiaciates a new WorkbookFunctionsTodayParameterSet
      */
     public WorkbookFunctionsTodayParameterSet() {}
-    private WorkbookFunctionsTodayParameterSet(@Nonnull final WorkbookFunctionsTodayParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsTodayParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsTodayParameterSet(@Nonnull final WorkbookFunctionsTodayParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookFunctionsTodayParameterSet {
      * Fluent builder for the WorkbookFunctionsTodayParameterSet
      */
     public static final class WorkbookFunctionsTodayParameterSetBuilder {
-        private WorkbookFunctionsTodayParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsTodayParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

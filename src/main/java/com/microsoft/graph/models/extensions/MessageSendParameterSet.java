@@ -26,7 +26,11 @@ public class MessageSendParameterSet {
      * Instiaciates a new MessageSendParameterSet
      */
     public MessageSendParameterSet() {}
-    private MessageSendParameterSet(@Nonnull final MessageSendParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MessageSendParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MessageSendParameterSet(@Nonnull final MessageSendParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class MessageSendParameterSet {
      * Fluent builder for the MessageSendParameterSet
      */
     public static final class MessageSendParameterSetBuilder {
-        private MessageSendParameterSetBuilder(){}
+        @Nullable
+        protected MessageSendParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

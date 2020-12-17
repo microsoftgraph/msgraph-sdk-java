@@ -35,7 +35,11 @@ public class WorkbookRangeMergeParameterSet {
      * Instiaciates a new WorkbookRangeMergeParameterSet
      */
     public WorkbookRangeMergeParameterSet() {}
-    private WorkbookRangeMergeParameterSet(@Nonnull final WorkbookRangeMergeParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeMergeParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeMergeParameterSet(@Nonnull final WorkbookRangeMergeParameterSetBuilder builder) {
         this.across = builder.across;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookRangeMergeParameterSet {
      * Fluent builder for the WorkbookRangeMergeParameterSet
      */
     public static final class WorkbookRangeMergeParameterSetBuilder {
-        private Boolean across;
+        /**
+         * The across parameter value
+         */
+        @Nullable
+        protected Boolean across;
         /**
          * Sets the Across
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookRangeMergeParameterSet {
             this.across = val;
             return this;
         }
-        private WorkbookRangeMergeParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeMergeParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

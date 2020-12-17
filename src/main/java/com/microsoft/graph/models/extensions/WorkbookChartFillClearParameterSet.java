@@ -26,7 +26,11 @@ public class WorkbookChartFillClearParameterSet {
      * Instiaciates a new WorkbookChartFillClearParameterSet
      */
     public WorkbookChartFillClearParameterSet() {}
-    private WorkbookChartFillClearParameterSet(@Nonnull final WorkbookChartFillClearParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookChartFillClearParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookChartFillClearParameterSet(@Nonnull final WorkbookChartFillClearParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookChartFillClearParameterSet {
      * Fluent builder for the WorkbookChartFillClearParameterSet
      */
     public static final class WorkbookChartFillClearParameterSetBuilder {
-        private WorkbookChartFillClearParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookChartFillClearParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

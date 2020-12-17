@@ -37,6 +37,7 @@ public class WorkbookFilterApplyBottomPercentFilterRequest extends BaseRequest<V
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFilterApplyBottomPercentFilterParameterSet body;
     /**
      * Creates the WorkbookFilterApplyBottomPercentFilter

@@ -35,7 +35,11 @@ public class ReportRootGetTeamsUserActivityCountsParameterSet {
      * Instiaciates a new ReportRootGetTeamsUserActivityCountsParameterSet
      */
     public ReportRootGetTeamsUserActivityCountsParameterSet() {}
-    private ReportRootGetTeamsUserActivityCountsParameterSet(@Nonnull final ReportRootGetTeamsUserActivityCountsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootGetTeamsUserActivityCountsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootGetTeamsUserActivityCountsParameterSet(@Nonnull final ReportRootGetTeamsUserActivityCountsParameterSetBuilder builder) {
         this.period = builder.period;
     }
     /**
@@ -50,7 +54,11 @@ public class ReportRootGetTeamsUserActivityCountsParameterSet {
      * Fluent builder for the ReportRootGetTeamsUserActivityCountsParameterSet
      */
     public static final class ReportRootGetTeamsUserActivityCountsParameterSetBuilder {
-        private String period;
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
         /**
          * Sets the Period
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ReportRootGetTeamsUserActivityCountsParameterSet {
             this.period = val;
             return this;
         }
-        private ReportRootGetTeamsUserActivityCountsParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootGetTeamsUserActivityCountsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

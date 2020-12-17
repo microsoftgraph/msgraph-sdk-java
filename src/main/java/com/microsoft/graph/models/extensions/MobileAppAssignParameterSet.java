@@ -35,7 +35,11 @@ public class MobileAppAssignParameterSet {
      * Instiaciates a new MobileAppAssignParameterSet
      */
     public MobileAppAssignParameterSet() {}
-    private MobileAppAssignParameterSet(@Nonnull final MobileAppAssignParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new MobileAppAssignParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected MobileAppAssignParameterSet(@Nonnull final MobileAppAssignParameterSetBuilder builder) {
         this.mobileAppAssignments = builder.mobileAppAssignments;
     }
     /**
@@ -50,7 +54,11 @@ public class MobileAppAssignParameterSet {
      * Fluent builder for the MobileAppAssignParameterSet
      */
     public static final class MobileAppAssignParameterSetBuilder {
-        private java.util.List<MobileAppAssignment> mobileAppAssignments;
+        /**
+         * The mobileAppAssignments parameter value
+         */
+        @Nullable
+        protected java.util.List<MobileAppAssignment> mobileAppAssignments;
         /**
          * Sets the MobileAppAssignments
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class MobileAppAssignParameterSet {
             this.mobileAppAssignments = val;
             return this;
         }
-        private MobileAppAssignParameterSetBuilder(){}
+        @Nullable
+        protected MobileAppAssignParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

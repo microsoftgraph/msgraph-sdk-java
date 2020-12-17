@@ -35,7 +35,11 @@ public class PostReplyParameterSet {
      * Instiaciates a new PostReplyParameterSet
      */
     public PostReplyParameterSet() {}
-    private PostReplyParameterSet(@Nonnull final PostReplyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new PostReplyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected PostReplyParameterSet(@Nonnull final PostReplyParameterSetBuilder builder) {
         this.post = builder.post;
     }
     /**
@@ -50,7 +54,11 @@ public class PostReplyParameterSet {
      * Fluent builder for the PostReplyParameterSet
      */
     public static final class PostReplyParameterSetBuilder {
-        private Post post;
+        /**
+         * The post parameter value
+         */
+        @Nullable
+        protected Post post;
         /**
          * Sets the Post
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class PostReplyParameterSet {
             this.post = val;
             return this;
         }
-        private PostReplyParameterSetBuilder(){}
+        @Nullable
+        protected PostReplyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

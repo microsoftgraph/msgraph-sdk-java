@@ -53,7 +53,11 @@ public class WorkbookFunctionsMidbParameterSet {
      * Instiaciates a new WorkbookFunctionsMidbParameterSet
      */
     public WorkbookFunctionsMidbParameterSet() {}
-    private WorkbookFunctionsMidbParameterSet(@Nonnull final WorkbookFunctionsMidbParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsMidbParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsMidbParameterSet(@Nonnull final WorkbookFunctionsMidbParameterSetBuilder builder) {
         this.text = builder.text;
         this.startNum = builder.startNum;
         this.numBytes = builder.numBytes;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsMidbParameterSet {
      * Fluent builder for the WorkbookFunctionsMidbParameterSet
      */
     public static final class WorkbookFunctionsMidbParameterSetBuilder {
-        private com.google.gson.JsonElement text;
+        /**
+         * The text parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement text;
         /**
          * Sets the Text
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsMidbParameterSet {
             this.text = val;
             return this;
         }
-        private com.google.gson.JsonElement startNum;
+        /**
+         * The startNum parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement startNum;
         /**
          * Sets the StartNum
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsMidbParameterSet {
             this.startNum = val;
             return this;
         }
-        private com.google.gson.JsonElement numBytes;
+        /**
+         * The numBytes parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement numBytes;
         /**
          * Sets the NumBytes
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsMidbParameterSet {
             this.numBytes = val;
             return this;
         }
-        private WorkbookFunctionsMidbParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsMidbParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

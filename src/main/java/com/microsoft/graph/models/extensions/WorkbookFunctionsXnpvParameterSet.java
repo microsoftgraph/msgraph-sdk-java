@@ -53,7 +53,11 @@ public class WorkbookFunctionsXnpvParameterSet {
      * Instiaciates a new WorkbookFunctionsXnpvParameterSet
      */
     public WorkbookFunctionsXnpvParameterSet() {}
-    private WorkbookFunctionsXnpvParameterSet(@Nonnull final WorkbookFunctionsXnpvParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsXnpvParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsXnpvParameterSet(@Nonnull final WorkbookFunctionsXnpvParameterSetBuilder builder) {
         this.rate = builder.rate;
         this.values = builder.values;
         this.dates = builder.dates;
@@ -70,7 +74,11 @@ public class WorkbookFunctionsXnpvParameterSet {
      * Fluent builder for the WorkbookFunctionsXnpvParameterSet
      */
     public static final class WorkbookFunctionsXnpvParameterSetBuilder {
-        private com.google.gson.JsonElement rate;
+        /**
+         * The rate parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement rate;
         /**
          * Sets the Rate
          * @param val the value to set it to
@@ -81,7 +89,11 @@ public class WorkbookFunctionsXnpvParameterSet {
             this.rate = val;
             return this;
         }
-        private com.google.gson.JsonElement values;
+        /**
+         * The values parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement values;
         /**
          * Sets the Values
          * @param val the value to set it to
@@ -92,7 +104,11 @@ public class WorkbookFunctionsXnpvParameterSet {
             this.values = val;
             return this;
         }
-        private com.google.gson.JsonElement dates;
+        /**
+         * The dates parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement dates;
         /**
          * Sets the Dates
          * @param val the value to set it to
@@ -103,7 +119,8 @@ public class WorkbookFunctionsXnpvParameterSet {
             this.dates = val;
             return this;
         }
-        private WorkbookFunctionsXnpvParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsXnpvParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

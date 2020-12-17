@@ -38,6 +38,7 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseRequest<WorkbookFuncti
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsRank_AvgParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

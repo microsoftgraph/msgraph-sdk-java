@@ -37,6 +37,7 @@ public class WorkbookWorksheetProtectionProtectRequest extends BaseRequest<Void>
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookWorksheetProtectionProtectParameterSet body;
     /**
      * Creates the WorkbookWorksheetProtectionProtect

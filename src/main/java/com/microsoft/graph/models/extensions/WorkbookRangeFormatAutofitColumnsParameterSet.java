@@ -26,7 +26,11 @@ public class WorkbookRangeFormatAutofitColumnsParameterSet {
      * Instiaciates a new WorkbookRangeFormatAutofitColumnsParameterSet
      */
     public WorkbookRangeFormatAutofitColumnsParameterSet() {}
-    private WorkbookRangeFormatAutofitColumnsParameterSet(@Nonnull final WorkbookRangeFormatAutofitColumnsParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeFormatAutofitColumnsParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeFormatAutofitColumnsParameterSet(@Nonnull final WorkbookRangeFormatAutofitColumnsParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookRangeFormatAutofitColumnsParameterSet {
      * Fluent builder for the WorkbookRangeFormatAutofitColumnsParameterSet
      */
     public static final class WorkbookRangeFormatAutofitColumnsParameterSetBuilder {
-        private WorkbookRangeFormatAutofitColumnsParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeFormatAutofitColumnsParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

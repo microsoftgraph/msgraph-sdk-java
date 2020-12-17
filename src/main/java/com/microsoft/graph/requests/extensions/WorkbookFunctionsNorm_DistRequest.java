@@ -38,6 +38,7 @@ public class WorkbookFunctionsNorm_DistRequest extends BaseRequest<WorkbookFunct
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookFunctionsNorm_DistParameterSet body;
     /**
      * Invokes the method and invokes the callback with the result

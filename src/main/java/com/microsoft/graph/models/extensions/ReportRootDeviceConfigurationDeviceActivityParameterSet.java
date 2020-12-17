@@ -26,7 +26,11 @@ public class ReportRootDeviceConfigurationDeviceActivityParameterSet {
      * Instiaciates a new ReportRootDeviceConfigurationDeviceActivityParameterSet
      */
     public ReportRootDeviceConfigurationDeviceActivityParameterSet() {}
-    private ReportRootDeviceConfigurationDeviceActivityParameterSet(@Nonnull final ReportRootDeviceConfigurationDeviceActivityParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ReportRootDeviceConfigurationDeviceActivityParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ReportRootDeviceConfigurationDeviceActivityParameterSet(@Nonnull final ReportRootDeviceConfigurationDeviceActivityParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class ReportRootDeviceConfigurationDeviceActivityParameterSet {
      * Fluent builder for the ReportRootDeviceConfigurationDeviceActivityParameterSet
      */
     public static final class ReportRootDeviceConfigurationDeviceActivityParameterSetBuilder {
-        private ReportRootDeviceConfigurationDeviceActivityParameterSetBuilder(){}
+        @Nullable
+        protected ReportRootDeviceConfigurationDeviceActivityParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

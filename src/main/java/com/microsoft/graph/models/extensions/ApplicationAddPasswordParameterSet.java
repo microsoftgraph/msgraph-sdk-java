@@ -35,7 +35,11 @@ public class ApplicationAddPasswordParameterSet {
      * Instiaciates a new ApplicationAddPasswordParameterSet
      */
     public ApplicationAddPasswordParameterSet() {}
-    private ApplicationAddPasswordParameterSet(@Nonnull final ApplicationAddPasswordParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new ApplicationAddPasswordParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected ApplicationAddPasswordParameterSet(@Nonnull final ApplicationAddPasswordParameterSetBuilder builder) {
         this.passwordCredential = builder.passwordCredential;
     }
     /**
@@ -50,7 +54,11 @@ public class ApplicationAddPasswordParameterSet {
      * Fluent builder for the ApplicationAddPasswordParameterSet
      */
     public static final class ApplicationAddPasswordParameterSetBuilder {
-        private PasswordCredential passwordCredential;
+        /**
+         * The passwordCredential parameter value
+         */
+        @Nullable
+        protected PasswordCredential passwordCredential;
         /**
          * Sets the PasswordCredential
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class ApplicationAddPasswordParameterSet {
             this.passwordCredential = val;
             return this;
         }
-        private ApplicationAddPasswordParameterSetBuilder(){}
+        @Nullable
+        protected ApplicationAddPasswordParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

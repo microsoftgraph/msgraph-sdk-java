@@ -62,7 +62,11 @@ public class OnenotePageCopyToSectionParameterSet {
      * Instiaciates a new OnenotePageCopyToSectionParameterSet
      */
     public OnenotePageCopyToSectionParameterSet() {}
-    private OnenotePageCopyToSectionParameterSet(@Nonnull final OnenotePageCopyToSectionParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new OnenotePageCopyToSectionParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected OnenotePageCopyToSectionParameterSet(@Nonnull final OnenotePageCopyToSectionParameterSetBuilder builder) {
         this.id = builder.id;
         this.groupId = builder.groupId;
         this.siteCollectionId = builder.siteCollectionId;
@@ -80,7 +84,11 @@ public class OnenotePageCopyToSectionParameterSet {
      * Fluent builder for the OnenotePageCopyToSectionParameterSet
      */
     public static final class OnenotePageCopyToSectionParameterSetBuilder {
-        private String id;
+        /**
+         * The id parameter value
+         */
+        @Nullable
+        protected String id;
         /**
          * Sets the Id
          * @param val the value to set it to
@@ -91,7 +99,11 @@ public class OnenotePageCopyToSectionParameterSet {
             this.id = val;
             return this;
         }
-        private String groupId;
+        /**
+         * The groupId parameter value
+         */
+        @Nullable
+        protected String groupId;
         /**
          * Sets the GroupId
          * @param val the value to set it to
@@ -102,7 +114,11 @@ public class OnenotePageCopyToSectionParameterSet {
             this.groupId = val;
             return this;
         }
-        private String siteCollectionId;
+        /**
+         * The siteCollectionId parameter value
+         */
+        @Nullable
+        protected String siteCollectionId;
         /**
          * Sets the SiteCollectionId
          * @param val the value to set it to
@@ -113,7 +129,11 @@ public class OnenotePageCopyToSectionParameterSet {
             this.siteCollectionId = val;
             return this;
         }
-        private String siteId;
+        /**
+         * The siteId parameter value
+         */
+        @Nullable
+        protected String siteId;
         /**
          * Sets the SiteId
          * @param val the value to set it to
@@ -124,7 +144,8 @@ public class OnenotePageCopyToSectionParameterSet {
             this.siteId = val;
             return this;
         }
-        private OnenotePageCopyToSectionParameterSetBuilder(){}
+        @Nullable
+        protected OnenotePageCopyToSectionParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

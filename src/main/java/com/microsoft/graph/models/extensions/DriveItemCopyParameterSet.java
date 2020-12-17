@@ -45,7 +45,11 @@ public class DriveItemCopyParameterSet {
      * Instiaciates a new DriveItemCopyParameterSet
      */
     public DriveItemCopyParameterSet() {}
-    private DriveItemCopyParameterSet(@Nonnull final DriveItemCopyParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new DriveItemCopyParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected DriveItemCopyParameterSet(@Nonnull final DriveItemCopyParameterSetBuilder builder) {
         this.name = builder.name;
         this.parentReference = builder.parentReference;
     }
@@ -61,7 +65,11 @@ public class DriveItemCopyParameterSet {
      * Fluent builder for the DriveItemCopyParameterSet
      */
     public static final class DriveItemCopyParameterSetBuilder {
-        private String name;
+        /**
+         * The name parameter value
+         */
+        @Nullable
+        protected String name;
         /**
          * Sets the Name
          * @param val the value to set it to
@@ -72,7 +80,11 @@ public class DriveItemCopyParameterSet {
             this.name = val;
             return this;
         }
-        private ItemReference parentReference;
+        /**
+         * The parentReference parameter value
+         */
+        @Nullable
+        protected ItemReference parentReference;
         /**
          * Sets the ParentReference
          * @param val the value to set it to
@@ -83,7 +95,8 @@ public class DriveItemCopyParameterSet {
             this.parentReference = val;
             return this;
         }
-        private DriveItemCopyParameterSetBuilder(){}
+        @Nullable
+        protected DriveItemCopyParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -26,7 +26,11 @@ public class WorkbookFunctionsRandParameterSet {
      * Instiaciates a new WorkbookFunctionsRandParameterSet
      */
     public WorkbookFunctionsRandParameterSet() {}
-    private WorkbookFunctionsRandParameterSet(@Nonnull final WorkbookFunctionsRandParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsRandParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsRandParameterSet(@Nonnull final WorkbookFunctionsRandParameterSetBuilder builder) {
     }
     /**
      * Gets a new builder for the body
@@ -40,7 +44,8 @@ public class WorkbookFunctionsRandParameterSet {
      * Fluent builder for the WorkbookFunctionsRandParameterSet
      */
     public static final class WorkbookFunctionsRandParameterSetBuilder {
-        private WorkbookFunctionsRandParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsRandParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

@@ -37,6 +37,7 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
     }
 
 	/** The body for the method */
+    @Nullable
     protected ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet body;
     /**
      * Creates the ManagedDeviceDeleteUserFromSharedAppleDevice

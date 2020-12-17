@@ -35,7 +35,11 @@ public class WorkbookRangeDeleteParameterSet {
      * Instiaciates a new WorkbookRangeDeleteParameterSet
      */
     public WorkbookRangeDeleteParameterSet() {}
-    private WorkbookRangeDeleteParameterSet(@Nonnull final WorkbookRangeDeleteParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookRangeDeleteParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookRangeDeleteParameterSet(@Nonnull final WorkbookRangeDeleteParameterSetBuilder builder) {
         this.shift = builder.shift;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookRangeDeleteParameterSet {
      * Fluent builder for the WorkbookRangeDeleteParameterSet
      */
     public static final class WorkbookRangeDeleteParameterSetBuilder {
-        private String shift;
+        /**
+         * The shift parameter value
+         */
+        @Nullable
+        protected String shift;
         /**
          * Sets the Shift
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookRangeDeleteParameterSet {
             this.shift = val;
             return this;
         }
-        private WorkbookRangeDeleteParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookRangeDeleteParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

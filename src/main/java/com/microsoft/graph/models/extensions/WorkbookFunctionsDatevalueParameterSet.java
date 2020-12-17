@@ -35,7 +35,11 @@ public class WorkbookFunctionsDatevalueParameterSet {
      * Instiaciates a new WorkbookFunctionsDatevalueParameterSet
      */
     public WorkbookFunctionsDatevalueParameterSet() {}
-    private WorkbookFunctionsDatevalueParameterSet(@Nonnull final WorkbookFunctionsDatevalueParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsDatevalueParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsDatevalueParameterSet(@Nonnull final WorkbookFunctionsDatevalueParameterSetBuilder builder) {
         this.dateText = builder.dateText;
     }
     /**
@@ -50,7 +54,11 @@ public class WorkbookFunctionsDatevalueParameterSet {
      * Fluent builder for the WorkbookFunctionsDatevalueParameterSet
      */
     public static final class WorkbookFunctionsDatevalueParameterSetBuilder {
-        private com.google.gson.JsonElement dateText;
+        /**
+         * The dateText parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement dateText;
         /**
          * Sets the DateText
          * @param val the value to set it to
@@ -61,7 +69,8 @@ public class WorkbookFunctionsDatevalueParameterSet {
             this.dateText = val;
             return this;
         }
-        private WorkbookFunctionsDatevalueParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsDatevalueParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

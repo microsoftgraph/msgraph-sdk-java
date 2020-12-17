@@ -37,6 +37,7 @@ public class WorkbookRangeMergeRequest extends BaseRequest<Void> {
     }
 
 	/** The body for the method */
+    @Nullable
     protected WorkbookRangeMergeParameterSet body;
     /**
      * Creates the WorkbookRangeMerge

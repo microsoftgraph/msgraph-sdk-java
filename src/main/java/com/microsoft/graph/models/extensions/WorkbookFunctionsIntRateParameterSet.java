@@ -71,7 +71,11 @@ public class WorkbookFunctionsIntRateParameterSet {
      * Instiaciates a new WorkbookFunctionsIntRateParameterSet
      */
     public WorkbookFunctionsIntRateParameterSet() {}
-    private WorkbookFunctionsIntRateParameterSet(@Nonnull final WorkbookFunctionsIntRateParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsIntRateParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsIntRateParameterSet(@Nonnull final WorkbookFunctionsIntRateParameterSetBuilder builder) {
         this.settlement = builder.settlement;
         this.maturity = builder.maturity;
         this.investment = builder.investment;
@@ -90,7 +94,11 @@ public class WorkbookFunctionsIntRateParameterSet {
      * Fluent builder for the WorkbookFunctionsIntRateParameterSet
      */
     public static final class WorkbookFunctionsIntRateParameterSetBuilder {
-        private com.google.gson.JsonElement settlement;
+        /**
+         * The settlement parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement settlement;
         /**
          * Sets the Settlement
          * @param val the value to set it to
@@ -101,7 +109,11 @@ public class WorkbookFunctionsIntRateParameterSet {
             this.settlement = val;
             return this;
         }
-        private com.google.gson.JsonElement maturity;
+        /**
+         * The maturity parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement maturity;
         /**
          * Sets the Maturity
          * @param val the value to set it to
@@ -112,7 +124,11 @@ public class WorkbookFunctionsIntRateParameterSet {
             this.maturity = val;
             return this;
         }
-        private com.google.gson.JsonElement investment;
+        /**
+         * The investment parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement investment;
         /**
          * Sets the Investment
          * @param val the value to set it to
@@ -123,7 +139,11 @@ public class WorkbookFunctionsIntRateParameterSet {
             this.investment = val;
             return this;
         }
-        private com.google.gson.JsonElement redemption;
+        /**
+         * The redemption parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement redemption;
         /**
          * Sets the Redemption
          * @param val the value to set it to
@@ -134,7 +154,11 @@ public class WorkbookFunctionsIntRateParameterSet {
             this.redemption = val;
             return this;
         }
-        private com.google.gson.JsonElement basis;
+        /**
+         * The basis parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement basis;
         /**
          * Sets the Basis
          * @param val the value to set it to
@@ -145,7 +169,8 @@ public class WorkbookFunctionsIntRateParameterSet {
             this.basis = val;
             return this;
         }
-        private WorkbookFunctionsIntRateParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsIntRateParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request

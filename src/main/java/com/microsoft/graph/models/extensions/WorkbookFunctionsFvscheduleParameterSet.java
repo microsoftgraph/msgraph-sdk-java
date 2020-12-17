@@ -44,7 +44,11 @@ public class WorkbookFunctionsFvscheduleParameterSet {
      * Instiaciates a new WorkbookFunctionsFvscheduleParameterSet
      */
     public WorkbookFunctionsFvscheduleParameterSet() {}
-    private WorkbookFunctionsFvscheduleParameterSet(@Nonnull final WorkbookFunctionsFvscheduleParameterSetBuilder builder) {
+    /**
+     * Instiaciates a new WorkbookFunctionsFvscheduleParameterSet
+     * @param builder builder bearing the parameters to initialize from
+     */
+    protected WorkbookFunctionsFvscheduleParameterSet(@Nonnull final WorkbookFunctionsFvscheduleParameterSetBuilder builder) {
         this.principal = builder.principal;
         this.schedule = builder.schedule;
     }
@@ -60,7 +64,11 @@ public class WorkbookFunctionsFvscheduleParameterSet {
      * Fluent builder for the WorkbookFunctionsFvscheduleParameterSet
      */
     public static final class WorkbookFunctionsFvscheduleParameterSetBuilder {
-        private com.google.gson.JsonElement principal;
+        /**
+         * The principal parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement principal;
         /**
          * Sets the Principal
          * @param val the value to set it to
@@ -71,7 +79,11 @@ public class WorkbookFunctionsFvscheduleParameterSet {
             this.principal = val;
             return this;
         }
-        private com.google.gson.JsonElement schedule;
+        /**
+         * The schedule parameter value
+         */
+        @Nullable
+        protected com.google.gson.JsonElement schedule;
         /**
          * Sets the Schedule
          * @param val the value to set it to
@@ -82,7 +94,8 @@ public class WorkbookFunctionsFvscheduleParameterSet {
             this.schedule = val;
             return this;
         }
-        private WorkbookFunctionsFvscheduleParameterSetBuilder(){}
+        @Nullable
+        protected WorkbookFunctionsFvscheduleParameterSetBuilder(){}
         /**
          * Buils the resulting body object to be passed to the request
          * @return the body object to pass to the request
