@@ -69,6 +69,9 @@ public class WorkbookFunctionsNorm_S_InvParameterSet {
             this.probability = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNorm_S_InvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNorm_S_InvParameterSetBuilder(){}
         /**

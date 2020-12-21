@@ -44,6 +44,9 @@ public class DriveItemGetActivitiesByIntervalParameterSet {
      * Fluent builder for the DriveItemGetActivitiesByIntervalParameterSet
      */
     public static final class DriveItemGetActivitiesByIntervalParameterSetBuilder {
+        /**
+         * Instanciates a new DriveItemGetActivitiesByIntervalParameterSetBuilder
+         */
         @Nullable
         protected DriveItemGetActivitiesByIntervalParameterSetBuilder(){}
         /**

@@ -119,6 +119,9 @@ public class WorkbookFunctionsPoisson_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPoisson_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPoisson_DistParameterSetBuilder(){}
         /**

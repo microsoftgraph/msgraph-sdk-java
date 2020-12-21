@@ -94,6 +94,9 @@ public class WorkbookFunctionsTextParameterSet {
             this.formatText = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTextParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTextParameterSetBuilder(){}
         /**

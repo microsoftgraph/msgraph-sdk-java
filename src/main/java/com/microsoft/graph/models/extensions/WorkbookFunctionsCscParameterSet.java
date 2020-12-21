@@ -69,6 +69,9 @@ public class WorkbookFunctionsCscParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCscParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCscParameterSetBuilder(){}
         /**

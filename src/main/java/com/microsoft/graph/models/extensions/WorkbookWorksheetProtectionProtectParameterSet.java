@@ -69,6 +69,9 @@ public class WorkbookWorksheetProtectionProtectParameterSet {
             this.options = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookWorksheetProtectionProtectParameterSetBuilder
+         */
         @Nullable
         protected WorkbookWorksheetProtectionProtectParameterSetBuilder(){}
         /**

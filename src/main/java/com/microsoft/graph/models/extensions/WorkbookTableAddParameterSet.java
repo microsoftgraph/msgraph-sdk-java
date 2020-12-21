@@ -94,6 +94,9 @@ public class WorkbookTableAddParameterSet {
             this.hasHeaders = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookTableAddParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableAddParameterSetBuilder(){}
         /**

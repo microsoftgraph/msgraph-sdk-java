@@ -44,6 +44,9 @@ public class ManagedDeviceRecoverPasscodeParameterSet {
      * Fluent builder for the ManagedDeviceRecoverPasscodeParameterSet
      */
     public static final class ManagedDeviceRecoverPasscodeParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceRecoverPasscodeParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceRecoverPasscodeParameterSetBuilder(){}
         /**

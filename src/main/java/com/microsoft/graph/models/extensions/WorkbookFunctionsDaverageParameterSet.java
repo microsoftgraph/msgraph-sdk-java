@@ -119,6 +119,9 @@ public class WorkbookFunctionsDaverageParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDaverageParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDaverageParameterSetBuilder(){}
         /**

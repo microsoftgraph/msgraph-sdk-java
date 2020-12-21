@@ -44,6 +44,9 @@ public class WorkbookChartImageParameterSet {
      * Fluent builder for the WorkbookChartImageParameterSet
      */
     public static final class WorkbookChartImageParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookChartImageParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartImageParameterSetBuilder(){}
         /**

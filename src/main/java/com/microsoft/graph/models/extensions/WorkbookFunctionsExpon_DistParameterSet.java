@@ -119,6 +119,9 @@ public class WorkbookFunctionsExpon_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsExpon_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsExpon_DistParameterSetBuilder(){}
         /**

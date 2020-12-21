@@ -44,6 +44,9 @@ public class ContactDeltaParameterSet {
      * Fluent builder for the ContactDeltaParameterSet
      */
     public static final class ContactDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new ContactDeltaParameterSetBuilder
+         */
         @Nullable
         protected ContactDeltaParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ReportRootGetEmailAppUsageUserCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetEmailAppUsageUserCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetEmailAppUsageUserCountsParameterSetBuilder(){}
         /**

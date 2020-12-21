@@ -44,6 +44,9 @@ public class TeamsAppInstallationUpgradeParameterSet {
      * Fluent builder for the TeamsAppInstallationUpgradeParameterSet
      */
     public static final class TeamsAppInstallationUpgradeParameterSetBuilder {
+        /**
+         * Instanciates a new TeamsAppInstallationUpgradeParameterSetBuilder
+         */
         @Nullable
         protected TeamsAppInstallationUpgradeParameterSetBuilder(){}
         /**

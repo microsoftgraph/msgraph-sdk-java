@@ -69,6 +69,9 @@ public class WorkbookFunctionsLcmParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsLcmParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsLcmParameterSetBuilder(){}
         /**

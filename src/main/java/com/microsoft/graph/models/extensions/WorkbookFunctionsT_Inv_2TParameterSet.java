@@ -94,6 +94,9 @@ public class WorkbookFunctionsT_Inv_2TParameterSet {
             this.degFreedom = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsT_Inv_2TParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsT_Inv_2TParameterSetBuilder(){}
         /**

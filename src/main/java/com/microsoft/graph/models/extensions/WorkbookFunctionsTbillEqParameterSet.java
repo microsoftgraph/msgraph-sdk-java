@@ -119,6 +119,9 @@ public class WorkbookFunctionsTbillEqParameterSet {
             this.discount = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTbillEqParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTbillEqParameterSetBuilder(){}
         /**

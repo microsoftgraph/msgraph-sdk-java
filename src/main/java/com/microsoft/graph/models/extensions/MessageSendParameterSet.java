@@ -44,6 +44,9 @@ public class MessageSendParameterSet {
      * Fluent builder for the MessageSendParameterSet
      */
     public static final class MessageSendParameterSetBuilder {
+        /**
+         * Instanciates a new MessageSendParameterSetBuilder
+         */
         @Nullable
         protected MessageSendParameterSetBuilder(){}
         /**

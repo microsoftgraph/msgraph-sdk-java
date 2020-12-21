@@ -94,6 +94,9 @@ public class WorkbookFunctionsLogParameterSet {
             this.base = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsLogParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsLogParameterSetBuilder(){}
         /**

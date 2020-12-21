@@ -119,6 +119,9 @@ public class WorkbookFunctionsLogNorm_InvParameterSet {
             this.standardDev = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsLogNorm_InvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsLogNorm_InvParameterSetBuilder(){}
         /**

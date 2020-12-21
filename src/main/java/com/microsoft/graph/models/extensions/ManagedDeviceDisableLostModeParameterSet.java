@@ -44,6 +44,9 @@ public class ManagedDeviceDisableLostModeParameterSet {
      * Fluent builder for the ManagedDeviceDisableLostModeParameterSet
      */
     public static final class ManagedDeviceDisableLostModeParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceDisableLostModeParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceDisableLostModeParameterSetBuilder(){}
         /**

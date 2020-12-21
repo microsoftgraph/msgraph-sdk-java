@@ -44,6 +44,9 @@ public class DriveItemUnfollowParameterSet {
      * Fluent builder for the DriveItemUnfollowParameterSet
      */
     public static final class DriveItemUnfollowParameterSetBuilder {
+        /**
+         * Instanciates a new DriveItemUnfollowParameterSetBuilder
+         */
         @Nullable
         protected DriveItemUnfollowParameterSetBuilder(){}
         /**

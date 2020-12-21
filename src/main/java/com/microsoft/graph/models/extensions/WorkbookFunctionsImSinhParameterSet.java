@@ -69,6 +69,9 @@ public class WorkbookFunctionsImSinhParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImSinhParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImSinhParameterSetBuilder(){}
         /**

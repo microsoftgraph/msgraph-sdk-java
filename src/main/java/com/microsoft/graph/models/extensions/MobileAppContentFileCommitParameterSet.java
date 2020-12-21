@@ -69,6 +69,9 @@ public class MobileAppContentFileCommitParameterSet {
             this.fileEncryptionInfo = val;
             return this;
         }
+        /**
+         * Instanciates a new MobileAppContentFileCommitParameterSetBuilder
+         */
         @Nullable
         protected MobileAppContentFileCommitParameterSetBuilder(){}
         /**

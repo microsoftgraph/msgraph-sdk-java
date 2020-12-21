@@ -69,6 +69,9 @@ public class ReportRootGetOneDriveUsageStorageParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOneDriveUsageStorageParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOneDriveUsageStorageParameterSetBuilder(){}
         /**

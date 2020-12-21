@@ -119,6 +119,9 @@ public class WorkbookFunctionsSlnParameterSet {
             this.life = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSlnParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSlnParameterSetBuilder(){}
         /**

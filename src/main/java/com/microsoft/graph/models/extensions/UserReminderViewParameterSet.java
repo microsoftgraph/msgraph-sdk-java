@@ -94,6 +94,9 @@ public class UserReminderViewParameterSet {
             this.endDateTime = val;
             return this;
         }
+        /**
+         * Instanciates a new UserReminderViewParameterSetBuilder
+         */
         @Nullable
         protected UserReminderViewParameterSetBuilder(){}
         /**

@@ -119,6 +119,9 @@ public class WorkbookFunctionsXnpvParameterSet {
             this.dates = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsXnpvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsXnpvParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ReportRootGetMailboxUsageStorageParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetMailboxUsageStorageParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetMailboxUsageStorageParameterSetBuilder(){}
         /**

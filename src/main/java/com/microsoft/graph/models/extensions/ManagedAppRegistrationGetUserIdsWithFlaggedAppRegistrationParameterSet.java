@@ -44,6 +44,9 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameter
      * Fluent builder for the ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSet
      */
     public static final class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSetBuilder
+         */
         @Nullable
         protected ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationParameterSetBuilder(){}
         /**

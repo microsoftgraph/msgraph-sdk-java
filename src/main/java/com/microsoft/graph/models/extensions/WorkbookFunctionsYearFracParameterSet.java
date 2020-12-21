@@ -119,6 +119,9 @@ public class WorkbookFunctionsYearFracParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsYearFracParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsYearFracParameterSetBuilder(){}
         /**

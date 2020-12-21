@@ -94,6 +94,9 @@ public class WorkbookFunctionsRomanParameterSet {
             this.form = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRomanParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRomanParameterSetBuilder(){}
         /**

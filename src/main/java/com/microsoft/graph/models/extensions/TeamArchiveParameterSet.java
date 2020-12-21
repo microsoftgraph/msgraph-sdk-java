@@ -69,6 +69,9 @@ public class TeamArchiveParameterSet {
             this.shouldSetSpoSiteReadOnlyForMembers = val;
             return this;
         }
+        /**
+         * Instanciates a new TeamArchiveParameterSetBuilder
+         */
         @Nullable
         protected TeamArchiveParameterSetBuilder(){}
         /**

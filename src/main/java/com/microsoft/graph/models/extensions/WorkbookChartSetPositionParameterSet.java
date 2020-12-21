@@ -94,6 +94,9 @@ public class WorkbookChartSetPositionParameterSet {
             this.endCell = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookChartSetPositionParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartSetPositionParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ManagedDeviceCleanWindowsDeviceParameterSet {
             this.keepUserData = val;
             return this;
         }
+        /**
+         * Instanciates a new ManagedDeviceCleanWindowsDeviceParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceCleanWindowsDeviceParameterSetBuilder(){}
         /**

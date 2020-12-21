@@ -44,6 +44,9 @@ public class WorkbookNamedItemRangeParameterSet {
      * Fluent builder for the WorkbookNamedItemRangeParameterSet
      */
     public static final class WorkbookNamedItemRangeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookNamedItemRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookNamedItemRangeParameterSetBuilder(){}
         /**

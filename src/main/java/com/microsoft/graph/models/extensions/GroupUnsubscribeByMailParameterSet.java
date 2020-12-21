@@ -44,6 +44,9 @@ public class GroupUnsubscribeByMailParameterSet {
      * Fluent builder for the GroupUnsubscribeByMailParameterSet
      */
     public static final class GroupUnsubscribeByMailParameterSetBuilder {
+        /**
+         * Instanciates a new GroupUnsubscribeByMailParameterSetBuilder
+         */
         @Nullable
         protected GroupUnsubscribeByMailParameterSetBuilder(){}
         /**

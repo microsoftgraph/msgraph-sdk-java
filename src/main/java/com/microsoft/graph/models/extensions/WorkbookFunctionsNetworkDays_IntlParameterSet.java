@@ -144,6 +144,9 @@ public class WorkbookFunctionsNetworkDays_IntlParameterSet {
             this.holidays = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNetworkDays_IntlParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNetworkDays_IntlParameterSetBuilder(){}
         /**

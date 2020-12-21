@@ -69,6 +69,9 @@ public class ReportRootGetMailboxUsageDetailParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetMailboxUsageDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetMailboxUsageDetailParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class WorkbookTableColumnRangeParameterSet {
      * Fluent builder for the WorkbookTableColumnRangeParameterSet
      */
     public static final class WorkbookTableColumnRangeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableColumnRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableColumnRangeParameterSetBuilder(){}
         /**

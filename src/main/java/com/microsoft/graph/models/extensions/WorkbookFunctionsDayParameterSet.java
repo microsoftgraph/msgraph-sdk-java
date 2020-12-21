@@ -69,6 +69,9 @@ public class WorkbookFunctionsDayParameterSet {
             this.serialNumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDayParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDayParameterSetBuilder(){}
         /**

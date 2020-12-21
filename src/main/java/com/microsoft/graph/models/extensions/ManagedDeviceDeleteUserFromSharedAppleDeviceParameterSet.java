@@ -69,6 +69,9 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet {
             this.userPrincipalName = val;
             return this;
         }
+        /**
+         * Instanciates a new ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSetBuilder(){}
         /**

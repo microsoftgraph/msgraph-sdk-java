@@ -44,6 +44,9 @@ public class EventDismissReminderParameterSet {
      * Fluent builder for the EventDismissReminderParameterSet
      */
     public static final class EventDismissReminderParameterSetBuilder {
+        /**
+         * Instanciates a new EventDismissReminderParameterSetBuilder
+         */
         @Nullable
         protected EventDismissReminderParameterSetBuilder(){}
         /**

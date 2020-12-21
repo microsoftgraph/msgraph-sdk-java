@@ -44,6 +44,9 @@ public class RemoteAssistancePartnerDisconnectParameterSet {
      * Fluent builder for the RemoteAssistancePartnerDisconnectParameterSet
      */
     public static final class RemoteAssistancePartnerDisconnectParameterSetBuilder {
+        /**
+         * Instanciates a new RemoteAssistancePartnerDisconnectParameterSetBuilder
+         */
         @Nullable
         protected RemoteAssistancePartnerDisconnectParameterSetBuilder(){}
         /**

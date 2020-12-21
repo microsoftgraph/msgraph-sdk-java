@@ -119,6 +119,9 @@ public class WorkbookFunctionsBinom_InvParameterSet {
             this.alpha = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBinom_InvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBinom_InvParameterSetBuilder(){}
         /**

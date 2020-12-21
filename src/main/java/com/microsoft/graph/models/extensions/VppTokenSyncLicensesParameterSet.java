@@ -44,6 +44,9 @@ public class VppTokenSyncLicensesParameterSet {
      * Fluent builder for the VppTokenSyncLicensesParameterSet
      */
     public static final class VppTokenSyncLicensesParameterSetBuilder {
+        /**
+         * Instanciates a new VppTokenSyncLicensesParameterSetBuilder
+         */
         @Nullable
         protected VppTokenSyncLicensesParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookChartSetDataParameterSet {
             this.seriesBy = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookChartSetDataParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartSetDataParameterSetBuilder(){}
         /**

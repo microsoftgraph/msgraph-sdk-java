@@ -44,6 +44,9 @@ public class OrganizationSetMobileDeviceManagementAuthorityParameterSet {
      * Fluent builder for the OrganizationSetMobileDeviceManagementAuthorityParameterSet
      */
     public static final class OrganizationSetMobileDeviceManagementAuthorityParameterSetBuilder {
+        /**
+         * Instanciates a new OrganizationSetMobileDeviceManagementAuthorityParameterSetBuilder
+         */
         @Nullable
         protected OrganizationSetMobileDeviceManagementAuthorityParameterSetBuilder(){}
         /**

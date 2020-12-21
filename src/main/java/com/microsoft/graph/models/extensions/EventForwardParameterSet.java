@@ -94,6 +94,9 @@ public class EventForwardParameterSet {
             this.comment = val;
             return this;
         }
+        /**
+         * Instanciates a new EventForwardParameterSetBuilder
+         */
         @Nullable
         protected EventForwardParameterSetBuilder(){}
         /**

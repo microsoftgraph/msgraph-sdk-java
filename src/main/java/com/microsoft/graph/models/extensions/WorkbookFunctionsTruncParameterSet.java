@@ -94,6 +94,9 @@ public class WorkbookFunctionsTruncParameterSet {
             this.numDigits = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTruncParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTruncParameterSetBuilder(){}
         /**

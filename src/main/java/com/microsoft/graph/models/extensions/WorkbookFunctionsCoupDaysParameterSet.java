@@ -144,6 +144,9 @@ public class WorkbookFunctionsCoupDaysParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCoupDaysParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCoupDaysParameterSetBuilder(){}
         /**

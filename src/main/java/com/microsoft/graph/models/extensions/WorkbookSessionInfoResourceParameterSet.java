@@ -69,6 +69,9 @@ public class WorkbookSessionInfoResourceParameterSet {
             this.key = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookSessionInfoResourceParameterSetBuilder
+         */
         @Nullable
         protected WorkbookSessionInfoResourceParameterSetBuilder(){}
         /**

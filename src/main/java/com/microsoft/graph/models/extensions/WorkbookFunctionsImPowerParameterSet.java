@@ -94,6 +94,9 @@ public class WorkbookFunctionsImPowerParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImPowerParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImPowerParameterSetBuilder(){}
         /**

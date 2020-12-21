@@ -69,6 +69,9 @@ public class ReportRootGetYammerDeviceUsageUserDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetYammerDeviceUsageUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetYammerDeviceUsageUserDetailParameterSetBuilder(){}
         /**

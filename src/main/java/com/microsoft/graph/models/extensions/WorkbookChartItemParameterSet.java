@@ -69,6 +69,9 @@ public class WorkbookChartItemParameterSet {
             this.name = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookChartItemParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartItemParameterSetBuilder(){}
         /**

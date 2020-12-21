@@ -69,6 +69,9 @@ public class WorkbookFunctionsGeoMeanParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsGeoMeanParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsGeoMeanParameterSetBuilder(){}
         /**

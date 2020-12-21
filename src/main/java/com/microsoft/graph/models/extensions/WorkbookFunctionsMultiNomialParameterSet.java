@@ -69,6 +69,9 @@ public class WorkbookFunctionsMultiNomialParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMultiNomialParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMultiNomialParameterSetBuilder(){}
         /**

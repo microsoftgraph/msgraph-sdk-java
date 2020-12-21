@@ -169,6 +169,9 @@ public class OnenoteSectionCopyToNotebookParameterSet {
             this.siteId = val;
             return this;
         }
+        /**
+         * Instanciates a new OnenoteSectionCopyToNotebookParameterSetBuilder
+         */
         @Nullable
         protected OnenoteSectionCopyToNotebookParameterSetBuilder(){}
         /**

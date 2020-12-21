@@ -44,6 +44,9 @@ public class ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet {
      * Fluent builder for the ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSet
      */
     public static final class ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceLogoutSharedAppleDeviceActiveUserParameterSetBuilder(){}
         /**

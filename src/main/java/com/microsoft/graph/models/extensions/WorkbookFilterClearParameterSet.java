@@ -44,6 +44,9 @@ public class WorkbookFilterClearParameterSet {
      * Fluent builder for the WorkbookFilterClearParameterSet
      */
     public static final class WorkbookFilterClearParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookFilterClearParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterClearParameterSetBuilder(){}
         /**

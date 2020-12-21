@@ -44,6 +44,9 @@ public class WorkbookRangeColumnsBeforeParameterSet {
      * Fluent builder for the WorkbookRangeColumnsBeforeParameterSet
      */
     public static final class WorkbookRangeColumnsBeforeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeColumnsBeforeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeColumnsBeforeParameterSetBuilder(){}
         /**

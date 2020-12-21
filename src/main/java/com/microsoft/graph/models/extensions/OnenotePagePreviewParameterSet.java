@@ -44,6 +44,9 @@ public class OnenotePagePreviewParameterSet {
      * Fluent builder for the OnenotePagePreviewParameterSet
      */
     public static final class OnenotePagePreviewParameterSetBuilder {
+        /**
+         * Instanciates a new OnenotePagePreviewParameterSetBuilder
+         */
         @Nullable
         protected OnenotePagePreviewParameterSetBuilder(){}
         /**

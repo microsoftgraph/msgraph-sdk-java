@@ -94,6 +94,9 @@ public class WorkbookFunctionsCombinaParameterSet {
             this.numberChosen = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCombinaParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCombinaParameterSetBuilder(){}
         /**

@@ -194,6 +194,9 @@ public class WorkbookFunctionsRateParameterSet {
             this.guess = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRateParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRateParameterSetBuilder(){}
         /**

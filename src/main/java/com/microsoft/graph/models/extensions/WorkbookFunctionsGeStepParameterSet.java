@@ -94,6 +94,9 @@ public class WorkbookFunctionsGeStepParameterSet {
             this.step = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsGeStepParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsGeStepParameterSetBuilder(){}
         /**

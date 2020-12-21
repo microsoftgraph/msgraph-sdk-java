@@ -94,6 +94,9 @@ public class UserSendMailParameterSet {
             this.saveToSentItems = val;
             return this;
         }
+        /**
+         * Instanciates a new UserSendMailParameterSetBuilder
+         */
         @Nullable
         protected UserSendMailParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetMailboxUsageQuotaStatusMailboxCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetMailboxUsageQuotaStatusMailboxCountsParameterSetBuilder(){}
         /**

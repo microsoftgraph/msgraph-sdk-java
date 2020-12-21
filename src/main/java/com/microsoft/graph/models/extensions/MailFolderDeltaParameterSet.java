@@ -44,6 +44,9 @@ public class MailFolderDeltaParameterSet {
      * Fluent builder for the MailFolderDeltaParameterSet
      */
     public static final class MailFolderDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new MailFolderDeltaParameterSetBuilder
+         */
         @Nullable
         protected MailFolderDeltaParameterSetBuilder(){}
         /**

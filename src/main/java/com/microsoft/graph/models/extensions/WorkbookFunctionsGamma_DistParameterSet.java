@@ -144,6 +144,9 @@ public class WorkbookFunctionsGamma_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsGamma_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsGamma_DistParameterSetBuilder(){}
         /**

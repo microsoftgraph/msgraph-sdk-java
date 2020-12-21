@@ -144,6 +144,9 @@ public class WorkbookFunctionsCoupNcdParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCoupNcdParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCoupNcdParameterSetBuilder(){}
         /**

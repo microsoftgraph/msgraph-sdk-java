@@ -69,6 +69,9 @@ public class WorkbookRangeClearParameterSet {
             this.applyTo = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeClearParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeClearParameterSetBuilder(){}
         /**

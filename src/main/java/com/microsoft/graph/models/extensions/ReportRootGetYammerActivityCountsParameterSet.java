@@ -69,6 +69,9 @@ public class ReportRootGetYammerActivityCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetYammerActivityCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetYammerActivityCountsParameterSetBuilder(){}
         /**

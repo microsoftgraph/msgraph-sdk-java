@@ -120,6 +120,9 @@ public class UserTranslateExchangeIdsParameterSet {
             this.sourceIdType = val;
             return this;
         }
+        /**
+         * Instanciates a new UserTranslateExchangeIdsParameterSetBuilder
+         */
         @Nullable
         protected UserTranslateExchangeIdsParameterSetBuilder(){}
         /**

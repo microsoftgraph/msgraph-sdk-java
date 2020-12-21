@@ -69,6 +69,9 @@ public class WorkbookFunctionsImCotParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImCotParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImCotParameterSetBuilder(){}
         /**

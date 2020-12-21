@@ -44,6 +44,9 @@ public class UserGetManagedAppDiagnosticStatusesParameterSet {
      * Fluent builder for the UserGetManagedAppDiagnosticStatusesParameterSet
      */
     public static final class UserGetManagedAppDiagnosticStatusesParameterSetBuilder {
+        /**
+         * Instanciates a new UserGetManagedAppDiagnosticStatusesParameterSetBuilder
+         */
         @Nullable
         protected UserGetManagedAppDiagnosticStatusesParameterSetBuilder(){}
         /**

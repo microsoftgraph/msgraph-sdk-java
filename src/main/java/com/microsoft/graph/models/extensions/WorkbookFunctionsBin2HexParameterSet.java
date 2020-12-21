@@ -94,6 +94,9 @@ public class WorkbookFunctionsBin2HexParameterSet {
             this.places = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBin2HexParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBin2HexParameterSetBuilder(){}
         /**

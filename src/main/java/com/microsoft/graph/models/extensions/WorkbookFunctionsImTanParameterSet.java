@@ -69,6 +69,9 @@ public class WorkbookFunctionsImTanParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImTanParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImTanParameterSetBuilder(){}
         /**

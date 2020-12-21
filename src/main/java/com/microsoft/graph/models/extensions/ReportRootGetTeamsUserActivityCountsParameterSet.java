@@ -69,6 +69,9 @@ public class ReportRootGetTeamsUserActivityCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetTeamsUserActivityCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetTeamsUserActivityCountsParameterSetBuilder(){}
         /**

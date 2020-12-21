@@ -44,6 +44,9 @@ public class WorkbookTableDataBodyRangeParameterSet {
      * Fluent builder for the WorkbookTableDataBodyRangeParameterSet
      */
     public static final class WorkbookTableDataBodyRangeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableDataBodyRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableDataBodyRangeParameterSetBuilder(){}
         /**

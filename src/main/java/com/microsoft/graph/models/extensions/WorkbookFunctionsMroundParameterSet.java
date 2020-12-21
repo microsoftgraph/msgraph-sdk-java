@@ -94,6 +94,9 @@ public class WorkbookFunctionsMroundParameterSet {
             this.multiple = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMroundParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMroundParameterSetBuilder(){}
         /**

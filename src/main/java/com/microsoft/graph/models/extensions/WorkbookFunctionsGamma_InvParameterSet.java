@@ -119,6 +119,9 @@ public class WorkbookFunctionsGamma_InvParameterSet {
             this.beta = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsGamma_InvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsGamma_InvParameterSetBuilder(){}
         /**

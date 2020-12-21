@@ -69,6 +69,9 @@ public class ConversationThreadReplyParameterSet {
             this.post = val;
             return this;
         }
+        /**
+         * Instanciates a new ConversationThreadReplyParameterSetBuilder
+         */
         @Nullable
         protected ConversationThreadReplyParameterSetBuilder(){}
         /**

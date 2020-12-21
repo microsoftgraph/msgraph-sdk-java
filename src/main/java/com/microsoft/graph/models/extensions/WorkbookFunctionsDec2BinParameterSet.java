@@ -94,6 +94,9 @@ public class WorkbookFunctionsDec2BinParameterSet {
             this.places = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDec2BinParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDec2BinParameterSetBuilder(){}
         /**

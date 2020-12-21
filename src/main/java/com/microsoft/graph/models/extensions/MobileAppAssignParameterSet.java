@@ -69,6 +69,9 @@ public class MobileAppAssignParameterSet {
             this.mobileAppAssignments = val;
             return this;
         }
+        /**
+         * Instanciates a new MobileAppAssignParameterSetBuilder
+         */
         @Nullable
         protected MobileAppAssignParameterSetBuilder(){}
         /**

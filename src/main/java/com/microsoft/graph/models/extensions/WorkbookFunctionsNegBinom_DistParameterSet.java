@@ -144,6 +144,9 @@ public class WorkbookFunctionsNegBinom_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNegBinom_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNegBinom_DistParameterSetBuilder(){}
         /**

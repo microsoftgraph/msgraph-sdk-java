@@ -69,6 +69,9 @@ public class WorkbookFilterApplyDynamicFilterParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyDynamicFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyDynamicFilterParameterSetBuilder(){}
         /**

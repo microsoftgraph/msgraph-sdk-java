@@ -94,6 +94,9 @@ public class WorkbookFunctionsT_Dist_2TParameterSet {
             this.degFreedom = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsT_Dist_2TParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsT_Dist_2TParameterSetBuilder(){}
         /**

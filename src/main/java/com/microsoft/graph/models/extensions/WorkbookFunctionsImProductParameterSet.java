@@ -69,6 +69,9 @@ public class WorkbookFunctionsImProductParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImProductParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImProductParameterSetBuilder(){}
         /**

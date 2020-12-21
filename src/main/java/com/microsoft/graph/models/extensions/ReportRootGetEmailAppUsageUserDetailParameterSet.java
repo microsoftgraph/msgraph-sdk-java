@@ -69,6 +69,9 @@ public class ReportRootGetEmailAppUsageUserDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetEmailAppUsageUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetEmailAppUsageUserDetailParameterSetBuilder(){}
         /**

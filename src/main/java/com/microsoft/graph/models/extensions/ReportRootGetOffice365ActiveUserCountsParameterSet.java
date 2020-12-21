@@ -69,6 +69,9 @@ public class ReportRootGetOffice365ActiveUserCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOffice365ActiveUserCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOffice365ActiveUserCountsParameterSetBuilder(){}
         /**

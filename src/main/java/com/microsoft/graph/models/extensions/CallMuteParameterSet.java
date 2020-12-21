@@ -69,6 +69,9 @@ public class CallMuteParameterSet {
             this.clientContext = val;
             return this;
         }
+        /**
+         * Instanciates a new CallMuteParameterSetBuilder
+         */
         @Nullable
         protected CallMuteParameterSetBuilder(){}
         /**

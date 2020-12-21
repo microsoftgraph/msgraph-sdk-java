@@ -44,6 +44,9 @@ public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsParameterSet {
      * Fluent builder for the DeviceAppManagementSyncMicrosoftStoreForBusinessAppsParameterSet
      */
     public static final class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsParameterSetBuilder {
+        /**
+         * Instanciates a new DeviceAppManagementSyncMicrosoftStoreForBusinessAppsParameterSetBuilder
+         */
         @Nullable
         protected DeviceAppManagementSyncMicrosoftStoreForBusinessAppsParameterSetBuilder(){}
         /**

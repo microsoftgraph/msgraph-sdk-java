@@ -44,6 +44,9 @@ public class UserDeltaParameterSet {
      * Fluent builder for the UserDeltaParameterSet
      */
     public static final class UserDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new UserDeltaParameterSetBuilder
+         */
         @Nullable
         protected UserDeltaParameterSetBuilder(){}
         /**

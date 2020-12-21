@@ -119,6 +119,9 @@ public class WorkbookFunctionsMatchParameterSet {
             this.matchType = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMatchParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMatchParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsReptParameterSet {
             this.numberTimes = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsReptParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsReptParameterSetBuilder(){}
         /**

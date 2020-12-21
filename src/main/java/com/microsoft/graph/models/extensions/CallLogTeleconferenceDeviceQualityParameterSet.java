@@ -69,6 +69,9 @@ public class CallLogTeleconferenceDeviceQualityParameterSet {
             this.quality = val;
             return this;
         }
+        /**
+         * Instanciates a new CallLogTeleconferenceDeviceQualityParameterSetBuilder
+         */
         @Nullable
         protected CallLogTeleconferenceDeviceQualityParameterSetBuilder(){}
         /**

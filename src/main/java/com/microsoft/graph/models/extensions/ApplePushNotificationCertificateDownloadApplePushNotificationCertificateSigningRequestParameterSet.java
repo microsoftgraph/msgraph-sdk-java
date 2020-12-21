@@ -44,6 +44,9 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
      * Fluent builder for the ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSet
      */
     public static final class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSetBuilder {
+        /**
+         * Instanciates a new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSetBuilder
+         */
         @Nullable
         protected ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestParameterSetBuilder(){}
         /**

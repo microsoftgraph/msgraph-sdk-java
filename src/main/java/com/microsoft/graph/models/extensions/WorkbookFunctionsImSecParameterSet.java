@@ -69,6 +69,9 @@ public class WorkbookFunctionsImSecParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImSecParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImSecParameterSetBuilder(){}
         /**

@@ -120,6 +120,9 @@ public class MessageCreateForwardParameterSet {
             this.comment = val;
             return this;
         }
+        /**
+         * Instanciates a new MessageCreateForwardParameterSetBuilder
+         */
         @Nullable
         protected MessageCreateForwardParameterSetBuilder(){}
         /**

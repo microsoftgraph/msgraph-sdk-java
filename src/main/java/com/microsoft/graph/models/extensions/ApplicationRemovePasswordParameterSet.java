@@ -69,6 +69,9 @@ public class ApplicationRemovePasswordParameterSet {
             this.keyId = val;
             return this;
         }
+        /**
+         * Instanciates a new ApplicationRemovePasswordParameterSetBuilder
+         */
         @Nullable
         protected ApplicationRemovePasswordParameterSetBuilder(){}
         /**

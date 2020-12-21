@@ -69,6 +69,9 @@ public class WorkbookFilterApplyIconFilterParameterSet {
             this.icon = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyIconFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyIconFilterParameterSetBuilder(){}
         /**

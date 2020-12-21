@@ -69,6 +69,9 @@ public class WorkbookFunctionsMinAParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMinAParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMinAParameterSetBuilder(){}
         /**

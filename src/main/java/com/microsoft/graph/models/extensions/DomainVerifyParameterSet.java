@@ -44,6 +44,9 @@ public class DomainVerifyParameterSet {
      * Fluent builder for the DomainVerifyParameterSet
      */
     public static final class DomainVerifyParameterSetBuilder {
+        /**
+         * Instanciates a new DomainVerifyParameterSetBuilder
+         */
         @Nullable
         protected DomainVerifyParameterSetBuilder(){}
         /**

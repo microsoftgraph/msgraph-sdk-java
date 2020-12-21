@@ -69,6 +69,9 @@ public class WorkbookRangeIntersectionParameterSet {
             this.anotherRange = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeIntersectionParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeIntersectionParameterSetBuilder(){}
         /**

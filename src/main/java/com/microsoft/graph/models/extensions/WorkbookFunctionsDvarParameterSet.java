@@ -119,6 +119,9 @@ public class WorkbookFunctionsDvarParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDvarParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDvarParameterSetBuilder(){}
         /**

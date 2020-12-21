@@ -44,6 +44,9 @@ public class WorkbookRangeBorderCountParameterSet {
      * Fluent builder for the WorkbookRangeBorderCountParameterSet
      */
     public static final class WorkbookRangeBorderCountParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeBorderCountParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeBorderCountParameterSetBuilder(){}
         /**

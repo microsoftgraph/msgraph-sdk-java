@@ -119,6 +119,9 @@ public class WorkbookFunctionsLookupParameterSet {
             this.resultVector = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsLookupParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsLookupParameterSetBuilder(){}
         /**

@@ -119,6 +119,9 @@ public class WorkbookFunctionsDcountAParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDcountAParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDcountAParameterSetBuilder(){}
         /**

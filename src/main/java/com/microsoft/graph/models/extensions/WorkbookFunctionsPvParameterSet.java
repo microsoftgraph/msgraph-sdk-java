@@ -169,6 +169,9 @@ public class WorkbookFunctionsPvParameterSet {
             this.type = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPvParameterSetBuilder(){}
         /**

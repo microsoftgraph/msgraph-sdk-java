@@ -69,6 +69,9 @@ public class DeviceConfigurationAssignParameterSet {
             this.assignments = val;
             return this;
         }
+        /**
+         * Instanciates a new DeviceConfigurationAssignParameterSetBuilder
+         */
         @Nullable
         protected DeviceConfigurationAssignParameterSetBuilder(){}
         /**

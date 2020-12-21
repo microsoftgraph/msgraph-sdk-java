@@ -94,6 +94,9 @@ public class WorkbookFunctionsImDivParameterSet {
             this.inumber2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImDivParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImDivParameterSetBuilder(){}
         /**

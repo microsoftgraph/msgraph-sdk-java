@@ -44,6 +44,9 @@ public class ManagedDeviceSyncDeviceParameterSet {
      * Fluent builder for the ManagedDeviceSyncDeviceParameterSet
      */
     public static final class ManagedDeviceSyncDeviceParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceSyncDeviceParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceSyncDeviceParameterSetBuilder(){}
         /**

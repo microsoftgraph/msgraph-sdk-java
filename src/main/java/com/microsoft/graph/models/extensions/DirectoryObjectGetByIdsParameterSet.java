@@ -94,6 +94,9 @@ public class DirectoryObjectGetByIdsParameterSet {
             this.types = val;
             return this;
         }
+        /**
+         * Instanciates a new DirectoryObjectGetByIdsParameterSetBuilder
+         */
         @Nullable
         protected DirectoryObjectGetByIdsParameterSetBuilder(){}
         /**

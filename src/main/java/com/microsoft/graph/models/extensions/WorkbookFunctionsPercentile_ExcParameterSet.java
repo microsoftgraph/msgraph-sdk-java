@@ -94,6 +94,9 @@ public class WorkbookFunctionsPercentile_ExcParameterSet {
             this.k = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPercentile_ExcParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPercentile_ExcParameterSetBuilder(){}
         /**

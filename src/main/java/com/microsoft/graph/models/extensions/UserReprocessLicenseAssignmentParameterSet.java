@@ -44,6 +44,9 @@ public class UserReprocessLicenseAssignmentParameterSet {
      * Fluent builder for the UserReprocessLicenseAssignmentParameterSet
      */
     public static final class UserReprocessLicenseAssignmentParameterSetBuilder {
+        /**
+         * Instanciates a new UserReprocessLicenseAssignmentParameterSetBuilder
+         */
         @Nullable
         protected UserReprocessLicenseAssignmentParameterSetBuilder(){}
         /**

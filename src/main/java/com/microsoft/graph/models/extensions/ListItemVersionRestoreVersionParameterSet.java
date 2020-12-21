@@ -44,6 +44,9 @@ public class ListItemVersionRestoreVersionParameterSet {
      * Fluent builder for the ListItemVersionRestoreVersionParameterSet
      */
     public static final class ListItemVersionRestoreVersionParameterSetBuilder {
+        /**
+         * Instanciates a new ListItemVersionRestoreVersionParameterSetBuilder
+         */
         @Nullable
         protected ListItemVersionRestoreVersionParameterSetBuilder(){}
         /**

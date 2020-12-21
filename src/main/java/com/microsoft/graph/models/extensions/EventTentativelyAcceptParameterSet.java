@@ -94,6 +94,9 @@ public class EventTentativelyAcceptParameterSet {
             this.sendResponse = val;
             return this;
         }
+        /**
+         * Instanciates a new EventTentativelyAcceptParameterSetBuilder
+         */
         @Nullable
         protected EventTentativelyAcceptParameterSetBuilder(){}
         /**

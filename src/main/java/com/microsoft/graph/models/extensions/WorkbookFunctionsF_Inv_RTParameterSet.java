@@ -119,6 +119,9 @@ public class WorkbookFunctionsF_Inv_RTParameterSet {
             this.degFreedom2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsF_Inv_RTParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsF_Inv_RTParameterSetBuilder(){}
         /**

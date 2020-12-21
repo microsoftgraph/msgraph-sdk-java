@@ -69,6 +69,9 @@ public class WorkbookFunctionsError_TypeParameterSet {
             this.errorVal = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsError_TypeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsError_TypeParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsLeftParameterSet {
             this.numChars = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsLeftParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsLeftParameterSetBuilder(){}
         /**

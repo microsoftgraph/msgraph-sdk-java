@@ -69,6 +69,9 @@ public class WorkbookRangeBorderItemAtParameterSet {
             this.index = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeBorderItemAtParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeBorderItemAtParameterSetBuilder(){}
         /**

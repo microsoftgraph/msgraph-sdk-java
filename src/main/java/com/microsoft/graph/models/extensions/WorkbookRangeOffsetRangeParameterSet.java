@@ -94,6 +94,9 @@ public class WorkbookRangeOffsetRangeParameterSet {
             this.columnOffset = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeOffsetRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeOffsetRangeParameterSetBuilder(){}
         /**

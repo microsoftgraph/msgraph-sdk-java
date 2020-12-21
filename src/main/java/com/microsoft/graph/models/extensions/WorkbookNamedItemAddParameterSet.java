@@ -119,6 +119,9 @@ public class WorkbookNamedItemAddParameterSet {
             this.comment = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookNamedItemAddParameterSetBuilder
+         */
         @Nullable
         protected WorkbookNamedItemAddParameterSetBuilder(){}
         /**

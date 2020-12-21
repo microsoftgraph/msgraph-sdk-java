@@ -94,6 +94,9 @@ public class WorkbookFunctionsExactParameterSet {
             this.text2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsExactParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsExactParameterSetBuilder(){}
         /**

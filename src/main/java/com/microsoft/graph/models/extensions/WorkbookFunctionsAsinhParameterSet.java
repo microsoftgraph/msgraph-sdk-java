@@ -69,6 +69,9 @@ public class WorkbookFunctionsAsinhParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAsinhParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAsinhParameterSetBuilder(){}
         /**

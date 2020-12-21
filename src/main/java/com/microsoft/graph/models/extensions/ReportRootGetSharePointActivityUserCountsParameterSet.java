@@ -69,6 +69,9 @@ public class ReportRootGetSharePointActivityUserCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSharePointActivityUserCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSharePointActivityUserCountsParameterSetBuilder(){}
         /**

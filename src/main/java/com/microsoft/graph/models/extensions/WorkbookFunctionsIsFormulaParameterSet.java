@@ -69,6 +69,9 @@ public class WorkbookFunctionsIsFormulaParameterSet {
             this.reference = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIsFormulaParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIsFormulaParameterSetBuilder(){}
         /**

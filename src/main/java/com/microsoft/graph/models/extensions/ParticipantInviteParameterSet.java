@@ -95,6 +95,9 @@ public class ParticipantInviteParameterSet {
             this.clientContext = val;
             return this;
         }
+        /**
+         * Instanciates a new ParticipantInviteParameterSetBuilder
+         */
         @Nullable
         protected ParticipantInviteParameterSetBuilder(){}
         /**

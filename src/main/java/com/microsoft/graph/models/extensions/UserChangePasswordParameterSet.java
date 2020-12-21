@@ -94,6 +94,9 @@ public class UserChangePasswordParameterSet {
             this.newPassword = val;
             return this;
         }
+        /**
+         * Instanciates a new UserChangePasswordParameterSetBuilder
+         */
         @Nullable
         protected UserChangePasswordParameterSetBuilder(){}
         /**

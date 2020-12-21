@@ -70,6 +70,9 @@ public class AttachmentCreateUploadSessionParameterSet {
             this.attachmentItem = val;
             return this;
         }
+        /**
+         * Instanciates a new AttachmentCreateUploadSessionParameterSetBuilder
+         */
         @Nullable
         protected AttachmentCreateUploadSessionParameterSetBuilder(){}
         /**

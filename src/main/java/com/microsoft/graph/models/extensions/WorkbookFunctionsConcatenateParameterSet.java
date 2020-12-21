@@ -69,6 +69,9 @@ public class WorkbookFunctionsConcatenateParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsConcatenateParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsConcatenateParameterSetBuilder(){}
         /**

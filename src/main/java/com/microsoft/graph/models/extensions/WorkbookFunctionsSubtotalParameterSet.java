@@ -94,6 +94,9 @@ public class WorkbookFunctionsSubtotalParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSubtotalParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSubtotalParameterSetBuilder(){}
         /**

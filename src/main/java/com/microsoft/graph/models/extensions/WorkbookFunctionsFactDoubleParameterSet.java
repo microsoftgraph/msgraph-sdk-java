@@ -69,6 +69,9 @@ public class WorkbookFunctionsFactDoubleParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsFactDoubleParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsFactDoubleParameterSetBuilder(){}
         /**

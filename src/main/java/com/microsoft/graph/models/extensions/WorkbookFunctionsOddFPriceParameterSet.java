@@ -269,6 +269,9 @@ public class WorkbookFunctionsOddFPriceParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsOddFPriceParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsOddFPriceParameterSetBuilder(){}
         /**

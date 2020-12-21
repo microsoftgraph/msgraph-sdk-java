@@ -119,6 +119,9 @@ public class WorkbookFunctionsSumIfParameterSet {
             this.sumRange = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSumIfParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSumIfParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsYearParameterSet {
             this.serialNumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsYearParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsYearParameterSetBuilder(){}
         /**

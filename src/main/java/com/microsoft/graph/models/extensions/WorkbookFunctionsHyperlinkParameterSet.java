@@ -94,6 +94,9 @@ public class WorkbookFunctionsHyperlinkParameterSet {
             this.friendlyName = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsHyperlinkParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsHyperlinkParameterSetBuilder(){}
         /**

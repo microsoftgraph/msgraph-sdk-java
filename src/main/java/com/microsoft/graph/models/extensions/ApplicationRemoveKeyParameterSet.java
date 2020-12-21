@@ -94,6 +94,9 @@ public class ApplicationRemoveKeyParameterSet {
             this.proof = val;
             return this;
         }
+        /**
+         * Instanciates a new ApplicationRemoveKeyParameterSetBuilder
+         */
         @Nullable
         protected ApplicationRemoveKeyParameterSetBuilder(){}
         /**

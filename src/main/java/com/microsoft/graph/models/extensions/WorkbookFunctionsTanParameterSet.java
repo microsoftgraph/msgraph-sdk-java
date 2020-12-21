@@ -69,6 +69,9 @@ public class WorkbookFunctionsTanParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTanParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTanParameterSetBuilder(){}
         /**

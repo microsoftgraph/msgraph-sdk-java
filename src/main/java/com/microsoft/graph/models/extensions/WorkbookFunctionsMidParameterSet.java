@@ -119,6 +119,9 @@ public class WorkbookFunctionsMidParameterSet {
             this.numChars = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMidParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMidParameterSetBuilder(){}
         /**

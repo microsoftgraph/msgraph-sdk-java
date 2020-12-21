@@ -44,6 +44,9 @@ public class WorkbookRangeFillClearParameterSet {
      * Fluent builder for the WorkbookRangeFillClearParameterSet
      */
     public static final class WorkbookRangeFillClearParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeFillClearParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeFillClearParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class WorkbookTableHeaderRowRangeParameterSet {
      * Fluent builder for the WorkbookTableHeaderRowRangeParameterSet
      */
     public static final class WorkbookTableHeaderRowRangeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableHeaderRowRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableHeaderRowRangeParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ManagedDeviceUpdateWindowsDeviceAccountParameterSet {
             this.updateWindowsDeviceAccountActionParameter = val;
             return this;
         }
+        /**
+         * Instanciates a new ManagedDeviceUpdateWindowsDeviceAccountParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceUpdateWindowsDeviceAccountParameterSetBuilder(){}
         /**

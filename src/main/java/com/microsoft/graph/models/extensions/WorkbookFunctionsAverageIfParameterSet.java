@@ -119,6 +119,9 @@ public class WorkbookFunctionsAverageIfParameterSet {
             this.averageRange = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAverageIfParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAverageIfParameterSetBuilder(){}
         /**

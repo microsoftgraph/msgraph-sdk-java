@@ -94,6 +94,9 @@ public class WorkbookFunctionsTrimMeanParameterSet {
             this.percent = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTrimMeanParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTrimMeanParameterSetBuilder(){}
         /**

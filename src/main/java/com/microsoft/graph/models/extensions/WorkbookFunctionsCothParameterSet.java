@@ -69,6 +69,9 @@ public class WorkbookFunctionsCothParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCothParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCothParameterSetBuilder(){}
         /**

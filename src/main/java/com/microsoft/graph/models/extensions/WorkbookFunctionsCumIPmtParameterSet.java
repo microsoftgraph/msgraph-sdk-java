@@ -194,6 +194,9 @@ public class WorkbookFunctionsCumIPmtParameterSet {
             this.type = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCumIPmtParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCumIPmtParameterSetBuilder(){}
         /**

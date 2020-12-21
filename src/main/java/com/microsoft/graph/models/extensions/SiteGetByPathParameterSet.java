@@ -69,6 +69,9 @@ public class SiteGetByPathParameterSet {
             this.path = val;
             return this;
         }
+        /**
+         * Instanciates a new SiteGetByPathParameterSetBuilder
+         */
         @Nullable
         protected SiteGetByPathParameterSetBuilder(){}
         /**

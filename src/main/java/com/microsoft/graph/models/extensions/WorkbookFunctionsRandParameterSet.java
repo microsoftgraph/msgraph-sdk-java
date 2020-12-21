@@ -44,6 +44,9 @@ public class WorkbookFunctionsRandParameterSet {
      * Fluent builder for the WorkbookFunctionsRandParameterSet
      */
     public static final class WorkbookFunctionsRandParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookFunctionsRandParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRandParameterSetBuilder(){}
         /**

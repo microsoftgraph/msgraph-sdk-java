@@ -69,6 +69,9 @@ public class WorkbookFunctionsSheetsParameterSet {
             this.reference = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSheetsParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSheetsParameterSetBuilder(){}
         /**

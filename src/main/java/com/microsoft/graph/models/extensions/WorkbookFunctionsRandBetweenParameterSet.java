@@ -94,6 +94,9 @@ public class WorkbookFunctionsRandBetweenParameterSet {
             this.top = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRandBetweenParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRandBetweenParameterSetBuilder(){}
         /**

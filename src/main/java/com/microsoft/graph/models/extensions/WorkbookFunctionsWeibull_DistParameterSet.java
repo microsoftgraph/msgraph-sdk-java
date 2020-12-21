@@ -144,6 +144,9 @@ public class WorkbookFunctionsWeibull_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsWeibull_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsWeibull_DistParameterSetBuilder(){}
         /**

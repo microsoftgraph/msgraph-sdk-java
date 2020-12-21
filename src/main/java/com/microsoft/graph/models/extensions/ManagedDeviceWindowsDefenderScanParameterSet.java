@@ -69,6 +69,9 @@ public class ManagedDeviceWindowsDefenderScanParameterSet {
             this.quickScan = val;
             return this;
         }
+        /**
+         * Instanciates a new ManagedDeviceWindowsDefenderScanParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceWindowsDefenderScanParameterSetBuilder(){}
         /**

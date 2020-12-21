@@ -69,6 +69,9 @@ public class WorkbookApplicationCalculateParameterSet {
             this.calculationType = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookApplicationCalculateParameterSetBuilder
+         */
         @Nullable
         protected WorkbookApplicationCalculateParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class CalendarSharingMessageAcceptParameterSet {
      * Fluent builder for the CalendarSharingMessageAcceptParameterSet
      */
     public static final class CalendarSharingMessageAcceptParameterSetBuilder {
+        /**
+         * Instanciates a new CalendarSharingMessageAcceptParameterSetBuilder
+         */
         @Nullable
         protected CalendarSharingMessageAcceptParameterSetBuilder(){}
         /**

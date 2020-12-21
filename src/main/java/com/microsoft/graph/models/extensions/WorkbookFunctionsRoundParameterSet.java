@@ -94,6 +94,9 @@ public class WorkbookFunctionsRoundParameterSet {
             this.numDigits = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRoundParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRoundParameterSetBuilder(){}
         /**

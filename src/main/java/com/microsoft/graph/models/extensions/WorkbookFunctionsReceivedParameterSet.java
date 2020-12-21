@@ -169,6 +169,9 @@ public class WorkbookFunctionsReceivedParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsReceivedParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsReceivedParameterSetBuilder(){}
         /**

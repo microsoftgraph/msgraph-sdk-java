@@ -69,6 +69,9 @@ public class WorkbookFunctionsAscParameterSet {
             this.text = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAscParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAscParameterSetBuilder(){}
         /**

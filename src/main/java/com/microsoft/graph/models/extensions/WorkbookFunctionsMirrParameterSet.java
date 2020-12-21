@@ -119,6 +119,9 @@ public class WorkbookFunctionsMirrParameterSet {
             this.reinvestRate = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMirrParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMirrParameterSetBuilder(){}
         /**

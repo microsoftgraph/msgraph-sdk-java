@@ -69,6 +69,9 @@ public class UserWipeManagedAppRegistrationsByDeviceTagParameterSet {
             this.deviceTag = val;
             return this;
         }
+        /**
+         * Instanciates a new UserWipeManagedAppRegistrationsByDeviceTagParameterSetBuilder
+         */
         @Nullable
         protected UserWipeManagedAppRegistrationsByDeviceTagParameterSetBuilder(){}
         /**

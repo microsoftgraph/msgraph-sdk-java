@@ -94,6 +94,9 @@ public class WorkbookRangeResizedRangeParameterSet {
             this.deltaColumns = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeResizedRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeResizedRangeParameterSetBuilder(){}
         /**

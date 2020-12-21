@@ -69,6 +69,9 @@ public class WorkbookFilterApplyCellColorFilterParameterSet {
             this.color = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyCellColorFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyCellColorFilterParameterSetBuilder(){}
         /**

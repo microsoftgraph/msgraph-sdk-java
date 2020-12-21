@@ -69,6 +69,9 @@ public class WorkbookFunctionsDatevalueParameterSet {
             this.dateText = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDatevalueParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDatevalueParameterSetBuilder(){}
         /**

@@ -194,6 +194,9 @@ public class WorkbookFunctionsMdurationParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMdurationParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMdurationParameterSetBuilder(){}
         /**

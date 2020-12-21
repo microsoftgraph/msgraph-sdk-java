@@ -44,6 +44,9 @@ public class WorkbookTableConvertToRangeParameterSet {
      * Fluent builder for the WorkbookTableConvertToRangeParameterSet
      */
     public static final class WorkbookTableConvertToRangeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableConvertToRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableConvertToRangeParameterSetBuilder(){}
         /**

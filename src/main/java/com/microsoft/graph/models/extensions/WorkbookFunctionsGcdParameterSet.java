@@ -69,6 +69,9 @@ public class WorkbookFunctionsGcdParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsGcdParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsGcdParameterSetBuilder(){}
         /**

@@ -120,6 +120,9 @@ public class ServicePrincipalAddKeyParameterSet {
             this.proof = val;
             return this;
         }
+        /**
+         * Instanciates a new ServicePrincipalAddKeyParameterSetBuilder
+         */
         @Nullable
         protected ServicePrincipalAddKeyParameterSetBuilder(){}
         /**

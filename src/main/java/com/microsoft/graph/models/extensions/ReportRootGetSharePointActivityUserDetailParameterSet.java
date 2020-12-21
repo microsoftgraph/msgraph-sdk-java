@@ -69,6 +69,9 @@ public class ReportRootGetSharePointActivityUserDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSharePointActivityUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSharePointActivityUserDetailParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSkypeForBusinessPeerToPeerActivityCountsParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class OrgContactDeltaParameterSet {
      * Fluent builder for the OrgContactDeltaParameterSet
      */
     public static final class OrgContactDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new OrgContactDeltaParameterSetBuilder
+         */
         @Nullable
         protected OrgContactDeltaParameterSetBuilder(){}
         /**

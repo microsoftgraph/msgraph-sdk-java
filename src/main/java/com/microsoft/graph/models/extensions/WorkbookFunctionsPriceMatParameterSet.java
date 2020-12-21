@@ -194,6 +194,9 @@ public class WorkbookFunctionsPriceMatParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPriceMatParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPriceMatParameterSetBuilder(){}
         /**

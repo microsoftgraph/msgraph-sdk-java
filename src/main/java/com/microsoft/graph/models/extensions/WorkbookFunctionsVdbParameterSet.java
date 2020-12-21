@@ -219,6 +219,9 @@ public class WorkbookFunctionsVdbParameterSet {
             this.noSwitch = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsVdbParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsVdbParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet {
             this.domainName = val;
             return this;
         }
+        /**
+         * Instanciates a new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSetBuilder
+         */
         @Nullable
         protected DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSetBuilder(){}
         /**

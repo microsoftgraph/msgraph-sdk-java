@@ -119,6 +119,9 @@ public class CallRedirectParameterSet {
             this.callbackUri = val;
             return this;
         }
+        /**
+         * Instanciates a new CallRedirectParameterSetBuilder
+         */
         @Nullable
         protected CallRedirectParameterSetBuilder(){}
         /**

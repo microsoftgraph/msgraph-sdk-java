@@ -44,6 +44,9 @@ public class DirectoryRoleDeltaParameterSet {
      * Fluent builder for the DirectoryRoleDeltaParameterSet
      */
     public static final class DirectoryRoleDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new DirectoryRoleDeltaParameterSetBuilder
+         */
         @Nullable
         protected DirectoryRoleDeltaParameterSetBuilder(){}
         /**

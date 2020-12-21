@@ -44,6 +44,9 @@ public class WorkbookTableColumnTotalRowRangeParameterSet {
      * Fluent builder for the WorkbookTableColumnTotalRowRangeParameterSet
      */
     public static final class WorkbookTableColumnTotalRowRangeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableColumnTotalRowRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableColumnTotalRowRangeParameterSetBuilder(){}
         /**

@@ -119,6 +119,9 @@ public class WorkbookFunctionsTimeParameterSet {
             this.second = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTimeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTimeParameterSetBuilder(){}
         /**

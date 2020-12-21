@@ -119,6 +119,9 @@ public class WorkbookFunctionsConfidence_NormParameterSet {
             this.size = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsConfidence_NormParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsConfidence_NormParameterSetBuilder(){}
         /**

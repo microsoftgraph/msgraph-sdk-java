@@ -119,6 +119,9 @@ public class WorkbookFunctionsPercentRank_ExcParameterSet {
             this.significance = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPercentRank_ExcParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPercentRank_ExcParameterSetBuilder(){}
         /**

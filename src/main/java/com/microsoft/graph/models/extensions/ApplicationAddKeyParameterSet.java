@@ -120,6 +120,9 @@ public class ApplicationAddKeyParameterSet {
             this.proof = val;
             return this;
         }
+        /**
+         * Instanciates a new ApplicationAddKeyParameterSetBuilder
+         */
         @Nullable
         protected ApplicationAddKeyParameterSetBuilder(){}
         /**

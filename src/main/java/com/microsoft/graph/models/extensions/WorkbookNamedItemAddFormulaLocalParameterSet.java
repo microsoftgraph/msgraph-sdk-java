@@ -119,6 +119,9 @@ public class WorkbookNamedItemAddFormulaLocalParameterSet {
             this.comment = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookNamedItemAddFormulaLocalParameterSetBuilder
+         */
         @Nullable
         protected WorkbookNamedItemAddFormulaLocalParameterSetBuilder(){}
         /**

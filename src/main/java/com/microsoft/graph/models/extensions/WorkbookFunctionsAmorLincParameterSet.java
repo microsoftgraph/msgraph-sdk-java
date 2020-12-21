@@ -219,6 +219,9 @@ public class WorkbookFunctionsAmorLincParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAmorLincParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAmorLincParameterSetBuilder(){}
         /**

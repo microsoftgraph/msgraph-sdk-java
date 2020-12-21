@@ -94,6 +94,9 @@ public class WorkbookFunctionsWeekNumParameterSet {
             this.returnType = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsWeekNumParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsWeekNumParameterSetBuilder(){}
         /**

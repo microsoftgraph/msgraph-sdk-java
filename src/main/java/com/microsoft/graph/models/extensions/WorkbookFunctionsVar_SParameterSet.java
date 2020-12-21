@@ -69,6 +69,9 @@ public class WorkbookFunctionsVar_SParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsVar_SParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsVar_SParameterSetBuilder(){}
         /**

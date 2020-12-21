@@ -69,6 +69,9 @@ public class ReportRootGetOneDriveActivityFileCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOneDriveActivityFileCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOneDriveActivityFileCountsParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsSignParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSignParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSignParameterSetBuilder(){}
         /**

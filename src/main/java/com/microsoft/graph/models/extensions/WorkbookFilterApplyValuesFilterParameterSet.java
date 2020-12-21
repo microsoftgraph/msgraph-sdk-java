@@ -69,6 +69,9 @@ public class WorkbookFilterApplyValuesFilterParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyValuesFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyValuesFilterParameterSetBuilder(){}
         /**

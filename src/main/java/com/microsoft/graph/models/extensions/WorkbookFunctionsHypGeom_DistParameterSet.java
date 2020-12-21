@@ -169,6 +169,9 @@ public class WorkbookFunctionsHypGeom_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsHypGeom_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsHypGeom_DistParameterSetBuilder(){}
         /**

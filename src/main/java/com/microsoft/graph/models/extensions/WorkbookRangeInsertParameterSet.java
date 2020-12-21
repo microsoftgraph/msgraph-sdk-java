@@ -69,6 +69,9 @@ public class WorkbookRangeInsertParameterSet {
             this.shift = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeInsertParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeInsertParameterSetBuilder(){}
         /**

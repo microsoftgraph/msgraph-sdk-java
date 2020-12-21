@@ -119,6 +119,9 @@ public class WorkbookFunctionsNorm_InvParameterSet {
             this.standardDev = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNorm_InvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNorm_InvParameterSetBuilder(){}
         /**

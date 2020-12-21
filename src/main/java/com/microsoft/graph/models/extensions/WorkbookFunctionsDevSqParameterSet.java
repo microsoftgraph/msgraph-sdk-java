@@ -69,6 +69,9 @@ public class WorkbookFunctionsDevSqParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDevSqParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDevSqParameterSetBuilder(){}
         /**

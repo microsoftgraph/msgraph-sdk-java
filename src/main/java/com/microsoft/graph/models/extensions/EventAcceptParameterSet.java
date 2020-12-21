@@ -94,6 +94,9 @@ public class EventAcceptParameterSet {
             this.sendResponse = val;
             return this;
         }
+        /**
+         * Instanciates a new EventAcceptParameterSetBuilder
+         */
         @Nullable
         protected EventAcceptParameterSetBuilder(){}
         /**

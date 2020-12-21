@@ -44,6 +44,9 @@ public class ManagedDeviceRetireParameterSet {
      * Fluent builder for the ManagedDeviceRetireParameterSet
      */
     public static final class ManagedDeviceRetireParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceRetireParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceRetireParameterSetBuilder(){}
         /**

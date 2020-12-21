@@ -69,6 +69,9 @@ public class DirectoryObjectCheckMemberObjectsParameterSet {
             this.ids = val;
             return this;
         }
+        /**
+         * Instanciates a new DirectoryObjectCheckMemberObjectsParameterSetBuilder
+         */
         @Nullable
         protected DirectoryObjectCheckMemberObjectsParameterSetBuilder(){}
         /**

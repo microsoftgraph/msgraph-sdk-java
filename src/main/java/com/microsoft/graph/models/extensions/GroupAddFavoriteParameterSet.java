@@ -44,6 +44,9 @@ public class GroupAddFavoriteParameterSet {
      * Fluent builder for the GroupAddFavoriteParameterSet
      */
     public static final class GroupAddFavoriteParameterSetBuilder {
+        /**
+         * Instanciates a new GroupAddFavoriteParameterSetBuilder
+         */
         @Nullable
         protected GroupAddFavoriteParameterSetBuilder(){}
         /**

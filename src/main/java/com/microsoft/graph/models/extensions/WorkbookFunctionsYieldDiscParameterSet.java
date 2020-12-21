@@ -169,6 +169,9 @@ public class WorkbookFunctionsYieldDiscParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsYieldDiscParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsYieldDiscParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsImSubParameterSet {
             this.inumber2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImSubParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImSubParameterSetBuilder(){}
         /**

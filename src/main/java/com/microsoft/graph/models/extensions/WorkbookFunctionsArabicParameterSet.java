@@ -69,6 +69,9 @@ public class WorkbookFunctionsArabicParameterSet {
             this.text = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsArabicParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsArabicParameterSetBuilder(){}
         /**

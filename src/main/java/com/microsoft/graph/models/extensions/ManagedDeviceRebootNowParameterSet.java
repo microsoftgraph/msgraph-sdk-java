@@ -44,6 +44,9 @@ public class ManagedDeviceRebootNowParameterSet {
      * Fluent builder for the ManagedDeviceRebootNowParameterSet
      */
     public static final class ManagedDeviceRebootNowParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceRebootNowParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceRebootNowParameterSetBuilder(){}
         /**

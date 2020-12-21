@@ -119,6 +119,9 @@ public class ScheduleShareParameterSet {
             this.endDateTime = val;
             return this;
         }
+        /**
+         * Instanciates a new ScheduleShareParameterSetBuilder
+         */
         @Nullable
         protected ScheduleShareParameterSetBuilder(){}
         /**

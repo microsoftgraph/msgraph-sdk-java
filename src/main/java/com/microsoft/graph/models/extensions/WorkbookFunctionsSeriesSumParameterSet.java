@@ -144,6 +144,9 @@ public class WorkbookFunctionsSeriesSumParameterSet {
             this.coefficients = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSeriesSumParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSeriesSumParameterSetBuilder(){}
         /**

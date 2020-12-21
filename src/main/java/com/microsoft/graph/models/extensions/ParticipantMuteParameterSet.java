@@ -69,6 +69,9 @@ public class ParticipantMuteParameterSet {
             this.clientContext = val;
             return this;
         }
+        /**
+         * Instanciates a new ParticipantMuteParameterSetBuilder
+         */
         @Nullable
         protected ParticipantMuteParameterSetBuilder(){}
         /**

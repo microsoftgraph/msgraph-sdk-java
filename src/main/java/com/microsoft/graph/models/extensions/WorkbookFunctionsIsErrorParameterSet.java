@@ -69,6 +69,9 @@ public class WorkbookFunctionsIsErrorParameterSet {
             this.value = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIsErrorParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIsErrorParameterSetBuilder(){}
         /**

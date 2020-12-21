@@ -119,6 +119,9 @@ public class WorkbookFunctionsRank_EqParameterSet {
             this.order = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRank_EqParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRank_EqParameterSetBuilder(){}
         /**

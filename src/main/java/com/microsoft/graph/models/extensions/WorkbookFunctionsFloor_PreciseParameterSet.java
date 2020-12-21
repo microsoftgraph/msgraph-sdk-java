@@ -94,6 +94,9 @@ public class WorkbookFunctionsFloor_PreciseParameterSet {
             this.significance = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsFloor_PreciseParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsFloor_PreciseParameterSetBuilder(){}
         /**

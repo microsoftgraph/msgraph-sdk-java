@@ -144,6 +144,9 @@ public class WorkbookFunctionsBinom_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBinom_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBinom_DistParameterSetBuilder(){}
         /**

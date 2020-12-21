@@ -44,6 +44,9 @@ public class NotificationMessageTemplateSendTestMessageParameterSet {
      * Fluent builder for the NotificationMessageTemplateSendTestMessageParameterSet
      */
     public static final class NotificationMessageTemplateSendTestMessageParameterSetBuilder {
+        /**
+         * Instanciates a new NotificationMessageTemplateSendTestMessageParameterSetBuilder
+         */
         @Nullable
         protected NotificationMessageTemplateSendTestMessageParameterSetBuilder(){}
         /**

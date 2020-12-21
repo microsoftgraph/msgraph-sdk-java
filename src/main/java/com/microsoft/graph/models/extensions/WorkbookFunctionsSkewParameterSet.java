@@ -69,6 +69,9 @@ public class WorkbookFunctionsSkewParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSkewParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSkewParameterSetBuilder(){}
         /**

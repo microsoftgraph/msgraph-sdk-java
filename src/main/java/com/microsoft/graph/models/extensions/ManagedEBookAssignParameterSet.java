@@ -69,6 +69,9 @@ public class ManagedEBookAssignParameterSet {
             this.managedEBookAssignments = val;
             return this;
         }
+        /**
+         * Instanciates a new ManagedEBookAssignParameterSetBuilder
+         */
         @Nullable
         protected ManagedEBookAssignParameterSetBuilder(){}
         /**

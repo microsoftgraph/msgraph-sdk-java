@@ -69,6 +69,9 @@ public class WorkbookFunctionsGaussParameterSet {
             this.x = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsGaussParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsGaussParameterSetBuilder(){}
         /**

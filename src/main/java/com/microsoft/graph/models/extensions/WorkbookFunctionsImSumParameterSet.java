@@ -69,6 +69,9 @@ public class WorkbookFunctionsImSumParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImSumParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImSumParameterSetBuilder(){}
         /**

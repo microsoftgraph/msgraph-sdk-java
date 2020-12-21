@@ -69,6 +69,9 @@ public class ReportRootGetOffice365GroupsActivityStorageParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOffice365GroupsActivityStorageParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOffice365GroupsActivityStorageParameterSetBuilder(){}
         /**

@@ -119,6 +119,9 @@ public class WorkbookFunctionsMidbParameterSet {
             this.numBytes = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMidbParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMidbParameterSetBuilder(){}
         /**

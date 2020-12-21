@@ -95,6 +95,9 @@ public class PermissionGrantParameterSet {
             this.recipients = val;
             return this;
         }
+        /**
+         * Instanciates a new PermissionGrantParameterSetBuilder
+         */
         @Nullable
         protected PermissionGrantParameterSetBuilder(){}
         /**

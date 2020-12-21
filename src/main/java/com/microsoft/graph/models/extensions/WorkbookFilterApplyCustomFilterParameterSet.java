@@ -119,6 +119,9 @@ public class WorkbookFilterApplyCustomFilterParameterSet {
             this.oper = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyCustomFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyCustomFilterParameterSetBuilder(){}
         /**

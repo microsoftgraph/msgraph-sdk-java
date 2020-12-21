@@ -69,6 +69,9 @@ public class ApplicationAddPasswordParameterSet {
             this.passwordCredential = val;
             return this;
         }
+        /**
+         * Instanciates a new ApplicationAddPasswordParameterSetBuilder
+         */
         @Nullable
         protected ApplicationAddPasswordParameterSetBuilder(){}
         /**

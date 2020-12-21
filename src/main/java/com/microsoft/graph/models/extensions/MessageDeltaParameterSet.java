@@ -44,6 +44,9 @@ public class MessageDeltaParameterSet {
      * Fluent builder for the MessageDeltaParameterSet
      */
     public static final class MessageDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new MessageDeltaParameterSetBuilder
+         */
         @Nullable
         protected MessageDeltaParameterSetBuilder(){}
         /**

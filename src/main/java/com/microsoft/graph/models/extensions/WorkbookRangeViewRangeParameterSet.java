@@ -44,6 +44,9 @@ public class WorkbookRangeViewRangeParameterSet {
      * Fluent builder for the WorkbookRangeViewRangeParameterSet
      */
     public static final class WorkbookRangeViewRangeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeViewRangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeViewRangeParameterSetBuilder(){}
         /**

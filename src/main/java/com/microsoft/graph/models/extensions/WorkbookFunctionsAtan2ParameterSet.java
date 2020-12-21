@@ -94,6 +94,9 @@ public class WorkbookFunctionsAtan2ParameterSet {
             this.yNum = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAtan2ParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAtan2ParameterSetBuilder(){}
         /**

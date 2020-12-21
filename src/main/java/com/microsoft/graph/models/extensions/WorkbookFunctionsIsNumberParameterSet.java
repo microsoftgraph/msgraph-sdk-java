@@ -69,6 +69,9 @@ public class WorkbookFunctionsIsNumberParameterSet {
             this.value = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIsNumberParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIsNumberParameterSetBuilder(){}
         /**

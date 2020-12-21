@@ -94,6 +94,9 @@ public class WorkbookFunctionsLeftbParameterSet {
             this.numBytes = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsLeftbParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsLeftbParameterSetBuilder(){}
         /**

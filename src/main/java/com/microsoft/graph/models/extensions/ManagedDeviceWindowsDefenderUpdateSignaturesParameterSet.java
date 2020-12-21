@@ -44,6 +44,9 @@ public class ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet {
      * Fluent builder for the ManagedDeviceWindowsDefenderUpdateSignaturesParameterSet
      */
     public static final class ManagedDeviceWindowsDefenderUpdateSignaturesParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceWindowsDefenderUpdateSignaturesParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceWindowsDefenderUpdateSignaturesParameterSetBuilder(){}
         /**

@@ -169,6 +169,9 @@ public class OnenoteSectionCopyToSectionGroupParameterSet {
             this.siteId = val;
             return this;
         }
+        /**
+         * Instanciates a new OnenoteSectionCopyToSectionGroupParameterSetBuilder
+         */
         @Nullable
         protected OnenoteSectionCopyToSectionGroupParameterSetBuilder(){}
         /**

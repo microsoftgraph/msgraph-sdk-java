@@ -169,6 +169,9 @@ public class WorkbookFunctionsNperParameterSet {
             this.type = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNperParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNperParameterSetBuilder(){}
         /**

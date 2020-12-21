@@ -69,6 +69,9 @@ public class ReportRootGetSharePointSiteUsageStorageParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSharePointSiteUsageStorageParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSharePointSiteUsageStorageParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class ManagedDeviceRemoteLockParameterSet {
      * Fluent builder for the ManagedDeviceRemoteLockParameterSet
      */
     public static final class ManagedDeviceRemoteLockParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceRemoteLockParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceRemoteLockParameterSetBuilder(){}
         /**

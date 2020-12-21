@@ -94,6 +94,9 @@ public class DriveItemCheckinParameterSet {
             this.comment = val;
             return this;
         }
+        /**
+         * Instanciates a new DriveItemCheckinParameterSetBuilder
+         */
         @Nullable
         protected DriveItemCheckinParameterSetBuilder(){}
         /**

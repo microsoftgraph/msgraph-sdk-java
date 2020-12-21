@@ -119,6 +119,9 @@ public class WorkbookFunctionsDsumParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDsumParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDsumParameterSetBuilder(){}
         /**

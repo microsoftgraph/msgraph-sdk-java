@@ -69,6 +69,9 @@ public class CalendarAllowedCalendarSharingRolesParameterSet {
             this.user = val;
             return this;
         }
+        /**
+         * Instanciates a new CalendarAllowedCalendarSharingRolesParameterSetBuilder
+         */
         @Nullable
         protected CalendarAllowedCalendarSharingRolesParameterSetBuilder(){}
         /**

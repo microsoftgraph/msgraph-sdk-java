@@ -44,6 +44,9 @@ public class WorkbookRangeFormatAutofitColumnsParameterSet {
      * Fluent builder for the WorkbookRangeFormatAutofitColumnsParameterSet
      */
     public static final class WorkbookRangeFormatAutofitColumnsParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeFormatAutofitColumnsParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeFormatAutofitColumnsParameterSetBuilder(){}
         /**

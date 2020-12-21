@@ -44,6 +44,9 @@ public class EventDeltaParameterSet {
      * Fluent builder for the EventDeltaParameterSet
      */
     public static final class EventDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new EventDeltaParameterSetBuilder
+         */
         @Nullable
         protected EventDeltaParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsMedianParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMedianParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMedianParameterSetBuilder(){}
         /**

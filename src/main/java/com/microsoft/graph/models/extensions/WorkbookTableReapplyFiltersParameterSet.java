@@ -44,6 +44,9 @@ public class WorkbookTableReapplyFiltersParameterSet {
      * Fluent builder for the WorkbookTableReapplyFiltersParameterSet
      */
     public static final class WorkbookTableReapplyFiltersParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableReapplyFiltersParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableReapplyFiltersParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookRangeMergeParameterSet {
             this.across = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeMergeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeMergeParameterSetBuilder(){}
         /**

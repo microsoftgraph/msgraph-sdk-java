@@ -69,6 +69,9 @@ public class WorkbookFunctionsTrimParameterSet {
             this.text = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTrimParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTrimParameterSetBuilder(){}
         /**

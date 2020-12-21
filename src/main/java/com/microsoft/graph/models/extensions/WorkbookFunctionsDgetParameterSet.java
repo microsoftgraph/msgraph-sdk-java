@@ -119,6 +119,9 @@ public class WorkbookFunctionsDgetParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDgetParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDgetParameterSetBuilder(){}
         /**

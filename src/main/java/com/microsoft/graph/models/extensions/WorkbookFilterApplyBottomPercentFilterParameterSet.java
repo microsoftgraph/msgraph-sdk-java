@@ -69,6 +69,9 @@ public class WorkbookFilterApplyBottomPercentFilterParameterSet {
             this.percent = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyBottomPercentFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyBottomPercentFilterParameterSetBuilder(){}
         /**

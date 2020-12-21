@@ -69,6 +69,9 @@ public class ReportRootGetSharePointActivityPagesParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSharePointActivityPagesParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSharePointActivityPagesParameterSetBuilder(){}
         /**

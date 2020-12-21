@@ -144,6 +144,9 @@ public class WorkbookFunctionsSydParameterSet {
             this.per = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSydParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSydParameterSetBuilder(){}
         /**

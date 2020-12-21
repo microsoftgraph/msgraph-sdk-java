@@ -94,6 +94,9 @@ public class WorkbookFunctionsPermutationaParameterSet {
             this.numberChosen = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPermutationaParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPermutationaParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsDec2HexParameterSet {
             this.places = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDec2HexParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDec2HexParameterSetBuilder(){}
         /**

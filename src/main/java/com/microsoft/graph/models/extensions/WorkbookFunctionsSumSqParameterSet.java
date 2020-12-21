@@ -69,6 +69,9 @@ public class WorkbookFunctionsSumSqParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSumSqParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSumSqParameterSetBuilder(){}
         /**

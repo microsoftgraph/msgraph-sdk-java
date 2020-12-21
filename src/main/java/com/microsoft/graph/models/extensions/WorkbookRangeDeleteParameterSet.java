@@ -69,6 +69,9 @@ public class WorkbookRangeDeleteParameterSet {
             this.shift = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeDeleteParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeDeleteParameterSetBuilder(){}
         /**

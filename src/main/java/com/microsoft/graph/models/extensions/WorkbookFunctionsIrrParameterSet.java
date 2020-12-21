@@ -94,6 +94,9 @@ public class WorkbookFunctionsIrrParameterSet {
             this.guess = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIrrParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIrrParameterSetBuilder(){}
         /**

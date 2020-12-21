@@ -69,6 +69,9 @@ public class WorkbookFunctionsIsNonTextParameterSet {
             this.value = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIsNonTextParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIsNonTextParameterSetBuilder(){}
         /**

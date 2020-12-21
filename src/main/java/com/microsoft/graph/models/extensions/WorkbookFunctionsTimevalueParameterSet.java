@@ -69,6 +69,9 @@ public class WorkbookFunctionsTimevalueParameterSet {
             this.timeText = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTimevalueParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTimevalueParameterSetBuilder(){}
         /**

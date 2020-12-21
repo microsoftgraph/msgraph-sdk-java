@@ -194,6 +194,9 @@ public class WorkbookFunctionsPpmtParameterSet {
             this.type = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPpmtParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPpmtParameterSetBuilder(){}
         /**

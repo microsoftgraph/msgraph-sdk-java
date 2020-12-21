@@ -44,6 +44,9 @@ public class ReportRootDeviceConfigurationDeviceActivityParameterSet {
      * Fluent builder for the ReportRootDeviceConfigurationDeviceActivityParameterSet
      */
     public static final class ReportRootDeviceConfigurationDeviceActivityParameterSetBuilder {
+        /**
+         * Instanciates a new ReportRootDeviceConfigurationDeviceActivityParameterSetBuilder
+         */
         @Nullable
         protected ReportRootDeviceConfigurationDeviceActivityParameterSetBuilder(){}
         /**

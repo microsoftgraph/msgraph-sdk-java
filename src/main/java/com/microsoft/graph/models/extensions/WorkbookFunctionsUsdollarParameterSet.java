@@ -94,6 +94,9 @@ public class WorkbookFunctionsUsdollarParameterSet {
             this.decimals = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsUsdollarParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsUsdollarParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSkypeForBusinessDeviceUsageUserDetailParameterSetBuilder(){}
         /**

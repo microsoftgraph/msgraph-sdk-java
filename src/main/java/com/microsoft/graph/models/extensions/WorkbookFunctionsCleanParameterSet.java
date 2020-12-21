@@ -69,6 +69,9 @@ public class WorkbookFunctionsCleanParameterSet {
             this.text = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCleanParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCleanParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsBahtTextParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBahtTextParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBahtTextParameterSetBuilder(){}
         /**

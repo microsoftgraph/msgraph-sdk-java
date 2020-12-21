@@ -44,6 +44,9 @@ public class WorkbookChartPointCountParameterSet {
      * Fluent builder for the WorkbookChartPointCountParameterSet
      */
     public static final class WorkbookChartPointCountParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookChartPointCountParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartPointCountParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsDec2OctParameterSet {
             this.places = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDec2OctParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDec2OctParameterSetBuilder(){}
         /**

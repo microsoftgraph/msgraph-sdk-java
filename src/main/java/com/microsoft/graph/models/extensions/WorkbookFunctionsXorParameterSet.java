@@ -69,6 +69,9 @@ public class WorkbookFunctionsXorParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsXorParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsXorParameterSetBuilder(){}
         /**

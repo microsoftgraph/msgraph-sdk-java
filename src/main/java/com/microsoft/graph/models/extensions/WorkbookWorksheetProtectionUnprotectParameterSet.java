@@ -44,6 +44,9 @@ public class WorkbookWorksheetProtectionUnprotectParameterSet {
      * Fluent builder for the WorkbookWorksheetProtectionUnprotectParameterSet
      */
     public static final class WorkbookWorksheetProtectionUnprotectParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookWorksheetProtectionUnprotectParameterSetBuilder
+         */
         @Nullable
         protected WorkbookWorksheetProtectionUnprotectParameterSetBuilder(){}
         /**

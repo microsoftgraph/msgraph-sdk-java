@@ -94,6 +94,9 @@ public class WorkbookFunctionsBitrshiftParameterSet {
             this.shiftAmount = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBitrshiftParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBitrshiftParameterSetBuilder(){}
         /**

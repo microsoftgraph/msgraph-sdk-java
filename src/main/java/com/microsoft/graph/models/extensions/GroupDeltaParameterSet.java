@@ -44,6 +44,9 @@ public class GroupDeltaParameterSet {
      * Fluent builder for the GroupDeltaParameterSet
      */
     public static final class GroupDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new GroupDeltaParameterSetBuilder
+         */
         @Nullable
         protected GroupDeltaParameterSetBuilder(){}
         /**

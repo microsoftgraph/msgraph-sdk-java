@@ -69,6 +69,9 @@ public class ReportRootGetOneDriveUsageAccountCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOneDriveUsageAccountCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOneDriveUsageAccountCountsParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsAbsParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAbsParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAbsParameterSetBuilder(){}
         /**

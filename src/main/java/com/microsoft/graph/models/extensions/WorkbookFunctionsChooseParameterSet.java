@@ -94,6 +94,9 @@ public class WorkbookFunctionsChooseParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsChooseParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsChooseParameterSetBuilder(){}
         /**

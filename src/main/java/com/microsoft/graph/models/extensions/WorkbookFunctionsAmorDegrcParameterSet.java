@@ -219,6 +219,9 @@ public class WorkbookFunctionsAmorDegrcParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAmorDegrcParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAmorDegrcParameterSetBuilder(){}
         /**

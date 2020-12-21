@@ -119,6 +119,9 @@ public class WorkbookFunctionsPdurationParameterSet {
             this.fv = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPdurationParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPdurationParameterSetBuilder(){}
         /**

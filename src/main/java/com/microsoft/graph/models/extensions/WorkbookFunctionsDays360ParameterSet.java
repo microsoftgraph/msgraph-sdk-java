@@ -119,6 +119,9 @@ public class WorkbookFunctionsDays360ParameterSet {
             this.method = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDays360ParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDays360ParameterSetBuilder(){}
         /**

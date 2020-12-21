@@ -69,6 +69,9 @@ public class WorkbookChartSeriesItemAtParameterSet {
             this.index = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookChartSeriesItemAtParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartSeriesItemAtParameterSetBuilder(){}
         /**

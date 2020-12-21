@@ -44,6 +44,9 @@ public class ListItemGetActivitiesByIntervalParameterSet {
      * Fluent builder for the ListItemGetActivitiesByIntervalParameterSet
      */
     public static final class ListItemGetActivitiesByIntervalParameterSetBuilder {
+        /**
+         * Instanciates a new ListItemGetActivitiesByIntervalParameterSetBuilder
+         */
         @Nullable
         protected ListItemGetActivitiesByIntervalParameterSetBuilder(){}
         /**

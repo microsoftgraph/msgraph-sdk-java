@@ -44,6 +44,9 @@ public class WorkbookFunctionsTodayParameterSet {
      * Fluent builder for the WorkbookFunctionsTodayParameterSet
      */
     public static final class WorkbookFunctionsTodayParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookFunctionsTodayParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTodayParameterSetBuilder(){}
         /**

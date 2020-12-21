@@ -44,6 +44,9 @@ public class GroupRemoveFavoriteParameterSet {
      * Fluent builder for the GroupRemoveFavoriteParameterSet
      */
     public static final class GroupRemoveFavoriteParameterSetBuilder {
+        /**
+         * Instanciates a new GroupRemoveFavoriteParameterSetBuilder
+         */
         @Nullable
         protected GroupRemoveFavoriteParameterSetBuilder(){}
         /**

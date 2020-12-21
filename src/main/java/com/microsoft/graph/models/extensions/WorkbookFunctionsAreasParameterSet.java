@@ -69,6 +69,9 @@ public class WorkbookFunctionsAreasParameterSet {
             this.reference = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAreasParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAreasParameterSetBuilder(){}
         /**

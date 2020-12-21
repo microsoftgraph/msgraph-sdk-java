@@ -69,6 +69,9 @@ public class ReportRootGetYammerActivityUserDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetYammerActivityUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetYammerActivityUserDetailParameterSetBuilder(){}
         /**

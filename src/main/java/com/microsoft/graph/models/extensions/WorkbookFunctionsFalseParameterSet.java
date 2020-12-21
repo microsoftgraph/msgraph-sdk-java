@@ -44,6 +44,9 @@ public class WorkbookFunctionsFalseParameterSet {
      * Fluent builder for the WorkbookFunctionsFalseParameterSet
      */
     public static final class WorkbookFunctionsFalseParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookFunctionsFalseParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsFalseParameterSetBuilder(){}
         /**

@@ -144,6 +144,9 @@ public class WorkbookFunctionsReplaceBParameterSet {
             this.newText = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsReplaceBParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsReplaceBParameterSetBuilder(){}
         /**

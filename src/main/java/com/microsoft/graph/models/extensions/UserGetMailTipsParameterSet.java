@@ -96,6 +96,9 @@ public class UserGetMailTipsParameterSet {
             this.mailTipsOptions = val;
             return this;
         }
+        /**
+         * Instanciates a new UserGetMailTipsParameterSetBuilder
+         */
         @Nullable
         protected UserGetMailTipsParameterSetBuilder(){}
         /**

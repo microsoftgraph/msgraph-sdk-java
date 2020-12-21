@@ -44,6 +44,9 @@ public class WorkbookPivotTableRefreshParameterSet {
      * Fluent builder for the WorkbookPivotTableRefreshParameterSet
      */
     public static final class WorkbookPivotTableRefreshParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookPivotTableRefreshParameterSetBuilder
+         */
         @Nullable
         protected WorkbookPivotTableRefreshParameterSetBuilder(){}
         /**

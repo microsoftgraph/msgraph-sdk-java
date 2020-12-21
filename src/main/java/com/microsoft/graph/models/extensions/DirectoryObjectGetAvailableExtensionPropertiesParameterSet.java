@@ -69,6 +69,9 @@ public class DirectoryObjectGetAvailableExtensionPropertiesParameterSet {
             this.isSyncedFromOnPremises = val;
             return this;
         }
+        /**
+         * Instanciates a new DirectoryObjectGetAvailableExtensionPropertiesParameterSetBuilder
+         */
         @Nullable
         protected DirectoryObjectGetAvailableExtensionPropertiesParameterSetBuilder(){}
         /**

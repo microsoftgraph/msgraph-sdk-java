@@ -44,6 +44,9 @@ public class DriveItemVersionRestoreVersionParameterSet {
      * Fluent builder for the DriveItemVersionRestoreVersionParameterSet
      */
     public static final class DriveItemVersionRestoreVersionParameterSetBuilder {
+        /**
+         * Instanciates a new DriveItemVersionRestoreVersionParameterSetBuilder
+         */
         @Nullable
         protected DriveItemVersionRestoreVersionParameterSetBuilder(){}
         /**

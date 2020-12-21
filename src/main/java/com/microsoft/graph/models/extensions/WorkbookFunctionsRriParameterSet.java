@@ -119,6 +119,9 @@ public class WorkbookFunctionsRriParameterSet {
             this.fv = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRriParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRriParameterSetBuilder(){}
         /**

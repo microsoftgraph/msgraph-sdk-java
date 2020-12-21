@@ -119,6 +119,9 @@ public class WorkbookFunctionsFloor_MathParameterSet {
             this.mode = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsFloor_MathParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsFloor_MathParameterSetBuilder(){}
         /**

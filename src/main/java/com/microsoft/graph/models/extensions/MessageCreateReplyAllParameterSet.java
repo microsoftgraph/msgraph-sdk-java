@@ -94,6 +94,9 @@ public class MessageCreateReplyAllParameterSet {
             this.comment = val;
             return this;
         }
+        /**
+         * Instanciates a new MessageCreateReplyAllParameterSetBuilder
+         */
         @Nullable
         protected MessageCreateReplyAllParameterSetBuilder(){}
         /**

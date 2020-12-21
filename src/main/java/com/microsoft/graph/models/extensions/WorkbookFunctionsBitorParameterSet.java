@@ -94,6 +94,9 @@ public class WorkbookFunctionsBitorParameterSet {
             this.number2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBitorParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBitorParameterSetBuilder(){}
         /**

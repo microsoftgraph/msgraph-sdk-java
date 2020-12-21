@@ -69,6 +69,9 @@ public class ReportRootGetSharePointActivityFileCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSharePointActivityFileCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSharePointActivityFileCountsParameterSetBuilder(){}
         /**

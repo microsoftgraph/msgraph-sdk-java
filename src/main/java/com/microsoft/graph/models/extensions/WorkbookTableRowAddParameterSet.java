@@ -94,6 +94,9 @@ public class WorkbookTableRowAddParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookTableRowAddParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableRowAddParameterSetBuilder(){}
         /**

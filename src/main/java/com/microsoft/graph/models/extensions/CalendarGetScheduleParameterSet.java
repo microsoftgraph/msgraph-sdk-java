@@ -145,6 +145,9 @@ public class CalendarGetScheduleParameterSet {
             this.availabilityViewInterval = val;
             return this;
         }
+        /**
+         * Instanciates a new CalendarGetScheduleParameterSetBuilder
+         */
         @Nullable
         protected CalendarGetScheduleParameterSetBuilder(){}
         /**

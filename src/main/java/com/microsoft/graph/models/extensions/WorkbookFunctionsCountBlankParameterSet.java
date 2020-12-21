@@ -69,6 +69,9 @@ public class WorkbookFunctionsCountBlankParameterSet {
             this.range = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCountBlankParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCountBlankParameterSetBuilder(){}
         /**

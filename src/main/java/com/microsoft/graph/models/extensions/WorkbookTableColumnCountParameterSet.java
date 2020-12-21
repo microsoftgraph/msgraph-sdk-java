@@ -44,6 +44,9 @@ public class WorkbookTableColumnCountParameterSet {
      * Fluent builder for the WorkbookTableColumnCountParameterSet
      */
     public static final class WorkbookTableColumnCountParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableColumnCountParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableColumnCountParameterSetBuilder(){}
         /**

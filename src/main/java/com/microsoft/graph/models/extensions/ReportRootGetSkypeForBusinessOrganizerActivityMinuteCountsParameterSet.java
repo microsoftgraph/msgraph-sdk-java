@@ -69,6 +69,9 @@ public class ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsParameter
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsParameterSetBuilder(){}
         /**

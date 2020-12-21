@@ -44,6 +44,9 @@ public class ChatGetAllMessagesParameterSet {
      * Fluent builder for the ChatGetAllMessagesParameterSet
      */
     public static final class ChatGetAllMessagesParameterSetBuilder {
+        /**
+         * Instanciates a new ChatGetAllMessagesParameterSetBuilder
+         */
         @Nullable
         protected ChatGetAllMessagesParameterSetBuilder(){}
         /**

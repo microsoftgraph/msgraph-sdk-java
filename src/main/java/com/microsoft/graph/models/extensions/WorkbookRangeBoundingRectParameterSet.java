@@ -69,6 +69,9 @@ public class WorkbookRangeBoundingRectParameterSet {
             this.anotherRange = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeBoundingRectParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeBoundingRectParameterSetBuilder(){}
         /**

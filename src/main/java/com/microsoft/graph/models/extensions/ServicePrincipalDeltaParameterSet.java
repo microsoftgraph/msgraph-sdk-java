@@ -44,6 +44,9 @@ public class ServicePrincipalDeltaParameterSet {
      * Fluent builder for the ServicePrincipalDeltaParameterSet
      */
     public static final class ServicePrincipalDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new ServicePrincipalDeltaParameterSetBuilder
+         */
         @Nullable
         protected ServicePrincipalDeltaParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class WorkbookFunctionsTrueParameterSet {
      * Fluent builder for the WorkbookFunctionsTrueParameterSet
      */
     public static final class WorkbookFunctionsTrueParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookFunctionsTrueParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTrueParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class WorkbookChartFillClearParameterSet {
      * Fluent builder for the WorkbookChartFillClearParameterSet
      */
     public static final class WorkbookChartFillClearParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookChartFillClearParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartFillClearParameterSetBuilder(){}
         /**

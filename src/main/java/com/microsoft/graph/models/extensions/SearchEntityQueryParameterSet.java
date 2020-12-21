@@ -70,6 +70,9 @@ public class SearchEntityQueryParameterSet {
             this.requests = val;
             return this;
         }
+        /**
+         * Instanciates a new SearchEntityQueryParameterSetBuilder
+         */
         @Nullable
         protected SearchEntityQueryParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsExpParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsExpParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsExpParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class WorkbookCloseSessionParameterSet {
      * Fluent builder for the WorkbookCloseSessionParameterSet
      */
     public static final class WorkbookCloseSessionParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookCloseSessionParameterSetBuilder
+         */
         @Nullable
         protected WorkbookCloseSessionParameterSetBuilder(){}
         /**

@@ -119,6 +119,9 @@ public class GroupValidatePropertiesParameterSet {
             this.onBehalfOfUserId = val;
             return this;
         }
+        /**
+         * Instanciates a new GroupValidatePropertiesParameterSetBuilder
+         */
         @Nullable
         protected GroupValidatePropertiesParameterSetBuilder(){}
         /**

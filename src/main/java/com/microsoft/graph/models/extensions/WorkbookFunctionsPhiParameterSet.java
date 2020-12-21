@@ -69,6 +69,9 @@ public class WorkbookFunctionsPhiParameterSet {
             this.x = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPhiParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPhiParameterSetBuilder(){}
         /**

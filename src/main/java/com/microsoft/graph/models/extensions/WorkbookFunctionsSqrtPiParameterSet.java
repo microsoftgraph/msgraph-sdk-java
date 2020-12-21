@@ -69,6 +69,9 @@ public class WorkbookFunctionsSqrtPiParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSqrtPiParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSqrtPiParameterSetBuilder(){}
         /**

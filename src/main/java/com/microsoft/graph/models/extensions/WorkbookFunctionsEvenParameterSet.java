@@ -69,6 +69,9 @@ public class WorkbookFunctionsEvenParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsEvenParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsEvenParameterSetBuilder(){}
         /**

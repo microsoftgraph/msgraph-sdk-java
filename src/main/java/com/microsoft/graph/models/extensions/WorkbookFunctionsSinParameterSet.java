@@ -69,6 +69,9 @@ public class WorkbookFunctionsSinParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSinParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSinParameterSetBuilder(){}
         /**

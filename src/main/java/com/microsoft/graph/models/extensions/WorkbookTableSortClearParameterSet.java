@@ -44,6 +44,9 @@ public class WorkbookTableSortClearParameterSet {
      * Fluent builder for the WorkbookTableSortClearParameterSet
      */
     public static final class WorkbookTableSortClearParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableSortClearParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableSortClearParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsEoMonthParameterSet {
             this.months = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsEoMonthParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsEoMonthParameterSetBuilder(){}
         /**

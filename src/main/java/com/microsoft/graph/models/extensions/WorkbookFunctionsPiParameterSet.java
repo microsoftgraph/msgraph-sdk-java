@@ -44,6 +44,9 @@ public class WorkbookFunctionsPiParameterSet {
      * Fluent builder for the WorkbookFunctionsPiParameterSet
      */
     public static final class WorkbookFunctionsPiParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookFunctionsPiParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPiParameterSetBuilder(){}
         /**

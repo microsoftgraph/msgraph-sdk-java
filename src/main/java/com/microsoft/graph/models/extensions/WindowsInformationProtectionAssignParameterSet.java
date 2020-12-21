@@ -69,6 +69,9 @@ public class WindowsInformationProtectionAssignParameterSet {
             this.assignments = val;
             return this;
         }
+        /**
+         * Instanciates a new WindowsInformationProtectionAssignParameterSetBuilder
+         */
         @Nullable
         protected WindowsInformationProtectionAssignParameterSetBuilder(){}
         /**

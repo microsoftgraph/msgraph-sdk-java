@@ -69,6 +69,9 @@ public class WorkbookFunctionsImSechParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImSechParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImSechParameterSetBuilder(){}
         /**

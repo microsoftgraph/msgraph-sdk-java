@@ -94,6 +94,9 @@ public class WorkbookFunctionsQuartile_ExcParameterSet {
             this.quart = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsQuartile_ExcParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsQuartile_ExcParameterSetBuilder(){}
         /**

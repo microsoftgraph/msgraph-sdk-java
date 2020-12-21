@@ -119,6 +119,9 @@ public class WorkbookFunctionsComplexParameterSet {
             this.suffix = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsComplexParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsComplexParameterSetBuilder(){}
         /**

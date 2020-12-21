@@ -44,6 +44,9 @@ public class DriveItemCheckoutParameterSet {
      * Fluent builder for the DriveItemCheckoutParameterSet
      */
     public static final class DriveItemCheckoutParameterSetBuilder {
+        /**
+         * Instanciates a new DriveItemCheckoutParameterSetBuilder
+         */
         @Nullable
         protected DriveItemCheckoutParameterSetBuilder(){}
         /**

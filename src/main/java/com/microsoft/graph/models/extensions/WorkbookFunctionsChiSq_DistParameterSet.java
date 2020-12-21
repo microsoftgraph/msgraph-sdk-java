@@ -119,6 +119,9 @@ public class WorkbookFunctionsChiSq_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsChiSq_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsChiSq_DistParameterSetBuilder(){}
         /**

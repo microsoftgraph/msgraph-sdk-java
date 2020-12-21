@@ -95,6 +95,9 @@ public class UserAssignLicenseParameterSet {
             this.removeLicenses = val;
             return this;
         }
+        /**
+         * Instanciates a new UserAssignLicenseParameterSetBuilder
+         */
         @Nullable
         protected UserAssignLicenseParameterSetBuilder(){}
         /**

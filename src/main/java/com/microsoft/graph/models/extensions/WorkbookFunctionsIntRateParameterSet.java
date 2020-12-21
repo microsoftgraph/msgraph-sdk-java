@@ -169,6 +169,9 @@ public class WorkbookFunctionsIntRateParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIntRateParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIntRateParameterSetBuilder(){}
         /**

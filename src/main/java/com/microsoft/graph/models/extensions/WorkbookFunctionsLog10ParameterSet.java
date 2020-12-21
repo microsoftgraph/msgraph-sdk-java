@@ -69,6 +69,9 @@ public class WorkbookFunctionsLog10ParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsLog10ParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsLog10ParameterSetBuilder(){}
         /**

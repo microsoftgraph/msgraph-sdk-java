@@ -94,6 +94,9 @@ public class PostForwardParameterSet {
             this.toRecipients = val;
             return this;
         }
+        /**
+         * Instanciates a new PostForwardParameterSetBuilder
+         */
         @Nullable
         protected PostForwardParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsNominalParameterSet {
             this.npery = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNominalParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNominalParameterSetBuilder(){}
         /**

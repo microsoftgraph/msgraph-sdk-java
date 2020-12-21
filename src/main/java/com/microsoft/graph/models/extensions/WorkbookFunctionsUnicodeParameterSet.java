@@ -69,6 +69,9 @@ public class WorkbookFunctionsUnicodeParameterSet {
             this.text = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsUnicodeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsUnicodeParameterSetBuilder(){}
         /**

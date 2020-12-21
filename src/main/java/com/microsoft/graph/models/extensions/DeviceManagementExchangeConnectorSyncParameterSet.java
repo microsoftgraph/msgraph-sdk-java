@@ -69,6 +69,9 @@ public class DeviceManagementExchangeConnectorSyncParameterSet {
             this.syncType = val;
             return this;
         }
+        /**
+         * Instanciates a new DeviceManagementExchangeConnectorSyncParameterSetBuilder
+         */
         @Nullable
         protected DeviceManagementExchangeConnectorSyncParameterSetBuilder(){}
         /**

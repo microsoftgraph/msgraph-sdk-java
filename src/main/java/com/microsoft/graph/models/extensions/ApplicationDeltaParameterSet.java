@@ -44,6 +44,9 @@ public class ApplicationDeltaParameterSet {
      * Fluent builder for the ApplicationDeltaParameterSet
      */
     public static final class ApplicationDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new ApplicationDeltaParameterSetBuilder
+         */
         @Nullable
         protected ApplicationDeltaParameterSetBuilder(){}
         /**

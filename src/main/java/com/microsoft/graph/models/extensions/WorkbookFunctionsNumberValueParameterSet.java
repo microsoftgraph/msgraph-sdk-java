@@ -119,6 +119,9 @@ public class WorkbookFunctionsNumberValueParameterSet {
             this.groupSeparator = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNumberValueParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNumberValueParameterSetBuilder(){}
         /**

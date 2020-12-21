@@ -69,6 +69,9 @@ public class WorkbookFunctionsAtanhParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAtanhParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAtanhParameterSetBuilder(){}
         /**

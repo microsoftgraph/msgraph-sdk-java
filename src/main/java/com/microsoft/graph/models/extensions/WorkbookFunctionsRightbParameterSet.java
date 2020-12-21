@@ -94,6 +94,9 @@ public class WorkbookFunctionsRightbParameterSet {
             this.numBytes = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRightbParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRightbParameterSetBuilder(){}
         /**

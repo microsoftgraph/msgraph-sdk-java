@@ -44,6 +44,9 @@ public class GroupResetUnseenCountParameterSet {
      * Fluent builder for the GroupResetUnseenCountParameterSet
      */
     public static final class GroupResetUnseenCountParameterSetBuilder {
+        /**
+         * Instanciates a new GroupResetUnseenCountParameterSetBuilder
+         */
         @Nullable
         protected GroupResetUnseenCountParameterSetBuilder(){}
         /**

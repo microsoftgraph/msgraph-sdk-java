@@ -44,6 +44,9 @@ public class ManagedDeviceRequestRemoteAssistanceParameterSet {
      * Fluent builder for the ManagedDeviceRequestRemoteAssistanceParameterSet
      */
     public static final class ManagedDeviceRequestRemoteAssistanceParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceRequestRemoteAssistanceParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceRequestRemoteAssistanceParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class SiteAddParameterSet {
             this.value = val;
             return this;
         }
+        /**
+         * Instanciates a new SiteAddParameterSetBuilder
+         */
         @Nullable
         protected SiteAddParameterSetBuilder(){}
         /**

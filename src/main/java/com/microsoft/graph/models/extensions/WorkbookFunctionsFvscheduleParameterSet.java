@@ -94,6 +94,9 @@ public class WorkbookFunctionsFvscheduleParameterSet {
             this.schedule = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsFvscheduleParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsFvscheduleParameterSetBuilder(){}
         /**

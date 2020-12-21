@@ -94,6 +94,9 @@ public class WorkbookFunctionsBitxorParameterSet {
             this.number2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBitxorParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBitxorParameterSetBuilder(){}
         /**

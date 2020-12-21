@@ -94,6 +94,9 @@ public class WorkbookFunctionsDeltaParameterSet {
             this.number2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDeltaParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDeltaParameterSetBuilder(){}
         /**

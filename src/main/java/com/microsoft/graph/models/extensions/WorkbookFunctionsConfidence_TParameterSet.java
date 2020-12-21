@@ -119,6 +119,9 @@ public class WorkbookFunctionsConfidence_TParameterSet {
             this.size = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsConfidence_TParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsConfidence_TParameterSetBuilder(){}
         /**

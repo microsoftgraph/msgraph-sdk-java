@@ -119,6 +119,9 @@ public class WorkbookFunctionsDmaxParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDmaxParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDmaxParameterSetBuilder(){}
         /**

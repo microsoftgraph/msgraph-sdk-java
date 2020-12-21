@@ -94,6 +94,9 @@ public class WorkbookFunctionsNpvParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNpvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNpvParameterSetBuilder(){}
         /**

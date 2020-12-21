@@ -247,6 +247,9 @@ public class UserFindMeetingTimesParameterSet {
             this.minimumAttendeePercentage = val;
             return this;
         }
+        /**
+         * Instanciates a new UserFindMeetingTimesParameterSetBuilder
+         */
         @Nullable
         protected UserFindMeetingTimesParameterSetBuilder(){}
         /**

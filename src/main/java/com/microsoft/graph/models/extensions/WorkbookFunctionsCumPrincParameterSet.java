@@ -194,6 +194,9 @@ public class WorkbookFunctionsCumPrincParameterSet {
             this.type = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCumPrincParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCumPrincParameterSetBuilder(){}
         /**

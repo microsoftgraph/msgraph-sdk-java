@@ -69,6 +69,9 @@ public class ReportRootGetYammerDeviceUsageDistributionUserCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetYammerDeviceUsageDistributionUserCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetYammerDeviceUsageDistributionUserCountsParameterSetBuilder(){}
         /**

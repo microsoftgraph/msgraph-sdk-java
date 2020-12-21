@@ -44,6 +44,9 @@ public class MobileAppContentFileRenewUploadParameterSet {
      * Fluent builder for the MobileAppContentFileRenewUploadParameterSet
      */
     public static final class MobileAppContentFileRenewUploadParameterSetBuilder {
+        /**
+         * Instanciates a new MobileAppContentFileRenewUploadParameterSetBuilder
+         */
         @Nullable
         protected MobileAppContentFileRenewUploadParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsImLog2ParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImLog2ParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImLog2ParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsEcma_CeilingParameterSet {
             this.significance = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsEcma_CeilingParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsEcma_CeilingParameterSetBuilder(){}
         /**

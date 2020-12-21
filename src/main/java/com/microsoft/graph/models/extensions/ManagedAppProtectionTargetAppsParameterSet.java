@@ -69,6 +69,9 @@ public class ManagedAppProtectionTargetAppsParameterSet {
             this.apps = val;
             return this;
         }
+        /**
+         * Instanciates a new ManagedAppProtectionTargetAppsParameterSetBuilder
+         */
         @Nullable
         protected ManagedAppProtectionTargetAppsParameterSetBuilder(){}
         /**

@@ -119,6 +119,9 @@ public class WorkbookFunctionsFixedParameterSet {
             this.noCommas = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsFixedParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsFixedParameterSetBuilder(){}
         /**

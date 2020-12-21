@@ -69,6 +69,9 @@ public class DriveItemSearchParameterSet {
             this.q = val;
             return this;
         }
+        /**
+         * Instanciates a new DriveItemSearchParameterSetBuilder
+         */
         @Nullable
         protected DriveItemSearchParameterSetBuilder(){}
         /**

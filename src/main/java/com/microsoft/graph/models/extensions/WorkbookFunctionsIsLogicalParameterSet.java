@@ -69,6 +69,9 @@ public class WorkbookFunctionsIsLogicalParameterSet {
             this.value = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIsLogicalParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIsLogicalParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsAcoshParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAcoshParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAcoshParameterSetBuilder(){}
         /**

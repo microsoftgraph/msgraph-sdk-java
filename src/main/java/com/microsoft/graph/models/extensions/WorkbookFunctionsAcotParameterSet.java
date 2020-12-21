@@ -69,6 +69,9 @@ public class WorkbookFunctionsAcotParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAcotParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAcotParameterSetBuilder(){}
         /**

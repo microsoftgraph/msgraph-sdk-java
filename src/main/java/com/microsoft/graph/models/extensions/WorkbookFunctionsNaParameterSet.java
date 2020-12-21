@@ -44,6 +44,9 @@ public class WorkbookFunctionsNaParameterSet {
      * Fluent builder for the WorkbookFunctionsNaParameterSet
      */
     public static final class WorkbookFunctionsNaParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookFunctionsNaParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNaParameterSetBuilder(){}
         /**

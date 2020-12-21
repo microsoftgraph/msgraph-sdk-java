@@ -94,6 +94,9 @@ public class WorkbookFunctionsSmallParameterSet {
             this.k = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSmallParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSmallParameterSetBuilder(){}
         /**

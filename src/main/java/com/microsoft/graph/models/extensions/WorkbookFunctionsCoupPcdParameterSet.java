@@ -144,6 +144,9 @@ public class WorkbookFunctionsCoupPcdParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCoupPcdParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCoupPcdParameterSetBuilder(){}
         /**

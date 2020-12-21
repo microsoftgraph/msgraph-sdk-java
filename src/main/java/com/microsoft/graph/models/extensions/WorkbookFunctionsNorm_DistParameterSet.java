@@ -144,6 +144,9 @@ public class WorkbookFunctionsNorm_DistParameterSet {
             this.cumulative = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNorm_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNorm_DistParameterSetBuilder(){}
         /**

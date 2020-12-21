@@ -119,6 +119,9 @@ public class WorkbookFunctionsConvertParameterSet {
             this.toUnit = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsConvertParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsConvertParameterSetBuilder(){}
         /**

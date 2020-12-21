@@ -94,6 +94,9 @@ public class WorkbookFunctionsQuartile_IncParameterSet {
             this.quart = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsQuartile_IncParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsQuartile_IncParameterSetBuilder(){}
         /**

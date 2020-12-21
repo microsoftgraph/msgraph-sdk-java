@@ -119,6 +119,9 @@ public class WorkbookFunctionsRank_AvgParameterSet {
             this.order = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRank_AvgParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRank_AvgParameterSetBuilder(){}
         /**

@@ -44,6 +44,9 @@ public class WorkbookTableSortReapplyParameterSet {
      * Fluent builder for the WorkbookTableSortReapplyParameterSet
      */
     public static final class WorkbookTableSortReapplyParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableSortReapplyParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableSortReapplyParameterSetBuilder(){}
         /**

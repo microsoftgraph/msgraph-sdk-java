@@ -144,6 +144,9 @@ public class WorkbookFunctionsBinom_Dist_RangeParameterSet {
             this.numberS2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBinom_Dist_RangeParameterSetBuilder(){}
         /**

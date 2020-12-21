@@ -44,6 +44,9 @@ public class WorkbookRangeLastColumnParameterSet {
      * Fluent builder for the WorkbookRangeLastColumnParameterSet
      */
     public static final class WorkbookRangeLastColumnParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeLastColumnParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeLastColumnParameterSetBuilder(){}
         /**

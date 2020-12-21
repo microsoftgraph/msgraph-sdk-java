@@ -119,6 +119,9 @@ public class ManagedDeviceWipeParameterSet {
             this.macOsUnlockCode = val;
             return this;
         }
+        /**
+         * Instanciates a new ManagedDeviceWipeParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceWipeParameterSetBuilder(){}
         /**

@@ -169,6 +169,9 @@ public class WorkbookFunctionsPriceDiscParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsPriceDiscParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsPriceDiscParameterSetBuilder(){}
         /**

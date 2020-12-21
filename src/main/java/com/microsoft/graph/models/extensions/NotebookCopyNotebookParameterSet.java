@@ -169,6 +169,9 @@ public class NotebookCopyNotebookParameterSet {
             this.siteId = val;
             return this;
         }
+        /**
+         * Instanciates a new NotebookCopyNotebookParameterSetBuilder
+         */
         @Nullable
         protected NotebookCopyNotebookParameterSetBuilder(){}
         /**

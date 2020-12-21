@@ -44,6 +44,9 @@ public class OutlookUserSupportedTimeZonesParameterSet {
      * Fluent builder for the OutlookUserSupportedTimeZonesParameterSet
      */
     public static final class OutlookUserSupportedTimeZonesParameterSetBuilder {
+        /**
+         * Instanciates a new OutlookUserSupportedTimeZonesParameterSetBuilder
+         */
         @Nullable
         protected OutlookUserSupportedTimeZonesParameterSetBuilder(){}
         /**

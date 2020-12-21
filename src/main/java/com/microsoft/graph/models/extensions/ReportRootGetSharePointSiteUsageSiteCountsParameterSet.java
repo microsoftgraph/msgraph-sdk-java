@@ -69,6 +69,9 @@ public class ReportRootGetSharePointSiteUsageSiteCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetSharePointSiteUsageSiteCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetSharePointSiteUsageSiteCountsParameterSetBuilder(){}
         /**

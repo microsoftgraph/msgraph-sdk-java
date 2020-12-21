@@ -169,6 +169,9 @@ public class WorkbookFunctionsAccrIntMParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAccrIntMParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAccrIntMParameterSetBuilder(){}
         /**

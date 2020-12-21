@@ -44,6 +44,9 @@ public class WorkbookTableRowCountParameterSet {
      * Fluent builder for the WorkbookTableRowCountParameterSet
      */
     public static final class WorkbookTableRowCountParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookTableRowCountParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableRowCountParameterSetBuilder(){}
         /**

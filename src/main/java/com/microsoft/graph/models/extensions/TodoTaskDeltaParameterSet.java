@@ -44,6 +44,9 @@ public class TodoTaskDeltaParameterSet {
      * Fluent builder for the TodoTaskDeltaParameterSet
      */
     public static final class TodoTaskDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new TodoTaskDeltaParameterSetBuilder
+         */
         @Nullable
         protected TodoTaskDeltaParameterSetBuilder(){}
         /**

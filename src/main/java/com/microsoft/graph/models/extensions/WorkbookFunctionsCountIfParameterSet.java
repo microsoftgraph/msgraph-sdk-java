@@ -94,6 +94,9 @@ public class WorkbookFunctionsCountIfParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCountIfParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCountIfParameterSetBuilder(){}
         /**

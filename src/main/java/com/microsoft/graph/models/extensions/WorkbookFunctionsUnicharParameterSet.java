@@ -69,6 +69,9 @@ public class WorkbookFunctionsUnicharParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsUnicharParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsUnicharParameterSetBuilder(){}
         /**

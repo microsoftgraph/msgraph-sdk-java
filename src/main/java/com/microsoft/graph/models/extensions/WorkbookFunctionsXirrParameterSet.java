@@ -119,6 +119,9 @@ public class WorkbookFunctionsXirrParameterSet {
             this.guess = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsXirrParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsXirrParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookChartFillSetSolidColorParameterSet {
             this.color = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookChartFillSetSolidColorParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartFillSetSolidColorParameterSetBuilder(){}
         /**

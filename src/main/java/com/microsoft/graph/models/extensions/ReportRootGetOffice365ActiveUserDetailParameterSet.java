@@ -69,6 +69,9 @@ public class ReportRootGetOffice365ActiveUserDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOffice365ActiveUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOffice365ActiveUserDetailParameterSetBuilder(){}
         /**

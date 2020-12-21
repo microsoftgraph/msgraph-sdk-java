@@ -119,6 +119,9 @@ public class WorkbookChartAddParameterSet {
             this.seriesBy = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookChartAddParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartAddParameterSetBuilder(){}
         /**

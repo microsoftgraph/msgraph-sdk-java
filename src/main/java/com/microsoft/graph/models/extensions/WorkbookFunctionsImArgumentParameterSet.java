@@ -69,6 +69,9 @@ public class WorkbookFunctionsImArgumentParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImArgumentParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImArgumentParameterSetBuilder(){}
         /**

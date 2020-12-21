@@ -69,6 +69,9 @@ public class DirectoryObjectGetMemberObjectsParameterSet {
             this.securityEnabledOnly = val;
             return this;
         }
+        /**
+         * Instanciates a new DirectoryObjectGetMemberObjectsParameterSetBuilder
+         */
         @Nullable
         protected DirectoryObjectGetMemberObjectsParameterSetBuilder(){}
         /**

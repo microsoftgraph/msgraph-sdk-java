@@ -44,6 +44,9 @@ public class UserGetManagedAppPoliciesParameterSet {
      * Fluent builder for the UserGetManagedAppPoliciesParameterSet
      */
     public static final class UserGetManagedAppPoliciesParameterSetBuilder {
+        /**
+         * Instanciates a new UserGetManagedAppPoliciesParameterSetBuilder
+         */
         @Nullable
         protected UserGetManagedAppPoliciesParameterSetBuilder(){}
         /**

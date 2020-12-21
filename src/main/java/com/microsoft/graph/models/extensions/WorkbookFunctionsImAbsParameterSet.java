@@ -69,6 +69,9 @@ public class WorkbookFunctionsImAbsParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImAbsParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImAbsParameterSetBuilder(){}
         /**

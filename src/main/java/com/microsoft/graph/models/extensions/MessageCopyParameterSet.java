@@ -69,6 +69,9 @@ public class MessageCopyParameterSet {
             this.destinationId = val;
             return this;
         }
+        /**
+         * Instanciates a new MessageCopyParameterSetBuilder
+         */
         @Nullable
         protected MessageCopyParameterSetBuilder(){}
         /**

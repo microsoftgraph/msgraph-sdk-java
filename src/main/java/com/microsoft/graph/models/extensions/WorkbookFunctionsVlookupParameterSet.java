@@ -144,6 +144,9 @@ public class WorkbookFunctionsVlookupParameterSet {
             this.rangeLookup = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsVlookupParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsVlookupParameterSetBuilder(){}
         /**

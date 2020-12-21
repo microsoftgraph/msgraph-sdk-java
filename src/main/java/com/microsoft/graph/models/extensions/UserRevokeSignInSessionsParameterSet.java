@@ -44,6 +44,9 @@ public class UserRevokeSignInSessionsParameterSet {
      * Fluent builder for the UserRevokeSignInSessionsParameterSet
      */
     public static final class UserRevokeSignInSessionsParameterSetBuilder {
+        /**
+         * Instanciates a new UserRevokeSignInSessionsParameterSetBuilder
+         */
         @Nullable
         protected UserRevokeSignInSessionsParameterSetBuilder(){}
         /**

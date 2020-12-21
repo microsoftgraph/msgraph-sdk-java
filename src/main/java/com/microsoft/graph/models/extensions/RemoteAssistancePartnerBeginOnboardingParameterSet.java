@@ -44,6 +44,9 @@ public class RemoteAssistancePartnerBeginOnboardingParameterSet {
      * Fluent builder for the RemoteAssistancePartnerBeginOnboardingParameterSet
      */
     public static final class RemoteAssistancePartnerBeginOnboardingParameterSetBuilder {
+        /**
+         * Instanciates a new RemoteAssistancePartnerBeginOnboardingParameterSetBuilder
+         */
         @Nullable
         protected RemoteAssistancePartnerBeginOnboardingParameterSetBuilder(){}
         /**

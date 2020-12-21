@@ -94,6 +94,9 @@ public class WorkbookFunctionsEdateParameterSet {
             this.months = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsEdateParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsEdateParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class OnenotePageOnenotePatchContentParameterSet {
             this.commands = val;
             return this;
         }
+        /**
+         * Instanciates a new OnenotePageOnenotePatchContentParameterSetBuilder
+         */
         @Nullable
         protected OnenotePageOnenotePatchContentParameterSetBuilder(){}
         /**

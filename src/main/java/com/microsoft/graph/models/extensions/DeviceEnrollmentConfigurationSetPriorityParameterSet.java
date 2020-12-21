@@ -69,6 +69,9 @@ public class DeviceEnrollmentConfigurationSetPriorityParameterSet {
             this.priority = val;
             return this;
         }
+        /**
+         * Instanciates a new DeviceEnrollmentConfigurationSetPriorityParameterSetBuilder
+         */
         @Nullable
         protected DeviceEnrollmentConfigurationSetPriorityParameterSetBuilder(){}
         /**

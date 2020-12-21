@@ -169,6 +169,9 @@ public class WorkbookFunctionsDbParameterSet {
             this.month = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDbParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDbParameterSetBuilder(){}
         /**

@@ -119,6 +119,9 @@ public class WorkbookFunctionsTbillYieldParameterSet {
             this.pr = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsTbillYieldParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsTbillYieldParameterSetBuilder(){}
         /**

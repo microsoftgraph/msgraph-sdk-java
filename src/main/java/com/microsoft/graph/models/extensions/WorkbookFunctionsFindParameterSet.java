@@ -119,6 +119,9 @@ public class WorkbookFunctionsFindParameterSet {
             this.startNum = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsFindParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsFindParameterSetBuilder(){}
         /**

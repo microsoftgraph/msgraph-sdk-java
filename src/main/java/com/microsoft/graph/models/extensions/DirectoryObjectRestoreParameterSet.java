@@ -44,6 +44,9 @@ public class DirectoryObjectRestoreParameterSet {
      * Fluent builder for the DirectoryObjectRestoreParameterSet
      */
     public static final class DirectoryObjectRestoreParameterSetBuilder {
+        /**
+         * Instanciates a new DirectoryObjectRestoreParameterSetBuilder
+         */
         @Nullable
         protected DirectoryObjectRestoreParameterSetBuilder(){}
         /**

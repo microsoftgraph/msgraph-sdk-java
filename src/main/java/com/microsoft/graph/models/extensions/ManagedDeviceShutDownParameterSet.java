@@ -44,6 +44,9 @@ public class ManagedDeviceShutDownParameterSet {
      * Fluent builder for the ManagedDeviceShutDownParameterSet
      */
     public static final class ManagedDeviceShutDownParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceShutDownParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceShutDownParameterSetBuilder(){}
         /**

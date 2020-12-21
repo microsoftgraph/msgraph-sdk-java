@@ -69,6 +69,9 @@ public class WorkbookFunctionsMaxParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMaxParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMaxParameterSetBuilder(){}
         /**

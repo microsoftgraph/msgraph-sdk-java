@@ -44,6 +44,9 @@ public class ManagedDeviceLocateDeviceParameterSet {
      * Fluent builder for the ManagedDeviceLocateDeviceParameterSet
      */
     public static final class ManagedDeviceLocateDeviceParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceLocateDeviceParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceLocateDeviceParameterSetBuilder(){}
         /**

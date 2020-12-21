@@ -44,6 +44,9 @@ public class WorkbookRangeRowsAboveParameterSet {
      * Fluent builder for the WorkbookRangeRowsAboveParameterSet
      */
     public static final class WorkbookRangeRowsAboveParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeRowsAboveParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeRowsAboveParameterSetBuilder(){}
         /**

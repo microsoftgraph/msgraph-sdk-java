@@ -69,6 +69,9 @@ public class CloudCommunicationsGetPresencesByUserIdParameterSet {
             this.ids = val;
             return this;
         }
+        /**
+         * Instanciates a new CloudCommunicationsGetPresencesByUserIdParameterSetBuilder
+         */
         @Nullable
         protected CloudCommunicationsGetPresencesByUserIdParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookFunctionsKurtParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsKurtParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsKurtParameterSetBuilder(){}
         /**

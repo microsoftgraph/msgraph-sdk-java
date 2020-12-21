@@ -44,6 +44,9 @@ public class OAuth2PermissionGrantDeltaParameterSet {
      * Fluent builder for the OAuth2PermissionGrantDeltaParameterSet
      */
     public static final class OAuth2PermissionGrantDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new OAuth2PermissionGrantDeltaParameterSetBuilder
+         */
         @Nullable
         protected OAuth2PermissionGrantDeltaParameterSetBuilder(){}
         /**

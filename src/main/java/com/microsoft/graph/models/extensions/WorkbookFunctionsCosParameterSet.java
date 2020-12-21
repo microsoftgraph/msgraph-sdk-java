@@ -69,6 +69,9 @@ public class WorkbookFunctionsCosParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCosParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCosParameterSetBuilder(){}
         /**

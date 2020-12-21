@@ -69,6 +69,9 @@ public class DeviceCompliancePolicyScheduleActionsForRulesParameterSet {
             this.deviceComplianceScheduledActionForRules = val;
             return this;
         }
+        /**
+         * Instanciates a new DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder
+         */
         @Nullable
         protected DeviceCompliancePolicyScheduleActionsForRulesParameterSetBuilder(){}
         /**

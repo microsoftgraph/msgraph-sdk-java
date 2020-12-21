@@ -44,6 +44,9 @@ public class DriveItemDeltaParameterSet {
      * Fluent builder for the DriveItemDeltaParameterSet
      */
     public static final class DriveItemDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new DriveItemDeltaParameterSetBuilder
+         */
         @Nullable
         protected DriveItemDeltaParameterSetBuilder(){}
         /**

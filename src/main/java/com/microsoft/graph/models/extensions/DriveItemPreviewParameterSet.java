@@ -94,6 +94,9 @@ public class DriveItemPreviewParameterSet {
             this.zoom = val;
             return this;
         }
+        /**
+         * Instanciates a new DriveItemPreviewParameterSetBuilder
+         */
         @Nullable
         protected DriveItemPreviewParameterSetBuilder(){}
         /**

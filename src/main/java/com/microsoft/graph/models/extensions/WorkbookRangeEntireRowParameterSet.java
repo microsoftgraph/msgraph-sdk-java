@@ -44,6 +44,9 @@ public class WorkbookRangeEntireRowParameterSet {
      * Fluent builder for the WorkbookRangeEntireRowParameterSet
      */
     public static final class WorkbookRangeEntireRowParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeEntireRowParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeEntireRowParameterSetBuilder(){}
         /**

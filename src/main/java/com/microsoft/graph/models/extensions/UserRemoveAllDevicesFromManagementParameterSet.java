@@ -44,6 +44,9 @@ public class UserRemoveAllDevicesFromManagementParameterSet {
      * Fluent builder for the UserRemoveAllDevicesFromManagementParameterSet
      */
     public static final class UserRemoveAllDevicesFromManagementParameterSetBuilder {
+        /**
+         * Instanciates a new UserRemoveAllDevicesFromManagementParameterSetBuilder
+         */
         @Nullable
         protected UserRemoveAllDevicesFromManagementParameterSetBuilder(){}
         /**

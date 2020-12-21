@@ -69,6 +69,9 @@ public class WorkbookFunctionsAverageAParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAverageAParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAverageAParameterSetBuilder(){}
         /**

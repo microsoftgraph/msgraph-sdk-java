@@ -69,6 +69,9 @@ public class WorkbookFunctionsIsrefParameterSet {
             this.value = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIsrefParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIsrefParameterSetBuilder(){}
         /**

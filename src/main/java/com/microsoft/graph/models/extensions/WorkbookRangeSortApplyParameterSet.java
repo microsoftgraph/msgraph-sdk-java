@@ -169,6 +169,9 @@ public class WorkbookRangeSortApplyParameterSet {
             this.method = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeSortApplyParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeSortApplyParameterSetBuilder(){}
         /**

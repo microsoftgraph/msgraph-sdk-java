@@ -44,6 +44,9 @@ public class UserActivityRecentParameterSet {
      * Fluent builder for the UserActivityRecentParameterSet
      */
     public static final class UserActivityRecentParameterSetBuilder {
+        /**
+         * Instanciates a new UserActivityRecentParameterSetBuilder
+         */
         @Nullable
         protected UserActivityRecentParameterSetBuilder(){}
         /**

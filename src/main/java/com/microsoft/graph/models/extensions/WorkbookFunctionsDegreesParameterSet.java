@@ -69,6 +69,9 @@ public class WorkbookFunctionsDegreesParameterSet {
             this.angle = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDegreesParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDegreesParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class MailFolderMoveParameterSet {
             this.destinationId = val;
             return this;
         }
+        /**
+         * Instanciates a new MailFolderMoveParameterSetBuilder
+         */
         @Nullable
         protected MailFolderMoveParameterSetBuilder(){}
         /**

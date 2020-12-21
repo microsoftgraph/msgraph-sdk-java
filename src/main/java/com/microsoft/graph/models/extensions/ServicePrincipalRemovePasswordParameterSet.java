@@ -69,6 +69,9 @@ public class ServicePrincipalRemovePasswordParameterSet {
             this.keyId = val;
             return this;
         }
+        /**
+         * Instanciates a new ServicePrincipalRemovePasswordParameterSetBuilder
+         */
         @Nullable
         protected ServicePrincipalRemovePasswordParameterSetBuilder(){}
         /**

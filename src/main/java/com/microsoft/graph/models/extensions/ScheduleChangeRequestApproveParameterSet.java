@@ -69,6 +69,9 @@ public class ScheduleChangeRequestApproveParameterSet {
             this.message = val;
             return this;
         }
+        /**
+         * Instanciates a new ScheduleChangeRequestApproveParameterSetBuilder
+         */
         @Nullable
         protected ScheduleChangeRequestApproveParameterSetBuilder(){}
         /**

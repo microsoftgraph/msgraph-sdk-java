@@ -94,6 +94,9 @@ public class WorkbookFunctionsBesselKParameterSet {
             this.n = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBesselKParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBesselKParameterSetBuilder(){}
         /**

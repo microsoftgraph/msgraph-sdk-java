@@ -69,6 +69,9 @@ public class WorkbookFunctionsGammaParameterSet {
             this.x = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsGammaParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsGammaParameterSetBuilder(){}
         /**

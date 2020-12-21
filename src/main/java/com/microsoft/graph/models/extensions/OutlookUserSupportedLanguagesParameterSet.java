@@ -44,6 +44,9 @@ public class OutlookUserSupportedLanguagesParameterSet {
      * Fluent builder for the OutlookUserSupportedLanguagesParameterSet
      */
     public static final class OutlookUserSupportedLanguagesParameterSetBuilder {
+        /**
+         * Instanciates a new OutlookUserSupportedLanguagesParameterSetBuilder
+         */
         @Nullable
         protected OutlookUserSupportedLanguagesParameterSetBuilder(){}
         /**

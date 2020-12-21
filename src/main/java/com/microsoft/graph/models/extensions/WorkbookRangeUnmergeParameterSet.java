@@ -44,6 +44,9 @@ public class WorkbookRangeUnmergeParameterSet {
      * Fluent builder for the WorkbookRangeUnmergeParameterSet
      */
     public static final class WorkbookRangeUnmergeParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRangeUnmergeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeUnmergeParameterSetBuilder(){}
         /**

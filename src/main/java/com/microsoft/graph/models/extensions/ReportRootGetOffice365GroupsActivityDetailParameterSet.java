@@ -69,6 +69,9 @@ public class ReportRootGetOffice365GroupsActivityDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOffice365GroupsActivityDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOffice365GroupsActivityDetailParameterSetBuilder(){}
         /**

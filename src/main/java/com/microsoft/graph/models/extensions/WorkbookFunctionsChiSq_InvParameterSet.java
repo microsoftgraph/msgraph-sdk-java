@@ -94,6 +94,9 @@ public class WorkbookFunctionsChiSq_InvParameterSet {
             this.degFreedom = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsChiSq_InvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsChiSq_InvParameterSetBuilder(){}
         /**

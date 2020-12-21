@@ -44,6 +44,9 @@ public class TeamUnarchiveParameterSet {
      * Fluent builder for the TeamUnarchiveParameterSet
      */
     public static final class TeamUnarchiveParameterSetBuilder {
+        /**
+         * Instanciates a new TeamUnarchiveParameterSetBuilder
+         */
         @Nullable
         protected TeamUnarchiveParameterSetBuilder(){}
         /**

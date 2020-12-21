@@ -44,6 +44,9 @@ public class WorkbookChartLineFormatClearParameterSet {
      * Fluent builder for the WorkbookChartLineFormatClearParameterSet
      */
     public static final class WorkbookChartLineFormatClearParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookChartLineFormatClearParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartLineFormatClearParameterSetBuilder(){}
         /**

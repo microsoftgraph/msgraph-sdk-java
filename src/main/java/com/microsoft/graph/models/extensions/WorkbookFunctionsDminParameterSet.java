@@ -119,6 +119,9 @@ public class WorkbookFunctionsDminParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDminParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDminParameterSetBuilder(){}
         /**

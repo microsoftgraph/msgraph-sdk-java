@@ -44,6 +44,9 @@ public class TeamGetAllMessagesParameterSet {
      * Fluent builder for the TeamGetAllMessagesParameterSet
      */
     public static final class TeamGetAllMessagesParameterSetBuilder {
+        /**
+         * Instanciates a new TeamGetAllMessagesParameterSetBuilder
+         */
         @Nullable
         protected TeamGetAllMessagesParameterSetBuilder(){}
         /**

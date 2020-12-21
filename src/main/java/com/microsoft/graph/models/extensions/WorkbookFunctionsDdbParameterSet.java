@@ -169,6 +169,9 @@ public class WorkbookFunctionsDdbParameterSet {
             this.factor = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDdbParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDdbParameterSetBuilder(){}
         /**

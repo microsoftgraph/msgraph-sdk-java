@@ -69,6 +69,9 @@ public class WorkbookFunctionsImaginaryParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImaginaryParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImaginaryParameterSetBuilder(){}
         /**

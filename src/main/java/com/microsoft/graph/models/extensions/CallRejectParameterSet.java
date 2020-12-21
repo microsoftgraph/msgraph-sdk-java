@@ -94,6 +94,9 @@ public class CallRejectParameterSet {
             this.callbackUri = val;
             return this;
         }
+        /**
+         * Instanciates a new CallRejectParameterSetBuilder
+         */
         @Nullable
         protected CallRejectParameterSetBuilder(){}
         /**

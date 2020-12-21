@@ -169,6 +169,9 @@ public class WorkbookFunctionsBeta_InvParameterSet {
             this.b = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBeta_InvParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBeta_InvParameterSetBuilder(){}
         /**

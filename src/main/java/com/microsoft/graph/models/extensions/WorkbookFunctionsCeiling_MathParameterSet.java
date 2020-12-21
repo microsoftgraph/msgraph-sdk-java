@@ -119,6 +119,9 @@ public class WorkbookFunctionsCeiling_MathParameterSet {
             this.mode = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCeiling_MathParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCeiling_MathParameterSetBuilder(){}
         /**

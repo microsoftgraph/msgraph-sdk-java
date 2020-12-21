@@ -69,6 +69,9 @@ public class WorkbookChartPointItemAtParameterSet {
             this.index = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookChartPointItemAtParameterSetBuilder
+         */
         @Nullable
         protected WorkbookChartPointItemAtParameterSetBuilder(){}
         /**

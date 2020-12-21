@@ -69,6 +69,9 @@ public class ReportRootGetTeamsUserActivityUserDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetTeamsUserActivityUserDetailParameterSetBuilder(){}
         /**

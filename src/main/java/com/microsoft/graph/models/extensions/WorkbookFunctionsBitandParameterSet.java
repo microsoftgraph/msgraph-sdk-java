@@ -94,6 +94,9 @@ public class WorkbookFunctionsBitandParameterSet {
             this.number2 = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBitandParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBitandParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsChiSq_Dist_RTParameterSet {
             this.degFreedom = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsChiSq_Dist_RTParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsChiSq_Dist_RTParameterSetBuilder(){}
         /**

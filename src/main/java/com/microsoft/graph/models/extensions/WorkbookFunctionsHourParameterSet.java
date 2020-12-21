@@ -69,6 +69,9 @@ public class WorkbookFunctionsHourParameterSet {
             this.serialNumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsHourParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsHourParameterSetBuilder(){}
         /**

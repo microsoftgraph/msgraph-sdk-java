@@ -69,6 +69,9 @@ public class WorkbookFilterApplyFontColorFilterParameterSet {
             this.color = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyFontColorFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyFontColorFilterParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class NotebookGetNotebookFromWebUrlParameterSet {
             this.webUrl = val;
             return this;
         }
+        /**
+         * Instanciates a new NotebookGetNotebookFromWebUrlParameterSetBuilder
+         */
         @Nullable
         protected NotebookGetNotebookFromWebUrlParameterSetBuilder(){}
         /**

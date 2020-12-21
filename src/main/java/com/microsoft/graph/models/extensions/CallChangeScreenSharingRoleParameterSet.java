@@ -69,6 +69,9 @@ public class CallChangeScreenSharingRoleParameterSet {
             this.role = val;
             return this;
         }
+        /**
+         * Instanciates a new CallChangeScreenSharingRoleParameterSetBuilder
+         */
         @Nullable
         protected CallChangeScreenSharingRoleParameterSetBuilder(){}
         /**

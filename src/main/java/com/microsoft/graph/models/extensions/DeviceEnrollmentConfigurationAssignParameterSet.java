@@ -69,6 +69,9 @@ public class DeviceEnrollmentConfigurationAssignParameterSet {
             this.enrollmentConfigurationAssignments = val;
             return this;
         }
+        /**
+         * Instanciates a new DeviceEnrollmentConfigurationAssignParameterSetBuilder
+         */
         @Nullable
         protected DeviceEnrollmentConfigurationAssignParameterSetBuilder(){}
         /**

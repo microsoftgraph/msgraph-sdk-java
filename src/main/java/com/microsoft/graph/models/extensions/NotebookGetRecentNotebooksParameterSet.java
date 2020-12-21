@@ -69,6 +69,9 @@ public class NotebookGetRecentNotebooksParameterSet {
             this.includePersonalNotebooks = val;
             return this;
         }
+        /**
+         * Instanciates a new NotebookGetRecentNotebooksParameterSetBuilder
+         */
         @Nullable
         protected NotebookGetRecentNotebooksParameterSetBuilder(){}
         /**

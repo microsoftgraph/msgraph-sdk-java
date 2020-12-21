@@ -244,6 +244,9 @@ public class WorkbookFunctionsAccrIntParameterSet {
             this.calcMethod = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsAccrIntParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsAccrIntParameterSetBuilder(){}
         /**

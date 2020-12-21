@@ -44,6 +44,9 @@ public class ManagedDeviceBypassActivationLockParameterSet {
      * Fluent builder for the ManagedDeviceBypassActivationLockParameterSet
      */
     public static final class ManagedDeviceBypassActivationLockParameterSetBuilder {
+        /**
+         * Instanciates a new ManagedDeviceBypassActivationLockParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceBypassActivationLockParameterSetBuilder(){}
         /**

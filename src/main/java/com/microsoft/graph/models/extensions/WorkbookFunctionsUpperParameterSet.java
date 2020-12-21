@@ -69,6 +69,9 @@ public class WorkbookFunctionsUpperParameterSet {
             this.text = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsUpperParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsUpperParameterSetBuilder(){}
         /**

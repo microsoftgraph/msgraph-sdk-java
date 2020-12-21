@@ -69,6 +69,9 @@ public class ReportRootGetOneDriveActivityUserDetailParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOneDriveActivityUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOneDriveActivityUserDetailParameterSetBuilder(){}
         /**

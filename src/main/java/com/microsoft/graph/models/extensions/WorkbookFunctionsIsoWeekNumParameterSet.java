@@ -69,6 +69,9 @@ public class WorkbookFunctionsIsoWeekNumParameterSet {
             this.date = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIsoWeekNumParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIsoWeekNumParameterSetBuilder(){}
         /**

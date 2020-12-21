@@ -244,6 +244,9 @@ public class WorkbookFunctionsOddLYieldParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsOddLYieldParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsOddLYieldParameterSetBuilder(){}
         /**

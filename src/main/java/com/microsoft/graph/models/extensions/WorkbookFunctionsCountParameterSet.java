@@ -69,6 +69,9 @@ public class WorkbookFunctionsCountParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsCountParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsCountParameterSetBuilder(){}
         /**

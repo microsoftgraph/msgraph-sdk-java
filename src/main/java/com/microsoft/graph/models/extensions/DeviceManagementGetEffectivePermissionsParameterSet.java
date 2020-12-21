@@ -69,6 +69,9 @@ public class DeviceManagementGetEffectivePermissionsParameterSet {
             this.scope = val;
             return this;
         }
+        /**
+         * Instanciates a new DeviceManagementGetEffectivePermissionsParameterSetBuilder
+         */
         @Nullable
         protected DeviceManagementGetEffectivePermissionsParameterSetBuilder(){}
         /**

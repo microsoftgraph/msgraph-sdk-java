@@ -69,6 +69,9 @@ public class WorkbookFunctionsHarMeanParameterSet {
             this.values = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsHarMeanParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsHarMeanParameterSetBuilder(){}
         /**

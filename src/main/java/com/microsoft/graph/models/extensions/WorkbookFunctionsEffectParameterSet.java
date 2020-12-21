@@ -94,6 +94,9 @@ public class WorkbookFunctionsEffectParameterSet {
             this.npery = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsEffectParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsEffectParameterSetBuilder(){}
         /**

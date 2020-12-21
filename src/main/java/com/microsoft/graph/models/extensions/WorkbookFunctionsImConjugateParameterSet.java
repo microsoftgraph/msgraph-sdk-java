@@ -69,6 +69,9 @@ public class WorkbookFunctionsImConjugateParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImConjugateParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImConjugateParameterSetBuilder(){}
         /**

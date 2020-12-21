@@ -44,6 +44,9 @@ public class SiteGetActivitiesByIntervalParameterSet {
      * Fluent builder for the SiteGetActivitiesByIntervalParameterSet
      */
     public static final class SiteGetActivitiesByIntervalParameterSetBuilder {
+        /**
+         * Instanciates a new SiteGetActivitiesByIntervalParameterSetBuilder
+         */
         @Nullable
         protected SiteGetActivitiesByIntervalParameterSetBuilder(){}
         /**

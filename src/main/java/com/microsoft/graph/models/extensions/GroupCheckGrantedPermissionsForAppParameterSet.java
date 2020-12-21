@@ -44,6 +44,9 @@ public class GroupCheckGrantedPermissionsForAppParameterSet {
      * Fluent builder for the GroupCheckGrantedPermissionsForAppParameterSet
      */
     public static final class GroupCheckGrantedPermissionsForAppParameterSetBuilder {
+        /**
+         * Instanciates a new GroupCheckGrantedPermissionsForAppParameterSetBuilder
+         */
         @Nullable
         protected GroupCheckGrantedPermissionsForAppParameterSetBuilder(){}
         /**

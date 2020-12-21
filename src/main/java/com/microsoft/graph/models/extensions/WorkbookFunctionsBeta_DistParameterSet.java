@@ -194,6 +194,9 @@ public class WorkbookFunctionsBeta_DistParameterSet {
             this.b = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBeta_DistParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBeta_DistParameterSetBuilder(){}
         /**

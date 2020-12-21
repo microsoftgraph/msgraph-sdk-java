@@ -119,6 +119,9 @@ public class WorkbookTableColumnAddParameterSet {
             this.name = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookTableColumnAddParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableColumnAddParameterSetBuilder(){}
         /**

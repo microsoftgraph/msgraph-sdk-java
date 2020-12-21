@@ -44,6 +44,9 @@ public class WorkbookRefreshSessionParameterSet {
      * Fluent builder for the WorkbookRefreshSessionParameterSet
      */
     public static final class WorkbookRefreshSessionParameterSetBuilder {
+        /**
+         * Instanciates a new WorkbookRefreshSessionParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRefreshSessionParameterSetBuilder(){}
         /**

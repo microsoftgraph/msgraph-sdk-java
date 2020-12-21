@@ -69,6 +69,9 @@ public class WorkbookFunctionsColumnsParameterSet {
             this.array = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsColumnsParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsColumnsParameterSetBuilder(){}
         /**

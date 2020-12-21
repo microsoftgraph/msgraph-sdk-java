@@ -94,6 +94,9 @@ public class WorkbookFunctionsDaysParameterSet {
             this.startDate = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDaysParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDaysParameterSetBuilder(){}
         /**

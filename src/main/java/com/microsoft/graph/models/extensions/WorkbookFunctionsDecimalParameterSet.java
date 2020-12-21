@@ -94,6 +94,9 @@ public class WorkbookFunctionsDecimalParameterSet {
             this.radix = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDecimalParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDecimalParameterSetBuilder(){}
         /**

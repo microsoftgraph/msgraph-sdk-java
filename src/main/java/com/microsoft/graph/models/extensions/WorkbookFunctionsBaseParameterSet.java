@@ -119,6 +119,9 @@ public class WorkbookFunctionsBaseParameterSet {
             this.minLength = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBaseParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBaseParameterSetBuilder(){}
         /**

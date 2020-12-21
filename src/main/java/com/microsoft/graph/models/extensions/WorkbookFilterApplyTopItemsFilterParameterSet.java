@@ -69,6 +69,9 @@ public class WorkbookFilterApplyTopItemsFilterParameterSet {
             this.count = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyTopItemsFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyTopItemsFilterParameterSetBuilder(){}
         /**

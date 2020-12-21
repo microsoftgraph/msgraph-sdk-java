@@ -94,6 +94,9 @@ public class WorkbookFunctionsModParameterSet {
             this.divisor = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsModParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsModParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class EventDeclineParameterSet {
             this.sendResponse = val;
             return this;
         }
+        /**
+         * Instanciates a new EventDeclineParameterSetBuilder
+         */
         @Nullable
         protected EventDeclineParameterSetBuilder(){}
         /**

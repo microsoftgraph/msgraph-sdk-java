@@ -69,6 +69,9 @@ public class WorkbookFunctionsErf_PreciseParameterSet {
             this.x = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsErf_PreciseParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsErf_PreciseParameterSetBuilder(){}
         /**

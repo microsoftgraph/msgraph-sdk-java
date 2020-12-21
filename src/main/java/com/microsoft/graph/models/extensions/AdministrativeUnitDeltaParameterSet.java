@@ -44,6 +44,9 @@ public class AdministrativeUnitDeltaParameterSet {
      * Fluent builder for the AdministrativeUnitDeltaParameterSet
      */
     public static final class AdministrativeUnitDeltaParameterSetBuilder {
+        /**
+         * Instanciates a new AdministrativeUnitDeltaParameterSetBuilder
+         */
         @Nullable
         protected AdministrativeUnitDeltaParameterSetBuilder(){}
         /**

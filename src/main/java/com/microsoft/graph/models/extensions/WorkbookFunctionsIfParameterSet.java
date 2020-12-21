@@ -119,6 +119,9 @@ public class WorkbookFunctionsIfParameterSet {
             this.valueIfFalse = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsIfParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsIfParameterSetBuilder(){}
         /**

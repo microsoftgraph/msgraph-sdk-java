@@ -69,6 +69,9 @@ public class DeviceCompliancePolicyAssignParameterSet {
             this.assignments = val;
             return this;
         }
+        /**
+         * Instanciates a new DeviceCompliancePolicyAssignParameterSetBuilder
+         */
         @Nullable
         protected DeviceCompliancePolicyAssignParameterSetBuilder(){}
         /**

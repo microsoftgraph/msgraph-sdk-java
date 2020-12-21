@@ -69,6 +69,9 @@ public class EventSnoozeReminderParameterSet {
             this.newReminderTime = val;
             return this;
         }
+        /**
+         * Instanciates a new EventSnoozeReminderParameterSetBuilder
+         */
         @Nullable
         protected EventSnoozeReminderParameterSetBuilder(){}
         /**

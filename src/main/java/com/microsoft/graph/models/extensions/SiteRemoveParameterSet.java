@@ -69,6 +69,9 @@ public class SiteRemoveParameterSet {
             this.value = val;
             return this;
         }
+        /**
+         * Instanciates a new SiteRemoveParameterSetBuilder
+         */
         @Nullable
         protected SiteRemoveParameterSetBuilder(){}
         /**

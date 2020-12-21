@@ -119,6 +119,9 @@ public class WorkbookFunctionsDstDevParameterSet {
             this.criteria = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDstDevParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDstDevParameterSetBuilder(){}
         /**

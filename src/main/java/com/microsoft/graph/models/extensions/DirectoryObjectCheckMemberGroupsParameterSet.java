@@ -69,6 +69,9 @@ public class DirectoryObjectCheckMemberGroupsParameterSet {
             this.groupIds = val;
             return this;
         }
+        /**
+         * Instanciates a new DirectoryObjectCheckMemberGroupsParameterSetBuilder
+         */
         @Nullable
         protected DirectoryObjectCheckMemberGroupsParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ServicePrincipalAddPasswordParameterSet {
             this.passwordCredential = val;
             return this;
         }
+        /**
+         * Instanciates a new ServicePrincipalAddPasswordParameterSetBuilder
+         */
         @Nullable
         protected ServicePrincipalAddPasswordParameterSetBuilder(){}
         /**

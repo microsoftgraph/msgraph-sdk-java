@@ -94,6 +94,9 @@ public class WorkbookFunctionsBin2OctParameterSet {
             this.places = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsBin2OctParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsBin2OctParameterSetBuilder(){}
         /**

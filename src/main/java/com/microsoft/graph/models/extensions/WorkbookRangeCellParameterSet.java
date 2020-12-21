@@ -94,6 +94,9 @@ public class WorkbookRangeCellParameterSet {
             this.column = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeCellParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeCellParameterSetBuilder(){}
         /**

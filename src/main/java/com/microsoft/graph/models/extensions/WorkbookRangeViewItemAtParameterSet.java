@@ -69,6 +69,9 @@ public class WorkbookRangeViewItemAtParameterSet {
             this.index = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeViewItemAtParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeViewItemAtParameterSetBuilder(){}
         /**

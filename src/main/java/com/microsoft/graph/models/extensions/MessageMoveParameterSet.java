@@ -69,6 +69,9 @@ public class MessageMoveParameterSet {
             this.destinationId = val;
             return this;
         }
+        /**
+         * Instanciates a new MessageMoveParameterSetBuilder
+         */
         @Nullable
         protected MessageMoveParameterSetBuilder(){}
         /**

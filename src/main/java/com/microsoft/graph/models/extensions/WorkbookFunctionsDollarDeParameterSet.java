@@ -94,6 +94,9 @@ public class WorkbookFunctionsDollarDeParameterSet {
             this.fraction = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsDollarDeParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsDollarDeParameterSetBuilder(){}
         /**

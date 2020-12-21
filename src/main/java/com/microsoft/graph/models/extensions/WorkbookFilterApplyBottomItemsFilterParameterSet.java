@@ -69,6 +69,9 @@ public class WorkbookFilterApplyBottomItemsFilterParameterSet {
             this.count = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFilterApplyBottomItemsFilterParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFilterApplyBottomItemsFilterParameterSetBuilder(){}
         /**

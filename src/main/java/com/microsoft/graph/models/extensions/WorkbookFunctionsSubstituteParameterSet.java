@@ -144,6 +144,9 @@ public class WorkbookFunctionsSubstituteParameterSet {
             this.instanceNum = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSubstituteParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSubstituteParameterSetBuilder(){}
         /**

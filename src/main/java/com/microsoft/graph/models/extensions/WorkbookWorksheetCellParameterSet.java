@@ -94,6 +94,9 @@ public class WorkbookWorksheetCellParameterSet {
             this.column = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookWorksheetCellParameterSetBuilder
+         */
         @Nullable
         protected WorkbookWorksheetCellParameterSetBuilder(){}
         /**

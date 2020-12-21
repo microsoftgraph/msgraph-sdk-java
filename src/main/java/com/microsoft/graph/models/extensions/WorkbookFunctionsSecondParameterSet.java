@@ -69,6 +69,9 @@ public class WorkbookFunctionsSecondParameterSet {
             this.serialNumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSecondParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSecondParameterSetBuilder(){}
         /**

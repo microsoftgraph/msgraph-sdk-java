@@ -69,6 +69,9 @@ public class WorkbookFunctionsNotParameterSet {
             this.logical = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsNotParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsNotParameterSetBuilder(){}
         /**

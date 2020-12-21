@@ -69,6 +69,9 @@ public class EventCancelParameterSet {
             this.comment = val;
             return this;
         }
+        /**
+         * Instanciates a new EventCancelParameterSetBuilder
+         */
         @Nullable
         protected EventCancelParameterSetBuilder(){}
         /**

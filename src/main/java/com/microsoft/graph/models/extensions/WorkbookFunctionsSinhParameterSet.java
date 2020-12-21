@@ -69,6 +69,9 @@ public class WorkbookFunctionsSinhParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsSinhParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsSinhParameterSetBuilder(){}
         /**

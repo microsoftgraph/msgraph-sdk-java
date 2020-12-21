@@ -69,6 +69,9 @@ public class TargetedManagedAppProtectionAssignParameterSet {
             this.assignments = val;
             return this;
         }
+        /**
+         * Instanciates a new TargetedManagedAppProtectionAssignParameterSetBuilder
+         */
         @Nullable
         protected TargetedManagedAppProtectionAssignParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookCreateSessionParameterSet {
             this.persistChanges = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookCreateSessionParameterSetBuilder
+         */
         @Nullable
         protected WorkbookCreateSessionParameterSetBuilder(){}
         /**

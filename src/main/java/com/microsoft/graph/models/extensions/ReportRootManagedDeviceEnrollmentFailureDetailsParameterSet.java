@@ -44,6 +44,9 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet {
      * Fluent builder for the ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet
      */
     public static final class ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder {
+        /**
+         * Instanciates a new ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder(){}
         /**

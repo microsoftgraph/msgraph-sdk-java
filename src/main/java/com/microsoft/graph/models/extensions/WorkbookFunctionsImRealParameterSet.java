@@ -69,6 +69,9 @@ public class WorkbookFunctionsImRealParameterSet {
             this.inumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsImRealParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsImRealParameterSetBuilder(){}
         /**

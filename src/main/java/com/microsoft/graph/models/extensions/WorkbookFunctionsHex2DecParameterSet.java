@@ -69,6 +69,9 @@ public class WorkbookFunctionsHex2DecParameterSet {
             this.number = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsHex2DecParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsHex2DecParameterSetBuilder(){}
         /**

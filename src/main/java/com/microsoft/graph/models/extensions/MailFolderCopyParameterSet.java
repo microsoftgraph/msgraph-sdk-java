@@ -69,6 +69,9 @@ public class MailFolderCopyParameterSet {
             this.destinationId = val;
             return this;
         }
+        /**
+         * Instanciates a new MailFolderCopyParameterSetBuilder
+         */
         @Nullable
         protected MailFolderCopyParameterSetBuilder(){}
         /**

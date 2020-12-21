@@ -119,6 +119,9 @@ public class WorkbookFunctionsWorkDayParameterSet {
             this.holidays = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsWorkDayParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsWorkDayParameterSetBuilder(){}
         /**

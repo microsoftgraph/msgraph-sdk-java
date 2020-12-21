@@ -69,6 +69,9 @@ public class WorkbookFunctionsFisherParameterSet {
             this.x = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsFisherParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsFisherParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class ReportRootGetOffice365GroupsActivityGroupCountsParameterSet {
             this.period = val;
             return this;
         }
+        /**
+         * Instanciates a new ReportRootGetOffice365GroupsActivityGroupCountsParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOffice365GroupsActivityGroupCountsParameterSetBuilder(){}
         /**

@@ -194,6 +194,9 @@ public class WorkbookFunctionsYieldMatParameterSet {
             this.basis = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsYieldMatParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsYieldMatParameterSetBuilder(){}
         /**

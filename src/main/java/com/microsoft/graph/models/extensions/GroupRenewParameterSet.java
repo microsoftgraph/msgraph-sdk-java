@@ -44,6 +44,9 @@ public class GroupRenewParameterSet {
      * Fluent builder for the GroupRenewParameterSet
      */
     public static final class GroupRenewParameterSetBuilder {
+        /**
+         * Instanciates a new GroupRenewParameterSetBuilder
+         */
         @Nullable
         protected GroupRenewParameterSetBuilder(){}
         /**

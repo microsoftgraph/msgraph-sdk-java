@@ -69,6 +69,9 @@ public class WorkbookFunctionsMonthParameterSet {
             this.serialNumber = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsMonthParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsMonthParameterSetBuilder(){}
         /**

@@ -94,6 +94,9 @@ public class WorkbookFunctionsRightParameterSet {
             this.numChars = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsRightParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsRightParameterSetBuilder(){}
         /**

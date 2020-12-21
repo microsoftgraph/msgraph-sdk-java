@@ -44,6 +44,9 @@ public class ReportRootGetOffice365ActivationsUserDetailParameterSet {
      * Fluent builder for the ReportRootGetOffice365ActivationsUserDetailParameterSet
      */
     public static final class ReportRootGetOffice365ActivationsUserDetailParameterSetBuilder {
+        /**
+         * Instanciates a new ReportRootGetOffice365ActivationsUserDetailParameterSetBuilder
+         */
         @Nullable
         protected ReportRootGetOffice365ActivationsUserDetailParameterSetBuilder(){}
         /**

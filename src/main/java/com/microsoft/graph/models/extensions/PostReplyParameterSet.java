@@ -69,6 +69,9 @@ public class PostReplyParameterSet {
             this.post = val;
             return this;
         }
+        /**
+         * Instanciates a new PostReplyParameterSetBuilder
+         */
         @Nullable
         protected PostReplyParameterSetBuilder(){}
         /**

@@ -69,6 +69,9 @@ public class WorkbookTableItemAtParameterSet {
             this.index = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookTableItemAtParameterSetBuilder
+         */
         @Nullable
         protected WorkbookTableItemAtParameterSetBuilder(){}
         /**

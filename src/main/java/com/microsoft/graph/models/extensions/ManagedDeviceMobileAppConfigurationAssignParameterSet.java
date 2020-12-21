@@ -69,6 +69,9 @@ public class ManagedDeviceMobileAppConfigurationAssignParameterSet {
             this.assignments = val;
             return this;
         }
+        /**
+         * Instanciates a new ManagedDeviceMobileAppConfigurationAssignParameterSetBuilder
+         */
         @Nullable
         protected ManagedDeviceMobileAppConfigurationAssignParameterSetBuilder(){}
         /**

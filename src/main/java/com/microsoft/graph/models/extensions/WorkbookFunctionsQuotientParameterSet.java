@@ -94,6 +94,9 @@ public class WorkbookFunctionsQuotientParameterSet {
             this.denominator = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsQuotientParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsQuotientParameterSetBuilder(){}
         /**

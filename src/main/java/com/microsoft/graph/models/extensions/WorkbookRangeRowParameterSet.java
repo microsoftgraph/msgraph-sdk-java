@@ -69,6 +69,9 @@ public class WorkbookRangeRowParameterSet {
             this.row = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookRangeRowParameterSetBuilder
+         */
         @Nullable
         protected WorkbookRangeRowParameterSetBuilder(){}
         /**

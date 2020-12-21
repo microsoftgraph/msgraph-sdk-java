@@ -69,6 +69,9 @@ public class TargetedManagedAppConfigurationTargetAppsParameterSet {
             this.apps = val;
             return this;
         }
+        /**
+         * Instanciates a new TargetedManagedAppConfigurationTargetAppsParameterSetBuilder
+         */
         @Nullable
         protected TargetedManagedAppConfigurationTargetAppsParameterSetBuilder(){}
         /**

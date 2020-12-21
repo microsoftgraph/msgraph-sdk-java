@@ -69,6 +69,9 @@ public class WorkbookFunctionsGammaLn_PreciseParameterSet {
             this.x = val;
             return this;
         }
+        /**
+         * Instanciates a new WorkbookFunctionsGammaLn_PreciseParameterSetBuilder
+         */
         @Nullable
         protected WorkbookFunctionsGammaLn_PreciseParameterSetBuilder(){}
         /**
