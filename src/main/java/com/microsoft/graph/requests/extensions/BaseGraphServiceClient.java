@@ -1,3 +1,4 @@
+// Template Source: BaseClient.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -976,7 +977,7 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Security
      */
-    public ISecurityRequestBuilder Security() {
+    public ISecurityRequestBuilder security() {
         return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
     }
 

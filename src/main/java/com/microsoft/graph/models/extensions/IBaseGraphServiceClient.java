@@ -1,3 +1,4 @@
+// Template Source: IBaseClient.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -707,7 +708,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Security
      */
-    ISecurityRequestBuilder Security();
+    ISecurityRequestBuilder security();
 
     /**
      * Gets the GraphServiceRequestBuilder
