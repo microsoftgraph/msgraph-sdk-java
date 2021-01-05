@@ -1034,7 +1034,7 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Security
      */
-    public ISecurityRequestBuilder security() {
+    public ISecurityRequestBuilder Security() {
         return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
     }
 
