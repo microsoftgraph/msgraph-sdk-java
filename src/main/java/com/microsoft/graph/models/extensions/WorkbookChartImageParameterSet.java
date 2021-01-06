@@ -21,6 +21,33 @@ import java.util.ArrayList;
  * The class for the Workbook Chart Image Parameter Set.
  */
 public class WorkbookChartImageParameterSet {
+    /**
+     * The width.
+     * 
+     */
+    @SerializedName(value = "width", alternate = {"Width"})
+    @Expose
+	@Nullable
+    public Integer width;
+
+    /**
+     * The height.
+     * 
+     */
+    @SerializedName(value = "height", alternate = {"Height"})
+    @Expose
+	@Nullable
+    public Integer height;
+
+    /**
+     * The fitting Mode.
+     * 
+     */
+    @SerializedName(value = "fittingMode", alternate = {"FittingMode"})
+    @Expose
+	@Nullable
+    public String fittingMode;
+
 
     /**
      * Instiaciates a new WorkbookChartImageParameterSet
@@ -31,6 +58,9 @@ public class WorkbookChartImageParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected WorkbookChartImageParameterSet(@Nonnull final WorkbookChartImageParameterSetBuilder builder) {
+        this.width = builder.width;
+        this.height = builder.height;
+        this.fittingMode = builder.fittingMode;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +74,51 @@ public class WorkbookChartImageParameterSet {
      * Fluent builder for the WorkbookChartImageParameterSet
      */
     public static final class WorkbookChartImageParameterSetBuilder {
+        /**
+         * The width parameter value
+         */
+        @Nullable
+        protected Integer width;
+        /**
+         * Sets the Width
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WorkbookChartImageParameterSetBuilder withWidth(@Nullable final Integer val) {
+            this.width = val;
+            return this;
+        }
+        /**
+         * The height parameter value
+         */
+        @Nullable
+        protected Integer height;
+        /**
+         * Sets the Height
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WorkbookChartImageParameterSetBuilder withHeight(@Nullable final Integer val) {
+            this.height = val;
+            return this;
+        }
+        /**
+         * The fittingMode parameter value
+         */
+        @Nullable
+        protected String fittingMode;
+        /**
+         * Sets the FittingMode
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WorkbookChartImageParameterSetBuilder withFittingMode(@Nullable final String val) {
+            this.fittingMode = val;
+            return this;
+        }
         /**
          * Instanciates a new WorkbookChartImageParameterSetBuilder
          */
@@ -65,6 +140,15 @@ public class WorkbookChartImageParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.width != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("width", width));
+        }
+        if(this.height != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("height", height));
+        }
+        if(this.fittingMode != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("fittingMode", fittingMode));
+        }
         return result;
     }
     /**

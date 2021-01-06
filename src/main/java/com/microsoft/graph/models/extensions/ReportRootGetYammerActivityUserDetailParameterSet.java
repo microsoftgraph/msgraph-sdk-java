@@ -30,6 +30,15 @@ public class ReportRootGetYammerActivityUserDetailParameterSet {
 	@Nullable
     public com.microsoft.graph.core.DateOnly date;
 
+    /**
+     * The period.
+     * 
+     */
+    @SerializedName(value = "period", alternate = {"Period"})
+    @Expose
+	@Nullable
+    public String period;
+
 
     /**
      * Instiaciates a new ReportRootGetYammerActivityUserDetailParameterSet
@@ -41,6 +50,7 @@ public class ReportRootGetYammerActivityUserDetailParameterSet {
      */
     protected ReportRootGetYammerActivityUserDetailParameterSet(@Nonnull final ReportRootGetYammerActivityUserDetailParameterSetBuilder builder) {
         this.date = builder.date;
+        this.period = builder.period;
     }
     /**
      * Gets a new builder for the body
@@ -70,6 +80,21 @@ public class ReportRootGetYammerActivityUserDetailParameterSet {
             return this;
         }
         /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
+        /**
+         * Sets the Period
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ReportRootGetYammerActivityUserDetailParameterSetBuilder withPeriod(@Nullable final String val) {
+            this.period = val;
+            return this;
+        }
+        /**
          * Instanciates a new ReportRootGetYammerActivityUserDetailParameterSetBuilder
          */
         @Nullable
@@ -92,6 +117,9 @@ public class ReportRootGetYammerActivityUserDetailParameterSet {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
         if(this.date != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("date", date));
+        }
+        if(this.period != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("period", period));
         }
         return result;
     }

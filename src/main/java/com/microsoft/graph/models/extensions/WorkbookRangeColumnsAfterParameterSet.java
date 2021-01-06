@@ -21,6 +21,15 @@ import java.util.ArrayList;
  * The class for the Workbook Range Columns After Parameter Set.
  */
 public class WorkbookRangeColumnsAfterParameterSet {
+    /**
+     * The count.
+     * 
+     */
+    @SerializedName(value = "count", alternate = {"Count"})
+    @Expose
+	@Nullable
+    public Integer count;
+
 
     /**
      * Instiaciates a new WorkbookRangeColumnsAfterParameterSet
@@ -31,6 +40,7 @@ public class WorkbookRangeColumnsAfterParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected WorkbookRangeColumnsAfterParameterSet(@Nonnull final WorkbookRangeColumnsAfterParameterSetBuilder builder) {
+        this.count = builder.count;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +54,21 @@ public class WorkbookRangeColumnsAfterParameterSet {
      * Fluent builder for the WorkbookRangeColumnsAfterParameterSet
      */
     public static final class WorkbookRangeColumnsAfterParameterSetBuilder {
+        /**
+         * The count parameter value
+         */
+        @Nullable
+        protected Integer count;
+        /**
+         * Sets the Count
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WorkbookRangeColumnsAfterParameterSetBuilder withCount(@Nullable final Integer val) {
+            this.count = val;
+            return this;
+        }
         /**
          * Instanciates a new WorkbookRangeColumnsAfterParameterSetBuilder
          */
@@ -65,6 +90,9 @@ public class WorkbookRangeColumnsAfterParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.count != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("count", count));
+        }
         return result;
     }
     /**

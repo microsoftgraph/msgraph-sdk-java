@@ -21,6 +21,42 @@ import java.util.ArrayList;
  * The class for the Report Root Managed Device Enrollment Failure Details Parameter Set.
  */
 public class ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet {
+    /**
+     * The skip.
+     * 
+     */
+    @SerializedName(value = "skip", alternate = {"Skip"})
+    @Expose
+	@Nullable
+    public Integer skip;
+
+    /**
+     * The top.
+     * 
+     */
+    @SerializedName(value = "top", alternate = {"Top"})
+    @Expose
+	@Nullable
+    public Integer top;
+
+    /**
+     * The filter.
+     * 
+     */
+    @SerializedName(value = "filter", alternate = {"Filter"})
+    @Expose
+	@Nullable
+    public String filter;
+
+    /**
+     * The skip Token.
+     * 
+     */
+    @SerializedName(value = "skipToken", alternate = {"SkipToken"})
+    @Expose
+	@Nullable
+    public String skipToken;
+
 
     /**
      * Instiaciates a new ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet
@@ -31,6 +67,10 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet(@Nonnull final ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder builder) {
+        this.skip = builder.skip;
+        this.top = builder.top;
+        this.filter = builder.filter;
+        this.skipToken = builder.skipToken;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +84,66 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet {
      * Fluent builder for the ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet
      */
     public static final class ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder {
+        /**
+         * The skip parameter value
+         */
+        @Nullable
+        protected Integer skip;
+        /**
+         * Sets the Skip
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder withSkip(@Nullable final Integer val) {
+            this.skip = val;
+            return this;
+        }
+        /**
+         * The top parameter value
+         */
+        @Nullable
+        protected Integer top;
+        /**
+         * Sets the Top
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder withTop(@Nullable final Integer val) {
+            this.top = val;
+            return this;
+        }
+        /**
+         * The filter parameter value
+         */
+        @Nullable
+        protected String filter;
+        /**
+         * Sets the Filter
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder withFilter(@Nullable final String val) {
+            this.filter = val;
+            return this;
+        }
+        /**
+         * The skipToken parameter value
+         */
+        @Nullable
+        protected String skipToken;
+        /**
+         * Sets the SkipToken
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder withSkipToken(@Nullable final String val) {
+            this.skipToken = val;
+            return this;
+        }
         /**
          * Instanciates a new ReportRootManagedDeviceEnrollmentFailureDetailsParameterSetBuilder
          */
@@ -65,6 +165,18 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.skip != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("skip", skip));
+        }
+        if(this.top != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("top", top));
+        }
+        if(this.filter != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("filter", filter));
+        }
+        if(this.skipToken != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("skipToken", skipToken));
+        }
         return result;
     }
     /**

@@ -21,6 +21,15 @@ import java.util.ArrayList;
  * The class for the Workbook Worksheet Used Range Parameter Set.
  */
 public class WorkbookWorksheetUsedRangeParameterSet {
+    /**
+     * The values Only.
+     * 
+     */
+    @SerializedName(value = "valuesOnly", alternate = {"ValuesOnly"})
+    @Expose
+	@Nullable
+    public Boolean valuesOnly;
+
 
     /**
      * Instiaciates a new WorkbookWorksheetUsedRangeParameterSet
@@ -31,6 +40,7 @@ public class WorkbookWorksheetUsedRangeParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected WorkbookWorksheetUsedRangeParameterSet(@Nonnull final WorkbookWorksheetUsedRangeParameterSetBuilder builder) {
+        this.valuesOnly = builder.valuesOnly;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +54,21 @@ public class WorkbookWorksheetUsedRangeParameterSet {
      * Fluent builder for the WorkbookWorksheetUsedRangeParameterSet
      */
     public static final class WorkbookWorksheetUsedRangeParameterSetBuilder {
+        /**
+         * The valuesOnly parameter value
+         */
+        @Nullable
+        protected Boolean valuesOnly;
+        /**
+         * Sets the ValuesOnly
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WorkbookWorksheetUsedRangeParameterSetBuilder withValuesOnly(@Nullable final Boolean val) {
+            this.valuesOnly = val;
+            return this;
+        }
         /**
          * Instanciates a new WorkbookWorksheetUsedRangeParameterSetBuilder
          */
@@ -65,6 +90,9 @@ public class WorkbookWorksheetUsedRangeParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.valuesOnly != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("valuesOnly", valuesOnly));
+        }
         return result;
     }
     /**

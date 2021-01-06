@@ -21,6 +21,15 @@ import java.util.ArrayList;
  * The class for the Outlook User Supported Time Zones Parameter Set.
  */
 public class OutlookUserSupportedTimeZonesParameterSet {
+    /**
+     * The time Zone Standard.
+     * 
+     */
+    @SerializedName(value = "timeZoneStandard", alternate = {"TimeZoneStandard"})
+    @Expose
+	@Nullable
+    public TimeZoneStandard timeZoneStandard;
+
 
     /**
      * Instiaciates a new OutlookUserSupportedTimeZonesParameterSet
@@ -31,6 +40,7 @@ public class OutlookUserSupportedTimeZonesParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected OutlookUserSupportedTimeZonesParameterSet(@Nonnull final OutlookUserSupportedTimeZonesParameterSetBuilder builder) {
+        this.timeZoneStandard = builder.timeZoneStandard;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +54,21 @@ public class OutlookUserSupportedTimeZonesParameterSet {
      * Fluent builder for the OutlookUserSupportedTimeZonesParameterSet
      */
     public static final class OutlookUserSupportedTimeZonesParameterSetBuilder {
+        /**
+         * The timeZoneStandard parameter value
+         */
+        @Nullable
+        protected TimeZoneStandard timeZoneStandard;
+        /**
+         * Sets the TimeZoneStandard
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public OutlookUserSupportedTimeZonesParameterSetBuilder withTimeZoneStandard(@Nullable final TimeZoneStandard val) {
+            this.timeZoneStandard = val;
+            return this;
+        }
         /**
          * Instanciates a new OutlookUserSupportedTimeZonesParameterSetBuilder
          */
@@ -65,6 +90,9 @@ public class OutlookUserSupportedTimeZonesParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.timeZoneStandard != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("timeZoneStandard", timeZoneStandard));
+        }
         return result;
     }
     /**

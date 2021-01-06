@@ -21,6 +21,15 @@ import java.util.ArrayList;
  * The class for the Report Root Managed Device Enrollment Top Failures Parameter Set.
  */
 public class ReportRootManagedDeviceEnrollmentTopFailuresParameterSet {
+    /**
+     * The period.
+     * 
+     */
+    @SerializedName(value = "period", alternate = {"Period"})
+    @Expose
+	@Nullable
+    public String period;
+
 
     /**
      * Instiaciates a new ReportRootManagedDeviceEnrollmentTopFailuresParameterSet
@@ -31,6 +40,7 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected ReportRootManagedDeviceEnrollmentTopFailuresParameterSet(@Nonnull final ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder builder) {
+        this.period = builder.period;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +54,21 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresParameterSet {
      * Fluent builder for the ReportRootManagedDeviceEnrollmentTopFailuresParameterSet
      */
     public static final class ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder {
+        /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
+        /**
+         * Sets the Period
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder withPeriod(@Nullable final String val) {
+            this.period = val;
+            return this;
+        }
         /**
          * Instanciates a new ReportRootManagedDeviceEnrollmentTopFailuresParameterSetBuilder
          */
@@ -65,6 +90,9 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.period != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("period", period));
+        }
         return result;
     }
     /**

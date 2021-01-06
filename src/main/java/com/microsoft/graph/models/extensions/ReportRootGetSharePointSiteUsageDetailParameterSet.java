@@ -30,6 +30,15 @@ public class ReportRootGetSharePointSiteUsageDetailParameterSet {
 	@Nullable
     public com.microsoft.graph.core.DateOnly date;
 
+    /**
+     * The period.
+     * 
+     */
+    @SerializedName(value = "period", alternate = {"Period"})
+    @Expose
+	@Nullable
+    public String period;
+
 
     /**
      * Instiaciates a new ReportRootGetSharePointSiteUsageDetailParameterSet
@@ -41,6 +50,7 @@ public class ReportRootGetSharePointSiteUsageDetailParameterSet {
      */
     protected ReportRootGetSharePointSiteUsageDetailParameterSet(@Nonnull final ReportRootGetSharePointSiteUsageDetailParameterSetBuilder builder) {
         this.date = builder.date;
+        this.period = builder.period;
     }
     /**
      * Gets a new builder for the body
@@ -70,6 +80,21 @@ public class ReportRootGetSharePointSiteUsageDetailParameterSet {
             return this;
         }
         /**
+         * The period parameter value
+         */
+        @Nullable
+        protected String period;
+        /**
+         * Sets the Period
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ReportRootGetSharePointSiteUsageDetailParameterSetBuilder withPeriod(@Nullable final String val) {
+            this.period = val;
+            return this;
+        }
+        /**
          * Instanciates a new ReportRootGetSharePointSiteUsageDetailParameterSetBuilder
          */
         @Nullable
@@ -92,6 +117,9 @@ public class ReportRootGetSharePointSiteUsageDetailParameterSet {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
         if(this.date != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("date", date));
+        }
+        if(this.period != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("period", period));
         }
         return result;
     }

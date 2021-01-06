@@ -21,6 +21,33 @@ import java.util.ArrayList;
  * The class for the Site Get Activities By Interval Parameter Set.
  */
 public class SiteGetActivitiesByIntervalParameterSet {
+    /**
+     * The start Date Time.
+     * 
+     */
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
+    @Expose
+	@Nullable
+    public String startDateTime;
+
+    /**
+     * The end Date Time.
+     * 
+     */
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
+    @Expose
+	@Nullable
+    public String endDateTime;
+
+    /**
+     * The interval.
+     * 
+     */
+    @SerializedName(value = "interval", alternate = {"Interval"})
+    @Expose
+	@Nullable
+    public String interval;
+
 
     /**
      * Instiaciates a new SiteGetActivitiesByIntervalParameterSet
@@ -31,6 +58,9 @@ public class SiteGetActivitiesByIntervalParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected SiteGetActivitiesByIntervalParameterSet(@Nonnull final SiteGetActivitiesByIntervalParameterSetBuilder builder) {
+        this.startDateTime = builder.startDateTime;
+        this.endDateTime = builder.endDateTime;
+        this.interval = builder.interval;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +74,51 @@ public class SiteGetActivitiesByIntervalParameterSet {
      * Fluent builder for the SiteGetActivitiesByIntervalParameterSet
      */
     public static final class SiteGetActivitiesByIntervalParameterSetBuilder {
+        /**
+         * The startDateTime parameter value
+         */
+        @Nullable
+        protected String startDateTime;
+        /**
+         * Sets the StartDateTime
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public SiteGetActivitiesByIntervalParameterSetBuilder withStartDateTime(@Nullable final String val) {
+            this.startDateTime = val;
+            return this;
+        }
+        /**
+         * The endDateTime parameter value
+         */
+        @Nullable
+        protected String endDateTime;
+        /**
+         * Sets the EndDateTime
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public SiteGetActivitiesByIntervalParameterSetBuilder withEndDateTime(@Nullable final String val) {
+            this.endDateTime = val;
+            return this;
+        }
+        /**
+         * The interval parameter value
+         */
+        @Nullable
+        protected String interval;
+        /**
+         * Sets the Interval
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public SiteGetActivitiesByIntervalParameterSetBuilder withInterval(@Nullable final String val) {
+            this.interval = val;
+            return this;
+        }
         /**
          * Instanciates a new SiteGetActivitiesByIntervalParameterSetBuilder
          */
@@ -65,6 +140,15 @@ public class SiteGetActivitiesByIntervalParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.startDateTime != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
+        }
+        if(this.endDateTime != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("endDateTime", endDateTime));
+        }
+        if(this.interval != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("interval", interval));
+        }
         return result;
     }
     /**

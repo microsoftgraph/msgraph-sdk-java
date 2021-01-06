@@ -21,6 +21,15 @@ import java.util.ArrayList;
  * The class for the Drive Item Delta Parameter Set.
  */
 public class DriveItemDeltaParameterSet {
+    /**
+     * The token.
+     * 
+     */
+    @SerializedName(value = "token", alternate = {"Token"})
+    @Expose
+	@Nullable
+    public String token;
+
 
     /**
      * Instiaciates a new DriveItemDeltaParameterSet
@@ -31,6 +40,7 @@ public class DriveItemDeltaParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected DriveItemDeltaParameterSet(@Nonnull final DriveItemDeltaParameterSetBuilder builder) {
+        this.token = builder.token;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +54,21 @@ public class DriveItemDeltaParameterSet {
      * Fluent builder for the DriveItemDeltaParameterSet
      */
     public static final class DriveItemDeltaParameterSetBuilder {
+        /**
+         * The token parameter value
+         */
+        @Nullable
+        protected String token;
+        /**
+         * Sets the Token
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DriveItemDeltaParameterSetBuilder withToken(@Nullable final String val) {
+            this.token = val;
+            return this;
+        }
         /**
          * Instanciates a new DriveItemDeltaParameterSetBuilder
          */
@@ -65,6 +90,9 @@ public class DriveItemDeltaParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.token != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("token", token));
+        }
         return result;
     }
     /**

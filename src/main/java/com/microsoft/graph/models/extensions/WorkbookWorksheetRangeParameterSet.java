@@ -21,6 +21,15 @@ import java.util.ArrayList;
  * The class for the Workbook Worksheet Range Parameter Set.
  */
 public class WorkbookWorksheetRangeParameterSet {
+    /**
+     * The address.
+     * 
+     */
+    @SerializedName(value = "address", alternate = {"Address"})
+    @Expose
+	@Nullable
+    public String address;
+
 
     /**
      * Instiaciates a new WorkbookWorksheetRangeParameterSet
@@ -31,6 +40,7 @@ public class WorkbookWorksheetRangeParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected WorkbookWorksheetRangeParameterSet(@Nonnull final WorkbookWorksheetRangeParameterSetBuilder builder) {
+        this.address = builder.address;
     }
     /**
      * Gets a new builder for the body
@@ -44,6 +54,21 @@ public class WorkbookWorksheetRangeParameterSet {
      * Fluent builder for the WorkbookWorksheetRangeParameterSet
      */
     public static final class WorkbookWorksheetRangeParameterSetBuilder {
+        /**
+         * The address parameter value
+         */
+        @Nullable
+        protected String address;
+        /**
+         * Sets the Address
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public WorkbookWorksheetRangeParameterSetBuilder withAddress(@Nullable final String val) {
+            this.address = val;
+            return this;
+        }
         /**
          * Instanciates a new WorkbookWorksheetRangeParameterSetBuilder
          */
@@ -65,6 +90,9 @@ public class WorkbookWorksheetRangeParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.address != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("address", address));
+        }
         return result;
     }
     /**
