@@ -6,6 +6,7 @@
 package com.microsoft.graph.models.extensions;
 
 import com.microsoft.graph.models.extensions.TimeZoneInformation;
+import com.microsoft.graph.models.generated.TimeZoneStandard;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
