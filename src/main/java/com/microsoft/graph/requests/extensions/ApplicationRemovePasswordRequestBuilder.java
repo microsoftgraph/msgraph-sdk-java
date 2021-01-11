@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.ApplicationRemovePasswordRequest;
 import com.microsoft.graph.models.extensions.Application;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.ApplicationRemovePasswordParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class ApplicationRemovePasswordRequestBuilder extends BaseActionRequestBuilder<Application> {
 
+    private ApplicationRemovePasswordParameterSet body;
     /**
      * The request builder for this ApplicationRemovePassword
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param keyId the keyId
+     * @param parameters     the parameters for the service method
      */
-    public ApplicationRemovePasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.UUID keyId) {
+    public ApplicationRemovePasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ApplicationRemovePasswordParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("keyId", keyId);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class ApplicationRemovePasswordRequestBuilder extends BaseActionRequestBu
         ApplicationRemovePasswordRequest request = new ApplicationRemovePasswordRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("keyId")) {
-            request.body.keyId = getParameter("keyId");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentRank_IncR
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPercentRank_IncParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsPercentRank_IncParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsPercentRank_Inc
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param array the array
-     * @param x the x
-     * @param significance the significance
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPercentRank_IncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement array, @Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement significance) {
+    public WorkbookFunctionsPercentRank_IncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPercentRank_IncParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("array", array);
-        bodyParams.put("x", x);
-        bodyParams.put("significance", significance);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRe
         WorkbookFunctionsPercentRank_IncRequest request = new WorkbookFunctionsPercentRank_IncRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("array")) {
-            request.body.array = getParameter("array");
-        }
-
-        if (hasParameter("x")) {
-            request.body.x = getParameter("x");
-        }
-
-        if (hasParameter("significance")) {
-            request.body.significance = getParameter("significance");
-        }
-
-        return request;
+            return request;
     }
 }

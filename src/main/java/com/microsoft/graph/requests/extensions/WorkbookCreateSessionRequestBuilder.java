@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookCreateSessionRequest;
 import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookCreateSessionParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilder<WorkbookSessionInfo> {
 
+    private WorkbookCreateSessionParameterSet body;
     /**
      * The request builder for this WorkbookCreateSession
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param persistChanges the persistChanges
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookCreateSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean persistChanges) {
+    public WorkbookCreateSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookCreateSessionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("persistChanges", persistChanges);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilde
         WorkbookCreateSessionRequest request = new WorkbookCreateSessionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("persistChanges")) {
-            request.body.persistChanges = getParameter("persistChanges");
-        }
-
-        return request;
+            return request;
     }
 }

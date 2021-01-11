@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsEoMonthRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsEoMonthParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsEoMonthRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsEoMonthParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsEoMonth
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param startDate the startDate
-     * @param months the months
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsEoMonthRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement months) {
+    public WorkbookFunctionsEoMonthRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEoMonthParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("startDate", startDate);
-        bodyParams.put("months", months);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsEoMonthRequestBuilder extends BaseActionRequestBui
         WorkbookFunctionsEoMonthRequest request = new WorkbookFunctionsEoMonthRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("startDate")) {
-            request.body.startDate = getParameter("startDate");
-        }
-
-        if (hasParameter("months")) {
-            request.body.months = getParameter("months");
-        }
-
-        return request;
+            return request;
     }
 }

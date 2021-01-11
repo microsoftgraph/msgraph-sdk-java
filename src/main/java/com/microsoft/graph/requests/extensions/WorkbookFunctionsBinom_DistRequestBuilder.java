@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsBinom_DistReques
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_DistParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,23 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsBinom_DistRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsBinom_DistParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsBinom_Dist
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param numberS the numberS
-     * @param trials the trials
-     * @param probabilityS the probabilityS
-     * @param cumulative the cumulative
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBinom_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement numberS, @Nullable final com.google.gson.JsonElement trials, @Nullable final com.google.gson.JsonElement probabilityS, @Nullable final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsBinom_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBinom_DistParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("numberS", numberS);
-        bodyParams.put("trials", trials);
-        bodyParams.put("probabilityS", probabilityS);
-        bodyParams.put("cumulative", cumulative);
+        this.body = parameters;
     }
 
     /**
@@ -61,25 +57,10 @@ public class WorkbookFunctionsBinom_DistRequestBuilder extends BaseActionRequest
         WorkbookFunctionsBinom_DistRequest request = new WorkbookFunctionsBinom_DistRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("numberS")) {
-            request.body.numberS = getParameter("numberS");
-        }
-
-        if (hasParameter("trials")) {
-            request.body.trials = getParameter("trials");
-        }
-
-        if (hasParameter("probabilityS")) {
-            request.body.probabilityS = getParameter("probabilityS");
-        }
-
-        if (hasParameter("cumulative")) {
-            request.body.cumulative = getParameter("cumulative");
-        }
-
-        return request;
+            return request;
     }
 }

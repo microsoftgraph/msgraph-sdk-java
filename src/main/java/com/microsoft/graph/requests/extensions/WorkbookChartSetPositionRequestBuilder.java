@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookChartSetPositionRequest;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookChartSetPositionParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBuilder<WorkbookChart> {
 
+    private WorkbookChartSetPositionParameterSet body;
     /**
      * The request builder for this WorkbookChartSetPosition
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param startCell the startCell
-     * @param endCell the endCell
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookChartSetPositionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement startCell, @Nullable final com.google.gson.JsonElement endCell) {
+    public WorkbookChartSetPositionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartSetPositionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("startCell", startCell);
-        bodyParams.put("endCell", endCell);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBui
         WorkbookChartSetPositionRequest request = new WorkbookChartSetPositionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("startCell")) {
-            request.body.startCell = getParameter("startCell");
-        }
-
-        if (hasParameter("endCell")) {
-            request.body.endCell = getParameter("endCell");
-        }
-
-        return request;
+            return request;
     }
 }

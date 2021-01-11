@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsRriRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsRriParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsRriRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsRriParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsRri
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param nper the nper
-     * @param pv the pv
-     * @param fv the fv
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsRriRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement nper, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv) {
+    public WorkbookFunctionsRriRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRriParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("nper", nper);
-        bodyParams.put("pv", pv);
-        bodyParams.put("fv", fv);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsRriRequestBuilder extends BaseActionRequestBuilder
         WorkbookFunctionsRriRequest request = new WorkbookFunctionsRriRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("nper")) {
-            request.body.nper = getParameter("nper");
-        }
-
-        if (hasParameter("pv")) {
-            request.body.pv = getParameter("pv");
-        }
-
-        if (hasParameter("fv")) {
-            request.body.fv = getParameter("fv");
-        }
-
-        return request;
+            return request;
     }
 }

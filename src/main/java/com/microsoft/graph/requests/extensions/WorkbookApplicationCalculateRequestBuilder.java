@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookApplicationCalculateReque
 import com.microsoft.graph.models.extensions.WorkbookApplication;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookApplicationCalculateParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookApplicationCalculateRequestBuilder extends BaseActionRequestBuilder<WorkbookApplication> {
 
+    private WorkbookApplicationCalculateParameterSet body;
     /**
      * The request builder for this WorkbookApplicationCalculate
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param calculationType the calculationType
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookApplicationCalculateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String calculationType) {
+    public WorkbookApplicationCalculateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookApplicationCalculateParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("calculationType", calculationType);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class WorkbookApplicationCalculateRequestBuilder extends BaseActionReques
         WorkbookApplicationCalculateRequest request = new WorkbookApplicationCalculateRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("calculationType")) {
-            request.body.calculationType = getParameter("calculationType");
-        }
-
-        return request;
+            return request;
     }
 }

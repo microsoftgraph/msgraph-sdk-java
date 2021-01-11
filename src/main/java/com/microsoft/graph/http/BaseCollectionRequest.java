@@ -50,6 +50,7 @@ import okhttp3.Request;
  *
  * @param <T> the type of the object in the collection
  * @param <T2> the response collection type
+ * @param <T3> the collection page type
  */
 public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>,
                                             T3 extends BaseCollectionPage<T, ? extends BaseRequestBuilder<T>>> implements IHttpRequest {
@@ -62,7 +63,7 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
     /**
      * The class for the response collection
      */
-    private final Class<T2> responseCollectionClass;
+    protected final Class<T2> responseCollectionClass;
 
     /**
      * The class for the collection page
@@ -107,34 +108,6 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
     }
 
     /**
-     * Gets the collection of items
-     * @param callback the callback to call once the response is received
-     */
-    public void get(@Nonnull final ICallback<? super T3> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    /**
-     * Gets the collection of items
-     *
-     * @return the collection page
-     */
-    @Nullable
-    public T3 get() throws ClientException {
-        return buildFromResponse(send());
-    }
-
-    /**
      * Deserializes the collection from the response object
      *
      * @param response the collection response
@@ -153,20 +126,6 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
         } catch(IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | SecurityException ex) {
             return null;
         }
-    }
-
-    /**
-     * Posts this request
-     *
-     * @param serializedObject the object to serialize as the body
-     * @param <BodyType>       the type of the serialized body, some times Action use different body than collection item
-     * @return the response object
-     * @throws ClientException an exception occurs if there was an error while the request was sent
-     */
-    @Nullable
-    protected <BodyType> T2 post(@Nonnull final BodyType serializedObject) throws ClientException {
-        baseRequest.setHttpMethod(HttpMethod.POST);
-        return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, serializedObject);
     }
 
     /**

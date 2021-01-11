@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLo
 /**
  * The class for the Windows Information Protection App Locker File Collection Request.
  */
-public class WindowsInformationProtectionAppLockerFileCollectionRequest extends BaseCollectionRequest<WindowsInformationProtectionAppLockerFile, WindowsInformationProtectionAppLockerFileCollectionResponse, WindowsInformationProtectionAppLockerFileCollectionPage> {
+public class WindowsInformationProtectionAppLockerFileCollectionRequest extends BaseEntityCollectionRequest<WindowsInformationProtectionAppLockerFile, WindowsInformationProtectionAppLockerFileCollectionResponse, WindowsInformationProtectionAppLockerFileCollectionPage> {
 
     /**
      * The request builder for this collection of WindowsInformationProtectionAppLockerFile

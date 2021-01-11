@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_Dist_RTRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsT_Dist_RTParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsT_Dist_RTRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsT_Dist_RTParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsT_Dist_RT
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param x the x
-     * @param degFreedom the degFreedom
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsT_Dist_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement degFreedom) {
+    public WorkbookFunctionsT_Dist_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsT_Dist_RTParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("x", x);
-        bodyParams.put("degFreedom", degFreedom);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsT_Dist_RTRequestBuilder extends BaseActionRequestB
         WorkbookFunctionsT_Dist_RTRequest request = new WorkbookFunctionsT_Dist_RTRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("x")) {
-            request.body.x = getParameter("x");
-        }
-
-        if (hasParameter("degFreedom")) {
-            request.body.degFreedom = getParameter("degFreedom");
-        }
-
-        return request;
+            return request;
     }
 }

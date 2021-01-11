@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequestBuilder.java.tt
+// Template Source: BaseEntityCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -48,17 +48,6 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseCollectionRequest
     @Nonnull
     public DirectoryRoleDeltaCollectionRequestBuilder delta() {
         return new DirectoryRoleDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
-    }
-
-    /**
-     * Gets the list of newly created, updated or deleted DirectoryRole
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
-     */
-    @Nonnull
-	public DirectoryRoleDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new DirectoryRoleDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 
     /**

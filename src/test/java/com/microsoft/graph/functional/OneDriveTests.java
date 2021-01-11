@@ -21,6 +21,7 @@ import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
+import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionParameterSet;
 
 @Ignore
 public class OneDriveTests {
@@ -30,7 +31,7 @@ public class OneDriveTests {
 	public void setUp() {
 	   testBase = new TestBase();
 	}
-	
+
 	IProgressCallback<DriveItem> callback = new IProgressCallback<DriveItem> () {
 		@Override
 		public void progress(final long current, final long max) {
@@ -42,7 +43,7 @@ public class OneDriveTests {
 			String finishedItemId = result.id;
 			Assert.assertNotNull(finishedItemId);
 		}
-		
+
 		@Override
 		public void failure(final ClientException ex) {
 			//Handle the failed upload
@@ -50,9 +51,9 @@ public class OneDriveTests {
 		}
 	};
 	/**
-	 * Test large file upload. 
+	 * Test large file upload.
 	 * https://github.com/OneDrive/onedrive-sdk-csharp/blob/master/docs/chunked-uploads.md
-	 * 
+	 *
 	 * @throws IOException if the input file is not found
 	 * @throws InterruptedException if the chunked upload fails
 	 */
@@ -61,23 +62,23 @@ public class OneDriveTests {
 		//Get resource file from file system
 		InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("largefile10M.blob");
 		long fileSize = (long) uploadFile.available();
-		
+
 		UploadSession uploadSession = testBase
 				.graphClient
 				.me()
 				.drive()
 				.root()
 				.itemWithPath("largefile10M.blob")
-				.createUploadSession(new DriveItemUploadableProperties())
+				.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(new DriveItemUploadableProperties()).build())
 				.buildRequest()
 				.post();
 		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
-				uploadSession, 
-				testBase.graphClient, 
-				uploadFile, 
-				fileSize, 
+				uploadSession,
+				testBase.graphClient,
+				uploadFile,
+				fileSize,
 				DriveItem.class);
-		
+
 		chunkedUploadProvider.upload(callback);
 	}
 	@Test
@@ -101,19 +102,19 @@ public class OneDriveTests {
 			.drive()
 			.root()
 			.itemWithPath(item.name)
-			.createUploadSession(item)
+			.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(item).build())
 			.buildRequest()
 			.post();
 
 		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
-				session, 
-				testBase.graphClient, 
-				uploadFile, 
-				fileSize, 
+				session,
+				testBase.graphClient,
+				uploadFile,
+				fileSize,
 				DriveItem.class);
-		
+
 		chunkedUploadProvider.upload(callback);
-		
+
 		final InputStream stream = testBase.graphClient.me()
 			.drive()
 			.root()

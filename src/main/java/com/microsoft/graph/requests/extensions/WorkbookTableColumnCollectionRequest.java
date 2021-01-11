@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequ
 /**
  * The class for the Workbook Table Column Collection Request.
  */
-public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<WorkbookTableColumn, WorkbookTableColumnCollectionResponse, WorkbookTableColumnCollectionPage> {
+public class WorkbookTableColumnCollectionRequest extends BaseEntityCollectionRequest<WorkbookTableColumn, WorkbookTableColumnCollectionResponse, WorkbookTableColumnCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookTableColumn

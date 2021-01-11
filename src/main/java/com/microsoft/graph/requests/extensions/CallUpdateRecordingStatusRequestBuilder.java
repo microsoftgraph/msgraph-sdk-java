@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -9,6 +9,7 @@ import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.CallUpdateRecordingStatusParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,19 +22,18 @@ import javax.annotation.Nonnull;
  */
 public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBuilder<UpdateRecordingStatusOperation> {
 
+    private CallUpdateRecordingStatusParameterSet body;
     /**
      * The request builder for this CallUpdateRecordingStatus
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param status the status
-     * @param clientContext the clientContext
+     * @param parameters     the parameters for the service method
      */
-    public CallUpdateRecordingStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final RecordingStatus status, @Nullable final String clientContext) {
+    public CallUpdateRecordingStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallUpdateRecordingStatusParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("status", status);
-        bodyParams.put("clientContext", clientContext);
+        this.body = parameters;
     }
 
     /**
@@ -58,17 +58,10 @@ public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBu
         CallUpdateRecordingStatusRequest request = new CallUpdateRecordingStatusRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("status")) {
-            request.body.status = getParameter("status");
-        }
-
-        if (hasParameter("clientContext")) {
-            request.body.clientContext = getParameter("clientContext");
-        }
-
-        return request;
+            return request;
     }
 }

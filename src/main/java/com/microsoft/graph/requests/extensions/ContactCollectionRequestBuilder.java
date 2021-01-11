@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequestBuilder.java.tt
+// Template Source: BaseEntityCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -49,17 +49,6 @@ public class ContactCollectionRequestBuilder extends BaseCollectionRequestBuilde
     @Nonnull
     public ContactDeltaCollectionRequestBuilder delta() {
         return new ContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
-    }
-
-    /**
-     * Gets the list of newly created, updated or deleted Contact
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
-     */
-    @Nonnull
-	public ContactDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new ContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 
     /**

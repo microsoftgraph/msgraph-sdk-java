@@ -30,23 +30,24 @@ public class TestBase {
     private String tokenEndpoint = "https://login.microsoftonline.com/"+ Constants.TENANTID +"/oauth2/v2.0/token";
     private String resourceId = "https%3A%2F%2Fgraph.microsoft.com%2F.default";
 
-    protected IGraphServiceClient graphClient = null;
+    public IGraphServiceClient graphClient = null;
 
-    public TestBase()
+    public TestBase(){
+        this(true);
+    }
+    public TestBase(boolean performAuth)
     {
         clientId = Constants.APPID;
         username = Constants.USERNAME;
         password = Constants.PASSWORD;
         clientSecret = Constants.CLIENTSECRET;
-
-        GetAuthenticatedClient();
+        GetClient(performAuth);
     }
-
-    private void GetAuthenticatedClient()
+    private void GetClient(boolean authenticate)
     {
         if (graphClient == null) {
             try {
-                final OkHttpClient httpClient = HttpClients.createDefault(getAuthenticationProvider());
+                final OkHttpClient httpClient = HttpClients.createDefault(authenticate ? getAuthenticationProvider() : getUnauthenticationProvider());
                 graphClient = GraphServiceClient.builder()
                                                 .httpClient(httpClient)
                                                 .buildClient();
@@ -56,6 +57,14 @@ public class TestBase {
                 throw new Error("Could not create a graph client: " + e.getLocalizedMessage());
             }
         }
+    }
+    public ICoreAuthenticationProvider getUnauthenticationProvider() {
+        return new ICoreAuthenticationProvider() {
+            @Override
+            public Request authenticateRequest(Request request) {
+                return request;
+            }
+        };
     }
     public ICoreAuthenticationProvider getAuthenticationProvider() {
         final String accessToken = GetAccessToken().replace("\"", "");

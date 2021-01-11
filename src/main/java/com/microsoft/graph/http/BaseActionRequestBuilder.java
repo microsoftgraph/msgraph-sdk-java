@@ -19,13 +19,6 @@ import javax.annotation.Nonnull;
  * The base method request builder class used for POST actions
  */
 public class BaseActionRequestBuilder<T> extends BaseRequestBuilder<T> {
-
-    /**
-     * The body parameters to add to this request
-     */
-    @Nonnull
-    protected Map<String, Object> bodyParams = new HashMap<>();
-
     /**
      * Constructs a new {@link BaseActionRequestBuilder}
      *
@@ -39,28 +32,5 @@ public class BaseActionRequestBuilder<T> extends BaseRequestBuilder<T> {
             @Nullable final List<? extends Option> options
     ) {
         super(requestUrl, client, options);
-    }
-
-    /**
-     * Checks if the parameter map contains a object accessible by the supplied key
-     *
-     * @param name the key used to access the stored body parameter
-     * @return true, if {@link BaseActionRequestBuilder#bodyParams} contains the key, otherwise false
-     */
-    protected boolean hasParameter(@Nonnull final String name) {
-        return bodyParams.containsKey(name);
-    }
-
-    /**
-     * Gets the requested parameter if present, otherwise null
-     *
-     * @param name the named object to retrieve
-     * @param <T1>  the type to which this object should be cast
-     * @return the stored instance of T, otherwise null
-     */
-    @SuppressWarnings("unchecked")
-    @Nullable
-    protected <T1> T1 getParameter(@Nonnull final String name) {
-        return (T1) bodyParams.get(name);
     }
 }

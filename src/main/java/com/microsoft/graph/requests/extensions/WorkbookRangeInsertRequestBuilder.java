@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeInsertRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookRangeInsertParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -19,17 +20,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookRangeInsertRequestBuilder extends BaseActionRequestBuilder<WorkbookRange> {
 
+    private WorkbookRangeInsertParameterSet body;
     /**
      * The request builder for this WorkbookRangeInsert
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param shift the shift
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeInsertRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String shift) {
+    public WorkbookRangeInsertRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeInsertParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("shift", shift);
+        this.body = parameters;
     }
 
     /**
@@ -54,13 +56,10 @@ public class WorkbookRangeInsertRequestBuilder extends BaseActionRequestBuilder<
         WorkbookRangeInsertRequest request = new WorkbookRangeInsertRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("shift")) {
-            request.body.shift = getParameter("shift");
-        }
-
-        return request;
+            return request;
     }
 }

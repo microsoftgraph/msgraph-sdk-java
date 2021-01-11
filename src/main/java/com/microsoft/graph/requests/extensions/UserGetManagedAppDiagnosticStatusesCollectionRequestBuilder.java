@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -38,7 +38,6 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends
     public UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder.class, UserGetManagedAppDiagnosticStatusesCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *
@@ -49,11 +48,6 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends
     @Nonnull
     public UserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UserGetManagedAppDiagnosticStatusesCollectionRequest request = super.buildRequest(requestOptions);
-
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
-
         return request;
     }
 }

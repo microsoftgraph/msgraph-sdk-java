@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequestBuilder.java.tt
+// Template Source: BaseEntityCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -48,17 +48,6 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseCollectio
     @Nonnull
     public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta() {
         return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
-    }
-
-    /**
-     * Gets the list of newly created, updated or deleted OAuth2PermissionGrant
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
-     */
-    @Nonnull
-	public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 
     /**

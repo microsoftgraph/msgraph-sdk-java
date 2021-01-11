@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionProtec
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionProtectParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseActionRequestBuilder<WorkbookWorksheetProtection> {
 
+    private WorkbookWorksheetProtectionProtectParameterSet body;
     /**
      * The request builder for this WorkbookWorksheetProtectionProtect
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param options the options
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookWorksheetProtectionProtectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final WorkbookWorksheetProtectionOptions options) {
+    public WorkbookWorksheetProtectionProtectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookWorksheetProtectionProtectParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("options", options);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseAction
         WorkbookWorksheetProtectionProtectRequest request = new WorkbookWorksheetProtectionProtectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("options")) {
-            request.body.options = getParameter("options");
-        }
-
-        return request;
+            return request;
     }
 }

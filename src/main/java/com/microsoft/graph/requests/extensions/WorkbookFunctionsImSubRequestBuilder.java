@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSubRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsImSubParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsImSubRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsImSubParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsImSub
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param inumber1 the inumber1
-     * @param inumber2 the inumber2
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsImSubRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement inumber1, @Nullable final com.google.gson.JsonElement inumber2) {
+    public WorkbookFunctionsImSubRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImSubParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("inumber1", inumber1);
-        bodyParams.put("inumber2", inumber2);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsImSubRequestBuilder extends BaseActionRequestBuild
         WorkbookFunctionsImSubRequest request = new WorkbookFunctionsImSubRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("inumber1")) {
-            request.body.inumber1 = getParameter("inumber1");
-        }
-
-        if (hasParameter("inumber2")) {
-            request.body.inumber2 = getParameter("inumber2");
-        }
-
-        return request;
+            return request;
     }
 }

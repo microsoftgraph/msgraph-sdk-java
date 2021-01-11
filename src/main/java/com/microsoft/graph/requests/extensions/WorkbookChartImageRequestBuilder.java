@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookChartImageRequest;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookChartImageParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -36,41 +37,13 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param width the width
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookChartImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Integer width) {
+    public WorkbookChartImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartImageParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("width", width));
-    }
-    /**
-     * The request builder for this WorkbookChartImage
-     *
-     * @param requestUrl     the request URL
-     * @param client         the service client
-     * @param requestOptions the options for this request
-     * @param width the width
-     * @param height the height
-     */
-    public WorkbookChartImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Integer width, @Nullable final Integer height) {
-        super(requestUrl, client, requestOptions);
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("width", width));
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("height", height));
-    }
-    /**
-     * The request builder for this WorkbookChartImage
-     *
-     * @param requestUrl     the request URL
-     * @param client         the service client
-     * @param requestOptions the options for this request
-     * @param width the width
-     * @param height the height
-     * @param fittingMode the fittingMode
-     */
-    public WorkbookChartImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Integer width, @Nullable final Integer height, @Nullable final String fittingMode) {
-        super(requestUrl, client, requestOptions);
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("width", width));
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("height", height));
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("fittingMode", fittingMode));
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**
@@ -97,10 +70,6 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
                 getClient(),
                 requestOptions
         );
-
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeRowsAboveRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookRangeRowsAboveParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -36,11 +37,13 @@ public class WorkbookRangeRowsAboveRequestBuilder extends BaseFunctionRequestBui
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param count the count
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeRowsAboveRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Integer count) {
+    public WorkbookRangeRowsAboveRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeRowsAboveParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("count", count));
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**
@@ -67,10 +70,6 @@ public class WorkbookRangeRowsAboveRequestBuilder extends BaseFunctionRequestBui
                 getClient(),
                 requestOptions
         );
-
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
 
         return request;
     }

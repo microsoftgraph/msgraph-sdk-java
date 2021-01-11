@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.NotebookGetNotebookFromWebUrlRequ
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.NotebookGetNotebookFromWebUrlParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionRequestBuilder<CopyNotebookModel> {
 
+    private NotebookGetNotebookFromWebUrlParameterSet body;
     /**
      * The request builder for this NotebookGetNotebookFromWebUrl
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param webUrl the webUrl
+     * @param parameters     the parameters for the service method
      */
-    public NotebookGetNotebookFromWebUrlRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String webUrl) {
+    public NotebookGetNotebookFromWebUrlRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookGetNotebookFromWebUrlParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("webUrl", webUrl);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionReque
         NotebookGetNotebookFromWebUrlRequest request = new NotebookGetNotebookFromWebUrlRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("webUrl")) {
-            request.body.webUrl = getParameter("webUrl");
-        }
-
-        return request;
+            return request;
     }
 }

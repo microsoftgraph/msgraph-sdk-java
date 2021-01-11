@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 /**
  * The class for the Single Value Legacy Extended Property Collection Request.
  */
-public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseCollectionRequest<SingleValueLegacyExtendedProperty, SingleValueLegacyExtendedPropertyCollectionResponse, SingleValueLegacyExtendedPropertyCollectionPage> {
+public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseEntityCollectionRequest<SingleValueLegacyExtendedProperty, SingleValueLegacyExtendedPropertyCollectionResponse, SingleValueLegacyExtendedPropertyCollectionPage> {
 
     /**
      * The request builder for this collection of SingleValueLegacyExtendedProperty

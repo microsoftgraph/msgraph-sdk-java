@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsNorm_DistRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsNorm_DistParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,23 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsNorm_DistParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsNorm_Dist
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param x the x
-     * @param mean the mean
-     * @param standardDev the standardDev
-     * @param cumulative the cumulative
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsNorm_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement mean, @Nullable final com.google.gson.JsonElement standardDev, @Nullable final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsNorm_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsNorm_DistParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("x", x);
-        bodyParams.put("mean", mean);
-        bodyParams.put("standardDev", standardDev);
-        bodyParams.put("cumulative", cumulative);
+        this.body = parameters;
     }
 
     /**
@@ -61,25 +57,10 @@ public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestB
         WorkbookFunctionsNorm_DistRequest request = new WorkbookFunctionsNorm_DistRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("x")) {
-            request.body.x = getParameter("x");
-        }
-
-        if (hasParameter("mean")) {
-            request.body.mean = getParameter("mean");
-        }
-
-        if (hasParameter("standardDev")) {
-            request.body.standardDev = getParameter("standardDev");
-        }
-
-        if (hasParameter("cumulative")) {
-            request.body.cumulative = getParameter("cumulative");
-        }
-
-        return request;
+            return request;
     }
 }

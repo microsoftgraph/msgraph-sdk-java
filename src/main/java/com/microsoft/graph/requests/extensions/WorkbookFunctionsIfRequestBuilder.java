@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsIfRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsIfParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsIfParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsIf
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param logicalTest the logicalTest
-     * @param valueIfTrue the valueIfTrue
-     * @param valueIfFalse the valueIfFalse
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsIfRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement logicalTest, @Nullable final com.google.gson.JsonElement valueIfTrue, @Nullable final com.google.gson.JsonElement valueIfFalse) {
+    public WorkbookFunctionsIfRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIfParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("logicalTest", logicalTest);
-        bodyParams.put("valueIfTrue", valueIfTrue);
-        bodyParams.put("valueIfFalse", valueIfFalse);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuilder<
         WorkbookFunctionsIfRequest request = new WorkbookFunctionsIfRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("logicalTest")) {
-            request.body.logicalTest = getParameter("logicalTest");
-        }
-
-        if (hasParameter("valueIfTrue")) {
-            request.body.valueIfTrue = getParameter("valueIfTrue");
-        }
-
-        if (hasParameter("valueIfFalse")) {
-            request.body.valueIfFalse = getParameter("valueIfFalse");
-        }
-
-        return request;
+            return request;
     }
 }

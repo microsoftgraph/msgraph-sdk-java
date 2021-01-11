@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequest;
 /**
  * The class for the Managed EBook Collection Request.
  */
-public class ManagedEBookCollectionRequest extends BaseCollectionRequest<ManagedEBook, ManagedEBookCollectionResponse, ManagedEBookCollectionPage> {
+public class ManagedEBookCollectionRequest extends BaseEntityCollectionRequest<ManagedEBook, ManagedEBookCollectionResponse, ManagedEBookCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedEBook

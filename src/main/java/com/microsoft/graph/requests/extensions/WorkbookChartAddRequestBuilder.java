@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookChartAddRequest;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookChartAddParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -19,21 +20,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookChartAddRequestBuilder extends BaseActionRequestBuilder<WorkbookChart> {
 
+    private WorkbookChartAddParameterSet body;
     /**
      * The request builder for this WorkbookChartAdd
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param type the type
-     * @param sourceData the sourceData
-     * @param seriesBy the seriesBy
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookChartAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String type, @Nullable final com.google.gson.JsonElement sourceData, @Nullable final String seriesBy) {
+    public WorkbookChartAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartAddParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("type", type);
-        bodyParams.put("sourceData", sourceData);
-        bodyParams.put("seriesBy", seriesBy);
+        this.body = parameters;
     }
 
     /**
@@ -58,21 +56,10 @@ public class WorkbookChartAddRequestBuilder extends BaseActionRequestBuilder<Wor
         WorkbookChartAddRequest request = new WorkbookChartAddRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("type")) {
-            request.body.type = getParameter("type");
-        }
-
-        if (hasParameter("sourceData")) {
-            request.body.sourceData = getParameter("sourceData");
-        }
-
-        if (hasParameter("seriesBy")) {
-            request.body.seriesBy = getParameter("seriesBy");
-        }
-
-        return request;
+            return request;
     }
 }

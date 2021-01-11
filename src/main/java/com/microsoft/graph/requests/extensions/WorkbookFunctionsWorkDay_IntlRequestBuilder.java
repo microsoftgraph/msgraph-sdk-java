@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsWorkDay_IntlRequ
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsWorkDay_IntlParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,23 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsWorkDay_IntlParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsWorkDay_Intl
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param startDate the startDate
-     * @param days the days
-     * @param weekend the weekend
-     * @param holidays the holidays
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsWorkDay_IntlRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement startDate, @Nullable final com.google.gson.JsonElement days, @Nullable final com.google.gson.JsonElement weekend, @Nullable final com.google.gson.JsonElement holidays) {
+    public WorkbookFunctionsWorkDay_IntlRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsWorkDay_IntlParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("startDate", startDate);
-        bodyParams.put("days", days);
-        bodyParams.put("weekend", weekend);
-        bodyParams.put("holidays", holidays);
+        this.body = parameters;
     }
 
     /**
@@ -61,25 +57,10 @@ public class WorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionReque
         WorkbookFunctionsWorkDay_IntlRequest request = new WorkbookFunctionsWorkDay_IntlRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("startDate")) {
-            request.body.startDate = getParameter("startDate");
-        }
-
-        if (hasParameter("days")) {
-            request.body.days = getParameter("days");
-        }
-
-        if (hasParameter("weekend")) {
-            request.body.weekend = getParameter("weekend");
-        }
-
-        if (hasParameter("holidays")) {
-            request.body.holidays = getParameter("holidays");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsHlookupRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsHlookupParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,23 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsHlookupRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsHlookupParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsHlookup
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param lookupValue the lookupValue
-     * @param tableArray the tableArray
-     * @param rowIndexNum the rowIndexNum
-     * @param rangeLookup the rangeLookup
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsHlookupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement lookupValue, @Nullable final com.google.gson.JsonElement tableArray, @Nullable final com.google.gson.JsonElement rowIndexNum, @Nullable final com.google.gson.JsonElement rangeLookup) {
+    public WorkbookFunctionsHlookupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsHlookupParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("lookupValue", lookupValue);
-        bodyParams.put("tableArray", tableArray);
-        bodyParams.put("rowIndexNum", rowIndexNum);
-        bodyParams.put("rangeLookup", rangeLookup);
+        this.body = parameters;
     }
 
     /**
@@ -61,25 +57,10 @@ public class WorkbookFunctionsHlookupRequestBuilder extends BaseActionRequestBui
         WorkbookFunctionsHlookupRequest request = new WorkbookFunctionsHlookupRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("lookupValue")) {
-            request.body.lookupValue = getParameter("lookupValue");
-        }
-
-        if (hasParameter("tableArray")) {
-            request.body.tableArray = getParameter("tableArray");
-        }
-
-        if (hasParameter("rowIndexNum")) {
-            request.body.rowIndexNum = getParameter("rowIndexNum");
-        }
-
-        if (hasParameter("rangeLookup")) {
-            request.body.rangeLookup = getParameter("rangeLookup");
-        }
-
-        return request;
+            return request;
     }
 }

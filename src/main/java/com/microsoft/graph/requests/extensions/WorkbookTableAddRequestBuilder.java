@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookTableAddRequest;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookTableAddParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -19,19 +20,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookTableAddRequestBuilder extends BaseActionRequestBuilder<WorkbookTable> {
 
+    private WorkbookTableAddParameterSet body;
     /**
      * The request builder for this WorkbookTableAdd
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param address the address
-     * @param hasHeaders the hasHeaders
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookTableAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String address, @Nullable final Boolean hasHeaders) {
+    public WorkbookTableAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookTableAddParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("address", address);
-        bodyParams.put("hasHeaders", hasHeaders);
+        this.body = parameters;
     }
 
     /**
@@ -56,17 +56,10 @@ public class WorkbookTableAddRequestBuilder extends BaseActionRequestBuilder<Wor
         WorkbookTableAddRequest request = new WorkbookTableAddRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("address")) {
-            request.body.address = getParameter("address");
-        }
-
-        if (hasParameter("hasHeaders")) {
-            request.body.hasHeaders = getParameter("hasHeaders");
-        }
-
-        return request;
+            return request;
     }
 }

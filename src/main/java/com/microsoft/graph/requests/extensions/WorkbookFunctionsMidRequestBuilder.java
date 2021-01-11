@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsMidRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsMidParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsMidRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsMidParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsMid
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param text the text
-     * @param startNum the startNum
-     * @param numChars the numChars
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsMidRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement text, @Nullable final com.google.gson.JsonElement startNum, @Nullable final com.google.gson.JsonElement numChars) {
+    public WorkbookFunctionsMidRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsMidParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("text", text);
-        bodyParams.put("startNum", startNum);
-        bodyParams.put("numChars", numChars);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsMidRequestBuilder extends BaseActionRequestBuilder
         WorkbookFunctionsMidRequest request = new WorkbookFunctionsMidRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("text")) {
-            request.body.text = getParameter("text");
-        }
-
-        if (hasParameter("startNum")) {
-            request.body.startNum = getParameter("startNum");
-        }
-
-        if (hasParameter("numChars")) {
-            request.body.numChars = getParameter("numChars");
-        }
-
-        return request;
+            return request;
     }
 }

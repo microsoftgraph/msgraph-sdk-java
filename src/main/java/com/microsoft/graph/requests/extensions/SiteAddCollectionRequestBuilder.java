@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionRequest;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionResponse;
+import com.microsoft.graph.models.extensions.SiteAddParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -28,21 +29,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class SiteAddCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<Site, SiteAddCollectionRequestBuilder, SiteAddCollectionResponse, SiteAddCollectionPage, SiteAddCollectionRequest> {
 
+    private SiteAddParameterSet body;
     /**
      * The request builder for this collection of Site
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param value the value
+     * @param parameters     the parameters for the service method
      */
-    public SiteAddCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<Site> value) {
+    public SiteAddCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteAddParameterSet parameters) {
         super(requestUrl, client, requestOptions, SiteAddCollectionRequestBuilder.class, SiteAddCollectionRequest.class);
-  	 if(value!=null){
-			bodyParams.put("value", value);
-		}
-      }
-    
+        this.body = parameters;
+    }
     /**
      * Creates the request
      *
@@ -53,11 +52,7 @@ public class SiteAddCollectionRequestBuilder extends BaseActionCollectionRequest
     @Nonnull
     public SiteAddCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final SiteAddCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("value")) {
-            request.body.value = getParameter("value");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

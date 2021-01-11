@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.UserSendMailRequest;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.UserSendMailParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class UserSendMailRequestBuilder extends BaseActionRequestBuilder<User> {
 
+    private UserSendMailParameterSet body;
     /**
      * The request builder for this UserSendMail
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param message the message
-     * @param saveToSentItems the saveToSentItems
+     * @param parameters     the parameters for the service method
      */
-    public UserSendMailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Message message, @Nullable final Boolean saveToSentItems) {
+    public UserSendMailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserSendMailParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("message", message);
-        bodyParams.put("saveToSentItems", saveToSentItems);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class UserSendMailRequestBuilder extends BaseActionRequestBuilder<User> {
         UserSendMailRequest request = new UserSendMailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("message")) {
-            request.body.message = getParameter("message");
-        }
-
-        if (hasParameter("saveToSentItems")) {
-            request.body.saveToSentItems = getParameter("saveToSentItems");
-        }
-
-        return request;
+            return request;
     }
 }

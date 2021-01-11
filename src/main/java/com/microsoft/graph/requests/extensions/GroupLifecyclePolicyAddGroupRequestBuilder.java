@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyAddGroupReque
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.GroupLifecyclePolicyAddGroupParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionRequestBuilder<Boolean> {
 
+    private GroupLifecyclePolicyAddGroupParameterSet body;
     /**
      * The request builder for this GroupLifecyclePolicyAddGroup
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param groupId the groupId
+     * @param parameters     the parameters for the service method
      */
-    public GroupLifecyclePolicyAddGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String groupId) {
+    public GroupLifecyclePolicyAddGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupLifecyclePolicyAddGroupParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("groupId", groupId);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionReques
         GroupLifecyclePolicyAddGroupRequest request = new GroupLifecyclePolicyAddGroupRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("groupId")) {
-            request.body.groupId = getParameter("groupId");
-        }
-
-        return request;
+            return request;
     }
 }

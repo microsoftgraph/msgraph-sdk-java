@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.OnenotePageCopyToSectionRequest;
 import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.OnenotePageCopyToSectionParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,23 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class OnenotePageCopyToSectionRequestBuilder extends BaseActionRequestBuilder<OnenoteOperation> {
 
+    private OnenotePageCopyToSectionParameterSet body;
     /**
      * The request builder for this OnenotePageCopyToSection
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param id the id
-     * @param groupId the groupId
-     * @param siteCollectionId the siteCollectionId
-     * @param siteId the siteId
+     * @param parameters     the parameters for the service method
      */
-    public OnenotePageCopyToSectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String id, @Nullable final String groupId, @Nullable final String siteCollectionId, @Nullable final String siteId) {
+    public OnenotePageCopyToSectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenotePageCopyToSectionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("id", id);
-        bodyParams.put("groupId", groupId);
-        bodyParams.put("siteCollectionId", siteCollectionId);
-        bodyParams.put("siteId", siteId);
+        this.body = parameters;
     }
 
     /**
@@ -61,25 +57,10 @@ public class OnenotePageCopyToSectionRequestBuilder extends BaseActionRequestBui
         OnenotePageCopyToSectionRequest request = new OnenotePageCopyToSectionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("id")) {
-            request.body.id = getParameter("id");
-        }
-
-        if (hasParameter("groupId")) {
-            request.body.groupId = getParameter("groupId");
-        }
-
-        if (hasParameter("siteCollectionId")) {
-            request.body.siteCollectionId = getParameter("siteCollectionId");
-        }
-
-        if (hasParameter("siteId")) {
-            request.body.siteId = getParameter("siteId");
-        }
-
-        return request;
+            return request;
     }
 }

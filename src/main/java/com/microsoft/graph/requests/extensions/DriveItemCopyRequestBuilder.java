@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.DriveItemCopyRequest;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.DriveItemCopyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class DriveItemCopyRequestBuilder extends BaseActionRequestBuilder<DriveItem> {
 
+    private DriveItemCopyParameterSet body;
     /**
      * The request builder for this DriveItemCopy
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param name the name
-     * @param parentReference the parentReference
+     * @param parameters     the parameters for the service method
      */
-    public DriveItemCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String name, @Nullable final ItemReference parentReference) {
+    public DriveItemCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemCopyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("name", name);
-        bodyParams.put("parentReference", parentReference);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class DriveItemCopyRequestBuilder extends BaseActionRequestBuilder<DriveI
         DriveItemCopyRequest request = new DriveItemCopyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("name")) {
-            request.body.name = getParameter("name");
-        }
-
-        if (hasParameter("parentReference")) {
-            request.body.parentReference = getParameter("parentReference");
-        }
-
-        return request;
+            return request;
     }
 }

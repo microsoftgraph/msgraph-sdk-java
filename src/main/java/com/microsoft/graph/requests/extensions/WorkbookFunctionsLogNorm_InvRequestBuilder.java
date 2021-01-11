@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsLogNorm_InvReque
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsLogNorm_InvParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsLogNorm_InvParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsLogNorm_Inv
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param probability the probability
-     * @param mean the mean
-     * @param standardDev the standardDev
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsLogNorm_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement probability, @Nullable final com.google.gson.JsonElement mean, @Nullable final com.google.gson.JsonElement standardDev) {
+    public WorkbookFunctionsLogNorm_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsLogNorm_InvParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("probability", probability);
-        bodyParams.put("mean", mean);
-        bodyParams.put("standardDev", standardDev);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionReques
         WorkbookFunctionsLogNorm_InvRequest request = new WorkbookFunctionsLogNorm_InvRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("probability")) {
-            request.body.probability = getParameter("probability");
-        }
-
-        if (hasParameter("mean")) {
-            request.body.mean = getParameter("mean");
-        }
-
-        if (hasParameter("standardDev")) {
-            request.body.standardDev = getParameter("standardDev");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequest;
 /**
  * The class for the Teams Tab Collection Request.
  */
-public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTab, TeamsTabCollectionResponse, TeamsTabCollectionPage> {
+public class TeamsTabCollectionRequest extends BaseEntityCollectionRequest<TeamsTab, TeamsTabCollectionResponse, TeamsTabCollectionPage> {
 
     /**
      * The request builder for this collection of TeamsTab

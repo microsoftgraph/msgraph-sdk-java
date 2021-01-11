@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsFixedRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsFixedParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsFixedRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsFixedParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsFixed
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param number the number
-     * @param decimals the decimals
-     * @param noCommas the noCommas
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsFixedRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement number, @Nullable final com.google.gson.JsonElement decimals, @Nullable final com.google.gson.JsonElement noCommas) {
+    public WorkbookFunctionsFixedRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFixedParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("number", number);
-        bodyParams.put("decimals", decimals);
-        bodyParams.put("noCommas", noCommas);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsFixedRequestBuilder extends BaseActionRequestBuild
         WorkbookFunctionsFixedRequest request = new WorkbookFunctionsFixedRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("number")) {
-            request.body.number = getParameter("number");
-        }
-
-        if (hasParameter("decimals")) {
-            request.body.decimals = getParameter("decimals");
-        }
-
-        if (hasParameter("noCommas")) {
-            request.body.noCommas = getParameter("noCommas");
-        }
-
-        return request;
+            return request;
     }
 }

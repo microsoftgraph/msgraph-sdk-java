@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
@@ -31,7 +31,7 @@ import com.microsoft.graph.requests.extensions.TeamCollectionRequest;
 /**
  * The class for the Team Collection Request.
  */
-public class TeamCollectionRequest extends BaseCollectionRequest<Team, TeamCollectionResponse, TeamCollectionPage> {
+public class TeamCollectionRequest extends BaseEntityCollectionRequest<Team, TeamCollectionResponse, TeamCollectionPage> {
 
     /**
      * The request builder for this collection of Team

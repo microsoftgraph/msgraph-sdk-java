@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionResponse;
+import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberGroupsParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -28,21 +29,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<String, DirectoryObjectGetMemberGroupsCollectionRequestBuilder, DirectoryObjectGetMemberGroupsCollectionResponse, DirectoryObjectGetMemberGroupsCollectionPage, DirectoryObjectGetMemberGroupsCollectionRequest> {
 
+    private DirectoryObjectGetMemberGroupsParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param securityEnabledOnly the securityEnabledOnly
+     * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean securityEnabledOnly) {
+    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class, DirectoryObjectGetMemberGroupsCollectionRequest.class);
-  	 if(securityEnabledOnly!=null){
-			bodyParams.put("securityEnabledOnly", securityEnabledOnly);
-		}
-      }
-    
+        this.body = parameters;
+    }
     /**
      * Creates the request
      *
@@ -53,11 +52,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
     @Nonnull
     public DirectoryObjectGetMemberGroupsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectGetMemberGroupsCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("securityEnabledOnly")) {
-            request.body.securityEnabledOnly = getParameter("securityEnabledOnly");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

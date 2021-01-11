@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsVdbRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsVdbParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,29 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsVdbParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsVdb
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param cost the cost
-     * @param salvage the salvage
-     * @param life the life
-     * @param startPeriod the startPeriod
-     * @param endPeriod the endPeriod
-     * @param factor the factor
-     * @param noSwitch the noSwitch
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsVdbRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement life, @Nullable final com.google.gson.JsonElement startPeriod, @Nullable final com.google.gson.JsonElement endPeriod, @Nullable final com.google.gson.JsonElement factor, @Nullable final com.google.gson.JsonElement noSwitch) {
+    public WorkbookFunctionsVdbRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsVdbParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("cost", cost);
-        bodyParams.put("salvage", salvage);
-        bodyParams.put("life", life);
-        bodyParams.put("startPeriod", startPeriod);
-        bodyParams.put("endPeriod", endPeriod);
-        bodyParams.put("factor", factor);
-        bodyParams.put("noSwitch", noSwitch);
+        this.body = parameters;
     }
 
     /**
@@ -67,37 +57,10 @@ public class WorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBuilder
         WorkbookFunctionsVdbRequest request = new WorkbookFunctionsVdbRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("cost")) {
-            request.body.cost = getParameter("cost");
-        }
-
-        if (hasParameter("salvage")) {
-            request.body.salvage = getParameter("salvage");
-        }
-
-        if (hasParameter("life")) {
-            request.body.life = getParameter("life");
-        }
-
-        if (hasParameter("startPeriod")) {
-            request.body.startPeriod = getParameter("startPeriod");
-        }
-
-        if (hasParameter("endPeriod")) {
-            request.body.endPeriod = getParameter("endPeriod");
-        }
-
-        if (hasParameter("factor")) {
-            request.body.factor = getParameter("factor");
-        }
-
-        if (hasParameter("noSwitch")) {
-            request.body.noSwitch = getParameter("noSwitch");
-        }
-
-        return request;
+            return request;
     }
 }

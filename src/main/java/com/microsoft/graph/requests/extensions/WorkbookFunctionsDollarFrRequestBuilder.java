@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsDollarFrRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDollarFrParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsDollarFrRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsDollarFrParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsDollarFr
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param decimalDollar the decimalDollar
-     * @param fraction the fraction
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsDollarFrRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement decimalDollar, @Nullable final com.google.gson.JsonElement fraction) {
+    public WorkbookFunctionsDollarFrRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsDollarFrParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("decimalDollar", decimalDollar);
-        bodyParams.put("fraction", fraction);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsDollarFrRequestBuilder extends BaseActionRequestBu
         WorkbookFunctionsDollarFrRequest request = new WorkbookFunctionsDollarFrRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("decimalDollar")) {
-            request.body.decimalDollar = getParameter("decimalDollar");
-        }
-
-        if (hasParameter("fraction")) {
-            request.body.fraction = getParameter("fraction");
-        }
-
-        return request;
+            return request;
     }
 }

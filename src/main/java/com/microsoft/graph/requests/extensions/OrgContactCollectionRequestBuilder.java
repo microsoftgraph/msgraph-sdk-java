@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequestBuilder.java.tt
+// Template Source: BaseEntityCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -48,17 +48,6 @@ public class OrgContactCollectionRequestBuilder extends BaseCollectionRequestBui
     @Nonnull
     public OrgContactDeltaCollectionRequestBuilder delta() {
         return new OrgContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
-    }
-
-    /**
-     * Gets the list of newly created, updated or deleted OrgContact
-     * 
-     * @return a request builder to get the changes
-     * @param deltaLink the link returned by the last delta request
-     */
-    @Nonnull
-	public OrgContactDeltaCollectionRequestBuilder delta(@Nonnull final String deltaLink) {
-        return new OrgContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 
     /**

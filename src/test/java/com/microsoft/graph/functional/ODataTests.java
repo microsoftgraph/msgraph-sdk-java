@@ -1,6 +1,7 @@
 package com.microsoft.graph.functional;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +13,11 @@ import org.junit.Test;
 
 import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.ExtensionSchemaProperty;
 import com.microsoft.graph.models.extensions.SchemaExtension;
+import com.microsoft.graph.requests.extensions.GroupDeltaCollectionPage;
+import com.microsoft.graph.models.extensions.GroupDeltaParameterSet;
 
 @Ignore
 public class ODataTests {
@@ -128,25 +132,19 @@ public class ODataTests {
 
     @Test
     public void testDeltaQuery() {
-//        testBase.graphClient.setServiceRoot("https://graph.microsoft.com/beta");
-//        IGroupDeltaCollectionPage deltas = testBase.graphClient.getGroups().getDelta().buildRequest().get();
-//
-//        assertNotNull(deltas.getCurrentPage());
-//        for (int i = 0; i < deltas.getCurrentPage().size(); i++) {
-//            Group group = deltas.getCurrentPage().get(i);
-//            String s = group.description;
-//        }
-//
-//        while(deltas.getNextPage() != null) {
-//            deltas = deltas.getNextPage().buildRequest().get();
-//            assertNotNull(deltas.getCurrentPage());
-//        }
-//
-//        IGroupDeltaCollectionPage deltas2 = testBase.graphClient.getGroups().getDelta(deltas.getDeltaLink()).buildRequest().get();
-//        assertNotNull(deltas2);
-    }
+       GroupDeltaCollectionPage deltas = testBase.graphClient.groups().delta().buildRequest().get();
 
-    @Test
-    public void testDeletedItem() {
+       assertNotNull(deltas.getCurrentPage());
+       for (final Group group : deltas.getCurrentPage()) {
+           final String s = group.description;
+       }
+
+       while(deltas.getNextPage() != null) {
+           deltas = deltas.getNextPage().buildRequest().get();
+           assertNotNull(deltas.getCurrentPage());
+       }
+
+       final GroupDeltaCollectionPage deltas2 = testBase.graphClient.groups().delta().buildRequest().deltaLink(deltas.deltaLink()).get();
+       assertNotNull(deltas2);
     }
 }

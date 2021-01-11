@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsXirrRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsXirrParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsXirrParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsXirr
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param values the values
-     * @param dates the dates
-     * @param guess the guess
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsXirrRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement values, @Nullable final com.google.gson.JsonElement dates, @Nullable final com.google.gson.JsonElement guess) {
+    public WorkbookFunctionsXirrRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsXirrParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("values", values);
-        bodyParams.put("dates", dates);
-        bodyParams.put("guess", guess);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBuilde
         WorkbookFunctionsXirrRequest request = new WorkbookFunctionsXirrRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("values")) {
-            request.body.values = getParameter("values");
-        }
-
-        if (hasParameter("dates")) {
-            request.body.dates = getParameter("dates");
-        }
-
-        if (hasParameter("guess")) {
-            request.body.guess = getParameter("guess");
-        }
-
-        return request;
+            return request;
     }
 }

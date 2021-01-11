@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -9,6 +9,7 @@ import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.OnlineMeetingCreateOrGetParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -21,27 +22,18 @@ import javax.annotation.Nonnull;
  */
 public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBuilder<OnlineMeeting> {
 
+    private OnlineMeetingCreateOrGetParameterSet body;
     /**
      * The request builder for this OnlineMeetingCreateOrGet
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param chatInfo the chatInfo
-     * @param endDateTime the endDateTime
-     * @param externalId the externalId
-     * @param participants the participants
-     * @param startDateTime the startDateTime
-     * @param subject the subject
+     * @param parameters     the parameters for the service method
      */
-    public OnlineMeetingCreateOrGetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final ChatInfo chatInfo, @Nullable final java.util.Calendar endDateTime, @Nullable final String externalId, @Nullable final MeetingParticipants participants, @Nullable final java.util.Calendar startDateTime, @Nullable final String subject) {
+    public OnlineMeetingCreateOrGetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnlineMeetingCreateOrGetParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("chatInfo", chatInfo);
-        bodyParams.put("endDateTime", endDateTime);
-        bodyParams.put("externalId", externalId);
-        bodyParams.put("participants", participants);
-        bodyParams.put("startDateTime", startDateTime);
-        bodyParams.put("subject", subject);
+        this.body = parameters;
     }
 
     /**
@@ -66,33 +58,10 @@ public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBui
         OnlineMeetingCreateOrGetRequest request = new OnlineMeetingCreateOrGetRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("chatInfo")) {
-            request.body.chatInfo = getParameter("chatInfo");
-        }
-
-        if (hasParameter("endDateTime")) {
-            request.body.endDateTime = getParameter("endDateTime");
-        }
-
-        if (hasParameter("externalId")) {
-            request.body.externalId = getParameter("externalId");
-        }
-
-        if (hasParameter("participants")) {
-            request.body.participants = getParameter("participants");
-        }
-
-        if (hasParameter("startDateTime")) {
-            request.body.startDateTime = getParameter("startDateTime");
-        }
-
-        if (hasParameter("subject")) {
-            request.body.subject = getParameter("subject");
-        }
-
-        return request;
+            return request;
     }
 }

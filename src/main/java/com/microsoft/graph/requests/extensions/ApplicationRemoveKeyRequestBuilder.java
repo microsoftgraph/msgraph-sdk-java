@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.ApplicationRemoveKeyRequest;
 import com.microsoft.graph.models.extensions.Application;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.ApplicationRemoveKeyParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class ApplicationRemoveKeyRequestBuilder extends BaseActionRequestBuilder<Application> {
 
+    private ApplicationRemoveKeyParameterSet body;
     /**
      * The request builder for this ApplicationRemoveKey
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param keyId the keyId
-     * @param proof the proof
+     * @param parameters     the parameters for the service method
      */
-    public ApplicationRemoveKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.UUID keyId, @Nullable final String proof) {
+    public ApplicationRemoveKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ApplicationRemoveKeyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("keyId", keyId);
-        bodyParams.put("proof", proof);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class ApplicationRemoveKeyRequestBuilder extends BaseActionRequestBuilder
         ApplicationRemoveKeyRequest request = new ApplicationRemoveKeyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("keyId")) {
-            request.body.keyId = getParameter("keyId");
-        }
-
-        if (hasParameter("proof")) {
-            request.body.proof = getParameter("proof");
-        }
-
-        return request;
+            return request;
     }
 }

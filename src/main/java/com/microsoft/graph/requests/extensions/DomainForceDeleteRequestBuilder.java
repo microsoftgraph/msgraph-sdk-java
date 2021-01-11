@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.DomainForceDeleteRequest;
 import com.microsoft.graph.models.extensions.Domain;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.DomainForceDeleteParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder<Domain> {
 
+    private DomainForceDeleteParameterSet body;
     /**
      * The request builder for this DomainForceDelete
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param disableUserAccounts the disableUserAccounts
+     * @param parameters     the parameters for the service method
      */
-    public DomainForceDeleteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Boolean disableUserAccounts) {
+    public DomainForceDeleteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DomainForceDeleteParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("disableUserAccounts", disableUserAccounts);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder<Do
         DomainForceDeleteRequest request = new DomainForceDeleteRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("disableUserAccounts")) {
-            request.body.disableUserAccounts = getParameter("disableUserAccounts");
-        }
-
-        return request;
+            return request;
     }
 }

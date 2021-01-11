@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.DriveItemDeltaParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -44,15 +45,14 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionCollecti
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param token the token
+     * @param parameters     the parameters for the service method
      */
-    public DriveItemDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String token) {
+    public DriveItemDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemDeltaParameterSet parameters) {
         super(requestUrl, client, requestOptions, DriveItemDeltaCollectionRequestBuilder.class, DriveItemDeltaCollectionRequest.class);
-     	 if(token!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("token", token));
-		}
-      }
-    
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
+    }
     /**
      * Creates the request
      *
@@ -63,11 +63,6 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionCollecti
     @Nonnull
     public DriveItemDeltaCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DriveItemDeltaCollectionRequest request = super.buildRequest(requestOptions);
-
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
-
         return request;
     }
 }

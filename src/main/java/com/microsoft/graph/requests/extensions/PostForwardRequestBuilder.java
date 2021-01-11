@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.PostForwardRequest;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.PostForwardParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class PostForwardRequestBuilder extends BaseActionRequestBuilder<Post> {
 
+    private PostForwardParameterSet body;
     /**
      * The request builder for this PostForward
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param comment the comment
-     * @param toRecipients the toRecipients
+     * @param parameters     the parameters for the service method
      */
-    public PostForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String comment, @Nullable final java.util.List<Recipient> toRecipients) {
+    public PostForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PostForwardParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("comment", comment);
-        bodyParams.put("toRecipients", toRecipients);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class PostForwardRequestBuilder extends BaseActionRequestBuilder<Post> {
         PostForwardRequest request = new PostForwardRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("comment")) {
-            request.body.comment = getParameter("comment");
-        }
-
-        if (hasParameter("toRecipients")) {
-            request.body.toRecipients = getParameter("toRecipients");
-        }
-
-        return request;
+            return request;
     }
 }

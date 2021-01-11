@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequ
 /**
  * The class for the Workbook Chart Series Collection Request.
  */
-public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<WorkbookChartSeries, WorkbookChartSeriesCollectionResponse, WorkbookChartSeriesCollectionPage> {
+public class WorkbookChartSeriesCollectionRequest extends BaseEntityCollectionRequest<WorkbookChartSeries, WorkbookChartSeriesCollectionResponse, WorkbookChartSeriesCollectionPage> {
 
     /**
      * The request builder for this collection of WorkbookChartSeries

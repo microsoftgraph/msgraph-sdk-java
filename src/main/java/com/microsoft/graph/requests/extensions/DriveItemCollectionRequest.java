@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
@@ -34,7 +34,7 @@ import com.microsoft.graph.requests.extensions.DriveItemCollectionRequest;
 /**
  * The class for the Drive Item Collection Request.
  */
-public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItem, DriveItemCollectionResponse, DriveItemCollectionPage> {
+public class DriveItemCollectionRequest extends BaseEntityCollectionRequest<DriveItem, DriveItemCollectionResponse, DriveItemCollectionPage> {
 
     /**
      * The request builder for this collection of DriveItem

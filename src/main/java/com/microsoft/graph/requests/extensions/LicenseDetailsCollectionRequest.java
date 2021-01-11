@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequest;
 /**
  * The class for the License Details Collection Request.
  */
-public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<LicenseDetails, LicenseDetailsCollectionResponse, LicenseDetailsCollectionPage> {
+public class LicenseDetailsCollectionRequest extends BaseEntityCollectionRequest<LicenseDetails, LicenseDetailsCollectionResponse, LicenseDetailsCollectionPage> {
 
     /**
      * The request builder for this collection of LicenseDetails

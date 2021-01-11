@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsGamma_DistReques
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsGamma_DistParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,23 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsGamma_DistRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsGamma_DistParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsGamma_Dist
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param x the x
-     * @param alpha the alpha
-     * @param beta the beta
-     * @param cumulative the cumulative
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsGamma_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement x, @Nullable final com.google.gson.JsonElement alpha, @Nullable final com.google.gson.JsonElement beta, @Nullable final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsGamma_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsGamma_DistParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("x", x);
-        bodyParams.put("alpha", alpha);
-        bodyParams.put("beta", beta);
-        bodyParams.put("cumulative", cumulative);
+        this.body = parameters;
     }
 
     /**
@@ -61,25 +57,10 @@ public class WorkbookFunctionsGamma_DistRequestBuilder extends BaseActionRequest
         WorkbookFunctionsGamma_DistRequest request = new WorkbookFunctionsGamma_DistRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("x")) {
-            request.body.x = getParameter("x");
-        }
-
-        if (hasParameter("alpha")) {
-            request.body.alpha = getParameter("alpha");
-        }
-
-        if (hasParameter("beta")) {
-            request.body.beta = getParameter("beta");
-        }
-
-        if (hasParameter("cumulative")) {
-            request.body.cumulative = getParameter("cumulative");
-        }
-
-        return request;
+            return request;
     }
 }

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsAmorLincRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsAmorLincParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,29 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsAmorLincRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsAmorLincParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsAmorLinc
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param cost the cost
-     * @param datePurchased the datePurchased
-     * @param firstPeriod the firstPeriod
-     * @param salvage the salvage
-     * @param period the period
-     * @param rate the rate
-     * @param basis the basis
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsAmorLincRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement cost, @Nullable final com.google.gson.JsonElement datePurchased, @Nullable final com.google.gson.JsonElement firstPeriod, @Nullable final com.google.gson.JsonElement salvage, @Nullable final com.google.gson.JsonElement period, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsAmorLincRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAmorLincParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("cost", cost);
-        bodyParams.put("datePurchased", datePurchased);
-        bodyParams.put("firstPeriod", firstPeriod);
-        bodyParams.put("salvage", salvage);
-        bodyParams.put("period", period);
-        bodyParams.put("rate", rate);
-        bodyParams.put("basis", basis);
+        this.body = parameters;
     }
 
     /**
@@ -67,37 +57,10 @@ public class WorkbookFunctionsAmorLincRequestBuilder extends BaseActionRequestBu
         WorkbookFunctionsAmorLincRequest request = new WorkbookFunctionsAmorLincRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("cost")) {
-            request.body.cost = getParameter("cost");
-        }
-
-        if (hasParameter("datePurchased")) {
-            request.body.datePurchased = getParameter("datePurchased");
-        }
-
-        if (hasParameter("firstPeriod")) {
-            request.body.firstPeriod = getParameter("firstPeriod");
-        }
-
-        if (hasParameter("salvage")) {
-            request.body.salvage = getParameter("salvage");
-        }
-
-        if (hasParameter("period")) {
-            request.body.period = getParameter("period");
-        }
-
-        if (hasParameter("rate")) {
-            request.body.rate = getParameter("rate");
-        }
-
-        if (hasParameter("basis")) {
-            request.body.basis = getParameter("basis");
-        }
-
-        return request;
+            return request;
     }
 }

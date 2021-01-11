@@ -53,6 +53,9 @@ import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.models.extensions.UserSendMailParameterSet;
+import com.microsoft.graph.models.extensions.AttachmentCreateUploadSessionParameterSet;
+import com.microsoft.graph.models.extensions.UserFindMeetingTimesParameterSet;
 
 @Ignore
 public class OutlookTests {
@@ -71,7 +74,7 @@ public class OutlookTests {
         ArrayList<Recipient> recipients = new ArrayList<Recipient>();
         recipients.add(r);
         message.toRecipients = recipients;
-        testBase.graphClient.me().sendMail(message, true).buildRequest().post();
+        testBase.graphClient.me().sendMail(UserSendMailParameterSet.newBuilder().withMessage(message).withSaveToSentItems(true).build()).buildRequest().post();
     }
 
     @Test
@@ -97,25 +100,34 @@ public class OutlookTests {
         try {
         	DatatypeFactory.newInstance().newDuration("PT30M");
             Duration duration = DatatypeFactory.newInstance().newDuration("PT30M");
-            MeetingTimeSuggestionsResult result = testBase.graphClient.me().findMeetingTimes(attendees, null, null, duration, 10, true, false, 10.0).buildRequest().post();
+            MeetingTimeSuggestionsResult result = testBase.graphClient.me()
+                                                    .findMeetingTimes(UserFindMeetingTimesParameterSet.newBuilder()
+                                                                        .withAttendees(attendees)
+                                                                        .withMeetingDuration(duration)
+                                                                        .withMaxCandidates(10)
+                                                                        .withReturnSuggestionReasons(true)
+                                                                        .withMinimumAttendeePercentage(10.0)
+                                                                        .build())
+                                                    .buildRequest()
+                                                    .post();
             assertNotNull(result);
         } catch (Exception e) {
             Assert.fail("Duration could not be created from String");
         }
 
     }
-    
+
     @Test
     public void testSendDraft() {
     	TestBase testBase = new TestBase();
-    	
+
     	//Attempt to identify the sent message via randomly generated subject
     	String draftSubject = "Draft Test Message " + Double.toString(Math.random()*1000);
     	Message newMessage = createDraftMessage(testBase, draftSubject);
-        
+
     	//Send the drafted message
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
-    	
+
     	//Check that the sent message exists on the server
     	MessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
     	assertFalse(mcp.getCurrentPage().isEmpty());
@@ -132,7 +144,7 @@ public class OutlookTests {
         recipients.add(r);
         message.toRecipients = recipients;
         message.isDraft = true;
-        
+
         //Save the message as a draft
         return testBase.graphClient.me().messages().buildRequest().post(message);
 	}
@@ -144,7 +156,7 @@ public class OutlookTests {
     	AttachmentCollectionResponse response = new AttachmentCollectionResponse();
     	response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
 		message.attachments = new AttachmentCollectionPage(response, null);
-		testBase.graphClient.me().sendMail(message, true).buildRequest().post();
+		testBase.graphClient.me().sendMail(UserSendMailParameterSet.newBuilder().withMessage(message).withSaveToSentItems(true).build()).buildRequest().post();
     }
 
     @Test
@@ -164,7 +176,7 @@ public class OutlookTests {
 		event.hasAttachments = true;
 		AttachmentCollectionResponse response = new AttachmentCollectionResponse();
 		response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithContact());
-		event.attachments = new AttachmentCollectionPage(response, null); 
+		event.attachments = new AttachmentCollectionPage(response, null);
 		Event eventResponse = testBase.graphClient.me().events().buildRequest().post(event);
 		assertNotNull(eventResponse);
     }
@@ -276,7 +288,7 @@ public class OutlookTests {
 			//Handle the successful response
 			Assert.assertNotNull(result);
 		}
-		
+
 		@Override
 		public void failure(final ClientException ex) {
 			//Handle the failed upload
@@ -286,7 +298,7 @@ public class OutlookTests {
 	@Test
     public void testSendDraftWithLargeAttachements() throws FileNotFoundException, IOException {
     	TestBase testBase = new TestBase();
-    	
+
     	//Attempt to identify the sent message via randomly generated subject
     	String draftSubject = "Draft Test Message " + Double.toString(Math.random()*1000);
     	Message newMessage = createDraftMessage(testBase, draftSubject);
@@ -306,13 +318,13 @@ public class OutlookTests {
 		UploadSession uploadSession = testBase.graphClient.me()
 									.messages(newMessage.id)
 									.attachments()
-									.createUploadSession(attachmentItem)
+									.createUploadSession(AttachmentCreateUploadSessionParameterSet.newBuilder().withAttachmentItem(attachmentItem).build())
 									.buildRequest()
 									.post();
 
 		ChunkedUploadProvider<AttachmentItem> chunkedUploadProvider = new ChunkedUploadProvider<>(uploadSession, testBase.graphClient, fileStream,
 				streamSize, AttachmentItem.class);
-		
+
 		// Do the upload
 		chunkedUploadProvider.upload(callback);
 

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionFo
 /**
  * The class for the Device Compliance Scheduled Action For Rule Collection Request.
  */
-public class DeviceComplianceScheduledActionForRuleCollectionRequest extends BaseCollectionRequest<DeviceComplianceScheduledActionForRule, DeviceComplianceScheduledActionForRuleCollectionResponse, DeviceComplianceScheduledActionForRuleCollectionPage> {
+public class DeviceComplianceScheduledActionForRuleCollectionRequest extends BaseEntityCollectionRequest<DeviceComplianceScheduledActionForRule, DeviceComplianceScheduledActionForRuleCollectionResponse, DeviceComplianceScheduledActionForRuleCollectionPage> {
 
     /**
      * The request builder for this collection of DeviceComplianceScheduledActionForRule

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.MobileAppContentFileCommitRequest
 import com.microsoft.graph.models.extensions.MobileAppContentFile;
 import com.microsoft.graph.models.extensions.FileEncryptionInfo;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.MobileAppContentFileCommitParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class MobileAppContentFileCommitRequestBuilder extends BaseActionRequestBuilder<MobileAppContentFile> {
 
+    private MobileAppContentFileCommitParameterSet body;
     /**
      * The request builder for this MobileAppContentFileCommit
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param fileEncryptionInfo the fileEncryptionInfo
+     * @param parameters     the parameters for the service method
      */
-    public MobileAppContentFileCommitRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final FileEncryptionInfo fileEncryptionInfo) {
+    public MobileAppContentFileCommitRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MobileAppContentFileCommitParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("fileEncryptionInfo", fileEncryptionInfo);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class MobileAppContentFileCommitRequestBuilder extends BaseActionRequestB
         MobileAppContentFileCommitRequest request = new MobileAppContentFileCommitRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("fileEncryptionInfo")) {
-            request.body.fileEncryptionInfo = getParameter("fileEncryptionInfo");
-        }
-
-        return request;
+            return request;
     }
 }

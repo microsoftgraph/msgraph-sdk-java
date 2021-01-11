@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequ
 /**
  * The class for the Token Lifetime Policy Collection Request.
  */
-public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<TokenLifetimePolicy, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionPage> {
+public class TokenLifetimePolicyCollectionRequest extends BaseEntityCollectionRequest<TokenLifetimePolicy, TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionPage> {
 
     /**
      * The request builder for this collection of TokenLifetimePolicy

@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequest;
 /**
  * The class for the Managed Device Collection Request.
  */
-public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<ManagedDevice, ManagedDeviceCollectionResponse, ManagedDeviceCollectionPage> {
+public class ManagedDeviceCollectionRequest extends BaseEntityCollectionRequest<ManagedDevice, ManagedDeviceCollectionResponse, ManagedDeviceCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedDevice

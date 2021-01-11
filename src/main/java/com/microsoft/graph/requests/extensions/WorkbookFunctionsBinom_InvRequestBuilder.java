@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsBinom_InvRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsBinom_InvParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsBinom_InvParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsBinom_Inv
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param trials the trials
-     * @param probabilityS the probabilityS
-     * @param alpha the alpha
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBinom_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement trials, @Nullable final com.google.gson.JsonElement probabilityS, @Nullable final com.google.gson.JsonElement alpha) {
+    public WorkbookFunctionsBinom_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBinom_InvParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("trials", trials);
-        bodyParams.put("probabilityS", probabilityS);
-        bodyParams.put("alpha", alpha);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequestB
         WorkbookFunctionsBinom_InvRequest request = new WorkbookFunctionsBinom_InvRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("trials")) {
-            request.body.trials = getParameter("trials");
-        }
-
-        if (hasParameter("probabilityS")) {
-            request.body.probabilityS = getParameter("probabilityS");
-        }
-
-        if (hasParameter("alpha")) {
-            request.body.alpha = getParameter("alpha");
-        }
-
-        return request;
+            return request;
     }
 }

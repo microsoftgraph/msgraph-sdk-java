@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -38,7 +38,6 @@ public class DirectoryRoleDeltaCollectionRequestBuilder extends BaseFunctionColl
     public DirectoryRoleDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryRoleDeltaCollectionRequestBuilder.class, DirectoryRoleDeltaCollectionRequest.class);
     }
-    
     /**
      * Creates the request
      *
@@ -49,11 +48,6 @@ public class DirectoryRoleDeltaCollectionRequestBuilder extends BaseFunctionColl
     @Nonnull
     public DirectoryRoleDeltaCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryRoleDeltaCollectionRequest request = super.buildRequest(requestOptions);
-
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
-
         return request;
     }
 }

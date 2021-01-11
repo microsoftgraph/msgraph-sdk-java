@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionResponse;
+import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -28,21 +29,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<String, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder, DirectoryObjectCheckMemberGroupsCollectionResponse, DirectoryObjectCheckMemberGroupsCollectionPage, DirectoryObjectCheckMemberGroupsCollectionRequest> {
 
+    private DirectoryObjectCheckMemberGroupsParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param groupIds the groupIds
+     * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> groupIds) {
+    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectCheckMemberGroupsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder.class, DirectoryObjectCheckMemberGroupsCollectionRequest.class);
-  	 if(groupIds!=null){
-			bodyParams.put("groupIds", groupIds);
-		}
-      }
-    
+        this.body = parameters;
+    }
     /**
      * Creates the request
      *
@@ -53,11 +52,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
     @Nonnull
     public DirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectCheckMemberGroupsCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("groupIds")) {
-            request.body.groupIds = getParameter("groupIds");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

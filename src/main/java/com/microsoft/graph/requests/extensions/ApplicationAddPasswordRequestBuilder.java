@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.ApplicationAddPasswordRequest;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.ApplicationAddPasswordParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,17 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuilder<PasswordCredential> {
 
+    private ApplicationAddPasswordParameterSet body;
     /**
      * The request builder for this ApplicationAddPassword
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param passwordCredential the passwordCredential
+     * @param parameters     the parameters for the service method
      */
-    public ApplicationAddPasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final PasswordCredential passwordCredential) {
+    public ApplicationAddPasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ApplicationAddPasswordParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("passwordCredential", passwordCredential);
+        this.body = parameters;
     }
 
     /**
@@ -55,13 +57,10 @@ public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuild
         ApplicationAddPasswordRequest request = new ApplicationAddPasswordRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("passwordCredential")) {
-            request.body.passwordCredential = getParameter("passwordCredential");
-        }
-
-        return request;
+            return request;
     }
 }

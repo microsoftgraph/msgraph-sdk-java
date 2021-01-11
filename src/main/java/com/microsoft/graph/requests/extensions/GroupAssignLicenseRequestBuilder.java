@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.GroupAssignLicenseRequest;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.GroupAssignLicenseParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder<Group> {
 
+    private GroupAssignLicenseParameterSet body;
     /**
      * The request builder for this GroupAssignLicense
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param addLicenses the addLicenses
-     * @param removeLicenses the removeLicenses
+     * @param parameters     the parameters for the service method
      */
-    public GroupAssignLicenseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<AssignedLicense> addLicenses, @Nullable final java.util.List<java.util.UUID> removeLicenses) {
+    public GroupAssignLicenseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupAssignLicenseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("addLicenses", addLicenses);
-        bodyParams.put("removeLicenses", removeLicenses);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder<G
         GroupAssignLicenseRequest request = new GroupAssignLicenseRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("addLicenses")) {
-            request.body.addLicenses = getParameter("addLicenses");
-        }
-
-        if (hasParameter("removeLicenses")) {
-            request.body.removeLicenses = getParameter("removeLicenses");
-        }
-
-        return request;
+            return request;
     }
 }

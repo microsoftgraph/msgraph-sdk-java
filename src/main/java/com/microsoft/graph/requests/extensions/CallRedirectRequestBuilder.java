@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.CallRedirectRequest;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.CallRedirectParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class CallRedirectRequestBuilder extends BaseActionRequestBuilder<Call> {
 
+    private CallRedirectParameterSet body;
     /**
      * The request builder for this CallRedirect
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param targets the targets
-     * @param timeout the timeout
-     * @param callbackUri the callbackUri
+     * @param parameters     the parameters for the service method
      */
-    public CallRedirectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<InvitationParticipantInfo> targets, @Nullable final Integer timeout, @Nullable final String callbackUri) {
+    public CallRedirectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRedirectParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("targets", targets);
-        bodyParams.put("timeout", timeout);
-        bodyParams.put("callbackUri", callbackUri);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class CallRedirectRequestBuilder extends BaseActionRequestBuilder<Call> {
         CallRedirectRequest request = new CallRedirectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("targets")) {
-            request.body.targets = getParameter("targets");
-        }
-
-        if (hasParameter("timeout")) {
-            request.body.timeout = getParameter("timeout");
-        }
-
-        if (hasParameter("callbackUri")) {
-            request.body.callbackUri = getParameter("callbackUri");
-        }
-
-        return request;
+            return request;
     }
 }

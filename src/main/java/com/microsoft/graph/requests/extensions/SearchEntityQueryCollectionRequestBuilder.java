@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -18,6 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.SearchEntityQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SearchEntityQueryCollectionRequest;
 import com.microsoft.graph.requests.extensions.SearchEntityQueryCollectionResponse;
+import com.microsoft.graph.models.extensions.SearchEntityQueryParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -29,21 +30,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class SearchEntityQueryCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<SearchResponse, SearchEntityQueryCollectionRequestBuilder, SearchEntityQueryCollectionResponse, SearchEntityQueryCollectionPage, SearchEntityQueryCollectionRequest> {
 
+    private SearchEntityQueryParameterSet body;
     /**
      * The request builder for this collection of SearchEntity
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param requests the requests
+     * @param parameters     the parameters for the service method
      */
-    public SearchEntityQueryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<SearchRequest> requests) {
+    public SearchEntityQueryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SearchEntityQueryParameterSet parameters) {
         super(requestUrl, client, requestOptions, SearchEntityQueryCollectionRequestBuilder.class, SearchEntityQueryCollectionRequest.class);
-  	 if(requests!=null){
-			bodyParams.put("requests", requests);
-		}
-      }
-    
+        this.body = parameters;
+    }
     /**
      * Creates the request
      *
@@ -54,11 +53,7 @@ public class SearchEntityQueryCollectionRequestBuilder extends BaseActionCollect
     @Nonnull
     public SearchEntityQueryCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final SearchEntityQueryCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("requests")) {
-            request.body.requests = getParameter("requests");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

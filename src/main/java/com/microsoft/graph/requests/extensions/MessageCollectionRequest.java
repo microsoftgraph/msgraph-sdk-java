@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
@@ -29,7 +29,7 @@ import com.microsoft.graph.requests.extensions.MessageCollectionRequest;
 /**
  * The class for the Message Collection Request.
  */
-public class MessageCollectionRequest extends BaseCollectionRequest<Message, MessageCollectionResponse, MessageCollectionPage> {
+public class MessageCollectionRequest extends BaseEntityCollectionRequest<Message, MessageCollectionResponse, MessageCollectionPage> {
 
     /**
      * The request builder for this collection of Message

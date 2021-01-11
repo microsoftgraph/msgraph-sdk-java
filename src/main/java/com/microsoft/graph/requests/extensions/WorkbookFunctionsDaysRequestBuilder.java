@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsDaysRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsDaysParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsDaysRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsDaysParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsDays
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param endDate the endDate
-     * @param startDate the startDate
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsDaysRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement endDate, @Nullable final com.google.gson.JsonElement startDate) {
+    public WorkbookFunctionsDaysRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsDaysParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("endDate", endDate);
-        bodyParams.put("startDate", startDate);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsDaysRequestBuilder extends BaseActionRequestBuilde
         WorkbookFunctionsDaysRequest request = new WorkbookFunctionsDaysRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("endDate")) {
-            request.body.endDate = getParameter("endDate");
-        }
-
-        if (hasParameter("startDate")) {
-            request.body.startDate = getParameter("startDate");
-        }
-
-        return request;
+            return request;
     }
 }

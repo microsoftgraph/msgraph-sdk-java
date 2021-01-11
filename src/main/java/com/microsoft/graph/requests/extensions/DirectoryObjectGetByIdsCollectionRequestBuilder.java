@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionResponse;
+import com.microsoft.graph.models.extensions.DirectoryObjectGetByIdsParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
@@ -28,25 +29,19 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<DirectoryObject, DirectoryObjectGetByIdsCollectionRequestBuilder, DirectoryObjectGetByIdsCollectionResponse, DirectoryObjectGetByIdsCollectionPage, DirectoryObjectGetByIdsCollectionRequest> {
 
+    private DirectoryObjectGetByIdsParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param ids the ids
-     * @param types the types
+     * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetByIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final java.util.List<String> ids, @Nullable final java.util.List<String> types) {
+    public DirectoryObjectGetByIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetByIdsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionRequestBuilder.class, DirectoryObjectGetByIdsCollectionRequest.class);
-  	 if(ids!=null){
-			bodyParams.put("ids", ids);
-		}
-    	 if(types!=null){
-			bodyParams.put("types", types);
-		}
-      }
-    
+        this.body = parameters;
+    }
     /**
      * Creates the request
      *
@@ -57,14 +52,7 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionC
     @Nonnull
     public DirectoryObjectGetByIdsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DirectoryObjectGetByIdsCollectionRequest request = super.buildRequest(requestOptions);
-
-        if (hasParameter("ids")) {
-            request.body.ids = getParameter("ids");
-        }
-        if (hasParameter("types")) {
-            request.body.types = getParameter("types");
-        }
-  
-        return request;
+            request.body = this.body;
+            return request;
     }
 }

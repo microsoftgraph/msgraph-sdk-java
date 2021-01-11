@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityRequestBuilder.java.tt
+// Template Source: BaseEntityRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -127,7 +127,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder<WorkbookTabl
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookTableClearFiltersRequestBuilder clearFilters() {
@@ -136,7 +136,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder<WorkbookTabl
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookTableConvertToRangeRequestBuilder convertToRange() {
@@ -145,7 +145,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder<WorkbookTabl
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookTableReapplyFiltersRequestBuilder reapplyFilters() {
@@ -154,7 +154,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder<WorkbookTabl
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookTableDataBodyRangeRequestBuilder dataBodyRange() {
@@ -163,7 +163,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder<WorkbookTabl
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookTableHeaderRowRangeRequestBuilder headerRowRange() {
@@ -172,7 +172,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder<WorkbookTabl
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookTableRangeRequestBuilder range() {
@@ -181,7 +181,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder<WorkbookTabl
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder 
+     * @return the request builder
      */
     @Nonnull
     public WorkbookTableTotalRowRangeRequestBuilder totalRowRange() {

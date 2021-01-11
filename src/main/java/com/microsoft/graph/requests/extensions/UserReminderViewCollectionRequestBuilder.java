@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodCollectionRequestBuilder.java.tt
+// Template Source: BaseMethodCollectionRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequest;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionResponse;
+import com.microsoft.graph.models.extensions.UserReminderViewParameterSet;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
@@ -34,19 +35,14 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionCollec
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param startDateTime the startDateTime
-     * @param endDateTime the endDateTime
+     * @param parameters     the parameters for the service method
      */
-    public UserReminderViewCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final String startDateTime, @Nullable final String endDateTime) {
+    public UserReminderViewCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserReminderViewParameterSet parameters) {
         super(requestUrl, client, requestOptions, UserReminderViewCollectionRequestBuilder.class, UserReminderViewCollectionRequest.class);
-     	 if(startDateTime!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
-		}
-       	 if(endDateTime!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("endDateTime", endDateTime));
-		}
-      }
-    
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
+    }
     /**
      * Creates the request
      *
@@ -57,11 +53,9 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionCollec
     @Nonnull
     public UserReminderViewCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UserReminderViewCollectionRequest request = super.buildRequest(requestOptions);
-
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
-
         return request;
     }
 }

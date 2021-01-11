@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsPdurationRequest
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsPdurationParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,21 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsPdurationRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsPdurationParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsPduration
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param rate the rate
-     * @param pv the pv
-     * @param fv the fv
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPdurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement rate, @Nullable final com.google.gson.JsonElement pv, @Nullable final com.google.gson.JsonElement fv) {
+    public WorkbookFunctionsPdurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPdurationParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("rate", rate);
-        bodyParams.put("pv", pv);
-        bodyParams.put("fv", fv);
+        this.body = parameters;
     }
 
     /**
@@ -59,21 +57,10 @@ public class WorkbookFunctionsPdurationRequestBuilder extends BaseActionRequestB
         WorkbookFunctionsPdurationRequest request = new WorkbookFunctionsPdurationRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("rate")) {
-            request.body.rate = getParameter("rate");
-        }
-
-        if (hasParameter("pv")) {
-            request.body.pv = getParameter("pv");
-        }
-
-        if (hasParameter("fv")) {
-            request.body.fv = getParameter("fv");
-        }
-
-        return request;
+            return request;
     }
 }

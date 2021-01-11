@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsWeekdayRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookFunctionsWeekdayParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,19 +21,18 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsWeekdayRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    private WorkbookFunctionsWeekdayParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsWeekday
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param serialNumber the serialNumber
-     * @param returnType the returnType
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsWeekdayRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final com.google.gson.JsonElement serialNumber, @Nullable final com.google.gson.JsonElement returnType) {
+    public WorkbookFunctionsWeekdayRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsWeekdayParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("serialNumber", serialNumber);
-        bodyParams.put("returnType", returnType);
+        this.body = parameters;
     }
 
     /**
@@ -57,17 +57,10 @@ public class WorkbookFunctionsWeekdayRequestBuilder extends BaseActionRequestBui
         WorkbookFunctionsWeekdayRequest request = new WorkbookFunctionsWeekdayRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
+                requestOptions,
+                this.body
         );
 
-        if (hasParameter("serialNumber")) {
-            request.body.serialNumber = getParameter("serialNumber");
-        }
-
-        if (hasParameter("returnType")) {
-            request.body.returnType = getParameter("returnType");
-        }
-
-        return request;
+            return request;
     }
 }

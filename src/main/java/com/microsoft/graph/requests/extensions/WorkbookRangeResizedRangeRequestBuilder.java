@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeResizedRangeRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookRangeResizedRangeParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -25,13 +26,13 @@ public class WorkbookRangeResizedRangeRequestBuilder extends BaseFunctionRequest
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param deltaRows the deltaRows
-     * @param deltaColumns the deltaColumns
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeResizedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Integer deltaRows, @Nullable final Integer deltaColumns) {
+    public WorkbookRangeResizedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeResizedRangeParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("deltaRows", deltaRows));
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("deltaColumns", deltaColumns));
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**
@@ -59,10 +60,9 @@ public class WorkbookRangeResizedRangeRequestBuilder extends BaseFunctionRequest
                 requestOptions
         );
 
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
-      }
-
+        }
         return request;
     }
 

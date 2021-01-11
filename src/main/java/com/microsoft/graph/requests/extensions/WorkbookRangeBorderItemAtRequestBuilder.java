@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseMethodRequestBuilder.java.tt
+// Template Source: BaseMethodRequestBuilder.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
+import com.microsoft.graph.models.extensions.WorkbookRangeBorderItemAtParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -25,11 +26,13 @@ public class WorkbookRangeBorderItemAtRequestBuilder extends BaseFunctionRequest
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param index the index
+     * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeBorderItemAtRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nullable final Integer index) {
+    public WorkbookRangeBorderItemAtRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeBorderItemAtParameterSet parameters) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new com.microsoft.graph.options.FunctionOption("index", index));
+        if(parameters != null) {
+            functionOptions = parameters.getFunctionOptions();
+        }
     }
 
     /**
@@ -57,10 +60,9 @@ public class WorkbookRangeBorderItemAtRequestBuilder extends BaseFunctionRequest
                 requestOptions
         );
 
-      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
-      }
-
+        }
         return request;
     }
 }

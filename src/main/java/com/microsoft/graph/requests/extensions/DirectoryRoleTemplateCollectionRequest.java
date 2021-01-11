@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRequestBuilder;
@@ -27,7 +27,7 @@ import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRe
 /**
  * The class for the Directory Role Template Collection Request.
  */
-public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionRequest<DirectoryRoleTemplate, DirectoryRoleTemplateCollectionResponse, DirectoryRoleTemplateCollectionPage> {
+public class DirectoryRoleTemplateCollectionRequest extends BaseEntityCollectionRequest<DirectoryRoleTemplate, DirectoryRoleTemplateCollectionResponse, DirectoryRoleTemplateCollectionPage> {
 
     /**
      * The request builder for this collection of DirectoryRoleTemplate

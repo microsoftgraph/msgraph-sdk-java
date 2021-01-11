@@ -1,4 +1,4 @@
-// Template Source: Templates\Java\requests_extensions\BaseEntityCollectionRequest.java.tt
+// Template Source: BaseEntityCollectionRequest.java.tt
 // ------------------------------------------------------------------------------
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseEntityCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
@@ -28,7 +28,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 /**
  * The class for the Managed Device Mobile App Configuration Assignment Collection Request.
  */
-public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest extends BaseCollectionRequest<ManagedDeviceMobileAppConfigurationAssignment, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse, ManagedDeviceMobileAppConfigurationAssignmentCollectionPage> {
+public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest extends BaseEntityCollectionRequest<ManagedDeviceMobileAppConfigurationAssignment, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse, ManagedDeviceMobileAppConfigurationAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedDeviceMobileAppConfigurationAssignment
