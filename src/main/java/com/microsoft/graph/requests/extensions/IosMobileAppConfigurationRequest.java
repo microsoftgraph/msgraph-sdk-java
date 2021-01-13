@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosMobileAppConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
     /**
      * Gets the IosMobileAppConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosMobileAppConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosMobileAppConfiguration with a source
      *
      * @param sourceIosMobileAppConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosMobileAppConfiguration sourceIosMobileAppConfiguration, @Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosMobileAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futurePatch(@Nonnull final IosMobileAppConfiguration sourceIosMobileAppConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceIosMobileAppConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
      * Creates a IosMobileAppConfiguration with a new object
      *
      * @param newIosMobileAppConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration, @Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
-        send(HttpMethod.POST, callback, newIosMobileAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futurePost(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration) {
+        return futureSend(HttpMethod.POST, newIosMobileAppConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
      * Creates a IosMobileAppConfiguration with a new object
      *
      * @param newIosMobileAppConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration, @Nonnull final ICallback<? super IosMobileAppConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newIosMobileAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futurePut(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration) {
+        return futureSend(HttpMethod.PUT, newIosMobileAppConfiguration);
     }
 
     /**

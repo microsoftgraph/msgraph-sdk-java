@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
     /**
      * Gets the ProfilePhoto from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ProfilePhoto> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ProfilePhoto> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ProfilePhoto delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ProfilePhoto with a source
      *
      * @param sourceProfilePhoto the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ProfilePhoto sourceProfilePhoto, @Nonnull final ICallback<? super ProfilePhoto> callback) {
-        send(HttpMethod.PATCH, callback, sourceProfilePhoto);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> futurePatch(@Nonnull final ProfilePhoto sourceProfilePhoto) {
+        return futureSend(HttpMethod.PATCH, sourceProfilePhoto);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
      * Creates a ProfilePhoto with a new object
      *
      * @param newProfilePhoto the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ProfilePhoto newProfilePhoto, @Nonnull final ICallback<? super ProfilePhoto> callback) {
-        send(HttpMethod.POST, callback, newProfilePhoto);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> futurePost(@Nonnull final ProfilePhoto newProfilePhoto) {
+        return futureSend(HttpMethod.POST, newProfilePhoto);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
      * Creates a ProfilePhoto with a new object
      *
      * @param newProfilePhoto the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ProfilePhoto newProfilePhoto, @Nonnull final ICallback<? super ProfilePhoto> callback) {
-        send(HttpMethod.PUT, callback, newProfilePhoto);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> futurePut(@Nonnull final ProfilePhoto newProfilePhoto) {
+        return futureSend(HttpMethod.PUT, newProfilePhoto);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
@@ -20,7 +19,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionRequest;
@@ -46,13 +44,14 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseEntityCollectio
     /**
      * Creates a new DeviceCompliancePolicy
      * @param newDeviceCompliancePolicy the DeviceCompliancePolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceCompliancePolicy newDeviceCompliancePolicy, @Nonnull final ICallback<? super DeviceCompliancePolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> futurePost(@Nonnull final DeviceCompliancePolicy newDeviceCompliancePolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceCompliancePolicy, callback);
+            .futurePost(newDeviceCompliancePolicy);
     }
 
     /**

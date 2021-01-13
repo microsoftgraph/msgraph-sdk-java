@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Win32LobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
     /**
      * Gets the Win32LobApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Win32LobApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Win32LobApp> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Win32LobApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Win32LobApp> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Win32LobApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Win32LobApp with a source
      *
      * @param sourceWin32LobApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Win32LobApp sourceWin32LobApp, @Nonnull final ICallback<? super Win32LobApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceWin32LobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Win32LobApp> futurePatch(@Nonnull final Win32LobApp sourceWin32LobApp) {
+        return futureSend(HttpMethod.PATCH, sourceWin32LobApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
      * Creates a Win32LobApp with a new object
      *
      * @param newWin32LobApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Win32LobApp newWin32LobApp, @Nonnull final ICallback<? super Win32LobApp> callback) {
-        send(HttpMethod.POST, callback, newWin32LobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Win32LobApp> futurePost(@Nonnull final Win32LobApp newWin32LobApp) {
+        return futureSend(HttpMethod.POST, newWin32LobApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
      * Creates a Win32LobApp with a new object
      *
      * @param newWin32LobApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Win32LobApp newWin32LobApp, @Nonnull final ICallback<? super Win32LobApp> callback) {
-        send(HttpMethod.PUT, callback, newWin32LobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Win32LobApp> futurePut(@Nonnull final Win32LobApp newWin32LobApp) {
+        return futureSend(HttpMethod.PUT, newWin32LobApp);
     }
 
     /**

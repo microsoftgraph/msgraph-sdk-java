@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrgContact;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
@@ -49,14 +48,15 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionWit
     /**
      * Creates a new DirectoryObject
      * @param newDirectoryObject the DirectoryObject to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DirectoryObject newDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> futurePost(@Nonnull final DirectoryObject newDirectoryObject) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/directoryObjects/" + newDirectoryObject.id);
-        new DirectoryObjectWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DirectoryObjectWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDirectoryObject, body, callback);
+            .futurePost(newDirectoryObject, body);
     }
 
     /**

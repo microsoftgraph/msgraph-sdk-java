@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceInstallStateCollectionRequest extends BaseEntityCollectionReq
     /**
      * Creates a new DeviceInstallState
      * @param newDeviceInstallState the DeviceInstallState to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceInstallState newDeviceInstallState, @Nonnull final ICallback<? super DeviceInstallState> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> futurePost(@Nonnull final DeviceInstallState newDeviceInstallState) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceInstallState, callback);
+            .futurePost(newDeviceInstallState);
     }
 
     /**

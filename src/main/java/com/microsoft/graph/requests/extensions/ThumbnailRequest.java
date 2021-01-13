@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Thumbnail;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ThumbnailRequest extends BaseRequest<Thumbnail> {
     /**
      * Gets the Thumbnail from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Thumbnail> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Thumbnail> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ThumbnailRequest extends BaseRequest<Thumbnail> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Thumbnail> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Thumbnail> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Thumbnail delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Thumbnail with a source
      *
      * @param sourceThumbnail the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Thumbnail sourceThumbnail, @Nonnull final ICallback<? super Thumbnail> callback) {
-        send(HttpMethod.PATCH, callback, sourceThumbnail);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Thumbnail> futurePatch(@Nonnull final Thumbnail sourceThumbnail) {
+        return futureSend(HttpMethod.PATCH, sourceThumbnail);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ThumbnailRequest extends BaseRequest<Thumbnail> {
      * Creates a Thumbnail with a new object
      *
      * @param newThumbnail the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Thumbnail newThumbnail, @Nonnull final ICallback<? super Thumbnail> callback) {
-        send(HttpMethod.POST, callback, newThumbnail);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Thumbnail> futurePost(@Nonnull final Thumbnail newThumbnail) {
+        return futureSend(HttpMethod.POST, newThumbnail);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ThumbnailRequest extends BaseRequest<Thumbnail> {
      * Creates a Thumbnail with a new object
      *
      * @param newThumbnail the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Thumbnail newThumbnail, @Nonnull final ICallback<? super Thumbnail> callback) {
-        send(HttpMethod.PUT, callback, newThumbnail);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Thumbnail> futurePut(@Nonnull final Thumbnail newThumbnail) {
+        return futureSend(HttpMethod.PUT, newThumbnail);
     }
 
     /**

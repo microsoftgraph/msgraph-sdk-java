@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrgContact;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
@@ -40,10 +39,11 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
     /**
      * Gets the OrgContact from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OrgContact> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OrgContact> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OrgContact> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OrgContact> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OrgContact delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OrgContact with a source
      *
      * @param sourceOrgContact the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OrgContact sourceOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
-        send(HttpMethod.PATCH, callback, sourceOrgContact);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OrgContact> futurePatch(@Nonnull final OrgContact sourceOrgContact) {
+        return futureSend(HttpMethod.PATCH, sourceOrgContact);
     }
 
     /**
@@ -101,10 +105,11 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
      * Creates a OrgContact with a new object
      *
      * @param newOrgContact the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OrgContact newOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
-        send(HttpMethod.POST, callback, newOrgContact);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OrgContact> futurePost(@Nonnull final OrgContact newOrgContact) {
+        return futureSend(HttpMethod.POST, newOrgContact);
     }
 
     /**
@@ -123,10 +128,11 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
      * Creates a OrgContact with a new object
      *
      * @param newOrgContact the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OrgContact newOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
-        send(HttpMethod.PUT, callback, newOrgContact);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OrgContact> futurePut(@Nonnull final OrgContact newOrgContact) {
+        return futureSend(HttpMethod.PUT, newOrgContact);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequest;
@@ -44,13 +42,14 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseEntityCol
     /**
      * Creates a new TermsAndConditionsAssignment
      * @param newTermsAndConditionsAssignment the TermsAndConditionsAssignment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment, @Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futurePost(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TermsAndConditionsAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TermsAndConditionsAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTermsAndConditionsAssignment, callback);
+            .futurePost(newTermsAndConditionsAssignment);
     }
 
     /**

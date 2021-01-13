@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContentType;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkRequestBuilder;
@@ -40,10 +39,11 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
     /**
      * Gets the ContentType from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ContentType> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ContentType> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ContentType delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ContentType with a source
      *
      * @param sourceContentType the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ContentType sourceContentType, @Nonnull final ICallback<? super ContentType> callback) {
-        send(HttpMethod.PATCH, callback, sourceContentType);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> futurePatch(@Nonnull final ContentType sourceContentType) {
+        return futureSend(HttpMethod.PATCH, sourceContentType);
     }
 
     /**
@@ -101,10 +105,11 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * Creates a ContentType with a new object
      *
      * @param newContentType the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ContentType newContentType, @Nonnull final ICallback<? super ContentType> callback) {
-        send(HttpMethod.POST, callback, newContentType);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> futurePost(@Nonnull final ContentType newContentType) {
+        return futureSend(HttpMethod.POST, newContentType);
     }
 
     /**
@@ -123,10 +128,11 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * Creates a ContentType with a new object
      *
      * @param newContentType the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ContentType newContentType, @Nonnull final ICallback<? super ContentType> callback) {
-        send(HttpMethod.PUT, callback, newContentType);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> futurePut(@Nonnull final ContentType newContentType) {
+        return futureSend(HttpMethod.PUT, newContentType);
     }
 
     /**

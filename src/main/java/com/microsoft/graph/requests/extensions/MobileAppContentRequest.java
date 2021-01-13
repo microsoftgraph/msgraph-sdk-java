@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppContent;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRequestBuilder;
@@ -40,10 +39,11 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
     /**
      * Gets the MobileAppContent from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MobileAppContent> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppContent> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MobileAppContent> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppContent> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MobileAppContent delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MobileAppContent with a source
      *
      * @param sourceMobileAppContent the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MobileAppContent sourceMobileAppContent, @Nonnull final ICallback<? super MobileAppContent> callback) {
-        send(HttpMethod.PATCH, callback, sourceMobileAppContent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppContent> futurePatch(@Nonnull final MobileAppContent sourceMobileAppContent) {
+        return futureSend(HttpMethod.PATCH, sourceMobileAppContent);
     }
 
     /**
@@ -101,10 +105,11 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
      * Creates a MobileAppContent with a new object
      *
      * @param newMobileAppContent the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MobileAppContent newMobileAppContent, @Nonnull final ICallback<? super MobileAppContent> callback) {
-        send(HttpMethod.POST, callback, newMobileAppContent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppContent> futurePost(@Nonnull final MobileAppContent newMobileAppContent) {
+        return futureSend(HttpMethod.POST, newMobileAppContent);
     }
 
     /**
@@ -123,10 +128,11 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
      * Creates a MobileAppContent with a new object
      *
      * @param newMobileAppContent the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MobileAppContent newMobileAppContent, @Nonnull final ICallback<? super MobileAppContent> callback) {
-        send(HttpMethod.PUT, callback, newMobileAppContent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppContent> futurePut(@Nonnull final MobileAppContent newMobileAppContent) {
+        return futureSend(HttpMethod.PUT, newMobileAppContent);
     }
 
     /**

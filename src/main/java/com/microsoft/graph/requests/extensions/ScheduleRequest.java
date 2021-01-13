@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestRequestBuilder;
@@ -56,10 +55,11 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
     /**
      * Gets the Schedule from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Schedule> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Schedule> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -76,29 +76,33 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Schedule> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Schedule> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Schedule delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Schedule with a source
      *
      * @param sourceSchedule the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Schedule sourceSchedule, @Nonnull final ICallback<? super Schedule> callback) {
-        send(HttpMethod.PATCH, callback, sourceSchedule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Schedule> futurePatch(@Nonnull final Schedule sourceSchedule) {
+        return futureSend(HttpMethod.PATCH, sourceSchedule);
     }
 
     /**
@@ -117,10 +121,11 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * Creates a Schedule with a new object
      *
      * @param newSchedule the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Schedule newSchedule, @Nonnull final ICallback<? super Schedule> callback) {
-        send(HttpMethod.POST, callback, newSchedule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Schedule> futurePost(@Nonnull final Schedule newSchedule) {
+        return futureSend(HttpMethod.POST, newSchedule);
     }
 
     /**
@@ -139,10 +144,11 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * Creates a Schedule with a new object
      *
      * @param newSchedule the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Schedule newSchedule, @Nonnull final ICallback<? super Schedule> callback) {
-        send(HttpMethod.PUT, callback, newSchedule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Schedule> futurePut(@Nonnull final Schedule newSchedule) {
+        return futureSend(HttpMethod.PUT, newSchedule);
     }
 
     /**

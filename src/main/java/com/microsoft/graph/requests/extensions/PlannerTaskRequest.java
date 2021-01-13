@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.requests.extensions.PlannerAssignedToTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketTaskBoardTaskFormatRequestBuilder;
@@ -42,10 +41,11 @@ public class PlannerTaskRequest extends BaseRequest<PlannerTask> {
     /**
      * Gets the PlannerTask from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PlannerTask> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerTask> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class PlannerTaskRequest extends BaseRequest<PlannerTask> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PlannerTask> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerTask> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PlannerTask delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PlannerTask with a source
      *
      * @param sourcePlannerTask the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PlannerTask sourcePlannerTask, @Nonnull final ICallback<? super PlannerTask> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlannerTask);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerTask> futurePatch(@Nonnull final PlannerTask sourcePlannerTask) {
+        return futureSend(HttpMethod.PATCH, sourcePlannerTask);
     }
 
     /**
@@ -103,10 +107,11 @@ public class PlannerTaskRequest extends BaseRequest<PlannerTask> {
      * Creates a PlannerTask with a new object
      *
      * @param newPlannerTask the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PlannerTask newPlannerTask, @Nonnull final ICallback<? super PlannerTask> callback) {
-        send(HttpMethod.POST, callback, newPlannerTask);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerTask> futurePost(@Nonnull final PlannerTask newPlannerTask) {
+        return futureSend(HttpMethod.POST, newPlannerTask);
     }
 
     /**
@@ -125,10 +130,11 @@ public class PlannerTaskRequest extends BaseRequest<PlannerTask> {
      * Creates a PlannerTask with a new object
      *
      * @param newPlannerTask the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PlannerTask newPlannerTask, @Nonnull final ICallback<? super PlannerTask> callback) {
-        send(HttpMethod.PUT, callback, newPlannerTask);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerTask> futurePut(@Nonnull final PlannerTask newPlannerTask) {
+        return futureSend(HttpMethod.PUT, newPlannerTask);
     }
 
     /**

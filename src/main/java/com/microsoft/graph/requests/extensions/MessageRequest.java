@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
@@ -62,10 +61,11 @@ public class MessageRequest extends BaseRequest<Message> {
     /**
      * Gets the Message from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Message> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Message> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -82,29 +82,33 @@ public class MessageRequest extends BaseRequest<Message> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Message> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Message> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Message delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Message with a source
      *
      * @param sourceMessage the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Message sourceMessage, @Nonnull final ICallback<? super Message> callback) {
-        send(HttpMethod.PATCH, callback, sourceMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Message> futurePatch(@Nonnull final Message sourceMessage) {
+        return futureSend(HttpMethod.PATCH, sourceMessage);
     }
 
     /**
@@ -123,10 +127,11 @@ public class MessageRequest extends BaseRequest<Message> {
      * Creates a Message with a new object
      *
      * @param newMessage the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Message newMessage, @Nonnull final ICallback<? super Message> callback) {
-        send(HttpMethod.POST, callback, newMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Message> futurePost(@Nonnull final Message newMessage) {
+        return futureSend(HttpMethod.POST, newMessage);
     }
 
     /**
@@ -145,10 +150,11 @@ public class MessageRequest extends BaseRequest<Message> {
      * Creates a Message with a new object
      *
      * @param newMessage the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Message newMessage, @Nonnull final ICallback<? super Message> callback) {
-        send(HttpMethod.PUT, callback, newMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Message> futurePut(@Nonnull final Message newMessage) {
+        return futureSend(HttpMethod.PUT, newMessage);
     }
 
     /**

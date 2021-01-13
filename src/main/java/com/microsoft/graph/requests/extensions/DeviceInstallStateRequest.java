@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
     /**
      * Gets the DeviceInstallState from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceInstallState> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceInstallState> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceInstallState delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceInstallState with a source
      *
      * @param sourceDeviceInstallState the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceInstallState sourceDeviceInstallState, @Nonnull final ICallback<? super DeviceInstallState> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceInstallState);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> futurePatch(@Nonnull final DeviceInstallState sourceDeviceInstallState) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceInstallState);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
      * Creates a DeviceInstallState with a new object
      *
      * @param newDeviceInstallState the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceInstallState newDeviceInstallState, @Nonnull final ICallback<? super DeviceInstallState> callback) {
-        send(HttpMethod.POST, callback, newDeviceInstallState);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> futurePost(@Nonnull final DeviceInstallState newDeviceInstallState) {
+        return futureSend(HttpMethod.POST, newDeviceInstallState);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
      * Creates a DeviceInstallState with a new object
      *
      * @param newDeviceInstallState the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceInstallState newDeviceInstallState, @Nonnull final ICallback<? super DeviceInstallState> callback) {
-        send(HttpMethod.PUT, callback, newDeviceInstallState);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> futurePut(@Nonnull final DeviceInstallState newDeviceInstallState) {
+        return futureSend(HttpMethod.PUT, newDeviceInstallState);
     }
 
     /**

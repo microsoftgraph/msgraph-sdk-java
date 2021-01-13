@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedInsight;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
     /**
      * Gets the SharedInsight from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SharedInsight> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedInsight> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SharedInsight> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedInsight> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SharedInsight delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SharedInsight with a source
      *
      * @param sourceSharedInsight the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SharedInsight sourceSharedInsight, @Nonnull final ICallback<? super SharedInsight> callback) {
-        send(HttpMethod.PATCH, callback, sourceSharedInsight);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedInsight> futurePatch(@Nonnull final SharedInsight sourceSharedInsight) {
+        return futureSend(HttpMethod.PATCH, sourceSharedInsight);
     }
 
     /**
@@ -100,10 +104,11 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
      * Creates a SharedInsight with a new object
      *
      * @param newSharedInsight the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SharedInsight newSharedInsight, @Nonnull final ICallback<? super SharedInsight> callback) {
-        send(HttpMethod.POST, callback, newSharedInsight);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedInsight> futurePost(@Nonnull final SharedInsight newSharedInsight) {
+        return futureSend(HttpMethod.POST, newSharedInsight);
     }
 
     /**
@@ -122,10 +127,11 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
      * Creates a SharedInsight with a new object
      *
      * @param newSharedInsight the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SharedInsight newSharedInsight, @Nonnull final ICallback<? super SharedInsight> callback) {
-        send(HttpMethod.PUT, callback, newSharedInsight);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedInsight> futurePut(@Nonnull final SharedInsight newSharedInsight) {
+        return futureSend(HttpMethod.PUT, newSharedInsight);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateRequestBuilder;
@@ -40,10 +39,11 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
     /**
      * Gets the DeviceCompliancePolicySettingStateSummary from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceCompliancePolicySettingStateSummary delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceCompliancePolicySettingStateSummary with a source
      *
      * @param sourceDeviceCompliancePolicySettingStateSummary the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceCompliancePolicySettingStateSummary sourceDeviceCompliancePolicySettingStateSummary, @Nonnull final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicySettingStateSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> futurePatch(@Nonnull final DeviceCompliancePolicySettingStateSummary sourceDeviceCompliancePolicySettingStateSummary) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceCompliancePolicySettingStateSummary);
     }
 
     /**
@@ -101,10 +105,11 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
      * Creates a DeviceCompliancePolicySettingStateSummary with a new object
      *
      * @param newDeviceCompliancePolicySettingStateSummary the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, @Nonnull final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
-        send(HttpMethod.POST, callback, newDeviceCompliancePolicySettingStateSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> futurePost(@Nonnull final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary) {
+        return futureSend(HttpMethod.POST, newDeviceCompliancePolicySettingStateSummary);
     }
 
     /**
@@ -123,10 +128,11 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
      * Creates a DeviceCompliancePolicySettingStateSummary with a new object
      *
      * @param newDeviceCompliancePolicySettingStateSummary the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, @Nonnull final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
-        send(HttpMethod.PUT, callback, newDeviceCompliancePolicySettingStateSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> futurePut(@Nonnull final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary) {
+        return futureSend(HttpMethod.PUT, newDeviceCompliancePolicySettingStateSummary);
     }
 
     /**

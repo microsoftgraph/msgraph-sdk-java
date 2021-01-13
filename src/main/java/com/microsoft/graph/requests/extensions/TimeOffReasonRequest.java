@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TimeOffReason;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
     /**
      * Gets the TimeOffReason from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TimeOffReason> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffReason> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TimeOffReason> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffReason> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TimeOffReason delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TimeOffReason with a source
      *
      * @param sourceTimeOffReason the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TimeOffReason sourceTimeOffReason, @Nonnull final ICallback<? super TimeOffReason> callback) {
-        send(HttpMethod.PATCH, callback, sourceTimeOffReason);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffReason> futurePatch(@Nonnull final TimeOffReason sourceTimeOffReason) {
+        return futureSend(HttpMethod.PATCH, sourceTimeOffReason);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
      * Creates a TimeOffReason with a new object
      *
      * @param newTimeOffReason the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TimeOffReason newTimeOffReason, @Nonnull final ICallback<? super TimeOffReason> callback) {
-        send(HttpMethod.POST, callback, newTimeOffReason);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffReason> futurePost(@Nonnull final TimeOffReason newTimeOffReason) {
+        return futureSend(HttpMethod.POST, newTimeOffReason);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
      * Creates a TimeOffReason with a new object
      *
      * @param newTimeOffReason the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TimeOffReason newTimeOffReason, @Nonnull final ICallback<? super TimeOffReason> callback) {
-        send(HttpMethod.PUT, callback, newTimeOffReason);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffReason> futurePut(@Nonnull final TimeOffReason newTimeOffReason) {
+        return futureSend(HttpMethod.PUT, newTimeOffReason);
     }
 
     /**

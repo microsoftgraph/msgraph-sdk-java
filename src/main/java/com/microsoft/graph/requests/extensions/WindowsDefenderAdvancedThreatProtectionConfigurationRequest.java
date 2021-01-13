@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsDefenderAdvancedThreatProtectionConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
     /**
      * Gets the WindowsDefenderAdvancedThreatProtectionConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WindowsDefenderAdvancedThreatProtectionConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WindowsDefenderAdvancedThreatProtectionConfiguration with a source
      *
      * @param sourceWindowsDefenderAdvancedThreatProtectionConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration, @Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindowsDefenderAdvancedThreatProtectionConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futurePatch(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * Creates a WindowsDefenderAdvancedThreatProtectionConfiguration with a new object
      *
      * @param newWindowsDefenderAdvancedThreatProtectionConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, @Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
-        send(HttpMethod.POST, callback, newWindowsDefenderAdvancedThreatProtectionConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futurePost(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) {
+        return futureSend(HttpMethod.POST, newWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * Creates a WindowsDefenderAdvancedThreatProtectionConfiguration with a new object
      *
      * @param newWindowsDefenderAdvancedThreatProtectionConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, @Nonnull final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newWindowsDefenderAdvancedThreatProtectionConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futurePut(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) {
+        return futureSend(HttpMethod.PUT, newWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
     /**

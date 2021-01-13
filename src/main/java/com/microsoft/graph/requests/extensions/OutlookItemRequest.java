@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookItem;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
     /**
      * Gets the OutlookItem from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OutlookItem> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookItem> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OutlookItem> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookItem> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OutlookItem delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OutlookItem with a source
      *
      * @param sourceOutlookItem the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OutlookItem sourceOutlookItem, @Nonnull final ICallback<? super OutlookItem> callback) {
-        send(HttpMethod.PATCH, callback, sourceOutlookItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookItem> futurePatch(@Nonnull final OutlookItem sourceOutlookItem) {
+        return futureSend(HttpMethod.PATCH, sourceOutlookItem);
     }
 
     /**
@@ -114,10 +118,11 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
      * Creates a OutlookItem with a new object
      *
      * @param newOutlookItem the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OutlookItem newOutlookItem, @Nonnull final ICallback<? super OutlookItem> callback) {
-        send(HttpMethod.POST, callback, newOutlookItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookItem> futurePost(@Nonnull final OutlookItem newOutlookItem) {
+        return futureSend(HttpMethod.POST, newOutlookItem);
     }
 
     /**
@@ -136,10 +141,11 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
      * Creates a OutlookItem with a new object
      *
      * @param newOutlookItem the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OutlookItem newOutlookItem, @Nonnull final ICallback<? super OutlookItem> callback) {
-        send(HttpMethod.PUT, callback, newOutlookItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookItem> futurePut(@Nonnull final OutlookItem newOutlookItem) {
+        return futureSend(HttpMethod.PUT, newOutlookItem);
     }
 
     /**

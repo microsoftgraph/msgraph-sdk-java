@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
@@ -57,10 +56,11 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
     /**
      * Gets the ManagedAppRegistration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -77,29 +77,33 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAppRegistration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAppRegistration with a source
      *
      * @param sourceManagedAppRegistration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePatch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration) {
+        return futureSend(HttpMethod.PATCH, sourceManagedAppRegistration);
     }
 
     /**
@@ -118,10 +122,11 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * Creates a ManagedAppRegistration with a new object
      *
      * @param newManagedAppRegistration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-        send(HttpMethod.POST, callback, newManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePost(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
+        return futureSend(HttpMethod.POST, newManagedAppRegistration);
     }
 
     /**
@@ -140,10 +145,11 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * Creates a ManagedAppRegistration with a new object
      *
      * @param newManagedAppRegistration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
-        send(HttpMethod.PUT, callback, newManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePut(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
+        return futureSend(HttpMethod.PUT, newManagedAppRegistration);
     }
 
     /**

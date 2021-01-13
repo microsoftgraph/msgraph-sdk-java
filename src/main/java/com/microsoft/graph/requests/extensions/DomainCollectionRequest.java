@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DomainCollectionResponse;
 import com.microsoft.graph.requests.extensions.DomainCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainCollectionRequest;
@@ -43,13 +41,14 @@ public class DomainCollectionRequest extends BaseEntityCollectionRequest<Domain,
     /**
      * Creates a new Domain
      * @param newDomain the Domain to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Domain newDomain, @Nonnull final ICallback<? super Domain> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Domain> futurePost(@Nonnull final Domain newDomain) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDomain, callback);
+            .futurePost(newDomain);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.Conversation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ConversationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationCollectionRequest;
@@ -44,13 +42,14 @@ public class ConversationCollectionRequest extends BaseEntityCollectionRequest<C
     /**
      * Creates a new Conversation
      * @param newConversation the Conversation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Conversation newConversation, @Nonnull final ICallback<? super Conversation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Conversation> futurePost(@Nonnull final Conversation newConversation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ConversationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ConversationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newConversation, callback);
+            .futurePost(newConversation);
     }
 
     /**

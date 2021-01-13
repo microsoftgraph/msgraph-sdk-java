@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
     /**
      * Gets the ManagedEBookAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedEBookAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedEBookAssignment with a source
      *
      * @param sourceManagedEBookAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedEBookAssignment sourceManagedEBookAssignment, @Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedEBookAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futurePatch(@Nonnull final ManagedEBookAssignment sourceManagedEBookAssignment) {
+        return futureSend(HttpMethod.PATCH, sourceManagedEBookAssignment);
     }
 
     /**
@@ -114,10 +118,11 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
      * Creates a ManagedEBookAssignment with a new object
      *
      * @param newManagedEBookAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment, @Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
-        send(HttpMethod.POST, callback, newManagedEBookAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futurePost(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
+        return futureSend(HttpMethod.POST, newManagedEBookAssignment);
     }
 
     /**
@@ -136,10 +141,11 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
      * Creates a ManagedEBookAssignment with a new object
      *
      * @param newManagedEBookAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment, @Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
-        send(HttpMethod.PUT, callback, newManagedEBookAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futurePut(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
+        return futureSend(HttpMethod.PUT, newManagedEBookAssignment);
     }
 
     /**

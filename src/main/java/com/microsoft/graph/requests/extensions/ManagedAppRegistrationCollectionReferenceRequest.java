@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
     /**
      * Creates a new ManagedAppRegistration
      * @param newManagedAppRegistration the ManagedAppRegistration to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePost(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/managedAppRegistrations/" + newManagedAppRegistration.id);
-        new ManagedAppRegistrationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedAppRegistrationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedAppRegistration, body, callback);
+            .futurePost(newManagedAppRegistration, body);
     }
 
     /**

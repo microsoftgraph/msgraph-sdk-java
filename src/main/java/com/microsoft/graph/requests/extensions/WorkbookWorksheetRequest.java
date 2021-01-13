@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookChartCollectionRequestBuilder;
@@ -48,10 +47,11 @@ public class WorkbookWorksheetRequest extends BaseRequest<WorkbookWorksheet> {
     /**
      * Gets the WorkbookWorksheet from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookWorksheet> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -68,29 +68,33 @@ public class WorkbookWorksheetRequest extends BaseRequest<WorkbookWorksheet> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookWorksheet> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookWorksheet delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookWorksheet with a source
      *
      * @param sourceWorkbookWorksheet the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookWorksheet sourceWorkbookWorksheet, @Nonnull final ICallback<? super WorkbookWorksheet> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookWorksheet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> futurePatch(@Nonnull final WorkbookWorksheet sourceWorkbookWorksheet) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookWorksheet);
     }
 
     /**
@@ -109,10 +113,11 @@ public class WorkbookWorksheetRequest extends BaseRequest<WorkbookWorksheet> {
      * Creates a WorkbookWorksheet with a new object
      *
      * @param newWorkbookWorksheet the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookWorksheet newWorkbookWorksheet, @Nonnull final ICallback<? super WorkbookWorksheet> callback) {
-        send(HttpMethod.POST, callback, newWorkbookWorksheet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> futurePost(@Nonnull final WorkbookWorksheet newWorkbookWorksheet) {
+        return futureSend(HttpMethod.POST, newWorkbookWorksheet);
     }
 
     /**
@@ -131,10 +136,11 @@ public class WorkbookWorksheetRequest extends BaseRequest<WorkbookWorksheet> {
      * Creates a WorkbookWorksheet with a new object
      *
      * @param newWorkbookWorksheet the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookWorksheet newWorkbookWorksheet, @Nonnull final ICallback<? super WorkbookWorksheet> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookWorksheet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> futurePut(@Nonnull final WorkbookWorksheet newWorkbookWorksheet) {
+        return futureSend(HttpMethod.PUT, newWorkbookWorksheet);
     }
 
     /**

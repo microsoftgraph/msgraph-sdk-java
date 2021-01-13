@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAreaFormat;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
@@ -40,10 +39,11 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
     /**
      * Gets the WorkbookChartAreaFormat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartAreaFormat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartAreaFormat with a source
      *
      * @param sourceWorkbookChartAreaFormat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat, @Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartAreaFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futurePatch(@Nonnull final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookChartAreaFormat);
     }
 
     /**
@@ -101,10 +105,11 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
      * Creates a WorkbookChartAreaFormat with a new object
      *
      * @param newWorkbookChartAreaFormat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat, @Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartAreaFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futurePost(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat) {
+        return futureSend(HttpMethod.POST, newWorkbookChartAreaFormat);
     }
 
     /**
@@ -123,10 +128,11 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
      * Creates a WorkbookChartAreaFormat with a new object
      *
      * @param newWorkbookChartAreaFormat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat, @Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartAreaFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futurePut(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat) {
+        return futureSend(HttpMethod.PUT, newWorkbookChartAreaFormat);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationUser;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionWithR
     /**
      * Creates a new EducationUser
      * @param newEducationUser the EducationUser to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final EducationUser newEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationUser> futurePost(@Nonnull final EducationUser newEducationUser) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/users/" + newEducationUser.id);
-        new EducationUserWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new EducationUserWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newEducationUser, body, callback);
+            .futurePost(newEducationUser, body);
     }
 
     /**

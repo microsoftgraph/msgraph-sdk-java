@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InferenceClassification;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideRequestBuilder;
@@ -40,10 +39,11 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
     /**
      * Gets the InferenceClassification from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super InferenceClassification> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassification> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super InferenceClassification> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassification> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public InferenceClassification delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this InferenceClassification with a source
      *
      * @param sourceInferenceClassification the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final InferenceClassification sourceInferenceClassification, @Nonnull final ICallback<? super InferenceClassification> callback) {
-        send(HttpMethod.PATCH, callback, sourceInferenceClassification);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassification> futurePatch(@Nonnull final InferenceClassification sourceInferenceClassification) {
+        return futureSend(HttpMethod.PATCH, sourceInferenceClassification);
     }
 
     /**
@@ -101,10 +105,11 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * Creates a InferenceClassification with a new object
      *
      * @param newInferenceClassification the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final InferenceClassification newInferenceClassification, @Nonnull final ICallback<? super InferenceClassification> callback) {
-        send(HttpMethod.POST, callback, newInferenceClassification);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassification> futurePost(@Nonnull final InferenceClassification newInferenceClassification) {
+        return futureSend(HttpMethod.POST, newInferenceClassification);
     }
 
     /**
@@ -123,10 +128,11 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * Creates a InferenceClassification with a new object
      *
      * @param newInferenceClassification the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final InferenceClassification newInferenceClassification, @Nonnull final ICallback<? super InferenceClassification> callback) {
-        send(HttpMethod.PUT, callback, newInferenceClassification);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassification> futurePut(@Nonnull final InferenceClassification newInferenceClassification) {
+        return futureSend(HttpMethod.PUT, newInferenceClassification);
     }
 
     /**

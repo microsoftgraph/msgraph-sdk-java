@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileCompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
     /**
      * Gets the AndroidWorkProfileCompliancePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AndroidWorkProfileCompliancePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AndroidWorkProfileCompliancePolicy with a source
      *
      * @param sourceAndroidWorkProfileCompliancePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AndroidWorkProfileCompliancePolicy sourceAndroidWorkProfileCompliancePolicy, @Nonnull final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futurePatch(@Nonnull final AndroidWorkProfileCompliancePolicy sourceAndroidWorkProfileCompliancePolicy) {
+        return futureSend(HttpMethod.PATCH, sourceAndroidWorkProfileCompliancePolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
      * Creates a AndroidWorkProfileCompliancePolicy with a new object
      *
      * @param newAndroidWorkProfileCompliancePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy, @Nonnull final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
-        send(HttpMethod.POST, callback, newAndroidWorkProfileCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futurePost(@Nonnull final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy) {
+        return futureSend(HttpMethod.POST, newAndroidWorkProfileCompliancePolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
      * Creates a AndroidWorkProfileCompliancePolicy with a new object
      *
      * @param newAndroidWorkProfileCompliancePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy, @Nonnull final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
-        send(HttpMethod.PUT, callback, newAndroidWorkProfileCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futurePut(@Nonnull final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy) {
+        return futureSend(HttpMethod.PUT, newAndroidWorkProfileCompliancePolicy);
     }
 
     /**

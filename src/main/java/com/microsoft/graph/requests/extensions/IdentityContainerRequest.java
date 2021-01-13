@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
 import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
     /**
      * Gets the IdentityContainer from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IdentityContainer> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityContainer> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IdentityContainer> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityContainer> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IdentityContainer delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IdentityContainer with a source
      *
      * @param sourceIdentityContainer the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IdentityContainer sourceIdentityContainer, @Nonnull final ICallback<? super IdentityContainer> callback) {
-        send(HttpMethod.PATCH, callback, sourceIdentityContainer);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityContainer> futurePatch(@Nonnull final IdentityContainer sourceIdentityContainer) {
+        return futureSend(HttpMethod.PATCH, sourceIdentityContainer);
     }
 
     /**
@@ -100,10 +104,11 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
      * Creates a IdentityContainer with a new object
      *
      * @param newIdentityContainer the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IdentityContainer newIdentityContainer, @Nonnull final ICallback<? super IdentityContainer> callback) {
-        send(HttpMethod.POST, callback, newIdentityContainer);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityContainer> futurePost(@Nonnull final IdentityContainer newIdentityContainer) {
+        return futureSend(HttpMethod.POST, newIdentityContainer);
     }
 
     /**
@@ -122,10 +127,11 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
      * Creates a IdentityContainer with a new object
      *
      * @param newIdentityContainer the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IdentityContainer newIdentityContainer, @Nonnull final ICallback<? super IdentityContainer> callback) {
-        send(HttpMethod.PUT, callback, newIdentityContainer);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityContainer> futurePut(@Nonnull final IdentityContainer newIdentityContainer) {
+        return futureSend(HttpMethod.PUT, newIdentityContainer);
     }
 
     /**

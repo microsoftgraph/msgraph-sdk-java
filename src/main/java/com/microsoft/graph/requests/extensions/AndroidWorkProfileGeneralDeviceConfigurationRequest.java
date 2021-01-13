@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileGeneralDeviceConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
     /**
      * Gets the AndroidWorkProfileGeneralDeviceConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AndroidWorkProfileGeneralDeviceConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AndroidWorkProfileGeneralDeviceConfiguration with a source
      *
      * @param sourceAndroidWorkProfileGeneralDeviceConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration sourceAndroidWorkProfileGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileGeneralDeviceConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futurePatch(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration sourceAndroidWorkProfileGeneralDeviceConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceAndroidWorkProfileGeneralDeviceConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * Creates a AndroidWorkProfileGeneralDeviceConfiguration with a new object
      *
      * @param newAndroidWorkProfileGeneralDeviceConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
-        send(HttpMethod.POST, callback, newAndroidWorkProfileGeneralDeviceConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futurePost(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration) {
+        return futureSend(HttpMethod.POST, newAndroidWorkProfileGeneralDeviceConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * Creates a AndroidWorkProfileGeneralDeviceConfiguration with a new object
      *
      * @param newAndroidWorkProfileGeneralDeviceConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newAndroidWorkProfileGeneralDeviceConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futurePut(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration) {
+        return futureSend(HttpMethod.PUT, newAndroidWorkProfileGeneralDeviceConfiguration);
     }
 
     /**

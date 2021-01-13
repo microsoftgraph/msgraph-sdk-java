@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
     /**
      * Gets the ExtensionProperty from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ExtensionProperty> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ExtensionProperty> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ExtensionProperty delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ExtensionProperty with a source
      *
      * @param sourceExtensionProperty the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ExtensionProperty sourceExtensionProperty, @Nonnull final ICallback<? super ExtensionProperty> callback) {
-        send(HttpMethod.PATCH, callback, sourceExtensionProperty);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> futurePatch(@Nonnull final ExtensionProperty sourceExtensionProperty) {
+        return futureSend(HttpMethod.PATCH, sourceExtensionProperty);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * Creates a ExtensionProperty with a new object
      *
      * @param newExtensionProperty the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ExtensionProperty newExtensionProperty, @Nonnull final ICallback<? super ExtensionProperty> callback) {
-        send(HttpMethod.POST, callback, newExtensionProperty);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> futurePost(@Nonnull final ExtensionProperty newExtensionProperty) {
+        return futureSend(HttpMethod.POST, newExtensionProperty);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * Creates a ExtensionProperty with a new object
      *
      * @param newExtensionProperty the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ExtensionProperty newExtensionProperty, @Nonnull final ICallback<? super ExtensionProperty> callback) {
-        send(HttpMethod.PUT, callback, newExtensionProperty);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> futurePut(@Nonnull final ExtensionProperty newExtensionProperty) {
+        return futureSend(HttpMethod.PUT, newExtensionProperty);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.models.extensions.ItemActivity;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionResponse;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequest;
@@ -44,13 +42,14 @@ public class ItemActivityCollectionRequest extends BaseEntityCollectionRequest<I
     /**
      * Creates a new ItemActivity
      * @param newItemActivity the ItemActivity to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ItemActivity newItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivity> futurePost(@Nonnull final ItemActivity newItemActivity) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newItemActivity, callback);
+            .futurePost(newItemActivity);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
@@ -71,12 +70,13 @@ public class EducationUserReferenceRequest extends BaseReferenceRequest<Educatio
      * Puts the EducationUser
      *
      * @param srcEducationUser the EducationUser reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EducationUser srcEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationUser> futurePut(@Nonnull final EducationUser srcEducationUser) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/education/users/" + srcEducationUser.id));
-        send(HttpMethod.PUT, callback, payload);
+        return futureSend(HttpMethod.PUT, payload);
     }
 
     /**

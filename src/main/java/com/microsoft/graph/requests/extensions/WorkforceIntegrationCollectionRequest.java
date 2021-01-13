@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Teamwork;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequest;
@@ -44,13 +42,14 @@ public class WorkforceIntegrationCollectionRequest extends BaseEntityCollectionR
     /**
      * Creates a new WorkforceIntegration
      * @param newWorkforceIntegration the WorkforceIntegration to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkforceIntegration newWorkforceIntegration, @Nonnull final ICallback<? super WorkforceIntegration> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> futurePost(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkforceIntegration, callback);
+            .futurePost(newWorkforceIntegration);
     }
 
     /**

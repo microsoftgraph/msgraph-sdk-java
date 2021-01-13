@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
     /**
      * Gets the AppRoleAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AppRoleAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AppRoleAssignment with a source
      *
      * @param sourceAppRoleAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AppRoleAssignment sourceAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceAppRoleAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futurePatch(@Nonnull final AppRoleAssignment sourceAppRoleAssignment) {
+        return futureSend(HttpMethod.PATCH, sourceAppRoleAssignment);
     }
 
     /**
@@ -99,10 +103,11 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
      * Creates a AppRoleAssignment with a new object
      *
      * @param newAppRoleAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AppRoleAssignment newAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.POST, callback, newAppRoleAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futurePost(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
+        return futureSend(HttpMethod.POST, newAppRoleAssignment);
     }
 
     /**
@@ -121,10 +126,11 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
      * Creates a AppRoleAssignment with a new object
      *
      * @param newAppRoleAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AppRoleAssignment newAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
-        send(HttpMethod.PUT, callback, newAppRoleAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futurePut(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
+        return futureSend(HttpMethod.PUT, newAppRoleAssignment);
     }
 
     /**

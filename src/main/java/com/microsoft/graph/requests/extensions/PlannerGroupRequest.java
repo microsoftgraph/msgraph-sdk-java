@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerGroup;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
@@ -40,10 +39,11 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
     /**
      * Gets the PlannerGroup from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PlannerGroup> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerGroup> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PlannerGroup> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerGroup> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PlannerGroup delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PlannerGroup with a source
      *
      * @param sourcePlannerGroup the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PlannerGroup sourcePlannerGroup, @Nonnull final ICallback<? super PlannerGroup> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlannerGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerGroup> futurePatch(@Nonnull final PlannerGroup sourcePlannerGroup) {
+        return futureSend(HttpMethod.PATCH, sourcePlannerGroup);
     }
 
     /**
@@ -101,10 +105,11 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * Creates a PlannerGroup with a new object
      *
      * @param newPlannerGroup the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PlannerGroup newPlannerGroup, @Nonnull final ICallback<? super PlannerGroup> callback) {
-        send(HttpMethod.POST, callback, newPlannerGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerGroup> futurePost(@Nonnull final PlannerGroup newPlannerGroup) {
+        return futureSend(HttpMethod.POST, newPlannerGroup);
     }
 
     /**
@@ -123,10 +128,11 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * Creates a PlannerGroup with a new object
      *
      * @param newPlannerGroup the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PlannerGroup newPlannerGroup, @Nonnull final ICallback<? super PlannerGroup> callback) {
-        send(HttpMethod.PUT, callback, newPlannerGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerGroup> futurePut(@Nonnull final PlannerGroup newPlannerGroup) {
+        return futureSend(HttpMethod.PUT, newPlannerGroup);
     }
 
     /**

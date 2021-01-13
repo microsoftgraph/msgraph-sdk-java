@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequest;
@@ -44,13 +42,14 @@ public class UsedInsightCollectionRequest extends BaseEntityCollectionRequest<Us
     /**
      * Creates a new UsedInsight
      * @param newUsedInsight the UsedInsight to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final UsedInsight newUsedInsight, @Nonnull final ICallback<? super UsedInsight> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UsedInsight> futurePost(@Nonnull final UsedInsight newUsedInsight) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newUsedInsight, callback);
+            .futurePost(newUsedInsight);
     }
 
     /**

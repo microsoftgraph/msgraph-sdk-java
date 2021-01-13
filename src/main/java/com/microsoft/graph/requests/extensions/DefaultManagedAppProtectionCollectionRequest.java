@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionRequest;
@@ -44,13 +42,14 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseEntityColl
     /**
      * Creates a new DefaultManagedAppProtection
      * @param newDefaultManagedAppProtection the DefaultManagedAppProtection to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection, @Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> futurePost(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDefaultManagedAppProtection, callback);
+            .futurePost(newDefaultManagedAppProtection);
     }
 
     /**

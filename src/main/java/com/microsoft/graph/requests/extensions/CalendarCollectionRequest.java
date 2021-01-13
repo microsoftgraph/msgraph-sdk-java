@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CalendarGroup;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
@@ -21,7 +20,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequest;
@@ -47,13 +45,14 @@ public class CalendarCollectionRequest extends BaseEntityCollectionRequest<Calen
     /**
      * Creates a new Calendar
      * @param newCalendar the Calendar to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Calendar newCalendar, @Nonnull final ICallback<? super Calendar> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Calendar> futurePost(@Nonnull final Calendar newCalendar) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newCalendar, callback);
+            .futurePost(newCalendar);
     }
 
     /**

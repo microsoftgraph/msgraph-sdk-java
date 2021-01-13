@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsUpdateForBusinessConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
     /**
      * Gets the WindowsUpdateForBusinessConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WindowsUpdateForBusinessConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WindowsUpdateForBusinessConfiguration with a source
      *
      * @param sourceWindowsUpdateForBusinessConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration, @Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindowsUpdateForBusinessConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futurePatch(@Nonnull final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceWindowsUpdateForBusinessConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
      * Creates a WindowsUpdateForBusinessConfiguration with a new object
      *
      * @param newWindowsUpdateForBusinessConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, @Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
-        send(HttpMethod.POST, callback, newWindowsUpdateForBusinessConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futurePost(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) {
+        return futureSend(HttpMethod.POST, newWindowsUpdateForBusinessConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
      * Creates a WindowsUpdateForBusinessConfiguration with a new object
      *
      * @param newWindowsUpdateForBusinessConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, @Nonnull final ICallback<? super WindowsUpdateForBusinessConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newWindowsUpdateForBusinessConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futurePut(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) {
+        return futureSend(HttpMethod.PUT, newWindowsUpdateForBusinessConfiguration);
     }
 
     /**

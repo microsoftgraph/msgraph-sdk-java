@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentRequestBuilder;
@@ -42,10 +41,11 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
     /**
      * Gets the ChatMessage from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ChatMessage> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ChatMessage> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ChatMessage delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ChatMessage with a source
      *
      * @param sourceChatMessage the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ChatMessage sourceChatMessage, @Nonnull final ICallback<? super ChatMessage> callback) {
-        send(HttpMethod.PATCH, callback, sourceChatMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> futurePatch(@Nonnull final ChatMessage sourceChatMessage) {
+        return futureSend(HttpMethod.PATCH, sourceChatMessage);
     }
 
     /**
@@ -103,10 +107,11 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * Creates a ChatMessage with a new object
      *
      * @param newChatMessage the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ChatMessage newChatMessage, @Nonnull final ICallback<? super ChatMessage> callback) {
-        send(HttpMethod.POST, callback, newChatMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> futurePost(@Nonnull final ChatMessage newChatMessage) {
+        return futureSend(HttpMethod.POST, newChatMessage);
     }
 
     /**
@@ -125,10 +130,11 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * Creates a ChatMessage with a new object
      *
      * @param newChatMessage the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ChatMessage newChatMessage, @Nonnull final ICallback<? super ChatMessage> callback) {
-        send(HttpMethod.PUT, callback, newChatMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> futurePut(@Nonnull final ChatMessage newChatMessage) {
+        return futureSend(HttpMethod.PUT, newChatMessage);
     }
 
     /**

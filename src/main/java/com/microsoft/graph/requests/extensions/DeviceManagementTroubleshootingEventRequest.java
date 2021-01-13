@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
     /**
      * Gets the DeviceManagementTroubleshootingEvent from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceManagementTroubleshootingEvent delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceManagementTroubleshootingEvent with a source
      *
      * @param sourceDeviceManagementTroubleshootingEvent the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceManagementTroubleshootingEvent sourceDeviceManagementTroubleshootingEvent, @Nonnull final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceManagementTroubleshootingEvent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futurePatch(@Nonnull final DeviceManagementTroubleshootingEvent sourceDeviceManagementTroubleshootingEvent) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceManagementTroubleshootingEvent);
     }
 
     /**
@@ -114,10 +118,11 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
      * Creates a DeviceManagementTroubleshootingEvent with a new object
      *
      * @param newDeviceManagementTroubleshootingEvent the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, @Nonnull final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
-        send(HttpMethod.POST, callback, newDeviceManagementTroubleshootingEvent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futurePost(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) {
+        return futureSend(HttpMethod.POST, newDeviceManagementTroubleshootingEvent);
     }
 
     /**
@@ -136,10 +141,11 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
      * Creates a DeviceManagementTroubleshootingEvent with a new object
      *
      * @param newDeviceManagementTroubleshootingEvent the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, @Nonnull final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
-        send(HttpMethod.PUT, callback, newDeviceManagementTroubleshootingEvent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futurePut(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) {
+        return futureSend(HttpMethod.PUT, newDeviceManagementTroubleshootingEvent);
     }
 
     /**

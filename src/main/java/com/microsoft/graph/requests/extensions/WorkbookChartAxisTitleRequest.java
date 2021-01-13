@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxisTitle;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisTitleFormatRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
     /**
      * Gets the WorkbookChartAxisTitle from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartAxisTitle delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartAxisTitle with a source
      *
      * @param sourceWorkbookChartAxisTitle the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle, @Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartAxisTitle);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futurePatch(@Nonnull final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookChartAxisTitle);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
      * Creates a WorkbookChartAxisTitle with a new object
      *
      * @param newWorkbookChartAxisTitle the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle, @Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartAxisTitle);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futurePost(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle) {
+        return futureSend(HttpMethod.POST, newWorkbookChartAxisTitle);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
      * Creates a WorkbookChartAxisTitle with a new object
      *
      * @param newWorkbookChartAxisTitle the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle, @Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartAxisTitle);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futurePut(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle) {
+        return futureSend(HttpMethod.PUT, newWorkbookChartAxisTitle);
     }
 
     /**

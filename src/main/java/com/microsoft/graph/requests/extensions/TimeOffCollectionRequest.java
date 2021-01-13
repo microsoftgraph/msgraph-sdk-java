@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.TimeOff;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionResponse;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionRequest;
@@ -44,13 +42,14 @@ public class TimeOffCollectionRequest extends BaseEntityCollectionRequest<TimeOf
     /**
      * Creates a new TimeOff
      * @param newTimeOff the TimeOff to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TimeOff newTimeOff, @Nonnull final ICallback<? super TimeOff> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOff> futurePost(@Nonnull final TimeOff newTimeOff) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TimeOffRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TimeOffRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTimeOff, callback);
+            .futurePost(newTimeOff);
     }
 
     /**

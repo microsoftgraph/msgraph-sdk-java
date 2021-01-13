@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookFilterRequestBuilder;
@@ -40,10 +39,11 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
     /**
      * Gets the WorkbookTableColumn from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookTableColumn> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookTableColumn> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookTableColumn delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookTableColumn with a source
      *
      * @param sourceWorkbookTableColumn the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookTableColumn sourceWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookTableColumn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futurePatch(@Nonnull final WorkbookTableColumn sourceWorkbookTableColumn) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookTableColumn);
     }
 
     /**
@@ -101,10 +105,11 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
      * Creates a WorkbookTableColumn with a new object
      *
      * @param newWorkbookTableColumn the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookTableColumn newWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
-        send(HttpMethod.POST, callback, newWorkbookTableColumn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futurePost(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) {
+        return futureSend(HttpMethod.POST, newWorkbookTableColumn);
     }
 
     /**
@@ -123,10 +128,11 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
      * Creates a WorkbookTableColumn with a new object
      *
      * @param newWorkbookTableColumn the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookTableColumn newWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookTableColumn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futurePut(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) {
+        return futureSend(HttpMethod.PUT, newWorkbookTableColumn);
     }
 
     /**

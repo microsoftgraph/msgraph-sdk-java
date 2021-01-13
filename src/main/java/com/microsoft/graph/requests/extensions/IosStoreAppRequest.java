@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosStoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
     /**
      * Gets the IosStoreApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosStoreApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosStoreApp> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosStoreApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosStoreApp> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosStoreApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosStoreApp with a source
      *
      * @param sourceIosStoreApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosStoreApp sourceIosStoreApp, @Nonnull final ICallback<? super IosStoreApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosStoreApp> futurePatch(@Nonnull final IosStoreApp sourceIosStoreApp) {
+        return futureSend(HttpMethod.PATCH, sourceIosStoreApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * Creates a IosStoreApp with a new object
      *
      * @param newIosStoreApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosStoreApp newIosStoreApp, @Nonnull final ICallback<? super IosStoreApp> callback) {
-        send(HttpMethod.POST, callback, newIosStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosStoreApp> futurePost(@Nonnull final IosStoreApp newIosStoreApp) {
+        return futureSend(HttpMethod.POST, newIosStoreApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * Creates a IosStoreApp with a new object
      *
      * @param newIosStoreApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosStoreApp newIosStoreApp, @Nonnull final ICallback<? super IosStoreApp> callback) {
-        send(HttpMethod.PUT, callback, newIosStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosStoreApp> futurePut(@Nonnull final IosStoreApp newIosStoreApp) {
+        return futureSend(HttpMethod.PUT, newIosStoreApp);
     }
 
     /**

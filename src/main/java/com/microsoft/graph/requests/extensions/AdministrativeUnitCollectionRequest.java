@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Directory;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionResponse;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequest;
@@ -44,13 +42,14 @@ public class AdministrativeUnitCollectionRequest extends BaseEntityCollectionReq
     /**
      * Creates a new AdministrativeUnit
      * @param newAdministrativeUnit the AdministrativeUnit to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final AdministrativeUnit newAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> futurePost(@Nonnull final AdministrativeUnit newAdministrativeUnit) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new AdministrativeUnitRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newAdministrativeUnit, callback);
+            .futurePost(newAdministrativeUnit);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
     /**
      * Gets the TermsAndConditionsAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TermsAndConditionsAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TermsAndConditionsAssignment with a source
      *
      * @param sourceTermsAndConditionsAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment, @Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceTermsAndConditionsAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futurePatch(@Nonnull final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment) {
+        return futureSend(HttpMethod.PATCH, sourceTermsAndConditionsAssignment);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * Creates a TermsAndConditionsAssignment with a new object
      *
      * @param newTermsAndConditionsAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment, @Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
-        send(HttpMethod.POST, callback, newTermsAndConditionsAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futurePost(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
+        return futureSend(HttpMethod.POST, newTermsAndConditionsAssignment);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * Creates a TermsAndConditionsAssignment with a new object
      *
      * @param newTermsAndConditionsAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment, @Nonnull final ICallback<? super TermsAndConditionsAssignment> callback) {
-        send(HttpMethod.PUT, callback, newTermsAndConditionsAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futurePut(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
+        return futureSend(HttpMethod.PUT, newTermsAndConditionsAssignment);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
@@ -43,10 +42,11 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
     /**
      * Gets the OnenotePage from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OnenotePage> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenotePage> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -63,29 +63,33 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OnenotePage> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenotePage> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OnenotePage delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OnenotePage with a source
      *
      * @param sourceOnenotePage the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OnenotePage sourceOnenotePage, @Nonnull final ICallback<? super OnenotePage> callback) {
-        send(HttpMethod.PATCH, callback, sourceOnenotePage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenotePage> futurePatch(@Nonnull final OnenotePage sourceOnenotePage) {
+        return futureSend(HttpMethod.PATCH, sourceOnenotePage);
     }
 
     /**
@@ -104,10 +108,11 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
      * Creates a OnenotePage with a new object
      *
      * @param newOnenotePage the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final byte[] newOnenotePage, @Nonnull final ICallback<? super OnenotePage> callback) {
-        send(HttpMethod.POST, callback, newOnenotePage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenotePage> futurePost(@Nonnull final byte[] newOnenotePage) {
+        return futureSend(HttpMethod.POST, newOnenotePage);
     }
 
     /**
@@ -126,10 +131,11 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
      * Creates a OnenotePage with a new object
      *
      * @param newOnenotePage the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OnenotePage newOnenotePage, @Nonnull final ICallback<? super OnenotePage> callback) {
-        send(HttpMethod.PUT, callback, newOnenotePage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenotePage> futurePut(@Nonnull final OnenotePage newOnenotePage) {
+        return futureSend(HttpMethod.PUT, newOnenotePage);
     }
 
     /**

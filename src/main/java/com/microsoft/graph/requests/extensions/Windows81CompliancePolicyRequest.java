@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows81CompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
     /**
      * Gets the Windows81CompliancePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Windows81CompliancePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Windows81CompliancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Windows81CompliancePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Windows81CompliancePolicy with a source
      *
      * @param sourceWindows81CompliancePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Windows81CompliancePolicy sourceWindows81CompliancePolicy, @Nonnull final ICallback<? super Windows81CompliancePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindows81CompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futurePatch(@Nonnull final Windows81CompliancePolicy sourceWindows81CompliancePolicy) {
+        return futureSend(HttpMethod.PATCH, sourceWindows81CompliancePolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
      * Creates a Windows81CompliancePolicy with a new object
      *
      * @param newWindows81CompliancePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Windows81CompliancePolicy newWindows81CompliancePolicy, @Nonnull final ICallback<? super Windows81CompliancePolicy> callback) {
-        send(HttpMethod.POST, callback, newWindows81CompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futurePost(@Nonnull final Windows81CompliancePolicy newWindows81CompliancePolicy) {
+        return futureSend(HttpMethod.POST, newWindows81CompliancePolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
      * Creates a Windows81CompliancePolicy with a new object
      *
      * @param newWindows81CompliancePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Windows81CompliancePolicy newWindows81CompliancePolicy, @Nonnull final ICallback<? super Windows81CompliancePolicy> callback) {
-        send(HttpMethod.PUT, callback, newWindows81CompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futurePut(@Nonnull final Windows81CompliancePolicy newWindows81CompliancePolicy) {
+        return futureSend(HttpMethod.PUT, newWindows81CompliancePolicy);
     }
 
     /**

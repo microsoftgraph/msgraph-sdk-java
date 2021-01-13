@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest;
@@ -44,13 +42,14 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
     /**
      * Creates a new ManagedDeviceMobileAppConfigurationUserStatus
      * @param newManagedDeviceMobileAppConfigurationUserStatus the ManagedDeviceMobileAppConfigurationUserStatus to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> futurePost(@Nonnull final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedDeviceMobileAppConfigurationUserStatus, callback);
+            .futurePost(newManagedDeviceMobileAppConfigurationUserStatus);
     }
 
     /**

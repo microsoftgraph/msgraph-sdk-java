@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10SecureAssessmentConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
     /**
      * Gets the Windows10SecureAssessmentConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Windows10SecureAssessmentConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Windows10SecureAssessmentConfiguration with a source
      *
      * @param sourceWindows10SecureAssessmentConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration, @Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindows10SecureAssessmentConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futurePatch(@Nonnull final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceWindows10SecureAssessmentConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * Creates a Windows10SecureAssessmentConfiguration with a new object
      *
      * @param newWindows10SecureAssessmentConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, @Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
-        send(HttpMethod.POST, callback, newWindows10SecureAssessmentConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futurePost(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) {
+        return futureSend(HttpMethod.POST, newWindows10SecureAssessmentConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * Creates a Windows10SecureAssessmentConfiguration with a new object
      *
      * @param newWindows10SecureAssessmentConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, @Nonnull final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newWindows10SecureAssessmentConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futurePut(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) {
+        return futureSend(HttpMethod.PUT, newWindows10SecureAssessmentConfiguration);
     }
 
     /**

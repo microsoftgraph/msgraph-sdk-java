@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Invitation;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class InvitationRequest extends BaseRequest<Invitation> {
     /**
      * Gets the Invitation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Invitation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Invitation> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class InvitationRequest extends BaseRequest<Invitation> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Invitation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Invitation> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Invitation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Invitation with a source
      *
      * @param sourceInvitation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Invitation sourceInvitation, @Nonnull final ICallback<? super Invitation> callback) {
-        send(HttpMethod.PATCH, callback, sourceInvitation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Invitation> futurePatch(@Nonnull final Invitation sourceInvitation) {
+        return futureSend(HttpMethod.PATCH, sourceInvitation);
     }
 
     /**
@@ -100,10 +104,11 @@ public class InvitationRequest extends BaseRequest<Invitation> {
      * Creates a Invitation with a new object
      *
      * @param newInvitation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Invitation newInvitation, @Nonnull final ICallback<? super Invitation> callback) {
-        send(HttpMethod.POST, callback, newInvitation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Invitation> futurePost(@Nonnull final Invitation newInvitation) {
+        return futureSend(HttpMethod.POST, newInvitation);
     }
 
     /**
@@ -122,10 +127,11 @@ public class InvitationRequest extends BaseRequest<Invitation> {
      * Creates a Invitation with a new object
      *
      * @param newInvitation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Invitation newInvitation, @Nonnull final ICallback<? super Invitation> callback) {
-        send(HttpMethod.PUT, callback, newInvitation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Invitation> futurePut(@Nonnull final Invitation newInvitation) {
+        return futureSend(HttpMethod.PUT, newInvitation);
     }
 
     /**

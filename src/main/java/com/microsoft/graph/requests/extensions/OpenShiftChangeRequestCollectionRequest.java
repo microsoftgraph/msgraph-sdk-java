@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.OpenShiftChangeRequest;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequest;
@@ -44,13 +42,14 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseEntityCollectio
     /**
      * Creates a new OpenShiftChangeRequest
      * @param newOpenShiftChangeRequest the OpenShiftChangeRequest to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest, @Nonnull final ICallback<? super OpenShiftChangeRequest> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futurePost(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newOpenShiftChangeRequest, callback);
+            .futurePost(newOpenShiftChangeRequest);
     }
 
     /**

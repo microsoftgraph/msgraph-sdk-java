@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
     /**
      * Gets the TargetedManagedAppPolicyAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TargetedManagedAppPolicyAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TargetedManagedAppPolicyAssignment with a source
      *
      * @param sourceTargetedManagedAppPolicyAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment, @Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceTargetedManagedAppPolicyAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futurePatch(@Nonnull final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment) {
+        return futureSend(HttpMethod.PATCH, sourceTargetedManagedAppPolicyAssignment);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
      * Creates a TargetedManagedAppPolicyAssignment with a new object
      *
      * @param newTargetedManagedAppPolicyAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, @Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
-        send(HttpMethod.POST, callback, newTargetedManagedAppPolicyAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futurePost(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
+        return futureSend(HttpMethod.POST, newTargetedManagedAppPolicyAssignment);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
      * Creates a TargetedManagedAppPolicyAssignment with a new object
      *
      * @param newTargetedManagedAppPolicyAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, @Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
-        send(HttpMethod.PUT, callback, newTargetedManagedAppPolicyAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futurePut(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
+        return futureSend(HttpMethod.PUT, newTargetedManagedAppPolicyAssignment);
     }
 
     /**

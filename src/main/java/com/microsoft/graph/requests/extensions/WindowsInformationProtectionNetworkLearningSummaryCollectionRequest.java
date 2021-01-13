@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionRequest;
@@ -44,13 +42,14 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest
     /**
      * Creates a new WindowsInformationProtectionNetworkLearningSummary
      * @param newWindowsInformationProtectionNetworkLearningSummary the WindowsInformationProtectionNetworkLearningSummary to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, @Nonnull final ICallback<? super WindowsInformationProtectionNetworkLearningSummary> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> futurePost(@Nonnull final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WindowsInformationProtectionNetworkLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WindowsInformationProtectionNetworkLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWindowsInformationProtectionNetworkLearningSummary, callback);
+            .futurePost(newWindowsInformationProtectionNetworkLearningSummary);
     }
 
     /**

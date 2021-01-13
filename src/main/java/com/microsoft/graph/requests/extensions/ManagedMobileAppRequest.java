@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
     /**
      * Gets the ManagedMobileApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedMobileApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedMobileApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedMobileApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedMobileApp with a source
      *
      * @param sourceManagedMobileApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedMobileApp sourceManagedMobileApp, @Nonnull final ICallback<? super ManagedMobileApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedMobileApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futurePatch(@Nonnull final ManagedMobileApp sourceManagedMobileApp) {
+        return futureSend(HttpMethod.PATCH, sourceManagedMobileApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
      * Creates a ManagedMobileApp with a new object
      *
      * @param newManagedMobileApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedMobileApp newManagedMobileApp, @Nonnull final ICallback<? super ManagedMobileApp> callback) {
-        send(HttpMethod.POST, callback, newManagedMobileApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futurePost(@Nonnull final ManagedMobileApp newManagedMobileApp) {
+        return futureSend(HttpMethod.POST, newManagedMobileApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
      * Creates a ManagedMobileApp with a new object
      *
      * @param newManagedMobileApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedMobileApp newManagedMobileApp, @Nonnull final ICallback<? super ManagedMobileApp> callback) {
-        send(HttpMethod.PUT, callback, newManagedMobileApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futurePut(@Nonnull final ManagedMobileApp newManagedMobileApp) {
+        return futureSend(HttpMethod.PUT, newManagedMobileApp);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OpenShiftChangeRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
     /**
      * Gets the OpenShiftChangeRequest from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OpenShiftChangeRequest> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OpenShiftChangeRequest> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OpenShiftChangeRequest delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OpenShiftChangeRequest with a source
      *
      * @param sourceOpenShiftChangeRequest the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OpenShiftChangeRequest sourceOpenShiftChangeRequest, @Nonnull final ICallback<? super OpenShiftChangeRequest> callback) {
-        send(HttpMethod.PATCH, callback, sourceOpenShiftChangeRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futurePatch(@Nonnull final OpenShiftChangeRequest sourceOpenShiftChangeRequest) {
+        return futureSend(HttpMethod.PATCH, sourceOpenShiftChangeRequest);
     }
 
     /**
@@ -99,10 +103,11 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
      * Creates a OpenShiftChangeRequest with a new object
      *
      * @param newOpenShiftChangeRequest the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest, @Nonnull final ICallback<? super OpenShiftChangeRequest> callback) {
-        send(HttpMethod.POST, callback, newOpenShiftChangeRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futurePost(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
+        return futureSend(HttpMethod.POST, newOpenShiftChangeRequest);
     }
 
     /**
@@ -121,10 +126,11 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
      * Creates a OpenShiftChangeRequest with a new object
      *
      * @param newOpenShiftChangeRequest the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest, @Nonnull final ICallback<? super OpenShiftChangeRequest> callback) {
-        send(HttpMethod.PUT, callback, newOpenShiftChangeRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futurePut(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
+        return futureSend(HttpMethod.PUT, newOpenShiftChangeRequest);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SchemaExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequest;
@@ -43,13 +41,14 @@ public class SchemaExtensionCollectionRequest extends BaseEntityCollectionReques
     /**
      * Creates a new SchemaExtension
      * @param newSchemaExtension the SchemaExtension to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final SchemaExtension newSchemaExtension, @Nonnull final ICallback<? super SchemaExtension> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchemaExtension> futurePost(@Nonnull final SchemaExtension newSchemaExtension) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSchemaExtension, callback);
+            .futurePost(newSchemaExtension);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.OfferShiftRequest;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequest;
@@ -44,13 +42,14 @@ public class OfferShiftRequestCollectionRequest extends BaseEntityCollectionRequ
     /**
      * Creates a new OfferShiftRequest
      * @param newOfferShiftRequest the OfferShiftRequest to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final OfferShiftRequest newOfferShiftRequest, @Nonnull final ICallback<? super OfferShiftRequest> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OfferShiftRequest> futurePost(@Nonnull final OfferShiftRequest newOfferShiftRequest) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newOfferShiftRequest, callback);
+            .futurePost(newOfferShiftRequest);
     }
 
     /**

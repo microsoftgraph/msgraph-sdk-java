@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
@@ -20,7 +19,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequest;
@@ -46,13 +44,14 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseEntity
     /**
      * Creates a new TargetedManagedAppConfiguration
      * @param newTargetedManagedAppConfiguration the TargetedManagedAppConfiguration to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, @Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futurePost(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTargetedManagedAppConfiguration, callback);
+            .futurePost(newTargetedManagedAppConfiguration);
     }
 
     /**

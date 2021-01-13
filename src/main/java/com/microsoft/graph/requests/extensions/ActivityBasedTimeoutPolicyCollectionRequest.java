@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequest;
@@ -44,13 +42,14 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseEntityColle
     /**
      * Creates a new ActivityBasedTimeoutPolicy
      * @param newActivityBasedTimeoutPolicy the ActivityBasedTimeoutPolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, @Nonnull final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> futurePost(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newActivityBasedTimeoutPolicy, callback);
+            .futurePost(newActivityBasedTimeoutPolicy);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeFill;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WorkbookRangeFillRequest extends BaseRequest<WorkbookRangeFill> {
     /**
      * Gets the WorkbookRangeFill from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookRangeFill> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFill> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WorkbookRangeFillRequest extends BaseRequest<WorkbookRangeFill> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookRangeFill> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFill> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookRangeFill delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookRangeFill with a source
      *
      * @param sourceWorkbookRangeFill the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookRangeFill sourceWorkbookRangeFill, @Nonnull final ICallback<? super WorkbookRangeFill> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookRangeFill);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFill> futurePatch(@Nonnull final WorkbookRangeFill sourceWorkbookRangeFill) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookRangeFill);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WorkbookRangeFillRequest extends BaseRequest<WorkbookRangeFill> {
      * Creates a WorkbookRangeFill with a new object
      *
      * @param newWorkbookRangeFill the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookRangeFill newWorkbookRangeFill, @Nonnull final ICallback<? super WorkbookRangeFill> callback) {
-        send(HttpMethod.POST, callback, newWorkbookRangeFill);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFill> futurePost(@Nonnull final WorkbookRangeFill newWorkbookRangeFill) {
+        return futureSend(HttpMethod.POST, newWorkbookRangeFill);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WorkbookRangeFillRequest extends BaseRequest<WorkbookRangeFill> {
      * Creates a WorkbookRangeFill with a new object
      *
      * @param newWorkbookRangeFill the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookRangeFill newWorkbookRangeFill, @Nonnull final ICallback<? super WorkbookRangeFill> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookRangeFill);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFill> futurePut(@Nonnull final WorkbookRangeFill newWorkbookRangeFill) {
+        return futureSend(HttpMethod.PUT, newWorkbookRangeFill);
     }
 
     /**

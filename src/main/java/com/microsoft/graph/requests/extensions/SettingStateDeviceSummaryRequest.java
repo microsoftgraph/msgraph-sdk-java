@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
     /**
      * Gets the SettingStateDeviceSummary from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SettingStateDeviceSummary delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SettingStateDeviceSummary with a source
      *
      * @param sourceSettingStateDeviceSummary the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SettingStateDeviceSummary sourceSettingStateDeviceSummary, @Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
-        send(HttpMethod.PATCH, callback, sourceSettingStateDeviceSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futurePatch(@Nonnull final SettingStateDeviceSummary sourceSettingStateDeviceSummary) {
+        return futureSend(HttpMethod.PATCH, sourceSettingStateDeviceSummary);
     }
 
     /**
@@ -99,10 +103,11 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
      * Creates a SettingStateDeviceSummary with a new object
      *
      * @param newSettingStateDeviceSummary the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary, @Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
-        send(HttpMethod.POST, callback, newSettingStateDeviceSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futurePost(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) {
+        return futureSend(HttpMethod.POST, newSettingStateDeviceSummary);
     }
 
     /**
@@ -121,10 +126,11 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
      * Creates a SettingStateDeviceSummary with a new object
      *
      * @param newSettingStateDeviceSummary the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary, @Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
-        send(HttpMethod.PUT, callback, newSettingStateDeviceSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futurePut(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) {
+        return futureSend(HttpMethod.PUT, newSettingStateDeviceSummary);
     }
 
     /**

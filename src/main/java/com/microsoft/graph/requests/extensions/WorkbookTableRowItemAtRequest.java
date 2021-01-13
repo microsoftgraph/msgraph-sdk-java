@@ -11,8 +11,6 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.models.extensions.WorkbookTableRowItemAtParameterSet;
@@ -37,10 +35,11 @@ public class WorkbookTableRowItemAtRequest extends BaseRequest<WorkbookTableRow>
     /**
      * Gets the WorkbookTableRow
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookTableRow> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**

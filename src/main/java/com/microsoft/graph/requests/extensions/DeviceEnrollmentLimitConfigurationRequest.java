@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentLimitConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
     /**
      * Gets the DeviceEnrollmentLimitConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceEnrollmentLimitConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceEnrollmentLimitConfiguration with a source
      *
      * @param sourceDeviceEnrollmentLimitConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceEnrollmentLimitConfiguration sourceDeviceEnrollmentLimitConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentLimitConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futurePatch(@Nonnull final DeviceEnrollmentLimitConfiguration sourceDeviceEnrollmentLimitConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceEnrollmentLimitConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
      * Creates a DeviceEnrollmentLimitConfiguration with a new object
      *
      * @param newDeviceEnrollmentLimitConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
-        send(HttpMethod.POST, callback, newDeviceEnrollmentLimitConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futurePost(@Nonnull final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration) {
+        return futureSend(HttpMethod.POST, newDeviceEnrollmentLimitConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
      * Creates a DeviceEnrollmentLimitConfiguration with a new object
      *
      * @param newDeviceEnrollmentLimitConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newDeviceEnrollmentLimitConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futurePut(@Nonnull final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration) {
+        return futureSend(HttpMethod.PUT, newDeviceEnrollmentLimitConfiguration);
     }
 
     /**

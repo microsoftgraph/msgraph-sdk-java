@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -66,12 +65,13 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseRefer
      * Puts the CertificateBasedAuthConfiguration
      *
      * @param srcCertificateBasedAuthConfiguration the CertificateBasedAuthConfiguration reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration, @Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePut(@Nonnull final CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + srcCertificateBasedAuthConfiguration.id));
-        send(HttpMethod.PUT, callback, payload);
+        return futureSend(HttpMethod.PUT, payload);
     }
 
     /**

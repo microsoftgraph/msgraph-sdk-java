@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveRecipient;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PermissionCollectionResponse;
 import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionCollectionRequest;
@@ -45,13 +43,14 @@ public class PermissionCollectionRequest extends BaseEntityCollectionRequest<Per
     /**
      * Creates a new Permission
      * @param newPermission the Permission to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Permission newPermission, @Nonnull final ICallback<? super Permission> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Permission> futurePost(@Nonnull final Permission newPermission) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newPermission, callback);
+            .futurePost(newPermission);
     }
 
     /**

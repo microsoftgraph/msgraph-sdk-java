@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
     /**
      * Gets the UsedInsight from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super UsedInsight> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UsedInsight> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super UsedInsight> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UsedInsight> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public UsedInsight delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this UsedInsight with a source
      *
      * @param sourceUsedInsight the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final UsedInsight sourceUsedInsight, @Nonnull final ICallback<? super UsedInsight> callback) {
-        send(HttpMethod.PATCH, callback, sourceUsedInsight);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UsedInsight> futurePatch(@Nonnull final UsedInsight sourceUsedInsight) {
+        return futureSend(HttpMethod.PATCH, sourceUsedInsight);
     }
 
     /**
@@ -100,10 +104,11 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
      * Creates a UsedInsight with a new object
      *
      * @param newUsedInsight the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final UsedInsight newUsedInsight, @Nonnull final ICallback<? super UsedInsight> callback) {
-        send(HttpMethod.POST, callback, newUsedInsight);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UsedInsight> futurePost(@Nonnull final UsedInsight newUsedInsight) {
+        return futureSend(HttpMethod.POST, newUsedInsight);
     }
 
     /**
@@ -122,10 +127,11 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
      * Creates a UsedInsight with a new object
      *
      * @param newUsedInsight the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final UsedInsight newUsedInsight, @Nonnull final ICallback<? super UsedInsight> callback) {
-        send(HttpMethod.PUT, callback, newUsedInsight);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UsedInsight> futurePut(@Nonnull final UsedInsight newUsedInsight) {
+        return futureSend(HttpMethod.PUT, newUsedInsight);
     }
 
     /**

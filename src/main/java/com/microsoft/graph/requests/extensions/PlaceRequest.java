@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Place;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class PlaceRequest extends BaseRequest<Place> {
     /**
      * Gets the Place from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Place> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Place> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class PlaceRequest extends BaseRequest<Place> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Place> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Place> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Place delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Place with a source
      *
      * @param sourcePlace the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Place sourcePlace, @Nonnull final ICallback<? super Place> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlace);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Place> futurePatch(@Nonnull final Place sourcePlace) {
+        return futureSend(HttpMethod.PATCH, sourcePlace);
     }
 
     /**
@@ -114,10 +118,11 @@ public class PlaceRequest extends BaseRequest<Place> {
      * Creates a Place with a new object
      *
      * @param newPlace the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Place newPlace, @Nonnull final ICallback<? super Place> callback) {
-        send(HttpMethod.POST, callback, newPlace);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Place> futurePost(@Nonnull final Place newPlace) {
+        return futureSend(HttpMethod.POST, newPlace);
     }
 
     /**
@@ -136,10 +141,11 @@ public class PlaceRequest extends BaseRequest<Place> {
      * Creates a Place with a new object
      *
      * @param newPlace the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Place newPlace, @Nonnull final ICallback<? super Place> callback) {
-        send(HttpMethod.PUT, callback, newPlace);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Place> futurePut(@Nonnull final Place newPlace) {
+        return futureSend(HttpMethod.PUT, newPlace);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
@@ -62,10 +61,11 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest<Mana
     /**
      * Gets the ManagedDeviceMobileAppConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -82,29 +82,33 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest<Mana
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedDeviceMobileAppConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedDeviceMobileAppConfiguration with a source
      *
      * @param sourceManagedDeviceMobileAppConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedDeviceMobileAppConfiguration sourceManagedDeviceMobileAppConfiguration, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> futurePatch(@Nonnull final ManagedDeviceMobileAppConfiguration sourceManagedDeviceMobileAppConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceManagedDeviceMobileAppConfiguration);
     }
 
     /**
@@ -123,10 +127,11 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest<Mana
      * Creates a ManagedDeviceMobileAppConfiguration with a new object
      *
      * @param newManagedDeviceMobileAppConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
-        send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> futurePost(@Nonnull final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration) {
+        return futureSend(HttpMethod.POST, newManagedDeviceMobileAppConfiguration);
     }
 
     /**
@@ -145,10 +150,11 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest<Mana
      * Creates a ManagedDeviceMobileAppConfiguration with a new object
      *
      * @param newManagedDeviceMobileAppConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> futurePut(@Nonnull final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration) {
+        return futureSend(HttpMethod.PUT, newManagedDeviceMobileAppConfiguration);
     }
 
     /**

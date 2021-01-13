@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
@@ -40,10 +39,11 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
     /**
      * Gets the PlannerBucket from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PlannerBucket> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerBucket> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PlannerBucket> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerBucket> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PlannerBucket delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PlannerBucket with a source
      *
      * @param sourcePlannerBucket the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PlannerBucket sourcePlannerBucket, @Nonnull final ICallback<? super PlannerBucket> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlannerBucket);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerBucket> futurePatch(@Nonnull final PlannerBucket sourcePlannerBucket) {
+        return futureSend(HttpMethod.PATCH, sourcePlannerBucket);
     }
 
     /**
@@ -101,10 +105,11 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * Creates a PlannerBucket with a new object
      *
      * @param newPlannerBucket the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PlannerBucket newPlannerBucket, @Nonnull final ICallback<? super PlannerBucket> callback) {
-        send(HttpMethod.POST, callback, newPlannerBucket);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerBucket> futurePost(@Nonnull final PlannerBucket newPlannerBucket) {
+        return futureSend(HttpMethod.POST, newPlannerBucket);
     }
 
     /**
@@ -123,10 +128,11 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * Creates a PlannerBucket with a new object
      *
      * @param newPlannerBucket the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PlannerBucket newPlannerBucket, @Nonnull final ICallback<? super PlannerBucket> callback) {
-        send(HttpMethod.PUT, callback, newPlannerBucket);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerBucket> futurePut(@Nonnull final PlannerBucket newPlannerBucket) {
+        return futureSend(HttpMethod.PUT, newPlannerBucket);
     }
 
     /**

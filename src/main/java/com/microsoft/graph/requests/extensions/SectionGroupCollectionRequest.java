@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequest;
@@ -43,13 +41,14 @@ public class SectionGroupCollectionRequest extends BaseEntityCollectionRequest<S
     /**
      * Creates a new SectionGroup
      * @param newSectionGroup the SectionGroup to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final SectionGroup newSectionGroup, @Nonnull final ICallback<? super SectionGroup> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SectionGroup> futurePost(@Nonnull final SectionGroup newSectionGroup) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new SectionGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SectionGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSectionGroup, callback);
+            .futurePost(newSectionGroup);
     }
 
     /**

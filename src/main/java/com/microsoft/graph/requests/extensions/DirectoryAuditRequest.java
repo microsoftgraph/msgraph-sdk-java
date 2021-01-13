@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryAudit;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
     /**
      * Gets the DirectoryAudit from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DirectoryAudit> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DirectoryAudit> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DirectoryAudit delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DirectoryAudit with a source
      *
      * @param sourceDirectoryAudit the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DirectoryAudit sourceDirectoryAudit, @Nonnull final ICallback<? super DirectoryAudit> callback) {
-        send(HttpMethod.PATCH, callback, sourceDirectoryAudit);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> futurePatch(@Nonnull final DirectoryAudit sourceDirectoryAudit) {
+        return futureSend(HttpMethod.PATCH, sourceDirectoryAudit);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
      * Creates a DirectoryAudit with a new object
      *
      * @param newDirectoryAudit the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DirectoryAudit newDirectoryAudit, @Nonnull final ICallback<? super DirectoryAudit> callback) {
-        send(HttpMethod.POST, callback, newDirectoryAudit);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> futurePost(@Nonnull final DirectoryAudit newDirectoryAudit) {
+        return futureSend(HttpMethod.POST, newDirectoryAudit);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
      * Creates a DirectoryAudit with a new object
      *
      * @param newDirectoryAudit the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DirectoryAudit newDirectoryAudit, @Nonnull final ICallback<? super DirectoryAudit> callback) {
-        send(HttpMethod.PUT, callback, newDirectoryAudit);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> futurePut(@Nonnull final DirectoryAudit newDirectoryAudit) {
+        return futureSend(HttpMethod.PUT, newDirectoryAudit);
     }
 
     /**

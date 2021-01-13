@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedDriveItem;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
@@ -44,10 +43,11 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
     /**
      * Gets the SharedDriveItem from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SharedDriveItem> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -64,29 +64,33 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SharedDriveItem> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SharedDriveItem delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SharedDriveItem with a source
      *
      * @param sourceSharedDriveItem the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SharedDriveItem sourceSharedDriveItem, @Nonnull final ICallback<? super SharedDriveItem> callback) {
-        send(HttpMethod.PATCH, callback, sourceSharedDriveItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> futurePatch(@Nonnull final SharedDriveItem sourceSharedDriveItem) {
+        return futureSend(HttpMethod.PATCH, sourceSharedDriveItem);
     }
 
     /**
@@ -105,10 +109,11 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * Creates a SharedDriveItem with a new object
      *
      * @param newSharedDriveItem the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SharedDriveItem newSharedDriveItem, @Nonnull final ICallback<? super SharedDriveItem> callback) {
-        send(HttpMethod.POST, callback, newSharedDriveItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> futurePost(@Nonnull final SharedDriveItem newSharedDriveItem) {
+        return futureSend(HttpMethod.POST, newSharedDriveItem);
     }
 
     /**
@@ -127,10 +132,11 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * Creates a SharedDriveItem with a new object
      *
      * @param newSharedDriveItem the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SharedDriveItem newSharedDriveItem, @Nonnull final ICallback<? super SharedDriveItem> callback) {
-        send(HttpMethod.PUT, callback, newSharedDriveItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> futurePut(@Nonnull final SharedDriveItem newSharedDriveItem) {
+        return futureSend(HttpMethod.PUT, newSharedDriveItem);
     }
 
     /**

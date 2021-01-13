@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteEntityBaseModel;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest<OnenoteEntityBase
     /**
      * Gets the OnenoteEntityBaseModel from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OnenoteEntityBaseModel> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityBaseModel> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest<OnenoteEntityBase
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OnenoteEntityBaseModel> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityBaseModel> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OnenoteEntityBaseModel delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OnenoteEntityBaseModel with a source
      *
      * @param sourceOnenoteEntityBaseModel the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OnenoteEntityBaseModel sourceOnenoteEntityBaseModel, @Nonnull final ICallback<? super OnenoteEntityBaseModel> callback) {
-        send(HttpMethod.PATCH, callback, sourceOnenoteEntityBaseModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityBaseModel> futurePatch(@Nonnull final OnenoteEntityBaseModel sourceOnenoteEntityBaseModel) {
+        return futureSend(HttpMethod.PATCH, sourceOnenoteEntityBaseModel);
     }
 
     /**
@@ -114,10 +118,11 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest<OnenoteEntityBase
      * Creates a OnenoteEntityBaseModel with a new object
      *
      * @param newOnenoteEntityBaseModel the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OnenoteEntityBaseModel newOnenoteEntityBaseModel, @Nonnull final ICallback<? super OnenoteEntityBaseModel> callback) {
-        send(HttpMethod.POST, callback, newOnenoteEntityBaseModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityBaseModel> futurePost(@Nonnull final OnenoteEntityBaseModel newOnenoteEntityBaseModel) {
+        return futureSend(HttpMethod.POST, newOnenoteEntityBaseModel);
     }
 
     /**
@@ -136,10 +141,11 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest<OnenoteEntityBase
      * Creates a OnenoteEntityBaseModel with a new object
      *
      * @param newOnenoteEntityBaseModel the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OnenoteEntityBaseModel newOnenoteEntityBaseModel, @Nonnull final ICallback<? super OnenoteEntityBaseModel> callback) {
-        send(HttpMethod.PUT, callback, newOnenoteEntityBaseModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityBaseModel> futurePut(@Nonnull final OnenoteEntityBaseModel newOnenoteEntityBaseModel) {
+        return futureSend(HttpMethod.PUT, newOnenoteEntityBaseModel);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
     /**
      * Gets the ResourceSpecificPermissionGrant from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ResourceSpecificPermissionGrant delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ResourceSpecificPermissionGrant with a source
      *
      * @param sourceResourceSpecificPermissionGrant the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant, @Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
-        send(HttpMethod.PATCH, callback, sourceResourceSpecificPermissionGrant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futurePatch(@Nonnull final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant) {
+        return futureSend(HttpMethod.PATCH, sourceResourceSpecificPermissionGrant);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
      * Creates a ResourceSpecificPermissionGrant with a new object
      *
      * @param newResourceSpecificPermissionGrant the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, @Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
-        send(HttpMethod.POST, callback, newResourceSpecificPermissionGrant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futurePost(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
+        return futureSend(HttpMethod.POST, newResourceSpecificPermissionGrant);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
      * Creates a ResourceSpecificPermissionGrant with a new object
      *
      * @param newResourceSpecificPermissionGrant the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, @Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
-        send(HttpMethod.PUT, callback, newResourceSpecificPermissionGrant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futurePut(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
+        return futureSend(HttpMethod.PUT, newResourceSpecificPermissionGrant);
     }
 
     /**

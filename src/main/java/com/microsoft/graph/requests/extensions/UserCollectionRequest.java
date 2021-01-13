@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AttendeeBase;
@@ -31,7 +30,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.UserCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequest;
@@ -57,13 +55,14 @@ public class UserCollectionRequest extends BaseEntityCollectionRequest<User, Use
     /**
      * Creates a new User
      * @param newUser the User to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final User newUser, @Nonnull final ICallback<? super User> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<User> futurePost(@Nonnull final User newUser) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newUser, callback);
+            .futurePost(newUser);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.models.extensions.WorkbookRange;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionRequest;
@@ -45,13 +43,14 @@ public class WorkbookTableRowCollectionRequest extends BaseEntityCollectionReque
     /**
      * Creates a new WorkbookTableRow
      * @param newWorkbookTableRow the WorkbookTableRow to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookTableRow newWorkbookTableRow, @Nonnull final ICallback<? super WorkbookTableRow> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futurePost(@Nonnull final WorkbookTableRow newWorkbookTableRow) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookTableRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookTableRowRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookTableRow, callback);
+            .futurePost(newWorkbookTableRow);
     }
 
     /**

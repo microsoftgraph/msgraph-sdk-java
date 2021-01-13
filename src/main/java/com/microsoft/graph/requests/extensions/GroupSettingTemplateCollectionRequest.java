@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupSettingTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionRequest;
@@ -43,13 +41,14 @@ public class GroupSettingTemplateCollectionRequest extends BaseEntityCollectionR
     /**
      * Creates a new GroupSettingTemplate
      * @param newGroupSettingTemplate the GroupSettingTemplate to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final GroupSettingTemplate newGroupSettingTemplate, @Nonnull final ICallback<? super GroupSettingTemplate> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> futurePost(@Nonnull final GroupSettingTemplate newGroupSettingTemplate) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new GroupSettingTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new GroupSettingTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newGroupSettingTemplate, callback);
+            .futurePost(newGroupSettingTemplate);
     }
 
     /**

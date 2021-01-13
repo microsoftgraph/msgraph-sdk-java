@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequest;
@@ -44,13 +42,14 @@ public class ManagedMobileAppCollectionRequest extends BaseEntityCollectionReque
     /**
      * Creates a new ManagedMobileApp
      * @param newManagedMobileApp the ManagedMobileApp to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedMobileApp newManagedMobileApp, @Nonnull final ICallback<? super ManagedMobileApp> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futurePost(@Nonnull final ManagedMobileApp newManagedMobileApp) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ManagedMobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedMobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedMobileApp, callback);
+            .futurePost(newManagedMobileApp);
     }
 
     /**

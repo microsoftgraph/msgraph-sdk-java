@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
@@ -67,12 +66,13 @@ public class DirectoryObjectReferenceRequest extends BaseReferenceRequest<Direct
      * Puts the DirectoryObject
      *
      * @param srcDirectoryObject the DirectoryObject reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DirectoryObject srcDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> futurePut(@Nonnull final DirectoryObject srcDirectoryObject) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directoryObjects/" + srcDirectoryObject.id));
-        send(HttpMethod.PUT, callback, payload);
+        return futureSend(HttpMethod.PUT, payload);
     }
 
     /**

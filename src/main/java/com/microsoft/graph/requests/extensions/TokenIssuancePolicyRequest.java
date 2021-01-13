@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
     /**
      * Gets the TokenIssuancePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TokenIssuancePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TokenIssuancePolicy with a source
      *
      * @param sourceTokenIssuancePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TokenIssuancePolicy sourceTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceTokenIssuancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePatch(@Nonnull final TokenIssuancePolicy sourceTokenIssuancePolicy) {
+        return futureSend(HttpMethod.PATCH, sourceTokenIssuancePolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
      * Creates a TokenIssuancePolicy with a new object
      *
      * @param newTokenIssuancePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.POST, callback, newTokenIssuancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePost(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
+        return futureSend(HttpMethod.POST, newTokenIssuancePolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
      * Creates a TokenIssuancePolicy with a new object
      *
      * @param newTokenIssuancePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
-        send(HttpMethod.PUT, callback, newTokenIssuancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePut(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
+        return futureSend(HttpMethod.PUT, newTokenIssuancePolicy);
     }
 
     /**

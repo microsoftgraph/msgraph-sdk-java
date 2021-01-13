@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
@@ -64,10 +63,11 @@ public class DeviceConfigurationRequest extends BaseRequest<DeviceConfiguration>
     /**
      * Gets the DeviceConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -84,29 +84,33 @@ public class DeviceConfigurationRequest extends BaseRequest<DeviceConfiguration>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceConfiguration with a source
      *
      * @param sourceDeviceConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceConfiguration sourceDeviceConfiguration, @Nonnull final ICallback<? super DeviceConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfiguration> futurePatch(@Nonnull final DeviceConfiguration sourceDeviceConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceConfiguration);
     }
 
     /**
@@ -125,10 +129,11 @@ public class DeviceConfigurationRequest extends BaseRequest<DeviceConfiguration>
      * Creates a DeviceConfiguration with a new object
      *
      * @param newDeviceConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceConfiguration newDeviceConfiguration, @Nonnull final ICallback<? super DeviceConfiguration> callback) {
-        send(HttpMethod.POST, callback, newDeviceConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfiguration> futurePost(@Nonnull final DeviceConfiguration newDeviceConfiguration) {
+        return futureSend(HttpMethod.POST, newDeviceConfiguration);
     }
 
     /**
@@ -147,10 +152,11 @@ public class DeviceConfigurationRequest extends BaseRequest<DeviceConfiguration>
      * Creates a DeviceConfiguration with a new object
      *
      * @param newDeviceConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceConfiguration newDeviceConfiguration, @Nonnull final ICallback<? super DeviceConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newDeviceConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfiguration> futurePut(@Nonnull final DeviceConfiguration newDeviceConfiguration) {
+        return futureSend(HttpMethod.PUT, newDeviceConfiguration);
     }
 
     /**

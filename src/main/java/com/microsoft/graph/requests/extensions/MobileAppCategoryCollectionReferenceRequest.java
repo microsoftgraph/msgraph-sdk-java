@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionW
     /**
      * Creates a new MobileAppCategory
      * @param newMobileAppCategory the MobileAppCategory to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final MobileAppCategory newMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> futurePost(@Nonnull final MobileAppCategory newMobileAppCategory) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newMobileAppCategory.id);
-        new MobileAppCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new MobileAppCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newMobileAppCategory, body, callback);
+            .futurePost(newMobileAppCategory, body);
     }
 
     /**

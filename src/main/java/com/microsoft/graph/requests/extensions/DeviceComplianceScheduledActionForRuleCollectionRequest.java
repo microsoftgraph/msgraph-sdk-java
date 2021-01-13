@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
     /**
      * Creates a new DeviceComplianceScheduledActionForRule
      * @param newDeviceComplianceScheduledActionForRule the DeviceComplianceScheduledActionForRule to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, @Nonnull final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> futurePost(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceComplianceScheduledActionForRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceComplianceScheduledActionForRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceComplianceScheduledActionForRule, callback);
+            .futurePost(newDeviceComplianceScheduledActionForRule);
     }
 
     /**

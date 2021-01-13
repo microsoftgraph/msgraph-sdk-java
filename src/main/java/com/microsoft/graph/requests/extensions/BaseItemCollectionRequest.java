@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.BaseItem;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequest;
@@ -44,13 +42,14 @@ public class BaseItemCollectionRequest extends BaseEntityCollectionRequest<BaseI
     /**
      * Creates a new BaseItem
      * @param newBaseItem the BaseItem to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final BaseItem newBaseItem, @Nonnull final ICallback<? super BaseItem> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<BaseItem> futurePost(@Nonnull final BaseItem newBaseItem) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new BaseItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new BaseItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newBaseItem, callback);
+            .futurePost(newBaseItem);
     }
 
     /**

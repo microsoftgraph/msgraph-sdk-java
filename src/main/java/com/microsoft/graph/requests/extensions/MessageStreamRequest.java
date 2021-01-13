@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
@@ -48,10 +47,11 @@ public class MessageStreamRequest extends BaseStreamRequest<Message> {
     /**
      * Gets the contents of this stream
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<InputStream> callback) {
-        send(callback);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InputStream> futureGet() {
+        return futureSend();
     }
 
     /**
@@ -69,10 +69,11 @@ public class MessageStreamRequest extends BaseStreamRequest<Message> {
      * Uploads to the stream
      *
      * @param fileContents the contents of the stream to upload
-          * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final byte[] fileContents, @Nonnull final ICallback<? super Message> callback) {
-        send(fileContents, callback);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Message> futurePut(@Nonnull final byte[] fileContents) {
+        return futureSend(fileContents);
     }
 
     /**

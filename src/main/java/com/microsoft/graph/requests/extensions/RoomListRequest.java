@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoomList;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
@@ -40,10 +39,11 @@ public class RoomListRequest extends BaseRequest<RoomList> {
     /**
      * Gets the RoomList from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super RoomList> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoomList> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class RoomListRequest extends BaseRequest<RoomList> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super RoomList> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoomList> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public RoomList delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this RoomList with a source
      *
      * @param sourceRoomList the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final RoomList sourceRoomList, @Nonnull final ICallback<? super RoomList> callback) {
-        send(HttpMethod.PATCH, callback, sourceRoomList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoomList> futurePatch(@Nonnull final RoomList sourceRoomList) {
+        return futureSend(HttpMethod.PATCH, sourceRoomList);
     }
 
     /**
@@ -101,10 +105,11 @@ public class RoomListRequest extends BaseRequest<RoomList> {
      * Creates a RoomList with a new object
      *
      * @param newRoomList the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final RoomList newRoomList, @Nonnull final ICallback<? super RoomList> callback) {
-        send(HttpMethod.POST, callback, newRoomList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoomList> futurePost(@Nonnull final RoomList newRoomList) {
+        return futureSend(HttpMethod.POST, newRoomList);
     }
 
     /**
@@ -123,10 +128,11 @@ public class RoomListRequest extends BaseRequest<RoomList> {
      * Creates a RoomList with a new object
      *
      * @param newRoomList the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final RoomList newRoomList, @Nonnull final ICallback<? super RoomList> callback) {
-        send(HttpMethod.PUT, callback, newRoomList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoomList> futurePut(@Nonnull final RoomList newRoomList) {
+        return futureSend(HttpMethod.PUT, newRoomList);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest<Dev
     /**
      * Gets the DeviceAndAppManagementRoleDefinition from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleDefinition> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest<Dev
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleDefinition> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceAndAppManagementRoleDefinition delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceAndAppManagementRoleDefinition with a source
      *
      * @param sourceDeviceAndAppManagementRoleDefinition the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition, @Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceAndAppManagementRoleDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleDefinition> futurePatch(@Nonnull final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceAndAppManagementRoleDefinition);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest<Dev
      * Creates a DeviceAndAppManagementRoleDefinition with a new object
      *
      * @param newDeviceAndAppManagementRoleDefinition the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, @Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
-        send(HttpMethod.POST, callback, newDeviceAndAppManagementRoleDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleDefinition> futurePost(@Nonnull final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition) {
+        return futureSend(HttpMethod.POST, newDeviceAndAppManagementRoleDefinition);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest<Dev
      * Creates a DeviceAndAppManagementRoleDefinition with a new object
      *
      * @param newDeviceAndAppManagementRoleDefinition the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, @Nonnull final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
-        send(HttpMethod.PUT, callback, newDeviceAndAppManagementRoleDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleDefinition> futurePut(@Nonnull final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition) {
+        return futureSend(HttpMethod.PUT, newDeviceAndAppManagementRoleDefinition);
     }
 
     /**

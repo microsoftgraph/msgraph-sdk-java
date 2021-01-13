@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WebApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WebAppRequest extends BaseRequest<WebApp> {
     /**
      * Gets the WebApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WebApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WebApp> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WebAppRequest extends BaseRequest<WebApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WebApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WebApp> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WebApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WebApp with a source
      *
      * @param sourceWebApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WebApp sourceWebApp, @Nonnull final ICallback<? super WebApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceWebApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WebApp> futurePatch(@Nonnull final WebApp sourceWebApp) {
+        return futureSend(HttpMethod.PATCH, sourceWebApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WebAppRequest extends BaseRequest<WebApp> {
      * Creates a WebApp with a new object
      *
      * @param newWebApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WebApp newWebApp, @Nonnull final ICallback<? super WebApp> callback) {
-        send(HttpMethod.POST, callback, newWebApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WebApp> futurePost(@Nonnull final WebApp newWebApp) {
+        return futureSend(HttpMethod.POST, newWebApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WebAppRequest extends BaseRequest<WebApp> {
      * Creates a WebApp with a new object
      *
      * @param newWebApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WebApp newWebApp, @Nonnull final ICallback<? super WebApp> callback) {
-        send(HttpMethod.PUT, callback, newWebApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WebApp> futurePut(@Nonnull final WebApp newWebApp) {
+        return futureSend(HttpMethod.PUT, newWebApp);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequest;
@@ -44,13 +42,14 @@ public class NotificationMessageTemplateCollectionRequest extends BaseEntityColl
     /**
      * Creates a new NotificationMessageTemplate
      * @param newNotificationMessageTemplate the NotificationMessageTemplate to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate, @Nonnull final ICallback<? super NotificationMessageTemplate> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futurePost(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newNotificationMessageTemplate, callback);
+            .futurePost(newNotificationMessageTemplate);
     }
 
     /**

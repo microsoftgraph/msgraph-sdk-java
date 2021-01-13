@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
     /**
      * Gets the WorkbookTableRow from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookTableRow> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookTableRow> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookTableRow delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookTableRow with a source
      *
      * @param sourceWorkbookTableRow the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookTableRow sourceWorkbookTableRow, @Nonnull final ICallback<? super WorkbookTableRow> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookTableRow);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futurePatch(@Nonnull final WorkbookTableRow sourceWorkbookTableRow) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookTableRow);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
      * Creates a WorkbookTableRow with a new object
      *
      * @param newWorkbookTableRow the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookTableRow newWorkbookTableRow, @Nonnull final ICallback<? super WorkbookTableRow> callback) {
-        send(HttpMethod.POST, callback, newWorkbookTableRow);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futurePost(@Nonnull final WorkbookTableRow newWorkbookTableRow) {
+        return futureSend(HttpMethod.POST, newWorkbookTableRow);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
      * Creates a WorkbookTableRow with a new object
      *
      * @param newWorkbookTableRow the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookTableRow newWorkbookTableRow, @Nonnull final ICallback<? super WorkbookTableRow> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookTableRow);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futurePut(@Nonnull final WorkbookTableRow newWorkbookTableRow) {
+        return futureSend(HttpMethod.PUT, newWorkbookTableRow);
     }
 
     /**

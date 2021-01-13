@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeSort;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
     /**
      * Gets the WorkbookRangeSort from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookRangeSort> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeSort> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookRangeSort> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeSort> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookRangeSort delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookRangeSort with a source
      *
      * @param sourceWorkbookRangeSort the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookRangeSort sourceWorkbookRangeSort, @Nonnull final ICallback<? super WorkbookRangeSort> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookRangeSort);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeSort> futurePatch(@Nonnull final WorkbookRangeSort sourceWorkbookRangeSort) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookRangeSort);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * Creates a WorkbookRangeSort with a new object
      *
      * @param newWorkbookRangeSort the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookRangeSort newWorkbookRangeSort, @Nonnull final ICallback<? super WorkbookRangeSort> callback) {
-        send(HttpMethod.POST, callback, newWorkbookRangeSort);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeSort> futurePost(@Nonnull final WorkbookRangeSort newWorkbookRangeSort) {
+        return futureSend(HttpMethod.POST, newWorkbookRangeSort);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookRangeSortRequest extends BaseRequest<WorkbookRangeSort> {
      * Creates a WorkbookRangeSort with a new object
      *
      * @param newWorkbookRangeSort the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookRangeSort newWorkbookRangeSort, @Nonnull final ICallback<? super WorkbookRangeSort> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookRangeSort);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeSort> futurePut(@Nonnull final WorkbookRangeSort newWorkbookRangeSort) {
+        return futureSend(HttpMethod.PUT, newWorkbookRangeSort);
     }
 
     /**

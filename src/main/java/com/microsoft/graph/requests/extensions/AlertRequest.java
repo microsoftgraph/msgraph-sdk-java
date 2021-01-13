@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Alert;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class AlertRequest extends BaseRequest<Alert> {
     /**
      * Gets the Alert from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Alert> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Alert> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class AlertRequest extends BaseRequest<Alert> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Alert> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Alert> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Alert delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Alert with a source
      *
      * @param sourceAlert the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Alert sourceAlert, @Nonnull final ICallback<? super Alert> callback) {
-        send(HttpMethod.PATCH, callback, sourceAlert);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Alert> futurePatch(@Nonnull final Alert sourceAlert) {
+        return futureSend(HttpMethod.PATCH, sourceAlert);
     }
 
     /**
@@ -99,10 +103,11 @@ public class AlertRequest extends BaseRequest<Alert> {
      * Creates a Alert with a new object
      *
      * @param newAlert the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Alert newAlert, @Nonnull final ICallback<? super Alert> callback) {
-        send(HttpMethod.POST, callback, newAlert);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Alert> futurePost(@Nonnull final Alert newAlert) {
+        return futureSend(HttpMethod.POST, newAlert);
     }
 
     /**
@@ -121,10 +126,11 @@ public class AlertRequest extends BaseRequest<Alert> {
      * Creates a Alert with a new object
      *
      * @param newAlert the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Alert newAlert, @Nonnull final ICallback<? super Alert> callback) {
-        send(HttpMethod.PUT, callback, newAlert);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Alert> futurePut(@Nonnull final Alert newAlert) {
+        return futureSend(HttpMethod.PUT, newAlert);
     }
 
     /**

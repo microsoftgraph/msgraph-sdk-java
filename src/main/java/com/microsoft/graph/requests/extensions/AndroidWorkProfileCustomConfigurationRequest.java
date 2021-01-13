@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileCustomConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
     /**
      * Gets the AndroidWorkProfileCustomConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AndroidWorkProfileCustomConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AndroidWorkProfileCustomConfiguration with a source
      *
      * @param sourceAndroidWorkProfileCustomConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AndroidWorkProfileCustomConfiguration sourceAndroidWorkProfileCustomConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futurePatch(@Nonnull final AndroidWorkProfileCustomConfiguration sourceAndroidWorkProfileCustomConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceAndroidWorkProfileCustomConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
      * Creates a AndroidWorkProfileCustomConfiguration with a new object
      *
      * @param newAndroidWorkProfileCustomConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
-        send(HttpMethod.POST, callback, newAndroidWorkProfileCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futurePost(@Nonnull final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) {
+        return futureSend(HttpMethod.POST, newAndroidWorkProfileCustomConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
      * Creates a AndroidWorkProfileCustomConfiguration with a new object
      *
      * @param newAndroidWorkProfileCustomConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newAndroidWorkProfileCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futurePut(@Nonnull final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) {
+        return futureSend(HttpMethod.PUT, newAndroidWorkProfileCustomConfiguration);
     }
 
     /**

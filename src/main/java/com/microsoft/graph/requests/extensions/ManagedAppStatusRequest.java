@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class ManagedAppStatusRequest extends BaseRequest<ManagedAppStatus> {
     /**
      * Gets the ManagedAppStatus from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAppStatus> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatus> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class ManagedAppStatusRequest extends BaseRequest<ManagedAppStatus> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAppStatus> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatus> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAppStatus delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAppStatus with a source
      *
      * @param sourceManagedAppStatus the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAppStatus sourceManagedAppStatus, @Nonnull final ICallback<? super ManagedAppStatus> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAppStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatus> futurePatch(@Nonnull final ManagedAppStatus sourceManagedAppStatus) {
+        return futureSend(HttpMethod.PATCH, sourceManagedAppStatus);
     }
 
     /**
@@ -114,10 +118,11 @@ public class ManagedAppStatusRequest extends BaseRequest<ManagedAppStatus> {
      * Creates a ManagedAppStatus with a new object
      *
      * @param newManagedAppStatus the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAppStatus newManagedAppStatus, @Nonnull final ICallback<? super ManagedAppStatus> callback) {
-        send(HttpMethod.POST, callback, newManagedAppStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatus> futurePost(@Nonnull final ManagedAppStatus newManagedAppStatus) {
+        return futureSend(HttpMethod.POST, newManagedAppStatus);
     }
 
     /**
@@ -136,10 +141,11 @@ public class ManagedAppStatusRequest extends BaseRequest<ManagedAppStatus> {
      * Creates a ManagedAppStatus with a new object
      *
      * @param newManagedAppStatus the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppStatus newManagedAppStatus, @Nonnull final ICallback<? super ManagedAppStatus> callback) {
-        send(HttpMethod.PUT, callback, newManagedAppStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatus> futurePut(@Nonnull final ManagedAppStatus newManagedAppStatus) {
+        return futureSend(HttpMethod.PUT, newManagedAppStatus);
     }
 
     /**

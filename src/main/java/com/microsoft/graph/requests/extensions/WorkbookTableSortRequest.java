@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
     /**
      * Gets the WorkbookTableSort from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookTableSort> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookTableSort> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookTableSort delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookTableSort with a source
      *
      * @param sourceWorkbookTableSort the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookTableSort sourceWorkbookTableSort, @Nonnull final ICallback<? super WorkbookTableSort> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookTableSort);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futurePatch(@Nonnull final WorkbookTableSort sourceWorkbookTableSort) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookTableSort);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
      * Creates a WorkbookTableSort with a new object
      *
      * @param newWorkbookTableSort the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookTableSort newWorkbookTableSort, @Nonnull final ICallback<? super WorkbookTableSort> callback) {
-        send(HttpMethod.POST, callback, newWorkbookTableSort);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futurePost(@Nonnull final WorkbookTableSort newWorkbookTableSort) {
+        return futureSend(HttpMethod.POST, newWorkbookTableSort);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
      * Creates a WorkbookTableSort with a new object
      *
      * @param newWorkbookTableSort the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookTableSort newWorkbookTableSort, @Nonnull final ICallback<? super WorkbookTableSort> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookTableSort);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futurePut(@Nonnull final WorkbookTableSort newWorkbookTableSort) {
+        return futureSend(HttpMethod.PUT, newWorkbookTableSort);
     }
 
     /**

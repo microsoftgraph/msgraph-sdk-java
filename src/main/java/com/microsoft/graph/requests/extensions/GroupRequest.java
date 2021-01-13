@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
@@ -68,10 +67,11 @@ public class GroupRequest extends BaseRequest<Group> {
     /**
      * Gets the Group from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Group> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Group> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -88,29 +88,33 @@ public class GroupRequest extends BaseRequest<Group> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Group> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Group> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Group delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Group with a source
      *
      * @param sourceGroup the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Group sourceGroup, @Nonnull final ICallback<? super Group> callback) {
-        send(HttpMethod.PATCH, callback, sourceGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Group> futurePatch(@Nonnull final Group sourceGroup) {
+        return futureSend(HttpMethod.PATCH, sourceGroup);
     }
 
     /**
@@ -129,10 +133,11 @@ public class GroupRequest extends BaseRequest<Group> {
      * Creates a Group with a new object
      *
      * @param newGroup the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
-        send(HttpMethod.POST, callback, newGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Group> futurePost(@Nonnull final Group newGroup) {
+        return futureSend(HttpMethod.POST, newGroup);
     }
 
     /**
@@ -151,10 +156,11 @@ public class GroupRequest extends BaseRequest<Group> {
      * Creates a Group with a new object
      *
      * @param newGroup the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
-        send(HttpMethod.PUT, callback, newGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Group> futurePut(@Nonnull final Group newGroup) {
+        return futureSend(HttpMethod.PUT, newGroup);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceUserStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceComplianceUserStatusRequest extends BaseRequest<DeviceComplia
     /**
      * Gets the DeviceComplianceUserStatus from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceComplianceUserStatus> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceUserStatus> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceComplianceUserStatusRequest extends BaseRequest<DeviceComplia
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceComplianceUserStatus> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceUserStatus> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceComplianceUserStatus delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceComplianceUserStatus with a source
      *
      * @param sourceDeviceComplianceUserStatus the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceComplianceUserStatus sourceDeviceComplianceUserStatus, @Nonnull final ICallback<? super DeviceComplianceUserStatus> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceComplianceUserStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceUserStatus> futurePatch(@Nonnull final DeviceComplianceUserStatus sourceDeviceComplianceUserStatus) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceComplianceUserStatus);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceComplianceUserStatusRequest extends BaseRequest<DeviceComplia
      * Creates a DeviceComplianceUserStatus with a new object
      *
      * @param newDeviceComplianceUserStatus the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceComplianceUserStatus newDeviceComplianceUserStatus, @Nonnull final ICallback<? super DeviceComplianceUserStatus> callback) {
-        send(HttpMethod.POST, callback, newDeviceComplianceUserStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceUserStatus> futurePost(@Nonnull final DeviceComplianceUserStatus newDeviceComplianceUserStatus) {
+        return futureSend(HttpMethod.POST, newDeviceComplianceUserStatus);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceComplianceUserStatusRequest extends BaseRequest<DeviceComplia
      * Creates a DeviceComplianceUserStatus with a new object
      *
      * @param newDeviceComplianceUserStatus the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceComplianceUserStatus newDeviceComplianceUserStatus, @Nonnull final ICallback<? super DeviceComplianceUserStatus> callback) {
-        send(HttpMethod.PUT, callback, newDeviceComplianceUserStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceUserStatus> futurePut(@Nonnull final DeviceComplianceUserStatus newDeviceComplianceUserStatus) {
+        return futureSend(HttpMethod.PUT, newDeviceComplianceUserStatus);
     }
 
     /**

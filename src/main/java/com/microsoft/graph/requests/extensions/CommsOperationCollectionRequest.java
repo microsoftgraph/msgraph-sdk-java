@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequest;
@@ -44,13 +42,14 @@ public class CommsOperationCollectionRequest extends BaseEntityCollectionRequest
     /**
      * Creates a new CommsOperation
      * @param newCommsOperation the CommsOperation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final CommsOperation newCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CommsOperation> futurePost(@Nonnull final CommsOperation newCommsOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newCommsOperation, callback);
+            .futurePost(newCommsOperation);
     }
 
     /**

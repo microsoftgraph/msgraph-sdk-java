@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecureScore;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
     /**
      * Gets the SecureScore from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SecureScore> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScore> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SecureScore> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScore> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SecureScore delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SecureScore with a source
      *
      * @param sourceSecureScore the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SecureScore sourceSecureScore, @Nonnull final ICallback<? super SecureScore> callback) {
-        send(HttpMethod.PATCH, callback, sourceSecureScore);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScore> futurePatch(@Nonnull final SecureScore sourceSecureScore) {
+        return futureSend(HttpMethod.PATCH, sourceSecureScore);
     }
 
     /**
@@ -99,10 +103,11 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
      * Creates a SecureScore with a new object
      *
      * @param newSecureScore the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SecureScore newSecureScore, @Nonnull final ICallback<? super SecureScore> callback) {
-        send(HttpMethod.POST, callback, newSecureScore);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScore> futurePost(@Nonnull final SecureScore newSecureScore) {
+        return futureSend(HttpMethod.POST, newSecureScore);
     }
 
     /**
@@ -121,10 +126,11 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
      * Creates a SecureScore with a new object
      *
      * @param newSecureScore the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SecureScore newSecureScore, @Nonnull final ICallback<? super SecureScore> callback) {
-        send(HttpMethod.PUT, callback, newSecureScore);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScore> futurePut(@Nonnull final SecureScore newSecureScore) {
+        return futureSend(HttpMethod.PUT, newSecureScore);
     }
 
     /**

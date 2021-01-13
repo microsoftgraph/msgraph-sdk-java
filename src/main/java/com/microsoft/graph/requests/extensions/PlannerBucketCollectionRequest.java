@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequest;
@@ -44,13 +42,14 @@ public class PlannerBucketCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new PlannerBucket
      * @param newPlannerBucket the PlannerBucket to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final PlannerBucket newPlannerBucket, @Nonnull final ICallback<? super PlannerBucket> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerBucket> futurePost(@Nonnull final PlannerBucket newPlannerBucket) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new PlannerBucketRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new PlannerBucketRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newPlannerBucket, callback);
+            .futurePost(newPlannerBucket);
     }
 
     /**

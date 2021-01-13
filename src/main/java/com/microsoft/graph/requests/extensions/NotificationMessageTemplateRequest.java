@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageRequestBuilder;
@@ -40,10 +39,11 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
     /**
      * Gets the NotificationMessageTemplate from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super NotificationMessageTemplate> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super NotificationMessageTemplate> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public NotificationMessageTemplate delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this NotificationMessageTemplate with a source
      *
      * @param sourceNotificationMessageTemplate the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final NotificationMessageTemplate sourceNotificationMessageTemplate, @Nonnull final ICallback<? super NotificationMessageTemplate> callback) {
-        send(HttpMethod.PATCH, callback, sourceNotificationMessageTemplate);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futurePatch(@Nonnull final NotificationMessageTemplate sourceNotificationMessageTemplate) {
+        return futureSend(HttpMethod.PATCH, sourceNotificationMessageTemplate);
     }
 
     /**
@@ -101,10 +105,11 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
      * Creates a NotificationMessageTemplate with a new object
      *
      * @param newNotificationMessageTemplate the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate, @Nonnull final ICallback<? super NotificationMessageTemplate> callback) {
-        send(HttpMethod.POST, callback, newNotificationMessageTemplate);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futurePost(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
+        return futureSend(HttpMethod.POST, newNotificationMessageTemplate);
     }
 
     /**
@@ -123,10 +128,11 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
      * Creates a NotificationMessageTemplate with a new object
      *
      * @param newNotificationMessageTemplate the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate, @Nonnull final ICallback<? super NotificationMessageTemplate> callback) {
-        send(HttpMethod.PUT, callback, newNotificationMessageTemplate);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futurePut(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
+        return futureSend(HttpMethod.PUT, newNotificationMessageTemplate);
     }
 
     /**

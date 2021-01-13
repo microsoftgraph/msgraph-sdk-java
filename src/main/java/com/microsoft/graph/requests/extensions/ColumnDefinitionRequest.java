@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ColumnDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
     /**
      * Gets the ColumnDefinition from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ColumnDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ColumnDefinition> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ColumnDefinition delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ColumnDefinition with a source
      *
      * @param sourceColumnDefinition the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ColumnDefinition sourceColumnDefinition, @Nonnull final ICallback<? super ColumnDefinition> callback) {
-        send(HttpMethod.PATCH, callback, sourceColumnDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> futurePatch(@Nonnull final ColumnDefinition sourceColumnDefinition) {
+        return futureSend(HttpMethod.PATCH, sourceColumnDefinition);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
      * Creates a ColumnDefinition with a new object
      *
      * @param newColumnDefinition the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ColumnDefinition newColumnDefinition, @Nonnull final ICallback<? super ColumnDefinition> callback) {
-        send(HttpMethod.POST, callback, newColumnDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> futurePost(@Nonnull final ColumnDefinition newColumnDefinition) {
+        return futureSend(HttpMethod.POST, newColumnDefinition);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
      * Creates a ColumnDefinition with a new object
      *
      * @param newColumnDefinition the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ColumnDefinition newColumnDefinition, @Nonnull final ICallback<? super ColumnDefinition> callback) {
-        send(HttpMethod.PUT, callback, newColumnDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> futurePut(@Nonnull final ColumnDefinition newColumnDefinition) {
+        return futureSend(HttpMethod.PUT, newColumnDefinition);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import com.microsoft.graph.models.extensions.TodoTask;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TodoTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.TodoTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskCollectionRequest;
@@ -44,13 +42,14 @@ public class TodoTaskCollectionRequest extends BaseEntityCollectionRequest<TodoT
     /**
      * Creates a new TodoTask
      * @param newTodoTask the TodoTask to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TodoTask newTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTask> futurePost(@Nonnull final TodoTask newTodoTask) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TodoTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TodoTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTodoTask, callback);
+            .futurePost(newTodoTask);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
@@ -42,10 +41,11 @@ public class EducationSchoolRequest extends BaseRequest<EducationSchool> {
     /**
      * Gets the EducationSchool from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super EducationSchool> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationSchool> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class EducationSchoolRequest extends BaseRequest<EducationSchool> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super EducationSchool> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationSchool> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public EducationSchool delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this EducationSchool with a source
      *
      * @param sourceEducationSchool the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final EducationSchool sourceEducationSchool, @Nonnull final ICallback<? super EducationSchool> callback) {
-        send(HttpMethod.PATCH, callback, sourceEducationSchool);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationSchool> futurePatch(@Nonnull final EducationSchool sourceEducationSchool) {
+        return futureSend(HttpMethod.PATCH, sourceEducationSchool);
     }
 
     /**
@@ -103,10 +107,11 @@ public class EducationSchoolRequest extends BaseRequest<EducationSchool> {
      * Creates a EducationSchool with a new object
      *
      * @param newEducationSchool the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final EducationSchool newEducationSchool, @Nonnull final ICallback<? super EducationSchool> callback) {
-        send(HttpMethod.POST, callback, newEducationSchool);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationSchool> futurePost(@Nonnull final EducationSchool newEducationSchool) {
+        return futureSend(HttpMethod.POST, newEducationSchool);
     }
 
     /**
@@ -125,10 +130,11 @@ public class EducationSchoolRequest extends BaseRequest<EducationSchool> {
      * Creates a EducationSchool with a new object
      *
      * @param newEducationSchool the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EducationSchool newEducationSchool, @Nonnull final ICallback<? super EducationSchool> callback) {
-        send(HttpMethod.PUT, callback, newEducationSchool);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationSchool> futurePut(@Nonnull final EducationSchool newEducationSchool) {
+        return futureSend(HttpMethod.PUT, newEducationSchool);
     }
 
     /**

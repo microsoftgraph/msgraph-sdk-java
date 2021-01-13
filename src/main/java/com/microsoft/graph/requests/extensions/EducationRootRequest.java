@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationRoot;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
@@ -44,10 +43,11 @@ public class EducationRootRequest extends BaseRequest<EducationRoot> {
     /**
      * Gets the EducationRoot from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super EducationRoot> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationRoot> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -64,29 +64,33 @@ public class EducationRootRequest extends BaseRequest<EducationRoot> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super EducationRoot> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationRoot> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public EducationRoot delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this EducationRoot with a source
      *
      * @param sourceEducationRoot the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final EducationRoot sourceEducationRoot, @Nonnull final ICallback<? super EducationRoot> callback) {
-        send(HttpMethod.PATCH, callback, sourceEducationRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationRoot> futurePatch(@Nonnull final EducationRoot sourceEducationRoot) {
+        return futureSend(HttpMethod.PATCH, sourceEducationRoot);
     }
 
     /**
@@ -105,10 +109,11 @@ public class EducationRootRequest extends BaseRequest<EducationRoot> {
      * Creates a EducationRoot with a new object
      *
      * @param newEducationRoot the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final EducationRoot newEducationRoot, @Nonnull final ICallback<? super EducationRoot> callback) {
-        send(HttpMethod.POST, callback, newEducationRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationRoot> futurePost(@Nonnull final EducationRoot newEducationRoot) {
+        return futureSend(HttpMethod.POST, newEducationRoot);
     }
 
     /**
@@ -127,10 +132,11 @@ public class EducationRootRequest extends BaseRequest<EducationRoot> {
      * Creates a EducationRoot with a new object
      *
      * @param newEducationRoot the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EducationRoot newEducationRoot, @Nonnull final ICallback<? super EducationRoot> callback) {
-        send(HttpMethod.PUT, callback, newEducationRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationRoot> futurePut(@Nonnull final EducationRoot newEducationRoot) {
+        return futureSend(HttpMethod.PUT, newEducationRoot);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.models.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InvitationRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;

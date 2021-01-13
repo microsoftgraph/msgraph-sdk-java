@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentPlatformRestrictionsConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
     /**
      * Gets the DeviceEnrollmentPlatformRestrictionsConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceEnrollmentPlatformRestrictionsConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceEnrollmentPlatformRestrictionsConfiguration with a source
      *
      * @param sourceDeviceEnrollmentPlatformRestrictionsConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentPlatformRestrictionsConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futurePatch(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * Creates a DeviceEnrollmentPlatformRestrictionsConfiguration with a new object
      *
      * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
-        send(HttpMethod.POST, callback, newDeviceEnrollmentPlatformRestrictionsConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futurePost(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) {
+        return futureSend(HttpMethod.POST, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * Creates a DeviceEnrollmentPlatformRestrictionsConfiguration with a new object
      *
      * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newDeviceEnrollmentPlatformRestrictionsConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futurePut(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) {
+        return futureSend(HttpMethod.PUT, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
     /**

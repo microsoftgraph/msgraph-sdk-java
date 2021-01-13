@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSDeviceFeaturesConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest<MacOSDe
     /**
      * Gets the MacOSDeviceFeaturesConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSDeviceFeaturesConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest<MacOSDe
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSDeviceFeaturesConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MacOSDeviceFeaturesConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MacOSDeviceFeaturesConfiguration with a source
      *
      * @param sourceMacOSDeviceFeaturesConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration, @Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceMacOSDeviceFeaturesConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSDeviceFeaturesConfiguration> futurePatch(@Nonnull final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceMacOSDeviceFeaturesConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest<MacOSDe
      * Creates a MacOSDeviceFeaturesConfiguration with a new object
      *
      * @param newMacOSDeviceFeaturesConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, @Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.POST, callback, newMacOSDeviceFeaturesConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSDeviceFeaturesConfiguration> futurePost(@Nonnull final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) {
+        return futureSend(HttpMethod.POST, newMacOSDeviceFeaturesConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest<MacOSDe
      * Creates a MacOSDeviceFeaturesConfiguration with a new object
      *
      * @param newMacOSDeviceFeaturesConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, @Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newMacOSDeviceFeaturesConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSDeviceFeaturesConfiguration> futurePut(@Nonnull final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) {
+        return futureSend(HttpMethod.PUT, newMacOSDeviceFeaturesConfiguration);
     }
 
     /**

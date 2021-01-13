@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
     /**
      * Gets the ManagedAppOperation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAppOperation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAppOperation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAppOperation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAppOperation with a source
      *
      * @param sourceManagedAppOperation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAppOperation sourceManagedAppOperation, @Nonnull final ICallback<? super ManagedAppOperation> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAppOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futurePatch(@Nonnull final ManagedAppOperation sourceManagedAppOperation) {
+        return futureSend(HttpMethod.PATCH, sourceManagedAppOperation);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
      * Creates a ManagedAppOperation with a new object
      *
      * @param newManagedAppOperation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAppOperation newManagedAppOperation, @Nonnull final ICallback<? super ManagedAppOperation> callback) {
-        send(HttpMethod.POST, callback, newManagedAppOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futurePost(@Nonnull final ManagedAppOperation newManagedAppOperation) {
+        return futureSend(HttpMethod.POST, newManagedAppOperation);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
      * Creates a ManagedAppOperation with a new object
      *
      * @param newManagedAppOperation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppOperation newManagedAppOperation, @Nonnull final ICallback<? super ManagedAppOperation> callback) {
-        send(HttpMethod.PUT, callback, newManagedAppOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futurePut(@Nonnull final ManagedAppOperation newManagedAppOperation) {
+        return futureSend(HttpMethod.PUT, newManagedAppOperation);
     }
 
     /**

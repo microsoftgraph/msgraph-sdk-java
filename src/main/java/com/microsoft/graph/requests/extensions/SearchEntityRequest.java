@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SearchEntity;
 import com.microsoft.graph.models.extensions.SearchRequest;
 import com.microsoft.graph.models.extensions.SearchResponse;
@@ -40,10 +39,11 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
     /**
      * Gets the SearchEntity from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SearchEntity> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SearchEntity> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SearchEntity> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SearchEntity> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SearchEntity delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SearchEntity with a source
      *
      * @param sourceSearchEntity the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SearchEntity sourceSearchEntity, @Nonnull final ICallback<? super SearchEntity> callback) {
-        send(HttpMethod.PATCH, callback, sourceSearchEntity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SearchEntity> futurePatch(@Nonnull final SearchEntity sourceSearchEntity) {
+        return futureSend(HttpMethod.PATCH, sourceSearchEntity);
     }
 
     /**
@@ -101,10 +105,11 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
      * Creates a SearchEntity with a new object
      *
      * @param newSearchEntity the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SearchEntity newSearchEntity, @Nonnull final ICallback<? super SearchEntity> callback) {
-        send(HttpMethod.POST, callback, newSearchEntity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SearchEntity> futurePost(@Nonnull final SearchEntity newSearchEntity) {
+        return futureSend(HttpMethod.POST, newSearchEntity);
     }
 
     /**
@@ -123,10 +128,11 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
      * Creates a SearchEntity with a new object
      *
      * @param newSearchEntity the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SearchEntity newSearchEntity, @Nonnull final ICallback<? super SearchEntity> callback) {
-        send(HttpMethod.PUT, callback, newSearchEntity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SearchEntity> futurePut(@Nonnull final SearchEntity newSearchEntity) {
+        return futureSend(HttpMethod.PUT, newSearchEntity);
     }
 
     /**

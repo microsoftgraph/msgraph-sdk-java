@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
     /**
      * Gets the CertificateBasedAuthConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public CertificateBasedAuthConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this CertificateBasedAuthConfiguration with a source
      *
      * @param sourceCertificateBasedAuthConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, @Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceCertificateBasedAuthConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePatch(@Nonnull final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceCertificateBasedAuthConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
      * Creates a CertificateBasedAuthConfiguration with a new object
      *
      * @param newCertificateBasedAuthConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, @Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-        send(HttpMethod.POST, callback, newCertificateBasedAuthConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePost(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
+        return futureSend(HttpMethod.POST, newCertificateBasedAuthConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
      * Creates a CertificateBasedAuthConfiguration with a new object
      *
      * @param newCertificateBasedAuthConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, @Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newCertificateBasedAuthConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePut(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
+        return futureSend(HttpMethod.PUT, newCertificateBasedAuthConfiguration);
     }
 
     /**

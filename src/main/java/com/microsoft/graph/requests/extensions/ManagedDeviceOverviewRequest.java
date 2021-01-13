@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceOverview;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
     /**
      * Gets the ManagedDeviceOverview from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedDeviceOverview delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedDeviceOverview with a source
      *
      * @param sourceManagedDeviceOverview the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedDeviceOverview sourceManagedDeviceOverview, @Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedDeviceOverview);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futurePatch(@Nonnull final ManagedDeviceOverview sourceManagedDeviceOverview) {
+        return futureSend(HttpMethod.PATCH, sourceManagedDeviceOverview);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
      * Creates a ManagedDeviceOverview with a new object
      *
      * @param newManagedDeviceOverview the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview, @Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-        send(HttpMethod.POST, callback, newManagedDeviceOverview);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futurePost(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview) {
+        return futureSend(HttpMethod.POST, newManagedDeviceOverview);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
      * Creates a ManagedDeviceOverview with a new object
      *
      * @param newManagedDeviceOverview the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview, @Nonnull final ICallback<? super ManagedDeviceOverview> callback) {
-        send(HttpMethod.PUT, callback, newManagedDeviceOverview);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futurePut(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview) {
+        return futureSend(HttpMethod.PUT, newManagedDeviceOverview);
     }
 
     /**

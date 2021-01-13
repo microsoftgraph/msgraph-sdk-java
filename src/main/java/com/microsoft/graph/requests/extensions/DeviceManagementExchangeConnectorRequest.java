@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorSyncType;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
     /**
      * Gets the DeviceManagementExchangeConnector from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceManagementExchangeConnector> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceManagementExchangeConnector> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceManagementExchangeConnector delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceManagementExchangeConnector with a source
      *
      * @param sourceDeviceManagementExchangeConnector the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceManagementExchangeConnector sourceDeviceManagementExchangeConnector, @Nonnull final ICallback<? super DeviceManagementExchangeConnector> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceManagementExchangeConnector);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futurePatch(@Nonnull final DeviceManagementExchangeConnector sourceDeviceManagementExchangeConnector) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceManagementExchangeConnector);
     }
 
     /**
@@ -100,10 +104,11 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
      * Creates a DeviceManagementExchangeConnector with a new object
      *
      * @param newDeviceManagementExchangeConnector the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, @Nonnull final ICallback<? super DeviceManagementExchangeConnector> callback) {
-        send(HttpMethod.POST, callback, newDeviceManagementExchangeConnector);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futurePost(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
+        return futureSend(HttpMethod.POST, newDeviceManagementExchangeConnector);
     }
 
     /**
@@ -122,10 +127,11 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
      * Creates a DeviceManagementExchangeConnector with a new object
      *
      * @param newDeviceManagementExchangeConnector the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, @Nonnull final ICallback<? super DeviceManagementExchangeConnector> callback) {
-        send(HttpMethod.PUT, callback, newDeviceManagementExchangeConnector);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futurePut(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
+        return futureSend(HttpMethod.PUT, newDeviceManagementExchangeConnector);
     }
 
     /**

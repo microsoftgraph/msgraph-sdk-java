@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.IosUpdateDeviceStatus;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionRequest;
@@ -44,13 +42,14 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseEntityCollection
     /**
      * Creates a new IosUpdateDeviceStatus
      * @param newIosUpdateDeviceStatus the IosUpdateDeviceStatus to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus, @Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futurePost(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newIosUpdateDeviceStatus, callback);
+            .futurePost(newIosUpdateDeviceStatus);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerPlanDetails;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class PlannerPlanDetailsRequest extends BaseRequest<PlannerPlanDetails> {
     /**
      * Gets the PlannerPlanDetails from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PlannerPlanDetails> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerPlanDetails> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class PlannerPlanDetailsRequest extends BaseRequest<PlannerPlanDetails> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PlannerPlanDetails> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerPlanDetails> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PlannerPlanDetails delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PlannerPlanDetails with a source
      *
      * @param sourcePlannerPlanDetails the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PlannerPlanDetails sourcePlannerPlanDetails, @Nonnull final ICallback<? super PlannerPlanDetails> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlannerPlanDetails);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerPlanDetails> futurePatch(@Nonnull final PlannerPlanDetails sourcePlannerPlanDetails) {
+        return futureSend(HttpMethod.PATCH, sourcePlannerPlanDetails);
     }
 
     /**
@@ -99,10 +103,11 @@ public class PlannerPlanDetailsRequest extends BaseRequest<PlannerPlanDetails> {
      * Creates a PlannerPlanDetails with a new object
      *
      * @param newPlannerPlanDetails the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PlannerPlanDetails newPlannerPlanDetails, @Nonnull final ICallback<? super PlannerPlanDetails> callback) {
-        send(HttpMethod.POST, callback, newPlannerPlanDetails);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerPlanDetails> futurePost(@Nonnull final PlannerPlanDetails newPlannerPlanDetails) {
+        return futureSend(HttpMethod.POST, newPlannerPlanDetails);
     }
 
     /**
@@ -121,10 +126,11 @@ public class PlannerPlanDetailsRequest extends BaseRequest<PlannerPlanDetails> {
      * Creates a PlannerPlanDetails with a new object
      *
      * @param newPlannerPlanDetails the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PlannerPlanDetails newPlannerPlanDetails, @Nonnull final ICallback<? super PlannerPlanDetails> callback) {
-        send(HttpMethod.PUT, callback, newPlannerPlanDetails);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerPlanDetails> futurePut(@Nonnull final PlannerPlanDetails newPlannerPlanDetails) {
+        return futureSend(HttpMethod.PUT, newPlannerPlanDetails);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
@@ -42,10 +41,11 @@ public class DomainRequest extends BaseRequest<Domain> {
     /**
      * Gets the Domain from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Domain> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Domain> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class DomainRequest extends BaseRequest<Domain> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Domain> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Domain> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Domain delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Domain with a source
      *
      * @param sourceDomain the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Domain sourceDomain, @Nonnull final ICallback<? super Domain> callback) {
-        send(HttpMethod.PATCH, callback, sourceDomain);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Domain> futurePatch(@Nonnull final Domain sourceDomain) {
+        return futureSend(HttpMethod.PATCH, sourceDomain);
     }
 
     /**
@@ -103,10 +107,11 @@ public class DomainRequest extends BaseRequest<Domain> {
      * Creates a Domain with a new object
      *
      * @param newDomain the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Domain newDomain, @Nonnull final ICallback<? super Domain> callback) {
-        send(HttpMethod.POST, callback, newDomain);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Domain> futurePost(@Nonnull final Domain newDomain) {
+        return futureSend(HttpMethod.POST, newDomain);
     }
 
     /**
@@ -125,10 +130,11 @@ public class DomainRequest extends BaseRequest<Domain> {
      * Creates a Domain with a new object
      *
      * @param newDomain the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Domain newDomain, @Nonnull final ICallback<? super Domain> callback) {
-        send(HttpMethod.PUT, callback, newDomain);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Domain> futurePut(@Nonnull final Domain newDomain) {
+        return futureSend(HttpMethod.PUT, newDomain);
     }
 
     /**

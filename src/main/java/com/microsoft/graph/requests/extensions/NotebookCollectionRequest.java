@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
@@ -21,7 +20,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.NotebookCollectionResponse;
 import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookCollectionRequest;
@@ -47,13 +45,14 @@ public class NotebookCollectionRequest extends BaseEntityCollectionRequest<Noteb
     /**
      * Creates a new Notebook
      * @param newNotebook the Notebook to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Notebook newNotebook, @Nonnull final ICallback<? super Notebook> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Notebook> futurePost(@Nonnull final Notebook newNotebook) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newNotebook, callback);
+            .futurePost(newNotebook);
     }
 
     /**

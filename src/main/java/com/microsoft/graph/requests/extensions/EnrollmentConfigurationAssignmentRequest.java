@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
     /**
      * Gets the EnrollmentConfigurationAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public EnrollmentConfigurationAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this EnrollmentConfigurationAssignment with a source
      *
      * @param sourceEnrollmentConfigurationAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceEnrollmentConfigurationAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futurePatch(@Nonnull final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment) {
+        return futureSend(HttpMethod.PATCH, sourceEnrollmentConfigurationAssignment);
     }
 
     /**
@@ -99,10 +103,11 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
      * Creates a EnrollmentConfigurationAssignment with a new object
      *
      * @param newEnrollmentConfigurationAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
-        send(HttpMethod.POST, callback, newEnrollmentConfigurationAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futurePost(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
+        return futureSend(HttpMethod.POST, newEnrollmentConfigurationAssignment);
     }
 
     /**
@@ -121,10 +126,11 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
      * Creates a EnrollmentConfigurationAssignment with a new object
      *
      * @param newEnrollmentConfigurationAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
-        send(HttpMethod.PUT, callback, newEnrollmentConfigurationAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futurePut(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
+        return futureSend(HttpMethod.PUT, newEnrollmentConfigurationAssignment);
     }
 
     /**

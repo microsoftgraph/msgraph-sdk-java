@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartPointFormat;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
     /**
      * Gets the WorkbookChartPointFormat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartPointFormat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartPointFormat with a source
      *
      * @param sourceWorkbookChartPointFormat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartPointFormat sourceWorkbookChartPointFormat, @Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartPointFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futurePatch(@Nonnull final WorkbookChartPointFormat sourceWorkbookChartPointFormat) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookChartPointFormat);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * Creates a WorkbookChartPointFormat with a new object
      *
      * @param newWorkbookChartPointFormat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat, @Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartPointFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futurePost(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat) {
+        return futureSend(HttpMethod.POST, newWorkbookChartPointFormat);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * Creates a WorkbookChartPointFormat with a new object
      *
      * @param newWorkbookChartPointFormat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat, @Nonnull final ICallback<? super WorkbookChartPointFormat> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartPointFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futurePut(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat) {
+        return futureSend(HttpMethod.PUT, newWorkbookChartPointFormat);
     }
 
     /**

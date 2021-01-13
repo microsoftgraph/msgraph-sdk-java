@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -66,12 +65,13 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseReferenceRequest<
      * Puts the OAuth2PermissionGrant
      *
      * @param srcOAuth2PermissionGrant the OAuth2PermissionGrant reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OAuth2PermissionGrant srcOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futurePut(@Nonnull final OAuth2PermissionGrant srcOAuth2PermissionGrant) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/oauth2PermissionGrants/" + srcOAuth2PermissionGrant.id));
-        send(HttpMethod.PUT, callback, payload);
+        return futureSend(HttpMethod.PUT, payload);
     }
 
     /**

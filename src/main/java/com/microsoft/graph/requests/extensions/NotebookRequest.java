@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.CopyNotebookModel;
@@ -45,10 +44,11 @@ public class NotebookRequest extends BaseRequest<Notebook> {
     /**
      * Gets the Notebook from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Notebook> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Notebook> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -65,29 +65,33 @@ public class NotebookRequest extends BaseRequest<Notebook> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Notebook> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Notebook> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Notebook delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Notebook with a source
      *
      * @param sourceNotebook the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Notebook sourceNotebook, @Nonnull final ICallback<? super Notebook> callback) {
-        send(HttpMethod.PATCH, callback, sourceNotebook);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Notebook> futurePatch(@Nonnull final Notebook sourceNotebook) {
+        return futureSend(HttpMethod.PATCH, sourceNotebook);
     }
 
     /**
@@ -106,10 +110,11 @@ public class NotebookRequest extends BaseRequest<Notebook> {
      * Creates a Notebook with a new object
      *
      * @param newNotebook the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Notebook newNotebook, @Nonnull final ICallback<? super Notebook> callback) {
-        send(HttpMethod.POST, callback, newNotebook);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Notebook> futurePost(@Nonnull final Notebook newNotebook) {
+        return futureSend(HttpMethod.POST, newNotebook);
     }
 
     /**
@@ -128,10 +133,11 @@ public class NotebookRequest extends BaseRequest<Notebook> {
      * Creates a Notebook with a new object
      *
      * @param newNotebook the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Notebook newNotebook, @Nonnull final ICallback<? super Notebook> callback) {
-        send(HttpMethod.PUT, callback, newNotebook);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Notebook> futurePut(@Nonnull final Notebook newNotebook) {
+        return futureSend(HttpMethod.PUT, newNotebook);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
@@ -53,10 +52,11 @@ public class TeamRequest extends BaseRequest<Team> {
     /**
      * Gets the Team from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Team> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Team> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class TeamRequest extends BaseRequest<Team> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Team> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Team> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Team delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Team with a source
      *
      * @param sourceTeam the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Team sourceTeam, @Nonnull final ICallback<? super Team> callback) {
-        send(HttpMethod.PATCH, callback, sourceTeam);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Team> futurePatch(@Nonnull final Team sourceTeam) {
+        return futureSend(HttpMethod.PATCH, sourceTeam);
     }
 
     /**
@@ -114,10 +118,11 @@ public class TeamRequest extends BaseRequest<Team> {
      * Creates a Team with a new object
      *
      * @param newTeam the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Team newTeam, @Nonnull final ICallback<? super Team> callback) {
-        send(HttpMethod.POST, callback, newTeam);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Team> futurePost(@Nonnull final Team newTeam) {
+        return futureSend(HttpMethod.POST, newTeam);
     }
 
     /**
@@ -136,10 +141,11 @@ public class TeamRequest extends BaseRequest<Team> {
      * Creates a Team with a new object
      *
      * @param newTeam the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Team newTeam, @Nonnull final ICallback<? super Team> callback) {
-        send(HttpMethod.PUT, callback, newTeam);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Team> futurePut(@Nonnull final Team newTeam) {
+        return futureSend(HttpMethod.PUT, newTeam);
     }
 
     /**

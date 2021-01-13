@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class ManagedAppConfigurationRequest extends BaseRequest<ManagedAppConfig
     /**
      * Gets the ManagedAppConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class ManagedAppConfigurationRequest extends BaseRequest<ManagedAppConfig
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAppConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAppConfiguration with a source
      *
      * @param sourceManagedAppConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAppConfiguration sourceManagedAppConfiguration, @Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppConfiguration> futurePatch(@Nonnull final ManagedAppConfiguration sourceManagedAppConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceManagedAppConfiguration);
     }
 
     /**
@@ -114,10 +118,11 @@ public class ManagedAppConfigurationRequest extends BaseRequest<ManagedAppConfig
      * Creates a ManagedAppConfiguration with a new object
      *
      * @param newManagedAppConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAppConfiguration newManagedAppConfiguration, @Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
-        send(HttpMethod.POST, callback, newManagedAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppConfiguration> futurePost(@Nonnull final ManagedAppConfiguration newManagedAppConfiguration) {
+        return futureSend(HttpMethod.POST, newManagedAppConfiguration);
     }
 
     /**
@@ -136,10 +141,11 @@ public class ManagedAppConfigurationRequest extends BaseRequest<ManagedAppConfig
      * Creates a ManagedAppConfiguration with a new object
      *
      * @param newManagedAppConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppConfiguration newManagedAppConfiguration, @Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newManagedAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppConfiguration> futurePut(@Nonnull final ManagedAppConfiguration newManagedAppConfiguration) {
+        return futureSend(HttpMethod.PUT, newManagedAppConfiguration);
     }
 
     /**

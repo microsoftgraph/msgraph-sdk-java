@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartDataLabelFormat;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
@@ -40,10 +39,11 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
     /**
      * Gets the WorkbookChartDataLabelFormat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartDataLabelFormat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartDataLabelFormat with a source
      *
      * @param sourceWorkbookChartDataLabelFormat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat, @Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartDataLabelFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futurePatch(@Nonnull final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookChartDataLabelFormat);
     }
 
     /**
@@ -101,10 +105,11 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * Creates a WorkbookChartDataLabelFormat with a new object
      *
      * @param newWorkbookChartDataLabelFormat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, @Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartDataLabelFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futurePost(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) {
+        return futureSend(HttpMethod.POST, newWorkbookChartDataLabelFormat);
     }
 
     /**
@@ -123,10 +128,11 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * Creates a WorkbookChartDataLabelFormat with a new object
      *
      * @param newWorkbookChartDataLabelFormat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, @Nonnull final ICallback<? super WorkbookChartDataLabelFormat> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartDataLabelFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futurePut(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) {
+        return futureSend(HttpMethod.PUT, newWorkbookChartDataLabelFormat);
     }
 
     /**

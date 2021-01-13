@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CalendarSharingMessage;
 import com.microsoft.graph.models.extensions.Calendar;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
     /**
      * Gets the CalendarSharingMessage from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super CalendarSharingMessage> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super CalendarSharingMessage> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public CalendarSharingMessage delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this CalendarSharingMessage with a source
      *
      * @param sourceCalendarSharingMessage the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final CalendarSharingMessage sourceCalendarSharingMessage, @Nonnull final ICallback<? super CalendarSharingMessage> callback) {
-        send(HttpMethod.PATCH, callback, sourceCalendarSharingMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futurePatch(@Nonnull final CalendarSharingMessage sourceCalendarSharingMessage) {
+        return futureSend(HttpMethod.PATCH, sourceCalendarSharingMessage);
     }
 
     /**
@@ -100,10 +104,11 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * Creates a CalendarSharingMessage with a new object
      *
      * @param newCalendarSharingMessage the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final CalendarSharingMessage newCalendarSharingMessage, @Nonnull final ICallback<? super CalendarSharingMessage> callback) {
-        send(HttpMethod.POST, callback, newCalendarSharingMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futurePost(@Nonnull final CalendarSharingMessage newCalendarSharingMessage) {
+        return futureSend(HttpMethod.POST, newCalendarSharingMessage);
     }
 
     /**
@@ -122,10 +127,11 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * Creates a CalendarSharingMessage with a new object
      *
      * @param newCalendarSharingMessage the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CalendarSharingMessage newCalendarSharingMessage, @Nonnull final ICallback<? super CalendarSharingMessage> callback) {
-        send(HttpMethod.PUT, callback, newCalendarSharingMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futurePut(@Nonnull final CalendarSharingMessage newCalendarSharingMessage) {
+        return futureSend(HttpMethod.PUT, newCalendarSharingMessage);
     }
 
     /**

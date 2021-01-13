@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequest;
@@ -43,13 +41,14 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseEntityCollection
     /**
      * Creates a new OAuth2PermissionGrant
      * @param newOAuth2PermissionGrant the OAuth2PermissionGrant to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futurePost(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new OAuth2PermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new OAuth2PermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newOAuth2PermissionGrant, callback);
+            .futurePost(newOAuth2PermissionGrant);
     }
 
     /**

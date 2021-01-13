@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.LicenseDetails;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequest;
@@ -44,13 +42,14 @@ public class LicenseDetailsCollectionRequest extends BaseEntityCollectionRequest
     /**
      * Creates a new LicenseDetails
      * @param newLicenseDetails the LicenseDetails to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final LicenseDetails newLicenseDetails, @Nonnull final ICallback<? super LicenseDetails> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LicenseDetails> futurePost(@Nonnull final LicenseDetails newLicenseDetails) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newLicenseDetails, callback);
+            .futurePost(newLicenseDetails);
     }
 
     /**

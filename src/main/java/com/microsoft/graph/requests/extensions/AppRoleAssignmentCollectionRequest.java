@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequest;
@@ -44,13 +42,14 @@ public class AppRoleAssignmentCollectionRequest extends BaseEntityCollectionRequ
     /**
      * Creates a new AppRoleAssignment
      * @param newAppRoleAssignment the AppRoleAssignment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final AppRoleAssignment newAppRoleAssignment, @Nonnull final ICallback<? super AppRoleAssignment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futurePost(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newAppRoleAssignment, callback);
+            .futurePost(newAppRoleAssignment);
     }
 
     /**

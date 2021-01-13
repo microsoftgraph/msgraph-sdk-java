@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequest;
@@ -44,13 +42,14 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseEnti
     /**
      * Creates a new SingleValueLegacyExtendedProperty
      * @param newSingleValueLegacyExtendedProperty the SingleValueLegacyExtendedProperty to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, @Nonnull final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> futurePost(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSingleValueLegacyExtendedProperty, callback);
+            .futurePost(newSingleValueLegacyExtendedProperty);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequest;
@@ -44,13 +42,14 @@ public class ManagedAppRegistrationCollectionRequest extends BaseEntityCollectio
     /**
      * Creates a new ManagedAppRegistration
      * @param newManagedAppRegistration the ManagedAppRegistration to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePost(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ManagedAppRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedAppRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedAppRegistration, callback);
+            .futurePost(newManagedAppRegistration);
     }
 
     /**

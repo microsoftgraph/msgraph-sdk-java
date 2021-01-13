@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LocalizedNotificationMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
     /**
      * Gets the LocalizedNotificationMessage from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public LocalizedNotificationMessage delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this LocalizedNotificationMessage with a source
      *
      * @param sourceLocalizedNotificationMessage the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final LocalizedNotificationMessage sourceLocalizedNotificationMessage, @Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
-        send(HttpMethod.PATCH, callback, sourceLocalizedNotificationMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futurePatch(@Nonnull final LocalizedNotificationMessage sourceLocalizedNotificationMessage) {
+        return futureSend(HttpMethod.PATCH, sourceLocalizedNotificationMessage);
     }
 
     /**
@@ -99,10 +103,11 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
      * Creates a LocalizedNotificationMessage with a new object
      *
      * @param newLocalizedNotificationMessage the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage, @Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
-        send(HttpMethod.POST, callback, newLocalizedNotificationMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futurePost(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
+        return futureSend(HttpMethod.POST, newLocalizedNotificationMessage);
     }
 
     /**
@@ -121,10 +126,11 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
      * Creates a LocalizedNotificationMessage with a new object
      *
      * @param newLocalizedNotificationMessage the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage, @Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
-        send(HttpMethod.PUT, callback, newLocalizedNotificationMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futurePut(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
+        return futureSend(HttpMethod.PUT, newLocalizedNotificationMessage);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MessageRule;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
     /**
      * Gets the MessageRule from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MessageRule> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MessageRule> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MessageRule> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MessageRule> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MessageRule delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MessageRule with a source
      *
      * @param sourceMessageRule the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MessageRule sourceMessageRule, @Nonnull final ICallback<? super MessageRule> callback) {
-        send(HttpMethod.PATCH, callback, sourceMessageRule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MessageRule> futurePatch(@Nonnull final MessageRule sourceMessageRule) {
+        return futureSend(HttpMethod.PATCH, sourceMessageRule);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
      * Creates a MessageRule with a new object
      *
      * @param newMessageRule the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MessageRule newMessageRule, @Nonnull final ICallback<? super MessageRule> callback) {
-        send(HttpMethod.POST, callback, newMessageRule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MessageRule> futurePost(@Nonnull final MessageRule newMessageRule) {
+        return futureSend(HttpMethod.POST, newMessageRule);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
      * Creates a MessageRule with a new object
      *
      * @param newMessageRule the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MessageRule newMessageRule, @Nonnull final ICallback<? super MessageRule> callback) {
-        send(HttpMethod.PUT, callback, newMessageRule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MessageRule> futurePut(@Nonnull final MessageRule newMessageRule) {
+        return futureSend(HttpMethod.PUT, newMessageRule);
     }
 
     /**

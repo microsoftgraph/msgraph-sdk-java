@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CalendarPermission;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
     /**
      * Gets the CalendarPermission from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super CalendarPermission> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarPermission> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super CalendarPermission> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarPermission> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public CalendarPermission delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this CalendarPermission with a source
      *
      * @param sourceCalendarPermission the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final CalendarPermission sourceCalendarPermission, @Nonnull final ICallback<? super CalendarPermission> callback) {
-        send(HttpMethod.PATCH, callback, sourceCalendarPermission);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarPermission> futurePatch(@Nonnull final CalendarPermission sourceCalendarPermission) {
+        return futureSend(HttpMethod.PATCH, sourceCalendarPermission);
     }
 
     /**
@@ -99,10 +103,11 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
      * Creates a CalendarPermission with a new object
      *
      * @param newCalendarPermission the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final CalendarPermission newCalendarPermission, @Nonnull final ICallback<? super CalendarPermission> callback) {
-        send(HttpMethod.POST, callback, newCalendarPermission);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarPermission> futurePost(@Nonnull final CalendarPermission newCalendarPermission) {
+        return futureSend(HttpMethod.POST, newCalendarPermission);
     }
 
     /**
@@ -121,10 +126,11 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
      * Creates a CalendarPermission with a new object
      *
      * @param newCalendarPermission the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CalendarPermission newCalendarPermission, @Nonnull final ICallback<? super CalendarPermission> callback) {
-        send(HttpMethod.PUT, callback, newCalendarPermission);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarPermission> futurePut(@Nonnull final CalendarPermission newCalendarPermission) {
+        return futureSend(HttpMethod.PUT, newCalendarPermission);
     }
 
     /**

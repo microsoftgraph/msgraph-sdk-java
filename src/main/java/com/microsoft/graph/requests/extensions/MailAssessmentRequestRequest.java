@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailAssessmentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
     /**
      * Gets the MailAssessmentRequest from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MailAssessmentRequest> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MailAssessmentRequest> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MailAssessmentRequest delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MailAssessmentRequest with a source
      *
      * @param sourceMailAssessmentRequest the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MailAssessmentRequest sourceMailAssessmentRequest, @Nonnull final ICallback<? super MailAssessmentRequest> callback) {
-        send(HttpMethod.PATCH, callback, sourceMailAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futurePatch(@Nonnull final MailAssessmentRequest sourceMailAssessmentRequest) {
+        return futureSend(HttpMethod.PATCH, sourceMailAssessmentRequest);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
      * Creates a MailAssessmentRequest with a new object
      *
      * @param newMailAssessmentRequest the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MailAssessmentRequest newMailAssessmentRequest, @Nonnull final ICallback<? super MailAssessmentRequest> callback) {
-        send(HttpMethod.POST, callback, newMailAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futurePost(@Nonnull final MailAssessmentRequest newMailAssessmentRequest) {
+        return futureSend(HttpMethod.POST, newMailAssessmentRequest);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
      * Creates a MailAssessmentRequest with a new object
      *
      * @param newMailAssessmentRequest the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MailAssessmentRequest newMailAssessmentRequest, @Nonnull final ICallback<? super MailAssessmentRequest> callback) {
-        send(HttpMethod.PUT, callback, newMailAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futurePut(@Nonnull final MailAssessmentRequest newMailAssessmentRequest) {
+        return futureSend(HttpMethod.PUT, newMailAssessmentRequest);
     }
 
     /**

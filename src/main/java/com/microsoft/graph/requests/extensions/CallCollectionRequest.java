@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudCommunications;
 import com.microsoft.graph.models.extensions.Call;
 import com.microsoft.graph.models.extensions.MediaConfig;
@@ -33,7 +32,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CallCollectionResponse;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallCollectionRequest;
@@ -59,13 +57,14 @@ public class CallCollectionRequest extends BaseEntityCollectionRequest<Call, Cal
     /**
      * Creates a new Call
      * @param newCall the Call to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Call newCall, @Nonnull final ICallback<? super Call> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Call> futurePost(@Nonnull final Call newCall) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new CallRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new CallRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newCall, callback);
+            .futurePost(newCall);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Person;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class PersonRequest extends BaseRequest<Person> {
     /**
      * Gets the Person from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Person> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Person> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class PersonRequest extends BaseRequest<Person> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Person> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Person> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Person delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Person with a source
      *
      * @param sourcePerson the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Person sourcePerson, @Nonnull final ICallback<? super Person> callback) {
-        send(HttpMethod.PATCH, callback, sourcePerson);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Person> futurePatch(@Nonnull final Person sourcePerson) {
+        return futureSend(HttpMethod.PATCH, sourcePerson);
     }
 
     /**
@@ -99,10 +103,11 @@ public class PersonRequest extends BaseRequest<Person> {
      * Creates a Person with a new object
      *
      * @param newPerson the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Person newPerson, @Nonnull final ICallback<? super Person> callback) {
-        send(HttpMethod.POST, callback, newPerson);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Person> futurePost(@Nonnull final Person newPerson) {
+        return futureSend(HttpMethod.POST, newPerson);
     }
 
     /**
@@ -121,10 +126,11 @@ public class PersonRequest extends BaseRequest<Person> {
      * Creates a Person with a new object
      *
      * @param newPerson the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Person newPerson, @Nonnull final ICallback<? super Person> callback) {
-        send(HttpMethod.PUT, callback, newPerson);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Person> futurePut(@Nonnull final Person newPerson) {
+        return futureSend(HttpMethod.PUT, newPerson);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileLobApp;
 import com.microsoft.graph.requests.extensions.MobileAppContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentRequestBuilder;
@@ -55,10 +54,11 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
     /**
      * Gets the MobileLobApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MobileLobApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileLobApp> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -75,29 +75,33 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MobileLobApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileLobApp> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MobileLobApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MobileLobApp with a source
      *
      * @param sourceMobileLobApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MobileLobApp sourceMobileLobApp, @Nonnull final ICallback<? super MobileLobApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceMobileLobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileLobApp> futurePatch(@Nonnull final MobileLobApp sourceMobileLobApp) {
+        return futureSend(HttpMethod.PATCH, sourceMobileLobApp);
     }
 
     /**
@@ -116,10 +120,11 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * Creates a MobileLobApp with a new object
      *
      * @param newMobileLobApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MobileLobApp newMobileLobApp, @Nonnull final ICallback<? super MobileLobApp> callback) {
-        send(HttpMethod.POST, callback, newMobileLobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileLobApp> futurePost(@Nonnull final MobileLobApp newMobileLobApp) {
+        return futureSend(HttpMethod.POST, newMobileLobApp);
     }
 
     /**
@@ -138,10 +143,11 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * Creates a MobileLobApp with a new object
      *
      * @param newMobileLobApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MobileLobApp newMobileLobApp, @Nonnull final ICallback<? super MobileLobApp> callback) {
-        send(HttpMethod.PUT, callback, newMobileLobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileLobApp> futurePut(@Nonnull final MobileLobApp newMobileLobApp) {
+        return futureSend(HttpMethod.PUT, newMobileLobApp);
     }
 
     /**

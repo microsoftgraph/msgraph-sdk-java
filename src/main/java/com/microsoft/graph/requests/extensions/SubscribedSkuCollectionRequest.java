@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SubscribedSku;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionResponse;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequest;
@@ -43,13 +41,14 @@ public class SubscribedSkuCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new SubscribedSku
      * @param newSubscribedSku the SubscribedSku to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final SubscribedSku newSubscribedSku, @Nonnull final ICallback<? super SubscribedSku> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SubscribedSku> futurePost(@Nonnull final SubscribedSku newSubscribedSku) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSubscribedSku, callback);
+            .futurePost(newSubscribedSku);
     }
 
     /**

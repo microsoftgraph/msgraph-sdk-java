@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DataPolicyOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequest;
@@ -43,13 +41,14 @@ public class DataPolicyOperationCollectionRequest extends BaseEntityCollectionRe
     /**
      * Creates a new DataPolicyOperation
      * @param newDataPolicyOperation the DataPolicyOperation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DataPolicyOperation newDataPolicyOperation, @Nonnull final ICallback<? super DataPolicyOperation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DataPolicyOperation> futurePost(@Nonnull final DataPolicyOperation newDataPolicyOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDataPolicyOperation, callback);
+            .futurePost(newDataPolicyOperation);
     }
 
     /**

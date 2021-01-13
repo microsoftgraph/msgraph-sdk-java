@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
     /**
      * Gets the HomeRealmDiscoveryPolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public HomeRealmDiscoveryPolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this HomeRealmDiscoveryPolicy with a source
      *
      * @param sourceHomeRealmDiscoveryPolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceHomeRealmDiscoveryPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePatch(@Nonnull final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy) {
+        return futureSend(HttpMethod.PATCH, sourceHomeRealmDiscoveryPolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * Creates a HomeRealmDiscoveryPolicy with a new object
      *
      * @param newHomeRealmDiscoveryPolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
-        send(HttpMethod.POST, callback, newHomeRealmDiscoveryPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePost(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
+        return futureSend(HttpMethod.POST, newHomeRealmDiscoveryPolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * Creates a HomeRealmDiscoveryPolicy with a new object
      *
      * @param newHomeRealmDiscoveryPolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
-        send(HttpMethod.PUT, callback, newHomeRealmDiscoveryPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePut(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
+        return futureSend(HttpMethod.PUT, newHomeRealmDiscoveryPolicy);
     }
 
     /**

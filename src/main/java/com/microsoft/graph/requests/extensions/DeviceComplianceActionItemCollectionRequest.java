@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import com.microsoft.graph.models.extensions.DeviceComplianceActionItem;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceComplianceActionItemCollectionRequest extends BaseEntityColle
     /**
      * Creates a new DeviceComplianceActionItem
      * @param newDeviceComplianceActionItem the DeviceComplianceActionItem to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceComplianceActionItem newDeviceComplianceActionItem, @Nonnull final ICallback<? super DeviceComplianceActionItem> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceActionItem> futurePost(@Nonnull final DeviceComplianceActionItem newDeviceComplianceActionItem) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceComplianceActionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceComplianceActionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceComplianceActionItem, callback);
+            .futurePost(newDeviceComplianceActionItem);
     }
 
     /**

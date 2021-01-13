@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
@@ -47,10 +46,11 @@ public class ListRequest extends BaseRequest<List> {
     /**
      * Gets the List from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super List> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<List> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -67,29 +67,33 @@ public class ListRequest extends BaseRequest<List> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super List> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<List> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public List delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this List with a source
      *
      * @param sourceList the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final List sourceList, @Nonnull final ICallback<? super List> callback) {
-        send(HttpMethod.PATCH, callback, sourceList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<List> futurePatch(@Nonnull final List sourceList) {
+        return futureSend(HttpMethod.PATCH, sourceList);
     }
 
     /**
@@ -108,10 +112,11 @@ public class ListRequest extends BaseRequest<List> {
      * Creates a List with a new object
      *
      * @param newList the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final List newList, @Nonnull final ICallback<? super List> callback) {
-        send(HttpMethod.POST, callback, newList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<List> futurePost(@Nonnull final List newList) {
+        return futureSend(HttpMethod.POST, newList);
     }
 
     /**
@@ -130,10 +135,11 @@ public class ListRequest extends BaseRequest<List> {
      * Creates a List with a new object
      *
      * @param newList the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final List newList, @Nonnull final ICallback<? super List> callback) {
-        send(HttpMethod.PUT, callback, newList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<List> futurePut(@Nonnull final List newList) {
+        return futureSend(HttpMethod.PUT, newList);
     }
 
     /**

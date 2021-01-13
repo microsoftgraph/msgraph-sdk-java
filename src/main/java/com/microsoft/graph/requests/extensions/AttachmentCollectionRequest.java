@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.AttachmentItem;
@@ -20,7 +19,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequest;
@@ -46,13 +44,14 @@ public class AttachmentCollectionRequest extends BaseEntityCollectionRequest<Att
     /**
      * Creates a new Attachment
      * @param newAttachment the Attachment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Attachment newAttachment, @Nonnull final ICallback<? super Attachment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Attachment> futurePost(@Nonnull final Attachment newAttachment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newAttachment, callback);
+            .futurePost(newAttachment);
     }
 
     /**

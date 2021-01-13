@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
     /**
      * Gets the CancelMediaProcessingOperation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public CancelMediaProcessingOperation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this CancelMediaProcessingOperation with a source
      *
      * @param sourceCancelMediaProcessingOperation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation, @Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
-        send(HttpMethod.PATCH, callback, sourceCancelMediaProcessingOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futurePatch(@Nonnull final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation) {
+        return futureSend(HttpMethod.PATCH, sourceCancelMediaProcessingOperation);
     }
 
     /**
@@ -99,10 +103,11 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
      * Creates a CancelMediaProcessingOperation with a new object
      *
      * @param newCancelMediaProcessingOperation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation, @Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
-        send(HttpMethod.POST, callback, newCancelMediaProcessingOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futurePost(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation) {
+        return futureSend(HttpMethod.POST, newCancelMediaProcessingOperation);
     }
 
     /**
@@ -121,10 +126,11 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
      * Creates a CancelMediaProcessingOperation with a new object
      *
      * @param newCancelMediaProcessingOperation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation, @Nonnull final ICallback<? super CancelMediaProcessingOperation> callback) {
-        send(HttpMethod.PUT, callback, newCancelMediaProcessingOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futurePut(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation) {
+        return futureSend(HttpMethod.PUT, newCancelMediaProcessingOperation);
     }
 
     /**

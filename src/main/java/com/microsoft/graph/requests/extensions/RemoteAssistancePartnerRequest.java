@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
     /**
      * Gets the RemoteAssistancePartner from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super RemoteAssistancePartner> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super RemoteAssistancePartner> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public RemoteAssistancePartner delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this RemoteAssistancePartner with a source
      *
      * @param sourceRemoteAssistancePartner the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final RemoteAssistancePartner sourceRemoteAssistancePartner, @Nonnull final ICallback<? super RemoteAssistancePartner> callback) {
-        send(HttpMethod.PATCH, callback, sourceRemoteAssistancePartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futurePatch(@Nonnull final RemoteAssistancePartner sourceRemoteAssistancePartner) {
+        return futureSend(HttpMethod.PATCH, sourceRemoteAssistancePartner);
     }
 
     /**
@@ -99,10 +103,11 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
      * Creates a RemoteAssistancePartner with a new object
      *
      * @param newRemoteAssistancePartner the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner, @Nonnull final ICallback<? super RemoteAssistancePartner> callback) {
-        send(HttpMethod.POST, callback, newRemoteAssistancePartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futurePost(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) {
+        return futureSend(HttpMethod.POST, newRemoteAssistancePartner);
     }
 
     /**
@@ -121,10 +126,11 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
      * Creates a RemoteAssistancePartner with a new object
      *
      * @param newRemoteAssistancePartner the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner, @Nonnull final ICallback<? super RemoteAssistancePartner> callback) {
-        send(HttpMethod.PUT, callback, newRemoteAssistancePartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futurePut(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) {
+        return futureSend(HttpMethod.PUT, newRemoteAssistancePartner);
     }
 
     /**

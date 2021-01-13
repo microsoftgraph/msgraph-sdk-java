@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ComplianceManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
     /**
      * Gets the ComplianceManagementPartner from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ComplianceManagementPartner> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ComplianceManagementPartner> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ComplianceManagementPartner delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ComplianceManagementPartner with a source
      *
      * @param sourceComplianceManagementPartner the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ComplianceManagementPartner sourceComplianceManagementPartner, @Nonnull final ICallback<? super ComplianceManagementPartner> callback) {
-        send(HttpMethod.PATCH, callback, sourceComplianceManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futurePatch(@Nonnull final ComplianceManagementPartner sourceComplianceManagementPartner) {
+        return futureSend(HttpMethod.PATCH, sourceComplianceManagementPartner);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
      * Creates a ComplianceManagementPartner with a new object
      *
      * @param newComplianceManagementPartner the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner, @Nonnull final ICallback<? super ComplianceManagementPartner> callback) {
-        send(HttpMethod.POST, callback, newComplianceManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futurePost(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) {
+        return futureSend(HttpMethod.POST, newComplianceManagementPartner);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
      * Creates a ComplianceManagementPartner with a new object
      *
      * @param newComplianceManagementPartner the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner, @Nonnull final ICallback<? super ComplianceManagementPartner> callback) {
-        send(HttpMethod.PUT, callback, newComplianceManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futurePut(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) {
+        return futureSend(HttpMethod.PUT, newComplianceManagementPartner);
     }
 
     /**

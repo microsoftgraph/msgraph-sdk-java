@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
     /**
      * Gets the RestrictedSignIn from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super RestrictedSignIn> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super RestrictedSignIn> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public RestrictedSignIn delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this RestrictedSignIn with a source
      *
      * @param sourceRestrictedSignIn the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final RestrictedSignIn sourceRestrictedSignIn, @Nonnull final ICallback<? super RestrictedSignIn> callback) {
-        send(HttpMethod.PATCH, callback, sourceRestrictedSignIn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futurePatch(@Nonnull final RestrictedSignIn sourceRestrictedSignIn) {
+        return futureSend(HttpMethod.PATCH, sourceRestrictedSignIn);
     }
 
     /**
@@ -99,10 +103,11 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
      * Creates a RestrictedSignIn with a new object
      *
      * @param newRestrictedSignIn the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final RestrictedSignIn newRestrictedSignIn, @Nonnull final ICallback<? super RestrictedSignIn> callback) {
-        send(HttpMethod.POST, callback, newRestrictedSignIn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futurePost(@Nonnull final RestrictedSignIn newRestrictedSignIn) {
+        return futureSend(HttpMethod.POST, newRestrictedSignIn);
     }
 
     /**
@@ -121,10 +126,11 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
      * Creates a RestrictedSignIn with a new object
      *
      * @param newRestrictedSignIn the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final RestrictedSignIn newRestrictedSignIn, @Nonnull final ICallback<? super RestrictedSignIn> callback) {
-        send(HttpMethod.PUT, callback, newRestrictedSignIn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futurePut(@Nonnull final RestrictedSignIn newRestrictedSignIn) {
+        return futureSend(HttpMethod.PUT, newRestrictedSignIn);
     }
 
     /**

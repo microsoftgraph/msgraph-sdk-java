@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
     /**
      * Gets the DeviceCompliancePolicyAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceCompliancePolicyAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceCompliancePolicyAssignment with a source
      *
      * @param sourceDeviceCompliancePolicyAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceCompliancePolicyAssignment sourceDeviceCompliancePolicyAssignment, @Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicyAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> futurePatch(@Nonnull final DeviceCompliancePolicyAssignment sourceDeviceCompliancePolicyAssignment) {
+        return futureSend(HttpMethod.PATCH, sourceDeviceCompliancePolicyAssignment);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * Creates a DeviceCompliancePolicyAssignment with a new object
      *
      * @param newDeviceCompliancePolicyAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, @Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
-        send(HttpMethod.POST, callback, newDeviceCompliancePolicyAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> futurePost(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) {
+        return futureSend(HttpMethod.POST, newDeviceCompliancePolicyAssignment);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest<DeviceC
      * Creates a DeviceCompliancePolicyAssignment with a new object
      *
      * @param newDeviceCompliancePolicyAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, @Nonnull final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
-        send(HttpMethod.PUT, callback, newDeviceCompliancePolicyAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> futurePut(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) {
+        return futureSend(HttpMethod.PUT, newDeviceCompliancePolicyAssignment);
     }
 
     /**

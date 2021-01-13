@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionRequest;
@@ -45,13 +43,14 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseEntityCo
     /**
      * Creates a new DeviceEnrollmentConfiguration
      * @param newDeviceEnrollmentConfiguration the DeviceEnrollmentConfiguration to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> futurePost(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceEnrollmentConfiguration, callback);
+            .futurePost(newDeviceEnrollmentConfiguration);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
@@ -45,10 +44,11 @@ public class ContactRequest extends BaseRequest<Contact> {
     /**
      * Gets the Contact from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Contact> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Contact> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -65,29 +65,33 @@ public class ContactRequest extends BaseRequest<Contact> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Contact> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Contact> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Contact delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Contact with a source
      *
      * @param sourceContact the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Contact sourceContact, @Nonnull final ICallback<? super Contact> callback) {
-        send(HttpMethod.PATCH, callback, sourceContact);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Contact> futurePatch(@Nonnull final Contact sourceContact) {
+        return futureSend(HttpMethod.PATCH, sourceContact);
     }
 
     /**
@@ -106,10 +110,11 @@ public class ContactRequest extends BaseRequest<Contact> {
      * Creates a Contact with a new object
      *
      * @param newContact the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Contact newContact, @Nonnull final ICallback<? super Contact> callback) {
-        send(HttpMethod.POST, callback, newContact);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Contact> futurePost(@Nonnull final Contact newContact) {
+        return futureSend(HttpMethod.POST, newContact);
     }
 
     /**
@@ -128,10 +133,11 @@ public class ContactRequest extends BaseRequest<Contact> {
      * Creates a Contact with a new object
      *
      * @param newContact the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Contact newContact, @Nonnull final ICallback<? super Contact> callback) {
-        send(HttpMethod.PUT, callback, newContact);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Contact> futurePut(@Nonnull final Contact newContact) {
+        return futureSend(HttpMethod.PUT, newContact);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidCompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
     /**
      * Gets the AndroidCompliancePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AndroidCompliancePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AndroidCompliancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AndroidCompliancePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AndroidCompliancePolicy with a source
      *
      * @param sourceAndroidCompliancePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AndroidCompliancePolicy sourceAndroidCompliancePolicy, @Nonnull final ICallback<? super AndroidCompliancePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceAndroidCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futurePatch(@Nonnull final AndroidCompliancePolicy sourceAndroidCompliancePolicy) {
+        return futureSend(HttpMethod.PATCH, sourceAndroidCompliancePolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * Creates a AndroidCompliancePolicy with a new object
      *
      * @param newAndroidCompliancePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AndroidCompliancePolicy newAndroidCompliancePolicy, @Nonnull final ICallback<? super AndroidCompliancePolicy> callback) {
-        send(HttpMethod.POST, callback, newAndroidCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futurePost(@Nonnull final AndroidCompliancePolicy newAndroidCompliancePolicy) {
+        return futureSend(HttpMethod.POST, newAndroidCompliancePolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * Creates a AndroidCompliancePolicy with a new object
      *
      * @param newAndroidCompliancePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AndroidCompliancePolicy newAndroidCompliancePolicy, @Nonnull final ICallback<? super AndroidCompliancePolicy> callback) {
-        send(HttpMethod.PUT, callback, newAndroidCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futurePut(@Nonnull final AndroidCompliancePolicy newAndroidCompliancePolicy) {
+        return futureSend(HttpMethod.PUT, newAndroidCompliancePolicy);
     }
 
     /**

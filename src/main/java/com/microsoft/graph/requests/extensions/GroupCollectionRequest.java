@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.GroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupCollectionRequest;
@@ -45,13 +43,14 @@ public class GroupCollectionRequest extends BaseEntityCollectionRequest<Group, G
     /**
      * Creates a new Group
      * @param newGroup the Group to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Group> futurePost(@Nonnull final Group newGroup) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newGroup, callback);
+            .futurePost(newGroup);
     }
 
     /**

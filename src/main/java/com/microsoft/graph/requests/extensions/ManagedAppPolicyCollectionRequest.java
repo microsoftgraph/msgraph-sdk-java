@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequest;
@@ -45,13 +43,14 @@ public class ManagedAppPolicyCollectionRequest extends BaseEntityCollectionReque
     /**
      * Creates a new ManagedAppPolicy
      * @param newManagedAppPolicy the ManagedAppPolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedAppPolicy newManagedAppPolicy, @Nonnull final ICallback<? super ManagedAppPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> futurePost(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedAppPolicy, callback);
+            .futurePost(newManagedAppPolicy);
     }
 
     /**

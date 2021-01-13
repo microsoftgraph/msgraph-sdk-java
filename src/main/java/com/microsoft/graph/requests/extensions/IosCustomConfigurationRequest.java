@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosCustomConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
     /**
      * Gets the IosCustomConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosCustomConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosCustomConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosCustomConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosCustomConfiguration with a source
      *
      * @param sourceIosCustomConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosCustomConfiguration sourceIosCustomConfiguration, @Nonnull final ICallback<? super IosCustomConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futurePatch(@Nonnull final IosCustomConfiguration sourceIosCustomConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceIosCustomConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * Creates a IosCustomConfiguration with a new object
      *
      * @param newIosCustomConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosCustomConfiguration newIosCustomConfiguration, @Nonnull final ICallback<? super IosCustomConfiguration> callback) {
-        send(HttpMethod.POST, callback, newIosCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futurePost(@Nonnull final IosCustomConfiguration newIosCustomConfiguration) {
+        return futureSend(HttpMethod.POST, newIosCustomConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * Creates a IosCustomConfiguration with a new object
      *
      * @param newIosCustomConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosCustomConfiguration newIosCustomConfiguration, @Nonnull final ICallback<? super IosCustomConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newIosCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futurePut(@Nonnull final IosCustomConfiguration newIosCustomConfiguration) {
+        return futureSend(HttpMethod.PUT, newIosCustomConfiguration);
     }
 
     /**

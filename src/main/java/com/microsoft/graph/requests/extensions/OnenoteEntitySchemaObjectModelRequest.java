@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteEntitySchemaObjectModel;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
     /**
      * Gets the OnenoteEntitySchemaObjectModel from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OnenoteEntitySchemaObjectModel delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OnenoteEntitySchemaObjectModel with a source
      *
      * @param sourceOnenoteEntitySchemaObjectModel the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel, @Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
-        send(HttpMethod.PATCH, callback, sourceOnenoteEntitySchemaObjectModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futurePatch(@Nonnull final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel) {
+        return futureSend(HttpMethod.PATCH, sourceOnenoteEntitySchemaObjectModel);
     }
 
     /**
@@ -114,10 +118,11 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
      * Creates a OnenoteEntitySchemaObjectModel with a new object
      *
      * @param newOnenoteEntitySchemaObjectModel the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, @Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
-        send(HttpMethod.POST, callback, newOnenoteEntitySchemaObjectModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futurePost(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) {
+        return futureSend(HttpMethod.POST, newOnenoteEntitySchemaObjectModel);
     }
 
     /**
@@ -136,10 +141,11 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
      * Creates a OnenoteEntitySchemaObjectModel with a new object
      *
      * @param newOnenoteEntitySchemaObjectModel the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, @Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
-        send(HttpMethod.PUT, callback, newOnenoteEntitySchemaObjectModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futurePut(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) {
+        return futureSend(HttpMethod.PUT, newOnenoteEntitySchemaObjectModel);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
@@ -43,10 +42,11 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
     /**
      * Gets the OnenoteSection from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OnenoteSection> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteSection> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -63,29 +63,33 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OnenoteSection> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteSection> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OnenoteSection delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OnenoteSection with a source
      *
      * @param sourceOnenoteSection the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OnenoteSection sourceOnenoteSection, @Nonnull final ICallback<? super OnenoteSection> callback) {
-        send(HttpMethod.PATCH, callback, sourceOnenoteSection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteSection> futurePatch(@Nonnull final OnenoteSection sourceOnenoteSection) {
+        return futureSend(HttpMethod.PATCH, sourceOnenoteSection);
     }
 
     /**
@@ -104,10 +108,11 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
      * Creates a OnenoteSection with a new object
      *
      * @param newOnenoteSection the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OnenoteSection newOnenoteSection, @Nonnull final ICallback<? super OnenoteSection> callback) {
-        send(HttpMethod.POST, callback, newOnenoteSection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteSection> futurePost(@Nonnull final OnenoteSection newOnenoteSection) {
+        return futureSend(HttpMethod.POST, newOnenoteSection);
     }
 
     /**
@@ -126,10 +131,11 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
      * Creates a OnenoteSection with a new object
      *
      * @param newOnenoteSection the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OnenoteSection newOnenoteSection, @Nonnull final ICallback<? super OnenoteSection> callback) {
-        send(HttpMethod.PUT, callback, newOnenoteSection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteSection> futurePut(@Nonnull final OnenoteSection newOnenoteSection) {
+        return futureSend(HttpMethod.PUT, newOnenoteSection);
     }
 
     /**

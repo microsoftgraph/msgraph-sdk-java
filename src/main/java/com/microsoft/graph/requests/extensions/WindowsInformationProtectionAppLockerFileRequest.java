@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
     /**
      * Gets the WindowsInformationProtectionAppLockerFile from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WindowsInformationProtectionAppLockerFile delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WindowsInformationProtectionAppLockerFile with a source
      *
      * @param sourceWindowsInformationProtectionAppLockerFile the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WindowsInformationProtectionAppLockerFile sourceWindowsInformationProtectionAppLockerFile, @Nonnull final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionAppLockerFile);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futurePatch(@Nonnull final WindowsInformationProtectionAppLockerFile sourceWindowsInformationProtectionAppLockerFile) {
+        return futureSend(HttpMethod.PATCH, sourceWindowsInformationProtectionAppLockerFile);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * Creates a WindowsInformationProtectionAppLockerFile with a new object
      *
      * @param newWindowsInformationProtectionAppLockerFile the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, @Nonnull final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
-        send(HttpMethod.POST, callback, newWindowsInformationProtectionAppLockerFile);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futurePost(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
+        return futureSend(HttpMethod.POST, newWindowsInformationProtectionAppLockerFile);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * Creates a WindowsInformationProtectionAppLockerFile with a new object
      *
      * @param newWindowsInformationProtectionAppLockerFile the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, @Nonnull final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
-        send(HttpMethod.PUT, callback, newWindowsInformationProtectionAppLockerFile);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futurePut(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
+        return futureSend(HttpMethod.PUT, newWindowsInformationProtectionAppLockerFile);
     }
 
     /**

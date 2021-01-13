@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartLegend;
 import com.microsoft.graph.requests.extensions.WorkbookChartLegendFormatRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
     /**
      * Gets the WorkbookChartLegend from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartLegend> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartLegend> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartLegend delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartLegend with a source
      *
      * @param sourceWorkbookChartLegend the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartLegend sourceWorkbookChartLegend, @Nonnull final ICallback<? super WorkbookChartLegend> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartLegend);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futurePatch(@Nonnull final WorkbookChartLegend sourceWorkbookChartLegend) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookChartLegend);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * Creates a WorkbookChartLegend with a new object
      *
      * @param newWorkbookChartLegend the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartLegend newWorkbookChartLegend, @Nonnull final ICallback<? super WorkbookChartLegend> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartLegend);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futurePost(@Nonnull final WorkbookChartLegend newWorkbookChartLegend) {
+        return futureSend(HttpMethod.POST, newWorkbookChartLegend);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * Creates a WorkbookChartLegend with a new object
      *
      * @param newWorkbookChartLegend the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartLegend newWorkbookChartLegend, @Nonnull final ICallback<? super WorkbookChartLegend> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartLegend);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futurePut(@Nonnull final WorkbookChartLegend newWorkbookChartLegend) {
+        return futureSend(HttpMethod.PUT, newWorkbookChartLegend);
     }
 
     /**

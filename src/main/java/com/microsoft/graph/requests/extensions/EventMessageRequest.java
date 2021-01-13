@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EventMessage;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
 import java.util.Arrays;
@@ -54,10 +53,11 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
     /**
      * Gets the EventMessage from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super EventMessage> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessage> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -74,29 +74,33 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super EventMessage> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessage> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public EventMessage delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this EventMessage with a source
      *
      * @param sourceEventMessage the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final EventMessage sourceEventMessage, @Nonnull final ICallback<? super EventMessage> callback) {
-        send(HttpMethod.PATCH, callback, sourceEventMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessage> futurePatch(@Nonnull final EventMessage sourceEventMessage) {
+        return futureSend(HttpMethod.PATCH, sourceEventMessage);
     }
 
     /**
@@ -115,10 +119,11 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * Creates a EventMessage with a new object
      *
      * @param newEventMessage the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final EventMessage newEventMessage, @Nonnull final ICallback<? super EventMessage> callback) {
-        send(HttpMethod.POST, callback, newEventMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessage> futurePost(@Nonnull final EventMessage newEventMessage) {
+        return futureSend(HttpMethod.POST, newEventMessage);
     }
 
     /**
@@ -137,10 +142,11 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * Creates a EventMessage with a new object
      *
      * @param newEventMessage the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EventMessage newEventMessage, @Nonnull final ICallback<? super EventMessage> callback) {
-        send(HttpMethod.PUT, callback, newEventMessage);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessage> futurePut(@Nonnull final EventMessage newEventMessage) {
+        return futureSend(HttpMethod.PUT, newEventMessage);
     }
 
     /**

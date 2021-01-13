@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
     /**
      * Gets the TokenLifetimePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TokenLifetimePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TokenLifetimePolicy with a source
      *
      * @param sourceTokenLifetimePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TokenLifetimePolicy sourceTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceTokenLifetimePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futurePatch(@Nonnull final TokenLifetimePolicy sourceTokenLifetimePolicy) {
+        return futureSend(HttpMethod.PATCH, sourceTokenLifetimePolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * Creates a TokenLifetimePolicy with a new object
      *
      * @param newTokenLifetimePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.POST, callback, newTokenLifetimePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futurePost(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
+        return futureSend(HttpMethod.POST, newTokenLifetimePolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * Creates a TokenLifetimePolicy with a new object
      *
      * @param newTokenLifetimePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
-        send(HttpMethod.PUT, callback, newTokenLifetimePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futurePut(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
+        return futureSend(HttpMethod.PUT, newTokenLifetimePolicy);
     }
 
     /**

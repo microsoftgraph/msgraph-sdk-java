@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SchedulingGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
     /**
      * Gets the SchedulingGroup from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SchedulingGroup> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SchedulingGroup> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SchedulingGroup delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SchedulingGroup with a source
      *
      * @param sourceSchedulingGroup the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SchedulingGroup sourceSchedulingGroup, @Nonnull final ICallback<? super SchedulingGroup> callback) {
-        send(HttpMethod.PATCH, callback, sourceSchedulingGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> futurePatch(@Nonnull final SchedulingGroup sourceSchedulingGroup) {
+        return futureSend(HttpMethod.PATCH, sourceSchedulingGroup);
     }
 
     /**
@@ -99,10 +103,11 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
      * Creates a SchedulingGroup with a new object
      *
      * @param newSchedulingGroup the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SchedulingGroup newSchedulingGroup, @Nonnull final ICallback<? super SchedulingGroup> callback) {
-        send(HttpMethod.POST, callback, newSchedulingGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> futurePost(@Nonnull final SchedulingGroup newSchedulingGroup) {
+        return futureSend(HttpMethod.POST, newSchedulingGroup);
     }
 
     /**
@@ -121,10 +126,11 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
      * Creates a SchedulingGroup with a new object
      *
      * @param newSchedulingGroup the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SchedulingGroup newSchedulingGroup, @Nonnull final ICallback<? super SchedulingGroup> callback) {
-        send(HttpMethod.PUT, callback, newSchedulingGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> futurePut(@Nonnull final SchedulingGroup newSchedulingGroup) {
+        return futureSend(HttpMethod.PUT, newSchedulingGroup);
     }
 
     /**

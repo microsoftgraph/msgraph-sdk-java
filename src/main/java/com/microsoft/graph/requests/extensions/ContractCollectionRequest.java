@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Contract;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ContractCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContractCollectionRequest;
@@ -43,13 +41,14 @@ public class ContractCollectionRequest extends BaseEntityCollectionRequest<Contr
     /**
      * Creates a new Contract
      * @param newContract the Contract to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Contract newContract, @Nonnull final ICallback<? super Contract> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Contract> futurePost(@Nonnull final Contract newContract) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ContractRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ContractRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newContract, callback);
+            .futurePost(newContract);
     }
 
     /**

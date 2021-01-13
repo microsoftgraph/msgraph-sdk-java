@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.models.extensions.LocalizedNotificationMessage;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequest;
@@ -44,13 +42,14 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseEntityCol
     /**
      * Creates a new LocalizedNotificationMessage
      * @param newLocalizedNotificationMessage the LocalizedNotificationMessage to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage, @Nonnull final ICallback<? super LocalizedNotificationMessage> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futurePost(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newLocalizedNotificationMessage, callback);
+            .futurePost(newLocalizedNotificationMessage);
     }
 
     /**

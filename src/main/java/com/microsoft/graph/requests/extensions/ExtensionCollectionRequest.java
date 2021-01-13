@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTask;
 import com.microsoft.graph.models.extensions.Extension;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequest;
@@ -44,13 +42,14 @@ public class ExtensionCollectionRequest extends BaseEntityCollectionRequest<Exte
     /**
      * Creates a new Extension
      * @param newExtension the Extension to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Extension newExtension, @Nonnull final ICallback<? super Extension> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Extension> futurePost(@Nonnull final Extension newExtension) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newExtension, callback);
+            .futurePost(newExtension);
     }
 
     /**

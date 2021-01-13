@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Device;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
@@ -42,10 +41,11 @@ public class DeviceRequest extends BaseRequest<Device> {
     /**
      * Gets the Device from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Device> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Device> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class DeviceRequest extends BaseRequest<Device> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Device> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Device> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Device delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Device with a source
      *
      * @param sourceDevice the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Device sourceDevice, @Nonnull final ICallback<? super Device> callback) {
-        send(HttpMethod.PATCH, callback, sourceDevice);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Device> futurePatch(@Nonnull final Device sourceDevice) {
+        return futureSend(HttpMethod.PATCH, sourceDevice);
     }
 
     /**
@@ -103,10 +107,11 @@ public class DeviceRequest extends BaseRequest<Device> {
      * Creates a Device with a new object
      *
      * @param newDevice the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Device newDevice, @Nonnull final ICallback<? super Device> callback) {
-        send(HttpMethod.POST, callback, newDevice);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Device> futurePost(@Nonnull final Device newDevice) {
+        return futureSend(HttpMethod.POST, newDevice);
     }
 
     /**
@@ -125,10 +130,11 @@ public class DeviceRequest extends BaseRequest<Device> {
      * Creates a Device with a new object
      *
      * @param newDevice the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Device newDevice, @Nonnull final ICallback<? super Device> callback) {
-        send(HttpMethod.PUT, callback, newDevice);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Device> futurePut(@Nonnull final Device newDevice) {
+        return futureSend(HttpMethod.PUT, newDevice);
     }
 
     /**

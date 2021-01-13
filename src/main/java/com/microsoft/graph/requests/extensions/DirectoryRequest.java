@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Directory;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
@@ -42,10 +41,11 @@ public class DirectoryRequest extends BaseRequest<Directory> {
     /**
      * Gets the Directory from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Directory> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Directory> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class DirectoryRequest extends BaseRequest<Directory> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Directory> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Directory> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Directory delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Directory with a source
      *
      * @param sourceDirectory the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Directory sourceDirectory, @Nonnull final ICallback<? super Directory> callback) {
-        send(HttpMethod.PATCH, callback, sourceDirectory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Directory> futurePatch(@Nonnull final Directory sourceDirectory) {
+        return futureSend(HttpMethod.PATCH, sourceDirectory);
     }
 
     /**
@@ -103,10 +107,11 @@ public class DirectoryRequest extends BaseRequest<Directory> {
      * Creates a Directory with a new object
      *
      * @param newDirectory the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Directory newDirectory, @Nonnull final ICallback<? super Directory> callback) {
-        send(HttpMethod.POST, callback, newDirectory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Directory> futurePost(@Nonnull final Directory newDirectory) {
+        return futureSend(HttpMethod.POST, newDirectory);
     }
 
     /**
@@ -125,10 +130,11 @@ public class DirectoryRequest extends BaseRequest<Directory> {
      * Creates a Directory with a new object
      *
      * @param newDirectory the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Directory newDirectory, @Nonnull final ICallback<? super Directory> callback) {
-        send(HttpMethod.PUT, callback, newDirectory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Directory> futurePut(@Nonnull final Directory newDirectory) {
+        return futureSend(HttpMethod.PUT, newDirectory);
     }
 
     /**

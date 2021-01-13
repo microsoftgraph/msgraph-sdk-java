@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CalendarGroup;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
@@ -40,10 +39,11 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
     /**
      * Gets the CalendarGroup from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super CalendarGroup> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarGroup> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super CalendarGroup> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarGroup> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public CalendarGroup delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this CalendarGroup with a source
      *
      * @param sourceCalendarGroup the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final CalendarGroup sourceCalendarGroup, @Nonnull final ICallback<? super CalendarGroup> callback) {
-        send(HttpMethod.PATCH, callback, sourceCalendarGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarGroup> futurePatch(@Nonnull final CalendarGroup sourceCalendarGroup) {
+        return futureSend(HttpMethod.PATCH, sourceCalendarGroup);
     }
 
     /**
@@ -101,10 +105,11 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
      * Creates a CalendarGroup with a new object
      *
      * @param newCalendarGroup the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final CalendarGroup newCalendarGroup, @Nonnull final ICallback<? super CalendarGroup> callback) {
-        send(HttpMethod.POST, callback, newCalendarGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarGroup> futurePost(@Nonnull final CalendarGroup newCalendarGroup) {
+        return futureSend(HttpMethod.POST, newCalendarGroup);
     }
 
     /**
@@ -123,10 +128,11 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
      * Creates a CalendarGroup with a new object
      *
      * @param newCalendarGroup the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CalendarGroup newCalendarGroup, @Nonnull final ICallback<? super CalendarGroup> callback) {
-        send(HttpMethod.PUT, callback, newCalendarGroup);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarGroup> futurePut(@Nonnull final CalendarGroup newCalendarGroup) {
+        return futureSend(HttpMethod.PUT, newCalendarGroup);
     }
 
     /**

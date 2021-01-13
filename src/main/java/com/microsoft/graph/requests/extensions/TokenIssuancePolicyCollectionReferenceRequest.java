@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
     /**
      * Creates a new TokenIssuancePolicy
      * @param newTokenIssuancePolicy the TokenIssuancePolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePost(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);
-        new TokenIssuancePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TokenIssuancePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTokenIssuancePolicy, body, callback);
+            .futurePost(newTokenIssuancePolicy, body);
     }
 
     /**

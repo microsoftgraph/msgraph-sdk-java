@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosUpdateDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
     /**
      * Gets the IosUpdateDeviceStatus from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosUpdateDeviceStatus delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosUpdateDeviceStatus with a source
      *
      * @param sourceIosUpdateDeviceStatus the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus, @Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosUpdateDeviceStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futurePatch(@Nonnull final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus) {
+        return futureSend(HttpMethod.PATCH, sourceIosUpdateDeviceStatus);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
      * Creates a IosUpdateDeviceStatus with a new object
      *
      * @param newIosUpdateDeviceStatus the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus, @Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
-        send(HttpMethod.POST, callback, newIosUpdateDeviceStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futurePost(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
+        return futureSend(HttpMethod.POST, newIosUpdateDeviceStatus);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
      * Creates a IosUpdateDeviceStatus with a new object
      *
      * @param newIosUpdateDeviceStatus the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus, @Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
-        send(HttpMethod.PUT, callback, newIosUpdateDeviceStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futurePut(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
+        return futureSend(HttpMethod.PUT, newIosUpdateDeviceStatus);
     }
 
     /**

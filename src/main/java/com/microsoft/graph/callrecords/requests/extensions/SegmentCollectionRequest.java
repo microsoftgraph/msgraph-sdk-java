@@ -7,7 +7,6 @@ package com.microsoft.graph.callrecords.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import com.microsoft.graph.callrecords.models.extensions.Segment;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequest;
@@ -44,13 +42,14 @@ public class SegmentCollectionRequest extends BaseEntityCollectionRequest<Segmen
     /**
      * Creates a new Segment
      * @param newSegment the Segment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Segment newSegment, @Nonnull final ICallback<? super Segment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Segment> futurePost(@Nonnull final Segment newSegment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSegment, callback);
+            .futurePost(newSegment);
     }
 
     /**

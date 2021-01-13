@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppProtection;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
@@ -54,10 +53,11 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
     /**
      * Gets the ManagedAppProtection from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAppProtection> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -74,29 +74,33 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAppProtection> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAppProtection delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAppProtection with a source
      *
      * @param sourceManagedAppProtection the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAppProtection sourceManagedAppProtection, @Nonnull final ICallback<? super ManagedAppProtection> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAppProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futurePatch(@Nonnull final ManagedAppProtection sourceManagedAppProtection) {
+        return futureSend(HttpMethod.PATCH, sourceManagedAppProtection);
     }
 
     /**
@@ -115,10 +119,11 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
      * Creates a ManagedAppProtection with a new object
      *
      * @param newManagedAppProtection the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAppProtection newManagedAppProtection, @Nonnull final ICallback<? super ManagedAppProtection> callback) {
-        send(HttpMethod.POST, callback, newManagedAppProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futurePost(@Nonnull final ManagedAppProtection newManagedAppProtection) {
+        return futureSend(HttpMethod.POST, newManagedAppProtection);
     }
 
     /**
@@ -137,10 +142,11 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
      * Creates a ManagedAppProtection with a new object
      *
      * @param newManagedAppProtection the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppProtection newManagedAppProtection, @Nonnull final ICallback<? super ManagedAppProtection> callback) {
-        send(HttpMethod.PUT, callback, newManagedAppProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futurePut(@Nonnull final ManagedAppProtection newManagedAppProtection) {
+        return futureSend(HttpMethod.PUT, newManagedAppProtection);
     }
 
     /**

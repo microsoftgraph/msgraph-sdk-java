@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ColumnLink;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
     /**
      * Gets the ColumnLink from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ColumnLink> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnLink> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ColumnLink> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnLink> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ColumnLink delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ColumnLink with a source
      *
      * @param sourceColumnLink the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ColumnLink sourceColumnLink, @Nonnull final ICallback<? super ColumnLink> callback) {
-        send(HttpMethod.PATCH, callback, sourceColumnLink);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnLink> futurePatch(@Nonnull final ColumnLink sourceColumnLink) {
+        return futureSend(HttpMethod.PATCH, sourceColumnLink);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
      * Creates a ColumnLink with a new object
      *
      * @param newColumnLink the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ColumnLink newColumnLink, @Nonnull final ICallback<? super ColumnLink> callback) {
-        send(HttpMethod.POST, callback, newColumnLink);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnLink> futurePost(@Nonnull final ColumnLink newColumnLink) {
+        return futureSend(HttpMethod.POST, newColumnLink);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
      * Creates a ColumnLink with a new object
      *
      * @param newColumnLink the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ColumnLink newColumnLink, @Nonnull final ICallback<? super ColumnLink> callback) {
-        send(HttpMethod.PUT, callback, newColumnLink);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ColumnLink> futurePut(@Nonnull final ColumnLink newColumnLink) {
+        return futureSend(HttpMethod.PUT, newColumnLink);
     }
 
     /**

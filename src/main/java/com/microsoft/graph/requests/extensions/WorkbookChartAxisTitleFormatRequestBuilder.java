@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxisTitleFormat;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;

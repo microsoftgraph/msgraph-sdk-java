@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequest;
@@ -44,13 +42,14 @@ public class WorkbookRangeBorderCollectionRequest extends BaseEntityCollectionRe
     /**
      * Creates a new WorkbookRangeBorder
      * @param newWorkbookRangeBorder the WorkbookRangeBorder to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder, @Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> futurePost(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookRangeBorder, callback);
+            .futurePost(newWorkbookRangeBorder);
     }
 
     /**

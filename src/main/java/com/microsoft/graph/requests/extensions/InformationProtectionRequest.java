@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtection;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
@@ -40,10 +39,11 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
     /**
      * Gets the InformationProtection from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super InformationProtection> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InformationProtection> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super InformationProtection> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InformationProtection> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public InformationProtection delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this InformationProtection with a source
      *
      * @param sourceInformationProtection the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final InformationProtection sourceInformationProtection, @Nonnull final ICallback<? super InformationProtection> callback) {
-        send(HttpMethod.PATCH, callback, sourceInformationProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InformationProtection> futurePatch(@Nonnull final InformationProtection sourceInformationProtection) {
+        return futureSend(HttpMethod.PATCH, sourceInformationProtection);
     }
 
     /**
@@ -101,10 +105,11 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
      * Creates a InformationProtection with a new object
      *
      * @param newInformationProtection the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final InformationProtection newInformationProtection, @Nonnull final ICallback<? super InformationProtection> callback) {
-        send(HttpMethod.POST, callback, newInformationProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InformationProtection> futurePost(@Nonnull final InformationProtection newInformationProtection) {
+        return futureSend(HttpMethod.POST, newInformationProtection);
     }
 
     /**
@@ -123,10 +128,11 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
      * Creates a InformationProtection with a new object
      *
      * @param newInformationProtection the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final InformationProtection newInformationProtection, @Nonnull final ICallback<? super InformationProtection> callback) {
-        send(HttpMethod.PUT, callback, newInformationProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InformationProtection> futurePut(@Nonnull final InformationProtection newInformationProtection) {
+        return futureSend(HttpMethod.PUT, newInformationProtection);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartFill;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
     /**
      * Gets the WorkbookChartFill from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartFill> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFill> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartFill> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFill> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartFill delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartFill with a source
      *
      * @param sourceWorkbookChartFill the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartFill sourceWorkbookChartFill, @Nonnull final ICallback<? super WorkbookChartFill> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartFill);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFill> futurePatch(@Nonnull final WorkbookChartFill sourceWorkbookChartFill) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookChartFill);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * Creates a WorkbookChartFill with a new object
      *
      * @param newWorkbookChartFill the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartFill newWorkbookChartFill, @Nonnull final ICallback<? super WorkbookChartFill> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartFill);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFill> futurePost(@Nonnull final WorkbookChartFill newWorkbookChartFill) {
+        return futureSend(HttpMethod.POST, newWorkbookChartFill);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WorkbookChartFillRequest extends BaseRequest<WorkbookChartFill> {
      * Creates a WorkbookChartFill with a new object
      *
      * @param newWorkbookChartFill the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartFill newWorkbookChartFill, @Nonnull final ICallback<? super WorkbookChartFill> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartFill);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFill> futurePut(@Nonnull final WorkbookChartFill newWorkbookChartFill) {
+        return futureSend(HttpMethod.PUT, newWorkbookChartFill);
     }
 
     /**

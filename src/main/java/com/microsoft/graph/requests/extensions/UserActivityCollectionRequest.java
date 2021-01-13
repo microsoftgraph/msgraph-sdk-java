@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.UserActivity;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionRequest;
@@ -44,13 +42,14 @@ public class UserActivityCollectionRequest extends BaseEntityCollectionRequest<U
     /**
      * Creates a new UserActivity
      * @param newUserActivity the UserActivity to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final UserActivity newUserActivity, @Nonnull final ICallback<? super UserActivity> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserActivity> futurePost(@Nonnull final UserActivity newUserActivity) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new UserActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new UserActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newUserActivity, callback);
+            .futurePost(newUserActivity);
     }
 
     /**

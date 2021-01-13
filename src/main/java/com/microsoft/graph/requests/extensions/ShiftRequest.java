@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Shift;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ShiftRequest extends BaseRequest<Shift> {
     /**
      * Gets the Shift from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Shift> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Shift> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ShiftRequest extends BaseRequest<Shift> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Shift> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Shift> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Shift delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Shift with a source
      *
      * @param sourceShift the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Shift sourceShift, @Nonnull final ICallback<? super Shift> callback) {
-        send(HttpMethod.PATCH, callback, sourceShift);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Shift> futurePatch(@Nonnull final Shift sourceShift) {
+        return futureSend(HttpMethod.PATCH, sourceShift);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ShiftRequest extends BaseRequest<Shift> {
      * Creates a Shift with a new object
      *
      * @param newShift the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Shift newShift, @Nonnull final ICallback<? super Shift> callback) {
-        send(HttpMethod.POST, callback, newShift);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Shift> futurePost(@Nonnull final Shift newShift) {
+        return futureSend(HttpMethod.POST, newShift);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ShiftRequest extends BaseRequest<Shift> {
      * Creates a Shift with a new object
      *
      * @param newShift the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Shift newShift, @Nonnull final ICallback<? super Shift> callback) {
-        send(HttpMethod.PUT, callback, newShift);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Shift> futurePut(@Nonnull final Shift newShift) {
+        return futureSend(HttpMethod.PUT, newShift);
     }
 
     /**

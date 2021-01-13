@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsUnavailableRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
     /**
      * Gets the DomainDnsUnavailableRecord from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DomainDnsUnavailableRecord> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DomainDnsUnavailableRecord> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DomainDnsUnavailableRecord delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DomainDnsUnavailableRecord with a source
      *
      * @param sourceDomainDnsUnavailableRecord the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord, @Nonnull final ICallback<? super DomainDnsUnavailableRecord> callback) {
-        send(HttpMethod.PATCH, callback, sourceDomainDnsUnavailableRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futurePatch(@Nonnull final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord) {
+        return futureSend(HttpMethod.PATCH, sourceDomainDnsUnavailableRecord);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
      * Creates a DomainDnsUnavailableRecord with a new object
      *
      * @param newDomainDnsUnavailableRecord the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, @Nonnull final ICallback<? super DomainDnsUnavailableRecord> callback) {
-        send(HttpMethod.POST, callback, newDomainDnsUnavailableRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futurePost(@Nonnull final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) {
+        return futureSend(HttpMethod.POST, newDomainDnsUnavailableRecord);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
      * Creates a DomainDnsUnavailableRecord with a new object
      *
      * @param newDomainDnsUnavailableRecord the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, @Nonnull final ICallback<? super DomainDnsUnavailableRecord> callback) {
-        send(HttpMethod.PUT, callback, newDomainDnsUnavailableRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futurePut(@Nonnull final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) {
+        return futureSend(HttpMethod.PUT, newDomainDnsUnavailableRecord);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
@@ -45,10 +44,11 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
     /**
      * Gets the TargetedManagedAppConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -65,29 +65,33 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TargetedManagedAppConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TargetedManagedAppConfiguration with a source
      *
      * @param sourceTargetedManagedAppConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration, @Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceTargetedManagedAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futurePatch(@Nonnull final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration) {
+        return futureSend(HttpMethod.PATCH, sourceTargetedManagedAppConfiguration);
     }
 
     /**
@@ -106,10 +110,11 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * Creates a TargetedManagedAppConfiguration with a new object
      *
      * @param newTargetedManagedAppConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, @Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
-        send(HttpMethod.POST, callback, newTargetedManagedAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futurePost(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
+        return futureSend(HttpMethod.POST, newTargetedManagedAppConfiguration);
     }
 
     /**
@@ -128,10 +133,11 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * Creates a TargetedManagedAppConfiguration with a new object
      *
      * @param newTargetedManagedAppConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, @Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newTargetedManagedAppConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futurePut(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
+        return futureSend(HttpMethod.PUT, newTargetedManagedAppConfiguration);
     }
 
     /**

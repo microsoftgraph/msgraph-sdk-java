@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosVppApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
     /**
      * Gets the IosVppApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosVppApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppApp> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosVppApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppApp> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosVppApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosVppApp with a source
      *
      * @param sourceIosVppApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosVppApp sourceIosVppApp, @Nonnull final ICallback<? super IosVppApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosVppApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppApp> futurePatch(@Nonnull final IosVppApp sourceIosVppApp) {
+        return futureSend(HttpMethod.PATCH, sourceIosVppApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
      * Creates a IosVppApp with a new object
      *
      * @param newIosVppApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosVppApp newIosVppApp, @Nonnull final ICallback<? super IosVppApp> callback) {
-        send(HttpMethod.POST, callback, newIosVppApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppApp> futurePost(@Nonnull final IosVppApp newIosVppApp) {
+        return futureSend(HttpMethod.POST, newIosVppApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
      * Creates a IosVppApp with a new object
      *
      * @param newIosVppApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosVppApp newIosVppApp, @Nonnull final ICallback<? super IosVppApp> callback) {
-        send(HttpMethod.PUT, callback, newIosVppApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppApp> futurePut(@Nonnull final IosVppApp newIosVppApp) {
+        return futureSend(HttpMethod.PUT, newIosVppApp);
     }
 
     /**

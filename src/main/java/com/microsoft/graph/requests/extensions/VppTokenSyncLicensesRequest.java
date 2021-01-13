@@ -11,8 +11,6 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -34,11 +32,12 @@ public class VppTokenSyncLicensesRequest extends BaseRequest<VppToken> {
     }
 
     /**
-     * Invokes the method and invokes the callback with the result
-     * @param callback the callback to be called after success or failure
+     * Invokes the method and returns a future with the result
+     * @return a future with the result
      */
-    public void post(@Nonnull final ICallback<? super VppToken> callback) {
-        send(HttpMethod.POST, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<VppToken> futurePost() {
+        return futureSend(HttpMethod.POST, null);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
 import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionResponse;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequest;
@@ -44,13 +42,14 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseEntityColl
     /**
      * Creates a new PermissionGrantConditionSet
      * @param newPermissionGrantConditionSet the PermissionGrantConditionSet to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet, @Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> futurePost(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newPermissionGrantConditionSet, callback);
+            .futurePost(newPermissionGrantConditionSet);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartFont;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
     /**
      * Gets the WorkbookChartFont from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartFont> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartFont> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartFont delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartFont with a source
      *
      * @param sourceWorkbookChartFont the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartFont sourceWorkbookChartFont, @Nonnull final ICallback<? super WorkbookChartFont> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartFont);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futurePatch(@Nonnull final WorkbookChartFont sourceWorkbookChartFont) {
+        return futureSend(HttpMethod.PATCH, sourceWorkbookChartFont);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * Creates a WorkbookChartFont with a new object
      *
      * @param newWorkbookChartFont the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartFont newWorkbookChartFont, @Nonnull final ICallback<? super WorkbookChartFont> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartFont);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futurePost(@Nonnull final WorkbookChartFont newWorkbookChartFont) {
+        return futureSend(HttpMethod.POST, newWorkbookChartFont);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * Creates a WorkbookChartFont with a new object
      *
      * @param newWorkbookChartFont the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartFont newWorkbookChartFont, @Nonnull final ICallback<? super WorkbookChartFont> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartFont);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futurePut(@Nonnull final WorkbookChartFont newWorkbookChartFont) {
+        return futureSend(HttpMethod.PUT, newWorkbookChartFont);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequest;
@@ -44,13 +42,14 @@ public class WorkbookRangeViewCollectionRequest extends BaseEntityCollectionRequ
     /**
      * Creates a new WorkbookRangeView
      * @param newWorkbookRangeView the WorkbookRangeView to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookRangeView newWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> futurePost(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookRangeView, callback);
+            .futurePost(newWorkbookRangeView);
     }
 
     /**

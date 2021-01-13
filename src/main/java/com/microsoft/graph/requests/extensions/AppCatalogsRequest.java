@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppCatalogs;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppRequestBuilder;
@@ -40,10 +39,11 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
     /**
      * Gets the AppCatalogs from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AppCatalogs> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppCatalogs> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AppCatalogs> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppCatalogs> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AppCatalogs delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AppCatalogs with a source
      *
      * @param sourceAppCatalogs the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AppCatalogs sourceAppCatalogs, @Nonnull final ICallback<? super AppCatalogs> callback) {
-        send(HttpMethod.PATCH, callback, sourceAppCatalogs);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppCatalogs> futurePatch(@Nonnull final AppCatalogs sourceAppCatalogs) {
+        return futureSend(HttpMethod.PATCH, sourceAppCatalogs);
     }
 
     /**
@@ -101,10 +105,11 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
      * Creates a AppCatalogs with a new object
      *
      * @param newAppCatalogs the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AppCatalogs newAppCatalogs, @Nonnull final ICallback<? super AppCatalogs> callback) {
-        send(HttpMethod.POST, callback, newAppCatalogs);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppCatalogs> futurePost(@Nonnull final AppCatalogs newAppCatalogs) {
+        return futureSend(HttpMethod.POST, newAppCatalogs);
     }
 
     /**
@@ -123,10 +128,11 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
      * Creates a AppCatalogs with a new object
      *
      * @param newAppCatalogs the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AppCatalogs newAppCatalogs, @Nonnull final ICallback<? super AppCatalogs> callback) {
-        send(HttpMethod.PUT, callback, newAppCatalogs);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppCatalogs> futurePut(@Nonnull final AppCatalogs newAppCatalogs) {
+        return futureSend(HttpMethod.PUT, newAppCatalogs);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequest;
@@ -44,13 +42,14 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseEnt
     /**
      * Creates a new TermsAndConditionsAcceptanceStatus
      * @param newTermsAndConditionsAcceptanceStatus the TermsAndConditionsAcceptanceStatus to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, @Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> futurePost(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTermsAndConditionsAcceptanceStatus, callback);
+            .futurePost(newTermsAndConditionsAcceptanceStatus);
     }
 
     /**

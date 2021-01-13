@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedIOSStoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
     /**
      * Gets the ManagedIOSStoreApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedIOSStoreApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedIOSStoreApp with a source
      *
      * @param sourceManagedIOSStoreApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedIOSStoreApp sourceManagedIOSStoreApp, @Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedIOSStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futurePatch(@Nonnull final ManagedIOSStoreApp sourceManagedIOSStoreApp) {
+        return futureSend(HttpMethod.PATCH, sourceManagedIOSStoreApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * Creates a ManagedIOSStoreApp with a new object
      *
      * @param newManagedIOSStoreApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp, @Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
-        send(HttpMethod.POST, callback, newManagedIOSStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futurePost(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp) {
+        return futureSend(HttpMethod.POST, newManagedIOSStoreApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * Creates a ManagedIOSStoreApp with a new object
      *
      * @param newManagedIOSStoreApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp, @Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
-        send(HttpMethod.PUT, callback, newManagedIOSStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futurePut(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp) {
+        return futureSend(HttpMethod.PUT, newManagedIOSStoreApp);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class TrendingRequest extends BaseRequest<Trending> {
     /**
      * Gets the Trending from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Trending> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Trending> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class TrendingRequest extends BaseRequest<Trending> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Trending> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Trending> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Trending delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Trending with a source
      *
      * @param sourceTrending the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Trending sourceTrending, @Nonnull final ICallback<? super Trending> callback) {
-        send(HttpMethod.PATCH, callback, sourceTrending);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Trending> futurePatch(@Nonnull final Trending sourceTrending) {
+        return futureSend(HttpMethod.PATCH, sourceTrending);
     }
 
     /**
@@ -100,10 +104,11 @@ public class TrendingRequest extends BaseRequest<Trending> {
      * Creates a Trending with a new object
      *
      * @param newTrending the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Trending newTrending, @Nonnull final ICallback<? super Trending> callback) {
-        send(HttpMethod.POST, callback, newTrending);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Trending> futurePost(@Nonnull final Trending newTrending) {
+        return futureSend(HttpMethod.POST, newTrending);
     }
 
     /**
@@ -122,10 +127,11 @@ public class TrendingRequest extends BaseRequest<Trending> {
      * Creates a Trending with a new object
      *
      * @param newTrending the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Trending newTrending, @Nonnull final ICallback<? super Trending> callback) {
-        send(HttpMethod.PUT, callback, newTrending);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Trending> futurePut(@Nonnull final Trending newTrending) {
+        return futureSend(HttpMethod.PUT, newTrending);
     }
 
     /**

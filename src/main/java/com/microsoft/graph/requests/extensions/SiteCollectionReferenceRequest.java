@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
@@ -49,14 +48,15 @@ public class SiteCollectionReferenceRequest extends BaseCollectionWithReferences
     /**
      * Creates a new Site
      * @param newSite the Site to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Site newSite, @Nonnull final ICallback<? super Site> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Site> futurePost(@Nonnull final Site newSite) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
-        new SiteWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SiteWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSite, body, callback);
+            .futurePost(newSite, body);
     }
 
     /**

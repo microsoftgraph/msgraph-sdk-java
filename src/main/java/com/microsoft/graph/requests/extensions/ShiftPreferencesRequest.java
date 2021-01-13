@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ShiftPreferences;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
     /**
      * Gets the ShiftPreferences from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ShiftPreferences> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ShiftPreferences> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ShiftPreferences delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ShiftPreferences with a source
      *
      * @param sourceShiftPreferences the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ShiftPreferences sourceShiftPreferences, @Nonnull final ICallback<? super ShiftPreferences> callback) {
-        send(HttpMethod.PATCH, callback, sourceShiftPreferences);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> futurePatch(@Nonnull final ShiftPreferences sourceShiftPreferences) {
+        return futureSend(HttpMethod.PATCH, sourceShiftPreferences);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * Creates a ShiftPreferences with a new object
      *
      * @param newShiftPreferences the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ShiftPreferences newShiftPreferences, @Nonnull final ICallback<? super ShiftPreferences> callback) {
-        send(HttpMethod.POST, callback, newShiftPreferences);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> futurePost(@Nonnull final ShiftPreferences newShiftPreferences) {
+        return futureSend(HttpMethod.POST, newShiftPreferences);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * Creates a ShiftPreferences with a new object
      *
      * @param newShiftPreferences the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ShiftPreferences newShiftPreferences, @Nonnull final ICallback<? super ShiftPreferences> callback) {
-        send(HttpMethod.PUT, callback, newShiftPreferences);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> futurePut(@Nonnull final ShiftPreferences newShiftPreferences) {
+        return futureSend(HttpMethod.PUT, newShiftPreferences);
     }
 
     /**

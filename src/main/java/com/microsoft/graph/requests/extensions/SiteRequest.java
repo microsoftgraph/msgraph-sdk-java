@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
@@ -53,10 +52,11 @@ public class SiteRequest extends BaseRequest<Site> {
     /**
      * Gets the Site from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Site> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Site> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class SiteRequest extends BaseRequest<Site> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Site> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Site> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Site delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Site with a source
      *
      * @param sourceSite the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Site sourceSite, @Nonnull final ICallback<? super Site> callback) {
-        send(HttpMethod.PATCH, callback, sourceSite);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Site> futurePatch(@Nonnull final Site sourceSite) {
+        return futureSend(HttpMethod.PATCH, sourceSite);
     }
 
     /**
@@ -114,10 +118,11 @@ public class SiteRequest extends BaseRequest<Site> {
      * Creates a Site with a new object
      *
      * @param newSite the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Site newSite, @Nonnull final ICallback<? super Site> callback) {
-        send(HttpMethod.POST, callback, newSite);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Site> futurePost(@Nonnull final Site newSite) {
+        return futureSend(HttpMethod.POST, newSite);
     }
 
     /**
@@ -136,10 +141,11 @@ public class SiteRequest extends BaseRequest<Site> {
      * Creates a Site with a new object
      *
      * @param newSite the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Site newSite, @Nonnull final ICallback<? super Site> callback) {
-        send(HttpMethod.PUT, callback, newSite);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Site> futurePut(@Nonnull final Site newSite) {
+        return futureSend(HttpMethod.PUT, newSite);
     }
 
     /**

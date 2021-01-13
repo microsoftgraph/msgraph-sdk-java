@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IpNamedLocation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
     /**
      * Gets the IpNamedLocation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IpNamedLocation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IpNamedLocation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IpNamedLocation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IpNamedLocation with a source
      *
      * @param sourceIpNamedLocation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IpNamedLocation sourceIpNamedLocation, @Nonnull final ICallback<? super IpNamedLocation> callback) {
-        send(HttpMethod.PATCH, callback, sourceIpNamedLocation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> futurePatch(@Nonnull final IpNamedLocation sourceIpNamedLocation) {
+        return futureSend(HttpMethod.PATCH, sourceIpNamedLocation);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * Creates a IpNamedLocation with a new object
      *
      * @param newIpNamedLocation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IpNamedLocation newIpNamedLocation, @Nonnull final ICallback<? super IpNamedLocation> callback) {
-        send(HttpMethod.POST, callback, newIpNamedLocation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> futurePost(@Nonnull final IpNamedLocation newIpNamedLocation) {
+        return futureSend(HttpMethod.POST, newIpNamedLocation);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * Creates a IpNamedLocation with a new object
      *
      * @param newIpNamedLocation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IpNamedLocation newIpNamedLocation, @Nonnull final ICallback<? super IpNamedLocation> callback) {
-        send(HttpMethod.PUT, callback, newIpNamedLocation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> futurePut(@Nonnull final IpNamedLocation newIpNamedLocation) {
+        return futureSend(HttpMethod.PUT, newIpNamedLocation);
     }
 
     /**

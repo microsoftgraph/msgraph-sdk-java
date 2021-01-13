@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleDefinition;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
@@ -55,10 +54,11 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
     /**
      * Gets the RoleDefinition from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleDefinition> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -75,29 +75,33 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleDefinition> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public RoleDefinition delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this RoleDefinition with a source
      *
      * @param sourceRoleDefinition the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final RoleDefinition sourceRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.PATCH, callback, sourceRoleDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleDefinition> futurePatch(@Nonnull final RoleDefinition sourceRoleDefinition) {
+        return futureSend(HttpMethod.PATCH, sourceRoleDefinition);
     }
 
     /**
@@ -116,10 +120,11 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
      * Creates a RoleDefinition with a new object
      *
      * @param newRoleDefinition the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final RoleDefinition newRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.POST, callback, newRoleDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleDefinition> futurePost(@Nonnull final RoleDefinition newRoleDefinition) {
+        return futureSend(HttpMethod.POST, newRoleDefinition);
     }
 
     /**
@@ -138,10 +143,11 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
      * Creates a RoleDefinition with a new object
      *
      * @param newRoleDefinition the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final RoleDefinition newRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
-        send(HttpMethod.PUT, callback, newRoleDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleDefinition> futurePut(@Nonnull final RoleDefinition newRoleDefinition) {
+        return futureSend(HttpMethod.PUT, newRoleDefinition);
     }
 
     /**

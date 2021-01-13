@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.TimeOffReason;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionResponse;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequest;
@@ -44,13 +42,14 @@ public class TimeOffReasonCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new TimeOffReason
      * @param newTimeOffReason the TimeOffReason to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TimeOffReason newTimeOffReason, @Nonnull final ICallback<? super TimeOffReason> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffReason> futurePost(@Nonnull final TimeOffReason newTimeOffReason) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTimeOffReason, callback);
+            .futurePost(newTimeOffReason);
     }
 
     /**

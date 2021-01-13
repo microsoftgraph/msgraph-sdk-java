@@ -7,7 +7,6 @@ package com.microsoft.graph.callrecords.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequest;
@@ -44,13 +42,14 @@ public class SessionCollectionRequest extends BaseEntityCollectionRequest<Sessio
     /**
      * Creates a new Session
      * @param newSession the Session to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Session newSession, @Nonnull final ICallback<? super Session> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Session> futurePost(@Nonnull final Session newSession) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSession, callback);
+            .futurePost(newSession);
     }
 
     /**

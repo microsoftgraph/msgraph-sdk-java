@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
     /**
      * Gets the TeamsTemplate from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TeamsTemplate delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TeamsTemplate with a source
      *
      * @param sourceTeamsTemplate the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TeamsTemplate sourceTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.PATCH, callback, sourceTeamsTemplate);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> futurePatch(@Nonnull final TeamsTemplate sourceTeamsTemplate) {
+        return futureSend(HttpMethod.PATCH, sourceTeamsTemplate);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
      * Creates a TeamsTemplate with a new object
      *
      * @param newTeamsTemplate the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TeamsTemplate newTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.POST, callback, newTeamsTemplate);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> futurePost(@Nonnull final TeamsTemplate newTeamsTemplate) {
+        return futureSend(HttpMethod.POST, newTeamsTemplate);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
      * Creates a TeamsTemplate with a new object
      *
      * @param newTeamsTemplate the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TeamsTemplate newTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.PUT, callback, newTeamsTemplate);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> futurePut(@Nonnull final TeamsTemplate newTeamsTemplate) {
+        return futureSend(HttpMethod.PUT, newTeamsTemplate);
     }
 
     /**
