@@ -9,6 +9,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.junit.Before;
@@ -24,8 +25,6 @@ import okhttp3.ResponseBody;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.MockBaseClient;
 import com.microsoft.graph.logger.MockLogger;
@@ -50,7 +49,7 @@ public class BaseRequestTests {
                 .request(new Request.Builder().url("https://a.b.c").build())
                 .protocol(Protocol.HTTP_1_1)
                 .code(200).message("OK").body(
-                   ResponseBody.create(MediaType.parse("application/json"), 
+                   ResponseBody.create(MediaType.parse("application/json"),
                         "{ \"id\": \"zzz\" }"
                 ))
                 .addHeader("Content-Type", "application/json")
@@ -72,28 +71,12 @@ public class BaseRequestTests {
     }
 
     @Test
-    public void testSendWithCallback() throws InterruptedException {
-        final AtomicBoolean success = new AtomicBoolean(false);
-        final AtomicBoolean failure = new AtomicBoolean(false);
-
-		final ICallback<JsonObject> callback = new ICallback<JsonObject>() {
-            @Override
-            public void success(JsonObject o) {
-                success.set(true);
-                callbackJsonObject = o;
-            }
-
-            @Override
-            public void failure(ClientException ex) {
-                failure.set(true);
-            }
-        };
-        mRequest.send(HttpMethod.GET, callback,null);
-        Thread.sleep(1000L); // running on different threads can make it so the asserts get called before the callback
-        assertTrue(success.get());
-        assertFalse(failure.get());
-        assertNotNull(callbackJsonObject);
-        assertEquals("zzz", callbackJsonObject.get("id").getAsString());
+    public void testSendWithCallback() throws InterruptedException, ExecutionException {
+        final java.util.concurrent.CompletableFuture<JsonObject> result = mRequest.futureSend(HttpMethod.GET, null);
+        assertNotNull(result.get());
+        assertTrue(result.isDone());
+        assertFalse(result.isCancelled());
+        assertEquals("zzz", result.get().get("id").getAsString());
     }
 
     @Test

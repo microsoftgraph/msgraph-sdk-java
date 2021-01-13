@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.http;
 
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.Option;
@@ -34,7 +33,7 @@ import javax.annotation.Nonnull;
 
 /**
  * An HTTP request.
- * 
+ *
  * @param <T> the response class
  */
 public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
@@ -53,15 +52,16 @@ public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
 
     /**
      * Deletes the entity and invokes the callback
-     * @param callback callback to be invoked once the entity is deleted
+     * @return a future with the result
      */
-    public void delete(@Nonnull final ICallback<? super T> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T> futureDelete() {
+        return futureSend(HttpMethod.DELETE, null);
     }
 
     /**
      * Deletes the entity
-     * @return the deleted entity 
+     * @return the result from the API response, if any
      */
     @Nullable
     public T delete() throws ClientException {

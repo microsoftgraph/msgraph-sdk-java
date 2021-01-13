@@ -29,9 +29,6 @@ import java.util.List;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.ICollectionResponse;
@@ -99,12 +96,24 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * Send this request
      *
      * @return the response object
+     * @deprecated use the future API instead
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
     protected T2 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, responseCollectionClass, null);
+    }
+    /**
+     * Send this request
+     *
+     * @return the response object
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    protected java.util.concurrent.CompletableFuture<T2> futureSend() throws ClientException {
+        baseRequest.setHttpMethod(HttpMethod.GET);
+        return baseRequest.getClient().getHttpProvider().futureSend(this, responseCollectionClass, null);
     }
 
     /**
@@ -428,25 +437,12 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * Returns the Request object to be executed
      * @param serializedObject the object to serialize at the body of the request
      * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response
      * @return the Request object to be executed
      */
     @Override
     @Nullable
-    public <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
+    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
         return baseRequest.getHttpRequest(serializedObject);
-    }
-
-    /**
-     * Returns the Request object to be executed
-     * @param serializedObject the object to serialize at the body of the request
-     * @param progress the progress callback
-     * @param <requestBodyType> the type of the serialized object
-     * @param <responseType> the type of the response object
-     * @return the Request object to be executed
-     */
-    @Override
-    @Nullable
-    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException {
-        return baseRequest.getHttpRequest(serializedObject, progress);
     }
 }

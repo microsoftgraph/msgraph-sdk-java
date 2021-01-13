@@ -29,9 +29,6 @@ import java.util.List;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.ICollectionResponse;
@@ -70,20 +67,11 @@ public abstract class BaseFunctionCollectionRequest<T, T2 extends ICollectionRes
 
     /**
      * Gets the collection of items
-     * @param callback the callback to call once the response is received
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super T3> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T3> futureGet() {
+        return futureSend().thenApply(r -> buildFromResponse(r));
     }
 
     /**

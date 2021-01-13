@@ -23,7 +23,6 @@ import okhttp3.OkHttpClient;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.logger.MockLogger;
@@ -33,7 +32,7 @@ import com.microsoft.graph.serializer.MockSerializer;
 
 @Ignore
 public class CoreHttpProviderTests {
-	
+
     private CoreHttpProvider mProvider;
     private Gson GSON = new GsonBuilder().create();
 
@@ -56,7 +55,7 @@ public class CoreHttpProviderTests {
             assertEquals(expectedMessage, e.getServiceError().message);
         }
     }
-    
+
     @Test
     public void testVerboseErrorResponse() throws Exception {
     	final GraphErrorCodes expectedErrorCode = GraphErrorCodes.INVALID_REQUEST;
@@ -74,10 +73,9 @@ public class CoreHttpProviderTests {
         logger.setLoggingLevel(LoggerLevel.DEBUG);
 
         mProvider = new CoreHttpProvider(new MockSerializer(toSerialize, ""),
-                new MockExecutors(),
                 logger,
                 new OkHttpClient.Builder().build());
-        
+
         try {
             mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             fail("Expected exception in previous statement");
@@ -86,19 +84,19 @@ public class CoreHttpProviderTests {
         	assertTrue(e.getMessage().indexOf("The raw request was invalid") > 0);
         }
     }
-    
+
     @Test
     public void testHasHeaderReturnsTrue() {
         HeaderOption h = new HeaderOption("name", "value");
         assertTrue(CoreHttpProvider.hasHeader(Arrays.asList(h), "name"));
     }
-    
+
     @Test
     public void testHasHeaderReturnsTrueWhenDifferentCase() {
         HeaderOption h = new HeaderOption("name", "value");
         assertTrue(CoreHttpProvider.hasHeader(Arrays.asList(h), "NAME"));
     }
-    
+
     @Test
     public void testHasHeaderReturnsFalse() {
         HeaderOption h = new HeaderOption("name", "value");
@@ -132,7 +130,6 @@ public class CoreHttpProviderTests {
      */
     private void setCoreHttpProvider(final Object toSerialize) {
         mProvider = new CoreHttpProvider(new MockSerializer(toSerialize, ""),
-                new MockExecutors(),
                 new MockLogger(),
                 new OkHttpClient.Builder().build());
     }

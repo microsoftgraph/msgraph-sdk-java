@@ -5,16 +5,13 @@ import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
 
 import org.junit.Test;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
-import com.microsoft.graph.concurrency.DefaultExecutors;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.core.GraphServiceClient;
@@ -46,7 +43,6 @@ public class GraphServiceClientTest {
                 .logger(logger)
                 .authenticationProvider(getAuthProvider())
                 .buildClient();
-        assertNotNull(client.getExecutors());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
@@ -59,13 +55,11 @@ public class GraphServiceClientTest {
                 .logger(logger)
                 .authenticationProvider(getAuthProvider())
                 .buildClient();
-        assertNotNull(client.getExecutors());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
         assertEquals(logger, ((CoreHttpProvider) client.getHttpProvider()).getLogger());
         assertEquals(logger, ((DefaultSerializer) client.getSerializer()).getLogger());
-        assertEquals(logger, ((DefaultExecutors) client.getExecutors()).getLogger());
         assertEquals(logger, client.getLogger());
     }
 
@@ -74,53 +68,9 @@ public class GraphServiceClientTest {
         IGraphServiceClient client = GraphServiceClient.builder()
                 .authenticationProvider(getAuthProvider())
                 .buildClient();
-        assertNotNull(client.getExecutors());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
-    }
-
-    @Test
-    public void testOverrideOfDefaultExecutors() {
-        IExecutors ex = new IExecutors() {
-
-            @Override
-            public void performOnBackground(Runnable runnable) {
-                // do nothing
-            }
-
-            @Override
-            public <Result> void performOnForeground(Result result, ICallback<Result> callback) {
-                // do nothing
-            }
-
-            @Override
-            public <Result> void performOnForeground(int progress, int progressMax,
-                    IProgressCallback<Result> callback) {
-                // do nothing
-            }
-
-            @Override
-            public <Result> void performOnForeground(ClientException exception,
-                    ICallback<Result> callback) {
-                // do nothing
-            }
-            
-            @Override
-            public void shutdownBackgroundExecutors() {
-            	// do nothing
-            }
-
-        };
-        IGraphServiceClient client = GraphServiceClient.builder()
-                .executors(ex)
-                .authenticationProvider(getAuthProvider())
-                .buildClient();
-        assertEquals(ex, client.getExecutors());
-        assertNotNull(client.getHttpProvider());
-        assertNotNull(client.getLogger());
-        assertNotNull(client.getSerializer());
-        assertEquals(ex, ((CoreHttpProvider) client.getHttpProvider()).getExecutors());
     }
 
     @Test
@@ -150,7 +100,6 @@ public class GraphServiceClientTest {
         assertEquals(serializer, client.getSerializer());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
-        assertNotNull(client.getExecutors());
         assertEquals(serializer, ((CoreHttpProvider) client.getHttpProvider()).getSerializer());
     }
 
@@ -164,9 +113,13 @@ public class GraphServiceClientTest {
             }
 
             @Override
-            public <Result, BodyType> void send(IHttpRequest request, ICallback<? super Result> callback,
-                    Class<Result> resultClass, BodyType serializable) {
-                // do nothing
+            public <Result, BodyType> java.util.concurrent.CompletableFuture<Result> futureSend(IHttpRequest request, Class<Result> resultClass, BodyType serializable) {
+                return null;
+            }
+
+            @Override
+            public <Result, BodyType, DeserializeType> java.util.concurrent.CompletableFuture<Result> futureSend(IHttpRequest request, Class<Result> resultClass, BodyType serializable, final IStatefulResponseHandler<Result, DeserializeType> handler) {
+                return null;
             }
 
             @Override
@@ -185,9 +138,13 @@ public class GraphServiceClientTest {
 
 			@Override
 			public <Result, BodyType> Request getHttpRequest(IHttpRequest request, Class<Result> resultClass,
-					BodyType serializable, IProgressCallback<? super Result> progress) throws ClientException {
+					BodyType serializable) throws ClientException {
 				return null;
-			}
+            }
+            @Override
+            public ExecutorService getExecutorService() {
+                return null;
+            }
         };
         IGraphServiceClient client = GraphServiceClient
                 .builder()
@@ -196,7 +153,6 @@ public class GraphServiceClientTest {
         assertEquals(hp, client.getHttpProvider());
         assertNotNull(client.getSerializer());
         assertNotNull(client.getLogger());
-        assertNotNull(client.getExecutors());
     }
 
     @Test(expected = NullPointerException.class)
@@ -205,15 +161,10 @@ public class GraphServiceClientTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void testExecutorsCannotBeNull() {
-        GraphServiceClient.builder().executors(null);
-    }
-
-    @Test(expected = NullPointerException.class)
     public void testLoggerCannotBeNull() {
         GraphServiceClient.builder().logger(null);
     }
-    
+
     private static ILogger createLogger() {
         return new ILogger() {
 

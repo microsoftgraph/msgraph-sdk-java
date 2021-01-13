@@ -278,21 +278,10 @@ public class OutlookTests {
 		return null;
 	}
 
-	IProgressCallback<AttachmentItem> callback = new IProgressCallback<AttachmentItem> () {
+	final IProgressCallback callback = new IProgressCallback () {
 		@Override
 		public void progress(final long current, final long max) {
 			//Check progress
-		}
-		@Override
-		public void success(final AttachmentItem result) {
-			//Handle the successful response
-			Assert.assertNotNull(result);
-		}
-
-		@Override
-		public void failure(final ClientException ex) {
-			//Handle the failed upload
-			Assert.fail("Upload session failed");
 		}
 	};
 	@Test
@@ -326,7 +315,8 @@ public class OutlookTests {
 				streamSize, AttachmentItem.class);
 
 		// Do the upload
-		chunkedUploadProvider.upload(callback);
+        final AttachmentItem result = chunkedUploadProvider.upload(0, null, callback);
+        assertNotNull(result);
 
     	//Send the drafted message
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();

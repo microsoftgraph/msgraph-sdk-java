@@ -23,10 +23,11 @@
 package com.microsoft.graph.http;
 
 import javax.annotation.Nullable;
+
+import java.util.concurrent.ExecutorService;
+
 import javax.annotation.Nonnull;
 
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.serializer.ISerializer;
 
@@ -44,21 +45,41 @@ public interface IHttpProvider {
      */
     @Nullable
     ISerializer getSerializer();
-    
+
     /**
      * Sends the HTTP request asynchronously
      *
      * @param request      the request description
-     * @param callback     the callback to be called after success or failure
      * @param resultClass  the class of the response from the service
      * @param serializable the object to send to the service in the body of the request
      * @param <Result>     the type of the response object
      * @param <BodyType>   the type of the object to send to the service in the body of the request
+     * @return a future with the result
      */
-    <Result, BodyType> void send(@Nonnull final IHttpRequest request,
-                                 @Nonnull final ICallback<? super Result> callback,
+    @Nonnull
+    <Result, BodyType> java.util.concurrent.CompletableFuture<Result> futureSend(@Nonnull final IHttpRequest request,
                                  @Nonnull final Class<Result> resultClass,
                                  @Nullable final BodyType serializable);
+
+    /**
+     * Sends the HTTP request
+     *
+     * @param request           the request description
+     * @param resultClass       the class of the response from the service
+     * @param serializable      the object to send to the service in the body of the request
+     * @param handler           the handler for stateful response
+     * @param <Result>          the expected return type return
+     * @param <BodyType>        the type of the object to send to the service in the body of the request
+     * @param <DeserializeType> the type of the HTTP response object
+     * @return                  a future with the result
+     * @throws ClientException  this exception occurs if the request was unable to complete for any reason
+     */
+    @Nullable
+    <Result, BodyType, DeserializeType> java.util.concurrent.CompletableFuture<Result> futureSend(@Nonnull final IHttpRequest request,
+                                                    @Nonnull final Class<Result> resultClass,
+                                                    @Nullable final BodyType serializable,
+                                                    @Nonnull final IStatefulResponseHandler<Result, DeserializeType> handler)
+            throws ClientException;
 
 
     /**
@@ -103,7 +124,6 @@ public interface IHttpProvider {
 	 * @param request           the request description
 	 * @param resultClass       the class of the response from the service
 	 * @param serializable      the object to send to the service in the body of the request
-	 * @param progress          the progress callback for the request
 	 * @param <Result>          the type of the response object
 	 * @param <BodyType>        the type of the object to send to the service in the body of the request
 	 * @return                  the result from the request
@@ -112,7 +132,12 @@ public interface IHttpProvider {
     @Nullable
     <Result, BodyType> Request getHttpRequest(@Nonnull final IHttpRequest request,
                                               @Nonnull final Class<Result> resultClass,
-                                              @Nullable final BodyType serializable,
-                                              @Nonnull final IProgressCallback<? super Result> progress)
+                                              @Nullable final BodyType serializable)
             throws ClientException;
+    /**
+     * Gets the executor service in use by the provider
+     * @return the executor service in use by the provider
+     */
+    @Nonnull
+    ExecutorService getExecutorService();
 }

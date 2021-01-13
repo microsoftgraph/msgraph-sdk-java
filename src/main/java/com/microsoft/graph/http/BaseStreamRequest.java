@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -22,8 +22,6 @@
 
 package com.microsoft.graph.http;
 
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
@@ -73,11 +71,12 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     /**
      * Sends this request
      *
-     * @param callback the callback when this request complements. The caller needs to close the stream
+     * @return a future with the result
      */
-    protected void send(@Nonnull final ICallback<InputStream> callback) {
+    @Nonnull
+    protected java.util.concurrent.CompletableFuture<InputStream> futureSend() {
         baseRequest.setHttpMethod(HttpMethod.GET);
-        baseRequest.getClient().getHttpProvider().send(this, callback, InputStream.class, null);
+        return baseRequest.getClient().getHttpProvider().futureSend(this, InputStream.class, null);
     }
 
     /**
@@ -96,12 +95,13 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * Sends this request
      *
      * @param fileContents the file to upload
-     * @param callback     the callback when this request complements. The caller needs to close the stream
+     * @return a future with the result
      */
     @SuppressWarnings("unchecked")
-    protected void send(@Nonnull final byte[] fileContents, @Nonnull final ICallback<? super T> callback) {
+    @Nonnull
+    protected java.util.concurrent.CompletableFuture<T> futureSend(@Nonnull final byte[] fileContents) {
         baseRequest.setHttpMethod(HttpMethod.PUT);
-        baseRequest.getClient().getHttpProvider().send(this, callback, (Class<T>) baseRequest.getResponseType(), fileContents);
+        return baseRequest.getClient().getHttpProvider().futureSend(this, (Class<T>) baseRequest.getResponseType(), fileContents);
     }
 
     /**
@@ -190,93 +190,93 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     public List<Option> getOptions() {
         return baseRequest.getOptions();
     }
-    
+
     /**
      * Sets the max redirects
-     * 
+     *
      * @param maxRedirects Max redirects that a request can take
      */
     public void setMaxRedirects(int maxRedirects) {
     	baseRequest.setMaxRedirects(maxRedirects);
     }
-    
+
     /**
      * Gets the max redirects
-     * 
+     *
      * @return Max redirects that a request can take
      */
     public int getMaxRedirects() {
     	return baseRequest.getMaxRedirects();
     }
-    
+
     /**
      * Sets the should redirect callback
-     * 
+     *
      * @param shouldRedirect Callback called before doing a redirect
      */
     public void setShouldRedirect(@Nonnull final IShouldRedirect shouldRedirect) {
     	baseRequest.setShouldRedirect(shouldRedirect);
     }
-    
+
     /**
      * Gets the should redirect callback
-     * 
+     *
      * @return Callback which is called before redirect
      */
     @Nullable
     public IShouldRedirect getShouldRedirect() {
     	return baseRequest.getShouldRedirect();
     }
-    
+
     /**
      * Sets the should retry callback
-     * 
+     *
      * @param shouldretry The callback called before retry
      */
     public void setShouldRetry(@Nonnull final IShouldRetry shouldretry) {
     	baseRequest.setShouldRetry(shouldretry);
     }
-    
+
     /**
      * Gets the should retry callback
-     * 
+     *
      * @return Callback called before retry
      */
     @Nullable
     public IShouldRetry getShouldRetry() {
     	return baseRequest.getShouldRetry();
     }
-    
+
     /**
      * Sets the max retries
-     * 
+     *
      * @param maxRetries Max retries for a request
      */
     public void setMaxRetries(int maxRetries) {
     	baseRequest.setMaxRetries(maxRetries);
     }
-    
+
     /**
-     * Gets max retries 
-     * 
+     * Gets max retries
+     *
      * @return Max retries for a request
      */
     public int getMaxRetries() {
     	return baseRequest.getMaxRetries();
     }
-    
+
     /**
      * Sets the delay in seconds between retires
-     * 
+     *
      * @param delay Delay in seconds between retries
      */
     public void setDelay(long delay) {
     	baseRequest.setDelay(delay);
     }
-    
+
     /**
      * Gets delay between retries
-     * 
+     *
      * @return Delay between retries in seconds
      */
     public long getDelay() {
@@ -309,25 +309,12 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * Returns the Request object to be executed
      * @param serializedObject the object to serialize at the body of the request
      * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response
      * @return the Request object to be executed
      */
     @Override
     @Nullable
-    public <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
+    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
         return baseRequest.getHttpRequest(serializedObject);
-    }
-
-    /**
-     * Returns the Request object to be executed
-     * @param serializedObject the object to serialize at the body of the request
-     * @param progress the progress callback
-     * @param <requestBodyType> the type of the serialized object
-     * @param <responseType> the type of the response object
-     * @return the Request object to be executed
-     */
-    @Override
-    @Nullable
-    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException {
-        return baseRequest.getHttpRequest(serializedObject, progress);
     }
 }

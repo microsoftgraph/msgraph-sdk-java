@@ -26,8 +26,6 @@ import okhttp3.HttpUrl;
 import okhttp3.Request;
 import okhttp3.HttpUrl.Builder;
 
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.content.MSBatchRequestContent;
 import com.microsoft.graph.content.MSBatchRequestStep;
 import com.microsoft.graph.core.IBaseClient;
@@ -216,27 +214,14 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * Returns the Request object to be executed
      * @param serializedObject the object to serialize at the body of the request
      * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response
      * @return the Request object to be executed
      */
     @Override
     @Nullable
-    public <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
-        return getHttpRequest(serializedObject, null);
-    }
-
-    /**
-     * Returns the Request object to be executed
-     * @param serializedObject the object to serialize at the body of the request
-     * @param progress the progress callback
-     * @param <requestBodyType> the type of the serialized object
-     * @param <responseType> the type of the response object
-     * @return the Request object to be executed
-     */
     @SuppressWarnings("unchecked")
-    @Override
-    @Nullable
-    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException {
-        return client.getHttpProvider().getHttpRequest(this, (Class<responseType>) responseClass, serializedObject, progress);
+    public <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException {
+        return client.getHttpProvider().getHttpRequest(this, (Class<responseType>) responseClass, serializedObject);
     }
 
     private String addFunctionParameters() {
@@ -326,16 +311,16 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      * Sends this request
      *
      * @param method           the HTTP method
-     * @param callback         the callback when this request complements
      * @param serializedObject the object to serialize as the body
      * @param <T1>             the type of the serialized body
+     * @return a future with the result
      */
-    @Nullable
-    protected <T1> void send(@Nonnull final HttpMethod method,
-                                 @Nonnull final ICallback<? super T> callback,
+    @Nonnull
+    @SuppressWarnings("unchecked")
+    protected <T1> java.util.concurrent.CompletableFuture<T> futureSend(@Nonnull final HttpMethod method,
                                  @Nullable final T1 serializedObject) {
         this.method = method;
-        client.getHttpProvider().send(this, callback, responseClass, serializedObject);
+        return (java.util.concurrent.CompletableFuture<T>) client.getHttpProvider().futureSend(this, responseClass, serializedObject);
     }
 
     /**

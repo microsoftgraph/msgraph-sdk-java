@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.http;
 
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
@@ -188,20 +187,10 @@ public interface IHttpRequest {
      * Returns the Request object to be executed
      * @param serializedObject the object to serialize at the body of the request
      * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response
      * @return the Request object to be executed
      */
     @Nullable
-    <requestBodyType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException;
-
-    /**
-     * Returns the Request object to be executed
-     * @param serializedObject the object to serialize at the body of the request
-     * @param progress the progress callback
-     * @param <requestBodyType> the type of the serialized object
-     * @param <responseType> the type of the response object
-     * @return the Request object to be executed
-     */
-    @Nullable
-    <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject, @Nonnull final IProgressCallback<responseType> progress) throws ClientException;
+    <requestBodyType, responseType> Request getHttpRequest(@Nonnull final requestBodyType serializedObject) throws ClientException;
 }
 

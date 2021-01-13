@@ -24,7 +24,6 @@ package com.microsoft.graph.http;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
@@ -52,10 +51,11 @@ public class PrimitiveRequest<T> extends BaseRequest<T> {
     /**
      * Gets the primitive information from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super T> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T> futureGet() {
+        return futureSend(HttpMethod.GET, null);
     }
 
     /**

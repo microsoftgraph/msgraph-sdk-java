@@ -27,7 +27,6 @@ import okhttp3.ResponseBody;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.MockBaseClient;
 import com.microsoft.graph.logger.MockLogger;
@@ -83,7 +82,6 @@ public class BaseCollectionRequestTests {
         final ICollectionResponse<JsonObject> result = mock(ICollectionResponse.class);
         when(result.values()).thenReturn(new ArrayList<JsonObject>(Arrays.asList(resultobj)));
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(result, "[{ \"id\": \"zzz\" }]"),
-                new MockExecutors(),
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);

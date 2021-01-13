@@ -2,6 +2,7 @@ package com.microsoft.graph.http;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
@@ -9,12 +10,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.stubbing.Answer;
 
 import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Dispatcher;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Protocol;
@@ -24,8 +29,6 @@ import okhttp3.ResponseBody;
 
 import static org.mockito.Mockito.*;
 
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.MockBaseClient;
 import com.microsoft.graph.logger.MockLogger;
@@ -57,7 +60,6 @@ public class BaseStreamRequestTests {
 
         final OkHttpClient mockClient = getMockClient(response);
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
-                new MockExecutors(),
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
@@ -66,7 +68,7 @@ public class BaseStreamRequestTests {
     }
 
     @Test
-    public void testSendWithCallback() throws IOException {
+    public void testSendWithCallback() throws IOException, InterruptedException, ExecutionException {
         final Response response = new Response.Builder()
                 .request(new Request.Builder().url("https://a.b.c").build())
                 .protocol(Protocol.HTTP_1_1)
@@ -79,31 +81,18 @@ public class BaseStreamRequestTests {
 
         final OkHttpClient mockClient = getMockClient(response);
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
-                new MockExecutors(),
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
-        final AtomicBoolean success = new AtomicBoolean(false);
-        final AtomicBoolean failure = new AtomicBoolean(false);
-        final ICallback<InputStream> callback = new ICallback<InputStream>() {
-            @Override
-            public void success(InputStream inputStream) {
-                success.set(true);
-            }
-
-            @Override
-            public void failure(ClientException ex) {
-                failure.set(true);
-            }
-        };
         final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c/", mBaseClient,null, InputStream.class){};
-        request.send(callback);
-        assertTrue(success.get());
-        assertFalse(failure.get());
+        final java.util.concurrent.CompletableFuture<InputStream> result = request.futureSend();
+        assertNotNull(result.get());
+        assertTrue(result.isDone());
+        assertFalse(result.isCancelled());
     }
 
     @Test
-    public void testSendWithContentAndCallback() throws IOException {
+    public void testSendWithContentAndCallback() throws IOException, InterruptedException, ExecutionException {
         final Response response = new Response.Builder()
                 .request(new Request.Builder().url("https://a.b.c").build())
                 .protocol(Protocol.HTTP_1_1)
@@ -116,27 +105,14 @@ public class BaseStreamRequestTests {
 
         final OkHttpClient mockClient = getMockClient(response);
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
-                new MockExecutors(),
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
-        final AtomicBoolean success = new AtomicBoolean(false);
-        final AtomicBoolean failure = new AtomicBoolean(false);
-        final ICallback<InputStream> callback = new ICallback<InputStream>() {
-            @Override
-            public void success(InputStream inputStream) {
-                success.set(true);
-            }
-
-            @Override
-            public void failure(ClientException ex) {
-                failure.set(true);
-            }
-        };
         final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c/", mBaseClient,null, InputStream.class){};
-        request.send(new byte[]{1, 2, 3, 4},callback);
-        assertTrue(success.get());
-        assertFalse(failure.get());
+        final java.util.concurrent.CompletableFuture<InputStream> result = request.futureSend(new byte[]{1, 2, 3, 4});
+        assertNotNull(result.get());
+        assertTrue(result.isDone());
+        assertFalse(result.isCancelled());
     }
 
     @Test
@@ -152,9 +128,8 @@ public class BaseStreamRequestTests {
                 .build();
 
         final OkHttpClient mockClient = getMockClient(response);
-        
+
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
-                new MockExecutors(),
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
@@ -174,7 +149,15 @@ public class BaseStreamRequestTests {
     public static OkHttpClient getMockClient(final Response response) throws IOException {
         final OkHttpClient mockClient = mock(OkHttpClient.class);
         final Call remoteCall = mock(Call.class);
+        final Dispatcher dispatcher = new Dispatcher();
         when(remoteCall.execute()).thenReturn(response);
+        doAnswer((Answer<Void>) invocation -> {
+            Callback callback = invocation.getArgument(0);
+            callback.onResponse(null, response);
+            return null;
+        }).when(remoteCall)
+            .enqueue(any(Callback.class));
+        when(mockClient.dispatcher()).thenReturn(dispatcher);
         when(mockClient.newCall(any())).thenReturn(remoteCall);
         return mockClient;
     }
