@@ -38,7 +38,7 @@ import com.microsoft.graph.core.DateOnly;
 import com.microsoft.graph.core.TimeOfDay;
 import java.lang.reflect.Type;
 import java.text.ParseException;
-import java.util.Calendar;
+import java.time.OffsetDateTime;
 import java.util.EnumSet;
 import java.util.GregorianCalendar;
 
@@ -66,16 +66,16 @@ final class GsonFactory {
      */
     public static Gson getGsonInstance(final ILogger logger) {
 
-        final JsonSerializer<Calendar> calendarJsonSerializer = new JsonSerializer<Calendar>() {
+        final JsonSerializer<OffsetDateTime> calendarJsonSerializer = new JsonSerializer<OffsetDateTime>() {
             @Override
-            public JsonElement serialize(final Calendar src,
+            public JsonElement serialize(final OffsetDateTime src,
                                          final Type typeOfSrc,
                                          final JsonSerializationContext context) {
                 if (src == null) {
                     return null;
                 }
                 try {
-                    return new JsonPrimitive(CalendarSerializer.serialize(src));
+                    return new JsonPrimitive(OffsetDateTimeSerializer.serialize(src));
                 } catch (final Exception e) {
                     logger.logError(PARSING_MESSAGE + src, e);
                     return null;
@@ -83,16 +83,16 @@ final class GsonFactory {
             }
         };
 
-        final JsonDeserializer<Calendar> calendarJsonDeserializer = new JsonDeserializer<Calendar>() {
+        final JsonDeserializer<OffsetDateTime> calendarJsonDeserializer = new JsonDeserializer<OffsetDateTime>() {
             @Override
-            public Calendar deserialize(final JsonElement json,
+            public OffsetDateTime deserialize(final JsonElement json,
                                         final Type typeOfT,
                                         final JsonDeserializationContext context) throws JsonParseException {
                 if (json == null) {
                     return null;
                 }
                 try {
-                    return CalendarSerializer.deserialize(json.getAsString());
+                    return OffsetDateTimeSerializer.deserialize(json.getAsString());
                 } catch (final ParseException e) {
                     logger.logError(PARSING_MESSAGE + json.getAsString(), e);
                     return null;
@@ -246,8 +246,8 @@ final class GsonFactory {
 
         return new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()
-                .registerTypeAdapter(Calendar.class, calendarJsonSerializer)
-                .registerTypeAdapter(Calendar.class, calendarJsonDeserializer)
+                .registerTypeAdapter(OffsetDateTime.class, calendarJsonSerializer)
+                .registerTypeAdapter(OffsetDateTime.class, calendarJsonDeserializer)
                 .registerTypeAdapter(GregorianCalendar.class, calendarJsonSerializer)
                 .registerTypeAdapter(GregorianCalendar.class, calendarJsonDeserializer)
                 .registerTypeAdapter(byte[].class, byteArrayJsonDeserializer)
