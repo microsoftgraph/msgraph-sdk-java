@@ -6,13 +6,12 @@ import static org.junit.Assert.assertNotNull;
 import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
-import java.util.Calendar;
 import java.util.TimeZone;
 
 import org.junit.Test;
 
 /**
- * Test cases for calendar serialization and deserialization
+ * Test cases for offsetDateTime serialization and deserialization
  *
  * @author mobilal
  *
@@ -20,14 +19,14 @@ import org.junit.Test;
 public class OffsetDateTimeSerializerTests {
 
 	/**
-	 * Validate if a calendar date instance could be serialized
-	 * @throws Exception if calendar couldn't be serialized
+	 * Validate if a offsetDateTime date instance could be serialized
+	 * @throws Exception if offsetDateTime couldn't be serialized
 	 */
 	@Test
 	public void testDateSerialization() throws Exception {
-        final OffsetDateTime calendar = OffsetDateTime.ofInstant(Instant.ofEpochMilli(1561162355000L), ZoneOffset.UTC);
+        final OffsetDateTime offsetDateTime = OffsetDateTime.ofInstant(Instant.ofEpochMilli(1561162355000L), ZoneOffset.UTC);
 		final String expected = "2019-06-22T00:12:35Z";
-		final String actual = OffsetDateTimeSerializer.serialize(calendar);
+		final String actual = OffsetDateTimeSerializer.serialize(offsetDateTime);
 		assertNotNull(actual);
 		assertEquals(expected, actual);
 	}
