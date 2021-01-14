@@ -156,7 +156,7 @@ public class CoreHttpProvider implements IHttpProvider {
                                                     @Nullable final BodyType serializable,
                                                     @Nonnull final IStatefulResponseHandler<Result, DeserializeType> handler)
             throws ClientException {
-        return sendRequestInternal(request,
+        return sendFutureRequestInternal(request,
                 resultClass,
                 serializable,
                 handler);
@@ -196,18 +196,11 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @throws ClientException this exception occurs if the request was unable to complete for any reason
 	 */
     @Nullable
-    @SuppressWarnings("unchecked")
 	public <Result, Body, DeserializeType> Result send(@Nonnull final IHttpRequest request,
 			@Nonnull final Class<Result> resultClass,
 			@Nullable final Body serializable,
 			@Nonnull final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
-            try {
-                return (Result) sendRequestInternal(request, resultClass, serializable, handler).get();
-            } catch (InterruptedException ex) {
-                throw new ClientException("The task has been interrupted", ex);
-            } catch (ExecutionException ex) {
-                throw new ClientException("Error while processing the response", ex);
-            }
+            return sendRequestInternal(request, resultClass, serializable, handler);
 	}
 	/**
 	 * Sends the HTTP request
@@ -345,7 +338,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
 	 */
 	@Nullable
-	protected <Result, Body, DeserializeType> java.util.concurrent.CompletableFuture<Result> sendRequestInternal(@Nonnull final IHttpRequest request,
+	private <Result, Body, DeserializeType> java.util.concurrent.CompletableFuture<Result> sendFutureRequestInternal(@Nonnull final IHttpRequest request,
 			@Nonnull final Class<Result> resultClass,
 			@Nullable final Body serializable,
 			@Nullable final IStatefulResponseHandler<Result, DeserializeType> handler)
@@ -353,8 +346,34 @@ public class CoreHttpProvider implements IHttpProvider {
             final Request coreHttpRequest = getHttpRequest(request, resultClass, serializable);
             final CoreHttpCallbackFutureWrapper wrapper = new CoreHttpCallbackFutureWrapper();
             corehttpClient.newCall(coreHttpRequest).enqueue(wrapper);
-            // CoreHttpResponseHandler<>(this.getLogger(), this.getSerializer(), request, resultClass, serializable, handler);
             return wrapper.future.thenApply(r -> processResponse(r, request, resultClass, serializable, handler));
+    }
+    /**
+	 * Sends the HTTP request
+	 *
+	 * @param request           the request description
+	 * @param resultClass       the class of the response from the service
+	 * @param serializable      the object to send to the service in the body of the request
+	 * @param handler           the handler for stateful response
+	 * @param <Result>          the type of the response object
+	 * @param <Body>            the type of the object to send to the service in the body of the request
+	 * @param <DeserializeType> the response handler for stateful response
+	 * @return                  the result from the request
+	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
+	 */
+	@Nullable
+	private <Result, Body, DeserializeType> Result sendRequestInternal(@Nonnull final IHttpRequest request,
+			@Nonnull final Class<Result> resultClass,
+			@Nullable final Body serializable,
+			@Nullable final IStatefulResponseHandler<Result, DeserializeType> handler)
+					throws ClientException {
+            final Request coreHttpRequest = getHttpRequest(request, resultClass, serializable);
+            try {
+                final Response response = corehttpClient.newCall(coreHttpRequest).execute();
+                return processResponse(response, request, resultClass, serializable, handler);
+            } catch(IOException ex) {
+                throw new ClientException("Error executing the request", ex);
+            }
     }
 
     @SuppressWarnings("unchecked")
