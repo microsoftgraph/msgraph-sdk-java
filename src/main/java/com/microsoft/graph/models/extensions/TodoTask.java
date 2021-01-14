@@ -51,7 +51,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "bodyLastModifiedDateTime", alternate = {"BodyLastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar bodyLastModifiedDateTime;
+    public java.time.OffsetDateTime bodyLastModifiedDateTime;
 
     /**
      * The Completed Date Time.
@@ -69,7 +69,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Due Date Time.
@@ -105,7 +105,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Recurrence.

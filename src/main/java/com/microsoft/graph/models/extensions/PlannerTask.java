@@ -103,7 +103,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar completedDateTime;
+    public java.time.OffsetDateTime completedDateTime;
 
     /**
      * The Conversation Thread Id.
@@ -130,7 +130,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Due Date Time.
@@ -139,7 +139,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar dueDateTime;
+    public java.time.OffsetDateTime dueDateTime;
 
     /**
      * The Has Description.
@@ -202,7 +202,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
      * The Title.

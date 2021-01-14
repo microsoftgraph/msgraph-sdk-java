@@ -62,7 +62,7 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements IJso
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The Subject Name.

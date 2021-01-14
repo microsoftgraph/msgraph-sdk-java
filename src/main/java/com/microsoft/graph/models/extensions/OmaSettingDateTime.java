@@ -32,7 +32,7 @@ public class OmaSettingDateTime extends OmaSetting implements IJsonBackedObject 
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose
 	@Nullable
-    public java.util.Calendar value;
+    public java.time.OffsetDateTime value;
 
 
     /**

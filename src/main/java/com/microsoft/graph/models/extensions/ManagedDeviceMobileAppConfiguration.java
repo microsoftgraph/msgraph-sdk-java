@@ -41,7 +41,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Description.
@@ -68,7 +68,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Targeted Mobile Apps.

@@ -57,7 +57,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Device Name.
@@ -102,7 +102,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastSyncDateTime;
+    public java.time.OffsetDateTime lastSyncDateTime;
 
     /**
      * The Management Sdk Version.

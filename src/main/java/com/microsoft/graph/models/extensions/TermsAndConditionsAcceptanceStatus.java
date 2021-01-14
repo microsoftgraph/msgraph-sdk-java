@@ -33,7 +33,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
     @SerializedName(value = "acceptedDateTime", alternate = {"AcceptedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar acceptedDateTime;
+    public java.time.OffsetDateTime acceptedDateTime;
 
     /**
      * The Accepted Version.

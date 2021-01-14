@@ -91,7 +91,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Description.
@@ -118,7 +118,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The Group Types.
@@ -208,7 +208,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar onPremisesLastSyncDateTime;
+    public java.time.OffsetDateTime onPremisesLastSyncDateTime;
 
     /**
      * The On Premises Net Bios Name.
@@ -289,7 +289,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "renewedDateTime", alternate = {"RenewedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar renewedDateTime;
+    public java.time.OffsetDateTime renewedDateTime;
 
     /**
      * The Security Enabled.

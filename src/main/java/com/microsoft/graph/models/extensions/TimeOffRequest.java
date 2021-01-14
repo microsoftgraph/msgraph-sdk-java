@@ -32,7 +32,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements IJsonBacked
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar endDateTime;
+    public java.time.OffsetDateTime endDateTime;
 
     /**
      * The Start Date Time.
@@ -41,7 +41,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements IJsonBacked
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
      * The Time Off Reason Id.

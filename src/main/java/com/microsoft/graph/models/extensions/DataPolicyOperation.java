@@ -33,7 +33,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar completedDateTime;
+    public java.time.OffsetDateTime completedDateTime;
 
     /**
      * The Progress.
@@ -69,7 +69,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "submittedDateTime", alternate = {"SubmittedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar submittedDateTime;
+    public java.time.OffsetDateTime submittedDateTime;
 
     /**
      * The User Id.

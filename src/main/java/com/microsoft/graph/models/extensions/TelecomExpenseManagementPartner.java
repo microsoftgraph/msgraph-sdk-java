@@ -59,7 +59,7 @@ public class TelecomExpenseManagementPartner extends Entity implements IJsonBack
     @SerializedName(value = "lastConnectionDateTime", alternate = {"LastConnectionDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastConnectionDateTime;
+    public java.time.OffsetDateTime lastConnectionDateTime;
 
     /**
      * The Url.

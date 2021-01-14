@@ -45,7 +45,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Description.
@@ -81,7 +81,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar modifiedDateTime;
+    public java.time.OffsetDateTime modifiedDateTime;
 
     /**
      * The Session Controls.

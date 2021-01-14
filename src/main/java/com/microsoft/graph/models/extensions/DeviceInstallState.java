@@ -69,7 +69,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastSyncDateTime;
+    public java.time.OffsetDateTime lastSyncDateTime;
 
     /**
      * The Os Description.

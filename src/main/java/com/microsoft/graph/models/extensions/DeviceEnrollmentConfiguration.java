@@ -35,7 +35,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Description.
@@ -62,7 +62,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Priority.

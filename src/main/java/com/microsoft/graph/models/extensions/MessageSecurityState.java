@@ -98,7 +98,7 @@ public class MessageSecurityState implements IJsonBackedObject {
     @SerializedName(value = "messageReceivedDateTime", alternate = {"MessageReceivedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar messageReceivedDateTime;
+    public java.time.OffsetDateTime messageReceivedDateTime;
 
     /**
      * The Message Subject.

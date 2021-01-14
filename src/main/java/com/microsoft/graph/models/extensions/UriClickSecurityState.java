@@ -53,7 +53,7 @@ public class UriClickSecurityState implements IJsonBackedObject {
     @SerializedName(value = "clickDateTime", alternate = {"ClickDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar clickDateTime;
+    public java.time.OffsetDateTime clickDateTime;
 
     /**
      * The Id.

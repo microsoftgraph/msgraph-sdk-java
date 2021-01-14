@@ -38,7 +38,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar endDateTime;
+    public java.time.OffsetDateTime endDateTime;
 
     /**
      * The Join Web Url.
@@ -56,7 +56,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Modalities.
@@ -92,7 +92,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
      * The Type.

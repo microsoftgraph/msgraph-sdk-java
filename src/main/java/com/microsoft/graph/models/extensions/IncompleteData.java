@@ -44,7 +44,7 @@ public class IncompleteData implements IJsonBackedObject {
     @SerializedName(value = "missingDataBeforeDateTime", alternate = {"MissingDataBeforeDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar missingDataBeforeDateTime;
+    public java.time.OffsetDateTime missingDataBeforeDateTime;
 
     /**
      * The Was Throttled.

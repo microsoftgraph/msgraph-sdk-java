@@ -42,7 +42,7 @@ public class DeviceComplianceUserStatus extends Entity implements IJsonBackedObj
     @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastReportedDateTime;
+    public java.time.OffsetDateTime lastReportedDateTime;
 
     /**
      * The Status.

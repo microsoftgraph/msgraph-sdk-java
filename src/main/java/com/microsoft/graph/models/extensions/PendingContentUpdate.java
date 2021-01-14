@@ -44,7 +44,7 @@ public class PendingContentUpdate implements IJsonBackedObject {
     @SerializedName(value = "queuedDateTime", alternate = {"QueuedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar queuedDateTime;
+    public java.time.OffsetDateTime queuedDateTime;
 
 
     /**

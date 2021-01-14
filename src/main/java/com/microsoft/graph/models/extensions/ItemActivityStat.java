@@ -73,7 +73,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar endDateTime;
+    public java.time.OffsetDateTime endDateTime;
 
     /**
      * The Incomplete Data.
@@ -109,7 +109,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
      * The Activities.

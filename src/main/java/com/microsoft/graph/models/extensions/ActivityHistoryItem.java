@@ -43,7 +43,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Expiration Date Time.
@@ -52,7 +52,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The Last Active Date Time.
@@ -61,7 +61,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastActiveDateTime", alternate = {"LastActiveDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastActiveDateTime;
+    public java.time.OffsetDateTime lastActiveDateTime;
 
     /**
      * The Last Modified Date Time.
@@ -70,7 +70,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Started Date Time.
@@ -79,7 +79,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
     @SerializedName(value = "startedDateTime", alternate = {"StartedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startedDateTime;
+    public java.time.OffsetDateTime startedDateTime;
 
     /**
      * The Status.

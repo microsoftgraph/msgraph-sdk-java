@@ -108,7 +108,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Max Score.

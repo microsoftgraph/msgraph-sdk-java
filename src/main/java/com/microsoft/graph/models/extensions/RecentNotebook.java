@@ -55,7 +55,7 @@ public class RecentNotebook implements IJsonBackedObject {
     @SerializedName(value = "lastAccessedTime", alternate = {"LastAccessedTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastAccessedTime;
+    public java.time.OffsetDateTime lastAccessedTime;
 
     /**
      * The Links.

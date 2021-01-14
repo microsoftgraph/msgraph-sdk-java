@@ -72,7 +72,7 @@ public class Shared implements IJsonBackedObject {
     @SerializedName(value = "sharedDateTime", alternate = {"SharedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar sharedDateTime;
+    public java.time.OffsetDateTime sharedDateTime;
 
 
     /**

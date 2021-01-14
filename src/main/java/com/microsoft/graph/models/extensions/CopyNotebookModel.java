@@ -65,7 +65,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
     @SerializedName(value = "createdTime", alternate = {"CreatedTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdTime;
+    public java.time.OffsetDateTime createdTime;
 
     /**
      * The Id.
@@ -119,7 +119,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedTime", alternate = {"LastModifiedTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedTime;
+    public java.time.OffsetDateTime lastModifiedTime;
 
     /**
      * The Links.

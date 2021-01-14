@@ -92,7 +92,7 @@ public class AlertHistoryState implements IJsonBackedObject {
     @SerializedName(value = "updatedDateTime", alternate = {"UpdatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar updatedDateTime;
+    public java.time.OffsetDateTime updatedDateTime;
 
     /**
      * The User.

@@ -91,7 +91,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @SerializedName(value = "featureUpdatesPauseExpiryDateTime", alternate = {"FeatureUpdatesPauseExpiryDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar featureUpdatesPauseExpiryDateTime;
+    public java.time.OffsetDateTime featureUpdatesPauseExpiryDateTime;
 
     /**
      * The Installation Schedule.
@@ -145,7 +145,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     @SerializedName(value = "qualityUpdatesPauseExpiryDateTime", alternate = {"QualityUpdatesPauseExpiryDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar qualityUpdatesPauseExpiryDateTime;
+    public java.time.OffsetDateTime qualityUpdatesPauseExpiryDateTime;
 
 
     /**

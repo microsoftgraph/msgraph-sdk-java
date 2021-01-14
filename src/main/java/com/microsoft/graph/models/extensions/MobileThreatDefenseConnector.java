@@ -69,7 +69,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     @SerializedName(value = "lastHeartbeatDateTime", alternate = {"LastHeartbeatDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastHeartbeatDateTime;
+    public java.time.OffsetDateTime lastHeartbeatDateTime;
 
     /**
      * The Partner State.

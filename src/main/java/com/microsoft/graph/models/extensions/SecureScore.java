@@ -72,7 +72,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Current Score.

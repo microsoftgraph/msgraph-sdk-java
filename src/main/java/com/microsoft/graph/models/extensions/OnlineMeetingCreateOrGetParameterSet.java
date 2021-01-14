@@ -39,7 +39,7 @@ public class OnlineMeetingCreateOrGetParameterSet {
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar endDateTime;
+    public java.time.OffsetDateTime endDateTime;
 
     /**
      * The external Id.
@@ -66,7 +66,7 @@ public class OnlineMeetingCreateOrGetParameterSet {
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
      * The subject.
@@ -125,14 +125,14 @@ public class OnlineMeetingCreateOrGetParameterSet {
          * The endDateTime parameter value
          */
         @Nullable
-        protected java.util.Calendar endDateTime;
+        protected java.time.OffsetDateTime endDateTime;
         /**
          * Sets the EndDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public OnlineMeetingCreateOrGetParameterSetBuilder withEndDateTime(@Nullable final java.util.Calendar val) {
+        public OnlineMeetingCreateOrGetParameterSetBuilder withEndDateTime(@Nullable final java.time.OffsetDateTime val) {
             this.endDateTime = val;
             return this;
         }
@@ -170,14 +170,14 @@ public class OnlineMeetingCreateOrGetParameterSet {
          * The startDateTime parameter value
          */
         @Nullable
-        protected java.util.Calendar startDateTime;
+        protected java.time.OffsetDateTime startDateTime;
         /**
          * Sets the StartDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public OnlineMeetingCreateOrGetParameterSetBuilder withStartDateTime(@Nullable final java.util.Calendar val) {
+        public OnlineMeetingCreateOrGetParameterSetBuilder withStartDateTime(@Nullable final java.time.OffsetDateTime val) {
             this.startDateTime = val;
             return this;
         }

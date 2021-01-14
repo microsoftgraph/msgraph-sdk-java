@@ -60,7 +60,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
 
     /**

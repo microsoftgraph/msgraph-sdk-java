@@ -109,7 +109,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar onPremisesLastSyncDateTime;
+    public java.time.OffsetDateTime onPremisesLastSyncDateTime;
 
     /**
      * The On Premises Provisioning Errors.

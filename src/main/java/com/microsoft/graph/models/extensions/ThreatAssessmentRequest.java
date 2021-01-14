@@ -68,7 +68,7 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Expected Assessment.

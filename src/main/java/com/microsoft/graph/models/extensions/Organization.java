@@ -87,7 +87,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Display Name.
@@ -114,7 +114,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar onPremisesLastSyncDateTime;
+    public java.time.OffsetDateTime onPremisesLastSyncDateTime;
 
     /**
      * The On Premises Sync Enabled.

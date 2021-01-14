@@ -116,7 +116,7 @@ public class Photo implements IJsonBackedObject {
     @SerializedName(value = "takenDateTime", alternate = {"TakenDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar takenDateTime;
+    public java.time.OffsetDateTime takenDateTime;
 
 
     /**

@@ -79,7 +79,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "microsoftStoreForBusinessLastCompletedApplicationSyncTime", alternate = {"MicrosoftStoreForBusinessLastCompletedApplicationSyncTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar microsoftStoreForBusinessLastCompletedApplicationSyncTime;
+    public java.time.OffsetDateTime microsoftStoreForBusinessLastCompletedApplicationSyncTime;
 
     /**
      * The Microsoft Store For Business Last Successful Sync Date Time.
@@ -88,7 +88,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "microsoftStoreForBusinessLastSuccessfulSyncDateTime", alternate = {"MicrosoftStoreForBusinessLastSuccessfulSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar microsoftStoreForBusinessLastSuccessfulSyncDateTime;
+    public java.time.OffsetDateTime microsoftStoreForBusinessLastSuccessfulSyncDateTime;
 
     /**
      * The Managed EBooks.

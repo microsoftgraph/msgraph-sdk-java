@@ -44,7 +44,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastDeliveredDateTime", alternate = {"LastDeliveredDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastDeliveredDateTime;
+    public java.time.OffsetDateTime lastDeliveredDateTime;
 
     /**
      * The Preview.

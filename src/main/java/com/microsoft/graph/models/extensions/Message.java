@@ -209,7 +209,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "receivedDateTime", alternate = {"ReceivedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar receivedDateTime;
+    public java.time.OffsetDateTime receivedDateTime;
 
     /**
      * The Reply To.
@@ -236,7 +236,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "sentDateTime", alternate = {"SentDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar sentDateTime;
+    public java.time.OffsetDateTime sentDateTime;
 
     /**
      * The Subject.

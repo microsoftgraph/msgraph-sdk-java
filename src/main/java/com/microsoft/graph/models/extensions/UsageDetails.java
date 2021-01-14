@@ -44,7 +44,7 @@ public class UsageDetails implements IJsonBackedObject {
     @SerializedName(value = "lastAccessedDateTime", alternate = {"LastAccessedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastAccessedDateTime;
+    public java.time.OffsetDateTime lastAccessedDateTime;
 
     /**
      * The Last Modified Date Time.
@@ -53,7 +53,7 @@ public class UsageDetails implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
 
     /**

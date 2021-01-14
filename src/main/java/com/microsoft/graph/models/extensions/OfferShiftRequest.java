@@ -32,7 +32,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
     @SerializedName(value = "recipientActionDateTime", alternate = {"RecipientActionDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar recipientActionDateTime;
+    public java.time.OffsetDateTime recipientActionDateTime;
 
     /**
      * The Recipient Action Message.

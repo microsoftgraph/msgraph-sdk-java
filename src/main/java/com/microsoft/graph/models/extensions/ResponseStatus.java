@@ -54,7 +54,7 @@ public class ResponseStatus implements IJsonBackedObject {
     @SerializedName(value = "time", alternate = {"Time"})
     @Expose
 	@Nullable
-    public java.util.Calendar time;
+    public java.time.OffsetDateTime time;
 
 
     /**

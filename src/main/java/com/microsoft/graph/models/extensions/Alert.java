@@ -107,7 +107,7 @@ public class Alert extends Entity implements IJsonBackedObject {
     @SerializedName(value = "closedDateTime", alternate = {"ClosedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar closedDateTime;
+    public java.time.OffsetDateTime closedDateTime;
 
     /**
      * The Cloud App States.
@@ -143,7 +143,7 @@ public class Alert extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Description.
@@ -170,7 +170,7 @@ public class Alert extends Entity implements IJsonBackedObject {
     @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar eventDateTime;
+    public java.time.OffsetDateTime eventDateTime;
 
     /**
      * The Feedback.
@@ -233,7 +233,7 @@ public class Alert extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastEventDateTime", alternate = {"LastEventDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastEventDateTime;
+    public java.time.OffsetDateTime lastEventDateTime;
 
     /**
      * The Last Modified Date Time.
@@ -242,7 +242,7 @@ public class Alert extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Malware States.

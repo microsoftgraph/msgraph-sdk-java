@@ -228,7 +228,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "refreshTokensValidFromDateTime", alternate = {"RefreshTokensValidFromDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar refreshTokensValidFromDateTime;
+    public java.time.OffsetDateTime refreshTokensValidFromDateTime;
 
     /**
      * The Residence Address.

@@ -63,7 +63,7 @@ public class DeviceActionResult implements IJsonBackedObject {
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastUpdatedDateTime;
+    public java.time.OffsetDateTime lastUpdatedDateTime;
 
     /**
      * The Start Date Time.
@@ -72,7 +72,7 @@ public class DeviceActionResult implements IJsonBackedObject {
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
 
     /**
