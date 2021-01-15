@@ -74,17 +74,24 @@ After you have a GraphServiceClient that is authenticated, you can begin making 
 To retrieve the user's drive:
 
 ```java
+final Drive result = graphClient
+  .me()
+  .drive()
+  .buildRequest()
+  .get();
+System.out.println("Found Drive " + result.id);
+```
+
+Or with the asynchronous API.
+
+```java
 graphClient
   .me()
   .drive()
   .buildRequest()
-  .get(new ICallback<Drive>() {
-     @Override
-     public void success(final Drive result) {
-        System.out.println("Found Drive " + result.id);
-     }
-     ...
-     // Handle failure case
+  .futureGet()
+  .thenApply(result -> {
+    System.out.println("Found Drive " + result.id);
   });
 ```
 
