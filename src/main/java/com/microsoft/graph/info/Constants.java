@@ -1,4 +1,4 @@
-package com.microsoft.graph.core;
+package com.microsoft.graph.info;
 
 /** Multi-purpose constants holder used accross the SDK */
 public final class Constants {

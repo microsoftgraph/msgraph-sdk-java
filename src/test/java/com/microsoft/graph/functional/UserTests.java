@@ -31,7 +31,7 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Organization;
-import com.microsoft.graph.core.IGraphServiceClient;
+import com.microsoft.graph.models.extensions.GraphServiceClient;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.models.extensions.User;
@@ -48,7 +48,7 @@ import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCollectionPage;
 @Ignore
 public class UserTests {
-	IGraphServiceClient graphServiceClient = null;
+	GraphServiceClient graphServiceClient = null;
 
 	@Before
 	public void setUp() {

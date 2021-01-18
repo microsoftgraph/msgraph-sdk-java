@@ -8,13 +8,13 @@ import java.net.URL;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.microsoft.graph.core.Constants;
+import com.microsoft.graph.info.Constants;
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
-import com.microsoft.graph.core.IGraphServiceClient;
-import com.microsoft.graph.core.GraphServiceClient;
+import com.microsoft.graph.models.extensions.GraphServiceClient;
+import com.microsoft.graph.requests.extensions.GraphServiceClient;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -30,7 +30,7 @@ public class TestBase {
     private String tokenEndpoint = "https://login.microsoftonline.com/"+ Constants.TENANTID +"/oauth2/v2.0/token";
     private String resourceId = "https%3A%2F%2Fgraph.microsoft.com%2F.default";
 
-    public IGraphServiceClient graphClient = null;
+    public GraphServiceClient graphClient = null;
 
     public TestBase(){
         this(true);

@@ -9,13 +9,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.mockito.Mockito.mock;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.logger.MockLogger;
+import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.Contact;
@@ -34,10 +36,10 @@ import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 
 public class CollectionPageSerializerTests {
-	private MockLogger logger;
+	private ILogger logger;
 	@Before
 	public void setUp() {
-		logger = new MockLogger();
+		logger = mock(ILogger.class);
 	}
 
 	@Test
