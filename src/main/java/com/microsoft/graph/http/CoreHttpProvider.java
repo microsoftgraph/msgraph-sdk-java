@@ -602,11 +602,4 @@ public class CoreHttpProvider implements IHttpProvider {
 	public ILogger getLogger() {
 		return logger;
     }
-    /**
-     * Gets the executor service in use by the provider
-     */
-    @Nonnull
-    public ExecutorService getExecutorService() {
-        return this.corehttpClient.dispatcher().executorService();
-    }
 }

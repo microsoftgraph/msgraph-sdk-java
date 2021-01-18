@@ -134,10 +134,4 @@ public interface IHttpProvider {
                                               @Nonnull final Class<Result> resultClass,
                                               @Nullable final BodyType serializable)
             throws ClientException;
-    /**
-     * Gets the executor service in use by the provider
-     * @return the executor service in use by the provider
-     */
-    @Nonnull
-    ExecutorService getExecutorService();
 }

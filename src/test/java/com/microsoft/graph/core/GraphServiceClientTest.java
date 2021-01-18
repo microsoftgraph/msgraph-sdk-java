@@ -141,10 +141,6 @@ public class GraphServiceClientTest {
 					BodyType serializable) throws ClientException {
 				return null;
             }
-            @Override
-            public ExecutorService getExecutorService() {
-                return null;
-            }
         };
         IGraphServiceClient client = GraphServiceClient
                 .builder()
