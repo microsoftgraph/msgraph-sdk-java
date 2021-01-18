@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Upload Session.
  */
-public class UploadSession implements IJsonBackedObject {
+public class UploadSession implements IJsonBackedObject, com.microsoft.graph.concurrency.IUploadSession {
 
     /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
@@ -107,5 +107,25 @@ public class UploadSession implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+    }
+    /**
+     * Gets the Upload Url.
+     * The URL endpoint that accepts PUT requests for byte ranges of the file.
+     * @return the upload Url
+     */
+    @Nullable
+    @Override
+    public String getUploadUrl() {
+        return uploadUrl;
+    }
+    /**
+     * Gets the Next Expected Ranges.
+     * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
+     * @return the Next Expected Ranges.
+     */
+    @Nullable
+    @Override
+    public java.util.List<String> getNextExpectedRanges() {
+        return nextExpectedRanges;
     }
 }
