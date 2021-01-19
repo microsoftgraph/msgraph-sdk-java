@@ -31,7 +31,7 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Organization;
-import com.microsoft.graph.models.extensions.GraphServiceClient;
+import com.microsoft.graph.requests.extensions.GraphServiceClient;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.models.extensions.User;

@@ -13,7 +13,7 @@ import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
-import com.microsoft.graph.models.extensions.GraphServiceClient;
+import com.microsoft.graph.requests.extensions.GraphServiceClient;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
