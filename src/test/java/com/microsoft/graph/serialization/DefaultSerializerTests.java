@@ -1,4 +1,4 @@
-package com.microsoft.graph.serializer;
+package com.microsoft.graph.serialization;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -28,6 +28,7 @@ import com.microsoft.graph.models.extensions.UserGetMailTipsParameterSet;
 import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
+import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.models.extensions.UploadSession;
 
 import org.junit.Assert;

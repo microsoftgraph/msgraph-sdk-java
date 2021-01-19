@@ -1,5 +1,6 @@
-package com.microsoft.graph.serializer;
+package com.microsoft.graph.serialization;
 
+// this package is named serialization instead of serializer to avoid conflicting with the core serializer package which throws some IDEs off balance
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -30,6 +31,7 @@ import com.microsoft.graph.models.extensions.PlannerAssignments;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.PlannerTaskDetails;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.serializer.DefaultSerializer;
 
 import java.util.Collections;
 

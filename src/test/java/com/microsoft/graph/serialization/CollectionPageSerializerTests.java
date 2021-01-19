@@ -1,4 +1,4 @@
-package com.microsoft.graph.serializer;
+package com.microsoft.graph.serialization;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -32,6 +32,9 @@ import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.EventCollectionResponse;
+import com.microsoft.graph.serializer.ByteArraySerializer;
+import com.microsoft.graph.serializer.CollectionPageSerializer;
+import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 
