@@ -9,11 +9,11 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.microsoft.graph.models.extensions.Calendar;
-import com.microsoft.graph.models.extensions.Event;
-import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
-import com.microsoft.graph.requests.extensions.GraphServiceClient;
+import com.microsoft.graph.models.Calendar;
+import com.microsoft.graph.models.Event;
+import com.microsoft.graph.requests.CalendarCollectionPage;
+import com.microsoft.graph.requests.EventCollectionPage;
+import com.microsoft.graph.requests.GraphServiceClient;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;

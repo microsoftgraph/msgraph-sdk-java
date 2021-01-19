@@ -9,9 +9,9 @@ import com.microsoft.graph.content.MSBatchRequestContent;
 import com.microsoft.graph.content.MSBatchResponseContent;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.httpcore.HttpClients;
-import com.microsoft.graph.requests.extensions.GraphServiceClient;
-import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.requests.extensions.UserRequest;
+import com.microsoft.graph.requests.GraphServiceClient;
+import com.microsoft.graph.models.User;
+import com.microsoft.graph.requests.UserRequest;
 
 import org.junit.Before;
 import org.junit.Ignore;

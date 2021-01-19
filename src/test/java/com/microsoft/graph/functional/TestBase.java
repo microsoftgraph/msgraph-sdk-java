@@ -13,7 +13,7 @@ import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
-import com.microsoft.graph.requests.extensions.GraphServiceClient;
+import com.microsoft.graph.requests.GraphServiceClient;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
