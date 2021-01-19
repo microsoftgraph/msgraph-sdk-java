@@ -72,7 +72,7 @@ public class BaseRequestTests {
 
     @Test
     public void testSendWithCallback() throws InterruptedException, ExecutionException {
-        final java.util.concurrent.CompletableFuture<JsonObject> result = mRequest.futureSend(HttpMethod.GET, null);
+        final java.util.concurrent.CompletableFuture<JsonObject> result = mRequest.sendAsync(HttpMethod.GET, null);
         assertNotNull(result.get());
         assertTrue(result.isDone());
         assertFalse(result.isCancelled());
