@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ListItemVersion;
 import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
     /**
      * Gets the ListItemVersion from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ListItemVersion> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItemVersion> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ListItemVersion> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItemVersion> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ListItemVersion delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ListItemVersion with a source
      *
      * @param sourceListItemVersion the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ListItemVersion sourceListItemVersion, @Nonnull final ICallback<? super ListItemVersion> callback) {
-        send(HttpMethod.PATCH, callback, sourceListItemVersion);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItemVersion> patchAsync(@Nonnull final ListItemVersion sourceListItemVersion) {
+        return sendAsync(HttpMethod.PATCH, sourceListItemVersion);
     }
 
     /**
@@ -100,10 +104,11 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
      * Creates a ListItemVersion with a new object
      *
      * @param newListItemVersion the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ListItemVersion newListItemVersion, @Nonnull final ICallback<? super ListItemVersion> callback) {
-        send(HttpMethod.POST, callback, newListItemVersion);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItemVersion> postAsync(@Nonnull final ListItemVersion newListItemVersion) {
+        return sendAsync(HttpMethod.POST, newListItemVersion);
     }
 
     /**
@@ -122,10 +127,11 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
      * Creates a ListItemVersion with a new object
      *
      * @param newListItemVersion the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ListItemVersion newListItemVersion, @Nonnull final ICallback<? super ListItemVersion> callback) {
-        send(HttpMethod.PUT, callback, newListItemVersion);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItemVersion> putAsync(@Nonnull final ListItemVersion newListItemVersion) {
+        return sendAsync(HttpMethod.PUT, newListItemVersion);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentitySecurityDefaultsEnforcementPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
     /**
      * Gets the IdentitySecurityDefaultsEnforcementPolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IdentitySecurityDefaultsEnforcementPolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IdentitySecurityDefaultsEnforcementPolicy with a source
      *
      * @param sourceIdentitySecurityDefaultsEnforcementPolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy sourceIdentitySecurityDefaultsEnforcementPolicy, @Nonnull final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceIdentitySecurityDefaultsEnforcementPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> patchAsync(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy sourceIdentitySecurityDefaultsEnforcementPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceIdentitySecurityDefaultsEnforcementPolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * Creates a IdentitySecurityDefaultsEnforcementPolicy with a new object
      *
      * @param newIdentitySecurityDefaultsEnforcementPolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, @Nonnull final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
-        send(HttpMethod.POST, callback, newIdentitySecurityDefaultsEnforcementPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> postAsync(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy) {
+        return sendAsync(HttpMethod.POST, newIdentitySecurityDefaultsEnforcementPolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * Creates a IdentitySecurityDefaultsEnforcementPolicy with a new object
      *
      * @param newIdentitySecurityDefaultsEnforcementPolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, @Nonnull final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
-        send(HttpMethod.PUT, callback, newIdentitySecurityDefaultsEnforcementPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> putAsync(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy) {
+        return sendAsync(HttpMethod.PUT, newIdentitySecurityDefaultsEnforcementPolicy);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequest;
@@ -44,13 +42,14 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
     /**
      * Creates a new WindowsInformationProtectionAppLockerFile
      * @param newWindowsInformationProtectionAppLockerFile the WindowsInformationProtectionAppLockerFile to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, @Nonnull final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> postAsync(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWindowsInformationProtectionAppLockerFile, callback);
+            .postAsync(newWindowsInformationProtectionAppLockerFile);
     }
 
     /**

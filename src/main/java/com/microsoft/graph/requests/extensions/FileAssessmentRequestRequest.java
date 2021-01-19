@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FileAssessmentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
     /**
      * Gets the FileAssessmentRequest from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super FileAssessmentRequest> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super FileAssessmentRequest> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public FileAssessmentRequest delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this FileAssessmentRequest with a source
      *
      * @param sourceFileAssessmentRequest the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final FileAssessmentRequest sourceFileAssessmentRequest, @Nonnull final ICallback<? super FileAssessmentRequest> callback) {
-        send(HttpMethod.PATCH, callback, sourceFileAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> patchAsync(@Nonnull final FileAssessmentRequest sourceFileAssessmentRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceFileAssessmentRequest);
     }
 
     /**
@@ -99,10 +103,11 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
      * Creates a FileAssessmentRequest with a new object
      *
      * @param newFileAssessmentRequest the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final FileAssessmentRequest newFileAssessmentRequest, @Nonnull final ICallback<? super FileAssessmentRequest> callback) {
-        send(HttpMethod.POST, callback, newFileAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> postAsync(@Nonnull final FileAssessmentRequest newFileAssessmentRequest) {
+        return sendAsync(HttpMethod.POST, newFileAssessmentRequest);
     }
 
     /**
@@ -121,10 +126,11 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
      * Creates a FileAssessmentRequest with a new object
      *
      * @param newFileAssessmentRequest the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final FileAssessmentRequest newFileAssessmentRequest, @Nonnull final ICallback<? super FileAssessmentRequest> callback) {
-        send(HttpMethod.PUT, callback, newFileAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> putAsync(@Nonnull final FileAssessmentRequest newFileAssessmentRequest) {
+        return sendAsync(HttpMethod.PUT, newFileAssessmentRequest);
     }
 
     /**

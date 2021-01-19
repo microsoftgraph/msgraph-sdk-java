@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class PermissionRequest extends BaseRequest<Permission> {
     /**
      * Gets the Permission from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Permission> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Permission> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class PermissionRequest extends BaseRequest<Permission> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Permission> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Permission> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Permission delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Permission with a source
      *
      * @param sourcePermission the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Permission sourcePermission, @Nonnull final ICallback<? super Permission> callback) {
-        send(HttpMethod.PATCH, callback, sourcePermission);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Permission> patchAsync(@Nonnull final Permission sourcePermission) {
+        return sendAsync(HttpMethod.PATCH, sourcePermission);
     }
 
     /**
@@ -100,10 +104,11 @@ public class PermissionRequest extends BaseRequest<Permission> {
      * Creates a Permission with a new object
      *
      * @param newPermission the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Permission newPermission, @Nonnull final ICallback<? super Permission> callback) {
-        send(HttpMethod.POST, callback, newPermission);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Permission> postAsync(@Nonnull final Permission newPermission) {
+        return sendAsync(HttpMethod.POST, newPermission);
     }
 
     /**
@@ -122,10 +127,11 @@ public class PermissionRequest extends BaseRequest<Permission> {
      * Creates a Permission with a new object
      *
      * @param newPermission the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Permission newPermission, @Nonnull final ICallback<? super Permission> callback) {
-        send(HttpMethod.PUT, callback, newPermission);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Permission> putAsync(@Nonnull final Permission newPermission) {
+        return sendAsync(HttpMethod.PUT, newPermission);
     }
 
     /**

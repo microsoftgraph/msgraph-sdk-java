@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionResponse;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequest;
@@ -43,13 +41,14 @@ public class ResourceSpecificPermissionGrantCollectionRequest extends BaseEntity
     /**
      * Creates a new ResourceSpecificPermissionGrant
      * @param newResourceSpecificPermissionGrant the ResourceSpecificPermissionGrant to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, @Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> postAsync(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ResourceSpecificPermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ResourceSpecificPermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newResourceSpecificPermissionGrant, callback);
+            .postAsync(newResourceSpecificPermissionGrant);
     }
 
     /**

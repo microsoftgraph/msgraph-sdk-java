@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
@@ -67,10 +66,11 @@ public class DeviceCompliancePolicyRequest extends BaseRequest<DeviceComplianceP
     /**
      * Gets the DeviceCompliancePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceCompliancePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -87,29 +87,33 @@ public class DeviceCompliancePolicyRequest extends BaseRequest<DeviceComplianceP
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceCompliancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceCompliancePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceCompliancePolicy with a source
      *
      * @param sourceDeviceCompliancePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceCompliancePolicy sourceDeviceCompliancePolicy, @Nonnull final ICallback<? super DeviceCompliancePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> patchAsync(@Nonnull final DeviceCompliancePolicy sourceDeviceCompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceCompliancePolicy);
     }
 
     /**
@@ -128,10 +132,11 @@ public class DeviceCompliancePolicyRequest extends BaseRequest<DeviceComplianceP
      * Creates a DeviceCompliancePolicy with a new object
      *
      * @param newDeviceCompliancePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceCompliancePolicy newDeviceCompliancePolicy, @Nonnull final ICallback<? super DeviceCompliancePolicy> callback) {
-        send(HttpMethod.POST, callback, newDeviceCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> postAsync(@Nonnull final DeviceCompliancePolicy newDeviceCompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newDeviceCompliancePolicy);
     }
 
     /**
@@ -150,10 +155,11 @@ public class DeviceCompliancePolicyRequest extends BaseRequest<DeviceComplianceP
      * Creates a DeviceCompliancePolicy with a new object
      *
      * @param newDeviceCompliancePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceCompliancePolicy newDeviceCompliancePolicy, @Nonnull final ICallback<? super DeviceCompliancePolicy> callback) {
-        send(HttpMethod.PUT, callback, newDeviceCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> putAsync(@Nonnull final DeviceCompliancePolicy newDeviceCompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newDeviceCompliancePolicy);
     }
 
     /**

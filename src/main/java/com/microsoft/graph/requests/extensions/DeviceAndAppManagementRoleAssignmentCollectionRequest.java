@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseE
     /**
      * Creates a new DeviceAndAppManagementRoleAssignment
      * @param newDeviceAndAppManagementRoleAssignment the DeviceAndAppManagementRoleAssignment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, @Nonnull final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> postAsync(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceAndAppManagementRoleAssignment, callback);
+            .postAsync(newDeviceAndAppManagementRoleAssignment);
     }
 
     /**

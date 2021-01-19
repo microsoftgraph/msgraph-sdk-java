@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
@@ -61,10 +60,11 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
     /**
      * Gets the ManagedEBook from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedEBook> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBook> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -81,29 +81,33 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedEBook> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBook> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedEBook delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedEBook with a source
      *
      * @param sourceManagedEBook the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedEBook sourceManagedEBook, @Nonnull final ICallback<? super ManagedEBook> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedEBook);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBook> patchAsync(@Nonnull final ManagedEBook sourceManagedEBook) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedEBook);
     }
 
     /**
@@ -122,10 +126,11 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * Creates a ManagedEBook with a new object
      *
      * @param newManagedEBook the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedEBook newManagedEBook, @Nonnull final ICallback<? super ManagedEBook> callback) {
-        send(HttpMethod.POST, callback, newManagedEBook);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBook> postAsync(@Nonnull final ManagedEBook newManagedEBook) {
+        return sendAsync(HttpMethod.POST, newManagedEBook);
     }
 
     /**
@@ -144,10 +149,11 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * Creates a ManagedEBook with a new object
      *
      * @param newManagedEBook the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedEBook newManagedEBook, @Nonnull final ICallback<? super ManagedEBook> callback) {
-        send(HttpMethod.PUT, callback, newManagedEBook);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBook> putAsync(@Nonnull final ManagedEBook newManagedEBook) {
+        return sendAsync(HttpMethod.PUT, newManagedEBook);
     }
 
     /**

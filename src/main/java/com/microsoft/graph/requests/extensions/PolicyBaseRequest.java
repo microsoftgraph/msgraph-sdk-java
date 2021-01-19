@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyBase;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class PolicyBaseRequest extends BaseRequest<PolicyBase> {
     /**
      * Gets the PolicyBase from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PolicyBase> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PolicyBase> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class PolicyBaseRequest extends BaseRequest<PolicyBase> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PolicyBase> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PolicyBase> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PolicyBase delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PolicyBase with a source
      *
      * @param sourcePolicyBase the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PolicyBase sourcePolicyBase, @Nonnull final ICallback<? super PolicyBase> callback) {
-        send(HttpMethod.PATCH, callback, sourcePolicyBase);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PolicyBase> patchAsync(@Nonnull final PolicyBase sourcePolicyBase) {
+        return sendAsync(HttpMethod.PATCH, sourcePolicyBase);
     }
 
     /**
@@ -114,10 +118,11 @@ public class PolicyBaseRequest extends BaseRequest<PolicyBase> {
      * Creates a PolicyBase with a new object
      *
      * @param newPolicyBase the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PolicyBase newPolicyBase, @Nonnull final ICallback<? super PolicyBase> callback) {
-        send(HttpMethod.POST, callback, newPolicyBase);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PolicyBase> postAsync(@Nonnull final PolicyBase newPolicyBase) {
+        return sendAsync(HttpMethod.POST, newPolicyBase);
     }
 
     /**
@@ -136,10 +141,11 @@ public class PolicyBaseRequest extends BaseRequest<PolicyBase> {
      * Creates a PolicyBase with a new object
      *
      * @param newPolicyBase the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PolicyBase newPolicyBase, @Nonnull final ICallback<? super PolicyBase> callback) {
-        send(HttpMethod.PUT, callback, newPolicyBase);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PolicyBase> putAsync(@Nonnull final PolicyBase newPolicyBase) {
+        return sendAsync(HttpMethod.PUT, newPolicyBase);
     }
 
     /**

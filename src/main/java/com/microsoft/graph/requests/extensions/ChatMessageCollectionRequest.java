@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequest;
@@ -43,13 +41,14 @@ public class ChatMessageCollectionRequest extends BaseEntityCollectionRequest<Ch
     /**
      * Creates a new ChatMessage
      * @param newChatMessage the ChatMessage to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ChatMessage newChatMessage, @Nonnull final ICallback<? super ChatMessage> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessage> postAsync(@Nonnull final ChatMessage newChatMessage) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newChatMessage, callback);
+            .postAsync(newChatMessage);
     }
 
     /**

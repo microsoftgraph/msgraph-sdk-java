@@ -32,9 +32,6 @@ import java.util.regex.Pattern;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.ICollectionResponse;

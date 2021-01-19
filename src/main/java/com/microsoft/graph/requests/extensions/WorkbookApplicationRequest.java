@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookApplication;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
     /**
      * Gets the WorkbookApplication from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookApplication> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookApplication> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookApplication delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookApplication with a source
      *
      * @param sourceWorkbookApplication the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookApplication sourceWorkbookApplication, @Nonnull final ICallback<? super WorkbookApplication> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookApplication);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> patchAsync(@Nonnull final WorkbookApplication sourceWorkbookApplication) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookApplication);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
      * Creates a WorkbookApplication with a new object
      *
      * @param newWorkbookApplication the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookApplication newWorkbookApplication, @Nonnull final ICallback<? super WorkbookApplication> callback) {
-        send(HttpMethod.POST, callback, newWorkbookApplication);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> postAsync(@Nonnull final WorkbookApplication newWorkbookApplication) {
+        return sendAsync(HttpMethod.POST, newWorkbookApplication);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
      * Creates a WorkbookApplication with a new object
      *
      * @param newWorkbookApplication the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookApplication newWorkbookApplication, @Nonnull final ICallback<? super WorkbookApplication> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookApplication);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> putAsync(@Nonnull final WorkbookApplication newWorkbookApplication) {
+        return sendAsync(HttpMethod.PUT, newWorkbookApplication);
     }
 
     /**

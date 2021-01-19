@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateRequestBuilder;
@@ -40,10 +39,11 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
     /**
      * Gets the UserInstallStateSummary from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super UserInstallStateSummary> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super UserInstallStateSummary> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public UserInstallStateSummary delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this UserInstallStateSummary with a source
      *
      * @param sourceUserInstallStateSummary the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final UserInstallStateSummary sourceUserInstallStateSummary, @Nonnull final ICallback<? super UserInstallStateSummary> callback) {
-        send(HttpMethod.PATCH, callback, sourceUserInstallStateSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> patchAsync(@Nonnull final UserInstallStateSummary sourceUserInstallStateSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceUserInstallStateSummary);
     }
 
     /**
@@ -101,10 +105,11 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * Creates a UserInstallStateSummary with a new object
      *
      * @param newUserInstallStateSummary the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final UserInstallStateSummary newUserInstallStateSummary, @Nonnull final ICallback<? super UserInstallStateSummary> callback) {
-        send(HttpMethod.POST, callback, newUserInstallStateSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> postAsync(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) {
+        return sendAsync(HttpMethod.POST, newUserInstallStateSummary);
     }
 
     /**
@@ -123,10 +128,11 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * Creates a UserInstallStateSummary with a new object
      *
      * @param newUserInstallStateSummary the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final UserInstallStateSummary newUserInstallStateSummary, @Nonnull final ICallback<? super UserInstallStateSummary> callback) {
-        send(HttpMethod.PUT, callback, newUserInstallStateSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> putAsync(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) {
+        return sendAsync(HttpMethod.PUT, newUserInstallStateSummary);
     }
 
     /**

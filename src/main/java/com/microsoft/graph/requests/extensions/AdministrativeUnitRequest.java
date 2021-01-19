@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
@@ -44,10 +43,11 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
     /**
      * Gets the AdministrativeUnit from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AdministrativeUnit> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,29 +64,33 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AdministrativeUnit> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AdministrativeUnit delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AdministrativeUnit with a source
      *
      * @param sourceAdministrativeUnit the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AdministrativeUnit sourceAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
-        send(HttpMethod.PATCH, callback, sourceAdministrativeUnit);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> patchAsync(@Nonnull final AdministrativeUnit sourceAdministrativeUnit) {
+        return sendAsync(HttpMethod.PATCH, sourceAdministrativeUnit);
     }
 
     /**
@@ -105,10 +109,11 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * Creates a AdministrativeUnit with a new object
      *
      * @param newAdministrativeUnit the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AdministrativeUnit newAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
-        send(HttpMethod.POST, callback, newAdministrativeUnit);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> postAsync(@Nonnull final AdministrativeUnit newAdministrativeUnit) {
+        return sendAsync(HttpMethod.POST, newAdministrativeUnit);
     }
 
     /**
@@ -127,10 +132,11 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * Creates a AdministrativeUnit with a new object
      *
      * @param newAdministrativeUnit the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AdministrativeUnit newAdministrativeUnit, @Nonnull final ICallback<? super AdministrativeUnit> callback) {
-        send(HttpMethod.PUT, callback, newAdministrativeUnit);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> putAsync(@Nonnull final AdministrativeUnit newAdministrativeUnit) {
+        return sendAsync(HttpMethod.PUT, newAdministrativeUnit);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudCommunications;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.ChatInfo;
@@ -20,7 +19,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequest;
@@ -46,13 +44,14 @@ public class OnlineMeetingCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new OnlineMeeting
      * @param newOnlineMeeting the OnlineMeeting to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final OnlineMeeting newOnlineMeeting, @Nonnull final ICallback<? super OnlineMeeting> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> postAsync(@Nonnull final OnlineMeeting newOnlineMeeting) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newOnlineMeeting, callback);
+            .postAsync(newOnlineMeeting);
     }
 
     /**

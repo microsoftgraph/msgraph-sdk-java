@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecureScoreControlProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
     /**
      * Gets the SecureScoreControlProfile from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SecureScoreControlProfile> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SecureScoreControlProfile> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SecureScoreControlProfile delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SecureScoreControlProfile with a source
      *
      * @param sourceSecureScoreControlProfile the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SecureScoreControlProfile sourceSecureScoreControlProfile, @Nonnull final ICallback<? super SecureScoreControlProfile> callback) {
-        send(HttpMethod.PATCH, callback, sourceSecureScoreControlProfile);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> patchAsync(@Nonnull final SecureScoreControlProfile sourceSecureScoreControlProfile) {
+        return sendAsync(HttpMethod.PATCH, sourceSecureScoreControlProfile);
     }
 
     /**
@@ -99,10 +103,11 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
      * Creates a SecureScoreControlProfile with a new object
      *
      * @param newSecureScoreControlProfile the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile, @Nonnull final ICallback<? super SecureScoreControlProfile> callback) {
-        send(HttpMethod.POST, callback, newSecureScoreControlProfile);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> postAsync(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) {
+        return sendAsync(HttpMethod.POST, newSecureScoreControlProfile);
     }
 
     /**
@@ -121,10 +126,11 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
      * Creates a SecureScoreControlProfile with a new object
      *
      * @param newSecureScoreControlProfile the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile, @Nonnull final ICallback<? super SecureScoreControlProfile> callback) {
-        send(HttpMethod.PUT, callback, newSecureScoreControlProfile);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> putAsync(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) {
+        return sendAsync(HttpMethod.PUT, newSecureScoreControlProfile);
     }
 
     /**

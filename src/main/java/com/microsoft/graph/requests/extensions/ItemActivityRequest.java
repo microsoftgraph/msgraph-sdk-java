@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivity;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
     /**
      * Gets the ItemActivity from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ItemActivity> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivity> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ItemActivity> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivity> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ItemActivity delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ItemActivity with a source
      *
      * @param sourceItemActivity the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ItemActivity sourceItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
-        send(HttpMethod.PATCH, callback, sourceItemActivity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivity> patchAsync(@Nonnull final ItemActivity sourceItemActivity) {
+        return sendAsync(HttpMethod.PATCH, sourceItemActivity);
     }
 
     /**
@@ -100,10 +104,11 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * Creates a ItemActivity with a new object
      *
      * @param newItemActivity the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ItemActivity newItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
-        send(HttpMethod.POST, callback, newItemActivity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivity> postAsync(@Nonnull final ItemActivity newItemActivity) {
+        return sendAsync(HttpMethod.POST, newItemActivity);
     }
 
     /**
@@ -122,10 +127,11 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * Creates a ItemActivity with a new object
      *
      * @param newItemActivity the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ItemActivity newItemActivity, @Nonnull final ICallback<? super ItemActivity> callback) {
-        send(HttpMethod.PUT, callback, newItemActivity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivity> putAsync(@Nonnull final ItemActivity newItemActivity) {
+        return sendAsync(HttpMethod.PUT, newItemActivity);
     }
 
     /**

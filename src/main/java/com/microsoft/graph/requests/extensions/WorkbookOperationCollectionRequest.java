@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.WorkbookOperation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequest;
@@ -44,13 +42,14 @@ public class WorkbookOperationCollectionRequest extends BaseEntityCollectionRequ
     /**
      * Creates a new WorkbookOperation
      * @param newWorkbookOperation the WorkbookOperation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookOperation newWorkbookOperation, @Nonnull final ICallback<? super WorkbookOperation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookOperation> postAsync(@Nonnull final WorkbookOperation newWorkbookOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookOperation, callback);
+            .postAsync(newWorkbookOperation);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequest;
@@ -45,13 +43,14 @@ public class ManagedEBookCollectionRequest extends BaseEntityCollectionRequest<M
     /**
      * Creates a new ManagedEBook
      * @param newManagedEBook the ManagedEBook to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedEBook newManagedEBook, @Nonnull final ICallback<? super ManagedEBook> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBook> postAsync(@Nonnull final ManagedEBook newManagedEBook) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ManagedEBookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedEBookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedEBook, callback);
+            .postAsync(newManagedEBook);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsAppDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
     /**
      * Gets the TeamsAppDefinition from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TeamsAppDefinition delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TeamsAppDefinition with a source
      *
      * @param sourceTeamsAppDefinition the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TeamsAppDefinition sourceTeamsAppDefinition, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.PATCH, callback, sourceTeamsAppDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> patchAsync(@Nonnull final TeamsAppDefinition sourceTeamsAppDefinition) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsAppDefinition);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * Creates a TeamsAppDefinition with a new object
      *
      * @param newTeamsAppDefinition the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TeamsAppDefinition newTeamsAppDefinition, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.POST, callback, newTeamsAppDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> postAsync(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) {
+        return sendAsync(HttpMethod.POST, newTeamsAppDefinition);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * Creates a TeamsAppDefinition with a new object
      *
      * @param newTeamsAppDefinition the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TeamsAppDefinition newTeamsAppDefinition, @Nonnull final ICallback<? super TeamsAppDefinition> callback) {
-        send(HttpMethod.PUT, callback, newTeamsAppDefinition);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> putAsync(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) {
+        return sendAsync(HttpMethod.PUT, newTeamsAppDefinition);
     }
 
     /**

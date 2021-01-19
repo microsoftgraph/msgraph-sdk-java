@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
 import com.microsoft.graph.models.extensions.NamedLocation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionResponse;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequest;
@@ -44,13 +42,14 @@ public class NamedLocationCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new NamedLocation
      * @param newNamedLocation the NamedLocation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final NamedLocation newNamedLocation, @Nonnull final ICallback<? super NamedLocation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<NamedLocation> postAsync(@Nonnull final NamedLocation newNamedLocation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newNamedLocation, callback);
+            .postAsync(newNamedLocation);
     }
 
     /**

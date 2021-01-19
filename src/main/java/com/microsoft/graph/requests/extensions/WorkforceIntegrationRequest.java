@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
     /**
      * Gets the WorkforceIntegration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkforceIntegration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkforceIntegration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkforceIntegration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkforceIntegration with a source
      *
      * @param sourceWorkforceIntegration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkforceIntegration sourceWorkforceIntegration, @Nonnull final ICallback<? super WorkforceIntegration> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkforceIntegration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> patchAsync(@Nonnull final WorkforceIntegration sourceWorkforceIntegration) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkforceIntegration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * Creates a WorkforceIntegration with a new object
      *
      * @param newWorkforceIntegration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkforceIntegration newWorkforceIntegration, @Nonnull final ICallback<? super WorkforceIntegration> callback) {
-        send(HttpMethod.POST, callback, newWorkforceIntegration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> postAsync(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
+        return sendAsync(HttpMethod.POST, newWorkforceIntegration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * Creates a WorkforceIntegration with a new object
      *
      * @param newWorkforceIntegration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkforceIntegration newWorkforceIntegration, @Nonnull final ICallback<? super WorkforceIntegration> callback) {
-        send(HttpMethod.PUT, callback, newWorkforceIntegration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> putAsync(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
+        return sendAsync(HttpMethod.PUT, newWorkforceIntegration);
     }
 
     /**

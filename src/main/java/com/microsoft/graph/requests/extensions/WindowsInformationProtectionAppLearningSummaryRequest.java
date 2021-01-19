@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
     /**
      * Gets the WindowsInformationProtectionAppLearningSummary from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WindowsInformationProtectionAppLearningSummary delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WindowsInformationProtectionAppLearningSummary with a source
      *
      * @param sourceWindowsInformationProtectionAppLearningSummary the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary, @Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionAppLearningSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> patchAsync(@Nonnull final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsInformationProtectionAppLearningSummary);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * Creates a WindowsInformationProtectionAppLearningSummary with a new object
      *
      * @param newWindowsInformationProtectionAppLearningSummary the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, @Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
-        send(HttpMethod.POST, callback, newWindowsInformationProtectionAppLearningSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> postAsync(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) {
+        return sendAsync(HttpMethod.POST, newWindowsInformationProtectionAppLearningSummary);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * Creates a WindowsInformationProtectionAppLearningSummary with a new object
      *
      * @param newWindowsInformationProtectionAppLearningSummary the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, @Nonnull final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
-        send(HttpMethod.PUT, callback, newWindowsInformationProtectionAppLearningSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> putAsync(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) {
+        return sendAsync(HttpMethod.PUT, newWindowsInformationProtectionAppLearningSummary);
     }
 
     /**

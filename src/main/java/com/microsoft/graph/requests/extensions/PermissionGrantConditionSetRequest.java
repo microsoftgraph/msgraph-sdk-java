@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
     /**
      * Gets the PermissionGrantConditionSet from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PermissionGrantConditionSet delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PermissionGrantConditionSet with a source
      *
      * @param sourcePermissionGrantConditionSet the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PermissionGrantConditionSet sourcePermissionGrantConditionSet, @Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
-        send(HttpMethod.PATCH, callback, sourcePermissionGrantConditionSet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> patchAsync(@Nonnull final PermissionGrantConditionSet sourcePermissionGrantConditionSet) {
+        return sendAsync(HttpMethod.PATCH, sourcePermissionGrantConditionSet);
     }
 
     /**
@@ -99,10 +103,11 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
      * Creates a PermissionGrantConditionSet with a new object
      *
      * @param newPermissionGrantConditionSet the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet, @Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
-        send(HttpMethod.POST, callback, newPermissionGrantConditionSet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> postAsync(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
+        return sendAsync(HttpMethod.POST, newPermissionGrantConditionSet);
     }
 
     /**
@@ -121,10 +126,11 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
      * Creates a PermissionGrantConditionSet with a new object
      *
      * @param newPermissionGrantConditionSet the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet, @Nonnull final ICallback<? super PermissionGrantConditionSet> callback) {
-        send(HttpMethod.PUT, callback, newPermissionGrantConditionSet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> putAsync(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
+        return sendAsync(HttpMethod.PUT, newPermissionGrantConditionSet);
     }
 
     /**

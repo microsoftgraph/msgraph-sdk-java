@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
     /**
      * Gets the MdmWindowsInformationProtectionPolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MdmWindowsInformationProtectionPolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MdmWindowsInformationProtectionPolicy with a source
      *
      * @param sourceMdmWindowsInformationProtectionPolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceMdmWindowsInformationProtectionPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patchAsync(@Nonnull final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceMdmWindowsInformationProtectionPolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
      * Creates a MdmWindowsInformationProtectionPolicy with a new object
      *
      * @param newMdmWindowsInformationProtectionPolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
-        send(HttpMethod.POST, callback, newMdmWindowsInformationProtectionPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> postAsync(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
+        return sendAsync(HttpMethod.POST, newMdmWindowsInformationProtectionPolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
      * Creates a MdmWindowsInformationProtectionPolicy with a new object
      *
      * @param newMdmWindowsInformationProtectionPolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
-        send(HttpMethod.PUT, callback, newMdmWindowsInformationProtectionPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> putAsync(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
+        return sendAsync(HttpMethod.PUT, newMdmWindowsInformationProtectionPolicy);
     }
 
     /**

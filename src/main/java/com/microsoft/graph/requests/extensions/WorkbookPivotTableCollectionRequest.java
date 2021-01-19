@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequest;
@@ -44,13 +42,14 @@ public class WorkbookPivotTableCollectionRequest extends BaseEntityCollectionReq
     /**
      * Creates a new WorkbookPivotTable
      * @param newWorkbookPivotTable the WorkbookPivotTable to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookPivotTable newWorkbookPivotTable, @Nonnull final ICallback<? super WorkbookPivotTable> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> postAsync(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookPivotTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookPivotTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookPivotTable, callback);
+            .postAsync(newWorkbookPivotTable);
     }
 
     /**

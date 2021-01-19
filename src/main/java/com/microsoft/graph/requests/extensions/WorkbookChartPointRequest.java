@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartPoint;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointFormatRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
     /**
      * Gets the WorkbookChartPoint from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartPoint> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartPoint> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartPoint delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartPoint with a source
      *
      * @param sourceWorkbookChartPoint the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartPoint sourceWorkbookChartPoint, @Nonnull final ICallback<? super WorkbookChartPoint> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartPoint);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> patchAsync(@Nonnull final WorkbookChartPoint sourceWorkbookChartPoint) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartPoint);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
      * Creates a WorkbookChartPoint with a new object
      *
      * @param newWorkbookChartPoint the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartPoint newWorkbookChartPoint, @Nonnull final ICallback<? super WorkbookChartPoint> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartPoint);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> postAsync(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartPoint);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
      * Creates a WorkbookChartPoint with a new object
      *
      * @param newWorkbookChartPoint the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartPoint newWorkbookChartPoint, @Nonnull final ICallback<? super WorkbookChartPoint> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartPoint);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> putAsync(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartPoint);
     }
 
     /**

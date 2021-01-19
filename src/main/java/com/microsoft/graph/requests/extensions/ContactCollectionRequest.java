@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContactFolder;
 import com.microsoft.graph.models.extensions.Contact;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ContactCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactCollectionRequest;
@@ -44,13 +42,14 @@ public class ContactCollectionRequest extends BaseEntityCollectionRequest<Contac
     /**
      * Creates a new Contact
      * @param newContact the Contact to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Contact newContact, @Nonnull final ICallback<? super Contact> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Contact> postAsync(@Nonnull final Contact newContact) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newContact, callback);
+            .postAsync(newContact);
     }
 
     /**

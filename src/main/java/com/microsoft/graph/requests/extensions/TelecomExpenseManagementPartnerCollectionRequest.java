@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionRequest;
@@ -44,13 +42,14 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseEntity
     /**
      * Creates a new TelecomExpenseManagementPartner
      * @param newTelecomExpenseManagementPartner the TelecomExpenseManagementPartner to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, @Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> postAsync(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTelecomExpenseManagementPartner, callback);
+            .postAsync(newTelecomExpenseManagementPartner);
     }
 
     /**

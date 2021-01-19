@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequest;
@@ -44,13 +42,14 @@ public class ActivityHistoryItemCollectionRequest extends BaseEntityCollectionRe
     /**
      * Creates a new ActivityHistoryItem
      * @param newActivityHistoryItem the ActivityHistoryItem to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ActivityHistoryItem newActivityHistoryItem, @Nonnull final ICallback<? super ActivityHistoryItem> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> postAsync(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newActivityHistoryItem, callback);
+            .postAsync(newActivityHistoryItem);
     }
 
     /**

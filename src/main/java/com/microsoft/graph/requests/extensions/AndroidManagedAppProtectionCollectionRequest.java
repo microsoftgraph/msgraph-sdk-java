@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequest;
@@ -44,13 +42,14 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseEntityColl
     /**
      * Creates a new AndroidManagedAppProtection
      * @param newAndroidManagedAppProtection the AndroidManagedAppProtection to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection, @Nonnull final ICallback<? super AndroidManagedAppProtection> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> postAsync(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new AndroidManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new AndroidManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newAndroidManagedAppProtection, callback);
+            .postAsync(newAndroidManagedAppProtection);
     }
 
     /**

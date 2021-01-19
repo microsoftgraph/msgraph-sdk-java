@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
@@ -41,10 +40,11 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
     /**
      * Gets the WorkbookRangeView from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookRangeView> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,29 +61,33 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookRangeView> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookRangeView delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookRangeView with a source
      *
      * @param sourceWorkbookRangeView the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookRangeView sourceWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookRangeView);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> patchAsync(@Nonnull final WorkbookRangeView sourceWorkbookRangeView) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookRangeView);
     }
 
     /**
@@ -102,10 +106,11 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
      * Creates a WorkbookRangeView with a new object
      *
      * @param newWorkbookRangeView the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookRangeView newWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
-        send(HttpMethod.POST, callback, newWorkbookRangeView);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> postAsync(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
+        return sendAsync(HttpMethod.POST, newWorkbookRangeView);
     }
 
     /**
@@ -124,10 +129,11 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
      * Creates a WorkbookRangeView with a new object
      *
      * @param newWorkbookRangeView the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookRangeView newWorkbookRangeView, @Nonnull final ICallback<? super WorkbookRangeView> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookRangeView);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> putAsync(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
+        return sendAsync(HttpMethod.PUT, newWorkbookRangeView);
     }
 
     /**

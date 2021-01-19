@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.ContentType;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequest;
@@ -44,13 +42,14 @@ public class ContentTypeCollectionRequest extends BaseEntityCollectionRequest<Co
     /**
      * Creates a new ContentType
      * @param newContentType the ContentType to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ContentType newContentType, @Nonnull final ICallback<? super ContentType> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContentType> postAsync(@Nonnull final ContentType newContentType) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newContentType, callback);
+            .postAsync(newContentType);
     }
 
     /**

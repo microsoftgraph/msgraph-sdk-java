@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
@@ -70,12 +69,13 @@ public class ManagedAppRegistrationReferenceRequest extends BaseReferenceRequest
      * Puts the ManagedAppRegistration
      *
      * @param srcManagedAppRegistration the ManagedAppRegistration reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppRegistration srcManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> putAsync(@Nonnull final ManagedAppRegistration srcManagedAppRegistration) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/managedAppRegistrations/" + srcManagedAppRegistration.id));
-        send(HttpMethod.PUT, callback, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

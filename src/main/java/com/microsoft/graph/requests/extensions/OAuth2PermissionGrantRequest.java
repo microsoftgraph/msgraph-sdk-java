@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
     /**
      * Gets the OAuth2PermissionGrant from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OAuth2PermissionGrant delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OAuth2PermissionGrant with a source
      *
      * @param sourceOAuth2PermissionGrant the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OAuth2PermissionGrant sourceOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
-        send(HttpMethod.PATCH, callback, sourceOAuth2PermissionGrant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> patchAsync(@Nonnull final OAuth2PermissionGrant sourceOAuth2PermissionGrant) {
+        return sendAsync(HttpMethod.PATCH, sourceOAuth2PermissionGrant);
     }
 
     /**
@@ -99,10 +103,11 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
      * Creates a OAuth2PermissionGrant with a new object
      *
      * @param newOAuth2PermissionGrant the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
-        send(HttpMethod.POST, callback, newOAuth2PermissionGrant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> postAsync(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
+        return sendAsync(HttpMethod.POST, newOAuth2PermissionGrant);
     }
 
     /**
@@ -121,10 +126,11 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
      * Creates a OAuth2PermissionGrant with a new object
      *
      * @param newOAuth2PermissionGrant the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
-        send(HttpMethod.PUT, callback, newOAuth2PermissionGrant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> putAsync(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
+        return sendAsync(HttpMethod.PUT, newOAuth2PermissionGrant);
     }
 
     /**

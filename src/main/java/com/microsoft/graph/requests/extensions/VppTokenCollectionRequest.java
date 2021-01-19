@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.VppToken;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionResponse;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionRequest;
@@ -44,13 +42,14 @@ public class VppTokenCollectionRequest extends BaseEntityCollectionRequest<VppTo
     /**
      * Creates a new VppToken
      * @param newVppToken the VppToken to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final VppToken newVppToken, @Nonnull final ICallback<? super VppToken> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<VppToken> postAsync(@Nonnull final VppToken newVppToken) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newVppToken, callback);
+            .postAsync(newVppToken);
     }
 
     /**

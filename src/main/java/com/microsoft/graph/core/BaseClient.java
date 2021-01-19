@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.core;
 
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
@@ -34,11 +33,6 @@ import javax.annotation.Nonnull;
  * A client that communications with an OData service
  */
 public abstract class BaseClient implements IBaseClient {
-    /**
-     * The executors instance
-     */
-    private IExecutors executors;
-
     /**
      * The HTTP provider instance
      */
@@ -55,19 +49,8 @@ public abstract class BaseClient implements IBaseClient {
     private ISerializer serializer;
 
     /**
-     * Gets the executors
-     * 
-     * @return The executors
-     */
-    @Override
-    @Nullable
-    public IExecutors getExecutors() {
-        return executors;
-    }
-
-    /**
      * Gets the HTTP provider
-     * 
+     *
      * @return The HTTP provider
      */
     @Override
@@ -78,7 +61,7 @@ public abstract class BaseClient implements IBaseClient {
 
     /**
      * Gets the logger
-     * 
+     *
      * @return The logger
      */
     @Nullable
@@ -88,7 +71,7 @@ public abstract class BaseClient implements IBaseClient {
 
     /**
      * Gets the serializer
-     * 
+     *
      * @return The serializer
      */
     @Override
@@ -102,10 +85,6 @@ public abstract class BaseClient implements IBaseClient {
      */
     @Override
     public void validate() {
-        if (executors == null) {
-            throw new NullPointerException("Executors");
-        }
-
         if (httpProvider == null) {
             throw new NullPointerException("HttpProvider");
         }
@@ -117,7 +96,7 @@ public abstract class BaseClient implements IBaseClient {
 
     /**
      * Sets the logger
-     * 
+     *
      * @param logger The logger
      */
     protected void setLogger(@Nonnull final ILogger logger) {
@@ -125,17 +104,8 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Sets the executors
-     * 
-     * @param executors The executors
-     */
-    protected void setExecutors(@Nonnull final IExecutors executors) {
-        this.executors = executors;
-    }
-
-    /**
      * Sets the HTTP provider
-     * 
+     *
      * @param httpProvider The HTTP provider
      */
     protected void setHttpProvider(@Nonnull final IHttpProvider httpProvider) {
@@ -144,14 +114,10 @@ public abstract class BaseClient implements IBaseClient {
 
     /**
      * Sets the serializer
-     * 
+     *
      * @param serializer The serializer
      */
     public void setSerializer(@Nonnull final ISerializer serializer) {
         this.serializer = serializer;
-    }
-    
-    public void shutdown() {
-    	this.executors.shutdownBackgroundExecutors();
     }
 }

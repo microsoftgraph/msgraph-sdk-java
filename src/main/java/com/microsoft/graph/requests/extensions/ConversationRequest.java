@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Conversation;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadRequestBuilder;
@@ -40,10 +39,11 @@ public class ConversationRequest extends BaseRequest<Conversation> {
     /**
      * Gets the Conversation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Conversation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Conversation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class ConversationRequest extends BaseRequest<Conversation> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Conversation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Conversation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Conversation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Conversation with a source
      *
      * @param sourceConversation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Conversation sourceConversation, @Nonnull final ICallback<? super Conversation> callback) {
-        send(HttpMethod.PATCH, callback, sourceConversation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Conversation> patchAsync(@Nonnull final Conversation sourceConversation) {
+        return sendAsync(HttpMethod.PATCH, sourceConversation);
     }
 
     /**
@@ -101,10 +105,11 @@ public class ConversationRequest extends BaseRequest<Conversation> {
      * Creates a Conversation with a new object
      *
      * @param newConversation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Conversation newConversation, @Nonnull final ICallback<? super Conversation> callback) {
-        send(HttpMethod.POST, callback, newConversation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Conversation> postAsync(@Nonnull final Conversation newConversation) {
+        return sendAsync(HttpMethod.POST, newConversation);
     }
 
     /**
@@ -123,10 +128,11 @@ public class ConversationRequest extends BaseRequest<Conversation> {
      * Creates a Conversation with a new object
      *
      * @param newConversation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Conversation newConversation, @Nonnull final ICallback<? super Conversation> callback) {
-        send(HttpMethod.PUT, callback, newConversation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Conversation> putAsync(@Nonnull final Conversation newConversation) {
+        return sendAsync(HttpMethod.PUT, newConversation);
     }
 
     /**

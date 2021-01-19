@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedPCConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
     /**
      * Gets the SharedPCConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SharedPCConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SharedPCConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SharedPCConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SharedPCConfiguration with a source
      *
      * @param sourceSharedPCConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SharedPCConfiguration sourceSharedPCConfiguration, @Nonnull final ICallback<? super SharedPCConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceSharedPCConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> patchAsync(@Nonnull final SharedPCConfiguration sourceSharedPCConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceSharedPCConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
      * Creates a SharedPCConfiguration with a new object
      *
      * @param newSharedPCConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SharedPCConfiguration newSharedPCConfiguration, @Nonnull final ICallback<? super SharedPCConfiguration> callback) {
-        send(HttpMethod.POST, callback, newSharedPCConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> postAsync(@Nonnull final SharedPCConfiguration newSharedPCConfiguration) {
+        return sendAsync(HttpMethod.POST, newSharedPCConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
      * Creates a SharedPCConfiguration with a new object
      *
      * @param newSharedPCConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SharedPCConfiguration newSharedPCConfiguration, @Nonnull final ICallback<? super SharedPCConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newSharedPCConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> putAsync(@Nonnull final SharedPCConfiguration newSharedPCConfiguration) {
+        return sendAsync(HttpMethod.PUT, newSharedPCConfiguration);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionResponse;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionRequest;
@@ -43,13 +41,14 @@ public class OrganizationCollectionRequest extends BaseEntityCollectionRequest<O
     /**
      * Creates a new Organization
      * @param newOrganization the Organization to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Organization newOrganization, @Nonnull final ICallback<? super Organization> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Organization> postAsync(@Nonnull final Organization newOrganization) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newOrganization, callback);
+            .postAsync(newOrganization);
     }
 
     /**

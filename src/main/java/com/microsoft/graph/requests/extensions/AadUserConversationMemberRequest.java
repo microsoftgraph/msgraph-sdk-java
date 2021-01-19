@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AadUserConversationMember;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
     /**
      * Gets the AadUserConversationMember from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AadUserConversationMember> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AadUserConversationMember> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AadUserConversationMember delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AadUserConversationMember with a source
      *
      * @param sourceAadUserConversationMember the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AadUserConversationMember sourceAadUserConversationMember, @Nonnull final ICallback<? super AadUserConversationMember> callback) {
-        send(HttpMethod.PATCH, callback, sourceAadUserConversationMember);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> patchAsync(@Nonnull final AadUserConversationMember sourceAadUserConversationMember) {
+        return sendAsync(HttpMethod.PATCH, sourceAadUserConversationMember);
     }
 
     /**
@@ -100,10 +104,11 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
      * Creates a AadUserConversationMember with a new object
      *
      * @param newAadUserConversationMember the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AadUserConversationMember newAadUserConversationMember, @Nonnull final ICallback<? super AadUserConversationMember> callback) {
-        send(HttpMethod.POST, callback, newAadUserConversationMember);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> postAsync(@Nonnull final AadUserConversationMember newAadUserConversationMember) {
+        return sendAsync(HttpMethod.POST, newAadUserConversationMember);
     }
 
     /**
@@ -122,10 +127,11 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
      * Creates a AadUserConversationMember with a new object
      *
      * @param newAadUserConversationMember the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AadUserConversationMember newAadUserConversationMember, @Nonnull final ICallback<? super AadUserConversationMember> callback) {
-        send(HttpMethod.PUT, callback, newAadUserConversationMember);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> putAsync(@Nonnull final AadUserConversationMember newAadUserConversationMember) {
+        return sendAsync(HttpMethod.PUT, newAadUserConversationMember);
     }
 
     /**

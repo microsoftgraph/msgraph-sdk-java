@@ -7,7 +7,6 @@ package com.microsoft.graph.callrecords.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SessionRequestBuilder;
@@ -40,10 +39,11 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
     /**
      * Gets the CallRecord from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super CallRecord> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CallRecord> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super CallRecord> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CallRecord> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public CallRecord delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this CallRecord with a source
      *
      * @param sourceCallRecord the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final CallRecord sourceCallRecord, @Nonnull final ICallback<? super CallRecord> callback) {
-        send(HttpMethod.PATCH, callback, sourceCallRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CallRecord> patchAsync(@Nonnull final CallRecord sourceCallRecord) {
+        return sendAsync(HttpMethod.PATCH, sourceCallRecord);
     }
 
     /**
@@ -101,10 +105,11 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * Creates a CallRecord with a new object
      *
      * @param newCallRecord the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final CallRecord newCallRecord, @Nonnull final ICallback<? super CallRecord> callback) {
-        send(HttpMethod.POST, callback, newCallRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CallRecord> postAsync(@Nonnull final CallRecord newCallRecord) {
+        return sendAsync(HttpMethod.POST, newCallRecord);
     }
 
     /**
@@ -123,10 +128,11 @@ public class CallRecordRequest extends BaseRequest<CallRecord> {
      * Creates a CallRecord with a new object
      *
      * @param newCallRecord the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CallRecord newCallRecord, @Nonnull final ICallback<? super CallRecord> callback) {
-        send(HttpMethod.PUT, callback, newCallRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CallRecord> putAsync(@Nonnull final CallRecord newCallRecord) {
+        return sendAsync(HttpMethod.PUT, newCallRecord);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
@@ -41,10 +40,11 @@ public class ParticipantRequest extends BaseRequest<Participant> {
     /**
      * Gets the Participant from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Participant> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Participant> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,29 +61,33 @@ public class ParticipantRequest extends BaseRequest<Participant> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Participant> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Participant> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Participant delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Participant with a source
      *
      * @param sourceParticipant the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Participant sourceParticipant, @Nonnull final ICallback<? super Participant> callback) {
-        send(HttpMethod.PATCH, callback, sourceParticipant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Participant> patchAsync(@Nonnull final Participant sourceParticipant) {
+        return sendAsync(HttpMethod.PATCH, sourceParticipant);
     }
 
     /**
@@ -102,10 +106,11 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * Creates a Participant with a new object
      *
      * @param newParticipant the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Participant newParticipant, @Nonnull final ICallback<? super Participant> callback) {
-        send(HttpMethod.POST, callback, newParticipant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Participant> postAsync(@Nonnull final Participant newParticipant) {
+        return sendAsync(HttpMethod.POST, newParticipant);
     }
 
     /**
@@ -124,10 +129,11 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * Creates a Participant with a new object
      *
      * @param newParticipant the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Participant newParticipant, @Nonnull final ICallback<? super Participant> callback) {
-        send(HttpMethod.PUT, callback, newParticipant);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Participant> putAsync(@Nonnull final Participant newParticipant) {
+        return sendAsync(HttpMethod.PUT, newParticipant);
     }
 
     /**

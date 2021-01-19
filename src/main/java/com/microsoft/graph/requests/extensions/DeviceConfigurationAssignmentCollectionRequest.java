@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseEntityCo
     /**
      * Creates a new DeviceConfigurationAssignment
      * @param newDeviceConfigurationAssignment the DeviceConfigurationAssignment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment, @Nonnull final ICallback<? super DeviceConfigurationAssignment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationAssignment> postAsync(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceConfigurationAssignment, callback);
+            .postAsync(newDeviceConfigurationAssignment);
     }
 
     /**

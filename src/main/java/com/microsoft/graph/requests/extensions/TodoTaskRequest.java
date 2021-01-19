@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTask;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
@@ -42,10 +41,11 @@ public class TodoTaskRequest extends BaseRequest<TodoTask> {
     /**
      * Gets the TodoTask from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TodoTask> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTask> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class TodoTaskRequest extends BaseRequest<TodoTask> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TodoTask> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTask> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TodoTask delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TodoTask with a source
      *
      * @param sourceTodoTask the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TodoTask sourceTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
-        send(HttpMethod.PATCH, callback, sourceTodoTask);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTask> patchAsync(@Nonnull final TodoTask sourceTodoTask) {
+        return sendAsync(HttpMethod.PATCH, sourceTodoTask);
     }
 
     /**
@@ -103,10 +107,11 @@ public class TodoTaskRequest extends BaseRequest<TodoTask> {
      * Creates a TodoTask with a new object
      *
      * @param newTodoTask the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TodoTask newTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
-        send(HttpMethod.POST, callback, newTodoTask);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTask> postAsync(@Nonnull final TodoTask newTodoTask) {
+        return sendAsync(HttpMethod.POST, newTodoTask);
     }
 
     /**
@@ -125,10 +130,11 @@ public class TodoTaskRequest extends BaseRequest<TodoTask> {
      * Creates a TodoTask with a new object
      *
      * @param newTodoTask the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TodoTask newTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
-        send(HttpMethod.PUT, callback, newTodoTask);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTask> putAsync(@Nonnull final TodoTask newTodoTask) {
+        return sendAsync(HttpMethod.PUT, newTodoTask);
     }
 
     /**

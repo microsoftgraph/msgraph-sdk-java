@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosVppEBookAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
     /**
      * Gets the IosVppEBookAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosVppEBookAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosVppEBookAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosVppEBookAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosVppEBookAssignment with a source
      *
      * @param sourceIosVppEBookAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosVppEBookAssignment sourceIosVppEBookAssignment, @Nonnull final ICallback<? super IosVppEBookAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosVppEBookAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> patchAsync(@Nonnull final IosVppEBookAssignment sourceIosVppEBookAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceIosVppEBookAssignment);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
      * Creates a IosVppEBookAssignment with a new object
      *
      * @param newIosVppEBookAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosVppEBookAssignment newIosVppEBookAssignment, @Nonnull final ICallback<? super IosVppEBookAssignment> callback) {
-        send(HttpMethod.POST, callback, newIosVppEBookAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> postAsync(@Nonnull final IosVppEBookAssignment newIosVppEBookAssignment) {
+        return sendAsync(HttpMethod.POST, newIosVppEBookAssignment);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
      * Creates a IosVppEBookAssignment with a new object
      *
      * @param newIosVppEBookAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosVppEBookAssignment newIosVppEBookAssignment, @Nonnull final ICallback<? super IosVppEBookAssignment> callback) {
-        send(HttpMethod.PUT, callback, newIosVppEBookAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> putAsync(@Nonnull final IosVppEBookAssignment newIosVppEBookAssignment) {
+        return sendAsync(HttpMethod.PUT, newIosVppEBookAssignment);
     }
 
     /**

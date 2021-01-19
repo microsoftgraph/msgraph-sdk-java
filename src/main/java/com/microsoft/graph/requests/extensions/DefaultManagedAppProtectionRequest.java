@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
@@ -41,10 +40,11 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
     /**
      * Gets the DefaultManagedAppProtection from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,29 +61,33 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DefaultManagedAppProtection delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DefaultManagedAppProtection with a source
      *
      * @param sourceDefaultManagedAppProtection the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DefaultManagedAppProtection sourceDefaultManagedAppProtection, @Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
-        send(HttpMethod.PATCH, callback, sourceDefaultManagedAppProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> patchAsync(@Nonnull final DefaultManagedAppProtection sourceDefaultManagedAppProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceDefaultManagedAppProtection);
     }
 
     /**
@@ -102,10 +106,11 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
      * Creates a DefaultManagedAppProtection with a new object
      *
      * @param newDefaultManagedAppProtection the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection, @Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
-        send(HttpMethod.POST, callback, newDefaultManagedAppProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> postAsync(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
+        return sendAsync(HttpMethod.POST, newDefaultManagedAppProtection);
     }
 
     /**
@@ -124,10 +129,11 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
      * Creates a DefaultManagedAppProtection with a new object
      *
      * @param newDefaultManagedAppProtection the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection, @Nonnull final ICallback<? super DefaultManagedAppProtection> callback) {
-        send(HttpMethod.PUT, callback, newDefaultManagedAppProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> putAsync(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
+        return sendAsync(HttpMethod.PUT, newDefaultManagedAppProtection);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class ChatRequest extends BaseRequest<Chat> {
     /**
      * Gets the Chat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Chat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Chat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class ChatRequest extends BaseRequest<Chat> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Chat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Chat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Chat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Chat with a source
      *
      * @param sourceChat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Chat sourceChat, @Nonnull final ICallback<? super Chat> callback) {
-        send(HttpMethod.PATCH, callback, sourceChat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Chat> patchAsync(@Nonnull final Chat sourceChat) {
+        return sendAsync(HttpMethod.PATCH, sourceChat);
     }
 
     /**
@@ -100,10 +104,11 @@ public class ChatRequest extends BaseRequest<Chat> {
      * Creates a Chat with a new object
      *
      * @param newChat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Chat newChat, @Nonnull final ICallback<? super Chat> callback) {
-        send(HttpMethod.POST, callback, newChat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Chat> postAsync(@Nonnull final Chat newChat) {
+        return sendAsync(HttpMethod.POST, newChat);
     }
 
     /**
@@ -122,10 +127,11 @@ public class ChatRequest extends BaseRequest<Chat> {
      * Creates a Chat with a new object
      *
      * @param newChat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Chat newChat, @Nonnull final ICallback<? super Chat> callback) {
-        send(HttpMethod.PUT, callback, newChat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Chat> putAsync(@Nonnull final Chat newChat) {
+        return sendAsync(HttpMethod.PUT, newChat);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
     /**
      * Gets the FileAttachment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super FileAttachment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAttachment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super FileAttachment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAttachment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public FileAttachment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this FileAttachment with a source
      *
      * @param sourceFileAttachment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final FileAttachment sourceFileAttachment, @Nonnull final ICallback<? super FileAttachment> callback) {
-        send(HttpMethod.PATCH, callback, sourceFileAttachment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAttachment> patchAsync(@Nonnull final FileAttachment sourceFileAttachment) {
+        return sendAsync(HttpMethod.PATCH, sourceFileAttachment);
     }
 
     /**
@@ -99,10 +103,11 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
      * Creates a FileAttachment with a new object
      *
      * @param newFileAttachment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final FileAttachment newFileAttachment, @Nonnull final ICallback<? super FileAttachment> callback) {
-        send(HttpMethod.POST, callback, newFileAttachment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAttachment> postAsync(@Nonnull final FileAttachment newFileAttachment) {
+        return sendAsync(HttpMethod.POST, newFileAttachment);
     }
 
     /**
@@ -121,10 +126,11 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
      * Creates a FileAttachment with a new object
      *
      * @param newFileAttachment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final FileAttachment newFileAttachment, @Nonnull final ICallback<? super FileAttachment> callback) {
-        send(HttpMethod.PUT, callback, newFileAttachment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FileAttachment> putAsync(@Nonnull final FileAttachment newFileAttachment) {
+        return sendAsync(HttpMethod.PUT, newFileAttachment);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Operation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class OperationRequest extends BaseRequest<Operation> {
     /**
      * Gets the Operation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Operation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Operation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class OperationRequest extends BaseRequest<Operation> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Operation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Operation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Operation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Operation with a source
      *
      * @param sourceOperation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Operation sourceOperation, @Nonnull final ICallback<? super Operation> callback) {
-        send(HttpMethod.PATCH, callback, sourceOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Operation> patchAsync(@Nonnull final Operation sourceOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceOperation);
     }
 
     /**
@@ -114,10 +118,11 @@ public class OperationRequest extends BaseRequest<Operation> {
      * Creates a Operation with a new object
      *
      * @param newOperation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Operation newOperation, @Nonnull final ICallback<? super Operation> callback) {
-        send(HttpMethod.POST, callback, newOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Operation> postAsync(@Nonnull final Operation newOperation) {
+        return sendAsync(HttpMethod.POST, newOperation);
     }
 
     /**
@@ -136,10 +141,11 @@ public class OperationRequest extends BaseRequest<Operation> {
      * Creates a Operation with a new object
      *
      * @param newOperation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Operation newOperation, @Nonnull final ICallback<? super Operation> callback) {
-        send(HttpMethod.PUT, callback, newOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Operation> putAsync(@Nonnull final Operation newOperation) {
+        return sendAsync(HttpMethod.PUT, newOperation);
     }
 
     /**

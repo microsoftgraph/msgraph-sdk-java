@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
@@ -81,12 +80,13 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * Puts the Site
      *
      * @param srcSite the Site reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Site srcSite, @Nonnull final ICallback<? super Site> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Site> putAsync(@Nonnull final Site srcSite) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/sites/" + srcSite.id));
-        send(HttpMethod.PUT, callback, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

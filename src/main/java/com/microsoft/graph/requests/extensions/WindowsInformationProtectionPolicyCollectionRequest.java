@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequest;
@@ -44,13 +42,14 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseEnt
     /**
      * Creates a new WindowsInformationProtectionPolicy
      * @param newWindowsInformationProtectionPolicy the WindowsInformationProtectionPolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super WindowsInformationProtectionPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> postAsync(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWindowsInformationProtectionPolicy, callback);
+            .postAsync(newWindowsInformationProtectionPolicy);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
@@ -43,10 +42,11 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
     /**
      * Gets the EducationClass from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super EducationClass> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationClass> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,29 +63,33 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super EducationClass> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationClass> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public EducationClass delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this EducationClass with a source
      *
      * @param sourceEducationClass the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final EducationClass sourceEducationClass, @Nonnull final ICallback<? super EducationClass> callback) {
-        send(HttpMethod.PATCH, callback, sourceEducationClass);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationClass> patchAsync(@Nonnull final EducationClass sourceEducationClass) {
+        return sendAsync(HttpMethod.PATCH, sourceEducationClass);
     }
 
     /**
@@ -104,10 +108,11 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
      * Creates a EducationClass with a new object
      *
      * @param newEducationClass the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final EducationClass newEducationClass, @Nonnull final ICallback<? super EducationClass> callback) {
-        send(HttpMethod.POST, callback, newEducationClass);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationClass> postAsync(@Nonnull final EducationClass newEducationClass) {
+        return sendAsync(HttpMethod.POST, newEducationClass);
     }
 
     /**
@@ -126,10 +131,11 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
      * Creates a EducationClass with a new object
      *
      * @param newEducationClass the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EducationClass newEducationClass, @Nonnull final ICallback<? super EducationClass> callback) {
-        send(HttpMethod.PUT, callback, newEducationClass);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationClass> putAsync(@Nonnull final EducationClass newEducationClass) {
+        return sendAsync(HttpMethod.PUT, newEducationClass);
     }
 
     /**

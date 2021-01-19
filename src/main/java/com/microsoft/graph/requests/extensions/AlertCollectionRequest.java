@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Security;
 import com.microsoft.graph.models.extensions.Alert;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequest;
@@ -44,13 +42,14 @@ public class AlertCollectionRequest extends BaseEntityCollectionRequest<Alert, A
     /**
      * Creates a new Alert
      * @param newAlert the Alert to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Alert newAlert, @Nonnull final ICallback<? super Alert> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Alert> postAsync(@Nonnull final Alert newAlert) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newAlert, callback);
+            .postAsync(newAlert);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAnalytics;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
@@ -40,10 +39,11 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
     /**
      * Gets the ItemAnalytics from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ItemAnalytics> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ItemAnalytics> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ItemAnalytics delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ItemAnalytics with a source
      *
      * @param sourceItemAnalytics the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ItemAnalytics sourceItemAnalytics, @Nonnull final ICallback<? super ItemAnalytics> callback) {
-        send(HttpMethod.PATCH, callback, sourceItemAnalytics);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> patchAsync(@Nonnull final ItemAnalytics sourceItemAnalytics) {
+        return sendAsync(HttpMethod.PATCH, sourceItemAnalytics);
     }
 
     /**
@@ -101,10 +105,11 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * Creates a ItemAnalytics with a new object
      *
      * @param newItemAnalytics the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ItemAnalytics newItemAnalytics, @Nonnull final ICallback<? super ItemAnalytics> callback) {
-        send(HttpMethod.POST, callback, newItemAnalytics);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> postAsync(@Nonnull final ItemAnalytics newItemAnalytics) {
+        return sendAsync(HttpMethod.POST, newItemAnalytics);
     }
 
     /**
@@ -123,10 +128,11 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * Creates a ItemAnalytics with a new object
      *
      * @param newItemAnalytics the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ItemAnalytics newItemAnalytics, @Nonnull final ICallback<? super ItemAnalytics> callback) {
-        send(HttpMethod.PUT, callback, newItemAnalytics);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> putAsync(@Nonnull final ItemAnalytics newItemAnalytics) {
+        return sendAsync(HttpMethod.PUT, newItemAnalytics);
     }
 
     /**

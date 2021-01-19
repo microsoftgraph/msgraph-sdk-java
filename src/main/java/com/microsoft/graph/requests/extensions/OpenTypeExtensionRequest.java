@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OpenTypeExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
     /**
      * Gets the OpenTypeExtension from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OpenTypeExtension> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OpenTypeExtension> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OpenTypeExtension delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OpenTypeExtension with a source
      *
      * @param sourceOpenTypeExtension the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OpenTypeExtension sourceOpenTypeExtension, @Nonnull final ICallback<? super OpenTypeExtension> callback) {
-        send(HttpMethod.PATCH, callback, sourceOpenTypeExtension);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> patchAsync(@Nonnull final OpenTypeExtension sourceOpenTypeExtension) {
+        return sendAsync(HttpMethod.PATCH, sourceOpenTypeExtension);
     }
 
     /**
@@ -99,10 +103,11 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
      * Creates a OpenTypeExtension with a new object
      *
      * @param newOpenTypeExtension the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OpenTypeExtension newOpenTypeExtension, @Nonnull final ICallback<? super OpenTypeExtension> callback) {
-        send(HttpMethod.POST, callback, newOpenTypeExtension);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> postAsync(@Nonnull final OpenTypeExtension newOpenTypeExtension) {
+        return sendAsync(HttpMethod.POST, newOpenTypeExtension);
     }
 
     /**
@@ -121,10 +126,11 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
      * Creates a OpenTypeExtension with a new object
      *
      * @param newOpenTypeExtension the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OpenTypeExtension newOpenTypeExtension, @Nonnull final ICallback<? super OpenTypeExtension> callback) {
-        send(HttpMethod.PUT, callback, newOpenTypeExtension);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> putAsync(@Nonnull final OpenTypeExtension newOpenTypeExtension) {
+        return sendAsync(HttpMethod.PUT, newOpenTypeExtension);
     }
 
     /**

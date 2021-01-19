@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
@@ -42,10 +41,11 @@ public class PlannerUserRequest extends BaseRequest<PlannerUser> {
     /**
      * Gets the PlannerUser from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PlannerUser> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerUser> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class PlannerUserRequest extends BaseRequest<PlannerUser> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PlannerUser> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerUser> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PlannerUser delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PlannerUser with a source
      *
      * @param sourcePlannerUser the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PlannerUser sourcePlannerUser, @Nonnull final ICallback<? super PlannerUser> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlannerUser);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerUser> patchAsync(@Nonnull final PlannerUser sourcePlannerUser) {
+        return sendAsync(HttpMethod.PATCH, sourcePlannerUser);
     }
 
     /**
@@ -103,10 +107,11 @@ public class PlannerUserRequest extends BaseRequest<PlannerUser> {
      * Creates a PlannerUser with a new object
      *
      * @param newPlannerUser the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PlannerUser newPlannerUser, @Nonnull final ICallback<? super PlannerUser> callback) {
-        send(HttpMethod.POST, callback, newPlannerUser);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerUser> postAsync(@Nonnull final PlannerUser newPlannerUser) {
+        return sendAsync(HttpMethod.POST, newPlannerUser);
     }
 
     /**
@@ -125,10 +130,11 @@ public class PlannerUserRequest extends BaseRequest<PlannerUser> {
      * Creates a PlannerUser with a new object
      *
      * @param newPlannerUser the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PlannerUser newPlannerUser, @Nonnull final ICallback<? super PlannerUser> callback) {
-        send(HttpMethod.PUT, callback, newPlannerUser);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerUser> putAsync(@Nonnull final PlannerUser newPlannerUser) {
+        return sendAsync(HttpMethod.PUT, newPlannerUser);
     }
 
     /**

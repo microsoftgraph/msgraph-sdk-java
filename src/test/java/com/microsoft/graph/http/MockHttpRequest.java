@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
@@ -133,23 +132,11 @@ public class MockHttpRequest implements IHttpRequest {
      * Returns the Request object to be executed
      * @param serializedObject the object to serialize at the body of the request
      * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response
      * @return the Request object to be executed
      */
     @Override
-    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
-        return getHttpRequest(serializedObject, null);
-    }
-
-    /**
-     * Returns the Request object to be executed
-     * @param serializedObject the object to serialize at the body of the request
-     * @param progress the progress callback
-     * @param <requestBodyType> the type of the serialized object
-     * @param <responseType> the type of the response object
-     * @return the Request object to be executed
-     */
-    @Override
-    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
         try {
             final Request.Builder requestBuilder = new Request.Builder();
             return requestBuilder.build();

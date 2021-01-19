@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
     /**
      * Gets the OutlookCategory from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OutlookCategory> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategory> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OutlookCategory> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategory> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OutlookCategory delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OutlookCategory with a source
      *
      * @param sourceOutlookCategory the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OutlookCategory sourceOutlookCategory, @Nonnull final ICallback<? super OutlookCategory> callback) {
-        send(HttpMethod.PATCH, callback, sourceOutlookCategory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategory> patchAsync(@Nonnull final OutlookCategory sourceOutlookCategory) {
+        return sendAsync(HttpMethod.PATCH, sourceOutlookCategory);
     }
 
     /**
@@ -99,10 +103,11 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * Creates a OutlookCategory with a new object
      *
      * @param newOutlookCategory the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OutlookCategory newOutlookCategory, @Nonnull final ICallback<? super OutlookCategory> callback) {
-        send(HttpMethod.POST, callback, newOutlookCategory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategory> postAsync(@Nonnull final OutlookCategory newOutlookCategory) {
+        return sendAsync(HttpMethod.POST, newOutlookCategory);
     }
 
     /**
@@ -121,10 +126,11 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * Creates a OutlookCategory with a new object
      *
      * @param newOutlookCategory the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OutlookCategory newOutlookCategory, @Nonnull final ICallback<? super OutlookCategory> callback) {
-        send(HttpMethod.PUT, callback, newOutlookCategory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategory> putAsync(@Nonnull final OutlookCategory newOutlookCategory) {
+        return sendAsync(HttpMethod.PUT, newOutlookCategory);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.TeamsTab;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequest;
@@ -44,13 +42,14 @@ public class TeamsTabCollectionRequest extends BaseEntityCollectionRequest<Teams
     /**
      * Creates a new TeamsTab
      * @param newTeamsTab the TeamsTab to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TeamsTab newTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTab> postAsync(@Nonnull final TeamsTab newTeamsTab) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTeamsTab, callback);
+            .postAsync(newTeamsTab);
     }
 
     /**

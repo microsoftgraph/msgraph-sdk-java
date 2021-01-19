@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtectionOptions;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
     /**
      * Gets the WorkbookWorksheetProtection from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookWorksheetProtection> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookWorksheetProtection> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookWorksheetProtection delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookWorksheetProtection with a source
      *
      * @param sourceWorkbookWorksheetProtection the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection, @Nonnull final ICallback<? super WorkbookWorksheetProtection> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookWorksheetProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> patchAsync(@Nonnull final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookWorksheetProtection);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
      * Creates a WorkbookWorksheetProtection with a new object
      *
      * @param newWorkbookWorksheetProtection the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookWorksheetProtection newWorkbookWorksheetProtection, @Nonnull final ICallback<? super WorkbookWorksheetProtection> callback) {
-        send(HttpMethod.POST, callback, newWorkbookWorksheetProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> postAsync(@Nonnull final WorkbookWorksheetProtection newWorkbookWorksheetProtection) {
+        return sendAsync(HttpMethod.POST, newWorkbookWorksheetProtection);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
      * Creates a WorkbookWorksheetProtection with a new object
      *
      * @param newWorkbookWorksheetProtection the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookWorksheetProtection newWorkbookWorksheetProtection, @Nonnull final ICallback<? super WorkbookWorksheetProtection> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookWorksheetProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> putAsync(@Nonnull final WorkbookWorksheetProtection newWorkbookWorksheetProtection) {
+        return sendAsync(HttpMethod.PUT, newWorkbookWorksheetProtection);
     }
 
     /**

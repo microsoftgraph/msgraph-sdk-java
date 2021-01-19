@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10TeamGeneralConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest<Window
     /**
      * Gets the Windows10TeamGeneralConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10TeamGeneralConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest<Window
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10TeamGeneralConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Windows10TeamGeneralConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Windows10TeamGeneralConfiguration with a source
      *
      * @param sourceWindows10TeamGeneralConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Windows10TeamGeneralConfiguration sourceWindows10TeamGeneralConfiguration, @Nonnull final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindows10TeamGeneralConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10TeamGeneralConfiguration> patchAsync(@Nonnull final Windows10TeamGeneralConfiguration sourceWindows10TeamGeneralConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10TeamGeneralConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest<Window
      * Creates a Windows10TeamGeneralConfiguration with a new object
      *
      * @param newWindows10TeamGeneralConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, @Nonnull final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
-        send(HttpMethod.POST, callback, newWindows10TeamGeneralConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10TeamGeneralConfiguration> postAsync(@Nonnull final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindows10TeamGeneralConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest<Window
      * Creates a Windows10TeamGeneralConfiguration with a new object
      *
      * @param newWindows10TeamGeneralConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, @Nonnull final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newWindows10TeamGeneralConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10TeamGeneralConfiguration> putAsync(@Nonnull final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindows10TeamGeneralConfiguration);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
     /**
      * Gets the TelecomExpenseManagementPartner from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TelecomExpenseManagementPartner delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TelecomExpenseManagementPartner with a source
      *
      * @param sourceTelecomExpenseManagementPartner the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner, @Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
-        send(HttpMethod.PATCH, callback, sourceTelecomExpenseManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> patchAsync(@Nonnull final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner) {
+        return sendAsync(HttpMethod.PATCH, sourceTelecomExpenseManagementPartner);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * Creates a TelecomExpenseManagementPartner with a new object
      *
      * @param newTelecomExpenseManagementPartner the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, @Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
-        send(HttpMethod.POST, callback, newTelecomExpenseManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> postAsync(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
+        return sendAsync(HttpMethod.POST, newTelecomExpenseManagementPartner);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * Creates a TelecomExpenseManagementPartner with a new object
      *
      * @param newTelecomExpenseManagementPartner the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, @Nonnull final ICallback<? super TelecomExpenseManagementPartner> callback) {
-        send(HttpMethod.PUT, callback, newTelecomExpenseManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> putAsync(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
+        return sendAsync(HttpMethod.PUT, newTelecomExpenseManagementPartner);
     }
 
     /**

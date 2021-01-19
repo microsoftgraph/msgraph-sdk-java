@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InferenceClassificationOverride;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
     /**
      * Gets the InferenceClassificationOverride from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super InferenceClassificationOverride> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super InferenceClassificationOverride> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public InferenceClassificationOverride delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this InferenceClassificationOverride with a source
      *
      * @param sourceInferenceClassificationOverride the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final InferenceClassificationOverride sourceInferenceClassificationOverride, @Nonnull final ICallback<? super InferenceClassificationOverride> callback) {
-        send(HttpMethod.PATCH, callback, sourceInferenceClassificationOverride);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> patchAsync(@Nonnull final InferenceClassificationOverride sourceInferenceClassificationOverride) {
+        return sendAsync(HttpMethod.PATCH, sourceInferenceClassificationOverride);
     }
 
     /**
@@ -99,10 +103,11 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
      * Creates a InferenceClassificationOverride with a new object
      *
      * @param newInferenceClassificationOverride the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final InferenceClassificationOverride newInferenceClassificationOverride, @Nonnull final ICallback<? super InferenceClassificationOverride> callback) {
-        send(HttpMethod.POST, callback, newInferenceClassificationOverride);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> postAsync(@Nonnull final InferenceClassificationOverride newInferenceClassificationOverride) {
+        return sendAsync(HttpMethod.POST, newInferenceClassificationOverride);
     }
 
     /**
@@ -121,10 +126,11 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
      * Creates a InferenceClassificationOverride with a new object
      *
      * @param newInferenceClassificationOverride the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final InferenceClassificationOverride newInferenceClassificationOverride, @Nonnull final ICallback<? super InferenceClassificationOverride> callback) {
-        send(HttpMethod.PUT, callback, newInferenceClassificationOverride);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> putAsync(@Nonnull final InferenceClassificationOverride newInferenceClassificationOverride) {
+        return sendAsync(HttpMethod.PUT, newInferenceClassificationOverride);
     }
 
     /**

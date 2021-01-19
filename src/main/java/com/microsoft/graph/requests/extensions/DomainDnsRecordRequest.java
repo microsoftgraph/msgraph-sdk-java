@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
     /**
      * Gets the DomainDnsRecord from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DomainDnsRecord> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DomainDnsRecord> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DomainDnsRecord delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DomainDnsRecord with a source
      *
      * @param sourceDomainDnsRecord the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DomainDnsRecord sourceDomainDnsRecord, @Nonnull final ICallback<? super DomainDnsRecord> callback) {
-        send(HttpMethod.PATCH, callback, sourceDomainDnsRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> patchAsync(@Nonnull final DomainDnsRecord sourceDomainDnsRecord) {
+        return sendAsync(HttpMethod.PATCH, sourceDomainDnsRecord);
     }
 
     /**
@@ -114,10 +118,11 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
      * Creates a DomainDnsRecord with a new object
      *
      * @param newDomainDnsRecord the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DomainDnsRecord newDomainDnsRecord, @Nonnull final ICallback<? super DomainDnsRecord> callback) {
-        send(HttpMethod.POST, callback, newDomainDnsRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> postAsync(@Nonnull final DomainDnsRecord newDomainDnsRecord) {
+        return sendAsync(HttpMethod.POST, newDomainDnsRecord);
     }
 
     /**
@@ -136,10 +141,11 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
      * Creates a DomainDnsRecord with a new object
      *
      * @param newDomainDnsRecord the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DomainDnsRecord newDomainDnsRecord, @Nonnull final ICallback<? super DomainDnsRecord> callback) {
-        send(HttpMethod.PUT, callback, newDomainDnsRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> putAsync(@Nonnull final DomainDnsRecord newDomainDnsRecord) {
+        return sendAsync(HttpMethod.PUT, newDomainDnsRecord);
     }
 
     /**

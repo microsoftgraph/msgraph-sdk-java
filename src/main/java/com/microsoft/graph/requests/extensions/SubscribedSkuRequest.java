@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SubscribedSku;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
     /**
      * Gets the SubscribedSku from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SubscribedSku> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SubscribedSku> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SubscribedSku> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SubscribedSku> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SubscribedSku delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SubscribedSku with a source
      *
      * @param sourceSubscribedSku the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SubscribedSku sourceSubscribedSku, @Nonnull final ICallback<? super SubscribedSku> callback) {
-        send(HttpMethod.PATCH, callback, sourceSubscribedSku);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SubscribedSku> patchAsync(@Nonnull final SubscribedSku sourceSubscribedSku) {
+        return sendAsync(HttpMethod.PATCH, sourceSubscribedSku);
     }
 
     /**
@@ -99,10 +103,11 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * Creates a SubscribedSku with a new object
      *
      * @param newSubscribedSku the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SubscribedSku newSubscribedSku, @Nonnull final ICallback<? super SubscribedSku> callback) {
-        send(HttpMethod.POST, callback, newSubscribedSku);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SubscribedSku> postAsync(@Nonnull final SubscribedSku newSubscribedSku) {
+        return sendAsync(HttpMethod.POST, newSubscribedSku);
     }
 
     /**
@@ -121,10 +126,11 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * Creates a SubscribedSku with a new object
      *
      * @param newSubscribedSku the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SubscribedSku newSubscribedSku, @Nonnull final ICallback<? super SubscribedSku> callback) {
-        send(HttpMethod.PUT, callback, newSubscribedSku);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SubscribedSku> putAsync(@Nonnull final SubscribedSku newSubscribedSku) {
+        return sendAsync(HttpMethod.PUT, newSubscribedSku);
     }
 
     /**

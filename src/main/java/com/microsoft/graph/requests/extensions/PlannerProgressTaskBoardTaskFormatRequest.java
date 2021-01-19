@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerProgressTaskBoardTaskFormat;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest<Plann
     /**
      * Gets the PlannerProgressTaskBoardTaskFormat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest<Plann
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PlannerProgressTaskBoardTaskFormat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PlannerProgressTaskBoardTaskFormat with a source
      *
      * @param sourcePlannerProgressTaskBoardTaskFormat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PlannerProgressTaskBoardTaskFormat sourcePlannerProgressTaskBoardTaskFormat, @Nonnull final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlannerProgressTaskBoardTaskFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> patchAsync(@Nonnull final PlannerProgressTaskBoardTaskFormat sourcePlannerProgressTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.PATCH, sourcePlannerProgressTaskBoardTaskFormat);
     }
 
     /**
@@ -99,10 +103,11 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest<Plann
      * Creates a PlannerProgressTaskBoardTaskFormat with a new object
      *
      * @param newPlannerProgressTaskBoardTaskFormat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, @Nonnull final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
-        send(HttpMethod.POST, callback, newPlannerProgressTaskBoardTaskFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> postAsync(@Nonnull final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.POST, newPlannerProgressTaskBoardTaskFormat);
     }
 
     /**
@@ -121,10 +126,11 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest<Plann
      * Creates a PlannerProgressTaskBoardTaskFormat with a new object
      *
      * @param newPlannerProgressTaskBoardTaskFormat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, @Nonnull final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
-        send(HttpMethod.PUT, callback, newPlannerProgressTaskBoardTaskFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerProgressTaskBoardTaskFormat> putAsync(@Nonnull final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.PUT, newPlannerProgressTaskBoardTaskFormat);
     }
 
     /**

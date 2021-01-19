@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
     /**
      * Gets the IosManagedAppRegistration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosManagedAppRegistration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosManagedAppRegistration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosManagedAppRegistration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosManagedAppRegistration with a source
      *
      * @param sourceIosManagedAppRegistration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosManagedAppRegistration sourceIosManagedAppRegistration, @Nonnull final ICallback<? super IosManagedAppRegistration> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> patchAsync(@Nonnull final IosManagedAppRegistration sourceIosManagedAppRegistration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosManagedAppRegistration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
      * Creates a IosManagedAppRegistration with a new object
      *
      * @param newIosManagedAppRegistration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosManagedAppRegistration newIosManagedAppRegistration, @Nonnull final ICallback<? super IosManagedAppRegistration> callback) {
-        send(HttpMethod.POST, callback, newIosManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> postAsync(@Nonnull final IosManagedAppRegistration newIosManagedAppRegistration) {
+        return sendAsync(HttpMethod.POST, newIosManagedAppRegistration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
      * Creates a IosManagedAppRegistration with a new object
      *
      * @param newIosManagedAppRegistration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosManagedAppRegistration newIosManagedAppRegistration, @Nonnull final ICallback<? super IosManagedAppRegistration> callback) {
-        send(HttpMethod.PUT, callback, newIosManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> putAsync(@Nonnull final IosManagedAppRegistration newIosManagedAppRegistration) {
+        return sendAsync(HttpMethod.PUT, newIosManagedAppRegistration);
     }
 
     /**

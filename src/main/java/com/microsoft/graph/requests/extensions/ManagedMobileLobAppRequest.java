@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedMobileLobApp;
 import com.microsoft.graph.requests.extensions.MobileAppContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentRequestBuilder;
@@ -55,10 +54,11 @@ public class ManagedMobileLobAppRequest extends BaseRequest<ManagedMobileLobApp>
     /**
      * Gets the ManagedMobileLobApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedMobileLobApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileLobApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -75,29 +75,33 @@ public class ManagedMobileLobAppRequest extends BaseRequest<ManagedMobileLobApp>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedMobileLobApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileLobApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedMobileLobApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedMobileLobApp with a source
      *
      * @param sourceManagedMobileLobApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedMobileLobApp sourceManagedMobileLobApp, @Nonnull final ICallback<? super ManagedMobileLobApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedMobileLobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileLobApp> patchAsync(@Nonnull final ManagedMobileLobApp sourceManagedMobileLobApp) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedMobileLobApp);
     }
 
     /**
@@ -116,10 +120,11 @@ public class ManagedMobileLobAppRequest extends BaseRequest<ManagedMobileLobApp>
      * Creates a ManagedMobileLobApp with a new object
      *
      * @param newManagedMobileLobApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedMobileLobApp newManagedMobileLobApp, @Nonnull final ICallback<? super ManagedMobileLobApp> callback) {
-        send(HttpMethod.POST, callback, newManagedMobileLobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileLobApp> postAsync(@Nonnull final ManagedMobileLobApp newManagedMobileLobApp) {
+        return sendAsync(HttpMethod.POST, newManagedMobileLobApp);
     }
 
     /**
@@ -138,10 +143,11 @@ public class ManagedMobileLobAppRequest extends BaseRequest<ManagedMobileLobApp>
      * Creates a ManagedMobileLobApp with a new object
      *
      * @param newManagedMobileLobApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedMobileLobApp newManagedMobileLobApp, @Nonnull final ICallback<? super ManagedMobileLobApp> callback) {
-        send(HttpMethod.PUT, callback, newManagedMobileLobApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedMobileLobApp> putAsync(@Nonnull final ManagedMobileLobApp newManagedMobileLobApp) {
+        return sendAsync(HttpMethod.PUT, newManagedMobileLobApp);
     }
 
     /**

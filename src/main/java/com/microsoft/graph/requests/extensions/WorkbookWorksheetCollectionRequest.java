@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookRange;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequest;
@@ -45,13 +43,14 @@ public class WorkbookWorksheetCollectionRequest extends BaseEntityCollectionRequ
     /**
      * Creates a new WorkbookWorksheet
      * @param newWorkbookWorksheet the WorkbookWorksheet to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookWorksheet newWorkbookWorksheet, @Nonnull final ICallback<? super WorkbookWorksheet> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> postAsync(@Nonnull final WorkbookWorksheet newWorkbookWorksheet) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookWorksheetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookWorksheetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookWorksheet, callback);
+            .postAsync(newWorkbookWorksheet);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LicenseDetails;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
     /**
      * Gets the LicenseDetails from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super LicenseDetails> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LicenseDetails> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super LicenseDetails> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LicenseDetails> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public LicenseDetails delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this LicenseDetails with a source
      *
      * @param sourceLicenseDetails the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final LicenseDetails sourceLicenseDetails, @Nonnull final ICallback<? super LicenseDetails> callback) {
-        send(HttpMethod.PATCH, callback, sourceLicenseDetails);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LicenseDetails> patchAsync(@Nonnull final LicenseDetails sourceLicenseDetails) {
+        return sendAsync(HttpMethod.PATCH, sourceLicenseDetails);
     }
 
     /**
@@ -99,10 +103,11 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * Creates a LicenseDetails with a new object
      *
      * @param newLicenseDetails the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final LicenseDetails newLicenseDetails, @Nonnull final ICallback<? super LicenseDetails> callback) {
-        send(HttpMethod.POST, callback, newLicenseDetails);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LicenseDetails> postAsync(@Nonnull final LicenseDetails newLicenseDetails) {
+        return sendAsync(HttpMethod.POST, newLicenseDetails);
     }
 
     /**
@@ -121,10 +126,11 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * Creates a LicenseDetails with a new object
      *
      * @param newLicenseDetails the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final LicenseDetails newLicenseDetails, @Nonnull final ICallback<? super LicenseDetails> callback) {
-        send(HttpMethod.PUT, callback, newLicenseDetails);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<LicenseDetails> putAsync(@Nonnull final LicenseDetails newLicenseDetails) {
+        return sendAsync(HttpMethod.PUT, newLicenseDetails);
     }
 
     /**

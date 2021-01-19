@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
     /**
      * Creates a new TokenLifetimePolicy
      * @param newTokenLifetimePolicy the TokenLifetimePolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> postAsync(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + newTokenLifetimePolicy.id);
-        new TokenLifetimePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TokenLifetimePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTokenLifetimePolicy, body, callback);
+            .postAsync(newTokenLifetimePolicy, body);
     }
 
     /**

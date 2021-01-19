@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
     /**
      * Creates a new ClaimsMappingPolicy
      * @param newClaimsMappingPolicy the ClaimsMappingPolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> postAsync(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + newClaimsMappingPolicy.id);
-        new ClaimsMappingPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ClaimsMappingPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newClaimsMappingPolicy, body, callback);
+            .postAsync(newClaimsMappingPolicy, body);
     }
 
     /**

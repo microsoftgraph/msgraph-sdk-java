@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
     /**
      * Gets the ActivityHistoryItem from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ActivityHistoryItem> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ActivityHistoryItem> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ActivityHistoryItem delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ActivityHistoryItem with a source
      *
      * @param sourceActivityHistoryItem the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ActivityHistoryItem sourceActivityHistoryItem, @Nonnull final ICallback<? super ActivityHistoryItem> callback) {
-        send(HttpMethod.PATCH, callback, sourceActivityHistoryItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> patchAsync(@Nonnull final ActivityHistoryItem sourceActivityHistoryItem) {
+        return sendAsync(HttpMethod.PATCH, sourceActivityHistoryItem);
     }
 
     /**
@@ -100,10 +104,11 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * Creates a ActivityHistoryItem with a new object
      *
      * @param newActivityHistoryItem the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ActivityHistoryItem newActivityHistoryItem, @Nonnull final ICallback<? super ActivityHistoryItem> callback) {
-        send(HttpMethod.POST, callback, newActivityHistoryItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> postAsync(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
+        return sendAsync(HttpMethod.POST, newActivityHistoryItem);
     }
 
     /**
@@ -122,10 +127,11 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * Creates a ActivityHistoryItem with a new object
      *
      * @param newActivityHistoryItem the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ActivityHistoryItem newActivityHistoryItem, @Nonnull final ICallback<? super ActivityHistoryItem> callback) {
-        send(HttpMethod.PUT, callback, newActivityHistoryItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> putAsync(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
+        return sendAsync(HttpMethod.PUT, newActivityHistoryItem);
     }
 
     /**

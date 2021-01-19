@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.models.extensions.WorkbookChartPoint;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionRequest;
@@ -44,13 +42,14 @@ public class WorkbookChartPointCollectionRequest extends BaseEntityCollectionReq
     /**
      * Creates a new WorkbookChartPoint
      * @param newWorkbookChartPoint the WorkbookChartPoint to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookChartPoint newWorkbookChartPoint, @Nonnull final ICallback<? super WorkbookChartPoint> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> postAsync(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookChartPoint, callback);
+            .postAsync(newWorkbookChartPoint);
     }
 
     /**

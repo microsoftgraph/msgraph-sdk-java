@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
@@ -40,10 +39,11 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
     /**
      * Gets the OnlineMeeting from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OnlineMeeting> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OnlineMeeting> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OnlineMeeting delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OnlineMeeting with a source
      *
      * @param sourceOnlineMeeting the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OnlineMeeting sourceOnlineMeeting, @Nonnull final ICallback<? super OnlineMeeting> callback) {
-        send(HttpMethod.PATCH, callback, sourceOnlineMeeting);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> patchAsync(@Nonnull final OnlineMeeting sourceOnlineMeeting) {
+        return sendAsync(HttpMethod.PATCH, sourceOnlineMeeting);
     }
 
     /**
@@ -101,10 +105,11 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * Creates a OnlineMeeting with a new object
      *
      * @param newOnlineMeeting the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OnlineMeeting newOnlineMeeting, @Nonnull final ICallback<? super OnlineMeeting> callback) {
-        send(HttpMethod.POST, callback, newOnlineMeeting);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> postAsync(@Nonnull final OnlineMeeting newOnlineMeeting) {
+        return sendAsync(HttpMethod.POST, newOnlineMeeting);
     }
 
     /**
@@ -123,10 +128,11 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * Creates a OnlineMeeting with a new object
      *
      * @param newOnlineMeeting the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OnlineMeeting newOnlineMeeting, @Nonnull final ICallback<? super OnlineMeeting> callback) {
-        send(HttpMethod.PUT, callback, newOnlineMeeting);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> putAsync(@Nonnull final OnlineMeeting newOnlineMeeting) {
+        return sendAsync(HttpMethod.PUT, newOnlineMeeting);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidStoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
     /**
      * Gets the AndroidStoreApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AndroidStoreApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AndroidStoreApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AndroidStoreApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AndroidStoreApp with a source
      *
      * @param sourceAndroidStoreApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AndroidStoreApp sourceAndroidStoreApp, @Nonnull final ICallback<? super AndroidStoreApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceAndroidStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> patchAsync(@Nonnull final AndroidStoreApp sourceAndroidStoreApp) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidStoreApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
      * Creates a AndroidStoreApp with a new object
      *
      * @param newAndroidStoreApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AndroidStoreApp newAndroidStoreApp, @Nonnull final ICallback<? super AndroidStoreApp> callback) {
-        send(HttpMethod.POST, callback, newAndroidStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> postAsync(@Nonnull final AndroidStoreApp newAndroidStoreApp) {
+        return sendAsync(HttpMethod.POST, newAndroidStoreApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
      * Creates a AndroidStoreApp with a new object
      *
      * @param newAndroidStoreApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AndroidStoreApp newAndroidStoreApp, @Nonnull final ICallback<? super AndroidStoreApp> callback) {
-        send(HttpMethod.PUT, callback, newAndroidStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> putAsync(@Nonnull final AndroidStoreApp newAndroidStoreApp) {
+        return sendAsync(HttpMethod.PUT, newAndroidStoreApp);
     }
 
     /**

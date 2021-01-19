@@ -11,8 +11,6 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.models.extensions.DriveItemRestoreParameterSet;
@@ -40,11 +38,12 @@ public class DriveItemRestoreRequest extends BaseRequest<DriveItem> {
     @Nullable
     protected DriveItemRestoreParameterSet body;
     /**
-     * Invokes the method and invokes the callback with the result
-     * @param callback the callback to be called after success or failure
+     * Invokes the method and returns a future with the result
+     * @return a future with the result
      */
-    public void post(@Nonnull final ICallback<? super DriveItem> callback) {
-        send(HttpMethod.POST, callback, body);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DriveItem> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

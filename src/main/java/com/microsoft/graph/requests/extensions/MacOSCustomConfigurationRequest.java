@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSCustomConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
     /**
      * Gets the MacOSCustomConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MacOSCustomConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MacOSCustomConfiguration with a source
      *
      * @param sourceMacOSCustomConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MacOSCustomConfiguration sourceMacOSCustomConfiguration, @Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceMacOSCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> patchAsync(@Nonnull final MacOSCustomConfiguration sourceMacOSCustomConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceMacOSCustomConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
      * Creates a MacOSCustomConfiguration with a new object
      *
      * @param newMacOSCustomConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration, @Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
-        send(HttpMethod.POST, callback, newMacOSCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> postAsync(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration) {
+        return sendAsync(HttpMethod.POST, newMacOSCustomConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
      * Creates a MacOSCustomConfiguration with a new object
      *
      * @param newMacOSCustomConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration, @Nonnull final ICallback<? super MacOSCustomConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newMacOSCustomConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> putAsync(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration) {
+        return sendAsync(HttpMethod.PUT, newMacOSCustomConfiguration);
     }
 
     /**

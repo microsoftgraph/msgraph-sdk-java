@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhone81GeneralConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
     /**
      * Gets the WindowsPhone81GeneralConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WindowsPhone81GeneralConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WindowsPhone81GeneralConfiguration with a source
      *
      * @param sourceWindowsPhone81GeneralConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WindowsPhone81GeneralConfiguration sourceWindowsPhone81GeneralConfiguration, @Nonnull final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindowsPhone81GeneralConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> patchAsync(@Nonnull final WindowsPhone81GeneralConfiguration sourceWindowsPhone81GeneralConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsPhone81GeneralConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
      * Creates a WindowsPhone81GeneralConfiguration with a new object
      *
      * @param newWindowsPhone81GeneralConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration, @Nonnull final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
-        send(HttpMethod.POST, callback, newWindowsPhone81GeneralConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> postAsync(@Nonnull final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindowsPhone81GeneralConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
      * Creates a WindowsPhone81GeneralConfiguration with a new object
      *
      * @param newWindowsPhone81GeneralConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration, @Nonnull final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newWindowsPhone81GeneralConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> putAsync(@Nonnull final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindowsPhone81GeneralConfiguration);
     }
 
     /**

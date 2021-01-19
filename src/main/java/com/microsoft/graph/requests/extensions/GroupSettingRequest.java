@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class GroupSettingRequest extends BaseRequest<GroupSetting> {
     /**
      * Gets the GroupSetting from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super GroupSetting> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupSetting> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class GroupSettingRequest extends BaseRequest<GroupSetting> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super GroupSetting> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupSetting> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public GroupSetting delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this GroupSetting with a source
      *
      * @param sourceGroupSetting the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final GroupSetting sourceGroupSetting, @Nonnull final ICallback<? super GroupSetting> callback) {
-        send(HttpMethod.PATCH, callback, sourceGroupSetting);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupSetting> patchAsync(@Nonnull final GroupSetting sourceGroupSetting) {
+        return sendAsync(HttpMethod.PATCH, sourceGroupSetting);
     }
 
     /**
@@ -99,10 +103,11 @@ public class GroupSettingRequest extends BaseRequest<GroupSetting> {
      * Creates a GroupSetting with a new object
      *
      * @param newGroupSetting the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final GroupSetting newGroupSetting, @Nonnull final ICallback<? super GroupSetting> callback) {
-        send(HttpMethod.POST, callback, newGroupSetting);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupSetting> postAsync(@Nonnull final GroupSetting newGroupSetting) {
+        return sendAsync(HttpMethod.POST, newGroupSetting);
     }
 
     /**
@@ -121,10 +126,11 @@ public class GroupSettingRequest extends BaseRequest<GroupSetting> {
      * Creates a GroupSetting with a new object
      *
      * @param newGroupSetting the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final GroupSetting newGroupSetting, @Nonnull final ICallback<? super GroupSetting> callback) {
-        send(HttpMethod.PUT, callback, newGroupSetting);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupSetting> putAsync(@Nonnull final GroupSetting newGroupSetting) {
+        return sendAsync(HttpMethod.PUT, newGroupSetting);
     }
 
     /**

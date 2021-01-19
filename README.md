@@ -74,17 +74,24 @@ After you have a GraphServiceClient that is authenticated, you can begin making 
 To retrieve the user's drive:
 
 ```java
+final Drive result = graphClient
+  .me()
+  .drive()
+  .buildRequest()
+  .get();
+System.out.println("Found Drive " + result.id);
+```
+
+Or with the asynchronous API.
+
+```java
 graphClient
   .me()
   .drive()
   .buildRequest()
-  .get(new ICallback<Drive>() {
-     @Override
-     public void success(final Drive result) {
-        System.out.println("Found Drive " + result.id);
-     }
-     ...
-     // Handle failure case
+  .futureGet()
+  .thenApply(result -> {
+    System.out.println("Found Drive " + result.id);
   });
 ```
 
@@ -112,7 +119,9 @@ The Microsoft Graph SDK is open for contribution. To contribute to this project,
 
 ## 7. Supported Java versions
 
-The Microsoft Graph SDK for Java library is supported at runtime for Java 8+ and [Android API revision 21](http://source.android.com/source/build-numbers.html) and greater.
+The Microsoft Graph SDK for Java library is supported at runtime for Java 8+ and [Android API revision 26](http://source.android.com/source/build-numbers.html) and greater.
+
+Android developers targeting lower android API levels can do so by [enabling desugaring](https://developer.android.com/studio/write/java8-support#library-desugaring) in their project.
 
 ## 8. License
 

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookFilter;
 import com.microsoft.graph.models.extensions.WorkbookFilterCriteria;
 import com.microsoft.graph.models.extensions.WorkbookIcon;
@@ -40,10 +39,11 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
     /**
      * Gets the WorkbookFilter from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookFilter> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookFilter> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookFilter delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookFilter with a source
      *
      * @param sourceWorkbookFilter the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookFilter sourceWorkbookFilter, @Nonnull final ICallback<? super WorkbookFilter> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookFilter);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> patchAsync(@Nonnull final WorkbookFilter sourceWorkbookFilter) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookFilter);
     }
 
     /**
@@ -101,10 +105,11 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
      * Creates a WorkbookFilter with a new object
      *
      * @param newWorkbookFilter the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookFilter newWorkbookFilter, @Nonnull final ICallback<? super WorkbookFilter> callback) {
-        send(HttpMethod.POST, callback, newWorkbookFilter);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> postAsync(@Nonnull final WorkbookFilter newWorkbookFilter) {
+        return sendAsync(HttpMethod.POST, newWorkbookFilter);
     }
 
     /**
@@ -123,10 +128,11 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
      * Creates a WorkbookFilter with a new object
      *
      * @param newWorkbookFilter the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookFilter newWorkbookFilter, @Nonnull final ICallback<? super WorkbookFilter> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookFilter);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> putAsync(@Nonnull final WorkbookFilter newWorkbookFilter) {
+        return sendAsync(HttpMethod.PUT, newWorkbookFilter);
     }
 
     /**

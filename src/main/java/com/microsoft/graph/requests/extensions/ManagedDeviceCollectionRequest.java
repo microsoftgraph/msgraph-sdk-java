@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequest;
@@ -45,13 +43,14 @@ public class ManagedDeviceCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new ManagedDevice
      * @param newManagedDevice the ManagedDevice to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedDevice newManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDevice> postAsync(@Nonnull final ManagedDevice newManagedDevice) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedDevice, callback);
+            .postAsync(newManagedDevice);
     }
 
     /**

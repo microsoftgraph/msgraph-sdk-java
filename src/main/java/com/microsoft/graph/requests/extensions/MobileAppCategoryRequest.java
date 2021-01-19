@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
     /**
      * Gets the MobileAppCategory from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MobileAppCategory delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MobileAppCategory with a source
      *
      * @param sourceMobileAppCategory the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MobileAppCategory sourceMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.PATCH, callback, sourceMobileAppCategory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> patchAsync(@Nonnull final MobileAppCategory sourceMobileAppCategory) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileAppCategory);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
      * Creates a MobileAppCategory with a new object
      *
      * @param newMobileAppCategory the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MobileAppCategory newMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.POST, callback, newMobileAppCategory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> postAsync(@Nonnull final MobileAppCategory newMobileAppCategory) {
+        return sendAsync(HttpMethod.POST, newMobileAppCategory);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
      * Creates a MobileAppCategory with a new object
      *
      * @param newMobileAppCategory the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MobileAppCategory newMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
-        send(HttpMethod.PUT, callback, newMobileAppCategory);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> putAsync(@Nonnull final MobileAppCategory newMobileAppCategory) {
+        return sendAsync(HttpMethod.PUT, newMobileAppCategory);
     }
 
     /**

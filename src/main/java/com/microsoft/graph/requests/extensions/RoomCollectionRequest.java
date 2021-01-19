@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoomList;
 import com.microsoft.graph.models.extensions.Room;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.RoomCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequest;
@@ -44,13 +42,14 @@ public class RoomCollectionRequest extends BaseEntityCollectionRequest<Room, Roo
     /**
      * Creates a new Room
      * @param newRoom the Room to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Room newRoom, @Nonnull final ICallback<? super Room> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Room> postAsync(@Nonnull final Room newRoom) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newRoom, callback);
+            .postAsync(newRoom);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosDeviceFeaturesConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
     /**
      * Gets the IosDeviceFeaturesConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosDeviceFeaturesConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosDeviceFeaturesConfiguration with a source
      *
      * @param sourceIosDeviceFeaturesConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration, @Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosDeviceFeaturesConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> patchAsync(@Nonnull final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosDeviceFeaturesConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * Creates a IosDeviceFeaturesConfiguration with a new object
      *
      * @param newIosDeviceFeaturesConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, @Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.POST, callback, newIosDeviceFeaturesConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> postAsync(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) {
+        return sendAsync(HttpMethod.POST, newIosDeviceFeaturesConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * Creates a IosDeviceFeaturesConfiguration with a new object
      *
      * @param newIosDeviceFeaturesConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, @Nonnull final ICallback<? super IosDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newIosDeviceFeaturesConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> putAsync(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) {
+        return sendAsync(HttpMethod.PUT, newIosDeviceFeaturesConfiguration);
     }
 
     /**

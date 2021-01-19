@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsApp;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
@@ -40,10 +39,11 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
     /**
      * Gets the TeamsApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TeamsApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TeamsApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TeamsApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TeamsApp with a source
      *
      * @param sourceTeamsApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TeamsApp sourceTeamsApp, @Nonnull final ICallback<? super TeamsApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceTeamsApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsApp> patchAsync(@Nonnull final TeamsApp sourceTeamsApp) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsApp);
     }
 
     /**
@@ -101,10 +105,11 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
      * Creates a TeamsApp with a new object
      *
      * @param newTeamsApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TeamsApp newTeamsApp, @Nonnull final ICallback<? super TeamsApp> callback) {
-        send(HttpMethod.POST, callback, newTeamsApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsApp> postAsync(@Nonnull final TeamsApp newTeamsApp) {
+        return sendAsync(HttpMethod.POST, newTeamsApp);
     }
 
     /**
@@ -123,10 +128,11 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
      * Creates a TeamsApp with a new object
      *
      * @param newTeamsApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TeamsApp newTeamsApp, @Nonnull final ICallback<? super TeamsApp> callback) {
-        send(HttpMethod.PUT, callback, newTeamsApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsApp> putAsync(@Nonnull final TeamsApp newTeamsApp) {
+        return sendAsync(HttpMethod.PUT, newTeamsApp);
     }
 
     /**

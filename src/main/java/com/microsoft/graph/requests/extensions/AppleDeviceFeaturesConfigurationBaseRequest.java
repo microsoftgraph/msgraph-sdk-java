@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppleDeviceFeaturesConfigurationBase;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
     /**
      * Gets the AppleDeviceFeaturesConfigurationBase from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AppleDeviceFeaturesConfigurationBase delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AppleDeviceFeaturesConfigurationBase with a source
      *
      * @param sourceAppleDeviceFeaturesConfigurationBase the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase, @Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
-        send(HttpMethod.PATCH, callback, sourceAppleDeviceFeaturesConfigurationBase);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> patchAsync(@Nonnull final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase) {
+        return sendAsync(HttpMethod.PATCH, sourceAppleDeviceFeaturesConfigurationBase);
     }
 
     /**
@@ -114,10 +118,11 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * Creates a AppleDeviceFeaturesConfigurationBase with a new object
      *
      * @param newAppleDeviceFeaturesConfigurationBase the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, @Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
-        send(HttpMethod.POST, callback, newAppleDeviceFeaturesConfigurationBase);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> postAsync(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) {
+        return sendAsync(HttpMethod.POST, newAppleDeviceFeaturesConfigurationBase);
     }
 
     /**
@@ -136,10 +141,11 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * Creates a AppleDeviceFeaturesConfigurationBase with a new object
      *
      * @param newAppleDeviceFeaturesConfigurationBase the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, @Nonnull final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback) {
-        send(HttpMethod.PUT, callback, newAppleDeviceFeaturesConfigurationBase);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> putAsync(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) {
+        return sendAsync(HttpMethod.PUT, newAppleDeviceFeaturesConfigurationBase);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
     /**
      * Gets the MobileAppAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MobileAppAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MobileAppAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MobileAppAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MobileAppAssignment with a source
      *
      * @param sourceMobileAppAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MobileAppAssignment sourceMobileAppAssignment, @Nonnull final ICallback<? super MobileAppAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceMobileAppAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> patchAsync(@Nonnull final MobileAppAssignment sourceMobileAppAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileAppAssignment);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
      * Creates a MobileAppAssignment with a new object
      *
      * @param newMobileAppAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MobileAppAssignment newMobileAppAssignment, @Nonnull final ICallback<? super MobileAppAssignment> callback) {
-        send(HttpMethod.POST, callback, newMobileAppAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> postAsync(@Nonnull final MobileAppAssignment newMobileAppAssignment) {
+        return sendAsync(HttpMethod.POST, newMobileAppAssignment);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
      * Creates a MobileAppAssignment with a new object
      *
      * @param newMobileAppAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MobileAppAssignment newMobileAppAssignment, @Nonnull final ICallback<? super MobileAppAssignment> callback) {
-        send(HttpMethod.PUT, callback, newMobileAppAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> putAsync(@Nonnull final MobileAppAssignment newMobileAppAssignment) {
+        return sendAsync(HttpMethod.PUT, newMobileAppAssignment);
     }
 
     /**

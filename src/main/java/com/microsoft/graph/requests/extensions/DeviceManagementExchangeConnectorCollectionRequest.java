@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorSyncType;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionRequest;
@@ -45,13 +43,14 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseEnti
     /**
      * Creates a new DeviceManagementExchangeConnector
      * @param newDeviceManagementExchangeConnector the DeviceManagementExchangeConnector to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, @Nonnull final ICallback<? super DeviceManagementExchangeConnector> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> postAsync(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceManagementExchangeConnector, callback);
+            .postAsync(newDeviceManagementExchangeConnector);
     }
 
     /**

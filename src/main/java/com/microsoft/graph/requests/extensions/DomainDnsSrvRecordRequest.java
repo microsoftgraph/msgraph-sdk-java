@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsSrvRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DomainDnsSrvRecordRequest extends BaseRequest<DomainDnsSrvRecord> {
     /**
      * Gets the DomainDnsSrvRecord from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsSrvRecord> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DomainDnsSrvRecordRequest extends BaseRequest<DomainDnsSrvRecord> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsSrvRecord> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DomainDnsSrvRecord delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DomainDnsSrvRecord with a source
      *
      * @param sourceDomainDnsSrvRecord the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DomainDnsSrvRecord sourceDomainDnsSrvRecord, @Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
-        send(HttpMethod.PATCH, callback, sourceDomainDnsSrvRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsSrvRecord> patchAsync(@Nonnull final DomainDnsSrvRecord sourceDomainDnsSrvRecord) {
+        return sendAsync(HttpMethod.PATCH, sourceDomainDnsSrvRecord);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DomainDnsSrvRecordRequest extends BaseRequest<DomainDnsSrvRecord> {
      * Creates a DomainDnsSrvRecord with a new object
      *
      * @param newDomainDnsSrvRecord the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DomainDnsSrvRecord newDomainDnsSrvRecord, @Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
-        send(HttpMethod.POST, callback, newDomainDnsSrvRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsSrvRecord> postAsync(@Nonnull final DomainDnsSrvRecord newDomainDnsSrvRecord) {
+        return sendAsync(HttpMethod.POST, newDomainDnsSrvRecord);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DomainDnsSrvRecordRequest extends BaseRequest<DomainDnsSrvRecord> {
      * Creates a DomainDnsSrvRecord with a new object
      *
      * @param newDomainDnsSrvRecord the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DomainDnsSrvRecord newDomainDnsSrvRecord, @Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
-        send(HttpMethod.PUT, callback, newDomainDnsSrvRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsSrvRecord> putAsync(@Nonnull final DomainDnsSrvRecord newDomainDnsSrvRecord) {
+        return sendAsync(HttpMethod.PUT, newDomainDnsSrvRecord);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserTeamwork;
 import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationCollectionRequest;
@@ -44,13 +42,14 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseEntityCo
     /**
      * Creates a new UserScopeTeamsAppInstallation
      * @param newUserScopeTeamsAppInstallation the UserScopeTeamsAppInstallation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, @Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> postAsync(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new UserScopeTeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new UserScopeTeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newUserScopeTeamsAppInstallation, callback);
+            .postAsync(newUserScopeTeamsAppInstallation);
     }
 
     /**

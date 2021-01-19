@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsTab;
 import com.microsoft.graph.requests.extensions.TeamsAppRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
     /**
      * Gets the TeamsTab from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TeamsTab> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTab> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TeamsTab> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTab> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TeamsTab delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TeamsTab with a source
      *
      * @param sourceTeamsTab the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TeamsTab sourceTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
-        send(HttpMethod.PATCH, callback, sourceTeamsTab);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTab> patchAsync(@Nonnull final TeamsTab sourceTeamsTab) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsTab);
     }
 
     /**
@@ -100,10 +104,11 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * Creates a TeamsTab with a new object
      *
      * @param newTeamsTab the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TeamsTab newTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
-        send(HttpMethod.POST, callback, newTeamsTab);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTab> postAsync(@Nonnull final TeamsTab newTeamsTab) {
+        return sendAsync(HttpMethod.POST, newTeamsTab);
     }
 
     /**
@@ -122,10 +127,11 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * Creates a TeamsTab with a new object
      *
      * @param newTeamsTab the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TeamsTab newTeamsTab, @Nonnull final ICallback<? super TeamsTab> callback) {
-        send(HttpMethod.PUT, callback, newTeamsTab);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsTab> putAsync(@Nonnull final TeamsTab newTeamsTab) {
+        return sendAsync(HttpMethod.PUT, newTeamsTab);
     }
 
     /**

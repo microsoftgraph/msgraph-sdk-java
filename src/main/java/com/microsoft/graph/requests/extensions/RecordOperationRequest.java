@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RecordOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
     /**
      * Gets the RecordOperation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super RecordOperation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RecordOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super RecordOperation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RecordOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public RecordOperation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this RecordOperation with a source
      *
      * @param sourceRecordOperation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final RecordOperation sourceRecordOperation, @Nonnull final ICallback<? super RecordOperation> callback) {
-        send(HttpMethod.PATCH, callback, sourceRecordOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RecordOperation> patchAsync(@Nonnull final RecordOperation sourceRecordOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceRecordOperation);
     }
 
     /**
@@ -99,10 +103,11 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
      * Creates a RecordOperation with a new object
      *
      * @param newRecordOperation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final RecordOperation newRecordOperation, @Nonnull final ICallback<? super RecordOperation> callback) {
-        send(HttpMethod.POST, callback, newRecordOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RecordOperation> postAsync(@Nonnull final RecordOperation newRecordOperation) {
+        return sendAsync(HttpMethod.POST, newRecordOperation);
     }
 
     /**
@@ -121,10 +126,11 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
      * Creates a RecordOperation with a new object
      *
      * @param newRecordOperation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final RecordOperation newRecordOperation, @Nonnull final ICallback<? super RecordOperation> callback) {
-        send(HttpMethod.PUT, callback, newRecordOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RecordOperation> putAsync(@Nonnull final RecordOperation newRecordOperation) {
+        return sendAsync(HttpMethod.PUT, newRecordOperation);
     }
 
     /**

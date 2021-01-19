@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequest;
@@ -44,13 +42,14 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseEntityCollectio
     /**
      * Creates a new ManagedEBookAssignment
      * @param newManagedEBookAssignment the ManagedEBookAssignment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment, @Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> postAsync(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedEBookAssignment, callback);
+            .postAsync(newManagedEBookAssignment);
     }
 
     /**

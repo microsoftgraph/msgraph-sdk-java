@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityRequestBuilder;
@@ -40,10 +39,11 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
     /**
      * Gets the ItemActivityStat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ItemActivityStat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ItemActivityStat with a source
      *
      * @param sourceItemActivityStat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ItemActivityStat sourceItemActivityStat, @Nonnull final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.PATCH, callback, sourceItemActivityStat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> patchAsync(@Nonnull final ItemActivityStat sourceItemActivityStat) {
+        return sendAsync(HttpMethod.PATCH, sourceItemActivityStat);
     }
 
     /**
@@ -101,10 +105,11 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
      * Creates a ItemActivityStat with a new object
      *
      * @param newItemActivityStat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ItemActivityStat newItemActivityStat, @Nonnull final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.POST, callback, newItemActivityStat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> postAsync(@Nonnull final ItemActivityStat newItemActivityStat) {
+        return sendAsync(HttpMethod.POST, newItemActivityStat);
     }
 
     /**
@@ -123,10 +128,11 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
      * Creates a ItemActivityStat with a new object
      *
      * @param newItemActivityStat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ItemActivityStat newItemActivityStat, @Nonnull final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.PUT, callback, newItemActivityStat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> putAsync(@Nonnull final ItemActivityStat newItemActivityStat) {
+        return sendAsync(HttpMethod.PUT, newItemActivityStat);
     }
 
     /**

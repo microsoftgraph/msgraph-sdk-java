@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseE
     /**
      * Creates a new DeviceManagementTroubleshootingEvent
      * @param newDeviceManagementTroubleshootingEvent the DeviceManagementTroubleshootingEvent to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, @Nonnull final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> postAsync(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceManagementTroubleshootingEvent, callback);
+            .postAsync(newDeviceManagementTroubleshootingEvent);
     }
 
     /**

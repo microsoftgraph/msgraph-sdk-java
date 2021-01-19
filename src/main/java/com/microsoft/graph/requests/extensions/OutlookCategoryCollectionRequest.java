@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.OutlookCategory;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequest;
@@ -44,13 +42,14 @@ public class OutlookCategoryCollectionRequest extends BaseEntityCollectionReques
     /**
      * Creates a new OutlookCategory
      * @param newOutlookCategory the OutlookCategory to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final OutlookCategory newOutlookCategory, @Nonnull final ICallback<? super OutlookCategory> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookCategory> postAsync(@Nonnull final OutlookCategory newOutlookCategory) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newOutlookCategory, callback);
+            .postAsync(newOutlookCategory);
     }
 
     /**

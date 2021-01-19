@@ -1,6 +1,5 @@
 package com.microsoft.graph.core;
 
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
@@ -9,11 +8,10 @@ public class MockBaseClient implements IBaseClient {
 
 	private static final String DEFAULT_GRAPH_ENDPOINT = "https://graph.microsoft.com/v1.0";
     private String mEndpoint;
-    private IExecutors mExecutors;
     private IHttpProvider mHttpProvider;
     private ILogger mLogger;
     private ISerializer mSerializer;
-	
+
     @Override
     public String getServiceRoot() {
         if(mEndpoint == null) {
@@ -25,11 +23,6 @@ public class MockBaseClient implements IBaseClient {
     @Override
     public void setServiceRoot(String value) {
         mEndpoint = value;
-    }
-
-    @Override
-    public IExecutors getExecutors() {
-        return mExecutors;
     }
 
     @Override
@@ -51,13 +44,9 @@ public class MockBaseClient implements IBaseClient {
     public void validate() {
 
     }
-    
+
     public void setLogger(final ILogger logger) {
         mLogger = logger;
-    }
-
-    public void setExecutors(final IExecutors executors) {
-        mExecutors = executors;
     }
 
     public void setHttpProvider(final IHttpProvider httpProvider) {
@@ -67,10 +56,4 @@ public class MockBaseClient implements IBaseClient {
     public void setSerializer(final ISerializer serializer) {
         mSerializer = serializer;
     }
-    
-    @Override
-    public void shutdown() {
-    	
-    }
-
 }

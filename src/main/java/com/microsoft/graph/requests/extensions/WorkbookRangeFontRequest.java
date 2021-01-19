@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeFont;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
     /**
      * Gets the WorkbookRangeFont from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookRangeFont> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookRangeFont> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookRangeFont delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookRangeFont with a source
      *
      * @param sourceWorkbookRangeFont the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookRangeFont sourceWorkbookRangeFont, @Nonnull final ICallback<? super WorkbookRangeFont> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookRangeFont);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> patchAsync(@Nonnull final WorkbookRangeFont sourceWorkbookRangeFont) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookRangeFont);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
      * Creates a WorkbookRangeFont with a new object
      *
      * @param newWorkbookRangeFont the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookRangeFont newWorkbookRangeFont, @Nonnull final ICallback<? super WorkbookRangeFont> callback) {
-        send(HttpMethod.POST, callback, newWorkbookRangeFont);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> postAsync(@Nonnull final WorkbookRangeFont newWorkbookRangeFont) {
+        return sendAsync(HttpMethod.POST, newWorkbookRangeFont);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
      * Creates a WorkbookRangeFont with a new object
      *
      * @param newWorkbookRangeFont the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookRangeFont newWorkbookRangeFont, @Nonnull final ICallback<? super WorkbookRangeFont> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookRangeFont);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> putAsync(@Nonnull final WorkbookRangeFont newWorkbookRangeFont) {
+        return sendAsync(HttpMethod.PUT, newWorkbookRangeFont);
     }
 
     /**

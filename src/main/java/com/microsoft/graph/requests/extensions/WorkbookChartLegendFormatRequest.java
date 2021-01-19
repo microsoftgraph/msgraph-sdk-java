@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartLegendFormat;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
@@ -40,10 +39,11 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest<WorkbookChartL
     /**
      * Gets the WorkbookChartLegendFormat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegendFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest<WorkbookChartL
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegendFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartLegendFormat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartLegendFormat with a source
      *
      * @param sourceWorkbookChartLegendFormat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat, @Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartLegendFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegendFormat> patchAsync(@Nonnull final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartLegendFormat);
     }
 
     /**
@@ -101,10 +105,11 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest<WorkbookChartL
      * Creates a WorkbookChartLegendFormat with a new object
      *
      * @param newWorkbookChartLegendFormat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartLegendFormat newWorkbookChartLegendFormat, @Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartLegendFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegendFormat> postAsync(@Nonnull final WorkbookChartLegendFormat newWorkbookChartLegendFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartLegendFormat);
     }
 
     /**
@@ -123,10 +128,11 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest<WorkbookChartL
      * Creates a WorkbookChartLegendFormat with a new object
      *
      * @param newWorkbookChartLegendFormat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartLegendFormat newWorkbookChartLegendFormat, @Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartLegendFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegendFormat> putAsync(@Nonnull final WorkbookChartLegendFormat newWorkbookChartLegendFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartLegendFormat);
     }
 
     /**

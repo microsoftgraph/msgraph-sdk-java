@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.requests.extensions.OutlookItemRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
     /**
      * Gets the ItemAttachment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ItemAttachment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAttachment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ItemAttachment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAttachment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ItemAttachment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ItemAttachment with a source
      *
      * @param sourceItemAttachment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ItemAttachment sourceItemAttachment, @Nonnull final ICallback<? super ItemAttachment> callback) {
-        send(HttpMethod.PATCH, callback, sourceItemAttachment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAttachment> patchAsync(@Nonnull final ItemAttachment sourceItemAttachment) {
+        return sendAsync(HttpMethod.PATCH, sourceItemAttachment);
     }
 
     /**
@@ -100,10 +104,11 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
      * Creates a ItemAttachment with a new object
      *
      * @param newItemAttachment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ItemAttachment newItemAttachment, @Nonnull final ICallback<? super ItemAttachment> callback) {
-        send(HttpMethod.POST, callback, newItemAttachment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAttachment> postAsync(@Nonnull final ItemAttachment newItemAttachment) {
+        return sendAsync(HttpMethod.POST, newItemAttachment);
     }
 
     /**
@@ -122,10 +127,11 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
      * Creates a ItemAttachment with a new object
      *
      * @param newItemAttachment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ItemAttachment newItemAttachment, @Nonnull final ICallback<? super ItemAttachment> callback) {
-        send(HttpMethod.PUT, callback, newItemAttachment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ItemAttachment> putAsync(@Nonnull final ItemAttachment newItemAttachment) {
+        return sendAsync(HttpMethod.PUT, newItemAttachment);
     }
 
     /**

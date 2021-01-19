@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest<Pla
     /**
      * Gets the PlannerAssignedToTaskBoardTaskFormat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest<Pla
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PlannerAssignedToTaskBoardTaskFormat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PlannerAssignedToTaskBoardTaskFormat with a source
      *
      * @param sourcePlannerAssignedToTaskBoardTaskFormat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PlannerAssignedToTaskBoardTaskFormat sourcePlannerAssignedToTaskBoardTaskFormat, @Nonnull final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlannerAssignedToTaskBoardTaskFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> patchAsync(@Nonnull final PlannerAssignedToTaskBoardTaskFormat sourcePlannerAssignedToTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.PATCH, sourcePlannerAssignedToTaskBoardTaskFormat);
     }
 
     /**
@@ -99,10 +103,11 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest<Pla
      * Creates a PlannerAssignedToTaskBoardTaskFormat with a new object
      *
      * @param newPlannerAssignedToTaskBoardTaskFormat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, @Nonnull final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
-        send(HttpMethod.POST, callback, newPlannerAssignedToTaskBoardTaskFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> postAsync(@Nonnull final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.POST, newPlannerAssignedToTaskBoardTaskFormat);
     }
 
     /**
@@ -121,10 +126,11 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest<Pla
      * Creates a PlannerAssignedToTaskBoardTaskFormat with a new object
      *
      * @param newPlannerAssignedToTaskBoardTaskFormat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, @Nonnull final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
-        send(HttpMethod.PUT, callback, newPlannerAssignedToTaskBoardTaskFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerAssignedToTaskBoardTaskFormat> putAsync(@Nonnull final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.PUT, newPlannerAssignedToTaskBoardTaskFormat);
     }
 
     /**

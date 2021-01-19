@@ -12,8 +12,6 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.models.extensions.WorkbookFunctionsDevSqParameterSet;
@@ -41,11 +39,12 @@ public class WorkbookFunctionsDevSqRequest extends BaseRequest<WorkbookFunctionR
     @Nullable
     protected WorkbookFunctionsDevSqParameterSet body;
     /**
-     * Invokes the method and invokes the callback with the result
-     * @param callback the callback to be called after success or failure
+     * Invokes the method and returns a future with the result
+     * @return a future with the result
      */
-    public void post(@Nonnull final ICallback<? super WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, body);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

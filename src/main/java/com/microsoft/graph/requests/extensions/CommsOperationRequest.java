@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
     /**
      * Gets the CommsOperation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super CommsOperation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CommsOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super CommsOperation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CommsOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public CommsOperation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this CommsOperation with a source
      *
      * @param sourceCommsOperation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final CommsOperation sourceCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
-        send(HttpMethod.PATCH, callback, sourceCommsOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CommsOperation> patchAsync(@Nonnull final CommsOperation sourceCommsOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceCommsOperation);
     }
 
     /**
@@ -114,10 +118,11 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * Creates a CommsOperation with a new object
      *
      * @param newCommsOperation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final CommsOperation newCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
-        send(HttpMethod.POST, callback, newCommsOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CommsOperation> postAsync(@Nonnull final CommsOperation newCommsOperation) {
+        return sendAsync(HttpMethod.POST, newCommsOperation);
     }
 
     /**
@@ -136,10 +141,11 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * Creates a CommsOperation with a new object
      *
      * @param newCommsOperation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CommsOperation newCommsOperation, @Nonnull final ICallback<? super CommsOperation> callback) {
-        send(HttpMethod.PUT, callback, newCommsOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CommsOperation> putAsync(@Nonnull final CommsOperation newCommsOperation) {
+        return sendAsync(HttpMethod.PUT, newCommsOperation);
     }
 
     /**

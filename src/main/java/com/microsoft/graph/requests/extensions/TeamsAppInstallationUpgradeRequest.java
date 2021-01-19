@@ -11,8 +11,6 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -36,21 +34,11 @@ public class TeamsAppInstallationUpgradeRequest extends BaseRequest<Void> {
     /**
      * Creates the TeamsAppInstallationUpgrade
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future for the operation
      */
-    public void post(@Nonnull final ICallback<Void> callback) {
-        final IExecutors executors = getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    post();
-                    executors.performOnForeground((Void)null, callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Void> postAsync() {
+        return this.sendAsync(HttpMethod.POST, null);
     }
 
     /**

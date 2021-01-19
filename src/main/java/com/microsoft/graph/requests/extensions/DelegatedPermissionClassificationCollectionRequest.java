@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.DelegatedPermissionClassification;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionRequest;
@@ -44,13 +42,14 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseEnti
     /**
      * Creates a new DelegatedPermissionClassification
      * @param newDelegatedPermissionClassification the DelegatedPermissionClassification to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification, @Nonnull final ICallback<? super DelegatedPermissionClassification> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> postAsync(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DelegatedPermissionClassificationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DelegatedPermissionClassificationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDelegatedPermissionClassification, callback);
+            .postAsync(newDelegatedPermissionClassification);
     }
 
     /**

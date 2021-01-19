@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequest;
@@ -44,13 +42,14 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseEntityCollect
     /**
      * Creates a new HomeRealmDiscoveryPolicy
      * @param newHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> postAsync(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new HomeRealmDiscoveryPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new HomeRealmDiscoveryPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newHomeRealmDiscoveryPolicy, callback);
+            .postAsync(newHomeRealmDiscoveryPolicy);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhone81CompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
     /**
      * Gets the WindowsPhone81CompliancePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WindowsPhone81CompliancePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WindowsPhone81CompliancePolicy with a source
      *
      * @param sourceWindowsPhone81CompliancePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WindowsPhone81CompliancePolicy sourceWindowsPhone81CompliancePolicy, @Nonnull final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindowsPhone81CompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> patchAsync(@Nonnull final WindowsPhone81CompliancePolicy sourceWindowsPhone81CompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsPhone81CompliancePolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * Creates a WindowsPhone81CompliancePolicy with a new object
      *
      * @param newWindowsPhone81CompliancePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, @Nonnull final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
-        send(HttpMethod.POST, callback, newWindowsPhone81CompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> postAsync(@Nonnull final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newWindowsPhone81CompliancePolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * Creates a WindowsPhone81CompliancePolicy with a new object
      *
      * @param newWindowsPhone81CompliancePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, @Nonnull final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
-        send(HttpMethod.PUT, callback, newWindowsPhone81CompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> putAsync(@Nonnull final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newWindowsPhone81CompliancePolicy);
     }
 
     /**

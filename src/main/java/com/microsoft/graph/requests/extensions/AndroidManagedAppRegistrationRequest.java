@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
     /**
      * Gets the AndroidManagedAppRegistration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AndroidManagedAppRegistration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AndroidManagedAppRegistration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AndroidManagedAppRegistration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AndroidManagedAppRegistration with a source
      *
      * @param sourceAndroidManagedAppRegistration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AndroidManagedAppRegistration sourceAndroidManagedAppRegistration, @Nonnull final ICallback<? super AndroidManagedAppRegistration> callback) {
-        send(HttpMethod.PATCH, callback, sourceAndroidManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> patchAsync(@Nonnull final AndroidManagedAppRegistration sourceAndroidManagedAppRegistration) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidManagedAppRegistration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
      * Creates a AndroidManagedAppRegistration with a new object
      *
      * @param newAndroidManagedAppRegistration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AndroidManagedAppRegistration newAndroidManagedAppRegistration, @Nonnull final ICallback<? super AndroidManagedAppRegistration> callback) {
-        send(HttpMethod.POST, callback, newAndroidManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> postAsync(@Nonnull final AndroidManagedAppRegistration newAndroidManagedAppRegistration) {
+        return sendAsync(HttpMethod.POST, newAndroidManagedAppRegistration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
      * Creates a AndroidManagedAppRegistration with a new object
      *
      * @param newAndroidManagedAppRegistration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AndroidManagedAppRegistration newAndroidManagedAppRegistration, @Nonnull final ICallback<? super AndroidManagedAppRegistration> callback) {
-        send(HttpMethod.PUT, callback, newAndroidManagedAppRegistration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> putAsync(@Nonnull final AndroidManagedAppRegistration newAndroidManagedAppRegistration) {
+        return sendAsync(HttpMethod.PUT, newAndroidManagedAppRegistration);
     }
 
     /**

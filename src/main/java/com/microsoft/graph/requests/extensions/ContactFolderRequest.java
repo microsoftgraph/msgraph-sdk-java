@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContactFolder;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
@@ -46,10 +45,11 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
     /**
      * Gets the ContactFolder from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ContactFolder> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContactFolder> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -66,29 +66,33 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ContactFolder> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContactFolder> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ContactFolder delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ContactFolder with a source
      *
      * @param sourceContactFolder the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ContactFolder sourceContactFolder, @Nonnull final ICallback<? super ContactFolder> callback) {
-        send(HttpMethod.PATCH, callback, sourceContactFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContactFolder> patchAsync(@Nonnull final ContactFolder sourceContactFolder) {
+        return sendAsync(HttpMethod.PATCH, sourceContactFolder);
     }
 
     /**
@@ -107,10 +111,11 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * Creates a ContactFolder with a new object
      *
      * @param newContactFolder the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ContactFolder newContactFolder, @Nonnull final ICallback<? super ContactFolder> callback) {
-        send(HttpMethod.POST, callback, newContactFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContactFolder> postAsync(@Nonnull final ContactFolder newContactFolder) {
+        return sendAsync(HttpMethod.POST, newContactFolder);
     }
 
     /**
@@ -129,10 +134,11 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * Creates a ContactFolder with a new object
      *
      * @param newContactFolder the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ContactFolder newContactFolder, @Nonnull final ICallback<? super ContactFolder> callback) {
-        send(HttpMethod.PUT, callback, newContactFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ContactFolder> putAsync(@Nonnull final ContactFolder newContactFolder) {
+        return sendAsync(HttpMethod.PUT, newContactFolder);
     }
 
     /**

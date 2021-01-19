@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MicrosoftStoreForBusinessApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
     /**
      * Gets the MicrosoftStoreForBusinessApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MicrosoftStoreForBusinessApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MicrosoftStoreForBusinessApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MicrosoftStoreForBusinessApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MicrosoftStoreForBusinessApp with a source
      *
      * @param sourceMicrosoftStoreForBusinessApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MicrosoftStoreForBusinessApp sourceMicrosoftStoreForBusinessApp, @Nonnull final ICallback<? super MicrosoftStoreForBusinessApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceMicrosoftStoreForBusinessApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> patchAsync(@Nonnull final MicrosoftStoreForBusinessApp sourceMicrosoftStoreForBusinessApp) {
+        return sendAsync(HttpMethod.PATCH, sourceMicrosoftStoreForBusinessApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
      * Creates a MicrosoftStoreForBusinessApp with a new object
      *
      * @param newMicrosoftStoreForBusinessApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp, @Nonnull final ICallback<? super MicrosoftStoreForBusinessApp> callback) {
-        send(HttpMethod.POST, callback, newMicrosoftStoreForBusinessApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> postAsync(@Nonnull final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp) {
+        return sendAsync(HttpMethod.POST, newMicrosoftStoreForBusinessApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
      * Creates a MicrosoftStoreForBusinessApp with a new object
      *
      * @param newMicrosoftStoreForBusinessApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp, @Nonnull final ICallback<? super MicrosoftStoreForBusinessApp> callback) {
-        send(HttpMethod.PUT, callback, newMicrosoftStoreForBusinessApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> putAsync(@Nonnull final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp) {
+        return sendAsync(HttpMethod.PUT, newMicrosoftStoreForBusinessApp);
     }
 
     /**

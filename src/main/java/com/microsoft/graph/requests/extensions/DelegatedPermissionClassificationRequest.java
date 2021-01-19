@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DelegatedPermissionClassification;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
     /**
      * Gets the DelegatedPermissionClassification from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DelegatedPermissionClassification> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DelegatedPermissionClassification> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DelegatedPermissionClassification delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DelegatedPermissionClassification with a source
      *
      * @param sourceDelegatedPermissionClassification the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DelegatedPermissionClassification sourceDelegatedPermissionClassification, @Nonnull final ICallback<? super DelegatedPermissionClassification> callback) {
-        send(HttpMethod.PATCH, callback, sourceDelegatedPermissionClassification);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> patchAsync(@Nonnull final DelegatedPermissionClassification sourceDelegatedPermissionClassification) {
+        return sendAsync(HttpMethod.PATCH, sourceDelegatedPermissionClassification);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
      * Creates a DelegatedPermissionClassification with a new object
      *
      * @param newDelegatedPermissionClassification the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification, @Nonnull final ICallback<? super DelegatedPermissionClassification> callback) {
-        send(HttpMethod.POST, callback, newDelegatedPermissionClassification);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> postAsync(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification) {
+        return sendAsync(HttpMethod.POST, newDelegatedPermissionClassification);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
      * Creates a DelegatedPermissionClassification with a new object
      *
      * @param newDelegatedPermissionClassification the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification, @Nonnull final ICallback<? super DelegatedPermissionClassification> callback) {
-        send(HttpMethod.PUT, callback, newDelegatedPermissionClassification);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> putAsync(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification) {
+        return sendAsync(HttpMethod.PUT, newDelegatedPermissionClassification);
     }
 
     /**

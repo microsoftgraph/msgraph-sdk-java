@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
@@ -54,10 +53,11 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
     /**
      * Gets the DirectoryObject from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -74,29 +74,33 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DirectoryObject delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DirectoryObject with a source
      *
      * @param sourceDirectoryObject the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DirectoryObject sourceDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.PATCH, callback, sourceDirectoryObject);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> patchAsync(@Nonnull final DirectoryObject sourceDirectoryObject) {
+        return sendAsync(HttpMethod.PATCH, sourceDirectoryObject);
     }
 
     /**
@@ -115,10 +119,11 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * Creates a DirectoryObject with a new object
      *
      * @param newDirectoryObject the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DirectoryObject newDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.POST, callback, newDirectoryObject);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> postAsync(@Nonnull final DirectoryObject newDirectoryObject) {
+        return sendAsync(HttpMethod.POST, newDirectoryObject);
     }
 
     /**
@@ -137,10 +142,11 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * Creates a DirectoryObject with a new object
      *
      * @param newDirectoryObject the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DirectoryObject newDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
-        send(HttpMethod.PUT, callback, newDirectoryObject);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> putAsync(@Nonnull final DirectoryObject newDirectoryObject) {
+        return sendAsync(HttpMethod.PUT, newDirectoryObject);
     }
 
     /**

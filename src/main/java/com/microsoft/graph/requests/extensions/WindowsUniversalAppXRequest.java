@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsUniversalAppX;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
     /**
      * Gets the WindowsUniversalAppX from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WindowsUniversalAppX delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WindowsUniversalAppX with a source
      *
      * @param sourceWindowsUniversalAppX the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WindowsUniversalAppX sourceWindowsUniversalAppX, @Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindowsUniversalAppX);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> patchAsync(@Nonnull final WindowsUniversalAppX sourceWindowsUniversalAppX) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsUniversalAppX);
     }
 
     /**
@@ -99,10 +103,11 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
      * Creates a WindowsUniversalAppX with a new object
      *
      * @param newWindowsUniversalAppX the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX, @Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
-        send(HttpMethod.POST, callback, newWindowsUniversalAppX);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> postAsync(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX) {
+        return sendAsync(HttpMethod.POST, newWindowsUniversalAppX);
     }
 
     /**
@@ -121,10 +126,11 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
      * Creates a WindowsUniversalAppX with a new object
      *
      * @param newWindowsUniversalAppX the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX, @Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
-        send(HttpMethod.PUT, callback, newWindowsUniversalAppX);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> putAsync(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX) {
+        return sendAsync(HttpMethod.PUT, newWindowsUniversalAppX);
     }
 
     /**

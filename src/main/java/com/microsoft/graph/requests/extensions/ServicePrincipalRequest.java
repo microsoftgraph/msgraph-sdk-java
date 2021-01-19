@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
@@ -58,10 +57,11 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
     /**
      * Gets the ServicePrincipal from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ServicePrincipal> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -78,29 +78,33 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ServicePrincipal> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ServicePrincipal delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ServicePrincipal with a source
      *
      * @param sourceServicePrincipal the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ServicePrincipal sourceServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
-        send(HttpMethod.PATCH, callback, sourceServicePrincipal);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> patchAsync(@Nonnull final ServicePrincipal sourceServicePrincipal) {
+        return sendAsync(HttpMethod.PATCH, sourceServicePrincipal);
     }
 
     /**
@@ -119,10 +123,11 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * Creates a ServicePrincipal with a new object
      *
      * @param newServicePrincipal the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
-        send(HttpMethod.POST, callback, newServicePrincipal);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> postAsync(@Nonnull final ServicePrincipal newServicePrincipal) {
+        return sendAsync(HttpMethod.POST, newServicePrincipal);
     }
 
     /**
@@ -141,10 +146,11 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * Creates a ServicePrincipal with a new object
      *
      * @param newServicePrincipal the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
-        send(HttpMethod.PUT, callback, newServicePrincipal);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> putAsync(@Nonnull final ServicePrincipal newServicePrincipal) {
+        return sendAsync(HttpMethod.PUT, newServicePrincipal);
     }
 
     /**

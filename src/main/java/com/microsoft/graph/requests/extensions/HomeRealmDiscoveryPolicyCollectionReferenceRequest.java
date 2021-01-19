@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
     /**
      * Creates a new HomeRealmDiscoveryPolicy
      * @param newHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> postAsync(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
-        new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newHomeRealmDiscoveryPolicy, body, callback);
+            .postAsync(newHomeRealmDiscoveryPolicy, body);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderRequestBuilder;
@@ -63,10 +62,11 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
     /**
      * Gets the MailFolder from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MailFolder> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailFolder> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -83,29 +83,33 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MailFolder> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailFolder> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MailFolder delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MailFolder with a source
      *
      * @param sourceMailFolder the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MailFolder sourceMailFolder, @Nonnull final ICallback<? super MailFolder> callback) {
-        send(HttpMethod.PATCH, callback, sourceMailFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailFolder> patchAsync(@Nonnull final MailFolder sourceMailFolder) {
+        return sendAsync(HttpMethod.PATCH, sourceMailFolder);
     }
 
     /**
@@ -124,10 +128,11 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * Creates a MailFolder with a new object
      *
      * @param newMailFolder the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MailFolder newMailFolder, @Nonnull final ICallback<? super MailFolder> callback) {
-        send(HttpMethod.POST, callback, newMailFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailFolder> postAsync(@Nonnull final MailFolder newMailFolder) {
+        return sendAsync(HttpMethod.POST, newMailFolder);
     }
 
     /**
@@ -146,10 +151,11 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * Creates a MailFolder with a new object
      *
      * @param newMailFolder the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MailFolder newMailFolder, @Nonnull final ICallback<? super MailFolder> callback) {
-        send(HttpMethod.PUT, callback, newMailFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailFolder> putAsync(@Nonnull final MailFolder newMailFolder) {
+        return sendAsync(HttpMethod.PUT, newMailFolder);
     }
 
     /**

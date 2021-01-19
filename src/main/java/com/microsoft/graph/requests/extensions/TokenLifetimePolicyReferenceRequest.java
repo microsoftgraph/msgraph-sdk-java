@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -66,12 +65,13 @@ public class TokenLifetimePolicyReferenceRequest extends BaseReferenceRequest<To
      * Puts the TokenLifetimePolicy
      *
      * @param srcTokenLifetimePolicy the TokenLifetimePolicy reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TokenLifetimePolicy srcTokenLifetimePolicy, @Nonnull final ICallback<? super TokenLifetimePolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> putAsync(@Nonnull final TokenLifetimePolicy srcTokenLifetimePolicy) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + srcTokenLifetimePolicy.id));
-        send(HttpMethod.PUT, callback, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

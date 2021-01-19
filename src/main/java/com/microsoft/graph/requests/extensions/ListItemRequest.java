@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequestBuilder;
@@ -44,10 +43,11 @@ public class ListItemRequest extends BaseRequest<ListItem> {
     /**
      * Gets the ListItem from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ListItem> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItem> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,29 +64,33 @@ public class ListItemRequest extends BaseRequest<ListItem> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ListItem> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItem> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ListItem delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ListItem with a source
      *
      * @param sourceListItem the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ListItem sourceListItem, @Nonnull final ICallback<? super ListItem> callback) {
-        send(HttpMethod.PATCH, callback, sourceListItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItem> patchAsync(@Nonnull final ListItem sourceListItem) {
+        return sendAsync(HttpMethod.PATCH, sourceListItem);
     }
 
     /**
@@ -105,10 +109,11 @@ public class ListItemRequest extends BaseRequest<ListItem> {
      * Creates a ListItem with a new object
      *
      * @param newListItem the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ListItem newListItem, @Nonnull final ICallback<? super ListItem> callback) {
-        send(HttpMethod.POST, callback, newListItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItem> postAsync(@Nonnull final ListItem newListItem) {
+        return sendAsync(HttpMethod.POST, newListItem);
     }
 
     /**
@@ -127,10 +132,11 @@ public class ListItemRequest extends BaseRequest<ListItem> {
      * Creates a ListItem with a new object
      *
      * @param newListItem the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ListItem newListItem, @Nonnull final ICallback<? super ListItem> callback) {
-        send(HttpMethod.PUT, callback, newListItem);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ListItem> putAsync(@Nonnull final ListItem newListItem) {
+        return sendAsync(HttpMethod.PUT, newListItem);
     }
 
     /**

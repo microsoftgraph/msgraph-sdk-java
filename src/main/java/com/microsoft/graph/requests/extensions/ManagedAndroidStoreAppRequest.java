@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAndroidStoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
     /**
      * Gets the ManagedAndroidStoreApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAndroidStoreApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAndroidStoreApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAndroidStoreApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAndroidStoreApp with a source
      *
      * @param sourceManagedAndroidStoreApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAndroidStoreApp sourceManagedAndroidStoreApp, @Nonnull final ICallback<? super ManagedAndroidStoreApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAndroidStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> patchAsync(@Nonnull final ManagedAndroidStoreApp sourceManagedAndroidStoreApp) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAndroidStoreApp);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
      * Creates a ManagedAndroidStoreApp with a new object
      *
      * @param newManagedAndroidStoreApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAndroidStoreApp newManagedAndroidStoreApp, @Nonnull final ICallback<? super ManagedAndroidStoreApp> callback) {
-        send(HttpMethod.POST, callback, newManagedAndroidStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> postAsync(@Nonnull final ManagedAndroidStoreApp newManagedAndroidStoreApp) {
+        return sendAsync(HttpMethod.POST, newManagedAndroidStoreApp);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
      * Creates a ManagedAndroidStoreApp with a new object
      *
      * @param newManagedAndroidStoreApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAndroidStoreApp newManagedAndroidStoreApp, @Nonnull final ICallback<? super ManagedAndroidStoreApp> callback) {
-        send(HttpMethod.PUT, callback, newManagedAndroidStoreApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> putAsync(@Nonnull final ManagedAndroidStoreApp newManagedAndroidStoreApp) {
+        return sendAsync(HttpMethod.PUT, newManagedAndroidStoreApp);
     }
 
     /**

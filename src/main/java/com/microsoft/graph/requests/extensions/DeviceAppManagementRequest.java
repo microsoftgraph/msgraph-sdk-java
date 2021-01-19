@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookRequestBuilder;
@@ -66,10 +65,11 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
     /**
      * Gets the DeviceAppManagement from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceAppManagement> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -86,29 +86,33 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceAppManagement> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceAppManagement delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceAppManagement with a source
      *
      * @param sourceDeviceAppManagement the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceAppManagement sourceDeviceAppManagement, @Nonnull final ICallback<? super DeviceAppManagement> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceAppManagement);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> patchAsync(@Nonnull final DeviceAppManagement sourceDeviceAppManagement) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceAppManagement);
     }
 
     /**
@@ -127,10 +131,11 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * Creates a DeviceAppManagement with a new object
      *
      * @param newDeviceAppManagement the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceAppManagement newDeviceAppManagement, @Nonnull final ICallback<? super DeviceAppManagement> callback) {
-        send(HttpMethod.POST, callback, newDeviceAppManagement);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> postAsync(@Nonnull final DeviceAppManagement newDeviceAppManagement) {
+        return sendAsync(HttpMethod.POST, newDeviceAppManagement);
     }
 
     /**
@@ -149,10 +154,11 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * Creates a DeviceAppManagement with a new object
      *
      * @param newDeviceAppManagement the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceAppManagement newDeviceAppManagement, @Nonnull final ICallback<? super DeviceAppManagement> callback) {
-        send(HttpMethod.PUT, callback, newDeviceAppManagement);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> putAsync(@Nonnull final DeviceAppManagement newDeviceAppManagement) {
+        return sendAsync(HttpMethod.PUT, newDeviceAppManagement);
     }
 
     /**

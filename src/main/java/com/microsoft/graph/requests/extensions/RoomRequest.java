@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Room;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class RoomRequest extends BaseRequest<Room> {
     /**
      * Gets the Room from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Room> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Room> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class RoomRequest extends BaseRequest<Room> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Room> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Room> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Room delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Room with a source
      *
      * @param sourceRoom the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Room sourceRoom, @Nonnull final ICallback<? super Room> callback) {
-        send(HttpMethod.PATCH, callback, sourceRoom);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Room> patchAsync(@Nonnull final Room sourceRoom) {
+        return sendAsync(HttpMethod.PATCH, sourceRoom);
     }
 
     /**
@@ -99,10 +103,11 @@ public class RoomRequest extends BaseRequest<Room> {
      * Creates a Room with a new object
      *
      * @param newRoom the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Room newRoom, @Nonnull final ICallback<? super Room> callback) {
-        send(HttpMethod.POST, callback, newRoom);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Room> postAsync(@Nonnull final Room newRoom) {
+        return sendAsync(HttpMethod.POST, newRoom);
     }
 
     /**
@@ -121,10 +126,11 @@ public class RoomRequest extends BaseRequest<Room> {
      * Creates a Room with a new object
      *
      * @param newRoom the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Room newRoom, @Nonnull final ICallback<? super Room> callback) {
-        send(HttpMethod.PUT, callback, newRoom);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Room> putAsync(@Nonnull final Room newRoom) {
+        return sendAsync(HttpMethod.PUT, newRoom);
     }
 
     /**

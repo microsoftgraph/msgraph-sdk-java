@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
     /**
      * Gets the UserScopeTeamsAppInstallation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public UserScopeTeamsAppInstallation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this UserScopeTeamsAppInstallation with a source
      *
      * @param sourceUserScopeTeamsAppInstallation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation, @Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
-        send(HttpMethod.PATCH, callback, sourceUserScopeTeamsAppInstallation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> patchAsync(@Nonnull final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation) {
+        return sendAsync(HttpMethod.PATCH, sourceUserScopeTeamsAppInstallation);
     }
 
     /**
@@ -100,10 +104,11 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * Creates a UserScopeTeamsAppInstallation with a new object
      *
      * @param newUserScopeTeamsAppInstallation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, @Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
-        send(HttpMethod.POST, callback, newUserScopeTeamsAppInstallation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> postAsync(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
+        return sendAsync(HttpMethod.POST, newUserScopeTeamsAppInstallation);
     }
 
     /**
@@ -122,10 +127,11 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * Creates a UserScopeTeamsAppInstallation with a new object
      *
      * @param newUserScopeTeamsAppInstallation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation, @Nonnull final ICallback<? super UserScopeTeamsAppInstallation> callback) {
-        send(HttpMethod.PUT, callback, newUserScopeTeamsAppInstallation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> putAsync(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
+        return sendAsync(HttpMethod.PUT, newUserScopeTeamsAppInstallation);
     }
 
     /**

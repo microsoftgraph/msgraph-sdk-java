@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -66,12 +65,13 @@ public class MobileAppCategoryReferenceRequest extends BaseReferenceRequest<Mobi
      * Puts the MobileAppCategory
      *
      * @param srcMobileAppCategory the MobileAppCategory reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MobileAppCategory srcMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> putAsync(@Nonnull final MobileAppCategory srcMobileAppCategory) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/mobileAppCategories/" + srcMobileAppCategory.id));
-        send(HttpMethod.PUT, callback, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

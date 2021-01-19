@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyState;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceCompliancePolicyStateCollectionRequest extends BaseEntityColl
     /**
      * Creates a new DeviceCompliancePolicyState
      * @param newDeviceCompliancePolicyState the DeviceCompliancePolicyState to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceCompliancePolicyState newDeviceCompliancePolicyState, @Nonnull final ICallback<? super DeviceCompliancePolicyState> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyState> postAsync(@Nonnull final DeviceCompliancePolicyState newDeviceCompliancePolicyState) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceCompliancePolicyStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceCompliancePolicyStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceCompliancePolicyState, callback);
+            .postAsync(newDeviceCompliancePolicyState);
     }
 
     /**

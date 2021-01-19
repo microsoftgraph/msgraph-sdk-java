@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
     /**
      * Gets the TeamsAsyncOperation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TeamsAsyncOperation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TeamsAsyncOperation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TeamsAsyncOperation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TeamsAsyncOperation with a source
      *
      * @param sourceTeamsAsyncOperation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TeamsAsyncOperation sourceTeamsAsyncOperation, @Nonnull final ICallback<? super TeamsAsyncOperation> callback) {
-        send(HttpMethod.PATCH, callback, sourceTeamsAsyncOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> patchAsync(@Nonnull final TeamsAsyncOperation sourceTeamsAsyncOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsAsyncOperation);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
      * Creates a TeamsAsyncOperation with a new object
      *
      * @param newTeamsAsyncOperation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation, @Nonnull final ICallback<? super TeamsAsyncOperation> callback) {
-        send(HttpMethod.POST, callback, newTeamsAsyncOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> postAsync(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
+        return sendAsync(HttpMethod.POST, newTeamsAsyncOperation);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
      * Creates a TeamsAsyncOperation with a new object
      *
      * @param newTeamsAsyncOperation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation, @Nonnull final ICallback<? super TeamsAsyncOperation> callback) {
-        send(HttpMethod.PUT, callback, newTeamsAsyncOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> putAsync(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
+        return sendAsync(HttpMethod.PUT, newTeamsAsyncOperation);
     }
 
     /**

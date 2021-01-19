@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
@@ -24,7 +23,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequest;
@@ -50,13 +48,14 @@ public class DriveItemCollectionRequest extends BaseEntityCollectionRequest<Driv
     /**
      * Creates a new DriveItem
      * @param newDriveItem the DriveItem to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DriveItem newDriveItem, @Nonnull final ICallback<? super DriveItem> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DriveItem> postAsync(@Nonnull final DriveItem newDriveItem) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDriveItem, callback);
+            .postAsync(newDriveItem);
     }
 
     /**

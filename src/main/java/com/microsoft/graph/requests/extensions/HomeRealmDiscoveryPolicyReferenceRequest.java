@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -66,12 +65,13 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseReferenceReque
      * Puts the HomeRealmDiscoveryPolicy
      *
      * @param srcHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy, @Nonnull final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> putAsync(@Nonnull final HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + srcHomeRealmDiscoveryPolicy.id));
-        send(HttpMethod.PUT, callback, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

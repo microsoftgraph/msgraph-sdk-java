@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookComment;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyRequestBuilder;
@@ -40,10 +39,11 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
     /**
      * Gets the WorkbookComment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookComment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookComment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookComment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookComment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookComment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookComment with a source
      *
      * @param sourceWorkbookComment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookComment sourceWorkbookComment, @Nonnull final ICallback<? super WorkbookComment> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookComment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookComment> patchAsync(@Nonnull final WorkbookComment sourceWorkbookComment) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookComment);
     }
 
     /**
@@ -101,10 +105,11 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * Creates a WorkbookComment with a new object
      *
      * @param newWorkbookComment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookComment newWorkbookComment, @Nonnull final ICallback<? super WorkbookComment> callback) {
-        send(HttpMethod.POST, callback, newWorkbookComment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookComment> postAsync(@Nonnull final WorkbookComment newWorkbookComment) {
+        return sendAsync(HttpMethod.POST, newWorkbookComment);
     }
 
     /**
@@ -123,10 +128,11 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * Creates a WorkbookComment with a new object
      *
      * @param newWorkbookComment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookComment newWorkbookComment, @Nonnull final ICallback<? super WorkbookComment> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookComment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookComment> putAsync(@Nonnull final WorkbookComment newWorkbookComment) {
+        return sendAsync(HttpMethod.PUT, newWorkbookComment);
     }
 
     /**

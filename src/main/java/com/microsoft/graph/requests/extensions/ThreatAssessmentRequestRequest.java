@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequestBuilder;
@@ -55,10 +54,11 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
     /**
      * Gets the ThreatAssessmentRequest from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ThreatAssessmentRequest> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -75,29 +75,33 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ThreatAssessmentRequest> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ThreatAssessmentRequest delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ThreatAssessmentRequest with a source
      *
      * @param sourceThreatAssessmentRequest the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ThreatAssessmentRequest sourceThreatAssessmentRequest, @Nonnull final ICallback<? super ThreatAssessmentRequest> callback) {
-        send(HttpMethod.PATCH, callback, sourceThreatAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> patchAsync(@Nonnull final ThreatAssessmentRequest sourceThreatAssessmentRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceThreatAssessmentRequest);
     }
 
     /**
@@ -116,10 +120,11 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
      * Creates a ThreatAssessmentRequest with a new object
      *
      * @param newThreatAssessmentRequest the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest, @Nonnull final ICallback<? super ThreatAssessmentRequest> callback) {
-        send(HttpMethod.POST, callback, newThreatAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> postAsync(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) {
+        return sendAsync(HttpMethod.POST, newThreatAssessmentRequest);
     }
 
     /**
@@ -138,10 +143,11 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
      * Creates a ThreatAssessmentRequest with a new object
      *
      * @param newThreatAssessmentRequest the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest, @Nonnull final ICallback<? super ThreatAssessmentRequest> callback) {
-        send(HttpMethod.PUT, callback, newThreatAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> putAsync(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) {
+        return sendAsync(HttpMethod.PUT, newThreatAssessmentRequest);
     }
 
     /**

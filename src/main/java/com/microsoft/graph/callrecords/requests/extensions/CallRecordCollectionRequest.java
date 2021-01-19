@@ -7,7 +7,6 @@ package com.microsoft.graph.callrecords.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudCommunications;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequest;
@@ -44,13 +42,14 @@ public class CallRecordCollectionRequest extends BaseEntityCollectionRequest<Cal
     /**
      * Creates a new CallRecord
      * @param newCallRecord the CallRecord to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final CallRecord newCallRecord, @Nonnull final ICallback<? super CallRecord> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CallRecord> postAsync(@Nonnull final CallRecord newCallRecord) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new CallRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new CallRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newCallRecord, callback);
+            .postAsync(newCallRecord);
     }
 
     /**

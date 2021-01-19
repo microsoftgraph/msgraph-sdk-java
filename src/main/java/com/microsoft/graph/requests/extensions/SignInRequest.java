@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class SignInRequest extends BaseRequest<SignIn> {
     /**
      * Gets the SignIn from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SignIn> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SignIn> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class SignInRequest extends BaseRequest<SignIn> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SignIn> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SignIn> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SignIn delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SignIn with a source
      *
      * @param sourceSignIn the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SignIn sourceSignIn, @Nonnull final ICallback<? super SignIn> callback) {
-        send(HttpMethod.PATCH, callback, sourceSignIn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SignIn> patchAsync(@Nonnull final SignIn sourceSignIn) {
+        return sendAsync(HttpMethod.PATCH, sourceSignIn);
     }
 
     /**
@@ -114,10 +118,11 @@ public class SignInRequest extends BaseRequest<SignIn> {
      * Creates a SignIn with a new object
      *
      * @param newSignIn the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SignIn newSignIn, @Nonnull final ICallback<? super SignIn> callback) {
-        send(HttpMethod.POST, callback, newSignIn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SignIn> postAsync(@Nonnull final SignIn newSignIn) {
+        return sendAsync(HttpMethod.POST, newSignIn);
     }
 
     /**
@@ -136,10 +141,11 @@ public class SignInRequest extends BaseRequest<SignIn> {
      * Creates a SignIn with a new object
      *
      * @param newSignIn the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SignIn newSignIn, @Nonnull final ICallback<? super SignIn> callback) {
-        send(HttpMethod.PUT, callback, newSignIn);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SignIn> putAsync(@Nonnull final SignIn newSignIn) {
+        return sendAsync(HttpMethod.PUT, newSignIn);
     }
 
     /**

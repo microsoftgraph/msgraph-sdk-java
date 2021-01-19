@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -66,12 +65,13 @@ public class TokenIssuancePolicyReferenceRequest extends BaseReferenceRequest<To
      * Puts the TokenIssuancePolicy
      *
      * @param srcTokenIssuancePolicy the TokenIssuancePolicy reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TokenIssuancePolicy srcTokenIssuancePolicy, @Nonnull final ICallback<? super TokenIssuancePolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> putAsync(@Nonnull final TokenIssuancePolicy srcTokenIssuancePolicy) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + srcTokenIssuancePolicy.id));
-        send(HttpMethod.PUT, callback, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

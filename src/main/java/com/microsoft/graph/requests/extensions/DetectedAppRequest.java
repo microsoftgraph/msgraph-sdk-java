@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DetectedApp;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRequestBuilder;
@@ -40,10 +39,11 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
     /**
      * Gets the DetectedApp from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DetectedApp> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DetectedApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DetectedApp> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DetectedApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DetectedApp delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DetectedApp with a source
      *
      * @param sourceDetectedApp the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DetectedApp sourceDetectedApp, @Nonnull final ICallback<? super DetectedApp> callback) {
-        send(HttpMethod.PATCH, callback, sourceDetectedApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DetectedApp> patchAsync(@Nonnull final DetectedApp sourceDetectedApp) {
+        return sendAsync(HttpMethod.PATCH, sourceDetectedApp);
     }
 
     /**
@@ -101,10 +105,11 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
      * Creates a DetectedApp with a new object
      *
      * @param newDetectedApp the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DetectedApp newDetectedApp, @Nonnull final ICallback<? super DetectedApp> callback) {
-        send(HttpMethod.POST, callback, newDetectedApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DetectedApp> postAsync(@Nonnull final DetectedApp newDetectedApp) {
+        return sendAsync(HttpMethod.POST, newDetectedApp);
     }
 
     /**
@@ -123,10 +128,11 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
      * Creates a DetectedApp with a new object
      *
      * @param newDetectedApp the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DetectedApp newDetectedApp, @Nonnull final ICallback<? super DetectedApp> callback) {
-        send(HttpMethod.PUT, callback, newDetectedApp);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DetectedApp> putAsync(@Nonnull final DetectedApp newDetectedApp) {
+        return sendAsync(HttpMethod.PUT, newDetectedApp);
     }
 
     /**

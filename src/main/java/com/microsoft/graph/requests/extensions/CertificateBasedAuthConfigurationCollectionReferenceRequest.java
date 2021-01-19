@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
     /**
      * Creates a new CertificateBasedAuthConfiguration
      * @param newCertificateBasedAuthConfiguration the CertificateBasedAuthConfiguration to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, @Nonnull final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> postAsync(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + newCertificateBasedAuthConfiguration.id);
-        new CertificateBasedAuthConfigurationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new CertificateBasedAuthConfigurationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newCertificateBasedAuthConfiguration, body, callback);
+            .postAsync(newCertificateBasedAuthConfiguration, body);
     }
 
     /**

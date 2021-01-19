@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
     /**
      * Gets the DeviceManagementPartner from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceManagementPartner> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceManagementPartner> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceManagementPartner delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceManagementPartner with a source
      *
      * @param sourceDeviceManagementPartner the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceManagementPartner sourceDeviceManagementPartner, @Nonnull final ICallback<? super DeviceManagementPartner> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> patchAsync(@Nonnull final DeviceManagementPartner sourceDeviceManagementPartner) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceManagementPartner);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
      * Creates a DeviceManagementPartner with a new object
      *
      * @param newDeviceManagementPartner the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceManagementPartner newDeviceManagementPartner, @Nonnull final ICallback<? super DeviceManagementPartner> callback) {
-        send(HttpMethod.POST, callback, newDeviceManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> postAsync(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) {
+        return sendAsync(HttpMethod.POST, newDeviceManagementPartner);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
      * Creates a DeviceManagementPartner with a new object
      *
      * @param newDeviceManagementPartner the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceManagementPartner newDeviceManagementPartner, @Nonnull final ICallback<? super DeviceManagementPartner> callback) {
-        send(HttpMethod.PUT, callback, newDeviceManagementPartner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> putAsync(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) {
+        return sendAsync(HttpMethod.PUT, newDeviceManagementPartner);
     }
 
     /**

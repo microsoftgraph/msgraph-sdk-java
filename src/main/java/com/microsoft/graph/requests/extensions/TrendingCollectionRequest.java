@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.Trending;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
 import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrendingCollectionRequest;
@@ -44,13 +42,14 @@ public class TrendingCollectionRequest extends BaseEntityCollectionRequest<Trend
     /**
      * Creates a new Trending
      * @param newTrending the Trending to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Trending newTrending, @Nonnull final ICallback<? super Trending> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Trending> postAsync(@Nonnull final Trending newTrending) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTrending, callback);
+            .postAsync(newTrending);
     }
 
     /**

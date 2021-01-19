@@ -7,7 +7,6 @@ package com.microsoft.graph.callrecords.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentRequestBuilder;
@@ -40,10 +39,11 @@ public class SessionRequest extends BaseRequest<Session> {
     /**
      * Gets the Session from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Session> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Session> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class SessionRequest extends BaseRequest<Session> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Session> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Session> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Session delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Session with a source
      *
      * @param sourceSession the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Session sourceSession, @Nonnull final ICallback<? super Session> callback) {
-        send(HttpMethod.PATCH, callback, sourceSession);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Session> patchAsync(@Nonnull final Session sourceSession) {
+        return sendAsync(HttpMethod.PATCH, sourceSession);
     }
 
     /**
@@ -101,10 +105,11 @@ public class SessionRequest extends BaseRequest<Session> {
      * Creates a Session with a new object
      *
      * @param newSession the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Session newSession, @Nonnull final ICallback<? super Session> callback) {
-        send(HttpMethod.POST, callback, newSession);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Session> postAsync(@Nonnull final Session newSession) {
+        return sendAsync(HttpMethod.POST, newSession);
     }
 
     /**
@@ -123,10 +128,11 @@ public class SessionRequest extends BaseRequest<Session> {
      * Creates a Session with a new object
      *
      * @param newSession the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Session newSession, @Nonnull final ICallback<? super Session> callback) {
-        send(HttpMethod.PUT, callback, newSession);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Session> putAsync(@Nonnull final Session newSession) {
+        return sendAsync(HttpMethod.PUT, newSession);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleAssignment;
 import com.microsoft.graph.requests.extensions.RoleDefinitionRequestBuilder;
 import java.util.Arrays;
@@ -54,10 +53,11 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
     /**
      * Gets the RoleAssignment from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super RoleAssignment> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -74,29 +74,33 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super RoleAssignment> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public RoleAssignment delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this RoleAssignment with a source
      *
      * @param sourceRoleAssignment the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final RoleAssignment sourceRoleAssignment, @Nonnull final ICallback<? super RoleAssignment> callback) {
-        send(HttpMethod.PATCH, callback, sourceRoleAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleAssignment> patchAsync(@Nonnull final RoleAssignment sourceRoleAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceRoleAssignment);
     }
 
     /**
@@ -115,10 +119,11 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * Creates a RoleAssignment with a new object
      *
      * @param newRoleAssignment the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final RoleAssignment newRoleAssignment, @Nonnull final ICallback<? super RoleAssignment> callback) {
-        send(HttpMethod.POST, callback, newRoleAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleAssignment> postAsync(@Nonnull final RoleAssignment newRoleAssignment) {
+        return sendAsync(HttpMethod.POST, newRoleAssignment);
     }
 
     /**
@@ -137,10 +142,11 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * Creates a RoleAssignment with a new object
      *
      * @param newRoleAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final RoleAssignment newRoleAssignment, @Nonnull final ICallback<? super RoleAssignment> callback) {
-        send(HttpMethod.PUT, callback, newRoleAssignment);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<RoleAssignment> putAsync(@Nonnull final RoleAssignment newRoleAssignment) {
+        return sendAsync(HttpMethod.PUT, newRoleAssignment);
     }
 
     /**

@@ -8,10 +8,8 @@ import com.microsoft.graph.core.ClientException;
 
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
-import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.logger.*;
 import com.google.gson.JsonObject;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpProvider;
@@ -80,7 +78,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 	public static final class Builder<httpClientType> {
 		private ISerializer serializer;
 		private IHttpProvider httpProvider;
-		private IExecutors executors;
 		private ILogger logger;
 		private httpClientType httpClient;
 		private ICoreAuthenticationProvider auth;
@@ -97,13 +94,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 				return new DefaultLogger();
 			} else {
 				return logger;
-			}
-		}
-		private IExecutors getExecutors() {
-			if(executors == null) {
-				return new DefaultExecutors(getLogger());
-			} else {
-				return executors;
 			}
 		}
 		private ISerializer getSerializer() {
@@ -123,7 +113,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		}
 		private IHttpProvider getHttpProvider() {
 			if(httpProvider == null) {
-				return new CoreHttpProvider(getSerializer(), getExecutors(), getLogger(), (OkHttpClient)getHttpClient());
+				return new CoreHttpProvider(getSerializer(), getLogger(), (OkHttpClient)getHttpClient());
 			} else {
 				return httpProvider;
 			}
@@ -154,20 +144,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		public Builder<httpClientType> httpProvider(@Nonnull final IHttpProvider httpProvider) {
 			checkNotNull(httpProvider, "httpProvider");
 			this.httpProvider = httpProvider;
-			return this;
-		}
-
-		/**
-		 * Sets the executors
-		 * 
-		 * @param executors
-		 *			the executors
-		 * @return the instance of this builder
-		 */
-		@Nonnull
-		public Builder<httpClientType> executors(@Nonnull final IExecutors executors) {
-			checkNotNull(executors, "executors");
-			this.executors = executors;
 			return this;
 		}
 
@@ -222,7 +198,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 		@Nonnull
 		public IGraphServiceClient buildClient() throws ClientException {
 			GraphServiceClient client = new GraphServiceClient();
-			client.setExecutors(this.getExecutors());
 			client.setHttpProvider(this.getHttpProvider());
 			client.setLogger(this.getLogger());
 			client.setSerializer(this.getSerializer());

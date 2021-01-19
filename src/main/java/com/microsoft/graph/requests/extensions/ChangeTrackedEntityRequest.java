@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChangeTrackedEntity;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
     /**
      * Gets the ChangeTrackedEntity from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ChangeTrackedEntity delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ChangeTrackedEntity with a source
      *
      * @param sourceChangeTrackedEntity the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ChangeTrackedEntity sourceChangeTrackedEntity, @Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
-        send(HttpMethod.PATCH, callback, sourceChangeTrackedEntity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> patchAsync(@Nonnull final ChangeTrackedEntity sourceChangeTrackedEntity) {
+        return sendAsync(HttpMethod.PATCH, sourceChangeTrackedEntity);
     }
 
     /**
@@ -114,10 +118,11 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
      * Creates a ChangeTrackedEntity with a new object
      *
      * @param newChangeTrackedEntity the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity, @Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
-        send(HttpMethod.POST, callback, newChangeTrackedEntity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> postAsync(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity) {
+        return sendAsync(HttpMethod.POST, newChangeTrackedEntity);
     }
 
     /**
@@ -136,10 +141,11 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
      * Creates a ChangeTrackedEntity with a new object
      *
      * @param newChangeTrackedEntity the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity, @Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
-        send(HttpMethod.PUT, callback, newChangeTrackedEntity);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> putAsync(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity) {
+        return sendAsync(HttpMethod.PUT, newChangeTrackedEntity);
     }
 
     /**

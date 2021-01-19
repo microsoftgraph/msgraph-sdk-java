@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemRequestBuilder;
@@ -40,10 +39,11 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
     /**
      * Gets the DeviceComplianceScheduledActionForRule from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceComplianceScheduledActionForRule delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceComplianceScheduledActionForRule with a source
      *
      * @param sourceDeviceComplianceScheduledActionForRule the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceComplianceScheduledActionForRule sourceDeviceComplianceScheduledActionForRule, @Nonnull final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceComplianceScheduledActionForRule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> patchAsync(@Nonnull final DeviceComplianceScheduledActionForRule sourceDeviceComplianceScheduledActionForRule) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceComplianceScheduledActionForRule);
     }
 
     /**
@@ -101,10 +105,11 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
      * Creates a DeviceComplianceScheduledActionForRule with a new object
      *
      * @param newDeviceComplianceScheduledActionForRule the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, @Nonnull final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
-        send(HttpMethod.POST, callback, newDeviceComplianceScheduledActionForRule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> postAsync(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) {
+        return sendAsync(HttpMethod.POST, newDeviceComplianceScheduledActionForRule);
     }
 
     /**
@@ -123,10 +128,11 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
      * Creates a DeviceComplianceScheduledActionForRule with a new object
      *
      * @param newDeviceComplianceScheduledActionForRule the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, @Nonnull final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
-        send(HttpMethod.PUT, callback, newDeviceComplianceScheduledActionForRule);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> putAsync(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) {
+        return sendAsync(HttpMethod.PUT, newDeviceComplianceScheduledActionForRule);
     }
 
     /**

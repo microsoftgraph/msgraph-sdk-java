@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartGridlines;
 import com.microsoft.graph.requests.extensions.WorkbookChartGridlinesFormatRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
     /**
      * Gets the WorkbookChartGridlines from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookChartGridlines delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookChartGridlines with a source
      *
      * @param sourceWorkbookChartGridlines the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookChartGridlines sourceWorkbookChartGridlines, @Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookChartGridlines);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> patchAsync(@Nonnull final WorkbookChartGridlines sourceWorkbookChartGridlines) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartGridlines);
     }
 
     /**
@@ -100,10 +104,11 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
      * Creates a WorkbookChartGridlines with a new object
      *
      * @param newWorkbookChartGridlines the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines, @Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
-        send(HttpMethod.POST, callback, newWorkbookChartGridlines);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> postAsync(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartGridlines);
     }
 
     /**
@@ -122,10 +127,11 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
      * Creates a WorkbookChartGridlines with a new object
      *
      * @param newWorkbookChartGridlines the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines, @Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookChartGridlines);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> putAsync(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartGridlines);
     }
 
     /**

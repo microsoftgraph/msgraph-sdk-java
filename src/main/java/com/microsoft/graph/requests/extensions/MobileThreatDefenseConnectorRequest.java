@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileThreatDefenseConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
     /**
      * Gets the MobileThreatDefenseConnector from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MobileThreatDefenseConnector> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MobileThreatDefenseConnector> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MobileThreatDefenseConnector delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MobileThreatDefenseConnector with a source
      *
      * @param sourceMobileThreatDefenseConnector the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MobileThreatDefenseConnector sourceMobileThreatDefenseConnector, @Nonnull final ICallback<? super MobileThreatDefenseConnector> callback) {
-        send(HttpMethod.PATCH, callback, sourceMobileThreatDefenseConnector);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> patchAsync(@Nonnull final MobileThreatDefenseConnector sourceMobileThreatDefenseConnector) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileThreatDefenseConnector);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * Creates a MobileThreatDefenseConnector with a new object
      *
      * @param newMobileThreatDefenseConnector the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector, @Nonnull final ICallback<? super MobileThreatDefenseConnector> callback) {
-        send(HttpMethod.POST, callback, newMobileThreatDefenseConnector);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> postAsync(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) {
+        return sendAsync(HttpMethod.POST, newMobileThreatDefenseConnector);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * Creates a MobileThreatDefenseConnector with a new object
      *
      * @param newMobileThreatDefenseConnector the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector, @Nonnull final ICallback<? super MobileThreatDefenseConnector> callback) {
-        send(HttpMethod.PUT, callback, newMobileThreatDefenseConnector);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> putAsync(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) {
+        return sendAsync(HttpMethod.PUT, newMobileThreatDefenseConnector);
     }
 
     /**

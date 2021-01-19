@@ -1,6 +1,7 @@
 package com.microsoft.graph.functional;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayInputStream;
@@ -32,22 +33,10 @@ public class OneDriveTests {
 	   testBase = new TestBase();
 	}
 
-	IProgressCallback<DriveItem> callback = new IProgressCallback<DriveItem> () {
+	final IProgressCallback callback = new IProgressCallback () {
 		@Override
 		public void progress(final long current, final long max) {
 			//Check progress
-		}
-		@Override
-		public void success(final DriveItem result) {
-			//Handle the successful response
-			String finishedItemId = result.id;
-			Assert.assertNotNull(finishedItemId);
-		}
-
-		@Override
-		public void failure(final ClientException ex) {
-			//Handle the failed upload
-			Assert.fail("Upload session failed");
 		}
 	};
 	/**
@@ -79,7 +68,8 @@ public class OneDriveTests {
 				fileSize,
 				DriveItem.class);
 
-		chunkedUploadProvider.upload(callback);
+        final DriveItem result = chunkedUploadProvider.upload(0, null, callback);
+        assertNotNull(result);
 	}
 	@Test
 	public void testDownloadWithCustomRequest() throws IOException {
@@ -113,7 +103,8 @@ public class OneDriveTests {
 				fileSize,
 				DriveItem.class);
 
-		chunkedUploadProvider.upload(callback);
+		final DriveItem result = chunkedUploadProvider.upload(0, null, callback);
+        assertNotNull(result);
 
 		final InputStream stream = testBase.graphClient.me()
 			.drive()

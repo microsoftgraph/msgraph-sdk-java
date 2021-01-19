@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.CalendarGroup;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequest;
@@ -44,13 +42,14 @@ public class CalendarGroupCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new CalendarGroup
      * @param newCalendarGroup the CalendarGroup to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final CalendarGroup newCalendarGroup, @Nonnull final ICallback<? super CalendarGroup> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CalendarGroup> postAsync(@Nonnull final CalendarGroup newCalendarGroup) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newCalendarGroup, callback);
+            .postAsync(newCalendarGroup);
     }
 
     /**

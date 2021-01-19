@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EventMessageResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class EventMessageResponseRequest extends BaseRequest<EventMessageRespons
     /**
      * Gets the EventMessageResponse from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super EventMessageResponse> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessageResponse> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class EventMessageResponseRequest extends BaseRequest<EventMessageRespons
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super EventMessageResponse> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessageResponse> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public EventMessageResponse delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this EventMessageResponse with a source
      *
      * @param sourceEventMessageResponse the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final EventMessageResponse sourceEventMessageResponse, @Nonnull final ICallback<? super EventMessageResponse> callback) {
-        send(HttpMethod.PATCH, callback, sourceEventMessageResponse);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessageResponse> patchAsync(@Nonnull final EventMessageResponse sourceEventMessageResponse) {
+        return sendAsync(HttpMethod.PATCH, sourceEventMessageResponse);
     }
 
     /**
@@ -99,10 +103,11 @@ public class EventMessageResponseRequest extends BaseRequest<EventMessageRespons
      * Creates a EventMessageResponse with a new object
      *
      * @param newEventMessageResponse the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final EventMessageResponse newEventMessageResponse, @Nonnull final ICallback<? super EventMessageResponse> callback) {
-        send(HttpMethod.POST, callback, newEventMessageResponse);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessageResponse> postAsync(@Nonnull final EventMessageResponse newEventMessageResponse) {
+        return sendAsync(HttpMethod.POST, newEventMessageResponse);
     }
 
     /**
@@ -121,10 +126,11 @@ public class EventMessageResponseRequest extends BaseRequest<EventMessageRespons
      * Creates a EventMessageResponse with a new object
      *
      * @param newEventMessageResponse the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EventMessageResponse newEventMessageResponse, @Nonnull final ICallback<? super EventMessageResponse> callback) {
-        send(HttpMethod.PUT, callback, newEventMessageResponse);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EventMessageResponse> putAsync(@Nonnull final EventMessageResponse newEventMessageResponse) {
+        return sendAsync(HttpMethod.PUT, newEventMessageResponse);
     }
 
     /**

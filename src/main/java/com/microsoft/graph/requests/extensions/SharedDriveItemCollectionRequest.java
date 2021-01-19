@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedDriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequest;
@@ -43,13 +41,14 @@ public class SharedDriveItemCollectionRequest extends BaseEntityCollectionReques
     /**
      * Creates a new SharedDriveItem
      * @param newSharedDriveItem the SharedDriveItem to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final SharedDriveItem newSharedDriveItem, @Nonnull final ICallback<? super SharedDriveItem> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> postAsync(@Nonnull final SharedDriveItem newSharedDriveItem) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSharedDriveItem, callback);
+            .postAsync(newSharedDriveItem);
     }
 
     /**

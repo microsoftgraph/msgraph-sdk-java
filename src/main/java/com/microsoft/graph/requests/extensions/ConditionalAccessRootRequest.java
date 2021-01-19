@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
@@ -42,10 +41,11 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
     /**
      * Gets the ConditionalAccessRoot from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ConditionalAccessRoot delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ConditionalAccessRoot with a source
      *
      * @param sourceConditionalAccessRoot the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ConditionalAccessRoot sourceConditionalAccessRoot, @Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
-        send(HttpMethod.PATCH, callback, sourceConditionalAccessRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> patchAsync(@Nonnull final ConditionalAccessRoot sourceConditionalAccessRoot) {
+        return sendAsync(HttpMethod.PATCH, sourceConditionalAccessRoot);
     }
 
     /**
@@ -103,10 +107,11 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * Creates a ConditionalAccessRoot with a new object
      *
      * @param newConditionalAccessRoot the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot, @Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
-        send(HttpMethod.POST, callback, newConditionalAccessRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> postAsync(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot) {
+        return sendAsync(HttpMethod.POST, newConditionalAccessRoot);
     }
 
     /**
@@ -125,10 +130,11 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * Creates a ConditionalAccessRoot with a new object
      *
      * @param newConditionalAccessRoot the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot, @Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
-        send(HttpMethod.PUT, callback, newConditionalAccessRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> putAsync(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot) {
+        return sendAsync(HttpMethod.PUT, newConditionalAccessRoot);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
@@ -44,10 +43,11 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
     /**
      * Gets the ManagedDevice from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedDevice> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDevice> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,29 +64,33 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedDevice> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDevice> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedDevice delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedDevice with a source
      *
      * @param sourceManagedDevice the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedDevice sourceManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedDevice);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDevice> patchAsync(@Nonnull final ManagedDevice sourceManagedDevice) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedDevice);
     }
 
     /**
@@ -105,10 +109,11 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
      * Creates a ManagedDevice with a new object
      *
      * @param newManagedDevice the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedDevice newManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
-        send(HttpMethod.POST, callback, newManagedDevice);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDevice> postAsync(@Nonnull final ManagedDevice newManagedDevice) {
+        return sendAsync(HttpMethod.POST, newManagedDevice);
     }
 
     /**
@@ -127,10 +132,11 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
      * Creates a ManagedDevice with a new object
      *
      * @param newManagedDevice the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedDevice newManagedDevice, @Nonnull final ICallback<? super ManagedDevice> callback) {
-        send(HttpMethod.PUT, callback, newManagedDevice);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDevice> putAsync(@Nonnull final ManagedDevice newManagedDevice) {
+        return sendAsync(HttpMethod.PUT, newManagedDevice);
     }
 
     /**

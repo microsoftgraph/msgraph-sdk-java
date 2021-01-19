@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
     /**
      * Gets the GroupLifecyclePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public GroupLifecyclePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this GroupLifecyclePolicy with a source
      *
      * @param sourceGroupLifecyclePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final GroupLifecyclePolicy sourceGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceGroupLifecyclePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> patchAsync(@Nonnull final GroupLifecyclePolicy sourceGroupLifecyclePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceGroupLifecyclePolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
      * Creates a GroupLifecyclePolicy with a new object
      *
      * @param newGroupLifecyclePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
-        send(HttpMethod.POST, callback, newGroupLifecyclePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> postAsync(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) {
+        return sendAsync(HttpMethod.POST, newGroupLifecyclePolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
      * Creates a GroupLifecyclePolicy with a new object
      *
      * @param newGroupLifecyclePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
-        send(HttpMethod.PUT, callback, newGroupLifecyclePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> putAsync(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) {
+        return sendAsync(HttpMethod.PUT, newGroupLifecyclePolicy);
     }
 
     /**

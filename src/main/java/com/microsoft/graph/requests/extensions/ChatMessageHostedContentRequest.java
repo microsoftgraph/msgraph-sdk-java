@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
     /**
      * Gets the ChatMessageHostedContent from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ChatMessageHostedContent delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ChatMessageHostedContent with a source
      *
      * @param sourceChatMessageHostedContent the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ChatMessageHostedContent sourceChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
-        send(HttpMethod.PATCH, callback, sourceChatMessageHostedContent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> patchAsync(@Nonnull final ChatMessageHostedContent sourceChatMessageHostedContent) {
+        return sendAsync(HttpMethod.PATCH, sourceChatMessageHostedContent);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * Creates a ChatMessageHostedContent with a new object
      *
      * @param newChatMessageHostedContent the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
-        send(HttpMethod.POST, callback, newChatMessageHostedContent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> postAsync(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
+        return sendAsync(HttpMethod.POST, newChatMessageHostedContent);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * Creates a ChatMessageHostedContent with a new object
      *
      * @param newChatMessageHostedContent the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
-        send(HttpMethod.PUT, callback, newChatMessageHostedContent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> putAsync(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
+        return sendAsync(HttpMethod.PUT, newChatMessageHostedContent);
     }
 
     /**

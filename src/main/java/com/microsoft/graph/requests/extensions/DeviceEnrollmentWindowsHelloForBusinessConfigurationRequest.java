@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentWindowsHelloForBusinessConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
     /**
      * Gets the DeviceEnrollmentWindowsHelloForBusinessConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceEnrollmentWindowsHelloForBusinessConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceEnrollmentWindowsHelloForBusinessConfiguration with a source
      *
      * @param sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> patchAsync(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * Creates a DeviceEnrollmentWindowsHelloForBusinessConfiguration with a new object
      *
      * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
-        send(HttpMethod.POST, callback, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> postAsync(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
+        return sendAsync(HttpMethod.POST, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * Creates a DeviceEnrollmentWindowsHelloForBusinessConfiguration with a new object
      *
      * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> putAsync(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
+        return sendAsync(HttpMethod.PUT, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
     /**

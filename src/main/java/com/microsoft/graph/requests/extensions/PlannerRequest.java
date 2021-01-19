@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Planner;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketRequestBuilder;
@@ -44,10 +43,11 @@ public class PlannerRequest extends BaseRequest<Planner> {
     /**
      * Gets the Planner from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Planner> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Planner> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,29 +64,33 @@ public class PlannerRequest extends BaseRequest<Planner> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Planner> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Planner> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Planner delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Planner with a source
      *
      * @param sourcePlanner the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Planner sourcePlanner, @Nonnull final ICallback<? super Planner> callback) {
-        send(HttpMethod.PATCH, callback, sourcePlanner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Planner> patchAsync(@Nonnull final Planner sourcePlanner) {
+        return sendAsync(HttpMethod.PATCH, sourcePlanner);
     }
 
     /**
@@ -105,10 +109,11 @@ public class PlannerRequest extends BaseRequest<Planner> {
      * Creates a Planner with a new object
      *
      * @param newPlanner the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Planner newPlanner, @Nonnull final ICallback<? super Planner> callback) {
-        send(HttpMethod.POST, callback, newPlanner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Planner> postAsync(@Nonnull final Planner newPlanner) {
+        return sendAsync(HttpMethod.POST, newPlanner);
     }
 
     /**
@@ -127,10 +132,11 @@ public class PlannerRequest extends BaseRequest<Planner> {
      * Creates a Planner with a new object
      *
      * @param newPlanner the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Planner newPlanner, @Nonnull final ICallback<? super Planner> callback) {
-        send(HttpMethod.PUT, callback, newPlanner);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Planner> putAsync(@Nonnull final Planner newPlanner) {
+        return sendAsync(HttpMethod.PUT, newPlanner);
     }
 
     /**

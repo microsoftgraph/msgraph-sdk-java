@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionRequestBuilder;
@@ -89,10 +88,11 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
     /**
      * Gets the DeviceManagement from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceManagement> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagement> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -109,29 +109,33 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceManagement> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagement> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceManagement delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceManagement with a source
      *
      * @param sourceDeviceManagement the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceManagement sourceDeviceManagement, @Nonnull final ICallback<? super DeviceManagement> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceManagement);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagement> patchAsync(@Nonnull final DeviceManagement sourceDeviceManagement) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceManagement);
     }
 
     /**
@@ -150,10 +154,11 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * Creates a DeviceManagement with a new object
      *
      * @param newDeviceManagement the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceManagement newDeviceManagement, @Nonnull final ICallback<? super DeviceManagement> callback) {
-        send(HttpMethod.POST, callback, newDeviceManagement);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagement> postAsync(@Nonnull final DeviceManagement newDeviceManagement) {
+        return sendAsync(HttpMethod.POST, newDeviceManagement);
     }
 
     /**
@@ -172,10 +177,11 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * Creates a DeviceManagement with a new object
      *
      * @param newDeviceManagement the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceManagement newDeviceManagement, @Nonnull final ICallback<? super DeviceManagement> callback) {
-        send(HttpMethod.PUT, callback, newDeviceManagement);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceManagement> putAsync(@Nonnull final DeviceManagement newDeviceManagement) {
+        return sendAsync(HttpMethod.PUT, newDeviceManagement);
     }
 
     /**

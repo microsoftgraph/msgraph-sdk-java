@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequest;
@@ -44,13 +42,14 @@ public class TeamsAppInstallationCollectionRequest extends BaseEntityCollectionR
     /**
      * Creates a new TeamsAppInstallation
      * @param newTeamsAppInstallation the TeamsAppInstallation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TeamsAppInstallation newTeamsAppInstallation, @Nonnull final ICallback<? super TeamsAppInstallation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> postAsync(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTeamsAppInstallation, callback);
+            .postAsync(newTeamsAppInstallation);
     }
 
     /**

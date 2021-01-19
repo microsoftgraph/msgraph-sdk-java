@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
     /**
      * Gets the MuteParticipantOperation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MuteParticipantOperation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MuteParticipantOperation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MuteParticipantOperation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MuteParticipantOperation with a source
      *
      * @param sourceMuteParticipantOperation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MuteParticipantOperation sourceMuteParticipantOperation, @Nonnull final ICallback<? super MuteParticipantOperation> callback) {
-        send(HttpMethod.PATCH, callback, sourceMuteParticipantOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> patchAsync(@Nonnull final MuteParticipantOperation sourceMuteParticipantOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceMuteParticipantOperation);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
      * Creates a MuteParticipantOperation with a new object
      *
      * @param newMuteParticipantOperation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MuteParticipantOperation newMuteParticipantOperation, @Nonnull final ICallback<? super MuteParticipantOperation> callback) {
-        send(HttpMethod.POST, callback, newMuteParticipantOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> postAsync(@Nonnull final MuteParticipantOperation newMuteParticipantOperation) {
+        return sendAsync(HttpMethod.POST, newMuteParticipantOperation);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
      * Creates a MuteParticipantOperation with a new object
      *
      * @param newMuteParticipantOperation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MuteParticipantOperation newMuteParticipantOperation, @Nonnull final ICallback<? super MuteParticipantOperation> callback) {
-        send(HttpMethod.PUT, callback, newMuteParticipantOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> putAsync(@Nonnull final MuteParticipantOperation newMuteParticipantOperation) {
+        return sendAsync(HttpMethod.PUT, newMuteParticipantOperation);
     }
 
     /**

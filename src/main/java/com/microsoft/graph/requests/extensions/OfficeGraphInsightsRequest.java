@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightRequestBuilder;
@@ -44,10 +43,11 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
     /**
      * Gets the OfficeGraphInsights from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OfficeGraphInsights> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,29 +64,33 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OfficeGraphInsights> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OfficeGraphInsights delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OfficeGraphInsights with a source
      *
      * @param sourceOfficeGraphInsights the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OfficeGraphInsights sourceOfficeGraphInsights, @Nonnull final ICallback<? super OfficeGraphInsights> callback) {
-        send(HttpMethod.PATCH, callback, sourceOfficeGraphInsights);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> patchAsync(@Nonnull final OfficeGraphInsights sourceOfficeGraphInsights) {
+        return sendAsync(HttpMethod.PATCH, sourceOfficeGraphInsights);
     }
 
     /**
@@ -105,10 +109,11 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * Creates a OfficeGraphInsights with a new object
      *
      * @param newOfficeGraphInsights the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OfficeGraphInsights newOfficeGraphInsights, @Nonnull final ICallback<? super OfficeGraphInsights> callback) {
-        send(HttpMethod.POST, callback, newOfficeGraphInsights);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> postAsync(@Nonnull final OfficeGraphInsights newOfficeGraphInsights) {
+        return sendAsync(HttpMethod.POST, newOfficeGraphInsights);
     }
 
     /**
@@ -127,10 +132,11 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * Creates a OfficeGraphInsights with a new object
      *
      * @param newOfficeGraphInsights the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OfficeGraphInsights newOfficeGraphInsights, @Nonnull final ICallback<? super OfficeGraphInsights> callback) {
-        send(HttpMethod.PUT, callback, newOfficeGraphInsights);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> putAsync(@Nonnull final OfficeGraphInsights newOfficeGraphInsights) {
+        return sendAsync(HttpMethod.PUT, newOfficeGraphInsights);
     }
 
     /**

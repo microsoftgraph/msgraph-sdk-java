@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequest;
@@ -44,13 +42,14 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseEnt
     /**
      * Creates a new TargetedManagedAppPolicyAssignment
      * @param newTargetedManagedAppPolicyAssignment the TargetedManagedAppPolicyAssignment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, @Nonnull final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> postAsync(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTargetedManagedAppPolicyAssignment, callback);
+            .postAsync(newTargetedManagedAppPolicyAssignment);
     }
 
     /**

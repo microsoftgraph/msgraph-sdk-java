@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookComment;
 import com.microsoft.graph.models.extensions.WorkbookCommentReply;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionRequest;
@@ -44,13 +42,14 @@ public class WorkbookCommentReplyCollectionRequest extends BaseEntityCollectionR
     /**
      * Creates a new WorkbookCommentReply
      * @param newWorkbookCommentReply the WorkbookCommentReply to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookCommentReply newWorkbookCommentReply, @Nonnull final ICallback<? super WorkbookCommentReply> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookCommentReply> postAsync(@Nonnull final WorkbookCommentReply newWorkbookCommentReply) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookCommentReplyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookCommentReplyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookCommentReply, callback);
+            .postAsync(newWorkbookCommentReply);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequest;
@@ -44,13 +42,14 @@ public class OnenoteOperationCollectionRequest extends BaseEntityCollectionReque
     /**
      * Creates a new OnenoteOperation
      * @param newOnenoteOperation the OnenoteOperation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final OnenoteOperation newOnenoteOperation, @Nonnull final ICallback<? super OnenoteOperation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> postAsync(@Nonnull final OnenoteOperation newOnenoteOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newOnenoteOperation, callback);
+            .postAsync(newOnenoteOperation);
     }
 
     /**

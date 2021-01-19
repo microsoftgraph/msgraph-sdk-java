@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequest;
@@ -44,13 +42,14 @@ public class ManagedAppOperationCollectionRequest extends BaseEntityCollectionRe
     /**
      * Creates a new ManagedAppOperation
      * @param newManagedAppOperation the ManagedAppOperation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ManagedAppOperation newManagedAppOperation, @Nonnull final ICallback<? super ManagedAppOperation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> postAsync(@Nonnull final ManagedAppOperation newManagedAppOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newManagedAppOperation, callback);
+            .postAsync(newManagedAppOperation);
     }
 
     /**

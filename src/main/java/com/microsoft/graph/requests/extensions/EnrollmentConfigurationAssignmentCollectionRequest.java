@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequest;
@@ -44,13 +42,14 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseEnti
     /**
      * Creates a new EnrollmentConfigurationAssignment
      * @param newEnrollmentConfigurationAssignment the EnrollmentConfigurationAssignment to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, @Nonnull final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> postAsync(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newEnrollmentConfigurationAssignment, callback);
+            .postAsync(newEnrollmentConfigurationAssignment);
     }
 
     /**

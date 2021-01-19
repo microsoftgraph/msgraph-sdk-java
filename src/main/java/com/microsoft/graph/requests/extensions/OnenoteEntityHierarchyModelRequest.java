@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -53,10 +52,11 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
     /**
      * Gets the OnenoteEntityHierarchyModel from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -73,29 +73,33 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OnenoteEntityHierarchyModel delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OnenoteEntityHierarchyModel with a source
      *
      * @param sourceOnenoteEntityHierarchyModel the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel, @Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
-        send(HttpMethod.PATCH, callback, sourceOnenoteEntityHierarchyModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> patchAsync(@Nonnull final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel) {
+        return sendAsync(HttpMethod.PATCH, sourceOnenoteEntityHierarchyModel);
     }
 
     /**
@@ -114,10 +118,11 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * Creates a OnenoteEntityHierarchyModel with a new object
      *
      * @param newOnenoteEntityHierarchyModel the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, @Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
-        send(HttpMethod.POST, callback, newOnenoteEntityHierarchyModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> postAsync(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) {
+        return sendAsync(HttpMethod.POST, newOnenoteEntityHierarchyModel);
     }
 
     /**
@@ -136,10 +141,11 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * Creates a OnenoteEntityHierarchyModel with a new object
      *
      * @param newOnenoteEntityHierarchyModel the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, @Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
-        send(HttpMethod.PUT, callback, newOnenoteEntityHierarchyModel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> putAsync(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) {
+        return sendAsync(HttpMethod.PUT, newOnenoteEntityHierarchyModel);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
 import com.microsoft.graph.models.extensions.DeviceComplianceSettingState;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseEntityCol
     /**
      * Creates a new DeviceComplianceSettingState
      * @param newDeviceComplianceSettingState the DeviceComplianceSettingState to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceComplianceSettingState newDeviceComplianceSettingState, @Nonnull final ICallback<? super DeviceComplianceSettingState> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceComplianceSettingState> postAsync(@Nonnull final DeviceComplianceSettingState newDeviceComplianceSettingState) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceComplianceSettingState, callback);
+            .postAsync(newDeviceComplianceSettingState);
     }
 
     /**

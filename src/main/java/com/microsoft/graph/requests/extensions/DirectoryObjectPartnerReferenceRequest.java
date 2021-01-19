@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryObjectPartnerReference;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
     /**
      * Gets the DirectoryObjectPartnerReference from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DirectoryObjectPartnerReference delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DirectoryObjectPartnerReference with a source
      *
      * @param sourceDirectoryObjectPartnerReference the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference, @Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
-        send(HttpMethod.PATCH, callback, sourceDirectoryObjectPartnerReference);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> patchAsync(@Nonnull final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference) {
+        return sendAsync(HttpMethod.PATCH, sourceDirectoryObjectPartnerReference);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
      * Creates a DirectoryObjectPartnerReference with a new object
      *
      * @param newDirectoryObjectPartnerReference the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, @Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
-        send(HttpMethod.POST, callback, newDirectoryObjectPartnerReference);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> postAsync(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) {
+        return sendAsync(HttpMethod.POST, newDirectoryObjectPartnerReference);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
      * Creates a DirectoryObjectPartnerReference with a new object
      *
      * @param newDirectoryObjectPartnerReference the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, @Nonnull final ICallback<? super DirectoryObjectPartnerReference> callback) {
-        send(HttpMethod.PUT, callback, newDirectoryObjectPartnerReference);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> putAsync(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) {
+        return sendAsync(HttpMethod.PUT, newDirectoryObjectPartnerReference);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
     /**
      * Gets the ManagedAppPolicyDeploymentSummary from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAppPolicyDeploymentSummary delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAppPolicyDeploymentSummary with a source
      *
      * @param sourceManagedAppPolicyDeploymentSummary the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary, @Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAppPolicyDeploymentSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> patchAsync(@Nonnull final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppPolicyDeploymentSummary);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * Creates a ManagedAppPolicyDeploymentSummary with a new object
      *
      * @param newManagedAppPolicyDeploymentSummary the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, @Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
-        send(HttpMethod.POST, callback, newManagedAppPolicyDeploymentSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> postAsync(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) {
+        return sendAsync(HttpMethod.POST, newManagedAppPolicyDeploymentSummary);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * Creates a ManagedAppPolicyDeploymentSummary with a new object
      *
      * @param newManagedAppPolicyDeploymentSummary the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, @Nonnull final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
-        send(HttpMethod.PUT, callback, newManagedAppPolicyDeploymentSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> putAsync(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) {
+        return sendAsync(HttpMethod.PUT, newManagedAppPolicyDeploymentSummary);
     }
 
     /**

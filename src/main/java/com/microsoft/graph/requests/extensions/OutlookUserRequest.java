@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.extensions.TimeZoneInformation;
@@ -43,10 +42,11 @@ public class OutlookUserRequest extends BaseRequest<OutlookUser> {
     /**
      * Gets the OutlookUser from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OutlookUser> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookUser> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,29 +63,33 @@ public class OutlookUserRequest extends BaseRequest<OutlookUser> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OutlookUser> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookUser> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OutlookUser delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OutlookUser with a source
      *
      * @param sourceOutlookUser the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OutlookUser sourceOutlookUser, @Nonnull final ICallback<? super OutlookUser> callback) {
-        send(HttpMethod.PATCH, callback, sourceOutlookUser);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookUser> patchAsync(@Nonnull final OutlookUser sourceOutlookUser) {
+        return sendAsync(HttpMethod.PATCH, sourceOutlookUser);
     }
 
     /**
@@ -104,10 +108,11 @@ public class OutlookUserRequest extends BaseRequest<OutlookUser> {
      * Creates a OutlookUser with a new object
      *
      * @param newOutlookUser the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OutlookUser newOutlookUser, @Nonnull final ICallback<? super OutlookUser> callback) {
-        send(HttpMethod.POST, callback, newOutlookUser);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookUser> postAsync(@Nonnull final OutlookUser newOutlookUser) {
+        return sendAsync(HttpMethod.POST, newOutlookUser);
     }
 
     /**
@@ -126,10 +131,11 @@ public class OutlookUserRequest extends BaseRequest<OutlookUser> {
      * Creates a OutlookUser with a new object
      *
      * @param newOutlookUser the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OutlookUser newOutlookUser, @Nonnull final ICallback<? super OutlookUser> callback) {
-        send(HttpMethod.PUT, callback, newOutlookUser);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OutlookUser> putAsync(@Nonnull final OutlookUser newOutlookUser) {
+        return sendAsync(HttpMethod.PUT, newOutlookUser);
     }
 
     /**

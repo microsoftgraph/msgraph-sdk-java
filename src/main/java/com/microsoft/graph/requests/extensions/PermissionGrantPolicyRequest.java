@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
@@ -40,10 +39,11 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
     /**
      * Gets the PermissionGrantPolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -60,29 +60,33 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public PermissionGrantPolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this PermissionGrantPolicy with a source
      *
      * @param sourcePermissionGrantPolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final PermissionGrantPolicy sourcePermissionGrantPolicy, @Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourcePermissionGrantPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> patchAsync(@Nonnull final PermissionGrantPolicy sourcePermissionGrantPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourcePermissionGrantPolicy);
     }
 
     /**
@@ -101,10 +105,11 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
      * Creates a PermissionGrantPolicy with a new object
      *
      * @param newPermissionGrantPolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy, @Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
-        send(HttpMethod.POST, callback, newPermissionGrantPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> postAsync(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) {
+        return sendAsync(HttpMethod.POST, newPermissionGrantPolicy);
     }
 
     /**
@@ -123,10 +128,11 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
      * Creates a PermissionGrantPolicy with a new object
      *
      * @param newPermissionGrantPolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy, @Nonnull final ICallback<? super PermissionGrantPolicy> callback) {
-        send(HttpMethod.PUT, callback, newPermissionGrantPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> putAsync(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) {
+        return sendAsync(HttpMethod.PUT, newPermissionGrantPolicy);
     }
 
     /**

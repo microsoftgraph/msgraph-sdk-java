@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionResponse;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequest;
@@ -45,13 +43,14 @@ public class ServicePrincipalCollectionRequest extends BaseEntityCollectionReque
     /**
      * Creates a new ServicePrincipal
      * @param newServicePrincipal the ServicePrincipal to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> postAsync(@Nonnull final ServicePrincipal newServicePrincipal) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newServicePrincipal, callback);
+            .postAsync(newServicePrincipal);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsRequestBuilder;
 import java.util.Arrays;
@@ -39,10 +38,11 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
     /**
      * Gets the TermsAndConditionsAcceptanceStatus from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -59,29 +59,33 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TermsAndConditionsAcceptanceStatus delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TermsAndConditionsAcceptanceStatus with a source
      *
      * @param sourceTermsAndConditionsAcceptanceStatus the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus, @Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
-        send(HttpMethod.PATCH, callback, sourceTermsAndConditionsAcceptanceStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> patchAsync(@Nonnull final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus) {
+        return sendAsync(HttpMethod.PATCH, sourceTermsAndConditionsAcceptanceStatus);
     }
 
     /**
@@ -100,10 +104,11 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * Creates a TermsAndConditionsAcceptanceStatus with a new object
      *
      * @param newTermsAndConditionsAcceptanceStatus the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, @Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
-        send(HttpMethod.POST, callback, newTermsAndConditionsAcceptanceStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> postAsync(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
+        return sendAsync(HttpMethod.POST, newTermsAndConditionsAcceptanceStatus);
     }
 
     /**
@@ -122,10 +127,11 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * Creates a TermsAndConditionsAcceptanceStatus with a new object
      *
      * @param newTermsAndConditionsAcceptanceStatus the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, @Nonnull final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
-        send(HttpMethod.PUT, callback, newTermsAndConditionsAcceptanceStatus);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> putAsync(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
+        return sendAsync(HttpMethod.PUT, newTermsAndConditionsAcceptanceStatus);
     }
 
     /**

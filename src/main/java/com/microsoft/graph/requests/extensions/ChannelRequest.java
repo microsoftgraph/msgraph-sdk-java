@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
@@ -45,10 +44,11 @@ public class ChannelRequest extends BaseRequest<Channel> {
     /**
      * Gets the Channel from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Channel> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Channel> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,29 +65,33 @@ public class ChannelRequest extends BaseRequest<Channel> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Channel> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Channel> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Channel delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Channel with a source
      *
      * @param sourceChannel the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Channel sourceChannel, @Nonnull final ICallback<? super Channel> callback) {
-        send(HttpMethod.PATCH, callback, sourceChannel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Channel> patchAsync(@Nonnull final Channel sourceChannel) {
+        return sendAsync(HttpMethod.PATCH, sourceChannel);
     }
 
     /**
@@ -106,10 +110,11 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * Creates a Channel with a new object
      *
      * @param newChannel the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Channel newChannel, @Nonnull final ICallback<? super Channel> callback) {
-        send(HttpMethod.POST, callback, newChannel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Channel> postAsync(@Nonnull final Channel newChannel) {
+        return sendAsync(HttpMethod.POST, newChannel);
     }
 
     /**
@@ -128,10 +133,11 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * Creates a Channel with a new object
      *
      * @param newChannel the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Channel newChannel, @Nonnull final ICallback<? super Channel> callback) {
-        send(HttpMethod.PUT, callback, newChannel);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Channel> putAsync(@Nonnull final Channel newChannel) {
+        return sendAsync(HttpMethod.PUT, newChannel);
     }
 
     /**

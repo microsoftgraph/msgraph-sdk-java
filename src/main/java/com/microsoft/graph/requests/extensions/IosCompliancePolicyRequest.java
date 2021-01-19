@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosCompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
     /**
      * Gets the IosCompliancePolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosCompliancePolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosCompliancePolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosCompliancePolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosCompliancePolicy with a source
      *
      * @param sourceIosCompliancePolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosCompliancePolicy sourceIosCompliancePolicy, @Nonnull final ICallback<? super IosCompliancePolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> patchAsync(@Nonnull final IosCompliancePolicy sourceIosCompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceIosCompliancePolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * Creates a IosCompliancePolicy with a new object
      *
      * @param newIosCompliancePolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosCompliancePolicy newIosCompliancePolicy, @Nonnull final ICallback<? super IosCompliancePolicy> callback) {
-        send(HttpMethod.POST, callback, newIosCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> postAsync(@Nonnull final IosCompliancePolicy newIosCompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newIosCompliancePolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * Creates a IosCompliancePolicy with a new object
      *
      * @param newIosCompliancePolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosCompliancePolicy newIosCompliancePolicy, @Nonnull final ICallback<? super IosCompliancePolicy> callback) {
-        send(HttpMethod.PUT, callback, newIosCompliancePolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> putAsync(@Nonnull final IosCompliancePolicy newIosCompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newIosCompliancePolicy);
     }
 
     /**

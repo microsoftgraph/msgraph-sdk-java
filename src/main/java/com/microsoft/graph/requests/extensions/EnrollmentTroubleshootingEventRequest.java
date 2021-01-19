@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EnrollmentTroubleshootingEvent;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
     /**
      * Gets the EnrollmentTroubleshootingEvent from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public EnrollmentTroubleshootingEvent delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this EnrollmentTroubleshootingEvent with a source
      *
      * @param sourceEnrollmentTroubleshootingEvent the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent, @Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
-        send(HttpMethod.PATCH, callback, sourceEnrollmentTroubleshootingEvent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> patchAsync(@Nonnull final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent) {
+        return sendAsync(HttpMethod.PATCH, sourceEnrollmentTroubleshootingEvent);
     }
 
     /**
@@ -99,10 +103,11 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
      * Creates a EnrollmentTroubleshootingEvent with a new object
      *
      * @param newEnrollmentTroubleshootingEvent the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, @Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
-        send(HttpMethod.POST, callback, newEnrollmentTroubleshootingEvent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> postAsync(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) {
+        return sendAsync(HttpMethod.POST, newEnrollmentTroubleshootingEvent);
     }
 
     /**
@@ -121,10 +126,11 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
      * Creates a EnrollmentTroubleshootingEvent with a new object
      *
      * @param newEnrollmentTroubleshootingEvent the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, @Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
-        send(HttpMethod.PUT, callback, newEnrollmentTroubleshootingEvent);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> putAsync(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) {
+        return sendAsync(HttpMethod.PUT, newEnrollmentTroubleshootingEvent);
     }
 
     /**

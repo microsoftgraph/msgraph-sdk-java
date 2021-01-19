@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailSearchFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
     /**
      * Gets the MailSearchFolder from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MailSearchFolder> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MailSearchFolder> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MailSearchFolder delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MailSearchFolder with a source
      *
      * @param sourceMailSearchFolder the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MailSearchFolder sourceMailSearchFolder, @Nonnull final ICallback<? super MailSearchFolder> callback) {
-        send(HttpMethod.PATCH, callback, sourceMailSearchFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> patchAsync(@Nonnull final MailSearchFolder sourceMailSearchFolder) {
+        return sendAsync(HttpMethod.PATCH, sourceMailSearchFolder);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
      * Creates a MailSearchFolder with a new object
      *
      * @param newMailSearchFolder the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MailSearchFolder newMailSearchFolder, @Nonnull final ICallback<? super MailSearchFolder> callback) {
-        send(HttpMethod.POST, callback, newMailSearchFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> postAsync(@Nonnull final MailSearchFolder newMailSearchFolder) {
+        return sendAsync(HttpMethod.POST, newMailSearchFolder);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
      * Creates a MailSearchFolder with a new object
      *
      * @param newMailSearchFolder the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MailSearchFolder newMailSearchFolder, @Nonnull final ICallback<? super MailSearchFolder> callback) {
-        send(HttpMethod.PUT, callback, newMailSearchFolder);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> putAsync(@Nonnull final MailSearchFolder newMailSearchFolder) {
+        return sendAsync(HttpMethod.PUT, newMailSearchFolder);
     }
 
     /**

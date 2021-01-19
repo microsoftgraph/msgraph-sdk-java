@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OpenShift;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
     /**
      * Gets the OpenShift from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OpenShift> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShift> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OpenShift> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShift> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OpenShift delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OpenShift with a source
      *
      * @param sourceOpenShift the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OpenShift sourceOpenShift, @Nonnull final ICallback<? super OpenShift> callback) {
-        send(HttpMethod.PATCH, callback, sourceOpenShift);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShift> patchAsync(@Nonnull final OpenShift sourceOpenShift) {
+        return sendAsync(HttpMethod.PATCH, sourceOpenShift);
     }
 
     /**
@@ -99,10 +103,11 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
      * Creates a OpenShift with a new object
      *
      * @param newOpenShift the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OpenShift newOpenShift, @Nonnull final ICallback<? super OpenShift> callback) {
-        send(HttpMethod.POST, callback, newOpenShift);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShift> postAsync(@Nonnull final OpenShift newOpenShift) {
+        return sendAsync(HttpMethod.POST, newOpenShift);
     }
 
     /**
@@ -121,10 +126,11 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
      * Creates a OpenShift with a new object
      *
      * @param newOpenShift the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OpenShift newOpenShift, @Nonnull final ICallback<? super OpenShift> callback) {
-        send(HttpMethod.PUT, callback, newOpenShift);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OpenShift> putAsync(@Nonnull final OpenShift newOpenShift) {
+        return sendAsync(HttpMethod.PUT, newOpenShift);
     }
 
     /**

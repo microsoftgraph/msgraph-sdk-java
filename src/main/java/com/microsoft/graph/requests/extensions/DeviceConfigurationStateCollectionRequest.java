@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceConfigurationStateCollectionRequest extends BaseEntityCollect
     /**
      * Creates a new DeviceConfigurationState
      * @param newDeviceConfigurationState the DeviceConfigurationState to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceConfigurationState newDeviceConfigurationState, @Nonnull final ICallback<? super DeviceConfigurationState> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationState> postAsync(@Nonnull final DeviceConfigurationState newDeviceConfigurationState) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceConfigurationStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceConfigurationStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceConfigurationState, callback);
+            .postAsync(newDeviceConfigurationState);
     }
 
     /**

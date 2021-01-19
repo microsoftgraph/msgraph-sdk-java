@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ScopedRoleMembership;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
     /**
      * Gets the ScopedRoleMembership from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ScopedRoleMembership> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ScopedRoleMembership> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ScopedRoleMembership delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ScopedRoleMembership with a source
      *
      * @param sourceScopedRoleMembership the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ScopedRoleMembership sourceScopedRoleMembership, @Nonnull final ICallback<? super ScopedRoleMembership> callback) {
-        send(HttpMethod.PATCH, callback, sourceScopedRoleMembership);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> patchAsync(@Nonnull final ScopedRoleMembership sourceScopedRoleMembership) {
+        return sendAsync(HttpMethod.PATCH, sourceScopedRoleMembership);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
      * Creates a ScopedRoleMembership with a new object
      *
      * @param newScopedRoleMembership the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ScopedRoleMembership newScopedRoleMembership, @Nonnull final ICallback<? super ScopedRoleMembership> callback) {
-        send(HttpMethod.POST, callback, newScopedRoleMembership);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> postAsync(@Nonnull final ScopedRoleMembership newScopedRoleMembership) {
+        return sendAsync(HttpMethod.POST, newScopedRoleMembership);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
      * Creates a ScopedRoleMembership with a new object
      *
      * @param newScopedRoleMembership the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ScopedRoleMembership newScopedRoleMembership, @Nonnull final ICallback<? super ScopedRoleMembership> callback) {
-        send(HttpMethod.PUT, callback, newScopedRoleMembership);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> putAsync(@Nonnull final ScopedRoleMembership newScopedRoleMembership) {
+        return sendAsync(HttpMethod.PUT, newScopedRoleMembership);
     }
 
     /**

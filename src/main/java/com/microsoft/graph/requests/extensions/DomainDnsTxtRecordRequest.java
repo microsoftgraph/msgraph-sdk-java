@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsTxtRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DomainDnsTxtRecordRequest extends BaseRequest<DomainDnsTxtRecord> {
     /**
      * Gets the DomainDnsTxtRecord from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DomainDnsTxtRecord> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsTxtRecord> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DomainDnsTxtRecordRequest extends BaseRequest<DomainDnsTxtRecord> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DomainDnsTxtRecord> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsTxtRecord> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DomainDnsTxtRecord delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DomainDnsTxtRecord with a source
      *
      * @param sourceDomainDnsTxtRecord the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DomainDnsTxtRecord sourceDomainDnsTxtRecord, @Nonnull final ICallback<? super DomainDnsTxtRecord> callback) {
-        send(HttpMethod.PATCH, callback, sourceDomainDnsTxtRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsTxtRecord> patchAsync(@Nonnull final DomainDnsTxtRecord sourceDomainDnsTxtRecord) {
+        return sendAsync(HttpMethod.PATCH, sourceDomainDnsTxtRecord);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DomainDnsTxtRecordRequest extends BaseRequest<DomainDnsTxtRecord> {
      * Creates a DomainDnsTxtRecord with a new object
      *
      * @param newDomainDnsTxtRecord the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DomainDnsTxtRecord newDomainDnsTxtRecord, @Nonnull final ICallback<? super DomainDnsTxtRecord> callback) {
-        send(HttpMethod.POST, callback, newDomainDnsTxtRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsTxtRecord> postAsync(@Nonnull final DomainDnsTxtRecord newDomainDnsTxtRecord) {
+        return sendAsync(HttpMethod.POST, newDomainDnsTxtRecord);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DomainDnsTxtRecordRequest extends BaseRequest<DomainDnsTxtRecord> {
      * Creates a DomainDnsTxtRecord with a new object
      *
      * @param newDomainDnsTxtRecord the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DomainDnsTxtRecord newDomainDnsTxtRecord, @Nonnull final ICallback<? super DomainDnsTxtRecord> callback) {
-        send(HttpMethod.PUT, callback, newDomainDnsTxtRecord);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DomainDnsTxtRecord> putAsync(@Nonnull final DomainDnsTxtRecord newDomainDnsTxtRecord) {
+        return sendAsync(HttpMethod.PUT, newDomainDnsTxtRecord);
     }
 
     /**

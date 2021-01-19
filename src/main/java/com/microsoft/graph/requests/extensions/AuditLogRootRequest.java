@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuditLogRoot;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditRequestBuilder;
@@ -44,10 +43,11 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
     /**
      * Gets the AuditLogRoot from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super AuditLogRoot> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,29 +64,33 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super AuditLogRoot> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public AuditLogRoot delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this AuditLogRoot with a source
      *
      * @param sourceAuditLogRoot the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final AuditLogRoot sourceAuditLogRoot, @Nonnull final ICallback<? super AuditLogRoot> callback) {
-        send(HttpMethod.PATCH, callback, sourceAuditLogRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> patchAsync(@Nonnull final AuditLogRoot sourceAuditLogRoot) {
+        return sendAsync(HttpMethod.PATCH, sourceAuditLogRoot);
     }
 
     /**
@@ -105,10 +109,11 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
      * Creates a AuditLogRoot with a new object
      *
      * @param newAuditLogRoot the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final AuditLogRoot newAuditLogRoot, @Nonnull final ICallback<? super AuditLogRoot> callback) {
-        send(HttpMethod.POST, callback, newAuditLogRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> postAsync(@Nonnull final AuditLogRoot newAuditLogRoot) {
+        return sendAsync(HttpMethod.POST, newAuditLogRoot);
     }
 
     /**
@@ -127,10 +132,11 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
      * Creates a AuditLogRoot with a new object
      *
      * @param newAuditLogRoot the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final AuditLogRoot newAuditLogRoot, @Nonnull final ICallback<? super AuditLogRoot> callback) {
-        send(HttpMethod.PUT, callback, newAuditLogRoot);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> putAsync(@Nonnull final AuditLogRoot newAuditLogRoot) {
+        return sendAsync(HttpMethod.PUT, newAuditLogRoot);
     }
 
     /**

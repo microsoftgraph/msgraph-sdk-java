@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequest;
@@ -43,13 +41,14 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseEntityCollectionR
     /**
      * Creates a new GroupLifecyclePolicy
      * @param newGroupLifecyclePolicy the GroupLifecyclePolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> postAsync(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newGroupLifecyclePolicy, callback);
+            .postAsync(newGroupLifecyclePolicy);
     }
 
     /**

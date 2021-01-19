@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.MobileLobApp;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionRequest;
@@ -44,13 +42,14 @@ public class MobileLobAppCollectionRequest extends BaseEntityCollectionRequest<M
     /**
      * Creates a new MobileLobApp
      * @param newMobileLobApp the MobileLobApp to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final MobileLobApp newMobileLobApp, @Nonnull final ICallback<? super MobileLobApp> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileLobApp> postAsync(@Nonnull final MobileLobApp newMobileLobApp) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new MobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new MobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newMobileLobApp, callback);
+            .postAsync(newMobileLobApp);
     }
 
     /**

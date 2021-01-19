@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
@@ -42,10 +41,11 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
     /**
      * Gets the TermsAndConditions from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TermsAndConditions> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TermsAndConditions> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TermsAndConditions delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TermsAndConditions with a source
      *
      * @param sourceTermsAndConditions the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TermsAndConditions sourceTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
-        send(HttpMethod.PATCH, callback, sourceTermsAndConditions);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> patchAsync(@Nonnull final TermsAndConditions sourceTermsAndConditions) {
+        return sendAsync(HttpMethod.PATCH, sourceTermsAndConditions);
     }
 
     /**
@@ -103,10 +107,11 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
      * Creates a TermsAndConditions with a new object
      *
      * @param newTermsAndConditions the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TermsAndConditions newTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
-        send(HttpMethod.POST, callback, newTermsAndConditions);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> postAsync(@Nonnull final TermsAndConditions newTermsAndConditions) {
+        return sendAsync(HttpMethod.POST, newTermsAndConditions);
     }
 
     /**
@@ -125,10 +130,11 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
      * Creates a TermsAndConditions with a new object
      *
      * @param newTermsAndConditions the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TermsAndConditions newTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
-        send(HttpMethod.PUT, callback, newTermsAndConditions);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> putAsync(@Nonnull final TermsAndConditions newTermsAndConditions) {
+        return sendAsync(HttpMethod.PUT, newTermsAndConditions);
     }
 
     /**

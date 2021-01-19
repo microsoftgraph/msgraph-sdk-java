@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Planner;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequest;
@@ -44,13 +42,14 @@ public class PlannerPlanCollectionRequest extends BaseEntityCollectionRequest<Pl
     /**
      * Creates a new PlannerPlan
      * @param newPlannerPlan the PlannerPlan to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final PlannerPlan newPlannerPlan, @Nonnull final ICallback<? super PlannerPlan> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<PlannerPlan> postAsync(@Nonnull final PlannerPlan newPlannerPlan) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new PlannerPlanRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new PlannerPlanRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newPlannerPlan, callback);
+            .postAsync(newPlannerPlan);
     }
 
     /**

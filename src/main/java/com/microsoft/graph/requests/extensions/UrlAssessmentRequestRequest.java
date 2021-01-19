@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UrlAssessmentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
     /**
      * Gets the UrlAssessmentRequest from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public UrlAssessmentRequest delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this UrlAssessmentRequest with a source
      *
      * @param sourceUrlAssessmentRequest the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final UrlAssessmentRequest sourceUrlAssessmentRequest, @Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
-        send(HttpMethod.PATCH, callback, sourceUrlAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> patchAsync(@Nonnull final UrlAssessmentRequest sourceUrlAssessmentRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceUrlAssessmentRequest);
     }
 
     /**
@@ -99,10 +103,11 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
      * Creates a UrlAssessmentRequest with a new object
      *
      * @param newUrlAssessmentRequest the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest, @Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
-        send(HttpMethod.POST, callback, newUrlAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> postAsync(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest) {
+        return sendAsync(HttpMethod.POST, newUrlAssessmentRequest);
     }
 
     /**
@@ -121,10 +126,11 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
      * Creates a UrlAssessmentRequest with a new object
      *
      * @param newUrlAssessmentRequest the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest, @Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
-        send(HttpMethod.PUT, callback, newUrlAssessmentRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> putAsync(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest) {
+        return sendAsync(HttpMethod.PUT, newUrlAssessmentRequest);
     }
 
     /**

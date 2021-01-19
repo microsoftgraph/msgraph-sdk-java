@@ -7,7 +7,6 @@ package com.microsoft.graph.callrecords.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SessionRequestBuilder;

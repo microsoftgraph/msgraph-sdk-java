@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
     /**
      * Gets the ManagedDeviceMobileAppConfigurationDeviceSummary from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedDeviceMobileAppConfigurationDeviceSummary delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedDeviceMobileAppConfigurationDeviceSummary with a source
      *
      * @param sourceManagedDeviceMobileAppConfigurationDeviceSummary the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary sourceManagedDeviceMobileAppConfigurationDeviceSummary, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfigurationDeviceSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> patchAsync(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary sourceManagedDeviceMobileAppConfigurationDeviceSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedDeviceMobileAppConfigurationDeviceSummary);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
      * Creates a ManagedDeviceMobileAppConfigurationDeviceSummary with a new object
      *
      * @param newManagedDeviceMobileAppConfigurationDeviceSummary the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
-        send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfigurationDeviceSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> postAsync(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary) {
+        return sendAsync(HttpMethod.POST, newManagedDeviceMobileAppConfigurationDeviceSummary);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
      * Creates a ManagedDeviceMobileAppConfigurationDeviceSummary with a new object
      *
      * @param newManagedDeviceMobileAppConfigurationDeviceSummary the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
-        send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationDeviceSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> putAsync(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary) {
+        return sendAsync(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationDeviceSummary);
     }
 
     /**

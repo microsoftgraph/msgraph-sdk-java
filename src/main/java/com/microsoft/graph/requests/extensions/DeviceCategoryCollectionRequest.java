@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionRequest;
@@ -44,13 +42,14 @@ public class DeviceCategoryCollectionRequest extends BaseEntityCollectionRequest
     /**
      * Creates a new DeviceCategory
      * @param newDeviceCategory the DeviceCategory to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DeviceCategory newDeviceCategory, @Nonnull final ICallback<? super DeviceCategory> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceCategory> postAsync(@Nonnull final DeviceCategory newDeviceCategory) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDeviceCategory, callback);
+            .postAsync(newDeviceCategory);
     }
 
     /**

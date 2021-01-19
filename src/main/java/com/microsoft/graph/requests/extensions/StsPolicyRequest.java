@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.StsPolicy;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
@@ -55,10 +54,11 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
     /**
      * Gets the StsPolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super StsPolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<StsPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -75,29 +75,33 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super StsPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<StsPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public StsPolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this StsPolicy with a source
      *
      * @param sourceStsPolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final StsPolicy sourceStsPolicy, @Nonnull final ICallback<? super StsPolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceStsPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<StsPolicy> patchAsync(@Nonnull final StsPolicy sourceStsPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceStsPolicy);
     }
 
     /**
@@ -116,10 +120,11 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * Creates a StsPolicy with a new object
      *
      * @param newStsPolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final StsPolicy newStsPolicy, @Nonnull final ICallback<? super StsPolicy> callback) {
-        send(HttpMethod.POST, callback, newStsPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<StsPolicy> postAsync(@Nonnull final StsPolicy newStsPolicy) {
+        return sendAsync(HttpMethod.POST, newStsPolicy);
     }
 
     /**
@@ -138,10 +143,11 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * Creates a StsPolicy with a new object
      *
      * @param newStsPolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final StsPolicy newStsPolicy, @Nonnull final ICallback<? super StsPolicy> callback) {
-        send(HttpMethod.PUT, callback, newStsPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<StsPolicy> putAsync(@Nonnull final StsPolicy newStsPolicy) {
+        return sendAsync(HttpMethod.PUT, newStsPolicy);
     }
 
     /**

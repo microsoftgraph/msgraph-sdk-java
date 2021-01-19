@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
@@ -58,10 +57,11 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
     /**
      * Gets the WindowsInformationProtection from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WindowsInformationProtection> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -78,29 +78,33 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WindowsInformationProtection> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WindowsInformationProtection delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WindowsInformationProtection with a source
      *
      * @param sourceWindowsInformationProtection the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WindowsInformationProtection sourceWindowsInformationProtection, @Nonnull final ICallback<? super WindowsInformationProtection> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindowsInformationProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> patchAsync(@Nonnull final WindowsInformationProtection sourceWindowsInformationProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsInformationProtection);
     }
 
     /**
@@ -119,10 +123,11 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * Creates a WindowsInformationProtection with a new object
      *
      * @param newWindowsInformationProtection the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WindowsInformationProtection newWindowsInformationProtection, @Nonnull final ICallback<? super WindowsInformationProtection> callback) {
-        send(HttpMethod.POST, callback, newWindowsInformationProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> postAsync(@Nonnull final WindowsInformationProtection newWindowsInformationProtection) {
+        return sendAsync(HttpMethod.POST, newWindowsInformationProtection);
     }
 
     /**
@@ -141,10 +146,11 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * Creates a WindowsInformationProtection with a new object
      *
      * @param newWindowsInformationProtection the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WindowsInformationProtection newWindowsInformationProtection, @Nonnull final ICallback<? super WindowsInformationProtection> callback) {
-        send(HttpMethod.PUT, callback, newWindowsInformationProtection);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> putAsync(@Nonnull final WindowsInformationProtection newWindowsInformationProtection) {
+        return sendAsync(HttpMethod.PUT, newWindowsInformationProtection);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationRoot;
 import com.microsoft.graph.models.extensions.EducationUser;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequest;
@@ -44,13 +42,14 @@ public class EducationUserCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new EducationUser
      * @param newEducationUser the EducationUser to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final EducationUser newEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EducationUser> postAsync(@Nonnull final EducationUser newEducationUser) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new EducationUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new EducationUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newEducationUser, callback);
+            .postAsync(newEducationUser);
     }
 
     /**

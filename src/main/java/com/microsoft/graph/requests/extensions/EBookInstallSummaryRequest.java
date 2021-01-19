@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EBookInstallSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
     /**
      * Gets the EBookInstallSummary from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super EBookInstallSummary> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super EBookInstallSummary> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public EBookInstallSummary delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this EBookInstallSummary with a source
      *
      * @param sourceEBookInstallSummary the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final EBookInstallSummary sourceEBookInstallSummary, @Nonnull final ICallback<? super EBookInstallSummary> callback) {
-        send(HttpMethod.PATCH, callback, sourceEBookInstallSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> patchAsync(@Nonnull final EBookInstallSummary sourceEBookInstallSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceEBookInstallSummary);
     }
 
     /**
@@ -99,10 +103,11 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
      * Creates a EBookInstallSummary with a new object
      *
      * @param newEBookInstallSummary the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final EBookInstallSummary newEBookInstallSummary, @Nonnull final ICallback<? super EBookInstallSummary> callback) {
-        send(HttpMethod.POST, callback, newEBookInstallSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> postAsync(@Nonnull final EBookInstallSummary newEBookInstallSummary) {
+        return sendAsync(HttpMethod.POST, newEBookInstallSummary);
     }
 
     /**
@@ -121,10 +126,11 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
      * Creates a EBookInstallSummary with a new object
      *
      * @param newEBookInstallSummary the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final EBookInstallSummary newEBookInstallSummary, @Nonnull final ICallback<? super EBookInstallSummary> callback) {
-        send(HttpMethod.PUT, callback, newEBookInstallSummary);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> putAsync(@Nonnull final EBookInstallSummary newEBookInstallSummary) {
+        return sendAsync(HttpMethod.PUT, newEBookInstallSummary);
     }
 
     /**

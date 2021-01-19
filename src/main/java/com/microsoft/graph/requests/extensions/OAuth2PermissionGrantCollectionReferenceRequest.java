@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
@@ -48,14 +47,15 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
     /**
      * Creates a new OAuth2PermissionGrant
      * @param newOAuth2PermissionGrant the OAuth2PermissionGrant to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant, @Nonnull final ICallback<? super OAuth2PermissionGrant> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> postAsync(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/oauth2PermissionGrants/" + newOAuth2PermissionGrant.id);
-        new OAuth2PermissionGrantWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new OAuth2PermissionGrantWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newOAuth2PermissionGrant, body, callback);
+            .postAsync(newOAuth2PermissionGrant, body);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionResponse;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequest;
@@ -43,13 +41,14 @@ public class IdentityProviderCollectionRequest extends BaseEntityCollectionReque
     /**
      * Creates a new IdentityProvider
      * @param newIdentityProvider the IdentityProvider to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final IdentityProvider newIdentityProvider, @Nonnull final ICallback<? super IdentityProvider> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IdentityProvider> postAsync(@Nonnull final IdentityProvider newIdentityProvider) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newIdentityProvider, callback);
+            .postAsync(newIdentityProvider);
     }
 
     /**

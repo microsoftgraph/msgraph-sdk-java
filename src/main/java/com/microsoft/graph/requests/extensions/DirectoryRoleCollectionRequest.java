@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryRole;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequest;
@@ -43,13 +41,14 @@ public class DirectoryRoleCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new DirectoryRole
      * @param newDirectoryRole the DirectoryRole to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DirectoryRole newDirectoryRole, @Nonnull final ICallback<? super DirectoryRole> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryRole> postAsync(@Nonnull final DirectoryRole newDirectoryRole) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDirectoryRole, callback);
+            .postAsync(newDirectoryRole);
     }
 
     /**

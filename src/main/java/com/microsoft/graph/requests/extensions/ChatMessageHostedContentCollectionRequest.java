@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequest;
@@ -44,13 +42,14 @@ public class ChatMessageHostedContentCollectionRequest extends BaseEntityCollect
     /**
      * Creates a new ChatMessageHostedContent
      * @param newChatMessageHostedContent the ChatMessageHostedContent to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent, @Nonnull final ICallback<? super ChatMessageHostedContent> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> postAsync(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newChatMessageHostedContent, callback);
+            .postAsync(newChatMessageHostedContent);
     }
 
     /**

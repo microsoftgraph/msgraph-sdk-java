@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderRequestBuilder;
@@ -43,10 +42,11 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
     /**
      * Gets the WorkbookRangeFormat from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,29 +63,33 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public WorkbookRangeFormat delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this WorkbookRangeFormat with a source
      *
      * @param sourceWorkbookRangeFormat the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final WorkbookRangeFormat sourceWorkbookRangeFormat, @Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
-        send(HttpMethod.PATCH, callback, sourceWorkbookRangeFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> patchAsync(@Nonnull final WorkbookRangeFormat sourceWorkbookRangeFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookRangeFormat);
     }
 
     /**
@@ -104,10 +108,11 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * Creates a WorkbookRangeFormat with a new object
      *
      * @param newWorkbookRangeFormat the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat, @Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
-        send(HttpMethod.POST, callback, newWorkbookRangeFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> postAsync(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookRangeFormat);
     }
 
     /**
@@ -126,10 +131,11 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * Creates a WorkbookRangeFormat with a new object
      *
      * @param newWorkbookRangeFormat the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat, @Nonnull final ICallback<? super WorkbookRangeFormat> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookRangeFormat);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> putAsync(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookRangeFormat);
     }
 
     /**

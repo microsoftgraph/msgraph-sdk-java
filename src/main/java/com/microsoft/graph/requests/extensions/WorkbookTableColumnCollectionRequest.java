@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.models.extensions.WorkbookRange;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequest;
@@ -45,13 +43,14 @@ public class WorkbookTableColumnCollectionRequest extends BaseEntityCollectionRe
     /**
      * Creates a new WorkbookTableColumn
      * @param newWorkbookTableColumn the WorkbookTableColumn to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final WorkbookTableColumn newWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> postAsync(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new WorkbookTableColumnRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new WorkbookTableColumnRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newWorkbookTableColumn, callback);
+            .postAsync(newWorkbookTableColumn);
     }
 
     /**

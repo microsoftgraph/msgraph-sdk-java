@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudCommunications;
 import com.microsoft.graph.models.extensions.Presence;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
@@ -47,10 +46,11 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
     /**
      * Gets the CloudCommunications from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super CloudCommunications> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CloudCommunications> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -67,29 +67,33 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super CloudCommunications> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CloudCommunications> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public CloudCommunications delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this CloudCommunications with a source
      *
      * @param sourceCloudCommunications the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final CloudCommunications sourceCloudCommunications, @Nonnull final ICallback<? super CloudCommunications> callback) {
-        send(HttpMethod.PATCH, callback, sourceCloudCommunications);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CloudCommunications> patchAsync(@Nonnull final CloudCommunications sourceCloudCommunications) {
+        return sendAsync(HttpMethod.PATCH, sourceCloudCommunications);
     }
 
     /**
@@ -108,10 +112,11 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
      * Creates a CloudCommunications with a new object
      *
      * @param newCloudCommunications the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final CloudCommunications newCloudCommunications, @Nonnull final ICallback<? super CloudCommunications> callback) {
-        send(HttpMethod.POST, callback, newCloudCommunications);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CloudCommunications> postAsync(@Nonnull final CloudCommunications newCloudCommunications) {
+        return sendAsync(HttpMethod.POST, newCloudCommunications);
     }
 
     /**
@@ -130,10 +135,11 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
      * Creates a CloudCommunications with a new object
      *
      * @param newCloudCommunications the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final CloudCommunications newCloudCommunications, @Nonnull final ICallback<? super CloudCommunications> callback) {
-        send(HttpMethod.PUT, callback, newCloudCommunications);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<CloudCommunications> putAsync(@Nonnull final CloudCommunications newCloudCommunications) {
+        return sendAsync(HttpMethod.PUT, newCloudCommunications);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequest;
@@ -44,13 +42,14 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
     /**
      * Creates a new MdmWindowsInformationProtectionPolicy
      * @param newMdmWindowsInformationProtectionPolicy the MdmWindowsInformationProtectionPolicy to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> postAsync(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newMdmWindowsInformationProtectionPolicy, callback);
+            .postAsync(newMdmWindowsInformationProtectionPolicy);
     }
 
     /**

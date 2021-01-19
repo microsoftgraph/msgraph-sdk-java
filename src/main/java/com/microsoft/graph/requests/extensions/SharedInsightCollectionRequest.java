@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.SharedInsight;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequest;
@@ -44,13 +42,14 @@ public class SharedInsightCollectionRequest extends BaseEntityCollectionRequest<
     /**
      * Creates a new SharedInsight
      * @param newSharedInsight the SharedInsight to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final SharedInsight newSharedInsight, @Nonnull final ICallback<? super SharedInsight> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SharedInsight> postAsync(@Nonnull final SharedInsight newSharedInsight) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newSharedInsight, callback);
+            .postAsync(newSharedInsight);
     }
 
     /**

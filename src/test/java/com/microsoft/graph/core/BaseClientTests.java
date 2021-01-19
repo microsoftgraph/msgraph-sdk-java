@@ -10,8 +10,6 @@ import org.junit.Test;
 
 import okhttp3.OkHttpClient;
 
-import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.logger.ILogger;
@@ -26,7 +24,6 @@ public class BaseClientTests {
 	public static final String DEFAULT_GRAPH_ENDPOINT = "https://graph.microsoft.com/v1.0";
     private String mEndpoint = DEFAULT_GRAPH_ENDPOINT;
     private BaseClient baseClient;
-    private IExecutors mExecutors;
     private IHttpProvider mHttpProvider;
     private ILogger mLogger;
     private ISerializer mSerializer;
@@ -44,11 +41,9 @@ public class BaseClientTests {
                 mEndpoint = value;
             }
         };
-        mExecutors = new MockExecutors();
         mLogger = new MockLogger();
         mSerializer = new MockSerializer(null, "");
         mHttpProvider = new CoreHttpProvider(mSerializer,
-            mExecutors,
             mLogger,
             new OkHttpClient.Builder().build());
 	}
@@ -56,7 +51,6 @@ public class BaseClientTests {
 	@Test
 	public void testNotNull() {
         assertNotNull(baseClient);
-        assertNotNull(mExecutors);
         assertNotNull(mHttpProvider);
         assertNotNull(mLogger);
         assertNotNull(mSerializer);
@@ -75,7 +69,6 @@ public class BaseClientTests {
 
 	@Test
     public void testValidateSuccess() throws Exception {
-        baseClient.setExecutors(mExecutors);
         baseClient.setHttpProvider(mHttpProvider);
         baseClient.setSerializer(mSerializer);
         baseClient.validate();
@@ -90,19 +83,12 @@ public class BaseClientTests {
     }
 
 	@Test
-    public void testExecutors() {
-        assertNull(baseClient.getExecutors());
-        baseClient.setExecutors(mExecutors);
-        assertEquals(mExecutors, baseClient.getExecutors());
-    }
-
-	@Test
     public void testHttpProvider() {
         assertNull(baseClient.getHttpProvider());
         baseClient.setHttpProvider(mHttpProvider);
         assertEquals(mHttpProvider, baseClient.getHttpProvider());
     }
-	
+
 	public void testLogger() {
         assertNull(baseClient.getLogger());
         baseClient.setLogger(mLogger);

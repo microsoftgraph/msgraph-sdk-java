@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
     /**
      * Gets the MultiValueLegacyExtendedProperty from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public MultiValueLegacyExtendedProperty delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this MultiValueLegacyExtendedProperty with a source
      *
      * @param sourceMultiValueLegacyExtendedProperty the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty, @Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
-        send(HttpMethod.PATCH, callback, sourceMultiValueLegacyExtendedProperty);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> patchAsync(@Nonnull final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.PATCH, sourceMultiValueLegacyExtendedProperty);
     }
 
     /**
@@ -99,10 +103,11 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * Creates a MultiValueLegacyExtendedProperty with a new object
      *
      * @param newMultiValueLegacyExtendedProperty the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, @Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
-        send(HttpMethod.POST, callback, newMultiValueLegacyExtendedProperty);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> postAsync(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.POST, newMultiValueLegacyExtendedProperty);
     }
 
     /**
@@ -121,10 +126,11 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * Creates a MultiValueLegacyExtendedProperty with a new object
      *
      * @param newMultiValueLegacyExtendedProperty the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, @Nonnull final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
-        send(HttpMethod.PUT, callback, newMultiValueLegacyExtendedProperty);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> putAsync(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.PUT, newMultiValueLegacyExtendedProperty);
     }
 
     /**

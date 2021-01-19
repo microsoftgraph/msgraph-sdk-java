@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
@@ -21,7 +20,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamCollectionRequest;
@@ -47,13 +45,14 @@ public class TeamCollectionRequest extends BaseEntityCollectionRequest<Team, Tea
     /**
      * Creates a new Team
      * @param newTeam the Team to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Team newTeam, @Nonnull final ICallback<? super Team> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Team> postAsync(@Nonnull final Team newTeam) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTeam, callback);
+            .postAsync(newTeam);
     }
 
     /**

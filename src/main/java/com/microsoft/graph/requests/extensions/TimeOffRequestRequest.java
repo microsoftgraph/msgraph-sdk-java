@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TimeOffRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
     /**
      * Gets the TimeOffRequest from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TimeOffRequest> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TimeOffRequest> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TimeOffRequest delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TimeOffRequest with a source
      *
      * @param sourceTimeOffRequest the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TimeOffRequest sourceTimeOffRequest, @Nonnull final ICallback<? super TimeOffRequest> callback) {
-        send(HttpMethod.PATCH, callback, sourceTimeOffRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> patchAsync(@Nonnull final TimeOffRequest sourceTimeOffRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceTimeOffRequest);
     }
 
     /**
@@ -99,10 +103,11 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
      * Creates a TimeOffRequest with a new object
      *
      * @param newTimeOffRequest the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TimeOffRequest newTimeOffRequest, @Nonnull final ICallback<? super TimeOffRequest> callback) {
-        send(HttpMethod.POST, callback, newTimeOffRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> postAsync(@Nonnull final TimeOffRequest newTimeOffRequest) {
+        return sendAsync(HttpMethod.POST, newTimeOffRequest);
     }
 
     /**
@@ -121,10 +126,11 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
      * Creates a TimeOffRequest with a new object
      *
      * @param newTimeOffRequest the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TimeOffRequest newTimeOffRequest, @Nonnull final ICallback<? super TimeOffRequest> callback) {
-        send(HttpMethod.PUT, callback, newTimeOffRequest);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> putAsync(@Nonnull final TimeOffRequest newTimeOffRequest) {
+        return sendAsync(HttpMethod.PUT, newTimeOffRequest);
     }
 
     /**

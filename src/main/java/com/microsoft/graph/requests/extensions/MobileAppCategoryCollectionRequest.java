@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequest;
@@ -44,13 +42,14 @@ public class MobileAppCategoryCollectionRequest extends BaseEntityCollectionRequ
     /**
      * Creates a new MobileAppCategory
      * @param newMobileAppCategory the MobileAppCategory to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final MobileAppCategory newMobileAppCategory, @Nonnull final ICallback<? super MobileAppCategory> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> postAsync(@Nonnull final MobileAppCategory newMobileAppCategory) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newMobileAppCategory, callback);
+            .postAsync(newMobileAppCategory);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosUpdateConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
     /**
      * Gets the IosUpdateConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super IosUpdateConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super IosUpdateConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public IosUpdateConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this IosUpdateConfiguration with a source
      *
      * @param sourceIosUpdateConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final IosUpdateConfiguration sourceIosUpdateConfiguration, @Nonnull final ICallback<? super IosUpdateConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceIosUpdateConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> patchAsync(@Nonnull final IosUpdateConfiguration sourceIosUpdateConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosUpdateConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * Creates a IosUpdateConfiguration with a new object
      *
      * @param newIosUpdateConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final IosUpdateConfiguration newIosUpdateConfiguration, @Nonnull final ICallback<? super IosUpdateConfiguration> callback) {
-        send(HttpMethod.POST, callback, newIosUpdateConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> postAsync(@Nonnull final IosUpdateConfiguration newIosUpdateConfiguration) {
+        return sendAsync(HttpMethod.POST, newIosUpdateConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * Creates a IosUpdateConfiguration with a new object
      *
      * @param newIosUpdateConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final IosUpdateConfiguration newIosUpdateConfiguration, @Nonnull final ICallback<? super IosUpdateConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newIosUpdateConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> putAsync(@Nonnull final IosUpdateConfiguration newIosUpdateConfiguration) {
+        return sendAsync(HttpMethod.PUT, newIosUpdateConfiguration);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequest;
@@ -44,13 +42,14 @@ public class DirectoryObjectCollectionRequest extends BaseEntityCollectionReques
     /**
      * Creates a new DirectoryObject
      * @param newDirectoryObject the DirectoryObject to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final DirectoryObject newDirectoryObject, @Nonnull final ICallback<? super DirectoryObject> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DirectoryObject> postAsync(@Nonnull final DirectoryObject newDirectoryObject) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newDirectoryObject, callback);
+            .postAsync(newDirectoryObject);
     }
 
     /**

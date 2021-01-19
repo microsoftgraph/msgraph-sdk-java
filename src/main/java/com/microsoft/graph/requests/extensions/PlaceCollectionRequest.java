@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Place;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -17,7 +16,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.PlaceCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlaceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlaceCollectionRequest;
@@ -43,13 +41,14 @@ public class PlaceCollectionRequest extends BaseEntityCollectionRequest<Place, P
     /**
      * Creates a new Place
      * @param newPlace the Place to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final Place newPlace, @Nonnull final ICallback<? super Place> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Place> postAsync(@Nonnull final Place newPlace) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new PlaceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new PlaceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newPlace, callback);
+            .postAsync(newPlace);
     }
 
     /**

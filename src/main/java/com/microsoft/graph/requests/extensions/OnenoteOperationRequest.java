@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
     /**
      * Gets the OnenoteOperation from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super OnenoteOperation> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super OnenoteOperation> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public OnenoteOperation delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this OnenoteOperation with a source
      *
      * @param sourceOnenoteOperation the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final OnenoteOperation sourceOnenoteOperation, @Nonnull final ICallback<? super OnenoteOperation> callback) {
-        send(HttpMethod.PATCH, callback, sourceOnenoteOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> patchAsync(@Nonnull final OnenoteOperation sourceOnenoteOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceOnenoteOperation);
     }
 
     /**
@@ -99,10 +103,11 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
      * Creates a OnenoteOperation with a new object
      *
      * @param newOnenoteOperation the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final OnenoteOperation newOnenoteOperation, @Nonnull final ICallback<? super OnenoteOperation> callback) {
-        send(HttpMethod.POST, callback, newOnenoteOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> postAsync(@Nonnull final OnenoteOperation newOnenoteOperation) {
+        return sendAsync(HttpMethod.POST, newOnenoteOperation);
     }
 
     /**
@@ -121,10 +126,11 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
      * Creates a OnenoteOperation with a new object
      *
      * @param newOnenoteOperation the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final OnenoteOperation newOnenoteOperation, @Nonnull final ICallback<? super OnenoteOperation> callback) {
-        send(HttpMethod.PUT, callback, newOnenoteOperation);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> putAsync(@Nonnull final OnenoteOperation newOnenoteOperation) {
+        return sendAsync(HttpMethod.PUT, newOnenoteOperation);
     }
 
     /**

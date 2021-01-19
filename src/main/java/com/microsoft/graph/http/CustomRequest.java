@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -27,7 +27,6 @@ import com.google.gson.JsonObject;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.options.Option;
@@ -35,14 +34,14 @@ import com.microsoft.graph.options.QueryOption;
 
 /**
  * Respresents a custom request to be executed against the service
- * 
+ *
  * @param <T> the entity or complex type
  */
 public class CustomRequest<T> extends BaseRequest<T> {
-    
+
     /**
      * Instanciates a custom requests to be executed against the service
-     * 
+     *
      * @param requestUrl the URL to send the request to
      * @param client the client to use to send the request
      * @param requestOptions the options to apply to the request
@@ -51,10 +50,10 @@ public class CustomRequest<T> extends BaseRequest<T> {
 	public CustomRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends Option> requestOptions, @Nonnull final Class<T> responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
     }
-	
+
     /**
      * Creates a custom requests to be executed against the service
-     * 
+     *
      * @param requestUrl the URL to send the request to
      * @param client the client to use to send the request
      * @param requestOptions the options to apply to the request
@@ -67,37 +66,37 @@ public class CustomRequest<T> extends BaseRequest<T> {
 
     /**
      * Gets the resource and returns the deserialized resource
-     * 
+     *
      * @return the deserialized resource
      */
     @Nullable
     public T get() throws ClientException {
         return send(HttpMethod.GET, null);
     }
-    
+
     /**
      * Gets the resource and calls the callback with the deserialized resource
-     * 
-     * @param callback callback to be invoked with the deserialized resource
+     *
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<T> callback) {
-    	send(HttpMethod.GET, callback, null);
-    }
-    
-    /**
-     * Delete this item from the service
-     * 
-     * @param callback the callback when the deletion action has completed
-     */
-    @SuppressWarnings("unchecked")
-    public void delete(@Nonnull final ICallback<Void> callback) {
-        // the callback should called with the null object
-        send(HttpMethod.DELETE, (ICallback<T>) callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T> getAsync() {
+    	return sendAsync(HttpMethod.GET, null);
     }
 
     /**
      * Delete this item from the service
-     * 
+     *
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
+    }
+
+    /**
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {
@@ -106,16 +105,17 @@ public class CustomRequest<T> extends BaseRequest<T> {
 
     /**
      * Patches this item with a source
-     * 
-     * @param callback the callback to be called after success or failure
+     *
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ICallback<T> callback) {
-        send(HttpMethod.PATCH, callback, super.getResponseType());
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T> patchAsync() {
+        return sendAsync(HttpMethod.PATCH, super.getResponseType());
     }
 
     /**
      * Patches this item with a source
-     * 
+     *
      * @param sourceObject     the source object with updates
      * @return                 the updated item
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
@@ -127,17 +127,18 @@ public class CustomRequest<T> extends BaseRequest<T> {
 
     /**
      * Creates a new object
-     * 
+     *
      * @param newObject the new object to create
-     * @param callback  the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final T newObject, @Nonnull final ICallback<T> callback) {
-        send(HttpMethod.POST, callback, newObject);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T> postAsync(@Nonnull final T newObject) {
+        return sendAsync(HttpMethod.POST, newObject);
     }
 
     /**
      * Creates a new object
-     * 
+     *
      * @param newObject        the new object to create
      * @return                 the created object
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
@@ -146,20 +147,21 @@ public class CustomRequest<T> extends BaseRequest<T> {
     public T post(@Nonnull final T newObject) throws ClientException {
         return send(HttpMethod.POST, newObject);
     }
-    
+
     /**
      * Creates a new object
-     * 
+     *
      * @param putObject the new object to create
-     * @param callback  the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final T putObject, @Nonnull final ICallback<T> callback) {
-        send(HttpMethod.PUT, callback, putObject);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T> putAsync(@Nonnull final T putObject) {
+        return sendAsync(HttpMethod.PUT, putObject);
     }
-    
+
     /**
      * Creates a new object
-     * 
+     *
      * @param putObject        the new object to create
      * @return                 the created object
      * @throws ClientException this exception occurs if the request was unable to complete for any reason

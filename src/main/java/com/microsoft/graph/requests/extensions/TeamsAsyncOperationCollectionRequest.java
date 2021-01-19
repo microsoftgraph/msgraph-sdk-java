@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import java.util.Arrays;
@@ -18,7 +17,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseEntityCollectionRequest;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequest;
@@ -44,13 +42,14 @@ public class TeamsAsyncOperationCollectionRequest extends BaseEntityCollectionRe
     /**
      * Creates a new TeamsAsyncOperation
      * @param newTeamsAsyncOperation the TeamsAsyncOperation to create
-     * @param callback the callback to invoke once the object has been created
+     * @return a future with the created object
      */
-    public void post(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation, @Nonnull final ICallback<? super TeamsAsyncOperation> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> postAsync(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
+        return new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .post(newTeamsAsyncOperation, callback);
+            .postAsync(newTeamsAsyncOperation);
     }
 
     /**

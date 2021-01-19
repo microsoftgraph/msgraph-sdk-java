@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest<DeviceCo
     /**
      * Gets the DeviceConfigurationUserOverview from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationUserOverview> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest<DeviceCo
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationUserOverview> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public DeviceConfigurationUserOverview delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this DeviceConfigurationUserOverview with a source
      *
      * @param sourceDeviceConfigurationUserOverview the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final DeviceConfigurationUserOverview sourceDeviceConfigurationUserOverview, @Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
-        send(HttpMethod.PATCH, callback, sourceDeviceConfigurationUserOverview);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationUserOverview> patchAsync(@Nonnull final DeviceConfigurationUserOverview sourceDeviceConfigurationUserOverview) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceConfigurationUserOverview);
     }
 
     /**
@@ -99,10 +103,11 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest<DeviceCo
      * Creates a DeviceConfigurationUserOverview with a new object
      *
      * @param newDeviceConfigurationUserOverview the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, @Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
-        send(HttpMethod.POST, callback, newDeviceConfigurationUserOverview);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationUserOverview> postAsync(@Nonnull final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview) {
+        return sendAsync(HttpMethod.POST, newDeviceConfigurationUserOverview);
     }
 
     /**
@@ -121,10 +126,11 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest<DeviceCo
      * Creates a DeviceConfigurationUserOverview with a new object
      *
      * @param newDeviceConfigurationUserOverview the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, @Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
-        send(HttpMethod.PUT, callback, newDeviceConfigurationUserOverview);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationUserOverview> putAsync(@Nonnull final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview) {
+        return sendAsync(HttpMethod.PUT, newDeviceConfigurationUserOverview);
     }
 
     /**

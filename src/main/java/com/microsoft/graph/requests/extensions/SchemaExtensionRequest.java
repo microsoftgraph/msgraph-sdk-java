@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SchemaExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
     /**
      * Gets the SchemaExtension from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super SchemaExtension> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchemaExtension> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super SchemaExtension> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchemaExtension> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public SchemaExtension delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this SchemaExtension with a source
      *
      * @param sourceSchemaExtension the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final SchemaExtension sourceSchemaExtension, @Nonnull final ICallback<? super SchemaExtension> callback) {
-        send(HttpMethod.PATCH, callback, sourceSchemaExtension);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchemaExtension> patchAsync(@Nonnull final SchemaExtension sourceSchemaExtension) {
+        return sendAsync(HttpMethod.PATCH, sourceSchemaExtension);
     }
 
     /**
@@ -99,10 +103,11 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
      * Creates a SchemaExtension with a new object
      *
      * @param newSchemaExtension the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final SchemaExtension newSchemaExtension, @Nonnull final ICallback<? super SchemaExtension> callback) {
-        send(HttpMethod.POST, callback, newSchemaExtension);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchemaExtension> postAsync(@Nonnull final SchemaExtension newSchemaExtension) {
+        return sendAsync(HttpMethod.POST, newSchemaExtension);
     }
 
     /**
@@ -121,10 +126,11 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
      * Creates a SchemaExtension with a new object
      *
      * @param newSchemaExtension the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final SchemaExtension newSchemaExtension, @Nonnull final ICallback<? super SchemaExtension> callback) {
-        send(HttpMethod.PUT, callback, newSchemaExtension);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<SchemaExtension> putAsync(@Nonnull final SchemaExtension newSchemaExtension) {
+        return sendAsync(HttpMethod.PUT, newSchemaExtension);
     }
 
     /**

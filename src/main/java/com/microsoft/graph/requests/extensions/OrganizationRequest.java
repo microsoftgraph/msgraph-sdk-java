@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationRequestBuilder;
@@ -42,10 +41,11 @@ public class OrganizationRequest extends BaseRequest<Organization> {
     /**
      * Gets the Organization from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Organization> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Organization> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class OrganizationRequest extends BaseRequest<Organization> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Organization> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Organization> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Organization delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Organization with a source
      *
      * @param sourceOrganization the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Organization sourceOrganization, @Nonnull final ICallback<? super Organization> callback) {
-        send(HttpMethod.PATCH, callback, sourceOrganization);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Organization> patchAsync(@Nonnull final Organization sourceOrganization) {
+        return sendAsync(HttpMethod.PATCH, sourceOrganization);
     }
 
     /**
@@ -103,10 +107,11 @@ public class OrganizationRequest extends BaseRequest<Organization> {
      * Creates a Organization with a new object
      *
      * @param newOrganization the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Organization newOrganization, @Nonnull final ICallback<? super Organization> callback) {
-        send(HttpMethod.POST, callback, newOrganization);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Organization> postAsync(@Nonnull final Organization newOrganization) {
+        return sendAsync(HttpMethod.POST, newOrganization);
     }
 
     /**
@@ -125,10 +130,11 @@ public class OrganizationRequest extends BaseRequest<Organization> {
      * Creates a Organization with a new object
      *
      * @param newOrganization the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Organization newOrganization, @Nonnull final ICallback<? super Organization> callback) {
-        send(HttpMethod.PUT, callback, newOrganization);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Organization> putAsync(@Nonnull final Organization newOrganization) {
+        return sendAsync(HttpMethod.PUT, newOrganization);
     }
 
     /**

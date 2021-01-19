@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -66,12 +65,13 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseReferenceRequest<Cl
      * Puts the ClaimsMappingPolicy
      *
      * @param srcClaimsMappingPolicy the ClaimsMappingPolicy reference to PUT
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ClaimsMappingPolicy srcClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> putAsync(@Nonnull final ClaimsMappingPolicy srcClaimsMappingPolicy) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + srcClaimsMappingPolicy.id));
-        send(HttpMethod.PUT, callback, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

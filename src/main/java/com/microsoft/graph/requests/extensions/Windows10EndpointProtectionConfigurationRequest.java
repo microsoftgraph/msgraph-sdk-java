@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10EndpointProtectionConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
     /**
      * Gets the Windows10EndpointProtectionConfiguration from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Windows10EndpointProtectionConfiguration delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Windows10EndpointProtectionConfiguration with a source
      *
      * @param sourceWindows10EndpointProtectionConfiguration the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration, @Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
-        send(HttpMethod.PATCH, callback, sourceWindows10EndpointProtectionConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> patchAsync(@Nonnull final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10EndpointProtectionConfiguration);
     }
 
     /**
@@ -99,10 +103,11 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * Creates a Windows10EndpointProtectionConfiguration with a new object
      *
      * @param newWindows10EndpointProtectionConfiguration the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, @Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
-        send(HttpMethod.POST, callback, newWindows10EndpointProtectionConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> postAsync(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindows10EndpointProtectionConfiguration);
     }
 
     /**
@@ -121,10 +126,11 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * Creates a Windows10EndpointProtectionConfiguration with a new object
      *
      * @param newWindows10EndpointProtectionConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, @Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newWindows10EndpointProtectionConfiguration);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> putAsync(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindows10EndpointProtectionConfiguration);
     }
 
     /**

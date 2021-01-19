@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
     /**
      * Gets the ClaimsMappingPolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ClaimsMappingPolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ClaimsMappingPolicy with a source
      *
      * @param sourceClaimsMappingPolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ClaimsMappingPolicy sourceClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceClaimsMappingPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> patchAsync(@Nonnull final ClaimsMappingPolicy sourceClaimsMappingPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceClaimsMappingPolicy);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
      * Creates a ClaimsMappingPolicy with a new object
      *
      * @param newClaimsMappingPolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
-        send(HttpMethod.POST, callback, newClaimsMappingPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> postAsync(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
+        return sendAsync(HttpMethod.POST, newClaimsMappingPolicy);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
      * Creates a ClaimsMappingPolicy with a new object
      *
      * @param newClaimsMappingPolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy, @Nonnull final ICallback<? super ClaimsMappingPolicy> callback) {
-        send(HttpMethod.PUT, callback, newClaimsMappingPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> putAsync(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
+        return sendAsync(HttpMethod.PUT, newClaimsMappingPolicy);
     }
 
     /**

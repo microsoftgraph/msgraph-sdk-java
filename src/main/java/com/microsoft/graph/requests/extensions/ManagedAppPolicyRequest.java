@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
@@ -54,10 +53,11 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
     /**
      * Gets the ManagedAppPolicy from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAppPolicy> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -74,29 +74,33 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAppPolicy> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAppPolicy delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAppPolicy with a source
      *
      * @param sourceManagedAppPolicy the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAppPolicy sourceManagedAppPolicy, @Nonnull final ICallback<? super ManagedAppPolicy> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAppPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> patchAsync(@Nonnull final ManagedAppPolicy sourceManagedAppPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppPolicy);
     }
 
     /**
@@ -115,10 +119,11 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * Creates a ManagedAppPolicy with a new object
      *
      * @param newManagedAppPolicy the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAppPolicy newManagedAppPolicy, @Nonnull final ICallback<? super ManagedAppPolicy> callback) {
-        send(HttpMethod.POST, callback, newManagedAppPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> postAsync(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
+        return sendAsync(HttpMethod.POST, newManagedAppPolicy);
     }
 
     /**
@@ -137,10 +142,11 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * Creates a ManagedAppPolicy with a new object
      *
      * @param newManagedAppPolicy the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppPolicy newManagedAppPolicy, @Nonnull final ICallback<? super ManagedAppPolicy> callback) {
-        send(HttpMethod.PUT, callback, newManagedAppPolicy);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> putAsync(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
+        return sendAsync(HttpMethod.PUT, newManagedAppPolicy);
     }
 
     /**

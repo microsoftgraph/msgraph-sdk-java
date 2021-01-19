@@ -30,9 +30,6 @@ import java.util.List;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.ICollectionResponse;
@@ -71,20 +68,24 @@ public abstract class BaseActionCollectionRequest<T, T2 extends ICollectionRespo
 
     /**
      * Invokes the method and calls the callback with the resulting collection of objects
-     * @param callback a callback to be invoked with the resulting collection of objects
+     * @return a future with the result
      */
-    public void post(@Nonnull final ICallback<? super T3> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(post(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<T3> postAsync() {
+        getBaseRequest().setHttpMethod(HttpMethod.POST);
+        Object bodyToSend = null;
+        try {
+            bodyToSend = this.getClass().getField("body").get(this);
+        } catch (NoSuchFieldException | IllegalAccessException ex) {
+            // this action doesn't body arguments, expected, no-op
+        }
+        return getBaseRequest()
+                            .getClient()
+                            .getHttpProvider()
+                            .sendAsync(this,
+                                responseCollectionClass,
+                                bodyToSend)
+                            .thenApply(r -> buildFromResponse(r));
     }
     /**
      * Invokes the method and returns the resulting collection of objects

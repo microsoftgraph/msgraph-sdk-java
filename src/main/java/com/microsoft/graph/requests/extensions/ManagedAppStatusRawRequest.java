@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppStatusRaw;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
     /**
      * Gets the ManagedAppStatusRaw from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public ManagedAppStatusRaw delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this ManagedAppStatusRaw with a source
      *
      * @param sourceManagedAppStatusRaw the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final ManagedAppStatusRaw sourceManagedAppStatusRaw, @Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
-        send(HttpMethod.PATCH, callback, sourceManagedAppStatusRaw);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> patchAsync(@Nonnull final ManagedAppStatusRaw sourceManagedAppStatusRaw) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppStatusRaw);
     }
 
     /**
@@ -99,10 +103,11 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
      * Creates a ManagedAppStatusRaw with a new object
      *
      * @param newManagedAppStatusRaw the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw, @Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
-        send(HttpMethod.POST, callback, newManagedAppStatusRaw);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> postAsync(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw) {
+        return sendAsync(HttpMethod.POST, newManagedAppStatusRaw);
     }
 
     /**
@@ -121,10 +126,11 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
      * Creates a ManagedAppStatusRaw with a new object
      *
      * @param newManagedAppStatusRaw the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw, @Nonnull final ICallback<? super ManagedAppStatusRaw> callback) {
-        send(HttpMethod.PUT, callback, newManagedAppStatusRaw);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> putAsync(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw) {
+        return sendAsync(HttpMethod.PUT, newManagedAppStatusRaw);
     }
 
     /**

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FieldValueSet;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,10 +37,11 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
     /**
      * Gets the FieldValueSet from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super FieldValueSet> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FieldValueSet> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -58,29 +58,33 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super FieldValueSet> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FieldValueSet> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public FieldValueSet delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this FieldValueSet with a source
      *
      * @param sourceFieldValueSet the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final FieldValueSet sourceFieldValueSet, @Nonnull final ICallback<? super FieldValueSet> callback) {
-        send(HttpMethod.PATCH, callback, sourceFieldValueSet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FieldValueSet> patchAsync(@Nonnull final FieldValueSet sourceFieldValueSet) {
+        return sendAsync(HttpMethod.PATCH, sourceFieldValueSet);
     }
 
     /**
@@ -99,10 +103,11 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * Creates a FieldValueSet with a new object
      *
      * @param newFieldValueSet the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final FieldValueSet newFieldValueSet, @Nonnull final ICallback<? super FieldValueSet> callback) {
-        send(HttpMethod.POST, callback, newFieldValueSet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FieldValueSet> postAsync(@Nonnull final FieldValueSet newFieldValueSet) {
+        return sendAsync(HttpMethod.POST, newFieldValueSet);
     }
 
     /**
@@ -121,10 +126,11 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * Creates a FieldValueSet with a new object
      *
      * @param newFieldValueSet the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final FieldValueSet newFieldValueSet, @Nonnull final ICallback<? super FieldValueSet> callback) {
-        send(HttpMethod.PUT, callback, newFieldValueSet);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<FieldValueSet> putAsync(@Nonnull final FieldValueSet newFieldValueSet) {
+        return sendAsync(HttpMethod.PUT, newFieldValueSet);
     }
 
     /**

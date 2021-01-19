@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTaskList;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
@@ -42,10 +41,11 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
     /**
      * Gets the TodoTaskList from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super TodoTaskList> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTaskList> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,29 +62,33 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super TodoTaskList> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTaskList> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public TodoTaskList delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this TodoTaskList with a source
      *
      * @param sourceTodoTaskList the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final TodoTaskList sourceTodoTaskList, @Nonnull final ICallback<? super TodoTaskList> callback) {
-        send(HttpMethod.PATCH, callback, sourceTodoTaskList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTaskList> patchAsync(@Nonnull final TodoTaskList sourceTodoTaskList) {
+        return sendAsync(HttpMethod.PATCH, sourceTodoTaskList);
     }
 
     /**
@@ -103,10 +107,11 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
      * Creates a TodoTaskList with a new object
      *
      * @param newTodoTaskList the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final TodoTaskList newTodoTaskList, @Nonnull final ICallback<? super TodoTaskList> callback) {
-        send(HttpMethod.POST, callback, newTodoTaskList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTaskList> postAsync(@Nonnull final TodoTaskList newTodoTaskList) {
+        return sendAsync(HttpMethod.POST, newTodoTaskList);
     }
 
     /**
@@ -125,10 +130,11 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
      * Creates a TodoTaskList with a new object
      *
      * @param newTodoTaskList the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final TodoTaskList newTodoTaskList, @Nonnull final ICallback<? super TodoTaskList> callback) {
-        send(HttpMethod.PUT, callback, newTodoTaskList);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<TodoTaskList> putAsync(@Nonnull final TodoTaskList newTodoTaskList) {
+        return sendAsync(HttpMethod.PUT, newTodoTaskList);
     }
 
     /**

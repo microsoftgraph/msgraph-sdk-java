@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
@@ -48,10 +47,11 @@ public class PostRequest extends BaseRequest<Post> {
     /**
      * Gets the Post from the service
      *
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void get(@Nonnull final ICallback<? super Post> callback) {
-        send(HttpMethod.GET, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Post> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -68,29 +68,33 @@ public class PostRequest extends BaseRequest<Post> {
     /**
      * Delete this item from the service
      *
-     * @param callback the callback when the deletion action has completed
+     * @return a future with the deletion result
      */
-    public void delete(@Nonnull final ICallback<? super Post> callback) {
-        send(HttpMethod.DELETE, callback, null);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Post> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
      * Delete this item from the service
+     * @return the resulting response if the service returns anything on deletion
      *
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {
-        send(HttpMethod.DELETE, null);
+    @Nullable
+    public Post delete() throws ClientException {
+        return send(HttpMethod.DELETE, null);
     }
 
     /**
      * Patches this Post with a source
      *
      * @param sourcePost the source object with updates
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void patch(@Nonnull final Post sourcePost, @Nonnull final ICallback<? super Post> callback) {
-        send(HttpMethod.PATCH, callback, sourcePost);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Post> patchAsync(@Nonnull final Post sourcePost) {
+        return sendAsync(HttpMethod.PATCH, sourcePost);
     }
 
     /**
@@ -109,10 +113,11 @@ public class PostRequest extends BaseRequest<Post> {
      * Creates a Post with a new object
      *
      * @param newPost the new object to create
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void post(@Nonnull final Post newPost, @Nonnull final ICallback<? super Post> callback) {
-        send(HttpMethod.POST, callback, newPost);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Post> postAsync(@Nonnull final Post newPost) {
+        return sendAsync(HttpMethod.POST, newPost);
     }
 
     /**
@@ -131,10 +136,11 @@ public class PostRequest extends BaseRequest<Post> {
      * Creates a Post with a new object
      *
      * @param newPost the object to create/update
-     * @param callback the callback to be called after success or failure
+     * @return a future with the result
      */
-    public void put(@Nonnull final Post newPost, @Nonnull final ICallback<? super Post> callback) {
-        send(HttpMethod.PUT, callback, newPost);
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Post> putAsync(@Nonnull final Post newPost) {
+        return sendAsync(HttpMethod.PUT, newPost);
     }
 
     /**
