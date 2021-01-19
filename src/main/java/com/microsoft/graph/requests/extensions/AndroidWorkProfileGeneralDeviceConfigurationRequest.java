@@ -40,8 +40,8 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futurePatch(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration sourceAndroidWorkProfileGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceAndroidWorkProfileGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> patchAsync(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration sourceAndroidWorkProfileGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidWorkProfileGeneralDeviceConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futurePost(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.POST, newAndroidWorkProfileGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> postAsync(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.POST, newAndroidWorkProfileGeneralDeviceConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> futurePut(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.PUT, newAndroidWorkProfileGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileGeneralDeviceConfiguration> putAsync(@Nonnull final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.PUT, newAndroidWorkProfileGeneralDeviceConfiguration);
     }
 
     /**

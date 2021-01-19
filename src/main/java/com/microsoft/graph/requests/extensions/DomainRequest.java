@@ -44,8 +44,8 @@ public class DomainRequest extends BaseRequest<Domain> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Domain> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,8 +65,8 @@ public class DomainRequest extends BaseRequest<Domain> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Domain> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -87,8 +87,8 @@ public class DomainRequest extends BaseRequest<Domain> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> futurePatch(@Nonnull final Domain sourceDomain) {
-        return futureSend(HttpMethod.PATCH, sourceDomain);
+    public java.util.concurrent.CompletableFuture<Domain> patchAsync(@Nonnull final Domain sourceDomain) {
+        return sendAsync(HttpMethod.PATCH, sourceDomain);
     }
 
     /**
@@ -110,8 +110,8 @@ public class DomainRequest extends BaseRequest<Domain> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> futurePost(@Nonnull final Domain newDomain) {
-        return futureSend(HttpMethod.POST, newDomain);
+    public java.util.concurrent.CompletableFuture<Domain> postAsync(@Nonnull final Domain newDomain) {
+        return sendAsync(HttpMethod.POST, newDomain);
     }
 
     /**
@@ -133,8 +133,8 @@ public class DomainRequest extends BaseRequest<Domain> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> futurePut(@Nonnull final Domain newDomain) {
-        return futureSend(HttpMethod.PUT, newDomain);
+    public java.util.concurrent.CompletableFuture<Domain> putAsync(@Nonnull final Domain newDomain) {
+        return sendAsync(HttpMethod.PUT, newDomain);
     }
 
     /**

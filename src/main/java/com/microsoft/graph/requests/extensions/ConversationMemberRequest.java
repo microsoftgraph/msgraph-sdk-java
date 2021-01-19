@@ -55,8 +55,8 @@ public class ConversationMemberRequest extends BaseRequest<ConversationMember> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMember> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ConversationMember> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class ConversationMemberRequest extends BaseRequest<ConversationMember> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMember> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ConversationMember> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class ConversationMemberRequest extends BaseRequest<ConversationMember> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMember> futurePatch(@Nonnull final ConversationMember sourceConversationMember) {
-        return futureSend(HttpMethod.PATCH, sourceConversationMember);
+    public java.util.concurrent.CompletableFuture<ConversationMember> patchAsync(@Nonnull final ConversationMember sourceConversationMember) {
+        return sendAsync(HttpMethod.PATCH, sourceConversationMember);
     }
 
     /**
@@ -121,8 +121,8 @@ public class ConversationMemberRequest extends BaseRequest<ConversationMember> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMember> futurePost(@Nonnull final ConversationMember newConversationMember) {
-        return futureSend(HttpMethod.POST, newConversationMember);
+    public java.util.concurrent.CompletableFuture<ConversationMember> postAsync(@Nonnull final ConversationMember newConversationMember) {
+        return sendAsync(HttpMethod.POST, newConversationMember);
     }
 
     /**
@@ -144,8 +144,8 @@ public class ConversationMemberRequest extends BaseRequest<ConversationMember> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationMember> futurePut(@Nonnull final ConversationMember newConversationMember) {
-        return futureSend(HttpMethod.PUT, newConversationMember);
+    public java.util.concurrent.CompletableFuture<ConversationMember> putAsync(@Nonnull final ConversationMember newConversationMember) {
+        return sendAsync(HttpMethod.PUT, newConversationMember);
     }
 
     /**

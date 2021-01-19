@@ -40,8 +40,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futurePatch(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsDefenderAdvancedThreatProtectionConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> patchAsync(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futurePost(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) {
-        return futureSend(HttpMethod.POST, newWindowsDefenderAdvancedThreatProtectionConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> postAsync(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> futurePut(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindowsDefenderAdvancedThreatProtectionConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsDefenderAdvancedThreatProtectionConfiguration> putAsync(@Nonnull final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindowsDefenderAdvancedThreatProtectionConfiguration);
     }
 
     /**

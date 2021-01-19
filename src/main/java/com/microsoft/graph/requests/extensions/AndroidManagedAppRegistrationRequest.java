@@ -40,8 +40,8 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> futurePatch(@Nonnull final AndroidManagedAppRegistration sourceAndroidManagedAppRegistration) {
-        return futureSend(HttpMethod.PATCH, sourceAndroidManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> patchAsync(@Nonnull final AndroidManagedAppRegistration sourceAndroidManagedAppRegistration) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidManagedAppRegistration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> futurePost(@Nonnull final AndroidManagedAppRegistration newAndroidManagedAppRegistration) {
-        return futureSend(HttpMethod.POST, newAndroidManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> postAsync(@Nonnull final AndroidManagedAppRegistration newAndroidManagedAppRegistration) {
+        return sendAsync(HttpMethod.POST, newAndroidManagedAppRegistration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest<AndroidMan
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> futurePut(@Nonnull final AndroidManagedAppRegistration newAndroidManagedAppRegistration) {
-        return futureSend(HttpMethod.PUT, newAndroidManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppRegistration> putAsync(@Nonnull final AndroidManagedAppRegistration newAndroidManagedAppRegistration) {
+        return sendAsync(HttpMethod.PUT, newAndroidManagedAppRegistration);
     }
 
     /**

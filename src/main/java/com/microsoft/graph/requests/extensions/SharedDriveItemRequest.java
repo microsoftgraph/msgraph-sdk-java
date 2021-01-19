@@ -46,8 +46,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedDriveItem> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -67,8 +67,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedDriveItem> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -89,8 +89,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedDriveItem> futurePatch(@Nonnull final SharedDriveItem sourceSharedDriveItem) {
-        return futureSend(HttpMethod.PATCH, sourceSharedDriveItem);
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> patchAsync(@Nonnull final SharedDriveItem sourceSharedDriveItem) {
+        return sendAsync(HttpMethod.PATCH, sourceSharedDriveItem);
     }
 
     /**
@@ -112,8 +112,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedDriveItem> futurePost(@Nonnull final SharedDriveItem newSharedDriveItem) {
-        return futureSend(HttpMethod.POST, newSharedDriveItem);
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> postAsync(@Nonnull final SharedDriveItem newSharedDriveItem) {
+        return sendAsync(HttpMethod.POST, newSharedDriveItem);
     }
 
     /**
@@ -135,8 +135,8 @@ public class SharedDriveItemRequest extends BaseRequest<SharedDriveItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedDriveItem> futurePut(@Nonnull final SharedDriveItem newSharedDriveItem) {
-        return futureSend(HttpMethod.PUT, newSharedDriveItem);
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> putAsync(@Nonnull final SharedDriveItem newSharedDriveItem) {
+        return sendAsync(HttpMethod.PUT, newSharedDriveItem);
     }
 
     /**

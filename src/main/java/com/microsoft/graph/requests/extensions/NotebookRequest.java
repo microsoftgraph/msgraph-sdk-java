@@ -47,8 +47,8 @@ public class NotebookRequest extends BaseRequest<Notebook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Notebook> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Notebook> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -68,8 +68,8 @@ public class NotebookRequest extends BaseRequest<Notebook> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Notebook> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Notebook> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -90,8 +90,8 @@ public class NotebookRequest extends BaseRequest<Notebook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Notebook> futurePatch(@Nonnull final Notebook sourceNotebook) {
-        return futureSend(HttpMethod.PATCH, sourceNotebook);
+    public java.util.concurrent.CompletableFuture<Notebook> patchAsync(@Nonnull final Notebook sourceNotebook) {
+        return sendAsync(HttpMethod.PATCH, sourceNotebook);
     }
 
     /**
@@ -113,8 +113,8 @@ public class NotebookRequest extends BaseRequest<Notebook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Notebook> futurePost(@Nonnull final Notebook newNotebook) {
-        return futureSend(HttpMethod.POST, newNotebook);
+    public java.util.concurrent.CompletableFuture<Notebook> postAsync(@Nonnull final Notebook newNotebook) {
+        return sendAsync(HttpMethod.POST, newNotebook);
     }
 
     /**
@@ -136,8 +136,8 @@ public class NotebookRequest extends BaseRequest<Notebook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Notebook> futurePut(@Nonnull final Notebook newNotebook) {
-        return futureSend(HttpMethod.PUT, newNotebook);
+    public java.util.concurrent.CompletableFuture<Notebook> putAsync(@Nonnull final Notebook newNotebook) {
+        return sendAsync(HttpMethod.PUT, newNotebook);
     }
 
     /**

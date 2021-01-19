@@ -50,12 +50,12 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionW
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> futurePost(@Nonnull final MobileAppCategory newMobileAppCategory) {
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> postAsync(@Nonnull final MobileAppCategory newMobileAppCategory) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newMobileAppCategory.id);
         return new MobileAppCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMobileAppCategory, body);
+            .postAsync(newMobileAppCategory, body);
     }
 
     /**

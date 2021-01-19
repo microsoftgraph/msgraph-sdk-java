@@ -40,8 +40,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> futurePatch(@Nonnull final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsInformationProtectionAppLearningSummary);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> patchAsync(@Nonnull final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsInformationProtectionAppLearningSummary);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> futurePost(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) {
-        return futureSend(HttpMethod.POST, newWindowsInformationProtectionAppLearningSummary);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> postAsync(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) {
+        return sendAsync(HttpMethod.POST, newWindowsInformationProtectionAppLearningSummary);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> futurePut(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) {
-        return futureSend(HttpMethod.PUT, newWindowsInformationProtectionAppLearningSummary);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> putAsync(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) {
+        return sendAsync(HttpMethod.PUT, newWindowsInformationProtectionAppLearningSummary);
     }
 
     /**

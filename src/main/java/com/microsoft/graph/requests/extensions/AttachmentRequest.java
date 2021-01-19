@@ -57,8 +57,8 @@ public class AttachmentRequest extends BaseRequest<Attachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Attachment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Attachment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -78,8 +78,8 @@ public class AttachmentRequest extends BaseRequest<Attachment> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Attachment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Attachment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -100,8 +100,8 @@ public class AttachmentRequest extends BaseRequest<Attachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Attachment> futurePatch(@Nonnull final Attachment sourceAttachment) {
-        return futureSend(HttpMethod.PATCH, sourceAttachment);
+    public java.util.concurrent.CompletableFuture<Attachment> patchAsync(@Nonnull final Attachment sourceAttachment) {
+        return sendAsync(HttpMethod.PATCH, sourceAttachment);
     }
 
     /**
@@ -123,8 +123,8 @@ public class AttachmentRequest extends BaseRequest<Attachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Attachment> futurePost(@Nonnull final Attachment newAttachment) {
-        return futureSend(HttpMethod.POST, newAttachment);
+    public java.util.concurrent.CompletableFuture<Attachment> postAsync(@Nonnull final Attachment newAttachment) {
+        return sendAsync(HttpMethod.POST, newAttachment);
     }
 
     /**
@@ -146,8 +146,8 @@ public class AttachmentRequest extends BaseRequest<Attachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Attachment> futurePut(@Nonnull final Attachment newAttachment) {
-        return futureSend(HttpMethod.PUT, newAttachment);
+    public java.util.concurrent.CompletableFuture<Attachment> putAsync(@Nonnull final Attachment newAttachment) {
+        return sendAsync(HttpMethod.PUT, newAttachment);
     }
 
     /**

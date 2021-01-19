@@ -37,8 +37,8 @@ public class WorkbookChartImageRequest extends BaseRequest<String> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<String> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<String> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

@@ -40,8 +40,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futurePatch(@Nonnull final IosMobileAppConfiguration sourceIosMobileAppConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceIosMobileAppConfiguration);
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> patchAsync(@Nonnull final IosMobileAppConfiguration sourceIosMobileAppConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosMobileAppConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futurePost(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration) {
-        return futureSend(HttpMethod.POST, newIosMobileAppConfiguration);
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> postAsync(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration) {
+        return sendAsync(HttpMethod.POST, newIosMobileAppConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosMobileAppConfigurationRequest extends BaseRequest<IosMobileAppCo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> futurePut(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration) {
-        return futureSend(HttpMethod.PUT, newIosMobileAppConfiguration);
+    public java.util.concurrent.CompletableFuture<IosMobileAppConfiguration> putAsync(@Nonnull final IosMobileAppConfiguration newIosMobileAppConfiguration) {
+        return sendAsync(HttpMethod.PUT, newIosMobileAppConfiguration);
     }
 
     /**

@@ -40,8 +40,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> futurePatch(@Nonnull final MacOSCustomConfiguration sourceMacOSCustomConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceMacOSCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> patchAsync(@Nonnull final MacOSCustomConfiguration sourceMacOSCustomConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceMacOSCustomConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> futurePost(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration) {
-        return futureSend(HttpMethod.POST, newMacOSCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> postAsync(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration) {
+        return sendAsync(HttpMethod.POST, newMacOSCustomConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MacOSCustomConfigurationRequest extends BaseRequest<MacOSCustomConf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> futurePut(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration) {
-        return futureSend(HttpMethod.PUT, newMacOSCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<MacOSCustomConfiguration> putAsync(@Nonnull final MacOSCustomConfiguration newMacOSCustomConfiguration) {
+        return sendAsync(HttpMethod.PUT, newMacOSCustomConfiguration);
     }
 
     /**

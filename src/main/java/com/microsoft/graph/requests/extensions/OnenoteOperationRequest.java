@@ -40,8 +40,8 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> futurePatch(@Nonnull final OnenoteOperation sourceOnenoteOperation) {
-        return futureSend(HttpMethod.PATCH, sourceOnenoteOperation);
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> patchAsync(@Nonnull final OnenoteOperation sourceOnenoteOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceOnenoteOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> futurePost(@Nonnull final OnenoteOperation newOnenoteOperation) {
-        return futureSend(HttpMethod.POST, newOnenoteOperation);
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> postAsync(@Nonnull final OnenoteOperation newOnenoteOperation) {
+        return sendAsync(HttpMethod.POST, newOnenoteOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class OnenoteOperationRequest extends BaseRequest<OnenoteOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> futurePut(@Nonnull final OnenoteOperation newOnenoteOperation) {
-        return futureSend(HttpMethod.PUT, newOnenoteOperation);
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> putAsync(@Nonnull final OnenoteOperation newOnenoteOperation) {
+        return sendAsync(HttpMethod.PUT, newOnenoteOperation);
     }
 
     /**

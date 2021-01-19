@@ -49,8 +49,8 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CloudCommunications> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<CloudCommunications> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -70,8 +70,8 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CloudCommunications> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<CloudCommunications> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -92,8 +92,8 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CloudCommunications> futurePatch(@Nonnull final CloudCommunications sourceCloudCommunications) {
-        return futureSend(HttpMethod.PATCH, sourceCloudCommunications);
+    public java.util.concurrent.CompletableFuture<CloudCommunications> patchAsync(@Nonnull final CloudCommunications sourceCloudCommunications) {
+        return sendAsync(HttpMethod.PATCH, sourceCloudCommunications);
     }
 
     /**
@@ -115,8 +115,8 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CloudCommunications> futurePost(@Nonnull final CloudCommunications newCloudCommunications) {
-        return futureSend(HttpMethod.POST, newCloudCommunications);
+    public java.util.concurrent.CompletableFuture<CloudCommunications> postAsync(@Nonnull final CloudCommunications newCloudCommunications) {
+        return sendAsync(HttpMethod.POST, newCloudCommunications);
     }
 
     /**
@@ -138,8 +138,8 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CloudCommunications> futurePut(@Nonnull final CloudCommunications newCloudCommunications) {
-        return futureSend(HttpMethod.PUT, newCloudCommunications);
+    public java.util.concurrent.CompletableFuture<CloudCommunications> putAsync(@Nonnull final CloudCommunications newCloudCommunications) {
+        return sendAsync(HttpMethod.PUT, newCloudCommunications);
     }
 
     /**

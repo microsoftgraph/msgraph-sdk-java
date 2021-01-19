@@ -63,8 +63,8 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBook> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedEBook> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBook> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedEBook> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBook> futurePatch(@Nonnull final ManagedEBook sourceManagedEBook) {
-        return futureSend(HttpMethod.PATCH, sourceManagedEBook);
+    public java.util.concurrent.CompletableFuture<ManagedEBook> patchAsync(@Nonnull final ManagedEBook sourceManagedEBook) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedEBook);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBook> futurePost(@Nonnull final ManagedEBook newManagedEBook) {
-        return futureSend(HttpMethod.POST, newManagedEBook);
+    public java.util.concurrent.CompletableFuture<ManagedEBook> postAsync(@Nonnull final ManagedEBook newManagedEBook) {
+        return sendAsync(HttpMethod.POST, newManagedEBook);
     }
 
     /**
@@ -152,8 +152,8 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBook> futurePut(@Nonnull final ManagedEBook newManagedEBook) {
-        return futureSend(HttpMethod.PUT, newManagedEBook);
+    public java.util.concurrent.CompletableFuture<ManagedEBook> putAsync(@Nonnull final ManagedEBook newManagedEBook) {
+        return sendAsync(HttpMethod.PUT, newManagedEBook);
     }
 
     /**

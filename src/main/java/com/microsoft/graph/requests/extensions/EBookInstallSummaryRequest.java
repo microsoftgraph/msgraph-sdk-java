@@ -40,8 +40,8 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EBookInstallSummary> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EBookInstallSummary> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EBookInstallSummary> futurePatch(@Nonnull final EBookInstallSummary sourceEBookInstallSummary) {
-        return futureSend(HttpMethod.PATCH, sourceEBookInstallSummary);
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> patchAsync(@Nonnull final EBookInstallSummary sourceEBookInstallSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceEBookInstallSummary);
     }
 
     /**
@@ -106,8 +106,8 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EBookInstallSummary> futurePost(@Nonnull final EBookInstallSummary newEBookInstallSummary) {
-        return futureSend(HttpMethod.POST, newEBookInstallSummary);
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> postAsync(@Nonnull final EBookInstallSummary newEBookInstallSummary) {
+        return sendAsync(HttpMethod.POST, newEBookInstallSummary);
     }
 
     /**
@@ -129,8 +129,8 @@ public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EBookInstallSummary> futurePut(@Nonnull final EBookInstallSummary newEBookInstallSummary) {
-        return futureSend(HttpMethod.PUT, newEBookInstallSummary);
+    public java.util.concurrent.CompletableFuture<EBookInstallSummary> putAsync(@Nonnull final EBookInstallSummary newEBookInstallSummary) {
+        return sendAsync(HttpMethod.PUT, newEBookInstallSummary);
     }
 
     /**

@@ -40,8 +40,8 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> futurePatch(@Nonnull final DeviceManagementPartner sourceDeviceManagementPartner) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceManagementPartner);
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> patchAsync(@Nonnull final DeviceManagementPartner sourceDeviceManagementPartner) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceManagementPartner);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> futurePost(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) {
-        return futureSend(HttpMethod.POST, newDeviceManagementPartner);
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> postAsync(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) {
+        return sendAsync(HttpMethod.POST, newDeviceManagementPartner);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceManagementPartnerRequest extends BaseRequest<DeviceManagement
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> futurePut(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) {
-        return futureSend(HttpMethod.PUT, newDeviceManagementPartner);
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> putAsync(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) {
+        return sendAsync(HttpMethod.PUT, newDeviceManagementPartner);
     }
 
     /**

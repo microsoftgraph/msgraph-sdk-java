@@ -40,8 +40,8 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> futurePatch(@Nonnull final FileAssessmentRequest sourceFileAssessmentRequest) {
-        return futureSend(HttpMethod.PATCH, sourceFileAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> patchAsync(@Nonnull final FileAssessmentRequest sourceFileAssessmentRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceFileAssessmentRequest);
     }
 
     /**
@@ -106,8 +106,8 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> futurePost(@Nonnull final FileAssessmentRequest newFileAssessmentRequest) {
-        return futureSend(HttpMethod.POST, newFileAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> postAsync(@Nonnull final FileAssessmentRequest newFileAssessmentRequest) {
+        return sendAsync(HttpMethod.POST, newFileAssessmentRequest);
     }
 
     /**
@@ -129,8 +129,8 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> futurePut(@Nonnull final FileAssessmentRequest newFileAssessmentRequest) {
-        return futureSend(HttpMethod.PUT, newFileAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<FileAssessmentRequest> putAsync(@Nonnull final FileAssessmentRequest newFileAssessmentRequest) {
+        return sendAsync(HttpMethod.PUT, newFileAssessmentRequest);
     }
 
     /**

@@ -45,8 +45,8 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePage> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnenotePage> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -66,8 +66,8 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePage> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OnenotePage> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -88,8 +88,8 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePage> futurePatch(@Nonnull final OnenotePage sourceOnenotePage) {
-        return futureSend(HttpMethod.PATCH, sourceOnenotePage);
+    public java.util.concurrent.CompletableFuture<OnenotePage> patchAsync(@Nonnull final OnenotePage sourceOnenotePage) {
+        return sendAsync(HttpMethod.PATCH, sourceOnenotePage);
     }
 
     /**
@@ -111,8 +111,8 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePage> futurePost(@Nonnull final byte[] newOnenotePage) {
-        return futureSend(HttpMethod.POST, newOnenotePage);
+    public java.util.concurrent.CompletableFuture<OnenotePage> postAsync(@Nonnull final byte[] newOnenotePage) {
+        return sendAsync(HttpMethod.POST, newOnenotePage);
     }
 
     /**
@@ -134,8 +134,8 @@ public class OnenotePageRequest extends BaseRequest<OnenotePage> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePage> futurePut(@Nonnull final OnenotePage newOnenotePage) {
-        return futureSend(HttpMethod.PUT, newOnenotePage);
+    public java.util.concurrent.CompletableFuture<OnenotePage> putAsync(@Nonnull final OnenotePage newOnenotePage) {
+        return sendAsync(HttpMethod.PUT, newOnenotePage);
     }
 
     /**

@@ -56,8 +56,8 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -77,8 +77,8 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -99,8 +99,8 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> futurePatch(@Nonnull final ManagedAppPolicy sourceManagedAppPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceManagedAppPolicy);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> patchAsync(@Nonnull final ManagedAppPolicy sourceManagedAppPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppPolicy);
     }
 
     /**
@@ -122,8 +122,8 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> futurePost(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
-        return futureSend(HttpMethod.POST, newManagedAppPolicy);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> postAsync(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
+        return sendAsync(HttpMethod.POST, newManagedAppPolicy);
     }
 
     /**
@@ -145,8 +145,8 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> futurePut(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
-        return futureSend(HttpMethod.PUT, newManagedAppPolicy);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> putAsync(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
+        return sendAsync(HttpMethod.PUT, newManagedAppPolicy);
     }
 
     /**

@@ -40,8 +40,8 @@ public class PresenceRequest extends BaseRequest<Presence> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Presence> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Presence> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class PresenceRequest extends BaseRequest<Presence> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Presence> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Presence> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class PresenceRequest extends BaseRequest<Presence> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Presence> futurePatch(@Nonnull final Presence sourcePresence) {
-        return futureSend(HttpMethod.PATCH, sourcePresence);
+    public java.util.concurrent.CompletableFuture<Presence> patchAsync(@Nonnull final Presence sourcePresence) {
+        return sendAsync(HttpMethod.PATCH, sourcePresence);
     }
 
     /**
@@ -106,8 +106,8 @@ public class PresenceRequest extends BaseRequest<Presence> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Presence> futurePost(@Nonnull final Presence newPresence) {
-        return futureSend(HttpMethod.POST, newPresence);
+    public java.util.concurrent.CompletableFuture<Presence> postAsync(@Nonnull final Presence newPresence) {
+        return sendAsync(HttpMethod.POST, newPresence);
     }
 
     /**
@@ -129,8 +129,8 @@ public class PresenceRequest extends BaseRequest<Presence> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Presence> futurePut(@Nonnull final Presence newPresence) {
-        return futureSend(HttpMethod.PUT, newPresence);
+    public java.util.concurrent.CompletableFuture<Presence> putAsync(@Nonnull final Presence newPresence) {
+        return sendAsync(HttpMethod.PUT, newPresence);
     }
 
     /**

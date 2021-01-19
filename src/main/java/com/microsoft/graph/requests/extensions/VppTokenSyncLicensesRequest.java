@@ -36,8 +36,8 @@ public class VppTokenSyncLicensesRequest extends BaseRequest<VppToken> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> futurePost() {
-        return futureSend(HttpMethod.POST, null);
+    public java.util.concurrent.CompletableFuture<VppToken> postAsync() {
+        return sendAsync(HttpMethod.POST, null);
     }
 
     /**

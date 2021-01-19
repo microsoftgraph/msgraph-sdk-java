@@ -51,12 +51,12 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionWithR
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> futurePost(@Nonnull final ManagedDevice newManagedDevice) {
+    public java.util.concurrent.CompletableFuture<ManagedDevice> postAsync(@Nonnull final ManagedDevice newManagedDevice) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         return new ManagedDeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedDevice, body);
+            .postAsync(newManagedDevice, body);
     }
 
     /**

@@ -40,8 +40,8 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosVppApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosVppApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppApp> futurePatch(@Nonnull final IosVppApp sourceIosVppApp) {
-        return futureSend(HttpMethod.PATCH, sourceIosVppApp);
+    public java.util.concurrent.CompletableFuture<IosVppApp> patchAsync(@Nonnull final IosVppApp sourceIosVppApp) {
+        return sendAsync(HttpMethod.PATCH, sourceIosVppApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppApp> futurePost(@Nonnull final IosVppApp newIosVppApp) {
-        return futureSend(HttpMethod.POST, newIosVppApp);
+    public java.util.concurrent.CompletableFuture<IosVppApp> postAsync(@Nonnull final IosVppApp newIosVppApp) {
+        return sendAsync(HttpMethod.POST, newIosVppApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosVppAppRequest extends BaseRequest<IosVppApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppApp> futurePut(@Nonnull final IosVppApp newIosVppApp) {
-        return futureSend(HttpMethod.PUT, newIosVppApp);
+    public java.util.concurrent.CompletableFuture<IosVppApp> putAsync(@Nonnull final IosVppApp newIosVppApp) {
+        return sendAsync(HttpMethod.PUT, newIosVppApp);
     }
 
     /**

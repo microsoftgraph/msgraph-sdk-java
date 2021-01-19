@@ -45,11 +45,11 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseEntityCollectionRe
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> futurePost(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> postAsync(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ClaimsMappingPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newClaimsMappingPolicy);
+            .postAsync(newClaimsMappingPolicy);
     }
 
     /**

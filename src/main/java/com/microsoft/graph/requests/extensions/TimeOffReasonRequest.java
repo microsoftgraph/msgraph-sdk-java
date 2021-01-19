@@ -40,8 +40,8 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReason> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TimeOffReason> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReason> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TimeOffReason> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReason> futurePatch(@Nonnull final TimeOffReason sourceTimeOffReason) {
-        return futureSend(HttpMethod.PATCH, sourceTimeOffReason);
+    public java.util.concurrent.CompletableFuture<TimeOffReason> patchAsync(@Nonnull final TimeOffReason sourceTimeOffReason) {
+        return sendAsync(HttpMethod.PATCH, sourceTimeOffReason);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReason> futurePost(@Nonnull final TimeOffReason newTimeOffReason) {
-        return futureSend(HttpMethod.POST, newTimeOffReason);
+    public java.util.concurrent.CompletableFuture<TimeOffReason> postAsync(@Nonnull final TimeOffReason newTimeOffReason) {
+        return sendAsync(HttpMethod.POST, newTimeOffReason);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReason> futurePut(@Nonnull final TimeOffReason newTimeOffReason) {
-        return futureSend(HttpMethod.PUT, newTimeOffReason);
+    public java.util.concurrent.CompletableFuture<TimeOffReason> putAsync(@Nonnull final TimeOffReason newTimeOffReason) {
+        return sendAsync(HttpMethod.PUT, newTimeOffReason);
     }
 
     /**

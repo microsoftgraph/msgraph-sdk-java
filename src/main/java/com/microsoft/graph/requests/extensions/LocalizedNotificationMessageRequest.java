@@ -40,8 +40,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futurePatch(@Nonnull final LocalizedNotificationMessage sourceLocalizedNotificationMessage) {
-        return futureSend(HttpMethod.PATCH, sourceLocalizedNotificationMessage);
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> patchAsync(@Nonnull final LocalizedNotificationMessage sourceLocalizedNotificationMessage) {
+        return sendAsync(HttpMethod.PATCH, sourceLocalizedNotificationMessage);
     }
 
     /**
@@ -106,8 +106,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futurePost(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
-        return futureSend(HttpMethod.POST, newLocalizedNotificationMessage);
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> postAsync(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
+        return sendAsync(HttpMethod.POST, newLocalizedNotificationMessage);
     }
 
     /**
@@ -129,8 +129,8 @@ public class LocalizedNotificationMessageRequest extends BaseRequest<LocalizedNo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futurePut(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
-        return futureSend(HttpMethod.PUT, newLocalizedNotificationMessage);
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> putAsync(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
+        return sendAsync(HttpMethod.PUT, newLocalizedNotificationMessage);
     }
 
     /**

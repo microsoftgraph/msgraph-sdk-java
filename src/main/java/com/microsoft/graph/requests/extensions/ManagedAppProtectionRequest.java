@@ -56,8 +56,8 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -77,8 +77,8 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -99,8 +99,8 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futurePatch(@Nonnull final ManagedAppProtection sourceManagedAppProtection) {
-        return futureSend(HttpMethod.PATCH, sourceManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> patchAsync(@Nonnull final ManagedAppProtection sourceManagedAppProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppProtection);
     }
 
     /**
@@ -122,8 +122,8 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futurePost(@Nonnull final ManagedAppProtection newManagedAppProtection) {
-        return futureSend(HttpMethod.POST, newManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> postAsync(@Nonnull final ManagedAppProtection newManagedAppProtection) {
+        return sendAsync(HttpMethod.POST, newManagedAppProtection);
     }
 
     /**
@@ -145,8 +145,8 @@ public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtectio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppProtection> futurePut(@Nonnull final ManagedAppProtection newManagedAppProtection) {
-        return futureSend(HttpMethod.PUT, newManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<ManagedAppProtection> putAsync(@Nonnull final ManagedAppProtection newManagedAppProtection) {
+        return sendAsync(HttpMethod.PUT, newManagedAppProtection);
     }
 
     /**

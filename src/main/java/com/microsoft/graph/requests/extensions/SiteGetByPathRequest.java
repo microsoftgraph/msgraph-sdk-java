@@ -38,8 +38,8 @@ public class SiteGetByPathRequest extends BaseRequest<Site> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Site> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

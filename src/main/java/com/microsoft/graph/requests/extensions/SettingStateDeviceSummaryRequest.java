@@ -40,8 +40,8 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futurePatch(@Nonnull final SettingStateDeviceSummary sourceSettingStateDeviceSummary) {
-        return futureSend(HttpMethod.PATCH, sourceSettingStateDeviceSummary);
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> patchAsync(@Nonnull final SettingStateDeviceSummary sourceSettingStateDeviceSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceSettingStateDeviceSummary);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futurePost(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) {
-        return futureSend(HttpMethod.POST, newSettingStateDeviceSummary);
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> postAsync(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) {
+        return sendAsync(HttpMethod.POST, newSettingStateDeviceSummary);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futurePut(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) {
-        return futureSend(HttpMethod.PUT, newSettingStateDeviceSummary);
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> putAsync(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) {
+        return sendAsync(HttpMethod.PUT, newSettingStateDeviceSummary);
     }
 
     /**

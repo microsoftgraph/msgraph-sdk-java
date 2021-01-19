@@ -44,8 +44,8 @@ public class OrganizationRequest extends BaseRequest<Organization> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Organization> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Organization> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,8 +65,8 @@ public class OrganizationRequest extends BaseRequest<Organization> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Organization> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Organization> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -87,8 +87,8 @@ public class OrganizationRequest extends BaseRequest<Organization> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Organization> futurePatch(@Nonnull final Organization sourceOrganization) {
-        return futureSend(HttpMethod.PATCH, sourceOrganization);
+    public java.util.concurrent.CompletableFuture<Organization> patchAsync(@Nonnull final Organization sourceOrganization) {
+        return sendAsync(HttpMethod.PATCH, sourceOrganization);
     }
 
     /**
@@ -110,8 +110,8 @@ public class OrganizationRequest extends BaseRequest<Organization> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Organization> futurePost(@Nonnull final Organization newOrganization) {
-        return futureSend(HttpMethod.POST, newOrganization);
+    public java.util.concurrent.CompletableFuture<Organization> postAsync(@Nonnull final Organization newOrganization) {
+        return sendAsync(HttpMethod.POST, newOrganization);
     }
 
     /**
@@ -133,8 +133,8 @@ public class OrganizationRequest extends BaseRequest<Organization> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Organization> futurePut(@Nonnull final Organization newOrganization) {
-        return futureSend(HttpMethod.PUT, newOrganization);
+    public java.util.concurrent.CompletableFuture<Organization> putAsync(@Nonnull final Organization newOrganization) {
+        return sendAsync(HttpMethod.PUT, newOrganization);
     }
 
     /**

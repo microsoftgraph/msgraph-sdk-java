@@ -45,11 +45,11 @@ public class SchedulingGroupCollectionRequest extends BaseEntityCollectionReques
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroup> futurePost(@Nonnull final SchedulingGroup newSchedulingGroup) {
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> postAsync(@Nonnull final SchedulingGroup newSchedulingGroup) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSchedulingGroup);
+            .postAsync(newSchedulingGroup);
     }
 
     /**

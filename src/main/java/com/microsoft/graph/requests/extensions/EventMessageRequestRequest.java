@@ -40,8 +40,8 @@ public class EventMessageRequestRequest extends BaseRequest<EventMessageRequest>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EventMessageRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EventMessageRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class EventMessageRequestRequest extends BaseRequest<EventMessageRequest>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EventMessageRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<EventMessageRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class EventMessageRequestRequest extends BaseRequest<EventMessageRequest>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EventMessageRequest> futurePatch(@Nonnull final EventMessageRequest sourceEventMessageRequest) {
-        return futureSend(HttpMethod.PATCH, sourceEventMessageRequest);
+    public java.util.concurrent.CompletableFuture<EventMessageRequest> patchAsync(@Nonnull final EventMessageRequest sourceEventMessageRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceEventMessageRequest);
     }
 
     /**
@@ -106,8 +106,8 @@ public class EventMessageRequestRequest extends BaseRequest<EventMessageRequest>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EventMessageRequest> futurePost(@Nonnull final EventMessageRequest newEventMessageRequest) {
-        return futureSend(HttpMethod.POST, newEventMessageRequest);
+    public java.util.concurrent.CompletableFuture<EventMessageRequest> postAsync(@Nonnull final EventMessageRequest newEventMessageRequest) {
+        return sendAsync(HttpMethod.POST, newEventMessageRequest);
     }
 
     /**
@@ -129,8 +129,8 @@ public class EventMessageRequestRequest extends BaseRequest<EventMessageRequest>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EventMessageRequest> futurePut(@Nonnull final EventMessageRequest newEventMessageRequest) {
-        return futureSend(HttpMethod.PUT, newEventMessageRequest);
+    public java.util.concurrent.CompletableFuture<EventMessageRequest> putAsync(@Nonnull final EventMessageRequest newEventMessageRequest) {
+        return sendAsync(HttpMethod.PUT, newEventMessageRequest);
     }
 
     /**

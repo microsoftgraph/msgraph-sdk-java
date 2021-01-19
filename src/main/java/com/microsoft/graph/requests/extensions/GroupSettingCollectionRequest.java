@@ -44,11 +44,11 @@ public class GroupSettingCollectionRequest extends BaseEntityCollectionRequest<G
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSetting> futurePost(@Nonnull final GroupSetting newGroupSetting) {
+    public java.util.concurrent.CompletableFuture<GroupSetting> postAsync(@Nonnull final GroupSetting newGroupSetting) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newGroupSetting);
+            .postAsync(newGroupSetting);
     }
 
     /**

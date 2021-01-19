@@ -45,11 +45,11 @@ public class TodoTaskCollectionRequest extends BaseEntityCollectionRequest<TodoT
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TodoTask> futurePost(@Nonnull final TodoTask newTodoTask) {
+    public java.util.concurrent.CompletableFuture<TodoTask> postAsync(@Nonnull final TodoTask newTodoTask) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TodoTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTodoTask);
+            .postAsync(newTodoTask);
     }
 
     /**

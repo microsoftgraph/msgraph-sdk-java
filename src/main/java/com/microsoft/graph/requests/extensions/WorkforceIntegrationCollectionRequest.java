@@ -45,11 +45,11 @@ public class WorkforceIntegrationCollectionRequest extends BaseEntityCollectionR
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegration> futurePost(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> postAsync(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWorkforceIntegration);
+            .postAsync(newWorkforceIntegration);
     }
 
     /**

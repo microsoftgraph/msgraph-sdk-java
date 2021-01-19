@@ -45,11 +45,11 @@ public class ExtensionPropertyCollectionRequest extends BaseEntityCollectionRequ
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ExtensionProperty> futurePost(@Nonnull final ExtensionProperty newExtensionProperty) {
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> postAsync(@Nonnull final ExtensionProperty newExtensionProperty) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExtensionPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newExtensionProperty);
+            .postAsync(newExtensionProperty);
     }
 
     /**

@@ -46,11 +46,11 @@ public class ServicePrincipalCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ServicePrincipal> futurePost(@Nonnull final ServicePrincipal newServicePrincipal) {
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> postAsync(@Nonnull final ServicePrincipal newServicePrincipal) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newServicePrincipal);
+            .postAsync(newServicePrincipal);
     }
 
     /**

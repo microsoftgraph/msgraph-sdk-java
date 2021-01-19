@@ -45,11 +45,11 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseEntityCol
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceSettingState> futurePost(@Nonnull final DeviceComplianceSettingState newDeviceComplianceSettingState) {
+    public java.util.concurrent.CompletableFuture<DeviceComplianceSettingState> postAsync(@Nonnull final DeviceComplianceSettingState newDeviceComplianceSettingState) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceComplianceSettingState);
+            .postAsync(newDeviceComplianceSettingState);
     }
 
     /**

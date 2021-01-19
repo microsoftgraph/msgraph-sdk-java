@@ -45,11 +45,11 @@ public class WorkbookCommentReplyCollectionRequest extends BaseEntityCollectionR
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookCommentReply> futurePost(@Nonnull final WorkbookCommentReply newWorkbookCommentReply) {
+    public java.util.concurrent.CompletableFuture<WorkbookCommentReply> postAsync(@Nonnull final WorkbookCommentReply newWorkbookCommentReply) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookCommentReplyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWorkbookCommentReply);
+            .postAsync(newWorkbookCommentReply);
     }
 
     /**

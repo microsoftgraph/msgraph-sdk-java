@@ -40,8 +40,8 @@ public class AndroidCustomConfigurationRequest extends BaseRequest<AndroidCustom
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AndroidCustomConfigurationRequest extends BaseRequest<AndroidCustom
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AndroidCustomConfigurationRequest extends BaseRequest<AndroidCustom
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> futurePatch(@Nonnull final AndroidCustomConfiguration sourceAndroidCustomConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceAndroidCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> patchAsync(@Nonnull final AndroidCustomConfiguration sourceAndroidCustomConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidCustomConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AndroidCustomConfigurationRequest extends BaseRequest<AndroidCustom
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> futurePost(@Nonnull final AndroidCustomConfiguration newAndroidCustomConfiguration) {
-        return futureSend(HttpMethod.POST, newAndroidCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> postAsync(@Nonnull final AndroidCustomConfiguration newAndroidCustomConfiguration) {
+        return sendAsync(HttpMethod.POST, newAndroidCustomConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AndroidCustomConfigurationRequest extends BaseRequest<AndroidCustom
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> futurePut(@Nonnull final AndroidCustomConfiguration newAndroidCustomConfiguration) {
-        return futureSend(HttpMethod.PUT, newAndroidCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidCustomConfiguration> putAsync(@Nonnull final AndroidCustomConfiguration newAndroidCustomConfiguration) {
+        return sendAsync(HttpMethod.PUT, newAndroidCustomConfiguration);
     }
 
     /**

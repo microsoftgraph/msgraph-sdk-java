@@ -42,8 +42,8 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest<Boolean> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Boolean> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<Boolean> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

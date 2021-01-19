@@ -40,8 +40,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> futurePatch(@Nonnull final DeviceCompliancePolicyDeviceStateSummary sourceDeviceCompliancePolicyDeviceStateSummary) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceCompliancePolicyDeviceStateSummary);
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> patchAsync(@Nonnull final DeviceCompliancePolicyDeviceStateSummary sourceDeviceCompliancePolicyDeviceStateSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceCompliancePolicyDeviceStateSummary);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> futurePost(@Nonnull final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) {
-        return futureSend(HttpMethod.POST, newDeviceCompliancePolicyDeviceStateSummary);
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> postAsync(@Nonnull final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) {
+        return sendAsync(HttpMethod.POST, newDeviceCompliancePolicyDeviceStateSummary);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> futurePut(@Nonnull final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) {
-        return futureSend(HttpMethod.PUT, newDeviceCompliancePolicyDeviceStateSummary);
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> putAsync(@Nonnull final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) {
+        return sendAsync(HttpMethod.PUT, newDeviceCompliancePolicyDeviceStateSummary);
     }
 
     /**

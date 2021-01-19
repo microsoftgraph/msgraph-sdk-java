@@ -40,8 +40,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> futurePatch(@Nonnull final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent) {
-        return futureSend(HttpMethod.PATCH, sourceEnrollmentTroubleshootingEvent);
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> patchAsync(@Nonnull final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent) {
+        return sendAsync(HttpMethod.PATCH, sourceEnrollmentTroubleshootingEvent);
     }
 
     /**
@@ -106,8 +106,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> futurePost(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) {
-        return futureSend(HttpMethod.POST, newEnrollmentTroubleshootingEvent);
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> postAsync(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) {
+        return sendAsync(HttpMethod.POST, newEnrollmentTroubleshootingEvent);
     }
 
     /**
@@ -129,8 +129,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> futurePut(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) {
-        return futureSend(HttpMethod.PUT, newEnrollmentTroubleshootingEvent);
+    public java.util.concurrent.CompletableFuture<EnrollmentTroubleshootingEvent> putAsync(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) {
+        return sendAsync(HttpMethod.PUT, newEnrollmentTroubleshootingEvent);
     }
 
     /**

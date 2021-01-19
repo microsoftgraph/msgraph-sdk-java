@@ -60,8 +60,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ServicePrincipal> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -81,8 +81,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ServicePrincipal> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -103,8 +103,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ServicePrincipal> futurePatch(@Nonnull final ServicePrincipal sourceServicePrincipal) {
-        return futureSend(HttpMethod.PATCH, sourceServicePrincipal);
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> patchAsync(@Nonnull final ServicePrincipal sourceServicePrincipal) {
+        return sendAsync(HttpMethod.PATCH, sourceServicePrincipal);
     }
 
     /**
@@ -126,8 +126,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ServicePrincipal> futurePost(@Nonnull final ServicePrincipal newServicePrincipal) {
-        return futureSend(HttpMethod.POST, newServicePrincipal);
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> postAsync(@Nonnull final ServicePrincipal newServicePrincipal) {
+        return sendAsync(HttpMethod.POST, newServicePrincipal);
     }
 
     /**
@@ -149,8 +149,8 @@ public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ServicePrincipal> futurePut(@Nonnull final ServicePrincipal newServicePrincipal) {
-        return futureSend(HttpMethod.PUT, newServicePrincipal);
+    public java.util.concurrent.CompletableFuture<ServicePrincipal> putAsync(@Nonnull final ServicePrincipal newServicePrincipal) {
+        return sendAsync(HttpMethod.PUT, newServicePrincipal);
     }
 
     /**

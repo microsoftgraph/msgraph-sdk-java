@@ -45,11 +45,11 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> futurePost(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) {
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> postAsync(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedDeviceMobileAppConfigurationAssignment);
+            .postAsync(newManagedDeviceMobileAppConfigurationAssignment);
     }
 
     /**

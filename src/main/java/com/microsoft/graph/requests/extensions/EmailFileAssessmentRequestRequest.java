@@ -40,8 +40,8 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest<EmailFileAsse
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest<EmailFileAsse
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest<EmailFileAsse
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> futurePatch(@Nonnull final EmailFileAssessmentRequest sourceEmailFileAssessmentRequest) {
-        return futureSend(HttpMethod.PATCH, sourceEmailFileAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> patchAsync(@Nonnull final EmailFileAssessmentRequest sourceEmailFileAssessmentRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceEmailFileAssessmentRequest);
     }
 
     /**
@@ -106,8 +106,8 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest<EmailFileAsse
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> futurePost(@Nonnull final EmailFileAssessmentRequest newEmailFileAssessmentRequest) {
-        return futureSend(HttpMethod.POST, newEmailFileAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> postAsync(@Nonnull final EmailFileAssessmentRequest newEmailFileAssessmentRequest) {
+        return sendAsync(HttpMethod.POST, newEmailFileAssessmentRequest);
     }
 
     /**
@@ -129,8 +129,8 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest<EmailFileAsse
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> futurePut(@Nonnull final EmailFileAssessmentRequest newEmailFileAssessmentRequest) {
-        return futureSend(HttpMethod.PUT, newEmailFileAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<EmailFileAssessmentRequest> putAsync(@Nonnull final EmailFileAssessmentRequest newEmailFileAssessmentRequest) {
+        return sendAsync(HttpMethod.PUT, newEmailFileAssessmentRequest);
     }
 
     /**

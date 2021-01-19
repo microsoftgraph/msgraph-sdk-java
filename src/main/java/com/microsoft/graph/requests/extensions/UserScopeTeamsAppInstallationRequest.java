@@ -41,8 +41,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> futurePatch(@Nonnull final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation) {
-        return futureSend(HttpMethod.PATCH, sourceUserScopeTeamsAppInstallation);
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> patchAsync(@Nonnull final UserScopeTeamsAppInstallation sourceUserScopeTeamsAppInstallation) {
+        return sendAsync(HttpMethod.PATCH, sourceUserScopeTeamsAppInstallation);
     }
 
     /**
@@ -107,8 +107,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> futurePost(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
-        return futureSend(HttpMethod.POST, newUserScopeTeamsAppInstallation);
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> postAsync(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
+        return sendAsync(HttpMethod.POST, newUserScopeTeamsAppInstallation);
     }
 
     /**
@@ -130,8 +130,8 @@ public class UserScopeTeamsAppInstallationRequest extends BaseRequest<UserScopeT
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> futurePut(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
-        return futureSend(HttpMethod.PUT, newUserScopeTeamsAppInstallation);
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> putAsync(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
+        return sendAsync(HttpMethod.PUT, newUserScopeTeamsAppInstallation);
     }
 
     /**

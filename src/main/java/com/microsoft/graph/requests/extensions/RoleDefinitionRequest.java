@@ -57,8 +57,8 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<RoleDefinition> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -78,8 +78,8 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<RoleDefinition> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -100,8 +100,8 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> futurePatch(@Nonnull final RoleDefinition sourceRoleDefinition) {
-        return futureSend(HttpMethod.PATCH, sourceRoleDefinition);
+    public java.util.concurrent.CompletableFuture<RoleDefinition> patchAsync(@Nonnull final RoleDefinition sourceRoleDefinition) {
+        return sendAsync(HttpMethod.PATCH, sourceRoleDefinition);
     }
 
     /**
@@ -123,8 +123,8 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> futurePost(@Nonnull final RoleDefinition newRoleDefinition) {
-        return futureSend(HttpMethod.POST, newRoleDefinition);
+    public java.util.concurrent.CompletableFuture<RoleDefinition> postAsync(@Nonnull final RoleDefinition newRoleDefinition) {
+        return sendAsync(HttpMethod.POST, newRoleDefinition);
     }
 
     /**
@@ -146,8 +146,8 @@ public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> futurePut(@Nonnull final RoleDefinition newRoleDefinition) {
-        return futureSend(HttpMethod.PUT, newRoleDefinition);
+    public java.util.concurrent.CompletableFuture<RoleDefinition> putAsync(@Nonnull final RoleDefinition newRoleDefinition) {
+        return sendAsync(HttpMethod.PUT, newRoleDefinition);
     }
 
     /**

@@ -45,11 +45,11 @@ public class NamedLocationCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NamedLocation> futurePost(@Nonnull final NamedLocation newNamedLocation) {
+    public java.util.concurrent.CompletableFuture<NamedLocation> postAsync(@Nonnull final NamedLocation newNamedLocation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newNamedLocation);
+            .postAsync(newNamedLocation);
     }
 
     /**

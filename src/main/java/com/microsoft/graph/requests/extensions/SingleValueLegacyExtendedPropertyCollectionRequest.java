@@ -45,11 +45,11 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseEnti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> futurePost(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) {
+    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> postAsync(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSingleValueLegacyExtendedProperty);
+            .postAsync(newSingleValueLegacyExtendedProperty);
     }
 
     /**

@@ -42,8 +42,8 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futurePatch(@Nonnull final NotificationMessageTemplate sourceNotificationMessageTemplate) {
-        return futureSend(HttpMethod.PATCH, sourceNotificationMessageTemplate);
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patchAsync(@Nonnull final NotificationMessageTemplate sourceNotificationMessageTemplate) {
+        return sendAsync(HttpMethod.PATCH, sourceNotificationMessageTemplate);
     }
 
     /**
@@ -108,8 +108,8 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futurePost(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
-        return futureSend(HttpMethod.POST, newNotificationMessageTemplate);
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> postAsync(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
+        return sendAsync(HttpMethod.POST, newNotificationMessageTemplate);
     }
 
     /**
@@ -131,8 +131,8 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futurePut(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
-        return futureSend(HttpMethod.PUT, newNotificationMessageTemplate);
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> putAsync(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
+        return sendAsync(HttpMethod.PUT, newNotificationMessageTemplate);
     }
 
     /**

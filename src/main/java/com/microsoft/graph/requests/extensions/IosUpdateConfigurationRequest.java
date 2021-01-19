@@ -40,8 +40,8 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> futurePatch(@Nonnull final IosUpdateConfiguration sourceIosUpdateConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceIosUpdateConfiguration);
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> patchAsync(@Nonnull final IosUpdateConfiguration sourceIosUpdateConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosUpdateConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> futurePost(@Nonnull final IosUpdateConfiguration newIosUpdateConfiguration) {
-        return futureSend(HttpMethod.POST, newIosUpdateConfiguration);
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> postAsync(@Nonnull final IosUpdateConfiguration newIosUpdateConfiguration) {
+        return sendAsync(HttpMethod.POST, newIosUpdateConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosUpdateConfigurationRequest extends BaseRequest<IosUpdateConfigur
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> futurePut(@Nonnull final IosUpdateConfiguration newIosUpdateConfiguration) {
-        return futureSend(HttpMethod.PUT, newIosUpdateConfiguration);
+    public java.util.concurrent.CompletableFuture<IosUpdateConfiguration> putAsync(@Nonnull final IosUpdateConfiguration newIosUpdateConfiguration) {
+        return sendAsync(HttpMethod.PUT, newIosUpdateConfiguration);
     }
 
     /**

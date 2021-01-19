@@ -40,8 +40,8 @@ public class WindowsMobileMSIRequest extends BaseRequest<WindowsMobileMSI> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsMobileMSIRequest extends BaseRequest<WindowsMobileMSI> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsMobileMSIRequest extends BaseRequest<WindowsMobileMSI> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> futurePatch(@Nonnull final WindowsMobileMSI sourceWindowsMobileMSI) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsMobileMSI);
+    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> patchAsync(@Nonnull final WindowsMobileMSI sourceWindowsMobileMSI) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsMobileMSI);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsMobileMSIRequest extends BaseRequest<WindowsMobileMSI> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> futurePost(@Nonnull final WindowsMobileMSI newWindowsMobileMSI) {
-        return futureSend(HttpMethod.POST, newWindowsMobileMSI);
+    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> postAsync(@Nonnull final WindowsMobileMSI newWindowsMobileMSI) {
+        return sendAsync(HttpMethod.POST, newWindowsMobileMSI);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsMobileMSIRequest extends BaseRequest<WindowsMobileMSI> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> futurePut(@Nonnull final WindowsMobileMSI newWindowsMobileMSI) {
-        return futureSend(HttpMethod.PUT, newWindowsMobileMSI);
+    public java.util.concurrent.CompletableFuture<WindowsMobileMSI> putAsync(@Nonnull final WindowsMobileMSI newWindowsMobileMSI) {
+        return sendAsync(HttpMethod.PUT, newWindowsMobileMSI);
     }
 
     /**

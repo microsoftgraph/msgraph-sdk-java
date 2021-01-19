@@ -45,11 +45,11 @@ public class WorkbookPivotTableCollectionRequest extends BaseEntityCollectionReq
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> futurePost(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) {
+    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> postAsync(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookPivotTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWorkbookPivotTable);
+            .postAsync(newWorkbookPivotTable);
     }
 
     /**

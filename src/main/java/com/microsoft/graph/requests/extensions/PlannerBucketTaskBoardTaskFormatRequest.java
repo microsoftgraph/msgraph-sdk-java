@@ -40,8 +40,8 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest<Planner
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest<Planner
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest<Planner
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> futurePatch(@Nonnull final PlannerBucketTaskBoardTaskFormat sourcePlannerBucketTaskBoardTaskFormat) {
-        return futureSend(HttpMethod.PATCH, sourcePlannerBucketTaskBoardTaskFormat);
+    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> patchAsync(@Nonnull final PlannerBucketTaskBoardTaskFormat sourcePlannerBucketTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.PATCH, sourcePlannerBucketTaskBoardTaskFormat);
     }
 
     /**
@@ -106,8 +106,8 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest<Planner
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> futurePost(@Nonnull final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat) {
-        return futureSend(HttpMethod.POST, newPlannerBucketTaskBoardTaskFormat);
+    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> postAsync(@Nonnull final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.POST, newPlannerBucketTaskBoardTaskFormat);
     }
 
     /**
@@ -129,8 +129,8 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest<Planner
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> futurePut(@Nonnull final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat) {
-        return futureSend(HttpMethod.PUT, newPlannerBucketTaskBoardTaskFormat);
+    public java.util.concurrent.CompletableFuture<PlannerBucketTaskBoardTaskFormat> putAsync(@Nonnull final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat) {
+        return sendAsync(HttpMethod.PUT, newPlannerBucketTaskBoardTaskFormat);
     }
 
     /**

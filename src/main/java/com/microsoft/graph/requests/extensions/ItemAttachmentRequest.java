@@ -41,8 +41,8 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAttachment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ItemAttachment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAttachment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ItemAttachment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAttachment> futurePatch(@Nonnull final ItemAttachment sourceItemAttachment) {
-        return futureSend(HttpMethod.PATCH, sourceItemAttachment);
+    public java.util.concurrent.CompletableFuture<ItemAttachment> patchAsync(@Nonnull final ItemAttachment sourceItemAttachment) {
+        return sendAsync(HttpMethod.PATCH, sourceItemAttachment);
     }
 
     /**
@@ -107,8 +107,8 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAttachment> futurePost(@Nonnull final ItemAttachment newItemAttachment) {
-        return futureSend(HttpMethod.POST, newItemAttachment);
+    public java.util.concurrent.CompletableFuture<ItemAttachment> postAsync(@Nonnull final ItemAttachment newItemAttachment) {
+        return sendAsync(HttpMethod.POST, newItemAttachment);
     }
 
     /**
@@ -130,8 +130,8 @@ public class ItemAttachmentRequest extends BaseRequest<ItemAttachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAttachment> futurePut(@Nonnull final ItemAttachment newItemAttachment) {
-        return futureSend(HttpMethod.PUT, newItemAttachment);
+    public java.util.concurrent.CompletableFuture<ItemAttachment> putAsync(@Nonnull final ItemAttachment newItemAttachment) {
+        return sendAsync(HttpMethod.PUT, newItemAttachment);
     }
 
     /**

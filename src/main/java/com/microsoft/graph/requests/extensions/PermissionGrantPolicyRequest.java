@@ -42,8 +42,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> futurePatch(@Nonnull final PermissionGrantPolicy sourcePermissionGrantPolicy) {
-        return futureSend(HttpMethod.PATCH, sourcePermissionGrantPolicy);
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> patchAsync(@Nonnull final PermissionGrantPolicy sourcePermissionGrantPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourcePermissionGrantPolicy);
     }
 
     /**
@@ -108,8 +108,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> futurePost(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) {
-        return futureSend(HttpMethod.POST, newPermissionGrantPolicy);
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> postAsync(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) {
+        return sendAsync(HttpMethod.POST, newPermissionGrantPolicy);
     }
 
     /**
@@ -131,8 +131,8 @@ public class PermissionGrantPolicyRequest extends BaseRequest<PermissionGrantPol
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> futurePut(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) {
-        return futureSend(HttpMethod.PUT, newPermissionGrantPolicy);
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> putAsync(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) {
+        return sendAsync(HttpMethod.PUT, newPermissionGrantPolicy);
     }
 
     /**

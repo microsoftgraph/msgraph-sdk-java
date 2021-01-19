@@ -51,12 +51,12 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionWit
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> futurePost(@Nonnull final DirectoryObject newDirectoryObject) {
+    public java.util.concurrent.CompletableFuture<DirectoryObject> postAsync(@Nonnull final DirectoryObject newDirectoryObject) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/directoryObjects/" + newDirectoryObject.id);
         return new DirectoryObjectWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDirectoryObject, body);
+            .postAsync(newDirectoryObject, body);
     }
 
     /**

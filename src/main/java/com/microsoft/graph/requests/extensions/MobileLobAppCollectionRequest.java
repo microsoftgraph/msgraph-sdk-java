@@ -45,11 +45,11 @@ public class MobileLobAppCollectionRequest extends BaseEntityCollectionRequest<M
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileLobApp> futurePost(@Nonnull final MobileLobApp newMobileLobApp) {
+    public java.util.concurrent.CompletableFuture<MobileLobApp> postAsync(@Nonnull final MobileLobApp newMobileLobApp) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileLobAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMobileLobApp);
+            .postAsync(newMobileLobApp);
     }
 
     /**

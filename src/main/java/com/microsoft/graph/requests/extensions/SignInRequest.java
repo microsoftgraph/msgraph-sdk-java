@@ -55,8 +55,8 @@ public class SignInRequest extends BaseRequest<SignIn> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SignIn> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SignIn> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class SignInRequest extends BaseRequest<SignIn> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SignIn> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SignIn> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class SignInRequest extends BaseRequest<SignIn> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SignIn> futurePatch(@Nonnull final SignIn sourceSignIn) {
-        return futureSend(HttpMethod.PATCH, sourceSignIn);
+    public java.util.concurrent.CompletableFuture<SignIn> patchAsync(@Nonnull final SignIn sourceSignIn) {
+        return sendAsync(HttpMethod.PATCH, sourceSignIn);
     }
 
     /**
@@ -121,8 +121,8 @@ public class SignInRequest extends BaseRequest<SignIn> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SignIn> futurePost(@Nonnull final SignIn newSignIn) {
-        return futureSend(HttpMethod.POST, newSignIn);
+    public java.util.concurrent.CompletableFuture<SignIn> postAsync(@Nonnull final SignIn newSignIn) {
+        return sendAsync(HttpMethod.POST, newSignIn);
     }
 
     /**
@@ -144,8 +144,8 @@ public class SignInRequest extends BaseRequest<SignIn> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SignIn> futurePut(@Nonnull final SignIn newSignIn) {
-        return futureSend(HttpMethod.PUT, newSignIn);
+    public java.util.concurrent.CompletableFuture<SignIn> putAsync(@Nonnull final SignIn newSignIn) {
+        return sendAsync(HttpMethod.PUT, newSignIn);
     }
 
     /**

@@ -40,8 +40,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> futurePatch(@Nonnull final PermissionGrantConditionSet sourcePermissionGrantConditionSet) {
-        return futureSend(HttpMethod.PATCH, sourcePermissionGrantConditionSet);
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> patchAsync(@Nonnull final PermissionGrantConditionSet sourcePermissionGrantConditionSet) {
+        return sendAsync(HttpMethod.PATCH, sourcePermissionGrantConditionSet);
     }
 
     /**
@@ -106,8 +106,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> futurePost(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
-        return futureSend(HttpMethod.POST, newPermissionGrantConditionSet);
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> postAsync(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
+        return sendAsync(HttpMethod.POST, newPermissionGrantConditionSet);
     }
 
     /**
@@ -129,8 +129,8 @@ public class PermissionGrantConditionSetRequest extends BaseRequest<PermissionGr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> futurePut(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
-        return futureSend(HttpMethod.PUT, newPermissionGrantConditionSet);
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> putAsync(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
+        return sendAsync(HttpMethod.PUT, newPermissionGrantConditionSet);
     }
 
     /**

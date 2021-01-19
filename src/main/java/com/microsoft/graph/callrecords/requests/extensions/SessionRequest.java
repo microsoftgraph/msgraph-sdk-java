@@ -42,8 +42,8 @@ public class SessionRequest extends BaseRequest<Session> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Session> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Session> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class SessionRequest extends BaseRequest<Session> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Session> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Session> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class SessionRequest extends BaseRequest<Session> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Session> futurePatch(@Nonnull final Session sourceSession) {
-        return futureSend(HttpMethod.PATCH, sourceSession);
+    public java.util.concurrent.CompletableFuture<Session> patchAsync(@Nonnull final Session sourceSession) {
+        return sendAsync(HttpMethod.PATCH, sourceSession);
     }
 
     /**
@@ -108,8 +108,8 @@ public class SessionRequest extends BaseRequest<Session> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Session> futurePost(@Nonnull final Session newSession) {
-        return futureSend(HttpMethod.POST, newSession);
+    public java.util.concurrent.CompletableFuture<Session> postAsync(@Nonnull final Session newSession) {
+        return sendAsync(HttpMethod.POST, newSession);
     }
 
     /**
@@ -131,8 +131,8 @@ public class SessionRequest extends BaseRequest<Session> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Session> futurePut(@Nonnull final Session newSession) {
-        return futureSend(HttpMethod.PUT, newSession);
+    public java.util.concurrent.CompletableFuture<Session> putAsync(@Nonnull final Session newSession) {
+        return sendAsync(HttpMethod.PUT, newSession);
     }
 
     /**

@@ -45,11 +45,11 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseEntityColle
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> futurePost(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) {
+    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> postAsync(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newActivityBasedTimeoutPolicy);
+            .postAsync(newActivityBasedTimeoutPolicy);
     }
 
     /**

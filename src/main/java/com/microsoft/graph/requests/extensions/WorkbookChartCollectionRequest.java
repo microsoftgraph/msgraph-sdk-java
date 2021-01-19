@@ -45,11 +45,11 @@ public class WorkbookChartCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> futurePost(@Nonnull final WorkbookChart newWorkbookChart) {
+    public java.util.concurrent.CompletableFuture<WorkbookChart> postAsync(@Nonnull final WorkbookChart newWorkbookChart) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWorkbookChart);
+            .postAsync(newWorkbookChart);
     }
 
     /**

@@ -44,8 +44,8 @@ public class DeviceRequest extends BaseRequest<Device> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Device> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Device> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,8 +65,8 @@ public class DeviceRequest extends BaseRequest<Device> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Device> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Device> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -87,8 +87,8 @@ public class DeviceRequest extends BaseRequest<Device> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Device> futurePatch(@Nonnull final Device sourceDevice) {
-        return futureSend(HttpMethod.PATCH, sourceDevice);
+    public java.util.concurrent.CompletableFuture<Device> patchAsync(@Nonnull final Device sourceDevice) {
+        return sendAsync(HttpMethod.PATCH, sourceDevice);
     }
 
     /**
@@ -110,8 +110,8 @@ public class DeviceRequest extends BaseRequest<Device> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Device> futurePost(@Nonnull final Device newDevice) {
-        return futureSend(HttpMethod.POST, newDevice);
+    public java.util.concurrent.CompletableFuture<Device> postAsync(@Nonnull final Device newDevice) {
+        return sendAsync(HttpMethod.POST, newDevice);
     }
 
     /**
@@ -133,8 +133,8 @@ public class DeviceRequest extends BaseRequest<Device> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Device> futurePut(@Nonnull final Device newDevice) {
-        return futureSend(HttpMethod.PUT, newDevice);
+    public java.util.concurrent.CompletableFuture<Device> putAsync(@Nonnull final Device newDevice) {
+        return sendAsync(HttpMethod.PUT, newDevice);
     }
 
     /**

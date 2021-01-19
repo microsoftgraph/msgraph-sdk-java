@@ -55,8 +55,8 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecord> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecord> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecord> futurePatch(@Nonnull final DomainDnsRecord sourceDomainDnsRecord) {
-        return futureSend(HttpMethod.PATCH, sourceDomainDnsRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> patchAsync(@Nonnull final DomainDnsRecord sourceDomainDnsRecord) {
+        return sendAsync(HttpMethod.PATCH, sourceDomainDnsRecord);
     }
 
     /**
@@ -121,8 +121,8 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecord> futurePost(@Nonnull final DomainDnsRecord newDomainDnsRecord) {
-        return futureSend(HttpMethod.POST, newDomainDnsRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> postAsync(@Nonnull final DomainDnsRecord newDomainDnsRecord) {
+        return sendAsync(HttpMethod.POST, newDomainDnsRecord);
     }
 
     /**
@@ -144,8 +144,8 @@ public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsRecord> futurePut(@Nonnull final DomainDnsRecord newDomainDnsRecord) {
-        return futureSend(HttpMethod.PUT, newDomainDnsRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsRecord> putAsync(@Nonnull final DomainDnsRecord newDomainDnsRecord) {
+        return sendAsync(HttpMethod.PUT, newDomainDnsRecord);
     }
 
     /**

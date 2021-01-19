@@ -42,8 +42,8 @@ public class MailFolderMoveRequest extends BaseRequest<MailFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolder> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<MailFolder> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

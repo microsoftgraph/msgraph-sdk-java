@@ -40,8 +40,8 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnDefinition> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnDefinition> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnDefinition> futurePatch(@Nonnull final ColumnDefinition sourceColumnDefinition) {
-        return futureSend(HttpMethod.PATCH, sourceColumnDefinition);
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> patchAsync(@Nonnull final ColumnDefinition sourceColumnDefinition) {
+        return sendAsync(HttpMethod.PATCH, sourceColumnDefinition);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnDefinition> futurePost(@Nonnull final ColumnDefinition newColumnDefinition) {
-        return futureSend(HttpMethod.POST, newColumnDefinition);
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> postAsync(@Nonnull final ColumnDefinition newColumnDefinition) {
+        return sendAsync(HttpMethod.POST, newColumnDefinition);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ColumnDefinitionRequest extends BaseRequest<ColumnDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnDefinition> futurePut(@Nonnull final ColumnDefinition newColumnDefinition) {
-        return futureSend(HttpMethod.PUT, newColumnDefinition);
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> putAsync(@Nonnull final ColumnDefinition newColumnDefinition) {
+        return sendAsync(HttpMethod.PUT, newColumnDefinition);
     }
 
     /**

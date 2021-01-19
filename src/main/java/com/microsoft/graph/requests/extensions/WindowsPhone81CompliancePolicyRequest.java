@@ -40,8 +40,8 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> futurePatch(@Nonnull final WindowsPhone81CompliancePolicy sourceWindowsPhone81CompliancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsPhone81CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> patchAsync(@Nonnull final WindowsPhone81CompliancePolicy sourceWindowsPhone81CompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsPhone81CompliancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> futurePost(@Nonnull final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy) {
-        return futureSend(HttpMethod.POST, newWindowsPhone81CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> postAsync(@Nonnull final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newWindowsPhone81CompliancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest<WindowsPh
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> futurePut(@Nonnull final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy) {
-        return futureSend(HttpMethod.PUT, newWindowsPhone81CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CompliancePolicy> putAsync(@Nonnull final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newWindowsPhone81CompliancePolicy);
     }
 
     /**

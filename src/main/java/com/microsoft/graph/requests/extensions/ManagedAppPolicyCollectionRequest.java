@@ -46,11 +46,11 @@ public class ManagedAppPolicyCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> futurePost(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicy> postAsync(@Nonnull final ManagedAppPolicy newManagedAppPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedAppPolicy);
+            .postAsync(newManagedAppPolicy);
     }
 
     /**

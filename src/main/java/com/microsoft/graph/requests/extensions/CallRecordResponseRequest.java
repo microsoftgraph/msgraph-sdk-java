@@ -43,8 +43,8 @@ public class CallRecordResponseRequest extends BaseRequest<RecordOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RecordOperation> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<RecordOperation> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

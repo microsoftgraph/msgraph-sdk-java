@@ -40,8 +40,8 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futurePatch(@Nonnull final AndroidWorkProfileCompliancePolicy sourceAndroidWorkProfileCompliancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceAndroidWorkProfileCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> patchAsync(@Nonnull final AndroidWorkProfileCompliancePolicy sourceAndroidWorkProfileCompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidWorkProfileCompliancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futurePost(@Nonnull final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy) {
-        return futureSend(HttpMethod.POST, newAndroidWorkProfileCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> postAsync(@Nonnull final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newAndroidWorkProfileCompliancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest<Andro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> futurePut(@Nonnull final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy) {
-        return futureSend(HttpMethod.PUT, newAndroidWorkProfileCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCompliancePolicy> putAsync(@Nonnull final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newAndroidWorkProfileCompliancePolicy);
     }
 
     /**

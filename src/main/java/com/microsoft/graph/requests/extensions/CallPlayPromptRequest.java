@@ -43,8 +43,8 @@ public class CallPlayPromptRequest extends BaseRequest<PlayPromptOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlayPromptOperation> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<PlayPromptOperation> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

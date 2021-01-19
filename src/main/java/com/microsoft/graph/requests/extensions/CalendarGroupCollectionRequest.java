@@ -45,11 +45,11 @@ public class CalendarGroupCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarGroup> futurePost(@Nonnull final CalendarGroup newCalendarGroup) {
+    public java.util.concurrent.CompletableFuture<CalendarGroup> postAsync(@Nonnull final CalendarGroup newCalendarGroup) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newCalendarGroup);
+            .postAsync(newCalendarGroup);
     }
 
     /**

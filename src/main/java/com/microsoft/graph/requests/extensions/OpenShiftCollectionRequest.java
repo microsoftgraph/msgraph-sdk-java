@@ -45,11 +45,11 @@ public class OpenShiftCollectionRequest extends BaseEntityCollectionRequest<Open
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShift> futurePost(@Nonnull final OpenShift newOpenShift) {
+    public java.util.concurrent.CompletableFuture<OpenShift> postAsync(@Nonnull final OpenShift newOpenShift) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OpenShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOpenShift);
+            .postAsync(newOpenShift);
     }
 
     /**

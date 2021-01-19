@@ -40,8 +40,8 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePatch(@Nonnull final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceCertificateBasedAuthConfiguration);
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> patchAsync(@Nonnull final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceCertificateBasedAuthConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePost(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
-        return futureSend(HttpMethod.POST, newCertificateBasedAuthConfiguration);
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> postAsync(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
+        return sendAsync(HttpMethod.POST, newCertificateBasedAuthConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest<Certif
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePut(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
-        return futureSend(HttpMethod.PUT, newCertificateBasedAuthConfiguration);
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> putAsync(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
+        return sendAsync(HttpMethod.PUT, newCertificateBasedAuthConfiguration);
     }
 
     /**

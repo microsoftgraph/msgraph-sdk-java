@@ -41,8 +41,8 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futurePatch(@Nonnull final DeviceManagementExchangeConnector sourceDeviceManagementExchangeConnector) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceManagementExchangeConnector);
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patchAsync(@Nonnull final DeviceManagementExchangeConnector sourceDeviceManagementExchangeConnector) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceManagementExchangeConnector);
     }
 
     /**
@@ -107,8 +107,8 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futurePost(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
-        return futureSend(HttpMethod.POST, newDeviceManagementExchangeConnector);
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> postAsync(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
+        return sendAsync(HttpMethod.POST, newDeviceManagementExchangeConnector);
     }
 
     /**
@@ -130,8 +130,8 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest<Device
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futurePut(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
-        return futureSend(HttpMethod.PUT, newDeviceManagementExchangeConnector);
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> putAsync(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
+        return sendAsync(HttpMethod.PUT, newDeviceManagementExchangeConnector);
     }
 
     /**

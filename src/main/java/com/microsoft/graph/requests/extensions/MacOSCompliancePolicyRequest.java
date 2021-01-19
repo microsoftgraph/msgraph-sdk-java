@@ -40,8 +40,8 @@ public class MacOSCompliancePolicyRequest extends BaseRequest<MacOSCompliancePol
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MacOSCompliancePolicyRequest extends BaseRequest<MacOSCompliancePol
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MacOSCompliancePolicyRequest extends BaseRequest<MacOSCompliancePol
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> futurePatch(@Nonnull final MacOSCompliancePolicy sourceMacOSCompliancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceMacOSCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> patchAsync(@Nonnull final MacOSCompliancePolicy sourceMacOSCompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceMacOSCompliancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MacOSCompliancePolicyRequest extends BaseRequest<MacOSCompliancePol
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> futurePost(@Nonnull final MacOSCompliancePolicy newMacOSCompliancePolicy) {
-        return futureSend(HttpMethod.POST, newMacOSCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> postAsync(@Nonnull final MacOSCompliancePolicy newMacOSCompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newMacOSCompliancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MacOSCompliancePolicyRequest extends BaseRequest<MacOSCompliancePol
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> futurePut(@Nonnull final MacOSCompliancePolicy newMacOSCompliancePolicy) {
-        return futureSend(HttpMethod.PUT, newMacOSCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<MacOSCompliancePolicy> putAsync(@Nonnull final MacOSCompliancePolicy newMacOSCompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newMacOSCompliancePolicy);
     }
 
     /**

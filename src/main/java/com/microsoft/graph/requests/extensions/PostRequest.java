@@ -50,8 +50,8 @@ public class PostRequest extends BaseRequest<Post> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Post> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Post> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -71,8 +71,8 @@ public class PostRequest extends BaseRequest<Post> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Post> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Post> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -93,8 +93,8 @@ public class PostRequest extends BaseRequest<Post> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Post> futurePatch(@Nonnull final Post sourcePost) {
-        return futureSend(HttpMethod.PATCH, sourcePost);
+    public java.util.concurrent.CompletableFuture<Post> patchAsync(@Nonnull final Post sourcePost) {
+        return sendAsync(HttpMethod.PATCH, sourcePost);
     }
 
     /**
@@ -116,8 +116,8 @@ public class PostRequest extends BaseRequest<Post> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Post> futurePost(@Nonnull final Post newPost) {
-        return futureSend(HttpMethod.POST, newPost);
+    public java.util.concurrent.CompletableFuture<Post> postAsync(@Nonnull final Post newPost) {
+        return sendAsync(HttpMethod.POST, newPost);
     }
 
     /**
@@ -139,8 +139,8 @@ public class PostRequest extends BaseRequest<Post> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Post> futurePut(@Nonnull final Post newPost) {
-        return futureSend(HttpMethod.PUT, newPost);
+    public java.util.concurrent.CompletableFuture<Post> putAsync(@Nonnull final Post newPost) {
+        return sendAsync(HttpMethod.PUT, newPost);
     }
 
     /**

@@ -45,11 +45,11 @@ public class SharedInsightCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedInsight> futurePost(@Nonnull final SharedInsight newSharedInsight) {
+    public java.util.concurrent.CompletableFuture<SharedInsight> postAsync(@Nonnull final SharedInsight newSharedInsight) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSharedInsight);
+            .postAsync(newSharedInsight);
     }
 
     /**

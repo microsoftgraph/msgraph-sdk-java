@@ -46,8 +46,8 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -67,8 +67,8 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -89,8 +89,8 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> futurePatch(@Nonnull final AuditLogRoot sourceAuditLogRoot) {
-        return futureSend(HttpMethod.PATCH, sourceAuditLogRoot);
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> patchAsync(@Nonnull final AuditLogRoot sourceAuditLogRoot) {
+        return sendAsync(HttpMethod.PATCH, sourceAuditLogRoot);
     }
 
     /**
@@ -112,8 +112,8 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> futurePost(@Nonnull final AuditLogRoot newAuditLogRoot) {
-        return futureSend(HttpMethod.POST, newAuditLogRoot);
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> postAsync(@Nonnull final AuditLogRoot newAuditLogRoot) {
+        return sendAsync(HttpMethod.POST, newAuditLogRoot);
     }
 
     /**
@@ -135,8 +135,8 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuditLogRoot> futurePut(@Nonnull final AuditLogRoot newAuditLogRoot) {
-        return futureSend(HttpMethod.PUT, newAuditLogRoot);
+    public java.util.concurrent.CompletableFuture<AuditLogRoot> putAsync(@Nonnull final AuditLogRoot newAuditLogRoot) {
+        return sendAsync(HttpMethod.PUT, newAuditLogRoot);
     }
 
     /**

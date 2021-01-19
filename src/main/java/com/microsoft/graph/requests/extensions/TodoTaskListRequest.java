@@ -44,8 +44,8 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TodoTaskList> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TodoTaskList> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,8 +65,8 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TodoTaskList> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TodoTaskList> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -87,8 +87,8 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TodoTaskList> futurePatch(@Nonnull final TodoTaskList sourceTodoTaskList) {
-        return futureSend(HttpMethod.PATCH, sourceTodoTaskList);
+    public java.util.concurrent.CompletableFuture<TodoTaskList> patchAsync(@Nonnull final TodoTaskList sourceTodoTaskList) {
+        return sendAsync(HttpMethod.PATCH, sourceTodoTaskList);
     }
 
     /**
@@ -110,8 +110,8 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TodoTaskList> futurePost(@Nonnull final TodoTaskList newTodoTaskList) {
-        return futureSend(HttpMethod.POST, newTodoTaskList);
+    public java.util.concurrent.CompletableFuture<TodoTaskList> postAsync(@Nonnull final TodoTaskList newTodoTaskList) {
+        return sendAsync(HttpMethod.POST, newTodoTaskList);
     }
 
     /**
@@ -133,8 +133,8 @@ public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TodoTaskList> futurePut(@Nonnull final TodoTaskList newTodoTaskList) {
-        return futureSend(HttpMethod.PUT, newTodoTaskList);
+    public java.util.concurrent.CompletableFuture<TodoTaskList> putAsync(@Nonnull final TodoTaskList newTodoTaskList) {
+        return sendAsync(HttpMethod.PUT, newTodoTaskList);
     }
 
     /**

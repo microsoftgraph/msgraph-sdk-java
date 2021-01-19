@@ -40,8 +40,8 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> futurePatch(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy sourceIdentitySecurityDefaultsEnforcementPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceIdentitySecurityDefaultsEnforcementPolicy);
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> patchAsync(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy sourceIdentitySecurityDefaultsEnforcementPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceIdentitySecurityDefaultsEnforcementPolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> futurePost(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy) {
-        return futureSend(HttpMethod.POST, newIdentitySecurityDefaultsEnforcementPolicy);
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> postAsync(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy) {
+        return sendAsync(HttpMethod.POST, newIdentitySecurityDefaultsEnforcementPolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> futurePut(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy) {
-        return futureSend(HttpMethod.PUT, newIdentitySecurityDefaultsEnforcementPolicy);
+    public java.util.concurrent.CompletableFuture<IdentitySecurityDefaultsEnforcementPolicy> putAsync(@Nonnull final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy) {
+        return sendAsync(HttpMethod.PUT, newIdentitySecurityDefaultsEnforcementPolicy);
     }
 
     /**

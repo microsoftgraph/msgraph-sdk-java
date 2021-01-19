@@ -45,11 +45,11 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseEntityCollection
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futurePost(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> postAsync(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newIosUpdateDeviceStatus);
+            .postAsync(newIosUpdateDeviceStatus);
     }
 
     /**

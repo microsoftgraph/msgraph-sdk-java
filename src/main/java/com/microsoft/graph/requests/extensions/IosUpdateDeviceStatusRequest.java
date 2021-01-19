@@ -40,8 +40,8 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futurePatch(@Nonnull final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus) {
-        return futureSend(HttpMethod.PATCH, sourceIosUpdateDeviceStatus);
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> patchAsync(@Nonnull final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus) {
+        return sendAsync(HttpMethod.PATCH, sourceIosUpdateDeviceStatus);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futurePost(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
-        return futureSend(HttpMethod.POST, newIosUpdateDeviceStatus);
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> postAsync(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
+        return sendAsync(HttpMethod.POST, newIosUpdateDeviceStatus);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceSta
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> futurePut(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
-        return futureSend(HttpMethod.PUT, newIosUpdateDeviceStatus);
+    public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> putAsync(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) {
+        return sendAsync(HttpMethod.PUT, newIosUpdateDeviceStatus);
     }
 
     /**

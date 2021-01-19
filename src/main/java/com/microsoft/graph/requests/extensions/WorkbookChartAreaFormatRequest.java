@@ -42,8 +42,8 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futurePatch(@Nonnull final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartAreaFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> patchAsync(@Nonnull final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartAreaFormat);
     }
 
     /**
@@ -108,8 +108,8 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futurePost(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat) {
-        return futureSend(HttpMethod.POST, newWorkbookChartAreaFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> postAsync(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartAreaFormat);
     }
 
     /**
@@ -131,8 +131,8 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAre
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> futurePut(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartAreaFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAreaFormat> putAsync(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartAreaFormat);
     }
 
     /**

@@ -44,11 +44,11 @@ public class OrgContactCollectionRequest extends BaseEntityCollectionRequest<Org
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OrgContact> futurePost(@Nonnull final OrgContact newOrgContact) {
+    public java.util.concurrent.CompletableFuture<OrgContact> postAsync(@Nonnull final OrgContact newOrgContact) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OrgContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOrgContact);
+            .postAsync(newOrgContact);
     }
 
     /**

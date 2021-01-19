@@ -40,8 +40,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePatch(@Nonnull final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceHomeRealmDiscoveryPolicy);
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> patchAsync(@Nonnull final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceHomeRealmDiscoveryPolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePost(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
-        return futureSend(HttpMethod.POST, newHomeRealmDiscoveryPolicy);
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> postAsync(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
+        return sendAsync(HttpMethod.POST, newHomeRealmDiscoveryPolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest<HomeRealmDiscov
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePut(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
-        return futureSend(HttpMethod.PUT, newHomeRealmDiscoveryPolicy);
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> putAsync(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
+        return sendAsync(HttpMethod.PUT, newHomeRealmDiscoveryPolicy);
     }
 
     /**

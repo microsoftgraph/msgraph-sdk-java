@@ -40,8 +40,8 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futurePatch(@Nonnull final RestrictedSignIn sourceRestrictedSignIn) {
-        return futureSend(HttpMethod.PATCH, sourceRestrictedSignIn);
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> patchAsync(@Nonnull final RestrictedSignIn sourceRestrictedSignIn) {
+        return sendAsync(HttpMethod.PATCH, sourceRestrictedSignIn);
     }
 
     /**
@@ -106,8 +106,8 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futurePost(@Nonnull final RestrictedSignIn newRestrictedSignIn) {
-        return futureSend(HttpMethod.POST, newRestrictedSignIn);
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> postAsync(@Nonnull final RestrictedSignIn newRestrictedSignIn) {
+        return sendAsync(HttpMethod.POST, newRestrictedSignIn);
     }
 
     /**
@@ -129,8 +129,8 @@ public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futurePut(@Nonnull final RestrictedSignIn newRestrictedSignIn) {
-        return futureSend(HttpMethod.PUT, newRestrictedSignIn);
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> putAsync(@Nonnull final RestrictedSignIn newRestrictedSignIn) {
+        return sendAsync(HttpMethod.PUT, newRestrictedSignIn);
     }
 
     /**

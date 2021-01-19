@@ -40,8 +40,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DataPolicyOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DataPolicyOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DataPolicyOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DataPolicyOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DataPolicyOperation> futurePatch(@Nonnull final DataPolicyOperation sourceDataPolicyOperation) {
-        return futureSend(HttpMethod.PATCH, sourceDataPolicyOperation);
+    public java.util.concurrent.CompletableFuture<DataPolicyOperation> patchAsync(@Nonnull final DataPolicyOperation sourceDataPolicyOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceDataPolicyOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DataPolicyOperation> futurePost(@Nonnull final DataPolicyOperation newDataPolicyOperation) {
-        return futureSend(HttpMethod.POST, newDataPolicyOperation);
+    public java.util.concurrent.CompletableFuture<DataPolicyOperation> postAsync(@Nonnull final DataPolicyOperation newDataPolicyOperation) {
+        return sendAsync(HttpMethod.POST, newDataPolicyOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DataPolicyOperationRequest extends BaseRequest<DataPolicyOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DataPolicyOperation> futurePut(@Nonnull final DataPolicyOperation newDataPolicyOperation) {
-        return futureSend(HttpMethod.PUT, newDataPolicyOperation);
+    public java.util.concurrent.CompletableFuture<DataPolicyOperation> putAsync(@Nonnull final DataPolicyOperation newDataPolicyOperation) {
+        return sendAsync(HttpMethod.PUT, newDataPolicyOperation);
     }
 
     /**

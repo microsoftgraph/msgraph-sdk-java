@@ -40,8 +40,8 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MessageRule> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MessageRule> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MessageRule> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MessageRule> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MessageRule> futurePatch(@Nonnull final MessageRule sourceMessageRule) {
-        return futureSend(HttpMethod.PATCH, sourceMessageRule);
+    public java.util.concurrent.CompletableFuture<MessageRule> patchAsync(@Nonnull final MessageRule sourceMessageRule) {
+        return sendAsync(HttpMethod.PATCH, sourceMessageRule);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MessageRule> futurePost(@Nonnull final MessageRule newMessageRule) {
-        return futureSend(HttpMethod.POST, newMessageRule);
+    public java.util.concurrent.CompletableFuture<MessageRule> postAsync(@Nonnull final MessageRule newMessageRule) {
+        return sendAsync(HttpMethod.POST, newMessageRule);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MessageRuleRequest extends BaseRequest<MessageRule> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MessageRule> futurePut(@Nonnull final MessageRule newMessageRule) {
-        return futureSend(HttpMethod.PUT, newMessageRule);
+    public java.util.concurrent.CompletableFuture<MessageRule> putAsync(@Nonnull final MessageRule newMessageRule) {
+        return sendAsync(HttpMethod.PUT, newMessageRule);
     }
 
     /**

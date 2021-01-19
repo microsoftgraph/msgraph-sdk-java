@@ -45,8 +45,8 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteSection> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnenoteSection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -66,8 +66,8 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteSection> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OnenoteSection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -88,8 +88,8 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteSection> futurePatch(@Nonnull final OnenoteSection sourceOnenoteSection) {
-        return futureSend(HttpMethod.PATCH, sourceOnenoteSection);
+    public java.util.concurrent.CompletableFuture<OnenoteSection> patchAsync(@Nonnull final OnenoteSection sourceOnenoteSection) {
+        return sendAsync(HttpMethod.PATCH, sourceOnenoteSection);
     }
 
     /**
@@ -111,8 +111,8 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteSection> futurePost(@Nonnull final OnenoteSection newOnenoteSection) {
-        return futureSend(HttpMethod.POST, newOnenoteSection);
+    public java.util.concurrent.CompletableFuture<OnenoteSection> postAsync(@Nonnull final OnenoteSection newOnenoteSection) {
+        return sendAsync(HttpMethod.POST, newOnenoteSection);
     }
 
     /**
@@ -134,8 +134,8 @@ public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteSection> futurePut(@Nonnull final OnenoteSection newOnenoteSection) {
-        return futureSend(HttpMethod.PUT, newOnenoteSection);
+    public java.util.concurrent.CompletableFuture<OnenoteSection> putAsync(@Nonnull final OnenoteSection newOnenoteSection) {
+        return sendAsync(HttpMethod.PUT, newOnenoteSection);
     }
 
     /**

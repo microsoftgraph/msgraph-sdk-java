@@ -40,8 +40,8 @@ public class WindowsInformationProtectionNetworkLearningSummaryRequest extends B
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsInformationProtectionNetworkLearningSummaryRequest extends B
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsInformationProtectionNetworkLearningSummaryRequest extends B
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> futurePatch(@Nonnull final WindowsInformationProtectionNetworkLearningSummary sourceWindowsInformationProtectionNetworkLearningSummary) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsInformationProtectionNetworkLearningSummary);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> patchAsync(@Nonnull final WindowsInformationProtectionNetworkLearningSummary sourceWindowsInformationProtectionNetworkLearningSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsInformationProtectionNetworkLearningSummary);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsInformationProtectionNetworkLearningSummaryRequest extends B
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> futurePost(@Nonnull final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary) {
-        return futureSend(HttpMethod.POST, newWindowsInformationProtectionNetworkLearningSummary);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> postAsync(@Nonnull final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary) {
+        return sendAsync(HttpMethod.POST, newWindowsInformationProtectionNetworkLearningSummary);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsInformationProtectionNetworkLearningSummaryRequest extends B
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> futurePut(@Nonnull final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary) {
-        return futureSend(HttpMethod.PUT, newWindowsInformationProtectionNetworkLearningSummary);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> putAsync(@Nonnull final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary) {
+        return sendAsync(HttpMethod.PUT, newWindowsInformationProtectionNetworkLearningSummary);
     }
 
     /**

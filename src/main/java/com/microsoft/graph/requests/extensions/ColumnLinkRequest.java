@@ -40,8 +40,8 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLink> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ColumnLink> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLink> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ColumnLink> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLink> futurePatch(@Nonnull final ColumnLink sourceColumnLink) {
-        return futureSend(HttpMethod.PATCH, sourceColumnLink);
+    public java.util.concurrent.CompletableFuture<ColumnLink> patchAsync(@Nonnull final ColumnLink sourceColumnLink) {
+        return sendAsync(HttpMethod.PATCH, sourceColumnLink);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLink> futurePost(@Nonnull final ColumnLink newColumnLink) {
-        return futureSend(HttpMethod.POST, newColumnLink);
+    public java.util.concurrent.CompletableFuture<ColumnLink> postAsync(@Nonnull final ColumnLink newColumnLink) {
+        return sendAsync(HttpMethod.POST, newColumnLink);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ColumnLinkRequest extends BaseRequest<ColumnLink> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnLink> futurePut(@Nonnull final ColumnLink newColumnLink) {
-        return futureSend(HttpMethod.PUT, newColumnLink);
+    public java.util.concurrent.CompletableFuture<ColumnLink> putAsync(@Nonnull final ColumnLink newColumnLink) {
+        return sendAsync(HttpMethod.PUT, newColumnLink);
     }
 
     /**

@@ -50,12 +50,12 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionWithR
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> futurePost(@Nonnull final EducationUser newEducationUser) {
+    public java.util.concurrent.CompletableFuture<EducationUser> postAsync(@Nonnull final EducationUser newEducationUser) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/users/" + newEducationUser.id);
         return new EducationUserWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newEducationUser, body);
+            .postAsync(newEducationUser, body);
     }
 
     /**

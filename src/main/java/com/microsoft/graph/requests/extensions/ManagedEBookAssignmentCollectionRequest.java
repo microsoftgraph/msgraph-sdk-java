@@ -45,11 +45,11 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseEntityCollectio
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futurePost(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> postAsync(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedEBookAssignment);
+            .postAsync(newManagedEBookAssignment);
     }
 
     /**

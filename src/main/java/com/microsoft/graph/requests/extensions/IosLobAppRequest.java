@@ -40,8 +40,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosLobApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosLobApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobApp> futurePatch(@Nonnull final IosLobApp sourceIosLobApp) {
-        return futureSend(HttpMethod.PATCH, sourceIosLobApp);
+    public java.util.concurrent.CompletableFuture<IosLobApp> patchAsync(@Nonnull final IosLobApp sourceIosLobApp) {
+        return sendAsync(HttpMethod.PATCH, sourceIosLobApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobApp> futurePost(@Nonnull final IosLobApp newIosLobApp) {
-        return futureSend(HttpMethod.POST, newIosLobApp);
+    public java.util.concurrent.CompletableFuture<IosLobApp> postAsync(@Nonnull final IosLobApp newIosLobApp) {
+        return sendAsync(HttpMethod.POST, newIosLobApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosLobAppRequest extends BaseRequest<IosLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobApp> futurePut(@Nonnull final IosLobApp newIosLobApp) {
-        return futureSend(HttpMethod.PUT, newIosLobApp);
+    public java.util.concurrent.CompletableFuture<IosLobApp> putAsync(@Nonnull final IosLobApp newIosLobApp) {
+        return sendAsync(HttpMethod.PUT, newIosLobApp);
     }
 
     /**

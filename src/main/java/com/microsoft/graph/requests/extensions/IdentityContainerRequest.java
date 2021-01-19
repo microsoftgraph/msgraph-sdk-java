@@ -41,8 +41,8 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IdentityContainer> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IdentityContainer> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> futurePatch(@Nonnull final IdentityContainer sourceIdentityContainer) {
-        return futureSend(HttpMethod.PATCH, sourceIdentityContainer);
+    public java.util.concurrent.CompletableFuture<IdentityContainer> patchAsync(@Nonnull final IdentityContainer sourceIdentityContainer) {
+        return sendAsync(HttpMethod.PATCH, sourceIdentityContainer);
     }
 
     /**
@@ -107,8 +107,8 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> futurePost(@Nonnull final IdentityContainer newIdentityContainer) {
-        return futureSend(HttpMethod.POST, newIdentityContainer);
+    public java.util.concurrent.CompletableFuture<IdentityContainer> postAsync(@Nonnull final IdentityContainer newIdentityContainer) {
+        return sendAsync(HttpMethod.POST, newIdentityContainer);
     }
 
     /**
@@ -130,8 +130,8 @@ public class IdentityContainerRequest extends BaseRequest<IdentityContainer> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityContainer> futurePut(@Nonnull final IdentityContainer newIdentityContainer) {
-        return futureSend(HttpMethod.PUT, newIdentityContainer);
+    public java.util.concurrent.CompletableFuture<IdentityContainer> putAsync(@Nonnull final IdentityContainer newIdentityContainer) {
+        return sendAsync(HttpMethod.PUT, newIdentityContainer);
     }
 
     /**

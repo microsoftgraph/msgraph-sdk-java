@@ -44,11 +44,11 @@ public class TeamsTemplateCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplate> futurePost(@Nonnull final TeamsTemplate newTeamsTemplate) {
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> postAsync(@Nonnull final TeamsTemplate newTeamsTemplate) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTeamsTemplate);
+            .postAsync(newTeamsTemplate);
     }
 
     /**

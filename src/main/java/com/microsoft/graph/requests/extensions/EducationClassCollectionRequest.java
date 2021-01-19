@@ -45,11 +45,11 @@ public class EducationClassCollectionRequest extends BaseEntityCollectionRequest
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> futurePost(@Nonnull final EducationClass newEducationClass) {
+    public java.util.concurrent.CompletableFuture<EducationClass> postAsync(@Nonnull final EducationClass newEducationClass) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationClassRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newEducationClass);
+            .postAsync(newEducationClass);
     }
 
     /**

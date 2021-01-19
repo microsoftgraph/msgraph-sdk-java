@@ -38,8 +38,8 @@ public class WorkbookTableItemAtRequest extends BaseRequest<WorkbookTable> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTable> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookTable> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

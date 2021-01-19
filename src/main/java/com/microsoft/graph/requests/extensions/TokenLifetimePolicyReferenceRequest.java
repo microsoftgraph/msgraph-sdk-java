@@ -68,10 +68,10 @@ public class TokenLifetimePolicyReferenceRequest extends BaseReferenceRequest<To
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futurePut(@Nonnull final TokenLifetimePolicy srcTokenLifetimePolicy) {
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> putAsync(@Nonnull final TokenLifetimePolicy srcTokenLifetimePolicy) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + srcTokenLifetimePolicy.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

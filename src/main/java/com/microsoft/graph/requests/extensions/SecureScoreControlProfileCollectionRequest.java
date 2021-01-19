@@ -45,11 +45,11 @@ public class SecureScoreControlProfileCollectionRequest extends BaseEntityCollec
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> futurePost(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) {
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> postAsync(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSecureScoreControlProfile);
+            .postAsync(newSecureScoreControlProfile);
     }
 
     /**

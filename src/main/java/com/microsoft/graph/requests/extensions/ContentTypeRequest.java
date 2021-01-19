@@ -42,8 +42,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ContentType> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ContentType> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> futurePatch(@Nonnull final ContentType sourceContentType) {
-        return futureSend(HttpMethod.PATCH, sourceContentType);
+    public java.util.concurrent.CompletableFuture<ContentType> patchAsync(@Nonnull final ContentType sourceContentType) {
+        return sendAsync(HttpMethod.PATCH, sourceContentType);
     }
 
     /**
@@ -108,8 +108,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> futurePost(@Nonnull final ContentType newContentType) {
-        return futureSend(HttpMethod.POST, newContentType);
+    public java.util.concurrent.CompletableFuture<ContentType> postAsync(@Nonnull final ContentType newContentType) {
+        return sendAsync(HttpMethod.POST, newContentType);
     }
 
     /**
@@ -131,8 +131,8 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> futurePut(@Nonnull final ContentType newContentType) {
-        return futureSend(HttpMethod.PUT, newContentType);
+    public java.util.concurrent.CompletableFuture<ContentType> putAsync(@Nonnull final ContentType newContentType) {
+        return sendAsync(HttpMethod.PUT, newContentType);
     }
 
     /**

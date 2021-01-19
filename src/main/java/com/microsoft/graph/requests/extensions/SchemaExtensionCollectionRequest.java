@@ -44,11 +44,11 @@ public class SchemaExtensionCollectionRequest extends BaseEntityCollectionReques
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchemaExtension> futurePost(@Nonnull final SchemaExtension newSchemaExtension) {
+    public java.util.concurrent.CompletableFuture<SchemaExtension> postAsync(@Nonnull final SchemaExtension newSchemaExtension) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSchemaExtension);
+            .postAsync(newSchemaExtension);
     }
 
     /**

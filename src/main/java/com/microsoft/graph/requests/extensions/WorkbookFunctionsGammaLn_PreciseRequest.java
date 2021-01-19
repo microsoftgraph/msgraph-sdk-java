@@ -43,8 +43,8 @@ public class WorkbookFunctionsGammaLn_PreciseRequest extends BaseRequest<Workboo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

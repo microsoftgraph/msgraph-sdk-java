@@ -45,11 +45,11 @@ public class ListItemVersionCollectionRequest extends BaseEntityCollectionReques
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersion> futurePost(@Nonnull final ListItemVersion newListItemVersion) {
+    public java.util.concurrent.CompletableFuture<ListItemVersion> postAsync(@Nonnull final ListItemVersion newListItemVersion) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ListItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newListItemVersion);
+            .postAsync(newListItemVersion);
     }
 
     /**

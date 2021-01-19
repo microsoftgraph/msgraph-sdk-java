@@ -47,11 +47,11 @@ public class EventCollectionRequest extends BaseEntityCollectionRequest<Event, E
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Event> futurePost(@Nonnull final Event newEvent) {
+    public java.util.concurrent.CompletableFuture<Event> postAsync(@Nonnull final Event newEvent) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newEvent);
+            .postAsync(newEvent);
     }
 
     /**

@@ -40,8 +40,8 @@ public class ConditionalAccessPolicyRequest extends BaseRequest<ConditionalAcces
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ConditionalAccessPolicyRequest extends BaseRequest<ConditionalAcces
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ConditionalAccessPolicyRequest extends BaseRequest<ConditionalAcces
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> futurePatch(@Nonnull final ConditionalAccessPolicy sourceConditionalAccessPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceConditionalAccessPolicy);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> patchAsync(@Nonnull final ConditionalAccessPolicy sourceConditionalAccessPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceConditionalAccessPolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ConditionalAccessPolicyRequest extends BaseRequest<ConditionalAcces
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> futurePost(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) {
-        return futureSend(HttpMethod.POST, newConditionalAccessPolicy);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> postAsync(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) {
+        return sendAsync(HttpMethod.POST, newConditionalAccessPolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ConditionalAccessPolicyRequest extends BaseRequest<ConditionalAcces
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> futurePut(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) {
-        return futureSend(HttpMethod.PUT, newConditionalAccessPolicy);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> putAsync(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) {
+        return sendAsync(HttpMethod.PUT, newConditionalAccessPolicy);
     }
 
     /**

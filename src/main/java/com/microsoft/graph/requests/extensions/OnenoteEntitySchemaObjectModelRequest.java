@@ -55,8 +55,8 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futurePatch(@Nonnull final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel) {
-        return futureSend(HttpMethod.PATCH, sourceOnenoteEntitySchemaObjectModel);
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> patchAsync(@Nonnull final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel) {
+        return sendAsync(HttpMethod.PATCH, sourceOnenoteEntitySchemaObjectModel);
     }
 
     /**
@@ -121,8 +121,8 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futurePost(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) {
-        return futureSend(HttpMethod.POST, newOnenoteEntitySchemaObjectModel);
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> postAsync(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) {
+        return sendAsync(HttpMethod.POST, newOnenoteEntitySchemaObjectModel);
     }
 
     /**
@@ -144,8 +144,8 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEn
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> futurePut(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) {
-        return futureSend(HttpMethod.PUT, newOnenoteEntitySchemaObjectModel);
+    public java.util.concurrent.CompletableFuture<OnenoteEntitySchemaObjectModel> putAsync(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) {
+        return sendAsync(HttpMethod.PUT, newOnenoteEntitySchemaObjectModel);
     }
 
     /**

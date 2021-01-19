@@ -48,11 +48,11 @@ public class TeamCollectionRequest extends BaseEntityCollectionRequest<Team, Tea
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Team> futurePost(@Nonnull final Team newTeam) {
+    public java.util.concurrent.CompletableFuture<Team> postAsync(@Nonnull final Team newTeam) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTeam);
+            .postAsync(newTeam);
     }
 
     /**

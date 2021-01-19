@@ -40,8 +40,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest<Dev
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest<Dev
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest<Dev
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> futurePatch(@Nonnull final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceAndAppManagementRoleAssignment);
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> patchAsync(@Nonnull final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceAndAppManagementRoleAssignment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest<Dev
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> futurePost(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) {
-        return futureSend(HttpMethod.POST, newDeviceAndAppManagementRoleAssignment);
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> postAsync(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) {
+        return sendAsync(HttpMethod.POST, newDeviceAndAppManagementRoleAssignment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest<Dev
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> futurePut(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) {
-        return futureSend(HttpMethod.PUT, newDeviceAndAppManagementRoleAssignment);
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> putAsync(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) {
+        return sendAsync(HttpMethod.PUT, newDeviceAndAppManagementRoleAssignment);
     }
 
     /**

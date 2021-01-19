@@ -45,11 +45,11 @@ public class LicenseDetailsCollectionRequest extends BaseEntityCollectionRequest
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetails> futurePost(@Nonnull final LicenseDetails newLicenseDetails) {
+    public java.util.concurrent.CompletableFuture<LicenseDetails> postAsync(@Nonnull final LicenseDetails newLicenseDetails) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newLicenseDetails);
+            .postAsync(newLicenseDetails);
     }
 
     /**

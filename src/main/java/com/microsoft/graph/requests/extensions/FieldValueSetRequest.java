@@ -40,8 +40,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FieldValueSet> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<FieldValueSet> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FieldValueSet> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<FieldValueSet> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FieldValueSet> futurePatch(@Nonnull final FieldValueSet sourceFieldValueSet) {
-        return futureSend(HttpMethod.PATCH, sourceFieldValueSet);
+    public java.util.concurrent.CompletableFuture<FieldValueSet> patchAsync(@Nonnull final FieldValueSet sourceFieldValueSet) {
+        return sendAsync(HttpMethod.PATCH, sourceFieldValueSet);
     }
 
     /**
@@ -106,8 +106,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FieldValueSet> futurePost(@Nonnull final FieldValueSet newFieldValueSet) {
-        return futureSend(HttpMethod.POST, newFieldValueSet);
+    public java.util.concurrent.CompletableFuture<FieldValueSet> postAsync(@Nonnull final FieldValueSet newFieldValueSet) {
+        return sendAsync(HttpMethod.POST, newFieldValueSet);
     }
 
     /**
@@ -129,8 +129,8 @@ public class FieldValueSetRequest extends BaseRequest<FieldValueSet> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FieldValueSet> futurePut(@Nonnull final FieldValueSet newFieldValueSet) {
-        return futureSend(HttpMethod.PUT, newFieldValueSet);
+    public java.util.concurrent.CompletableFuture<FieldValueSet> putAsync(@Nonnull final FieldValueSet newFieldValueSet) {
+        return sendAsync(HttpMethod.PUT, newFieldValueSet);
     }
 
     /**

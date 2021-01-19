@@ -45,11 +45,11 @@ public class ManagedAppStatusCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppStatus> futurePost(@Nonnull final ManagedAppStatus newManagedAppStatus) {
+    public java.util.concurrent.CompletableFuture<ManagedAppStatus> postAsync(@Nonnull final ManagedAppStatus newManagedAppStatus) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedAppStatus);
+            .postAsync(newManagedAppStatus);
     }
 
     /**

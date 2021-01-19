@@ -45,11 +45,11 @@ public class ContactCollectionRequest extends BaseEntityCollectionRequest<Contac
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contact> futurePost(@Nonnull final Contact newContact) {
+    public java.util.concurrent.CompletableFuture<Contact> postAsync(@Nonnull final Contact newContact) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newContact);
+            .postAsync(newContact);
     }
 
     /**

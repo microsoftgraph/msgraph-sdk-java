@@ -40,8 +40,8 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest<MacOSGen
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest<MacOSGen
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest<MacOSGen
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> futurePatch(@Nonnull final MacOSGeneralDeviceConfiguration sourceMacOSGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceMacOSGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> patchAsync(@Nonnull final MacOSGeneralDeviceConfiguration sourceMacOSGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceMacOSGeneralDeviceConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest<MacOSGen
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> futurePost(@Nonnull final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.POST, newMacOSGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> postAsync(@Nonnull final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.POST, newMacOSGeneralDeviceConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest<MacOSGen
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> futurePut(@Nonnull final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.PUT, newMacOSGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<MacOSGeneralDeviceConfiguration> putAsync(@Nonnull final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.PUT, newMacOSGeneralDeviceConfiguration);
     }
 
     /**

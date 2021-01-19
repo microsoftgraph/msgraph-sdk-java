@@ -42,8 +42,8 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> futurePatch(@Nonnull final DeviceComplianceScheduledActionForRule sourceDeviceComplianceScheduledActionForRule) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceComplianceScheduledActionForRule);
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> patchAsync(@Nonnull final DeviceComplianceScheduledActionForRule sourceDeviceComplianceScheduledActionForRule) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceComplianceScheduledActionForRule);
     }
 
     /**
@@ -108,8 +108,8 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> futurePost(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) {
-        return futureSend(HttpMethod.POST, newDeviceComplianceScheduledActionForRule);
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> postAsync(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) {
+        return sendAsync(HttpMethod.POST, newDeviceComplianceScheduledActionForRule);
     }
 
     /**
@@ -131,8 +131,8 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest<D
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> futurePut(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) {
-        return futureSend(HttpMethod.PUT, newDeviceComplianceScheduledActionForRule);
+    public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> putAsync(@Nonnull final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) {
+        return sendAsync(HttpMethod.PUT, newDeviceComplianceScheduledActionForRule);
     }
 
     /**

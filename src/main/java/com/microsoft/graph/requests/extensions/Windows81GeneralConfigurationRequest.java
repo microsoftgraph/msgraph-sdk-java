@@ -40,8 +40,8 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81G
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81G
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81G
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> futurePatch(@Nonnull final Windows81GeneralConfiguration sourceWindows81GeneralConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindows81GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> patchAsync(@Nonnull final Windows81GeneralConfiguration sourceWindows81GeneralConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows81GeneralConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81G
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> futurePost(@Nonnull final Windows81GeneralConfiguration newWindows81GeneralConfiguration) {
-        return futureSend(HttpMethod.POST, newWindows81GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> postAsync(@Nonnull final Windows81GeneralConfiguration newWindows81GeneralConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindows81GeneralConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81G
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> futurePut(@Nonnull final Windows81GeneralConfiguration newWindows81GeneralConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindows81GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows81GeneralConfiguration> putAsync(@Nonnull final Windows81GeneralConfiguration newWindows81GeneralConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindows81GeneralConfiguration);
     }
 
     /**

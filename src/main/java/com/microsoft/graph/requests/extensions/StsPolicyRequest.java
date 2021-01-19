@@ -57,8 +57,8 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<StsPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<StsPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -78,8 +78,8 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<StsPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<StsPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -100,8 +100,8 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<StsPolicy> futurePatch(@Nonnull final StsPolicy sourceStsPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceStsPolicy);
+    public java.util.concurrent.CompletableFuture<StsPolicy> patchAsync(@Nonnull final StsPolicy sourceStsPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceStsPolicy);
     }
 
     /**
@@ -123,8 +123,8 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<StsPolicy> futurePost(@Nonnull final StsPolicy newStsPolicy) {
-        return futureSend(HttpMethod.POST, newStsPolicy);
+    public java.util.concurrent.CompletableFuture<StsPolicy> postAsync(@Nonnull final StsPolicy newStsPolicy) {
+        return sendAsync(HttpMethod.POST, newStsPolicy);
     }
 
     /**
@@ -146,8 +146,8 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<StsPolicy> futurePut(@Nonnull final StsPolicy newStsPolicy) {
-        return futureSend(HttpMethod.PUT, newStsPolicy);
+    public java.util.concurrent.CompletableFuture<StsPolicy> putAsync(@Nonnull final StsPolicy newStsPolicy) {
+        return sendAsync(HttpMethod.PUT, newStsPolicy);
     }
 
     /**

@@ -40,8 +40,8 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futurePatch(@Nonnull final Windows81CompliancePolicy sourceWindows81CompliancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceWindows81CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> patchAsync(@Nonnull final Windows81CompliancePolicy sourceWindows81CompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows81CompliancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futurePost(@Nonnull final Windows81CompliancePolicy newWindows81CompliancePolicy) {
-        return futureSend(HttpMethod.POST, newWindows81CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> postAsync(@Nonnull final Windows81CompliancePolicy newWindows81CompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newWindows81CompliancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows81CompliancePolicyRequest extends BaseRequest<Windows81Compl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> futurePut(@Nonnull final Windows81CompliancePolicy newWindows81CompliancePolicy) {
-        return futureSend(HttpMethod.PUT, newWindows81CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows81CompliancePolicy> putAsync(@Nonnull final Windows81CompliancePolicy newWindows81CompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newWindows81CompliancePolicy);
     }
 
     /**

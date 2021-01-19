@@ -55,8 +55,8 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futurePatch(@Nonnull final ManagedEBookAssignment sourceManagedEBookAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceManagedEBookAssignment);
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> patchAsync(@Nonnull final ManagedEBookAssignment sourceManagedEBookAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedEBookAssignment);
     }
 
     /**
@@ -121,8 +121,8 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futurePost(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
-        return futureSend(HttpMethod.POST, newManagedEBookAssignment);
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> postAsync(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
+        return sendAsync(HttpMethod.POST, newManagedEBookAssignment);
     }
 
     /**
@@ -144,8 +144,8 @@ public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssig
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> futurePut(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
-        return futureSend(HttpMethod.PUT, newManagedEBookAssignment);
+    public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> putAsync(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) {
+        return sendAsync(HttpMethod.PUT, newManagedEBookAssignment);
     }
 
     /**

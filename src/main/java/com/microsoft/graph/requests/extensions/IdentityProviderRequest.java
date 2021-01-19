@@ -40,8 +40,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProvider> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IdentityProvider> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProvider> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IdentityProvider> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProvider> futurePatch(@Nonnull final IdentityProvider sourceIdentityProvider) {
-        return futureSend(HttpMethod.PATCH, sourceIdentityProvider);
+    public java.util.concurrent.CompletableFuture<IdentityProvider> patchAsync(@Nonnull final IdentityProvider sourceIdentityProvider) {
+        return sendAsync(HttpMethod.PATCH, sourceIdentityProvider);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProvider> futurePost(@Nonnull final IdentityProvider newIdentityProvider) {
-        return futureSend(HttpMethod.POST, newIdentityProvider);
+    public java.util.concurrent.CompletableFuture<IdentityProvider> postAsync(@Nonnull final IdentityProvider newIdentityProvider) {
+        return sendAsync(HttpMethod.POST, newIdentityProvider);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IdentityProviderRequest extends BaseRequest<IdentityProvider> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProvider> futurePut(@Nonnull final IdentityProvider newIdentityProvider) {
-        return futureSend(HttpMethod.PUT, newIdentityProvider);
+    public java.util.concurrent.CompletableFuture<IdentityProvider> putAsync(@Nonnull final IdentityProvider newIdentityProvider) {
+        return sendAsync(HttpMethod.PUT, newIdentityProvider);
     }
 
     /**

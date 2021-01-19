@@ -40,8 +40,8 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> futurePatch(@Nonnull final ClaimsMappingPolicy sourceClaimsMappingPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceClaimsMappingPolicy);
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> patchAsync(@Nonnull final ClaimsMappingPolicy sourceClaimsMappingPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceClaimsMappingPolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> futurePost(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
-        return futureSend(HttpMethod.POST, newClaimsMappingPolicy);
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> postAsync(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
+        return sendAsync(HttpMethod.POST, newClaimsMappingPolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ClaimsMappingPolicyRequest extends BaseRequest<ClaimsMappingPolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> futurePut(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
-        return futureSend(HttpMethod.PUT, newClaimsMappingPolicy);
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> putAsync(@Nonnull final ClaimsMappingPolicy newClaimsMappingPolicy) {
+        return sendAsync(HttpMethod.PUT, newClaimsMappingPolicy);
     }
 
     /**

@@ -40,8 +40,8 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futurePatch(@Nonnull final ComplianceManagementPartner sourceComplianceManagementPartner) {
-        return futureSend(HttpMethod.PATCH, sourceComplianceManagementPartner);
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> patchAsync(@Nonnull final ComplianceManagementPartner sourceComplianceManagementPartner) {
+        return sendAsync(HttpMethod.PATCH, sourceComplianceManagementPartner);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futurePost(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) {
-        return futureSend(HttpMethod.POST, newComplianceManagementPartner);
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> postAsync(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) {
+        return sendAsync(HttpMethod.POST, newComplianceManagementPartner);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ComplianceManagementPartnerRequest extends BaseRequest<ComplianceMa
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futurePut(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) {
-        return futureSend(HttpMethod.PUT, newComplianceManagementPartner);
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> putAsync(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) {
+        return sendAsync(HttpMethod.PUT, newComplianceManagementPartner);
     }
 
     /**

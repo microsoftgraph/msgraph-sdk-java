@@ -40,8 +40,8 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplate> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplate> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplate> futurePatch(@Nonnull final TeamsTemplate sourceTeamsTemplate) {
-        return futureSend(HttpMethod.PATCH, sourceTeamsTemplate);
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> patchAsync(@Nonnull final TeamsTemplate sourceTeamsTemplate) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsTemplate);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplate> futurePost(@Nonnull final TeamsTemplate newTeamsTemplate) {
-        return futureSend(HttpMethod.POST, newTeamsTemplate);
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> postAsync(@Nonnull final TeamsTemplate newTeamsTemplate) {
+        return sendAsync(HttpMethod.POST, newTeamsTemplate);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTemplate> futurePut(@Nonnull final TeamsTemplate newTeamsTemplate) {
-        return futureSend(HttpMethod.PUT, newTeamsTemplate);
+    public java.util.concurrent.CompletableFuture<TeamsTemplate> putAsync(@Nonnull final TeamsTemplate newTeamsTemplate) {
+        return sendAsync(HttpMethod.PUT, newTeamsTemplate);
     }
 
     /**

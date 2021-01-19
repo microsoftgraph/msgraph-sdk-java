@@ -68,10 +68,10 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseRefer
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePut(@Nonnull final CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration) {
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> putAsync(@Nonnull final CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + srcCertificateBasedAuthConfiguration.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

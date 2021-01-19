@@ -41,8 +41,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> futurePatch(@Nonnull final WorkbookChartGridlines sourceWorkbookChartGridlines) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartGridlines);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> patchAsync(@Nonnull final WorkbookChartGridlines sourceWorkbookChartGridlines) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartGridlines);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> futurePost(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines) {
-        return futureSend(HttpMethod.POST, newWorkbookChartGridlines);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> postAsync(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartGridlines);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> futurePut(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartGridlines);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlines> putAsync(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartGridlines);
     }
 
     /**

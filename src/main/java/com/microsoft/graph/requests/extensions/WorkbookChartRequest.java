@@ -48,8 +48,8 @@ public class WorkbookChartRequest extends BaseRequest<WorkbookChart> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChart> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -69,8 +69,8 @@ public class WorkbookChartRequest extends BaseRequest<WorkbookChart> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChart> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -91,8 +91,8 @@ public class WorkbookChartRequest extends BaseRequest<WorkbookChart> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> futurePatch(@Nonnull final WorkbookChart sourceWorkbookChart) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChart);
+    public java.util.concurrent.CompletableFuture<WorkbookChart> patchAsync(@Nonnull final WorkbookChart sourceWorkbookChart) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChart);
     }
 
     /**
@@ -114,8 +114,8 @@ public class WorkbookChartRequest extends BaseRequest<WorkbookChart> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> futurePost(@Nonnull final WorkbookChart newWorkbookChart) {
-        return futureSend(HttpMethod.POST, newWorkbookChart);
+    public java.util.concurrent.CompletableFuture<WorkbookChart> postAsync(@Nonnull final WorkbookChart newWorkbookChart) {
+        return sendAsync(HttpMethod.POST, newWorkbookChart);
     }
 
     /**
@@ -137,8 +137,8 @@ public class WorkbookChartRequest extends BaseRequest<WorkbookChart> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> futurePut(@Nonnull final WorkbookChart newWorkbookChart) {
-        return futureSend(HttpMethod.PUT, newWorkbookChart);
+    public java.util.concurrent.CompletableFuture<WorkbookChart> putAsync(@Nonnull final WorkbookChart newWorkbookChart) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChart);
     }
 
     /**

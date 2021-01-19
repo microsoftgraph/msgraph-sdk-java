@@ -41,8 +41,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> futurePatch(@Nonnull final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus) {
-        return futureSend(HttpMethod.PATCH, sourceTermsAndConditionsAcceptanceStatus);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> patchAsync(@Nonnull final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus) {
+        return sendAsync(HttpMethod.PATCH, sourceTermsAndConditionsAcceptanceStatus);
     }
 
     /**
@@ -107,8 +107,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> futurePost(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
-        return futureSend(HttpMethod.POST, newTermsAndConditionsAcceptanceStatus);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> postAsync(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
+        return sendAsync(HttpMethod.POST, newTermsAndConditionsAcceptanceStatus);
     }
 
     /**
@@ -130,8 +130,8 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest<Terms
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> futurePut(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
-        return futureSend(HttpMethod.PUT, newTermsAndConditionsAcceptanceStatus);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> putAsync(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
+        return sendAsync(HttpMethod.PUT, newTermsAndConditionsAcceptanceStatus);
     }
 
     /**

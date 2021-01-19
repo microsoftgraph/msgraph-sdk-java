@@ -41,8 +41,8 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedInsight> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SharedInsight> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedInsight> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SharedInsight> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedInsight> futurePatch(@Nonnull final SharedInsight sourceSharedInsight) {
-        return futureSend(HttpMethod.PATCH, sourceSharedInsight);
+    public java.util.concurrent.CompletableFuture<SharedInsight> patchAsync(@Nonnull final SharedInsight sourceSharedInsight) {
+        return sendAsync(HttpMethod.PATCH, sourceSharedInsight);
     }
 
     /**
@@ -107,8 +107,8 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedInsight> futurePost(@Nonnull final SharedInsight newSharedInsight) {
-        return futureSend(HttpMethod.POST, newSharedInsight);
+    public java.util.concurrent.CompletableFuture<SharedInsight> postAsync(@Nonnull final SharedInsight newSharedInsight) {
+        return sendAsync(HttpMethod.POST, newSharedInsight);
     }
 
     /**
@@ -130,8 +130,8 @@ public class SharedInsightRequest extends BaseRequest<SharedInsight> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedInsight> futurePut(@Nonnull final SharedInsight newSharedInsight) {
-        return futureSend(HttpMethod.PUT, newSharedInsight);
+    public java.util.concurrent.CompletableFuture<SharedInsight> putAsync(@Nonnull final SharedInsight newSharedInsight) {
+        return sendAsync(HttpMethod.PUT, newSharedInsight);
     }
 
     /**

@@ -43,8 +43,8 @@ public class ApplicationAddPasswordRequest extends BaseRequest<PasswordCredentia
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PasswordCredential> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<PasswordCredential> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

@@ -42,8 +42,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> futurePatch(@Nonnull final OnlineMeeting sourceOnlineMeeting) {
-        return futureSend(HttpMethod.PATCH, sourceOnlineMeeting);
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> patchAsync(@Nonnull final OnlineMeeting sourceOnlineMeeting) {
+        return sendAsync(HttpMethod.PATCH, sourceOnlineMeeting);
     }
 
     /**
@@ -108,8 +108,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> futurePost(@Nonnull final OnlineMeeting newOnlineMeeting) {
-        return futureSend(HttpMethod.POST, newOnlineMeeting);
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> postAsync(@Nonnull final OnlineMeeting newOnlineMeeting) {
+        return sendAsync(HttpMethod.POST, newOnlineMeeting);
     }
 
     /**
@@ -131,8 +131,8 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> futurePut(@Nonnull final OnlineMeeting newOnlineMeeting) {
-        return futureSend(HttpMethod.PUT, newOnlineMeeting);
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> putAsync(@Nonnull final OnlineMeeting newOnlineMeeting) {
+        return sendAsync(HttpMethod.PUT, newOnlineMeeting);
     }
 
     /**

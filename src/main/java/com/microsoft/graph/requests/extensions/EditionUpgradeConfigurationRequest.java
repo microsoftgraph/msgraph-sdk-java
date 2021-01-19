@@ -40,8 +40,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest<EditionUpgra
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest<EditionUpgra
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest<EditionUpgra
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> futurePatch(@Nonnull final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceEditionUpgradeConfiguration);
+    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> patchAsync(@Nonnull final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceEditionUpgradeConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest<EditionUpgra
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> futurePost(@Nonnull final EditionUpgradeConfiguration newEditionUpgradeConfiguration) {
-        return futureSend(HttpMethod.POST, newEditionUpgradeConfiguration);
+    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> postAsync(@Nonnull final EditionUpgradeConfiguration newEditionUpgradeConfiguration) {
+        return sendAsync(HttpMethod.POST, newEditionUpgradeConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest<EditionUpgra
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> futurePut(@Nonnull final EditionUpgradeConfiguration newEditionUpgradeConfiguration) {
-        return futureSend(HttpMethod.PUT, newEditionUpgradeConfiguration);
+    public java.util.concurrent.CompletableFuture<EditionUpgradeConfiguration> putAsync(@Nonnull final EditionUpgradeConfiguration newEditionUpgradeConfiguration) {
+        return sendAsync(HttpMethod.PUT, newEditionUpgradeConfiguration);
     }
 
     /**

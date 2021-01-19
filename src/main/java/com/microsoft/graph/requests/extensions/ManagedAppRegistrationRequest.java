@@ -59,8 +59,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -80,8 +80,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -102,8 +102,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePatch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration) {
-        return futureSend(HttpMethod.PATCH, sourceManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> patchAsync(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppRegistration);
     }
 
     /**
@@ -125,8 +125,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePost(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
-        return futureSend(HttpMethod.POST, newManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> postAsync(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
+        return sendAsync(HttpMethod.POST, newManagedAppRegistration);
     }
 
     /**
@@ -148,8 +148,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePut(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
-        return futureSend(HttpMethod.PUT, newManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> putAsync(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
+        return sendAsync(HttpMethod.PUT, newManagedAppRegistration);
     }
 
     /**

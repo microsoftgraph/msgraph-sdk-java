@@ -45,11 +45,11 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futurePost(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> postAsync(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWindowsInformationProtectionAppLockerFile);
+            .postAsync(newWindowsInformationProtectionAppLockerFile);
     }
 
     /**

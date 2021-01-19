@@ -40,8 +40,8 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futurePatch(@Nonnull final AndroidWorkProfileCustomConfiguration sourceAndroidWorkProfileCustomConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceAndroidWorkProfileCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> patchAsync(@Nonnull final AndroidWorkProfileCustomConfiguration sourceAndroidWorkProfileCustomConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidWorkProfileCustomConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futurePost(@Nonnull final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) {
-        return futureSend(HttpMethod.POST, newAndroidWorkProfileCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> postAsync(@Nonnull final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) {
+        return sendAsync(HttpMethod.POST, newAndroidWorkProfileCustomConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest<An
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> futurePut(@Nonnull final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) {
-        return futureSend(HttpMethod.PUT, newAndroidWorkProfileCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<AndroidWorkProfileCustomConfiguration> putAsync(@Nonnull final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) {
+        return sendAsync(HttpMethod.PUT, newAndroidWorkProfileCustomConfiguration);
     }
 
     /**

@@ -45,11 +45,11 @@ public class ManagedAppRegistrationCollectionRequest extends BaseEntityCollectio
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePost(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> postAsync(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedAppRegistration);
+            .postAsync(newManagedAppRegistration);
     }
 
     /**

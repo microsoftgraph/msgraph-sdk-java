@@ -40,8 +40,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest<Windows10Compl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest<Windows10Compl
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest<Windows10Compl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> futurePatch(@Nonnull final Windows10CompliancePolicy sourceWindows10CompliancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceWindows10CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> patchAsync(@Nonnull final Windows10CompliancePolicy sourceWindows10CompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10CompliancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest<Windows10Compl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> futurePost(@Nonnull final Windows10CompliancePolicy newWindows10CompliancePolicy) {
-        return futureSend(HttpMethod.POST, newWindows10CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> postAsync(@Nonnull final Windows10CompliancePolicy newWindows10CompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newWindows10CompliancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest<Windows10Compl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> futurePut(@Nonnull final Windows10CompliancePolicy newWindows10CompliancePolicy) {
-        return futureSend(HttpMethod.PUT, newWindows10CompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows10CompliancePolicy> putAsync(@Nonnull final Windows10CompliancePolicy newWindows10CompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newWindows10CompliancePolicy);
     }
 
     /**

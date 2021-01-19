@@ -40,8 +40,8 @@ public class VppTokenRequest extends BaseRequest<VppToken> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<VppToken> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class VppTokenRequest extends BaseRequest<VppToken> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<VppToken> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class VppTokenRequest extends BaseRequest<VppToken> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> futurePatch(@Nonnull final VppToken sourceVppToken) {
-        return futureSend(HttpMethod.PATCH, sourceVppToken);
+    public java.util.concurrent.CompletableFuture<VppToken> patchAsync(@Nonnull final VppToken sourceVppToken) {
+        return sendAsync(HttpMethod.PATCH, sourceVppToken);
     }
 
     /**
@@ -106,8 +106,8 @@ public class VppTokenRequest extends BaseRequest<VppToken> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> futurePost(@Nonnull final VppToken newVppToken) {
-        return futureSend(HttpMethod.POST, newVppToken);
+    public java.util.concurrent.CompletableFuture<VppToken> postAsync(@Nonnull final VppToken newVppToken) {
+        return sendAsync(HttpMethod.POST, newVppToken);
     }
 
     /**
@@ -129,8 +129,8 @@ public class VppTokenRequest extends BaseRequest<VppToken> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> futurePut(@Nonnull final VppToken newVppToken) {
-        return futureSend(HttpMethod.PUT, newVppToken);
+    public java.util.concurrent.CompletableFuture<VppToken> putAsync(@Nonnull final VppToken newVppToken) {
+        return sendAsync(HttpMethod.PUT, newVppToken);
     }
 
     /**

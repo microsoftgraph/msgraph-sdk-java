@@ -40,8 +40,8 @@ public class OnenoteResourceRequest extends BaseRequest<OnenoteResource> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResource> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnenoteResource> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class OnenoteResourceRequest extends BaseRequest<OnenoteResource> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResource> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OnenoteResource> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class OnenoteResourceRequest extends BaseRequest<OnenoteResource> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResource> futurePatch(@Nonnull final OnenoteResource sourceOnenoteResource) {
-        return futureSend(HttpMethod.PATCH, sourceOnenoteResource);
+    public java.util.concurrent.CompletableFuture<OnenoteResource> patchAsync(@Nonnull final OnenoteResource sourceOnenoteResource) {
+        return sendAsync(HttpMethod.PATCH, sourceOnenoteResource);
     }
 
     /**
@@ -106,8 +106,8 @@ public class OnenoteResourceRequest extends BaseRequest<OnenoteResource> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResource> futurePost(@Nonnull final OnenoteResource newOnenoteResource) {
-        return futureSend(HttpMethod.POST, newOnenoteResource);
+    public java.util.concurrent.CompletableFuture<OnenoteResource> postAsync(@Nonnull final OnenoteResource newOnenoteResource) {
+        return sendAsync(HttpMethod.POST, newOnenoteResource);
     }
 
     /**
@@ -129,8 +129,8 @@ public class OnenoteResourceRequest extends BaseRequest<OnenoteResource> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteResource> futurePut(@Nonnull final OnenoteResource newOnenoteResource) {
-        return futureSend(HttpMethod.PUT, newOnenoteResource);
+    public java.util.concurrent.CompletableFuture<OnenoteResource> putAsync(@Nonnull final OnenoteResource newOnenoteResource) {
+        return sendAsync(HttpMethod.PUT, newOnenoteResource);
     }
 
     /**

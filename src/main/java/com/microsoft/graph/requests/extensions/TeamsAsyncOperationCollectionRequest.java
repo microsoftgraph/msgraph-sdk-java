@@ -45,11 +45,11 @@ public class TeamsAsyncOperationCollectionRequest extends BaseEntityCollectionRe
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> futurePost(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> postAsync(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTeamsAsyncOperation);
+            .postAsync(newTeamsAsyncOperation);
     }
 
     /**

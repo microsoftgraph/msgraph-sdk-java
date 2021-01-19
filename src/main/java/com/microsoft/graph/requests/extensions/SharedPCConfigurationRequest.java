@@ -40,8 +40,8 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> futurePatch(@Nonnull final SharedPCConfiguration sourceSharedPCConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceSharedPCConfiguration);
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> patchAsync(@Nonnull final SharedPCConfiguration sourceSharedPCConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceSharedPCConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> futurePost(@Nonnull final SharedPCConfiguration newSharedPCConfiguration) {
-        return futureSend(HttpMethod.POST, newSharedPCConfiguration);
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> postAsync(@Nonnull final SharedPCConfiguration newSharedPCConfiguration) {
+        return sendAsync(HttpMethod.POST, newSharedPCConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SharedPCConfigurationRequest extends BaseRequest<SharedPCConfigurat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> futurePut(@Nonnull final SharedPCConfiguration newSharedPCConfiguration) {
-        return futureSend(HttpMethod.PUT, newSharedPCConfiguration);
+    public java.util.concurrent.CompletableFuture<SharedPCConfiguration> putAsync(@Nonnull final SharedPCConfiguration newSharedPCConfiguration) {
+        return sendAsync(HttpMethod.PUT, newSharedPCConfiguration);
     }
 
     /**

@@ -38,8 +38,8 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseRequest<Workbo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRange> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRange> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

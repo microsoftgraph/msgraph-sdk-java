@@ -43,8 +43,8 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest<UpdateRecordin
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

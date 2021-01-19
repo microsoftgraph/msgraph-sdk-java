@@ -55,8 +55,8 @@ public class ExtensionRequest extends BaseRequest<Extension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Extension> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class ExtensionRequest extends BaseRequest<Extension> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Extension> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class ExtensionRequest extends BaseRequest<Extension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> futurePatch(@Nonnull final Extension sourceExtension) {
-        return futureSend(HttpMethod.PATCH, sourceExtension);
+    public java.util.concurrent.CompletableFuture<Extension> patchAsync(@Nonnull final Extension sourceExtension) {
+        return sendAsync(HttpMethod.PATCH, sourceExtension);
     }
 
     /**
@@ -121,8 +121,8 @@ public class ExtensionRequest extends BaseRequest<Extension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> futurePost(@Nonnull final Extension newExtension) {
-        return futureSend(HttpMethod.POST, newExtension);
+    public java.util.concurrent.CompletableFuture<Extension> postAsync(@Nonnull final Extension newExtension) {
+        return sendAsync(HttpMethod.POST, newExtension);
     }
 
     /**
@@ -144,8 +144,8 @@ public class ExtensionRequest extends BaseRequest<Extension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> futurePut(@Nonnull final Extension newExtension) {
-        return futureSend(HttpMethod.PUT, newExtension);
+    public java.util.concurrent.CompletableFuture<Extension> putAsync(@Nonnull final Extension newExtension) {
+        return sendAsync(HttpMethod.PUT, newExtension);
     }
 
     /**

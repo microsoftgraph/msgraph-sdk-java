@@ -42,8 +42,8 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AppCatalogs> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AppCatalogs> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> futurePatch(@Nonnull final AppCatalogs sourceAppCatalogs) {
-        return futureSend(HttpMethod.PATCH, sourceAppCatalogs);
+    public java.util.concurrent.CompletableFuture<AppCatalogs> patchAsync(@Nonnull final AppCatalogs sourceAppCatalogs) {
+        return sendAsync(HttpMethod.PATCH, sourceAppCatalogs);
     }
 
     /**
@@ -108,8 +108,8 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> futurePost(@Nonnull final AppCatalogs newAppCatalogs) {
-        return futureSend(HttpMethod.POST, newAppCatalogs);
+    public java.util.concurrent.CompletableFuture<AppCatalogs> postAsync(@Nonnull final AppCatalogs newAppCatalogs) {
+        return sendAsync(HttpMethod.POST, newAppCatalogs);
     }
 
     /**
@@ -131,8 +131,8 @@ public class AppCatalogsRequest extends BaseRequest<AppCatalogs> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppCatalogs> futurePut(@Nonnull final AppCatalogs newAppCatalogs) {
-        return futureSend(HttpMethod.PUT, newAppCatalogs);
+    public java.util.concurrent.CompletableFuture<AppCatalogs> putAsync(@Nonnull final AppCatalogs newAppCatalogs) {
+        return sendAsync(HttpMethod.PUT, newAppCatalogs);
     }
 
     /**

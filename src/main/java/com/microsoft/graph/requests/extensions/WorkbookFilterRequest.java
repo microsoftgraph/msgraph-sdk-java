@@ -42,8 +42,8 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFilter> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFilter> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFilter> futurePatch(@Nonnull final WorkbookFilter sourceWorkbookFilter) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookFilter);
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> patchAsync(@Nonnull final WorkbookFilter sourceWorkbookFilter) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookFilter);
     }
 
     /**
@@ -108,8 +108,8 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFilter> futurePost(@Nonnull final WorkbookFilter newWorkbookFilter) {
-        return futureSend(HttpMethod.POST, newWorkbookFilter);
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> postAsync(@Nonnull final WorkbookFilter newWorkbookFilter) {
+        return sendAsync(HttpMethod.POST, newWorkbookFilter);
     }
 
     /**
@@ -131,8 +131,8 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFilter> futurePut(@Nonnull final WorkbookFilter newWorkbookFilter) {
-        return futureSend(HttpMethod.PUT, newWorkbookFilter);
+    public java.util.concurrent.CompletableFuture<WorkbookFilter> putAsync(@Nonnull final WorkbookFilter newWorkbookFilter) {
+        return sendAsync(HttpMethod.PUT, newWorkbookFilter);
     }
 
     /**

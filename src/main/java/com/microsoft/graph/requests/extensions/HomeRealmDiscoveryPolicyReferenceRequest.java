@@ -68,10 +68,10 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseReferenceReque
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePut(@Nonnull final HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy) {
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> putAsync(@Nonnull final HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + srcHomeRealmDiscoveryPolicy.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

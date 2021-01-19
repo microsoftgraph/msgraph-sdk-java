@@ -48,8 +48,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolder> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ContactFolder> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -69,8 +69,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolder> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ContactFolder> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -91,8 +91,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolder> futurePatch(@Nonnull final ContactFolder sourceContactFolder) {
-        return futureSend(HttpMethod.PATCH, sourceContactFolder);
+    public java.util.concurrent.CompletableFuture<ContactFolder> patchAsync(@Nonnull final ContactFolder sourceContactFolder) {
+        return sendAsync(HttpMethod.PATCH, sourceContactFolder);
     }
 
     /**
@@ -114,8 +114,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolder> futurePost(@Nonnull final ContactFolder newContactFolder) {
-        return futureSend(HttpMethod.POST, newContactFolder);
+    public java.util.concurrent.CompletableFuture<ContactFolder> postAsync(@Nonnull final ContactFolder newContactFolder) {
+        return sendAsync(HttpMethod.POST, newContactFolder);
     }
 
     /**
@@ -137,8 +137,8 @@ public class ContactFolderRequest extends BaseRequest<ContactFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContactFolder> futurePut(@Nonnull final ContactFolder newContactFolder) {
-        return futureSend(HttpMethod.PUT, newContactFolder);
+    public java.util.concurrent.CompletableFuture<ContactFolder> putAsync(@Nonnull final ContactFolder newContactFolder) {
+        return sendAsync(HttpMethod.PUT, newContactFolder);
     }
 
     /**

@@ -42,8 +42,8 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> futurePatch(@Nonnull final ItemActivityStat sourceItemActivityStat) {
-        return futureSend(HttpMethod.PATCH, sourceItemActivityStat);
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> patchAsync(@Nonnull final ItemActivityStat sourceItemActivityStat) {
+        return sendAsync(HttpMethod.PATCH, sourceItemActivityStat);
     }
 
     /**
@@ -108,8 +108,8 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> futurePost(@Nonnull final ItemActivityStat newItemActivityStat) {
-        return futureSend(HttpMethod.POST, newItemActivityStat);
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> postAsync(@Nonnull final ItemActivityStat newItemActivityStat) {
+        return sendAsync(HttpMethod.POST, newItemActivityStat);
     }
 
     /**
@@ -131,8 +131,8 @@ public class ItemActivityStatRequest extends BaseRequest<ItemActivityStat> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityStat> futurePut(@Nonnull final ItemActivityStat newItemActivityStat) {
-        return futureSend(HttpMethod.PUT, newItemActivityStat);
+    public java.util.concurrent.CompletableFuture<ItemActivityStat> putAsync(@Nonnull final ItemActivityStat newItemActivityStat) {
+        return sendAsync(HttpMethod.PUT, newItemActivityStat);
     }
 
     /**

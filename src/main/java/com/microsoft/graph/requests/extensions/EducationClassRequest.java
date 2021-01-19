@@ -45,8 +45,8 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EducationClass> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -66,8 +66,8 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<EducationClass> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -88,8 +88,8 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> futurePatch(@Nonnull final EducationClass sourceEducationClass) {
-        return futureSend(HttpMethod.PATCH, sourceEducationClass);
+    public java.util.concurrent.CompletableFuture<EducationClass> patchAsync(@Nonnull final EducationClass sourceEducationClass) {
+        return sendAsync(HttpMethod.PATCH, sourceEducationClass);
     }
 
     /**
@@ -111,8 +111,8 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> futurePost(@Nonnull final EducationClass newEducationClass) {
-        return futureSend(HttpMethod.POST, newEducationClass);
+    public java.util.concurrent.CompletableFuture<EducationClass> postAsync(@Nonnull final EducationClass newEducationClass) {
+        return sendAsync(HttpMethod.POST, newEducationClass);
     }
 
     /**
@@ -134,8 +134,8 @@ public class EducationClassRequest extends BaseRequest<EducationClass> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationClass> futurePut(@Nonnull final EducationClass newEducationClass) {
-        return futureSend(HttpMethod.PUT, newEducationClass);
+    public java.util.concurrent.CompletableFuture<EducationClass> putAsync(@Nonnull final EducationClass newEducationClass) {
+        return sendAsync(HttpMethod.PUT, newEducationClass);
     }
 
     /**

@@ -45,11 +45,11 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> futurePost(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) {
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLearningSummary> postAsync(@Nonnull final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionAppLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWindowsInformationProtectionAppLearningSummary);
+            .postAsync(newWindowsInformationProtectionAppLearningSummary);
     }
 
     /**

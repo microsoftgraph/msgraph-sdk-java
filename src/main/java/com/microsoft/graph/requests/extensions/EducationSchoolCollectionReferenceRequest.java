@@ -50,12 +50,12 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationSchool> futurePost(@Nonnull final EducationSchool newEducationSchool) {
+    public java.util.concurrent.CompletableFuture<EducationSchool> postAsync(@Nonnull final EducationSchool newEducationSchool) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/schools/" + newEducationSchool.id);
         return new EducationSchoolWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newEducationSchool, body);
+            .postAsync(newEducationSchool, body);
     }
 
     /**

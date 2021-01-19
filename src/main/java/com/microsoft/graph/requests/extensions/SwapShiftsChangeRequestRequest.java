@@ -40,8 +40,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest<SwapShiftsChange
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest<SwapShiftsChange
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest<SwapShiftsChange
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> futurePatch(@Nonnull final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest) {
-        return futureSend(HttpMethod.PATCH, sourceSwapShiftsChangeRequest);
+    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> patchAsync(@Nonnull final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceSwapShiftsChangeRequest);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest<SwapShiftsChange
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> futurePost(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) {
-        return futureSend(HttpMethod.POST, newSwapShiftsChangeRequest);
+    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> postAsync(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) {
+        return sendAsync(HttpMethod.POST, newSwapShiftsChangeRequest);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest<SwapShiftsChange
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> futurePut(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) {
-        return futureSend(HttpMethod.PUT, newSwapShiftsChangeRequest);
+    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> putAsync(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) {
+        return sendAsync(HttpMethod.PUT, newSwapShiftsChangeRequest);
     }
 
     /**

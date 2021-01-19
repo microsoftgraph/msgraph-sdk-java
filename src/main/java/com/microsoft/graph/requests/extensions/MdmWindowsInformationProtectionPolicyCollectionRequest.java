@@ -45,11 +45,11 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> futurePost(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> postAsync(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMdmWindowsInformationProtectionPolicy);
+            .postAsync(newMdmWindowsInformationProtectionPolicy);
     }
 
     /**

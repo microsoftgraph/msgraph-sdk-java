@@ -40,8 +40,8 @@ public class ShiftRequest extends BaseRequest<Shift> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Shift> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ShiftRequest extends BaseRequest<Shift> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Shift> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ShiftRequest extends BaseRequest<Shift> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> futurePatch(@Nonnull final Shift sourceShift) {
-        return futureSend(HttpMethod.PATCH, sourceShift);
+    public java.util.concurrent.CompletableFuture<Shift> patchAsync(@Nonnull final Shift sourceShift) {
+        return sendAsync(HttpMethod.PATCH, sourceShift);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ShiftRequest extends BaseRequest<Shift> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> futurePost(@Nonnull final Shift newShift) {
-        return futureSend(HttpMethod.POST, newShift);
+    public java.util.concurrent.CompletableFuture<Shift> postAsync(@Nonnull final Shift newShift) {
+        return sendAsync(HttpMethod.POST, newShift);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ShiftRequest extends BaseRequest<Shift> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> futurePut(@Nonnull final Shift newShift) {
-        return futureSend(HttpMethod.PUT, newShift);
+    public java.util.concurrent.CompletableFuture<Shift> putAsync(@Nonnull final Shift newShift) {
+        return sendAsync(HttpMethod.PUT, newShift);
     }
 
     /**

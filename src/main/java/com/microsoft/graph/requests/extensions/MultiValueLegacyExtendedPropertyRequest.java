@@ -40,8 +40,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> futurePatch(@Nonnull final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty) {
-        return futureSend(HttpMethod.PATCH, sourceMultiValueLegacyExtendedProperty);
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> patchAsync(@Nonnull final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.PATCH, sourceMultiValueLegacyExtendedProperty);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> futurePost(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) {
-        return futureSend(HttpMethod.POST, newMultiValueLegacyExtendedProperty);
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> postAsync(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.POST, newMultiValueLegacyExtendedProperty);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest<MultiVa
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> futurePut(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) {
-        return futureSend(HttpMethod.PUT, newMultiValueLegacyExtendedProperty);
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> putAsync(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.PUT, newMultiValueLegacyExtendedProperty);
     }
 
     /**

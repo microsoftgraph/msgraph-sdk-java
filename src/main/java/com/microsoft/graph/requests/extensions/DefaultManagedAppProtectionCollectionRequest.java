@@ -45,11 +45,11 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseEntityColl
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> futurePost(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> postAsync(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDefaultManagedAppProtection);
+            .postAsync(newDefaultManagedAppProtection);
     }
 
     /**

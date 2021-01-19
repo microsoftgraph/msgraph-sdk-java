@@ -47,8 +47,8 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -68,8 +68,8 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -90,8 +90,8 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futurePatch(@Nonnull final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceTargetedManagedAppConfiguration);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> patchAsync(@Nonnull final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceTargetedManagedAppConfiguration);
     }
 
     /**
@@ -113,8 +113,8 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futurePost(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
-        return futureSend(HttpMethod.POST, newTargetedManagedAppConfiguration);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> postAsync(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
+        return sendAsync(HttpMethod.POST, newTargetedManagedAppConfiguration);
     }
 
     /**
@@ -136,8 +136,8 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest<Targeted
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futurePut(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
-        return futureSend(HttpMethod.PUT, newTargetedManagedAppConfiguration);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> putAsync(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
+        return sendAsync(HttpMethod.PUT, newTargetedManagedAppConfiguration);
     }
 
     /**

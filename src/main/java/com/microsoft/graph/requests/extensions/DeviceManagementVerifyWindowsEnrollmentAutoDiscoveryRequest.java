@@ -38,8 +38,8 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Boolean> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Boolean> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

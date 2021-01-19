@@ -55,8 +55,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> futurePatch(@Nonnull final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase) {
-        return futureSend(HttpMethod.PATCH, sourceAppleDeviceFeaturesConfigurationBase);
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> patchAsync(@Nonnull final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase) {
+        return sendAsync(HttpMethod.PATCH, sourceAppleDeviceFeaturesConfigurationBase);
     }
 
     /**
@@ -121,8 +121,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> futurePost(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) {
-        return futureSend(HttpMethod.POST, newAppleDeviceFeaturesConfigurationBase);
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> postAsync(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) {
+        return sendAsync(HttpMethod.POST, newAppleDeviceFeaturesConfigurationBase);
     }
 
     /**
@@ -144,8 +144,8 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest<App
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> futurePut(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) {
-        return futureSend(HttpMethod.PUT, newAppleDeviceFeaturesConfigurationBase);
+    public java.util.concurrent.CompletableFuture<AppleDeviceFeaturesConfigurationBase> putAsync(@Nonnull final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) {
+        return sendAsync(HttpMethod.PUT, newAppleDeviceFeaturesConfigurationBase);
     }
 
     /**

@@ -47,11 +47,11 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseEntity
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> futurePost(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> postAsync(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTargetedManagedAppConfiguration);
+            .postAsync(newTargetedManagedAppConfiguration);
     }
 
     /**

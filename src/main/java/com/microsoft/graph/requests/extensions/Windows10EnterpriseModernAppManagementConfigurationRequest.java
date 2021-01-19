@@ -40,8 +40,8 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> futurePatch(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindows10EnterpriseModernAppManagementConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> patchAsync(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10EnterpriseModernAppManagementConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> futurePost(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) {
-        return futureSend(HttpMethod.POST, newWindows10EnterpriseModernAppManagementConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> postAsync(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindows10EnterpriseModernAppManagementConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> futurePut(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindows10EnterpriseModernAppManagementConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10EnterpriseModernAppManagementConfiguration> putAsync(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindows10EnterpriseModernAppManagementConfiguration);
     }
 
     /**

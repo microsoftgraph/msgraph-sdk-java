@@ -45,11 +45,11 @@ public class OfferShiftRequestCollectionRequest extends BaseEntityCollectionRequ
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequest> futurePost(@Nonnull final OfferShiftRequest newOfferShiftRequest) {
+    public java.util.concurrent.CompletableFuture<OfferShiftRequest> postAsync(@Nonnull final OfferShiftRequest newOfferShiftRequest) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOfferShiftRequest);
+            .postAsync(newOfferShiftRequest);
     }
 
     /**

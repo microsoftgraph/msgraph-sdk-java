@@ -45,11 +45,11 @@ public class TrendingCollectionRequest extends BaseEntityCollectionRequest<Trend
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Trending> futurePost(@Nonnull final Trending newTrending) {
+    public java.util.concurrent.CompletableFuture<Trending> postAsync(@Nonnull final Trending newTrending) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTrending);
+            .postAsync(newTrending);
     }
 
     /**

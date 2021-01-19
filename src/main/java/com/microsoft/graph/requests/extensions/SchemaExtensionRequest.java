@@ -40,8 +40,8 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchemaExtension> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SchemaExtension> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchemaExtension> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SchemaExtension> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchemaExtension> futurePatch(@Nonnull final SchemaExtension sourceSchemaExtension) {
-        return futureSend(HttpMethod.PATCH, sourceSchemaExtension);
+    public java.util.concurrent.CompletableFuture<SchemaExtension> patchAsync(@Nonnull final SchemaExtension sourceSchemaExtension) {
+        return sendAsync(HttpMethod.PATCH, sourceSchemaExtension);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchemaExtension> futurePost(@Nonnull final SchemaExtension newSchemaExtension) {
-        return futureSend(HttpMethod.POST, newSchemaExtension);
+    public java.util.concurrent.CompletableFuture<SchemaExtension> postAsync(@Nonnull final SchemaExtension newSchemaExtension) {
+        return sendAsync(HttpMethod.POST, newSchemaExtension);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SchemaExtensionRequest extends BaseRequest<SchemaExtension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchemaExtension> futurePut(@Nonnull final SchemaExtension newSchemaExtension) {
-        return futureSend(HttpMethod.PUT, newSchemaExtension);
+    public java.util.concurrent.CompletableFuture<SchemaExtension> putAsync(@Nonnull final SchemaExtension newSchemaExtension) {
+        return sendAsync(HttpMethod.PUT, newSchemaExtension);
     }
 
     /**

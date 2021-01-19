@@ -45,11 +45,11 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseEntit
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> futurePost(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) {
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyAssignment> postAsync(@Nonnull final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceCompliancePolicyAssignment);
+            .postAsync(newDeviceCompliancePolicyAssignment);
     }
 
     /**

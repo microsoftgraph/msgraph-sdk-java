@@ -43,8 +43,8 @@ public class NotebookCopyNotebookRequest extends BaseRequest<OnenoteOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

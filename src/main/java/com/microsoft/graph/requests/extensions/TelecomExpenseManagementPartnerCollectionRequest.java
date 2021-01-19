@@ -45,11 +45,11 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseEntity
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> futurePost(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> postAsync(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTelecomExpenseManagementPartner);
+            .postAsync(newTelecomExpenseManagementPartner);
     }
 
     /**

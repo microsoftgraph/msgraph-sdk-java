@@ -40,8 +40,8 @@ public class DirectoryRoleTemplateRequest extends BaseRequest<DirectoryRoleTempl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DirectoryRoleTemplateRequest extends BaseRequest<DirectoryRoleTempl
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DirectoryRoleTemplateRequest extends BaseRequest<DirectoryRoleTempl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> futurePatch(@Nonnull final DirectoryRoleTemplate sourceDirectoryRoleTemplate) {
-        return futureSend(HttpMethod.PATCH, sourceDirectoryRoleTemplate);
+    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> patchAsync(@Nonnull final DirectoryRoleTemplate sourceDirectoryRoleTemplate) {
+        return sendAsync(HttpMethod.PATCH, sourceDirectoryRoleTemplate);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DirectoryRoleTemplateRequest extends BaseRequest<DirectoryRoleTempl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> futurePost(@Nonnull final DirectoryRoleTemplate newDirectoryRoleTemplate) {
-        return futureSend(HttpMethod.POST, newDirectoryRoleTemplate);
+    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> postAsync(@Nonnull final DirectoryRoleTemplate newDirectoryRoleTemplate) {
+        return sendAsync(HttpMethod.POST, newDirectoryRoleTemplate);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DirectoryRoleTemplateRequest extends BaseRequest<DirectoryRoleTempl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> futurePut(@Nonnull final DirectoryRoleTemplate newDirectoryRoleTemplate) {
-        return futureSend(HttpMethod.PUT, newDirectoryRoleTemplate);
+    public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> putAsync(@Nonnull final DirectoryRoleTemplate newDirectoryRoleTemplate) {
+        return sendAsync(HttpMethod.PUT, newDirectoryRoleTemplate);
     }
 
     /**

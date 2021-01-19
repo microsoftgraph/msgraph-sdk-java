@@ -40,8 +40,8 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Win32LobApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Win32LobApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobApp> futurePatch(@Nonnull final Win32LobApp sourceWin32LobApp) {
-        return futureSend(HttpMethod.PATCH, sourceWin32LobApp);
+    public java.util.concurrent.CompletableFuture<Win32LobApp> patchAsync(@Nonnull final Win32LobApp sourceWin32LobApp) {
+        return sendAsync(HttpMethod.PATCH, sourceWin32LobApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobApp> futurePost(@Nonnull final Win32LobApp newWin32LobApp) {
-        return futureSend(HttpMethod.POST, newWin32LobApp);
+    public java.util.concurrent.CompletableFuture<Win32LobApp> postAsync(@Nonnull final Win32LobApp newWin32LobApp) {
+        return sendAsync(HttpMethod.POST, newWin32LobApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Win32LobApp> futurePut(@Nonnull final Win32LobApp newWin32LobApp) {
-        return futureSend(HttpMethod.PUT, newWin32LobApp);
+    public java.util.concurrent.CompletableFuture<Win32LobApp> putAsync(@Nonnull final Win32LobApp newWin32LobApp) {
+        return sendAsync(HttpMethod.PUT, newWin32LobApp);
     }
 
     /**

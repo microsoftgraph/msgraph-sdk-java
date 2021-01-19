@@ -38,8 +38,8 @@ public class OnenotePagePreviewRequest extends BaseRequest<OnenotePagePreview> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenotePagePreview> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnenotePagePreview> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

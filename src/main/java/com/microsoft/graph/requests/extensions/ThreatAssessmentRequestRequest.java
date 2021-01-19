@@ -57,8 +57,8 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -78,8 +78,8 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -100,8 +100,8 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> futurePatch(@Nonnull final ThreatAssessmentRequest sourceThreatAssessmentRequest) {
-        return futureSend(HttpMethod.PATCH, sourceThreatAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> patchAsync(@Nonnull final ThreatAssessmentRequest sourceThreatAssessmentRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceThreatAssessmentRequest);
     }
 
     /**
@@ -123,8 +123,8 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> futurePost(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) {
-        return futureSend(HttpMethod.POST, newThreatAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> postAsync(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) {
+        return sendAsync(HttpMethod.POST, newThreatAssessmentRequest);
     }
 
     /**
@@ -146,8 +146,8 @@ public class ThreatAssessmentRequestRequest extends BaseRequest<ThreatAssessment
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> futurePut(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) {
-        return futureSend(HttpMethod.PUT, newThreatAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> putAsync(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) {
+        return sendAsync(HttpMethod.PUT, newThreatAssessmentRequest);
     }
 
     /**

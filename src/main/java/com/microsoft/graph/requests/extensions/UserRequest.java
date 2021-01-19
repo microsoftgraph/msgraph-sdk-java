@@ -109,8 +109,8 @@ public class UserRequest extends BaseRequest<User> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<User> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<User> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -130,8 +130,8 @@ public class UserRequest extends BaseRequest<User> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<User> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<User> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -152,8 +152,8 @@ public class UserRequest extends BaseRequest<User> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<User> futurePatch(@Nonnull final User sourceUser) {
-        return futureSend(HttpMethod.PATCH, sourceUser);
+    public java.util.concurrent.CompletableFuture<User> patchAsync(@Nonnull final User sourceUser) {
+        return sendAsync(HttpMethod.PATCH, sourceUser);
     }
 
     /**
@@ -175,8 +175,8 @@ public class UserRequest extends BaseRequest<User> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<User> futurePost(@Nonnull final User newUser) {
-        return futureSend(HttpMethod.POST, newUser);
+    public java.util.concurrent.CompletableFuture<User> postAsync(@Nonnull final User newUser) {
+        return sendAsync(HttpMethod.POST, newUser);
     }
 
     /**
@@ -198,8 +198,8 @@ public class UserRequest extends BaseRequest<User> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<User> futurePut(@Nonnull final User newUser) {
-        return futureSend(HttpMethod.PUT, newUser);
+    public java.util.concurrent.CompletableFuture<User> putAsync(@Nonnull final User newUser) {
+        return sendAsync(HttpMethod.PUT, newUser);
     }
 
     /**

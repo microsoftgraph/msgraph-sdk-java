@@ -40,8 +40,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> futurePatch(@Nonnull final UrlAssessmentRequest sourceUrlAssessmentRequest) {
-        return futureSend(HttpMethod.PATCH, sourceUrlAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> patchAsync(@Nonnull final UrlAssessmentRequest sourceUrlAssessmentRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceUrlAssessmentRequest);
     }
 
     /**
@@ -106,8 +106,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> futurePost(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest) {
-        return futureSend(HttpMethod.POST, newUrlAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> postAsync(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest) {
+        return sendAsync(HttpMethod.POST, newUrlAssessmentRequest);
     }
 
     /**
@@ -129,8 +129,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> futurePut(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest) {
-        return futureSend(HttpMethod.PUT, newUrlAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<UrlAssessmentRequest> putAsync(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest) {
+        return sendAsync(HttpMethod.PUT, newUrlAssessmentRequest);
     }
 
     /**

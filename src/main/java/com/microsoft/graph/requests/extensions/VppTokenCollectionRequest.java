@@ -45,11 +45,11 @@ public class VppTokenCollectionRequest extends BaseEntityCollectionRequest<VppTo
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<VppToken> futurePost(@Nonnull final VppToken newVppToken) {
+    public java.util.concurrent.CompletableFuture<VppToken> postAsync(@Nonnull final VppToken newVppToken) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newVppToken);
+            .postAsync(newVppToken);
     }
 
     /**

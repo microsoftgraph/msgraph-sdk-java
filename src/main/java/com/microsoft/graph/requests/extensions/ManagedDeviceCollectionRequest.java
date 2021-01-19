@@ -46,11 +46,11 @@ public class ManagedDeviceCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> futurePost(@Nonnull final ManagedDevice newManagedDevice) {
+    public java.util.concurrent.CompletableFuture<ManagedDevice> postAsync(@Nonnull final ManagedDevice newManagedDevice) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedDevice);
+            .postAsync(newManagedDevice);
     }
 
     /**

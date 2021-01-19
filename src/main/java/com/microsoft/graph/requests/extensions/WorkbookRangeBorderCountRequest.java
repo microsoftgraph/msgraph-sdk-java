@@ -37,8 +37,8 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest<Integer> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Integer> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Integer> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

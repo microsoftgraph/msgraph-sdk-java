@@ -41,8 +41,8 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersion> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ListItemVersion> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersion> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ListItemVersion> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersion> futurePatch(@Nonnull final ListItemVersion sourceListItemVersion) {
-        return futureSend(HttpMethod.PATCH, sourceListItemVersion);
+    public java.util.concurrent.CompletableFuture<ListItemVersion> patchAsync(@Nonnull final ListItemVersion sourceListItemVersion) {
+        return sendAsync(HttpMethod.PATCH, sourceListItemVersion);
     }
 
     /**
@@ -107,8 +107,8 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersion> futurePost(@Nonnull final ListItemVersion newListItemVersion) {
-        return futureSend(HttpMethod.POST, newListItemVersion);
+    public java.util.concurrent.CompletableFuture<ListItemVersion> postAsync(@Nonnull final ListItemVersion newListItemVersion) {
+        return sendAsync(HttpMethod.POST, newListItemVersion);
     }
 
     /**
@@ -130,8 +130,8 @@ public class ListItemVersionRequest extends BaseRequest<ListItemVersion> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ListItemVersion> futurePut(@Nonnull final ListItemVersion newListItemVersion) {
-        return futureSend(HttpMethod.PUT, newListItemVersion);
+    public java.util.concurrent.CompletableFuture<ListItemVersion> putAsync(@Nonnull final ListItemVersion newListItemVersion) {
+        return sendAsync(HttpMethod.PUT, newListItemVersion);
     }
 
     /**

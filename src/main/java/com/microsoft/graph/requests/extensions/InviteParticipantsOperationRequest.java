@@ -40,8 +40,8 @@ public class InviteParticipantsOperationRequest extends BaseRequest<InvitePartic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class InviteParticipantsOperationRequest extends BaseRequest<InvitePartic
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class InviteParticipantsOperationRequest extends BaseRequest<InvitePartic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> futurePatch(@Nonnull final InviteParticipantsOperation sourceInviteParticipantsOperation) {
-        return futureSend(HttpMethod.PATCH, sourceInviteParticipantsOperation);
+    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> patchAsync(@Nonnull final InviteParticipantsOperation sourceInviteParticipantsOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceInviteParticipantsOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class InviteParticipantsOperationRequest extends BaseRequest<InvitePartic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> futurePost(@Nonnull final InviteParticipantsOperation newInviteParticipantsOperation) {
-        return futureSend(HttpMethod.POST, newInviteParticipantsOperation);
+    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> postAsync(@Nonnull final InviteParticipantsOperation newInviteParticipantsOperation) {
+        return sendAsync(HttpMethod.POST, newInviteParticipantsOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class InviteParticipantsOperationRequest extends BaseRequest<InvitePartic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> futurePut(@Nonnull final InviteParticipantsOperation newInviteParticipantsOperation) {
-        return futureSend(HttpMethod.PUT, newInviteParticipantsOperation);
+    public java.util.concurrent.CompletableFuture<InviteParticipantsOperation> putAsync(@Nonnull final InviteParticipantsOperation newInviteParticipantsOperation) {
+        return sendAsync(HttpMethod.PUT, newInviteParticipantsOperation);
     }
 
     /**

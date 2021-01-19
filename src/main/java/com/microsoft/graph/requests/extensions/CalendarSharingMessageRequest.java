@@ -41,8 +41,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futurePatch(@Nonnull final CalendarSharingMessage sourceCalendarSharingMessage) {
-        return futureSend(HttpMethod.PATCH, sourceCalendarSharingMessage);
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> patchAsync(@Nonnull final CalendarSharingMessage sourceCalendarSharingMessage) {
+        return sendAsync(HttpMethod.PATCH, sourceCalendarSharingMessage);
     }
 
     /**
@@ -107,8 +107,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futurePost(@Nonnull final CalendarSharingMessage newCalendarSharingMessage) {
-        return futureSend(HttpMethod.POST, newCalendarSharingMessage);
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> postAsync(@Nonnull final CalendarSharingMessage newCalendarSharingMessage) {
+        return sendAsync(HttpMethod.POST, newCalendarSharingMessage);
     }
 
     /**
@@ -130,8 +130,8 @@ public class CalendarSharingMessageRequest extends BaseRequest<CalendarSharingMe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> futurePut(@Nonnull final CalendarSharingMessage newCalendarSharingMessage) {
-        return futureSend(HttpMethod.PUT, newCalendarSharingMessage);
+    public java.util.concurrent.CompletableFuture<CalendarSharingMessage> putAsync(@Nonnull final CalendarSharingMessage newCalendarSharingMessage) {
+        return sendAsync(HttpMethod.PUT, newCalendarSharingMessage);
     }
 
     /**

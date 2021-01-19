@@ -40,8 +40,8 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallState> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallState> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallState> futurePatch(@Nonnull final DeviceInstallState sourceDeviceInstallState) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceInstallState);
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> patchAsync(@Nonnull final DeviceInstallState sourceDeviceInstallState) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceInstallState);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallState> futurePost(@Nonnull final DeviceInstallState newDeviceInstallState) {
-        return futureSend(HttpMethod.POST, newDeviceInstallState);
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> postAsync(@Nonnull final DeviceInstallState newDeviceInstallState) {
+        return sendAsync(HttpMethod.POST, newDeviceInstallState);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceInstallStateRequest extends BaseRequest<DeviceInstallState> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallState> futurePut(@Nonnull final DeviceInstallState newDeviceInstallState) {
-        return futureSend(HttpMethod.PUT, newDeviceInstallState);
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> putAsync(@Nonnull final DeviceInstallState newDeviceInstallState) {
+        return sendAsync(HttpMethod.PUT, newDeviceInstallState);
     }
 
     /**

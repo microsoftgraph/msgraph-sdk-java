@@ -49,8 +49,8 @@ public class ListRequest extends BaseRequest<List> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<List> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<List> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -70,8 +70,8 @@ public class ListRequest extends BaseRequest<List> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<List> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<List> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -92,8 +92,8 @@ public class ListRequest extends BaseRequest<List> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<List> futurePatch(@Nonnull final List sourceList) {
-        return futureSend(HttpMethod.PATCH, sourceList);
+    public java.util.concurrent.CompletableFuture<List> patchAsync(@Nonnull final List sourceList) {
+        return sendAsync(HttpMethod.PATCH, sourceList);
     }
 
     /**
@@ -115,8 +115,8 @@ public class ListRequest extends BaseRequest<List> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<List> futurePost(@Nonnull final List newList) {
-        return futureSend(HttpMethod.POST, newList);
+    public java.util.concurrent.CompletableFuture<List> postAsync(@Nonnull final List newList) {
+        return sendAsync(HttpMethod.POST, newList);
     }
 
     /**
@@ -138,8 +138,8 @@ public class ListRequest extends BaseRequest<List> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<List> futurePut(@Nonnull final List newList) {
-        return futureSend(HttpMethod.PUT, newList);
+    public java.util.concurrent.CompletableFuture<List> putAsync(@Nonnull final List newList) {
+        return sendAsync(HttpMethod.PUT, newList);
     }
 
     /**

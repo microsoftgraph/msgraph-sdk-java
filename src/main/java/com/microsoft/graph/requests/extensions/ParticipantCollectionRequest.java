@@ -48,11 +48,11 @@ public class ParticipantCollectionRequest extends BaseEntityCollectionRequest<Pa
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Participant> futurePost(@Nonnull final Participant newParticipant) {
+    public java.util.concurrent.CompletableFuture<Participant> postAsync(@Nonnull final Participant newParticipant) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ParticipantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newParticipant);
+            .postAsync(newParticipant);
     }
 
     /**

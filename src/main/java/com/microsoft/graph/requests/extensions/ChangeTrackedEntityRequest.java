@@ -55,8 +55,8 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> futurePatch(@Nonnull final ChangeTrackedEntity sourceChangeTrackedEntity) {
-        return futureSend(HttpMethod.PATCH, sourceChangeTrackedEntity);
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> patchAsync(@Nonnull final ChangeTrackedEntity sourceChangeTrackedEntity) {
+        return sendAsync(HttpMethod.PATCH, sourceChangeTrackedEntity);
     }
 
     /**
@@ -121,8 +121,8 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> futurePost(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity) {
-        return futureSend(HttpMethod.POST, newChangeTrackedEntity);
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> postAsync(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity) {
+        return sendAsync(HttpMethod.POST, newChangeTrackedEntity);
     }
 
     /**
@@ -144,8 +144,8 @@ public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> futurePut(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity) {
-        return futureSend(HttpMethod.PUT, newChangeTrackedEntity);
+    public java.util.concurrent.CompletableFuture<ChangeTrackedEntity> putAsync(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity) {
+        return sendAsync(HttpMethod.PUT, newChangeTrackedEntity);
     }
 
     /**

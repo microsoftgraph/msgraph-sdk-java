@@ -44,11 +44,11 @@ public class DirectoryRoleCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRole> futurePost(@Nonnull final DirectoryRole newDirectoryRole) {
+    public java.util.concurrent.CompletableFuture<DirectoryRole> postAsync(@Nonnull final DirectoryRole newDirectoryRole) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDirectoryRole);
+            .postAsync(newDirectoryRole);
     }
 
     /**

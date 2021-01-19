@@ -40,8 +40,8 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> futurePatch(@Nonnull final ProfilePhoto sourceProfilePhoto) {
-        return futureSend(HttpMethod.PATCH, sourceProfilePhoto);
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> patchAsync(@Nonnull final ProfilePhoto sourceProfilePhoto) {
+        return sendAsync(HttpMethod.PATCH, sourceProfilePhoto);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> futurePost(@Nonnull final ProfilePhoto newProfilePhoto) {
-        return futureSend(HttpMethod.POST, newProfilePhoto);
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> postAsync(@Nonnull final ProfilePhoto newProfilePhoto) {
+        return sendAsync(HttpMethod.POST, newProfilePhoto);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ProfilePhotoRequest extends BaseRequest<ProfilePhoto> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> futurePut(@Nonnull final ProfilePhoto newProfilePhoto) {
-        return futureSend(HttpMethod.PUT, newProfilePhoto);
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> putAsync(@Nonnull final ProfilePhoto newProfilePhoto) {
+        return sendAsync(HttpMethod.PUT, newProfilePhoto);
     }
 
     /**

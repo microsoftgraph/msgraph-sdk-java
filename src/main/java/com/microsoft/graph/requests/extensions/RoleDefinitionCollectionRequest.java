@@ -45,11 +45,11 @@ public class RoleDefinitionCollectionRequest extends BaseEntityCollectionRequest
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleDefinition> futurePost(@Nonnull final RoleDefinition newRoleDefinition) {
+    public java.util.concurrent.CompletableFuture<RoleDefinition> postAsync(@Nonnull final RoleDefinition newRoleDefinition) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newRoleDefinition);
+            .postAsync(newRoleDefinition);
     }
 
     /**

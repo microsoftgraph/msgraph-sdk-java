@@ -40,8 +40,8 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futurePatch(@Nonnull final ManagedDeviceOverview sourceManagedDeviceOverview) {
-        return futureSend(HttpMethod.PATCH, sourceManagedDeviceOverview);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> patchAsync(@Nonnull final ManagedDeviceOverview sourceManagedDeviceOverview) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedDeviceOverview);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futurePost(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview) {
-        return futureSend(HttpMethod.POST, newManagedDeviceOverview);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> postAsync(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview) {
+        return sendAsync(HttpMethod.POST, newManagedDeviceOverview);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedDeviceOverviewRequest extends BaseRequest<ManagedDeviceOverv
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> futurePut(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview) {
-        return futureSend(HttpMethod.PUT, newManagedDeviceOverview);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> putAsync(@Nonnull final ManagedDeviceOverview newManagedDeviceOverview) {
+        return sendAsync(HttpMethod.PUT, newManagedDeviceOverview);
     }
 
     /**

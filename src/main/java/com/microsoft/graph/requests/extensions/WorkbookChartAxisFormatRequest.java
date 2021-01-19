@@ -42,8 +42,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> futurePatch(@Nonnull final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartAxisFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> patchAsync(@Nonnull final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartAxisFormat);
     }
 
     /**
@@ -108,8 +108,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> futurePost(@Nonnull final WorkbookChartAxisFormat newWorkbookChartAxisFormat) {
-        return futureSend(HttpMethod.POST, newWorkbookChartAxisFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> postAsync(@Nonnull final WorkbookChartAxisFormat newWorkbookChartAxisFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartAxisFormat);
     }
 
     /**
@@ -131,8 +131,8 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest<WorkbookChartAxi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> futurePut(@Nonnull final WorkbookChartAxisFormat newWorkbookChartAxisFormat) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartAxisFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisFormat> putAsync(@Nonnull final WorkbookChartAxisFormat newWorkbookChartAxisFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartAxisFormat);
     }
 
     /**

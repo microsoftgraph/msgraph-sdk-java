@@ -83,10 +83,10 @@ public class SiteReferenceRequest extends BaseReferenceRequest<Site> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futurePut(@Nonnull final Site srcSite) {
+    public java.util.concurrent.CompletableFuture<Site> putAsync(@Nonnull final Site srcSite) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/sites/" + srcSite.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

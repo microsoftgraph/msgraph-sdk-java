@@ -41,8 +41,8 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest<WorkbookChartDat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest<WorkbookChartDat
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest<WorkbookChartDat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> futurePatch(@Nonnull final WorkbookChartDataLabels sourceWorkbookChartDataLabels) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartDataLabels);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> patchAsync(@Nonnull final WorkbookChartDataLabels sourceWorkbookChartDataLabels) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartDataLabels);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest<WorkbookChartDat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> futurePost(@Nonnull final WorkbookChartDataLabels newWorkbookChartDataLabels) {
-        return futureSend(HttpMethod.POST, newWorkbookChartDataLabels);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> postAsync(@Nonnull final WorkbookChartDataLabels newWorkbookChartDataLabels) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartDataLabels);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest<WorkbookChartDat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> futurePut(@Nonnull final WorkbookChartDataLabels newWorkbookChartDataLabels) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartDataLabels);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabels> putAsync(@Nonnull final WorkbookChartDataLabels newWorkbookChartDataLabels) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartDataLabels);
     }
 
     /**

@@ -40,8 +40,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> futurePatch(@Nonnull final ManagedAppStatusRaw sourceManagedAppStatusRaw) {
-        return futureSend(HttpMethod.PATCH, sourceManagedAppStatusRaw);
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> patchAsync(@Nonnull final ManagedAppStatusRaw sourceManagedAppStatusRaw) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppStatusRaw);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> futurePost(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw) {
-        return futureSend(HttpMethod.POST, newManagedAppStatusRaw);
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> postAsync(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw) {
+        return sendAsync(HttpMethod.POST, newManagedAppStatusRaw);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> futurePut(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw) {
-        return futureSend(HttpMethod.PUT, newManagedAppStatusRaw);
+    public java.util.concurrent.CompletableFuture<ManagedAppStatusRaw> putAsync(@Nonnull final ManagedAppStatusRaw newManagedAppStatusRaw) {
+        return sendAsync(HttpMethod.PUT, newManagedAppStatusRaw);
     }
 
     /**

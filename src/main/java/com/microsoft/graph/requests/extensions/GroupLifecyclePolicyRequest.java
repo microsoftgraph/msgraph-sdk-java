@@ -40,8 +40,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> futurePatch(@Nonnull final GroupLifecyclePolicy sourceGroupLifecyclePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceGroupLifecyclePolicy);
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> patchAsync(@Nonnull final GroupLifecyclePolicy sourceGroupLifecyclePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceGroupLifecyclePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> futurePost(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) {
-        return futureSend(HttpMethod.POST, newGroupLifecyclePolicy);
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> postAsync(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) {
+        return sendAsync(HttpMethod.POST, newGroupLifecyclePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> futurePut(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) {
-        return futureSend(HttpMethod.PUT, newGroupLifecyclePolicy);
+    public java.util.concurrent.CompletableFuture<GroupLifecyclePolicy> putAsync(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) {
+        return sendAsync(HttpMethod.PUT, newGroupLifecyclePolicy);
     }
 
     /**

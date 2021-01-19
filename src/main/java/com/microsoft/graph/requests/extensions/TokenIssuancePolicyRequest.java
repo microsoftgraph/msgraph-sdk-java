@@ -40,8 +40,8 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePatch(@Nonnull final TokenIssuancePolicy sourceTokenIssuancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceTokenIssuancePolicy);
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> patchAsync(@Nonnull final TokenIssuancePolicy sourceTokenIssuancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceTokenIssuancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePost(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
-        return futureSend(HttpMethod.POST, newTokenIssuancePolicy);
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> postAsync(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
+        return sendAsync(HttpMethod.POST, newTokenIssuancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TokenIssuancePolicyRequest extends BaseRequest<TokenIssuancePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePut(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
-        return futureSend(HttpMethod.PUT, newTokenIssuancePolicy);
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> putAsync(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
+        return sendAsync(HttpMethod.PUT, newTokenIssuancePolicy);
     }
 
     /**

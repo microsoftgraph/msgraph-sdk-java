@@ -40,8 +40,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> futurePatch(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> patchAsync(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> futurePost(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
-        return futureSend(HttpMethod.POST, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> postAsync(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
+        return sendAsync(HttpMethod.POST, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> futurePut(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
-        return futureSend(HttpMethod.PUT, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentWindowsHelloForBusinessConfiguration> putAsync(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) {
+        return sendAsync(HttpMethod.PUT, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
     /**

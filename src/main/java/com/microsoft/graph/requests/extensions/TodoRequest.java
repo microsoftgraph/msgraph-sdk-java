@@ -42,8 +42,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Todo> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Todo> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Todo> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Todo> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Todo> futurePatch(@Nonnull final Todo sourceTodo) {
-        return futureSend(HttpMethod.PATCH, sourceTodo);
+    public java.util.concurrent.CompletableFuture<Todo> patchAsync(@Nonnull final Todo sourceTodo) {
+        return sendAsync(HttpMethod.PATCH, sourceTodo);
     }
 
     /**
@@ -108,8 +108,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Todo> futurePost(@Nonnull final Todo newTodo) {
-        return futureSend(HttpMethod.POST, newTodo);
+    public java.util.concurrent.CompletableFuture<Todo> postAsync(@Nonnull final Todo newTodo) {
+        return sendAsync(HttpMethod.POST, newTodo);
     }
 
     /**
@@ -131,8 +131,8 @@ public class TodoRequest extends BaseRequest<Todo> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Todo> futurePut(@Nonnull final Todo newTodo) {
-        return futureSend(HttpMethod.PUT, newTodo);
+    public java.util.concurrent.CompletableFuture<Todo> putAsync(@Nonnull final Todo newTodo) {
+        return sendAsync(HttpMethod.PUT, newTodo);
     }
 
     /**

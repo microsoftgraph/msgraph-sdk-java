@@ -46,11 +46,11 @@ public class PostCollectionRequest extends BaseEntityCollectionRequest<Post, Pos
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Post> futurePost(@Nonnull final Post newPost) {
+    public java.util.concurrent.CompletableFuture<Post> postAsync(@Nonnull final Post newPost) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PostRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newPost);
+            .postAsync(newPost);
     }
 
     /**

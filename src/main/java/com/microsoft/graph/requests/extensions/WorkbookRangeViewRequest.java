@@ -43,8 +43,8 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeView> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,8 +64,8 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeView> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -86,8 +86,8 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeView> futurePatch(@Nonnull final WorkbookRangeView sourceWorkbookRangeView) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookRangeView);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> patchAsync(@Nonnull final WorkbookRangeView sourceWorkbookRangeView) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookRangeView);
     }
 
     /**
@@ -109,8 +109,8 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeView> futurePost(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
-        return futureSend(HttpMethod.POST, newWorkbookRangeView);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> postAsync(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
+        return sendAsync(HttpMethod.POST, newWorkbookRangeView);
     }
 
     /**
@@ -132,8 +132,8 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeView> futurePut(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
-        return futureSend(HttpMethod.PUT, newWorkbookRangeView);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> putAsync(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
+        return sendAsync(HttpMethod.PUT, newWorkbookRangeView);
     }
 
     /**

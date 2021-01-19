@@ -44,8 +44,8 @@ public class DirectoryRoleRequest extends BaseRequest<DirectoryRole> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRole> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DirectoryRole> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,8 +65,8 @@ public class DirectoryRoleRequest extends BaseRequest<DirectoryRole> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRole> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DirectoryRole> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -87,8 +87,8 @@ public class DirectoryRoleRequest extends BaseRequest<DirectoryRole> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRole> futurePatch(@Nonnull final DirectoryRole sourceDirectoryRole) {
-        return futureSend(HttpMethod.PATCH, sourceDirectoryRole);
+    public java.util.concurrent.CompletableFuture<DirectoryRole> patchAsync(@Nonnull final DirectoryRole sourceDirectoryRole) {
+        return sendAsync(HttpMethod.PATCH, sourceDirectoryRole);
     }
 
     /**
@@ -110,8 +110,8 @@ public class DirectoryRoleRequest extends BaseRequest<DirectoryRole> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRole> futurePost(@Nonnull final DirectoryRole newDirectoryRole) {
-        return futureSend(HttpMethod.POST, newDirectoryRole);
+    public java.util.concurrent.CompletableFuture<DirectoryRole> postAsync(@Nonnull final DirectoryRole newDirectoryRole) {
+        return sendAsync(HttpMethod.POST, newDirectoryRole);
     }
 
     /**
@@ -133,8 +133,8 @@ public class DirectoryRoleRequest extends BaseRequest<DirectoryRole> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryRole> futurePut(@Nonnull final DirectoryRole newDirectoryRole) {
-        return futureSend(HttpMethod.PUT, newDirectoryRole);
+    public java.util.concurrent.CompletableFuture<DirectoryRole> putAsync(@Nonnull final DirectoryRole newDirectoryRole) {
+        return sendAsync(HttpMethod.PUT, newDirectoryRole);
     }
 
     /**

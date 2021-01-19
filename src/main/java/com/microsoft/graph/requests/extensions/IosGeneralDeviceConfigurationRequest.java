@@ -40,8 +40,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest<IosGeneral
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest<IosGeneral
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest<IosGeneral
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> futurePatch(@Nonnull final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceIosGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> patchAsync(@Nonnull final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosGeneralDeviceConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest<IosGeneral
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> futurePost(@Nonnull final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.POST, newIosGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> postAsync(@Nonnull final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.POST, newIosGeneralDeviceConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest<IosGeneral
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> futurePut(@Nonnull final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) {
-        return futureSend(HttpMethod.PUT, newIosGeneralDeviceConfiguration);
+    public java.util.concurrent.CompletableFuture<IosGeneralDeviceConfiguration> putAsync(@Nonnull final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) {
+        return sendAsync(HttpMethod.PUT, newIosGeneralDeviceConfiguration);
     }
 
     /**

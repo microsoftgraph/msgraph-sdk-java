@@ -40,8 +40,8 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> futurePatch(@Nonnull final MicrosoftStoreForBusinessApp sourceMicrosoftStoreForBusinessApp) {
-        return futureSend(HttpMethod.PATCH, sourceMicrosoftStoreForBusinessApp);
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> patchAsync(@Nonnull final MicrosoftStoreForBusinessApp sourceMicrosoftStoreForBusinessApp) {
+        return sendAsync(HttpMethod.PATCH, sourceMicrosoftStoreForBusinessApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> futurePost(@Nonnull final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp) {
-        return futureSend(HttpMethod.POST, newMicrosoftStoreForBusinessApp);
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> postAsync(@Nonnull final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp) {
+        return sendAsync(HttpMethod.POST, newMicrosoftStoreForBusinessApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest<MicrosoftSt
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> futurePut(@Nonnull final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp) {
-        return futureSend(HttpMethod.PUT, newMicrosoftStoreForBusinessApp);
+    public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> putAsync(@Nonnull final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp) {
+        return sendAsync(HttpMethod.PUT, newMicrosoftStoreForBusinessApp);
     }
 
     /**

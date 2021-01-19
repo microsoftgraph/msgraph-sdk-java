@@ -40,8 +40,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IpNamedLocation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IpNamedLocation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IpNamedLocation> futurePatch(@Nonnull final IpNamedLocation sourceIpNamedLocation) {
-        return futureSend(HttpMethod.PATCH, sourceIpNamedLocation);
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> patchAsync(@Nonnull final IpNamedLocation sourceIpNamedLocation) {
+        return sendAsync(HttpMethod.PATCH, sourceIpNamedLocation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IpNamedLocation> futurePost(@Nonnull final IpNamedLocation newIpNamedLocation) {
-        return futureSend(HttpMethod.POST, newIpNamedLocation);
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> postAsync(@Nonnull final IpNamedLocation newIpNamedLocation) {
+        return sendAsync(HttpMethod.POST, newIpNamedLocation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IpNamedLocationRequest extends BaseRequest<IpNamedLocation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IpNamedLocation> futurePut(@Nonnull final IpNamedLocation newIpNamedLocation) {
-        return futureSend(HttpMethod.PUT, newIpNamedLocation);
+    public java.util.concurrent.CompletableFuture<IpNamedLocation> putAsync(@Nonnull final IpNamedLocation newIpNamedLocation) {
+        return sendAsync(HttpMethod.PUT, newIpNamedLocation);
     }
 
     /**

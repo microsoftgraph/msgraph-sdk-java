@@ -45,11 +45,11 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseEntit
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> futurePost(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) {
+    public java.util.concurrent.CompletableFuture<MultiValueLegacyExtendedProperty> postAsync(@Nonnull final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MultiValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMultiValueLegacyExtendedProperty);
+            .postAsync(newMultiValueLegacyExtendedProperty);
     }
 
     /**

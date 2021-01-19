@@ -59,8 +59,8 @@ public class CallRequest extends BaseRequest<Call> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Call> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Call> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -80,8 +80,8 @@ public class CallRequest extends BaseRequest<Call> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Call> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Call> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -102,8 +102,8 @@ public class CallRequest extends BaseRequest<Call> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Call> futurePatch(@Nonnull final Call sourceCall) {
-        return futureSend(HttpMethod.PATCH, sourceCall);
+    public java.util.concurrent.CompletableFuture<Call> patchAsync(@Nonnull final Call sourceCall) {
+        return sendAsync(HttpMethod.PATCH, sourceCall);
     }
 
     /**
@@ -125,8 +125,8 @@ public class CallRequest extends BaseRequest<Call> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Call> futurePost(@Nonnull final Call newCall) {
-        return futureSend(HttpMethod.POST, newCall);
+    public java.util.concurrent.CompletableFuture<Call> postAsync(@Nonnull final Call newCall) {
+        return sendAsync(HttpMethod.POST, newCall);
     }
 
     /**
@@ -148,8 +148,8 @@ public class CallRequest extends BaseRequest<Call> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Call> futurePut(@Nonnull final Call newCall) {
-        return futureSend(HttpMethod.PUT, newCall);
+    public java.util.concurrent.CompletableFuture<Call> putAsync(@Nonnull final Call newCall) {
+        return sendAsync(HttpMethod.PUT, newCall);
     }
 
     /**

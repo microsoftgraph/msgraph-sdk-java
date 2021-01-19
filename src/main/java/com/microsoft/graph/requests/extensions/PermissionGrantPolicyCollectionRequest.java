@@ -45,11 +45,11 @@ public class PermissionGrantPolicyCollectionRequest extends BaseEntityCollection
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> futurePost(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) {
+    public java.util.concurrent.CompletableFuture<PermissionGrantPolicy> postAsync(@Nonnull final PermissionGrantPolicy newPermissionGrantPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newPermissionGrantPolicy);
+            .postAsync(newPermissionGrantPolicy);
     }
 
     /**

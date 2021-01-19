@@ -40,8 +40,8 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppAssignment> futurePatch(@Nonnull final MobileAppAssignment sourceMobileAppAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceMobileAppAssignment);
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> patchAsync(@Nonnull final MobileAppAssignment sourceMobileAppAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileAppAssignment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppAssignment> futurePost(@Nonnull final MobileAppAssignment newMobileAppAssignment) {
-        return futureSend(HttpMethod.POST, newMobileAppAssignment);
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> postAsync(@Nonnull final MobileAppAssignment newMobileAppAssignment) {
+        return sendAsync(HttpMethod.POST, newMobileAppAssignment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MobileAppAssignmentRequest extends BaseRequest<MobileAppAssignment>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppAssignment> futurePut(@Nonnull final MobileAppAssignment newMobileAppAssignment) {
-        return futureSend(HttpMethod.PUT, newMobileAppAssignment);
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> putAsync(@Nonnull final MobileAppAssignment newMobileAppAssignment) {
+        return sendAsync(HttpMethod.PUT, newMobileAppAssignment);
     }
 
     /**

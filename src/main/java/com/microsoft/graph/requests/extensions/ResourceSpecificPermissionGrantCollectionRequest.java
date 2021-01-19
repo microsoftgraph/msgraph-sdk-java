@@ -44,11 +44,11 @@ public class ResourceSpecificPermissionGrantCollectionRequest extends BaseEntity
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futurePost(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> postAsync(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ResourceSpecificPermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newResourceSpecificPermissionGrant);
+            .postAsync(newResourceSpecificPermissionGrant);
     }
 
     /**

@@ -45,11 +45,11 @@ public class ItemActivityCollectionRequest extends BaseEntityCollectionRequest<I
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivity> futurePost(@Nonnull final ItemActivity newItemActivity) {
+    public java.util.concurrent.CompletableFuture<ItemActivity> postAsync(@Nonnull final ItemActivity newItemActivity) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newItemActivity);
+            .postAsync(newItemActivity);
     }
 
     /**

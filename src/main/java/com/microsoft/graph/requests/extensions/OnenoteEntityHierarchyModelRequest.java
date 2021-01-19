@@ -55,8 +55,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> futurePatch(@Nonnull final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel) {
-        return futureSend(HttpMethod.PATCH, sourceOnenoteEntityHierarchyModel);
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> patchAsync(@Nonnull final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel) {
+        return sendAsync(HttpMethod.PATCH, sourceOnenoteEntityHierarchyModel);
     }
 
     /**
@@ -121,8 +121,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> futurePost(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) {
-        return futureSend(HttpMethod.POST, newOnenoteEntityHierarchyModel);
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> postAsync(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) {
+        return sendAsync(HttpMethod.POST, newOnenoteEntityHierarchyModel);
     }
 
     /**
@@ -144,8 +144,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntit
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> futurePut(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) {
-        return futureSend(HttpMethod.PUT, newOnenoteEntityHierarchyModel);
+    public java.util.concurrent.CompletableFuture<OnenoteEntityHierarchyModel> putAsync(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) {
+        return sendAsync(HttpMethod.PUT, newOnenoteEntityHierarchyModel);
     }
 
     /**

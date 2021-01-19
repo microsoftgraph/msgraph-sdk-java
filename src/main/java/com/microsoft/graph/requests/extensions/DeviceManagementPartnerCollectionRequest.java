@@ -45,11 +45,11 @@ public class DeviceManagementPartnerCollectionRequest extends BaseEntityCollecti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> futurePost(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) {
+    public java.util.concurrent.CompletableFuture<DeviceManagementPartner> postAsync(@Nonnull final DeviceManagementPartner newDeviceManagementPartner) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceManagementPartner);
+            .postAsync(newDeviceManagementPartner);
     }
 
     /**

@@ -41,8 +41,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> futurePatch(@Nonnull final WorkbookPivotTable sourceWorkbookPivotTable) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookPivotTable);
+    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> patchAsync(@Nonnull final WorkbookPivotTable sourceWorkbookPivotTable) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookPivotTable);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> futurePost(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) {
-        return futureSend(HttpMethod.POST, newWorkbookPivotTable);
+    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> postAsync(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) {
+        return sendAsync(HttpMethod.POST, newWorkbookPivotTable);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookPivotTableRequest extends BaseRequest<WorkbookPivotTable> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> futurePut(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) {
-        return futureSend(HttpMethod.PUT, newWorkbookPivotTable);
+    public java.util.concurrent.CompletableFuture<WorkbookPivotTable> putAsync(@Nonnull final WorkbookPivotTable newWorkbookPivotTable) {
+        return sendAsync(HttpMethod.PUT, newWorkbookPivotTable);
     }
 
     /**

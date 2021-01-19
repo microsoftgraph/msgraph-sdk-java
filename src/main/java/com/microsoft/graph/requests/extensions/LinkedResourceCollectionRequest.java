@@ -45,11 +45,11 @@ public class LinkedResourceCollectionRequest extends BaseEntityCollectionRequest
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LinkedResource> futurePost(@Nonnull final LinkedResource newLinkedResource) {
+    public java.util.concurrent.CompletableFuture<LinkedResource> postAsync(@Nonnull final LinkedResource newLinkedResource) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LinkedResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newLinkedResource);
+            .postAsync(newLinkedResource);
     }
 
     /**

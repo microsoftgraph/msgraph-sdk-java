@@ -40,8 +40,8 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> futurePatch(@Nonnull final IosManagedAppRegistration sourceIosManagedAppRegistration) {
-        return futureSend(HttpMethod.PATCH, sourceIosManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> patchAsync(@Nonnull final IosManagedAppRegistration sourceIosManagedAppRegistration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosManagedAppRegistration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> futurePost(@Nonnull final IosManagedAppRegistration newIosManagedAppRegistration) {
-        return futureSend(HttpMethod.POST, newIosManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> postAsync(@Nonnull final IosManagedAppRegistration newIosManagedAppRegistration) {
+        return sendAsync(HttpMethod.POST, newIosManagedAppRegistration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosManagedAppRegistrationRequest extends BaseRequest<IosManagedAppR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> futurePut(@Nonnull final IosManagedAppRegistration newIosManagedAppRegistration) {
-        return futureSend(HttpMethod.PUT, newIosManagedAppRegistration);
+    public java.util.concurrent.CompletableFuture<IosManagedAppRegistration> putAsync(@Nonnull final IosManagedAppRegistration newIosManagedAppRegistration) {
+        return sendAsync(HttpMethod.PUT, newIosManagedAppRegistration);
     }
 
     /**

@@ -40,8 +40,8 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScore> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SecureScore> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScore> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SecureScore> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScore> futurePatch(@Nonnull final SecureScore sourceSecureScore) {
-        return futureSend(HttpMethod.PATCH, sourceSecureScore);
+    public java.util.concurrent.CompletableFuture<SecureScore> patchAsync(@Nonnull final SecureScore sourceSecureScore) {
+        return sendAsync(HttpMethod.PATCH, sourceSecureScore);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScore> futurePost(@Nonnull final SecureScore newSecureScore) {
-        return futureSend(HttpMethod.POST, newSecureScore);
+    public java.util.concurrent.CompletableFuture<SecureScore> postAsync(@Nonnull final SecureScore newSecureScore) {
+        return sendAsync(HttpMethod.POST, newSecureScore);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SecureScoreRequest extends BaseRequest<SecureScore> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScore> futurePut(@Nonnull final SecureScore newSecureScore) {
-        return futureSend(HttpMethod.PUT, newSecureScore);
+    public java.util.concurrent.CompletableFuture<SecureScore> putAsync(@Nonnull final SecureScore newSecureScore) {
+        return sendAsync(HttpMethod.PUT, newSecureScore);
     }
 
     /**

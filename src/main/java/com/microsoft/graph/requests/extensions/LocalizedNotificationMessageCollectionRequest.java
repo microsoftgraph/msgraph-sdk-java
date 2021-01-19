@@ -45,11 +45,11 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseEntityCol
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> futurePost(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
+    public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> postAsync(@Nonnull final LocalizedNotificationMessage newLocalizedNotificationMessage) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newLocalizedNotificationMessage);
+            .postAsync(newLocalizedNotificationMessage);
     }
 
     /**

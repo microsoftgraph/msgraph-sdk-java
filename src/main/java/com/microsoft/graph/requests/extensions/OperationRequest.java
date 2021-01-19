@@ -55,8 +55,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Operation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Operation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Operation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Operation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Operation> futurePatch(@Nonnull final Operation sourceOperation) {
-        return futureSend(HttpMethod.PATCH, sourceOperation);
+    public java.util.concurrent.CompletableFuture<Operation> patchAsync(@Nonnull final Operation sourceOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceOperation);
     }
 
     /**
@@ -121,8 +121,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Operation> futurePost(@Nonnull final Operation newOperation) {
-        return futureSend(HttpMethod.POST, newOperation);
+    public java.util.concurrent.CompletableFuture<Operation> postAsync(@Nonnull final Operation newOperation) {
+        return sendAsync(HttpMethod.POST, newOperation);
     }
 
     /**
@@ -144,8 +144,8 @@ public class OperationRequest extends BaseRequest<Operation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Operation> futurePut(@Nonnull final Operation newOperation) {
-        return futureSend(HttpMethod.PUT, newOperation);
+    public java.util.concurrent.CompletableFuture<Operation> putAsync(@Nonnull final Operation newOperation) {
+        return sendAsync(HttpMethod.PUT, newOperation);
     }
 
     /**

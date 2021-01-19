@@ -42,8 +42,8 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futurePatch(@Nonnull final WorkbookTableColumn sourceWorkbookTableColumn) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookTableColumn);
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> patchAsync(@Nonnull final WorkbookTableColumn sourceWorkbookTableColumn) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookTableColumn);
     }
 
     /**
@@ -108,8 +108,8 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futurePost(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) {
-        return futureSend(HttpMethod.POST, newWorkbookTableColumn);
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> postAsync(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) {
+        return sendAsync(HttpMethod.POST, newWorkbookTableColumn);
     }
 
     /**
@@ -131,8 +131,8 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futurePut(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) {
-        return futureSend(HttpMethod.PUT, newWorkbookTableColumn);
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> putAsync(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) {
+        return sendAsync(HttpMethod.PUT, newWorkbookTableColumn);
     }
 
     /**

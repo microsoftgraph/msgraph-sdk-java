@@ -47,11 +47,11 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseEntityCollectio
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> futurePost(@Nonnull final DeviceCompliancePolicy newDeviceCompliancePolicy) {
+    public java.util.concurrent.CompletableFuture<DeviceCompliancePolicy> postAsync(@Nonnull final DeviceCompliancePolicy newDeviceCompliancePolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceCompliancePolicy);
+            .postAsync(newDeviceCompliancePolicy);
     }
 
     /**

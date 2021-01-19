@@ -40,8 +40,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSet> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ThumbnailSet> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSet> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ThumbnailSet> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSet> futurePatch(@Nonnull final ThumbnailSet sourceThumbnailSet) {
-        return futureSend(HttpMethod.PATCH, sourceThumbnailSet);
+    public java.util.concurrent.CompletableFuture<ThumbnailSet> patchAsync(@Nonnull final ThumbnailSet sourceThumbnailSet) {
+        return sendAsync(HttpMethod.PATCH, sourceThumbnailSet);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSet> futurePost(@Nonnull final ThumbnailSet newThumbnailSet) {
-        return futureSend(HttpMethod.POST, newThumbnailSet);
+    public java.util.concurrent.CompletableFuture<ThumbnailSet> postAsync(@Nonnull final ThumbnailSet newThumbnailSet) {
+        return sendAsync(HttpMethod.POST, newThumbnailSet);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ThumbnailSetRequest extends BaseRequest<ThumbnailSet> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSet> futurePut(@Nonnull final ThumbnailSet newThumbnailSet) {
-        return futureSend(HttpMethod.PUT, newThumbnailSet);
+    public java.util.concurrent.CompletableFuture<ThumbnailSet> putAsync(@Nonnull final ThumbnailSet newThumbnailSet) {
+        return sendAsync(HttpMethod.PUT, newThumbnailSet);
     }
 
     /**

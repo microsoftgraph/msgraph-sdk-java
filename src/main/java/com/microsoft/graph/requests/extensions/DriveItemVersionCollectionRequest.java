@@ -45,11 +45,11 @@ public class DriveItemVersionCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersion> futurePost(@Nonnull final DriveItemVersion newDriveItemVersion) {
+    public java.util.concurrent.CompletableFuture<DriveItemVersion> postAsync(@Nonnull final DriveItemVersion newDriveItemVersion) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDriveItemVersion);
+            .postAsync(newDriveItemVersion);
     }
 
     /**

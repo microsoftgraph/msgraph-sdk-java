@@ -40,8 +40,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest<DomainDnsMxRecord> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest<DomainDnsMxRecord> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest<DomainDnsMxRecord> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> futurePatch(@Nonnull final DomainDnsMxRecord sourceDomainDnsMxRecord) {
-        return futureSend(HttpMethod.PATCH, sourceDomainDnsMxRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> patchAsync(@Nonnull final DomainDnsMxRecord sourceDomainDnsMxRecord) {
+        return sendAsync(HttpMethod.PATCH, sourceDomainDnsMxRecord);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest<DomainDnsMxRecord> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> futurePost(@Nonnull final DomainDnsMxRecord newDomainDnsMxRecord) {
-        return futureSend(HttpMethod.POST, newDomainDnsMxRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> postAsync(@Nonnull final DomainDnsMxRecord newDomainDnsMxRecord) {
+        return sendAsync(HttpMethod.POST, newDomainDnsMxRecord);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DomainDnsMxRecordRequest extends BaseRequest<DomainDnsMxRecord> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> futurePut(@Nonnull final DomainDnsMxRecord newDomainDnsMxRecord) {
-        return futureSend(HttpMethod.PUT, newDomainDnsMxRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsMxRecord> putAsync(@Nonnull final DomainDnsMxRecord newDomainDnsMxRecord) {
+        return sendAsync(HttpMethod.PUT, newDomainDnsMxRecord);
     }
 
     /**

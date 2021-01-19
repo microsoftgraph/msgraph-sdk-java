@@ -47,8 +47,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contact> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Contact> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -68,8 +68,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contact> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Contact> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -90,8 +90,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contact> futurePatch(@Nonnull final Contact sourceContact) {
-        return futureSend(HttpMethod.PATCH, sourceContact);
+    public java.util.concurrent.CompletableFuture<Contact> patchAsync(@Nonnull final Contact sourceContact) {
+        return sendAsync(HttpMethod.PATCH, sourceContact);
     }
 
     /**
@@ -113,8 +113,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contact> futurePost(@Nonnull final Contact newContact) {
-        return futureSend(HttpMethod.POST, newContact);
+    public java.util.concurrent.CompletableFuture<Contact> postAsync(@Nonnull final Contact newContact) {
+        return sendAsync(HttpMethod.POST, newContact);
     }
 
     /**
@@ -136,8 +136,8 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contact> futurePut(@Nonnull final Contact newContact) {
-        return futureSend(HttpMethod.PUT, newContact);
+    public java.util.concurrent.CompletableFuture<Contact> putAsync(@Nonnull final Contact newContact) {
+        return sendAsync(HttpMethod.PUT, newContact);
     }
 
     /**

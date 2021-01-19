@@ -45,11 +45,11 @@ public class AppRoleAssignmentCollectionRequest extends BaseEntityCollectionRequ
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futurePost(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> postAsync(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newAppRoleAssignment);
+            .postAsync(newAppRoleAssignment);
     }
 
     /**

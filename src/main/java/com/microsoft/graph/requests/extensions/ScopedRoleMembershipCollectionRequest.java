@@ -44,11 +44,11 @@ public class ScopedRoleMembershipCollectionRequest extends BaseEntityCollectionR
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> futurePost(@Nonnull final ScopedRoleMembership newScopedRoleMembership) {
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> postAsync(@Nonnull final ScopedRoleMembership newScopedRoleMembership) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newScopedRoleMembership);
+            .postAsync(newScopedRoleMembership);
     }
 
     /**

@@ -45,11 +45,11 @@ public class EndpointCollectionRequest extends BaseEntityCollectionRequest<Endpo
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Endpoint> futurePost(@Nonnull final Endpoint newEndpoint) {
+    public java.util.concurrent.CompletableFuture<Endpoint> postAsync(@Nonnull final Endpoint newEndpoint) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newEndpoint);
+            .postAsync(newEndpoint);
     }
 
     /**

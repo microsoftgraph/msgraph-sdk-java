@@ -40,8 +40,8 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarPermission> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<CalendarPermission> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarPermission> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<CalendarPermission> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarPermission> futurePatch(@Nonnull final CalendarPermission sourceCalendarPermission) {
-        return futureSend(HttpMethod.PATCH, sourceCalendarPermission);
+    public java.util.concurrent.CompletableFuture<CalendarPermission> patchAsync(@Nonnull final CalendarPermission sourceCalendarPermission) {
+        return sendAsync(HttpMethod.PATCH, sourceCalendarPermission);
     }
 
     /**
@@ -106,8 +106,8 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarPermission> futurePost(@Nonnull final CalendarPermission newCalendarPermission) {
-        return futureSend(HttpMethod.POST, newCalendarPermission);
+    public java.util.concurrent.CompletableFuture<CalendarPermission> postAsync(@Nonnull final CalendarPermission newCalendarPermission) {
+        return sendAsync(HttpMethod.POST, newCalendarPermission);
     }
 
     /**
@@ -129,8 +129,8 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarPermission> futurePut(@Nonnull final CalendarPermission newCalendarPermission) {
-        return futureSend(HttpMethod.PUT, newCalendarPermission);
+    public java.util.concurrent.CompletableFuture<CalendarPermission> putAsync(@Nonnull final CalendarPermission newCalendarPermission) {
+        return sendAsync(HttpMethod.PUT, newCalendarPermission);
     }
 
     /**

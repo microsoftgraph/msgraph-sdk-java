@@ -38,8 +38,8 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest<WorkbookRangeB
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

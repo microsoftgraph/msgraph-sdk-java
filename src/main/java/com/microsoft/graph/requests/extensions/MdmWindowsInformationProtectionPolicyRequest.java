@@ -40,8 +40,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> futurePatch(@Nonnull final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceMdmWindowsInformationProtectionPolicy);
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patchAsync(@Nonnull final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceMdmWindowsInformationProtectionPolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> futurePost(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
-        return futureSend(HttpMethod.POST, newMdmWindowsInformationProtectionPolicy);
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> postAsync(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
+        return sendAsync(HttpMethod.POST, newMdmWindowsInformationProtectionPolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<Md
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> futurePut(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
-        return futureSend(HttpMethod.PUT, newMdmWindowsInformationProtectionPolicy);
+    public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> putAsync(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) {
+        return sendAsync(HttpMethod.PUT, newMdmWindowsInformationProtectionPolicy);
     }
 
     /**

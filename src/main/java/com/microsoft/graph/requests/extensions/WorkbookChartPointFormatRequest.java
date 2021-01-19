@@ -41,8 +41,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futurePatch(@Nonnull final WorkbookChartPointFormat sourceWorkbookChartPointFormat) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartPointFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> patchAsync(@Nonnull final WorkbookChartPointFormat sourceWorkbookChartPointFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartPointFormat);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futurePost(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat) {
-        return futureSend(HttpMethod.POST, newWorkbookChartPointFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> postAsync(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartPointFormat);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookChartPointFormatRequest extends BaseRequest<WorkbookChartPo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> futurePut(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartPointFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPointFormat> putAsync(@Nonnull final WorkbookChartPointFormat newWorkbookChartPointFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartPointFormat);
     }
 
     /**

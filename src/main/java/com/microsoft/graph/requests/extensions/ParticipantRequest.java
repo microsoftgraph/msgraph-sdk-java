@@ -43,8 +43,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Participant> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Participant> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,8 +64,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Participant> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Participant> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -86,8 +86,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Participant> futurePatch(@Nonnull final Participant sourceParticipant) {
-        return futureSend(HttpMethod.PATCH, sourceParticipant);
+    public java.util.concurrent.CompletableFuture<Participant> patchAsync(@Nonnull final Participant sourceParticipant) {
+        return sendAsync(HttpMethod.PATCH, sourceParticipant);
     }
 
     /**
@@ -109,8 +109,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Participant> futurePost(@Nonnull final Participant newParticipant) {
-        return futureSend(HttpMethod.POST, newParticipant);
+    public java.util.concurrent.CompletableFuture<Participant> postAsync(@Nonnull final Participant newParticipant) {
+        return sendAsync(HttpMethod.POST, newParticipant);
     }
 
     /**
@@ -132,8 +132,8 @@ public class ParticipantRequest extends BaseRequest<Participant> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Participant> futurePut(@Nonnull final Participant newParticipant) {
-        return futureSend(HttpMethod.PUT, newParticipant);
+    public java.util.concurrent.CompletableFuture<Participant> putAsync(@Nonnull final Participant newParticipant) {
+        return sendAsync(HttpMethod.PUT, newParticipant);
     }
 
     /**

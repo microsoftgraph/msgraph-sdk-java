@@ -44,11 +44,11 @@ public class DomainCollectionRequest extends BaseEntityCollectionRequest<Domain,
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Domain> futurePost(@Nonnull final Domain newDomain) {
+    public java.util.concurrent.CompletableFuture<Domain> postAsync(@Nonnull final Domain newDomain) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDomain);
+            .postAsync(newDomain);
     }
 
     /**

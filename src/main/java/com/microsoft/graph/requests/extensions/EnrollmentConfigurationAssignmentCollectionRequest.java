@@ -45,11 +45,11 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseEnti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futurePost(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> postAsync(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newEnrollmentConfigurationAssignment);
+            .postAsync(newEnrollmentConfigurationAssignment);
     }
 
     /**

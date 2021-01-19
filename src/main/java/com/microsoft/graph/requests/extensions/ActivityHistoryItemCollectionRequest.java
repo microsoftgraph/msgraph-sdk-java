@@ -45,11 +45,11 @@ public class ActivityHistoryItemCollectionRequest extends BaseEntityCollectionRe
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> futurePost(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> postAsync(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newActivityHistoryItem);
+            .postAsync(newActivityHistoryItem);
     }
 
     /**

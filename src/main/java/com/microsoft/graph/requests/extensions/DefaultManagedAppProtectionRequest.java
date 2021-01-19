@@ -43,8 +43,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,8 +64,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -86,8 +86,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> futurePatch(@Nonnull final DefaultManagedAppProtection sourceDefaultManagedAppProtection) {
-        return futureSend(HttpMethod.PATCH, sourceDefaultManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> patchAsync(@Nonnull final DefaultManagedAppProtection sourceDefaultManagedAppProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceDefaultManagedAppProtection);
     }
 
     /**
@@ -109,8 +109,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> futurePost(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
-        return futureSend(HttpMethod.POST, newDefaultManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> postAsync(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
+        return sendAsync(HttpMethod.POST, newDefaultManagedAppProtection);
     }
 
     /**
@@ -132,8 +132,8 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest<DefaultManag
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> futurePut(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
-        return futureSend(HttpMethod.PUT, newDefaultManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> putAsync(@Nonnull final DefaultManagedAppProtection newDefaultManagedAppProtection) {
+        return sendAsync(HttpMethod.PUT, newDefaultManagedAppProtection);
     }
 
     /**

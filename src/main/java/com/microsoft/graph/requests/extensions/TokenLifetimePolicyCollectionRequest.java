@@ -45,11 +45,11 @@ public class TokenLifetimePolicyCollectionRequest extends BaseEntityCollectionRe
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futurePost(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> postAsync(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TokenLifetimePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTokenLifetimePolicy);
+            .postAsync(newTokenLifetimePolicy);
     }
 
     /**

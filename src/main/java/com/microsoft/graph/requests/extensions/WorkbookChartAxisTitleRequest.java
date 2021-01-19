@@ -41,8 +41,8 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futurePatch(@Nonnull final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartAxisTitle);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> patchAsync(@Nonnull final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartAxisTitle);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futurePost(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle) {
-        return futureSend(HttpMethod.POST, newWorkbookChartAxisTitle);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> postAsync(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartAxisTitle);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxis
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> futurePut(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartAxisTitle);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitle> putAsync(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartAxisTitle);
     }
 
     /**

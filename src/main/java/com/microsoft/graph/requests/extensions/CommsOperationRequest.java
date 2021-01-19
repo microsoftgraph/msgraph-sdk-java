@@ -55,8 +55,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<CommsOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<CommsOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperation> futurePatch(@Nonnull final CommsOperation sourceCommsOperation) {
-        return futureSend(HttpMethod.PATCH, sourceCommsOperation);
+    public java.util.concurrent.CompletableFuture<CommsOperation> patchAsync(@Nonnull final CommsOperation sourceCommsOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceCommsOperation);
     }
 
     /**
@@ -121,8 +121,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperation> futurePost(@Nonnull final CommsOperation newCommsOperation) {
-        return futureSend(HttpMethod.POST, newCommsOperation);
+    public java.util.concurrent.CompletableFuture<CommsOperation> postAsync(@Nonnull final CommsOperation newCommsOperation) {
+        return sendAsync(HttpMethod.POST, newCommsOperation);
     }
 
     /**
@@ -144,8 +144,8 @@ public class CommsOperationRequest extends BaseRequest<CommsOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperation> futurePut(@Nonnull final CommsOperation newCommsOperation) {
-        return futureSend(HttpMethod.PUT, newCommsOperation);
+    public java.util.concurrent.CompletableFuture<CommsOperation> putAsync(@Nonnull final CommsOperation newCommsOperation) {
+        return sendAsync(HttpMethod.PUT, newCommsOperation);
     }
 
     /**

@@ -45,11 +45,11 @@ public class UserScopeTeamsAppInstallationCollectionRequest extends BaseEntityCo
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> futurePost(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
+    public java.util.concurrent.CompletableFuture<UserScopeTeamsAppInstallation> postAsync(@Nonnull final UserScopeTeamsAppInstallation newUserScopeTeamsAppInstallation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserScopeTeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newUserScopeTeamsAppInstallation);
+            .postAsync(newUserScopeTeamsAppInstallation);
     }
 
     /**

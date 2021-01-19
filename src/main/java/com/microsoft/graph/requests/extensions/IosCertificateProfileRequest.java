@@ -40,8 +40,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCertificateProfile> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosCertificateProfile> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCertificateProfile> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosCertificateProfile> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCertificateProfile> futurePatch(@Nonnull final IosCertificateProfile sourceIosCertificateProfile) {
-        return futureSend(HttpMethod.PATCH, sourceIosCertificateProfile);
+    public java.util.concurrent.CompletableFuture<IosCertificateProfile> patchAsync(@Nonnull final IosCertificateProfile sourceIosCertificateProfile) {
+        return sendAsync(HttpMethod.PATCH, sourceIosCertificateProfile);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCertificateProfile> futurePost(@Nonnull final IosCertificateProfile newIosCertificateProfile) {
-        return futureSend(HttpMethod.POST, newIosCertificateProfile);
+    public java.util.concurrent.CompletableFuture<IosCertificateProfile> postAsync(@Nonnull final IosCertificateProfile newIosCertificateProfile) {
+        return sendAsync(HttpMethod.POST, newIosCertificateProfile);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosCertificateProfileRequest extends BaseRequest<IosCertificateProf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCertificateProfile> futurePut(@Nonnull final IosCertificateProfile newIosCertificateProfile) {
-        return futureSend(HttpMethod.PUT, newIosCertificateProfile);
+    public java.util.concurrent.CompletableFuture<IosCertificateProfile> putAsync(@Nonnull final IosCertificateProfile newIosCertificateProfile) {
+        return sendAsync(HttpMethod.PUT, newIosCertificateProfile);
     }
 
     /**

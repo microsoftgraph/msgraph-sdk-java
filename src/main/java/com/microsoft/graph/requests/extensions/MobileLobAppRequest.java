@@ -57,8 +57,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileLobApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MobileLobApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -78,8 +78,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileLobApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MobileLobApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -100,8 +100,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileLobApp> futurePatch(@Nonnull final MobileLobApp sourceMobileLobApp) {
-        return futureSend(HttpMethod.PATCH, sourceMobileLobApp);
+    public java.util.concurrent.CompletableFuture<MobileLobApp> patchAsync(@Nonnull final MobileLobApp sourceMobileLobApp) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileLobApp);
     }
 
     /**
@@ -123,8 +123,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileLobApp> futurePost(@Nonnull final MobileLobApp newMobileLobApp) {
-        return futureSend(HttpMethod.POST, newMobileLobApp);
+    public java.util.concurrent.CompletableFuture<MobileLobApp> postAsync(@Nonnull final MobileLobApp newMobileLobApp) {
+        return sendAsync(HttpMethod.POST, newMobileLobApp);
     }
 
     /**
@@ -146,8 +146,8 @@ public class MobileLobAppRequest extends BaseRequest<MobileLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileLobApp> futurePut(@Nonnull final MobileLobApp newMobileLobApp) {
-        return futureSend(HttpMethod.PUT, newMobileLobApp);
+    public java.util.concurrent.CompletableFuture<MobileLobApp> putAsync(@Nonnull final MobileLobApp newMobileLobApp) {
+        return sendAsync(HttpMethod.PUT, newMobileLobApp);
     }
 
     /**

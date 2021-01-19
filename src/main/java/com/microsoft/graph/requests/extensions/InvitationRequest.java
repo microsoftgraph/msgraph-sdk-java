@@ -41,8 +41,8 @@ public class InvitationRequest extends BaseRequest<Invitation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Invitation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class InvitationRequest extends BaseRequest<Invitation> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Invitation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class InvitationRequest extends BaseRequest<Invitation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> futurePatch(@Nonnull final Invitation sourceInvitation) {
-        return futureSend(HttpMethod.PATCH, sourceInvitation);
+    public java.util.concurrent.CompletableFuture<Invitation> patchAsync(@Nonnull final Invitation sourceInvitation) {
+        return sendAsync(HttpMethod.PATCH, sourceInvitation);
     }
 
     /**
@@ -107,8 +107,8 @@ public class InvitationRequest extends BaseRequest<Invitation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> futurePost(@Nonnull final Invitation newInvitation) {
-        return futureSend(HttpMethod.POST, newInvitation);
+    public java.util.concurrent.CompletableFuture<Invitation> postAsync(@Nonnull final Invitation newInvitation) {
+        return sendAsync(HttpMethod.POST, newInvitation);
     }
 
     /**
@@ -130,8 +130,8 @@ public class InvitationRequest extends BaseRequest<Invitation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> futurePut(@Nonnull final Invitation newInvitation) {
-        return futureSend(HttpMethod.PUT, newInvitation);
+    public java.util.concurrent.CompletableFuture<Invitation> putAsync(@Nonnull final Invitation newInvitation) {
+        return sendAsync(HttpMethod.PUT, newInvitation);
     }
 
     /**

@@ -45,11 +45,11 @@ public class RestrictedSignInCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RestrictedSignIn> futurePost(@Nonnull final RestrictedSignIn newRestrictedSignIn) {
+    public java.util.concurrent.CompletableFuture<RestrictedSignIn> postAsync(@Nonnull final RestrictedSignIn newRestrictedSignIn) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newRestrictedSignIn);
+            .postAsync(newRestrictedSignIn);
     }
 
     /**

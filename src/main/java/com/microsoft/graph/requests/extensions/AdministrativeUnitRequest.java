@@ -46,8 +46,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AdministrativeUnit> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -67,8 +67,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AdministrativeUnit> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -89,8 +89,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AdministrativeUnit> futurePatch(@Nonnull final AdministrativeUnit sourceAdministrativeUnit) {
-        return futureSend(HttpMethod.PATCH, sourceAdministrativeUnit);
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> patchAsync(@Nonnull final AdministrativeUnit sourceAdministrativeUnit) {
+        return sendAsync(HttpMethod.PATCH, sourceAdministrativeUnit);
     }
 
     /**
@@ -112,8 +112,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AdministrativeUnit> futurePost(@Nonnull final AdministrativeUnit newAdministrativeUnit) {
-        return futureSend(HttpMethod.POST, newAdministrativeUnit);
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> postAsync(@Nonnull final AdministrativeUnit newAdministrativeUnit) {
+        return sendAsync(HttpMethod.POST, newAdministrativeUnit);
     }
 
     /**
@@ -135,8 +135,8 @@ public class AdministrativeUnitRequest extends BaseRequest<AdministrativeUnit> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AdministrativeUnit> futurePut(@Nonnull final AdministrativeUnit newAdministrativeUnit) {
-        return futureSend(HttpMethod.PUT, newAdministrativeUnit);
+    public java.util.concurrent.CompletableFuture<AdministrativeUnit> putAsync(@Nonnull final AdministrativeUnit newAdministrativeUnit) {
+        return sendAsync(HttpMethod.PUT, newAdministrativeUnit);
     }
 
     /**

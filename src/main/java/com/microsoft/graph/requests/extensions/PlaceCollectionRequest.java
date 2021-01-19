@@ -44,11 +44,11 @@ public class PlaceCollectionRequest extends BaseEntityCollectionRequest<Place, P
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Place> futurePost(@Nonnull final Place newPlace) {
+    public java.util.concurrent.CompletableFuture<Place> postAsync(@Nonnull final Place newPlace) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlaceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newPlace);
+            .postAsync(newPlace);
     }
 
     /**

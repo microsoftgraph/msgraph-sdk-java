@@ -43,8 +43,8 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest<KeyCredential> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<KeyCredential> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<KeyCredential> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

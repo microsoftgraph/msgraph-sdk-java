@@ -46,11 +46,11 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseEnti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> futurePost(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
+    public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> postAsync(@Nonnull final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceManagementExchangeConnector);
+            .postAsync(newDeviceManagementExchangeConnector);
     }
 
     /**

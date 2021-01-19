@@ -40,8 +40,8 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RecordOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<RecordOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RecordOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<RecordOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RecordOperation> futurePatch(@Nonnull final RecordOperation sourceRecordOperation) {
-        return futureSend(HttpMethod.PATCH, sourceRecordOperation);
+    public java.util.concurrent.CompletableFuture<RecordOperation> patchAsync(@Nonnull final RecordOperation sourceRecordOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceRecordOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RecordOperation> futurePost(@Nonnull final RecordOperation newRecordOperation) {
-        return futureSend(HttpMethod.POST, newRecordOperation);
+    public java.util.concurrent.CompletableFuture<RecordOperation> postAsync(@Nonnull final RecordOperation newRecordOperation) {
+        return sendAsync(HttpMethod.POST, newRecordOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class RecordOperationRequest extends BaseRequest<RecordOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RecordOperation> futurePut(@Nonnull final RecordOperation newRecordOperation) {
-        return futureSend(HttpMethod.PUT, newRecordOperation);
+    public java.util.concurrent.CompletableFuture<RecordOperation> putAsync(@Nonnull final RecordOperation newRecordOperation) {
+        return sendAsync(HttpMethod.PUT, newRecordOperation);
     }
 
     /**

@@ -40,8 +40,8 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> futurePatch(@Nonnull final TeamsAsyncOperation sourceTeamsAsyncOperation) {
-        return futureSend(HttpMethod.PATCH, sourceTeamsAsyncOperation);
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> patchAsync(@Nonnull final TeamsAsyncOperation sourceTeamsAsyncOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsAsyncOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> futurePost(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
-        return futureSend(HttpMethod.POST, newTeamsAsyncOperation);
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> postAsync(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
+        return sendAsync(HttpMethod.POST, newTeamsAsyncOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TeamsAsyncOperationRequest extends BaseRequest<TeamsAsyncOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> futurePut(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
-        return futureSend(HttpMethod.PUT, newTeamsAsyncOperation);
+    public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> putAsync(@Nonnull final TeamsAsyncOperation newTeamsAsyncOperation) {
+        return sendAsync(HttpMethod.PUT, newTeamsAsyncOperation);
     }
 
     /**

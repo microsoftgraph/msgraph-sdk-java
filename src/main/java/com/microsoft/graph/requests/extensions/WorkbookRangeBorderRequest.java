@@ -40,8 +40,8 @@ public class WorkbookRangeBorderRequest extends BaseRequest<WorkbookRangeBorder>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WorkbookRangeBorderRequest extends BaseRequest<WorkbookRangeBorder>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WorkbookRangeBorderRequest extends BaseRequest<WorkbookRangeBorder>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> futurePatch(@Nonnull final WorkbookRangeBorder sourceWorkbookRangeBorder) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookRangeBorder);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> patchAsync(@Nonnull final WorkbookRangeBorder sourceWorkbookRangeBorder) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookRangeBorder);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WorkbookRangeBorderRequest extends BaseRequest<WorkbookRangeBorder>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> futurePost(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) {
-        return futureSend(HttpMethod.POST, newWorkbookRangeBorder);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> postAsync(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) {
+        return sendAsync(HttpMethod.POST, newWorkbookRangeBorder);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WorkbookRangeBorderRequest extends BaseRequest<WorkbookRangeBorder>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> futurePut(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) {
-        return futureSend(HttpMethod.PUT, newWorkbookRangeBorder);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> putAsync(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) {
+        return sendAsync(HttpMethod.PUT, newWorkbookRangeBorder);
     }
 
     /**

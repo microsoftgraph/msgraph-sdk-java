@@ -45,11 +45,11 @@ public class TermsAndConditionsCollectionRequest extends BaseEntityCollectionReq
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> futurePost(@Nonnull final TermsAndConditions newTermsAndConditions) {
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> postAsync(@Nonnull final TermsAndConditions newTermsAndConditions) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTermsAndConditions);
+            .postAsync(newTermsAndConditions);
     }
 
     /**

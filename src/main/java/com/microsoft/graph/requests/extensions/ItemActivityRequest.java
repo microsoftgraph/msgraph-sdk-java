@@ -41,8 +41,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivity> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ItemActivity> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivity> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ItemActivity> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivity> futurePatch(@Nonnull final ItemActivity sourceItemActivity) {
-        return futureSend(HttpMethod.PATCH, sourceItemActivity);
+    public java.util.concurrent.CompletableFuture<ItemActivity> patchAsync(@Nonnull final ItemActivity sourceItemActivity) {
+        return sendAsync(HttpMethod.PATCH, sourceItemActivity);
     }
 
     /**
@@ -107,8 +107,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivity> futurePost(@Nonnull final ItemActivity newItemActivity) {
-        return futureSend(HttpMethod.POST, newItemActivity);
+    public java.util.concurrent.CompletableFuture<ItemActivity> postAsync(@Nonnull final ItemActivity newItemActivity) {
+        return sendAsync(HttpMethod.POST, newItemActivity);
     }
 
     /**
@@ -130,8 +130,8 @@ public class ItemActivityRequest extends BaseRequest<ItemActivity> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivity> futurePut(@Nonnull final ItemActivity newItemActivity) {
-        return futureSend(HttpMethod.PUT, newItemActivity);
+    public java.util.concurrent.CompletableFuture<ItemActivity> putAsync(@Nonnull final ItemActivity newItemActivity) {
+        return sendAsync(HttpMethod.PUT, newItemActivity);
     }
 
     /**

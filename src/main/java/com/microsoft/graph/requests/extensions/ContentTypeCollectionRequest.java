@@ -45,11 +45,11 @@ public class ContentTypeCollectionRequest extends BaseEntityCollectionRequest<Co
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> futurePost(@Nonnull final ContentType newContentType) {
+    public java.util.concurrent.CompletableFuture<ContentType> postAsync(@Nonnull final ContentType newContentType) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newContentType);
+            .postAsync(newContentType);
     }
 
     /**

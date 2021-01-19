@@ -42,8 +42,8 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookComment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookComment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookComment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookComment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookComment> futurePatch(@Nonnull final WorkbookComment sourceWorkbookComment) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookComment);
+    public java.util.concurrent.CompletableFuture<WorkbookComment> patchAsync(@Nonnull final WorkbookComment sourceWorkbookComment) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookComment);
     }
 
     /**
@@ -108,8 +108,8 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookComment> futurePost(@Nonnull final WorkbookComment newWorkbookComment) {
-        return futureSend(HttpMethod.POST, newWorkbookComment);
+    public java.util.concurrent.CompletableFuture<WorkbookComment> postAsync(@Nonnull final WorkbookComment newWorkbookComment) {
+        return sendAsync(HttpMethod.POST, newWorkbookComment);
     }
 
     /**
@@ -131,8 +131,8 @@ public class WorkbookCommentRequest extends BaseRequest<WorkbookComment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookComment> futurePut(@Nonnull final WorkbookComment newWorkbookComment) {
-        return futureSend(HttpMethod.PUT, newWorkbookComment);
+    public java.util.concurrent.CompletableFuture<WorkbookComment> putAsync(@Nonnull final WorkbookComment newWorkbookComment) {
+        return sendAsync(HttpMethod.PUT, newWorkbookComment);
     }
 
     /**

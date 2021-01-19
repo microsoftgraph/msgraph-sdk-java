@@ -43,8 +43,8 @@ public class CallSubscribeToToneRequest extends BaseRequest<SubscribeToToneOpera
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

@@ -68,10 +68,10 @@ public class MobileAppCategoryReferenceRequest extends BaseReferenceRequest<Mobi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> futurePut(@Nonnull final MobileAppCategory srcMobileAppCategory) {
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> putAsync(@Nonnull final MobileAppCategory srcMobileAppCategory) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceAppManagement/mobileAppCategories/" + srcMobileAppCategory.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

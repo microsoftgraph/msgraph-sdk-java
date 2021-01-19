@@ -40,8 +40,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> futurePatch(@Nonnull final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary) {
-        return futureSend(HttpMethod.PATCH, sourceManagedAppPolicyDeploymentSummary);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> patchAsync(@Nonnull final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppPolicyDeploymentSummary);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> futurePost(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) {
-        return futureSend(HttpMethod.POST, newManagedAppPolicyDeploymentSummary);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> postAsync(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) {
+        return sendAsync(HttpMethod.POST, newManagedAppPolicyDeploymentSummary);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> futurePut(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) {
-        return futureSend(HttpMethod.PUT, newManagedAppPolicyDeploymentSummary);
+    public java.util.concurrent.CompletableFuture<ManagedAppPolicyDeploymentSummary> putAsync(@Nonnull final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) {
+        return sendAsync(HttpMethod.PUT, newManagedAppPolicyDeploymentSummary);
     }
 
     /**

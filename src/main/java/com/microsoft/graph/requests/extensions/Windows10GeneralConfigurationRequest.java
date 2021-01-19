@@ -40,8 +40,8 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest<Windows10G
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest<Windows10G
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest<Windows10G
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> futurePatch(@Nonnull final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindows10GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> patchAsync(@Nonnull final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10GeneralConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest<Windows10G
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> futurePost(@Nonnull final Windows10GeneralConfiguration newWindows10GeneralConfiguration) {
-        return futureSend(HttpMethod.POST, newWindows10GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> postAsync(@Nonnull final Windows10GeneralConfiguration newWindows10GeneralConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindows10GeneralConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest<Windows10G
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> futurePut(@Nonnull final Windows10GeneralConfiguration newWindows10GeneralConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindows10GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10GeneralConfiguration> putAsync(@Nonnull final Windows10GeneralConfiguration newWindows10GeneralConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindows10GeneralConfiguration);
     }
 
     /**

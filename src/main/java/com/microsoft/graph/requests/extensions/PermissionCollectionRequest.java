@@ -46,11 +46,11 @@ public class PermissionCollectionRequest extends BaseEntityCollectionRequest<Per
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Permission> futurePost(@Nonnull final Permission newPermission) {
+    public java.util.concurrent.CompletableFuture<Permission> postAsync(@Nonnull final Permission newPermission) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newPermission);
+            .postAsync(newPermission);
     }
 
     /**

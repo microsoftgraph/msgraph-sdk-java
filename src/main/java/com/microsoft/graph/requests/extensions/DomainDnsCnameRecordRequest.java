@@ -40,8 +40,8 @@ public class DomainDnsCnameRecordRequest extends BaseRequest<DomainDnsCnameRecor
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DomainDnsCnameRecordRequest extends BaseRequest<DomainDnsCnameRecor
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DomainDnsCnameRecordRequest extends BaseRequest<DomainDnsCnameRecor
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> futurePatch(@Nonnull final DomainDnsCnameRecord sourceDomainDnsCnameRecord) {
-        return futureSend(HttpMethod.PATCH, sourceDomainDnsCnameRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> patchAsync(@Nonnull final DomainDnsCnameRecord sourceDomainDnsCnameRecord) {
+        return sendAsync(HttpMethod.PATCH, sourceDomainDnsCnameRecord);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DomainDnsCnameRecordRequest extends BaseRequest<DomainDnsCnameRecor
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> futurePost(@Nonnull final DomainDnsCnameRecord newDomainDnsCnameRecord) {
-        return futureSend(HttpMethod.POST, newDomainDnsCnameRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> postAsync(@Nonnull final DomainDnsCnameRecord newDomainDnsCnameRecord) {
+        return sendAsync(HttpMethod.POST, newDomainDnsCnameRecord);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DomainDnsCnameRecordRequest extends BaseRequest<DomainDnsCnameRecor
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> futurePut(@Nonnull final DomainDnsCnameRecord newDomainDnsCnameRecord) {
-        return futureSend(HttpMethod.PUT, newDomainDnsCnameRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsCnameRecord> putAsync(@Nonnull final DomainDnsCnameRecord newDomainDnsCnameRecord) {
+        return sendAsync(HttpMethod.PUT, newDomainDnsCnameRecord);
     }
 
     /**

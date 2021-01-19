@@ -40,8 +40,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlayPromptOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<PlayPromptOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlayPromptOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<PlayPromptOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlayPromptOperation> futurePatch(@Nonnull final PlayPromptOperation sourcePlayPromptOperation) {
-        return futureSend(HttpMethod.PATCH, sourcePlayPromptOperation);
+    public java.util.concurrent.CompletableFuture<PlayPromptOperation> patchAsync(@Nonnull final PlayPromptOperation sourcePlayPromptOperation) {
+        return sendAsync(HttpMethod.PATCH, sourcePlayPromptOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlayPromptOperation> futurePost(@Nonnull final PlayPromptOperation newPlayPromptOperation) {
-        return futureSend(HttpMethod.POST, newPlayPromptOperation);
+    public java.util.concurrent.CompletableFuture<PlayPromptOperation> postAsync(@Nonnull final PlayPromptOperation newPlayPromptOperation) {
+        return sendAsync(HttpMethod.POST, newPlayPromptOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class PlayPromptOperationRequest extends BaseRequest<PlayPromptOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlayPromptOperation> futurePut(@Nonnull final PlayPromptOperation newPlayPromptOperation) {
-        return futureSend(HttpMethod.PUT, newPlayPromptOperation);
+    public java.util.concurrent.CompletableFuture<PlayPromptOperation> putAsync(@Nonnull final PlayPromptOperation newPlayPromptOperation) {
+        return sendAsync(HttpMethod.PUT, newPlayPromptOperation);
     }
 
     /**

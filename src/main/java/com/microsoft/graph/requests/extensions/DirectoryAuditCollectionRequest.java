@@ -45,11 +45,11 @@ public class DirectoryAuditCollectionRequest extends BaseEntityCollectionRequest
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryAudit> futurePost(@Nonnull final DirectoryAudit newDirectoryAudit) {
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> postAsync(@Nonnull final DirectoryAudit newDirectoryAudit) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDirectoryAudit);
+            .postAsync(newDirectoryAudit);
     }
 
     /**
