@@ -115,6 +115,15 @@ public class GraphServiceClient extends BaseClient implements IBaseClient {
         setServiceRoot("https://graph.microsoft.com/v1.0");
     }
     /**
+     * Gets the service SDK version if the service SDK is in use, null otherwise
+     * @return the service SDK version if the service SDK is in use, null otherwise
+     */
+    @Override
+    @Nullable
+    public String getServiceSDKVersion() {
+        return com.microsoft.graph.info.Constants.VERSION_NAME;
+    }
+    /**
      * Gets the builder to start configuring the client
      *
      * @return builder to start configuring the client
