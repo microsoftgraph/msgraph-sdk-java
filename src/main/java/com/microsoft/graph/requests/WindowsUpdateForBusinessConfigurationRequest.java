@@ -40,8 +40,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futurePatch(@Nonnull final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsUpdateForBusinessConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> patchAsync(@Nonnull final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsUpdateForBusinessConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futurePost(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) {
-        return futureSend(HttpMethod.POST, newWindowsUpdateForBusinessConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> postAsync(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindowsUpdateForBusinessConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> futurePut(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindowsUpdateForBusinessConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsUpdateForBusinessConfiguration> putAsync(@Nonnull final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindowsUpdateForBusinessConfiguration);
     }
 
     /**

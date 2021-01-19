@@ -41,8 +41,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> futurePatch(@Nonnull final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartAxisTitleFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> patchAsync(@Nonnull final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartAxisTitleFormat);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> futurePost(@Nonnull final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) {
-        return futureSend(HttpMethod.POST, newWorkbookChartAxisTitleFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> postAsync(@Nonnull final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartAxisTitleFormat);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> futurePut(@Nonnull final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartAxisTitleFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartAxisTitleFormat> putAsync(@Nonnull final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartAxisTitleFormat);
     }
 
     /**

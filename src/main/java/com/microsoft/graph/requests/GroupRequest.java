@@ -70,8 +70,8 @@ public class GroupRequest extends BaseRequest<Group> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Group> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Group> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -91,8 +91,8 @@ public class GroupRequest extends BaseRequest<Group> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Group> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Group> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -113,8 +113,8 @@ public class GroupRequest extends BaseRequest<Group> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Group> futurePatch(@Nonnull final Group sourceGroup) {
-        return futureSend(HttpMethod.PATCH, sourceGroup);
+    public java.util.concurrent.CompletableFuture<Group> patchAsync(@Nonnull final Group sourceGroup) {
+        return sendAsync(HttpMethod.PATCH, sourceGroup);
     }
 
     /**
@@ -136,8 +136,8 @@ public class GroupRequest extends BaseRequest<Group> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Group> futurePost(@Nonnull final Group newGroup) {
-        return futureSend(HttpMethod.POST, newGroup);
+    public java.util.concurrent.CompletableFuture<Group> postAsync(@Nonnull final Group newGroup) {
+        return sendAsync(HttpMethod.POST, newGroup);
     }
 
     /**
@@ -159,8 +159,8 @@ public class GroupRequest extends BaseRequest<Group> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Group> futurePut(@Nonnull final Group newGroup) {
-        return futureSend(HttpMethod.PUT, newGroup);
+    public java.util.concurrent.CompletableFuture<Group> putAsync(@Nonnull final Group newGroup) {
+        return sendAsync(HttpMethod.PUT, newGroup);
     }
 
     /**

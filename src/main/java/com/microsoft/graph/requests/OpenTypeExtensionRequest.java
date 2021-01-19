@@ -40,8 +40,8 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenTypeExtension> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenTypeExtension> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenTypeExtension> futurePatch(@Nonnull final OpenTypeExtension sourceOpenTypeExtension) {
-        return futureSend(HttpMethod.PATCH, sourceOpenTypeExtension);
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> patchAsync(@Nonnull final OpenTypeExtension sourceOpenTypeExtension) {
+        return sendAsync(HttpMethod.PATCH, sourceOpenTypeExtension);
     }
 
     /**
@@ -106,8 +106,8 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenTypeExtension> futurePost(@Nonnull final OpenTypeExtension newOpenTypeExtension) {
-        return futureSend(HttpMethod.POST, newOpenTypeExtension);
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> postAsync(@Nonnull final OpenTypeExtension newOpenTypeExtension) {
+        return sendAsync(HttpMethod.POST, newOpenTypeExtension);
     }
 
     /**
@@ -129,8 +129,8 @@ public class OpenTypeExtensionRequest extends BaseRequest<OpenTypeExtension> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenTypeExtension> futurePut(@Nonnull final OpenTypeExtension newOpenTypeExtension) {
-        return futureSend(HttpMethod.PUT, newOpenTypeExtension);
+    public java.util.concurrent.CompletableFuture<OpenTypeExtension> putAsync(@Nonnull final OpenTypeExtension newOpenTypeExtension) {
+        return sendAsync(HttpMethod.PUT, newOpenTypeExtension);
     }
 
     /**

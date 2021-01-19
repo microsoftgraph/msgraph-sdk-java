@@ -40,8 +40,8 @@ public class PlannerTaskDetailsRequest extends BaseRequest<PlannerTaskDetails> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class PlannerTaskDetailsRequest extends BaseRequest<PlannerTaskDetails> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class PlannerTaskDetailsRequest extends BaseRequest<PlannerTaskDetails> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> futurePatch(@Nonnull final PlannerTaskDetails sourcePlannerTaskDetails) {
-        return futureSend(HttpMethod.PATCH, sourcePlannerTaskDetails);
+    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> patchAsync(@Nonnull final PlannerTaskDetails sourcePlannerTaskDetails) {
+        return sendAsync(HttpMethod.PATCH, sourcePlannerTaskDetails);
     }
 
     /**
@@ -106,8 +106,8 @@ public class PlannerTaskDetailsRequest extends BaseRequest<PlannerTaskDetails> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> futurePost(@Nonnull final PlannerTaskDetails newPlannerTaskDetails) {
-        return futureSend(HttpMethod.POST, newPlannerTaskDetails);
+    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> postAsync(@Nonnull final PlannerTaskDetails newPlannerTaskDetails) {
+        return sendAsync(HttpMethod.POST, newPlannerTaskDetails);
     }
 
     /**
@@ -129,8 +129,8 @@ public class PlannerTaskDetailsRequest extends BaseRequest<PlannerTaskDetails> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> futurePut(@Nonnull final PlannerTaskDetails newPlannerTaskDetails) {
-        return futureSend(HttpMethod.PUT, newPlannerTaskDetails);
+    public java.util.concurrent.CompletableFuture<PlannerTaskDetails> putAsync(@Nonnull final PlannerTaskDetails newPlannerTaskDetails) {
+        return sendAsync(HttpMethod.PUT, newPlannerTaskDetails);
     }
 
     /**

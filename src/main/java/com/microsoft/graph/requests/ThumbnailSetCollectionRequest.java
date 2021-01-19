@@ -45,11 +45,11 @@ public class ThumbnailSetCollectionRequest extends BaseEntityCollectionRequest<T
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThumbnailSet> futurePost(@Nonnull final ThumbnailSet newThumbnailSet) {
+    public java.util.concurrent.CompletableFuture<ThumbnailSet> postAsync(@Nonnull final ThumbnailSet newThumbnailSet) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThumbnailSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newThumbnailSet);
+            .postAsync(newThumbnailSet);
     }
 
     /**

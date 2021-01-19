@@ -40,8 +40,8 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> futurePatch(@Nonnull final WindowsUniversalAppX sourceWindowsUniversalAppX) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsUniversalAppX);
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> patchAsync(@Nonnull final WindowsUniversalAppX sourceWindowsUniversalAppX) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsUniversalAppX);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> futurePost(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX) {
-        return futureSend(HttpMethod.POST, newWindowsUniversalAppX);
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> postAsync(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX) {
+        return sendAsync(HttpMethod.POST, newWindowsUniversalAppX);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalApp
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> futurePut(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX) {
-        return futureSend(HttpMethod.PUT, newWindowsUniversalAppX);
+    public java.util.concurrent.CompletableFuture<WindowsUniversalAppX> putAsync(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX) {
+        return sendAsync(HttpMethod.PUT, newWindowsUniversalAppX);
     }
 
     /**

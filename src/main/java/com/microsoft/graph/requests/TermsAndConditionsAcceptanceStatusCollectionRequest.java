@@ -45,11 +45,11 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseEnt
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> futurePost(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> postAsync(@Nonnull final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTermsAndConditionsAcceptanceStatus);
+            .postAsync(newTermsAndConditionsAcceptanceStatus);
     }
 
     /**

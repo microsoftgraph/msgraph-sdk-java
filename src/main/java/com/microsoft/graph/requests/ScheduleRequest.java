@@ -58,8 +58,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Schedule> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Schedule> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -79,8 +79,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Schedule> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Schedule> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -101,8 +101,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Schedule> futurePatch(@Nonnull final Schedule sourceSchedule) {
-        return futureSend(HttpMethod.PATCH, sourceSchedule);
+    public java.util.concurrent.CompletableFuture<Schedule> patchAsync(@Nonnull final Schedule sourceSchedule) {
+        return sendAsync(HttpMethod.PATCH, sourceSchedule);
     }
 
     /**
@@ -124,8 +124,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Schedule> futurePost(@Nonnull final Schedule newSchedule) {
-        return futureSend(HttpMethod.POST, newSchedule);
+    public java.util.concurrent.CompletableFuture<Schedule> postAsync(@Nonnull final Schedule newSchedule) {
+        return sendAsync(HttpMethod.POST, newSchedule);
     }
 
     /**
@@ -147,8 +147,8 @@ public class ScheduleRequest extends BaseRequest<Schedule> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Schedule> futurePut(@Nonnull final Schedule newSchedule) {
-        return futureSend(HttpMethod.PUT, newSchedule);
+    public java.util.concurrent.CompletableFuture<Schedule> putAsync(@Nonnull final Schedule newSchedule) {
+        return sendAsync(HttpMethod.PUT, newSchedule);
     }
 
     /**

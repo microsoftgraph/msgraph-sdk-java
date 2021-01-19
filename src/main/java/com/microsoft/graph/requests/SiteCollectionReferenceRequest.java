@@ -51,12 +51,12 @@ public class SiteCollectionReferenceRequest extends BaseCollectionWithReferences
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futurePost(@Nonnull final Site newSite) {
+    public java.util.concurrent.CompletableFuture<Site> postAsync(@Nonnull final Site newSite) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
         return new SiteWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSite, body);
+            .postAsync(newSite, body);
     }
 
     /**

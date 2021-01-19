@@ -46,8 +46,8 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedDevice> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -67,8 +67,8 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedDevice> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -89,8 +89,8 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> futurePatch(@Nonnull final ManagedDevice sourceManagedDevice) {
-        return futureSend(HttpMethod.PATCH, sourceManagedDevice);
+    public java.util.concurrent.CompletableFuture<ManagedDevice> patchAsync(@Nonnull final ManagedDevice sourceManagedDevice) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedDevice);
     }
 
     /**
@@ -112,8 +112,8 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> futurePost(@Nonnull final ManagedDevice newManagedDevice) {
-        return futureSend(HttpMethod.POST, newManagedDevice);
+    public java.util.concurrent.CompletableFuture<ManagedDevice> postAsync(@Nonnull final ManagedDevice newManagedDevice) {
+        return sendAsync(HttpMethod.POST, newManagedDevice);
     }
 
     /**
@@ -135,8 +135,8 @@ public class ManagedDeviceRequest extends BaseRequest<ManagedDevice> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> futurePut(@Nonnull final ManagedDevice newManagedDevice) {
-        return futureSend(HttpMethod.PUT, newManagedDevice);
+    public java.util.concurrent.CompletableFuture<ManagedDevice> putAsync(@Nonnull final ManagedDevice newManagedDevice) {
+        return sendAsync(HttpMethod.PUT, newManagedDevice);
     }
 
     /**

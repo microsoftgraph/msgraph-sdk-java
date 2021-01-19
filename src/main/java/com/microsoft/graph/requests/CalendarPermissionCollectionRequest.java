@@ -45,11 +45,11 @@ public class CalendarPermissionCollectionRequest extends BaseEntityCollectionReq
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarPermission> futurePost(@Nonnull final CalendarPermission newCalendarPermission) {
+    public java.util.concurrent.CompletableFuture<CalendarPermission> postAsync(@Nonnull final CalendarPermission newCalendarPermission) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarPermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newCalendarPermission);
+            .postAsync(newCalendarPermission);
     }
 
     /**

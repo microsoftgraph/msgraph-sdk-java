@@ -40,8 +40,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> futurePatch(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment sourceManagedDeviceMobileAppConfigurationAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceManagedDeviceMobileAppConfigurationAssignment);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> patchAsync(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment sourceManagedDeviceMobileAppConfigurationAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedDeviceMobileAppConfigurationAssignment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> futurePost(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) {
-        return futureSend(HttpMethod.POST, newManagedDeviceMobileAppConfigurationAssignment);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> postAsync(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) {
+        return sendAsync(HttpMethod.POST, newManagedDeviceMobileAppConfigurationAssignment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> futurePut(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) {
-        return futureSend(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationAssignment);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationAssignment> putAsync(@Nonnull final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) {
+        return sendAsync(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationAssignment);
     }
 
     /**

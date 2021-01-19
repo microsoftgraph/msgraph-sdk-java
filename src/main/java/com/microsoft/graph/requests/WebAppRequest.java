@@ -40,8 +40,8 @@ public class WebAppRequest extends BaseRequest<WebApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WebApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WebApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WebAppRequest extends BaseRequest<WebApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WebApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WebApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WebAppRequest extends BaseRequest<WebApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WebApp> futurePatch(@Nonnull final WebApp sourceWebApp) {
-        return futureSend(HttpMethod.PATCH, sourceWebApp);
+    public java.util.concurrent.CompletableFuture<WebApp> patchAsync(@Nonnull final WebApp sourceWebApp) {
+        return sendAsync(HttpMethod.PATCH, sourceWebApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WebAppRequest extends BaseRequest<WebApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WebApp> futurePost(@Nonnull final WebApp newWebApp) {
-        return futureSend(HttpMethod.POST, newWebApp);
+    public java.util.concurrent.CompletableFuture<WebApp> postAsync(@Nonnull final WebApp newWebApp) {
+        return sendAsync(HttpMethod.POST, newWebApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WebAppRequest extends BaseRequest<WebApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WebApp> futurePut(@Nonnull final WebApp newWebApp) {
-        return futureSend(HttpMethod.PUT, newWebApp);
+    public java.util.concurrent.CompletableFuture<WebApp> putAsync(@Nonnull final WebApp newWebApp) {
+        return sendAsync(HttpMethod.PUT, newWebApp);
     }
 
     /**

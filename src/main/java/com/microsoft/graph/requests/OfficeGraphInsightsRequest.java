@@ -46,8 +46,8 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -67,8 +67,8 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -89,8 +89,8 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> futurePatch(@Nonnull final OfficeGraphInsights sourceOfficeGraphInsights) {
-        return futureSend(HttpMethod.PATCH, sourceOfficeGraphInsights);
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> patchAsync(@Nonnull final OfficeGraphInsights sourceOfficeGraphInsights) {
+        return sendAsync(HttpMethod.PATCH, sourceOfficeGraphInsights);
     }
 
     /**
@@ -112,8 +112,8 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> futurePost(@Nonnull final OfficeGraphInsights newOfficeGraphInsights) {
-        return futureSend(HttpMethod.POST, newOfficeGraphInsights);
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> postAsync(@Nonnull final OfficeGraphInsights newOfficeGraphInsights) {
+        return sendAsync(HttpMethod.POST, newOfficeGraphInsights);
     }
 
     /**
@@ -135,8 +135,8 @@ public class OfficeGraphInsightsRequest extends BaseRequest<OfficeGraphInsights>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> futurePut(@Nonnull final OfficeGraphInsights newOfficeGraphInsights) {
-        return futureSend(HttpMethod.PUT, newOfficeGraphInsights);
+    public java.util.concurrent.CompletableFuture<OfficeGraphInsights> putAsync(@Nonnull final OfficeGraphInsights newOfficeGraphInsights) {
+        return sendAsync(HttpMethod.PUT, newOfficeGraphInsights);
     }
 
     /**

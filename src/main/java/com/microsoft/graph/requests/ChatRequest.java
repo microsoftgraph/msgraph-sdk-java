@@ -41,8 +41,8 @@ public class ChatRequest extends BaseRequest<Chat> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Chat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class ChatRequest extends BaseRequest<Chat> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Chat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class ChatRequest extends BaseRequest<Chat> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> futurePatch(@Nonnull final Chat sourceChat) {
-        return futureSend(HttpMethod.PATCH, sourceChat);
+    public java.util.concurrent.CompletableFuture<Chat> patchAsync(@Nonnull final Chat sourceChat) {
+        return sendAsync(HttpMethod.PATCH, sourceChat);
     }
 
     /**
@@ -107,8 +107,8 @@ public class ChatRequest extends BaseRequest<Chat> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> futurePost(@Nonnull final Chat newChat) {
-        return futureSend(HttpMethod.POST, newChat);
+    public java.util.concurrent.CompletableFuture<Chat> postAsync(@Nonnull final Chat newChat) {
+        return sendAsync(HttpMethod.POST, newChat);
     }
 
     /**
@@ -130,8 +130,8 @@ public class ChatRequest extends BaseRequest<Chat> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> futurePut(@Nonnull final Chat newChat) {
-        return futureSend(HttpMethod.PUT, newChat);
+    public java.util.concurrent.CompletableFuture<Chat> putAsync(@Nonnull final Chat newChat) {
+        return sendAsync(HttpMethod.PUT, newChat);
     }
 
     /**

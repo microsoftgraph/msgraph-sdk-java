@@ -40,8 +40,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosStoreApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosStoreApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosStoreApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosStoreApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosStoreApp> futurePatch(@Nonnull final IosStoreApp sourceIosStoreApp) {
-        return futureSend(HttpMethod.PATCH, sourceIosStoreApp);
+    public java.util.concurrent.CompletableFuture<IosStoreApp> patchAsync(@Nonnull final IosStoreApp sourceIosStoreApp) {
+        return sendAsync(HttpMethod.PATCH, sourceIosStoreApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosStoreApp> futurePost(@Nonnull final IosStoreApp newIosStoreApp) {
-        return futureSend(HttpMethod.POST, newIosStoreApp);
+    public java.util.concurrent.CompletableFuture<IosStoreApp> postAsync(@Nonnull final IosStoreApp newIosStoreApp) {
+        return sendAsync(HttpMethod.POST, newIosStoreApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosStoreAppRequest extends BaseRequest<IosStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosStoreApp> futurePut(@Nonnull final IosStoreApp newIosStoreApp) {
-        return futureSend(HttpMethod.PUT, newIosStoreApp);
+    public java.util.concurrent.CompletableFuture<IosStoreApp> putAsync(@Nonnull final IosStoreApp newIosStoreApp) {
+        return sendAsync(HttpMethod.PUT, newIosStoreApp);
     }
 
     /**

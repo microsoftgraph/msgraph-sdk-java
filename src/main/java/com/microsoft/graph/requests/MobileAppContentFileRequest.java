@@ -41,8 +41,8 @@ public class MobileAppContentFileRequest extends BaseRequest<MobileAppContentFil
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MobileAppContentFile> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class MobileAppContentFileRequest extends BaseRequest<MobileAppContentFil
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MobileAppContentFile> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class MobileAppContentFileRequest extends BaseRequest<MobileAppContentFil
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> futurePatch(@Nonnull final MobileAppContentFile sourceMobileAppContentFile) {
-        return futureSend(HttpMethod.PATCH, sourceMobileAppContentFile);
+    public java.util.concurrent.CompletableFuture<MobileAppContentFile> patchAsync(@Nonnull final MobileAppContentFile sourceMobileAppContentFile) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileAppContentFile);
     }
 
     /**
@@ -107,8 +107,8 @@ public class MobileAppContentFileRequest extends BaseRequest<MobileAppContentFil
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> futurePost(@Nonnull final MobileAppContentFile newMobileAppContentFile) {
-        return futureSend(HttpMethod.POST, newMobileAppContentFile);
+    public java.util.concurrent.CompletableFuture<MobileAppContentFile> postAsync(@Nonnull final MobileAppContentFile newMobileAppContentFile) {
+        return sendAsync(HttpMethod.POST, newMobileAppContentFile);
     }
 
     /**
@@ -130,8 +130,8 @@ public class MobileAppContentFileRequest extends BaseRequest<MobileAppContentFil
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContentFile> futurePut(@Nonnull final MobileAppContentFile newMobileAppContentFile) {
-        return futureSend(HttpMethod.PUT, newMobileAppContentFile);
+    public java.util.concurrent.CompletableFuture<MobileAppContentFile> putAsync(@Nonnull final MobileAppContentFile newMobileAppContentFile) {
+        return sendAsync(HttpMethod.PUT, newMobileAppContentFile);
     }
 
     /**

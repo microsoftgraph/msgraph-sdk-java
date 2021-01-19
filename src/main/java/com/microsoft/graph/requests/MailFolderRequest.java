@@ -65,8 +65,8 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolder> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MailFolder> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -86,8 +86,8 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolder> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MailFolder> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -108,8 +108,8 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolder> futurePatch(@Nonnull final MailFolder sourceMailFolder) {
-        return futureSend(HttpMethod.PATCH, sourceMailFolder);
+    public java.util.concurrent.CompletableFuture<MailFolder> patchAsync(@Nonnull final MailFolder sourceMailFolder) {
+        return sendAsync(HttpMethod.PATCH, sourceMailFolder);
     }
 
     /**
@@ -131,8 +131,8 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolder> futurePost(@Nonnull final MailFolder newMailFolder) {
-        return futureSend(HttpMethod.POST, newMailFolder);
+    public java.util.concurrent.CompletableFuture<MailFolder> postAsync(@Nonnull final MailFolder newMailFolder) {
+        return sendAsync(HttpMethod.POST, newMailFolder);
     }
 
     /**
@@ -154,8 +154,8 @@ public class MailFolderRequest extends BaseRequest<MailFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailFolder> futurePut(@Nonnull final MailFolder newMailFolder) {
-        return futureSend(HttpMethod.PUT, newMailFolder);
+    public java.util.concurrent.CompletableFuture<MailFolder> putAsync(@Nonnull final MailFolder newMailFolder) {
+        return sendAsync(HttpMethod.PUT, newMailFolder);
     }
 
     /**

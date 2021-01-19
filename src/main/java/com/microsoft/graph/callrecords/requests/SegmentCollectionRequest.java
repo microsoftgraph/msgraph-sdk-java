@@ -45,11 +45,11 @@ public class SegmentCollectionRequest extends BaseEntityCollectionRequest<Segmen
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Segment> futurePost(@Nonnull final Segment newSegment) {
+    public java.util.concurrent.CompletableFuture<Segment> postAsync(@Nonnull final Segment newSegment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSegment);
+            .postAsync(newSegment);
     }
 
     /**

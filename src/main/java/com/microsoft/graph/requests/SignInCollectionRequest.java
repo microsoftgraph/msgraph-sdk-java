@@ -45,11 +45,11 @@ public class SignInCollectionRequest extends BaseEntityCollectionRequest<SignIn,
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SignIn> futurePost(@Nonnull final SignIn newSignIn) {
+    public java.util.concurrent.CompletableFuture<SignIn> postAsync(@Nonnull final SignIn newSignIn) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSignIn);
+            .postAsync(newSignIn);
     }
 
     /**

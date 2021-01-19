@@ -40,8 +40,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegration> futurePatch(@Nonnull final WorkforceIntegration sourceWorkforceIntegration) {
-        return futureSend(HttpMethod.PATCH, sourceWorkforceIntegration);
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> patchAsync(@Nonnull final WorkforceIntegration sourceWorkforceIntegration) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkforceIntegration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegration> futurePost(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
-        return futureSend(HttpMethod.POST, newWorkforceIntegration);
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> postAsync(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
+        return sendAsync(HttpMethod.POST, newWorkforceIntegration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkforceIntegration> futurePut(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
-        return futureSend(HttpMethod.PUT, newWorkforceIntegration);
+    public java.util.concurrent.CompletableFuture<WorkforceIntegration> putAsync(@Nonnull final WorkforceIntegration newWorkforceIntegration) {
+        return sendAsync(HttpMethod.PUT, newWorkforceIntegration);
     }
 
     /**

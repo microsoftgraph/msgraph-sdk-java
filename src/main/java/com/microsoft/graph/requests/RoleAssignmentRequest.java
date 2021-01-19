@@ -56,8 +56,8 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<RoleAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -77,8 +77,8 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<RoleAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -99,8 +99,8 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleAssignment> futurePatch(@Nonnull final RoleAssignment sourceRoleAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceRoleAssignment);
+    public java.util.concurrent.CompletableFuture<RoleAssignment> patchAsync(@Nonnull final RoleAssignment sourceRoleAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceRoleAssignment);
     }
 
     /**
@@ -122,8 +122,8 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleAssignment> futurePost(@Nonnull final RoleAssignment newRoleAssignment) {
-        return futureSend(HttpMethod.POST, newRoleAssignment);
+    public java.util.concurrent.CompletableFuture<RoleAssignment> postAsync(@Nonnull final RoleAssignment newRoleAssignment) {
+        return sendAsync(HttpMethod.POST, newRoleAssignment);
     }
 
     /**
@@ -145,8 +145,8 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoleAssignment> futurePut(@Nonnull final RoleAssignment newRoleAssignment) {
-        return futureSend(HttpMethod.PUT, newRoleAssignment);
+    public java.util.concurrent.CompletableFuture<RoleAssignment> putAsync(@Nonnull final RoleAssignment newRoleAssignment) {
+        return sendAsync(HttpMethod.PUT, newRoleAssignment);
     }
 
     /**

@@ -40,8 +40,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> futurePatch(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus sourceManagedDeviceMobileAppConfigurationDeviceStatus) {
-        return futureSend(HttpMethod.PATCH, sourceManagedDeviceMobileAppConfigurationDeviceStatus);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> patchAsync(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus sourceManagedDeviceMobileAppConfigurationDeviceStatus) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> futurePost(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) {
-        return futureSend(HttpMethod.POST, newManagedDeviceMobileAppConfigurationDeviceStatus);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> postAsync(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) {
+        return sendAsync(HttpMethod.POST, newManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> futurePut(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) {
-        return futureSend(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationDeviceStatus);
+    public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> putAsync(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) {
+        return sendAsync(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
     /**

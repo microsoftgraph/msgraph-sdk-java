@@ -45,11 +45,11 @@ public class DriveCollectionRequest extends BaseEntityCollectionRequest<Drive, D
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Drive> futurePost(@Nonnull final Drive newDrive) {
+    public java.util.concurrent.CompletableFuture<Drive> postAsync(@Nonnull final Drive newDrive) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDrive);
+            .postAsync(newDrive);
     }
 
     /**

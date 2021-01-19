@@ -36,8 +36,8 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Integer> futurePost() {
-        return futureSend(HttpMethod.POST, null);
+    public java.util.concurrent.CompletableFuture<Integer> postAsync() {
+        return sendAsync(HttpMethod.POST, null);
     }
 
     /**

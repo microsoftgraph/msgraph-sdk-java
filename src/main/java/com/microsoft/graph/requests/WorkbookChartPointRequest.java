@@ -41,8 +41,8 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> futurePatch(@Nonnull final WorkbookChartPoint sourceWorkbookChartPoint) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartPoint);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> patchAsync(@Nonnull final WorkbookChartPoint sourceWorkbookChartPoint) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartPoint);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> futurePost(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
-        return futureSend(HttpMethod.POST, newWorkbookChartPoint);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> postAsync(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartPoint);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> futurePut(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartPoint);
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> putAsync(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartPoint);
     }
 
     /**

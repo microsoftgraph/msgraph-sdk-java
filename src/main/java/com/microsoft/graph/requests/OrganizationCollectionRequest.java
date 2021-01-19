@@ -44,11 +44,11 @@ public class OrganizationCollectionRequest extends BaseEntityCollectionRequest<O
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Organization> futurePost(@Nonnull final Organization newOrganization) {
+    public java.util.concurrent.CompletableFuture<Organization> postAsync(@Nonnull final Organization newOrganization) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOrganization);
+            .postAsync(newOrganization);
     }
 
     /**

@@ -50,12 +50,12 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futurePost(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> postAsync(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/oauth2PermissionGrants/" + newOAuth2PermissionGrant.id);
         return new OAuth2PermissionGrantWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOAuth2PermissionGrant, body);
+            .postAsync(newOAuth2PermissionGrant, body);
     }
 
     /**

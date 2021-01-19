@@ -42,8 +42,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> futurePatch(@Nonnull final UserInstallStateSummary sourceUserInstallStateSummary) {
-        return futureSend(HttpMethod.PATCH, sourceUserInstallStateSummary);
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> patchAsync(@Nonnull final UserInstallStateSummary sourceUserInstallStateSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceUserInstallStateSummary);
     }
 
     /**
@@ -108,8 +108,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> futurePost(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) {
-        return futureSend(HttpMethod.POST, newUserInstallStateSummary);
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> postAsync(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) {
+        return sendAsync(HttpMethod.POST, newUserInstallStateSummary);
     }
 
     /**
@@ -131,8 +131,8 @@ public class UserInstallStateSummaryRequest extends BaseRequest<UserInstallState
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> futurePut(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) {
-        return futureSend(HttpMethod.PUT, newUserInstallStateSummary);
+    public java.util.concurrent.CompletableFuture<UserInstallStateSummary> putAsync(@Nonnull final UserInstallStateSummary newUserInstallStateSummary) {
+        return sendAsync(HttpMethod.PUT, newUserInstallStateSummary);
     }
 
     /**

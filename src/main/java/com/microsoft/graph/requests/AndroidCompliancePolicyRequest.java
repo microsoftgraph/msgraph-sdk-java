@@ -40,8 +40,8 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futurePatch(@Nonnull final AndroidCompliancePolicy sourceAndroidCompliancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceAndroidCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> patchAsync(@Nonnull final AndroidCompliancePolicy sourceAndroidCompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidCompliancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futurePost(@Nonnull final AndroidCompliancePolicy newAndroidCompliancePolicy) {
-        return futureSend(HttpMethod.POST, newAndroidCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> postAsync(@Nonnull final AndroidCompliancePolicy newAndroidCompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newAndroidCompliancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AndroidCompliancePolicyRequest extends BaseRequest<AndroidComplianc
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> futurePut(@Nonnull final AndroidCompliancePolicy newAndroidCompliancePolicy) {
-        return futureSend(HttpMethod.PUT, newAndroidCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<AndroidCompliancePolicy> putAsync(@Nonnull final AndroidCompliancePolicy newAndroidCompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newAndroidCompliancePolicy);
     }
 
     /**

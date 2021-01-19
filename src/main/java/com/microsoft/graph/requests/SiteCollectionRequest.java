@@ -45,11 +45,11 @@ public class SiteCollectionRequest extends BaseEntityCollectionRequest<Site, Sit
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futurePost(@Nonnull final Site newSite) {
+    public java.util.concurrent.CompletableFuture<Site> postAsync(@Nonnull final Site newSite) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSite);
+            .postAsync(newSite);
     }
 
     /**

@@ -40,8 +40,8 @@ public class DeviceCategoryRequest extends BaseRequest<DeviceCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCategory> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceCategory> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceCategoryRequest extends BaseRequest<DeviceCategory> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCategory> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceCategory> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceCategoryRequest extends BaseRequest<DeviceCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCategory> futurePatch(@Nonnull final DeviceCategory sourceDeviceCategory) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceCategory);
+    public java.util.concurrent.CompletableFuture<DeviceCategory> patchAsync(@Nonnull final DeviceCategory sourceDeviceCategory) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceCategory);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceCategoryRequest extends BaseRequest<DeviceCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCategory> futurePost(@Nonnull final DeviceCategory newDeviceCategory) {
-        return futureSend(HttpMethod.POST, newDeviceCategory);
+    public java.util.concurrent.CompletableFuture<DeviceCategory> postAsync(@Nonnull final DeviceCategory newDeviceCategory) {
+        return sendAsync(HttpMethod.POST, newDeviceCategory);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceCategoryRequest extends BaseRequest<DeviceCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceCategory> futurePut(@Nonnull final DeviceCategory newDeviceCategory) {
-        return futureSend(HttpMethod.PUT, newDeviceCategory);
+    public java.util.concurrent.CompletableFuture<DeviceCategory> putAsync(@Nonnull final DeviceCategory newDeviceCategory) {
+        return sendAsync(HttpMethod.PUT, newDeviceCategory);
     }
 
     /**

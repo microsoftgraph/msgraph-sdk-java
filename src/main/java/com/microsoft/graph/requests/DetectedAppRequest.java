@@ -42,8 +42,8 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DetectedApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DetectedApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DetectedApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DetectedApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DetectedApp> futurePatch(@Nonnull final DetectedApp sourceDetectedApp) {
-        return futureSend(HttpMethod.PATCH, sourceDetectedApp);
+    public java.util.concurrent.CompletableFuture<DetectedApp> patchAsync(@Nonnull final DetectedApp sourceDetectedApp) {
+        return sendAsync(HttpMethod.PATCH, sourceDetectedApp);
     }
 
     /**
@@ -108,8 +108,8 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DetectedApp> futurePost(@Nonnull final DetectedApp newDetectedApp) {
-        return futureSend(HttpMethod.POST, newDetectedApp);
+    public java.util.concurrent.CompletableFuture<DetectedApp> postAsync(@Nonnull final DetectedApp newDetectedApp) {
+        return sendAsync(HttpMethod.POST, newDetectedApp);
     }
 
     /**
@@ -131,8 +131,8 @@ public class DetectedAppRequest extends BaseRequest<DetectedApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DetectedApp> futurePut(@Nonnull final DetectedApp newDetectedApp) {
-        return futureSend(HttpMethod.PUT, newDetectedApp);
+    public java.util.concurrent.CompletableFuture<DetectedApp> putAsync(@Nonnull final DetectedApp newDetectedApp) {
+        return sendAsync(HttpMethod.PUT, newDetectedApp);
     }
 
     /**

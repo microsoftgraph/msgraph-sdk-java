@@ -40,8 +40,8 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> futurePatch(@Nonnull final WorkbookRangeFont sourceWorkbookRangeFont) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookRangeFont);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> patchAsync(@Nonnull final WorkbookRangeFont sourceWorkbookRangeFont) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookRangeFont);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> futurePost(@Nonnull final WorkbookRangeFont newWorkbookRangeFont) {
-        return futureSend(HttpMethod.POST, newWorkbookRangeFont);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> postAsync(@Nonnull final WorkbookRangeFont newWorkbookRangeFont) {
+        return sendAsync(HttpMethod.POST, newWorkbookRangeFont);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WorkbookRangeFontRequest extends BaseRequest<WorkbookRangeFont> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> futurePut(@Nonnull final WorkbookRangeFont newWorkbookRangeFont) {
-        return futureSend(HttpMethod.PUT, newWorkbookRangeFont);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFont> putAsync(@Nonnull final WorkbookRangeFont newWorkbookRangeFont) {
+        return sendAsync(HttpMethod.PUT, newWorkbookRangeFont);
     }
 
     /**

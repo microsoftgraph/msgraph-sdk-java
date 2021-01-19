@@ -40,8 +40,8 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> futurePatch(@Nonnull final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindows10EndpointProtectionConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> patchAsync(@Nonnull final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10EndpointProtectionConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> futurePost(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) {
-        return futureSend(HttpMethod.POST, newWindows10EndpointProtectionConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> postAsync(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindows10EndpointProtectionConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> futurePut(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindows10EndpointProtectionConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10EndpointProtectionConfiguration> putAsync(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindows10EndpointProtectionConfiguration);
     }
 
     /**

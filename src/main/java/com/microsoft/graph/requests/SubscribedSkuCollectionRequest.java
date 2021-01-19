@@ -44,11 +44,11 @@ public class SubscribedSkuCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSku> futurePost(@Nonnull final SubscribedSku newSubscribedSku) {
+    public java.util.concurrent.CompletableFuture<SubscribedSku> postAsync(@Nonnull final SubscribedSku newSubscribedSku) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSubscribedSku);
+            .postAsync(newSubscribedSku);
     }
 
     /**

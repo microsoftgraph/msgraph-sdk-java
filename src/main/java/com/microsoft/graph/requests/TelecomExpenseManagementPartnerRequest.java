@@ -40,8 +40,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> futurePatch(@Nonnull final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner) {
-        return futureSend(HttpMethod.PATCH, sourceTelecomExpenseManagementPartner);
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> patchAsync(@Nonnull final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner) {
+        return sendAsync(HttpMethod.PATCH, sourceTelecomExpenseManagementPartner);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> futurePost(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
-        return futureSend(HttpMethod.POST, newTelecomExpenseManagementPartner);
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> postAsync(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
+        return sendAsync(HttpMethod.POST, newTelecomExpenseManagementPartner);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest<TelecomE
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> futurePut(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
-        return futureSend(HttpMethod.PUT, newTelecomExpenseManagementPartner);
+    public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> putAsync(@Nonnull final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) {
+        return sendAsync(HttpMethod.PUT, newTelecomExpenseManagementPartner);
     }
 
     /**

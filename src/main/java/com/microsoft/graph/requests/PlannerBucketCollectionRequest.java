@@ -45,11 +45,11 @@ public class PlannerBucketCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucket> futurePost(@Nonnull final PlannerBucket newPlannerBucket) {
+    public java.util.concurrent.CompletableFuture<PlannerBucket> postAsync(@Nonnull final PlannerBucket newPlannerBucket) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlannerBucketRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newPlannerBucket);
+            .postAsync(newPlannerBucket);
     }
 
     /**

@@ -40,8 +40,8 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryAudit> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryAudit> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryAudit> futurePatch(@Nonnull final DirectoryAudit sourceDirectoryAudit) {
-        return futureSend(HttpMethod.PATCH, sourceDirectoryAudit);
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> patchAsync(@Nonnull final DirectoryAudit sourceDirectoryAudit) {
+        return sendAsync(HttpMethod.PATCH, sourceDirectoryAudit);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryAudit> futurePost(@Nonnull final DirectoryAudit newDirectoryAudit) {
-        return futureSend(HttpMethod.POST, newDirectoryAudit);
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> postAsync(@Nonnull final DirectoryAudit newDirectoryAudit) {
+        return sendAsync(HttpMethod.POST, newDirectoryAudit);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryAudit> futurePut(@Nonnull final DirectoryAudit newDirectoryAudit) {
-        return futureSend(HttpMethod.PUT, newDirectoryAudit);
+    public java.util.concurrent.CompletableFuture<DirectoryAudit> putAsync(@Nonnull final DirectoryAudit newDirectoryAudit) {
+        return sendAsync(HttpMethod.PUT, newDirectoryAudit);
     }
 
     /**

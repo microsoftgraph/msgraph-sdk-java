@@ -45,11 +45,11 @@ public class RoomCollectionRequest extends BaseEntityCollectionRequest<Room, Roo
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Room> futurePost(@Nonnull final Room newRoom) {
+    public java.util.concurrent.CompletableFuture<Room> postAsync(@Nonnull final Room newRoom) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newRoom);
+            .postAsync(newRoom);
     }
 
     /**

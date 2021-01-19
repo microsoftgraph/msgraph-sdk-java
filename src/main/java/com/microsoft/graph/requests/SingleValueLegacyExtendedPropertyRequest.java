@@ -40,8 +40,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> futurePatch(@Nonnull final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty) {
-        return futureSend(HttpMethod.PATCH, sourceSingleValueLegacyExtendedProperty);
+    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> patchAsync(@Nonnull final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.PATCH, sourceSingleValueLegacyExtendedProperty);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> futurePost(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) {
-        return futureSend(HttpMethod.POST, newSingleValueLegacyExtendedProperty);
+    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> postAsync(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.POST, newSingleValueLegacyExtendedProperty);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest<Single
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> futurePut(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) {
-        return futureSend(HttpMethod.PUT, newSingleValueLegacyExtendedProperty);
+    public java.util.concurrent.CompletableFuture<SingleValueLegacyExtendedProperty> putAsync(@Nonnull final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) {
+        return sendAsync(HttpMethod.PUT, newSingleValueLegacyExtendedProperty);
     }
 
     /**

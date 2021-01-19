@@ -41,8 +41,8 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futurePatch(@Nonnull final WorkbookTableRow sourceWorkbookTableRow) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookTableRow);
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> patchAsync(@Nonnull final WorkbookTableRow sourceWorkbookTableRow) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookTableRow);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futurePost(@Nonnull final WorkbookTableRow newWorkbookTableRow) {
-        return futureSend(HttpMethod.POST, newWorkbookTableRow);
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> postAsync(@Nonnull final WorkbookTableRow newWorkbookTableRow) {
+        return sendAsync(HttpMethod.POST, newWorkbookTableRow);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookTableRowRequest extends BaseRequest<WorkbookTableRow> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableRow> futurePut(@Nonnull final WorkbookTableRow newWorkbookTableRow) {
-        return futureSend(HttpMethod.PUT, newWorkbookTableRow);
+    public java.util.concurrent.CompletableFuture<WorkbookTableRow> putAsync(@Nonnull final WorkbookTableRow newWorkbookTableRow) {
+        return sendAsync(HttpMethod.PUT, newWorkbookTableRow);
     }
 
     /**

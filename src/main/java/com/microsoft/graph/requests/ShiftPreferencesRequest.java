@@ -40,8 +40,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ShiftPreferences> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ShiftPreferences> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ShiftPreferences> futurePatch(@Nonnull final ShiftPreferences sourceShiftPreferences) {
-        return futureSend(HttpMethod.PATCH, sourceShiftPreferences);
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> patchAsync(@Nonnull final ShiftPreferences sourceShiftPreferences) {
+        return sendAsync(HttpMethod.PATCH, sourceShiftPreferences);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ShiftPreferences> futurePost(@Nonnull final ShiftPreferences newShiftPreferences) {
-        return futureSend(HttpMethod.POST, newShiftPreferences);
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> postAsync(@Nonnull final ShiftPreferences newShiftPreferences) {
+        return sendAsync(HttpMethod.POST, newShiftPreferences);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ShiftPreferencesRequest extends BaseRequest<ShiftPreferences> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ShiftPreferences> futurePut(@Nonnull final ShiftPreferences newShiftPreferences) {
-        return futureSend(HttpMethod.PUT, newShiftPreferences);
+    public java.util.concurrent.CompletableFuture<ShiftPreferences> putAsync(@Nonnull final ShiftPreferences newShiftPreferences) {
+        return sendAsync(HttpMethod.PUT, newShiftPreferences);
     }
 
     /**

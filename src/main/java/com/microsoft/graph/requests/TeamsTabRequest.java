@@ -41,8 +41,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTab> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TeamsTab> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTab> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TeamsTab> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTab> futurePatch(@Nonnull final TeamsTab sourceTeamsTab) {
-        return futureSend(HttpMethod.PATCH, sourceTeamsTab);
+    public java.util.concurrent.CompletableFuture<TeamsTab> patchAsync(@Nonnull final TeamsTab sourceTeamsTab) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsTab);
     }
 
     /**
@@ -107,8 +107,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTab> futurePost(@Nonnull final TeamsTab newTeamsTab) {
-        return futureSend(HttpMethod.POST, newTeamsTab);
+    public java.util.concurrent.CompletableFuture<TeamsTab> postAsync(@Nonnull final TeamsTab newTeamsTab) {
+        return sendAsync(HttpMethod.POST, newTeamsTab);
     }
 
     /**
@@ -130,8 +130,8 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTab> futurePut(@Nonnull final TeamsTab newTeamsTab) {
-        return futureSend(HttpMethod.PUT, newTeamsTab);
+    public java.util.concurrent.CompletableFuture<TeamsTab> putAsync(@Nonnull final TeamsTab newTeamsTab) {
+        return sendAsync(HttpMethod.PUT, newTeamsTab);
     }
 
     /**

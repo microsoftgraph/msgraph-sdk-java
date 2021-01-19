@@ -40,8 +40,8 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> futurePatch(@Nonnull final SecureScoreControlProfile sourceSecureScoreControlProfile) {
-        return futureSend(HttpMethod.PATCH, sourceSecureScoreControlProfile);
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> patchAsync(@Nonnull final SecureScoreControlProfile sourceSecureScoreControlProfile) {
+        return sendAsync(HttpMethod.PATCH, sourceSecureScoreControlProfile);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> futurePost(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) {
-        return futureSend(HttpMethod.POST, newSecureScoreControlProfile);
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> postAsync(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) {
+        return sendAsync(HttpMethod.POST, newSecureScoreControlProfile);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> futurePut(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) {
-        return futureSend(HttpMethod.PUT, newSecureScoreControlProfile);
+    public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> putAsync(@Nonnull final SecureScoreControlProfile newSecureScoreControlProfile) {
+        return sendAsync(HttpMethod.PUT, newSecureScoreControlProfile);
     }
 
     /**

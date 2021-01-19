@@ -44,8 +44,8 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,8 +65,8 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -87,8 +87,8 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> futurePatch(@Nonnull final ConditionalAccessRoot sourceConditionalAccessRoot) {
-        return futureSend(HttpMethod.PATCH, sourceConditionalAccessRoot);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> patchAsync(@Nonnull final ConditionalAccessRoot sourceConditionalAccessRoot) {
+        return sendAsync(HttpMethod.PATCH, sourceConditionalAccessRoot);
     }
 
     /**
@@ -110,8 +110,8 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> futurePost(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot) {
-        return futureSend(HttpMethod.POST, newConditionalAccessRoot);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> postAsync(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot) {
+        return sendAsync(HttpMethod.POST, newConditionalAccessRoot);
     }
 
     /**
@@ -133,8 +133,8 @@ public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> futurePut(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot) {
-        return futureSend(HttpMethod.PUT, newConditionalAccessRoot);
+    public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> putAsync(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot) {
+        return sendAsync(HttpMethod.PUT, newConditionalAccessRoot);
     }
 
     /**

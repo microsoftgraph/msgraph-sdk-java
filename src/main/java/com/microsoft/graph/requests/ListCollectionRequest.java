@@ -45,11 +45,11 @@ public class ListCollectionRequest extends BaseEntityCollectionRequest<List, Lis
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<List> futurePost(@Nonnull final List newList) {
+    public java.util.concurrent.CompletableFuture<List> postAsync(@Nonnull final List newList) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ListRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newList);
+            .postAsync(newList);
     }
 
     /**

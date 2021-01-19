@@ -36,8 +36,8 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest<Boolean> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Boolean> futurePost() {
-        return futureSend(HttpMethod.POST, null);
+    public java.util.concurrent.CompletableFuture<Boolean> postAsync() {
+        return sendAsync(HttpMethod.POST, null);
     }
 
     /**

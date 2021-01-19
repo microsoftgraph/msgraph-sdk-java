@@ -40,8 +40,8 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futurePatch(@Nonnull final AppRoleAssignment sourceAppRoleAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceAppRoleAssignment);
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> patchAsync(@Nonnull final AppRoleAssignment sourceAppRoleAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceAppRoleAssignment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futurePost(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
-        return futureSend(HttpMethod.POST, newAppRoleAssignment);
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> postAsync(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
+        return sendAsync(HttpMethod.POST, newAppRoleAssignment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AppRoleAssignmentRequest extends BaseRequest<AppRoleAssignment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AppRoleAssignment> futurePut(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
-        return futureSend(HttpMethod.PUT, newAppRoleAssignment);
+    public java.util.concurrent.CompletableFuture<AppRoleAssignment> putAsync(@Nonnull final AppRoleAssignment newAppRoleAssignment) {
+        return sendAsync(HttpMethod.PUT, newAppRoleAssignment);
     }
 
     /**

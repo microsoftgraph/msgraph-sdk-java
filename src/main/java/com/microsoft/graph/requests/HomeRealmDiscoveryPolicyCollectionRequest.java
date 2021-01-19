@@ -45,11 +45,11 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseEntityCollect
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePost(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> postAsync(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new HomeRealmDiscoveryPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newHomeRealmDiscoveryPolicy);
+            .postAsync(newHomeRealmDiscoveryPolicy);
     }
 
     /**

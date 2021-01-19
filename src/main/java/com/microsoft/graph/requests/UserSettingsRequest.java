@@ -41,8 +41,8 @@ public class UserSettingsRequest extends BaseRequest<UserSettings> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserSettings> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<UserSettings> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class UserSettingsRequest extends BaseRequest<UserSettings> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserSettings> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<UserSettings> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class UserSettingsRequest extends BaseRequest<UserSettings> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserSettings> futurePatch(@Nonnull final UserSettings sourceUserSettings) {
-        return futureSend(HttpMethod.PATCH, sourceUserSettings);
+    public java.util.concurrent.CompletableFuture<UserSettings> patchAsync(@Nonnull final UserSettings sourceUserSettings) {
+        return sendAsync(HttpMethod.PATCH, sourceUserSettings);
     }
 
     /**
@@ -107,8 +107,8 @@ public class UserSettingsRequest extends BaseRequest<UserSettings> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserSettings> futurePost(@Nonnull final UserSettings newUserSettings) {
-        return futureSend(HttpMethod.POST, newUserSettings);
+    public java.util.concurrent.CompletableFuture<UserSettings> postAsync(@Nonnull final UserSettings newUserSettings) {
+        return sendAsync(HttpMethod.POST, newUserSettings);
     }
 
     /**
@@ -130,8 +130,8 @@ public class UserSettingsRequest extends BaseRequest<UserSettings> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserSettings> futurePut(@Nonnull final UserSettings newUserSettings) {
-        return futureSend(HttpMethod.PUT, newUserSettings);
+    public java.util.concurrent.CompletableFuture<UserSettings> putAsync(@Nonnull final UserSettings newUserSettings) {
+        return sendAsync(HttpMethod.PUT, newUserSettings);
     }
 
     /**

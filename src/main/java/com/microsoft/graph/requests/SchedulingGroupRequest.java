@@ -40,8 +40,8 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroup> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroup> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroup> futurePatch(@Nonnull final SchedulingGroup sourceSchedulingGroup) {
-        return futureSend(HttpMethod.PATCH, sourceSchedulingGroup);
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> patchAsync(@Nonnull final SchedulingGroup sourceSchedulingGroup) {
+        return sendAsync(HttpMethod.PATCH, sourceSchedulingGroup);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroup> futurePost(@Nonnull final SchedulingGroup newSchedulingGroup) {
-        return futureSend(HttpMethod.POST, newSchedulingGroup);
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> postAsync(@Nonnull final SchedulingGroup newSchedulingGroup) {
+        return sendAsync(HttpMethod.POST, newSchedulingGroup);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SchedulingGroupRequest extends BaseRequest<SchedulingGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SchedulingGroup> futurePut(@Nonnull final SchedulingGroup newSchedulingGroup) {
-        return futureSend(HttpMethod.PUT, newSchedulingGroup);
+    public java.util.concurrent.CompletableFuture<SchedulingGroup> putAsync(@Nonnull final SchedulingGroup newSchedulingGroup) {
+        return sendAsync(HttpMethod.PUT, newSchedulingGroup);
     }
 
     /**

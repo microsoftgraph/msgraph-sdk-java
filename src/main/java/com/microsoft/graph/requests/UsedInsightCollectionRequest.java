@@ -45,11 +45,11 @@ public class UsedInsightCollectionRequest extends BaseEntityCollectionRequest<Us
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> futurePost(@Nonnull final UsedInsight newUsedInsight) {
+    public java.util.concurrent.CompletableFuture<UsedInsight> postAsync(@Nonnull final UsedInsight newUsedInsight) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newUsedInsight);
+            .postAsync(newUsedInsight);
     }
 
     /**

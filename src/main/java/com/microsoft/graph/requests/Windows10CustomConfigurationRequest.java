@@ -40,8 +40,8 @@ public class Windows10CustomConfigurationRequest extends BaseRequest<Windows10Cu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows10CustomConfigurationRequest extends BaseRequest<Windows10Cu
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows10CustomConfigurationRequest extends BaseRequest<Windows10Cu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> futurePatch(@Nonnull final Windows10CustomConfiguration sourceWindows10CustomConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindows10CustomConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> patchAsync(@Nonnull final Windows10CustomConfiguration sourceWindows10CustomConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10CustomConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows10CustomConfigurationRequest extends BaseRequest<Windows10Cu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> futurePost(@Nonnull final Windows10CustomConfiguration newWindows10CustomConfiguration) {
-        return futureSend(HttpMethod.POST, newWindows10CustomConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> postAsync(@Nonnull final Windows10CustomConfiguration newWindows10CustomConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindows10CustomConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows10CustomConfigurationRequest extends BaseRequest<Windows10Cu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> futurePut(@Nonnull final Windows10CustomConfiguration newWindows10CustomConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindows10CustomConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10CustomConfiguration> putAsync(@Nonnull final Windows10CustomConfiguration newWindows10CustomConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindows10CustomConfiguration);
     }
 
     /**

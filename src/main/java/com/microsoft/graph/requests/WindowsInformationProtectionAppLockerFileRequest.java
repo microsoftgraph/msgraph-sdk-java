@@ -40,8 +40,8 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futurePatch(@Nonnull final WindowsInformationProtectionAppLockerFile sourceWindowsInformationProtectionAppLockerFile) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsInformationProtectionAppLockerFile);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> patchAsync(@Nonnull final WindowsInformationProtectionAppLockerFile sourceWindowsInformationProtectionAppLockerFile) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsInformationProtectionAppLockerFile);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futurePost(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
-        return futureSend(HttpMethod.POST, newWindowsInformationProtectionAppLockerFile);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> postAsync(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
+        return sendAsync(HttpMethod.POST, newWindowsInformationProtectionAppLockerFile);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> futurePut(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
-        return futureSend(HttpMethod.PUT, newWindowsInformationProtectionAppLockerFile);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionAppLockerFile> putAsync(@Nonnull final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) {
+        return sendAsync(HttpMethod.PUT, newWindowsInformationProtectionAppLockerFile);
     }
 
     /**

@@ -55,8 +55,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OfferShiftRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OfferShiftRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequest> futurePatch(@Nonnull final OfferShiftRequest sourceOfferShiftRequest) {
-        return futureSend(HttpMethod.PATCH, sourceOfferShiftRequest);
+    public java.util.concurrent.CompletableFuture<OfferShiftRequest> patchAsync(@Nonnull final OfferShiftRequest sourceOfferShiftRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceOfferShiftRequest);
     }
 
     /**
@@ -121,8 +121,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequest> futurePost(@Nonnull final OfferShiftRequest newOfferShiftRequest) {
-        return futureSend(HttpMethod.POST, newOfferShiftRequest);
+    public java.util.concurrent.CompletableFuture<OfferShiftRequest> postAsync(@Nonnull final OfferShiftRequest newOfferShiftRequest) {
+        return sendAsync(HttpMethod.POST, newOfferShiftRequest);
     }
 
     /**
@@ -144,8 +144,8 @@ public class OfferShiftRequestRequest extends BaseRequest<OfferShiftRequest> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OfferShiftRequest> futurePut(@Nonnull final OfferShiftRequest newOfferShiftRequest) {
-        return futureSend(HttpMethod.PUT, newOfferShiftRequest);
+    public java.util.concurrent.CompletableFuture<OfferShiftRequest> putAsync(@Nonnull final OfferShiftRequest newOfferShiftRequest) {
+        return sendAsync(HttpMethod.PUT, newOfferShiftRequest);
     }
 
     /**

@@ -40,8 +40,8 @@ public class AndroidLobAppRequest extends BaseRequest<AndroidLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidLobApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AndroidLobApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AndroidLobAppRequest extends BaseRequest<AndroidLobApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidLobApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AndroidLobApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AndroidLobAppRequest extends BaseRequest<AndroidLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidLobApp> futurePatch(@Nonnull final AndroidLobApp sourceAndroidLobApp) {
-        return futureSend(HttpMethod.PATCH, sourceAndroidLobApp);
+    public java.util.concurrent.CompletableFuture<AndroidLobApp> patchAsync(@Nonnull final AndroidLobApp sourceAndroidLobApp) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidLobApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AndroidLobAppRequest extends BaseRequest<AndroidLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidLobApp> futurePost(@Nonnull final AndroidLobApp newAndroidLobApp) {
-        return futureSend(HttpMethod.POST, newAndroidLobApp);
+    public java.util.concurrent.CompletableFuture<AndroidLobApp> postAsync(@Nonnull final AndroidLobApp newAndroidLobApp) {
+        return sendAsync(HttpMethod.POST, newAndroidLobApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AndroidLobAppRequest extends BaseRequest<AndroidLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidLobApp> futurePut(@Nonnull final AndroidLobApp newAndroidLobApp) {
-        return futureSend(HttpMethod.PUT, newAndroidLobApp);
+    public java.util.concurrent.CompletableFuture<AndroidLobApp> putAsync(@Nonnull final AndroidLobApp newAndroidLobApp) {
+        return sendAsync(HttpMethod.PUT, newAndroidLobApp);
     }
 
     /**

@@ -43,8 +43,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppPro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -64,8 +64,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppPro
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -86,8 +86,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppPro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> futurePatch(@Nonnull final IosManagedAppProtection sourceIosManagedAppProtection) {
-        return futureSend(HttpMethod.PATCH, sourceIosManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> patchAsync(@Nonnull final IosManagedAppProtection sourceIosManagedAppProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceIosManagedAppProtection);
     }
 
     /**
@@ -109,8 +109,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppPro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> futurePost(@Nonnull final IosManagedAppProtection newIosManagedAppProtection) {
-        return futureSend(HttpMethod.POST, newIosManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> postAsync(@Nonnull final IosManagedAppProtection newIosManagedAppProtection) {
+        return sendAsync(HttpMethod.POST, newIosManagedAppProtection);
     }
 
     /**
@@ -132,8 +132,8 @@ public class IosManagedAppProtectionRequest extends BaseRequest<IosManagedAppPro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> futurePut(@Nonnull final IosManagedAppProtection newIosManagedAppProtection) {
-        return futureSend(HttpMethod.PUT, newIosManagedAppProtection);
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> putAsync(@Nonnull final IosManagedAppProtection newIosManagedAppProtection) {
+        return sendAsync(HttpMethod.PUT, newIosManagedAppProtection);
     }
 
     /**

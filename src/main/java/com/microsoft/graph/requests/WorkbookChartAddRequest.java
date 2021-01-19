@@ -42,8 +42,8 @@ public class WorkbookChartAddRequest extends BaseRequest<WorkbookChart> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<WorkbookChart> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

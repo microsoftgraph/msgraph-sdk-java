@@ -40,8 +40,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futurePatch(@Nonnull final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceTargetedManagedAppPolicyAssignment);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> patchAsync(@Nonnull final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceTargetedManagedAppPolicyAssignment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futurePost(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
-        return futureSend(HttpMethod.POST, newTargetedManagedAppPolicyAssignment);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> postAsync(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
+        return sendAsync(HttpMethod.POST, newTargetedManagedAppPolicyAssignment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest<Targe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futurePut(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
-        return futureSend(HttpMethod.PUT, newTargetedManagedAppPolicyAssignment);
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> putAsync(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
+        return sendAsync(HttpMethod.PUT, newTargetedManagedAppPolicyAssignment);
     }
 
     /**

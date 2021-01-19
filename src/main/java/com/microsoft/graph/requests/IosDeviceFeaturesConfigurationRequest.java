@@ -40,8 +40,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> futurePatch(@Nonnull final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceIosDeviceFeaturesConfiguration);
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> patchAsync(@Nonnull final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosDeviceFeaturesConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> futurePost(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) {
-        return futureSend(HttpMethod.POST, newIosDeviceFeaturesConfiguration);
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> postAsync(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) {
+        return sendAsync(HttpMethod.POST, newIosDeviceFeaturesConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest<IosDevice
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> futurePut(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) {
-        return futureSend(HttpMethod.PUT, newIosDeviceFeaturesConfiguration);
+    public java.util.concurrent.CompletableFuture<IosDeviceFeaturesConfiguration> putAsync(@Nonnull final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) {
+        return sendAsync(HttpMethod.PUT, newIosDeviceFeaturesConfiguration);
     }
 
     /**

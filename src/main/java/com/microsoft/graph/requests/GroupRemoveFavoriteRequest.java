@@ -37,8 +37,8 @@ public class GroupRemoveFavoriteRequest extends BaseRequest<Void> {
      * @return a future for the operation
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Void> futurePost() {
-        return this.futureSend(HttpMethod.POST, null);
+    public java.util.concurrent.CompletableFuture<Void> postAsync() {
+        return this.sendAsync(HttpMethod.POST, null);
     }
 
     /**

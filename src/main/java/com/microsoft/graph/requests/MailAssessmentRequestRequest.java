@@ -40,8 +40,8 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futurePatch(@Nonnull final MailAssessmentRequest sourceMailAssessmentRequest) {
-        return futureSend(HttpMethod.PATCH, sourceMailAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> patchAsync(@Nonnull final MailAssessmentRequest sourceMailAssessmentRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceMailAssessmentRequest);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futurePost(@Nonnull final MailAssessmentRequest newMailAssessmentRequest) {
-        return futureSend(HttpMethod.POST, newMailAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> postAsync(@Nonnull final MailAssessmentRequest newMailAssessmentRequest) {
+        return sendAsync(HttpMethod.POST, newMailAssessmentRequest);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> futurePut(@Nonnull final MailAssessmentRequest newMailAssessmentRequest) {
-        return futureSend(HttpMethod.PUT, newMailAssessmentRequest);
+    public java.util.concurrent.CompletableFuture<MailAssessmentRequest> putAsync(@Nonnull final MailAssessmentRequest newMailAssessmentRequest) {
+        return sendAsync(HttpMethod.PUT, newMailAssessmentRequest);
     }
 
     /**

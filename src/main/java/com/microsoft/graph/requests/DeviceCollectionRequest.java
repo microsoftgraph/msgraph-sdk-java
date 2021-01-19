@@ -44,11 +44,11 @@ public class DeviceCollectionRequest extends BaseEntityCollectionRequest<Device,
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Device> futurePost(@Nonnull final Device newDevice) {
+    public java.util.concurrent.CompletableFuture<Device> postAsync(@Nonnull final Device newDevice) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDevice);
+            .postAsync(newDevice);
     }
 
     /**

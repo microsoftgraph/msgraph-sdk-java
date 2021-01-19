@@ -50,12 +50,12 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> futurePost(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
+    public java.util.concurrent.CompletableFuture<HomeRealmDiscoveryPolicy> postAsync(@Nonnull final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
         return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newHomeRealmDiscoveryPolicy, body);
+            .postAsync(newHomeRealmDiscoveryPolicy, body);
     }
 
     /**

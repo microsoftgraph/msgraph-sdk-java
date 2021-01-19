@@ -40,8 +40,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> futurePatch(@Nonnull final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference) {
-        return futureSend(HttpMethod.PATCH, sourceDirectoryObjectPartnerReference);
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> patchAsync(@Nonnull final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference) {
+        return sendAsync(HttpMethod.PATCH, sourceDirectoryObjectPartnerReference);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> futurePost(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) {
-        return futureSend(HttpMethod.POST, newDirectoryObjectPartnerReference);
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> postAsync(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) {
+        return sendAsync(HttpMethod.POST, newDirectoryObjectPartnerReference);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest<Director
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> futurePut(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) {
-        return futureSend(HttpMethod.PUT, newDirectoryObjectPartnerReference);
+    public java.util.concurrent.CompletableFuture<DirectoryObjectPartnerReference> putAsync(@Nonnull final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) {
+        return sendAsync(HttpMethod.PUT, newDirectoryObjectPartnerReference);
     }
 
     /**

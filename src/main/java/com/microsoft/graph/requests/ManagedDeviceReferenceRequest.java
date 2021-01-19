@@ -74,10 +74,10 @@ public class ManagedDeviceReferenceRequest extends BaseReferenceRequest<ManagedD
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedDevice> futurePut(@Nonnull final ManagedDevice srcManagedDevice) {
+    public java.util.concurrent.CompletableFuture<ManagedDevice> putAsync(@Nonnull final ManagedDevice srcManagedDevice) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/managedDevices/" + srcManagedDevice.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

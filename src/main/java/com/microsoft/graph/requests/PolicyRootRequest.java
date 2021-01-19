@@ -56,8 +56,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<PolicyRoot> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -77,8 +77,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<PolicyRoot> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -99,8 +99,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> futurePatch(@Nonnull final PolicyRoot sourcePolicyRoot) {
-        return futureSend(HttpMethod.PATCH, sourcePolicyRoot);
+    public java.util.concurrent.CompletableFuture<PolicyRoot> patchAsync(@Nonnull final PolicyRoot sourcePolicyRoot) {
+        return sendAsync(HttpMethod.PATCH, sourcePolicyRoot);
     }
 
     /**
@@ -122,8 +122,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> futurePost(@Nonnull final PolicyRoot newPolicyRoot) {
-        return futureSend(HttpMethod.POST, newPolicyRoot);
+    public java.util.concurrent.CompletableFuture<PolicyRoot> postAsync(@Nonnull final PolicyRoot newPolicyRoot) {
+        return sendAsync(HttpMethod.POST, newPolicyRoot);
     }
 
     /**
@@ -145,8 +145,8 @@ public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PolicyRoot> futurePut(@Nonnull final PolicyRoot newPolicyRoot) {
-        return futureSend(HttpMethod.PUT, newPolicyRoot);
+    public java.util.concurrent.CompletableFuture<PolicyRoot> putAsync(@Nonnull final PolicyRoot newPolicyRoot) {
+        return sendAsync(HttpMethod.PUT, newPolicyRoot);
     }
 
     /**

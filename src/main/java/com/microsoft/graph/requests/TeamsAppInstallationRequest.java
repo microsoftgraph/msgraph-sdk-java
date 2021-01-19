@@ -57,8 +57,8 @@ public class TeamsAppInstallationRequest extends BaseRequest<TeamsAppInstallatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -78,8 +78,8 @@ public class TeamsAppInstallationRequest extends BaseRequest<TeamsAppInstallatio
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -100,8 +100,8 @@ public class TeamsAppInstallationRequest extends BaseRequest<TeamsAppInstallatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> futurePatch(@Nonnull final TeamsAppInstallation sourceTeamsAppInstallation) {
-        return futureSend(HttpMethod.PATCH, sourceTeamsAppInstallation);
+    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> patchAsync(@Nonnull final TeamsAppInstallation sourceTeamsAppInstallation) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsAppInstallation);
     }
 
     /**
@@ -123,8 +123,8 @@ public class TeamsAppInstallationRequest extends BaseRequest<TeamsAppInstallatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> futurePost(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) {
-        return futureSend(HttpMethod.POST, newTeamsAppInstallation);
+    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> postAsync(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) {
+        return sendAsync(HttpMethod.POST, newTeamsAppInstallation);
     }
 
     /**
@@ -146,8 +146,8 @@ public class TeamsAppInstallationRequest extends BaseRequest<TeamsAppInstallatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> futurePut(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) {
-        return futureSend(HttpMethod.PUT, newTeamsAppInstallation);
+    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> putAsync(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) {
+        return sendAsync(HttpMethod.PUT, newTeamsAppInstallation);
     }
 
     /**

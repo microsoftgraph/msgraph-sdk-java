@@ -40,8 +40,8 @@ public class ResourceOperationRequest extends BaseRequest<ResourceOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ResourceOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ResourceOperationRequest extends BaseRequest<ResourceOperation> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ResourceOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ResourceOperationRequest extends BaseRequest<ResourceOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperation> futurePatch(@Nonnull final ResourceOperation sourceResourceOperation) {
-        return futureSend(HttpMethod.PATCH, sourceResourceOperation);
+    public java.util.concurrent.CompletableFuture<ResourceOperation> patchAsync(@Nonnull final ResourceOperation sourceResourceOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceResourceOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ResourceOperationRequest extends BaseRequest<ResourceOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperation> futurePost(@Nonnull final ResourceOperation newResourceOperation) {
-        return futureSend(HttpMethod.POST, newResourceOperation);
+    public java.util.concurrent.CompletableFuture<ResourceOperation> postAsync(@Nonnull final ResourceOperation newResourceOperation) {
+        return sendAsync(HttpMethod.POST, newResourceOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ResourceOperationRequest extends BaseRequest<ResourceOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperation> futurePut(@Nonnull final ResourceOperation newResourceOperation) {
-        return futureSend(HttpMethod.PUT, newResourceOperation);
+    public java.util.concurrent.CompletableFuture<ResourceOperation> putAsync(@Nonnull final ResourceOperation newResourceOperation) {
+        return sendAsync(HttpMethod.PUT, newResourceOperation);
     }
 
     /**

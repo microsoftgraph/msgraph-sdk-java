@@ -38,8 +38,8 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest<WorkbookRangeVi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeView> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

@@ -47,11 +47,11 @@ public class OnlineMeetingCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnlineMeeting> futurePost(@Nonnull final OnlineMeeting newOnlineMeeting) {
+    public java.util.concurrent.CompletableFuture<OnlineMeeting> postAsync(@Nonnull final OnlineMeeting newOnlineMeeting) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOnlineMeeting);
+            .postAsync(newOnlineMeeting);
     }
 
     /**

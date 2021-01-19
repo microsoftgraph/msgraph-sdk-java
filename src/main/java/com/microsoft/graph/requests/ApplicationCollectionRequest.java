@@ -46,11 +46,11 @@ public class ApplicationCollectionRequest extends BaseEntityCollectionRequest<Ap
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Application> futurePost(@Nonnull final Application newApplication) {
+    public java.util.concurrent.CompletableFuture<Application> postAsync(@Nonnull final Application newApplication) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ApplicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newApplication);
+            .postAsync(newApplication);
     }
 
     /**

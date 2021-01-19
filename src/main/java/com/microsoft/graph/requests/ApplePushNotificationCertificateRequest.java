@@ -40,8 +40,8 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest<ApplePu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest<ApplePu
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest<ApplePu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> futurePatch(@Nonnull final ApplePushNotificationCertificate sourceApplePushNotificationCertificate) {
-        return futureSend(HttpMethod.PATCH, sourceApplePushNotificationCertificate);
+    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> patchAsync(@Nonnull final ApplePushNotificationCertificate sourceApplePushNotificationCertificate) {
+        return sendAsync(HttpMethod.PATCH, sourceApplePushNotificationCertificate);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest<ApplePu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> futurePost(@Nonnull final ApplePushNotificationCertificate newApplePushNotificationCertificate) {
-        return futureSend(HttpMethod.POST, newApplePushNotificationCertificate);
+    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> postAsync(@Nonnull final ApplePushNotificationCertificate newApplePushNotificationCertificate) {
+        return sendAsync(HttpMethod.POST, newApplePushNotificationCertificate);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest<ApplePu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> futurePut(@Nonnull final ApplePushNotificationCertificate newApplePushNotificationCertificate) {
-        return futureSend(HttpMethod.PUT, newApplePushNotificationCertificate);
+    public java.util.concurrent.CompletableFuture<ApplePushNotificationCertificate> putAsync(@Nonnull final ApplePushNotificationCertificate newApplePushNotificationCertificate) {
+        return sendAsync(HttpMethod.PUT, newApplePushNotificationCertificate);
     }
 
     /**

@@ -42,8 +42,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futurePatch(@Nonnull final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartDataLabelFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> patchAsync(@Nonnull final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartDataLabelFormat);
     }
 
     /**
@@ -108,8 +108,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futurePost(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) {
-        return futureSend(HttpMethod.POST, newWorkbookChartDataLabelFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> postAsync(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartDataLabelFormat);
     }
 
     /**
@@ -131,8 +131,8 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> futurePut(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartDataLabelFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartDataLabelFormat> putAsync(@Nonnull final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartDataLabelFormat);
     }
 
     /**

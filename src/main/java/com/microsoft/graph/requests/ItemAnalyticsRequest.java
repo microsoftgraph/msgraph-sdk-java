@@ -42,8 +42,8 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> futurePatch(@Nonnull final ItemAnalytics sourceItemAnalytics) {
-        return futureSend(HttpMethod.PATCH, sourceItemAnalytics);
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> patchAsync(@Nonnull final ItemAnalytics sourceItemAnalytics) {
+        return sendAsync(HttpMethod.PATCH, sourceItemAnalytics);
     }
 
     /**
@@ -108,8 +108,8 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> futurePost(@Nonnull final ItemAnalytics newItemAnalytics) {
-        return futureSend(HttpMethod.POST, newItemAnalytics);
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> postAsync(@Nonnull final ItemAnalytics newItemAnalytics) {
+        return sendAsync(HttpMethod.POST, newItemAnalytics);
     }
 
     /**
@@ -131,8 +131,8 @@ public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ItemAnalytics> futurePut(@Nonnull final ItemAnalytics newItemAnalytics) {
-        return futureSend(HttpMethod.PUT, newItemAnalytics);
+    public java.util.concurrent.CompletableFuture<ItemAnalytics> putAsync(@Nonnull final ItemAnalytics newItemAnalytics) {
+        return sendAsync(HttpMethod.PUT, newItemAnalytics);
     }
 
     /**

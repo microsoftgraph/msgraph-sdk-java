@@ -55,8 +55,8 @@ public class SiteRequest extends BaseRequest<Site> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Site> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class SiteRequest extends BaseRequest<Site> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Site> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class SiteRequest extends BaseRequest<Site> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futurePatch(@Nonnull final Site sourceSite) {
-        return futureSend(HttpMethod.PATCH, sourceSite);
+    public java.util.concurrent.CompletableFuture<Site> patchAsync(@Nonnull final Site sourceSite) {
+        return sendAsync(HttpMethod.PATCH, sourceSite);
     }
 
     /**
@@ -121,8 +121,8 @@ public class SiteRequest extends BaseRequest<Site> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futurePost(@Nonnull final Site newSite) {
-        return futureSend(HttpMethod.POST, newSite);
+    public java.util.concurrent.CompletableFuture<Site> postAsync(@Nonnull final Site newSite) {
+        return sendAsync(HttpMethod.POST, newSite);
     }
 
     /**
@@ -144,8 +144,8 @@ public class SiteRequest extends BaseRequest<Site> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Site> futurePut(@Nonnull final Site newSite) {
-        return futureSend(HttpMethod.PUT, newSite);
+    public java.util.concurrent.CompletableFuture<Site> putAsync(@Nonnull final Site newSite) {
+        return sendAsync(HttpMethod.PUT, newSite);
     }
 
     /**

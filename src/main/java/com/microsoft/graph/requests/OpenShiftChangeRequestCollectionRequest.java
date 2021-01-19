@@ -45,11 +45,11 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseEntityCollectio
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futurePost(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> postAsync(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOpenShiftChangeRequest);
+            .postAsync(newOpenShiftChangeRequest);
     }
 
     /**

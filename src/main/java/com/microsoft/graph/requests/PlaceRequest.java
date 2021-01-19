@@ -55,8 +55,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Place> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Place> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Place> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Place> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Place> futurePatch(@Nonnull final Place sourcePlace) {
-        return futureSend(HttpMethod.PATCH, sourcePlace);
+    public java.util.concurrent.CompletableFuture<Place> patchAsync(@Nonnull final Place sourcePlace) {
+        return sendAsync(HttpMethod.PATCH, sourcePlace);
     }
 
     /**
@@ -121,8 +121,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Place> futurePost(@Nonnull final Place newPlace) {
-        return futureSend(HttpMethod.POST, newPlace);
+    public java.util.concurrent.CompletableFuture<Place> postAsync(@Nonnull final Place newPlace) {
+        return sendAsync(HttpMethod.POST, newPlace);
     }
 
     /**
@@ -144,8 +144,8 @@ public class PlaceRequest extends BaseRequest<Place> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Place> futurePut(@Nonnull final Place newPlace) {
-        return futureSend(HttpMethod.PUT, newPlace);
+    public java.util.concurrent.CompletableFuture<Place> putAsync(@Nonnull final Place newPlace) {
+        return sendAsync(HttpMethod.PUT, newPlace);
     }
 
     /**

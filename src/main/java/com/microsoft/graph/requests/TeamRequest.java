@@ -55,8 +55,8 @@ public class TeamRequest extends BaseRequest<Team> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Team> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Team> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class TeamRequest extends BaseRequest<Team> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Team> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Team> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class TeamRequest extends BaseRequest<Team> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Team> futurePatch(@Nonnull final Team sourceTeam) {
-        return futureSend(HttpMethod.PATCH, sourceTeam);
+    public java.util.concurrent.CompletableFuture<Team> patchAsync(@Nonnull final Team sourceTeam) {
+        return sendAsync(HttpMethod.PATCH, sourceTeam);
     }
 
     /**
@@ -121,8 +121,8 @@ public class TeamRequest extends BaseRequest<Team> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Team> futurePost(@Nonnull final Team newTeam) {
-        return futureSend(HttpMethod.POST, newTeam);
+    public java.util.concurrent.CompletableFuture<Team> postAsync(@Nonnull final Team newTeam) {
+        return sendAsync(HttpMethod.POST, newTeam);
     }
 
     /**
@@ -144,8 +144,8 @@ public class TeamRequest extends BaseRequest<Team> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Team> futurePut(@Nonnull final Team newTeam) {
-        return futureSend(HttpMethod.PUT, newTeam);
+    public java.util.concurrent.CompletableFuture<Team> putAsync(@Nonnull final Team newTeam) {
+        return sendAsync(HttpMethod.PUT, newTeam);
     }
 
     /**

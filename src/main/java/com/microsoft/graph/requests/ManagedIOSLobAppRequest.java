@@ -40,8 +40,8 @@ public class ManagedIOSLobAppRequest extends BaseRequest<ManagedIOSLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedIOSLobAppRequest extends BaseRequest<ManagedIOSLobApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedIOSLobAppRequest extends BaseRequest<ManagedIOSLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> futurePatch(@Nonnull final ManagedIOSLobApp sourceManagedIOSLobApp) {
-        return futureSend(HttpMethod.PATCH, sourceManagedIOSLobApp);
+    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> patchAsync(@Nonnull final ManagedIOSLobApp sourceManagedIOSLobApp) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedIOSLobApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedIOSLobAppRequest extends BaseRequest<ManagedIOSLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> futurePost(@Nonnull final ManagedIOSLobApp newManagedIOSLobApp) {
-        return futureSend(HttpMethod.POST, newManagedIOSLobApp);
+    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> postAsync(@Nonnull final ManagedIOSLobApp newManagedIOSLobApp) {
+        return sendAsync(HttpMethod.POST, newManagedIOSLobApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedIOSLobAppRequest extends BaseRequest<ManagedIOSLobApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> futurePut(@Nonnull final ManagedIOSLobApp newManagedIOSLobApp) {
-        return futureSend(HttpMethod.PUT, newManagedIOSLobApp);
+    public java.util.concurrent.CompletableFuture<ManagedIOSLobApp> putAsync(@Nonnull final ManagedIOSLobApp newManagedIOSLobApp) {
+        return sendAsync(HttpMethod.PUT, newManagedIOSLobApp);
     }
 
     /**

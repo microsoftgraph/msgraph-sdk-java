@@ -45,11 +45,11 @@ public class UserActivityCollectionRequest extends BaseEntityCollectionRequest<U
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserActivity> futurePost(@Nonnull final UserActivity newUserActivity) {
+    public java.util.concurrent.CompletableFuture<UserActivity> postAsync(@Nonnull final UserActivity newUserActivity) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newUserActivity);
+            .postAsync(newUserActivity);
     }
 
     /**

@@ -41,8 +41,8 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> futurePatch(@Nonnull final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartGridlinesFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> patchAsync(@Nonnull final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartGridlinesFormat);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> futurePost(@Nonnull final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) {
-        return futureSend(HttpMethod.POST, newWorkbookChartGridlinesFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> postAsync(@Nonnull final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartGridlinesFormat);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest<WorkbookCha
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> futurePut(@Nonnull final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartGridlinesFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartGridlinesFormat> putAsync(@Nonnull final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartGridlinesFormat);
     }
 
     /**

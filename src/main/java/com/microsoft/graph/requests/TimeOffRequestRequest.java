@@ -40,8 +40,8 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffRequest> futurePatch(@Nonnull final TimeOffRequest sourceTimeOffRequest) {
-        return futureSend(HttpMethod.PATCH, sourceTimeOffRequest);
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> patchAsync(@Nonnull final TimeOffRequest sourceTimeOffRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceTimeOffRequest);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffRequest> futurePost(@Nonnull final TimeOffRequest newTimeOffRequest) {
-        return futureSend(HttpMethod.POST, newTimeOffRequest);
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> postAsync(@Nonnull final TimeOffRequest newTimeOffRequest) {
+        return sendAsync(HttpMethod.POST, newTimeOffRequest);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TimeOffRequestRequest extends BaseRequest<TimeOffRequest> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffRequest> futurePut(@Nonnull final TimeOffRequest newTimeOffRequest) {
-        return futureSend(HttpMethod.PUT, newTimeOffRequest);
+    public java.util.concurrent.CompletableFuture<TimeOffRequest> putAsync(@Nonnull final TimeOffRequest newTimeOffRequest) {
+        return sendAsync(HttpMethod.PUT, newTimeOffRequest);
     }
 
     /**

@@ -45,8 +45,8 @@ public class SectionGroupRequest extends BaseRequest<SectionGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SectionGroup> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -66,8 +66,8 @@ public class SectionGroupRequest extends BaseRequest<SectionGroup> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SectionGroup> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -88,8 +88,8 @@ public class SectionGroupRequest extends BaseRequest<SectionGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> futurePatch(@Nonnull final SectionGroup sourceSectionGroup) {
-        return futureSend(HttpMethod.PATCH, sourceSectionGroup);
+    public java.util.concurrent.CompletableFuture<SectionGroup> patchAsync(@Nonnull final SectionGroup sourceSectionGroup) {
+        return sendAsync(HttpMethod.PATCH, sourceSectionGroup);
     }
 
     /**
@@ -111,8 +111,8 @@ public class SectionGroupRequest extends BaseRequest<SectionGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> futurePost(@Nonnull final SectionGroup newSectionGroup) {
-        return futureSend(HttpMethod.POST, newSectionGroup);
+    public java.util.concurrent.CompletableFuture<SectionGroup> postAsync(@Nonnull final SectionGroup newSectionGroup) {
+        return sendAsync(HttpMethod.POST, newSectionGroup);
     }
 
     /**
@@ -134,8 +134,8 @@ public class SectionGroupRequest extends BaseRequest<SectionGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> futurePut(@Nonnull final SectionGroup newSectionGroup) {
-        return futureSend(HttpMethod.PUT, newSectionGroup);
+    public java.util.concurrent.CompletableFuture<SectionGroup> putAsync(@Nonnull final SectionGroup newSectionGroup) {
+        return sendAsync(HttpMethod.PUT, newSectionGroup);
     }
 
     /**

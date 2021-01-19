@@ -45,11 +45,11 @@ public class CommsOperationCollectionRequest extends BaseEntityCollectionRequest
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CommsOperation> futurePost(@Nonnull final CommsOperation newCommsOperation) {
+    public java.util.concurrent.CompletableFuture<CommsOperation> postAsync(@Nonnull final CommsOperation newCommsOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newCommsOperation);
+            .postAsync(newCommsOperation);
     }
 
     /**

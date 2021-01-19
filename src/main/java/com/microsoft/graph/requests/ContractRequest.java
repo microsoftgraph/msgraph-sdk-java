@@ -40,8 +40,8 @@ public class ContractRequest extends BaseRequest<Contract> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contract> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Contract> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ContractRequest extends BaseRequest<Contract> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contract> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Contract> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ContractRequest extends BaseRequest<Contract> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contract> futurePatch(@Nonnull final Contract sourceContract) {
-        return futureSend(HttpMethod.PATCH, sourceContract);
+    public java.util.concurrent.CompletableFuture<Contract> patchAsync(@Nonnull final Contract sourceContract) {
+        return sendAsync(HttpMethod.PATCH, sourceContract);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ContractRequest extends BaseRequest<Contract> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contract> futurePost(@Nonnull final Contract newContract) {
-        return futureSend(HttpMethod.POST, newContract);
+    public java.util.concurrent.CompletableFuture<Contract> postAsync(@Nonnull final Contract newContract) {
+        return sendAsync(HttpMethod.POST, newContract);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ContractRequest extends BaseRequest<Contract> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contract> futurePut(@Nonnull final Contract newContract) {
-        return futureSend(HttpMethod.PUT, newContract);
+    public java.util.concurrent.CompletableFuture<Contract> putAsync(@Nonnull final Contract newContract) {
+        return sendAsync(HttpMethod.PUT, newContract);
     }
 
     /**

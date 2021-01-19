@@ -40,8 +40,8 @@ public class ReferenceAttachmentRequest extends BaseRequest<ReferenceAttachment>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReferenceAttachment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ReferenceAttachment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ReferenceAttachmentRequest extends BaseRequest<ReferenceAttachment>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReferenceAttachment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ReferenceAttachment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ReferenceAttachmentRequest extends BaseRequest<ReferenceAttachment>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReferenceAttachment> futurePatch(@Nonnull final ReferenceAttachment sourceReferenceAttachment) {
-        return futureSend(HttpMethod.PATCH, sourceReferenceAttachment);
+    public java.util.concurrent.CompletableFuture<ReferenceAttachment> patchAsync(@Nonnull final ReferenceAttachment sourceReferenceAttachment) {
+        return sendAsync(HttpMethod.PATCH, sourceReferenceAttachment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ReferenceAttachmentRequest extends BaseRequest<ReferenceAttachment>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReferenceAttachment> futurePost(@Nonnull final ReferenceAttachment newReferenceAttachment) {
-        return futureSend(HttpMethod.POST, newReferenceAttachment);
+    public java.util.concurrent.CompletableFuture<ReferenceAttachment> postAsync(@Nonnull final ReferenceAttachment newReferenceAttachment) {
+        return sendAsync(HttpMethod.POST, newReferenceAttachment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ReferenceAttachmentRequest extends BaseRequest<ReferenceAttachment>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReferenceAttachment> futurePut(@Nonnull final ReferenceAttachment newReferenceAttachment) {
-        return futureSend(HttpMethod.PUT, newReferenceAttachment);
+    public java.util.concurrent.CompletableFuture<ReferenceAttachment> putAsync(@Nonnull final ReferenceAttachment newReferenceAttachment) {
+        return sendAsync(HttpMethod.PUT, newReferenceAttachment);
     }
 
     /**

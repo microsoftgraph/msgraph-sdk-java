@@ -60,11 +60,11 @@ public class CallCollectionRequest extends BaseEntityCollectionRequest<Call, Cal
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Call> futurePost(@Nonnull final Call newCall) {
+    public java.util.concurrent.CompletableFuture<Call> postAsync(@Nonnull final Call newCall) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CallRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newCall);
+            .postAsync(newCall);
     }
 
     /**

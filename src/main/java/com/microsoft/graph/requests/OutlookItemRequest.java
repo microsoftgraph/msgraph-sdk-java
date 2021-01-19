@@ -55,8 +55,8 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookItem> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OutlookItem> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookItem> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OutlookItem> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookItem> futurePatch(@Nonnull final OutlookItem sourceOutlookItem) {
-        return futureSend(HttpMethod.PATCH, sourceOutlookItem);
+    public java.util.concurrent.CompletableFuture<OutlookItem> patchAsync(@Nonnull final OutlookItem sourceOutlookItem) {
+        return sendAsync(HttpMethod.PATCH, sourceOutlookItem);
     }
 
     /**
@@ -121,8 +121,8 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookItem> futurePost(@Nonnull final OutlookItem newOutlookItem) {
-        return futureSend(HttpMethod.POST, newOutlookItem);
+    public java.util.concurrent.CompletableFuture<OutlookItem> postAsync(@Nonnull final OutlookItem newOutlookItem) {
+        return sendAsync(HttpMethod.POST, newOutlookItem);
     }
 
     /**
@@ -144,8 +144,8 @@ public class OutlookItemRequest extends BaseRequest<OutlookItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookItem> futurePut(@Nonnull final OutlookItem newOutlookItem) {
-        return futureSend(HttpMethod.PUT, newOutlookItem);
+    public java.util.concurrent.CompletableFuture<OutlookItem> putAsync(@Nonnull final OutlookItem newOutlookItem) {
+        return sendAsync(HttpMethod.PUT, newOutlookItem);
     }
 
     /**

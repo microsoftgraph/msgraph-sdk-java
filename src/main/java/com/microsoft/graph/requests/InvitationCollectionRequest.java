@@ -44,11 +44,11 @@ public class InvitationCollectionRequest extends BaseEntityCollectionRequest<Inv
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Invitation> futurePost(@Nonnull final Invitation newInvitation) {
+    public java.util.concurrent.CompletableFuture<Invitation> postAsync(@Nonnull final Invitation newInvitation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new InvitationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newInvitation);
+            .postAsync(newInvitation);
     }
 
     /**

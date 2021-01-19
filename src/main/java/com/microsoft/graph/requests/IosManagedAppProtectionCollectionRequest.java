@@ -45,11 +45,11 @@ public class IosManagedAppProtectionCollectionRequest extends BaseEntityCollecti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> futurePost(@Nonnull final IosManagedAppProtection newIosManagedAppProtection) {
+    public java.util.concurrent.CompletableFuture<IosManagedAppProtection> postAsync(@Nonnull final IosManagedAppProtection newIosManagedAppProtection) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newIosManagedAppProtection);
+            .postAsync(newIosManagedAppProtection);
     }
 
     /**

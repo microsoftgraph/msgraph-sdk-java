@@ -53,8 +53,8 @@ public class EventRequest extends BaseRequest<Event> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Event> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Event> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -74,8 +74,8 @@ public class EventRequest extends BaseRequest<Event> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Event> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Event> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -96,8 +96,8 @@ public class EventRequest extends BaseRequest<Event> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Event> futurePatch(@Nonnull final Event sourceEvent) {
-        return futureSend(HttpMethod.PATCH, sourceEvent);
+    public java.util.concurrent.CompletableFuture<Event> patchAsync(@Nonnull final Event sourceEvent) {
+        return sendAsync(HttpMethod.PATCH, sourceEvent);
     }
 
     /**
@@ -119,8 +119,8 @@ public class EventRequest extends BaseRequest<Event> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Event> futurePost(@Nonnull final Event newEvent) {
-        return futureSend(HttpMethod.POST, newEvent);
+    public java.util.concurrent.CompletableFuture<Event> postAsync(@Nonnull final Event newEvent) {
+        return sendAsync(HttpMethod.POST, newEvent);
     }
 
     /**
@@ -142,8 +142,8 @@ public class EventRequest extends BaseRequest<Event> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Event> futurePut(@Nonnull final Event newEvent) {
-        return futureSend(HttpMethod.PUT, newEvent);
+    public java.util.concurrent.CompletableFuture<Event> putAsync(@Nonnull final Event newEvent) {
+        return sendAsync(HttpMethod.PUT, newEvent);
     }
 
     /**

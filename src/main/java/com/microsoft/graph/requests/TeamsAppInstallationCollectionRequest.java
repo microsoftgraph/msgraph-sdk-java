@@ -45,11 +45,11 @@ public class TeamsAppInstallationCollectionRequest extends BaseEntityCollectionR
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> futurePost(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) {
+    public java.util.concurrent.CompletableFuture<TeamsAppInstallation> postAsync(@Nonnull final TeamsAppInstallation newTeamsAppInstallation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTeamsAppInstallation);
+            .postAsync(newTeamsAppInstallation);
     }
 
     /**

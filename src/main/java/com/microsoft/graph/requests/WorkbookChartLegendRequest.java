@@ -41,8 +41,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futurePatch(@Nonnull final WorkbookChartLegend sourceWorkbookChartLegend) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartLegend);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> patchAsync(@Nonnull final WorkbookChartLegend sourceWorkbookChartLegend) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartLegend);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futurePost(@Nonnull final WorkbookChartLegend newWorkbookChartLegend) {
-        return futureSend(HttpMethod.POST, newWorkbookChartLegend);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> postAsync(@Nonnull final WorkbookChartLegend newWorkbookChartLegend) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartLegend);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> futurePut(@Nonnull final WorkbookChartLegend newWorkbookChartLegend) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartLegend);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLegend> putAsync(@Nonnull final WorkbookChartLegend newWorkbookChartLegend) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartLegend);
     }
 
     /**

@@ -40,8 +40,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futurePatch(@Nonnull final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceTermsAndConditionsAssignment);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> patchAsync(@Nonnull final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceTermsAndConditionsAssignment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futurePost(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
-        return futureSend(HttpMethod.POST, newTermsAndConditionsAssignment);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> postAsync(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
+        return sendAsync(HttpMethod.POST, newTermsAndConditionsAssignment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futurePut(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
-        return futureSend(HttpMethod.PUT, newTermsAndConditionsAssignment);
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> putAsync(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
+        return sendAsync(HttpMethod.PUT, newTermsAndConditionsAssignment);
     }
 
     /**

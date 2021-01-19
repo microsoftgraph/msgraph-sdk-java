@@ -45,11 +45,11 @@ public class ManagedAppOperationCollectionRequest extends BaseEntityCollectionRe
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futurePost(@Nonnull final ManagedAppOperation newManagedAppOperation) {
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> postAsync(@Nonnull final ManagedAppOperation newManagedAppOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedAppOperation);
+            .postAsync(newManagedAppOperation);
     }
 
     /**

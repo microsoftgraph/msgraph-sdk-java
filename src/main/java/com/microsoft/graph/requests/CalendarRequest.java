@@ -51,8 +51,8 @@ public class CalendarRequest extends BaseRequest<Calendar> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Calendar> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -72,8 +72,8 @@ public class CalendarRequest extends BaseRequest<Calendar> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Calendar> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -94,8 +94,8 @@ public class CalendarRequest extends BaseRequest<Calendar> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> futurePatch(@Nonnull final Calendar sourceCalendar) {
-        return futureSend(HttpMethod.PATCH, sourceCalendar);
+    public java.util.concurrent.CompletableFuture<Calendar> patchAsync(@Nonnull final Calendar sourceCalendar) {
+        return sendAsync(HttpMethod.PATCH, sourceCalendar);
     }
 
     /**
@@ -117,8 +117,8 @@ public class CalendarRequest extends BaseRequest<Calendar> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> futurePost(@Nonnull final Calendar newCalendar) {
-        return futureSend(HttpMethod.POST, newCalendar);
+    public java.util.concurrent.CompletableFuture<Calendar> postAsync(@Nonnull final Calendar newCalendar) {
+        return sendAsync(HttpMethod.POST, newCalendar);
     }
 
     /**
@@ -140,8 +140,8 @@ public class CalendarRequest extends BaseRequest<Calendar> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> futurePut(@Nonnull final Calendar newCalendar) {
-        return futureSend(HttpMethod.PUT, newCalendar);
+    public java.util.concurrent.CompletableFuture<Calendar> putAsync(@Nonnull final Calendar newCalendar) {
+        return sendAsync(HttpMethod.PUT, newCalendar);
     }
 
     /**

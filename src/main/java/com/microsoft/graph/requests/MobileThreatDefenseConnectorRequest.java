@@ -40,8 +40,8 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> futurePatch(@Nonnull final MobileThreatDefenseConnector sourceMobileThreatDefenseConnector) {
-        return futureSend(HttpMethod.PATCH, sourceMobileThreatDefenseConnector);
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> patchAsync(@Nonnull final MobileThreatDefenseConnector sourceMobileThreatDefenseConnector) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileThreatDefenseConnector);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> futurePost(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) {
-        return futureSend(HttpMethod.POST, newMobileThreatDefenseConnector);
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> postAsync(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) {
+        return sendAsync(HttpMethod.POST, newMobileThreatDefenseConnector);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest<MobileThrea
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> futurePut(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) {
-        return futureSend(HttpMethod.PUT, newMobileThreatDefenseConnector);
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> putAsync(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) {
+        return sendAsync(HttpMethod.PUT, newMobileThreatDefenseConnector);
     }
 
     /**

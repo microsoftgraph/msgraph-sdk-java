@@ -45,11 +45,11 @@ public class WorkbookRangeViewCollectionRequest extends BaseEntityCollectionRequ
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeView> futurePost(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
+    public java.util.concurrent.CompletableFuture<WorkbookRangeView> postAsync(@Nonnull final WorkbookRangeView newWorkbookRangeView) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWorkbookRangeView);
+            .postAsync(newWorkbookRangeView);
     }
 
     /**

@@ -45,11 +45,11 @@ public class ConversationCollectionRequest extends BaseEntityCollectionRequest<C
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Conversation> futurePost(@Nonnull final Conversation newConversation) {
+    public java.util.concurrent.CompletableFuture<Conversation> postAsync(@Nonnull final Conversation newConversation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConversationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newConversation);
+            .postAsync(newConversation);
     }
 
     /**

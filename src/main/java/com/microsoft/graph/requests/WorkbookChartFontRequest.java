@@ -40,8 +40,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futurePatch(@Nonnull final WorkbookChartFont sourceWorkbookChartFont) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartFont);
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> patchAsync(@Nonnull final WorkbookChartFont sourceWorkbookChartFont) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartFont);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futurePost(@Nonnull final WorkbookChartFont newWorkbookChartFont) {
-        return futureSend(HttpMethod.POST, newWorkbookChartFont);
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> postAsync(@Nonnull final WorkbookChartFont newWorkbookChartFont) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartFont);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WorkbookChartFontRequest extends BaseRequest<WorkbookChartFont> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartFont> futurePut(@Nonnull final WorkbookChartFont newWorkbookChartFont) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartFont);
+    public java.util.concurrent.CompletableFuture<WorkbookChartFont> putAsync(@Nonnull final WorkbookChartFont newWorkbookChartFont) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartFont);
     }
 
     /**

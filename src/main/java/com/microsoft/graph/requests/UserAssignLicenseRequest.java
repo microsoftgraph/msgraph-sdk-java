@@ -42,8 +42,8 @@ public class UserAssignLicenseRequest extends BaseRequest<User> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<User> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<User> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

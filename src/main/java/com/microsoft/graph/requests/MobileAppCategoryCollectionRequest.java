@@ -45,11 +45,11 @@ public class MobileAppCategoryCollectionRequest extends BaseEntityCollectionRequ
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> futurePost(@Nonnull final MobileAppCategory newMobileAppCategory) {
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> postAsync(@Nonnull final MobileAppCategory newMobileAppCategory) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMobileAppCategory);
+            .postAsync(newMobileAppCategory);
     }
 
     /**

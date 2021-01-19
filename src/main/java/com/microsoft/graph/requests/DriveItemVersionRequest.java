@@ -40,8 +40,8 @@ public class DriveItemVersionRequest extends BaseRequest<DriveItemVersion> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersion> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DriveItemVersion> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DriveItemVersionRequest extends BaseRequest<DriveItemVersion> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersion> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DriveItemVersion> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DriveItemVersionRequest extends BaseRequest<DriveItemVersion> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersion> futurePatch(@Nonnull final DriveItemVersion sourceDriveItemVersion) {
-        return futureSend(HttpMethod.PATCH, sourceDriveItemVersion);
+    public java.util.concurrent.CompletableFuture<DriveItemVersion> patchAsync(@Nonnull final DriveItemVersion sourceDriveItemVersion) {
+        return sendAsync(HttpMethod.PATCH, sourceDriveItemVersion);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DriveItemVersionRequest extends BaseRequest<DriveItemVersion> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersion> futurePost(@Nonnull final DriveItemVersion newDriveItemVersion) {
-        return futureSend(HttpMethod.POST, newDriveItemVersion);
+    public java.util.concurrent.CompletableFuture<DriveItemVersion> postAsync(@Nonnull final DriveItemVersion newDriveItemVersion) {
+        return sendAsync(HttpMethod.POST, newDriveItemVersion);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DriveItemVersionRequest extends BaseRequest<DriveItemVersion> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItemVersion> futurePut(@Nonnull final DriveItemVersion newDriveItemVersion) {
-        return futureSend(HttpMethod.PUT, newDriveItemVersion);
+    public java.util.concurrent.CompletableFuture<DriveItemVersion> putAsync(@Nonnull final DriveItemVersion newDriveItemVersion) {
+        return sendAsync(HttpMethod.PUT, newDriveItemVersion);
     }
 
     /**

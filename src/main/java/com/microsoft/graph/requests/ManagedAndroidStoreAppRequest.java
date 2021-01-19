@@ -40,8 +40,8 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> futurePatch(@Nonnull final ManagedAndroidStoreApp sourceManagedAndroidStoreApp) {
-        return futureSend(HttpMethod.PATCH, sourceManagedAndroidStoreApp);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> patchAsync(@Nonnull final ManagedAndroidStoreApp sourceManagedAndroidStoreApp) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAndroidStoreApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> futurePost(@Nonnull final ManagedAndroidStoreApp newManagedAndroidStoreApp) {
-        return futureSend(HttpMethod.POST, newManagedAndroidStoreApp);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> postAsync(@Nonnull final ManagedAndroidStoreApp newManagedAndroidStoreApp) {
+        return sendAsync(HttpMethod.POST, newManagedAndroidStoreApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest<ManagedAndroidSto
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> futurePut(@Nonnull final ManagedAndroidStoreApp newManagedAndroidStoreApp) {
-        return futureSend(HttpMethod.PUT, newManagedAndroidStoreApp);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidStoreApp> putAsync(@Nonnull final ManagedAndroidStoreApp newManagedAndroidStoreApp) {
+        return sendAsync(HttpMethod.PUT, newManagedAndroidStoreApp);
     }
 
     /**

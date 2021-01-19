@@ -40,8 +40,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBook> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosVppEBook> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBook> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosVppEBook> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBook> futurePatch(@Nonnull final IosVppEBook sourceIosVppEBook) {
-        return futureSend(HttpMethod.PATCH, sourceIosVppEBook);
+    public java.util.concurrent.CompletableFuture<IosVppEBook> patchAsync(@Nonnull final IosVppEBook sourceIosVppEBook) {
+        return sendAsync(HttpMethod.PATCH, sourceIosVppEBook);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBook> futurePost(@Nonnull final IosVppEBook newIosVppEBook) {
-        return futureSend(HttpMethod.POST, newIosVppEBook);
+    public java.util.concurrent.CompletableFuture<IosVppEBook> postAsync(@Nonnull final IosVppEBook newIosVppEBook) {
+        return sendAsync(HttpMethod.POST, newIosVppEBook);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosVppEBookRequest extends BaseRequest<IosVppEBook> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBook> futurePut(@Nonnull final IosVppEBook newIosVppEBook) {
-        return futureSend(HttpMethod.PUT, newIosVppEBook);
+    public java.util.concurrent.CompletableFuture<IosVppEBook> putAsync(@Nonnull final IosVppEBook newIosVppEBook) {
+        return sendAsync(HttpMethod.PUT, newIosVppEBook);
     }
 
     /**

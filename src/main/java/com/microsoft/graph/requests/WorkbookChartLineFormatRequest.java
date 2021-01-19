@@ -40,8 +40,8 @@ public class WorkbookChartLineFormatRequest extends BaseRequest<WorkbookChartLin
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WorkbookChartLineFormatRequest extends BaseRequest<WorkbookChartLin
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WorkbookChartLineFormatRequest extends BaseRequest<WorkbookChartLin
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> futurePatch(@Nonnull final WorkbookChartLineFormat sourceWorkbookChartLineFormat) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookChartLineFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> patchAsync(@Nonnull final WorkbookChartLineFormat sourceWorkbookChartLineFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookChartLineFormat);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WorkbookChartLineFormatRequest extends BaseRequest<WorkbookChartLin
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> futurePost(@Nonnull final WorkbookChartLineFormat newWorkbookChartLineFormat) {
-        return futureSend(HttpMethod.POST, newWorkbookChartLineFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> postAsync(@Nonnull final WorkbookChartLineFormat newWorkbookChartLineFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookChartLineFormat);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WorkbookChartLineFormatRequest extends BaseRequest<WorkbookChartLin
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> futurePut(@Nonnull final WorkbookChartLineFormat newWorkbookChartLineFormat) {
-        return futureSend(HttpMethod.PUT, newWorkbookChartLineFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookChartLineFormat> putAsync(@Nonnull final WorkbookChartLineFormat newWorkbookChartLineFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookChartLineFormat);
     }
 
     /**

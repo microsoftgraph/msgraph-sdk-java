@@ -40,8 +40,8 @@ public class EndpointRequest extends BaseRequest<Endpoint> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Endpoint> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Endpoint> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class EndpointRequest extends BaseRequest<Endpoint> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Endpoint> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Endpoint> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class EndpointRequest extends BaseRequest<Endpoint> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Endpoint> futurePatch(@Nonnull final Endpoint sourceEndpoint) {
-        return futureSend(HttpMethod.PATCH, sourceEndpoint);
+    public java.util.concurrent.CompletableFuture<Endpoint> patchAsync(@Nonnull final Endpoint sourceEndpoint) {
+        return sendAsync(HttpMethod.PATCH, sourceEndpoint);
     }
 
     /**
@@ -106,8 +106,8 @@ public class EndpointRequest extends BaseRequest<Endpoint> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Endpoint> futurePost(@Nonnull final Endpoint newEndpoint) {
-        return futureSend(HttpMethod.POST, newEndpoint);
+    public java.util.concurrent.CompletableFuture<Endpoint> postAsync(@Nonnull final Endpoint newEndpoint) {
+        return sendAsync(HttpMethod.POST, newEndpoint);
     }
 
     /**
@@ -129,8 +129,8 @@ public class EndpointRequest extends BaseRequest<Endpoint> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Endpoint> futurePut(@Nonnull final Endpoint newEndpoint) {
-        return futureSend(HttpMethod.PUT, newEndpoint);
+    public java.util.concurrent.CompletableFuture<Endpoint> putAsync(@Nonnull final Endpoint newEndpoint) {
+        return sendAsync(HttpMethod.PUT, newEndpoint);
     }
 
     /**

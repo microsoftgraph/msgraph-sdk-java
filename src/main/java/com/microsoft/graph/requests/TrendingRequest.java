@@ -41,8 +41,8 @@ public class TrendingRequest extends BaseRequest<Trending> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Trending> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Trending> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class TrendingRequest extends BaseRequest<Trending> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Trending> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Trending> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class TrendingRequest extends BaseRequest<Trending> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Trending> futurePatch(@Nonnull final Trending sourceTrending) {
-        return futureSend(HttpMethod.PATCH, sourceTrending);
+    public java.util.concurrent.CompletableFuture<Trending> patchAsync(@Nonnull final Trending sourceTrending) {
+        return sendAsync(HttpMethod.PATCH, sourceTrending);
     }
 
     /**
@@ -107,8 +107,8 @@ public class TrendingRequest extends BaseRequest<Trending> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Trending> futurePost(@Nonnull final Trending newTrending) {
-        return futureSend(HttpMethod.POST, newTrending);
+    public java.util.concurrent.CompletableFuture<Trending> postAsync(@Nonnull final Trending newTrending) {
+        return sendAsync(HttpMethod.POST, newTrending);
     }
 
     /**
@@ -130,8 +130,8 @@ public class TrendingRequest extends BaseRequest<Trending> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Trending> futurePut(@Nonnull final Trending newTrending) {
-        return futureSend(HttpMethod.PUT, newTrending);
+    public java.util.concurrent.CompletableFuture<Trending> putAsync(@Nonnull final Trending newTrending) {
+        return sendAsync(HttpMethod.PUT, newTrending);
     }
 
     /**

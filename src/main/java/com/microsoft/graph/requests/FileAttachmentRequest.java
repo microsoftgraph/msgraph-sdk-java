@@ -40,8 +40,8 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAttachment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<FileAttachment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAttachment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<FileAttachment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAttachment> futurePatch(@Nonnull final FileAttachment sourceFileAttachment) {
-        return futureSend(HttpMethod.PATCH, sourceFileAttachment);
+    public java.util.concurrent.CompletableFuture<FileAttachment> patchAsync(@Nonnull final FileAttachment sourceFileAttachment) {
+        return sendAsync(HttpMethod.PATCH, sourceFileAttachment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAttachment> futurePost(@Nonnull final FileAttachment newFileAttachment) {
-        return futureSend(HttpMethod.POST, newFileAttachment);
+    public java.util.concurrent.CompletableFuture<FileAttachment> postAsync(@Nonnull final FileAttachment newFileAttachment) {
+        return sendAsync(HttpMethod.POST, newFileAttachment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<FileAttachment> futurePut(@Nonnull final FileAttachment newFileAttachment) {
-        return futureSend(HttpMethod.PUT, newFileAttachment);
+    public java.util.concurrent.CompletableFuture<FileAttachment> putAsync(@Nonnull final FileAttachment newFileAttachment) {
+        return sendAsync(HttpMethod.PUT, newFileAttachment);
     }
 
     /**

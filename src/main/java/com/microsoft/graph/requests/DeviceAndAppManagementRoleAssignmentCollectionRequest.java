@@ -45,11 +45,11 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseE
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> futurePost(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) {
+    public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> postAsync(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceAndAppManagementRoleAssignment);
+            .postAsync(newDeviceAndAppManagementRoleAssignment);
     }
 
     /**

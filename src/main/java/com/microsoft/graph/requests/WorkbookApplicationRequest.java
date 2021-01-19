@@ -40,8 +40,8 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookApplication> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookApplication> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookApplication> futurePatch(@Nonnull final WorkbookApplication sourceWorkbookApplication) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookApplication);
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> patchAsync(@Nonnull final WorkbookApplication sourceWorkbookApplication) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookApplication);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookApplication> futurePost(@Nonnull final WorkbookApplication newWorkbookApplication) {
-        return futureSend(HttpMethod.POST, newWorkbookApplication);
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> postAsync(@Nonnull final WorkbookApplication newWorkbookApplication) {
+        return sendAsync(HttpMethod.POST, newWorkbookApplication);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WorkbookApplicationRequest extends BaseRequest<WorkbookApplication>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookApplication> futurePut(@Nonnull final WorkbookApplication newWorkbookApplication) {
-        return futureSend(HttpMethod.PUT, newWorkbookApplication);
+    public java.util.concurrent.CompletableFuture<WorkbookApplication> putAsync(@Nonnull final WorkbookApplication newWorkbookApplication) {
+        return sendAsync(HttpMethod.PUT, newWorkbookApplication);
     }
 
     /**

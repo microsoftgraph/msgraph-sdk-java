@@ -40,8 +40,8 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futurePatch(@Nonnull final OpenShiftChangeRequest sourceOpenShiftChangeRequest) {
-        return futureSend(HttpMethod.PATCH, sourceOpenShiftChangeRequest);
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> patchAsync(@Nonnull final OpenShiftChangeRequest sourceOpenShiftChangeRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceOpenShiftChangeRequest);
     }
 
     /**
@@ -106,8 +106,8 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futurePost(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
-        return futureSend(HttpMethod.POST, newOpenShiftChangeRequest);
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> postAsync(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
+        return sendAsync(HttpMethod.POST, newOpenShiftChangeRequest);
     }
 
     /**
@@ -129,8 +129,8 @@ public class OpenShiftChangeRequestRequest extends BaseRequest<OpenShiftChangeRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> futurePut(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
-        return futureSend(HttpMethod.PUT, newOpenShiftChangeRequest);
+    public java.util.concurrent.CompletableFuture<OpenShiftChangeRequest> putAsync(@Nonnull final OpenShiftChangeRequest newOpenShiftChangeRequest) {
+        return sendAsync(HttpMethod.PUT, newOpenShiftChangeRequest);
     }
 
     /**

@@ -56,8 +56,8 @@ public class BaseItemRequest extends BaseRequest<BaseItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<BaseItem> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<BaseItem> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -77,8 +77,8 @@ public class BaseItemRequest extends BaseRequest<BaseItem> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<BaseItem> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<BaseItem> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -99,8 +99,8 @@ public class BaseItemRequest extends BaseRequest<BaseItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<BaseItem> futurePatch(@Nonnull final BaseItem sourceBaseItem) {
-        return futureSend(HttpMethod.PATCH, sourceBaseItem);
+    public java.util.concurrent.CompletableFuture<BaseItem> patchAsync(@Nonnull final BaseItem sourceBaseItem) {
+        return sendAsync(HttpMethod.PATCH, sourceBaseItem);
     }
 
     /**
@@ -122,8 +122,8 @@ public class BaseItemRequest extends BaseRequest<BaseItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<BaseItem> futurePost(@Nonnull final BaseItem newBaseItem) {
-        return futureSend(HttpMethod.POST, newBaseItem);
+    public java.util.concurrent.CompletableFuture<BaseItem> postAsync(@Nonnull final BaseItem newBaseItem) {
+        return sendAsync(HttpMethod.POST, newBaseItem);
     }
 
     /**
@@ -145,8 +145,8 @@ public class BaseItemRequest extends BaseRequest<BaseItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<BaseItem> futurePut(@Nonnull final BaseItem newBaseItem) {
-        return futureSend(HttpMethod.PUT, newBaseItem);
+    public java.util.concurrent.CompletableFuture<BaseItem> putAsync(@Nonnull final BaseItem newBaseItem) {
+        return sendAsync(HttpMethod.PUT, newBaseItem);
     }
 
     /**

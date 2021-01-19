@@ -44,11 +44,11 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseEnti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePost(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> postAsync(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newCertificateBasedAuthConfiguration);
+            .postAsync(newCertificateBasedAuthConfiguration);
     }
 
     /**

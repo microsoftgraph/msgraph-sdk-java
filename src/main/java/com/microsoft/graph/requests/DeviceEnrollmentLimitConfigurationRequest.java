@@ -40,8 +40,8 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futurePatch(@Nonnull final DeviceEnrollmentLimitConfiguration sourceDeviceEnrollmentLimitConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceEnrollmentLimitConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> patchAsync(@Nonnull final DeviceEnrollmentLimitConfiguration sourceDeviceEnrollmentLimitConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceEnrollmentLimitConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futurePost(@Nonnull final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration) {
-        return futureSend(HttpMethod.POST, newDeviceEnrollmentLimitConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> postAsync(@Nonnull final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration) {
+        return sendAsync(HttpMethod.POST, newDeviceEnrollmentLimitConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest<Devic
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> futurePut(@Nonnull final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration) {
-        return futureSend(HttpMethod.PUT, newDeviceEnrollmentLimitConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentLimitConfiguration> putAsync(@Nonnull final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration) {
+        return sendAsync(HttpMethod.PUT, newDeviceEnrollmentLimitConfiguration);
     }
 
     /**

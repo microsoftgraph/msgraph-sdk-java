@@ -41,8 +41,8 @@ public class ReportRootRequest extends BaseRequest<ReportRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ReportRoot> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class ReportRootRequest extends BaseRequest<ReportRoot> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ReportRoot> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class ReportRootRequest extends BaseRequest<ReportRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> futurePatch(@Nonnull final ReportRoot sourceReportRoot) {
-        return futureSend(HttpMethod.PATCH, sourceReportRoot);
+    public java.util.concurrent.CompletableFuture<ReportRoot> patchAsync(@Nonnull final ReportRoot sourceReportRoot) {
+        return sendAsync(HttpMethod.PATCH, sourceReportRoot);
     }
 
     /**
@@ -107,8 +107,8 @@ public class ReportRootRequest extends BaseRequest<ReportRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> futurePost(@Nonnull final ReportRoot newReportRoot) {
-        return futureSend(HttpMethod.POST, newReportRoot);
+    public java.util.concurrent.CompletableFuture<ReportRoot> postAsync(@Nonnull final ReportRoot newReportRoot) {
+        return sendAsync(HttpMethod.POST, newReportRoot);
     }
 
     /**
@@ -130,8 +130,8 @@ public class ReportRootRequest extends BaseRequest<ReportRoot> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> futurePut(@Nonnull final ReportRoot newReportRoot) {
-        return futureSend(HttpMethod.PUT, newReportRoot);
+    public java.util.concurrent.CompletableFuture<ReportRoot> putAsync(@Nonnull final ReportRoot newReportRoot) {
+        return sendAsync(HttpMethod.PUT, newReportRoot);
     }
 
     /**

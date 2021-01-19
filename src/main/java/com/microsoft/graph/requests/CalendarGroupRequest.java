@@ -42,8 +42,8 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarGroup> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<CalendarGroup> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarGroup> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<CalendarGroup> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarGroup> futurePatch(@Nonnull final CalendarGroup sourceCalendarGroup) {
-        return futureSend(HttpMethod.PATCH, sourceCalendarGroup);
+    public java.util.concurrent.CompletableFuture<CalendarGroup> patchAsync(@Nonnull final CalendarGroup sourceCalendarGroup) {
+        return sendAsync(HttpMethod.PATCH, sourceCalendarGroup);
     }
 
     /**
@@ -108,8 +108,8 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarGroup> futurePost(@Nonnull final CalendarGroup newCalendarGroup) {
-        return futureSend(HttpMethod.POST, newCalendarGroup);
+    public java.util.concurrent.CompletableFuture<CalendarGroup> postAsync(@Nonnull final CalendarGroup newCalendarGroup) {
+        return sendAsync(HttpMethod.POST, newCalendarGroup);
     }
 
     /**
@@ -131,8 +131,8 @@ public class CalendarGroupRequest extends BaseRequest<CalendarGroup> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CalendarGroup> futurePut(@Nonnull final CalendarGroup newCalendarGroup) {
-        return futureSend(HttpMethod.PUT, newCalendarGroup);
+    public java.util.concurrent.CompletableFuture<CalendarGroup> putAsync(@Nonnull final CalendarGroup newCalendarGroup) {
+        return sendAsync(HttpMethod.PUT, newCalendarGroup);
     }
 
     /**

@@ -40,8 +40,8 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> futurePatch(@Nonnull final WindowsPhone81GeneralConfiguration sourceWindowsPhone81GeneralConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsPhone81GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> patchAsync(@Nonnull final WindowsPhone81GeneralConfiguration sourceWindowsPhone81GeneralConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsPhone81GeneralConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> futurePost(@Nonnull final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration) {
-        return futureSend(HttpMethod.POST, newWindowsPhone81GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> postAsync(@Nonnull final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindowsPhone81GeneralConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest<Windo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> futurePut(@Nonnull final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindowsPhone81GeneralConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81GeneralConfiguration> putAsync(@Nonnull final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindowsPhone81GeneralConfiguration);
     }
 
     /**

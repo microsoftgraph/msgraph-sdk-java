@@ -73,10 +73,10 @@ public class EducationUserReferenceRequest extends BaseReferenceRequest<Educatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> futurePut(@Nonnull final EducationUser srcEducationUser) {
+    public java.util.concurrent.CompletableFuture<EducationUser> putAsync(@Nonnull final EducationUser srcEducationUser) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/education/users/" + srcEducationUser.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

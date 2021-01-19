@@ -68,10 +68,10 @@ public class TokenIssuancePolicyReferenceRequest extends BaseReferenceRequest<To
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePut(@Nonnull final TokenIssuancePolicy srcTokenIssuancePolicy) {
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> putAsync(@Nonnull final TokenIssuancePolicy srcTokenIssuancePolicy) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + srcTokenIssuancePolicy.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

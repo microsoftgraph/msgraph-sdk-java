@@ -40,8 +40,8 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailSearchFolder> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailSearchFolder> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailSearchFolder> futurePatch(@Nonnull final MailSearchFolder sourceMailSearchFolder) {
-        return futureSend(HttpMethod.PATCH, sourceMailSearchFolder);
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> patchAsync(@Nonnull final MailSearchFolder sourceMailSearchFolder) {
+        return sendAsync(HttpMethod.PATCH, sourceMailSearchFolder);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailSearchFolder> futurePost(@Nonnull final MailSearchFolder newMailSearchFolder) {
-        return futureSend(HttpMethod.POST, newMailSearchFolder);
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> postAsync(@Nonnull final MailSearchFolder newMailSearchFolder) {
+        return sendAsync(HttpMethod.POST, newMailSearchFolder);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MailSearchFolder> futurePut(@Nonnull final MailSearchFolder newMailSearchFolder) {
-        return futureSend(HttpMethod.PUT, newMailSearchFolder);
+    public java.util.concurrent.CompletableFuture<MailSearchFolder> putAsync(@Nonnull final MailSearchFolder newMailSearchFolder) {
+        return sendAsync(HttpMethod.PUT, newMailSearchFolder);
     }
 
     /**

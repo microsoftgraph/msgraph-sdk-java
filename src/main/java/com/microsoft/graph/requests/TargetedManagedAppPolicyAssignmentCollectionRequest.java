@@ -45,11 +45,11 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseEnt
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> futurePost(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
+    public java.util.concurrent.CompletableFuture<TargetedManagedAppPolicyAssignment> postAsync(@Nonnull final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTargetedManagedAppPolicyAssignment);
+            .postAsync(newTargetedManagedAppPolicyAssignment);
     }
 
     /**

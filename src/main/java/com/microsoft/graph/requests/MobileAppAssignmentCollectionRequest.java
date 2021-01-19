@@ -45,11 +45,11 @@ public class MobileAppAssignmentCollectionRequest extends BaseEntityCollectionRe
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppAssignment> futurePost(@Nonnull final MobileAppAssignment newMobileAppAssignment) {
+    public java.util.concurrent.CompletableFuture<MobileAppAssignment> postAsync(@Nonnull final MobileAppAssignment newMobileAppAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMobileAppAssignment);
+            .postAsync(newMobileAppAssignment);
     }
 
     /**

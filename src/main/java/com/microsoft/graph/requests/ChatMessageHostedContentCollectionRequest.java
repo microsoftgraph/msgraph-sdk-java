@@ -45,11 +45,11 @@ public class ChatMessageHostedContentCollectionRequest extends BaseEntityCollect
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> futurePost(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> postAsync(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newChatMessageHostedContent);
+            .postAsync(newChatMessageHostedContent);
     }
 
     /**

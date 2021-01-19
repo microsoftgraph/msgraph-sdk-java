@@ -45,11 +45,11 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseEntityCol
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> futurePost(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
+    public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> postAsync(@Nonnull final TermsAndConditionsAssignment newTermsAndConditionsAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTermsAndConditionsAssignment);
+            .postAsync(newTermsAndConditionsAssignment);
     }
 
     /**

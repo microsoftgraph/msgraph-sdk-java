@@ -40,8 +40,8 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest<UpdateRec
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest<UpdateRec
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest<UpdateRec
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> futurePatch(@Nonnull final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation) {
-        return futureSend(HttpMethod.PATCH, sourceUpdateRecordingStatusOperation);
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> patchAsync(@Nonnull final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceUpdateRecordingStatusOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest<UpdateRec
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> futurePost(@Nonnull final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) {
-        return futureSend(HttpMethod.POST, newUpdateRecordingStatusOperation);
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> postAsync(@Nonnull final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) {
+        return sendAsync(HttpMethod.POST, newUpdateRecordingStatusOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest<UpdateRec
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> futurePut(@Nonnull final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) {
-        return futureSend(HttpMethod.PUT, newUpdateRecordingStatusOperation);
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> putAsync(@Nonnull final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) {
+        return sendAsync(HttpMethod.PUT, newUpdateRecordingStatusOperation);
     }
 
     /**

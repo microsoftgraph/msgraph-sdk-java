@@ -46,11 +46,11 @@ public class OnenoteSectionCollectionRequest extends BaseEntityCollectionRequest
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteSection> futurePost(@Nonnull final OnenoteSection newOnenoteSection) {
+    public java.util.concurrent.CompletableFuture<OnenoteSection> postAsync(@Nonnull final OnenoteSection newOnenoteSection) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOnenoteSection);
+            .postAsync(newOnenoteSection);
     }
 
     /**

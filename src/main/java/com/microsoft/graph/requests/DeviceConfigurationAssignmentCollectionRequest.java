@@ -45,11 +45,11 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseEntityCo
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationAssignment> futurePost(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment) {
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationAssignment> postAsync(@Nonnull final DeviceConfigurationAssignment newDeviceConfigurationAssignment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceConfigurationAssignment);
+            .postAsync(newDeviceConfigurationAssignment);
     }
 
     /**

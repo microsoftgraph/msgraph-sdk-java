@@ -40,8 +40,8 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futurePatch(@Nonnull final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant) {
-        return futureSend(HttpMethod.PATCH, sourceResourceSpecificPermissionGrant);
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> patchAsync(@Nonnull final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant) {
+        return sendAsync(HttpMethod.PATCH, sourceResourceSpecificPermissionGrant);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futurePost(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
-        return futureSend(HttpMethod.POST, newResourceSpecificPermissionGrant);
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> postAsync(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
+        return sendAsync(HttpMethod.POST, newResourceSpecificPermissionGrant);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest<Resource
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> futurePut(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
-        return futureSend(HttpMethod.PUT, newResourceSpecificPermissionGrant);
+    public java.util.concurrent.CompletableFuture<ResourceSpecificPermissionGrant> putAsync(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) {
+        return sendAsync(HttpMethod.PUT, newResourceSpecificPermissionGrant);
     }
 
     /**

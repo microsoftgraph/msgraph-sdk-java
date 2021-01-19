@@ -41,8 +41,8 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AadUserConversationMember> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AadUserConversationMember> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AadUserConversationMember> futurePatch(@Nonnull final AadUserConversationMember sourceAadUserConversationMember) {
-        return futureSend(HttpMethod.PATCH, sourceAadUserConversationMember);
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> patchAsync(@Nonnull final AadUserConversationMember sourceAadUserConversationMember) {
+        return sendAsync(HttpMethod.PATCH, sourceAadUserConversationMember);
     }
 
     /**
@@ -107,8 +107,8 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AadUserConversationMember> futurePost(@Nonnull final AadUserConversationMember newAadUserConversationMember) {
-        return futureSend(HttpMethod.POST, newAadUserConversationMember);
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> postAsync(@Nonnull final AadUserConversationMember newAadUserConversationMember) {
+        return sendAsync(HttpMethod.POST, newAadUserConversationMember);
     }
 
     /**
@@ -130,8 +130,8 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AadUserConversationMember> futurePut(@Nonnull final AadUserConversationMember newAadUserConversationMember) {
-        return futureSend(HttpMethod.PUT, newAadUserConversationMember);
+    public java.util.concurrent.CompletableFuture<AadUserConversationMember> putAsync(@Nonnull final AadUserConversationMember newAadUserConversationMember) {
+        return sendAsync(HttpMethod.PUT, newAadUserConversationMember);
     }
 
     /**

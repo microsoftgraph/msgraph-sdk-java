@@ -40,8 +40,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> futurePatch(@Nonnull final TeamsAppDefinition sourceTeamsAppDefinition) {
-        return futureSend(HttpMethod.PATCH, sourceTeamsAppDefinition);
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> patchAsync(@Nonnull final TeamsAppDefinition sourceTeamsAppDefinition) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsAppDefinition);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> futurePost(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) {
-        return futureSend(HttpMethod.POST, newTeamsAppDefinition);
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> postAsync(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) {
+        return sendAsync(HttpMethod.POST, newTeamsAppDefinition);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> futurePut(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) {
-        return futureSend(HttpMethod.PUT, newTeamsAppDefinition);
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> putAsync(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) {
+        return sendAsync(HttpMethod.PUT, newTeamsAppDefinition);
     }
 
     /**

@@ -40,8 +40,8 @@ public class RoomRequest extends BaseRequest<Room> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Room> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Room> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class RoomRequest extends BaseRequest<Room> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Room> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Room> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class RoomRequest extends BaseRequest<Room> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Room> futurePatch(@Nonnull final Room sourceRoom) {
-        return futureSend(HttpMethod.PATCH, sourceRoom);
+    public java.util.concurrent.CompletableFuture<Room> patchAsync(@Nonnull final Room sourceRoom) {
+        return sendAsync(HttpMethod.PATCH, sourceRoom);
     }
 
     /**
@@ -106,8 +106,8 @@ public class RoomRequest extends BaseRequest<Room> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Room> futurePost(@Nonnull final Room newRoom) {
-        return futureSend(HttpMethod.POST, newRoom);
+    public java.util.concurrent.CompletableFuture<Room> postAsync(@Nonnull final Room newRoom) {
+        return sendAsync(HttpMethod.POST, newRoom);
     }
 
     /**
@@ -129,8 +129,8 @@ public class RoomRequest extends BaseRequest<Room> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Room> futurePut(@Nonnull final Room newRoom) {
-        return futureSend(HttpMethod.PUT, newRoom);
+    public java.util.concurrent.CompletableFuture<Room> putAsync(@Nonnull final Room newRoom) {
+        return sendAsync(HttpMethod.PUT, newRoom);
     }
 
     /**

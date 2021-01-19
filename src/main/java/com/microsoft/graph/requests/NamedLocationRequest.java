@@ -55,8 +55,8 @@ public class NamedLocationRequest extends BaseRequest<NamedLocation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NamedLocation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<NamedLocation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class NamedLocationRequest extends BaseRequest<NamedLocation> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NamedLocation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<NamedLocation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class NamedLocationRequest extends BaseRequest<NamedLocation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NamedLocation> futurePatch(@Nonnull final NamedLocation sourceNamedLocation) {
-        return futureSend(HttpMethod.PATCH, sourceNamedLocation);
+    public java.util.concurrent.CompletableFuture<NamedLocation> patchAsync(@Nonnull final NamedLocation sourceNamedLocation) {
+        return sendAsync(HttpMethod.PATCH, sourceNamedLocation);
     }
 
     /**
@@ -121,8 +121,8 @@ public class NamedLocationRequest extends BaseRequest<NamedLocation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NamedLocation> futurePost(@Nonnull final NamedLocation newNamedLocation) {
-        return futureSend(HttpMethod.POST, newNamedLocation);
+    public java.util.concurrent.CompletableFuture<NamedLocation> postAsync(@Nonnull final NamedLocation newNamedLocation) {
+        return sendAsync(HttpMethod.POST, newNamedLocation);
     }
 
     /**
@@ -144,8 +144,8 @@ public class NamedLocationRequest extends BaseRequest<NamedLocation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NamedLocation> futurePut(@Nonnull final NamedLocation newNamedLocation) {
-        return futureSend(HttpMethod.PUT, newNamedLocation);
+    public java.util.concurrent.CompletableFuture<NamedLocation> putAsync(@Nonnull final NamedLocation newNamedLocation) {
+        return sendAsync(HttpMethod.PUT, newNamedLocation);
     }
 
     /**

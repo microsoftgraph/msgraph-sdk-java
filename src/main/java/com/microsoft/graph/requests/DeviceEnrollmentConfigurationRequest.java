@@ -58,8 +58,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -79,8 +79,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -101,8 +101,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> futurePatch(@Nonnull final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceEnrollmentConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patchAsync(@Nonnull final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceEnrollmentConfiguration);
     }
 
     /**
@@ -124,8 +124,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> futurePost(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) {
-        return futureSend(HttpMethod.POST, newDeviceEnrollmentConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> postAsync(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) {
+        return sendAsync(HttpMethod.POST, newDeviceEnrollmentConfiguration);
     }
 
     /**
@@ -147,8 +147,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> futurePut(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) {
-        return futureSend(HttpMethod.PUT, newDeviceEnrollmentConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> putAsync(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) {
+        return sendAsync(HttpMethod.PUT, newDeviceEnrollmentConfiguration);
     }
 
     /**

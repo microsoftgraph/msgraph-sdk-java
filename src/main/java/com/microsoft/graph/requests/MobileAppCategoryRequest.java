@@ -40,8 +40,8 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> futurePatch(@Nonnull final MobileAppCategory sourceMobileAppCategory) {
-        return futureSend(HttpMethod.PATCH, sourceMobileAppCategory);
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> patchAsync(@Nonnull final MobileAppCategory sourceMobileAppCategory) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileAppCategory);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> futurePost(@Nonnull final MobileAppCategory newMobileAppCategory) {
-        return futureSend(HttpMethod.POST, newMobileAppCategory);
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> postAsync(@Nonnull final MobileAppCategory newMobileAppCategory) {
+        return sendAsync(HttpMethod.POST, newMobileAppCategory);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MobileAppCategoryRequest extends BaseRequest<MobileAppCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppCategory> futurePut(@Nonnull final MobileAppCategory newMobileAppCategory) {
-        return futureSend(HttpMethod.PUT, newMobileAppCategory);
+    public java.util.concurrent.CompletableFuture<MobileAppCategory> putAsync(@Nonnull final MobileAppCategory newMobileAppCategory) {
+        return sendAsync(HttpMethod.PUT, newMobileAppCategory);
     }
 
     /**

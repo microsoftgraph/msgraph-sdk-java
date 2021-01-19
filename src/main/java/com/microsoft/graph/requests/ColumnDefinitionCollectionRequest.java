@@ -45,11 +45,11 @@ public class ColumnDefinitionCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ColumnDefinition> futurePost(@Nonnull final ColumnDefinition newColumnDefinition) {
+    public java.util.concurrent.CompletableFuture<ColumnDefinition> postAsync(@Nonnull final ColumnDefinition newColumnDefinition) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ColumnDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newColumnDefinition);
+            .postAsync(newColumnDefinition);
     }
 
     /**

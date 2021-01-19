@@ -40,8 +40,8 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> futurePatch(@Nonnull final InferenceClassificationOverride sourceInferenceClassificationOverride) {
-        return futureSend(HttpMethod.PATCH, sourceInferenceClassificationOverride);
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> patchAsync(@Nonnull final InferenceClassificationOverride sourceInferenceClassificationOverride) {
+        return sendAsync(HttpMethod.PATCH, sourceInferenceClassificationOverride);
     }
 
     /**
@@ -106,8 +106,8 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> futurePost(@Nonnull final InferenceClassificationOverride newInferenceClassificationOverride) {
-        return futureSend(HttpMethod.POST, newInferenceClassificationOverride);
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> postAsync(@Nonnull final InferenceClassificationOverride newInferenceClassificationOverride) {
+        return sendAsync(HttpMethod.POST, newInferenceClassificationOverride);
     }
 
     /**
@@ -129,8 +129,8 @@ public class InferenceClassificationOverrideRequest extends BaseRequest<Inferenc
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> futurePut(@Nonnull final InferenceClassificationOverride newInferenceClassificationOverride) {
-        return futureSend(HttpMethod.PUT, newInferenceClassificationOverride);
+    public java.util.concurrent.CompletableFuture<InferenceClassificationOverride> putAsync(@Nonnull final InferenceClassificationOverride newInferenceClassificationOverride) {
+        return sendAsync(HttpMethod.PUT, newInferenceClassificationOverride);
     }
 
     /**

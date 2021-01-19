@@ -40,8 +40,8 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest<OnPr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest<OnPr
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest<OnPr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> futurePatch(@Nonnull final OnPremisesConditionalAccessSettings sourceOnPremisesConditionalAccessSettings) {
-        return futureSend(HttpMethod.PATCH, sourceOnPremisesConditionalAccessSettings);
+    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> patchAsync(@Nonnull final OnPremisesConditionalAccessSettings sourceOnPremisesConditionalAccessSettings) {
+        return sendAsync(HttpMethod.PATCH, sourceOnPremisesConditionalAccessSettings);
     }
 
     /**
@@ -106,8 +106,8 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest<OnPr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> futurePost(@Nonnull final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings) {
-        return futureSend(HttpMethod.POST, newOnPremisesConditionalAccessSettings);
+    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> postAsync(@Nonnull final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings) {
+        return sendAsync(HttpMethod.POST, newOnPremisesConditionalAccessSettings);
     }
 
     /**
@@ -129,8 +129,8 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest<OnPr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> futurePut(@Nonnull final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings) {
-        return futureSend(HttpMethod.PUT, newOnPremisesConditionalAccessSettings);
+    public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> putAsync(@Nonnull final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings) {
+        return sendAsync(HttpMethod.PUT, newOnPremisesConditionalAccessSettings);
     }
 
     /**

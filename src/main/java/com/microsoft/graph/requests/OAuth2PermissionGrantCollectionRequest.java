@@ -44,11 +44,11 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseEntityCollection
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futurePost(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> postAsync(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OAuth2PermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOAuth2PermissionGrant);
+            .postAsync(newOAuth2PermissionGrant);
     }
 
     /**

@@ -40,8 +40,8 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest<MacOSOfficeSuiteApp>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest<MacOSOfficeSuiteApp>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest<MacOSOfficeSuiteApp>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> futurePatch(@Nonnull final MacOSOfficeSuiteApp sourceMacOSOfficeSuiteApp) {
-        return futureSend(HttpMethod.PATCH, sourceMacOSOfficeSuiteApp);
+    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> patchAsync(@Nonnull final MacOSOfficeSuiteApp sourceMacOSOfficeSuiteApp) {
+        return sendAsync(HttpMethod.PATCH, sourceMacOSOfficeSuiteApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest<MacOSOfficeSuiteApp>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> futurePost(@Nonnull final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp) {
-        return futureSend(HttpMethod.POST, newMacOSOfficeSuiteApp);
+    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> postAsync(@Nonnull final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp) {
+        return sendAsync(HttpMethod.POST, newMacOSOfficeSuiteApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest<MacOSOfficeSuiteApp>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> futurePut(@Nonnull final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp) {
-        return futureSend(HttpMethod.PUT, newMacOSOfficeSuiteApp);
+    public java.util.concurrent.CompletableFuture<MacOSOfficeSuiteApp> putAsync(@Nonnull final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp) {
+        return sendAsync(HttpMethod.PUT, newMacOSOfficeSuiteApp);
     }
 
     /**

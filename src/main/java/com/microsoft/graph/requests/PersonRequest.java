@@ -40,8 +40,8 @@ public class PersonRequest extends BaseRequest<Person> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Person> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Person> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class PersonRequest extends BaseRequest<Person> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Person> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Person> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class PersonRequest extends BaseRequest<Person> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Person> futurePatch(@Nonnull final Person sourcePerson) {
-        return futureSend(HttpMethod.PATCH, sourcePerson);
+    public java.util.concurrent.CompletableFuture<Person> patchAsync(@Nonnull final Person sourcePerson) {
+        return sendAsync(HttpMethod.PATCH, sourcePerson);
     }
 
     /**
@@ -106,8 +106,8 @@ public class PersonRequest extends BaseRequest<Person> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Person> futurePost(@Nonnull final Person newPerson) {
-        return futureSend(HttpMethod.POST, newPerson);
+    public java.util.concurrent.CompletableFuture<Person> postAsync(@Nonnull final Person newPerson) {
+        return sendAsync(HttpMethod.POST, newPerson);
     }
 
     /**
@@ -129,8 +129,8 @@ public class PersonRequest extends BaseRequest<Person> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Person> futurePut(@Nonnull final Person newPerson) {
-        return futureSend(HttpMethod.PUT, newPerson);
+    public java.util.concurrent.CompletableFuture<Person> putAsync(@Nonnull final Person newPerson) {
+        return sendAsync(HttpMethod.PUT, newPerson);
     }
 
     /**

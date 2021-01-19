@@ -44,11 +44,11 @@ public class SectionGroupCollectionRequest extends BaseEntityCollectionRequest<S
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SectionGroup> futurePost(@Nonnull final SectionGroup newSectionGroup) {
+    public java.util.concurrent.CompletableFuture<SectionGroup> postAsync(@Nonnull final SectionGroup newSectionGroup) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SectionGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSectionGroup);
+            .postAsync(newSectionGroup);
     }
 
     /**

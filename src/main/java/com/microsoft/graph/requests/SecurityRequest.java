@@ -46,8 +46,8 @@ public class SecurityRequest extends BaseRequest<Security> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Security> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Security> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -67,8 +67,8 @@ public class SecurityRequest extends BaseRequest<Security> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Security> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Security> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -89,8 +89,8 @@ public class SecurityRequest extends BaseRequest<Security> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Security> futurePatch(@Nonnull final Security sourceSecurity) {
-        return futureSend(HttpMethod.PATCH, sourceSecurity);
+    public java.util.concurrent.CompletableFuture<Security> patchAsync(@Nonnull final Security sourceSecurity) {
+        return sendAsync(HttpMethod.PATCH, sourceSecurity);
     }
 
     /**
@@ -112,8 +112,8 @@ public class SecurityRequest extends BaseRequest<Security> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Security> futurePost(@Nonnull final Security newSecurity) {
-        return futureSend(HttpMethod.POST, newSecurity);
+    public java.util.concurrent.CompletableFuture<Security> postAsync(@Nonnull final Security newSecurity) {
+        return sendAsync(HttpMethod.POST, newSecurity);
     }
 
     /**
@@ -135,8 +135,8 @@ public class SecurityRequest extends BaseRequest<Security> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Security> futurePut(@Nonnull final Security newSecurity) {
-        return futureSend(HttpMethod.PUT, newSecurity);
+    public java.util.concurrent.CompletableFuture<Security> putAsync(@Nonnull final Security newSecurity) {
+        return sendAsync(HttpMethod.PUT, newSecurity);
     }
 
     /**

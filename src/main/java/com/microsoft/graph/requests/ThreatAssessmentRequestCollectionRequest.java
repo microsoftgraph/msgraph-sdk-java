@@ -45,11 +45,11 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseEntityCollecti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> futurePost(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) {
+    public java.util.concurrent.CompletableFuture<ThreatAssessmentRequest> postAsync(@Nonnull final ThreatAssessmentRequest newThreatAssessmentRequest) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThreatAssessmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newThreatAssessmentRequest);
+            .postAsync(newThreatAssessmentRequest);
     }
 
     /**

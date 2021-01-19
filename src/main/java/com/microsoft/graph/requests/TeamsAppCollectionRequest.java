@@ -45,11 +45,11 @@ public class TeamsAppCollectionRequest extends BaseEntityCollectionRequest<Teams
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsApp> futurePost(@Nonnull final TeamsApp newTeamsApp) {
+    public java.util.concurrent.CompletableFuture<TeamsApp> postAsync(@Nonnull final TeamsApp newTeamsApp) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTeamsApp);
+            .postAsync(newTeamsApp);
     }
 
     /**

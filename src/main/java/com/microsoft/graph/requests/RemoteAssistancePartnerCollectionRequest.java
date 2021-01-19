@@ -45,11 +45,11 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseEntityCollecti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futurePost(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) {
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> postAsync(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newRemoteAssistancePartner);
+            .postAsync(newRemoteAssistancePartner);
     }
 
     /**

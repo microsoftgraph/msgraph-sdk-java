@@ -42,8 +42,8 @@ public class WorkbookTableColumnAddRequest extends BaseRequest<WorkbookTableColu
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<WorkbookTableColumn> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

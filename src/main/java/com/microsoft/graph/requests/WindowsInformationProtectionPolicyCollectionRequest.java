@@ -45,11 +45,11 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseEnt
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> futurePost(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) {
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> postAsync(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWindowsInformationProtectionPolicy);
+            .postAsync(newWindowsInformationProtectionPolicy);
     }
 
     /**

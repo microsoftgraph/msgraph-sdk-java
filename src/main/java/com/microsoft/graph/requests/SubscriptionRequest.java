@@ -40,8 +40,8 @@ public class SubscriptionRequest extends BaseRequest<Subscription> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Subscription> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Subscription> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SubscriptionRequest extends BaseRequest<Subscription> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Subscription> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Subscription> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SubscriptionRequest extends BaseRequest<Subscription> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Subscription> futurePatch(@Nonnull final Subscription sourceSubscription) {
-        return futureSend(HttpMethod.PATCH, sourceSubscription);
+    public java.util.concurrent.CompletableFuture<Subscription> patchAsync(@Nonnull final Subscription sourceSubscription) {
+        return sendAsync(HttpMethod.PATCH, sourceSubscription);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SubscriptionRequest extends BaseRequest<Subscription> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Subscription> futurePost(@Nonnull final Subscription newSubscription) {
-        return futureSend(HttpMethod.POST, newSubscription);
+    public java.util.concurrent.CompletableFuture<Subscription> postAsync(@Nonnull final Subscription newSubscription) {
+        return sendAsync(HttpMethod.POST, newSubscription);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SubscriptionRequest extends BaseRequest<Subscription> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Subscription> futurePut(@Nonnull final Subscription newSubscription) {
-        return futureSend(HttpMethod.PUT, newSubscription);
+    public java.util.concurrent.CompletableFuture<Subscription> putAsync(@Nonnull final Subscription newSubscription) {
+        return sendAsync(HttpMethod.PUT, newSubscription);
     }
 
     /**

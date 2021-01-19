@@ -45,11 +45,11 @@ public class MobileAppContentCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContent> futurePost(@Nonnull final MobileAppContent newMobileAppContent) {
+    public java.util.concurrent.CompletableFuture<MobileAppContent> postAsync(@Nonnull final MobileAppContent newMobileAppContent) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMobileAppContent);
+            .postAsync(newMobileAppContent);
     }
 
     /**

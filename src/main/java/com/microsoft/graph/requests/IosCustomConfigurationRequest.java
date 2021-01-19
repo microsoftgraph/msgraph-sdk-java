@@ -40,8 +40,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futurePatch(@Nonnull final IosCustomConfiguration sourceIosCustomConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceIosCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> patchAsync(@Nonnull final IosCustomConfiguration sourceIosCustomConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceIosCustomConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futurePost(@Nonnull final IosCustomConfiguration newIosCustomConfiguration) {
-        return futureSend(HttpMethod.POST, newIosCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> postAsync(@Nonnull final IosCustomConfiguration newIosCustomConfiguration) {
+        return sendAsync(HttpMethod.POST, newIosCustomConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosCustomConfigurationRequest extends BaseRequest<IosCustomConfigur
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> futurePut(@Nonnull final IosCustomConfiguration newIosCustomConfiguration) {
-        return futureSend(HttpMethod.PUT, newIosCustomConfiguration);
+    public java.util.concurrent.CompletableFuture<IosCustomConfiguration> putAsync(@Nonnull final IosCustomConfiguration newIosCustomConfiguration) {
+        return sendAsync(HttpMethod.PUT, newIosCustomConfiguration);
     }
 
     /**

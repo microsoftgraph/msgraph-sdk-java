@@ -45,11 +45,11 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseEntityCollec
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> futurePost(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) {
+    public java.util.concurrent.CompletableFuture<SettingStateDeviceSummary> postAsync(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSettingStateDeviceSummary);
+            .postAsync(newSettingStateDeviceSummary);
     }
 
     /**

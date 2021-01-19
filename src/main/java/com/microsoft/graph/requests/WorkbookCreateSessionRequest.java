@@ -43,8 +43,8 @@ public class WorkbookCreateSessionRequest extends BaseRequest<WorkbookSessionInf
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookSessionInfo> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<WorkbookSessionInfo> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

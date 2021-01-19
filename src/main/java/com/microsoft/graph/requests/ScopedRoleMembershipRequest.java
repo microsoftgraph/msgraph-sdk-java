@@ -40,8 +40,8 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> futurePatch(@Nonnull final ScopedRoleMembership sourceScopedRoleMembership) {
-        return futureSend(HttpMethod.PATCH, sourceScopedRoleMembership);
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> patchAsync(@Nonnull final ScopedRoleMembership sourceScopedRoleMembership) {
+        return sendAsync(HttpMethod.PATCH, sourceScopedRoleMembership);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> futurePost(@Nonnull final ScopedRoleMembership newScopedRoleMembership) {
-        return futureSend(HttpMethod.POST, newScopedRoleMembership);
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> postAsync(@Nonnull final ScopedRoleMembership newScopedRoleMembership) {
+        return sendAsync(HttpMethod.POST, newScopedRoleMembership);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ScopedRoleMembershipRequest extends BaseRequest<ScopedRoleMembershi
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> futurePut(@Nonnull final ScopedRoleMembership newScopedRoleMembership) {
-        return futureSend(HttpMethod.PUT, newScopedRoleMembership);
+    public java.util.concurrent.CompletableFuture<ScopedRoleMembership> putAsync(@Nonnull final ScopedRoleMembership newScopedRoleMembership) {
+        return sendAsync(HttpMethod.PUT, newScopedRoleMembership);
     }
 
     /**

@@ -40,8 +40,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> futurePatch(@Nonnull final SubscribeToToneOperation sourceSubscribeToToneOperation) {
-        return futureSend(HttpMethod.PATCH, sourceSubscribeToToneOperation);
+    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> patchAsync(@Nonnull final SubscribeToToneOperation sourceSubscribeToToneOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceSubscribeToToneOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> futurePost(@Nonnull final SubscribeToToneOperation newSubscribeToToneOperation) {
-        return futureSend(HttpMethod.POST, newSubscribeToToneOperation);
+    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> postAsync(@Nonnull final SubscribeToToneOperation newSubscribeToToneOperation) {
+        return sendAsync(HttpMethod.POST, newSubscribeToToneOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SubscribeToToneOperationRequest extends BaseRequest<SubscribeToTone
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> futurePut(@Nonnull final SubscribeToToneOperation newSubscribeToToneOperation) {
-        return futureSend(HttpMethod.PUT, newSubscribeToToneOperation);
+    public java.util.concurrent.CompletableFuture<SubscribeToToneOperation> putAsync(@Nonnull final SubscribeToToneOperation newSubscribeToToneOperation) {
+        return sendAsync(HttpMethod.PUT, newSubscribeToToneOperation);
     }
 
     /**

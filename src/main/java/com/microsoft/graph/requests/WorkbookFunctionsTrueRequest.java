@@ -37,8 +37,8 @@ public class WorkbookFunctionsTrueRequest extends BaseRequest<WorkbookFunctionRe
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> futurePost() {
-        return futureSend(HttpMethod.POST, null);
+    public java.util.concurrent.CompletableFuture<WorkbookFunctionResult> postAsync() {
+        return sendAsync(HttpMethod.POST, null);
     }
 
     /**

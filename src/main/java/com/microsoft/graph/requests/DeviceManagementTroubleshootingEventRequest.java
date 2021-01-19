@@ -55,8 +55,8 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futurePatch(@Nonnull final DeviceManagementTroubleshootingEvent sourceDeviceManagementTroubleshootingEvent) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceManagementTroubleshootingEvent);
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> patchAsync(@Nonnull final DeviceManagementTroubleshootingEvent sourceDeviceManagementTroubleshootingEvent) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceManagementTroubleshootingEvent);
     }
 
     /**
@@ -121,8 +121,8 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futurePost(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) {
-        return futureSend(HttpMethod.POST, newDeviceManagementTroubleshootingEvent);
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> postAsync(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) {
+        return sendAsync(HttpMethod.POST, newDeviceManagementTroubleshootingEvent);
     }
 
     /**
@@ -144,8 +144,8 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest<Dev
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> futurePut(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) {
-        return futureSend(HttpMethod.PUT, newDeviceManagementTroubleshootingEvent);
+    public java.util.concurrent.CompletableFuture<DeviceManagementTroubleshootingEvent> putAsync(@Nonnull final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) {
+        return sendAsync(HttpMethod.PUT, newDeviceManagementTroubleshootingEvent);
     }
 
     /**

@@ -68,10 +68,10 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseReferenceRequest<
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futurePut(@Nonnull final OAuth2PermissionGrant srcOAuth2PermissionGrant) {
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> putAsync(@Nonnull final OAuth2PermissionGrant srcOAuth2PermissionGrant) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/oauth2PermissionGrants/" + srcOAuth2PermissionGrant.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

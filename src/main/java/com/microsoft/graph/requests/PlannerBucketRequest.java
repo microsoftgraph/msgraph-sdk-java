@@ -42,8 +42,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucket> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<PlannerBucket> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucket> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<PlannerBucket> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucket> futurePatch(@Nonnull final PlannerBucket sourcePlannerBucket) {
-        return futureSend(HttpMethod.PATCH, sourcePlannerBucket);
+    public java.util.concurrent.CompletableFuture<PlannerBucket> patchAsync(@Nonnull final PlannerBucket sourcePlannerBucket) {
+        return sendAsync(HttpMethod.PATCH, sourcePlannerBucket);
     }
 
     /**
@@ -108,8 +108,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucket> futurePost(@Nonnull final PlannerBucket newPlannerBucket) {
-        return futureSend(HttpMethod.POST, newPlannerBucket);
+    public java.util.concurrent.CompletableFuture<PlannerBucket> postAsync(@Nonnull final PlannerBucket newPlannerBucket) {
+        return sendAsync(HttpMethod.POST, newPlannerBucket);
     }
 
     /**
@@ -131,8 +131,8 @@ public class PlannerBucketRequest extends BaseRequest<PlannerBucket> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PlannerBucket> futurePut(@Nonnull final PlannerBucket newPlannerBucket) {
-        return futureSend(HttpMethod.PUT, newPlannerBucket);
+    public java.util.concurrent.CompletableFuture<PlannerBucket> putAsync(@Nonnull final PlannerBucket newPlannerBucket) {
+        return sendAsync(HttpMethod.PUT, newPlannerBucket);
     }
 
     /**

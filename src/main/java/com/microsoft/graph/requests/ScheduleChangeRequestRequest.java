@@ -55,8 +55,8 @@ public class ScheduleChangeRequestRequest extends BaseRequest<ScheduleChangeRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class ScheduleChangeRequestRequest extends BaseRequest<ScheduleChangeRequ
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class ScheduleChangeRequestRequest extends BaseRequest<ScheduleChangeRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> futurePatch(@Nonnull final ScheduleChangeRequest sourceScheduleChangeRequest) {
-        return futureSend(HttpMethod.PATCH, sourceScheduleChangeRequest);
+    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> patchAsync(@Nonnull final ScheduleChangeRequest sourceScheduleChangeRequest) {
+        return sendAsync(HttpMethod.PATCH, sourceScheduleChangeRequest);
     }
 
     /**
@@ -121,8 +121,8 @@ public class ScheduleChangeRequestRequest extends BaseRequest<ScheduleChangeRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> futurePost(@Nonnull final ScheduleChangeRequest newScheduleChangeRequest) {
-        return futureSend(HttpMethod.POST, newScheduleChangeRequest);
+    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> postAsync(@Nonnull final ScheduleChangeRequest newScheduleChangeRequest) {
+        return sendAsync(HttpMethod.POST, newScheduleChangeRequest);
     }
 
     /**
@@ -144,8 +144,8 @@ public class ScheduleChangeRequestRequest extends BaseRequest<ScheduleChangeRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> futurePut(@Nonnull final ScheduleChangeRequest newScheduleChangeRequest) {
-        return futureSend(HttpMethod.PUT, newScheduleChangeRequest);
+    public java.util.concurrent.CompletableFuture<ScheduleChangeRequest> putAsync(@Nonnull final ScheduleChangeRequest newScheduleChangeRequest) {
+        return sendAsync(HttpMethod.PUT, newScheduleChangeRequest);
     }
 
     /**

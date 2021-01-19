@@ -40,8 +40,8 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> futurePatch(@Nonnull final DelegatedPermissionClassification sourceDelegatedPermissionClassification) {
-        return futureSend(HttpMethod.PATCH, sourceDelegatedPermissionClassification);
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> patchAsync(@Nonnull final DelegatedPermissionClassification sourceDelegatedPermissionClassification) {
+        return sendAsync(HttpMethod.PATCH, sourceDelegatedPermissionClassification);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> futurePost(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification) {
-        return futureSend(HttpMethod.POST, newDelegatedPermissionClassification);
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> postAsync(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification) {
+        return sendAsync(HttpMethod.POST, newDelegatedPermissionClassification);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest<Delega
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> futurePut(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification) {
-        return futureSend(HttpMethod.PUT, newDelegatedPermissionClassification);
+    public java.util.concurrent.CompletableFuture<DelegatedPermissionClassification> putAsync(@Nonnull final DelegatedPermissionClassification newDelegatedPermissionClassification) {
+        return sendAsync(HttpMethod.PUT, newDelegatedPermissionClassification);
     }
 
     /**

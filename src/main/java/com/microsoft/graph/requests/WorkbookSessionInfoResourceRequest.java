@@ -39,8 +39,8 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest<WorkbookSess
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookSessionInfo> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookSessionInfo> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

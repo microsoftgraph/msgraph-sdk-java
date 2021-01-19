@@ -50,12 +50,12 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> futurePost(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
+    public java.util.concurrent.CompletableFuture<ManagedAppRegistration> postAsync(@Nonnull final ManagedAppRegistration newManagedAppRegistration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/managedAppRegistrations/" + newManagedAppRegistration.id);
         return new ManagedAppRegistrationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedAppRegistration, body);
+            .postAsync(newManagedAppRegistration, body);
     }
 
     /**

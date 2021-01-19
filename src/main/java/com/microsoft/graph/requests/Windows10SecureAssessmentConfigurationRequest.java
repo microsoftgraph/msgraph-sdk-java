@@ -40,8 +40,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futurePatch(@Nonnull final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindows10SecureAssessmentConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> patchAsync(@Nonnull final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10SecureAssessmentConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futurePost(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) {
-        return futureSend(HttpMethod.POST, newWindows10SecureAssessmentConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> postAsync(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindows10SecureAssessmentConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest<W
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> futurePut(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindows10SecureAssessmentConfiguration);
+    public java.util.concurrent.CompletableFuture<Windows10SecureAssessmentConfiguration> putAsync(@Nonnull final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindows10SecureAssessmentConfiguration);
     }
 
     /**

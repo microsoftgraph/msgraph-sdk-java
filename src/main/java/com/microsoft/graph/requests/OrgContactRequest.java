@@ -42,8 +42,8 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OrgContact> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OrgContact> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OrgContact> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OrgContact> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OrgContact> futurePatch(@Nonnull final OrgContact sourceOrgContact) {
-        return futureSend(HttpMethod.PATCH, sourceOrgContact);
+    public java.util.concurrent.CompletableFuture<OrgContact> patchAsync(@Nonnull final OrgContact sourceOrgContact) {
+        return sendAsync(HttpMethod.PATCH, sourceOrgContact);
     }
 
     /**
@@ -108,8 +108,8 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OrgContact> futurePost(@Nonnull final OrgContact newOrgContact) {
-        return futureSend(HttpMethod.POST, newOrgContact);
+    public java.util.concurrent.CompletableFuture<OrgContact> postAsync(@Nonnull final OrgContact newOrgContact) {
+        return sendAsync(HttpMethod.POST, newOrgContact);
     }
 
     /**
@@ -131,8 +131,8 @@ public class OrgContactRequest extends BaseRequest<OrgContact> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OrgContact> futurePut(@Nonnull final OrgContact newOrgContact) {
-        return futureSend(HttpMethod.PUT, newOrgContact);
+    public java.util.concurrent.CompletableFuture<OrgContact> putAsync(@Nonnull final OrgContact newOrgContact) {
+        return sendAsync(HttpMethod.PUT, newOrgContact);
     }
 
     /**

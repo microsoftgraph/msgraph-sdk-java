@@ -45,11 +45,11 @@ public class TeamsAppDefinitionCollectionRequest extends BaseEntityCollectionReq
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> futurePost(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) {
+    public java.util.concurrent.CompletableFuture<TeamsAppDefinition> postAsync(@Nonnull final TeamsAppDefinition newTeamsAppDefinition) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTeamsAppDefinition);
+            .postAsync(newTeamsAppDefinition);
     }
 
     /**

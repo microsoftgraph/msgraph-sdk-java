@@ -40,8 +40,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> futurePatch(@Nonnull final ManagedAndroidLobApp sourceManagedAndroidLobApp) {
-        return futureSend(HttpMethod.PATCH, sourceManagedAndroidLobApp);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> patchAsync(@Nonnull final ManagedAndroidLobApp sourceManagedAndroidLobApp) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAndroidLobApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> futurePost(@Nonnull final ManagedAndroidLobApp newManagedAndroidLobApp) {
-        return futureSend(HttpMethod.POST, newManagedAndroidLobApp);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> postAsync(@Nonnull final ManagedAndroidLobApp newManagedAndroidLobApp) {
+        return sendAsync(HttpMethod.POST, newManagedAndroidLobApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> futurePut(@Nonnull final ManagedAndroidLobApp newManagedAndroidLobApp) {
-        return futureSend(HttpMethod.PUT, newManagedAndroidLobApp);
+    public java.util.concurrent.CompletableFuture<ManagedAndroidLobApp> putAsync(@Nonnull final ManagedAndroidLobApp newManagedAndroidLobApp) {
+        return sendAsync(HttpMethod.PUT, newManagedAndroidLobApp);
     }
 
     /**

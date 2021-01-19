@@ -42,8 +42,8 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<InformationProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<InformationProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> futurePatch(@Nonnull final InformationProtection sourceInformationProtection) {
-        return futureSend(HttpMethod.PATCH, sourceInformationProtection);
+    public java.util.concurrent.CompletableFuture<InformationProtection> patchAsync(@Nonnull final InformationProtection sourceInformationProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceInformationProtection);
     }
 
     /**
@@ -108,8 +108,8 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> futurePost(@Nonnull final InformationProtection newInformationProtection) {
-        return futureSend(HttpMethod.POST, newInformationProtection);
+    public java.util.concurrent.CompletableFuture<InformationProtection> postAsync(@Nonnull final InformationProtection newInformationProtection) {
+        return sendAsync(HttpMethod.POST, newInformationProtection);
     }
 
     /**
@@ -131,8 +131,8 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InformationProtection> futurePut(@Nonnull final InformationProtection newInformationProtection) {
-        return futureSend(HttpMethod.PUT, newInformationProtection);
+    public java.util.concurrent.CompletableFuture<InformationProtection> putAsync(@Nonnull final InformationProtection newInformationProtection) {
+        return sendAsync(HttpMethod.PUT, newInformationProtection);
     }
 
     /**

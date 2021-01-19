@@ -45,11 +45,11 @@ public class OutlookCategoryCollectionRequest extends BaseEntityCollectionReques
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> futurePost(@Nonnull final OutlookCategory newOutlookCategory) {
+    public java.util.concurrent.CompletableFuture<OutlookCategory> postAsync(@Nonnull final OutlookCategory newOutlookCategory) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOutlookCategory);
+            .postAsync(newOutlookCategory);
     }
 
     /**

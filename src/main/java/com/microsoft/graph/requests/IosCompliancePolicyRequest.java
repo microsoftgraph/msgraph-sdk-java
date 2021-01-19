@@ -40,8 +40,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> futurePatch(@Nonnull final IosCompliancePolicy sourceIosCompliancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceIosCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> patchAsync(@Nonnull final IosCompliancePolicy sourceIosCompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceIosCompliancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> futurePost(@Nonnull final IosCompliancePolicy newIosCompliancePolicy) {
-        return futureSend(HttpMethod.POST, newIosCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> postAsync(@Nonnull final IosCompliancePolicy newIosCompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newIosCompliancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosCompliancePolicyRequest extends BaseRequest<IosCompliancePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> futurePut(@Nonnull final IosCompliancePolicy newIosCompliancePolicy) {
-        return futureSend(HttpMethod.PUT, newIosCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<IosCompliancePolicy> putAsync(@Nonnull final IosCompliancePolicy newIosCompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newIosCompliancePolicy);
     }
 
     /**

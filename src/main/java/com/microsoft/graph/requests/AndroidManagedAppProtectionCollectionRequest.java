@@ -45,11 +45,11 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseEntityColl
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> futurePost(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection) {
+    public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> postAsync(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AndroidManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newAndroidManagedAppProtection);
+            .postAsync(newAndroidManagedAppProtection);
     }
 
     /**

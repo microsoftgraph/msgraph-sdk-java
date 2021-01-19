@@ -44,8 +44,8 @@ public class DirectoryRequest extends BaseRequest<Directory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Directory> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,8 +65,8 @@ public class DirectoryRequest extends BaseRequest<Directory> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Directory> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -87,8 +87,8 @@ public class DirectoryRequest extends BaseRequest<Directory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> futurePatch(@Nonnull final Directory sourceDirectory) {
-        return futureSend(HttpMethod.PATCH, sourceDirectory);
+    public java.util.concurrent.CompletableFuture<Directory> patchAsync(@Nonnull final Directory sourceDirectory) {
+        return sendAsync(HttpMethod.PATCH, sourceDirectory);
     }
 
     /**
@@ -110,8 +110,8 @@ public class DirectoryRequest extends BaseRequest<Directory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> futurePost(@Nonnull final Directory newDirectory) {
-        return futureSend(HttpMethod.POST, newDirectory);
+    public java.util.concurrent.CompletableFuture<Directory> postAsync(@Nonnull final Directory newDirectory) {
+        return sendAsync(HttpMethod.POST, newDirectory);
     }
 
     /**
@@ -133,8 +133,8 @@ public class DirectoryRequest extends BaseRequest<Directory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> futurePut(@Nonnull final Directory newDirectory) {
-        return futureSend(HttpMethod.PUT, newDirectory);
+    public java.util.concurrent.CompletableFuture<Directory> putAsync(@Nonnull final Directory newDirectory) {
+        return sendAsync(HttpMethod.PUT, newDirectory);
     }
 
     /**

@@ -45,11 +45,11 @@ public class TeamsTabCollectionRequest extends BaseEntityCollectionRequest<Teams
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsTab> futurePost(@Nonnull final TeamsTab newTeamsTab) {
+    public java.util.concurrent.CompletableFuture<TeamsTab> postAsync(@Nonnull final TeamsTab newTeamsTab) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTeamsTab);
+            .postAsync(newTeamsTab);
     }
 
     /**

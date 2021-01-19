@@ -41,8 +41,8 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> futurePatch(@Nonnull final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookWorksheetProtection);
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> patchAsync(@Nonnull final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookWorksheetProtection);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> futurePost(@Nonnull final WorkbookWorksheetProtection newWorkbookWorksheetProtection) {
-        return futureSend(HttpMethod.POST, newWorkbookWorksheetProtection);
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> postAsync(@Nonnull final WorkbookWorksheetProtection newWorkbookWorksheetProtection) {
+        return sendAsync(HttpMethod.POST, newWorkbookWorksheetProtection);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest<WorkbookWork
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> futurePut(@Nonnull final WorkbookWorksheetProtection newWorkbookWorksheetProtection) {
-        return futureSend(HttpMethod.PUT, newWorkbookWorksheetProtection);
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheetProtection> putAsync(@Nonnull final WorkbookWorksheetProtection newWorkbookWorksheetProtection) {
+        return sendAsync(HttpMethod.PUT, newWorkbookWorksheetProtection);
     }
 
     /**

@@ -45,11 +45,11 @@ public class WorkbookRangeBorderCollectionRequest extends BaseEntityCollectionRe
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> futurePost(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) {
+    public java.util.concurrent.CompletableFuture<WorkbookRangeBorder> postAsync(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWorkbookRangeBorder);
+            .postAsync(newWorkbookRangeBorder);
     }
 
     /**

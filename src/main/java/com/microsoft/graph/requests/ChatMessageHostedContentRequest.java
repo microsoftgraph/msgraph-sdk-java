@@ -40,8 +40,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> futurePatch(@Nonnull final ChatMessageHostedContent sourceChatMessageHostedContent) {
-        return futureSend(HttpMethod.PATCH, sourceChatMessageHostedContent);
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> patchAsync(@Nonnull final ChatMessageHostedContent sourceChatMessageHostedContent) {
+        return sendAsync(HttpMethod.PATCH, sourceChatMessageHostedContent);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> futurePost(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
-        return futureSend(HttpMethod.POST, newChatMessageHostedContent);
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> postAsync(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
+        return sendAsync(HttpMethod.POST, newChatMessageHostedContent);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ChatMessageHostedContentRequest extends BaseRequest<ChatMessageHost
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> futurePut(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
-        return futureSend(HttpMethod.PUT, newChatMessageHostedContent);
+    public java.util.concurrent.CompletableFuture<ChatMessageHostedContent> putAsync(@Nonnull final ChatMessageHostedContent newChatMessageHostedContent) {
+        return sendAsync(HttpMethod.PUT, newChatMessageHostedContent);
     }
 
     /**

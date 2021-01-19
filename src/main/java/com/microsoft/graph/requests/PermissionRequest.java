@@ -41,8 +41,8 @@ public class PermissionRequest extends BaseRequest<Permission> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Permission> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Permission> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class PermissionRequest extends BaseRequest<Permission> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Permission> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Permission> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class PermissionRequest extends BaseRequest<Permission> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Permission> futurePatch(@Nonnull final Permission sourcePermission) {
-        return futureSend(HttpMethod.PATCH, sourcePermission);
+    public java.util.concurrent.CompletableFuture<Permission> patchAsync(@Nonnull final Permission sourcePermission) {
+        return sendAsync(HttpMethod.PATCH, sourcePermission);
     }
 
     /**
@@ -107,8 +107,8 @@ public class PermissionRequest extends BaseRequest<Permission> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Permission> futurePost(@Nonnull final Permission newPermission) {
-        return futureSend(HttpMethod.POST, newPermission);
+    public java.util.concurrent.CompletableFuture<Permission> postAsync(@Nonnull final Permission newPermission) {
+        return sendAsync(HttpMethod.POST, newPermission);
     }
 
     /**
@@ -130,8 +130,8 @@ public class PermissionRequest extends BaseRequest<Permission> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Permission> futurePut(@Nonnull final Permission newPermission) {
-        return futureSend(HttpMethod.PUT, newPermission);
+    public java.util.concurrent.CompletableFuture<Permission> putAsync(@Nonnull final Permission newPermission) {
+        return sendAsync(HttpMethod.PUT, newPermission);
     }
 
     /**

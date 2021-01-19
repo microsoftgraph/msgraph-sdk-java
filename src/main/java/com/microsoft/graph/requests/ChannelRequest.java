@@ -47,8 +47,8 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Channel> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Channel> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -68,8 +68,8 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Channel> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Channel> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -90,8 +90,8 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Channel> futurePatch(@Nonnull final Channel sourceChannel) {
-        return futureSend(HttpMethod.PATCH, sourceChannel);
+    public java.util.concurrent.CompletableFuture<Channel> patchAsync(@Nonnull final Channel sourceChannel) {
+        return sendAsync(HttpMethod.PATCH, sourceChannel);
     }
 
     /**
@@ -113,8 +113,8 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Channel> futurePost(@Nonnull final Channel newChannel) {
-        return futureSend(HttpMethod.POST, newChannel);
+    public java.util.concurrent.CompletableFuture<Channel> postAsync(@Nonnull final Channel newChannel) {
+        return sendAsync(HttpMethod.POST, newChannel);
     }
 
     /**
@@ -136,8 +136,8 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Channel> futurePut(@Nonnull final Channel newChannel) {
-        return futureSend(HttpMethod.PUT, newChannel);
+    public java.util.concurrent.CompletableFuture<Channel> putAsync(@Nonnull final Channel newChannel) {
+        return sendAsync(HttpMethod.PUT, newChannel);
     }
 
     /**

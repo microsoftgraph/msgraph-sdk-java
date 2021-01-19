@@ -41,8 +41,8 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futurePatch(@Nonnull final WorkbookTableSort sourceWorkbookTableSort) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookTableSort);
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> patchAsync(@Nonnull final WorkbookTableSort sourceWorkbookTableSort) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookTableSort);
     }
 
     /**
@@ -107,8 +107,8 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futurePost(@Nonnull final WorkbookTableSort newWorkbookTableSort) {
-        return futureSend(HttpMethod.POST, newWorkbookTableSort);
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> postAsync(@Nonnull final WorkbookTableSort newWorkbookTableSort) {
+        return sendAsync(HttpMethod.POST, newWorkbookTableSort);
     }
 
     /**
@@ -130,8 +130,8 @@ public class WorkbookTableSortRequest extends BaseRequest<WorkbookTableSort> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookTableSort> futurePut(@Nonnull final WorkbookTableSort newWorkbookTableSort) {
-        return futureSend(HttpMethod.PUT, newWorkbookTableSort);
+    public java.util.concurrent.CompletableFuture<WorkbookTableSort> putAsync(@Nonnull final WorkbookTableSort newWorkbookTableSort) {
+        return sendAsync(HttpMethod.PUT, newWorkbookTableSort);
     }
 
     /**

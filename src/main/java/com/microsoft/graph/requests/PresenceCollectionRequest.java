@@ -45,11 +45,11 @@ public class PresenceCollectionRequest extends BaseEntityCollectionRequest<Prese
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Presence> futurePost(@Nonnull final Presence newPresence) {
+    public java.util.concurrent.CompletableFuture<Presence> postAsync(@Nonnull final Presence newPresence) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PresenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newPresence);
+            .postAsync(newPresence);
     }
 
     /**

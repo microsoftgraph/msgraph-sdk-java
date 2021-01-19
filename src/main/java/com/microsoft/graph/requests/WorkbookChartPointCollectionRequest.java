@@ -45,11 +45,11 @@ public class WorkbookChartPointCollectionRequest extends BaseEntityCollectionReq
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> futurePost(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
+    public java.util.concurrent.CompletableFuture<WorkbookChartPoint> postAsync(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWorkbookChartPoint);
+            .postAsync(newWorkbookChartPoint);
     }
 
     /**

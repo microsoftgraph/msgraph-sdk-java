@@ -68,10 +68,10 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseReferenceRequest<Cl
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> futurePut(@Nonnull final ClaimsMappingPolicy srcClaimsMappingPolicy) {
+    public java.util.concurrent.CompletableFuture<ClaimsMappingPolicy> putAsync(@Nonnull final ClaimsMappingPolicy srcClaimsMappingPolicy) {
         final JsonObject payload = new JsonObject();
         payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + srcClaimsMappingPolicy.id));
-        return futureSend(HttpMethod.PUT, payload);
+        return sendAsync(HttpMethod.PUT, payload);
     }
 
     /**

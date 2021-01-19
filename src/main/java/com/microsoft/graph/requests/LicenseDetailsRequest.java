@@ -40,8 +40,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetails> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<LicenseDetails> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetails> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<LicenseDetails> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetails> futurePatch(@Nonnull final LicenseDetails sourceLicenseDetails) {
-        return futureSend(HttpMethod.PATCH, sourceLicenseDetails);
+    public java.util.concurrent.CompletableFuture<LicenseDetails> patchAsync(@Nonnull final LicenseDetails sourceLicenseDetails) {
+        return sendAsync(HttpMethod.PATCH, sourceLicenseDetails);
     }
 
     /**
@@ -106,8 +106,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetails> futurePost(@Nonnull final LicenseDetails newLicenseDetails) {
-        return futureSend(HttpMethod.POST, newLicenseDetails);
+    public java.util.concurrent.CompletableFuture<LicenseDetails> postAsync(@Nonnull final LicenseDetails newLicenseDetails) {
+        return sendAsync(HttpMethod.POST, newLicenseDetails);
     }
 
     /**
@@ -129,8 +129,8 @@ public class LicenseDetailsRequest extends BaseRequest<LicenseDetails> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LicenseDetails> futurePut(@Nonnull final LicenseDetails newLicenseDetails) {
-        return futureSend(HttpMethod.PUT, newLicenseDetails);
+    public java.util.concurrent.CompletableFuture<LicenseDetails> putAsync(@Nonnull final LicenseDetails newLicenseDetails) {
+        return sendAsync(HttpMethod.PUT, newLicenseDetails);
     }
 
     /**

@@ -45,11 +45,11 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseEntityColl
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> futurePost(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
+    public java.util.concurrent.CompletableFuture<PermissionGrantConditionSet> postAsync(@Nonnull final PermissionGrantConditionSet newPermissionGrantConditionSet) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newPermissionGrantConditionSet);
+            .postAsync(newPermissionGrantConditionSet);
     }
 
     /**

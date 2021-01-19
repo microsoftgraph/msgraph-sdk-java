@@ -40,8 +40,8 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futurePatch(@Nonnull final ManagedMobileApp sourceManagedMobileApp) {
-        return futureSend(HttpMethod.PATCH, sourceManagedMobileApp);
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> patchAsync(@Nonnull final ManagedMobileApp sourceManagedMobileApp) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedMobileApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futurePost(@Nonnull final ManagedMobileApp newManagedMobileApp) {
-        return futureSend(HttpMethod.POST, newManagedMobileApp);
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> postAsync(@Nonnull final ManagedMobileApp newManagedMobileApp) {
+        return sendAsync(HttpMethod.POST, newManagedMobileApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedMobileAppRequest extends BaseRequest<ManagedMobileApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedMobileApp> futurePut(@Nonnull final ManagedMobileApp newManagedMobileApp) {
-        return futureSend(HttpMethod.PUT, newManagedMobileApp);
+    public java.util.concurrent.CompletableFuture<ManagedMobileApp> putAsync(@Nonnull final ManagedMobileApp newManagedMobileApp) {
+        return sendAsync(HttpMethod.PUT, newManagedMobileApp);
     }
 
     /**

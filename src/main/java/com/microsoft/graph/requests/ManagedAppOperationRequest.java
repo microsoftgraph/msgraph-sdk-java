@@ -40,8 +40,8 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futurePatch(@Nonnull final ManagedAppOperation sourceManagedAppOperation) {
-        return futureSend(HttpMethod.PATCH, sourceManagedAppOperation);
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> patchAsync(@Nonnull final ManagedAppOperation sourceManagedAppOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedAppOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futurePost(@Nonnull final ManagedAppOperation newManagedAppOperation) {
-        return futureSend(HttpMethod.POST, newManagedAppOperation);
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> postAsync(@Nonnull final ManagedAppOperation newManagedAppOperation) {
+        return sendAsync(HttpMethod.POST, newManagedAppOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedAppOperation> futurePut(@Nonnull final ManagedAppOperation newManagedAppOperation) {
-        return futureSend(HttpMethod.PUT, newManagedAppOperation);
+    public java.util.concurrent.CompletableFuture<ManagedAppOperation> putAsync(@Nonnull final ManagedAppOperation newManagedAppOperation) {
+        return sendAsync(HttpMethod.PUT, newManagedAppOperation);
     }
 
     /**

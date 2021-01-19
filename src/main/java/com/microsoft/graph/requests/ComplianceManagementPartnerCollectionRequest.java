@@ -45,11 +45,11 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseEntityColl
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> futurePost(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) {
+    public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> postAsync(@Nonnull final ComplianceManagementPartner newComplianceManagementPartner) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ComplianceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newComplianceManagementPartner);
+            .postAsync(newComplianceManagementPartner);
     }
 
     /**

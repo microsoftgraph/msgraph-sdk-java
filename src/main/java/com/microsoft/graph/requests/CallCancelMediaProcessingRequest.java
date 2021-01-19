@@ -43,8 +43,8 @@ public class CallCancelMediaProcessingRequest extends BaseRequest<CancelMediaPro
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

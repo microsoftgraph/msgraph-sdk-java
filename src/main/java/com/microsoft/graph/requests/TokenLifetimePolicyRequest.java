@@ -40,8 +40,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futurePatch(@Nonnull final TokenLifetimePolicy sourceTokenLifetimePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceTokenLifetimePolicy);
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> patchAsync(@Nonnull final TokenLifetimePolicy sourceTokenLifetimePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceTokenLifetimePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futurePost(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
-        return futureSend(HttpMethod.POST, newTokenLifetimePolicy);
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> postAsync(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
+        return sendAsync(HttpMethod.POST, newTokenLifetimePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class TokenLifetimePolicyRequest extends BaseRequest<TokenLifetimePolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> futurePut(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
-        return futureSend(HttpMethod.PUT, newTokenLifetimePolicy);
+    public java.util.concurrent.CompletableFuture<TokenLifetimePolicy> putAsync(@Nonnull final TokenLifetimePolicy newTokenLifetimePolicy) {
+        return sendAsync(HttpMethod.PUT, newTokenLifetimePolicy);
     }
 
     /**

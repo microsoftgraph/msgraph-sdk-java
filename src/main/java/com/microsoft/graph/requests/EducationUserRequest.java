@@ -45,8 +45,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EducationUser> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -66,8 +66,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<EducationUser> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -88,8 +88,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> futurePatch(@Nonnull final EducationUser sourceEducationUser) {
-        return futureSend(HttpMethod.PATCH, sourceEducationUser);
+    public java.util.concurrent.CompletableFuture<EducationUser> patchAsync(@Nonnull final EducationUser sourceEducationUser) {
+        return sendAsync(HttpMethod.PATCH, sourceEducationUser);
     }
 
     /**
@@ -111,8 +111,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> futurePost(@Nonnull final EducationUser newEducationUser) {
-        return futureSend(HttpMethod.POST, newEducationUser);
+    public java.util.concurrent.CompletableFuture<EducationUser> postAsync(@Nonnull final EducationUser newEducationUser) {
+        return sendAsync(HttpMethod.POST, newEducationUser);
     }
 
     /**
@@ -134,8 +134,8 @@ public class EducationUserRequest extends BaseRequest<EducationUser> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationUser> futurePut(@Nonnull final EducationUser newEducationUser) {
-        return futureSend(HttpMethod.PUT, newEducationUser);
+    public java.util.concurrent.CompletableFuture<EducationUser> putAsync(@Nonnull final EducationUser newEducationUser) {
+        return sendAsync(HttpMethod.PUT, newEducationUser);
     }
 
     /**

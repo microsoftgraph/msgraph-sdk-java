@@ -40,8 +40,8 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest<Window
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest<Window
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest<Window
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> futurePatch(@Nonnull final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsPhone81CustomConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> patchAsync(@Nonnull final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsPhone81CustomConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest<Window
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> futurePost(@Nonnull final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) {
-        return futureSend(HttpMethod.POST, newWindowsPhone81CustomConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> postAsync(@Nonnull final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) {
+        return sendAsync(HttpMethod.POST, newWindowsPhone81CustomConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest<Window
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> futurePut(@Nonnull final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) {
-        return futureSend(HttpMethod.PUT, newWindowsPhone81CustomConfiguration);
+    public java.util.concurrent.CompletableFuture<WindowsPhone81CustomConfiguration> putAsync(@Nonnull final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) {
+        return sendAsync(HttpMethod.PUT, newWindowsPhone81CustomConfiguration);
     }
 
     /**

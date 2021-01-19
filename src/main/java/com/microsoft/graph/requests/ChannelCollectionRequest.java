@@ -45,11 +45,11 @@ public class ChannelCollectionRequest extends BaseEntityCollectionRequest<Channe
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Channel> futurePost(@Nonnull final Channel newChannel) {
+    public java.util.concurrent.CompletableFuture<Channel> postAsync(@Nonnull final Channel newChannel) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChannelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newChannel);
+            .postAsync(newChannel);
     }
 
     /**

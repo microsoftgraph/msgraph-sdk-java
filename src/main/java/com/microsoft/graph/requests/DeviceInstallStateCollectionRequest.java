@@ -45,11 +45,11 @@ public class DeviceInstallStateCollectionRequest extends BaseEntityCollectionReq
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceInstallState> futurePost(@Nonnull final DeviceInstallState newDeviceInstallState) {
+    public java.util.concurrent.CompletableFuture<DeviceInstallState> postAsync(@Nonnull final DeviceInstallState newDeviceInstallState) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceInstallState);
+            .postAsync(newDeviceInstallState);
     }
 
     /**

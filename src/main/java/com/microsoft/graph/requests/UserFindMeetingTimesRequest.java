@@ -43,8 +43,8 @@ public class UserFindMeetingTimesRequest extends BaseRequest<MeetingTimeSuggesti
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

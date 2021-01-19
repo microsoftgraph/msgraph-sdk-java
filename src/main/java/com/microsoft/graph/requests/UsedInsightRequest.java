@@ -41,8 +41,8 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<UsedInsight> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<UsedInsight> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> futurePatch(@Nonnull final UsedInsight sourceUsedInsight) {
-        return futureSend(HttpMethod.PATCH, sourceUsedInsight);
+    public java.util.concurrent.CompletableFuture<UsedInsight> patchAsync(@Nonnull final UsedInsight sourceUsedInsight) {
+        return sendAsync(HttpMethod.PATCH, sourceUsedInsight);
     }
 
     /**
@@ -107,8 +107,8 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> futurePost(@Nonnull final UsedInsight newUsedInsight) {
-        return futureSend(HttpMethod.POST, newUsedInsight);
+    public java.util.concurrent.CompletableFuture<UsedInsight> postAsync(@Nonnull final UsedInsight newUsedInsight) {
+        return sendAsync(HttpMethod.POST, newUsedInsight);
     }
 
     /**
@@ -130,8 +130,8 @@ public class UsedInsightRequest extends BaseRequest<UsedInsight> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UsedInsight> futurePut(@Nonnull final UsedInsight newUsedInsight) {
-        return futureSend(HttpMethod.PUT, newUsedInsight);
+    public java.util.concurrent.CompletableFuture<UsedInsight> putAsync(@Nonnull final UsedInsight newUsedInsight) {
+        return sendAsync(HttpMethod.PUT, newUsedInsight);
     }
 
     /**

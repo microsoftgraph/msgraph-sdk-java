@@ -44,8 +44,8 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -65,8 +65,8 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -87,8 +87,8 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> futurePatch(@Nonnull final TermsAndConditions sourceTermsAndConditions) {
-        return futureSend(HttpMethod.PATCH, sourceTermsAndConditions);
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> patchAsync(@Nonnull final TermsAndConditions sourceTermsAndConditions) {
+        return sendAsync(HttpMethod.PATCH, sourceTermsAndConditions);
     }
 
     /**
@@ -110,8 +110,8 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> futurePost(@Nonnull final TermsAndConditions newTermsAndConditions) {
-        return futureSend(HttpMethod.POST, newTermsAndConditions);
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> postAsync(@Nonnull final TermsAndConditions newTermsAndConditions) {
+        return sendAsync(HttpMethod.POST, newTermsAndConditions);
     }
 
     /**
@@ -133,8 +133,8 @@ public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TermsAndConditions> futurePut(@Nonnull final TermsAndConditions newTermsAndConditions) {
-        return futureSend(HttpMethod.PUT, newTermsAndConditions);
+    public java.util.concurrent.CompletableFuture<TermsAndConditions> putAsync(@Nonnull final TermsAndConditions newTermsAndConditions) {
+        return sendAsync(HttpMethod.PUT, newTermsAndConditions);
     }
 
     /**

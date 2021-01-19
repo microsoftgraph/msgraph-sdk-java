@@ -45,8 +45,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -66,8 +66,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -88,8 +88,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> futurePatch(@Nonnull final WorkbookRangeFormat sourceWorkbookRangeFormat) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookRangeFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> patchAsync(@Nonnull final WorkbookRangeFormat sourceWorkbookRangeFormat) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookRangeFormat);
     }
 
     /**
@@ -111,8 +111,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> futurePost(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat) {
-        return futureSend(HttpMethod.POST, newWorkbookRangeFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> postAsync(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat) {
+        return sendAsync(HttpMethod.POST, newWorkbookRangeFormat);
     }
 
     /**
@@ -134,8 +134,8 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> futurePut(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat) {
-        return futureSend(HttpMethod.PUT, newWorkbookRangeFormat);
+    public java.util.concurrent.CompletableFuture<WorkbookRangeFormat> putAsync(@Nonnull final WorkbookRangeFormat newWorkbookRangeFormat) {
+        return sendAsync(HttpMethod.PUT, newWorkbookRangeFormat);
     }
 
     /**

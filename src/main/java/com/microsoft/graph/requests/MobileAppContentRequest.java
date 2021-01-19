@@ -42,8 +42,8 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContent> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MobileAppContent> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContent> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MobileAppContent> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContent> futurePatch(@Nonnull final MobileAppContent sourceMobileAppContent) {
-        return futureSend(HttpMethod.PATCH, sourceMobileAppContent);
+    public java.util.concurrent.CompletableFuture<MobileAppContent> patchAsync(@Nonnull final MobileAppContent sourceMobileAppContent) {
+        return sendAsync(HttpMethod.PATCH, sourceMobileAppContent);
     }
 
     /**
@@ -108,8 +108,8 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContent> futurePost(@Nonnull final MobileAppContent newMobileAppContent) {
-        return futureSend(HttpMethod.POST, newMobileAppContent);
+    public java.util.concurrent.CompletableFuture<MobileAppContent> postAsync(@Nonnull final MobileAppContent newMobileAppContent) {
+        return sendAsync(HttpMethod.POST, newMobileAppContent);
     }
 
     /**
@@ -131,8 +131,8 @@ public class MobileAppContentRequest extends BaseRequest<MobileAppContent> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileAppContent> futurePut(@Nonnull final MobileAppContent newMobileAppContent) {
-        return futureSend(HttpMethod.PUT, newMobileAppContent);
+    public java.util.concurrent.CompletableFuture<MobileAppContent> putAsync(@Nonnull final MobileAppContent newMobileAppContent) {
+        return sendAsync(HttpMethod.PUT, newMobileAppContent);
     }
 
     /**

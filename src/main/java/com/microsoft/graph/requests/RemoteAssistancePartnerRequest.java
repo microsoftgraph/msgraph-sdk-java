@@ -40,8 +40,8 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futurePatch(@Nonnull final RemoteAssistancePartner sourceRemoteAssistancePartner) {
-        return futureSend(HttpMethod.PATCH, sourceRemoteAssistancePartner);
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> patchAsync(@Nonnull final RemoteAssistancePartner sourceRemoteAssistancePartner) {
+        return sendAsync(HttpMethod.PATCH, sourceRemoteAssistancePartner);
     }
 
     /**
@@ -106,8 +106,8 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futurePost(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) {
-        return futureSend(HttpMethod.POST, newRemoteAssistancePartner);
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> postAsync(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) {
+        return sendAsync(HttpMethod.POST, newRemoteAssistancePartner);
     }
 
     /**
@@ -129,8 +129,8 @@ public class RemoteAssistancePartnerRequest extends BaseRequest<RemoteAssistance
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> futurePut(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) {
-        return futureSend(HttpMethod.PUT, newRemoteAssistancePartner);
+    public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> putAsync(@Nonnull final RemoteAssistancePartner newRemoteAssistancePartner) {
+        return sendAsync(HttpMethod.PUT, newRemoteAssistancePartner);
     }
 
     /**

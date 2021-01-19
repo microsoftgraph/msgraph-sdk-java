@@ -46,11 +46,11 @@ public class ConversationThreadCollectionRequest extends BaseEntityCollectionReq
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConversationThread> futurePost(@Nonnull final ConversationThread newConversationThread) {
+    public java.util.concurrent.CompletableFuture<ConversationThread> postAsync(@Nonnull final ConversationThread newConversationThread) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConversationThreadRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newConversationThread);
+            .postAsync(newConversationThread);
     }
 
     /**

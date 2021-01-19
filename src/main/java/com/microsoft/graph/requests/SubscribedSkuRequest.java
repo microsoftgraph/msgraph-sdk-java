@@ -40,8 +40,8 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSku> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SubscribedSku> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSku> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SubscribedSku> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSku> futurePatch(@Nonnull final SubscribedSku sourceSubscribedSku) {
-        return futureSend(HttpMethod.PATCH, sourceSubscribedSku);
+    public java.util.concurrent.CompletableFuture<SubscribedSku> patchAsync(@Nonnull final SubscribedSku sourceSubscribedSku) {
+        return sendAsync(HttpMethod.PATCH, sourceSubscribedSku);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSku> futurePost(@Nonnull final SubscribedSku newSubscribedSku) {
-        return futureSend(HttpMethod.POST, newSubscribedSku);
+    public java.util.concurrent.CompletableFuture<SubscribedSku> postAsync(@Nonnull final SubscribedSku newSubscribedSku) {
+        return sendAsync(HttpMethod.POST, newSubscribedSku);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SubscribedSku> futurePut(@Nonnull final SubscribedSku newSubscribedSku) {
-        return futureSend(HttpMethod.PUT, newSubscribedSku);
+    public java.util.concurrent.CompletableFuture<SubscribedSku> putAsync(@Nonnull final SubscribedSku newSubscribedSku) {
+        return sendAsync(HttpMethod.PUT, newSubscribedSku);
     }
 
     /**

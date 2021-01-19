@@ -50,12 +50,12 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> futurePost(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
+    public java.util.concurrent.CompletableFuture<TokenIssuancePolicy> postAsync(@Nonnull final TokenIssuancePolicy newTokenIssuancePolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);
         return new TokenIssuancePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTokenIssuancePolicy, body);
+            .postAsync(newTokenIssuancePolicy, body);
     }
 
     /**

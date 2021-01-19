@@ -45,11 +45,11 @@ public class ResourceOperationCollectionRequest extends BaseEntityCollectionRequ
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ResourceOperation> futurePost(@Nonnull final ResourceOperation newResourceOperation) {
+    public java.util.concurrent.CompletableFuture<ResourceOperation> postAsync(@Nonnull final ResourceOperation newResourceOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newResourceOperation);
+            .postAsync(newResourceOperation);
     }
 
     /**

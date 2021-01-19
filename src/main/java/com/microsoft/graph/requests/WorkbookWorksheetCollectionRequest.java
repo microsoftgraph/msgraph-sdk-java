@@ -46,11 +46,11 @@ public class WorkbookWorksheetCollectionRequest extends BaseEntityCollectionRequ
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> futurePost(@Nonnull final WorkbookWorksheet newWorkbookWorksheet) {
+    public java.util.concurrent.CompletableFuture<WorkbookWorksheet> postAsync(@Nonnull final WorkbookWorksheet newWorkbookWorksheet) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookWorksheetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newWorkbookWorksheet);
+            .postAsync(newWorkbookWorksheet);
     }
 
     /**

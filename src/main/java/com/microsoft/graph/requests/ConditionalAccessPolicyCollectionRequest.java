@@ -45,11 +45,11 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseEntityCollecti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> futurePost(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) {
+    public java.util.concurrent.CompletableFuture<ConditionalAccessPolicy> postAsync(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newConditionalAccessPolicy);
+            .postAsync(newConditionalAccessPolicy);
     }
 
     /**

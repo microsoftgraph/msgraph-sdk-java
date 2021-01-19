@@ -38,8 +38,8 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Report> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Report> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

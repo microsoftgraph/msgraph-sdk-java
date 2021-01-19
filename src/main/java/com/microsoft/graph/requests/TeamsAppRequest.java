@@ -42,8 +42,8 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<TeamsApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<TeamsApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsApp> futurePatch(@Nonnull final TeamsApp sourceTeamsApp) {
-        return futureSend(HttpMethod.PATCH, sourceTeamsApp);
+    public java.util.concurrent.CompletableFuture<TeamsApp> patchAsync(@Nonnull final TeamsApp sourceTeamsApp) {
+        return sendAsync(HttpMethod.PATCH, sourceTeamsApp);
     }
 
     /**
@@ -108,8 +108,8 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsApp> futurePost(@Nonnull final TeamsApp newTeamsApp) {
-        return futureSend(HttpMethod.POST, newTeamsApp);
+    public java.util.concurrent.CompletableFuture<TeamsApp> postAsync(@Nonnull final TeamsApp newTeamsApp) {
+        return sendAsync(HttpMethod.POST, newTeamsApp);
     }
 
     /**
@@ -131,8 +131,8 @@ public class TeamsAppRequest extends BaseRequest<TeamsApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TeamsApp> futurePut(@Nonnull final TeamsApp newTeamsApp) {
-        return futureSend(HttpMethod.PUT, newTeamsApp);
+    public java.util.concurrent.CompletableFuture<TeamsApp> putAsync(@Nonnull final TeamsApp newTeamsApp) {
+        return sendAsync(HttpMethod.PUT, newTeamsApp);
     }
 
     /**

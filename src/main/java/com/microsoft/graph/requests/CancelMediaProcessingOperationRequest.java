@@ -40,8 +40,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futurePatch(@Nonnull final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation) {
-        return futureSend(HttpMethod.PATCH, sourceCancelMediaProcessingOperation);
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> patchAsync(@Nonnull final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceCancelMediaProcessingOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futurePost(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation) {
-        return futureSend(HttpMethod.POST, newCancelMediaProcessingOperation);
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> postAsync(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation) {
+        return sendAsync(HttpMethod.POST, newCancelMediaProcessingOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest<CancelMed
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> futurePut(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation) {
-        return futureSend(HttpMethod.PUT, newCancelMediaProcessingOperation);
+    public java.util.concurrent.CompletableFuture<CancelMediaProcessingOperation> putAsync(@Nonnull final CancelMediaProcessingOperation newCancelMediaProcessingOperation) {
+        return sendAsync(HttpMethod.PUT, newCancelMediaProcessingOperation);
     }
 
     /**

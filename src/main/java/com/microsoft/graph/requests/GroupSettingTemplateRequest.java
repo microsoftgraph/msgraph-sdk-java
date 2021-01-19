@@ -40,8 +40,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> futurePatch(@Nonnull final GroupSettingTemplate sourceGroupSettingTemplate) {
-        return futureSend(HttpMethod.PATCH, sourceGroupSettingTemplate);
+    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> patchAsync(@Nonnull final GroupSettingTemplate sourceGroupSettingTemplate) {
+        return sendAsync(HttpMethod.PATCH, sourceGroupSettingTemplate);
     }
 
     /**
@@ -106,8 +106,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> futurePost(@Nonnull final GroupSettingTemplate newGroupSettingTemplate) {
-        return futureSend(HttpMethod.POST, newGroupSettingTemplate);
+    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> postAsync(@Nonnull final GroupSettingTemplate newGroupSettingTemplate) {
+        return sendAsync(HttpMethod.POST, newGroupSettingTemplate);
     }
 
     /**
@@ -129,8 +129,8 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> futurePut(@Nonnull final GroupSettingTemplate newGroupSettingTemplate) {
-        return futureSend(HttpMethod.PUT, newGroupSettingTemplate);
+    public java.util.concurrent.CompletableFuture<GroupSettingTemplate> putAsync(@Nonnull final GroupSettingTemplate newGroupSettingTemplate) {
+        return sendAsync(HttpMethod.PUT, newGroupSettingTemplate);
     }
 
     /**

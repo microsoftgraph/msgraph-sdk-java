@@ -40,8 +40,8 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> futurePatch(@Nonnull final MuteParticipantOperation sourceMuteParticipantOperation) {
-        return futureSend(HttpMethod.PATCH, sourceMuteParticipantOperation);
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> patchAsync(@Nonnull final MuteParticipantOperation sourceMuteParticipantOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceMuteParticipantOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> futurePost(@Nonnull final MuteParticipantOperation newMuteParticipantOperation) {
-        return futureSend(HttpMethod.POST, newMuteParticipantOperation);
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> postAsync(@Nonnull final MuteParticipantOperation newMuteParticipantOperation) {
+        return sendAsync(HttpMethod.POST, newMuteParticipantOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class MuteParticipantOperationRequest extends BaseRequest<MuteParticipant
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> futurePut(@Nonnull final MuteParticipantOperation newMuteParticipantOperation) {
-        return futureSend(HttpMethod.PUT, newMuteParticipantOperation);
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> putAsync(@Nonnull final MuteParticipantOperation newMuteParticipantOperation) {
+        return sendAsync(HttpMethod.PUT, newMuteParticipantOperation);
     }
 
     /**

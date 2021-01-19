@@ -40,8 +40,8 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futurePatch(@Nonnull final OAuth2PermissionGrant sourceOAuth2PermissionGrant) {
-        return futureSend(HttpMethod.PATCH, sourceOAuth2PermissionGrant);
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> patchAsync(@Nonnull final OAuth2PermissionGrant sourceOAuth2PermissionGrant) {
+        return sendAsync(HttpMethod.PATCH, sourceOAuth2PermissionGrant);
     }
 
     /**
@@ -106,8 +106,8 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futurePost(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
-        return futureSend(HttpMethod.POST, newOAuth2PermissionGrant);
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> postAsync(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
+        return sendAsync(HttpMethod.POST, newOAuth2PermissionGrant);
     }
 
     /**
@@ -129,8 +129,8 @@ public class OAuth2PermissionGrantRequest extends BaseRequest<OAuth2PermissionGr
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> futurePut(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
-        return futureSend(HttpMethod.PUT, newOAuth2PermissionGrant);
+    public java.util.concurrent.CompletableFuture<OAuth2PermissionGrant> putAsync(@Nonnull final OAuth2PermissionGrant newOAuth2PermissionGrant) {
+        return sendAsync(HttpMethod.PUT, newOAuth2PermissionGrant);
     }
 
     /**

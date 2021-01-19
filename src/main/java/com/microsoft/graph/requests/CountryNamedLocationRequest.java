@@ -40,8 +40,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CountryNamedLocation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<CountryNamedLocation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CountryNamedLocation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<CountryNamedLocation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CountryNamedLocation> futurePatch(@Nonnull final CountryNamedLocation sourceCountryNamedLocation) {
-        return futureSend(HttpMethod.PATCH, sourceCountryNamedLocation);
+    public java.util.concurrent.CompletableFuture<CountryNamedLocation> patchAsync(@Nonnull final CountryNamedLocation sourceCountryNamedLocation) {
+        return sendAsync(HttpMethod.PATCH, sourceCountryNamedLocation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CountryNamedLocation> futurePost(@Nonnull final CountryNamedLocation newCountryNamedLocation) {
-        return futureSend(HttpMethod.POST, newCountryNamedLocation);
+    public java.util.concurrent.CompletableFuture<CountryNamedLocation> postAsync(@Nonnull final CountryNamedLocation newCountryNamedLocation) {
+        return sendAsync(HttpMethod.POST, newCountryNamedLocation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class CountryNamedLocationRequest extends BaseRequest<CountryNamedLocatio
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CountryNamedLocation> futurePut(@Nonnull final CountryNamedLocation newCountryNamedLocation) {
-        return futureSend(HttpMethod.PUT, newCountryNamedLocation);
+    public java.util.concurrent.CompletableFuture<CountryNamedLocation> putAsync(@Nonnull final CountryNamedLocation newCountryNamedLocation) {
+        return sendAsync(HttpMethod.PUT, newCountryNamedLocation);
     }
 
     /**

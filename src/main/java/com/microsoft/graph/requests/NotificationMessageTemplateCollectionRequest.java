@@ -45,11 +45,11 @@ public class NotificationMessageTemplateCollectionRequest extends BaseEntityColl
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> futurePost(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
+    public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> postAsync(@Nonnull final NotificationMessageTemplate newNotificationMessageTemplate) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newNotificationMessageTemplate);
+            .postAsync(newNotificationMessageTemplate);
     }
 
     /**

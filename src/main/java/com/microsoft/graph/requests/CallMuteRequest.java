@@ -43,8 +43,8 @@ public class CallMuteRequest extends BaseRequest<MuteParticipantOperation> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> futurePost() {
-        return futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<MuteParticipantOperation> postAsync() {
+        return sendAsync(HttpMethod.POST, body);
     }
 
     /**

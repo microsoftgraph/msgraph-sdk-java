@@ -41,8 +41,8 @@ public class ThumbnailContentStreamRequest extends BaseStreamRequest<Thumbnail> 
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> futureGet() {
-        return futureSend();
+    public java.util.concurrent.CompletableFuture<InputStream> getAsync() {
+        return sendAsync();
     }
 
     /**
@@ -63,8 +63,8 @@ public class ThumbnailContentStreamRequest extends BaseStreamRequest<Thumbnail> 
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Thumbnail> futurePut(@Nonnull final byte[] fileContents) {
-        return futureSend(fileContents);
+    public java.util.concurrent.CompletableFuture<Thumbnail> putAsync(@Nonnull final byte[] fileContents) {
+        return sendAsync(fileContents);
     }
 
     /**

@@ -44,11 +44,11 @@ public class SubscriptionCollectionRequest extends BaseEntityCollectionRequest<S
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Subscription> futurePost(@Nonnull final Subscription newSubscription) {
+    public java.util.concurrent.CompletableFuture<Subscription> postAsync(@Nonnull final Subscription newSubscription) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SubscriptionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSubscription);
+            .postAsync(newSubscription);
     }
 
     /**

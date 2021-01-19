@@ -40,8 +40,8 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShift> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OpenShift> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShift> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OpenShift> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShift> futurePatch(@Nonnull final OpenShift sourceOpenShift) {
-        return futureSend(HttpMethod.PATCH, sourceOpenShift);
+    public java.util.concurrent.CompletableFuture<OpenShift> patchAsync(@Nonnull final OpenShift sourceOpenShift) {
+        return sendAsync(HttpMethod.PATCH, sourceOpenShift);
     }
 
     /**
@@ -106,8 +106,8 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShift> futurePost(@Nonnull final OpenShift newOpenShift) {
-        return futureSend(HttpMethod.POST, newOpenShift);
+    public java.util.concurrent.CompletableFuture<OpenShift> postAsync(@Nonnull final OpenShift newOpenShift) {
+        return sendAsync(HttpMethod.POST, newOpenShift);
     }
 
     /**
@@ -129,8 +129,8 @@ public class OpenShiftRequest extends BaseRequest<OpenShift> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OpenShift> futurePut(@Nonnull final OpenShift newOpenShift) {
-        return futureSend(HttpMethod.PUT, newOpenShift);
+    public java.util.concurrent.CompletableFuture<OpenShift> putAsync(@Nonnull final OpenShift newOpenShift) {
+        return sendAsync(HttpMethod.PUT, newOpenShift);
     }
 
     /**

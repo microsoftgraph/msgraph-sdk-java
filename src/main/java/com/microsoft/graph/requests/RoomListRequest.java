@@ -42,8 +42,8 @@ public class RoomListRequest extends BaseRequest<RoomList> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoomList> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<RoomList> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class RoomListRequest extends BaseRequest<RoomList> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoomList> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<RoomList> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class RoomListRequest extends BaseRequest<RoomList> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoomList> futurePatch(@Nonnull final RoomList sourceRoomList) {
-        return futureSend(HttpMethod.PATCH, sourceRoomList);
+    public java.util.concurrent.CompletableFuture<RoomList> patchAsync(@Nonnull final RoomList sourceRoomList) {
+        return sendAsync(HttpMethod.PATCH, sourceRoomList);
     }
 
     /**
@@ -108,8 +108,8 @@ public class RoomListRequest extends BaseRequest<RoomList> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoomList> futurePost(@Nonnull final RoomList newRoomList) {
-        return futureSend(HttpMethod.POST, newRoomList);
+    public java.util.concurrent.CompletableFuture<RoomList> postAsync(@Nonnull final RoomList newRoomList) {
+        return sendAsync(HttpMethod.POST, newRoomList);
     }
 
     /**
@@ -131,8 +131,8 @@ public class RoomListRequest extends BaseRequest<RoomList> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<RoomList> futurePut(@Nonnull final RoomList newRoomList) {
-        return futureSend(HttpMethod.PUT, newRoomList);
+    public java.util.concurrent.CompletableFuture<RoomList> putAsync(@Nonnull final RoomList newRoomList) {
+        return sendAsync(HttpMethod.PUT, newRoomList);
     }
 
     /**

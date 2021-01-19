@@ -55,8 +55,8 @@ public class ManagedAppRequest extends BaseRequest<ManagedApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -76,8 +76,8 @@ public class ManagedAppRequest extends BaseRequest<ManagedApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -98,8 +98,8 @@ public class ManagedAppRequest extends BaseRequest<ManagedApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedApp> futurePatch(@Nonnull final ManagedApp sourceManagedApp) {
-        return futureSend(HttpMethod.PATCH, sourceManagedApp);
+    public java.util.concurrent.CompletableFuture<ManagedApp> patchAsync(@Nonnull final ManagedApp sourceManagedApp) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedApp);
     }
 
     /**
@@ -121,8 +121,8 @@ public class ManagedAppRequest extends BaseRequest<ManagedApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedApp> futurePost(@Nonnull final ManagedApp newManagedApp) {
-        return futureSend(HttpMethod.POST, newManagedApp);
+    public java.util.concurrent.CompletableFuture<ManagedApp> postAsync(@Nonnull final ManagedApp newManagedApp) {
+        return sendAsync(HttpMethod.POST, newManagedApp);
     }
 
     /**
@@ -144,8 +144,8 @@ public class ManagedAppRequest extends BaseRequest<ManagedApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedApp> futurePut(@Nonnull final ManagedApp newManagedApp) {
-        return futureSend(HttpMethod.PUT, newManagedApp);
+    public java.util.concurrent.CompletableFuture<ManagedApp> putAsync(@Nonnull final ManagedApp newManagedApp) {
+        return sendAsync(HttpMethod.PUT, newManagedApp);
     }
 
     /**

@@ -56,8 +56,8 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DirectoryObject> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -77,8 +77,8 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DirectoryObject> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -99,8 +99,8 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> futurePatch(@Nonnull final DirectoryObject sourceDirectoryObject) {
-        return futureSend(HttpMethod.PATCH, sourceDirectoryObject);
+    public java.util.concurrent.CompletableFuture<DirectoryObject> patchAsync(@Nonnull final DirectoryObject sourceDirectoryObject) {
+        return sendAsync(HttpMethod.PATCH, sourceDirectoryObject);
     }
 
     /**
@@ -122,8 +122,8 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> futurePost(@Nonnull final DirectoryObject newDirectoryObject) {
-        return futureSend(HttpMethod.POST, newDirectoryObject);
+    public java.util.concurrent.CompletableFuture<DirectoryObject> postAsync(@Nonnull final DirectoryObject newDirectoryObject) {
+        return sendAsync(HttpMethod.POST, newDirectoryObject);
     }
 
     /**
@@ -145,8 +145,8 @@ public class DirectoryObjectRequest extends BaseRequest<DirectoryObject> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> futurePut(@Nonnull final DirectoryObject newDirectoryObject) {
-        return futureSend(HttpMethod.PUT, newDirectoryObject);
+    public java.util.concurrent.CompletableFuture<DirectoryObject> putAsync(@Nonnull final DirectoryObject newDirectoryObject) {
+        return sendAsync(HttpMethod.PUT, newDirectoryObject);
     }
 
     /**

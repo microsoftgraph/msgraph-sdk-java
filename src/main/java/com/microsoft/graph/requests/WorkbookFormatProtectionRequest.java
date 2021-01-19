@@ -40,8 +40,8 @@ public class WorkbookFormatProtectionRequest extends BaseRequest<WorkbookFormatP
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class WorkbookFormatProtectionRequest extends BaseRequest<WorkbookFormatP
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class WorkbookFormatProtectionRequest extends BaseRequest<WorkbookFormatP
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> futurePatch(@Nonnull final WorkbookFormatProtection sourceWorkbookFormatProtection) {
-        return futureSend(HttpMethod.PATCH, sourceWorkbookFormatProtection);
+    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> patchAsync(@Nonnull final WorkbookFormatProtection sourceWorkbookFormatProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceWorkbookFormatProtection);
     }
 
     /**
@@ -106,8 +106,8 @@ public class WorkbookFormatProtectionRequest extends BaseRequest<WorkbookFormatP
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> futurePost(@Nonnull final WorkbookFormatProtection newWorkbookFormatProtection) {
-        return futureSend(HttpMethod.POST, newWorkbookFormatProtection);
+    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> postAsync(@Nonnull final WorkbookFormatProtection newWorkbookFormatProtection) {
+        return sendAsync(HttpMethod.POST, newWorkbookFormatProtection);
     }
 
     /**
@@ -129,8 +129,8 @@ public class WorkbookFormatProtectionRequest extends BaseRequest<WorkbookFormatP
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> futurePut(@Nonnull final WorkbookFormatProtection newWorkbookFormatProtection) {
-        return futureSend(HttpMethod.PUT, newWorkbookFormatProtection);
+    public java.util.concurrent.CompletableFuture<WorkbookFormatProtection> putAsync(@Nonnull final WorkbookFormatProtection newWorkbookFormatProtection) {
+        return sendAsync(HttpMethod.PUT, newWorkbookFormatProtection);
     }
 
     /**

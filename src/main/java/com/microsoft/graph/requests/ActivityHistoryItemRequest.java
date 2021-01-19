@@ -41,8 +41,8 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -62,8 +62,8 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -84,8 +84,8 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> futurePatch(@Nonnull final ActivityHistoryItem sourceActivityHistoryItem) {
-        return futureSend(HttpMethod.PATCH, sourceActivityHistoryItem);
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> patchAsync(@Nonnull final ActivityHistoryItem sourceActivityHistoryItem) {
+        return sendAsync(HttpMethod.PATCH, sourceActivityHistoryItem);
     }
 
     /**
@@ -107,8 +107,8 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> futurePost(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
-        return futureSend(HttpMethod.POST, newActivityHistoryItem);
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> postAsync(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
+        return sendAsync(HttpMethod.POST, newActivityHistoryItem);
     }
 
     /**
@@ -130,8 +130,8 @@ public class ActivityHistoryItemRequest extends BaseRequest<ActivityHistoryItem>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> futurePut(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
-        return futureSend(HttpMethod.PUT, newActivityHistoryItem);
+    public java.util.concurrent.CompletableFuture<ActivityHistoryItem> putAsync(@Nonnull final ActivityHistoryItem newActivityHistoryItem) {
+        return sendAsync(HttpMethod.PUT, newActivityHistoryItem);
     }
 
     /**

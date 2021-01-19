@@ -40,8 +40,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ExtensionProperty> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ExtensionProperty> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ExtensionProperty> futurePatch(@Nonnull final ExtensionProperty sourceExtensionProperty) {
-        return futureSend(HttpMethod.PATCH, sourceExtensionProperty);
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> patchAsync(@Nonnull final ExtensionProperty sourceExtensionProperty) {
+        return sendAsync(HttpMethod.PATCH, sourceExtensionProperty);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ExtensionProperty> futurePost(@Nonnull final ExtensionProperty newExtensionProperty) {
-        return futureSend(HttpMethod.POST, newExtensionProperty);
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> postAsync(@Nonnull final ExtensionProperty newExtensionProperty) {
+        return sendAsync(HttpMethod.POST, newExtensionProperty);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ExtensionPropertyRequest extends BaseRequest<ExtensionProperty> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ExtensionProperty> futurePut(@Nonnull final ExtensionProperty newExtensionProperty) {
-        return futureSend(HttpMethod.PUT, newExtensionProperty);
+    public java.util.concurrent.CompletableFuture<ExtensionProperty> putAsync(@Nonnull final ExtensionProperty newExtensionProperty) {
+        return sendAsync(HttpMethod.PUT, newExtensionProperty);
     }
 
     /**

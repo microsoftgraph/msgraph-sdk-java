@@ -45,11 +45,11 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseEntityCol
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> futurePost(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) {
+    public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> postAsync(@Nonnull final MobileThreatDefenseConnector newMobileThreatDefenseConnector) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileThreatDefenseConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMobileThreatDefenseConnector);
+            .postAsync(newMobileThreatDefenseConnector);
     }
 
     /**

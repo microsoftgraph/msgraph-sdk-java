@@ -40,8 +40,8 @@ public class UnmuteParticipantOperationRequest extends BaseRequest<UnmutePartici
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class UnmuteParticipantOperationRequest extends BaseRequest<UnmutePartici
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class UnmuteParticipantOperationRequest extends BaseRequest<UnmutePartici
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> futurePatch(@Nonnull final UnmuteParticipantOperation sourceUnmuteParticipantOperation) {
-        return futureSend(HttpMethod.PATCH, sourceUnmuteParticipantOperation);
+    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> patchAsync(@Nonnull final UnmuteParticipantOperation sourceUnmuteParticipantOperation) {
+        return sendAsync(HttpMethod.PATCH, sourceUnmuteParticipantOperation);
     }
 
     /**
@@ -106,8 +106,8 @@ public class UnmuteParticipantOperationRequest extends BaseRequest<UnmutePartici
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> futurePost(@Nonnull final UnmuteParticipantOperation newUnmuteParticipantOperation) {
-        return futureSend(HttpMethod.POST, newUnmuteParticipantOperation);
+    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> postAsync(@Nonnull final UnmuteParticipantOperation newUnmuteParticipantOperation) {
+        return sendAsync(HttpMethod.POST, newUnmuteParticipantOperation);
     }
 
     /**
@@ -129,8 +129,8 @@ public class UnmuteParticipantOperationRequest extends BaseRequest<UnmutePartici
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> futurePut(@Nonnull final UnmuteParticipantOperation newUnmuteParticipantOperation) {
-        return futureSend(HttpMethod.PUT, newUnmuteParticipantOperation);
+    public java.util.concurrent.CompletableFuture<UnmuteParticipantOperation> putAsync(@Nonnull final UnmuteParticipantOperation newUnmuteParticipantOperation) {
+        return sendAsync(HttpMethod.PUT, newUnmuteParticipantOperation);
     }
 
     /**

@@ -40,8 +40,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<OutlookCategory> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<OutlookCategory> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> futurePatch(@Nonnull final OutlookCategory sourceOutlookCategory) {
-        return futureSend(HttpMethod.PATCH, sourceOutlookCategory);
+    public java.util.concurrent.CompletableFuture<OutlookCategory> patchAsync(@Nonnull final OutlookCategory sourceOutlookCategory) {
+        return sendAsync(HttpMethod.PATCH, sourceOutlookCategory);
     }
 
     /**
@@ -106,8 +106,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> futurePost(@Nonnull final OutlookCategory newOutlookCategory) {
-        return futureSend(HttpMethod.POST, newOutlookCategory);
+    public java.util.concurrent.CompletableFuture<OutlookCategory> postAsync(@Nonnull final OutlookCategory newOutlookCategory) {
+        return sendAsync(HttpMethod.POST, newOutlookCategory);
     }
 
     /**
@@ -129,8 +129,8 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OutlookCategory> futurePut(@Nonnull final OutlookCategory newOutlookCategory) {
-        return futureSend(HttpMethod.PUT, newOutlookCategory);
+    public java.util.concurrent.CompletableFuture<OutlookCategory> putAsync(@Nonnull final OutlookCategory newOutlookCategory) {
+        return sendAsync(HttpMethod.PUT, newOutlookCategory);
     }
 
     /**

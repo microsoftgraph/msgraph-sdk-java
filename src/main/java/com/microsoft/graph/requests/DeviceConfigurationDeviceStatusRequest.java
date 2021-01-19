@@ -40,8 +40,8 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest<DeviceCo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest<DeviceCo
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest<DeviceCo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> futurePatch(@Nonnull final DeviceConfigurationDeviceStatus sourceDeviceConfigurationDeviceStatus) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceConfigurationDeviceStatus);
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> patchAsync(@Nonnull final DeviceConfigurationDeviceStatus sourceDeviceConfigurationDeviceStatus) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceConfigurationDeviceStatus);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest<DeviceCo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> futurePost(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) {
-        return futureSend(HttpMethod.POST, newDeviceConfigurationDeviceStatus);
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> postAsync(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) {
+        return sendAsync(HttpMethod.POST, newDeviceConfigurationDeviceStatus);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest<DeviceCo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> futurePut(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) {
-        return futureSend(HttpMethod.PUT, newDeviceConfigurationDeviceStatus);
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> putAsync(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) {
+        return sendAsync(HttpMethod.PUT, newDeviceConfigurationDeviceStatus);
     }
 
     /**

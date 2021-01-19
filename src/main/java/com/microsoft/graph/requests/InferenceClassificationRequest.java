@@ -42,8 +42,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassification> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<InferenceClassification> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassification> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<InferenceClassification> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassification> futurePatch(@Nonnull final InferenceClassification sourceInferenceClassification) {
-        return futureSend(HttpMethod.PATCH, sourceInferenceClassification);
+    public java.util.concurrent.CompletableFuture<InferenceClassification> patchAsync(@Nonnull final InferenceClassification sourceInferenceClassification) {
+        return sendAsync(HttpMethod.PATCH, sourceInferenceClassification);
     }
 
     /**
@@ -108,8 +108,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassification> futurePost(@Nonnull final InferenceClassification newInferenceClassification) {
-        return futureSend(HttpMethod.POST, newInferenceClassification);
+    public java.util.concurrent.CompletableFuture<InferenceClassification> postAsync(@Nonnull final InferenceClassification newInferenceClassification) {
+        return sendAsync(HttpMethod.POST, newInferenceClassification);
     }
 
     /**
@@ -131,8 +131,8 @@ public class InferenceClassificationRequest extends BaseRequest<InferenceClassif
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<InferenceClassification> futurePut(@Nonnull final InferenceClassification newInferenceClassification) {
-        return futureSend(HttpMethod.PUT, newInferenceClassification);
+    public java.util.concurrent.CompletableFuture<InferenceClassification> putAsync(@Nonnull final InferenceClassification newInferenceClassification) {
+        return sendAsync(HttpMethod.PUT, newInferenceClassification);
     }
 
     /**

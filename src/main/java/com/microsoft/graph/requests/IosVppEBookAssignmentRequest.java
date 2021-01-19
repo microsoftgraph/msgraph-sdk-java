@@ -40,8 +40,8 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> futurePatch(@Nonnull final IosVppEBookAssignment sourceIosVppEBookAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceIosVppEBookAssignment);
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> patchAsync(@Nonnull final IosVppEBookAssignment sourceIosVppEBookAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceIosVppEBookAssignment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> futurePost(@Nonnull final IosVppEBookAssignment newIosVppEBookAssignment) {
-        return futureSend(HttpMethod.POST, newIosVppEBookAssignment);
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> postAsync(@Nonnull final IosVppEBookAssignment newIosVppEBookAssignment) {
+        return sendAsync(HttpMethod.POST, newIosVppEBookAssignment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class IosVppEBookAssignmentRequest extends BaseRequest<IosVppEBookAssignm
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> futurePut(@Nonnull final IosVppEBookAssignment newIosVppEBookAssignment) {
-        return futureSend(HttpMethod.PUT, newIosVppEBookAssignment);
+    public java.util.concurrent.CompletableFuture<IosVppEBookAssignment> putAsync(@Nonnull final IosVppEBookAssignment newIosVppEBookAssignment) {
+        return sendAsync(HttpMethod.PUT, newIosVppEBookAssignment);
     }
 
     /**

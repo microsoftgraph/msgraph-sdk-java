@@ -42,8 +42,8 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SearchEntity> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SearchEntity> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SearchEntity> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SearchEntity> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SearchEntity> futurePatch(@Nonnull final SearchEntity sourceSearchEntity) {
-        return futureSend(HttpMethod.PATCH, sourceSearchEntity);
+    public java.util.concurrent.CompletableFuture<SearchEntity> patchAsync(@Nonnull final SearchEntity sourceSearchEntity) {
+        return sendAsync(HttpMethod.PATCH, sourceSearchEntity);
     }
 
     /**
@@ -108,8 +108,8 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SearchEntity> futurePost(@Nonnull final SearchEntity newSearchEntity) {
-        return futureSend(HttpMethod.POST, newSearchEntity);
+    public java.util.concurrent.CompletableFuture<SearchEntity> postAsync(@Nonnull final SearchEntity newSearchEntity) {
+        return sendAsync(HttpMethod.POST, newSearchEntity);
     }
 
     /**
@@ -131,8 +131,8 @@ public class SearchEntityRequest extends BaseRequest<SearchEntity> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SearchEntity> futurePut(@Nonnull final SearchEntity newSearchEntity) {
-        return futureSend(HttpMethod.PUT, newSearchEntity);
+    public java.util.concurrent.CompletableFuture<SearchEntity> putAsync(@Nonnull final SearchEntity newSearchEntity) {
+        return sendAsync(HttpMethod.PUT, newSearchEntity);
     }
 
     /**

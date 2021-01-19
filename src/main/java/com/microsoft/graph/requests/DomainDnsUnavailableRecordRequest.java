@@ -40,8 +40,8 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futurePatch(@Nonnull final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord) {
-        return futureSend(HttpMethod.PATCH, sourceDomainDnsUnavailableRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> patchAsync(@Nonnull final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord) {
+        return sendAsync(HttpMethod.PATCH, sourceDomainDnsUnavailableRecord);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futurePost(@Nonnull final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) {
-        return futureSend(HttpMethod.POST, newDomainDnsUnavailableRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> postAsync(@Nonnull final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) {
+        return sendAsync(HttpMethod.POST, newDomainDnsUnavailableRecord);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest<DomainDnsUnav
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> futurePut(@Nonnull final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) {
-        return futureSend(HttpMethod.PUT, newDomainDnsUnavailableRecord);
+    public java.util.concurrent.CompletableFuture<DomainDnsUnavailableRecord> putAsync(@Nonnull final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) {
+        return sendAsync(HttpMethod.PUT, newDomainDnsUnavailableRecord);
     }
 
     /**

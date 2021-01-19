@@ -40,8 +40,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futurePatch(@Nonnull final ManagedIOSStoreApp sourceManagedIOSStoreApp) {
-        return futureSend(HttpMethod.PATCH, sourceManagedIOSStoreApp);
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> patchAsync(@Nonnull final ManagedIOSStoreApp sourceManagedIOSStoreApp) {
+        return sendAsync(HttpMethod.PATCH, sourceManagedIOSStoreApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futurePost(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp) {
-        return futureSend(HttpMethod.POST, newManagedIOSStoreApp);
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> postAsync(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp) {
+        return sendAsync(HttpMethod.POST, newManagedIOSStoreApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> futurePut(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp) {
-        return futureSend(HttpMethod.PUT, newManagedIOSStoreApp);
+    public java.util.concurrent.CompletableFuture<ManagedIOSStoreApp> putAsync(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp) {
+        return sendAsync(HttpMethod.PUT, newManagedIOSStoreApp);
     }
 
     /**

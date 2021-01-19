@@ -43,8 +43,8 @@ public class MobileAppContentFileCommitRequest extends BaseRequest<Void> {
      * @return a future for the operation
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Void> futurePost() {
-        return this.futureSend(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<Void> postAsync() {
+        return this.sendAsync(HttpMethod.POST, body);
     }
 
     /**

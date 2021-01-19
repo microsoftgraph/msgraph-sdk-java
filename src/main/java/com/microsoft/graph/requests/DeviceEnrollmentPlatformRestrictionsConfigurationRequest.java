@@ -40,8 +40,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futurePatch(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceEnrollmentPlatformRestrictionsConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> patchAsync(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
     /**
@@ -106,8 +106,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futurePost(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) {
-        return futureSend(HttpMethod.POST, newDeviceEnrollmentPlatformRestrictionsConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> postAsync(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) {
+        return sendAsync(HttpMethod.POST, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
     /**
@@ -129,8 +129,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> futurePut(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) {
-        return futureSend(HttpMethod.PUT, newDeviceEnrollmentPlatformRestrictionsConfiguration);
+    public java.util.concurrent.CompletableFuture<DeviceEnrollmentPlatformRestrictionsConfiguration> putAsync(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) {
+        return sendAsync(HttpMethod.PUT, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
     /**

@@ -60,8 +60,8 @@ public class DriveItemRequest extends BaseRequest<DriveItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DriveItem> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -81,8 +81,8 @@ public class DriveItemRequest extends BaseRequest<DriveItem> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DriveItem> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -103,8 +103,8 @@ public class DriveItemRequest extends BaseRequest<DriveItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> futurePatch(@Nonnull final DriveItem sourceDriveItem) {
-        return futureSend(HttpMethod.PATCH, sourceDriveItem);
+    public java.util.concurrent.CompletableFuture<DriveItem> patchAsync(@Nonnull final DriveItem sourceDriveItem) {
+        return sendAsync(HttpMethod.PATCH, sourceDriveItem);
     }
 
     /**
@@ -126,8 +126,8 @@ public class DriveItemRequest extends BaseRequest<DriveItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> futurePost(@Nonnull final DriveItem newDriveItem) {
-        return futureSend(HttpMethod.POST, newDriveItem);
+    public java.util.concurrent.CompletableFuture<DriveItem> postAsync(@Nonnull final DriveItem newDriveItem) {
+        return sendAsync(HttpMethod.POST, newDriveItem);
     }
 
     /**
@@ -149,8 +149,8 @@ public class DriveItemRequest extends BaseRequest<DriveItem> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> futurePut(@Nonnull final DriveItem newDriveItem) {
-        return futureSend(HttpMethod.PUT, newDriveItem);
+    public java.util.concurrent.CompletableFuture<DriveItem> putAsync(@Nonnull final DriveItem newDriveItem) {
+        return sendAsync(HttpMethod.PUT, newDriveItem);
     }
 
     /**

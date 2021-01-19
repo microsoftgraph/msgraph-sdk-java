@@ -45,11 +45,11 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseEntityCollecti
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> futurePost(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) {
+    public java.util.concurrent.CompletableFuture<SwapShiftsChangeRequest> postAsync(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSwapShiftsChangeRequest);
+            .postAsync(newSwapShiftsChangeRequest);
     }
 
     /**

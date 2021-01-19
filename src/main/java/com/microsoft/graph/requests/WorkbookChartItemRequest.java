@@ -38,8 +38,8 @@ public class WorkbookChartItemRequest extends BaseRequest<WorkbookChart> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WorkbookChart> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WorkbookChart> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

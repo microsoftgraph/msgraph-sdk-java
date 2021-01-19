@@ -40,8 +40,8 @@ public class LinkedResourceRequest extends BaseRequest<LinkedResource> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LinkedResource> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<LinkedResource> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class LinkedResourceRequest extends BaseRequest<LinkedResource> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LinkedResource> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<LinkedResource> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class LinkedResourceRequest extends BaseRequest<LinkedResource> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LinkedResource> futurePatch(@Nonnull final LinkedResource sourceLinkedResource) {
-        return futureSend(HttpMethod.PATCH, sourceLinkedResource);
+    public java.util.concurrent.CompletableFuture<LinkedResource> patchAsync(@Nonnull final LinkedResource sourceLinkedResource) {
+        return sendAsync(HttpMethod.PATCH, sourceLinkedResource);
     }
 
     /**
@@ -106,8 +106,8 @@ public class LinkedResourceRequest extends BaseRequest<LinkedResource> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LinkedResource> futurePost(@Nonnull final LinkedResource newLinkedResource) {
-        return futureSend(HttpMethod.POST, newLinkedResource);
+    public java.util.concurrent.CompletableFuture<LinkedResource> postAsync(@Nonnull final LinkedResource newLinkedResource) {
+        return sendAsync(HttpMethod.POST, newLinkedResource);
     }
 
     /**
@@ -129,8 +129,8 @@ public class LinkedResourceRequest extends BaseRequest<LinkedResource> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<LinkedResource> futurePut(@Nonnull final LinkedResource newLinkedResource) {
-        return futureSend(HttpMethod.PUT, newLinkedResource);
+    public java.util.concurrent.CompletableFuture<LinkedResource> putAsync(@Nonnull final LinkedResource newLinkedResource) {
+        return sendAsync(HttpMethod.PUT, newLinkedResource);
     }
 
     /**

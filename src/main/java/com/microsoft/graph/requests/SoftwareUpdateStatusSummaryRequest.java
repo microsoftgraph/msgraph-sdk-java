@@ -40,8 +40,8 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest<SoftwareUpda
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest<SoftwareUpda
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest<SoftwareUpda
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> futurePatch(@Nonnull final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary) {
-        return futureSend(HttpMethod.PATCH, sourceSoftwareUpdateStatusSummary);
+    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> patchAsync(@Nonnull final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary) {
+        return sendAsync(HttpMethod.PATCH, sourceSoftwareUpdateStatusSummary);
     }
 
     /**
@@ -106,8 +106,8 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest<SoftwareUpda
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> futurePost(@Nonnull final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary) {
-        return futureSend(HttpMethod.POST, newSoftwareUpdateStatusSummary);
+    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> postAsync(@Nonnull final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary) {
+        return sendAsync(HttpMethod.POST, newSoftwareUpdateStatusSummary);
     }
 
     /**
@@ -129,8 +129,8 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest<SoftwareUpda
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> futurePut(@Nonnull final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary) {
-        return futureSend(HttpMethod.PUT, newSoftwareUpdateStatusSummary);
+    public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> putAsync(@Nonnull final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary) {
+        return sendAsync(HttpMethod.PUT, newSoftwareUpdateStatusSummary);
     }
 
     /**

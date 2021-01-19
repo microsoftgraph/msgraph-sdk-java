@@ -45,11 +45,11 @@ public class ProfilePhotoCollectionRequest extends BaseEntityCollectionRequest<P
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ProfilePhoto> futurePost(@Nonnull final ProfilePhoto newProfilePhoto) {
+    public java.util.concurrent.CompletableFuture<ProfilePhoto> postAsync(@Nonnull final ProfilePhoto newProfilePhoto) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newProfilePhoto);
+            .postAsync(newProfilePhoto);
     }
 
     /**

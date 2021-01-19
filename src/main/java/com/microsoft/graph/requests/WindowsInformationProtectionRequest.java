@@ -60,8 +60,8 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -81,8 +81,8 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -103,8 +103,8 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> futurePatch(@Nonnull final WindowsInformationProtection sourceWindowsInformationProtection) {
-        return futureSend(HttpMethod.PATCH, sourceWindowsInformationProtection);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> patchAsync(@Nonnull final WindowsInformationProtection sourceWindowsInformationProtection) {
+        return sendAsync(HttpMethod.PATCH, sourceWindowsInformationProtection);
     }
 
     /**
@@ -126,8 +126,8 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> futurePost(@Nonnull final WindowsInformationProtection newWindowsInformationProtection) {
-        return futureSend(HttpMethod.POST, newWindowsInformationProtection);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> postAsync(@Nonnull final WindowsInformationProtection newWindowsInformationProtection) {
+        return sendAsync(HttpMethod.POST, newWindowsInformationProtection);
     }
 
     /**
@@ -149,8 +149,8 @@ public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInfo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> futurePut(@Nonnull final WindowsInformationProtection newWindowsInformationProtection) {
-        return futureSend(HttpMethod.PUT, newWindowsInformationProtection);
+    public java.util.concurrent.CompletableFuture<WindowsInformationProtection> putAsync(@Nonnull final WindowsInformationProtection newWindowsInformationProtection) {
+        return sendAsync(HttpMethod.PUT, newWindowsInformationProtection);
     }
 
     /**

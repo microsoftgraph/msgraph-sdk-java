@@ -45,11 +45,11 @@ public class TimeOffReasonCollectionRequest extends BaseEntityCollectionRequest<
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<TimeOffReason> futurePost(@Nonnull final TimeOffReason newTimeOffReason) {
+    public java.util.concurrent.CompletableFuture<TimeOffReason> postAsync(@Nonnull final TimeOffReason newTimeOffReason) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newTimeOffReason);
+            .postAsync(newTimeOffReason);
     }
 
     /**

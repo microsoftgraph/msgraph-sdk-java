@@ -45,11 +45,11 @@ public class ShiftCollectionRequest extends BaseEntityCollectionRequest<Shift, S
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Shift> futurePost(@Nonnull final Shift newShift) {
+    public java.util.concurrent.CompletableFuture<Shift> postAsync(@Nonnull final Shift newShift) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newShift);
+            .postAsync(newShift);
     }
 
     /**

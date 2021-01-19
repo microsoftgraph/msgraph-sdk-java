@@ -36,8 +36,8 @@ public class DirectoryObjectRestoreRequest extends BaseRequest<DirectoryObject> 
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DirectoryObject> futurePost() {
-        return futureSend(HttpMethod.POST, null);
+    public java.util.concurrent.CompletableFuture<DirectoryObject> postAsync() {
+        return sendAsync(HttpMethod.POST, null);
     }
 
     /**

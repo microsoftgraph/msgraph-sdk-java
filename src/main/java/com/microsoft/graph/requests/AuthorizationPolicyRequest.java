@@ -40,8 +40,8 @@ public class AuthorizationPolicyRequest extends BaseRequest<AuthorizationPolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AuthorizationPolicyRequest extends BaseRequest<AuthorizationPolicy>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AuthorizationPolicyRequest extends BaseRequest<AuthorizationPolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> futurePatch(@Nonnull final AuthorizationPolicy sourceAuthorizationPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceAuthorizationPolicy);
+    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> patchAsync(@Nonnull final AuthorizationPolicy sourceAuthorizationPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceAuthorizationPolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AuthorizationPolicyRequest extends BaseRequest<AuthorizationPolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> futurePost(@Nonnull final AuthorizationPolicy newAuthorizationPolicy) {
-        return futureSend(HttpMethod.POST, newAuthorizationPolicy);
+    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> postAsync(@Nonnull final AuthorizationPolicy newAuthorizationPolicy) {
+        return sendAsync(HttpMethod.POST, newAuthorizationPolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AuthorizationPolicyRequest extends BaseRequest<AuthorizationPolicy>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> futurePut(@Nonnull final AuthorizationPolicy newAuthorizationPolicy) {
-        return futureSend(HttpMethod.PUT, newAuthorizationPolicy);
+    public java.util.concurrent.CompletableFuture<AuthorizationPolicy> putAsync(@Nonnull final AuthorizationPolicy newAuthorizationPolicy) {
+        return sendAsync(HttpMethod.PUT, newAuthorizationPolicy);
     }
 
     /**

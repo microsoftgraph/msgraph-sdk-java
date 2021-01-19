@@ -44,11 +44,11 @@ public class SharedDriveItemCollectionRequest extends BaseEntityCollectionReques
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<SharedDriveItem> futurePost(@Nonnull final SharedDriveItem newSharedDriveItem) {
+    public java.util.concurrent.CompletableFuture<SharedDriveItem> postAsync(@Nonnull final SharedDriveItem newSharedDriveItem) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newSharedDriveItem);
+            .postAsync(newSharedDriveItem);
     }
 
     /**

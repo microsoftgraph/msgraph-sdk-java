@@ -48,11 +48,11 @@ public class CalendarCollectionRequest extends BaseEntityCollectionRequest<Calen
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> futurePost(@Nonnull final Calendar newCalendar) {
+    public java.util.concurrent.CompletableFuture<Calendar> postAsync(@Nonnull final Calendar newCalendar) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newCalendar);
+            .postAsync(newCalendar);
     }
 
     /**

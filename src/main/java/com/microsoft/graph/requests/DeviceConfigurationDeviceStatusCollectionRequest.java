@@ -45,11 +45,11 @@ public class DeviceConfigurationDeviceStatusCollectionRequest extends BaseEntity
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> futurePost(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) {
+    public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> postAsync(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newDeviceConfigurationDeviceStatus);
+            .postAsync(newDeviceConfigurationDeviceStatus);
     }
 
     /**

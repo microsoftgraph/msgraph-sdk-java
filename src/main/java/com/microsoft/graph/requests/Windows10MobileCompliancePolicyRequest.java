@@ -40,8 +40,8 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest<Windows1
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest<Windows1
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest<Windows1
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> futurePatch(@Nonnull final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy) {
-        return futureSend(HttpMethod.PATCH, sourceWindows10MobileCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> patchAsync(@Nonnull final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceWindows10MobileCompliancePolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest<Windows1
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> futurePost(@Nonnull final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) {
-        return futureSend(HttpMethod.POST, newWindows10MobileCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> postAsync(@Nonnull final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) {
+        return sendAsync(HttpMethod.POST, newWindows10MobileCompliancePolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest<Windows1
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> futurePut(@Nonnull final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) {
-        return futureSend(HttpMethod.PUT, newWindows10MobileCompliancePolicy);
+    public java.util.concurrent.CompletableFuture<Windows10MobileCompliancePolicy> putAsync(@Nonnull final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) {
+        return sendAsync(HttpMethod.PUT, newWindows10MobileCompliancePolicy);
     }
 
     /**

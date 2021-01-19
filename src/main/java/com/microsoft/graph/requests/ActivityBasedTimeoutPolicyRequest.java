@@ -40,8 +40,8 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest<ActivityBased
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest<ActivityBased
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest<ActivityBased
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> futurePatch(@Nonnull final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy) {
-        return futureSend(HttpMethod.PATCH, sourceActivityBasedTimeoutPolicy);
+    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> patchAsync(@Nonnull final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy) {
+        return sendAsync(HttpMethod.PATCH, sourceActivityBasedTimeoutPolicy);
     }
 
     /**
@@ -106,8 +106,8 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest<ActivityBased
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> futurePost(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) {
-        return futureSend(HttpMethod.POST, newActivityBasedTimeoutPolicy);
+    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> postAsync(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) {
+        return sendAsync(HttpMethod.POST, newActivityBasedTimeoutPolicy);
     }
 
     /**
@@ -129,8 +129,8 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest<ActivityBased
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> futurePut(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) {
-        return futureSend(HttpMethod.PUT, newActivityBasedTimeoutPolicy);
+    public java.util.concurrent.CompletableFuture<ActivityBasedTimeoutPolicy> putAsync(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) {
+        return sendAsync(HttpMethod.PUT, newActivityBasedTimeoutPolicy);
     }
 
     /**

@@ -68,8 +68,8 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAppManagement> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -89,8 +89,8 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAppManagement> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -111,8 +111,8 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAppManagement> futurePatch(@Nonnull final DeviceAppManagement sourceDeviceAppManagement) {
-        return futureSend(HttpMethod.PATCH, sourceDeviceAppManagement);
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> patchAsync(@Nonnull final DeviceAppManagement sourceDeviceAppManagement) {
+        return sendAsync(HttpMethod.PATCH, sourceDeviceAppManagement);
     }
 
     /**
@@ -134,8 +134,8 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAppManagement> futurePost(@Nonnull final DeviceAppManagement newDeviceAppManagement) {
-        return futureSend(HttpMethod.POST, newDeviceAppManagement);
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> postAsync(@Nonnull final DeviceAppManagement newDeviceAppManagement) {
+        return sendAsync(HttpMethod.POST, newDeviceAppManagement);
     }
 
     /**
@@ -157,8 +157,8 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceAppManagement> futurePut(@Nonnull final DeviceAppManagement newDeviceAppManagement) {
-        return futureSend(HttpMethod.PUT, newDeviceAppManagement);
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> putAsync(@Nonnull final DeviceAppManagement newDeviceAppManagement) {
+        return sendAsync(HttpMethod.PUT, newDeviceAppManagement);
     }
 
     /**

@@ -45,11 +45,11 @@ public class ExtensionCollectionRequest extends BaseEntityCollectionRequest<Exte
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Extension> futurePost(@Nonnull final Extension newExtension) {
+    public java.util.concurrent.CompletableFuture<Extension> postAsync(@Nonnull final Extension newExtension) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newExtension);
+            .postAsync(newExtension);
     }
 
     /**

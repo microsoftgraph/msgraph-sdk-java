@@ -40,8 +40,8 @@ public class AlertRequest extends BaseRequest<Alert> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<Alert> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AlertRequest extends BaseRequest<Alert> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<Alert> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AlertRequest extends BaseRequest<Alert> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> futurePatch(@Nonnull final Alert sourceAlert) {
-        return futureSend(HttpMethod.PATCH, sourceAlert);
+    public java.util.concurrent.CompletableFuture<Alert> patchAsync(@Nonnull final Alert sourceAlert) {
+        return sendAsync(HttpMethod.PATCH, sourceAlert);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AlertRequest extends BaseRequest<Alert> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> futurePost(@Nonnull final Alert newAlert) {
-        return futureSend(HttpMethod.POST, newAlert);
+    public java.util.concurrent.CompletableFuture<Alert> postAsync(@Nonnull final Alert newAlert) {
+        return sendAsync(HttpMethod.POST, newAlert);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AlertRequest extends BaseRequest<Alert> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Alert> futurePut(@Nonnull final Alert newAlert) {
-        return futureSend(HttpMethod.PUT, newAlert);
+    public java.util.concurrent.CompletableFuture<Alert> putAsync(@Nonnull final Alert newAlert) {
+        return sendAsync(HttpMethod.PUT, newAlert);
     }
 
     /**

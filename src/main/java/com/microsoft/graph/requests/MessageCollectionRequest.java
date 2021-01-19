@@ -46,11 +46,11 @@ public class MessageCollectionRequest extends BaseEntityCollectionRequest<Messag
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Message> futurePost(@Nonnull final Message newMessage) {
+    public java.util.concurrent.CompletableFuture<Message> postAsync(@Nonnull final Message newMessage) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newMessage);
+            .postAsync(newMessage);
     }
 
     /**

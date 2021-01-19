@@ -48,11 +48,11 @@ public class NotebookCollectionRequest extends BaseEntityCollectionRequest<Noteb
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Notebook> futurePost(@Nonnull final Notebook newNotebook) {
+    public java.util.concurrent.CompletableFuture<Notebook> postAsync(@Nonnull final Notebook newNotebook) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newNotebook);
+            .postAsync(newNotebook);
     }
 
     /**

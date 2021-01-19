@@ -45,11 +45,11 @@ public class OnenoteOperationCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> futurePost(@Nonnull final OnenoteOperation newOnenoteOperation) {
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> postAsync(@Nonnull final OnenoteOperation newOnenoteOperation) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newOnenoteOperation);
+            .postAsync(newOnenoteOperation);
     }
 
     /**

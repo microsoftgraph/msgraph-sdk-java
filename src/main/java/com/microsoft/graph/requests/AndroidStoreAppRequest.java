@@ -40,8 +40,8 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidStoreApp> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidStoreApp> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidStoreApp> futurePatch(@Nonnull final AndroidStoreApp sourceAndroidStoreApp) {
-        return futureSend(HttpMethod.PATCH, sourceAndroidStoreApp);
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> patchAsync(@Nonnull final AndroidStoreApp sourceAndroidStoreApp) {
+        return sendAsync(HttpMethod.PATCH, sourceAndroidStoreApp);
     }
 
     /**
@@ -106,8 +106,8 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidStoreApp> futurePost(@Nonnull final AndroidStoreApp newAndroidStoreApp) {
-        return futureSend(HttpMethod.POST, newAndroidStoreApp);
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> postAsync(@Nonnull final AndroidStoreApp newAndroidStoreApp) {
+        return sendAsync(HttpMethod.POST, newAndroidStoreApp);
     }
 
     /**
@@ -129,8 +129,8 @@ public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<AndroidStoreApp> futurePut(@Nonnull final AndroidStoreApp newAndroidStoreApp) {
-        return futureSend(HttpMethod.PUT, newAndroidStoreApp);
+    public java.util.concurrent.CompletableFuture<AndroidStoreApp> putAsync(@Nonnull final AndroidStoreApp newAndroidStoreApp) {
+        return sendAsync(HttpMethod.PUT, newAndroidStoreApp);
     }
 
     /**

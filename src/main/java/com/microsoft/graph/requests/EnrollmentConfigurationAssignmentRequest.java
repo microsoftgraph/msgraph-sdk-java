@@ -40,8 +40,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -61,8 +61,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -83,8 +83,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futurePatch(@Nonnull final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment) {
-        return futureSend(HttpMethod.PATCH, sourceEnrollmentConfigurationAssignment);
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> patchAsync(@Nonnull final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment) {
+        return sendAsync(HttpMethod.PATCH, sourceEnrollmentConfigurationAssignment);
     }
 
     /**
@@ -106,8 +106,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futurePost(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
-        return futureSend(HttpMethod.POST, newEnrollmentConfigurationAssignment);
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> postAsync(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
+        return sendAsync(HttpMethod.POST, newEnrollmentConfigurationAssignment);
     }
 
     /**
@@ -129,8 +129,8 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest<Enroll
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> futurePut(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
-        return futureSend(HttpMethod.PUT, newEnrollmentConfigurationAssignment);
+    public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> putAsync(@Nonnull final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) {
+        return sendAsync(HttpMethod.PUT, newEnrollmentConfigurationAssignment);
     }
 
     /**

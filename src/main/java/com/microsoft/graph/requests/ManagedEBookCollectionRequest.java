@@ -46,11 +46,11 @@ public class ManagedEBookCollectionRequest extends BaseEntityCollectionRequest<M
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ManagedEBook> futurePost(@Nonnull final ManagedEBook newManagedEBook) {
+    public java.util.concurrent.CompletableFuture<ManagedEBook> postAsync(@Nonnull final ManagedEBook newManagedEBook) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedEBookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newManagedEBook);
+            .postAsync(newManagedEBook);
     }
 
     /**

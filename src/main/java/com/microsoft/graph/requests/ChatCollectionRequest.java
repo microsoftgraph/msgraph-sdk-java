@@ -45,11 +45,11 @@ public class ChatCollectionRequest extends BaseEntityCollectionRequest<Chat, Cha
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Chat> futurePost(@Nonnull final Chat newChat) {
+    public java.util.concurrent.CompletableFuture<Chat> postAsync(@Nonnull final Chat newChat) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newChat);
+            .postAsync(newChat);
     }
 
     /**

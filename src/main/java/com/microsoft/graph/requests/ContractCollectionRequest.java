@@ -44,11 +44,11 @@ public class ContractCollectionRequest extends BaseEntityCollectionRequest<Contr
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Contract> futurePost(@Nonnull final Contract newContract) {
+    public java.util.concurrent.CompletableFuture<Contract> postAsync(@Nonnull final Contract newContract) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContractRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newContract);
+            .postAsync(newContract);
     }
 
     /**

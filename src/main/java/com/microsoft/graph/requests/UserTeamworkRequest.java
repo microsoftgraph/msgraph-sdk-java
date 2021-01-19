@@ -42,8 +42,8 @@ public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserTeamwork> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<UserTeamwork> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -63,8 +63,8 @@ public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
      * @return a future with the deletion result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserTeamwork> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<UserTeamwork> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -85,8 +85,8 @@ public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserTeamwork> futurePatch(@Nonnull final UserTeamwork sourceUserTeamwork) {
-        return futureSend(HttpMethod.PATCH, sourceUserTeamwork);
+    public java.util.concurrent.CompletableFuture<UserTeamwork> patchAsync(@Nonnull final UserTeamwork sourceUserTeamwork) {
+        return sendAsync(HttpMethod.PATCH, sourceUserTeamwork);
     }
 
     /**
@@ -108,8 +108,8 @@ public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserTeamwork> futurePost(@Nonnull final UserTeamwork newUserTeamwork) {
-        return futureSend(HttpMethod.POST, newUserTeamwork);
+    public java.util.concurrent.CompletableFuture<UserTeamwork> postAsync(@Nonnull final UserTeamwork newUserTeamwork) {
+        return sendAsync(HttpMethod.POST, newUserTeamwork);
     }
 
     /**
@@ -131,8 +131,8 @@ public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UserTeamwork> futurePut(@Nonnull final UserTeamwork newUserTeamwork) {
-        return futureSend(HttpMethod.PUT, newUserTeamwork);
+    public java.util.concurrent.CompletableFuture<UserTeamwork> putAsync(@Nonnull final UserTeamwork newUserTeamwork) {
+        return sendAsync(HttpMethod.PUT, newUserTeamwork);
     }
 
     /**

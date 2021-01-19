@@ -44,11 +44,11 @@ public class IdentityProviderCollectionRequest extends BaseEntityCollectionReque
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<IdentityProvider> futurePost(@Nonnull final IdentityProvider newIdentityProvider) {
+    public java.util.concurrent.CompletableFuture<IdentityProvider> postAsync(@Nonnull final IdentityProvider newIdentityProvider) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newIdentityProvider);
+            .postAsync(newIdentityProvider);
     }
 
     /**

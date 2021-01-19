@@ -47,11 +47,11 @@ public class AttachmentCollectionRequest extends BaseEntityCollectionRequest<Att
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Attachment> futurePost(@Nonnull final Attachment newAttachment) {
+    public java.util.concurrent.CompletableFuture<Attachment> postAsync(@Nonnull final Attachment newAttachment) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newAttachment);
+            .postAsync(newAttachment);
     }
 
     /**

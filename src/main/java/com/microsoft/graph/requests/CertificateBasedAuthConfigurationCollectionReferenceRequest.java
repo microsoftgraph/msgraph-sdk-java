@@ -50,12 +50,12 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      * @return a future with the created object
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> futurePost(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
+    public java.util.concurrent.CompletableFuture<CertificateBasedAuthConfiguration> postAsync(@Nonnull final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + newCertificateBasedAuthConfiguration.id);
         return new CertificateBasedAuthConfigurationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
-            .futurePost(newCertificateBasedAuthConfiguration, body);
+            .postAsync(newCertificateBasedAuthConfiguration, body);
     }
 
     /**
