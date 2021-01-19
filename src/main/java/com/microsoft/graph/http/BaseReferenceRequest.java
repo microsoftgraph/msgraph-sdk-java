@@ -55,8 +55,8 @@ public abstract class BaseReferenceRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<T> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**

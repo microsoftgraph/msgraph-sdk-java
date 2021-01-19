@@ -113,12 +113,12 @@ public class GraphServiceClientTest {
             }
 
             @Override
-            public <Result, BodyType> java.util.concurrent.CompletableFuture<Result> futureSend(IHttpRequest request, Class<Result> resultClass, BodyType serializable) {
+            public <Result, BodyType> java.util.concurrent.CompletableFuture<Result> sendAsync(IHttpRequest request, Class<Result> resultClass, BodyType serializable) {
                 return null;
             }
 
             @Override
-            public <Result, BodyType, DeserializeType> java.util.concurrent.CompletableFuture<Result> futureSend(IHttpRequest request, Class<Result> resultClass, BodyType serializable, final IStatefulResponseHandler<Result, DeserializeType> handler) {
+            public <Result, BodyType, DeserializeType> java.util.concurrent.CompletableFuture<Result> sendAsync(IHttpRequest request, Class<Result> resultClass, BodyType serializable, final IStatefulResponseHandler<Result, DeserializeType> handler) {
                 return null;
             }
 

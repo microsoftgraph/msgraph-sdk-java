@@ -141,7 +141,7 @@ public class ChunkedUploadProvider<UploadType> {
      * @throws IOException the IO exception that occurred during upload
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UploadType> futureUpload(@Nullable final int chunkSize, @Nullable final List<Option> options, @Nullable final IProgressCallback progressCallback)
+    public java.util.concurrent.CompletableFuture<UploadType> uploadAsync(@Nullable final int chunkSize, @Nullable final List<Option> options, @Nullable final IProgressCallback progressCallback)
             throws IOException {
 
         int internalChunkSize = chunkSize;
@@ -176,7 +176,7 @@ public class ChunkedUploadProvider<UploadType> {
                     new ChunkedUploadRequest<UploadType>(this.uploadUrl, this.client, options, buffer, buffRead,
                             this.readSoFar, this.streamSize);
             final ChunkedUploadResult<UploadType> result = request.upload(this.responseHandler);
-            // TODO: upload should return a future, use sendfuture instead and the futures should be chained with completableFuture.then apply
+            // TODO: upload should return a future, use sendAsync instead and the futures should be chained with completableFuture.then apply
 
             if (result.uploadCompleted()) {
                 if(progressCallback != null) {
@@ -213,9 +213,9 @@ public class ChunkedUploadProvider<UploadType> {
      * @throws IOException the IO exception that occurred during upload
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UploadType> futureUpload()
+    public java.util.concurrent.CompletableFuture<UploadType> uploadAsync()
     				throws IOException {
-    	return futureUpload(0);
+    	return uploadAsync(0);
     }
     /**
      * Uploads content to remote upload session based on the input stream
@@ -225,9 +225,9 @@ public class ChunkedUploadProvider<UploadType> {
      * @throws IOException the IO exception that occurred during upload
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UploadType> futureUpload(@Nullable final int chunkSize)
+    public java.util.concurrent.CompletableFuture<UploadType> uploadAsync(@Nullable final int chunkSize)
     				throws IOException {
-    	return futureUpload(chunkSize, null);
+    	return uploadAsync(chunkSize, null);
     }
     /**
      * Uploads content to remote upload session based on the input stream
@@ -238,9 +238,9 @@ public class ChunkedUploadProvider<UploadType> {
      * @throws IOException the IO exception that occurred during upload
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<UploadType> futureUpload(@Nullable final int chunkSize, @Nullable final List<Option> options)
+    public java.util.concurrent.CompletableFuture<UploadType> uploadAsync(@Nullable final int chunkSize, @Nullable final List<Option> options)
     				throws IOException {
-    	return futureUpload(chunkSize, options, null);
+    	return uploadAsync(chunkSize, options, null);
     }
 
     /**
@@ -256,7 +256,7 @@ public class ChunkedUploadProvider<UploadType> {
     public UploadType upload(@Nullable final int chunkSize, @Nullable final List<Option> options, @Nullable final IProgressCallback progressCallback)
             throws IOException {
         try {
-            return futureUpload(chunkSize, options, progressCallback).get();
+            return uploadAsync(chunkSize, options, progressCallback).get();
         } catch (InterruptedException ex) {
             throw new ClientException("The request was interrupted", ex);
         } catch (ExecutionException ex) {

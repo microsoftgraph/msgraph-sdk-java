@@ -71,7 +71,7 @@ public abstract class BaseVoidActionCollectionRequest<T, T2 extends ICollectionR
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<Void> futurePost() {
+    public java.util.concurrent.CompletableFuture<Void> postAsync() {
         Object bodyToSend = null;
         try {
             bodyToSend = this.getClass().getField("body").get(this);
@@ -81,7 +81,7 @@ public abstract class BaseVoidActionCollectionRequest<T, T2 extends ICollectionR
         return getBaseRequest()
                     .getClient()
                     .getHttpProvider()
-                    .futureSend(this,
+                    .sendAsync(this,
                         Void.class,
                         bodyToSend);
     }

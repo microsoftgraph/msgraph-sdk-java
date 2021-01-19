@@ -60,8 +60,8 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futurePost(@Nullable final T newEntity, @Nonnull final IJsonBackedObject payload) {
-        return futureSend(HttpMethod.POST, payload);
+    public java.util.concurrent.CompletableFuture<T> postAsync(@Nullable final T newEntity, @Nonnull final IJsonBackedObject payload) {
+        return sendAsync(HttpMethod.POST, payload);
     }
 
     /**
@@ -85,8 +85,8 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<T> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -103,8 +103,8 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-	public java.util.concurrent.CompletableFuture<T> futureDelete() {
-		return futureSend(HttpMethod.DELETE, null);
+	public java.util.concurrent.CompletableFuture<T> deleteAsync() {
+		return sendAsync(HttpMethod.DELETE, null);
 	}
 
     /**
@@ -121,8 +121,8 @@ public abstract class BaseWithReferenceRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-	public java.util.concurrent.CompletableFuture<T> futurePatch(@Nonnull final T sourceObject) {
-		return futureSend(HttpMethod.PATCH, sourceObject);
+	public java.util.concurrent.CompletableFuture<T> patchAsync(@Nonnull final T sourceObject) {
+		return sendAsync(HttpMethod.PATCH, sourceObject);
 	}
 
     /**

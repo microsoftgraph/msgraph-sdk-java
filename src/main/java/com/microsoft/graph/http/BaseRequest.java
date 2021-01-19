@@ -317,10 +317,10 @@ public abstract class BaseRequest<T> implements IHttpRequest {
      */
     @Nonnull
     @SuppressWarnings("unchecked")
-    protected <T1> java.util.concurrent.CompletableFuture<T> futureSend(@Nonnull final HttpMethod method,
+    protected <T1> java.util.concurrent.CompletableFuture<T> sendAsync(@Nonnull final HttpMethod method,
                                  @Nullable final T1 serializedObject) {
         this.method = method;
-        return (java.util.concurrent.CompletableFuture<T>) client.getHttpProvider().futureSend(this, responseClass, serializedObject);
+        return (java.util.concurrent.CompletableFuture<T>) client.getHttpProvider().sendAsync(this, responseClass, serializedObject);
     }
 
     /**

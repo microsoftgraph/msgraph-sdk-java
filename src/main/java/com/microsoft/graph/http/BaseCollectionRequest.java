@@ -96,7 +96,6 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * Send this request
      *
      * @return the response object
-     * @deprecated use the future API instead
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
@@ -111,9 +110,9 @@ public abstract class BaseCollectionRequest<T, T2 extends ICollectionResponse<T>
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
-    protected java.util.concurrent.CompletableFuture<T2> futureSend() throws ClientException {
+    protected java.util.concurrent.CompletableFuture<T2> sendAsync() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
-        return baseRequest.getClient().getHttpProvider().futureSend(this, responseCollectionClass, null);
+        return baseRequest.getClient().getHttpProvider().sendAsync(this, responseCollectionClass, null);
     }
 
     /**

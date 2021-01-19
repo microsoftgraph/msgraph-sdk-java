@@ -71,7 +71,7 @@ public abstract class BaseActionCollectionRequest<T, T2 extends ICollectionRespo
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T3> futurePost() {
+    public java.util.concurrent.CompletableFuture<T3> postAsync() {
         getBaseRequest().setHttpMethod(HttpMethod.POST);
         Object bodyToSend = null;
         try {
@@ -82,7 +82,7 @@ public abstract class BaseActionCollectionRequest<T, T2 extends ICollectionRespo
         return getBaseRequest()
                             .getClient()
                             .getHttpProvider()
-                            .futureSend(this,
+                            .sendAsync(this,
                                 responseCollectionClass,
                                 bodyToSend)
                             .thenApply(r -> buildFromResponse(r));

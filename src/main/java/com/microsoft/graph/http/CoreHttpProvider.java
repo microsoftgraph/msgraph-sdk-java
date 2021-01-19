@@ -129,10 +129,10 @@ public class CoreHttpProvider implements IHttpProvider {
 	 */
 	@Override
 	@Nullable
-	public <Result, Body> java.util.concurrent.CompletableFuture<Result> futureSend(@Nonnull final IHttpRequest request,
+	public <Result, Body> java.util.concurrent.CompletableFuture<Result> sendAsync(@Nonnull final IHttpRequest request,
 			@Nonnull final Class<Result> resultClass,
 			@Nullable final Body serializable) {
-		return futureSend(request,
+		return sendAsync(request,
 							resultClass,
 							serializable,
 							null);
@@ -151,7 +151,7 @@ public class CoreHttpProvider implements IHttpProvider {
      * @throws ClientException  this exception occurs if the request was unable to complete for any reason
      */
     @Nullable
-    public <Result, BodyType, DeserializeType> java.util.concurrent.CompletableFuture<Result> futureSend(@Nonnull final IHttpRequest request,
+    public <Result, BodyType, DeserializeType> java.util.concurrent.CompletableFuture<Result> sendAsync(@Nonnull final IHttpRequest request,
                                                     @Nonnull final Class<Result> resultClass,
                                                     @Nullable final BodyType serializable,
                                                     @Nonnull final IStatefulResponseHandler<Result, DeserializeType> handler)

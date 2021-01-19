@@ -54,8 +54,8 @@ public class PrimitiveRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futureGet() {
-        return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<T> getAsync() {
+        return sendAsync(HttpMethod.GET, null);
     }
 
     /**

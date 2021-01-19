@@ -70,8 +70,8 @@ public abstract class BaseFunctionCollectionRequest<T, T2 extends ICollectionRes
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T3> futureGet() {
-        return futureSend().thenApply(r -> buildFromResponse(r));
+    public java.util.concurrent.CompletableFuture<T3> getAsync() {
+        return sendAsync().thenApply(r -> buildFromResponse(r));
     }
 
     /**

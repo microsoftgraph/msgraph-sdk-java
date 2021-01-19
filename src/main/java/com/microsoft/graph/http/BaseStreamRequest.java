@@ -74,9 +74,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @return a future with the result
      */
     @Nonnull
-    protected java.util.concurrent.CompletableFuture<InputStream> futureSend() {
+    protected java.util.concurrent.CompletableFuture<InputStream> sendAsync() {
         baseRequest.setHttpMethod(HttpMethod.GET);
-        return baseRequest.getClient().getHttpProvider().futureSend(this, InputStream.class, null);
+        return baseRequest.getClient().getHttpProvider().sendAsync(this, InputStream.class, null);
     }
 
     /**
@@ -99,9 +99,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @SuppressWarnings("unchecked")
     @Nonnull
-    protected java.util.concurrent.CompletableFuture<T> futureSend(@Nonnull final byte[] fileContents) {
+    protected java.util.concurrent.CompletableFuture<T> sendAsync(@Nonnull final byte[] fileContents) {
         baseRequest.setHttpMethod(HttpMethod.PUT);
-        return baseRequest.getClient().getHttpProvider().futureSend(this, (Class<T>) baseRequest.getResponseType(), fileContents);
+        return baseRequest.getClient().getHttpProvider().sendAsync(this, (Class<T>) baseRequest.getResponseType(), fileContents);
     }
 
     /**

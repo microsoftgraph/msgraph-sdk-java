@@ -57,7 +57,7 @@ public interface IHttpProvider {
      * @return a future with the result
      */
     @Nonnull
-    <Result, BodyType> java.util.concurrent.CompletableFuture<Result> futureSend(@Nonnull final IHttpRequest request,
+    <Result, BodyType> java.util.concurrent.CompletableFuture<Result> sendAsync(@Nonnull final IHttpRequest request,
                                  @Nonnull final Class<Result> resultClass,
                                  @Nullable final BodyType serializable);
 
@@ -75,7 +75,7 @@ public interface IHttpProvider {
      * @throws ClientException  this exception occurs if the request was unable to complete for any reason
      */
     @Nullable
-    <Result, BodyType, DeserializeType> java.util.concurrent.CompletableFuture<Result> futureSend(@Nonnull final IHttpRequest request,
+    <Result, BodyType, DeserializeType> java.util.concurrent.CompletableFuture<Result> sendAsync(@Nonnull final IHttpRequest request,
                                                     @Nonnull final Class<Result> resultClass,
                                                     @Nullable final BodyType serializable,
                                                     @Nonnull final IStatefulResponseHandler<Result, DeserializeType> handler)

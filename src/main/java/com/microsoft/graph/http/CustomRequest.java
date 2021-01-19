@@ -80,8 +80,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futureGet() {
-    	return futureSend(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<T> getAsync() {
+    	return sendAsync(HttpMethod.GET, null);
     }
 
     /**
@@ -90,8 +90,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futureDelete() {
-        return futureSend(HttpMethod.DELETE, null);
+    public java.util.concurrent.CompletableFuture<T> deleteAsync() {
+        return sendAsync(HttpMethod.DELETE, null);
     }
 
     /**
@@ -109,8 +109,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futurePatch() {
-        return futureSend(HttpMethod.PATCH, super.getResponseType());
+    public java.util.concurrent.CompletableFuture<T> patchAsync() {
+        return sendAsync(HttpMethod.PATCH, super.getResponseType());
     }
 
     /**
@@ -132,8 +132,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futurePost(@Nonnull final T newObject) {
-        return futureSend(HttpMethod.POST, newObject);
+    public java.util.concurrent.CompletableFuture<T> postAsync(@Nonnull final T newObject) {
+        return sendAsync(HttpMethod.POST, newObject);
     }
 
     /**
@@ -155,8 +155,8 @@ public class CustomRequest<T> extends BaseRequest<T> {
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<T> futurePut(@Nonnull final T putObject) {
-        return futureSend(HttpMethod.PUT, putObject);
+    public java.util.concurrent.CompletableFuture<T> putAsync(@Nonnull final T putObject) {
+        return sendAsync(HttpMethod.PUT, putObject);
     }
 
     /**
