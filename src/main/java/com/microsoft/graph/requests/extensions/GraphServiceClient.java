@@ -5,12 +5,19 @@
 
 package com.microsoft.graph.requests.extensions;
 
+import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
+import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InvitationRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
+import com.microsoft.graph.serializer.ISerializer;
+
+import okhttp3.OkHttpClient;
+
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
@@ -109,7 +116,98 @@ public class GraphServiceClient extends BaseClient implements IBaseClient {
     protected GraphServiceClient() {
         setServiceRoot("https://graph.microsoft.com/v1.0");
     }
-    //TODO lean builder that inherits from the builder in core and overrides the method to return child type
+    /**
+     * Gets the builder to start configuring the client
+     *
+     * @return builder to start configuring the client
+     */
+    @Nonnull
+    public static Builder<OkHttpClient> builder() {
+        return new Builder<>();
+    }
+    public static class Builder<httpClientType> extends BaseClient.Builder<httpClientType> {
+        /**
+         * Sets the serializer.
+         *
+         * @param serializer
+         *            the serializer
+         * @return the instance of this builder
+         */
+        @Nonnull
+        @Override
+        public Builder<httpClientType> serializer(@Nonnull final ISerializer serializer) {
+            super.serializer(serializer);
+            return this;
+        }
+
+        /**
+         * Sets the httpProvider
+         *
+         * @param httpProvider
+         *            the httpProvider
+         * @return the instance of this builder
+         */
+        @Nonnull
+        @Override
+        public Builder<httpClientType> httpProvider(@Nonnull final IHttpProvider httpProvider) {
+            super.httpProvider(httpProvider);
+            return this;
+        }
+
+        /**
+         * Sets the logger
+         *
+         * @param logger
+         *            the logger
+         * @return the instance of this builder
+         */
+        @Nonnull
+        @Override
+        public Builder<httpClientType> logger(@Nonnull final ILogger logger) {
+            super.logger(logger);
+            return this;
+        }
+
+        /**
+         * Sets the http client
+         *
+         * @param client the http client
+         *
+         * @return the instance of this builder
+         */
+        @Nonnull
+        @Override
+        public Builder<httpClientType> httpClient(@Nonnull final httpClientType client) {
+            super.httpClient(client);
+            return this;
+        }
+
+        /**
+         * Sets the authentication provider
+         *
+         * @param auth the authentication provider
+         * @return the instance of this builder
+         */
+        @Nonnull
+        @Override
+        public Builder<httpClientType> authenticationProvider(@Nonnull final ICoreAuthenticationProvider auth) {
+            super.authenticationProvider(auth);
+            return this;
+        }
+
+        /**
+         * Builds and returns the Graph service client.
+         *
+         * @return the Graph service client object
+         * @throws ClientException
+         *             if there was an exception creating the client
+         */
+        @Nonnull
+        @Override
+        public GraphServiceClient buildClient() throws ClientException {
+            return buildClient(new GraphServiceClient());
+        }
+    }
 
     /**
      * Gets the collection of Invitations objects
