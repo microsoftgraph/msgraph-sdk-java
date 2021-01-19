@@ -44,7 +44,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Error.
@@ -62,7 +62,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastActionDateTime;
+    public java.time.OffsetDateTime lastActionDateTime;
 
     /**
      * The Operation Type.

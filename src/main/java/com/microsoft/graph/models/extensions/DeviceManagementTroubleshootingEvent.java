@@ -41,7 +41,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
     @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar eventDateTime;
+    public java.time.OffsetDateTime eventDateTime;
 
 
     /**

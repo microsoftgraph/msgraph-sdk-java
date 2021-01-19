@@ -91,7 +91,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Expiration Date Time.
@@ -100,7 +100,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The Fallback Url.
@@ -118,7 +118,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Status.

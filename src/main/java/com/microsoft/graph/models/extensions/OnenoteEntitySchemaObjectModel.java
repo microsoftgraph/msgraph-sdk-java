@@ -32,7 +32,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
 
     /**

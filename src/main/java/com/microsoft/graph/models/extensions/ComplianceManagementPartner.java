@@ -80,7 +80,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
     @SerializedName(value = "lastHeartbeatDateTime", alternate = {"LastHeartbeatDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastHeartbeatDateTime;
+    public java.time.OffsetDateTime lastHeartbeatDateTime;
 
     /**
      * The Mac Os Enrollment Assignments.

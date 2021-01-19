@@ -51,7 +51,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
 	@Nullable
-    public java.util.Calendar birthday;
+    public java.time.OffsetDateTime birthday;
 
     /**
      * The Business Address.

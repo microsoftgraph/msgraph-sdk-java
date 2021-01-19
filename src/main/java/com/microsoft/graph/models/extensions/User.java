@@ -178,7 +178,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Creation Type.
@@ -214,7 +214,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "employeeHireDate", alternate = {"EmployeeHireDate"})
     @Expose
 	@Nullable
-    public java.util.Calendar employeeHireDate;
+    public java.time.OffsetDateTime employeeHireDate;
 
     /**
      * The Employee Id.
@@ -259,7 +259,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "externalUserStateChangeDateTime", alternate = {"ExternalUserStateChangeDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar externalUserStateChangeDateTime;
+    public java.time.OffsetDateTime externalUserStateChangeDateTime;
 
     /**
      * The Fax Number.
@@ -322,7 +322,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "lastPasswordChangeDateTime", alternate = {"LastPasswordChangeDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastPasswordChangeDateTime;
+    public java.time.OffsetDateTime lastPasswordChangeDateTime;
 
     /**
      * The Legal Age Group Classification.
@@ -421,7 +421,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar onPremisesLastSyncDateTime;
+    public java.time.OffsetDateTime onPremisesLastSyncDateTime;
 
     /**
      * The On Premises Provisioning Errors.
@@ -547,7 +547,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "signInSessionsValidFromDateTime", alternate = {"SignInSessionsValidFromDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar signInSessionsValidFromDateTime;
+    public java.time.OffsetDateTime signInSessionsValidFromDateTime;
 
     /**
      * The State.
@@ -637,7 +637,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
 	@Nullable
-    public java.util.Calendar birthday;
+    public java.time.OffsetDateTime birthday;
 
     /**
      * The Hire Date.
@@ -646,7 +646,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "hireDate", alternate = {"HireDate"})
     @Expose
 	@Nullable
-    public java.util.Calendar hireDate;
+    public java.time.OffsetDateTime hireDate;
 
     /**
      * The Interests.

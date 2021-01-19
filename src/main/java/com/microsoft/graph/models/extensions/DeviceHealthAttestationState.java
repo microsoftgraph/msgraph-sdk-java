@@ -197,7 +197,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     @SerializedName(value = "issuedDateTime", alternate = {"IssuedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar issuedDateTime;
+    public java.time.OffsetDateTime issuedDateTime;
 
     /**
      * The Last Update Date Time.

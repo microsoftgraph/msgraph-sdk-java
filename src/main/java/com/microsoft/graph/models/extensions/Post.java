@@ -98,7 +98,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "receivedDateTime", alternate = {"ReceivedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar receivedDateTime;
+    public java.time.OffsetDateTime receivedDateTime;
 
     /**
      * The Sender.

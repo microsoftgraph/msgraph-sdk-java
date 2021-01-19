@@ -110,7 +110,7 @@ public class NetworkConnection implements IJsonBackedObject {
     @SerializedName(value = "domainRegisteredDateTime", alternate = {"DomainRegisteredDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar domainRegisteredDateTime;
+    public java.time.OffsetDateTime domainRegisteredDateTime;
 
     /**
      * The Local Dns Name.

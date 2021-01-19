@@ -53,7 +53,7 @@ public class OnPremisesProvisioningError implements IJsonBackedObject {
     @SerializedName(value = "occurredDateTime", alternate = {"OccurredDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar occurredDateTime;
+    public java.time.OffsetDateTime occurredDateTime;
 
     /**
      * The Property Causing Error.

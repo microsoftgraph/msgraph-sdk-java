@@ -41,7 +41,7 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Locale.

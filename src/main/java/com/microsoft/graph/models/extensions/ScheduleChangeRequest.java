@@ -43,7 +43,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
     @SerializedName(value = "managerActionDateTime", alternate = {"ManagerActionDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar managerActionDateTime;
+    public java.time.OffsetDateTime managerActionDateTime;
 
     /**
      * The Manager Action Message.
@@ -70,7 +70,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
     @SerializedName(value = "senderDateTime", alternate = {"SenderDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar senderDateTime;
+    public java.time.OffsetDateTime senderDateTime;
 
     /**
      * The Sender Message.

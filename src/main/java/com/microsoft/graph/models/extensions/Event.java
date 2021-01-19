@@ -255,7 +255,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName(value = "originalStart", alternate = {"OriginalStart"})
     @Expose
 	@Nullable
-    public java.util.Calendar originalStart;
+    public java.time.OffsetDateTime originalStart;
 
     /**
      * The Original Start Time Zone.

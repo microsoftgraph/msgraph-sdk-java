@@ -111,7 +111,7 @@ public class ChangeNotification implements IJsonBackedObject {
     @SerializedName(value = "subscriptionExpirationDateTime", alternate = {"SubscriptionExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar subscriptionExpirationDateTime;
+    public java.time.OffsetDateTime subscriptionExpirationDateTime;
 
     /**
      * The Subscription Id.

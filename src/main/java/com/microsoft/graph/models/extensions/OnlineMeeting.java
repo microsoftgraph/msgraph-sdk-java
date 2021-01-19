@@ -65,7 +65,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar creationDateTime;
+    public java.time.OffsetDateTime creationDateTime;
 
     /**
      * The End Date Time.
@@ -74,7 +74,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar endDateTime;
+    public java.time.OffsetDateTime endDateTime;
 
     /**
      * The External Id.
@@ -137,7 +137,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
      * The Subject.

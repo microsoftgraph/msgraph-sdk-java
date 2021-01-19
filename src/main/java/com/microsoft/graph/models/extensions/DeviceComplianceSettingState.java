@@ -33,7 +33,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
     @SerializedName(value = "complianceGracePeriodExpirationDateTime", alternate = {"ComplianceGracePeriodExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar complianceGracePeriodExpirationDateTime;
+    public java.time.OffsetDateTime complianceGracePeriodExpirationDateTime;
 
     /**
      * The Device Id.

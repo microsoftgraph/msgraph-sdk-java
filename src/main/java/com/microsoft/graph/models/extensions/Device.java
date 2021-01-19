@@ -55,7 +55,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "approximateLastSignInDateTime", alternate = {"ApproximateLastSignInDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar approximateLastSignInDateTime;
+    public java.time.OffsetDateTime approximateLastSignInDateTime;
 
     /**
      * The Compliance Expiration Date Time.
@@ -64,7 +64,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "complianceExpirationDateTime", alternate = {"ComplianceExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar complianceExpirationDateTime;
+    public java.time.OffsetDateTime complianceExpirationDateTime;
 
     /**
      * The Device Id.
@@ -136,7 +136,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar onPremisesLastSyncDateTime;
+    public java.time.OffsetDateTime onPremisesLastSyncDateTime;
 
     /**
      * The On Premises Sync Enabled.

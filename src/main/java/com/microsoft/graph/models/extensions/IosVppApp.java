@@ -71,7 +71,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
     @SerializedName(value = "releaseDateTime", alternate = {"ReleaseDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar releaseDateTime;
+    public java.time.OffsetDateTime releaseDateTime;
 
     /**
      * The Total License Count.

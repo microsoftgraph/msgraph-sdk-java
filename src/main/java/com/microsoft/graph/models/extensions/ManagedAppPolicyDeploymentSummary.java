@@ -61,7 +61,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
     @SerializedName(value = "lastRefreshTime", alternate = {"LastRefreshTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastRefreshTime;
+    public java.time.OffsetDateTime lastRefreshTime;
 
     /**
      * The Version.

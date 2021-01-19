@@ -92,7 +92,7 @@ public class UserSecurityState implements IJsonBackedObject {
     @SerializedName(value = "logonDateTime", alternate = {"LogonDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar logonDateTime;
+    public java.time.OffsetDateTime logonDateTime;
 
     /**
      * The Logon Id.

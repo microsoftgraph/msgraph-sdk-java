@@ -80,7 +80,7 @@ public class SecureScoreControlStateUpdate implements IJsonBackedObject {
     @SerializedName(value = "updatedDateTime", alternate = {"UpdatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar updatedDateTime;
+    public java.time.OffsetDateTime updatedDateTime;
 
 
     /**

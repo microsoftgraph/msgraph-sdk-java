@@ -33,7 +33,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     @SerializedName(value = "complianceGracePeriodExpirationDateTime", alternate = {"ComplianceGracePeriodExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar complianceGracePeriodExpirationDateTime;
+    public java.time.OffsetDateTime complianceGracePeriodExpirationDateTime;
 
     /**
      * The Device Display Name.
@@ -60,7 +60,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
     @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastReportedDateTime;
+    public java.time.OffsetDateTime lastReportedDateTime;
 
     /**
      * The Status.

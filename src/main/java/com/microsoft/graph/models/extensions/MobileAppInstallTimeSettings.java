@@ -44,7 +44,7 @@ public class MobileAppInstallTimeSettings implements IJsonBackedObject {
     @SerializedName(value = "deadlineDateTime", alternate = {"DeadlineDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar deadlineDateTime;
+    public java.time.OffsetDateTime deadlineDateTime;
 
     /**
      * The Start Date Time.
@@ -53,7 +53,7 @@ public class MobileAppInstallTimeSettings implements IJsonBackedObject {
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
      * The Use Local Time.

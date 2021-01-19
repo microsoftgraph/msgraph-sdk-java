@@ -61,7 +61,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements IJsonBacked
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The Minimum Supported Operating System.

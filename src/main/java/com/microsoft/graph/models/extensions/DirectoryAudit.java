@@ -37,7 +37,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar activityDateTime;
+    public java.time.OffsetDateTime activityDateTime;
 
     /**
      * The Activity Display Name.

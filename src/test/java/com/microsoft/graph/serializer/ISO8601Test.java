@@ -2,7 +2,8 @@ package com.microsoft.graph.serializer;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Calendar;
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
 import java.util.Date;
 import java.util.TimeZone;
 
@@ -17,13 +18,11 @@ public class ISO8601Test {
 	@Test
     public void testFromDate() throws Exception {
         TimeZone.setDefault(TimeZone.getTimeZone("PST"));
-        final Calendar date = Calendar.getInstance();
-        date.setTime(new Date(123456789012345L));
-        assertEquals("5882-03-11T00:30:12.345Z", CalendarSerializer.serialize(date));
+        final OffsetDateTime date = OffsetDateTime.of(5882, 3, 11, 00, 30, 12, 345000000, ZoneOffset.UTC);
+        assertEquals("5882-03-11T00:30:12.345Z", OffsetDateTimeSerializer.serialize(date));
 
-        final Calendar dateNoMillis = Calendar.getInstance();
-        dateNoMillis.setTime(new Date(123456789012000L));
-        assertEquals("5882-03-11T00:30:12.000Z", CalendarSerializer.serialize(dateNoMillis));
+        final OffsetDateTime dateNoMillis = OffsetDateTime.of(5882, 3, 11, 00, 30, 12, 0, ZoneOffset.UTC);
+        assertEquals("5882-03-11T00:30:12Z", OffsetDateTimeSerializer.serialize(dateNoMillis));
     }
 
     /**
@@ -33,15 +32,16 @@ public class ISO8601Test {
 	@Test
     public void testToDate() throws Exception {
         TimeZone.setDefault(TimeZone.getTimeZone("PST"));
-        final long toTheSecondDate = 123456789012000L;
-        final Calendar dateToSecond = CalendarSerializer.deserialize("5882-03-11T00:30:12Z");
-        assertEquals(toTheSecondDate, dateToSecond.getTimeInMillis());
+        final long toTheSecondDate = 123456789012L;
+        final OffsetDateTime dateToSecond = OffsetDateTimeSerializer.deserialize("5882-03-11T00:30:12Z");
+        assertEquals(toTheSecondDate, dateToSecond.toInstant().getEpochSecond());
 
-        final long toTheMillisecondDate = 123456789012345L;
-        final Calendar dateToTheMillisecond = CalendarSerializer.deserialize("5882-03-11T00:30:12.345Z");
-        assertEquals(toTheMillisecondDate, dateToTheMillisecond.getTimeInMillis());
+        final OffsetDateTime dateToTheMillisecond = OffsetDateTimeSerializer.deserialize("5882-03-11T00:30:12.345Z");
+        assertEquals(toTheSecondDate, dateToTheMillisecond.toInstant().getEpochSecond());
+        assertEquals(345000000, dateToTheMillisecond.toInstant().getNano());
 
-        final Calendar dateToTheExtremeMillisecond = CalendarSerializer.deserialize("5882-03-11T00:30:12.3456789Z");
-        assertEquals(toTheMillisecondDate, dateToTheExtremeMillisecond.getTimeInMillis());
+        final OffsetDateTime dateToTheExtremeMillisecond = OffsetDateTimeSerializer.deserialize("5882-03-11T00:30:12.3456789Z");
+        assertEquals(toTheSecondDate, dateToTheExtremeMillisecond.toInstant().getEpochSecond());
+        assertEquals(345678900, dateToTheExtremeMillisecond.toInstant().getNano());
     }
 }

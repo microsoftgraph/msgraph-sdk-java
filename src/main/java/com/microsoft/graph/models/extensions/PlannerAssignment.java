@@ -54,7 +54,7 @@ public class PlannerAssignment implements IJsonBackedObject {
     @SerializedName(value = "assignedDateTime", alternate = {"AssignedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar assignedDateTime;
+    public java.time.OffsetDateTime assignedDateTime;
 
     /**
      * The Order Hint.

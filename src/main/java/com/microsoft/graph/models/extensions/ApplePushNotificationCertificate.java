@@ -50,7 +50,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The Last Modified Date Time.
@@ -59,7 +59,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Topic Identifier.

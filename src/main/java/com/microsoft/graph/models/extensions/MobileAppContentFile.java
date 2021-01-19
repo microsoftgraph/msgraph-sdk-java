@@ -42,7 +42,7 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "azureStorageUriExpirationDateTime", alternate = {"AzureStorageUriExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar azureStorageUriExpirationDateTime;
+    public java.time.OffsetDateTime azureStorageUriExpirationDateTime;
 
     /**
      * The Created Date Time.
@@ -51,7 +51,7 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Is Committed.

@@ -33,7 +33,7 @@ public class Operation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Last Action Date Time.
@@ -42,7 +42,7 @@ public class Operation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastActionDateTime;
+    public java.time.OffsetDateTime lastActionDateTime;
 
     /**
      * The Status.

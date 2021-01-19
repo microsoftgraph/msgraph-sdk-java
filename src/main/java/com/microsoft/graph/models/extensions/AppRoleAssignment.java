@@ -41,7 +41,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Principal Display Name.

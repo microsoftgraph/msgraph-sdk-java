@@ -85,7 +85,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "complianceGracePeriodExpirationDateTime", alternate = {"ComplianceGracePeriodExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar complianceGracePeriodExpirationDateTime;
+    public java.time.OffsetDateTime complianceGracePeriodExpirationDateTime;
 
     /**
      * The Compliance State.
@@ -175,7 +175,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "easActivationDateTime", alternate = {"EasActivationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar easActivationDateTime;
+    public java.time.OffsetDateTime easActivationDateTime;
 
     /**
      * The Eas Device Id.
@@ -202,7 +202,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "enrolledDateTime", alternate = {"EnrolledDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar enrolledDateTime;
+    public java.time.OffsetDateTime enrolledDateTime;
 
     /**
      * The Exchange Access State.
@@ -229,7 +229,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "exchangeLastSuccessfulSyncDateTime", alternate = {"ExchangeLastSuccessfulSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar exchangeLastSuccessfulSyncDateTime;
+    public java.time.OffsetDateTime exchangeLastSuccessfulSyncDateTime;
 
     /**
      * The Free Storage Space In Bytes.
@@ -283,7 +283,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastSyncDateTime;
+    public java.time.OffsetDateTime lastSyncDateTime;
 
     /**
      * The Managed Device Name.

@@ -45,7 +45,7 @@ public class UploadSession implements IJsonBackedObject {
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The Next Expected Ranges.

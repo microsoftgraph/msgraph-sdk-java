@@ -71,7 +71,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
     @SerializedName(value = "lastCollectedDateTime", alternate = {"LastCollectedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastCollectedDateTime;
+    public java.time.OffsetDateTime lastCollectedDateTime;
 
     /**
      * The Latitude.

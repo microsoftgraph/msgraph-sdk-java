@@ -44,7 +44,7 @@ public class DomainState implements IJsonBackedObject {
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastActionDateTime;
+    public java.time.OffsetDateTime lastActionDateTime;
 
     /**
      * The Operation.

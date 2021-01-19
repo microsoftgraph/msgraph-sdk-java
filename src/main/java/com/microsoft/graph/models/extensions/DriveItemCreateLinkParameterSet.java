@@ -46,7 +46,7 @@ public class DriveItemCreateLinkParameterSet {
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The password.
@@ -128,14 +128,14 @@ public class DriveItemCreateLinkParameterSet {
          * The expirationDateTime parameter value
          */
         @Nullable
-        protected java.util.Calendar expirationDateTime;
+        protected java.time.OffsetDateTime expirationDateTime;
         /**
          * Sets the ExpirationDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public DriveItemCreateLinkParameterSetBuilder withExpirationDateTime(@Nullable final java.util.Calendar val) {
+        public DriveItemCreateLinkParameterSetBuilder withExpirationDateTime(@Nullable final java.time.OffsetDateTime val) {
             this.expirationDateTime = val;
             return this;
         }

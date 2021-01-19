@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastUpdateDateTime;
+    public java.time.OffsetDateTime lastUpdateDateTime;
 
     /**
      * The Not Applicable Count.

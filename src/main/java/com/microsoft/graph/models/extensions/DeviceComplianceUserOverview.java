@@ -59,7 +59,7 @@ public class DeviceComplianceUserOverview extends Entity implements IJsonBackedO
     @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastUpdateDateTime;
+    public java.time.OffsetDateTime lastUpdateDateTime;
 
     /**
      * The Not Applicable Count.

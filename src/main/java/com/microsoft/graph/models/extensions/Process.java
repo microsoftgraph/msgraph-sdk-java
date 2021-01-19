@@ -64,7 +64,7 @@ public class Process implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The File Hash.
@@ -109,7 +109,7 @@ public class Process implements IJsonBackedObject {
     @SerializedName(value = "parentProcessCreatedDateTime", alternate = {"ParentProcessCreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar parentProcessCreatedDateTime;
+    public java.time.OffsetDateTime parentProcessCreatedDateTime;
 
     /**
      * The Parent Process Id.

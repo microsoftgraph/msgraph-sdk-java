@@ -44,7 +44,7 @@ public class FileSystemInfo implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Last Accessed Date Time.
@@ -53,7 +53,7 @@ public class FileSystemInfo implements IJsonBackedObject {
     @SerializedName(value = "lastAccessedDateTime", alternate = {"LastAccessedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastAccessedDateTime;
+    public java.time.OffsetDateTime lastAccessedDateTime;
 
     /**
      * The Last Modified Date Time.
@@ -62,7 +62,7 @@ public class FileSystemInfo implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
 
     /**

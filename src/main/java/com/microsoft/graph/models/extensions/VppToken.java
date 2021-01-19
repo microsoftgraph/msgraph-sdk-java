@@ -62,7 +62,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar expirationDateTime;
+    public java.time.OffsetDateTime expirationDateTime;
 
     /**
      * The Last Modified Date Time.
@@ -71,7 +71,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Last Sync Date Time.
@@ -80,7 +80,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastSyncDateTime;
+    public java.time.OffsetDateTime lastSyncDateTime;
 
     /**
      * The Last Sync Status.

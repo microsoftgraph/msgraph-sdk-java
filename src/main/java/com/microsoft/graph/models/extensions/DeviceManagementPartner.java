@@ -52,7 +52,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
     @SerializedName(value = "lastHeartbeatDateTime", alternate = {"LastHeartbeatDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastHeartbeatDateTime;
+    public java.time.OffsetDateTime lastHeartbeatDateTime;
 
     /**
      * The Partner App Type.
@@ -88,7 +88,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
     @SerializedName(value = "whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", alternate = {"WhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
+    public java.time.OffsetDateTime whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
 
     /**
      * The When Partner Devices Will Be Removed Date Time.
@@ -97,7 +97,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
     @SerializedName(value = "whenPartnerDevicesWillBeRemovedDateTime", alternate = {"WhenPartnerDevicesWillBeRemovedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar whenPartnerDevicesWillBeRemovedDateTime;
+    public java.time.OffsetDateTime whenPartnerDevicesWillBeRemovedDateTime;
 
 
     /**

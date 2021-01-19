@@ -37,7 +37,7 @@ public class ScheduleShareParameterSet {
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar startDateTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
      * The end Date Time.
@@ -46,7 +46,7 @@ public class ScheduleShareParameterSet {
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar endDateTime;
+    public java.time.OffsetDateTime endDateTime;
 
 
     /**
@@ -93,14 +93,14 @@ public class ScheduleShareParameterSet {
          * The startDateTime parameter value
          */
         @Nullable
-        protected java.util.Calendar startDateTime;
+        protected java.time.OffsetDateTime startDateTime;
         /**
          * Sets the StartDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public ScheduleShareParameterSetBuilder withStartDateTime(@Nullable final java.util.Calendar val) {
+        public ScheduleShareParameterSetBuilder withStartDateTime(@Nullable final java.time.OffsetDateTime val) {
             this.startDateTime = val;
             return this;
         }
@@ -108,14 +108,14 @@ public class ScheduleShareParameterSet {
          * The endDateTime parameter value
          */
         @Nullable
-        protected java.util.Calendar endDateTime;
+        protected java.time.OffsetDateTime endDateTime;
         /**
          * Sets the EndDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public ScheduleShareParameterSetBuilder withEndDateTime(@Nullable final java.util.Calendar val) {
+        public ScheduleShareParameterSetBuilder withEndDateTime(@Nullable final java.time.OffsetDateTime val) {
             this.endDateTime = val;
             return this;
         }

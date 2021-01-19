@@ -63,7 +63,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar createdDateTime;
+    public java.time.OffsetDateTime createdDateTime;
 
     /**
      * The Deleted Date Time.
@@ -72,7 +72,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "deletedDateTime", alternate = {"DeletedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar deletedDateTime;
+    public java.time.OffsetDateTime deletedDateTime;
 
     /**
      * The Etag.
@@ -108,7 +108,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastEditedDateTime", alternate = {"LastEditedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastEditedDateTime;
+    public java.time.OffsetDateTime lastEditedDateTime;
 
     /**
      * The Last Modified Date Time.
@@ -117,7 +117,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastModifiedDateTime;
+    public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
      * The Locale.

@@ -70,7 +70,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
 	@Nullable
-    public java.util.Calendar lastSyncDateTime;
+    public java.time.OffsetDateTime lastSyncDateTime;
 
     /**
      * The Primary Smtp Address.
