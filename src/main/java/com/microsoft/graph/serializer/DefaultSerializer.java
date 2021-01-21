@@ -156,8 +156,8 @@ public class DefaultSerializer implements ISerializer {
 							final List<?> fieldObjectList = (List<?>) fieldObject;
 							if (collectionJson != null && collectionJson.isJsonArray()) {
 								final JsonArray rawJsonArray = (JsonArray) collectionJson;
-								final Integer fieldObjectListSize = fieldObjectList.size();
-								final Integer rawJsonArraySize = rawJsonArray.size();
+								final int fieldObjectListSize = fieldObjectList.size();
+								final int rawJsonArraySize = rawJsonArray.size();
 								for (int i = 0; i < fieldObjectListSize && i < rawJsonArraySize; i++) {
 									final Object element = fieldObjectList.get(i);
 									if (element instanceof IJsonBackedObject) {
@@ -167,8 +167,9 @@ public class DefaultSerializer implements ISerializer {
 										}
 									}
 								}
-								if (rawJsonArraySize != fieldObjectListSize) 
+								if (rawJsonArraySize != fieldObjectListSize) {
 									logger.logDebug("rawJsonArray has a size of " + rawJsonArraySize + " and fieldObjectList of " + fieldObjectListSize);
+                                }
 							}
 						}
 						// If the object is a valid Graph object, set its additional data
