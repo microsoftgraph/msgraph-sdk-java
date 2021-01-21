@@ -9,9 +9,9 @@ import com.microsoft.graph.content.MSBatchRequestContent;
 import com.microsoft.graph.content.MSBatchResponseContent;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.httpcore.HttpClients;
-import com.microsoft.graph.core.IGraphServiceClient;
-import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.requests.extensions.UserRequest;
+import com.microsoft.graph.requests.GraphServiceClient;
+import com.microsoft.graph.models.User;
+import com.microsoft.graph.requests.UserRequest;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -28,7 +28,7 @@ public class BatchTests {
     @Test
     public void GetsABatchFromRequests() throws IOException{
         final TestBase testBase = new TestBase();
-		final IGraphServiceClient graphServiceClient = testBase.graphClient;
+		final GraphServiceClient graphServiceClient = testBase.graphClient;
         final MSBatchRequestContent batchContent = new MSBatchRequestContent();
         final String meGetId = batchContent.addBatchRequestStep(graphServiceClient.me()
                                         .buildRequest()
@@ -56,7 +56,7 @@ public class BatchTests {
                         .url("https://graph.microsoft.com/v1.0/$batch")
                         .post(RequestBody.create(serializedBatchContent, MediaType.parse("application/json")))
                         .build();
-        
+
         final OkHttpClient client = HttpClients.createDefault(testBase.getAuthenticationProvider());
         try (final Response batchResponse = client.newCall(batchRequest).execute()) {
             assertEquals(200, batchResponse.code());

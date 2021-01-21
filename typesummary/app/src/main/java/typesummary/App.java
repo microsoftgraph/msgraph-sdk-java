@@ -3,7 +3,7 @@
  */
 package typesummary;
 
-import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.User;
 
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -35,7 +35,7 @@ public class App {
 
         final ILogWriter writer = isFileMode ? new TextFileLogWriter(args[1]) : new ConsoleLogWriter();
 
-        
+
         final List<String> classNames = getOrderedClassNames();
         serializeEnums(writer, classNames);
         serializeClasses(writer, classNames);
@@ -109,7 +109,7 @@ public class App {
     private static String delimiter = " ";
     private static void serializeMethods(final Class<?> clazz, final ILogWriter writer) {
         final Method[] methods = clazz.getMethods();
-        Arrays.sort(methods, (o1, o2) -> (o1.getName() + 
+        Arrays.sort(methods, (o1, o2) -> (o1.getName() +
                                             Joiner.on(delimiter)
                                                 .useForNull("")
                                                 .join(Arrays.asList(o1.getParameters())

@@ -19,10 +19,10 @@ import com.microsoft.graph.concurrency.ChunkedUploadProvider;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.http.CoreHttpProvider;
-import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
-import com.microsoft.graph.models.extensions.UploadSession;
-import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionParameterSet;
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.DriveItemUploadableProperties;
+import com.microsoft.graph.models.UploadSession;
+import com.microsoft.graph.models.DriveItemCreateUploadSessionParameterSet;
 
 @Ignore
 public class OneDriveTests {

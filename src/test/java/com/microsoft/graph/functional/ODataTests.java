@@ -12,12 +12,12 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.models.extensions.Extension;
-import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.models.extensions.ExtensionSchemaProperty;
-import com.microsoft.graph.models.extensions.SchemaExtension;
-import com.microsoft.graph.requests.extensions.GroupDeltaCollectionPage;
-import com.microsoft.graph.models.extensions.GroupDeltaParameterSet;
+import com.microsoft.graph.models.Extension;
+import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.ExtensionSchemaProperty;
+import com.microsoft.graph.models.SchemaExtension;
+import com.microsoft.graph.requests.GroupDeltaCollectionPage;
+import com.microsoft.graph.models.GroupDeltaParameterSet;
 
 @Ignore
 public class ODataTests {

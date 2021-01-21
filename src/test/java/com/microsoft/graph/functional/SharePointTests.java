@@ -10,15 +10,15 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.requests.extensions.SiteCollectionPage;
-import com.microsoft.graph.requests.extensions.DriveCollectionPage;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
+import com.microsoft.graph.models.Site;
+import com.microsoft.graph.requests.SiteCollectionPage;
+import com.microsoft.graph.requests.DriveCollectionPage;
+import com.microsoft.graph.requests.DriveItemCollectionPage;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.models.extensions.Drive;
-import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.Drive;
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.Site;
 
 @Ignore
 public class SharePointTests {

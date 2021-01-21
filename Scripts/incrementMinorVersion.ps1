@@ -49,7 +49,7 @@ function Update-MinorVersionNumber([version]$currentVersion) {
 function Update-MinorVersion() {
 	$readmeFilePath = Join-Path -Path $PWD.ToString() -ChildPath "../README.md"
 	$propertiesFilePath = Join-Path -Path $PWD.ToString() -ChildPath "../gradle.properties"
-	$telemetryFilePath = Join-Path -Path $PWD.ToString() -ChildPath "../src/main/java/com/microsoft/graph/core/Constants.java"
+	$telemetryFilePath = Join-Path -Path $PWD.ToString() -ChildPath "../src/main/java/com/microsoft/graph/info/Constants.java"
 	$currentVersion = Get-CurrentTelemetryVersion -telemetryFilePath $telemetryFilePath
 	$nextVersion = Update-MinorVersionNumber -currentVersion $currentVersion
 	Update-ReadmeVersion -version $nextVersion -readmeFilePath $readmeFilePath

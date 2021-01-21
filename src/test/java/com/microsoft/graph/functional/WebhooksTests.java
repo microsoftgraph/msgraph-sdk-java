@@ -8,7 +8,7 @@ import java.time.OffsetDateTime;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.microsoft.graph.models.extensions.Subscription;
+import com.microsoft.graph.models.Subscription;
 
 @Ignore
 public class WebhooksTests {
