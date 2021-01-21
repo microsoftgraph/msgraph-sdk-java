@@ -167,8 +167,9 @@ public class DefaultSerializer implements ISerializer {
 										}
 									}
 								}
-								if (rawJsonArraySize != fieldObjectListSize) 
+								if (!rawJsonArraySize.equals(fieldObjectListSize)) {
 									logger.logDebug("rawJsonArray has a size of " + rawJsonArraySize + " and fieldObjectList of " + fieldObjectListSize);
+                                }
 							}
 						}
 						// If the object is a valid Graph object, set its additional data
