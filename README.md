@@ -51,14 +51,14 @@ Register your application by following the steps at [Register your app with the 
 
 An instance of the **GraphServiceClient** class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this class, you need to provide an instance of `IAuthenticationProvider`, which can authenticate requests to Microsoft Graph.
 
-For an example of authentication in a Java desktop client application, see the [Preview msgraph-sdk-java-auth](https://github.com/microsoftgraph/msgraph-sdk-android-msa-auth-for-android-adapter) and for an Android application see [Preview msgraph-sdk-android-auth](https://github.com/microsoftgraph/msgraph-sdk-android-auth).
+For an example of how to get an authentication provider, see [the samples](https://github.com/microsoftgraph/msgraph-sdk-java-core/blob/master/samples).
 
 ### 2.3 Get a GraphServiceClient object
 
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-IGraphServiceClient graphClient = 
+GraphServiceClient graphClient = 
   GraphServiceClient
     .builder()
     .authenticationProvider(authenticationProvider)
