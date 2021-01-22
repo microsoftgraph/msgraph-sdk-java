@@ -41,7 +41,7 @@ public class CustomRequestTests {
 		JsonObject meJson = testBase.graphClient
 				.customRequest("/me")
 				.buildRequest()
-				.get();
+				.get().getAsJsonObject();
 
 		assertEquals(meGraphService.displayName, meOriginal.displayName);
 		assertEquals(meJson.get("displayName").getAsString(), meOriginal.displayName);
@@ -64,7 +64,7 @@ public class CustomRequestTests {
 		JsonObject response = testBase.graphClient.
 				customRequest("/me/activities/%2Farticle%3F12346").
 				buildRequest().
-				put(JsonParser.parseString(str).getAsJsonObject());
+				put(JsonParser.parseString(str).getAsJsonObject()).getAsJsonObject();
 
 		UserActivity userActivity = serializer.deserializeObject(str, UserActivity.class);
 		UserActivity responseWithClass = testBase.graphClient.
