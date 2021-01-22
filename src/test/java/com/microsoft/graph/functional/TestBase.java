@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.concurrent.CompletableFuture;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
@@ -12,7 +13,7 @@ import com.microsoft.graph.info.Constants;
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.httpcore.HttpClients;
-import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
+import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.requests.GraphServiceClient;
 
 import okhttp3.OkHttpClient;
@@ -57,20 +58,20 @@ public class TestBase {
             }
         }
     }
-    public ICoreAuthenticationProvider getUnauthenticationProvider() {
-        return new ICoreAuthenticationProvider() {
+    public IAuthenticationProvider getUnauthenticationProvider() {
+        return new IAuthenticationProvider() {
             @Override
-            public Request authenticateRequest(Request request) {
-                return request;
+            public CompletableFuture<String> getAuthorizationTokenAsync(final URL requestUrl) {
+                return CompletableFuture.completedFuture((String)null);
             }
         };
     }
-    public ICoreAuthenticationProvider getAuthenticationProvider() {
+    public IAuthenticationProvider getAuthenticationProvider() {
         final String accessToken = GetAccessToken().replace("\"", "");
-        return new ICoreAuthenticationProvider() {
+        return new IAuthenticationProvider() {
             @Override
-            public Request authenticateRequest(Request request) {
-                return request.newBuilder().addHeader("Authorization", "Bearer "+ accessToken).build();
+            public CompletableFuture<String> getAuthorizationTokenAsync(final URL requestUrl) {
+                return CompletableFuture.completedFuture(accessToken);
             }
         };
     }
