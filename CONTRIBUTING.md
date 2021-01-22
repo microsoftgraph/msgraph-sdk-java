@@ -22,7 +22,8 @@ If major functionality is being added, or there will need to be gestation time f
 Revisions of this nature will result in a 0.X.X change of the version number.
 
 ## Submit pull requests for model or request files
-You can revise code in the extension folders of these folders. See [Extending the Library](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Extending-the-Library) for more information on how to work with the generated parts of the library.
+
+All the code of the current repository is being generated automatically by the [SDK generator](https://github.com/microsoftgraph/MSGraph-SDK-Code-Generator/) in which any change must be reflected.
 
 ## Add yourself as a contributor
 
