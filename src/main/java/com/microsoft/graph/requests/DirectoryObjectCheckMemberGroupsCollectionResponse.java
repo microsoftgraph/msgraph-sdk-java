@@ -25,9 +25,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionResponse extends BaseColl
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
-    @Override
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
-        this.serializer = serializer;
-        rawObject = json;
+
     }
 }

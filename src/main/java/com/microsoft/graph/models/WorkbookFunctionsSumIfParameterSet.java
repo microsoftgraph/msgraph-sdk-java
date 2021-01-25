@@ -11,7 +11,6 @@ import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import com.google.gson.JsonObject;
-import com.microsoft.graph.serializer.ISerializer;
 import java.util.EnumSet;
 import java.util.ArrayList;
 
@@ -150,46 +149,5 @@ public class WorkbookFunctionsSumIfParameterSet {
             result.add(new com.microsoft.graph.options.FunctionOption("sumRange", sumRange));
         }
         return result;
-    }
-    /**
-     * The raw representation of this class
-     */
-    private JsonObject rawObject;
-
-    /**
-     * The serializer
-     */
-    private ISerializer serializer;
-
-    /**
-     * Gets the raw representation of this class
-     *
-     * @return the raw representation of this class
-     */
-    @Nullable
-    public JsonObject getRawObject() {
-        return rawObject;
-    }
-
-    /**
-     * Gets serializer
-     *
-     * @return the serializer
-     */
-    @Nullable
-    public ISerializer getSerializer() {
-        return serializer;
-    }
-
-    /**
-     * Sets the raw JSON object
-     *
-     * @param serializer the serializer
-     * @param json the JSON object to set this object to
-     */
-    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
-        this.serializer = serializer;
-        rawObject = json;
-
     }
 }
