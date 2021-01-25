@@ -180,6 +180,13 @@ The object model for JSON batching has been improved to provide a cleaner API su
 
 > Note: this change also replaces the `MSBatchRequestContent` constuctor accepting a list of steps by a vararg constructor and `getArrayOfDependsOnIds` by `getDependsOnIds` (HashSet\<String>).
 
+### IJsonBackedObject interface
+
+The interface has been simplified to remove the `getRawObject` and `getSerializer` methods. This avoid entity and collection objects storing a copy of the JSON on top the the properties they already have, which improves drastically the memory impacts:
+
+1. Replace any reference to `getRawObject` by `additionalDataManager`.
+1. Replace any reference to `getSerializer` by `graphClient.getSerializer` or create a new instance of the serializer.
+
 ## Upgrade guide for non-breaking improvments
 
 This section lists out other improvements which are not considered as breaking changes. SDK users are strongly encouraged to take advantage of those new improvements to simplify their code.
