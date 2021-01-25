@@ -28,6 +28,7 @@ import com.microsoft.graph.models.UserGetMailTipsParameterSet;
 import com.microsoft.graph.models.MailTipsType;
 import com.microsoft.graph.models.RecurrenceRangeType;
 import com.microsoft.graph.requests.DriveItemDeltaCollectionResponse;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.models.UploadSession;
 
@@ -160,9 +161,7 @@ public class DefaultSerializerTests {
 
 		final FileAttachment fileAttachment = (FileAttachment) result;
 		assertNotNull(fileAttachment.contentBytes);
-		final JsonObject o = fileAttachment.getRawObject();
-		assertNotNull(o);
-		assertEquals("#microsoft.graph.fileAttachment", o. get("@odata.type").getAsString());
+		assertEquals("#microsoft.graph.fileAttachment", fileAttachment.oDataType);
 	}
 
     @Test
