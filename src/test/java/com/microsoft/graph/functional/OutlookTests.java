@@ -3,6 +3,8 @@ package com.microsoft.graph.functional;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -21,6 +23,8 @@ import javax.xml.datatype.Duration;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import com.google.gson.JsonObject;
 
 import com.microsoft.graph.concurrency.ChunkedUploadProvider;
 import com.microsoft.graph.concurrency.IProgressCallback;
@@ -56,6 +60,8 @@ import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionP
 import com.microsoft.graph.models.UserSendMailParameterSet;
 import com.microsoft.graph.models.AttachmentCreateUploadSessionParameterSet;
 import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;
+import com.microsoft.graph.serializer.DefaultSerializer;
+import com.microsoft.graph.logger.ILogger;
 
 @Ignore
 public class OutlookTests {
@@ -284,7 +290,7 @@ public class OutlookTests {
 			//Check progress
 		}
 	};
-	@Test
+    @Test
     public void testSendDraftWithLargeAttachements() throws FileNotFoundException, IOException {
     	TestBase testBase = new TestBase();
 
@@ -321,7 +327,7 @@ public class OutlookTests {
     	//Send the drafted message
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
 	}
-	@Test
+    @Test
 	public void testSingleValuesExtendedProperties() {
     	final TestBase testBase = new TestBase();
 		final EventCollectionPage arrangePage = testBase.graphClient.me().events().buildRequest().top(1).get();
@@ -348,5 +354,18 @@ public class OutlookTests {
 		final List<Event> events = page.getCurrentPage();
 		assertTrue(events.size() == 1);
 		assertNotNull(events.get(0).singleValueExtendedProperties);
-	}
+    }
+    @Test
+    public void testAttachments() throws Exception {
+        final TestBase testBase = new TestBase();
+        final AttachmentCollectionPage page = testBase.graphClient
+                                                        .me()
+                                                        .messages("AAMkADc5NmMyYjUxLTQ0ZDEtNGM3Yi1iY2JkLTgyZWYwZjgzNDI3NwBGAAAAAADVwiXSJFUqQrTdi_SlUV7QBwCD0ThbORwuS5hfVs_PIdoqAAAAAAENAACD0ThbORwuS5hfVs_PIdoqAAZ6u3D_AAA=")
+                                                        .attachments()
+                                                        .buildRequest()
+                                                        .get();
+        final List<Attachment> attchs = page.getCurrentPage();
+        assertEquals(1, attchs.size());
+        assertTrue(attchs.get(0) instanceof FileAttachment);
+    }
 }
