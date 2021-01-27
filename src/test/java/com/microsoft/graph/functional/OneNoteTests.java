@@ -212,7 +212,7 @@ public class OneNoteTests {
         		.notebooks()
         		.buildRequest(options)
         		.get();
-        assert(countedBooks.getRawObject().get("@odata.count").getAsInt() > 0);
+        assert(countedBooks.getCount() > 0);
 
         // Test PageLevel on pages
         List<QueryOption> pageLevelOptions = new ArrayList<QueryOption>();

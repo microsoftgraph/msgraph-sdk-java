@@ -130,45 +130,12 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
 
     /**
-     * The raw representation of this class
-     */
-    private JsonObject rawObject;
-
-    /**
-     * The serializer
-     */
-    private ISerializer serializer;
-
-    /**
-     * Gets the raw representation of this class
-     *
-     * @return the raw representation of this class
-     */
-    @Nullable
-    public JsonObject getRawObject() {
-        return rawObject;
-    }
-
-    /**
-     * Gets serializer
-     *
-     * @return the serializer
-     */
-	@Override
-    @Nullable
-    public ISerializer getSerializer() {
-        return serializer;
-    }
-
-    /**
      * Sets the raw JSON object
      *
      * @param serializer the serializer
      * @param json the JSON object to set this object to
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
-        this.serializer = serializer;
-        rawObject = json;
 
 
         if (json.has("deviceComplianceSettingStates")) {

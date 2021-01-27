@@ -143,7 +143,7 @@ public class PlannerTests {
         		.tasks(planTask.id)
         		.buildRequest()
         		.get();
-        JsonElement createdAssignment = updatedTask.getRawObject().get("assignments").getAsJsonObject().get(me.id);
+        JsonElement createdAssignment = updatedTask.additionalDataManager().get("assignments").getAsJsonObject().get(me.id);
 
         assertNotNull(createdAssignment);
     }
@@ -197,7 +197,7 @@ public class PlannerTests {
         Thread.sleep(2000);
 
         PlannerTask updatedTask = prb.tasks(planTask.id).buildRequest().get();
-        int checklistItemCount = updatedTask.getRawObject().get("checklistItemCount").getAsInt();
+        int checklistItemCount = updatedTask.additionalDataManager().get("checklistItemCount").getAsInt();
 
         assertEquals(3, checklistItemCount);
     }
@@ -242,7 +242,7 @@ public class PlannerTests {
             		.details()
             		.buildRequest()
             		.get();
-            JsonElement obj = updatedTaskDetails.getRawObject().get("references");
+            JsonElement obj = updatedTaskDetails.additionalDataManager().get("references");
             JsonArray array = new JsonArray();
             array.add(obj);
             int referencesCount = array.size();
@@ -327,7 +327,7 @@ public class PlannerTests {
         req.addHeader("Prefer", "return=representation");
         PlannerTask updatedTask = req.patch(task);
 
-        JsonElement appliedCategories = updatedTask.getRawObject().get("appliedCategories");
+        JsonElement appliedCategories = updatedTask.additionalDataManager().get("appliedCategories");
 
         assertNotNull(appliedCategories);
     }
