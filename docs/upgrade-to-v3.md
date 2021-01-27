@@ -4,7 +4,7 @@ Welcome to the Microsoft Graph Java SDK migration guide to v3. The purpose of th
 
 ## Breaking changes
 
-To improve the development experience of provided by the SDK, it was necessary to make the following breaking changes in addition to the changes listed in the migration guide below:
+To improve the development experience provided by the SDK, it was necessary to make the following breaking changes in addition to the changes listed in the migration guide below:
 
 - The minimum [android API level](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels) is now level 26 (from 15).
 - The minimum Java version is now version 8 (from 7).
@@ -39,9 +39,9 @@ Due to historical reasons, the SDK provided two authentication provider interfac
 
 1. Replace any reference to `ICoreAuthenticationProvider` by `IAuthenticationProvider`.
 1. Update the implementation to match the new interface.
-1. Replace any reference to `com.microsoft.graph.
+1. Replace any reference to `com.microsoft.graph`.
 
-> Note: if your project implements its own authentication provider, you might want to review the list of providers available with Azure identity to review whether a custom provider is still required. If a custom provider is still required, you should extend `BaseAuthenticationProvider` which provides a method to check whether a spefic request should be authenticated based on it's URL.
+> Note: if your project implements its own authentication provider, you might want to review the list of providers available with Azure identity to review whether a custom provider is still required. If a custom provider is still required, you should extend `BaseAuthenticationProvider` which provides a method to check whether a spefic request should be authenticated based on its URL.
 
 ### Modern date and time API
 
@@ -114,7 +114,7 @@ To provide a standard and modern way of executing requests asynchronuously to SD
 
 ### Non-generated code moved to the core library
 
-The service library (microsoft-graph) was designed to contain only code that has been generated automatically from the API metadata. All code that has been manually handcrafted should live in the core library (microsoft-graph-core). This principle makes reusability of code easier for consumers and it was not respected until this new version of the SDK. All the code living under anything but `com.microsoft.graph.models` or `.requests` have been moved to the same package name in the core asset. This move should be transparent to consummers expect for the following that needs to be updated:
+The service library (microsoft-graph) was designed to contain only code that has been generated automatically from the API metadata. All code that has been manually handcrafted should live in the core library (microsoft-graph-core). This principle makes reusability of code easier for consumers and it was not respected until this new version of the SDK. All the code living under anything but `com.microsoft.graph.models` or `com.microsoft.graph.requests` have been moved to the same package name in the core asset. This move should be transparent to consumers, except for the following that needs to be updated:
 
 1. Replace any reference to `ChunkUploadProvider` from `com.microsoft.graph.requests.extensions` to `com.microsoft.graph.concurrency`.
 1. Replace any reference to `CustomRequestBuilder`, `DateOnly`, `TimeOfDay`, and `Multipart` from `com.microsoft.graph.(models|requests).extensions` to `com.microsoft.graph.core`.
@@ -134,7 +134,7 @@ No action needs to be taken unless the project has a direct reference to an olde
 
 ### float properties have been replaced by Float
 
-As the OData specification madates support for null values for numeric values, any property that previously was implemented using a float primitive type is now using a Float object type:
+As the OData specification mandates support for null values for numeric values, any property that previously was implemented using a float primitive type is now using a Float object type:
 
 1. Replace any assignment from float to Float and check for null values.
 
@@ -146,7 +146,7 @@ To simplify the object model of the SDK, `BaseGraphServiceClient` has been merge
 
 ### Generic refactoring
 
-Requests, request builders, and responses have been refactored to take advantage of generic types. This maximizes code reusability improving performances, binary size and more. These changes should be transparent to most SDK consumers but it's possible impact developers calling the SDK using reflection techniques.
+Requests, request builders, and responses have been refactored to take advantage of generic types. This maximizes code reusability improving performances, binary size and more. These changes should be transparent to most SDK consumers but it's possible to impact developers calling the SDK using reflection techniques.
 
 ## Batch object model improvements
 
@@ -182,7 +182,7 @@ The object model for JSON batching has been improved to provide a cleaner API su
 
 ### IJsonBackedObject interface
 
-The interface has been simplified to remove the `getRawObject` and `getSerializer` methods. This avoid entity and collection objects storing a copy of the JSON on top the the properties they already have, which improves drastically the memory impacts:
+The interface has been simplified to remove the `getRawObject` and `getSerializer` methods. This avoid entity and collection objects storing a copy of the JSON on top of the properties they already have, which improves drastically the memory impacts:
 
 1. Replace any reference to `getRawObject` by `additionalDataManager`.
 1. Replace any reference to `getSerializer` by `graphClient.getSerializer` or create a new instance of the serializer.
