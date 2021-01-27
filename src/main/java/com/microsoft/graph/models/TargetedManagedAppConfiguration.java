@@ -87,11 +87,11 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps").toString(), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
     }
 }

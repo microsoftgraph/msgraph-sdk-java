@@ -115,11 +115,11 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
 
         if (json.has("sectionGroups")) {
-            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), SectionGroupCollectionPage.class);
+            sectionGroups = serializer.deserializeObject(json.get("sectionGroups"), SectionGroupCollectionPage.class);
         }
 
         if (json.has("sections")) {
-            sections = serializer.deserializeObject(json.get("sections").toString(), OnenoteSectionCollectionPage.class);
+            sections = serializer.deserializeObject(json.get("sections"), OnenoteSectionCollectionPage.class);
         }
     }
 }

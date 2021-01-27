@@ -48,7 +48,7 @@ public class Todo extends Entity implements IJsonBackedObject {
 
 
         if (json.has("lists")) {
-            lists = serializer.deserializeObject(json.get("lists").toString(), TodoTaskListCollectionPage.class);
+            lists = serializer.deserializeObject(json.get("lists"), TodoTaskListCollectionPage.class);
         }
     }
 }

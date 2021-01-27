@@ -57,7 +57,7 @@ public class RoomList extends Place implements IJsonBackedObject {
 
 
         if (json.has("rooms")) {
-            rooms = serializer.deserializeObject(json.get("rooms").toString(), RoomCollectionPage.class);
+            rooms = serializer.deserializeObject(json.get("rooms"), RoomCollectionPage.class);
         }
     }
 }

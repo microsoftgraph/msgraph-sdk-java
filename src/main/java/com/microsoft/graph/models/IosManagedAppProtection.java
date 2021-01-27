@@ -104,7 +104,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps").toString(), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
         }
     }
 }

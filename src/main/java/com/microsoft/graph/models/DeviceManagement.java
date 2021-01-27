@@ -378,91 +378,91 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("termsAndConditions")) {
-            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions").toString(), TermsAndConditionsCollectionPage.class);
+            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), TermsAndConditionsCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicies")) {
-            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies").toString(), DeviceCompliancePolicyCollectionPage.class);
+            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies"), DeviceCompliancePolicyCollectionPage.class);
         }
 
         if (json.has("deviceCompliancePolicySettingStateSummaries")) {
-            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries").toString(), DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
+            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries"), DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
         }
 
         if (json.has("deviceConfigurations")) {
-            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations").toString(), DeviceConfigurationCollectionPage.class);
+            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations"), DeviceConfigurationCollectionPage.class);
         }
 
         if (json.has("iosUpdateStatuses")) {
-            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses").toString(), IosUpdateDeviceStatusCollectionPage.class);
+            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses"), IosUpdateDeviceStatusCollectionPage.class);
         }
 
         if (json.has("complianceManagementPartners")) {
-            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners").toString(), ComplianceManagementPartnerCollectionPage.class);
+            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners"), ComplianceManagementPartnerCollectionPage.class);
         }
 
         if (json.has("deviceCategories")) {
-            deviceCategories = serializer.deserializeObject(json.get("deviceCategories").toString(), DeviceCategoryCollectionPage.class);
+            deviceCategories = serializer.deserializeObject(json.get("deviceCategories"), DeviceCategoryCollectionPage.class);
         }
 
         if (json.has("deviceEnrollmentConfigurations")) {
-            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations").toString(), DeviceEnrollmentConfigurationCollectionPage.class);
+            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations"), DeviceEnrollmentConfigurationCollectionPage.class);
         }
 
         if (json.has("deviceManagementPartners")) {
-            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners").toString(), DeviceManagementPartnerCollectionPage.class);
+            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners"), DeviceManagementPartnerCollectionPage.class);
         }
 
         if (json.has("exchangeConnectors")) {
-            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors").toString(), DeviceManagementExchangeConnectorCollectionPage.class);
+            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors"), DeviceManagementExchangeConnectorCollectionPage.class);
         }
 
         if (json.has("mobileThreatDefenseConnectors")) {
-            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors").toString(), MobileThreatDefenseConnectorCollectionPage.class);
+            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors"), MobileThreatDefenseConnectorCollectionPage.class);
         }
 
         if (json.has("detectedApps")) {
-            detectedApps = serializer.deserializeObject(json.get("detectedApps").toString(), DetectedAppCollectionPage.class);
+            detectedApps = serializer.deserializeObject(json.get("detectedApps"), DetectedAppCollectionPage.class);
         }
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
         }
 
         if (json.has("notificationMessageTemplates")) {
-            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates").toString(), NotificationMessageTemplateCollectionPage.class);
+            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates"), NotificationMessageTemplateCollectionPage.class);
         }
 
         if (json.has("resourceOperations")) {
-            resourceOperations = serializer.deserializeObject(json.get("resourceOperations").toString(), ResourceOperationCollectionPage.class);
+            resourceOperations = serializer.deserializeObject(json.get("resourceOperations"), ResourceOperationCollectionPage.class);
         }
 
         if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), DeviceAndAppManagementRoleAssignmentCollectionPage.class);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), DeviceAndAppManagementRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("roleDefinitions")) {
-            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions").toString(), RoleDefinitionCollectionPage.class);
+            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), RoleDefinitionCollectionPage.class);
         }
 
         if (json.has("remoteAssistancePartners")) {
-            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners").toString(), RemoteAssistancePartnerCollectionPage.class);
+            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners"), RemoteAssistancePartnerCollectionPage.class);
         }
 
         if (json.has("telecomExpenseManagementPartners")) {
-            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners").toString(), TelecomExpenseManagementPartnerCollectionPage.class);
+            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners"), TelecomExpenseManagementPartnerCollectionPage.class);
         }
 
         if (json.has("troubleshootingEvents")) {
-            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents").toString(), DeviceManagementTroubleshootingEventCollectionPage.class);
+            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents"), DeviceManagementTroubleshootingEventCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionAppLearningSummaries")) {
-            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries").toString(), WindowsInformationProtectionAppLearningSummaryCollectionPage.class);
+            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries"), WindowsInformationProtectionAppLearningSummaryCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionNetworkLearningSummaries")) {
-            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries").toString(), WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
+            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries"), WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
         }
     }
 }

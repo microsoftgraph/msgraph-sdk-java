@@ -117,7 +117,7 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
 
 
         if (json.has("results")) {
-            results = serializer.deserializeObject(json.get("results").toString(), ThreatAssessmentResultCollectionPage.class);
+            results = serializer.deserializeObject(json.get("results"), ThreatAssessmentResultCollectionPage.class);
         }
     }
 }

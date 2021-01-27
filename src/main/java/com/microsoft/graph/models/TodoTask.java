@@ -172,11 +172,11 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
         }
 
         if (json.has("linkedResources")) {
-            linkedResources = serializer.deserializeObject(json.get("linkedResources").toString(), LinkedResourceCollectionPage.class);
+            linkedResources = serializer.deserializeObject(json.get("linkedResources"), LinkedResourceCollectionPage.class);
         }
     }
 }

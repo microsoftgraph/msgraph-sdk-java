@@ -180,27 +180,27 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns").toString(), ColumnDefinitionCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns"), ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("contentTypes")) {
-            contentTypes = serializer.deserializeObject(json.get("contentTypes").toString(), ContentTypeCollectionPage.class);
+            contentTypes = serializer.deserializeObject(json.get("contentTypes"), ContentTypeCollectionPage.class);
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives"), DriveCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), BaseItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), BaseItemCollectionPage.class);
         }
 
         if (json.has("lists")) {
-            lists = serializer.deserializeObject(json.get("lists").toString(), ListCollectionPage.class);
+            lists = serializer.deserializeObject(json.get("lists"), ListCollectionPage.class);
         }
 
         if (json.has("sites")) {
-            sites = serializer.deserializeObject(json.get("sites").toString(), SiteCollectionPage.class);
+            sites = serializer.deserializeObject(json.get("sites"), SiteCollectionPage.class);
         }
     }
 }

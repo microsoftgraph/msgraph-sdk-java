@@ -123,7 +123,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("borders")) {
-            borders = serializer.deserializeObject(json.get("borders").toString(), WorkbookRangeBorderCollectionPage.class);
+            borders = serializer.deserializeObject(json.get("borders"), WorkbookRangeBorderCollectionPage.class);
         }
     }
 }

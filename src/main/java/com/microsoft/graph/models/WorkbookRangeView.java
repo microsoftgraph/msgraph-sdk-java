@@ -147,7 +147,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
 
         if (json.has("rows")) {
-            rows = serializer.deserializeObject(json.get("rows").toString(), WorkbookRangeViewCollectionPage.class);
+            rows = serializer.deserializeObject(json.get("rows"), WorkbookRangeViewCollectionPage.class);
         }
     }
 }

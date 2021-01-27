@@ -48,7 +48,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threatAssessmentRequests")) {
-            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), ThreatAssessmentRequestCollectionPage.class);
+            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests"), ThreatAssessmentRequestCollectionPage.class);
         }
     }
 }

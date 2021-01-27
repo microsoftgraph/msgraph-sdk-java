@@ -59,11 +59,11 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("namedLocations")) {
-            namedLocations = serializer.deserializeObject(json.get("namedLocations").toString(), NamedLocationCollectionPage.class);
+            namedLocations = serializer.deserializeObject(json.get("namedLocations"), NamedLocationCollectionPage.class);
         }
 
         if (json.has("policies")) {
-            policies = serializer.deserializeObject(json.get("policies").toString(), ConditionalAccessPolicyCollectionPage.class);
+            policies = serializer.deserializeObject(json.get("policies"), ConditionalAccessPolicyCollectionPage.class);
         }
     }
 }

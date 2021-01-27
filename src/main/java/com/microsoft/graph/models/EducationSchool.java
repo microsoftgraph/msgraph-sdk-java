@@ -156,11 +156,11 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes").toString(), EducationClassCollectionPage.class);
+            classes = serializer.deserializeObject(json.get("classes"), EducationClassCollectionPage.class);
         }
 
         if (json.has("users")) {
-            users = serializer.deserializeObject(json.get("users").toString(), EducationUserCollectionPage.class);
+            users = serializer.deserializeObject(json.get("users"), EducationUserCollectionPage.class);
         }
     }
 }

@@ -494,11 +494,11 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("deviceCompliancePolicyStates")) {
-            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates").toString(), DeviceCompliancePolicyStateCollectionPage.class);
+            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates"), DeviceCompliancePolicyStateCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationStates")) {
-            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), DeviceConfigurationStateCollectionPage.class);
+            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates"), DeviceConfigurationStateCollectionPage.class);
         }
     }
 }

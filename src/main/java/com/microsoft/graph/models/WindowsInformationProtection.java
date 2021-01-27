@@ -272,15 +272,15 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), TargetedManagedAppPolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("exemptAppLockerFiles")) {
-            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles").toString(), WindowsInformationProtectionAppLockerFileCollectionPage.class);
+            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles"), WindowsInformationProtectionAppLockerFileCollectionPage.class);
         }
 
         if (json.has("protectedAppLockerFiles")) {
-            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), WindowsInformationProtectionAppLockerFileCollectionPage.class);
+            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles"), WindowsInformationProtectionAppLockerFileCollectionPage.class);
         }
     }
 }

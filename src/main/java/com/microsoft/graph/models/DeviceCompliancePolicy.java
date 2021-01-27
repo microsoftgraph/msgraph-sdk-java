@@ -157,23 +157,23 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), DeviceCompliancePolicyAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), DeviceCompliancePolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceSettingStateSummaries")) {
-            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), SettingStateDeviceSummaryCollectionPage.class);
+            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries"), SettingStateDeviceSummaryCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), DeviceComplianceDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), DeviceComplianceDeviceStatusCollectionPage.class);
         }
 
         if (json.has("scheduledActionsForRule")) {
-            scheduledActionsForRule = serializer.deserializeObject(json.get("scheduledActionsForRule").toString(), DeviceComplianceScheduledActionForRuleCollectionPage.class);
+            scheduledActionsForRule = serializer.deserializeObject(json.get("scheduledActionsForRule"), DeviceComplianceScheduledActionForRuleCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), DeviceComplianceUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses"), DeviceComplianceUserStatusCollectionPage.class);
         }
     }
 }

@@ -57,7 +57,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
 
 
         if (json.has("scheduledActionConfigurations")) {
-            scheduledActionConfigurations = serializer.deserializeObject(json.get("scheduledActionConfigurations").toString(), DeviceComplianceActionItemCollectionPage.class);
+            scheduledActionConfigurations = serializer.deserializeObject(json.get("scheduledActionConfigurations"), DeviceComplianceActionItemCollectionPage.class);
         }
     }
 }

@@ -227,39 +227,39 @@ public class Schedule extends Entity implements IJsonBackedObject {
 
 
         if (json.has("offerShiftRequests")) {
-            offerShiftRequests = serializer.deserializeObject(json.get("offerShiftRequests").toString(), OfferShiftRequestCollectionPage.class);
+            offerShiftRequests = serializer.deserializeObject(json.get("offerShiftRequests"), OfferShiftRequestCollectionPage.class);
         }
 
         if (json.has("openShiftChangeRequests")) {
-            openShiftChangeRequests = serializer.deserializeObject(json.get("openShiftChangeRequests").toString(), OpenShiftChangeRequestCollectionPage.class);
+            openShiftChangeRequests = serializer.deserializeObject(json.get("openShiftChangeRequests"), OpenShiftChangeRequestCollectionPage.class);
         }
 
         if (json.has("openShifts")) {
-            openShifts = serializer.deserializeObject(json.get("openShifts").toString(), OpenShiftCollectionPage.class);
+            openShifts = serializer.deserializeObject(json.get("openShifts"), OpenShiftCollectionPage.class);
         }
 
         if (json.has("schedulingGroups")) {
-            schedulingGroups = serializer.deserializeObject(json.get("schedulingGroups").toString(), SchedulingGroupCollectionPage.class);
+            schedulingGroups = serializer.deserializeObject(json.get("schedulingGroups"), SchedulingGroupCollectionPage.class);
         }
 
         if (json.has("shifts")) {
-            shifts = serializer.deserializeObject(json.get("shifts").toString(), ShiftCollectionPage.class);
+            shifts = serializer.deserializeObject(json.get("shifts"), ShiftCollectionPage.class);
         }
 
         if (json.has("swapShiftsChangeRequests")) {
-            swapShiftsChangeRequests = serializer.deserializeObject(json.get("swapShiftsChangeRequests").toString(), SwapShiftsChangeRequestCollectionPage.class);
+            swapShiftsChangeRequests = serializer.deserializeObject(json.get("swapShiftsChangeRequests"), SwapShiftsChangeRequestCollectionPage.class);
         }
 
         if (json.has("timeOffReasons")) {
-            timeOffReasons = serializer.deserializeObject(json.get("timeOffReasons").toString(), TimeOffReasonCollectionPage.class);
+            timeOffReasons = serializer.deserializeObject(json.get("timeOffReasons"), TimeOffReasonCollectionPage.class);
         }
 
         if (json.has("timeOffRequests")) {
-            timeOffRequests = serializer.deserializeObject(json.get("timeOffRequests").toString(), TimeOffRequestCollectionPage.class);
+            timeOffRequests = serializer.deserializeObject(json.get("timeOffRequests"), TimeOffRequestCollectionPage.class);
         }
 
         if (json.has("timesOff")) {
-            timesOff = serializer.deserializeObject(json.get("timesOff").toString(), TimeOffCollectionPage.class);
+            timesOff = serializer.deserializeObject(json.get("timesOff"), TimeOffCollectionPage.class);
         }
     }
 }

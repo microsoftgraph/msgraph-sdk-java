@@ -48,7 +48,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("workforceIntegrations")) {
-            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations").toString(), WorkforceIntegrationCollectionPage.class);
+            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations"), WorkforceIntegrationCollectionPage.class);
         }
     }
 }

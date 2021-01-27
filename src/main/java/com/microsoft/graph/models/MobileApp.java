@@ -176,11 +176,11 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), MobileAppAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), MobileAppAssignmentCollectionPage.class);
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories").toString(), MobileAppCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), MobileAppCategoryCollectionPage.class);
         }
     }
 }

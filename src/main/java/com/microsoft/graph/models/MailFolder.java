@@ -137,23 +137,23 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
 
         if (json.has("childFolders")) {
-            childFolders = serializer.deserializeObject(json.get("childFolders").toString(), MailFolderCollectionPage.class);
+            childFolders = serializer.deserializeObject(json.get("childFolders"), MailFolderCollectionPage.class);
         }
 
         if (json.has("messageRules")) {
-            messageRules = serializer.deserializeObject(json.get("messageRules").toString(), MessageRuleCollectionPage.class);
+            messageRules = serializer.deserializeObject(json.get("messageRules"), MessageRuleCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages").toString(), MessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), MessageCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

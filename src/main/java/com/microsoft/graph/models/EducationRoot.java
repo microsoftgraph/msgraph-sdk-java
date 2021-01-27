@@ -79,15 +79,15 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes").toString(), EducationClassCollectionPage.class);
+            classes = serializer.deserializeObject(json.get("classes"), EducationClassCollectionPage.class);
         }
 
         if (json.has("schools")) {
-            schools = serializer.deserializeObject(json.get("schools").toString(), EducationSchoolCollectionPage.class);
+            schools = serializer.deserializeObject(json.get("schools"), EducationSchoolCollectionPage.class);
         }
 
         if (json.has("users")) {
-            users = serializer.deserializeObject(json.get("users").toString(), EducationUserCollectionPage.class);
+            users = serializer.deserializeObject(json.get("users"), EducationUserCollectionPage.class);
         }
     }
 }

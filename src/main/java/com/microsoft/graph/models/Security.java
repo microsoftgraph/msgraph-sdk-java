@@ -70,15 +70,15 @@ public class Security extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alerts")) {
-            alerts = serializer.deserializeObject(json.get("alerts").toString(), AlertCollectionPage.class);
+            alerts = serializer.deserializeObject(json.get("alerts"), AlertCollectionPage.class);
         }
 
         if (json.has("secureScoreControlProfiles")) {
-            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), SecureScoreControlProfileCollectionPage.class);
+            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles"), SecureScoreControlProfileCollectionPage.class);
         }
 
         if (json.has("secureScores")) {
-            secureScores = serializer.deserializeObject(json.get("secureScores").toString(), SecureScoreCollectionPage.class);
+            secureScores = serializer.deserializeObject(json.get("secureScores"), SecureScoreCollectionPage.class);
         }
     }
 }

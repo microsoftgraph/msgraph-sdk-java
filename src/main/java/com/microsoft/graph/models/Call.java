@@ -254,11 +254,11 @@ public class Call extends Entity implements IJsonBackedObject {
 
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), CommsOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), CommsOperationCollectionPage.class);
         }
 
         if (json.has("participants")) {
-            participants = serializer.deserializeObject(json.get("participants").toString(), ParticipantCollectionPage.class);
+            participants = serializer.deserializeObject(json.get("participants"), ParticipantCollectionPage.class);
         }
     }
 }

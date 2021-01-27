@@ -169,11 +169,11 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns").toString(), WorkbookTableColumnCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns"), WorkbookTableColumnCollectionPage.class);
         }
 
         if (json.has("rows")) {
-            rows = serializer.deserializeObject(json.get("rows").toString(), WorkbookTableRowCollectionPage.class);
+            rows = serializer.deserializeObject(json.get("rows"), WorkbookTableRowCollectionPage.class);
         }
     }
 }

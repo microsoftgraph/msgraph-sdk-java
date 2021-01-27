@@ -167,7 +167,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
 
 
         if (json.has("historyItems")) {
-            historyItems = serializer.deserializeObject(json.get("historyItems").toString(), ActivityHistoryItemCollectionPage.class);
+            historyItems = serializer.deserializeObject(json.get("historyItems"), ActivityHistoryItemCollectionPage.class);
         }
     }
 }

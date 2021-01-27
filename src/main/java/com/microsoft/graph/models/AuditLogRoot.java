@@ -70,15 +70,15 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("directoryAudits")) {
-            directoryAudits = serializer.deserializeObject(json.get("directoryAudits").toString(), DirectoryAuditCollectionPage.class);
+            directoryAudits = serializer.deserializeObject(json.get("directoryAudits"), DirectoryAuditCollectionPage.class);
         }
 
         if (json.has("restrictedSignIns")) {
-            restrictedSignIns = serializer.deserializeObject(json.get("restrictedSignIns").toString(), RestrictedSignInCollectionPage.class);
+            restrictedSignIns = serializer.deserializeObject(json.get("restrictedSignIns"), RestrictedSignInCollectionPage.class);
         }
 
         if (json.has("signIns")) {
-            signIns = serializer.deserializeObject(json.get("signIns").toString(), SignInCollectionPage.class);
+            signIns = serializer.deserializeObject(json.get("signIns"), SignInCollectionPage.class);
         }
     }
 }

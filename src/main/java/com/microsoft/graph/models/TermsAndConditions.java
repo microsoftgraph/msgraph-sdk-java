@@ -131,11 +131,11 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
 
 
         if (json.has("acceptanceStatuses")) {
-            acceptanceStatuses = serializer.deserializeObject(json.get("acceptanceStatuses").toString(), TermsAndConditionsAcceptanceStatusCollectionPage.class);
+            acceptanceStatuses = serializer.deserializeObject(json.get("acceptanceStatuses"), TermsAndConditionsAcceptanceStatusCollectionPage.class);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), TermsAndConditionsAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), TermsAndConditionsAssignmentCollectionPage.class);
         }
     }
 }

@@ -234,19 +234,19 @@ public class Team extends Entity implements IJsonBackedObject {
 
 
         if (json.has("channels")) {
-            channels = serializer.deserializeObject(json.get("channels").toString(), ChannelCollectionPage.class);
+            channels = serializer.deserializeObject(json.get("channels"), ChannelCollectionPage.class);
         }
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), TeamsAppInstallationCollectionPage.class);
+            installedApps = serializer.deserializeObject(json.get("installedApps"), TeamsAppInstallationCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), ConversationMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), ConversationMemberCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), TeamsAsyncOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), TeamsAsyncOperationCollectionPage.class);
         }
     }
 }

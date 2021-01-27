@@ -103,27 +103,27 @@ public class Onenote extends Entity implements IJsonBackedObject {
 
 
         if (json.has("notebooks")) {
-            notebooks = serializer.deserializeObject(json.get("notebooks").toString(), NotebookCollectionPage.class);
+            notebooks = serializer.deserializeObject(json.get("notebooks"), NotebookCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), OnenoteOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), OnenoteOperationCollectionPage.class);
         }
 
         if (json.has("pages")) {
-            pages = serializer.deserializeObject(json.get("pages").toString(), OnenotePageCollectionPage.class);
+            pages = serializer.deserializeObject(json.get("pages"), OnenotePageCollectionPage.class);
         }
 
         if (json.has("resources")) {
-            resources = serializer.deserializeObject(json.get("resources").toString(), OnenoteResourceCollectionPage.class);
+            resources = serializer.deserializeObject(json.get("resources"), OnenoteResourceCollectionPage.class);
         }
 
         if (json.has("sectionGroups")) {
-            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), SectionGroupCollectionPage.class);
+            sectionGroups = serializer.deserializeObject(json.get("sectionGroups"), SectionGroupCollectionPage.class);
         }
 
         if (json.has("sections")) {
-            sections = serializer.deserializeObject(json.get("sections").toString(), OnenoteSectionCollectionPage.class);
+            sections = serializer.deserializeObject(json.get("sections"), OnenoteSectionCollectionPage.class);
         }
     }
 }

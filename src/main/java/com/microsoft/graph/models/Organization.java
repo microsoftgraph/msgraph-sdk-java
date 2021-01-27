@@ -260,11 +260,11 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("certificateBasedAuthConfiguration")) {
-            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration").toString(), CertificateBasedAuthConfigurationCollectionPage.class);
+            certificateBasedAuthConfiguration = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration"), CertificateBasedAuthConfigurationCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
         }
     }
 }

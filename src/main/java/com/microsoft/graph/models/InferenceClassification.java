@@ -48,7 +48,7 @@ public class InferenceClassification extends Entity implements IJsonBackedObject
 
 
         if (json.has("overrides")) {
-            overrides = serializer.deserializeObject(json.get("overrides").toString(), InferenceClassificationOverrideCollectionPage.class);
+            overrides = serializer.deserializeObject(json.get("overrides"), InferenceClassificationOverrideCollectionPage.class);
         }
     }
 }

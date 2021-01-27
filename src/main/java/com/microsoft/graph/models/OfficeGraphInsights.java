@@ -70,15 +70,15 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
 
 
         if (json.has("shared")) {
-            shared = serializer.deserializeObject(json.get("shared").toString(), SharedInsightCollectionPage.class);
+            shared = serializer.deserializeObject(json.get("shared"), SharedInsightCollectionPage.class);
         }
 
         if (json.has("trending")) {
-            trending = serializer.deserializeObject(json.get("trending").toString(), TrendingCollectionPage.class);
+            trending = serializer.deserializeObject(json.get("trending"), TrendingCollectionPage.class);
         }
 
         if (json.has("used")) {
-            used = serializer.deserializeObject(json.get("used").toString(), UsedInsightCollectionPage.class);
+            used = serializer.deserializeObject(json.get("used"), UsedInsightCollectionPage.class);
         }
     }
 }

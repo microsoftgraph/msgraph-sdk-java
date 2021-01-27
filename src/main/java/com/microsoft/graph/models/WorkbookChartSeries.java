@@ -67,7 +67,7 @@ public class WorkbookChartSeries extends Entity implements IJsonBackedObject {
 
 
         if (json.has("points")) {
-            points = serializer.deserializeObject(json.get("points").toString(), WorkbookChartPointCollectionPage.class);
+            points = serializer.deserializeObject(json.get("points"), WorkbookChartPointCollectionPage.class);
         }
     }
 }

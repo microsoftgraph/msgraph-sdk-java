@@ -227,59 +227,59 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managedEBooks")) {
-            managedEBooks = serializer.deserializeObject(json.get("managedEBooks").toString(), ManagedEBookCollectionPage.class);
+            managedEBooks = serializer.deserializeObject(json.get("managedEBooks"), ManagedEBookCollectionPage.class);
         }
 
         if (json.has("mobileAppCategories")) {
-            mobileAppCategories = serializer.deserializeObject(json.get("mobileAppCategories").toString(), MobileAppCategoryCollectionPage.class);
+            mobileAppCategories = serializer.deserializeObject(json.get("mobileAppCategories"), MobileAppCategoryCollectionPage.class);
         }
 
         if (json.has("mobileAppConfigurations")) {
-            mobileAppConfigurations = serializer.deserializeObject(json.get("mobileAppConfigurations").toString(), ManagedDeviceMobileAppConfigurationCollectionPage.class);
+            mobileAppConfigurations = serializer.deserializeObject(json.get("mobileAppConfigurations"), ManagedDeviceMobileAppConfigurationCollectionPage.class);
         }
 
         if (json.has("mobileApps")) {
-            mobileApps = serializer.deserializeObject(json.get("mobileApps").toString(), MobileAppCollectionPage.class);
+            mobileApps = serializer.deserializeObject(json.get("mobileApps"), MobileAppCollectionPage.class);
         }
 
         if (json.has("vppTokens")) {
-            vppTokens = serializer.deserializeObject(json.get("vppTokens").toString(), VppTokenCollectionPage.class);
+            vppTokens = serializer.deserializeObject(json.get("vppTokens"), VppTokenCollectionPage.class);
         }
 
         if (json.has("androidManagedAppProtections")) {
-            androidManagedAppProtections = serializer.deserializeObject(json.get("androidManagedAppProtections").toString(), AndroidManagedAppProtectionCollectionPage.class);
+            androidManagedAppProtections = serializer.deserializeObject(json.get("androidManagedAppProtections"), AndroidManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("defaultManagedAppProtections")) {
-            defaultManagedAppProtections = serializer.deserializeObject(json.get("defaultManagedAppProtections").toString(), DefaultManagedAppProtectionCollectionPage.class);
+            defaultManagedAppProtections = serializer.deserializeObject(json.get("defaultManagedAppProtections"), DefaultManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("iosManagedAppProtections")) {
-            iosManagedAppProtections = serializer.deserializeObject(json.get("iosManagedAppProtections").toString(), IosManagedAppProtectionCollectionPage.class);
+            iosManagedAppProtections = serializer.deserializeObject(json.get("iosManagedAppProtections"), IosManagedAppProtectionCollectionPage.class);
         }
 
         if (json.has("managedAppPolicies")) {
-            managedAppPolicies = serializer.deserializeObject(json.get("managedAppPolicies").toString(), ManagedAppPolicyCollectionPage.class);
+            managedAppPolicies = serializer.deserializeObject(json.get("managedAppPolicies"), ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("managedAppRegistrations")) {
-            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), ManagedAppRegistrationCollectionPage.class);
+            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations"), ManagedAppRegistrationCollectionPage.class);
         }
 
         if (json.has("managedAppStatuses")) {
-            managedAppStatuses = serializer.deserializeObject(json.get("managedAppStatuses").toString(), ManagedAppStatusCollectionPage.class);
+            managedAppStatuses = serializer.deserializeObject(json.get("managedAppStatuses"), ManagedAppStatusCollectionPage.class);
         }
 
         if (json.has("mdmWindowsInformationProtectionPolicies")) {
-            mdmWindowsInformationProtectionPolicies = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies").toString(), MdmWindowsInformationProtectionPolicyCollectionPage.class);
+            mdmWindowsInformationProtectionPolicies = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies"), MdmWindowsInformationProtectionPolicyCollectionPage.class);
         }
 
         if (json.has("targetedManagedAppConfigurations")) {
-            targetedManagedAppConfigurations = serializer.deserializeObject(json.get("targetedManagedAppConfigurations").toString(), TargetedManagedAppConfigurationCollectionPage.class);
+            targetedManagedAppConfigurations = serializer.deserializeObject(json.get("targetedManagedAppConfigurations"), TargetedManagedAppConfigurationCollectionPage.class);
         }
 
         if (json.has("windowsInformationProtectionPolicies")) {
-            windowsInformationProtectionPolicies = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies").toString(), WindowsInformationProtectionPolicyCollectionPage.class);
+            windowsInformationProtectionPolicies = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies"), WindowsInformationProtectionPolicyCollectionPage.class);
         }
     }
 }

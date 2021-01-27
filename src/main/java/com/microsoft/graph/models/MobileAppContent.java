@@ -48,7 +48,7 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
 
 
         if (json.has("files")) {
-            files = serializer.deserializeObject(json.get("files").toString(), MobileAppContentFileCollectionPage.class);
+            files = serializer.deserializeObject(json.get("files"), MobileAppContentFileCollectionPage.class);
         }
     }
 }

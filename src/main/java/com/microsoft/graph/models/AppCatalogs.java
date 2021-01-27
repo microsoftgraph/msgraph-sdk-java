@@ -48,7 +48,7 @@ public class AppCatalogs extends Entity implements IJsonBackedObject {
 
 
         if (json.has("teamsApps")) {
-            teamsApps = serializer.deserializeObject(json.get("teamsApps").toString(), TeamsAppCollectionPage.class);
+            teamsApps = serializer.deserializeObject(json.get("teamsApps"), TeamsAppCollectionPage.class);
         }
     }
 }

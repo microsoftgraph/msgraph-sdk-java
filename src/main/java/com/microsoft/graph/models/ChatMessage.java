@@ -229,11 +229,11 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("hostedContents")) {
-            hostedContents = serializer.deserializeObject(json.get("hostedContents").toString(), ChatMessageHostedContentCollectionPage.class);
+            hostedContents = serializer.deserializeObject(json.get("hostedContents"), ChatMessageHostedContentCollectionPage.class);
         }
 
         if (json.has("replies")) {
-            replies = serializer.deserializeObject(json.get("replies").toString(), ChatMessageCollectionPage.class);
+            replies = serializer.deserializeObject(json.get("replies"), ChatMessageCollectionPage.class);
         }
     }
 }

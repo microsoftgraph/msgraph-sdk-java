@@ -131,7 +131,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
 
         if (json.has("columnLinks")) {
-            columnLinks = serializer.deserializeObject(json.get("columnLinks").toString(), ColumnLinkCollectionPage.class);
+            columnLinks = serializer.deserializeObject(json.get("columnLinks"), ColumnLinkCollectionPage.class);
         }
     }
 }

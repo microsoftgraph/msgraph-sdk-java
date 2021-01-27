@@ -134,31 +134,31 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
 
         if (json.has("activityBasedTimeoutPolicies")) {
-            activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies").toString(), ActivityBasedTimeoutPolicyCollectionPage.class);
+            activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies"), ActivityBasedTimeoutPolicyCollectionPage.class);
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), ClaimsMappingPolicyCollectionPage.class);
+            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies"), ClaimsMappingPolicyCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("permissionGrantPolicies")) {
-            permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies").toString(), PermissionGrantPolicyCollectionPage.class);
+            permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies"), PermissionGrantPolicyCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), TokenLifetimePolicyCollectionPage.class);
         }
 
         if (json.has("conditionalAccessPolicies")) {
-            conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies").toString(), ConditionalAccessPolicyCollectionPage.class);
+            conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies"), ConditionalAccessPolicyCollectionPage.class);
         }
     }
 }

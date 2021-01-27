@@ -99,19 +99,19 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
 
 
         if (json.has("childFolders")) {
-            childFolders = serializer.deserializeObject(json.get("childFolders").toString(), ContactFolderCollectionPage.class);
+            childFolders = serializer.deserializeObject(json.get("childFolders"), ContactFolderCollectionPage.class);
         }
 
         if (json.has("contacts")) {
-            contacts = serializer.deserializeObject(json.get("contacts").toString(), ContactCollectionPage.class);
+            contacts = serializer.deserializeObject(json.get("contacts"), ContactCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

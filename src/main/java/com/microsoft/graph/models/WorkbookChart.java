@@ -153,7 +153,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
 
 
         if (json.has("series")) {
-            series = serializer.deserializeObject(json.get("series").toString(), WorkbookChartSeriesCollectionPage.class);
+            series = serializer.deserializeObject(json.get("series"), WorkbookChartSeriesCollectionPage.class);
         }
     }
 }

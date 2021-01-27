@@ -105,7 +105,7 @@ public class Session extends Entity implements IJsonBackedObject {
 
 
         if (json.has("segments")) {
-            segments = serializer.deserializeObject(json.get("segments").toString(), SegmentCollectionPage.class);
+            segments = serializer.deserializeObject(json.get("segments"), SegmentCollectionPage.class);
         }
     }
 }

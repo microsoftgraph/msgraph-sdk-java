@@ -131,7 +131,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities").toString(), ItemActivityCollectionPage.class);
+            activities = serializer.deserializeObject(json.get("activities"), ItemActivityCollectionPage.class);
         }
     }
 }
