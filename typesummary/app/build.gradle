@@ -17,12 +17,15 @@ repositories {
     flatDir {
         dirs '../../build/libs'
     }
+    jcenter { //TODO remove when releasing
+        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+    }
 }
 
 dependencies {
     implementation 'com.google.guava:guava:29.0-jre'
 
-    implementation 'com.microsoft.graph:microsoft-graph-core:1.0.5'
+    implementation 'com.microsoft.graph:microsoft-graph-core:2.0.0-SNAPSHOT' //TODO update this when releasing
 
     implementation name: 'msgraph-sdk-java'
 }
