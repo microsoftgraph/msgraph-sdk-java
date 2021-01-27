@@ -48,7 +48,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("masterCategories")) {
-            masterCategories = serializer.deserializeObject(json.get("masterCategories").toString(), OutlookCategoryCollectionPage.class);
+            masterCategories = serializer.deserializeObject(json.get("masterCategories"), OutlookCategoryCollectionPage.class);
         }
     }
 }

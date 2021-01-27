@@ -64,7 +64,7 @@ public class StsPolicy extends PolicyBase implements IJsonBackedObject {
 
 
         if (json.has("appliesTo")) {
-            appliesTo = serializer.deserializeObject(json.get("appliesTo").toString(), DirectoryObjectCollectionPage.class);
+            appliesTo = serializer.deserializeObject(json.get("appliesTo"), DirectoryObjectCollectionPage.class);
         }
     }
 }

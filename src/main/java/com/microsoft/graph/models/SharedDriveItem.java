@@ -116,7 +116,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), DriveItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), DriveItemCollectionPage.class);
         }
     }
 }

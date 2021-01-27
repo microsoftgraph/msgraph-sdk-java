@@ -94,15 +94,15 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("scopedRoleMembers")) {
-            scopedRoleMembers = serializer.deserializeObject(json.get("scopedRoleMembers").toString(), ScopedRoleMembershipCollectionPage.class);
+            scopedRoleMembers = serializer.deserializeObject(json.get("scopedRoleMembers"), ScopedRoleMembershipCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
         }
     }
 }

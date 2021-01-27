@@ -75,7 +75,7 @@ public class MobileLobApp extends MobileApp implements IJsonBackedObject {
 
 
         if (json.has("contentVersions")) {
-            contentVersions = serializer.deserializeObject(json.get("contentVersions").toString(), MobileAppContentCollectionPage.class);
+            contentVersions = serializer.deserializeObject(json.get("contentVersions"), MobileAppContentCollectionPage.class);
         }
     }
 }

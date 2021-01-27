@@ -178,15 +178,15 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
 
 
         if (json.has("appliedPolicies")) {
-            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies").toString(), ManagedAppPolicyCollectionPage.class);
+            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies"), ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("intendedPolicies")) {
-            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies").toString(), ManagedAppPolicyCollectionPage.class);
+            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies"), ManagedAppPolicyCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), ManagedAppOperationCollectionPage.class);
+            operations = serializer.deserializeObject(json.get("operations"), ManagedAppOperationCollectionPage.class);
         }
     }
 }

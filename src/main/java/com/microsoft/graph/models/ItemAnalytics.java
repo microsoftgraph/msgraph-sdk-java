@@ -66,7 +66,7 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
 
 
         if (json.has("itemActivityStats")) {
-            itemActivityStats = serializer.deserializeObject(json.get("itemActivityStats").toString(), ItemActivityStatCollectionPage.class);
+            itemActivityStats = serializer.deserializeObject(json.get("itemActivityStats"), ItemActivityStatCollectionPage.class);
         }
     }
 }

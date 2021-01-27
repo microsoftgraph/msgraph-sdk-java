@@ -146,19 +146,19 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), DeviceConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), DeviceConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceSettingStateSummaries")) {
-            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), SettingStateDeviceSummaryCollectionPage.class);
+            deviceSettingStateSummaries = serializer.deserializeObject(json.get("deviceSettingStateSummaries"), SettingStateDeviceSummaryCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), DeviceConfigurationDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), DeviceConfigurationDeviceStatusCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), DeviceConfigurationUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses"), DeviceConfigurationUserStatusCollectionPage.class);
         }
     }
 }

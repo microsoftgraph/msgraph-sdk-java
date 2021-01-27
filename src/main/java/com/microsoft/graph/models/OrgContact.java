@@ -197,15 +197,15 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports").toString(), DirectoryObjectCollectionPage.class);
+            directReports = serializer.deserializeObject(json.get("directReports"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
         }
     }
 }

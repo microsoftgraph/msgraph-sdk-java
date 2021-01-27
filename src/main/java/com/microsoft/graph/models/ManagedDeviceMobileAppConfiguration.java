@@ -144,15 +144,15 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses"), ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses"), ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
         }
     }
 }

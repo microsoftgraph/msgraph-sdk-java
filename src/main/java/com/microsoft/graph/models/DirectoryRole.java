@@ -83,11 +83,11 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("scopedMembers")) {
-            scopedMembers = serializer.deserializeObject(json.get("scopedMembers").toString(), ScopedRoleMembershipCollectionPage.class);
+            scopedMembers = serializer.deserializeObject(json.get("scopedMembers"), ScopedRoleMembershipCollectionPage.class);
         }
     }
 }

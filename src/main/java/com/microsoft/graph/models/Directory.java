@@ -59,11 +59,11 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("administrativeUnits")) {
-            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits").toString(), AdministrativeUnitCollectionPage.class);
+            administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), AdministrativeUnitCollectionPage.class);
         }
 
         if (json.has("deletedItems")) {
-            deletedItems = serializer.deserializeObject(json.get("deletedItems").toString(), DirectoryObjectCollectionPage.class);
+            deletedItems = serializer.deserializeObject(json.get("deletedItems"), DirectoryObjectCollectionPage.class);
         }
     }
 }

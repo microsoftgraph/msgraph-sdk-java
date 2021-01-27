@@ -102,7 +102,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), EnrollmentConfigurationAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), EnrollmentConfigurationAssignmentCollectionPage.class);
         }
     }
 }

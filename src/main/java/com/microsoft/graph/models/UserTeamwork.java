@@ -48,7 +48,7 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("installedApps")) {
-            installedApps = serializer.deserializeObject(json.get("installedApps").toString(), UserScopeTeamsAppInstallationCollectionPage.class);
+            installedApps = serializer.deserializeObject(json.get("installedApps"), UserScopeTeamsAppInstallationCollectionPage.class);
         }
     }
 }

@@ -135,15 +135,15 @@ public class Channel extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), ConversationMemberCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), ConversationMemberCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages").toString(), ChatMessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), ChatMessageCollectionPage.class);
         }
 
         if (json.has("tabs")) {
-            tabs = serializer.deserializeObject(json.get("tabs").toString(), TeamsTabCollectionPage.class);
+            tabs = serializer.deserializeObject(json.get("tabs"), TeamsTabCollectionPage.class);
         }
     }
 }

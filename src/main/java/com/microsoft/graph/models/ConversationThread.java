@@ -121,7 +121,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
 
         if (json.has("posts")) {
-            posts = serializer.deserializeObject(json.get("posts").toString(), PostCollectionPage.class);
+            posts = serializer.deserializeObject(json.get("posts"), PostCollectionPage.class);
         }
     }
 }

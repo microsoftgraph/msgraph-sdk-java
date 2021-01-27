@@ -85,7 +85,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
 
 
         if (json.has("localizedNotificationMessages")) {
-            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages").toString(), LocalizedNotificationMessageCollectionPage.class);
+            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages"), LocalizedNotificationMessageCollectionPage.class);
         }
     }
 }

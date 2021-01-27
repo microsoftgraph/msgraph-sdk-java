@@ -66,7 +66,7 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
 
 
         if (json.has("replies")) {
-            replies = serializer.deserializeObject(json.get("replies").toString(), WorkbookCommentReplyCollectionPage.class);
+            replies = serializer.deserializeObject(json.get("replies"), WorkbookCommentReplyCollectionPage.class);
         }
     }
 }

@@ -96,7 +96,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements IJson
 
 
         if (json.has("pages")) {
-            pages = serializer.deserializeObject(json.get("pages").toString(), OnenotePageCollectionPage.class);
+            pages = serializer.deserializeObject(json.get("pages"), OnenotePageCollectionPage.class);
         }
     }
 }

@@ -84,7 +84,7 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
 
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), DeviceInstallStateCollectionPage.class);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates"), DeviceInstallStateCollectionPage.class);
         }
     }
 }

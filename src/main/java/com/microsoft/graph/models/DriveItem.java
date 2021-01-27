@@ -328,23 +328,23 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("children")) {
-            children = serializer.deserializeObject(json.get("children").toString(), DriveItemCollectionPage.class);
+            children = serializer.deserializeObject(json.get("children"), DriveItemCollectionPage.class);
         }
 
         if (json.has("permissions")) {
-            permissions = serializer.deserializeObject(json.get("permissions").toString(), PermissionCollectionPage.class);
+            permissions = serializer.deserializeObject(json.get("permissions"), PermissionCollectionPage.class);
         }
 
         if (json.has("subscriptions")) {
-            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), SubscriptionCollectionPage.class);
+            subscriptions = serializer.deserializeObject(json.get("subscriptions"), SubscriptionCollectionPage.class);
         }
 
         if (json.has("thumbnails")) {
-            thumbnails = serializer.deserializeObject(json.get("thumbnails").toString(), ThumbnailSetCollectionPage.class);
+            thumbnails = serializer.deserializeObject(json.get("thumbnails"), ThumbnailSetCollectionPage.class);
         }
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions").toString(), DriveItemVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions"), DriveItemVersionCollectionPage.class);
         }
     }
 }

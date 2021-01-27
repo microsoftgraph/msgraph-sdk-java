@@ -162,15 +162,15 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), ManagedEBookAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), ManagedEBookAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), DeviceInstallStateCollectionPage.class);
+            deviceStates = serializer.deserializeObject(json.get("deviceStates"), DeviceInstallStateCollectionPage.class);
         }
 
         if (json.has("userStateSummary")) {
-            userStateSummary = serializer.deserializeObject(json.get("userStateSummary").toString(), UserInstallStateSummaryCollectionPage.class);
+            userStateSummary = serializer.deserializeObject(json.get("userStateSummary"), UserInstallStateSummaryCollectionPage.class);
         }
     }
 }

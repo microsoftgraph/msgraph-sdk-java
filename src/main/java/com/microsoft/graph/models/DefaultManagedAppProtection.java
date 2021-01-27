@@ -150,7 +150,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
 
 
         if (json.has("apps")) {
-            apps = serializer.deserializeObject(json.get("apps").toString(), ManagedMobileAppCollectionPage.class);
+            apps = serializer.deserializeObject(json.get("apps"), ManagedMobileAppCollectionPage.class);
         }
     }
 }

@@ -76,7 +76,7 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("appDefinitions")) {
-            appDefinitions = serializer.deserializeObject(json.get("appDefinitions").toString(), TeamsAppDefinitionCollectionPage.class);
+            appDefinitions = serializer.deserializeObject(json.get("appDefinitions"), TeamsAppDefinitionCollectionPage.class);
         }
     }
 }

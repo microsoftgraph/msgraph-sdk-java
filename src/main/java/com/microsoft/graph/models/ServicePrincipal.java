@@ -437,59 +437,59 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
 
         if (json.has("appRoleAssignedTo")) {
-            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo").toString(), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo"), AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), ClaimsMappingPolicyCollectionPage.class);
+            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies"), ClaimsMappingPolicyCollectionPage.class);
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), DirectoryObjectCollectionPage.class);
+            createdObjects = serializer.deserializeObject(json.get("createdObjects"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("delegatedPermissionClassifications")) {
-            delegatedPermissionClassifications = serializer.deserializeObject(json.get("delegatedPermissionClassifications").toString(), DelegatedPermissionClassificationCollectionPage.class);
+            delegatedPermissionClassifications = serializer.deserializeObject(json.get("delegatedPermissionClassifications"), DelegatedPermissionClassificationCollectionPage.class);
         }
 
         if (json.has("endpoints")) {
-            endpoints = serializer.deserializeObject(json.get("endpoints").toString(), EndpointCollectionPage.class);
+            endpoints = serializer.deserializeObject(json.get("endpoints"), EndpointCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), OAuth2PermissionGrantCollectionPage.class);
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), OAuth2PermissionGrantCollectionPage.class);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), DirectoryObjectCollectionPage.class);
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), TokenLifetimePolicyCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
         }
     }
 }

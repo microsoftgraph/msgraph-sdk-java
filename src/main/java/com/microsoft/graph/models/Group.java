@@ -632,83 +632,83 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), DirectoryObjectCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("membersWithLicenseErrors")) {
-            membersWithLicenseErrors = serializer.deserializeObject(json.get("membersWithLicenseErrors").toString(), DirectoryObjectCollectionPage.class);
+            membersWithLicenseErrors = serializer.deserializeObject(json.get("membersWithLicenseErrors"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("permissionGrants")) {
-            permissionGrants = serializer.deserializeObject(json.get("permissionGrants").toString(), ResourceSpecificPermissionGrantCollectionPage.class);
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), ResourceSpecificPermissionGrantCollectionPage.class);
         }
 
         if (json.has("settings")) {
-            settings = serializer.deserializeObject(json.get("settings").toString(), GroupSettingCollectionPage.class);
+            settings = serializer.deserializeObject(json.get("settings"), GroupSettingCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveMembers")) {
-            transitiveMembers = serializer.deserializeObject(json.get("transitiveMembers").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMembers = serializer.deserializeObject(json.get("transitiveMembers"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("acceptedSenders")) {
-            acceptedSenders = serializer.deserializeObject(json.get("acceptedSenders").toString(), DirectoryObjectCollectionPage.class);
+            acceptedSenders = serializer.deserializeObject(json.get("acceptedSenders"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView"), EventCollectionPage.class);
         }
 
         if (json.has("conversations")) {
-            conversations = serializer.deserializeObject(json.get("conversations").toString(), ConversationCollectionPage.class);
+            conversations = serializer.deserializeObject(json.get("conversations"), ConversationCollectionPage.class);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events").toString(), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events"), EventCollectionPage.class);
         }
 
         if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
+            photos = serializer.deserializeObject(json.get("photos"), ProfilePhotoCollectionPage.class);
         }
 
         if (json.has("rejectedSenders")) {
-            rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders").toString(), DirectoryObjectCollectionPage.class);
+            rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("threads")) {
-            threads = serializer.deserializeObject(json.get("threads").toString(), ConversationThreadCollectionPage.class);
+            threads = serializer.deserializeObject(json.get("threads"), ConversationThreadCollectionPage.class);
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives"), DriveCollectionPage.class);
         }
 
         if (json.has("sites")) {
-            sites = serializer.deserializeObject(json.get("sites").toString(), SiteCollectionPage.class);
+            sites = serializer.deserializeObject(json.get("sites"), SiteCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
         }
 
         if (json.has("groupLifecyclePolicies")) {
-            groupLifecyclePolicies = serializer.deserializeObject(json.get("groupLifecyclePolicies").toString(), GroupLifecyclePolicyCollectionPage.class);
+            groupLifecyclePolicies = serializer.deserializeObject(json.get("groupLifecyclePolicies"), GroupLifecyclePolicyCollectionPage.class);
         }
     }
 }

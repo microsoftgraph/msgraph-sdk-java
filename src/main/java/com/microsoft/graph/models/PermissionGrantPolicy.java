@@ -57,11 +57,11 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
 
 
         if (json.has("excludes")) {
-            excludes = serializer.deserializeObject(json.get("excludes").toString(), PermissionGrantConditionSetCollectionPage.class);
+            excludes = serializer.deserializeObject(json.get("excludes"), PermissionGrantConditionSetCollectionPage.class);
         }
 
         if (json.has("includes")) {
-            includes = serializer.deserializeObject(json.get("includes").toString(), PermissionGrantConditionSetCollectionPage.class);
+            includes = serializer.deserializeObject(json.get("includes"), PermissionGrantConditionSetCollectionPage.class);
         }
     }
 }

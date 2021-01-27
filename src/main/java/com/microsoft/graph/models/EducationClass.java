@@ -156,15 +156,15 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members").toString(), EducationUserCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), EducationUserCollectionPage.class);
         }
 
         if (json.has("schools")) {
-            schools = serializer.deserializeObject(json.get("schools").toString(), EducationSchoolCollectionPage.class);
+            schools = serializer.deserializeObject(json.get("schools"), EducationSchoolCollectionPage.class);
         }
 
         if (json.has("teachers")) {
-            teachers = serializer.deserializeObject(json.get("teachers").toString(), EducationUserCollectionPage.class);
+            teachers = serializer.deserializeObject(json.get("teachers"), EducationUserCollectionPage.class);
         }
     }
 }

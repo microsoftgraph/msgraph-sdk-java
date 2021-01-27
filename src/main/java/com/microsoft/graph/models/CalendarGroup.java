@@ -75,7 +75,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calendars")) {
-            calendars = serializer.deserializeObject(json.get("calendars").toString(), CalendarCollectionPage.class);
+            calendars = serializer.deserializeObject(json.get("calendars"), CalendarCollectionPage.class);
         }
     }
 }

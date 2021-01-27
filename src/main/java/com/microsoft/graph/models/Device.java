@@ -249,23 +249,23 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("registeredOwners")) {
-            registeredOwners = serializer.deserializeObject(json.get("registeredOwners").toString(), DirectoryObjectCollectionPage.class);
+            registeredOwners = serializer.deserializeObject(json.get("registeredOwners"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("registeredUsers")) {
-            registeredUsers = serializer.deserializeObject(json.get("registeredUsers").toString(), DirectoryObjectCollectionPage.class);
+            registeredUsers = serializer.deserializeObject(json.get("registeredUsers"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
         }
     }
 }

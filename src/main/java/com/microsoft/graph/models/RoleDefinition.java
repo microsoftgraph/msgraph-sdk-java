@@ -85,7 +85,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), RoleAssignmentCollectionPage.class);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), RoleAssignmentCollectionPage.class);
         }
     }
 }

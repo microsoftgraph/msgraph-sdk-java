@@ -184,15 +184,15 @@ public class Domain extends Entity implements IJsonBackedObject {
 
 
         if (json.has("domainNameReferences")) {
-            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences").toString(), DirectoryObjectCollectionPage.class);
+            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("serviceConfigurationRecords")) {
-            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords").toString(), DomainDnsRecordCollectionPage.class);
+            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords"), DomainDnsRecordCollectionPage.class);
         }
 
         if (json.has("verificationDnsRecords")) {
-            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords").toString(), DomainDnsRecordCollectionPage.class);
+            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords"), DomainDnsRecordCollectionPage.class);
         }
     }
 }

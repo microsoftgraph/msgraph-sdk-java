@@ -1089,123 +1089,123 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
+            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments"), AppRoleAssignmentCollectionPage.class);
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), DirectoryObjectCollectionPage.class);
+            createdObjects = serializer.deserializeObject(json.get("createdObjects"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports").toString(), DirectoryObjectCollectionPage.class);
+            directReports = serializer.deserializeObject(json.get("directReports"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("licenseDetails")) {
-            licenseDetails = serializer.deserializeObject(json.get("licenseDetails").toString(), LicenseDetailsCollectionPage.class);
+            licenseDetails = serializer.deserializeObject(json.get("licenseDetails"), LicenseDetailsCollectionPage.class);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), OAuth2PermissionGrantCollectionPage.class);
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), OAuth2PermissionGrantCollectionPage.class);
         }
 
         if (json.has("ownedDevices")) {
-            ownedDevices = serializer.deserializeObject(json.get("ownedDevices").toString(), DirectoryObjectCollectionPage.class);
+            ownedDevices = serializer.deserializeObject(json.get("ownedDevices"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), DirectoryObjectCollectionPage.class);
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("registeredDevices")) {
-            registeredDevices = serializer.deserializeObject(json.get("registeredDevices").toString(), DirectoryObjectCollectionPage.class);
+            registeredDevices = serializer.deserializeObject(json.get("registeredDevices"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("scopedRoleMemberOf")) {
-            scopedRoleMemberOf = serializer.deserializeObject(json.get("scopedRoleMemberOf").toString(), ScopedRoleMembershipCollectionPage.class);
+            scopedRoleMemberOf = serializer.deserializeObject(json.get("scopedRoleMemberOf"), ScopedRoleMembershipCollectionPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("calendarGroups")) {
-            calendarGroups = serializer.deserializeObject(json.get("calendarGroups").toString(), CalendarGroupCollectionPage.class);
+            calendarGroups = serializer.deserializeObject(json.get("calendarGroups"), CalendarGroupCollectionPage.class);
         }
 
         if (json.has("calendars")) {
-            calendars = serializer.deserializeObject(json.get("calendars").toString(), CalendarCollectionPage.class);
+            calendars = serializer.deserializeObject(json.get("calendars"), CalendarCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView"), EventCollectionPage.class);
         }
 
         if (json.has("contactFolders")) {
-            contactFolders = serializer.deserializeObject(json.get("contactFolders").toString(), ContactFolderCollectionPage.class);
+            contactFolders = serializer.deserializeObject(json.get("contactFolders"), ContactFolderCollectionPage.class);
         }
 
         if (json.has("contacts")) {
-            contacts = serializer.deserializeObject(json.get("contacts").toString(), ContactCollectionPage.class);
+            contacts = serializer.deserializeObject(json.get("contacts"), ContactCollectionPage.class);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events").toString(), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events"), EventCollectionPage.class);
         }
 
         if (json.has("mailFolders")) {
-            mailFolders = serializer.deserializeObject(json.get("mailFolders").toString(), MailFolderCollectionPage.class);
+            mailFolders = serializer.deserializeObject(json.get("mailFolders"), MailFolderCollectionPage.class);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages").toString(), MessageCollectionPage.class);
+            messages = serializer.deserializeObject(json.get("messages"), MessageCollectionPage.class);
         }
 
         if (json.has("people")) {
-            people = serializer.deserializeObject(json.get("people").toString(), PersonCollectionPage.class);
+            people = serializer.deserializeObject(json.get("people"), PersonCollectionPage.class);
         }
 
         if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
+            photos = serializer.deserializeObject(json.get("photos"), ProfilePhotoCollectionPage.class);
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
+            drives = serializer.deserializeObject(json.get("drives"), DriveCollectionPage.class);
         }
 
         if (json.has("followedSites")) {
-            followedSites = serializer.deserializeObject(json.get("followedSites").toString(), SiteCollectionPage.class);
+            followedSites = serializer.deserializeObject(json.get("followedSites"), SiteCollectionPage.class);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);
         }
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
         }
 
         if (json.has("managedAppRegistrations")) {
-            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), ManagedAppRegistrationCollectionPage.class);
+            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations"), ManagedAppRegistrationCollectionPage.class);
         }
 
         if (json.has("deviceManagementTroubleshootingEvents")) {
-            deviceManagementTroubleshootingEvents = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents").toString(), DeviceManagementTroubleshootingEventCollectionPage.class);
+            deviceManagementTroubleshootingEvents = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents"), DeviceManagementTroubleshootingEventCollectionPage.class);
         }
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities").toString(), UserActivityCollectionPage.class);
+            activities = serializer.deserializeObject(json.get("activities"), UserActivityCollectionPage.class);
         }
 
         if (json.has("onlineMeetings")) {
-            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), OnlineMeetingCollectionPage.class);
+            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings"), OnlineMeetingCollectionPage.class);
         }
 
         if (json.has("joinedTeams")) {
-            joinedTeams = serializer.deserializeObject(json.get("joinedTeams").toString(), TeamCollectionPage.class);
+            joinedTeams = serializer.deserializeObject(json.get("joinedTeams"), TeamCollectionPage.class);
         }
     }
 }

@@ -139,7 +139,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
 
         if (json.has("deviceComplianceSettingStates")) {
-            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates").toString(), DeviceComplianceSettingStateCollectionPage.class);
+            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates"), DeviceComplianceSettingStateCollectionPage.class);
         }
     }
 }

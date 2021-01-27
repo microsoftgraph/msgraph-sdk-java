@@ -48,7 +48,7 @@ public class PlannerGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("plans")) {
-            plans = serializer.deserializeObject(json.get("plans").toString(), PlannerPlanCollectionPage.class);
+            plans = serializer.deserializeObject(json.get("plans"), PlannerPlanCollectionPage.class);
         }
     }
 }

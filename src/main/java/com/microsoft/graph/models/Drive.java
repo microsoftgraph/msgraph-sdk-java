@@ -134,15 +134,15 @@ public class Drive extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("following")) {
-            following = serializer.deserializeObject(json.get("following").toString(), DriveItemCollectionPage.class);
+            following = serializer.deserializeObject(json.get("following"), DriveItemCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), DriveItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), DriveItemCollectionPage.class);
         }
 
         if (json.has("special")) {
-            special = serializer.deserializeObject(json.get("special").toString(), DriveItemCollectionPage.class);
+            special = serializer.deserializeObject(json.get("special"), DriveItemCollectionPage.class);
         }
     }
 }

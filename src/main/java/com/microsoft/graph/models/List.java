@@ -130,19 +130,19 @@ public class List extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            columns = serializer.deserializeObject(json.get("columns").toString(), ColumnDefinitionCollectionPage.class);
+            columns = serializer.deserializeObject(json.get("columns"), ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("contentTypes")) {
-            contentTypes = serializer.deserializeObject(json.get("contentTypes").toString(), ContentTypeCollectionPage.class);
+            contentTypes = serializer.deserializeObject(json.get("contentTypes"), ContentTypeCollectionPage.class);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), ListItemCollectionPage.class);
+            items = serializer.deserializeObject(json.get("items"), ListItemCollectionPage.class);
         }
 
         if (json.has("subscriptions")) {
-            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), SubscriptionCollectionPage.class);
+            subscriptions = serializer.deserializeObject(json.get("subscriptions"), SubscriptionCollectionPage.class);
         }
     }
 }

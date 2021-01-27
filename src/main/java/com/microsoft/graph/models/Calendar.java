@@ -210,23 +210,23 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calendarPermissions")) {
-            calendarPermissions = serializer.deserializeObject(json.get("calendarPermissions").toString(), CalendarPermissionCollectionPage.class);
+            calendarPermissions = serializer.deserializeObject(json.get("calendarPermissions"), CalendarPermissionCollectionPage.class);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), EventCollectionPage.class);
+            calendarView = serializer.deserializeObject(json.get("calendarView"), EventCollectionPage.class);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events").toString(), EventCollectionPage.class);
+            events = serializer.deserializeObject(json.get("events"), EventCollectionPage.class);
         }
 
         if (json.has("multiValueExtendedProperties")) {
-            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), MultiValueLegacyExtendedPropertyCollectionPage.class);
+            multiValueExtendedProperties = serializer.deserializeObject(json.get("multiValueExtendedProperties"), MultiValueLegacyExtendedPropertyCollectionPage.class);
         }
 
         if (json.has("singleValueExtendedProperties")) {
-            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), SingleValueLegacyExtendedPropertyCollectionPage.class);
+            singleValueExtendedProperties = serializer.deserializeObject(json.get("singleValueExtendedProperties"), SingleValueLegacyExtendedPropertyCollectionPage.class);
         }
     }
 }

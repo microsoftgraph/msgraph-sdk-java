@@ -118,19 +118,19 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("charts")) {
-            charts = serializer.deserializeObject(json.get("charts").toString(), WorkbookChartCollectionPage.class);
+            charts = serializer.deserializeObject(json.get("charts"), WorkbookChartCollectionPage.class);
         }
 
         if (json.has("names")) {
-            names = serializer.deserializeObject(json.get("names").toString(), WorkbookNamedItemCollectionPage.class);
+            names = serializer.deserializeObject(json.get("names"), WorkbookNamedItemCollectionPage.class);
         }
 
         if (json.has("pivotTables")) {
-            pivotTables = serializer.deserializeObject(json.get("pivotTables").toString(), WorkbookPivotTableCollectionPage.class);
+            pivotTables = serializer.deserializeObject(json.get("pivotTables"), WorkbookPivotTableCollectionPage.class);
         }
 
         if (json.has("tables")) {
-            tables = serializer.deserializeObject(json.get("tables").toString(), WorkbookTableCollectionPage.class);
+            tables = serializer.deserializeObject(json.get("tables"), WorkbookTableCollectionPage.class);
         }
     }
 }

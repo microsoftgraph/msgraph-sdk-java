@@ -82,7 +82,7 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
         }
     }
 }

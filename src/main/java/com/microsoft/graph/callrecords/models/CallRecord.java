@@ -132,7 +132,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sessions")) {
-            sessions = serializer.deserializeObject(json.get("sessions").toString(), SessionCollectionPage.class);
+            sessions = serializer.deserializeObject(json.get("sessions"), SessionCollectionPage.class);
         }
     }
 }

@@ -98,7 +98,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions").toString(), ListItemVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions"), ListItemVersionCollectionPage.class);
         }
     }
 }
