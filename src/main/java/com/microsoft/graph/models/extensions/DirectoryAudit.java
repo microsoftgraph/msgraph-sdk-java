@@ -37,7 +37,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Display Name.
-     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+     * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure Ad activity list.
      */
     @SerializedName(value = "activityDisplayName", alternate = {"ActivityDisplayName"})
     @Expose
@@ -101,7 +101,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Result Reason.
-     * Describes cause of 'failure' or 'timeout' results.
+     * Indicates the reason for failure if the result is 'Failure' or 'timeout'.
      */
     @SerializedName(value = "resultReason", alternate = {"ResultReason"})
     @Expose

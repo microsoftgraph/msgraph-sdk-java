@@ -42,7 +42,7 @@ public class ResourceAction implements IJsonBackedObject {
 
     /**
      * The Not Allowed Resource Actions.
-     * Not Allowed Actions
+     * Not Allowed Actions.
      */
     @SerializedName(value = "notAllowedResourceActions", alternate = {"NotAllowedResourceActions"})
     @Expose

@@ -435,12 +435,12 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IOrgContactWithReferenceRequestBuilder transitiveMembersAsOrgContact(final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMembers") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder acceptedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder acceptedSenders() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder acceptedSenders(final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
+    public IDirectoryObjectWithReferenceRequestBuilder acceptedSenders(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
     }
 
     /**
@@ -488,12 +488,12 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IProfilePhotoRequestBuilder photos(final String id) {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder rejectedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder rejectedSenders() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder rejectedSenders(final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
+    public IDirectoryObjectWithReferenceRequestBuilder rejectedSenders(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
     }
     public IConversationThreadCollectionRequestBuilder threads() {
         return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
