@@ -76,7 +76,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Info.
-     * The chat information. Required information for joining a meeting.
+     * The chat information. Required information for meeting scenarios.
      */
     @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
@@ -92,7 +92,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Context.
-     * 
+     * The context associated with an incoming call. Read-only. Server generated.
      */
     @SerializedName(value = "incomingContext", alternate = {"IncomingContext"})
     @Expose
@@ -100,7 +100,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Media Config.
-     * The media configuration. Required.
+     * The media configuration. Required information for creating peer to peer calls or joining meetings.
      */
     @SerializedName(value = "mediaConfig", alternate = {"MediaConfig"})
     @Expose
@@ -116,7 +116,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Meeting Info.
-     * The meeting information that's required for joining a meeting.
+     * The meeting information. Required information for meeting scenarios.
      */
     @SerializedName(value = "meetingInfo", alternate = {"MeetingInfo"})
     @Expose
@@ -196,7 +196,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Transcription.
-     * 
+     * The transcription information for the call. Read-only.
      */
     @SerializedName(value = "transcription", alternate = {"Transcription"})
     @Expose

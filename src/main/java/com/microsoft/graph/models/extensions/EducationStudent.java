@@ -51,7 +51,7 @@ public class EducationStudent implements IJsonBackedObject {
 
     /**
      * The Gender.
-     * The possible values are: female, male, other, unknownFutureValue.
+     * Possible values are: female, male, other.
      */
     @SerializedName(value = "gender", alternate = {"Gender"})
     @Expose

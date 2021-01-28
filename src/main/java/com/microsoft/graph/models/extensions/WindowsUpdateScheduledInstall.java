@@ -26,7 +26,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
 
     /**
      * The Scheduled Install Day.
-     * Scheduled Install Day in week. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Scheduled Install Day in week. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
      */
     @SerializedName(value = "scheduledInstallDay", alternate = {"ScheduledInstallDay"})
     @Expose

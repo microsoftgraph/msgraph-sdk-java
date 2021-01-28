@@ -29,7 +29,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
-     * true if the account is enabled; otherwise, false. Required.
+     * true if the account is enabled; otherwise, false. default is true.
      */
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
@@ -141,7 +141,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
-     * The version of the operating system on the device. Required.
+     * Operating system version of the device. Required.
      */
     @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose

@@ -34,7 +34,7 @@ public class EmailAddress implements IJsonBackedObject {
 
     /**
      * The Address.
-     * The email address of the person or entity.
+     * The email address of an entity instance.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -42,7 +42,7 @@ public class EmailAddress implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The display name of the person or entity.
+     * The display name of an entity instance.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

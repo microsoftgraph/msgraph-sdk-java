@@ -91,7 +91,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Site Id.
-     * 
+     * For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
      */
     @SerializedName(value = "siteId", alternate = {"SiteId"})
     @Expose
