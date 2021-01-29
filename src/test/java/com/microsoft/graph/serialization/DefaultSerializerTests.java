@@ -1,9 +1,9 @@
 package com.microsoft.graph.serialization;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,8 +32,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.models.UploadSession;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import okhttp3.Request;
 import okio.Buffer;
@@ -214,11 +213,11 @@ public class DefaultSerializerTests {
         final UserGetMailTipsParameterSet body = UserGetMailTipsParameterSet.newBuilder().withEmailAddresses(users).withMailTipsOptions(mailtips).build();
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         final String serialized = serializer.serializeObject(body);
-        Assert.assertTrue("result contains camelCasedValues", serialized.contains("mailboxFullStatus"));
+        assertTrue(serialized.contains("mailboxFullStatus"), "result contains camelCasedValues");
 
         final UserGetMailTipsParameterSet deserialized = serializer.deserializeObject(serialized, UserGetMailTipsParameterSet.class);
 
-        Assert.assertEquals(2, deserialized.mailTipsOptions.size());
+        assertEquals(2, deserialized.mailTipsOptions.size());
     }
 
   public static final class HasVoidMember {

@@ -1,10 +1,10 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -18,9 +18,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import com.microsoft.graph.core.Multipart;
 import com.microsoft.graph.http.BaseCollectionPage;
@@ -54,7 +54,7 @@ import com.microsoft.graph.models.OnenotePageOnenotePatchContentParameterSet;
 /**
  * Tests for OneNote API functionality
  */
-@Ignore
+@Disabled
 public class OneNoteTests {
 
 	private OnenoteRequestBuilder orb;
@@ -65,7 +65,7 @@ public class OneNoteTests {
     private SectionGroup testSectionGroup2;
     private final String HTML_ENCODING= "US-ASCII";
 
-    @Before
+    @BeforeEach
     public void setUp() {
         TestBase testBase = new TestBase();
         orb = testBase.graphClient.me().onenote();
@@ -362,7 +362,7 @@ public class OneNoteTests {
      * Test copy operations
      * TODO: Accessing header data from successful calls is currently not supported
      */
-    @Ignore
+    @Disabled
     @Test
     public void testCopyTo(){
     	// Test copy to notebook

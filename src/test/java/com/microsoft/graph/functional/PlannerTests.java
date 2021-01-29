@@ -1,15 +1,15 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -38,18 +38,18 @@ import com.microsoft.graph.requests.PlannerTaskRequest;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.DefaultSerializer;
 
-@Ignore
+@Disabled
 public class PlannerTests {
-    private static TestBase testBase;
+    private TestBase testBase;
     // For now, you must specify a specific plan ID since the test cannot
     // clean up after itself
-    private static String planId = "f1WS2LJ4_k2G-KXzHwH-lGUABSKq";
-    private static PlannerBucket planBucket;
-    private static PlannerTask planTask;
-    private static PlannerRequestBuilder prb;
+    private String planId = "f1WS2LJ4_k2G-KXzHwH-lGUABSKq";
+    private PlannerBucket planBucket;
+    private PlannerTask planTask;
+    private PlannerRequestBuilder prb;
 
-    @BeforeClass
-    public static void setUp() {
+    @BeforeEach
+    public void setUp() {
         testBase = new TestBase();
         prb = testBase.graphClient.planner();
 
@@ -450,8 +450,8 @@ public class PlannerTests {
     	assertEquals(item.isChecked, false);
     }
 
-    @AfterClass
-    public static void tearDown() throws InterruptedException {
+    @AfterEach
+    public void tearDown() throws InterruptedException {
 
     	Thread.sleep(4000);
 

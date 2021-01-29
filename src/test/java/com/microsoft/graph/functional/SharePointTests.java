@@ -1,13 +1,13 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Site;
@@ -20,13 +20,13 @@ import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.Site;
 
-@Ignore
+@Disabled
 public class SharePointTests {
 
     private TestBase testBase;
     private Site testSite;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         testBase = new TestBase();
 
