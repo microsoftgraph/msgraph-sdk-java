@@ -192,7 +192,7 @@ The interface has been simplified to remove the `getRawObject` and `getSerialize
 When using [change tracking/delta APIs](https://docs.microsoft.com/graph/delta-query-overview) Microsoft Graph provides two types of links with the response collection:
 
 - A next link whenever there are more change results to iterate through.
-- A delta link whenever there are no more change results to iterate throught at this instant. This is the link your application should use to get new changes in the future.
+- A delta link whenever there are no more change results to iterate through at this instant. This is the link your application should use to get new changes in the future.
 
 This new version improves the Java API provided to developers.
 
