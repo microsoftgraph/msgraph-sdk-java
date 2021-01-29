@@ -22,7 +22,7 @@ public class BatchTests {
     @Test
     public void GetsABatchFromRequests() throws IOException{
         final TestBase testBase = new TestBase();
-        final GraphServiceClient graphServiceClient = testBase.graphClient;
+        final GraphServiceClient<?> graphServiceClient = testBase.graphClient;
         final BatchRequestContent batchContent = new BatchRequestContent();
         final String meGetId = batchContent.addBatchRequestStep(graphServiceClient.me()
                                         .buildRequest());
