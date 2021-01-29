@@ -1,9 +1,10 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.mock;
 
 import java.io.ByteArrayOutputStream;
@@ -20,9 +21,8 @@ import java.util.UUID;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import com.google.gson.JsonObject;
 
@@ -63,7 +63,7 @@ import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.logger.ILogger;
 
-@Ignore
+@Disabled
 public class OutlookTests {
 
     @Test
@@ -118,7 +118,7 @@ public class OutlookTests {
                                                     .post();
             assertNotNull(result);
         } catch (Exception e) {
-            Assert.fail("Duration could not be created from String");
+            fail("Duration could not be created from String");
         }
 
     }

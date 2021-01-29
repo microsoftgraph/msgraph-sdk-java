@@ -1,11 +1,11 @@
 package com.microsoft.graph.conventions;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import com.microsoft.graph.functional.TestBase;
 import com.microsoft.graph.http.HttpMethod;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import okhttp3.Request;
 

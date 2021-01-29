@@ -1,15 +1,15 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.models.Extension;
@@ -19,12 +19,12 @@ import com.microsoft.graph.models.SchemaExtension;
 import com.microsoft.graph.requests.GroupDeltaCollectionPage;
 import com.microsoft.graph.models.GroupDeltaParameterSet;
 
-@Ignore
+@Disabled
 public class ODataTests {
 
     private TestBase testBase;
 
-    @Before
+    @BeforeEach
     public void setUp() {
        testBase = new TestBase();
 
@@ -97,10 +97,10 @@ public class ODataTests {
                 }
             }
             if (!foundUpdatedProperty) {
-                Assert.fail("Patch failed on Schema Extension");
+                fail("Patch failed on Schema Extension");
             }
         } catch (Exception e) {
-            Assert.fail("Patch failed on Schema Extension");
+            fail("Patch failed on Schema Extension");
         } finally {
             testBase.graphClient.schemaExtensions(newExtension.id).buildRequest().delete();
         }

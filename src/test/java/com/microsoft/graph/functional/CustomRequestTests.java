@@ -1,11 +1,11 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -17,11 +17,11 @@ import com.microsoft.graph.serializer.DefaultSerializer;
 /**
  * Tests for sending custom requests using the SDK
  */
-@Ignore
+@Disabled
 public class CustomRequestTests {
 	private TestBase testBase;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		testBase = new TestBase();
 	}

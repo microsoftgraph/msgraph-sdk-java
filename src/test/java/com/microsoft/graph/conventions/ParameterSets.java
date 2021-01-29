@@ -1,12 +1,12 @@
 package com.microsoft.graph.conventions;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.functional.TestBase;
 import com.microsoft.graph.models.ReportRootGetMailboxUsageStorageParameterSet;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import okhttp3.Request;
 

@@ -22,6 +22,10 @@ java {
     withJavadocJar()
 }
 
+test {
+    useJUnitPlatform()
+}
+
 sourceSets {
     main {
         java {

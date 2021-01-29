@@ -1,7 +1,7 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.io.IOException;
 
@@ -13,9 +13,9 @@ import com.microsoft.graph.requests.GraphServiceClient;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.requests.UserRequest;
 
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -23,7 +23,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-@Ignore
+@Disabled
 public class BatchTests {
     @Test
     public void GetsABatchFromRequests() throws IOException{

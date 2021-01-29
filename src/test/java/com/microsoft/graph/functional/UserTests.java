@@ -1,8 +1,8 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,10 +14,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import okhttp3.Request;
 
@@ -46,11 +45,11 @@ import com.microsoft.graph.requests.MessageCollectionPage;
 import com.microsoft.graph.requests.OrganizationCollectionPage;
 import com.microsoft.graph.requests.UsedInsightCollectionPage;
 import com.microsoft.graph.requests.UserCollectionPage;
-@Ignore
+@Disabled
 public class UserTests {
 	GraphServiceClient graphServiceClient = null;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		TestBase testBase = new TestBase();
 		graphServiceClient = testBase.graphClient;
@@ -271,13 +270,13 @@ public class UserTests {
     public void getUsersRawCount() {
         final List<Option> consistencyLevelOptions = Arrays.asList(new HeaderOption("ConsistencyLevel", "eventual"));
         final Long usersCount = graphServiceClient.users().count().buildRequest(consistencyLevelOptions).get();
-        Assert.assertNotNull(usersCount);
+        assertNotNull(usersCount);
     }
     @Test
     public void getUsersWithCount() {
         final List<Option> consistencyLevelOptions = Arrays.asList(new HeaderOption("ConsistencyLevel", "eventual"));
         final UserCollectionPage usersWithCount = graphServiceClient.users().buildRequest(consistencyLevelOptions).count().get();
-        Assert.assertNotNull(usersWithCount);
-        Assert.assertNotNull(usersWithCount.getCount());
+        assertNotNull(usersWithCount);
+        assertNotNull(usersWithCount.getCount());
     }
 }
