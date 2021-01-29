@@ -187,6 +187,41 @@ The interface has been simplified to remove the `getRawObject` and `getSerialize
 1. Replace any reference to `getRawObject` by `additionalDataManager`.
 1. Replace any reference to `getSerializer` by `graphClient.getSerializer` or create a new instance of the serializer.
 
+### Improved delta API
+
+When using [change tracking/delta APIs](https://docs.microsoft.com/graph/delta-query-overview) Microsoft Graph provides two types of links with the response collection:
+
+- A next link whenever there are more change results to iterate through.
+- A delta link whenever there are no more change results to iterate through at this instant. This is the link your application should use to get new changes in the future.
+
+This new version improves the Java API provided to developers.
+
+1. Replace any of the following
+
+    ```Java
+    graphClient.users().delta("https://mydeltalink").buildRequest().get();
+    ```
+
+    by
+
+    ```Java
+    graphClient.users().delta().buildRequest().deltaLink("https://mydeltalink").get();
+    ```
+
+1. Replace any of the following
+
+    ```Java
+    graphClient.customRequest("mydeltaPathAndQuery").buildRequest().get();
+    ```
+
+    by
+
+    ```Java
+    graphClient.users().delta().buildRequest().deltaLink("https://mydeltalink").get();
+    ```
+
+> Note: the `DeltaCollectionPage` also offers a `getNextPage` method which simplifies iterating through results and removes the need for consumers to directly handle the next link themselves.
+
 ## Upgrade guide for non-breaking improvments
 
 This section lists out other improvements which are not considered as breaking changes. SDK users are strongly encouraged to take advantage of those new improvements to simplify their code.
