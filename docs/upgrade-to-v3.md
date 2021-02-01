@@ -127,7 +127,7 @@ As the connection configuration evolved over time, the connection configuration 
 
 ### Dependencies upgrade
 
-- OkHttpClient has been upgraded from 3.X to 4.9.0.
+- OkHttpClient has been upgraded from 3.X to 4.X.
 - Google Guava has been upgraded from 20 to 30.
 
 No action needs to be taken unless the project has a direct reference to an older version of those libraries, in which case the references need to be upgraded to match the versions listed here.
