@@ -172,13 +172,11 @@ The object model for JSON batching has been improved to provide a cleaner API su
     By:
 
     ```Java
-    final MSBatchRequestContent batchRequestContent = new MSBatchRequestContent();
-    final String meGetId = batchRequestContent.addbatchRequestStep(graphClient.me().buildRequest().withHttpMethod(HttpMethod.GET).getHttpRequest());
-    final MSBatchResponseContent batchResponseContent = batchRequestContent.execute(graphClient);
-    final Response userResponse = batchResponseContent.getResponseById(meGetId);
+    final BatchRequestContent batchRequestContent = new BatchRequestContent();
+    final String meGetId = batchRequestContent.addbatchRequestStep(graphClient.me().buildRequest().getHttpRequest());
+    final BatchResponseContent batchResponseContent = graphClient.batch().buildRequest().post(graphClient);
+    final User me = batchResponseContent.getResponseById(meGetId).getDeserializedBody(User.class);
     ```
-
-> Note: this change also replaces the `MSBatchRequestContent` constuctor accepting a list of steps by a vararg constructor and `getArrayOfDependsOnIds` by `getDependsOnIds` (HashSet\<String>).
 
 ### IJsonBackedObject interface
 
