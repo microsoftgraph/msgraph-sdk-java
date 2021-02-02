@@ -47,7 +47,7 @@ public class BatchTests {
         assertEquals(400, responseContent.getResponseById(userPostId).status); //400:we're not providing enough properties for the call to go through
         assertEquals(200, responseContent.getResponseById(meGetId).status);
         assertEquals(200, responseContent.getResponseById(usersGetId).status);
-        final User me = responseContent.getResponseById(meGetId).getDeserializedBody(testBase.graphClient.getSerializer(), User.class);
+        final User me = responseContent.getResponseById(meGetId).getDeserializedBody(User.class);
         assertNotNull(me.displayName);
     }
 }
