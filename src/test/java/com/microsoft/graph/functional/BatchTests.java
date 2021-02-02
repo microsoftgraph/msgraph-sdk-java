@@ -22,7 +22,7 @@ public class BatchTests {
     @Test
     public void GetsABatchFromRequests() throws IOException{
         final TestBase testBase = new TestBase();
-		final GraphServiceClient graphServiceClient = testBase.graphClient;
+        final GraphServiceClient graphServiceClient = testBase.graphClient;
         final BatchRequestContent batchContent = new BatchRequestContent();
         final String meGetId = batchContent.addBatchRequestStep(graphServiceClient.me()
                                         .buildRequest());
@@ -47,5 +47,7 @@ public class BatchTests {
         assertEquals(400, responseContent.getResponseById(userPostId).status); //400:we're not providing enough properties for the call to go through
         assertEquals(200, responseContent.getResponseById(meGetId).status);
         assertEquals(200, responseContent.getResponseById(usersGetId).status);
+        final User me = responseContent.getResponseById(meGetId).getDeserializedBody(testBase.graphClient.getSerializer(), User.class);
+        assertNotNull(me.displayName);
     }
 }
