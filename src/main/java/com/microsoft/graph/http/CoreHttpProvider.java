@@ -64,6 +64,7 @@ import okhttp3.Protocol;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import okio.BufferedSink;
 
 /**
@@ -395,71 +396,73 @@ public class CoreHttpProvider implements IHttpProvider {
 				authenticationProvider.authenticateRequest(request);
 			}
 			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
-			Response response = corehttpClient.newCall(coreHttpRequest).execute();
-			InputStream in = null;
-			boolean isBinaryStreamInput = false;
-			try {
+            try (final Response response = corehttpClient.newCall(coreHttpRequest).execute()) {
+            try (final ResponseBody body = response.body()) {
+                InputStream in = null;
+                boolean isBinaryStreamInput = false;
+                try {
 
-				// Call being executed
+                    // Call being executed
 
 
-				if (handler != null) {
-					handler.configConnection(response);
-				}
+                    if (handler != null) {
+                        handler.configConnection(response);
+                    }
 
-				logger.logDebug(String.format("Response code %d, %s",
-						response.code(),
-						response.message()));
+                    logger.logDebug(String.format("Response code %d, %s",
+                            response.code(),
+                            response.message()));
 
-				if (handler != null) {
-					logger.logDebug("StatefulResponse is handling the HTTP response.");
-					return handler.generateResult(
-							request, response, this.getSerializer(), this.logger);
-				}
+                    if (handler != null) {
+                        logger.logDebug("StatefulResponse is handling the HTTP response.");
+                        return handler.generateResult(
+                                request, response, this.getSerializer(), this.logger);
+                    }
 
-				if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
-					logger.logDebug("Handling error response");
-					in = response.body().byteStream();
-					handleErrorResponse(request, serializable, response);
-				}
+                    if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
+                        logger.logDebug("Handling error response");
+                        in = body.byteStream();
+                        handleErrorResponse(request, serializable, response);
+                    }
 
-				if (response.code() == HttpResponseCode.HTTP_NOBODY
-						|| response.code() == HttpResponseCode.HTTP_NOT_MODIFIED) {
-					logger.logDebug("Handling response with no body");
-					return handleEmptyResponse(responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
-				}
+                    if (response.code() == HttpResponseCode.HTTP_NOBODY
+                            || response.code() == HttpResponseCode.HTTP_NOT_MODIFIED) {
+                        logger.logDebug("Handling response with no body");
+                        return handleEmptyResponse(responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
+                    }
 
-				if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
-					logger.logDebug("Handling accepted response");
-					return handleEmptyResponse(responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
-				}
+                    if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
+                        logger.logDebug("Handling accepted response");
+                        return handleEmptyResponse(responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
+                    }
 
-				in = new BufferedInputStream(response.body().byteStream());
+                    in = new BufferedInputStream(body.byteStream());
 
-				if(response.body() == null || response.body().contentLength() == 0)
-					return (Result) null;
+                    if(body == null || body.contentLength() == 0)
+                        return (Result) null;
 
-                if (response.body() != null && response.body().contentType() != null &&
-                    response.body().contentType().subtype().contains("json") && resultClass != InputStream.class) {
-					logger.logDebug("Response json");
-					return handleJsonResponse(in, responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
-				} else if (resultClass == InputStream.class) {
-					logger.logDebug("Response binary");
-					isBinaryStreamInput = true;
-					return (Result) handleBinaryStream(in);
-				} else {
-					return (Result) null;
-				}
-			} finally {
-				if (!isBinaryStreamInput) {
-					try{
-						if (in != null) in.close();
-					}catch(IOException e) {
-						logger.logError(e.getMessage(), e);
-					}
-					if (response != null) response.close();
-				}
-			}
+                    if (body != null && body.contentType() != null &&
+                        body.contentType().subtype().contains("json") && resultClass != InputStream.class) {
+                        logger.logDebug("Response json");
+                        return handleJsonResponse(in, responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
+                    } else if (resultClass == InputStream.class) {
+                        logger.logDebug("Response binary");
+                        isBinaryStreamInput = true;
+                        return (Result) handleBinaryStream(in);
+                    } else {
+                        return (Result) null;
+                    }
+                } finally {
+                    if (!isBinaryStreamInput) {
+                        try{
+                            if (in != null) in.close();
+                        }catch(IOException e) {
+                            logger.logError(e.getMessage(), e);
+                        }
+                    }
+                }
+            }
+            }
 		} catch (final GraphServiceException ex) {
 			final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
 			logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
