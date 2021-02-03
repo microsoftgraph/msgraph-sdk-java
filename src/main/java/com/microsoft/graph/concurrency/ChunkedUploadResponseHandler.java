@@ -75,7 +75,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 	public void configConnection(final IConnection connection) {
 		return;
 	}
-	
+
 	/**
 	 * Do nothing before getting the response
 	 *
@@ -141,7 +141,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 
 		return null;
 	}
-	
+
 	/**
 	 * Generate the chunked upload response result
 	 *
@@ -168,11 +168,9 @@ public class ChunkedUploadResponseHandler<UploadType>
 							response, logger));
 			} else if (response.code() >= HttpResponseCode.HTTP_OK
 					&& response.code() < HttpResponseCode.HTTP_MULTIPLE_CHOICES) {
-				final Map<String, String> headers = responseHeadersHelper.getResponseHeadersAsMapStringString(response);
-				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
-				final String location = headers.get("Location");
-				if(contentType != null
-					&& contentType.contains(Constants.JSON_CONTENT_TYPE)) {
+				final String location = response.headers().get("Location");
+                if(response.body() != null && response.body().contentType() != null &&
+                    response.body().contentType().subtype().contains("json")) {
 					in = new BufferedInputStream(response.body().byteStream());
 					final String rawJson = DefaultHttpProvider.streamToString(in);
 					final UploadSession session = serializer.deserializeObject(rawJson, UploadSession.class);

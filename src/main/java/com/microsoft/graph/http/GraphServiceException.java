@@ -1,16 +1,16 @@
 // ------------------------------------------------------------------------------
 // Copyright (c) 2017 Microsoft Corporation
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -28,6 +28,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.Collections;
 
 import com.google.gson.Gson;
@@ -38,6 +39,7 @@ import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
+import okhttp3.Headers;
 import okhttp3.Response;
 import static okhttp3.internal.Util.closeQuietly;
 
@@ -174,7 +176,7 @@ public class GraphServiceException extends ClientException {
     public String getMessage() {
         return getMessage(verbose);
     }
-    
+
     /**
      * Gets the HTTP status code
      *
@@ -215,7 +217,7 @@ public class GraphServiceException extends ClientException {
     public String getUrl() {
         return url;
     }
-    
+
     /**
      * Gets the request headers
      * @return the request headers
@@ -402,7 +404,7 @@ public class GraphServiceException extends ClientException {
                 error,
                 isVerbose);
     }
-    
+
     /**
      * Creates a Graph service exception from a given failed HTTP request
      *
@@ -454,7 +456,7 @@ public class GraphServiceException extends ClientException {
 
         final int responseCode = response.code();
         final List<String> responseHeaders = new LinkedList<>();
-        final Map<String, String> headers = responseHeadersHelper.getResponseHeadersAsMapStringString(response);
+        final Map<String, String> headers = getResponseHeadersAsMapStringString(response);
         for (final String key : headers.keySet()) {
             final String fieldPrefix;
             if (key == null) {
@@ -507,5 +509,20 @@ public class GraphServiceException extends ClientException {
                 responseHeaders,
                 error,
                 isVerbose);
+    }
+    protected static Map<String, String> getResponseHeadersAsMapStringString(final Response response) {
+        final Map<String, String> headers = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
+        int index = 0;
+        Headers responseHeaders = response.headers();
+        while (index < responseHeaders.size()) {
+            final String headerName = responseHeaders.name(index);
+            final String headerValue = responseHeaders.value(index);
+            if (headerName == null || headerValue == null) {
+                break;
+            }
+            headers.put(headerName, headerValue);
+            index++;
+        }
+        return headers;
     }
 }
