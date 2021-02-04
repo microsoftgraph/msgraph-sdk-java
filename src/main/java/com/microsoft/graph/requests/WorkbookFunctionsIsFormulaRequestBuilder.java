@@ -54,13 +54,11 @@ public class WorkbookFunctionsIsFormulaRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsIsFormulaRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIsFormulaRequest request = new WorkbookFunctionsIsFormulaRequest(
+        final WorkbookFunctionsIsFormulaRequest request = new WorkbookFunctionsIsFormulaRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

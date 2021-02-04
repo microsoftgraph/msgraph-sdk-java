@@ -54,13 +54,11 @@ public class WorkbookFunctionsTbillEqRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsTbillEqRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsTbillEqRequest request = new WorkbookFunctionsTbillEqRequest(
+        final WorkbookFunctionsTbillEqRequest request = new WorkbookFunctionsTbillEqRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -55,13 +55,11 @@ public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder<R
      */
     @Nonnull
     public CallRecordResponseRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallRecordResponseRequest request = new CallRecordResponseRequest(
+        final CallRecordResponseRequest request = new CallRecordResponseRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

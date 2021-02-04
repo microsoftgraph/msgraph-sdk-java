@@ -65,12 +65,10 @@ public class WorkbookRangeColumnsBeforeRequestBuilder extends BaseFunctionReques
      */
     @Nonnull
     public WorkbookRangeColumnsBeforeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeColumnsBeforeRequest request = new WorkbookRangeColumnsBeforeRequest(
+        final WorkbookRangeColumnsBeforeRequest request = new WorkbookRangeColumnsBeforeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

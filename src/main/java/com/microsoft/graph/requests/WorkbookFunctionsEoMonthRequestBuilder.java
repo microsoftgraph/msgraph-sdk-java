@@ -54,13 +54,11 @@ public class WorkbookFunctionsEoMonthRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsEoMonthRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsEoMonthRequest request = new WorkbookFunctionsEoMonthRequest(
+        final WorkbookFunctionsEoMonthRequest request = new WorkbookFunctionsEoMonthRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

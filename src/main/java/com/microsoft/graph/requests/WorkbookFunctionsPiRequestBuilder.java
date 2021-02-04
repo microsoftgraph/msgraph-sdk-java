@@ -50,12 +50,10 @@ public class WorkbookFunctionsPiRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public WorkbookFunctionsPiRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPiRequest request = new WorkbookFunctionsPiRequest(
+        final WorkbookFunctionsPiRequest request = new WorkbookFunctionsPiRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

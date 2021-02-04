@@ -54,13 +54,11 @@ public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequ
      */
     @Nonnull
     public OnenotePageOnenotePatchContentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        OnenotePageOnenotePatchContentRequest request = new OnenotePageOnenotePatchContentRequest(
+        final OnenotePageOnenotePatchContentRequest request = new OnenotePageOnenotePatchContentRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

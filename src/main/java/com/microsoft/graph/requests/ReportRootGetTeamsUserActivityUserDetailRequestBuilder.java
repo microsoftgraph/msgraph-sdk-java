@@ -56,13 +56,11 @@ public class ReportRootGetTeamsUserActivityUserDetailRequestBuilder extends Base
      */
     @Nonnull
     public ReportRootGetTeamsUserActivityUserDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetTeamsUserActivityUserDetailRequest request = new ReportRootGetTeamsUserActivityUserDetailRequest(
+        final ReportRootGetTeamsUserActivityUserDetailRequest request = new ReportRootGetTeamsUserActivityUserDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

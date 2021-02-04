@@ -54,13 +54,11 @@ public class WorkbookRangeSortApplyRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookRangeSortApplyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeSortApplyRequest request = new WorkbookRangeSortApplyRequest(
+        final WorkbookRangeSortApplyRequest request = new WorkbookRangeSortApplyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

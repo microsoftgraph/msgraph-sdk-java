@@ -54,13 +54,11 @@ public class WorkbookFunctionsNpvRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsNpvRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsNpvRequest request = new WorkbookFunctionsNpvRequest(
+        final WorkbookFunctionsNpvRequest request = new WorkbookFunctionsNpvRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

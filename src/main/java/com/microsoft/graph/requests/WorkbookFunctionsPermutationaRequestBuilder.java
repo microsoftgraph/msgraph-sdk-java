@@ -54,13 +54,11 @@ public class WorkbookFunctionsPermutationaRequestBuilder extends BaseActionReque
      */
     @Nonnull
     public WorkbookFunctionsPermutationaRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPermutationaRequest request = new WorkbookFunctionsPermutationaRequest(
+        final WorkbookFunctionsPermutationaRequest request = new WorkbookFunctionsPermutationaRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

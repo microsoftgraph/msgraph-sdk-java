@@ -54,13 +54,11 @@ public class WorkbookFunctionsIsLogicalRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsIsLogicalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIsLogicalRequest request = new WorkbookFunctionsIsLogicalRequest(
+        final WorkbookFunctionsIsLogicalRequest request = new WorkbookFunctionsIsLogicalRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

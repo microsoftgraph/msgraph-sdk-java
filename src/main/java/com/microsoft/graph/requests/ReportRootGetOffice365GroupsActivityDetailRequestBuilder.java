@@ -56,13 +56,11 @@ public class ReportRootGetOffice365GroupsActivityDetailRequestBuilder extends Ba
      */
     @Nonnull
     public ReportRootGetOffice365GroupsActivityDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetOffice365GroupsActivityDetailRequest request = new ReportRootGetOffice365GroupsActivityDetailRequest(
+        final ReportRootGetOffice365GroupsActivityDetailRequest request = new ReportRootGetOffice365GroupsActivityDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

@@ -54,13 +54,11 @@ public class WorkbookFunctionsConfidence_TRequestBuilder extends BaseActionReque
      */
     @Nonnull
     public WorkbookFunctionsConfidence_TRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsConfidence_TRequest request = new WorkbookFunctionsConfidence_TRequest(
+        final WorkbookFunctionsConfidence_TRequest request = new WorkbookFunctionsConfidence_TRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

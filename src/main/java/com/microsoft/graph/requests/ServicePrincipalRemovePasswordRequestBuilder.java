@@ -54,13 +54,11 @@ public class ServicePrincipalRemovePasswordRequestBuilder extends BaseActionRequ
      */
     @Nonnull
     public ServicePrincipalRemovePasswordRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ServicePrincipalRemovePasswordRequest request = new ServicePrincipalRemovePasswordRequest(
+        final ServicePrincipalRemovePasswordRequest request = new ServicePrincipalRemovePasswordRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

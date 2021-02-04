@@ -54,13 +54,11 @@ public class WorkbookFunctionsUnicodeRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsUnicodeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsUnicodeRequest request = new WorkbookFunctionsUnicodeRequest(
+        final WorkbookFunctionsUnicodeRequest request = new WorkbookFunctionsUnicodeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

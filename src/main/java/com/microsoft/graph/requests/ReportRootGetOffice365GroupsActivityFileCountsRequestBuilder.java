@@ -55,13 +55,11 @@ public class ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder extend
      */
     @Nonnull
     public ReportRootGetOffice365GroupsActivityFileCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetOffice365GroupsActivityFileCountsRequest request = new ReportRootGetOffice365GroupsActivityFileCountsRequest(
+        final ReportRootGetOffice365GroupsActivityFileCountsRequest request = new ReportRootGetOffice365GroupsActivityFileCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

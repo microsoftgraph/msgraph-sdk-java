@@ -54,13 +54,11 @@ public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder<Do
      */
     @Nonnull
     public DomainForceDeleteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DomainForceDeleteRequest request = new DomainForceDeleteRequest(
+        final DomainForceDeleteRequest request = new DomainForceDeleteRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

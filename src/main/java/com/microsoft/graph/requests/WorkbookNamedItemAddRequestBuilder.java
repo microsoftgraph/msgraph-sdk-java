@@ -53,13 +53,11 @@ public class WorkbookNamedItemAddRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookNamedItemAddRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookNamedItemAddRequest request = new WorkbookNamedItemAddRequest(
+        final WorkbookNamedItemAddRequest request = new WorkbookNamedItemAddRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

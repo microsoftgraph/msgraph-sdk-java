@@ -55,13 +55,11 @@ public class WorkbookSessionInfoResourceRequestBuilder extends BaseFunctionReque
      */
     @Nonnull
     public WorkbookSessionInfoResourceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookSessionInfoResourceRequest request = new WorkbookSessionInfoResourceRequest(
+        final WorkbookSessionInfoResourceRequest request = new WorkbookSessionInfoResourceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

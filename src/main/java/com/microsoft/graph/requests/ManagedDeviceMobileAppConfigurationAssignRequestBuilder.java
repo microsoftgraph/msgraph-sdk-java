@@ -54,13 +54,11 @@ public class ManagedDeviceMobileAppConfigurationAssignRequestBuilder extends Bas
      */
     @Nonnull
     public ManagedDeviceMobileAppConfigurationAssignRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceMobileAppConfigurationAssignRequest request = new ManagedDeviceMobileAppConfigurationAssignRequest(
+        final ManagedDeviceMobileAppConfigurationAssignRequest request = new ManagedDeviceMobileAppConfigurationAssignRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

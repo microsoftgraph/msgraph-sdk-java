@@ -50,12 +50,10 @@ public class WorkbookRangeFillClearRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookRangeFillClearRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeFillClearRequest request = new WorkbookRangeFillClearRequest(
+        final WorkbookRangeFillClearRequest request = new WorkbookRangeFillClearRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsAmorDegrcRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsAmorDegrcRequest request = new WorkbookFunctionsAmorDegrcRequest(
+        final WorkbookFunctionsAmorDegrcRequest request = new WorkbookFunctionsAmorDegrcRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

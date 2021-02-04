@@ -50,12 +50,10 @@ public class ManagedDeviceLocateDeviceRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public ManagedDeviceLocateDeviceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceLocateDeviceRequest request = new ManagedDeviceLocateDeviceRequest(
+        final ManagedDeviceLocateDeviceRequest request = new ManagedDeviceLocateDeviceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

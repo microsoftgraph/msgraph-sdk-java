@@ -54,13 +54,11 @@ public class WorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionReque
      */
     @Nonnull
     public WorkbookFunctionsQuartile_IncRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsQuartile_IncRequest request = new WorkbookFunctionsQuartile_IncRequest(
+        final WorkbookFunctionsQuartile_IncRequest request = new WorkbookFunctionsQuartile_IncRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

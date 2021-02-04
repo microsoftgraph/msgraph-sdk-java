@@ -50,12 +50,10 @@ public class ReportRootGetOffice365ActivationsUserDetailRequestBuilder extends B
      */
     @Nonnull
     public ReportRootGetOffice365ActivationsUserDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetOffice365ActivationsUserDetailRequest request = new ReportRootGetOffice365ActivationsUserDetailRequest(
+        final ReportRootGetOffice365ActivationsUserDetailRequest request = new ReportRootGetOffice365ActivationsUserDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

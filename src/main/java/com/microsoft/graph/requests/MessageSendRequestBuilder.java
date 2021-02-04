@@ -50,12 +50,10 @@ public class MessageSendRequestBuilder extends BaseActionRequestBuilder<Message>
      */
     @Nonnull
     public MessageSendRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MessageSendRequest request = new MessageSendRequest(
+        final MessageSendRequest request = new MessageSendRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

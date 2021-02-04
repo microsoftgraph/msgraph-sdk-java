@@ -50,12 +50,10 @@ public class WorkbookWorksheetProtectionUnprotectRequestBuilder extends BaseActi
      */
     @Nonnull
     public WorkbookWorksheetProtectionUnprotectRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookWorksheetProtectionUnprotectRequest request = new WorkbookWorksheetProtectionUnprotectRequest(
+        final WorkbookWorksheetProtectionUnprotectRequest request = new WorkbookWorksheetProtectionUnprotectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

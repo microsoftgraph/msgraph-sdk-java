@@ -50,12 +50,10 @@ public class WorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseActionR
      */
     @Nonnull
     public WorkbookRangeFormatAutofitColumnsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeFormatAutofitColumnsRequest request = new WorkbookRangeFormatAutofitColumnsRequest(
+        final WorkbookRangeFormatAutofitColumnsRequest request = new WorkbookRangeFormatAutofitColumnsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

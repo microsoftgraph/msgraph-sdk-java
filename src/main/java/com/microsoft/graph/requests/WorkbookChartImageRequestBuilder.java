@@ -65,12 +65,10 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      */
     @Nonnull
     public WorkbookChartImageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookChartImageRequest request = new WorkbookChartImageRequest(
+        final WorkbookChartImageRequest request = new WorkbookChartImageRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

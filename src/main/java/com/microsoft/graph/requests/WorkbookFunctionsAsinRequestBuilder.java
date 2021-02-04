@@ -54,13 +54,11 @@ public class WorkbookFunctionsAsinRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsAsinRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsAsinRequest request = new WorkbookFunctionsAsinRequest(
+        final WorkbookFunctionsAsinRequest request = new WorkbookFunctionsAsinRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -50,12 +50,10 @@ public class WorkbookTableHeaderRowRangeRequestBuilder extends BaseFunctionReque
      */
     @Nonnull
     public WorkbookTableHeaderRowRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableHeaderRowRangeRequest request = new WorkbookTableHeaderRowRangeRequest(
+        final WorkbookTableHeaderRowRangeRequest request = new WorkbookTableHeaderRowRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

@@ -53,13 +53,11 @@ public class WorkbookTableColumnAddRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookTableColumnAddRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableColumnAddRequest request = new WorkbookTableColumnAddRequest(
+        final WorkbookTableColumnAddRequest request = new WorkbookTableColumnAddRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

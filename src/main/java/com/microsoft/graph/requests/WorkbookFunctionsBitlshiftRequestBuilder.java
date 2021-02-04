@@ -54,13 +54,11 @@ public class WorkbookFunctionsBitlshiftRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsBitlshiftRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsBitlshiftRequest request = new WorkbookFunctionsBitlshiftRequest(
+        final WorkbookFunctionsBitlshiftRequest request = new WorkbookFunctionsBitlshiftRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

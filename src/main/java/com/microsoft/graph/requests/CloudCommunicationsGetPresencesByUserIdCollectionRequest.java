@@ -31,7 +31,7 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionRequest extends Ba
 
     /** The body for the method */
     @Nullable
-    protected CloudCommunicationsGetPresencesByUserIdParameterSet body;
+    public CloudCommunicationsGetPresencesByUserIdParameterSet body;
 
 
     /**
@@ -40,11 +40,9 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionRequest extends Ba
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters the parameters for the service method
      */
-    public CloudCommunicationsGetPresencesByUserIdCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CloudCommunicationsGetPresencesByUserIdParameterSet parameters) {
+    public CloudCommunicationsGetPresencesByUserIdCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CloudCommunicationsGetPresencesByUserIdCollectionResponse.class, CloudCommunicationsGetPresencesByUserIdCollectionPage.class, CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder.class);
-        body = parameters;
     }
 
 

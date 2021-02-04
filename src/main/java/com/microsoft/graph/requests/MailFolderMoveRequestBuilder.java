@@ -53,13 +53,11 @@ public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder<MailF
      */
     @Nonnull
     public MailFolderMoveRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MailFolderMoveRequest request = new MailFolderMoveRequest(
+        final MailFolderMoveRequest request = new MailFolderMoveRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

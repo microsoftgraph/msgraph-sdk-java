@@ -54,13 +54,11 @@ public class ScheduleChangeRequestApproveRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public ScheduleChangeRequestApproveRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ScheduleChangeRequestApproveRequest request = new ScheduleChangeRequestApproveRequest(
+        final ScheduleChangeRequestApproveRequest request = new ScheduleChangeRequestApproveRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

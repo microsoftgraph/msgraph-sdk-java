@@ -50,12 +50,10 @@ public class WorkbookFunctionsNaRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public WorkbookFunctionsNaRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsNaRequest request = new WorkbookFunctionsNaRequest(
+        final WorkbookFunctionsNaRequest request = new WorkbookFunctionsNaRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

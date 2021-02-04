@@ -50,12 +50,10 @@ public class ManagedDeviceShutDownRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public ManagedDeviceShutDownRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceShutDownRequest request = new ManagedDeviceShutDownRequest(
+        final ManagedDeviceShutDownRequest request = new ManagedDeviceShutDownRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

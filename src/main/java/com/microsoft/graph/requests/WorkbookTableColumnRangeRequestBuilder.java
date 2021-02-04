@@ -50,12 +50,10 @@ public class WorkbookTableColumnRangeRequestBuilder extends BaseFunctionRequestB
      */
     @Nonnull
     public WorkbookTableColumnRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableColumnRangeRequest request = new WorkbookTableColumnRangeRequest(
+        final WorkbookTableColumnRangeRequest request = new WorkbookTableColumnRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

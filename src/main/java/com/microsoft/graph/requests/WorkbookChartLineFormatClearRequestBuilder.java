@@ -50,12 +50,10 @@ public class WorkbookChartLineFormatClearRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public WorkbookChartLineFormatClearRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookChartLineFormatClearRequest request = new WorkbookChartLineFormatClearRequest(
+        final WorkbookChartLineFormatClearRequest request = new WorkbookChartLineFormatClearRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

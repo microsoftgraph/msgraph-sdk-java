@@ -54,13 +54,11 @@ public class WorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequestB
      */
     @Nonnull
     public WorkbookRangeOffsetRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeOffsetRangeRequest request = new WorkbookRangeOffsetRangeRequest(
+        final WorkbookRangeOffsetRangeRequest request = new WorkbookRangeOffsetRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

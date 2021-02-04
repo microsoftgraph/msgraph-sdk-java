@@ -33,7 +33,7 @@ public class UserGetMailTipsCollectionRequest extends BaseActionCollectionReques
 
     /** The body for the method */
     @Nullable
-    protected UserGetMailTipsParameterSet body;
+    public UserGetMailTipsParameterSet body;
 
 
     /**
@@ -42,11 +42,9 @@ public class UserGetMailTipsCollectionRequest extends BaseActionCollectionReques
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters the parameters for the service method
      */
-    public UserGetMailTipsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserGetMailTipsParameterSet parameters) {
+    public UserGetMailTipsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserGetMailTipsCollectionResponse.class, UserGetMailTipsCollectionPage.class, UserGetMailTipsCollectionRequestBuilder.class);
-        body = parameters;
     }
 
 

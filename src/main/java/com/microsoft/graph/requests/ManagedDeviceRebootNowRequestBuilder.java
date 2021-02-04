@@ -50,12 +50,10 @@ public class ManagedDeviceRebootNowRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public ManagedDeviceRebootNowRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceRebootNowRequest request = new ManagedDeviceRebootNowRequest(
+        final ManagedDeviceRebootNowRequest request = new ManagedDeviceRebootNowRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

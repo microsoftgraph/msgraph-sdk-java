@@ -56,13 +56,11 @@ public class ReportRootGetSharePointActivityUserDetailRequestBuilder extends Bas
      */
     @Nonnull
     public ReportRootGetSharePointActivityUserDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetSharePointActivityUserDetailRequest request = new ReportRootGetSharePointActivityUserDetailRequest(
+        final ReportRootGetSharePointActivityUserDetailRequest request = new ReportRootGetSharePointActivityUserDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

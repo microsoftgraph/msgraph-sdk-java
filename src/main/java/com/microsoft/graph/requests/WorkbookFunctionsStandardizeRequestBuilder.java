@@ -54,13 +54,11 @@ public class WorkbookFunctionsStandardizeRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public WorkbookFunctionsStandardizeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsStandardizeRequest request = new WorkbookFunctionsStandardizeRequest(
+        final WorkbookFunctionsStandardizeRequest request = new WorkbookFunctionsStandardizeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

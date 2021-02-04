@@ -54,13 +54,11 @@ public class DriveItemRestoreRequestBuilder extends BaseActionRequestBuilder<Dri
      */
     @Nonnull
     public DriveItemRestoreRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemRestoreRequest request = new DriveItemRestoreRequest(
+        final DriveItemRestoreRequest request = new DriveItemRestoreRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

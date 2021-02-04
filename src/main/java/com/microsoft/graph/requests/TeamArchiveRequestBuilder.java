@@ -54,13 +54,11 @@ public class TeamArchiveRequestBuilder extends BaseActionRequestBuilder<Team> {
      */
     @Nonnull
     public TeamArchiveRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        TeamArchiveRequest request = new TeamArchiveRequest(
+        final TeamArchiveRequest request = new TeamArchiveRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

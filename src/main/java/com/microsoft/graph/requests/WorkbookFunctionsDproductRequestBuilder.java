@@ -54,13 +54,11 @@ public class WorkbookFunctionsDproductRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsDproductRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDproductRequest request = new WorkbookFunctionsDproductRequest(
+        final WorkbookFunctionsDproductRequest request = new WorkbookFunctionsDproductRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

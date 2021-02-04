@@ -50,12 +50,10 @@ public class WorkbookChartFillClearRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookChartFillClearRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookChartFillClearRequest request = new WorkbookChartFillClearRequest(
+        final WorkbookChartFillClearRequest request = new WorkbookChartFillClearRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

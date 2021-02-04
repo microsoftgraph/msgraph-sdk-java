@@ -50,12 +50,10 @@ public class WorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsTrueRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsTrueRequest request = new WorkbookFunctionsTrueRequest(
+        final WorkbookFunctionsTrueRequest request = new WorkbookFunctionsTrueRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

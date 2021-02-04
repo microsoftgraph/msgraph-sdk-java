@@ -50,12 +50,10 @@ public class MobileAppContentFileRenewUploadRequestBuilder extends BaseActionReq
      */
     @Nonnull
     public MobileAppContentFileRenewUploadRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MobileAppContentFileRenewUploadRequest request = new MobileAppContentFileRenewUploadRequest(
+        final MobileAppContentFileRenewUploadRequest request = new MobileAppContentFileRenewUploadRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -50,12 +50,10 @@ public class GroupUnsubscribeByMailRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public GroupUnsubscribeByMailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupUnsubscribeByMailRequest request = new GroupUnsubscribeByMailRequest(
+        final GroupUnsubscribeByMailRequest request = new GroupUnsubscribeByMailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

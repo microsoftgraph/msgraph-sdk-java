@@ -54,13 +54,11 @@ public class CallCancelMediaProcessingRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public CallCancelMediaProcessingRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallCancelMediaProcessingRequest request = new CallCancelMediaProcessingRequest(
+        final CallCancelMediaProcessingRequest request = new CallCancelMediaProcessingRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

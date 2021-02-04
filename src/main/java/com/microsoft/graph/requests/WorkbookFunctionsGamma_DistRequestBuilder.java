@@ -54,13 +54,11 @@ public class WorkbookFunctionsGamma_DistRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookFunctionsGamma_DistRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsGamma_DistRequest request = new WorkbookFunctionsGamma_DistRequest(
+        final WorkbookFunctionsGamma_DistRequest request = new WorkbookFunctionsGamma_DistRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

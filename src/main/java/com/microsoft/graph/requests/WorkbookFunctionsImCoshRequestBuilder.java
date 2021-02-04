@@ -54,13 +54,11 @@ public class WorkbookFunctionsImCoshRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsImCoshRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImCoshRequest request = new WorkbookFunctionsImCoshRequest(
+        final WorkbookFunctionsImCoshRequest request = new WorkbookFunctionsImCoshRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookRangeResizedRangeRequestBuilder extends BaseFunctionRequest
      */
     @Nonnull
     public WorkbookRangeResizedRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeResizedRangeRequest request = new WorkbookRangeResizedRangeRequest(
+        final WorkbookRangeResizedRangeRequest request = new WorkbookRangeResizedRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

@@ -28,16 +28,14 @@ public class WorkbookFunctionsLogNorm_DistRequest extends BaseRequest<WorkbookFu
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsLogNorm_DistRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsLogNorm_DistParameterSet parameters) {
+    public WorkbookFunctionsLogNorm_DistRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected WorkbookFunctionsLogNorm_DistParameterSet body;
+    public WorkbookFunctionsLogNorm_DistParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

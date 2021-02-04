@@ -50,12 +50,10 @@ public class DriveItemVersionRestoreVersionRequestBuilder extends BaseActionRequ
      */
     @Nonnull
     public DriveItemVersionRestoreVersionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemVersionRestoreVersionRequest request = new DriveItemVersionRestoreVersionRequest(
+        final DriveItemVersionRestoreVersionRequest request = new DriveItemVersionRestoreVersionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

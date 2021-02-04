@@ -55,13 +55,11 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder ext
      */
     @Nonnull
     public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest request = new ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest(
+        final ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest request = new ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

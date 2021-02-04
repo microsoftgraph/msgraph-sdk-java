@@ -56,13 +56,11 @@ public class ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder extends BaseF
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageUserDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetTeamsDeviceUsageUserDetailRequest request = new ReportRootGetTeamsDeviceUsageUserDetailRequest(
+        final ReportRootGetTeamsDeviceUsageUserDetailRequest request = new ReportRootGetTeamsDeviceUsageUserDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

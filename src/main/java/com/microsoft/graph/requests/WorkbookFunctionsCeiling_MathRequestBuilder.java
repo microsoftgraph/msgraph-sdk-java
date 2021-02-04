@@ -54,13 +54,11 @@ public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionReque
      */
     @Nonnull
     public WorkbookFunctionsCeiling_MathRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCeiling_MathRequest request = new WorkbookFunctionsCeiling_MathRequest(
+        final WorkbookFunctionsCeiling_MathRequest request = new WorkbookFunctionsCeiling_MathRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

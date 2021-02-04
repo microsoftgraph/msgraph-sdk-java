@@ -54,13 +54,11 @@ public class WorkbookRangeIntersectionRequestBuilder extends BaseFunctionRequest
      */
     @Nonnull
     public WorkbookRangeIntersectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeIntersectionRequest request = new WorkbookRangeIntersectionRequest(
+        final WorkbookRangeIntersectionRequest request = new WorkbookRangeIntersectionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

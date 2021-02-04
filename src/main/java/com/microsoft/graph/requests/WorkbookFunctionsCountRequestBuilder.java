@@ -54,13 +54,11 @@ public class WorkbookFunctionsCountRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsCountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCountRequest request = new WorkbookFunctionsCountRequest(
+        final WorkbookFunctionsCountRequest request = new WorkbookFunctionsCountRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

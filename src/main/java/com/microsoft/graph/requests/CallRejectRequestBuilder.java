@@ -54,13 +54,11 @@ public class CallRejectRequestBuilder extends BaseActionRequestBuilder<Call> {
      */
     @Nonnull
     public CallRejectRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallRejectRequest request = new CallRejectRequest(
+        final CallRejectRequest request = new CallRejectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

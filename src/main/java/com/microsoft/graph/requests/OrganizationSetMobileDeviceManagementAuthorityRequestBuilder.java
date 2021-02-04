@@ -50,12 +50,10 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequestBuilder extend
      */
     @Nonnull
     public OrganizationSetMobileDeviceManagementAuthorityRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        OrganizationSetMobileDeviceManagementAuthorityRequest request = new OrganizationSetMobileDeviceManagementAuthorityRequest(
+        final OrganizationSetMobileDeviceManagementAuthorityRequest request = new OrganizationSetMobileDeviceManagementAuthorityRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

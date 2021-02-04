@@ -54,13 +54,11 @@ public class WorkbookFunctionsIsrefRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsIsrefRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIsrefRequest request = new WorkbookFunctionsIsrefRequest(
+        final WorkbookFunctionsIsrefRequest request = new WorkbookFunctionsIsrefRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

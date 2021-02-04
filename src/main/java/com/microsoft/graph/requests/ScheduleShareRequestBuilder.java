@@ -54,13 +54,11 @@ public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder<Schedu
      */
     @Nonnull
     public ScheduleShareRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ScheduleShareRequest request = new ScheduleShareRequest(
+        final ScheduleShareRequest request = new ScheduleShareRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsImLog2RequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsImLog2Request buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImLog2Request request = new WorkbookFunctionsImLog2Request(
+        final WorkbookFunctionsImLog2Request request = new WorkbookFunctionsImLog2Request(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

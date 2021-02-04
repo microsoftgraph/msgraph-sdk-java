@@ -54,13 +54,11 @@ public class MobileAppAssignRequestBuilder extends BaseActionRequestBuilder<Mobi
      */
     @Nonnull
     public MobileAppAssignRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MobileAppAssignRequest request = new MobileAppAssignRequest(
+        final MobileAppAssignRequest request = new MobileAppAssignRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

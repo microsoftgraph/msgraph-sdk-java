@@ -54,13 +54,11 @@ public class WorkbookFunctionsAverageIfRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsAverageIfRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsAverageIfRequest request = new WorkbookFunctionsAverageIfRequest(
+        final WorkbookFunctionsAverageIfRequest request = new WorkbookFunctionsAverageIfRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

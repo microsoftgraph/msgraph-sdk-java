@@ -54,13 +54,11 @@ public class WorkbookFunctionsLog10RequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsLog10Request buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsLog10Request request = new WorkbookFunctionsLog10Request(
+        final WorkbookFunctionsLog10Request request = new WorkbookFunctionsLog10Request(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

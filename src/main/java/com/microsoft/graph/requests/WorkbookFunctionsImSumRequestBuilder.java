@@ -54,13 +54,11 @@ public class WorkbookFunctionsImSumRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsImSumRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImSumRequest request = new WorkbookFunctionsImSumRequest(
+        final WorkbookFunctionsImSumRequest request = new WorkbookFunctionsImSumRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

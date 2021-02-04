@@ -50,12 +50,10 @@ public class ReportRootDeviceConfigurationDeviceActivityRequestBuilder extends B
      */
     @Nonnull
     public ReportRootDeviceConfigurationDeviceActivityRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootDeviceConfigurationDeviceActivityRequest request = new ReportRootDeviceConfigurationDeviceActivityRequest(
+        final ReportRootDeviceConfigurationDeviceActivityRequest request = new ReportRootDeviceConfigurationDeviceActivityRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

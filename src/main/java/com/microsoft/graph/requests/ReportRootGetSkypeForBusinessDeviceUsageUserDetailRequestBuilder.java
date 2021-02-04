@@ -56,13 +56,11 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder ex
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest request = new ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest(
+        final ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest request = new ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

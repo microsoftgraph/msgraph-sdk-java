@@ -54,13 +54,11 @@ public class WorkbookFunctionsIsNARequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsIsNARequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIsNARequest request = new WorkbookFunctionsIsNARequest(
+        final WorkbookFunctionsIsNARequest request = new WorkbookFunctionsIsNARequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

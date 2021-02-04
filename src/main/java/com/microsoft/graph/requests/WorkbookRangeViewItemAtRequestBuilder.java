@@ -54,13 +54,11 @@ public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBu
      */
     @Nonnull
     public WorkbookRangeViewItemAtRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeViewItemAtRequest request = new WorkbookRangeViewItemAtRequest(
+        final WorkbookRangeViewItemAtRequest request = new WorkbookRangeViewItemAtRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

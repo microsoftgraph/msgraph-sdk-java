@@ -54,13 +54,11 @@ public class WorkbookFunctionsSumRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsSumRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsSumRequest request = new WorkbookFunctionsSumRequest(
+        final WorkbookFunctionsSumRequest request = new WorkbookFunctionsSumRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsConvertRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsConvertRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsConvertRequest request = new WorkbookFunctionsConvertRequest(
+        final WorkbookFunctionsConvertRequest request = new WorkbookFunctionsConvertRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

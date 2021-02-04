@@ -54,13 +54,11 @@ public class TargetedManagedAppConfigurationTargetAppsRequestBuilder extends Bas
      */
     @Nonnull
     public TargetedManagedAppConfigurationTargetAppsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        TargetedManagedAppConfigurationTargetAppsRequest request = new TargetedManagedAppConfigurationTargetAppsRequest(
+        final TargetedManagedAppConfigurationTargetAppsRequest request = new TargetedManagedAppConfigurationTargetAppsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class TargetedManagedAppProtectionAssignRequestBuilder extends BaseAction
      */
     @Nonnull
     public TargetedManagedAppProtectionAssignRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        TargetedManagedAppProtectionAssignRequest request = new TargetedManagedAppProtectionAssignRequest(
+        final TargetedManagedAppProtectionAssignRequest request = new TargetedManagedAppProtectionAssignRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

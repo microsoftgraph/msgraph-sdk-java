@@ -54,13 +54,11 @@ public class WorkbookFunctionsRank_EqRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsRank_EqRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsRank_EqRequest request = new WorkbookFunctionsRank_EqRequest(
+        final WorkbookFunctionsRank_EqRequest request = new WorkbookFunctionsRank_EqRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

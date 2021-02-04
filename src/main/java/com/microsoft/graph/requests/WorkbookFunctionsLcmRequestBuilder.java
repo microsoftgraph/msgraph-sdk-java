@@ -54,13 +54,11 @@ public class WorkbookFunctionsLcmRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsLcmRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsLcmRequest request = new WorkbookFunctionsLcmRequest(
+        final WorkbookFunctionsLcmRequest request = new WorkbookFunctionsLcmRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

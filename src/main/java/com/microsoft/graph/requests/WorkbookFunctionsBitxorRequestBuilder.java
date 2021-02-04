@@ -54,13 +54,11 @@ public class WorkbookFunctionsBitxorRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsBitxorRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsBitxorRequest request = new WorkbookFunctionsBitxorRequest(
+        final WorkbookFunctionsBitxorRequest request = new WorkbookFunctionsBitxorRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

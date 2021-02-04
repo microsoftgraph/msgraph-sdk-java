@@ -50,12 +50,10 @@ public class ManagedDeviceBypassActivationLockRequestBuilder extends BaseActionR
      */
     @Nonnull
     public ManagedDeviceBypassActivationLockRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceBypassActivationLockRequest request = new ManagedDeviceBypassActivationLockRequest(
+        final ManagedDeviceBypassActivationLockRequest request = new ManagedDeviceBypassActivationLockRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

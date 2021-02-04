@@ -54,13 +54,11 @@ public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public EventSnoozeReminderRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        EventSnoozeReminderRequest request = new EventSnoozeReminderRequest(
+        final EventSnoozeReminderRequest request = new EventSnoozeReminderRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

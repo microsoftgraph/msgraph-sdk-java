@@ -56,13 +56,11 @@ public class ReportRootGetEmailActivityUserDetailRequestBuilder extends BaseFunc
      */
     @Nonnull
     public ReportRootGetEmailActivityUserDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetEmailActivityUserDetailRequest request = new ReportRootGetEmailActivityUserDetailRequest(
+        final ReportRootGetEmailActivityUserDetailRequest request = new ReportRootGetEmailActivityUserDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

@@ -28,16 +28,14 @@ public class WorkbookFunctionsImLog2Request extends BaseRequest<WorkbookFunction
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsImLog2Request(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImLog2ParameterSet parameters) {
+    public WorkbookFunctionsImLog2Request(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected WorkbookFunctionsImLog2ParameterSet body;
+    public WorkbookFunctionsImLog2ParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

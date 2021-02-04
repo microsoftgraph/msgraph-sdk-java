@@ -54,13 +54,11 @@ public class WorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsYieldDiscRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsYieldDiscRequest request = new WorkbookFunctionsYieldDiscRequest(
+        final WorkbookFunctionsYieldDiscRequest request = new WorkbookFunctionsYieldDiscRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

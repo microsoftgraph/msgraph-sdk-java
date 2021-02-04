@@ -54,13 +54,11 @@ public class WorkbookFunctionsAmorLincRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsAmorLincRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsAmorLincRequest request = new WorkbookFunctionsAmorLincRequest(
+        final WorkbookFunctionsAmorLincRequest request = new WorkbookFunctionsAmorLincRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

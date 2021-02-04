@@ -54,13 +54,11 @@ public class CallTransferRequestBuilder extends BaseActionRequestBuilder<Call> {
      */
     @Nonnull
     public CallTransferRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallTransferRequest request = new CallTransferRequest(
+        final CallTransferRequest request = new CallTransferRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

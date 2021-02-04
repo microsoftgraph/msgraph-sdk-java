@@ -54,13 +54,11 @@ public class WorkbookFunctionsQuotientRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsQuotientRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsQuotientRequest request = new WorkbookFunctionsQuotientRequest(
+        final WorkbookFunctionsQuotientRequest request = new WorkbookFunctionsQuotientRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

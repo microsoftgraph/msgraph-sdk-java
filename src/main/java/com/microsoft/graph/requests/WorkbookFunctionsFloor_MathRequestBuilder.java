@@ -54,13 +54,11 @@ public class WorkbookFunctionsFloor_MathRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookFunctionsFloor_MathRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsFloor_MathRequest request = new WorkbookFunctionsFloor_MathRequest(
+        final WorkbookFunctionsFloor_MathRequest request = new WorkbookFunctionsFloor_MathRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

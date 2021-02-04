@@ -54,13 +54,11 @@ public class WorkbookFunctionsFixedRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsFixedRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsFixedRequest request = new WorkbookFunctionsFixedRequest(
+        final WorkbookFunctionsFixedRequest request = new WorkbookFunctionsFixedRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

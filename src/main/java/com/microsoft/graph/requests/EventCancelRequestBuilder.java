@@ -54,13 +54,11 @@ public class EventCancelRequestBuilder extends BaseActionRequestBuilder<Event> {
      */
     @Nonnull
     public EventCancelRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        EventCancelRequest request = new EventCancelRequest(
+        final EventCancelRequest request = new EventCancelRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

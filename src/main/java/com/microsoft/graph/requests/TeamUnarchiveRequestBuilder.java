@@ -50,12 +50,10 @@ public class TeamUnarchiveRequestBuilder extends BaseActionRequestBuilder<Team> 
      */
     @Nonnull
     public TeamUnarchiveRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        TeamUnarchiveRequest request = new TeamUnarchiveRequest(
+        final TeamUnarchiveRequest request = new TeamUnarchiveRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsStDev_PRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsStDev_PRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsStDev_PRequest request = new WorkbookFunctionsStDev_PRequest(
+        final WorkbookFunctionsStDev_PRequest request = new WorkbookFunctionsStDev_PRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

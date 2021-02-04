@@ -54,13 +54,11 @@ public class WorkbookFunctionsGammaRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsGammaRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsGammaRequest request = new WorkbookFunctionsGammaRequest(
+        final WorkbookFunctionsGammaRequest request = new WorkbookFunctionsGammaRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

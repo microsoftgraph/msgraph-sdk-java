@@ -54,13 +54,11 @@ public class EventTentativelyAcceptRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public EventTentativelyAcceptRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        EventTentativelyAcceptRequest request = new EventTentativelyAcceptRequest(
+        final EventTentativelyAcceptRequest request = new EventTentativelyAcceptRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsImDivRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsImDivRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImDivRequest request = new WorkbookFunctionsImDivRequest(
+        final WorkbookFunctionsImDivRequest request = new WorkbookFunctionsImDivRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

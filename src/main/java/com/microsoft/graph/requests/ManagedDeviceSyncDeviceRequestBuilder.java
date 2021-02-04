@@ -50,12 +50,10 @@ public class ManagedDeviceSyncDeviceRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public ManagedDeviceSyncDeviceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceSyncDeviceRequest request = new ManagedDeviceSyncDeviceRequest(
+        final ManagedDeviceSyncDeviceRequest request = new ManagedDeviceSyncDeviceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

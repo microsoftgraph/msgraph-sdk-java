@@ -49,12 +49,10 @@ public class DirectoryObjectRestoreRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public DirectoryObjectRestoreRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DirectoryObjectRestoreRequest request = new DirectoryObjectRestoreRequest(
+        final DirectoryObjectRestoreRequest request = new DirectoryObjectRestoreRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

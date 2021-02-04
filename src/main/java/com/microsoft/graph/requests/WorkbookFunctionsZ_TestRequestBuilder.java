@@ -54,13 +54,11 @@ public class WorkbookFunctionsZ_TestRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsZ_TestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsZ_TestRequest request = new WorkbookFunctionsZ_TestRequest(
+        final WorkbookFunctionsZ_TestRequest request = new WorkbookFunctionsZ_TestRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

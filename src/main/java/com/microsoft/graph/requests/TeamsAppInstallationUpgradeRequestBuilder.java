@@ -50,12 +50,10 @@ public class TeamsAppInstallationUpgradeRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public TeamsAppInstallationUpgradeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        TeamsAppInstallationUpgradeRequest request = new TeamsAppInstallationUpgradeRequest(
+        final TeamsAppInstallationUpgradeRequest request = new TeamsAppInstallationUpgradeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

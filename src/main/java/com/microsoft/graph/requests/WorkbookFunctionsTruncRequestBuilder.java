@@ -54,13 +54,11 @@ public class WorkbookFunctionsTruncRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsTruncRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsTruncRequest request = new WorkbookFunctionsTruncRequest(
+        final WorkbookFunctionsTruncRequest request = new WorkbookFunctionsTruncRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

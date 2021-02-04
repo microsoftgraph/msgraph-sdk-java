@@ -54,13 +54,11 @@ public class WorkbookFunctionsDollarDeRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsDollarDeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDollarDeRequest request = new WorkbookFunctionsDollarDeRequest(
+        final WorkbookFunctionsDollarDeRequest request = new WorkbookFunctionsDollarDeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

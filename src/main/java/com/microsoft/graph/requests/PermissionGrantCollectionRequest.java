@@ -32,7 +32,7 @@ public class PermissionGrantCollectionRequest extends BaseActionCollectionReques
 
     /** The body for the method */
     @Nullable
-    protected PermissionGrantParameterSet body;
+    public PermissionGrantParameterSet body;
 
 
     /**
@@ -41,11 +41,9 @@ public class PermissionGrantCollectionRequest extends BaseActionCollectionReques
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters the parameters for the service method
      */
-    public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PermissionGrantParameterSet parameters) {
+    public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantCollectionResponse.class, PermissionGrantCollectionPage.class, PermissionGrantCollectionRequestBuilder.class);
-        body = parameters;
     }
 
 

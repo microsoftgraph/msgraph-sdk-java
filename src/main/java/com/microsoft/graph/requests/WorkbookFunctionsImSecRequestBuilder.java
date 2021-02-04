@@ -54,13 +54,11 @@ public class WorkbookFunctionsImSecRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsImSecRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImSecRequest request = new WorkbookFunctionsImSecRequest(
+        final WorkbookFunctionsImSecRequest request = new WorkbookFunctionsImSecRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

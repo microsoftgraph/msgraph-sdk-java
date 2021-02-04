@@ -54,13 +54,11 @@ public class WorkbookFunctionsCschRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsCschRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCschRequest request = new WorkbookFunctionsCschRequest(
+        final WorkbookFunctionsCschRequest request = new WorkbookFunctionsCschRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

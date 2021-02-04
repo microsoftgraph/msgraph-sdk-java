@@ -50,12 +50,10 @@ public class ManagedDeviceRequestRemoteAssistanceRequestBuilder extends BaseActi
      */
     @Nonnull
     public ManagedDeviceRequestRemoteAssistanceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceRequestRemoteAssistanceRequest request = new ManagedDeviceRequestRemoteAssistanceRequest(
+        final ManagedDeviceRequestRemoteAssistanceRequest request = new ManagedDeviceRequestRemoteAssistanceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

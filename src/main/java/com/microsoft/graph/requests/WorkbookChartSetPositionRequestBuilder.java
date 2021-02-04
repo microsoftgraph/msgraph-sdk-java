@@ -54,13 +54,11 @@ public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookChartSetPositionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookChartSetPositionRequest request = new WorkbookChartSetPositionRequest(
+        final WorkbookChartSetPositionRequest request = new WorkbookChartSetPositionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

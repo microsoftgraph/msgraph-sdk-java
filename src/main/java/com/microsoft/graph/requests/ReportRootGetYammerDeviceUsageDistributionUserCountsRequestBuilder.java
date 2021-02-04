@@ -55,13 +55,11 @@ public class ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder 
      */
     @Nonnull
     public ReportRootGetYammerDeviceUsageDistributionUserCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetYammerDeviceUsageDistributionUserCountsRequest request = new ReportRootGetYammerDeviceUsageDistributionUserCountsRequest(
+        final ReportRootGetYammerDeviceUsageDistributionUserCountsRequest request = new ReportRootGetYammerDeviceUsageDistributionUserCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

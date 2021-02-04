@@ -54,13 +54,11 @@ public class EventForwardRequestBuilder extends BaseActionRequestBuilder<Event> 
      */
     @Nonnull
     public EventForwardRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        EventForwardRequest request = new EventForwardRequest(
+        final EventForwardRequest request = new EventForwardRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookChartPointItemAtRequestBuilder extends BaseFunctionRequestB
      */
     @Nonnull
     public WorkbookChartPointItemAtRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookChartPointItemAtRequest request = new WorkbookChartPointItemAtRequest(
+        final WorkbookChartPointItemAtRequest request = new WorkbookChartPointItemAtRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

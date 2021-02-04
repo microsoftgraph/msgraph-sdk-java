@@ -54,13 +54,11 @@ public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookCreateSessionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookCreateSessionRequest request = new WorkbookCreateSessionRequest(
+        final WorkbookCreateSessionRequest request = new WorkbookCreateSessionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

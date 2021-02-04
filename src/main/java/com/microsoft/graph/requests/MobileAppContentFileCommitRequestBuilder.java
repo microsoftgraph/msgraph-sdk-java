@@ -54,13 +54,11 @@ public class MobileAppContentFileCommitRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public MobileAppContentFileCommitRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MobileAppContentFileCommitRequest request = new MobileAppContentFileCommitRequest(
+        final MobileAppContentFileCommitRequest request = new MobileAppContentFileCommitRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

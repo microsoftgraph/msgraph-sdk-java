@@ -54,13 +54,11 @@ public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsPriceDiscRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPriceDiscRequest request = new WorkbookFunctionsPriceDiscRequest(
+        final WorkbookFunctionsPriceDiscRequest request = new WorkbookFunctionsPriceDiscRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsIsOddRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsIsOddRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIsOddRequest request = new WorkbookFunctionsIsOddRequest(
+        final WorkbookFunctionsIsOddRequest request = new WorkbookFunctionsIsOddRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

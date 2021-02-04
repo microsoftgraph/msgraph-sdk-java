@@ -55,13 +55,11 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder 
      */
     @Nonnull
     public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest request = new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest(
+        final DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest request = new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

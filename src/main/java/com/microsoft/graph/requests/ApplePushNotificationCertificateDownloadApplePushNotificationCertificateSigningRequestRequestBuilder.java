@@ -50,12 +50,10 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
      */
     @Nonnull
     public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest request = new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest(
+        final ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest request = new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

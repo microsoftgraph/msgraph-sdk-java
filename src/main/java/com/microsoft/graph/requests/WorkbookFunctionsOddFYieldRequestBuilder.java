@@ -54,13 +54,11 @@ public class WorkbookFunctionsOddFYieldRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsOddFYieldRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsOddFYieldRequest request = new WorkbookFunctionsOddFYieldRequest(
+        final WorkbookFunctionsOddFYieldRequest request = new WorkbookFunctionsOddFYieldRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class ManagedAppPolicyTargetAppsRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public ManagedAppPolicyTargetAppsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedAppPolicyTargetAppsRequest request = new ManagedAppPolicyTargetAppsRequest(
+        final ManagedAppPolicyTargetAppsRequest request = new ManagedAppPolicyTargetAppsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

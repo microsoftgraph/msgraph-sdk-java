@@ -49,12 +49,10 @@ public class DomainVerifyRequestBuilder extends BaseActionRequestBuilder<Domain>
      */
     @Nonnull
     public DomainVerifyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DomainVerifyRequest request = new DomainVerifyRequest(
+        final DomainVerifyRequest request = new DomainVerifyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder extends Ba
      */
     @Nonnull
     public UserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        UserWipeManagedAppRegistrationsByDeviceTagRequest request = new UserWipeManagedAppRegistrationsByDeviceTagRequest(
+        final UserWipeManagedAppRegistrationsByDeviceTagRequest request = new UserWipeManagedAppRegistrationsByDeviceTagRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

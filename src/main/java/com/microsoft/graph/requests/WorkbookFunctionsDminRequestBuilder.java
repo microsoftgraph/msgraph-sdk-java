@@ -54,13 +54,11 @@ public class WorkbookFunctionsDminRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsDminRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDminRequest request = new WorkbookFunctionsDminRequest(
+        final WorkbookFunctionsDminRequest request = new WorkbookFunctionsDminRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

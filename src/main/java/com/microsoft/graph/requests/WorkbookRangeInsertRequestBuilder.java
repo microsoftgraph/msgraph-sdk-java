@@ -53,13 +53,11 @@ public class WorkbookRangeInsertRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public WorkbookRangeInsertRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeInsertRequest request = new WorkbookRangeInsertRequest(
+        final WorkbookRangeInsertRequest request = new WorkbookRangeInsertRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsDiscRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDiscRequest request = new WorkbookFunctionsDiscRequest(
+        final WorkbookFunctionsDiscRequest request = new WorkbookFunctionsDiscRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }
