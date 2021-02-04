@@ -128,7 +128,7 @@ final TokenCredentialAuthProvider authProvider = new TokenCredentialAuthProvider
 final GraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider(authProvider).buildClient();
 ```
 
-##### Interwactive browser flow
+##### Interactive browser flow
 
 Replace any of the following:
 
