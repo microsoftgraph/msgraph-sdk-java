@@ -51,7 +51,7 @@ By
 ``` Java
 final AuthorizationCodeCredential authCodeCredential = new AuthorizationCodeCredentialBuilder()
     .clientId(CLIENT_ID)
-    .clientSecret(CLIENT_SECRET) //required for web apps, do not set for native apps
+    .clientSecret(CLIENT_SECRET) //required for web apps, skip it for native apps
     .authorizationCode(AUTHORIZATION_CODE)
     .redirectUrl(REDIRECT_URL)
     .build();
