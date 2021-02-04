@@ -130,13 +130,26 @@ final GraphServiceClient graphClient = GraphServiceClient.builder().authenticati
 
 ##### Interwactive browser flow
 
-> Note: the interactive browser flow was previously not available, some customers might have implemented custom authentication providers in their application to bridge the feature gap. That custom code can now be replaced.
-
 Replace any of the following:
 
 ```Java
-CustomBuiltBrowserProvider authProvider = new CustomBuiltBrowserProvider(CLIENT_ID, REDIRECT_URL); // code specific to the custom implementation
+PublicClientApplication publicClientApplication = new PublicClientApplication(getApplicationContext(), CLIENT_ID);
+MSALAuthenticationProvider msalAuthenticationProvider = new MSALAuthenticationProvider(
+    getActivity(),
+    getApplication(),
+    publicClientApplication,
+    scopes);
+CustomBuiltBrowserProvider authProvider = new CustomBuiltBrowserProvider(CLIENT_ID, REDIRECT_URL);
 IGraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider(authProvider).buildClient();
+```
+
+And
+
+```Java
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    msalAuthenticationProvider.handleInteractiveRequestRedirect(requestCode, resultCode, data);
+}
 ```
 
 By
