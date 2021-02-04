@@ -55,7 +55,7 @@ final AuthorizationCodeCredential authCodeCredential = new AuthorizationCodeCred
     .authorizationCode(AUTHORIZATION_CODE)
     .redirectUrl(REDIRECT_URL)
     .build();
-final TokenCredentialAuthProvider tokenCredentialAuthProvider = new TokenCredentialAuthProvider(SCOPES, authCodeCredential);
+final TokenCredentialAuthProvider authProvider = new TokenCredentialAuthProvider(SCOPES, authCodeCredential);
 final GraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider(authProvider).buildClient();
 ```
 
@@ -76,7 +76,7 @@ final ClientSecretCredential clientSecretCredential = new ClientSecretCredential
     .clientSecret(CLIENT_SECRET)
     .tenantId(TENANT_GUID)
     .build();
-final TokenCredentialAuthProvider tokenCredentialAuthProvider = new TokenCredentialAuthProvider(SCOPES, authCodeCredential);
+final TokenCredentialAuthProvider authProvider = new TokenCredentialAuthProvider(SCOPES, clientSecretCredential);
 final GraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider(authProvider).buildClient();
 ```
 
@@ -99,7 +99,7 @@ final UsernamePasswordCredential usernamePasswordCredential = new UsernamePasswo
     .username(USERNAME)
     .password(PASSWORD)
     .build();
-final TokenCredentialAuthProvider tokenCredentialAuthProvider = new TokenCredentialAuthProvider(SCOPES, authCodeCredential);
+final TokenCredentialAuthProvider authProvider = new TokenCredentialAuthProvider(SCOPES, usernamePasswordCredential);
 final GraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider(authProvider).buildClient();
 ```
 
@@ -124,7 +124,7 @@ final DeviceCodeCredential deviceCodeCredential = new DeviceCodeCredentialBuilde
                         System.out.println(challenge.getMessage());
                     })
     .build();
-final TokenCredentialAuthProvider tokenCredentialAuthProvider = new TokenCredentialAuthProvider(SCOPES, authCodeCredential);
+final TokenCredentialAuthProvider authProvider = new TokenCredentialAuthProvider(SCOPES, deviceCodeCredential);
 final GraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider(authProvider).buildClient();
 ```
 
@@ -159,7 +159,7 @@ final InteractiveBrowserCredential interactiveBrowserCredential = new Interactiv
     .clientId(CLIENT_ID)
     .redirectUrl(REDIRECT_URL)
     .build();
-final TokenCredentialAuthProvider tokenCredentialAuthProvider = new TokenCredentialAuthProvider(SCOPES, authCodeCredential);
+final TokenCredentialAuthProvider authProvider = new TokenCredentialAuthProvider(SCOPES, interactiveBrowserCredential);
 final GraphServiceClient graphClient = GraphServiceClient.builder().authenticationProvider(authProvider).buildClient();
 ```
 
