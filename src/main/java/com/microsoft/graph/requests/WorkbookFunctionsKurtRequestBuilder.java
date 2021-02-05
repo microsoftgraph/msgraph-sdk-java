@@ -54,13 +54,11 @@ public class WorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsKurtRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsKurtRequest request = new WorkbookFunctionsKurtRequest(
+        final WorkbookFunctionsKurtRequest request = new WorkbookFunctionsKurtRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

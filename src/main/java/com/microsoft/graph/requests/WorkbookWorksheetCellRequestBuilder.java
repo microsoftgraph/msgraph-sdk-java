@@ -55,13 +55,11 @@ public class WorkbookWorksheetCellRequestBuilder extends BaseFunctionRequestBuil
      */
     @Nonnull
     public WorkbookWorksheetCellRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookWorksheetCellRequest request = new WorkbookWorksheetCellRequest(
+        final WorkbookWorksheetCellRequest request = new WorkbookWorksheetCellRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

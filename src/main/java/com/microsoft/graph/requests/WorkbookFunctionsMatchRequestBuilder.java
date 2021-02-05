@@ -54,13 +54,11 @@ public class WorkbookFunctionsMatchRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsMatchRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsMatchRequest request = new WorkbookFunctionsMatchRequest(
+        final WorkbookFunctionsMatchRequest request = new WorkbookFunctionsMatchRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

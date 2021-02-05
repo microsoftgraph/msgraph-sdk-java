@@ -29,7 +29,7 @@ public class DeviceComplianceActionItem extends Entity implements IJsonBackedObj
 
     /**
      * The Action Type.
-     * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification.
+     * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification, remoteLock.
      */
     @SerializedName(value = "actionType", alternate = {"ActionType"})
     @Expose

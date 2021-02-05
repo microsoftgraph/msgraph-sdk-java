@@ -54,13 +54,11 @@ public class WorkbookFunctionsPriceRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsPriceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPriceRequest request = new WorkbookFunctionsPriceRequest(
+        final WorkbookFunctionsPriceRequest request = new WorkbookFunctionsPriceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

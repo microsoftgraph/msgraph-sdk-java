@@ -55,13 +55,11 @@ public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public OnlineMeetingCreateOrGetRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        OnlineMeetingCreateOrGetRequest request = new OnlineMeetingCreateOrGetRequest(
+        final OnlineMeetingCreateOrGetRequest request = new OnlineMeetingCreateOrGetRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

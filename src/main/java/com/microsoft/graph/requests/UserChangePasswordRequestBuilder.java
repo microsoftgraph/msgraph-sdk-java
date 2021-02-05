@@ -54,13 +54,11 @@ public class UserChangePasswordRequestBuilder extends BaseActionRequestBuilder<U
      */
     @Nonnull
     public UserChangePasswordRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        UserChangePasswordRequest request = new UserChangePasswordRequest(
+        final UserChangePasswordRequest request = new UserChangePasswordRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

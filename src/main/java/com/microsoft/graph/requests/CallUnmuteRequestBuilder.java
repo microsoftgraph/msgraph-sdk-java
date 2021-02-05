@@ -54,13 +54,11 @@ public class CallUnmuteRequestBuilder extends BaseActionRequestBuilder<UnmutePar
      */
     @Nonnull
     public CallUnmuteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallUnmuteRequest request = new CallUnmuteRequest(
+        final CallUnmuteRequest request = new CallUnmuteRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

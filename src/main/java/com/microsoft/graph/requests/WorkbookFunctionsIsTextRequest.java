@@ -28,16 +28,14 @@ public class WorkbookFunctionsIsTextRequest extends BaseRequest<WorkbookFunction
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsIsTextRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIsTextParameterSet parameters) {
+    public WorkbookFunctionsIsTextRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected WorkbookFunctionsIsTextParameterSet body;
+    public WorkbookFunctionsIsTextParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

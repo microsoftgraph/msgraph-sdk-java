@@ -54,13 +54,11 @@ public class WorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsTrimRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsTrimRequest request = new WorkbookFunctionsTrimRequest(
+        final WorkbookFunctionsTrimRequest request = new WorkbookFunctionsTrimRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsMinRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsMinRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsMinRequest request = new WorkbookFunctionsMinRequest(
+        final WorkbookFunctionsMinRequest request = new WorkbookFunctionsMinRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

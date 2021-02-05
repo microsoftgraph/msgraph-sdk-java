@@ -54,13 +54,11 @@ public class WorkbookFunctionsAtanRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsAtanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsAtanRequest request = new WorkbookFunctionsAtanRequest(
+        final WorkbookFunctionsAtanRequest request = new WorkbookFunctionsAtanRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

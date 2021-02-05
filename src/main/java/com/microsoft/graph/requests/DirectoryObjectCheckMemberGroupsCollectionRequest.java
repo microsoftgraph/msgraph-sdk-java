@@ -30,7 +30,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseActio
 
     /** The body for the method */
     @Nullable
-    protected DirectoryObjectCheckMemberGroupsParameterSet body;
+    public DirectoryObjectCheckMemberGroupsParameterSet body;
 
 
     /**
@@ -39,11 +39,9 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseActio
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters the parameters for the service method
      */
-    public DirectoryObjectCheckMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectCheckMemberGroupsParameterSet parameters) {
+    public DirectoryObjectCheckMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionResponse.class, DirectoryObjectCheckMemberGroupsCollectionPage.class, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder.class);
-        body = parameters;
     }
 
 

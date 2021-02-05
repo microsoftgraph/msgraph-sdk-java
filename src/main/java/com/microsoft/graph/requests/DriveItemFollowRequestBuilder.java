@@ -49,12 +49,10 @@ public class DriveItemFollowRequestBuilder extends BaseActionRequestBuilder<Driv
      */
     @Nonnull
     public DriveItemFollowRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemFollowRequest request = new DriveItemFollowRequest(
+        final DriveItemFollowRequest request = new DriveItemFollowRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

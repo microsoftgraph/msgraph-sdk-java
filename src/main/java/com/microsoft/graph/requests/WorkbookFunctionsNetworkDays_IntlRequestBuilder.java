@@ -54,13 +54,11 @@ public class WorkbookFunctionsNetworkDays_IntlRequestBuilder extends BaseActionR
      */
     @Nonnull
     public WorkbookFunctionsNetworkDays_IntlRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsNetworkDays_IntlRequest request = new WorkbookFunctionsNetworkDays_IntlRequest(
+        final WorkbookFunctionsNetworkDays_IntlRequest request = new WorkbookFunctionsNetworkDays_IntlRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

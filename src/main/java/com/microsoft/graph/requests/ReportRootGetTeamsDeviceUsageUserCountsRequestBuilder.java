@@ -55,13 +55,11 @@ public class ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder extends BaseF
      */
     @Nonnull
     public ReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetTeamsDeviceUsageUserCountsRequest request = new ReportRootGetTeamsDeviceUsageUserCountsRequest(
+        final ReportRootGetTeamsDeviceUsageUserCountsRequest request = new ReportRootGetTeamsDeviceUsageUserCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

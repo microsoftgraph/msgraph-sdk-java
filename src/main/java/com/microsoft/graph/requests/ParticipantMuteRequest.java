@@ -28,16 +28,14 @@ public class ParticipantMuteRequest extends BaseRequest<MuteParticipantOperation
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public ParticipantMuteRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ParticipantMuteParameterSet parameters) {
+    public ParticipantMuteRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MuteParticipantOperation.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected ParticipantMuteParameterSet body;
+    public ParticipantMuteParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

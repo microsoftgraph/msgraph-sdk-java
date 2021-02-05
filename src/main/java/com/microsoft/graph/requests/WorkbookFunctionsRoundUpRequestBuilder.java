@@ -54,13 +54,11 @@ public class WorkbookFunctionsRoundUpRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsRoundUpRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsRoundUpRequest request = new WorkbookFunctionsRoundUpRequest(
+        final WorkbookFunctionsRoundUpRequest request = new WorkbookFunctionsRoundUpRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

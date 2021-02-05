@@ -55,13 +55,11 @@ public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public CallUpdateRecordingStatusRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallUpdateRecordingStatusRequest request = new CallUpdateRecordingStatusRequest(
+        final CallUpdateRecordingStatusRequest request = new CallUpdateRecordingStatusRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

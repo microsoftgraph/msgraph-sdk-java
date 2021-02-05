@@ -54,13 +54,11 @@ public class WorkbookFunctionsFvscheduleRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookFunctionsFvscheduleRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsFvscheduleRequest request = new WorkbookFunctionsFvscheduleRequest(
+        final WorkbookFunctionsFvscheduleRequest request = new WorkbookFunctionsFvscheduleRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

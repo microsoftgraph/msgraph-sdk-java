@@ -54,13 +54,11 @@ public class WorkbookRangeColumnRequestBuilder extends BaseFunctionRequestBuilde
      */
     @Nonnull
     public WorkbookRangeColumnRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeColumnRequest request = new WorkbookRangeColumnRequest(
+        final WorkbookRangeColumnRequest request = new WorkbookRangeColumnRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

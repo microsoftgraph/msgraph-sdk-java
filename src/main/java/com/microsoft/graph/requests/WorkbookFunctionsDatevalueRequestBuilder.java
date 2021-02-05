@@ -54,13 +54,11 @@ public class WorkbookFunctionsDatevalueRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsDatevalueRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDatevalueRequest request = new WorkbookFunctionsDatevalueRequest(
+        final WorkbookFunctionsDatevalueRequest request = new WorkbookFunctionsDatevalueRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

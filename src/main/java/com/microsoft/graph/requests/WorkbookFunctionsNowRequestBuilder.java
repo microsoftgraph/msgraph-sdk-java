@@ -50,12 +50,10 @@ public class WorkbookFunctionsNowRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsNowRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsNowRequest request = new WorkbookFunctionsNowRequest(
+        final WorkbookFunctionsNowRequest request = new WorkbookFunctionsNowRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

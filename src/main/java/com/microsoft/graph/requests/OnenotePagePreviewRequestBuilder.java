@@ -50,12 +50,10 @@ public class OnenotePagePreviewRequestBuilder extends BaseFunctionRequestBuilder
      */
     @Nonnull
     public OnenotePagePreviewRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        OnenotePagePreviewRequest request = new OnenotePagePreviewRequest(
+        final OnenotePagePreviewRequest request = new OnenotePagePreviewRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

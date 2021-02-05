@@ -49,12 +49,10 @@ public class UserReprocessLicenseAssignmentRequestBuilder extends BaseActionRequ
      */
     @Nonnull
     public UserReprocessLicenseAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        UserReprocessLicenseAssignmentRequest request = new UserReprocessLicenseAssignmentRequest(
+        final UserReprocessLicenseAssignmentRequest request = new UserReprocessLicenseAssignmentRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

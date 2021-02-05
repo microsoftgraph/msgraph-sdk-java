@@ -54,13 +54,11 @@ public class UserAssignLicenseRequestBuilder extends BaseActionRequestBuilder<Us
      */
     @Nonnull
     public UserAssignLicenseRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        UserAssignLicenseRequest request = new UserAssignLicenseRequest(
+        final UserAssignLicenseRequest request = new UserAssignLicenseRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

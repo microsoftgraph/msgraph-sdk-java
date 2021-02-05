@@ -106,7 +106,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Hide Attendees.
-     * 
+     * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
      */
     @SerializedName(value = "hideAttendees", alternate = {"HideAttendees"})
     @Expose
@@ -151,7 +151,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Draft.
-     * 
+     * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
      */
     @SerializedName(value = "isDraft", alternate = {"IsDraft"})
     @Expose
@@ -376,7 +376,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+     * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
@@ -394,7 +394,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the event. Read-only. Nullable.
+     * The collection of open extensions defined for the event. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
@@ -403,7 +403,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Instances.
-     * The instances of the event. Navigation property. Read-only. Nullable.
+     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
      */
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose

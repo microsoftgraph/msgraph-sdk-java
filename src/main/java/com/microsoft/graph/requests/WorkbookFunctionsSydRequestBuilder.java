@@ -54,13 +54,11 @@ public class WorkbookFunctionsSydRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsSydRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsSydRequest request = new WorkbookFunctionsSydRequest(
+        final WorkbookFunctionsSydRequest request = new WorkbookFunctionsSydRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

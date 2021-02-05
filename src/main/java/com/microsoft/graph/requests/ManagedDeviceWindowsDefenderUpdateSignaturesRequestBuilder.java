@@ -50,12 +50,10 @@ public class ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder extends 
      */
     @Nonnull
     public ManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceWindowsDefenderUpdateSignaturesRequest request = new ManagedDeviceWindowsDefenderUpdateSignaturesRequest(
+        final ManagedDeviceWindowsDefenderUpdateSignaturesRequest request = new ManagedDeviceWindowsDefenderUpdateSignaturesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

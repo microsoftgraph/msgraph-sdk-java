@@ -54,13 +54,11 @@ public class WorkbookFunctionsDvarRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsDvarRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDvarRequest request = new WorkbookFunctionsDvarRequest(
+        final WorkbookFunctionsDvarRequest request = new WorkbookFunctionsDvarRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

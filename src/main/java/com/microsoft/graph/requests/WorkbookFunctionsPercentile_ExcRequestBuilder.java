@@ -54,13 +54,11 @@ public class WorkbookFunctionsPercentile_ExcRequestBuilder extends BaseActionReq
      */
     @Nonnull
     public WorkbookFunctionsPercentile_ExcRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPercentile_ExcRequest request = new WorkbookFunctionsPercentile_ExcRequest(
+        final WorkbookFunctionsPercentile_ExcRequest request = new WorkbookFunctionsPercentile_ExcRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

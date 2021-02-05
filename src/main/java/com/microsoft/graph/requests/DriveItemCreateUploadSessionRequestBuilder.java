@@ -55,13 +55,11 @@ public class DriveItemCreateUploadSessionRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public DriveItemCreateUploadSessionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemCreateUploadSessionRequest request = new DriveItemCreateUploadSessionRequest(
+        final DriveItemCreateUploadSessionRequest request = new DriveItemCreateUploadSessionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

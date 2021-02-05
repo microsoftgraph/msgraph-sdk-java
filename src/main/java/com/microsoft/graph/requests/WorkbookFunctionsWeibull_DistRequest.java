@@ -28,16 +28,14 @@ public class WorkbookFunctionsWeibull_DistRequest extends BaseRequest<WorkbookFu
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsWeibull_DistRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsWeibull_DistParameterSet parameters) {
+    public WorkbookFunctionsWeibull_DistRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected WorkbookFunctionsWeibull_DistParameterSet body;
+    public WorkbookFunctionsWeibull_DistParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

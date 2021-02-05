@@ -54,13 +54,11 @@ public class WorkbookFunctionsErfRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsErfRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsErfRequest request = new WorkbookFunctionsErfRequest(
+        final WorkbookFunctionsErfRequest request = new WorkbookFunctionsErfRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

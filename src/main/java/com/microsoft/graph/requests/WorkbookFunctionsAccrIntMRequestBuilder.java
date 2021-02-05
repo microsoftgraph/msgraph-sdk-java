@@ -54,13 +54,11 @@ public class WorkbookFunctionsAccrIntMRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsAccrIntMRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsAccrIntMRequest request = new WorkbookFunctionsAccrIntMRequest(
+        final WorkbookFunctionsAccrIntMRequest request = new WorkbookFunctionsAccrIntMRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

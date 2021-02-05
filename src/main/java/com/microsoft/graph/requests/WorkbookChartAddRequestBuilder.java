@@ -53,13 +53,11 @@ public class WorkbookChartAddRequestBuilder extends BaseActionRequestBuilder<Wor
      */
     @Nonnull
     public WorkbookChartAddRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookChartAddRequest request = new WorkbookChartAddRequest(
+        final WorkbookChartAddRequest request = new WorkbookChartAddRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

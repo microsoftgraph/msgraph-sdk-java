@@ -54,13 +54,11 @@ public class WorkbookFunctionsCoupDaysNcRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookFunctionsCoupDaysNcRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCoupDaysNcRequest request = new WorkbookFunctionsCoupDaysNcRequest(
+        final WorkbookFunctionsCoupDaysNcRequest request = new WorkbookFunctionsCoupDaysNcRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

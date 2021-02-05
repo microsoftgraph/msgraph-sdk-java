@@ -54,13 +54,11 @@ public class WorkbookFunctionsDsumRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsDsumRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDsumRequest request = new WorkbookFunctionsDsumRequest(
+        final WorkbookFunctionsDsumRequest request = new WorkbookFunctionsDsumRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

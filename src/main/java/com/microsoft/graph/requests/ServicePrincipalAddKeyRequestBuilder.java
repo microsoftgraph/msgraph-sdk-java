@@ -55,13 +55,11 @@ public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public ServicePrincipalAddKeyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ServicePrincipalAddKeyRequest request = new ServicePrincipalAddKeyRequest(
+        final ServicePrincipalAddKeyRequest request = new ServicePrincipalAddKeyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -53,13 +53,11 @@ public class MessageCopyRequestBuilder extends BaseActionRequestBuilder<Message>
      */
     @Nonnull
     public MessageCopyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MessageCopyRequest request = new MessageCopyRequest(
+        final MessageCopyRequest request = new MessageCopyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

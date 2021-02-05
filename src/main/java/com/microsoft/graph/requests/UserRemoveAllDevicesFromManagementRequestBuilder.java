@@ -50,12 +50,10 @@ public class UserRemoveAllDevicesFromManagementRequestBuilder extends BaseAction
      */
     @Nonnull
     public UserRemoveAllDevicesFromManagementRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        UserRemoveAllDevicesFromManagementRequest request = new UserRemoveAllDevicesFromManagementRequest(
+        final UserRemoveAllDevicesFromManagementRequest request = new UserRemoveAllDevicesFromManagementRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

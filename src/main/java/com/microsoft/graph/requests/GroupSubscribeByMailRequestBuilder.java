@@ -50,12 +50,10 @@ public class GroupSubscribeByMailRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public GroupSubscribeByMailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupSubscribeByMailRequest request = new GroupSubscribeByMailRequest(
+        final GroupSubscribeByMailRequest request = new GroupSubscribeByMailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

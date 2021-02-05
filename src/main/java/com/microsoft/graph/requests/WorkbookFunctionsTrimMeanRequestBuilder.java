@@ -54,13 +54,11 @@ public class WorkbookFunctionsTrimMeanRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsTrimMeanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsTrimMeanRequest request = new WorkbookFunctionsTrimMeanRequest(
+        final WorkbookFunctionsTrimMeanRequest request = new WorkbookFunctionsTrimMeanRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

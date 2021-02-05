@@ -54,13 +54,11 @@ public class WorkbookFunctionsDaysRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsDaysRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDaysRequest request = new WorkbookFunctionsDaysRequest(
+        final WorkbookFunctionsDaysRequest request = new WorkbookFunctionsDaysRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

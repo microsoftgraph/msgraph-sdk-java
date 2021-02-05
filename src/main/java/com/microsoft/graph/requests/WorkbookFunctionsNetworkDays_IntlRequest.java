@@ -28,16 +28,14 @@ public class WorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest<Workbo
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsNetworkDays_IntlRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsNetworkDays_IntlParameterSet parameters) {
+    public WorkbookFunctionsNetworkDays_IntlRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected WorkbookFunctionsNetworkDays_IntlParameterSet body;
+    public WorkbookFunctionsNetworkDays_IntlParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

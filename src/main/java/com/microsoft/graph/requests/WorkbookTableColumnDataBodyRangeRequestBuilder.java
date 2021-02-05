@@ -50,12 +50,10 @@ public class WorkbookTableColumnDataBodyRangeRequestBuilder extends BaseFunction
      */
     @Nonnull
     public WorkbookTableColumnDataBodyRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableColumnDataBodyRangeRequest request = new WorkbookTableColumnDataBodyRangeRequest(
+        final WorkbookTableColumnDataBodyRangeRequest request = new WorkbookTableColumnDataBodyRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

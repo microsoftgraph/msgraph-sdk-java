@@ -50,12 +50,10 @@ public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestB
      */
     @Nonnull
     public WorkbookRangeBorderCountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeBorderCountRequest request = new WorkbookRangeBorderCountRequest(
+        final WorkbookRangeBorderCountRequest request = new WorkbookRangeBorderCountRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

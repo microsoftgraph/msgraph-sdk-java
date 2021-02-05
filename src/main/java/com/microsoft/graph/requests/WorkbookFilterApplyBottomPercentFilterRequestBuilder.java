@@ -54,13 +54,11 @@ public class WorkbookFilterApplyBottomPercentFilterRequestBuilder extends BaseAc
      */
     @Nonnull
     public WorkbookFilterApplyBottomPercentFilterRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFilterApplyBottomPercentFilterRequest request = new WorkbookFilterApplyBottomPercentFilterRequest(
+        final WorkbookFilterApplyBottomPercentFilterRequest request = new WorkbookFilterApplyBottomPercentFilterRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

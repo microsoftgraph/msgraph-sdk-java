@@ -54,13 +54,11 @@ public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRe
      */
     @Nonnull
     public WorkbookFunctionsPercentRank_IncRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPercentRank_IncRequest request = new WorkbookFunctionsPercentRank_IncRequest(
+        final WorkbookFunctionsPercentRank_IncRequest request = new WorkbookFunctionsPercentRank_IncRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

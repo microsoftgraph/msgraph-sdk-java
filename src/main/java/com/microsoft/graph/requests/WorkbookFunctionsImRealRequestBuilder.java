@@ -54,13 +54,11 @@ public class WorkbookFunctionsImRealRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsImRealRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImRealRequest request = new WorkbookFunctionsImRealRequest(
+        final WorkbookFunctionsImRealRequest request = new WorkbookFunctionsImRealRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

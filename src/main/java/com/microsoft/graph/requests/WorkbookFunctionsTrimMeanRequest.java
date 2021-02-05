@@ -28,16 +28,14 @@ public class WorkbookFunctionsTrimMeanRequest extends BaseRequest<WorkbookFuncti
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsTrimMeanRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsTrimMeanParameterSet parameters) {
+    public WorkbookFunctionsTrimMeanRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected WorkbookFunctionsTrimMeanParameterSet body;
+    public WorkbookFunctionsTrimMeanParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

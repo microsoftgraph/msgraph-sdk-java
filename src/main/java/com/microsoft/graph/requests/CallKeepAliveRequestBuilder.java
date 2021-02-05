@@ -50,12 +50,10 @@ public class CallKeepAliveRequestBuilder extends BaseActionRequestBuilder<Call> 
      */
     @Nonnull
     public CallKeepAliveRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallKeepAliveRequest request = new CallKeepAliveRequest(
+        final CallKeepAliveRequest request = new CallKeepAliveRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsPermutRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsPermutRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPermutRequest request = new WorkbookFunctionsPermutRequest(
+        final WorkbookFunctionsPermutRequest request = new WorkbookFunctionsPermutRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

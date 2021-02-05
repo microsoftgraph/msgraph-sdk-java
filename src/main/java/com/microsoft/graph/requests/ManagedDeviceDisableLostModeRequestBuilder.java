@@ -50,12 +50,10 @@ public class ManagedDeviceDisableLostModeRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public ManagedDeviceDisableLostModeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceDisableLostModeRequest request = new ManagedDeviceDisableLostModeRequest(
+        final ManagedDeviceDisableLostModeRequest request = new ManagedDeviceDisableLostModeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

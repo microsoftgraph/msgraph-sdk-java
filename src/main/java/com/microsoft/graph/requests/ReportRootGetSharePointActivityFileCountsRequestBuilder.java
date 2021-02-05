@@ -55,13 +55,11 @@ public class ReportRootGetSharePointActivityFileCountsRequestBuilder extends Bas
      */
     @Nonnull
     public ReportRootGetSharePointActivityFileCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetSharePointActivityFileCountsRequest request = new ReportRootGetSharePointActivityFileCountsRequest(
+        final ReportRootGetSharePointActivityFileCountsRequest request = new ReportRootGetSharePointActivityFileCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

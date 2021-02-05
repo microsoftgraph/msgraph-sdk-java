@@ -54,13 +54,11 @@ public class WorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsCoupDayBsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCoupDayBsRequest request = new WorkbookFunctionsCoupDayBsRequest(
+        final WorkbookFunctionsCoupDayBsRequest request = new WorkbookFunctionsCoupDayBsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

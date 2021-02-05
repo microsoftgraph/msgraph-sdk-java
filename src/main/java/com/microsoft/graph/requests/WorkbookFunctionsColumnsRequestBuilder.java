@@ -54,13 +54,11 @@ public class WorkbookFunctionsColumnsRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsColumnsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsColumnsRequest request = new WorkbookFunctionsColumnsRequest(
+        final WorkbookFunctionsColumnsRequest request = new WorkbookFunctionsColumnsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

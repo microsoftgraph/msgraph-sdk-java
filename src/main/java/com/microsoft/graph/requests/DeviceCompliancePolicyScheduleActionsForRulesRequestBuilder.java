@@ -54,13 +54,11 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder extends
      */
     @Nonnull
     public DeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DeviceCompliancePolicyScheduleActionsForRulesRequest request = new DeviceCompliancePolicyScheduleActionsForRulesRequest(
+        final DeviceCompliancePolicyScheduleActionsForRulesRequest request = new DeviceCompliancePolicyScheduleActionsForRulesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

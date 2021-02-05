@@ -54,13 +54,11 @@ public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionReq
      */
     @Nonnull
     public ManagedDeviceCleanWindowsDeviceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceCleanWindowsDeviceRequest request = new ManagedDeviceCleanWindowsDeviceRequest(
+        final ManagedDeviceCleanWindowsDeviceRequest request = new ManagedDeviceCleanWindowsDeviceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

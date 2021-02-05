@@ -54,13 +54,11 @@ public class WorkbookFunctionsDcountRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsDcountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDcountRequest request = new WorkbookFunctionsDcountRequest(
+        final WorkbookFunctionsDcountRequest request = new WorkbookFunctionsDcountRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

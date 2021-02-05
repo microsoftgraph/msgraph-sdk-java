@@ -54,13 +54,11 @@ public class CallSubscribeToToneRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public CallSubscribeToToneRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallSubscribeToToneRequest request = new CallSubscribeToToneRequest(
+        final CallSubscribeToToneRequest request = new CallSubscribeToToneRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

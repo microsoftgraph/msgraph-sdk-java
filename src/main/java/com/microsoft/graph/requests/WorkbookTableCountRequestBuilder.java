@@ -50,12 +50,10 @@ public class WorkbookTableCountRequestBuilder extends BaseFunctionRequestBuilder
      */
     @Nonnull
     public WorkbookTableCountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableCountRequest request = new WorkbookTableCountRequest(
+        final WorkbookTableCountRequest request = new WorkbookTableCountRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

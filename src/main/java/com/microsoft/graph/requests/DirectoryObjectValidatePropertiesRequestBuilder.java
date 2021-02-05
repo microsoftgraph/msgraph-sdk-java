@@ -54,13 +54,11 @@ public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionR
      */
     @Nonnull
     public DirectoryObjectValidatePropertiesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DirectoryObjectValidatePropertiesRequest request = new DirectoryObjectValidatePropertiesRequest(
+        final DirectoryObjectValidatePropertiesRequest request = new DirectoryObjectValidatePropertiesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

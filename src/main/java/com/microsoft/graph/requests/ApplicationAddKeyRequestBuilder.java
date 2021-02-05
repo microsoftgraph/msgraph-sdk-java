@@ -55,13 +55,11 @@ public class ApplicationAddKeyRequestBuilder extends BaseActionRequestBuilder<Ke
      */
     @Nonnull
     public ApplicationAddKeyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ApplicationAddKeyRequest request = new ApplicationAddKeyRequest(
+        final ApplicationAddKeyRequest request = new ApplicationAddKeyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

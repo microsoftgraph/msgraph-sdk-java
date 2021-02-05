@@ -54,13 +54,11 @@ public class WorkbookFunctionsHlookupRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsHlookupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsHlookupRequest request = new WorkbookFunctionsHlookupRequest(
+        final WorkbookFunctionsHlookupRequest request = new WorkbookFunctionsHlookupRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

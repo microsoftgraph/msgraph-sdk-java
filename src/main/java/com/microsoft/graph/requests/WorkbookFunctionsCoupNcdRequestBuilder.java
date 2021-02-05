@@ -54,13 +54,11 @@ public class WorkbookFunctionsCoupNcdRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsCoupNcdRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCoupNcdRequest request = new WorkbookFunctionsCoupNcdRequest(
+        final WorkbookFunctionsCoupNcdRequest request = new WorkbookFunctionsCoupNcdRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

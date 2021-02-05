@@ -50,12 +50,10 @@ public class GroupResetUnseenCountRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public GroupResetUnseenCountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupResetUnseenCountRequest request = new GroupResetUnseenCountRequest(
+        final GroupResetUnseenCountRequest request = new GroupResetUnseenCountRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class ConversationThreadReplyRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public ConversationThreadReplyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ConversationThreadReplyRequest request = new ConversationThreadReplyRequest(
+        final ConversationThreadReplyRequest request = new ConversationThreadReplyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

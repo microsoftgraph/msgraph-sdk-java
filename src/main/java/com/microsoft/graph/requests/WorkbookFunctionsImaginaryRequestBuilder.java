@@ -54,13 +54,11 @@ public class WorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsImaginaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImaginaryRequest request = new WorkbookFunctionsImaginaryRequest(
+        final WorkbookFunctionsImaginaryRequest request = new WorkbookFunctionsImaginaryRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

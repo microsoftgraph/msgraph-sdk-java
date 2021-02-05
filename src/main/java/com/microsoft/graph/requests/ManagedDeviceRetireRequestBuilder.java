@@ -50,12 +50,10 @@ public class ManagedDeviceRetireRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public ManagedDeviceRetireRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceRetireRequest request = new ManagedDeviceRetireRequest(
+        final ManagedDeviceRetireRequest request = new ManagedDeviceRetireRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

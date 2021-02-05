@@ -36,6 +36,10 @@ public enum ConditionalAccessGrantControl
     */
     COMPLIANT_APPLICATION,
     /**
+    * password Change
+    */
+    PASSWORD_CHANGE,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

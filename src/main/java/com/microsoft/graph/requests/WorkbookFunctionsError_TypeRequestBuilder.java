@@ -54,13 +54,11 @@ public class WorkbookFunctionsError_TypeRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookFunctionsError_TypeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsError_TypeRequest request = new WorkbookFunctionsError_TypeRequest(
+        final WorkbookFunctionsError_TypeRequest request = new WorkbookFunctionsError_TypeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

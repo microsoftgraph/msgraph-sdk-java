@@ -54,13 +54,11 @@ public class WorkbookFunctionsXorRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsXorRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsXorRequest request = new WorkbookFunctionsXorRequest(
+        final WorkbookFunctionsXorRequest request = new WorkbookFunctionsXorRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

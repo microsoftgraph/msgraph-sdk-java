@@ -54,13 +54,11 @@ public class WorkbookFunctionsReplaceRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsReplaceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsReplaceRequest request = new WorkbookFunctionsReplaceRequest(
+        final WorkbookFunctionsReplaceRequest request = new WorkbookFunctionsReplaceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

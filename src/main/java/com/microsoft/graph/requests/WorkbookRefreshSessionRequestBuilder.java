@@ -50,12 +50,10 @@ public class WorkbookRefreshSessionRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookRefreshSessionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRefreshSessionRequest request = new WorkbookRefreshSessionRequest(
+        final WorkbookRefreshSessionRequest request = new WorkbookRefreshSessionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsBinom_InvRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsBinom_InvRequest request = new WorkbookFunctionsBinom_InvRequest(
+        final WorkbookFunctionsBinom_InvRequest request = new WorkbookFunctionsBinom_InvRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

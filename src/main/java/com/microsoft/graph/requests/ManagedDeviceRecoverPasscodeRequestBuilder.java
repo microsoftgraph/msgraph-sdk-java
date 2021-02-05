@@ -50,12 +50,10 @@ public class ManagedDeviceRecoverPasscodeRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public ManagedDeviceRecoverPasscodeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceRecoverPasscodeRequest request = new ManagedDeviceRecoverPasscodeRequest(
+        final ManagedDeviceRecoverPasscodeRequest request = new ManagedDeviceRecoverPasscodeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder extends 
      */
     @Nonnull
     public ManagedDeviceDeleteUserFromSharedAppleDeviceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceDeleteUserFromSharedAppleDeviceRequest request = new ManagedDeviceDeleteUserFromSharedAppleDeviceRequest(
+        final ManagedDeviceDeleteUserFromSharedAppleDeviceRequest request = new ManagedDeviceDeleteUserFromSharedAppleDeviceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

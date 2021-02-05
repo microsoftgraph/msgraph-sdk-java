@@ -28,16 +28,14 @@ public class WorkbookFunctionsIsNumberRequest extends BaseRequest<WorkbookFuncti
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsIsNumberRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIsNumberParameterSet parameters) {
+    public WorkbookFunctionsIsNumberRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected WorkbookFunctionsIsNumberParameterSet body;
+    public WorkbookFunctionsIsNumberParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

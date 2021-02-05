@@ -50,12 +50,10 @@ public class GroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder<Gro
      */
     @Nonnull
     public GroupAddFavoriteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupAddFavoriteRequest request = new GroupAddFavoriteRequest(
+        final GroupAddFavoriteRequest request = new GroupAddFavoriteRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

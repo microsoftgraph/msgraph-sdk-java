@@ -50,12 +50,10 @@ public class WorkbookTableSortClearRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookTableSortClearRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableSortClearRequest request = new WorkbookTableSortClearRequest(
+        final WorkbookTableSortClearRequest request = new WorkbookTableSortClearRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

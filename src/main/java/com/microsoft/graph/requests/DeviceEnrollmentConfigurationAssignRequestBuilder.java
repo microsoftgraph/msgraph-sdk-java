@@ -54,13 +54,11 @@ public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActio
      */
     @Nonnull
     public DeviceEnrollmentConfigurationAssignRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DeviceEnrollmentConfigurationAssignRequest request = new DeviceEnrollmentConfigurationAssignRequest(
+        final DeviceEnrollmentConfigurationAssignRequest request = new DeviceEnrollmentConfigurationAssignRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public DriveItemCreateLinkRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemCreateLinkRequest request = new DriveItemCreateLinkRequest(
+        final DriveItemCreateLinkRequest request = new DriveItemCreateLinkRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

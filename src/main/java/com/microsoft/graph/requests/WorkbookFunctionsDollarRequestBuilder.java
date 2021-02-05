@@ -54,13 +54,11 @@ public class WorkbookFunctionsDollarRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsDollarRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDollarRequest request = new WorkbookFunctionsDollarRequest(
+        final WorkbookFunctionsDollarRequest request = new WorkbookFunctionsDollarRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

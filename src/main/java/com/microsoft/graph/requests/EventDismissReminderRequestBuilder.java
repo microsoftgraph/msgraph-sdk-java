@@ -50,12 +50,10 @@ public class EventDismissReminderRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public EventDismissReminderRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        EventDismissReminderRequest request = new EventDismissReminderRequest(
+        final EventDismissReminderRequest request = new EventDismissReminderRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

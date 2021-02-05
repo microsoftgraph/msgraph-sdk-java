@@ -54,13 +54,11 @@ public class EventAcceptRequestBuilder extends BaseActionRequestBuilder<Event> {
      */
     @Nonnull
     public EventAcceptRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        EventAcceptRequest request = new EventAcceptRequest(
+        final EventAcceptRequest request = new EventAcceptRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

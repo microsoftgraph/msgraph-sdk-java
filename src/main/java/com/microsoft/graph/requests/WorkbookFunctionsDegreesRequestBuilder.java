@@ -54,13 +54,11 @@ public class WorkbookFunctionsDegreesRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsDegreesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDegreesRequest request = new WorkbookFunctionsDegreesRequest(
+        final WorkbookFunctionsDegreesRequest request = new WorkbookFunctionsDegreesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

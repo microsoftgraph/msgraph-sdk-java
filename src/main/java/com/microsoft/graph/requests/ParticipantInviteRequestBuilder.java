@@ -55,13 +55,11 @@ public class ParticipantInviteRequestBuilder extends BaseActionRequestBuilder<In
      */
     @Nonnull
     public ParticipantInviteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ParticipantInviteRequest request = new ParticipantInviteRequest(
+        final ParticipantInviteRequest request = new ParticipantInviteRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

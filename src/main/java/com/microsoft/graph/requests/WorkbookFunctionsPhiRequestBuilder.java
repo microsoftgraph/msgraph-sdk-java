@@ -54,13 +54,11 @@ public class WorkbookFunctionsPhiRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsPhiRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPhiRequest request = new WorkbookFunctionsPhiRequest(
+        final WorkbookFunctionsPhiRequest request = new WorkbookFunctionsPhiRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

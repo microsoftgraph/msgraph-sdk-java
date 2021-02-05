@@ -50,12 +50,10 @@ public class DriveItemCheckoutRequestBuilder extends BaseActionRequestBuilder<Dr
      */
     @Nonnull
     public DriveItemCheckoutRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemCheckoutRequest request = new DriveItemCheckoutRequest(
+        final DriveItemCheckoutRequest request = new DriveItemCheckoutRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

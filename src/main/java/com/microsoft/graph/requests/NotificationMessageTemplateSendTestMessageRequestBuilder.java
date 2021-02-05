@@ -50,12 +50,10 @@ public class NotificationMessageTemplateSendTestMessageRequestBuilder extends Ba
      */
     @Nonnull
     public NotificationMessageTemplateSendTestMessageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        NotificationMessageTemplateSendTestMessageRequest request = new NotificationMessageTemplateSendTestMessageRequest(
+        final NotificationMessageTemplateSendTestMessageRequest request = new NotificationMessageTemplateSendTestMessageRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

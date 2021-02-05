@@ -54,13 +54,11 @@ public class WorkbookFunctionsPdurationRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsPdurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsPdurationRequest request = new WorkbookFunctionsPdurationRequest(
+        final WorkbookFunctionsPdurationRequest request = new WorkbookFunctionsPdurationRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

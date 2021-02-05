@@ -54,13 +54,11 @@ public class WorkbookFunctionsSinRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsSinRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsSinRequest request = new WorkbookFunctionsSinRequest(
+        final WorkbookFunctionsSinRequest request = new WorkbookFunctionsSinRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

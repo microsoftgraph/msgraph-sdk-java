@@ -54,13 +54,11 @@ public class WorkbookFunctionsSkewRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsSkewRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsSkewRequest request = new WorkbookFunctionsSkewRequest(
+        final WorkbookFunctionsSkewRequest request = new WorkbookFunctionsSkewRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

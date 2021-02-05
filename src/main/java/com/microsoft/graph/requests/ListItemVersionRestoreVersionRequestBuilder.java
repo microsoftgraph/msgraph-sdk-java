@@ -50,12 +50,10 @@ public class ListItemVersionRestoreVersionRequestBuilder extends BaseActionReque
      */
     @Nonnull
     public ListItemVersionRestoreVersionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ListItemVersionRestoreVersionRequest request = new ListItemVersionRestoreVersionRequest(
+        final ListItemVersionRestoreVersionRequest request = new ListItemVersionRestoreVersionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

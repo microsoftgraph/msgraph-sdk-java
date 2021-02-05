@@ -40,7 +40,7 @@ public class RecentNotebookLinks implements IJsonBackedObject {
 
     /**
      * The One Note Client Url.
-     * Opens the notebook in the OneNote native client if it's installed.
+     * Opens the notebook in the OneNote client, if it's installed.
      */
     @SerializedName(value = "oneNoteClientUrl", alternate = {"OneNoteClientUrl"})
     @Expose

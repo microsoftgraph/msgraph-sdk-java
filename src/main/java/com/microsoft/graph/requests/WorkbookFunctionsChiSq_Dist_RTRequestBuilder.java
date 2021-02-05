@@ -54,13 +54,11 @@ public class WorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseActionRequ
      */
     @Nonnull
     public WorkbookFunctionsChiSq_Dist_RTRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsChiSq_Dist_RTRequest request = new WorkbookFunctionsChiSq_Dist_RTRequest(
+        final WorkbookFunctionsChiSq_Dist_RTRequest request = new WorkbookFunctionsChiSq_Dist_RTRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

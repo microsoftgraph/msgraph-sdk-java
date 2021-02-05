@@ -54,13 +54,11 @@ public class WorkbookFunctionsLeftbRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsLeftbRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsLeftbRequest request = new WorkbookFunctionsLeftbRequest(
+        final WorkbookFunctionsLeftbRequest request = new WorkbookFunctionsLeftbRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

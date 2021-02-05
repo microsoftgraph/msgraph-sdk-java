@@ -55,13 +55,11 @@ public class ReportRootGetMailboxUsageDetailRequestBuilder extends BaseFunctionR
      */
     @Nonnull
     public ReportRootGetMailboxUsageDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetMailboxUsageDetailRequest request = new ReportRootGetMailboxUsageDetailRequest(
+        final ReportRootGetMailboxUsageDetailRequest request = new ReportRootGetMailboxUsageDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

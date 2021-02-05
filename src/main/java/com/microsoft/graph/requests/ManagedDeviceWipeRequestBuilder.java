@@ -54,13 +54,11 @@ public class ManagedDeviceWipeRequestBuilder extends BaseActionRequestBuilder<Ma
      */
     @Nonnull
     public ManagedDeviceWipeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceWipeRequest request = new ManagedDeviceWipeRequest(
+        final ManagedDeviceWipeRequest request = new ManagedDeviceWipeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

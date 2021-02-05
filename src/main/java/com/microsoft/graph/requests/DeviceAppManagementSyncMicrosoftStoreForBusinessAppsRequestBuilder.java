@@ -50,12 +50,10 @@ public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder 
      */
     @Nonnull
     public DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest request = new DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest(
+        final DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest request = new DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

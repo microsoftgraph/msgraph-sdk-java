@@ -54,13 +54,11 @@ public class WorkbookFunctionsImTanRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsImTanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImTanRequest request = new WorkbookFunctionsImTanRequest(
+        final WorkbookFunctionsImTanRequest request = new WorkbookFunctionsImTanRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

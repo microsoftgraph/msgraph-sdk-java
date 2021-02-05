@@ -50,12 +50,10 @@ public class WorkbookFunctionsFalseRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsFalseRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsFalseRequest request = new WorkbookFunctionsFalseRequest(
+        final WorkbookFunctionsFalseRequest request = new WorkbookFunctionsFalseRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

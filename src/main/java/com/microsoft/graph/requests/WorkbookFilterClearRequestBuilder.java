@@ -50,12 +50,10 @@ public class WorkbookFilterClearRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public WorkbookFilterClearRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFilterClearRequest request = new WorkbookFilterClearRequest(
+        final WorkbookFilterClearRequest request = new WorkbookFilterClearRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

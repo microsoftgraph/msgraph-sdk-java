@@ -54,13 +54,11 @@ public class WorkbookFunctionsSecRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsSecRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsSecRequest request = new WorkbookFunctionsSecRequest(
+        final WorkbookFunctionsSecRequest request = new WorkbookFunctionsSecRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

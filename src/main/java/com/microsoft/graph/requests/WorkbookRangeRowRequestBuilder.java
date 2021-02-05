@@ -54,13 +54,11 @@ public class WorkbookRangeRowRequestBuilder extends BaseFunctionRequestBuilder<W
      */
     @Nonnull
     public WorkbookRangeRowRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeRowRequest request = new WorkbookRangeRowRequest(
+        final WorkbookRangeRowRequest request = new WorkbookRangeRowRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

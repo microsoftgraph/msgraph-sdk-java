@@ -50,12 +50,10 @@ public class RemoteAssistancePartnerDisconnectRequestBuilder extends BaseActionR
      */
     @Nonnull
     public RemoteAssistancePartnerDisconnectRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        RemoteAssistancePartnerDisconnectRequest request = new RemoteAssistancePartnerDisconnectRequest(
+        final RemoteAssistancePartnerDisconnectRequest request = new RemoteAssistancePartnerDisconnectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

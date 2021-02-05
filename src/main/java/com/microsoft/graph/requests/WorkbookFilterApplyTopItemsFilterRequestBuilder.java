@@ -54,13 +54,11 @@ public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseActionR
      */
     @Nonnull
     public WorkbookFilterApplyTopItemsFilterRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFilterApplyTopItemsFilterRequest request = new WorkbookFilterApplyTopItemsFilterRequest(
+        final WorkbookFilterApplyTopItemsFilterRequest request = new WorkbookFilterApplyTopItemsFilterRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

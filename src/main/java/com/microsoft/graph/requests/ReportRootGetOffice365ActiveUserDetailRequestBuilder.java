@@ -56,13 +56,11 @@ public class ReportRootGetOffice365ActiveUserDetailRequestBuilder extends BaseFu
      */
     @Nonnull
     public ReportRootGetOffice365ActiveUserDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetOffice365ActiveUserDetailRequest request = new ReportRootGetOffice365ActiveUserDetailRequest(
+        final ReportRootGetOffice365ActiveUserDetailRequest request = new ReportRootGetOffice365ActiveUserDetailRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

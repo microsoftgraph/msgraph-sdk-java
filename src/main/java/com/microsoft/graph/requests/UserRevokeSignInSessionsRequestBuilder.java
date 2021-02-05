@@ -50,12 +50,10 @@ public class UserRevokeSignInSessionsRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public UserRevokeSignInSessionsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        UserRevokeSignInSessionsRequest request = new UserRevokeSignInSessionsRequest(
+        final UserRevokeSignInSessionsRequest request = new UserRevokeSignInSessionsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

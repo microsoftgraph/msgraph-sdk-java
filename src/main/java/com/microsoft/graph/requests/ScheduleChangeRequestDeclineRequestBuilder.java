@@ -54,13 +54,11 @@ public class ScheduleChangeRequestDeclineRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public ScheduleChangeRequestDeclineRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ScheduleChangeRequestDeclineRequest request = new ScheduleChangeRequestDeclineRequest(
+        final ScheduleChangeRequestDeclineRequest request = new ScheduleChangeRequestDeclineRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

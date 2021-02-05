@@ -54,13 +54,11 @@ public class WorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActionRe
      */
     @Nonnull
     public WorkbookFunctionsGammaLn_PreciseRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsGammaLn_PreciseRequest request = new WorkbookFunctionsGammaLn_PreciseRequest(
+        final WorkbookFunctionsGammaLn_PreciseRequest request = new WorkbookFunctionsGammaLn_PreciseRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

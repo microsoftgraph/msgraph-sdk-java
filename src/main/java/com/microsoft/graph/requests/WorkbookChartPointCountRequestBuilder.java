@@ -50,12 +50,10 @@ public class WorkbookChartPointCountRequestBuilder extends BaseFunctionRequestBu
      */
     @Nonnull
     public WorkbookChartPointCountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookChartPointCountRequest request = new WorkbookChartPointCountRequest(
+        final WorkbookChartPointCountRequest request = new WorkbookChartPointCountRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class PostForwardRequestBuilder extends BaseActionRequestBuilder<Post> {
      */
     @Nonnull
     public PostForwardRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        PostForwardRequest request = new PostForwardRequest(
+        final PostForwardRequest request = new PostForwardRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -50,12 +50,10 @@ public class WorkbookFunctionsTodayRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsTodayRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsTodayRequest request = new WorkbookFunctionsTodayRequest(
+        final WorkbookFunctionsTodayRequest request = new WorkbookFunctionsTodayRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

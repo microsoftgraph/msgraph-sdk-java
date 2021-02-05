@@ -27,16 +27,14 @@ public class TeamCloneRequest extends BaseRequest<Void> {
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public TeamCloneRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TeamCloneParameterSet parameters) {
+    public TeamCloneRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected TeamCloneParameterSet body;
+    public TeamCloneParameterSet body;
     /**
      * Creates the TeamClone
      *

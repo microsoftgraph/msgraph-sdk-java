@@ -50,12 +50,10 @@ public class WorkbookTableReapplyFiltersRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookTableReapplyFiltersRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableReapplyFiltersRequest request = new WorkbookTableReapplyFiltersRequest(
+        final WorkbookTableReapplyFiltersRequest request = new WorkbookTableReapplyFiltersRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

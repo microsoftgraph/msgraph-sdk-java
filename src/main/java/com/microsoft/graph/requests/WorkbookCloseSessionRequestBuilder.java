@@ -50,12 +50,10 @@ public class WorkbookCloseSessionRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookCloseSessionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookCloseSessionRequest request = new WorkbookCloseSessionRequest(
+        final WorkbookCloseSessionRequest request = new WorkbookCloseSessionRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

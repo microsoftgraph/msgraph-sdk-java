@@ -55,13 +55,11 @@ public class ReportRootGetYammerActivityUserCountsRequestBuilder extends BaseFun
      */
     @Nonnull
     public ReportRootGetYammerActivityUserCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetYammerActivityUserCountsRequest request = new ReportRootGetYammerActivityUserCountsRequest(
+        final ReportRootGetYammerActivityUserCountsRequest request = new ReportRootGetYammerActivityUserCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

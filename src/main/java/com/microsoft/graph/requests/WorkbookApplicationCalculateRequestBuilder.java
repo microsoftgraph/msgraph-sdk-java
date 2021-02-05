@@ -54,13 +54,11 @@ public class WorkbookApplicationCalculateRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public WorkbookApplicationCalculateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookApplicationCalculateRequest request = new WorkbookApplicationCalculateRequest(
+        final WorkbookApplicationCalculateRequest request = new WorkbookApplicationCalculateRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

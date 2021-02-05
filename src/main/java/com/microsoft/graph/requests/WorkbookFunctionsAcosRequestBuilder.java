@@ -54,13 +54,11 @@ public class WorkbookFunctionsAcosRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsAcosRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsAcosRequest request = new WorkbookFunctionsAcosRequest(
+        final WorkbookFunctionsAcosRequest request = new WorkbookFunctionsAcosRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

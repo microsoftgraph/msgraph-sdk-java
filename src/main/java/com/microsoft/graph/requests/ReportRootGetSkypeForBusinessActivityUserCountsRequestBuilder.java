@@ -55,13 +55,11 @@ public class ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder exten
      */
     @Nonnull
     public ReportRootGetSkypeForBusinessActivityUserCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetSkypeForBusinessActivityUserCountsRequest request = new ReportRootGetSkypeForBusinessActivityUserCountsRequest(
+        final ReportRootGetSkypeForBusinessActivityUserCountsRequest request = new ReportRootGetSkypeForBusinessActivityUserCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;
