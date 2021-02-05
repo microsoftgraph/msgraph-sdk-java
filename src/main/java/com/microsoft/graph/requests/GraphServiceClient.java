@@ -140,6 +140,8 @@ public class GraphServiceClient<NativeRequestType> extends BaseClient<NativeRequ
      *
      * @param <nativeClient> the type of the native http client
      * @param <nativeRequest> the type of the native http request
+     * @param nativeClientClass the class of the native http client
+     * @param nativeRequestClass the class of the native http request
      * @return builder to start configuring the client
      */
     @Nonnull
