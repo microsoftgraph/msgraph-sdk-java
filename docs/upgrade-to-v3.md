@@ -33,6 +33,8 @@ The Microsoft Graph Java SDK now leverages azure-identity to improve the authent
 1. Remove any dependency on `microsoft-graph-android-auth` and replace them by one of the providers available in azure-identity.
 1. Reconsider the need for custom authentication providers (implementation of `IAuthenticationProvider` or `ICoreAuthenticationProvider`) that might be part of your project and use a provider available in azure-identity whenever possible.
 
+Check out [this document](./upgrade-to-v3-auth.md) to find examples on how to upgrade your authentication providers to azure-identity providers.
+
 ### Single authentication provider interface
 
 Due to historical reasons, the SDK provided two authentication provider interfaces `ICoreAuthenticationProvider` and `IAuthenticationProvider`. This was creating confusion and duplication and has been resolved to a single `IAuthenticationProvider` interface. If you implemented any of those interfaces you should:
