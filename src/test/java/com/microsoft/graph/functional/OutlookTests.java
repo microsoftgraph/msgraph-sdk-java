@@ -13,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -58,11 +59,12 @@ import com.microsoft.graph.requests.EventCollectionPage;
 import com.microsoft.graph.requests.UserCollectionPage;
 import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.models.UserSendMailParameterSet;
+import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.models.AttachmentCreateUploadSessionParameterSet;
 import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.logger.ILogger;
-
+import com.microsoft.graph.models.CalendarGetScheduleParameterSet;
 @Disabled
 public class OutlookTests {
 
@@ -367,5 +369,34 @@ public class OutlookTests {
         final List<Attachment> attchs = page.getCurrentPage();
         assertEquals(1, attchs.size());
         assertTrue(attchs.get(0) instanceof FileAttachment);
+    }
+    @Test
+    public void testGetSchedule() throws Exception {
+        final TestBase testBase = new TestBase();
+        final User me = testBase.graphClient.me().buildRequest().select("userPrincipalName").get();
+        final UserCollectionPage usersPage = testBase.graphClient
+                                                    .users()
+                                                    .buildRequest(new HeaderOption("ConsistencyLevel", "eventual"))
+                                                    .top(1)
+                                                    .select("userPrincipalName")
+                                                    .filter("userPrincipalName ne '" + me.userPrincipalName + "'")
+                                                    .count()
+                                                    .get();
+        final List<User> users = usersPage.getCurrentPage();
+        final DateTimeTimeZone endTime = new DateTimeTimeZone();
+        endTime.dateTime = OffsetDateTime.now().plusDays(1).plusHours(8).toLocalDateTime().toString();
+        endTime.timeZone = "Eastern Standard Time";
+        final DateTimeTimeZone startTime = new DateTimeTimeZone();
+        startTime.dateTime = OffsetDateTime.now().plusDays(1).toLocalDateTime().toString();
+        startTime.timeZone = "Eastern Standard Time";
+        final CalendarGetScheduleParameterSet paramSet = CalendarGetScheduleParameterSet
+                                    .newBuilder()
+                                    .withSchedules(Arrays.asList(me.userPrincipalName, users.get(0).userPrincipalName))
+                                    .withEndTime(endTime)
+                                    .withStartTime(startTime)
+                                    .withAvailabilityViewInterval(60)
+                                    .build();
+        testBase.graphClient.me().calendar().getSchedule(paramSet)
+                    .buildRequest().post();
     }
 }
