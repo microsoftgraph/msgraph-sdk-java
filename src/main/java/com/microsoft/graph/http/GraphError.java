@@ -26,6 +26,7 @@ import com.google.gson.annotations.SerializedName;
 
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.google.gson.annotations.Expose;
+import com.google.common.base.CaseFormat;
 
 public class GraphError {
 
@@ -47,16 +48,24 @@ public class GraphError {
      * @return <b>true</b> if the error code matches, and <b>false</b> if there was no match
      */
     public boolean isError(final GraphErrorCodes expectedCode) {
-        if (code.equalsIgnoreCase(expectedCode.toString())) {
+        if (transformErrorCodeCase(code).equalsIgnoreCase(expectedCode.toString())) {
             return true;
         }
         GraphInnerError innerError = innererror;
         while (null != innerError) {
-            if (innerError.code.equalsIgnoreCase(expectedCode.toString())) {
+            if (transformErrorCodeCase(innerError.code).equalsIgnoreCase(expectedCode.toString())) {
                 return true;
             }
             innerError = innerError.innererror;
         }
         return false;
+    }
+    /**
+     * Transforms the text error code into the format expected by the value of the enum
+     * @param original original lowser Camel cased error code
+     * @return the resulting upper undescore cased error code
+     */
+    protected String transformErrorCodeCase(final String original) {
+        return CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, original);
     }
 }
