@@ -15,47 +15,49 @@ The following section lists out the breaking changes requiring code changes from
 
 ### Shorter package names
 
-1. Replace any reference to `com.microsoft.graph.models.generated` and `com.microsoft.graph.models.extensions` by `com.microsoft.graph.models`.
-1. Replace any reference to `com.microsoft.graph.requests.extensions` by `com.microsoft.graph.requests`.
+To upgrade your application do the following.
+
+- Replace any reference to `com.microsoft.graph.models.generated` and `com.microsoft.graph.models.extensions` by `com.microsoft.graph.models`.
+- Replace any reference to `com.microsoft.graph.requests.extensions` by `com.microsoft.graph.requests`.
 
 ### Cleanup of unecessary interfaces
 
-To provide a cleaner API surface and avoid shipping potentially breaking changes when properties are added, some interfaces have been removed:
+To provide a cleaner API surface and avoid shipping potentially breaking changes when properties are added, some interfaces have been removed. To upgrade your application do the following.
 
-1. Replace any reference to `IGraphServiceClient` by `GraphServiceClient`.
-1. Replace any reference to `IEntityCollectionPage` by `EntityCollectionPage` (e.g. `IEventCollectionPage`).
+- Replace any reference to `IGraphServiceClient` by `GraphServiceClient`.
+- Replace any reference to `IEntityCollectionPage` by `EntityCollectionPage` (e.g. `IEventCollectionPage`).
 
 ### Azure identity
 
-The Microsoft Graph Java SDK now leverages azure-identity to improve the authentication experience. This new library provides support for [more authentication flows](https://docs.microsoft.com/graph/sdks/choose-authentication-providers?tabs=Java) and improves the configuration experience:
+The Microsoft Graph Java SDK now leverages azure-identity to improve the authentication experience. This new library provides support for [more authentication flows](https://docs.microsoft.com/graph/sdks/choose-authentication-providers?tabs=Java) and improves the configuration experience. To upgrade your application do the following.
 
-1. Remove any dependency on `microsoft-graph-auth` and replace them by one of the providers available in azure-identity.
-1. Remove any dependency on `microsoft-graph-android-auth` and replace them by one of the providers available in azure-identity.
-1. Reconsider the need for custom authentication providers (implementation of `IAuthenticationProvider` or `ICoreAuthenticationProvider`) that might be part of your project and use a provider available in azure-identity whenever possible.
+- Remove any dependency on `microsoft-graph-auth` and replace them by one of the providers available in azure-identity.
+- Remove any dependency on `microsoft-graph-android-auth` and replace them by one of the providers available in azure-identity.
+- Reconsider the need for custom authentication providers (implementation of `IAuthenticationProvider` or `ICoreAuthenticationProvider`) that might be part of your project and use a provider available in azure-identity whenever possible.
 
 Check out [this document](./upgrade-to-v3-auth.md) to find examples on how to upgrade your authentication providers to azure-identity providers.
 
 ### Single authentication provider interface
 
-Due to historical reasons, the SDK provided two authentication provider interfaces `ICoreAuthenticationProvider` and `IAuthenticationProvider`. This was creating confusion and duplication and has been resolved to a single `IAuthenticationProvider` interface. If you implemented any of those interfaces you should:
+Due to historical reasons, the SDK provided two authentication provider interfaces `ICoreAuthenticationProvider` and `IAuthenticationProvider`. This was creating confusion and duplication and has been resolved to a single `IAuthenticationProvider` interface. To upgrade your application do the following.
 
-1. Replace any reference to `ICoreAuthenticationProvider` by `IAuthenticationProvider`.
-1. Update the implementation to match the new interface.
-1. Replace any reference to `com.microsoft.graph`.
+- Replace any reference to `ICoreAuthenticationProvider` by `IAuthenticationProvider`.
+- Update the implementation to match the new interface.
+- Replace any reference to `com.microsoft.graph`.
 
 > Note: if your project implements its own authentication provider, you might want to review the list of providers available with Azure identity to review whether a custom provider is still required. If a custom provider is still required, you should extend `BaseAuthenticationProvider` which provides a method to check whether a spefic request should be authenticated based on its URL.
 
 ### Modern date and time API
 
-To provide a modern, more reliable, and faster date and time API, `Calendar` properties have been replaced by `OffsetDateTime` properties:
+To provide a modern, more reliable, and faster date and time API, `Calendar` properties have been replaced by `OffsetDateTime` properties. To upgrade your application do the following.
 
-1. Replace any `Calendar` assignment by `OffsetDateTime`.
+- Replace any `Calendar` assignment by `OffsetDateTime`.
 
 ### Fluent method parameter sets and support for optional parameters
 
-To provide support for optional parameters for OData methods (actions, functions), the SDK now makes use of parameter classes with fluent builders:
+To provide support for optional parameters for OData methods (actions, functions), the SDK now makes use of parameter classes with fluent builders. To upgrade your application do the following.
 
-1. Replace any OData method reference by it's parameter set equivalent.
+- Replace any OData method reference by it's parameter set equivalent.
 
    Example:
 
@@ -84,9 +86,9 @@ To provide support for optional parameters for OData methods (actions, functions
 
 ### Futures vs Callbacks
 
-To provide a standard and modern way of executing requests asynchronuously to SDK users, the custom defined `ICallback` interface has been removed and the API now returns `CompletableFuture`.
+To provide a standard and modern way of executing requests asynchronuously to SDK users, the custom defined `ICallback` interface has been removed and the API now returns `CompletableFuture`. To upgrade your application do the following.
 
-1. Replace any of the code built the following way
+- Replace any of the code built the following way
 
     ```Java
     graphClient
@@ -116,16 +118,16 @@ To provide a standard and modern way of executing requests asynchronuously to SD
 
 ### Non-generated code moved to the core library
 
-The service library (microsoft-graph) was designed to contain only code that has been generated automatically from the API metadata. All code that has been manually handcrafted should live in the core library (microsoft-graph-core). This principle makes reusability of code easier for consumers and it was not respected until this new version of the SDK. All the code living under anything but `com.microsoft.graph.models` or `com.microsoft.graph.requests` have been moved to the same package name in the core asset. This move should be transparent to consumers, except for the following that needs to be updated:
+The service library (microsoft-graph) was designed to contain only code that has been generated automatically from the API metadata. All code that has been manually handcrafted should live in the core library (microsoft-graph-core). This principle makes reusability of code easier for consumers and it was not respected until this new version of the SDK. All the code living under anything but `com.microsoft.graph.models` or `com.microsoft.graph.requests` have been moved to the same package name in the core asset. This move should be transparent to consumers, except for the following that needs to be updated. To upgrade your application do the following.
 
-1. Replace any reference to `ChunkUploadProvider` from `com.microsoft.graph.requests.extensions` to `com.microsoft.graph.concurrency`.
-1. Replace any reference to `CustomRequestBuilder`, `DateOnly`, `TimeOfDay`, and `Multipart` from `com.microsoft.graph.(models|requests).extensions` to `com.microsoft.graph.core`.
+- Replace any reference to `ChunkUploadProvider` from `com.microsoft.graph.requests.extensions` to `com.microsoft.graph.concurrency`.
+- Replace any reference to `CustomRequestBuilder`, `DateOnly`, `TimeOfDay`, and `Multipart` from `com.microsoft.graph.(models|requests).extensions` to `com.microsoft.graph.core`.
 
 ### Removal of connection configuration
 
-As the connection configuration evolved over time, the connection configuration infrastructure had become redundant with the native library configuration capabilities:
+As the connection configuration evolved over time, the connection configuration infrastructure had become redundant with the native library configuration capabilities. To upgrade your application do the following.
 
-1. Remove any reference to `IConnectionConfiguration` and re-implement the configuration using [Customize the Microsoft Graph SDK service client](https://docs.microsoft.com/graph/sdks/customize-client?tabs=java).
+- Remove any reference to `IConnectionConfiguration` and re-implement the configuration using [Customize the Microsoft Graph SDK service client](https://docs.microsoft.com/graph/sdks/customize-client?tabs=java).
 
 ### Dependencies upgrade
 
@@ -136,15 +138,15 @@ No action needs to be taken unless the project has a direct reference to an olde
 
 ### float properties have been replaced by Float
 
-As the OData specification mandates support for null values for numeric values, any property that previously was implemented using a float primitive type is now using a Float object type:
+As the OData specification mandates support for null values for numeric values, any property that previously was implemented using a float primitive type is now using a Float object type. To upgrade your application do the following.
 
-1. Replace any assignment from float to Float and check for null values.
+- Replace any assignment from float to Float and check for null values.
 
 ### Merge of GraphServiceClient and BaseGraphServiceClient
 
-To simplify the object model of the SDK, `BaseGraphServiceClient` has been merged into `GraphServiceClient`:
+To simplify the object model of the SDK, `BaseGraphServiceClient` has been merged into `GraphServiceClient`. To upgrade your application do the following.
 
-1. Replace any reference to `BaseGraphServiceClient` by `GraphServiceClient`.
+- Replace any reference to `BaseGraphServiceClient` by `GraphServiceClient`.
 
 ### Generic refactoring
 
@@ -152,9 +154,9 @@ Requests, request builders, and responses have been refactored to take advantage
 
 ## Batch object model improvements
 
-The object model for JSON batching has been improved to provide a cleaner API surface to SDK users:
+The object model for JSON batching has been improved to provide a cleaner API surface to SDK users. To upgrade your application do the following.
 
-1. Replace any of the following patterns
+- Replace any of the following patterns
 
     ```Java
     final MSBatchRequestContent batchRequestContent = new MSBatchRequestContent();
@@ -182,10 +184,10 @@ The object model for JSON batching has been improved to provide a cleaner API su
 
 ### IJsonBackedObject interface
 
-The interface has been simplified to remove the `getRawObject` and `getSerializer` methods. This avoid entity and collection objects storing a copy of the JSON on top of the properties they already have, which improves drastically the memory impacts:
+The interface has been simplified to remove the `getRawObject` and `getSerializer` methods. This avoid entity and collection objects storing a copy of the JSON on top of the properties they already have, which improves drastically the memory impacts. To upgrade your application do the following.
 
-1. Replace any reference to `getRawObject` by `additionalDataManager`.
-1. Replace any reference to `getSerializer` by `graphClient.getSerializer` or create a new instance of the serializer.
+- Replace any reference to `getRawObject` by `additionalDataManager`.
+- Replace any reference to `getSerializer` by `graphClient.getSerializer` or create a new instance of the serializer.
 
 ### Improved delta API
 
@@ -194,9 +196,9 @@ When using [change tracking/delta APIs](https://docs.microsoft.com/graph/delta-q
 - A next link whenever there are more change results to iterate through.
 - A delta link whenever there are no more change results to iterate through at this instant. This is the link your application should use to get new changes in the future.
 
-This new version improves the Java API provided to developers.
+This new version improves the Java API provided to developers. To upgrade your application do the following.
 
-1. Replace any of the following
+- Replace any of the following
 
     ```Java
     graphClient.users().delta("https://mydeltalink").buildRequest().get();
@@ -208,7 +210,7 @@ This new version improves the Java API provided to developers.
     graphClient.users().delta().buildRequest().deltaLink("https://mydeltalink").get();
     ```
 
-1. Replace any of the following
+- Replace any of the following
 
     ```Java
     graphClient.customRequest("mydeltaPathAndQuery").buildRequest().get();
@@ -228,9 +230,9 @@ This section lists out other improvements which are not considered as breaking c
 
 ### Support for OData Count
 
-The SDK now produces methods to include the count of items included in collections:
+The SDK now produces methods to include the count of items included in collections. To upgrade your application do the following.
 
-1. Replace any use of `QueryOption`
+- Replace any use of `QueryOption`
 
     ```Java
     graphClient
@@ -249,7 +251,7 @@ The SDK now produces methods to include the count of items included in collectio
     .get();
     ```
 
-1. Replace any custom request
+- Replace any custom request
 
     ```Java
     graphClient
