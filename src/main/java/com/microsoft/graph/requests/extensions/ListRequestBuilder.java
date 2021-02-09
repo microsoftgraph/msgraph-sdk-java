@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemCollectionRequestBuilder;
@@ -25,8 +27,6 @@ import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBui
 import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

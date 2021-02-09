@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IInvitationCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IInvitationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
@@ -77,6 +79,7 @@ import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
@@ -131,6 +134,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the Users object
      */
     IUserRequestBuilder users(final String id);
+
+    /**
+     * Gets the collection of AuthenticationMethodConfigurations objects
+     *
+     * @return the request builder for the collection of AuthenticationMethodConfigurations objects
+     */
+    IAuthenticationMethodConfigurationCollectionRequestBuilder authenticationMethodConfigurations();
+
+    /**
+     * Gets a single AuthenticationMethodConfigurations
+     *
+     * @param id the id of the AuthenticationMethodConfigurations to retrieve
+     * @return the request builder for the AuthenticationMethodConfigurations object
+     */
+    IAuthenticationMethodConfigurationRequestBuilder authenticationMethodConfigurations(final String id);
 
     /**
      * Gets the collection of IdentityProviders objects
@@ -622,6 +640,13 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the AuthenticationMethodsPolicy
+     */
+    IAuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the IdentityContainer
      */
     IIdentityContainerRequestBuilder identity();
@@ -708,7 +733,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Security
      */
-    ISecurityRequestBuilder Security();
+    ISecurityRequestBuilder security();
 
     /**
      * Gets the GraphServiceRequestBuilder

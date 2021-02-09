@@ -14,14 +14,18 @@ import com.microsoft.graph.requests.extensions.ITermsAndConditionsCollectionRequ
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySettingStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnPremisesConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequestBuilder;
@@ -32,8 +36,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnecto
 import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceOverviewWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateCollectionRequestBuilder;
@@ -54,12 +60,6 @@ import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppL
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLearningSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISoftwareUpdateStatusSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesConditionalAccessSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

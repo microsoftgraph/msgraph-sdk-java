@@ -47,6 +47,7 @@ import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.Presence;
+import com.microsoft.graph.models.extensions.Authentication;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.UserTeamwork;
 import com.microsoft.graph.models.extensions.Todo;
@@ -938,6 +939,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "presence", alternate = {"Presence"})
     @Expose
     public Presence presence;
+
+    /**
+     * The Authentication.
+     * 
+     */
+    @SerializedName(value = "authentication", alternate = {"Authentication"})
+    @Expose
+    public Authentication authentication;
 
     /**
      * The Joined Teams.

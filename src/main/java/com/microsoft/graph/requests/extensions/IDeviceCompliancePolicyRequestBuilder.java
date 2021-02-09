@@ -17,11 +17,11 @@ import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollect
 import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

@@ -9,8 +9,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyRoot;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
@@ -23,7 +25,6 @@ import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionReq
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -50,6 +51,13 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
      */
     IPolicyRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for AuthenticationMethodsPolicy
+     *
+     * @return the IAuthenticationMethodsPolicyRequestBuilder instance
+     */
+    IAuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy();
 
     IActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies();
 

@@ -16,8 +16,11 @@ import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
+import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
@@ -26,9 +29,6 @@ import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

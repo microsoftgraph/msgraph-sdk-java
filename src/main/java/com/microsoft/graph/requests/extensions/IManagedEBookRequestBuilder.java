@@ -14,9 +14,9 @@ import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollection
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
