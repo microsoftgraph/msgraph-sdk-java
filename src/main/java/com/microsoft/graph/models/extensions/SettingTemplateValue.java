@@ -34,7 +34,7 @@ public class SettingTemplateValue implements IJsonBackedObject {
 
     /**
      * The Default Value.
-     * Default value for the setting. Read-only.
+     * Default value for the setting.
      */
     @SerializedName(value = "defaultValue", alternate = {"DefaultValue"})
     @Expose
@@ -42,7 +42,7 @@ public class SettingTemplateValue implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the setting. Read-only.
+     * Description of the setting.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -50,7 +50,7 @@ public class SettingTemplateValue implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Name of the setting. Read-only.
+     * Name of the setting.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -58,7 +58,7 @@ public class SettingTemplateValue implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Type of the setting. Read-only.
+     * Type of the setting.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

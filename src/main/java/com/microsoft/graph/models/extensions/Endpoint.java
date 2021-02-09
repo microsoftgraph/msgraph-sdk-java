@@ -25,7 +25,7 @@ public class Endpoint extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Capability.
-     * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.)  Not nullable. Read-only.
+     * 
      */
     @SerializedName(value = "capability", alternate = {"Capability"})
     @Expose
@@ -33,7 +33,7 @@ public class Endpoint extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Provider Id.
-     * Application id of the publishing underlying service. Not nullable. Read-only.
+     * 
      */
     @SerializedName(value = "providerId", alternate = {"ProviderId"})
     @Expose
@@ -41,7 +41,7 @@ public class Endpoint extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Provider Name.
-     * Name of the publishing underlying service. Read-only.
+     * 
      */
     @SerializedName(value = "providerName", alternate = {"ProviderName"})
     @Expose
@@ -49,7 +49,7 @@ public class Endpoint extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Provider Resource Id.
-     * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+     * 
      */
     @SerializedName(value = "providerResourceId", alternate = {"ProviderResourceId"})
     @Expose
@@ -57,7 +57,7 @@ public class Endpoint extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Uri.
-     * URL of the published resource. Not nullable. Read-only.
+     * 
      */
     @SerializedName(value = "uri", alternate = {"Uri"})
     @Expose

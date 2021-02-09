@@ -34,7 +34,7 @@ public class ChatInfo implements IJsonBackedObject {
 
     /**
      * The Message Id.
-     * The unique identifier for a message in a Microsoft Teams channel.
+     * The unique identifier of a message in a Microsoft Teams channel.
      */
     @SerializedName(value = "messageId", alternate = {"MessageId"})
     @Expose

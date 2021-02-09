@@ -31,7 +31,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * The end time of the requested meeting.
+     * 
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose

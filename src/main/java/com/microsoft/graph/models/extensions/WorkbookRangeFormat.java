@@ -38,7 +38,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
     /**
      * The Horizontal Alignment.
-     * Represents the horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      */
     @SerializedName(value = "horizontalAlignment", alternate = {"HorizontalAlignment"})
     @Expose
@@ -54,7 +54,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
     /**
      * The Vertical Alignment.
-     * Represents the vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      */
     @SerializedName(value = "verticalAlignment", alternate = {"VerticalAlignment"})
     @Expose

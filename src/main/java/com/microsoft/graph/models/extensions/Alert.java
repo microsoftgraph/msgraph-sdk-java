@@ -173,7 +173,7 @@ public class Alert extends Entity implements IJsonBackedObject {
 
     /**
      * The History States.
-     * A collection of alertHistoryStates comprising an audit log of all updates made to an alert.
+     * 
      */
     @SerializedName(value = "historyStates", alternate = {"HistoryStates"})
     @Expose

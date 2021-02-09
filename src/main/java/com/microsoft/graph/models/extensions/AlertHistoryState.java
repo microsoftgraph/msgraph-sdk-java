@@ -36,7 +36,7 @@ public class AlertHistoryState implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
+     * 
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -44,7 +44,7 @@ public class AlertHistoryState implements IJsonBackedObject {
 
     /**
      * The Assigned To.
-     * UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
+     * 
      */
     @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
@@ -52,7 +52,7 @@ public class AlertHistoryState implements IJsonBackedObject {
 
     /**
      * The Comments.
-     * Comment entered by signed-in user.
+     * 
      */
     @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose
@@ -60,7 +60,7 @@ public class AlertHistoryState implements IJsonBackedObject {
 
     /**
      * The Feedback.
-     * Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+     * 
      */
     @SerializedName(value = "feedback", alternate = {"Feedback"})
     @Expose
@@ -68,7 +68,7 @@ public class AlertHistoryState implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -76,7 +76,7 @@ public class AlertHistoryState implements IJsonBackedObject {
 
     /**
      * The Updated Date Time.
-     * Date and time of the alert update. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "updatedDateTime", alternate = {"UpdatedDateTime"})
     @Expose
@@ -84,7 +84,7 @@ public class AlertHistoryState implements IJsonBackedObject {
 
     /**
      * The User.
-     * UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
+     * 
      */
     @SerializedName(value = "user", alternate = {"User"})
     @Expose

@@ -33,7 +33,7 @@ public class WorkbookRangeBorder extends Entity implements IJsonBackedObject {
 
     /**
      * The Side Index.
-     * Constant value that indicates the specific side of the border. Possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+     * Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      */
     @SerializedName(value = "sideIndex", alternate = {"SideIndex"})
     @Expose
@@ -41,7 +41,7 @@ public class WorkbookRangeBorder extends Entity implements IJsonBackedObject {
 
     /**
      * The Style.
-     * One of the constants of line style specifying the line style for the border. Possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+     * One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      */
     @SerializedName(value = "style", alternate = {"Style"})
     @Expose
@@ -49,7 +49,7 @@ public class WorkbookRangeBorder extends Entity implements IJsonBackedObject {
 
     /**
      * The Weight.
-     * Specifies the weight of the border around a range. Possible values are: Hairline, Thin, Medium, Thick.
+     * Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      */
     @SerializedName(value = "weight", alternate = {"Weight"})
     @Expose

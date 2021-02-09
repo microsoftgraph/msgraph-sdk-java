@@ -43,7 +43,7 @@ public class WindowsInformationProtectionIPRangeCollection implements IJsonBacke
 
     /**
      * The Ranges.
-     * Collection of ip ranges
+     * Collection of Internet protocol address ranges
      */
     @SerializedName(value = "ranges", alternate = {"Ranges"})
     @Expose

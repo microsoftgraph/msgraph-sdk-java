@@ -51,7 +51,7 @@ public class Website implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Possible values are: other, home, work, blog, profile.
+     * The possible values are: other, home, work, blog, profile.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

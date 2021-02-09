@@ -90,7 +90,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Is Wheel Chair Accessible.
-     * 
+     * Specifies whether the room is wheelchair accessible.
      */
     @SerializedName(value = "isWheelChairAccessible", alternate = {"IsWheelChairAccessible"})
     @Expose

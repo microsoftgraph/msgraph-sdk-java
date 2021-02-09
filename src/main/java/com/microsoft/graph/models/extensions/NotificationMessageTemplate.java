@@ -28,7 +28,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
 
     /**
      * The Branding Options.
-     * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation, includeCompanyPortalLink.
+     * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
      */
     @SerializedName(value = "brandingOptions", alternate = {"BrandingOptions"})
     @Expose
