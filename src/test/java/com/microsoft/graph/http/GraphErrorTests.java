@@ -15,7 +15,7 @@ public class GraphErrorTests {
 	public void testIsError(){
         String expectedMessage = "test error message";
         GraphError error = new GraphError();
-        error.code = GraphErrorCodes.ACCESS_DENIED.toString();
+        error.code = "accessDenied"; // the code prop is lower camel cased https://docs.microsoft.com/en-us/graph/errors#code-property
         error.message = expectedMessage;
         assertTrue(error.isError(GraphErrorCodes.ACCESS_DENIED));
         assertEquals(expectedMessage, error.message);
