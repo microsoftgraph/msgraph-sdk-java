@@ -35,7 +35,7 @@ public class IncomingContext implements IJsonBackedObject {
 
     /**
      * The Observed Participant Id.
-     * The id of the participant that is under observation. Read-only.
+     * The ID of the participant that is under observation. Read-only.
      */
     @SerializedName(value = "observedParticipantId", alternate = {"ObservedParticipantId"})
     @Expose
@@ -51,7 +51,7 @@ public class IncomingContext implements IJsonBackedObject {
 
     /**
      * The Source Participant Id.
-     * The id of the participant that triggered the incoming call. Read-only.
+     * The ID of the participant that triggered the incoming call. Read-only.
      */
     @SerializedName(value = "sourceParticipantId", alternate = {"SourceParticipantId"})
     @Expose

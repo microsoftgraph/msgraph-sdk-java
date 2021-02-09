@@ -44,7 +44,7 @@ public class Win32LobAppInstallExperience implements IJsonBackedObject {
 
     /**
      * The Run As Account.
-     * Indicates the type of execution context the app runs in. Possible values are: system, user.
+     * Indicates the type of execution context the app runs in.
      */
     @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose

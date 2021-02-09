@@ -44,7 +44,7 @@ public class AttendeeAvailability implements IJsonBackedObject {
 
     /**
      * The Availability.
-     * The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
     @SerializedName(value = "availability", alternate = {"Availability"})
     @Expose

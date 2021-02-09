@@ -34,7 +34,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
 
     /**
      * The Device Compliance Checkin Threshold Days.
-     * The number of days a device is allowed to go without checking in to remain compliant.
+     * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
      */
     @SerializedName(value = "deviceComplianceCheckinThresholdDays", alternate = {"DeviceComplianceCheckinThresholdDays"})
     @Expose

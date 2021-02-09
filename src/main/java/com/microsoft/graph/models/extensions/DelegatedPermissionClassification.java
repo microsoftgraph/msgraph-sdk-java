@@ -34,7 +34,7 @@ public class DelegatedPermissionClassification extends Entity implements IJsonBa
 
     /**
      * The Permission Id.
-     * The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
+     * The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
      */
     @SerializedName(value = "permissionId", alternate = {"PermissionId"})
     @Expose
@@ -42,7 +42,7 @@ public class DelegatedPermissionClassification extends Entity implements IJsonBa
 
     /**
      * The Permission Name.
-     * The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
+     * The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
      */
     @SerializedName(value = "permissionName", alternate = {"PermissionName"})
     @Expose

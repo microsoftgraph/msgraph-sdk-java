@@ -34,7 +34,7 @@ public class SpaApplication implements IJsonBackedObject {
 
     /**
      * The Redirect Uris.
-     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+     * 
      */
     @SerializedName(value = "redirectUris", alternate = {"RedirectUris"})
     @Expose

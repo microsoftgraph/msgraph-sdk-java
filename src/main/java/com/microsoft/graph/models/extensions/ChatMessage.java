@@ -93,7 +93,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Edited Date Time.
-     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
+     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Microsoft Teams UI. If no edits are made the value is null.
      */
     @SerializedName(value = "lastEditedDateTime", alternate = {"LastEditedDateTime"})
     @Expose
@@ -101,7 +101,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
+     * Read only. Timestamp when the chat message is created (initial setting) or edited, including when a reaction is added or removed.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -141,7 +141,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reactions.
-     * Reactions for this chat message (for example, Like).
+     * 
      */
     @SerializedName(value = "reactions", alternate = {"Reactions"})
     @Expose
@@ -149,7 +149,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reply To Id.
-     * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+     * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels not chats)
      */
     @SerializedName(value = "replyToId", alternate = {"ReplyToId"})
     @Expose

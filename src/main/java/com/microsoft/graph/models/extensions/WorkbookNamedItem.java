@@ -50,7 +50,7 @@ public class WorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Indicates what type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

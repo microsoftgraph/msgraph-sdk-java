@@ -225,7 +225,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Preferred Token Signing Key Thumbprint.
-     * Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
+     * 
      */
     @SerializedName(value = "preferredTokenSigningKeyThumbprint", alternate = {"PreferredTokenSigningKeyThumbprint"})
     @Expose
@@ -265,7 +265,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Sign In Audience.
-     * Specifies what Microsoft accounts are supported for the associated application. Read-only.
+     * 
      */
     @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose
@@ -317,7 +317,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Delegated Permission Classifications.
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents.
+     * 
      */
     @SerializedName(value = "delegatedPermissionClassifications", alternate = {"DelegatedPermissionClassifications"})
     @Expose
@@ -325,7 +325,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Endpoints.
-     * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+     * 
      */
     @SerializedName(value = "endpoints", alternate = {"Endpoints"})
     @Expose

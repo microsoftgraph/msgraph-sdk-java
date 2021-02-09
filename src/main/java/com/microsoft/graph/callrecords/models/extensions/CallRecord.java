@@ -94,7 +94,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+     * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

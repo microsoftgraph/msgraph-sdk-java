@@ -36,7 +36,7 @@ public class PublicError implements IJsonBackedObject {
 
     /**
      * The Code.
-     * Represents the error code.
+     * 
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -44,7 +44,7 @@ public class PublicError implements IJsonBackedObject {
 
     /**
      * The Details.
-     * Details of the error.
+     * 
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -52,7 +52,7 @@ public class PublicError implements IJsonBackedObject {
 
     /**
      * The Inner Error.
-     * Details of the inner error.
+     * 
      */
     @SerializedName(value = "innerError", alternate = {"InnerError"})
     @Expose
@@ -60,7 +60,7 @@ public class PublicError implements IJsonBackedObject {
 
     /**
      * The Message.
-     * A non-localized message for the developer.
+     * 
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -68,7 +68,7 @@ public class PublicError implements IJsonBackedObject {
 
     /**
      * The Target.
-     * The target of the error.
+     * 
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

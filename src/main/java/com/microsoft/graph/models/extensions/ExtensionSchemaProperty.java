@@ -34,7 +34,7 @@ public class ExtensionSchemaProperty implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name of the strongly typed property defined as part of a schema extension.
+     * The name of the strongly-typed property defined as part of a schema extension.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

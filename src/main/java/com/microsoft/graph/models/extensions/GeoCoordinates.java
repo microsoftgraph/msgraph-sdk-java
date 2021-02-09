@@ -42,7 +42,7 @@ public class GeoCoordinates implements IJsonBackedObject {
 
     /**
      * The Latitude.
-     * Optional. The latitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Optional. The latitude, in decimal, for the item. Read-only.
      */
     @SerializedName(value = "latitude", alternate = {"Latitude"})
     @Expose
@@ -50,7 +50,7 @@ public class GeoCoordinates implements IJsonBackedObject {
 
     /**
      * The Longitude.
-     * Optional. The longitude, in decimal, for the item. Writable on OneDrive Personal.
+     * Optional. The longitude, in decimal, for the item. Read-only.
      */
     @SerializedName(value = "longitude", alternate = {"Longitude"})
     @Expose

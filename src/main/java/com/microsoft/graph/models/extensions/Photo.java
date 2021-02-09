@@ -98,7 +98,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Taken Date Time.
-     * The date and time the photo was taken in UTC time. Read-only.
+     * Represents the date and time the photo was taken. Read-only.
      */
     @SerializedName(value = "takenDateTime", alternate = {"TakenDateTime"})
     @Expose
