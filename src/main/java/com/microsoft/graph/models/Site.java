@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ContentType;
 import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.models.List;
+import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.models.Onenote;
 import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
@@ -26,6 +27,7 @@ import com.microsoft.graph.requests.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.DriveCollectionPage;
 import com.microsoft.graph.requests.BaseItemCollectionPage;
 import com.microsoft.graph.requests.ListCollectionPage;
+import com.microsoft.graph.requests.PermissionCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
 
 
@@ -152,6 +154,15 @@ public class Site extends BaseItem implements IJsonBackedObject {
     public ListCollectionPage lists;
 
     /**
+     * The Permissions.
+     * The permissions associated with the site. Nullable.
+     */
+    @SerializedName(value = "permissions", alternate = {"Permissions"})
+    @Expose
+	@Nullable
+    public PermissionCollectionPage permissions;
+
+    /**
      * The Sites.
      * The collection of the sub-sites under this site.
      */
@@ -197,6 +208,10 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
         if (json.has("lists")) {
             lists = serializer.deserializeObject(json.get("lists"), ListCollectionPage.class);
+        }
+
+        if (json.has("permissions")) {
+            permissions = serializer.deserializeObject(json.get("permissions"), PermissionCollectionPage.class);
         }
 
         if (json.has("sites")) {

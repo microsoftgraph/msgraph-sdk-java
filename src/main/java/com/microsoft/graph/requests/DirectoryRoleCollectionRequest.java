@@ -34,7 +34,7 @@ public class DirectoryRoleCollectionRequest extends BaseEntityCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRoleCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRoleCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryRoleCollectionResponse.class, DirectoryRoleCollectionPage.class, DirectoryRoleCollectionRequestBuilder.class);
     }
 

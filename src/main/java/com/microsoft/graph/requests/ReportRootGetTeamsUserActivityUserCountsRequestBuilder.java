@@ -29,7 +29,7 @@ public class ReportRootGetTeamsUserActivityUserCountsRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetTeamsUserActivityUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetTeamsUserActivityUserCountsParameterSet parameters) {
+    public ReportRootGetTeamsUserActivityUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetTeamsUserActivityUserCountsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

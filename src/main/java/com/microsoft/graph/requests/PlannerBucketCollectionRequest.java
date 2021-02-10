@@ -35,7 +35,7 @@ public class PlannerBucketCollectionRequest extends BaseEntityCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerBucketCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerBucketCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerBucketCollectionResponse.class, PlannerBucketCollectionPage.class, PlannerBucketCollectionRequestBuilder.class);
     }
 

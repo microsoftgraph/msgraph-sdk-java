@@ -35,7 +35,7 @@ public class TeamsAppDefinitionCollectionRequest extends BaseEntityCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppDefinitionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppDefinitionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppDefinitionCollectionResponse.class, TeamsAppDefinitionCollectionPage.class, TeamsAppDefinitionCollectionRequestBuilder.class);
     }
 

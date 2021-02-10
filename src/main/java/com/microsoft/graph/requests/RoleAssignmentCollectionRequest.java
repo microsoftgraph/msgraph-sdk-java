@@ -35,7 +35,7 @@ public class RoleAssignmentCollectionRequest extends BaseEntityCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class, RoleAssignmentCollectionPage.class, RoleAssignmentCollectionRequestBuilder.class);
     }
 

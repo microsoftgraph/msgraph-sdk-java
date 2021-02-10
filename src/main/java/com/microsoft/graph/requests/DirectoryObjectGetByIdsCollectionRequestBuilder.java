@@ -37,7 +37,7 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionC
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetByIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetByIdsParameterSet parameters) {
+    public DirectoryObjectGetByIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetByIdsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionRequestBuilder.class, DirectoryObjectGetByIdsCollectionRequest.class);
         this.body = parameters;
     }

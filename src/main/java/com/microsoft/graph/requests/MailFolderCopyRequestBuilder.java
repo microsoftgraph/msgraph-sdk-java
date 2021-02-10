@@ -29,7 +29,7 @@ public class MailFolderCopyRequestBuilder extends BaseActionRequestBuilder<MailF
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public MailFolderCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MailFolderCopyParameterSet parameters) {
+    public MailFolderCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MailFolderCopyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

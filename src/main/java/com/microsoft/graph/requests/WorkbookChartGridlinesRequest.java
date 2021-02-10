@@ -31,7 +31,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGrid
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartGridlinesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartGridlinesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartGridlines.class);
     }
 

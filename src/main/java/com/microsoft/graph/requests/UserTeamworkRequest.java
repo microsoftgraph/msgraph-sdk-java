@@ -32,7 +32,7 @@ public class UserTeamworkRequest extends BaseRequest<UserTeamwork> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserTeamworkRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserTeamworkRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserTeamwork.class);
     }
 

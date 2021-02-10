@@ -30,7 +30,7 @@ public class WorkbookFunctionsEvenRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsEvenRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEvenParameterSet parameters) {
+    public WorkbookFunctionsEvenRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEvenParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

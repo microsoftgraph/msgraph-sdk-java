@@ -31,7 +31,7 @@ public class PermissionRequest extends BaseRequest<Permission> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Permission.class);
     }
 

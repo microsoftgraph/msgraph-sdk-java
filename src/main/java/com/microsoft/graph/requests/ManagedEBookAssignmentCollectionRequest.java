@@ -35,7 +35,7 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseEntityCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedEBookAssignmentCollectionResponse.class, ManagedEBookAssignmentCollectionPage.class, ManagedEBookAssignmentCollectionRequestBuilder.class);
     }
 

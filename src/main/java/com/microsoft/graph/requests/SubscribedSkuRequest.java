@@ -30,7 +30,7 @@ public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscribedSkuRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscribedSkuRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SubscribedSku.class);
     }
 

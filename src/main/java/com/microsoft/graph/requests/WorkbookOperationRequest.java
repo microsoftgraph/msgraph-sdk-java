@@ -30,7 +30,7 @@ public class WorkbookOperationRequest extends BaseRequest<WorkbookOperation> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookOperation.class);
     }
 

@@ -35,7 +35,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
     }
     /**
@@ -46,7 +46,7 @@ public class ListItemGetActivitiesByIntervalCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ListItemGetActivitiesByIntervalParameterSet parameters) {
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ListItemGetActivitiesByIntervalParameterSet parameters) {
         super(requestUrl, client, requestOptions, ListItemGetActivitiesByIntervalCollectionRequestBuilder.class, ListItemGetActivitiesByIntervalCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

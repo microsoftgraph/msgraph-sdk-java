@@ -34,7 +34,7 @@ public class NamedLocationCollectionRequestBuilder extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NamedLocationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NamedLocationCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NamedLocationRequestBuilder.class, NamedLocationCollectionRequest.class);
     }
 

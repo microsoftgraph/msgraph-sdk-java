@@ -36,7 +36,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarAllowedCalendarSharingRolesParameterSet parameters) {
+    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarAllowedCalendarSharingRolesParameterSet parameters) {
         super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder.class, CalendarAllowedCalendarSharingRolesCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

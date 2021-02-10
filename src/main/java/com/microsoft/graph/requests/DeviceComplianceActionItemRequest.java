@@ -30,7 +30,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest<DeviceComplia
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceActionItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceActionItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceActionItem.class);
     }
 

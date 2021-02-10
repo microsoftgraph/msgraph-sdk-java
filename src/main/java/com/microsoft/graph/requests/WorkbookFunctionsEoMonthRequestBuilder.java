@@ -30,7 +30,7 @@ public class WorkbookFunctionsEoMonthRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsEoMonthRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEoMonthParameterSet parameters) {
+    public WorkbookFunctionsEoMonthRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEoMonthParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

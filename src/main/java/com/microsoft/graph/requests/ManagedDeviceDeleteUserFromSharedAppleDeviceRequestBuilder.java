@@ -30,7 +30,7 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder extends 
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet parameters) {
+    public ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

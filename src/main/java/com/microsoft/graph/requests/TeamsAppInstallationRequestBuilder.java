@@ -8,8 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsAppInstallation;
-import com.microsoft.graph.requests.TeamsAppRequestBuilder;
-import com.microsoft.graph.requests.TeamsAppDefinitionRequestBuilder;
+import com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.TeamsAppDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -31,7 +31,7 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder<Teams
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppInstallationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppInstallationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

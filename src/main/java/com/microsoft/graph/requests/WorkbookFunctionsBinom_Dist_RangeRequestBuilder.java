@@ -30,7 +30,7 @@ public class WorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseActionR
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBinom_Dist_RangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBinom_Dist_RangeParameterSet parameters) {
+    public WorkbookFunctionsBinom_Dist_RangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBinom_Dist_RangeParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

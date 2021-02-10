@@ -30,7 +30,7 @@ public class DeviceCategoryRequest extends BaseRequest<DeviceCategory> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCategory.class);
     }
 

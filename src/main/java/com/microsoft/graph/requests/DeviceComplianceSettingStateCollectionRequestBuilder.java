@@ -34,7 +34,7 @@ public class DeviceComplianceSettingStateCollectionRequestBuilder extends BaseCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceSettingStateCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceSettingStateCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceSettingStateRequestBuilder.class, DeviceComplianceSettingStateCollectionRequest.class);
     }
 

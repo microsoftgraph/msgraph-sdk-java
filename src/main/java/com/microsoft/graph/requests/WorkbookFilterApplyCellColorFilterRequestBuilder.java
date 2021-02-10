@@ -30,7 +30,7 @@ public class WorkbookFilterApplyCellColorFilterRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyCellColorFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyCellColorFilterParameterSet parameters) {
+    public WorkbookFilterApplyCellColorFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyCellColorFilterParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

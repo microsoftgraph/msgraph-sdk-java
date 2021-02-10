@@ -29,7 +29,7 @@ public class EnrollmentTroubleshootingEventRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnrollmentTroubleshootingEventRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentTroubleshootingEventRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

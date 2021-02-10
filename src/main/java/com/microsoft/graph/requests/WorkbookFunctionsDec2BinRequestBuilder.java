@@ -30,7 +30,7 @@ public class WorkbookFunctionsDec2BinRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsDec2BinRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsDec2BinParameterSet parameters) {
+    public WorkbookFunctionsDec2BinRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsDec2BinParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

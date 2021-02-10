@@ -35,7 +35,7 @@ public class UsedInsightCollectionRequest extends BaseEntityCollectionRequest<Us
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UsedInsightCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UsedInsightCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UsedInsightCollectionResponse.class, UsedInsightCollectionPage.class, UsedInsightCollectionRequestBuilder.class);
     }
 

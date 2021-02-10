@@ -37,7 +37,7 @@ public class EventCollectionRequest extends BaseEntityCollectionRequest<Event, E
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EventCollectionResponse.class, EventCollectionPage.class, EventCollectionRequestBuilder.class);
     }
 

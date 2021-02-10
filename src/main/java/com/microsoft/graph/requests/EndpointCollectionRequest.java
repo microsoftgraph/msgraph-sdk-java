@@ -35,7 +35,7 @@ public class EndpointCollectionRequest extends BaseEntityCollectionRequest<Endpo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EndpointCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class, EndpointCollectionRequestBuilder.class);
     }
 

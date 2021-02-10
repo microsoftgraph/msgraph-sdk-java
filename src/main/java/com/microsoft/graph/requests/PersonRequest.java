@@ -30,7 +30,7 @@ public class PersonRequest extends BaseRequest<Person> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Person.class);
     }
 

@@ -35,7 +35,7 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseEntityCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationUserStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationUserStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationUserStatusCollectionResponse.class, DeviceConfigurationUserStatusCollectionPage.class, DeviceConfigurationUserStatusCollectionRequestBuilder.class);
     }
 

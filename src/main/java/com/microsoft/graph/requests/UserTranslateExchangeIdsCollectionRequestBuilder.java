@@ -38,7 +38,7 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserTranslateExchangeIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserTranslateExchangeIdsParameterSet parameters) {
+    public UserTranslateExchangeIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserTranslateExchangeIdsParameterSet parameters) {
         super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionRequestBuilder.class, UserTranslateExchangeIdsCollectionRequest.class);
         this.body = parameters;
     }

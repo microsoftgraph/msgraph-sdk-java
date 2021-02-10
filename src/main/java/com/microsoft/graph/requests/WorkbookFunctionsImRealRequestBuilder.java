@@ -30,7 +30,7 @@ public class WorkbookFunctionsImRealRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsImRealRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImRealParameterSet parameters) {
+    public WorkbookFunctionsImRealRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImRealParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

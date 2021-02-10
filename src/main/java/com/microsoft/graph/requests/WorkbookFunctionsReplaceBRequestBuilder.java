@@ -30,7 +30,7 @@ public class WorkbookFunctionsReplaceBRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsReplaceBRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsReplaceBParameterSet parameters) {
+    public WorkbookFunctionsReplaceBRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsReplaceBParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

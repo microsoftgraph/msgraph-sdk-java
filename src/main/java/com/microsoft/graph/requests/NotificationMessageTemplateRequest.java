@@ -32,7 +32,7 @@ public class NotificationMessageTemplateRequest extends BaseRequest<Notification
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotificationMessageTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotificationMessageTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NotificationMessageTemplate.class);
     }
 

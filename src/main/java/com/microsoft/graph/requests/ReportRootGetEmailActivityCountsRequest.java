@@ -29,7 +29,7 @@ public class ReportRootGetEmailActivityCountsRequest extends BaseRequest<Report>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootGetEmailActivityCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetEmailActivityCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Report.class);
     }
 

@@ -36,7 +36,7 @@ public class ServicePrincipalCollectionRequest extends BaseEntityCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class, ServicePrincipalCollectionRequestBuilder.class);
     }
 

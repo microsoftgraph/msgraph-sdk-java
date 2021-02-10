@@ -35,7 +35,7 @@ public class TimeOffCollectionRequest extends BaseEntityCollectionRequest<TimeOf
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TimeOffCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TimeOffCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TimeOffCollectionResponse.class, TimeOffCollectionPage.class, TimeOffCollectionRequestBuilder.class);
     }
 

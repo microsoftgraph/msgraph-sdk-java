@@ -30,7 +30,7 @@ public class OutlookCategoryRequest extends BaseRequest<OutlookCategory> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookCategory.class);
     }
 

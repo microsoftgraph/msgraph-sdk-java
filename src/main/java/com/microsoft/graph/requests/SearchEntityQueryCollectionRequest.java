@@ -42,7 +42,7 @@ public class SearchEntityQueryCollectionRequest extends BaseActionCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SearchEntityQueryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SearchEntityQueryCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SearchEntityQueryCollectionResponse.class, SearchEntityQueryCollectionPage.class, SearchEntityQueryCollectionRequestBuilder.class);
     }
 

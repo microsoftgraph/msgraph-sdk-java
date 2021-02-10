@@ -28,7 +28,7 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public SiteGetByPathRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteGetByPathParameterSet parameters) {
+    public SiteGetByPathRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteGetByPathParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();
@@ -202,6 +202,26 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
     @Nonnull
     public ListRequestBuilder lists(@Nonnull final String id) {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Permission collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PermissionCollectionRequestBuilder permissions() {
+        return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Permission item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PermissionRequestBuilder permissions(@Nonnull final String id) {
+        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Site collection

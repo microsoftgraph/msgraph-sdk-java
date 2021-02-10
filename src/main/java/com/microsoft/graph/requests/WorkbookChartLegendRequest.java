@@ -31,7 +31,7 @@ public class WorkbookChartLegendRequest extends BaseRequest<WorkbookChartLegend>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartLegendRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartLegendRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartLegend.class);
     }
 

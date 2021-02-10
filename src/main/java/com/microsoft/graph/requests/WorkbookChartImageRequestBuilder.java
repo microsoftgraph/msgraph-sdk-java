@@ -28,7 +28,7 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -39,7 +39,7 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookChartImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartImageParameterSet parameters) {
+    public WorkbookChartImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartImageParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

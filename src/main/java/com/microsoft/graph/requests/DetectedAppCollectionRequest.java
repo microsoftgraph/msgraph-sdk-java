@@ -35,7 +35,7 @@ public class DetectedAppCollectionRequest extends BaseEntityCollectionRequest<De
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DetectedAppCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DetectedAppCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class, DetectedAppCollectionPage.class, DetectedAppCollectionRequestBuilder.class);
     }
 

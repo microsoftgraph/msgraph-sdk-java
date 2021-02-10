@@ -30,7 +30,7 @@ public class TargetedManagedAppConfigurationTargetAppsRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public TargetedManagedAppConfigurationTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TargetedManagedAppConfigurationTargetAppsParameterSet parameters) {
+    public TargetedManagedAppConfigurationTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TargetedManagedAppConfigurationTargetAppsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -30,7 +30,7 @@ public class WorkbookFunctionsImLog2RequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsImLog2RequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImLog2ParameterSet parameters) {
+    public WorkbookFunctionsImLog2RequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImLog2ParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -27,7 +27,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest<User> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserReprocessLicenseAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserReprocessLicenseAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, User.class);
     }
 

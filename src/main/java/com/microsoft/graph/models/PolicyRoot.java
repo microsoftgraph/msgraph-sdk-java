@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.AuthorizationPolicy;
 import com.microsoft.graph.models.ClaimsMappingPolicy;
@@ -41,6 +42,15 @@ import javax.annotation.Nonnull;
  */
 public class PolicyRoot extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Authentication Methods Policy.
+     * 
+     */
+    @SerializedName(value = "authenticationMethodsPolicy", alternate = {"AuthenticationMethodsPolicy"})
+    @Expose
+	@Nullable
+    public AuthenticationMethodsPolicy authenticationMethodsPolicy;
 
     /**
      * The Activity Based Timeout Policies.

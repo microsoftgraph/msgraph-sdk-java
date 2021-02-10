@@ -31,7 +31,7 @@ public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder<PlayP
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallPlayPromptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallPlayPromptParameterSet parameters) {
+    public CallPlayPromptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallPlayPromptParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

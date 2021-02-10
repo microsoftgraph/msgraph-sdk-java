@@ -30,7 +30,7 @@ public class WorkbookFunctionsRank_AvgRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsRank_AvgRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRank_AvgParameterSet parameters) {
+    public WorkbookFunctionsRank_AvgRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRank_AvgParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

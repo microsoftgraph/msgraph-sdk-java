@@ -30,7 +30,7 @@ public class ReportRootGetSharePointActivityUserDetailRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetSharePointActivityUserDetailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSharePointActivityUserDetailParameterSet parameters) {
+    public ReportRootGetSharePointActivityUserDetailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSharePointActivityUserDetailParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

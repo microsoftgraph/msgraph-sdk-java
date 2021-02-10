@@ -30,7 +30,7 @@ public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder<G
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public GroupAssignLicenseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupAssignLicenseParameterSet parameters) {
+    public GroupAssignLicenseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupAssignLicenseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

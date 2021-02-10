@@ -31,7 +31,7 @@ public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OnlineMeetingCreateOrGetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnlineMeetingCreateOrGetParameterSet parameters) {
+    public OnlineMeetingCreateOrGetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnlineMeetingCreateOrGetParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -35,7 +35,7 @@ public class DriveItemVersionCollectionRequest extends BaseEntityCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemVersionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemVersionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemVersionCollectionResponse.class, DriveItemVersionCollectionPage.class, DriveItemVersionCollectionRequestBuilder.class);
     }
 

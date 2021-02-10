@@ -13,9 +13,9 @@ import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmen
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -41,7 +41,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest<Mana
      * @param responseClass  the class of the response
      */
     public ManagedDeviceMobileAppConfigurationRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends ManagedDeviceMobileAppConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -54,7 +54,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest<Mana
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfiguration.class);
     }
 

@@ -27,7 +27,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest<Integer> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnCountRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnCountRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Integer.class);
     }
 

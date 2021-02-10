@@ -29,7 +29,7 @@ public class ReportRootGetOneDriveUsageFileCountsRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetOneDriveUsageFileCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetOneDriveUsageFileCountsParameterSet parameters) {
+    public ReportRootGetOneDriveUsageFileCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetOneDriveUsageFileCountsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

@@ -30,7 +30,7 @@ public class WorkbookFunctionsSumRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsSumRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsSumParameterSet parameters) {
+    public WorkbookFunctionsSumRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsSumParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

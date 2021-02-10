@@ -13,14 +13,18 @@ import com.microsoft.graph.requests.TermsAndConditionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.TermsAndConditionsRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicyRequestBuilder;
+import com.microsoft.graph.requests.DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.DeviceConfigurationDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationRequestBuilder;
 import com.microsoft.graph.requests.IosUpdateDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.IosUpdateDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.SoftwareUpdateStatusSummaryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.ComplianceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.OnPremisesConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.requests.DeviceCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionRequestBuilder;
@@ -31,8 +35,10 @@ import com.microsoft.graph.requests.DeviceManagementExchangeConnectorCollectionR
 import com.microsoft.graph.requests.DeviceManagementExchangeConnectorRequestBuilder;
 import com.microsoft.graph.requests.MobileThreatDefenseConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.MobileThreatDefenseConnectorRequestBuilder;
+import com.microsoft.graph.requests.ApplePushNotificationCertificateRequestBuilder;
 import com.microsoft.graph.requests.DetectedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.DetectedAppRequestBuilder;
+import com.microsoft.graph.requests.ManagedDeviceOverviewWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.NotificationMessageTemplateCollectionRequestBuilder;
@@ -53,12 +59,6 @@ import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSumma
 import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSummaryRequestBuilder;
 import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryRequestBuilder;
-import com.microsoft.graph.requests.DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationDeviceStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.SoftwareUpdateStatusSummaryRequestBuilder;
-import com.microsoft.graph.requests.OnPremisesConditionalAccessSettingsRequestBuilder;
-import com.microsoft.graph.requests.ApplePushNotificationCertificateRequestBuilder;
-import com.microsoft.graph.requests.ManagedDeviceOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -81,7 +81,7 @@ public class DeviceManagementRequest extends BaseRequest<DeviceManagement> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagement.class);
     }
 

@@ -29,7 +29,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet parameters) {
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

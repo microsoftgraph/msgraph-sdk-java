@@ -34,7 +34,7 @@ public class IdentityProviderCollectionRequest extends BaseEntityCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityProviderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityProviderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IdentityProviderCollectionPage.class, IdentityProviderCollectionRequestBuilder.class);
     }
 

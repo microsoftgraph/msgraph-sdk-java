@@ -30,7 +30,7 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest<Windows81G
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows81GeneralConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows81GeneralConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows81GeneralConfiguration.class);
     }
 

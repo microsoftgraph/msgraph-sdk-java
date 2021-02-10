@@ -35,7 +35,7 @@ public class DirectoryObjectCollectionRequest extends BaseEntityCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionPage.class, DirectoryObjectCollectionRequestBuilder.class);
     }
 

@@ -8,7 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsTab;
-import com.microsoft.graph.requests.TeamsAppRequestBuilder;
+import com.microsoft.graph.requests.TeamsAppWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -31,7 +31,7 @@ public class TeamsTabRequest extends BaseRequest<TeamsTab> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTabRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTabRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTab.class);
     }
 

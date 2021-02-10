@@ -35,7 +35,7 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder<OutlookUser> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookUserRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookUserRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

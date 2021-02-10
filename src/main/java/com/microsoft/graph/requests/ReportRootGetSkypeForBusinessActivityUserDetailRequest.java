@@ -29,7 +29,7 @@ public class ReportRootGetSkypeForBusinessActivityUserDetailRequest extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootGetSkypeForBusinessActivityUserDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSkypeForBusinessActivityUserDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Report.class);
     }
 

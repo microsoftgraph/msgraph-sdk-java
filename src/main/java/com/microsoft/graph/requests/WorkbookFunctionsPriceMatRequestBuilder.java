@@ -30,7 +30,7 @@ public class WorkbookFunctionsPriceMatRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPriceMatRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPriceMatParameterSet parameters) {
+    public WorkbookFunctionsPriceMatRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPriceMatParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

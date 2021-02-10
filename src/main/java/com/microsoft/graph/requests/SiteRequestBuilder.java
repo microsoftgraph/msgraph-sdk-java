@@ -9,19 +9,21 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.models.ItemActivityStat;
+import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.DriveRequestBuilder;
+import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.BaseItemRequestBuilder;
 import com.microsoft.graph.requests.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.ListRequestBuilder;
+import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.PermissionRequestBuilder;
 import com.microsoft.graph.requests.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteRequestBuilder;
-import com.microsoft.graph.requests.ItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -46,7 +48,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -212,6 +214,26 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
     @Nonnull
     public ListRequestBuilder lists(@Nonnull final String id) {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Permission collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PermissionCollectionRequestBuilder permissions() {
+        return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Permission item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PermissionRequestBuilder permissions(@Nonnull final String id) {
+        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Site collection

@@ -30,7 +30,7 @@ public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBinom_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBinom_InvParameterSet parameters) {
+    public WorkbookFunctionsBinom_InvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBinom_InvParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

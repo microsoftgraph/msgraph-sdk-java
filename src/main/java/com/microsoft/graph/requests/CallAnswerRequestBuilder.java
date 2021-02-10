@@ -31,7 +31,7 @@ public class CallAnswerRequestBuilder extends BaseActionRequestBuilder<Call> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallAnswerRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallAnswerParameterSet parameters) {
+    public CallAnswerRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallAnswerParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

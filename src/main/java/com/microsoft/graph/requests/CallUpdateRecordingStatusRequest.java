@@ -29,7 +29,7 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest<UpdateRecordin
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallUpdateRecordingStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallUpdateRecordingStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UpdateRecordingStatusOperation.class);
     }
 

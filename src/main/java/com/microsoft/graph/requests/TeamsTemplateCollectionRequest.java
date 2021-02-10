@@ -34,7 +34,7 @@ public class TeamsTemplateCollectionRequest extends BaseEntityCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTemplateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTemplateCollectionResponse.class, TeamsTemplateCollectionPage.class, TeamsTemplateCollectionRequestBuilder.class);
     }
 

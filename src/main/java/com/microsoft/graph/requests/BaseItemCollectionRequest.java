@@ -35,7 +35,7 @@ public class BaseItemCollectionRequest extends BaseEntityCollectionRequest<BaseI
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BaseItemCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BaseItemCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseItemCollectionResponse.class, BaseItemCollectionPage.class, BaseItemCollectionRequestBuilder.class);
     }
 

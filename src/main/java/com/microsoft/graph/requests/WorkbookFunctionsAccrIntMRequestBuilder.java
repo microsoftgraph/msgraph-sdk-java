@@ -30,7 +30,7 @@ public class WorkbookFunctionsAccrIntMRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsAccrIntMRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAccrIntMParameterSet parameters) {
+    public WorkbookFunctionsAccrIntMRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAccrIntMParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

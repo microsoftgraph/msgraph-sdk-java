@@ -30,7 +30,7 @@ public class DeviceConfigurationDeviceStateSummaryRequest extends BaseRequest<De
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationDeviceStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationDeviceStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationDeviceStateSummary.class);
     }
 

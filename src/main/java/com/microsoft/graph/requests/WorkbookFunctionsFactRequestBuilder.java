@@ -30,7 +30,7 @@ public class WorkbookFunctionsFactRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsFactRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFactParameterSet parameters) {
+    public WorkbookFunctionsFactRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFactParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

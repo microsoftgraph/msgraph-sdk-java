@@ -30,7 +30,7 @@ public class OnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActionRe
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OnenoteSectionCopyToSectionGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenoteSectionCopyToSectionGroupParameterSet parameters) {
+    public OnenoteSectionCopyToSectionGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenoteSectionCopyToSectionGroupParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

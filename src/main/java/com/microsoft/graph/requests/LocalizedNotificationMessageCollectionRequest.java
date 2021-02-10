@@ -35,7 +35,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseEntityCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LocalizedNotificationMessageCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LocalizedNotificationMessageCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LocalizedNotificationMessageCollectionResponse.class, LocalizedNotificationMessageCollectionPage.class, LocalizedNotificationMessageCollectionRequestBuilder.class);
     }
 

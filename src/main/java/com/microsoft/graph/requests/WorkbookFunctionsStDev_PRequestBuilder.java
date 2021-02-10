@@ -30,7 +30,7 @@ public class WorkbookFunctionsStDev_PRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsStDev_PRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsStDev_PParameterSet parameters) {
+    public WorkbookFunctionsStDev_PRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsStDev_PParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -15,8 +15,11 @@ import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.DriveRecipient;
 import com.microsoft.graph.models.ItemPreviewInfo;
 import com.microsoft.graph.models.ItemActivityStat;
+import com.microsoft.graph.requests.WorkbookRequestBuilder;
+import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.DriveItemRequestBuilder;
+import com.microsoft.graph.requests.ListItemRequestBuilder;
 import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.PermissionRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
@@ -25,9 +28,6 @@ import com.microsoft.graph.requests.ThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.ThumbnailSetRequestBuilder;
 import com.microsoft.graph.requests.DriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.DriveItemVersionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookRequestBuilder;
-import com.microsoft.graph.requests.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.ListItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -50,7 +50,7 @@ public class DriveItemRequest extends BaseRequest<DriveItem> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItem.class);
     }
 

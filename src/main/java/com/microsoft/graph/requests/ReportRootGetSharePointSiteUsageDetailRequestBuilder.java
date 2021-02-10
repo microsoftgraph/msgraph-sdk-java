@@ -30,7 +30,7 @@ public class ReportRootGetSharePointSiteUsageDetailRequestBuilder extends BaseFu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ReportRootGetSharePointSiteUsageDetailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSharePointSiteUsageDetailParameterSet parameters) {
+    public ReportRootGetSharePointSiteUsageDetailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetSharePointSiteUsageDetailParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

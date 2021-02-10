@@ -30,7 +30,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest<Windo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicy.class);
     }
 

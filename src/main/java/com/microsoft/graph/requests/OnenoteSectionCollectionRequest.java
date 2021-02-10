@@ -36,7 +36,7 @@ public class OnenoteSectionCollectionRequest extends BaseEntityCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteSectionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteSectionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteSectionCollectionResponse.class, OnenoteSectionCollectionPage.class, OnenoteSectionCollectionRequestBuilder.class);
     }
 

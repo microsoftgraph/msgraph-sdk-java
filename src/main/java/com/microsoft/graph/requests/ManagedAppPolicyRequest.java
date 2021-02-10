@@ -33,7 +33,7 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * @param responseClass  the class of the response
      */
     public ManagedAppPolicyRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends ManagedAppPolicy> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -46,7 +46,7 @@ public class ManagedAppPolicyRequest extends BaseRequest<ManagedAppPolicy> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppPolicy.class);
     }
 

@@ -35,7 +35,7 @@ public class TeamsAppInstallationCollectionRequest extends BaseEntityCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppInstallationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppInstallationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppInstallationCollectionResponse.class, TeamsAppInstallationCollectionPage.class, TeamsAppInstallationCollectionRequestBuilder.class);
     }
 

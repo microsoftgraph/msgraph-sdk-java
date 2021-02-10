@@ -29,7 +29,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest<WorkbookSess
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookSessionInfoResourceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookSessionInfoResourceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookSessionInfo.class);
     }
 

@@ -30,7 +30,7 @@ public class WorkbookFunctionsCschRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsCschRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCschParameterSet parameters) {
+    public WorkbookFunctionsCschRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCschParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

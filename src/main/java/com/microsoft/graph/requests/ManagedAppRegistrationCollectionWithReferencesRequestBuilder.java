@@ -31,7 +31,7 @@ public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistrationReferenceRequestBuilder.class, ManagedAppRegistrationCollectionReferenceRequest.class, ManagedAppRegistrationCollectionReferenceRequestBuilder.class);
     }
 }

@@ -36,7 +36,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceManagementGetEffectivePermissionsParameterSet parameters) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceManagementGetEffectivePermissionsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionRequestBuilder.class, DeviceManagementGetEffectivePermissionsCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

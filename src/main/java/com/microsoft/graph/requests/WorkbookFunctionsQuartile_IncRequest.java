@@ -29,7 +29,7 @@ public class WorkbookFunctionsQuartile_IncRequest extends BaseRequest<WorkbookFu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsQuartile_IncRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsQuartile_IncRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
     }
 

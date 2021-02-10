@@ -30,7 +30,7 @@ public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseAction
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookWorksheetProtectionProtectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookWorksheetProtectionProtectParameterSet parameters) {
+    public WorkbookWorksheetProtectionProtectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookWorksheetProtectionProtectParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

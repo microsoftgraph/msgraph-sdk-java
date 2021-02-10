@@ -9,11 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ListItem;
 import com.microsoft.graph.models.ItemActivityStat;
-import com.microsoft.graph.requests.ListItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ListItemVersionRequestBuilder;
-import com.microsoft.graph.requests.ItemAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.FieldValueSetRequestBuilder;
+import com.microsoft.graph.requests.ListItemVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.ListItemVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -36,7 +36,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder<ListItem> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

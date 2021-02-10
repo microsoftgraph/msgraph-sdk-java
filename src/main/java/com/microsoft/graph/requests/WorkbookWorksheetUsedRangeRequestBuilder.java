@@ -29,7 +29,7 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -40,7 +40,7 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookWorksheetUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookWorksheetUsedRangeParameterSet parameters) {
+    public WorkbookWorksheetUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookWorksheetUsedRangeParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

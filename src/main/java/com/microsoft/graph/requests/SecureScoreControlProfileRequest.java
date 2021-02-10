@@ -30,7 +30,7 @@ public class SecureScoreControlProfileRequest extends BaseRequest<SecureScoreCon
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecureScoreControlProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreControlProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecureScoreControlProfile.class);
     }
 

@@ -10,16 +10,20 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
+import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.TokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.TokenLifetimePolicyRequestBuilder;
+import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.EndpointRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.UserRequestBuilder;
+import com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.TokenIssuancePolicyWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.TokenLifetimePolicyWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -45,7 +49,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

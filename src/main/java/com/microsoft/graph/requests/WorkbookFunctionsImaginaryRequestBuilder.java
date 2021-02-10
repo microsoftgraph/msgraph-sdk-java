@@ -30,7 +30,7 @@ public class WorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsImaginaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImaginaryParameterSet parameters) {
+    public WorkbookFunctionsImaginaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImaginaryParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

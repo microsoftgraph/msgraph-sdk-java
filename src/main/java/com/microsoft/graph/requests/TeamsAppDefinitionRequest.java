@@ -30,7 +30,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest<TeamsAppDefinition> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
     }
 

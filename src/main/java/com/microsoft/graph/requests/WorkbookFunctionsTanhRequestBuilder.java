@@ -30,7 +30,7 @@ public class WorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsTanhRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsTanhParameterSet parameters) {
+    public WorkbookFunctionsTanhRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsTanhParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

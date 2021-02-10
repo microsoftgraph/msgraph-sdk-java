@@ -11,6 +11,8 @@ import com.microsoft.graph.requests.InvitationCollectionRequestBuilder;
 import com.microsoft.graph.requests.InvitationRequestBuilder;
 import com.microsoft.graph.requests.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;
+import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.AuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.ApplicationCollectionRequestBuilder;
@@ -76,6 +78,7 @@ import com.microsoft.graph.requests.TeamRequestBuilder;
 import com.microsoft.graph.requests.TeamsTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.AuditLogRootRequestBuilder;
+import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.IdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.PolicyRootRequestBuilder;
@@ -276,6 +279,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public UserRequestBuilder users(@Nonnull final String id) {
         return new UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of AuthenticationMethodConfigurations objects
+     *
+     * @return the request builder for the collection of AuthenticationMethodConfigurations objects
+     */
+    @Nonnull
+    public AuthenticationMethodConfigurationCollectionRequestBuilder authenticationMethodConfigurations() {
+        return new AuthenticationMethodConfigurationCollectionRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations", this, null);
+    }
+
+    /**
+     * Gets a single AuthenticationMethodConfigurations
+     *
+     * @param id the id of the AuthenticationMethodConfigurations to retrieve
+     * @return the request builder for the AuthenticationMethodConfigurations object
+     */
+    @Nonnull
+    public AuthenticationMethodConfigurationRequestBuilder authenticationMethodConfigurations(@Nonnull final String id) {
+        return new AuthenticationMethodConfigurationRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations/" + id, this, null);
     }
 
     /**
@@ -958,6 +982,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public AuditLogRootRequestBuilder auditLogs() {
         return new AuditLogRootRequestBuilder(getServiceRoot() + "/auditLogs", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AuthenticationMethodsPolicy
+     */
+    @Nonnull
+    public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
+        return new AuthenticationMethodsPolicyRequestBuilder(getServiceRoot() + "/authenticationMethodsPolicy", this, null);
     }
 
     /**

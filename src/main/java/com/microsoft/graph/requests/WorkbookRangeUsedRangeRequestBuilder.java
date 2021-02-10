@@ -28,7 +28,7 @@ public class WorkbookRangeUsedRangeRequestBuilder extends BaseFunctionRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -39,7 +39,7 @@ public class WorkbookRangeUsedRangeRequestBuilder extends BaseFunctionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeUsedRangeParameterSet parameters) {
+    public WorkbookRangeUsedRangeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeUsedRangeParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

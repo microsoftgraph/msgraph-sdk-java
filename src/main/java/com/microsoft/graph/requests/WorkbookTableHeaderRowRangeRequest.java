@@ -28,7 +28,7 @@ public class WorkbookTableHeaderRowRangeRequest extends BaseRequest<WorkbookRang
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableHeaderRowRangeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableHeaderRowRangeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
     }
 

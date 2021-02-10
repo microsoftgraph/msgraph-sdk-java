@@ -29,7 +29,7 @@ public class WorkbookFunctionsRateRequest extends BaseRequest<WorkbookFunctionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsRateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
     }
 

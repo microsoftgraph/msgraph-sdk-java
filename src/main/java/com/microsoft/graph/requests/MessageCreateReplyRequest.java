@@ -28,7 +28,7 @@ public class MessageCreateReplyRequest extends BaseRequest<Message> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageCreateReplyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageCreateReplyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Message.class);
     }
 

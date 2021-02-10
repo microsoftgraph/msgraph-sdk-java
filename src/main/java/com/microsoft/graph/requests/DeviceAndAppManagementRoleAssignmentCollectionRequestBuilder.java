@@ -34,7 +34,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentRequestBuilder.class, DeviceAndAppManagementRoleAssignmentCollectionRequest.class);
     }
 

@@ -38,7 +38,7 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionCollectio
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public PermissionGrantCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PermissionGrantParameterSet parameters) {
+    public PermissionGrantCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PermissionGrantParameterSet parameters) {
         super(requestUrl, client, requestOptions, PermissionGrantCollectionRequestBuilder.class, PermissionGrantCollectionRequest.class);
         this.body = parameters;
     }

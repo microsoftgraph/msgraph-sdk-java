@@ -15,9 +15,9 @@ import com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBu
 import com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -43,7 +43,7 @@ public class DeviceConfigurationRequest extends BaseRequest<DeviceConfiguration>
      * @param responseClass  the class of the response
      */
     public DeviceConfigurationRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends DeviceConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -56,7 +56,7 @@ public class DeviceConfigurationRequest extends BaseRequest<DeviceConfiguration>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfiguration.class);
     }
 

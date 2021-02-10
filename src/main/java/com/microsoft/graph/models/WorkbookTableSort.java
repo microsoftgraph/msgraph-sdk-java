@@ -47,7 +47,7 @@ public class WorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Method.
-     * Represents Chinese character ordering method last used to sort the table. Possible values are: PinYin, StrokeCount. Read-only.
+     * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      */
     @SerializedName(value = "method", alternate = {"Method"})
     @Expose

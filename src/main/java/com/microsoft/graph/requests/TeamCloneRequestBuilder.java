@@ -32,7 +32,7 @@ public class TeamCloneRequestBuilder extends BaseActionRequestBuilder<Team> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public TeamCloneRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TeamCloneParameterSet parameters) {
+    public TeamCloneRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final TeamCloneParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

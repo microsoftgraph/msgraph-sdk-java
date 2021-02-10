@@ -30,7 +30,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest<ManagedIOSLobApp> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedIOSLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedIOSLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedIOSLobApp.class);
     }
 

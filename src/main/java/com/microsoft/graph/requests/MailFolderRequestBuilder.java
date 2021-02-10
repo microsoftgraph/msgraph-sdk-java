@@ -41,7 +41,7 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder<MailFolder> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailFolderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailFolderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

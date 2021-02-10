@@ -29,7 +29,7 @@ public class WorkbookFunctionsNegBinom_DistRequest extends BaseRequest<WorkbookF
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsNegBinom_DistRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNegBinom_DistRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
     }
 

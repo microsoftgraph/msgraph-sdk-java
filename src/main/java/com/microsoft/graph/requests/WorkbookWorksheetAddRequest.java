@@ -28,7 +28,7 @@ public class WorkbookWorksheetAddRequest extends BaseRequest<WorkbookWorksheet> 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetAddRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetAddRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookWorksheet.class);
     }
 

@@ -30,7 +30,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest<Dev
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementRoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignment.class);
     }
 

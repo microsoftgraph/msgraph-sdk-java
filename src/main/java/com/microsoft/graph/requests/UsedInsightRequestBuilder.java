@@ -8,7 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UsedInsight;
-import com.microsoft.graph.requests.EntityRequestBuilder;
+import com.microsoft.graph.requests.EntityWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder<UsedInsight> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UsedInsightRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UsedInsightRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

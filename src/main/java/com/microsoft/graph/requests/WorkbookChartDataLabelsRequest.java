@@ -31,7 +31,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest<WorkbookChartDat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartDataLabelsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartDataLabelsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartDataLabels.class);
     }
 

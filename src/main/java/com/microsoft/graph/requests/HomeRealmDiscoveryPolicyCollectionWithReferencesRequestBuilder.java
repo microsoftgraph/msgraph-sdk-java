@@ -31,7 +31,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyReferenceRequestBuilder.class, HomeRealmDiscoveryPolicyCollectionReferenceRequest.class, HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder.class);
     }
 }

@@ -28,7 +28,7 @@ public class WorkbookRangeIntersectionRequestBuilder extends BaseFunctionRequest
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookRangeIntersectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeIntersectionParameterSet parameters) {
+    public WorkbookRangeIntersectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookRangeIntersectionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

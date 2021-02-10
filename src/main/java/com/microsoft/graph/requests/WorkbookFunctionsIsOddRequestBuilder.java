@@ -30,7 +30,7 @@ public class WorkbookFunctionsIsOddRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsIsOddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIsOddParameterSet parameters) {
+    public WorkbookFunctionsIsOddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsIsOddParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

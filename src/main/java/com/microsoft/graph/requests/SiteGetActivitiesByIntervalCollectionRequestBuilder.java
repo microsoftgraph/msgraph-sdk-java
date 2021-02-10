@@ -35,7 +35,7 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteGetActivitiesByIntervalCollectionRequestBuilder.class, SiteGetActivitiesByIntervalCollectionRequest.class);
     }
     /**
@@ -46,7 +46,7 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public SiteGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteGetActivitiesByIntervalParameterSet parameters) {
+    public SiteGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteGetActivitiesByIntervalParameterSet parameters) {
         super(requestUrl, client, requestOptions, SiteGetActivitiesByIntervalCollectionRequestBuilder.class, SiteGetActivitiesByIntervalCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

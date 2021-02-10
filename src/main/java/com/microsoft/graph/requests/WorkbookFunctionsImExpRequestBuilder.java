@@ -30,7 +30,7 @@ public class WorkbookFunctionsImExpRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsImExpRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImExpParameterSet parameters) {
+    public WorkbookFunctionsImExpRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsImExpParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -34,7 +34,7 @@ public class OrganizationCollectionRequest extends BaseEntityCollectionRequest<O
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrganizationCollectionResponse.class, OrganizationCollectionPage.class, OrganizationCollectionRequestBuilder.class);
     }
 

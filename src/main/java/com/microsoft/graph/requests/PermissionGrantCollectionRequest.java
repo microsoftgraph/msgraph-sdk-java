@@ -42,7 +42,7 @@ public class PermissionGrantCollectionRequest extends BaseActionCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantCollectionResponse.class, PermissionGrantCollectionPage.class, PermissionGrantCollectionRequestBuilder.class);
     }
 

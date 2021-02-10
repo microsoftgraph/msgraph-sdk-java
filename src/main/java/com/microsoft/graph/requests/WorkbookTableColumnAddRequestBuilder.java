@@ -29,7 +29,7 @@ public class WorkbookTableColumnAddRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookTableColumnAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookTableColumnAddParameterSet parameters) {
+    public WorkbookTableColumnAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookTableColumnAddParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

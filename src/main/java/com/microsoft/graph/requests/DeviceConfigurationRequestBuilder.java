@@ -15,9 +15,9 @@ import com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBu
 import com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -41,7 +41,7 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder<Device
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

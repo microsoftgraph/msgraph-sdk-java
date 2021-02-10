@@ -35,7 +35,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseEntityCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecureScoreControlProfileCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreControlProfileCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecureScoreControlProfileCollectionResponse.class, SecureScoreControlProfileCollectionPage.class, SecureScoreControlProfileCollectionRequestBuilder.class);
     }
 

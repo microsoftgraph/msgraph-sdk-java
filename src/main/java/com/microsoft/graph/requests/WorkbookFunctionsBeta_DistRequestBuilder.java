@@ -30,7 +30,7 @@ public class WorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBeta_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBeta_DistParameterSet parameters) {
+    public WorkbookFunctionsBeta_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBeta_DistParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

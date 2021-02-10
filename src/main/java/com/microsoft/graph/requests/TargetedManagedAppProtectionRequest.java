@@ -35,7 +35,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest<TargetedMan
      * @param responseClass  the class of the response
      */
     public TargetedManagedAppProtectionRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends TargetedManagedAppProtection> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -48,7 +48,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest<TargetedMan
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppProtection.class);
     }
 

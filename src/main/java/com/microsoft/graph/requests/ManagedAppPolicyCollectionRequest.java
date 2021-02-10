@@ -36,7 +36,7 @@ public class ManagedAppPolicyCollectionRequest extends BaseEntityCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppPolicyCollectionResponse.class, ManagedAppPolicyCollectionPage.class, ManagedAppPolicyCollectionRequestBuilder.class);
     }
 

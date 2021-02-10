@@ -29,7 +29,7 @@ public class WorkbookFunctionsT_Inv_2TRequest extends BaseRequest<WorkbookFuncti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsT_Inv_2TRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsT_Inv_2TRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
     }
 

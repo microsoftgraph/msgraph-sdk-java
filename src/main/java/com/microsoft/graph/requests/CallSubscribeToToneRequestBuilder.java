@@ -30,7 +30,7 @@ public class CallSubscribeToToneRequestBuilder extends BaseActionRequestBuilder<
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallSubscribeToToneRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallSubscribeToToneParameterSet parameters) {
+    public CallSubscribeToToneRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallSubscribeToToneParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

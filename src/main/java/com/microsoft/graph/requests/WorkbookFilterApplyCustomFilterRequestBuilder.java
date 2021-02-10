@@ -30,7 +30,7 @@ public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionReq
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFilterApplyCustomFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyCustomFilterParameterSet parameters) {
+    public WorkbookFilterApplyCustomFilterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFilterApplyCustomFilterParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

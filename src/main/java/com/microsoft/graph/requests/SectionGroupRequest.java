@@ -8,11 +8,11 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SectionGroup;
-import com.microsoft.graph.requests.SectionGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.NotebookRequestBuilder;
 import com.microsoft.graph.requests.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.OnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.NotebookRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -35,7 +35,7 @@ public class SectionGroupRequest extends BaseRequest<SectionGroup> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SectionGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SectionGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SectionGroup.class);
     }
 

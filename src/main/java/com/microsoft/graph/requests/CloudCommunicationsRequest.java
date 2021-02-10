@@ -39,7 +39,7 @@ public class CloudCommunicationsRequest extends BaseRequest<CloudCommunications>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudCommunicationsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CloudCommunicationsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CloudCommunications.class);
     }
 

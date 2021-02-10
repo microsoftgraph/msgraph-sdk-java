@@ -30,7 +30,7 @@ public class WorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActionRe
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsGammaLn_PreciseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsGammaLn_PreciseParameterSet parameters) {
+    public WorkbookFunctionsGammaLn_PreciseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsGammaLn_PreciseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

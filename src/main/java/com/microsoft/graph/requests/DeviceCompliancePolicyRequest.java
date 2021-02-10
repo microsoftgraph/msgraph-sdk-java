@@ -16,11 +16,11 @@ import com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBu
 import com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.DeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceUserStatusRequestBuilder;
-import com.microsoft.graph.requests.DeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceUserOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -46,7 +46,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest<DeviceComplianceP
      * @param responseClass  the class of the response
      */
     public DeviceCompliancePolicyRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends DeviceCompliancePolicy> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -59,7 +59,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest<DeviceComplianceP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicy.class);
     }
 

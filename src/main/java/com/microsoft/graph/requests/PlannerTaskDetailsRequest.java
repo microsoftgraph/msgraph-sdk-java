@@ -30,7 +30,7 @@ public class PlannerTaskDetailsRequest extends BaseRequest<PlannerTaskDetails> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerTaskDetailsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerTaskDetailsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerTaskDetails.class);
     }
 

@@ -38,7 +38,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionColle
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CalendarGetScheduleCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarGetScheduleParameterSet parameters) {
+    public CalendarGetScheduleCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CalendarGetScheduleParameterSet parameters) {
         super(requestUrl, client, requestOptions, CalendarGetScheduleCollectionRequestBuilder.class, CalendarGetScheduleCollectionRequest.class);
         this.body = parameters;
     }

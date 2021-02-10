@@ -33,7 +33,7 @@ public class SchemaExtensionCollectionRequestBuilder extends BaseCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SchemaExtensionCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchemaExtensionCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SchemaExtensionRequestBuilder.class, SchemaExtensionCollectionRequest.class);
     }
 

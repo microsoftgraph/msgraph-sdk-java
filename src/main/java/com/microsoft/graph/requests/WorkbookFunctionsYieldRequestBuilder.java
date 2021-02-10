@@ -30,7 +30,7 @@ public class WorkbookFunctionsYieldRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsYieldRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsYieldParameterSet parameters) {
+    public WorkbookFunctionsYieldRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsYieldParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

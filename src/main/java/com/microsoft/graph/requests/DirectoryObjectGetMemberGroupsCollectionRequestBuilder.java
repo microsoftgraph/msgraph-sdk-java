@@ -37,7 +37,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsParameterSet parameters) {
+    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class, DirectoryObjectGetMemberGroupsCollectionRequest.class);
         this.body = parameters;
     }

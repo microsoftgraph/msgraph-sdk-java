@@ -34,7 +34,7 @@ public class OutlookCategoryCollectionRequestBuilder extends BaseCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookCategoryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookCategoryCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookCategoryRequestBuilder.class, OutlookCategoryCollectionRequest.class);
     }
 

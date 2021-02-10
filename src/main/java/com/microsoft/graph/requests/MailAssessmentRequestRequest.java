@@ -30,7 +30,7 @@ public class MailAssessmentRequestRequest extends BaseRequest<MailAssessmentRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailAssessmentRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailAssessmentRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailAssessmentRequest.class);
     }
 

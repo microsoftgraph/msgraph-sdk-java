@@ -36,7 +36,7 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder<OnenoteSect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteSectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteSectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

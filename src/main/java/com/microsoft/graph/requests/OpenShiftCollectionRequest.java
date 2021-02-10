@@ -35,7 +35,7 @@ public class OpenShiftCollectionRequest extends BaseEntityCollectionRequest<Open
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenShiftCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class, OpenShiftCollectionPage.class, OpenShiftCollectionRequestBuilder.class);
     }
 

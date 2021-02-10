@@ -34,7 +34,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder.class, ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest.class);
     }
 

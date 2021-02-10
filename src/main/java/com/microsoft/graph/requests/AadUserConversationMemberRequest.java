@@ -8,7 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AadUserConversationMember;
-import com.microsoft.graph.requests.UserRequestBuilder;
+import com.microsoft.graph.requests.UserWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -31,7 +31,7 @@ public class AadUserConversationMemberRequest extends BaseRequest<AadUserConvers
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AadUserConversationMemberRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AadUserConversationMemberRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AadUserConversationMember.class);
     }
 

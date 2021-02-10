@@ -37,7 +37,7 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DeviceCompliancePolicyAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyAssignParameterSet parameters) {
+    public DeviceCompliancePolicyAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionRequestBuilder.class, DeviceCompliancePolicyAssignCollectionRequest.class);
         this.body = parameters;
     }

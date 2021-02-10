@@ -30,7 +30,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest<ManagedAppStatusRaw>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppStatusRawRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppStatusRawRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppStatusRaw.class);
     }
 

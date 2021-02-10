@@ -36,7 +36,7 @@ public class PostCollectionRequest extends BaseEntityCollectionRequest<Post, Pos
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PostCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PostCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PostCollectionResponse.class, PostCollectionPage.class, PostCollectionRequestBuilder.class);
     }
 

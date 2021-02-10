@@ -30,7 +30,7 @@ public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseActionReques
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public OnenoteSectionCopyToNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenoteSectionCopyToNotebookParameterSet parameters) {
+    public OnenoteSectionCopyToNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final OnenoteSectionCopyToNotebookParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

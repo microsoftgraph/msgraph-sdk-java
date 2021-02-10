@@ -40,7 +40,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionWit
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSchoolCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSchoolCollectionReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, EducationSchoolCollectionWithReferencesPage.class, EducationSchoolCollectionWithReferencesRequestBuilder.class);
     }
 

@@ -423,7 +423,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender System Scan Schedule.
-     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
      */
     @SerializedName(value = "defenderSystemScanSchedule", alternate = {"DefenderSystemScanSchedule"})
     @Expose
@@ -1359,7 +1359,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Smart Screen Enable App Install Control.
-     * This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
+     * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
      */
     @SerializedName(value = "smartScreenEnableAppInstallControl", alternate = {"SmartScreenEnableAppInstallControl"})
     @Expose

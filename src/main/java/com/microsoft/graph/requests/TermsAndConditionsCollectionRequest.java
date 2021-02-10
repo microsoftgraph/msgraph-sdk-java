@@ -35,7 +35,7 @@ public class TermsAndConditionsCollectionRequest extends BaseEntityCollectionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsCollectionResponse.class, TermsAndConditionsCollectionPage.class, TermsAndConditionsCollectionRequestBuilder.class);
     }
 

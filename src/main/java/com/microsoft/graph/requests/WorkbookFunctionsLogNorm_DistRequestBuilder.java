@@ -30,7 +30,7 @@ public class WorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsLogNorm_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsLogNorm_DistParameterSet parameters) {
+    public WorkbookFunctionsLogNorm_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsLogNorm_DistParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

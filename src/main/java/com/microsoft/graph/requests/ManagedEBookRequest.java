@@ -13,9 +13,9 @@ import com.microsoft.graph.requests.ManagedEBookAssignmentCollectionRequestBuild
 import com.microsoft.graph.requests.ManagedEBookAssignmentRequestBuilder;
 import com.microsoft.graph.requests.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceInstallStateRequestBuilder;
+import com.microsoft.graph.requests.EBookInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.UserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserInstallStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.EBookInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -40,7 +40,7 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * @param responseClass  the class of the response
      */
     public ManagedEBookRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends ManagedEBook> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -53,7 +53,7 @@ public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedEBook.class);
     }
 

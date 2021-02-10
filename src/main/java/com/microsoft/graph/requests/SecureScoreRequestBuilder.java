@@ -29,7 +29,7 @@ public class SecureScoreRequestBuilder extends BaseRequestBuilder<SecureScore> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecureScoreRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

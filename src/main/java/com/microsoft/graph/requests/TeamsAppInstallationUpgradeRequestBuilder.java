@@ -27,7 +27,7 @@ public class TeamsAppInstallationUpgradeRequestBuilder extends BaseActionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppInstallationUpgradeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppInstallationUpgradeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

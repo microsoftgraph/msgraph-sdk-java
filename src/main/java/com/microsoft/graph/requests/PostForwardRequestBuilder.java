@@ -30,7 +30,7 @@ public class PostForwardRequestBuilder extends BaseActionRequestBuilder<Post> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public PostForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PostForwardParameterSet parameters) {
+    public PostForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final PostForwardParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

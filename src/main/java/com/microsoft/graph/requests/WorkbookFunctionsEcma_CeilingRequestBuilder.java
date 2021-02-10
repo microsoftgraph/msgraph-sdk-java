@@ -30,7 +30,7 @@ public class WorkbookFunctionsEcma_CeilingRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsEcma_CeilingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEcma_CeilingParameterSet parameters) {
+    public WorkbookFunctionsEcma_CeilingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsEcma_CeilingParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

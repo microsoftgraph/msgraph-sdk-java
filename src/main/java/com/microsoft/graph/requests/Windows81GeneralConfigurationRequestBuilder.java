@@ -29,7 +29,7 @@ public class Windows81GeneralConfigurationRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows81GeneralConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows81GeneralConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

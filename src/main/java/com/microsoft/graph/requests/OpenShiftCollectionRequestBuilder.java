@@ -34,7 +34,7 @@ public class OpenShiftCollectionRequestBuilder extends BaseCollectionRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenShiftCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OpenShiftRequestBuilder.class, OpenShiftCollectionRequest.class);
     }
 

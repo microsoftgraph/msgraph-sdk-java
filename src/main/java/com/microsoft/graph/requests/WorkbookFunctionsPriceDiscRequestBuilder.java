@@ -30,7 +30,7 @@ public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPriceDiscRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPriceDiscParameterSet parameters) {
+    public WorkbookFunctionsPriceDiscRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPriceDiscParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

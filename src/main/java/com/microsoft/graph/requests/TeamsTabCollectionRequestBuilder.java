@@ -34,7 +34,7 @@ public class TeamsTabCollectionRequestBuilder extends BaseCollectionRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTabCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTabCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTabRequestBuilder.class, TeamsTabCollectionRequest.class);
     }
 

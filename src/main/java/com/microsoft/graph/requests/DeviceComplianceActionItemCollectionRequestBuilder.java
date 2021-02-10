@@ -34,7 +34,7 @@ public class DeviceComplianceActionItemCollectionRequestBuilder extends BaseColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceActionItemCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceActionItemCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceActionItemRequestBuilder.class, DeviceComplianceActionItemCollectionRequest.class);
     }
 

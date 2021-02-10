@@ -32,7 +32,7 @@ public class UserActivityWithReferenceRequestBuilder extends BaseWithReferenceRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserActivityWithReferenceRequest.class, UserActivityReferenceRequestBuilder.class);
     }
 }

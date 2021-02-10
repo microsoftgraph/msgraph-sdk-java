@@ -35,7 +35,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class, ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder.class);
     }
 

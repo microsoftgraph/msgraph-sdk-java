@@ -29,7 +29,7 @@ public class WorkbookFunctionsWorkDay_IntlRequest extends BaseRequest<WorkbookFu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsWorkDay_IntlRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsWorkDay_IntlRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
     }
 

@@ -30,7 +30,7 @@ public class CallRejectRequestBuilder extends BaseActionRequestBuilder<Call> {
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallRejectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRejectParameterSet parameters) {
+    public CallRejectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRejectParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

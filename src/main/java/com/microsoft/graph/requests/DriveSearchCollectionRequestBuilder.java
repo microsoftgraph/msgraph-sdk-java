@@ -36,7 +36,7 @@ public class DriveSearchCollectionRequestBuilder extends BaseFunctionCollectionR
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveSearchCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveSearchParameterSet parameters) {
+    public DriveSearchCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveSearchParameterSet parameters) {
         super(requestUrl, client, requestOptions, DriveSearchCollectionRequestBuilder.class, DriveSearchCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

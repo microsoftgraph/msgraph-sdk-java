@@ -34,7 +34,7 @@ public class RestrictedSignInCollectionRequestBuilder extends BaseCollectionRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RestrictedSignInCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RestrictedSignInCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RestrictedSignInRequestBuilder.class, RestrictedSignInCollectionRequest.class);
     }
 

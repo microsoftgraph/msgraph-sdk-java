@@ -35,7 +35,7 @@ public class CallRecordCollectionRequest extends BaseEntityCollectionRequest<Cal
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallRecordCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallRecordCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CallRecordCollectionResponse.class, CallRecordCollectionPage.class, CallRecordCollectionRequestBuilder.class);
     }
 

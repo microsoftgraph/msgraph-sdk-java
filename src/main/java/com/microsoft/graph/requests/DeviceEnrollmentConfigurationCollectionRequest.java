@@ -36,7 +36,7 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseEntityCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentConfigurationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceEnrollmentConfigurationCollectionResponse.class, DeviceEnrollmentConfigurationCollectionPage.class, DeviceEnrollmentConfigurationCollectionRequestBuilder.class);
     }
 

@@ -30,7 +30,7 @@ public class WorkforceIntegrationRequest extends BaseRequest<WorkforceIntegratio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkforceIntegrationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkforceIntegrationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkforceIntegration.class);
     }
 

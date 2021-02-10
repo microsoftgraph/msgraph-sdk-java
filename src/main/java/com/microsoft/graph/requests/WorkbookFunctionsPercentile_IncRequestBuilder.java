@@ -30,7 +30,7 @@ public class WorkbookFunctionsPercentile_IncRequestBuilder extends BaseActionReq
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPercentile_IncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPercentile_IncParameterSet parameters) {
+    public WorkbookFunctionsPercentile_IncRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPercentile_IncParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

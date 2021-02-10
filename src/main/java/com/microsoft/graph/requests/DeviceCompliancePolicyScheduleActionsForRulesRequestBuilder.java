@@ -30,7 +30,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder extends
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyScheduleActionsForRulesParameterSet parameters) {
+    public DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceCompliancePolicyScheduleActionsForRulesParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

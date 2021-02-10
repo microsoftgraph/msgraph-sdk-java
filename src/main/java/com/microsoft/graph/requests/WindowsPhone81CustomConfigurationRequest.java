@@ -30,7 +30,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest<Window
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhone81CustomConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsPhone81CustomConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsPhone81CustomConfiguration.class);
     }
 

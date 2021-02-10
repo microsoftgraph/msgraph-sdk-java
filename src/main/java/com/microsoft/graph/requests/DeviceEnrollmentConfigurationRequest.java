@@ -35,7 +35,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @param responseClass  the class of the response
      */
     public DeviceEnrollmentConfigurationRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends DeviceEnrollmentConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -48,7 +48,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnro
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceEnrollmentConfiguration.class);
     }
 

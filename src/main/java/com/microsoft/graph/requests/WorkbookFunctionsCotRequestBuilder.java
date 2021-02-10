@@ -30,7 +30,7 @@ public class WorkbookFunctionsCotRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsCotRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCotParameterSet parameters) {
+    public WorkbookFunctionsCotRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCotParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

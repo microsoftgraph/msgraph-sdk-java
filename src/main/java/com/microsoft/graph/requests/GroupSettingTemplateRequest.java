@@ -30,7 +30,7 @@ public class GroupSettingTemplateRequest extends BaseRequest<GroupSettingTemplat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupSettingTemplate.class);
     }
 

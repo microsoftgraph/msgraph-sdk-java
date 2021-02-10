@@ -27,7 +27,7 @@ public class DriveItemCheckoutRequestBuilder extends BaseActionRequestBuilder<Dr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemCheckoutRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemCheckoutRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

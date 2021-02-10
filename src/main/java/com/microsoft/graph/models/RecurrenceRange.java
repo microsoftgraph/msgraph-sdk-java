@@ -76,7 +76,7 @@ public class RecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+     * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

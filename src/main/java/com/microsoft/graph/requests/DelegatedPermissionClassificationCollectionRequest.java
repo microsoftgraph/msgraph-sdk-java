@@ -35,7 +35,7 @@ public class DelegatedPermissionClassificationCollectionRequest extends BaseEnti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DelegatedPermissionClassificationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DelegatedPermissionClassificationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DelegatedPermissionClassificationCollectionResponse.class, DelegatedPermissionClassificationCollectionPage.class, DelegatedPermissionClassificationCollectionRequestBuilder.class);
     }
 

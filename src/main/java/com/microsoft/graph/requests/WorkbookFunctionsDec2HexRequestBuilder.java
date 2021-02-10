@@ -30,7 +30,7 @@ public class WorkbookFunctionsDec2HexRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsDec2HexRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsDec2HexParameterSet parameters) {
+    public WorkbookFunctionsDec2HexRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsDec2HexParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -30,7 +30,7 @@ public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppOperation.class);
     }
 

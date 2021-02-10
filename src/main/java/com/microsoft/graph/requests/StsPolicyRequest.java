@@ -8,8 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.StsPolicy;
-import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @param responseClass  the class of the response
      */
     public StsPolicyRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends StsPolicy> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -47,7 +47,7 @@ public class StsPolicyRequest extends BaseRequest<StsPolicy> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public StsPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public StsPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, StsPolicy.class);
     }
 
