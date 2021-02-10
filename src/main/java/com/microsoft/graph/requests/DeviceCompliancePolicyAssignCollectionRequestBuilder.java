@@ -28,6 +28,16 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignCollectionRequestBuilder, DeviceCompliancePolicyAssignCollectionResponse, DeviceCompliancePolicyAssignCollectionPage, DeviceCompliancePolicyAssignCollectionRequest> {
 
+    /**
+     * The request builder for this collection of DeviceCompliancePolicy
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public DeviceCompliancePolicyAssignCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionRequestBuilder.class, DeviceCompliancePolicyAssignCollectionRequest.class);
+    }
     private DeviceCompliancePolicyAssignParameterSet body;
     /**
      * The request builder for this collection of DeviceCompliancePolicy

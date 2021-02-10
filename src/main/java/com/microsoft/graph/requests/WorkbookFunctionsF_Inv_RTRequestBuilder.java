@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsF_Inv_RTRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    /**
+     * The request builder for this WorkbookFunctionsF_Inv_RT
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookFunctionsF_Inv_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookFunctionsF_Inv_RTParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsF_Inv_RT

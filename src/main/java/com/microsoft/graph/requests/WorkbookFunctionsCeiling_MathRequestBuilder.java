@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    /**
+     * The request builder for this WorkbookFunctionsCeiling_Math
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookFunctionsCeiling_MathRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookFunctionsCeiling_MathParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsCeiling_Math

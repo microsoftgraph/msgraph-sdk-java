@@ -34,6 +34,16 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseFunctionCollect
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     */
+    public DriveItemSearchCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions, DriveItemSearchCollectionRequestBuilder.class, DriveItemSearchCollectionRequest.class);
+    }
+    /**
+     * The request builder for this collection of DriveItem
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
     public DriveItemSearchCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemSearchParameterSet parameters) {

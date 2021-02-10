@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsSkew_pRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    /**
+     * The request builder for this WorkbookFunctionsSkew_p
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookFunctionsSkew_pRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookFunctionsSkew_pParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsSkew_p

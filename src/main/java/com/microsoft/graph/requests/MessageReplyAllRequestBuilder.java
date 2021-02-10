@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class MessageReplyAllRequestBuilder extends BaseActionRequestBuilder<Message> {
 
+    /**
+     * The request builder for this MessageReplyAll
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public MessageReplyAllRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private MessageReplyAllParameterSet body;
     /**
      * The request builder for this MessageReplyAll

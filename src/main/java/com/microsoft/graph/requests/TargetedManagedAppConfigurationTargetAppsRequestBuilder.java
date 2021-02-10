@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class TargetedManagedAppConfigurationTargetAppsRequestBuilder extends BaseActionRequestBuilder<TargetedManagedAppConfiguration> {
 
+    /**
+     * The request builder for this TargetedManagedAppConfigurationTargetApps
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public TargetedManagedAppConfigurationTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private TargetedManagedAppConfigurationTargetAppsParameterSet body;
     /**
      * The request builder for this TargetedManagedAppConfigurationTargetApps

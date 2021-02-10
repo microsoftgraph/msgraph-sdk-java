@@ -20,6 +20,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookWorksheetAddRequestBuilder extends BaseActionRequestBuilder<WorkbookWorksheet> {
 
+    /**
+     * The request builder for this WorkbookWorksheetAdd
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookWorksheetAddRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookWorksheetAddParameterSet body;
     /**
      * The request builder for this WorkbookWorksheetAdd

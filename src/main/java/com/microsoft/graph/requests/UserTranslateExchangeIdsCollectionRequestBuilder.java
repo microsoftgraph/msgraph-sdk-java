@@ -29,6 +29,16 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<ConvertIdResult, UserTranslateExchangeIdsCollectionRequestBuilder, UserTranslateExchangeIdsCollectionResponse, UserTranslateExchangeIdsCollectionPage, UserTranslateExchangeIdsCollectionRequest> {
 
+    /**
+     * The request builder for this collection of User
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public UserTranslateExchangeIdsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionRequestBuilder.class, UserTranslateExchangeIdsCollectionRequest.class);
+    }
     private UserTranslateExchangeIdsParameterSet body;
     /**
      * The request builder for this collection of User

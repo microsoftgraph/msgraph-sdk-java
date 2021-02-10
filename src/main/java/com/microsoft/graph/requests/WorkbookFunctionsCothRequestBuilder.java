@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookFunctionsCothRequestBuilder extends BaseActionRequestBuilder<WorkbookFunctionResult> {
 
+    /**
+     * The request builder for this WorkbookFunctionsCoth
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookFunctionsCothRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookFunctionsCothParameterSet body;
     /**
      * The request builder for this WorkbookFunctionsCoth

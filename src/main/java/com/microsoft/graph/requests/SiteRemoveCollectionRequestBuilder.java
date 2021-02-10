@@ -28,6 +28,16 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class SiteRemoveCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<Site, SiteRemoveCollectionRequestBuilder, SiteRemoveCollectionResponse, SiteRemoveCollectionPage, SiteRemoveCollectionRequest> {
 
+    /**
+     * The request builder for this collection of Site
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public SiteRemoveCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions, SiteRemoveCollectionRequestBuilder.class, SiteRemoveCollectionRequest.class);
+    }
     private SiteRemoveParameterSet body;
     /**
      * The request builder for this collection of Site

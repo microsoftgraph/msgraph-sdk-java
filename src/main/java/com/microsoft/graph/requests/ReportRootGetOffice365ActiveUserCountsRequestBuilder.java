@@ -27,6 +27,16 @@ public class ReportRootGetOffice365ActiveUserCountsRequestBuilder extends BaseFu
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     */
+    public ReportRootGetOffice365ActiveUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
+    /**
+     * The request builder for this ReportRootGetOffice365ActiveUserCounts
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
     public ReportRootGetOffice365ActiveUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetOffice365ActiveUserCountsParameterSet parameters) {

@@ -22,6 +22,16 @@ import javax.annotation.Nonnull;
  */
 public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBuilder<OnlineMeeting> {
 
+    /**
+     * The request builder for this OnlineMeetingCreateOrGet
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public OnlineMeetingCreateOrGetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private OnlineMeetingCreateOrGetParameterSet body;
     /**
      * The request builder for this OnlineMeetingCreateOrGet

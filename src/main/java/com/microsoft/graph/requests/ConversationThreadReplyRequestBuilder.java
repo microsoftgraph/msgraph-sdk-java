@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class ConversationThreadReplyRequestBuilder extends BaseActionRequestBuilder<ConversationThread> {
 
+    /**
+     * The request builder for this ConversationThreadReply
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public ConversationThreadReplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private ConversationThreadReplyParameterSet body;
     /**
      * The request builder for this ConversationThreadReply

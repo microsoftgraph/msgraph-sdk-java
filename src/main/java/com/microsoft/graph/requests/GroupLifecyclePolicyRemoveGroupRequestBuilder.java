@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class GroupLifecyclePolicyRemoveGroupRequestBuilder extends BaseActionRequestBuilder<Boolean> {
 
+    /**
+     * The request builder for this GroupLifecyclePolicyRemoveGroup
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public GroupLifecyclePolicyRemoveGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private GroupLifecyclePolicyRemoveGroupParameterSet body;
     /**
      * The request builder for this GroupLifecyclePolicyRemoveGroup

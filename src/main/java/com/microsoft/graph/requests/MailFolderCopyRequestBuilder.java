@@ -20,6 +20,16 @@ import javax.annotation.Nonnull;
  */
 public class MailFolderCopyRequestBuilder extends BaseActionRequestBuilder<MailFolder> {
 
+    /**
+     * The request builder for this MailFolderCopy
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public MailFolderCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private MailFolderCopyParameterSet body;
     /**
      * The request builder for this MailFolderCopy

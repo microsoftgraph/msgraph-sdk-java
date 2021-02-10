@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookApplicationCalculateRequestBuilder extends BaseActionRequestBuilder<WorkbookApplication> {
 
+    /**
+     * The request builder for this WorkbookApplicationCalculate
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookApplicationCalculateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookApplicationCalculateParameterSet body;
     /**
      * The request builder for this WorkbookApplicationCalculate

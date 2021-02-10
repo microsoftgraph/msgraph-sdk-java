@@ -26,6 +26,16 @@ public class WorkbookChartSeriesItemAtRequestBuilder extends BaseFunctionRequest
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     */
+    public WorkbookChartSeriesItemAtRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
+    /**
+     * The request builder for this WorkbookChartSeriesItemAt
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
     public WorkbookChartSeriesItemAtRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartSeriesItemAtParameterSet parameters) {

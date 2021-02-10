@@ -20,6 +20,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRequestBuilder<WorkbookNamedItem> {
 
+    /**
+     * The request builder for this WorkbookNamedItemAddFormulaLocal
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookNamedItemAddFormulaLocalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookNamedItemAddFormulaLocalParameterSet body;
     /**
      * The request builder for this WorkbookNamedItemAddFormulaLocal

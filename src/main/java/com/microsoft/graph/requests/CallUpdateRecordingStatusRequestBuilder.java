@@ -22,6 +22,16 @@ import javax.annotation.Nonnull;
  */
 public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBuilder<UpdateRecordingStatusOperation> {
 
+    /**
+     * The request builder for this CallUpdateRecordingStatus
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public CallUpdateRecordingStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private CallUpdateRecordingStatusParameterSet body;
     /**
      * The request builder for this CallUpdateRecordingStatus

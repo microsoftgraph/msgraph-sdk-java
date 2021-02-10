@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRequestBuilder<OnenoteOperation> {
 
+    /**
+     * The request builder for this OnenoteSectionCopyToNotebook
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public OnenoteSectionCopyToNotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private OnenoteSectionCopyToNotebookParameterSet body;
     /**
      * The request builder for this OnenoteSectionCopyToNotebook

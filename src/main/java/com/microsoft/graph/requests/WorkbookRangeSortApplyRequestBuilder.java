@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookRangeSortApplyRequestBuilder extends BaseActionRequestBuilder<WorkbookRangeSort> {
 
+    /**
+     * The request builder for this WorkbookRangeSortApply
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookRangeSortApplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookRangeSortApplyParameterSet body;
     /**
      * The request builder for this WorkbookRangeSortApply

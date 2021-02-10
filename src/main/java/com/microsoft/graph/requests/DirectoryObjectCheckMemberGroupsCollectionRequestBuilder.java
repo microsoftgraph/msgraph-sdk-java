@@ -28,6 +28,16 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<String, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder, DirectoryObjectCheckMemberGroupsCollectionResponse, DirectoryObjectCheckMemberGroupsCollectionPage, DirectoryObjectCheckMemberGroupsCollectionRequest> {
 
+    /**
+     * The request builder for this collection of DirectoryObject
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder.class, DirectoryObjectCheckMemberGroupsCollectionRequest.class);
+    }
     private DirectoryObjectCheckMemberGroupsParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject

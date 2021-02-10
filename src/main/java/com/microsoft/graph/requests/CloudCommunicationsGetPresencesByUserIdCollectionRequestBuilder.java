@@ -28,6 +28,16 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<Presence, CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder, CloudCommunicationsGetPresencesByUserIdCollectionResponse, CloudCommunicationsGetPresencesByUserIdCollectionPage, CloudCommunicationsGetPresencesByUserIdCollectionRequest> {
 
+    /**
+     * The request builder for this collection of CloudCommunications
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions, CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder.class, CloudCommunicationsGetPresencesByUserIdCollectionRequest.class);
+    }
     private CloudCommunicationsGetPresencesByUserIdParameterSet body;
     /**
      * The request builder for this collection of CloudCommunications
