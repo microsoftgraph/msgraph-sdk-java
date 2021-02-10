@@ -3,7 +3,7 @@ package com.microsoft.graph.core;
 public final class Constants {
 	private Constants() {
 	}
-	
+
 	public static final String APPROOT = "approot";
 	/**
 	 * The content type header
@@ -18,19 +18,19 @@ public final class Constants {
 	 */
 	public static final String JSON_CONTENT_TYPE = "application/json";
 	/**
-	 * The binary content type header's value 
+	 * The binary content type header's value
 	 */
 	public static final String BINARY_CONTENT_TYPE = "application/octet-stream";
-		
+
 	// Constants for functional tests
-	// TO-DO: document how to register an application for functional 
+	// TO-DO: document how to register an application for functional
 	// testing purposes
 	public static final String APPID = "app-id";
 	public static final String USERNAME = "user@email.com";
 	public static final String PASSWORD = "password";
 	public static final String TENANTID = "tenantid";
 	public static final String CLIENTSECRET = "clientsecret";
-	public static final String VERSION_NAME = "2.8.0";
+	public static final String VERSION_NAME = "2.7.1";
 }
 
 
