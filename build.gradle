@@ -13,7 +13,6 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'signing'
-    id 'com.jfrog.bintray' version '1.8.5'
 }
 
 java {
@@ -36,13 +35,9 @@ sourceSets {
 
 // In this section you declare where to find the dependencies of your project
 repositories {
-    // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
-    jcenter()
     mavenCentral()
-    jcenter { //TODO remove when releasing
-        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
-	}
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' } //TODO remove when releasing
 }
 
 apply from: "gradle/dependencies.gradle"
@@ -139,34 +134,6 @@ publishing {
     			}
             }
         }
-        
-        maven {
-            url = 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
-            name = 'jfrogSnapshot'
-            
-            credentials {
-    			if (project.rootProject.file('local.properties').exists()) {
-        			Properties properties = new Properties()
-        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        			username = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
-        			password = properties.getProperty('bintray.apikey')
-    			}
-            }
-		}
-
-        maven {
-            url = 'https://oss.jfrog.org/artifactory/libs-release'
-            name = 'jfrog'
-            
-            credentials {
-    			if (project.rootProject.file('local.properties').exists()) {
-        			Properties properties = new Properties()
-        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        			username = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
-        			password = properties.getProperty('bintray.apikey')
-    			}
-            }
-		}
     }
 }
 
@@ -181,38 +148,6 @@ def fixAscNames = { name ->
     } else {
         name.replace('msgraph-sdk-java', "${project.property('mavenArtifactId')}-${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}")
     }
-}
-bintray {
-    if (project.rootProject.file('local.properties').exists()) {
-        Properties properties = new Properties()
-        properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        user = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
-        key = properties.getProperty('bintray.apikey')
-    }
-	publications = ['mavenCentralRelease']
-    filesSpec {
-        from ('build/libs') {
-            include 'msgraph-sdk-java*.jar.asc'
-            rename fixAscNames
-        }
-        from ('build') {
-            include 'generated-pom.xml.asc'
-            rename fixAscNames
-        }
-        into "com/microsoft/graph/${project.property('mavenArtifactId')}/${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}/"
-    }
-	pkg {
-		repo = 'Maven'
-		name = project.property('mavenArtifactId')
-		userOrg = 'microsoftgraph'
-		licenses = ['MIT']
-		vcsUrl = 'https://github.com/microsoftgraph/msgraph-sdk-java.git'
-		publicDownloadNumbers = true
-		version {
-			name = "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
-			vcsTag = "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
-		}
-	}
 }
 
 compileJava {

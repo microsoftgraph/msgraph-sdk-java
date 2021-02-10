@@ -12,22 +12,24 @@ plugins {
 }
 
 repositories {
-    // Use JCenter for resolving dependencies.
-    jcenter()
-    flatDir {
-        dirs '../../build/libs'
-    }
-    jcenter { //TODO remove when releasing
-        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' } //TODO remove when releasing
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+            srcDirs '../../src/main'
+        }
     }
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:29.0-jre'
+    implementation 'com.google.guava:guava:30.1-jre'
+    implementation 'com.google.code.gson:gson:2.8.6'
 
     implementation 'com.microsoft.graph:microsoft-graph-core:2.0.0-SNAPSHOT' //TODO update this when releasing
-
-    implementation name: 'msgraph-sdk-java'
 }
 
 application {
