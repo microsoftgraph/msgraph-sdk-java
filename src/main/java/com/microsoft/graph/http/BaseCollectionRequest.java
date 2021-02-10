@@ -271,7 +271,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @param maxRetries Max retries for a request
      */
     public void setMaxRetries(int maxRetries) {
-    	baseRequest.setMaxRedirects(maxRetries);
+    	baseRequest.setMaxRetries(maxRetries);
     }
     
     /**
