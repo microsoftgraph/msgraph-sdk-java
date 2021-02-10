@@ -13,6 +13,9 @@ import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequ
 import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

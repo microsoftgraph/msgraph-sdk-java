@@ -16,9 +16,9 @@ import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionReque
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

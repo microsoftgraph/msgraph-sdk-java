@@ -16,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
@@ -146,6 +150,8 @@ import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBui
 import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuditLogRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
@@ -245,6 +251,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IUserRequestBuilder users(final String id) {
         return new UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of AuthenticationMethodConfigurations objects
+     *
+     * @return the request builder for the collection of AuthenticationMethodConfigurations objects
+     */
+    public IAuthenticationMethodConfigurationCollectionRequestBuilder authenticationMethodConfigurations() {
+        return new AuthenticationMethodConfigurationCollectionRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations", this, null);
+    }
+
+    /**
+     * Gets a single AuthenticationMethodConfigurations
+     *
+     * @param id the id of the AuthenticationMethodConfigurations to retrieve
+     * @return the request builder for the AuthenticationMethodConfigurations object
+     */
+    public IAuthenticationMethodConfigurationRequestBuilder authenticationMethodConfigurations(final String id) {
+        return new AuthenticationMethodConfigurationRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations/" + id, this, null);
     }
 
     /**
@@ -862,6 +887,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IAuditLogRootRequestBuilder auditLogs() {
         return new AuditLogRootRequestBuilder(getServiceRoot() + "/auditLogs", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AuthenticationMethodsPolicy
+     */
+    public IAuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
+        return new AuthenticationMethodsPolicyRequestBuilder(getServiceRoot() + "/authenticationMethodsPolicy", this, null);
     }
 
     /**

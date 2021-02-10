@@ -9,7 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

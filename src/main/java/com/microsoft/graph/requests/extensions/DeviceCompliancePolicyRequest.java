@@ -23,6 +23,8 @@ import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusColl
 import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
@@ -31,8 +33,6 @@ import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusCollec
 import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceUserOverviewRequestBuilder;
 import java.util.Arrays;

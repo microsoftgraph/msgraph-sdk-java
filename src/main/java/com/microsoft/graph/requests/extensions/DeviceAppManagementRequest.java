@@ -25,6 +25,10 @@ import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedMobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedMobileLobAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;

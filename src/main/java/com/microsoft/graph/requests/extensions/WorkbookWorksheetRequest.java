@@ -22,12 +22,12 @@ import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequ
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
