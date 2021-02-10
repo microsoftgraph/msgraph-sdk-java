@@ -54,13 +54,11 @@ public class WorkbookFunctionsArabicRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsArabicRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsArabicRequest request = new WorkbookFunctionsArabicRequest(
+        final WorkbookFunctionsArabicRequest request = new WorkbookFunctionsArabicRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

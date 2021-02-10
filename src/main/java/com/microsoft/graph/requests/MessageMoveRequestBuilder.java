@@ -53,13 +53,11 @@ public class MessageMoveRequestBuilder extends BaseActionRequestBuilder<Message>
      */
     @Nonnull
     public MessageMoveRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MessageMoveRequest request = new MessageMoveRequest(
+        final MessageMoveRequest request = new MessageMoveRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

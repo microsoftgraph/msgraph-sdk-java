@@ -54,13 +54,11 @@ public class WorkbookFunctionsSechRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsSechRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsSechRequest request = new WorkbookFunctionsSechRequest(
+        final WorkbookFunctionsSechRequest request = new WorkbookFunctionsSechRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

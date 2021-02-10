@@ -54,13 +54,11 @@ public class WorkbookFunctionsReceivedRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsReceivedRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsReceivedRequest request = new WorkbookFunctionsReceivedRequest(
+        final WorkbookFunctionsReceivedRequest request = new WorkbookFunctionsReceivedRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

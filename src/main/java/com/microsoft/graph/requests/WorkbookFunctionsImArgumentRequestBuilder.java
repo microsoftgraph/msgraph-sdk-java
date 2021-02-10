@@ -54,13 +54,11 @@ public class WorkbookFunctionsImArgumentRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookFunctionsImArgumentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImArgumentRequest request = new WorkbookFunctionsImArgumentRequest(
+        final WorkbookFunctionsImArgumentRequest request = new WorkbookFunctionsImArgumentRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

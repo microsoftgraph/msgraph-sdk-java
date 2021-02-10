@@ -49,12 +49,10 @@ public class WorkbookRangeEntireRowRequestBuilder extends BaseFunctionRequestBui
      */
     @Nonnull
     public WorkbookRangeEntireRowRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeEntireRowRequest request = new WorkbookRangeEntireRowRequest(
+        final WorkbookRangeEntireRowRequest request = new WorkbookRangeEntireRowRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

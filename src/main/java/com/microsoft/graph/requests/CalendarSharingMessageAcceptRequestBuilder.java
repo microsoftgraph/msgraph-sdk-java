@@ -50,12 +50,10 @@ public class CalendarSharingMessageAcceptRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public CalendarSharingMessageAcceptRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CalendarSharingMessageAcceptRequest request = new CalendarSharingMessageAcceptRequest(
+        final CalendarSharingMessageAcceptRequest request = new CalendarSharingMessageAcceptRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -1004,8 +1004,8 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryObjectCollectionRequestBuilder acceptedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
+    public DirectoryObjectCollectionWithReferencesRequestBuilder acceptedSenders() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
     }
 
     /**
@@ -1015,8 +1015,8 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryObjectRequestBuilder acceptedSenders(@Nonnull final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
+    public DirectoryObjectWithReferenceRequestBuilder acceptedSenders(@Nonnull final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
     }
 
     /**
@@ -1124,8 +1124,8 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
      * @return the collection request builder
      */
     @Nonnull
-    public DirectoryObjectCollectionRequestBuilder rejectedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
+    public DirectoryObjectCollectionWithReferencesRequestBuilder rejectedSenders() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
     }
 
     /**
@@ -1135,8 +1135,8 @@ public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
      * @param id the item identifier
      */
     @Nonnull
-    public DirectoryObjectRequestBuilder rejectedSenders(@Nonnull final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
+    public DirectoryObjectWithReferenceRequestBuilder rejectedSenders(@Nonnull final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ConversationThread collection

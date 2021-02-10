@@ -54,13 +54,11 @@ public class WorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsHyperlinkRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsHyperlinkRequest request = new WorkbookFunctionsHyperlinkRequest(
+        final WorkbookFunctionsHyperlinkRequest request = new WorkbookFunctionsHyperlinkRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

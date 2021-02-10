@@ -54,13 +54,11 @@ public class WorkbookFunctionsLookupRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsLookupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsLookupRequest request = new WorkbookFunctionsLookupRequest(
+        final WorkbookFunctionsLookupRequest request = new WorkbookFunctionsLookupRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

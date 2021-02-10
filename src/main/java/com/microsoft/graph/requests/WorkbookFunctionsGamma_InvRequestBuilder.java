@@ -54,13 +54,11 @@ public class WorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsGamma_InvRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsGamma_InvRequest request = new WorkbookFunctionsGamma_InvRequest(
+        final WorkbookFunctionsGamma_InvRequest request = new WorkbookFunctionsGamma_InvRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

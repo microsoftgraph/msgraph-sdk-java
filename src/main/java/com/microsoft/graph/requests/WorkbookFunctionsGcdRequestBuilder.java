@@ -54,13 +54,11 @@ public class WorkbookFunctionsGcdRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsGcdRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsGcdRequest request = new WorkbookFunctionsGcdRequest(
+        final WorkbookFunctionsGcdRequest request = new WorkbookFunctionsGcdRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

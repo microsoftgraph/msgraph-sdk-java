@@ -54,13 +54,11 @@ public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseAction
      */
     @Nonnull
     public WorkbookFilterApplyFontColorFilterRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFilterApplyFontColorFilterRequest request = new WorkbookFilterApplyFontColorFilterRequest(
+        final WorkbookFilterApplyFontColorFilterRequest request = new WorkbookFilterApplyFontColorFilterRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

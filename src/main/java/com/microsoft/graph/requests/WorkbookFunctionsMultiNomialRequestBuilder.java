@@ -54,13 +54,11 @@ public class WorkbookFunctionsMultiNomialRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public WorkbookFunctionsMultiNomialRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsMultiNomialRequest request = new WorkbookFunctionsMultiNomialRequest(
+        final WorkbookFunctionsMultiNomialRequest request = new WorkbookFunctionsMultiNomialRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -66,12 +66,10 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder extends 
      */
     @Nonnull
     public ReportRootManagedDeviceEnrollmentTopFailuresRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootManagedDeviceEnrollmentTopFailuresRequest request = new ReportRootManagedDeviceEnrollmentTopFailuresRequest(
+        final ReportRootManagedDeviceEnrollmentTopFailuresRequest request = new ReportRootManagedDeviceEnrollmentTopFailuresRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsImSinhRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsImSinhRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImSinhRequest request = new WorkbookFunctionsImSinhRequest(
+        final WorkbookFunctionsImSinhRequest request = new WorkbookFunctionsImSinhRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

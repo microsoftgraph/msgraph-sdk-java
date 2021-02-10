@@ -11,16 +11,13 @@ buildscript {
         classpath "com.gradle:gradle-enterprise-gradle-plugin:3.5"
         classpath "com.android.tools.build:gradle:4.0.1"
         classpath "com.github.ben-manes:gradle-versions-plugin:0.36.0"
-        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5"
     }
 }
 
 repositories {
     google()
     gradlePluginPortal()
-    jcenter {//TODO remove when releasing
-        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
-    }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' } //TODO remove when releasing
 }
 
 apply plugin: "com.android.library"

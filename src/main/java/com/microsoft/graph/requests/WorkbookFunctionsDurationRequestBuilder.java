@@ -54,13 +54,11 @@ public class WorkbookFunctionsDurationRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsDurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDurationRequest request = new WorkbookFunctionsDurationRequest(
+        final WorkbookFunctionsDurationRequest request = new WorkbookFunctionsDurationRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

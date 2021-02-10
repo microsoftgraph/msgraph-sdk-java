@@ -54,13 +54,11 @@ public class WorkbookFunctionsConcatenateRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public WorkbookFunctionsConcatenateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsConcatenateRequest request = new WorkbookFunctionsConcatenateRequest(
+        final WorkbookFunctionsConcatenateRequest request = new WorkbookFunctionsConcatenateRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

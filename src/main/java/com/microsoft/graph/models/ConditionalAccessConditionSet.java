@@ -82,12 +82,21 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Sign In Risk Levels.
-     * Risk levels included in the policy. Possible values are: low, medium, high, none.
+     * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
      */
     @SerializedName(value = "signInRiskLevels", alternate = {"SignInRiskLevels"})
     @Expose
 	@Nullable
     public java.util.List<RiskLevel> signInRiskLevels;
+
+    /**
+     * The User Risk Levels.
+     * User risk levels included in the policy. Possible values are: low, medium, high, none.
+     */
+    @SerializedName(value = "userRiskLevels", alternate = {"UserRiskLevels"})
+    @Expose
+	@Nullable
+    public java.util.List<RiskLevel> userRiskLevels;
 
     /**
      * The Users.

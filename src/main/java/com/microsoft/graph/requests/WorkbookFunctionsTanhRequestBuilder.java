@@ -54,13 +54,11 @@ public class WorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsTanhRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsTanhRequest request = new WorkbookFunctionsTanhRequest(
+        final WorkbookFunctionsTanhRequest request = new WorkbookFunctionsTanhRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

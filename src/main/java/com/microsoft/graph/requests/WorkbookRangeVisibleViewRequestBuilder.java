@@ -50,12 +50,10 @@ public class WorkbookRangeVisibleViewRequestBuilder extends BaseFunctionRequestB
      */
     @Nonnull
     public WorkbookRangeVisibleViewRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeVisibleViewRequest request = new WorkbookRangeVisibleViewRequest(
+        final WorkbookRangeVisibleViewRequest request = new WorkbookRangeVisibleViewRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
     /**

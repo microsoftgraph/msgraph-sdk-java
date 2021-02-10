@@ -50,12 +50,10 @@ public class RemoteAssistancePartnerBeginOnboardingRequestBuilder extends BaseAc
      */
     @Nonnull
     public RemoteAssistancePartnerBeginOnboardingRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        RemoteAssistancePartnerBeginOnboardingRequest request = new RemoteAssistancePartnerBeginOnboardingRequest(
+        final RemoteAssistancePartnerBeginOnboardingRequest request = new RemoteAssistancePartnerBeginOnboardingRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

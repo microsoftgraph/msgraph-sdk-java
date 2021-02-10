@@ -54,13 +54,11 @@ public class DriveItemCheckinRequestBuilder extends BaseActionRequestBuilder<Dri
      */
     @Nonnull
     public DriveItemCheckinRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemCheckinRequest request = new DriveItemCheckinRequest(
+        final DriveItemCheckinRequest request = new DriveItemCheckinRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

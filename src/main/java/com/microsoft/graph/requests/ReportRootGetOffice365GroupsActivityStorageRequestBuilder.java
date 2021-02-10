@@ -55,13 +55,11 @@ public class ReportRootGetOffice365GroupsActivityStorageRequestBuilder extends B
      */
     @Nonnull
     public ReportRootGetOffice365GroupsActivityStorageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetOffice365GroupsActivityStorageRequest request = new ReportRootGetOffice365GroupsActivityStorageRequest(
+        final ReportRootGetOffice365GroupsActivityStorageRequest request = new ReportRootGetOffice365GroupsActivityStorageRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

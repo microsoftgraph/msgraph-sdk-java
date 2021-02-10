@@ -54,13 +54,11 @@ public class WorkbookFunctionsRank_AvgRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsRank_AvgRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsRank_AvgRequest request = new WorkbookFunctionsRank_AvgRequest(
+        final WorkbookFunctionsRank_AvgRequest request = new WorkbookFunctionsRank_AvgRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

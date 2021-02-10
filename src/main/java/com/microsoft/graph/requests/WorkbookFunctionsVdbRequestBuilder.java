@@ -54,13 +54,11 @@ public class WorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsVdbRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsVdbRequest request = new WorkbookFunctionsVdbRequest(
+        final WorkbookFunctionsVdbRequest request = new WorkbookFunctionsVdbRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

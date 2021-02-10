@@ -56,13 +56,11 @@ public class TeamCloneRequestBuilder extends BaseActionRequestBuilder<Team> {
      */
     @Nonnull
     public TeamCloneRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        TeamCloneRequest request = new TeamCloneRequest(
+        final TeamCloneRequest request = new TeamCloneRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

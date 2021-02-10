@@ -55,13 +55,11 @@ public class ReportRootGetSharePointSiteUsageStorageRequestBuilder extends BaseF
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsageStorageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetSharePointSiteUsageStorageRequest request = new ReportRootGetSharePointSiteUsageStorageRequest(
+        final ReportRootGetSharePointSiteUsageStorageRequest request = new ReportRootGetSharePointSiteUsageStorageRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

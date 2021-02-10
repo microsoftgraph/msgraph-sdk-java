@@ -54,13 +54,11 @@ public class TargetedManagedAppConfigurationAssignRequestBuilder extends BaseAct
      */
     @Nonnull
     public TargetedManagedAppConfigurationAssignRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        TargetedManagedAppConfigurationAssignRequest request = new TargetedManagedAppConfigurationAssignRequest(
+        final TargetedManagedAppConfigurationAssignRequest request = new TargetedManagedAppConfigurationAssignRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

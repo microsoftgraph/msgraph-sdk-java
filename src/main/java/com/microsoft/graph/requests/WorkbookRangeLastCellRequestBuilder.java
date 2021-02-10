@@ -49,12 +49,10 @@ public class WorkbookRangeLastCellRequestBuilder extends BaseFunctionRequestBuil
      */
     @Nonnull
     public WorkbookRangeLastCellRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeLastCellRequest request = new WorkbookRangeLastCellRequest(
+        final WorkbookRangeLastCellRequest request = new WorkbookRangeLastCellRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

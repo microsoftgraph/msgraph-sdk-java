@@ -28,16 +28,14 @@ public class WorkbookFunctionsAtan2Request extends BaseRequest<WorkbookFunctionR
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsAtan2Request(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAtan2ParameterSet parameters) {
+    public WorkbookFunctionsAtan2Request(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected WorkbookFunctionsAtan2ParameterSet body;
+    public WorkbookFunctionsAtan2ParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

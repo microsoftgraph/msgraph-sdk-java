@@ -54,13 +54,11 @@ public class ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder extends BaseA
      */
     @Nonnull
     public ManagedDeviceUpdateWindowsDeviceAccountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceUpdateWindowsDeviceAccountRequest request = new ManagedDeviceUpdateWindowsDeviceAccountRequest(
+        final ManagedDeviceUpdateWindowsDeviceAccountRequest request = new ManagedDeviceUpdateWindowsDeviceAccountRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

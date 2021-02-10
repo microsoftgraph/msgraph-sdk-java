@@ -54,13 +54,11 @@ public class WorkbookFunctionsExactRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsExactRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsExactRequest request = new WorkbookFunctionsExactRequest(
+        final WorkbookFunctionsExactRequest request = new WorkbookFunctionsExactRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

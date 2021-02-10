@@ -55,13 +55,11 @@ public class ReportRootGetOneDriveActivityFileCountsRequestBuilder extends BaseF
      */
     @Nonnull
     public ReportRootGetOneDriveActivityFileCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetOneDriveActivityFileCountsRequest request = new ReportRootGetOneDriveActivityFileCountsRequest(
+        final ReportRootGetOneDriveActivityFileCountsRequest request = new ReportRootGetOneDriveActivityFileCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

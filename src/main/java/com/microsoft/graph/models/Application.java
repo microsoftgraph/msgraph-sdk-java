@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ParentalControlSettings;
 import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PublicClientApplication;
 import com.microsoft.graph.models.RequiredResourceAccess;
+import com.microsoft.graph.models.SpaApplication;
 import com.microsoft.graph.models.WebApplication;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
@@ -48,7 +49,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Add Ins.
-     * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
+     * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on.
      */
     @SerializedName(value = "addIns", alternate = {"AddIns"})
     @Expose
@@ -66,7 +67,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
+     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -84,7 +85,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Roles.
-     * The collection of roles the application declares. With app role assignments, these roles can be assigned to users, groups, or other applications' service principals. Not nullable.
+     * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      */
     @SerializedName(value = "appRoles", alternate = {"AppRoles"})
     @Expose
@@ -120,7 +121,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Membership Claims.
-     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This will get all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of
+     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.
      */
     @SerializedName(value = "groupMembershipClaims", alternate = {"GroupMembershipClaims"})
     @Expose
@@ -129,7 +130,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Identifier Uris.
-     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
      */
     @SerializedName(value = "identifierUris", alternate = {"IdentifierUris"})
     @Expose
@@ -138,7 +139,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Info.
-     * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+     * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose
@@ -156,7 +157,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Fallback Public Client.
-     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
+     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
      */
     @SerializedName(value = "isFallbackPublicClient", alternate = {"IsFallbackPublicClient"})
     @Expose
@@ -165,7 +166,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Key Credentials.
-     * The collection of key credentials associated with the application Not nullable.
+     * The collection of key credentials associated with the application. Not nullable.
      */
     @SerializedName(value = "keyCredentials", alternate = {"KeyCredentials"})
     @Expose
@@ -192,7 +193,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Optional Claims.
-     * Application developers can configure optional claims in their Azure AD apps to specify which claims they want in tokens sent to their application by the Microsoft security token service. See provide optional claims to your Azure AD app for more information.
+     * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
      */
     @SerializedName(value = "optionalClaims", alternate = {"OptionalClaims"})
     @Expose
@@ -237,7 +238,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Required Resource Access.
-     * Specifies resources that this application requires access to and the set of OAuth permission scopes and application roles that it needs under each of those resources. This pre-configuration of required resource access drives the consent experience. Not nullable.
+     * Specifies the resources that the application needs to access. This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. Not nullable.
      */
     @SerializedName(value = "requiredResourceAccess", alternate = {"RequiredResourceAccess"})
     @Expose
@@ -246,12 +247,21 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Audience.
-     * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single tenant)AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.For authenticating users with Azure AD B2C user flows, use AzureADandPersonalMicrosoftAccount. This value allows for the widest set of user identities including local accounts and user identities from Microsoft, Facebook, Google, Twitter, or any OpenID Connect provider.
+     * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
      */
     @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose
 	@Nullable
     public String signInAudience;
+
+    /**
+     * The Spa.
+     * Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
+     */
+    @SerializedName(value = "spa", alternate = {"Spa"})
+    @Expose
+	@Nullable
+    public SpaApplication spa;
 
     /**
      * The Tags.
@@ -321,7 +331,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Token Lifetime Policies.
-     * 
+     * The tokenLifetimePolicies assigned to this application.
      */
 	@Nullable
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;

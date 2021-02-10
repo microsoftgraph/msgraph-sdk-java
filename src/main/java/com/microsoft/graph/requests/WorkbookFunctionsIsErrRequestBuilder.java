@@ -54,13 +54,11 @@ public class WorkbookFunctionsIsErrRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsIsErrRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIsErrRequest request = new WorkbookFunctionsIsErrRequest(
+        final WorkbookFunctionsIsErrRequest request = new WorkbookFunctionsIsErrRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

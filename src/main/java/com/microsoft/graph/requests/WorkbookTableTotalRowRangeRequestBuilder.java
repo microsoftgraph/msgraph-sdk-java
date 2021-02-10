@@ -50,12 +50,10 @@ public class WorkbookTableTotalRowRangeRequestBuilder extends BaseFunctionReques
      */
     @Nonnull
     public WorkbookTableTotalRowRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableTotalRowRangeRequest request = new WorkbookTableTotalRowRangeRequest(
+        final WorkbookTableTotalRowRangeRequest request = new WorkbookTableTotalRowRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

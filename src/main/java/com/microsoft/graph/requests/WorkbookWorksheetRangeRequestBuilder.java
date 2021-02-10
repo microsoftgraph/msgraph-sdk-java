@@ -66,12 +66,10 @@ public class WorkbookWorksheetRangeRequestBuilder extends BaseFunctionRequestBui
      */
     @Nonnull
     public WorkbookWorksheetRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookWorksheetRangeRequest request = new WorkbookWorksheetRangeRequest(
+        final WorkbookWorksheetRangeRequest request = new WorkbookWorksheetRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

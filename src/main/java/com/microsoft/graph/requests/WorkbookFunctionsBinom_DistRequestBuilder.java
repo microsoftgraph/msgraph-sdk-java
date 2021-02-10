@@ -54,13 +54,11 @@ public class WorkbookFunctionsBinom_DistRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookFunctionsBinom_DistRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsBinom_DistRequest request = new WorkbookFunctionsBinom_DistRequest(
+        final WorkbookFunctionsBinom_DistRequest request = new WorkbookFunctionsBinom_DistRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

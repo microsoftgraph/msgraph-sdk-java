@@ -54,13 +54,11 @@ public class WorkbookFunctionsRomanRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsRomanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsRomanRequest request = new WorkbookFunctionsRomanRequest(
+        final WorkbookFunctionsRomanRequest request = new WorkbookFunctionsRomanRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

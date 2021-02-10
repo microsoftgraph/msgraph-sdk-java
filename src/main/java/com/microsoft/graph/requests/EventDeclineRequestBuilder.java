@@ -54,13 +54,11 @@ public class EventDeclineRequestBuilder extends BaseActionRequestBuilder<Event> 
      */
     @Nonnull
     public EventDeclineRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        EventDeclineRequest request = new EventDeclineRequest(
+        final EventDeclineRequest request = new EventDeclineRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

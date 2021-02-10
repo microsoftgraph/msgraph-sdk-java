@@ -54,13 +54,11 @@ public class WorkbookFunctionsSqrtRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsSqrtRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsSqrtRequest request = new WorkbookFunctionsSqrtRequest(
+        final WorkbookFunctionsSqrtRequest request = new WorkbookFunctionsSqrtRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

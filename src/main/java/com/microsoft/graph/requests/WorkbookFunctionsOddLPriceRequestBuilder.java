@@ -54,13 +54,11 @@ public class WorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsOddLPriceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsOddLPriceRequest request = new WorkbookFunctionsOddLPriceRequest(
+        final WorkbookFunctionsOddLPriceRequest request = new WorkbookFunctionsOddLPriceRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

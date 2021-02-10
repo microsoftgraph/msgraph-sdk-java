@@ -54,13 +54,11 @@ public class MessageCreateForwardRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public MessageCreateForwardRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MessageCreateForwardRequest request = new MessageCreateForwardRequest(
+        final MessageCreateForwardRequest request = new MessageCreateForwardRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

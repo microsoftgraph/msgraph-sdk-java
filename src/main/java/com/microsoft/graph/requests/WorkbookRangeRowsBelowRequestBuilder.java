@@ -65,12 +65,10 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseFunctionRequestBui
      */
     @Nonnull
     public WorkbookRangeRowsBelowRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeRowsBelowRequest request = new WorkbookRangeRowsBelowRequest(
+        final WorkbookRangeRowsBelowRequest request = new WorkbookRangeRowsBelowRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

@@ -1,6 +1,6 @@
 # Microsoft Graph SDK for Java
 
-[![Download](https://api.bintray.com/packages/microsoftgraph/Maven/microsoft-graph/images/download.svg)](https://bintray.com/microsoftgraph/Maven/microsoft-graph/_latestVersion)
+[![Download](https://img.shields.io/maven-central/v/com.microsoft.graph/microsoft-graph.svg)](https://search.maven.org/artifact/com.microsoft.graph/microsoft-graph)
 
 Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/get-started/java) into your Java application!
 
@@ -14,7 +14,7 @@ Add the repository and a compile dependency for `microsoft-graph` to your projec
 
 ```gradle
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -95,18 +95,14 @@ graphClient
   });
 ```
 
-For a general overview of how the SDK is designed, see [overview](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Overview).
-
 ## 4. Documentation
 
 For more detailed documentation, see:
 
-* [Overview](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Overview)
-* [Extending the library](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Extending-the-Library)
-* [Handling Open Types, PATCH support with `null` values](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Working-with-Open-Types)
-* [Collections](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Working-with-Collections)
-* [Making custom requests](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Custom-Requests)
-* [Known issues](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Known-Issues)
+* [Overview](https://docs.microsoft.com/graph/overview)
+* [Collections](https://docs.microsoft.com/graph/sdks/paging)
+* [Making requests](https://docs.microsoft.com/graph/sdks/create-requests)
+* [Known issues](https://github.com/MicrosoftGraph/msgraph-sdk-java/issues)
 * [Contributions](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md)
 
 ## 5. Issues

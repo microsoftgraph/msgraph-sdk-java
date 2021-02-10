@@ -53,13 +53,11 @@ public class MessageCreateReplyRequestBuilder extends BaseActionRequestBuilder<M
      */
     @Nonnull
     public MessageCreateReplyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MessageCreateReplyRequest request = new MessageCreateReplyRequest(
+        final MessageCreateReplyRequest request = new MessageCreateReplyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

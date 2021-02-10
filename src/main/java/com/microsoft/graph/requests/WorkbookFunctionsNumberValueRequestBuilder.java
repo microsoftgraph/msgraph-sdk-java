@@ -54,13 +54,11 @@ public class WorkbookFunctionsNumberValueRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public WorkbookFunctionsNumberValueRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsNumberValueRequest request = new WorkbookFunctionsNumberValueRequest(
+        final WorkbookFunctionsNumberValueRequest request = new WorkbookFunctionsNumberValueRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

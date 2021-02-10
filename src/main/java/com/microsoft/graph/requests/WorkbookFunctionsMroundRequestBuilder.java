@@ -54,13 +54,11 @@ public class WorkbookFunctionsMroundRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsMroundRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsMroundRequest request = new WorkbookFunctionsMroundRequest(
+        final WorkbookFunctionsMroundRequest request = new WorkbookFunctionsMroundRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsCombinaRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsCombinaRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCombinaRequest request = new WorkbookFunctionsCombinaRequest(
+        final WorkbookFunctionsCombinaRequest request = new WorkbookFunctionsCombinaRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

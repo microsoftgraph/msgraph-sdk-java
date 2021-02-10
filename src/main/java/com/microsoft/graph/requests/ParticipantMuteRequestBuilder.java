@@ -54,13 +54,11 @@ public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder<Mute
      */
     @Nonnull
     public ParticipantMuteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ParticipantMuteRequest request = new ParticipantMuteRequest(
+        final ParticipantMuteRequest request = new ParticipantMuteRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

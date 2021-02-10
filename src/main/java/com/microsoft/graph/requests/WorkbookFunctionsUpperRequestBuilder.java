@@ -54,13 +54,11 @@ public class WorkbookFunctionsUpperRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsUpperRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsUpperRequest request = new WorkbookFunctionsUpperRequest(
+        final WorkbookFunctionsUpperRequest request = new WorkbookFunctionsUpperRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -65,12 +65,10 @@ public class WorkbookRangeUsedRangeRequestBuilder extends BaseFunctionRequestBui
      */
     @Nonnull
     public WorkbookRangeUsedRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeUsedRangeRequest request = new WorkbookRangeUsedRangeRequest(
+        final WorkbookRangeUsedRangeRequest request = new WorkbookRangeUsedRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

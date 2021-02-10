@@ -49,12 +49,10 @@ public class WorkbookRangeEntireColumnRequestBuilder extends BaseFunctionRequest
      */
     @Nonnull
     public WorkbookRangeEntireColumnRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeEntireColumnRequest request = new WorkbookRangeEntireColumnRequest(
+        final WorkbookRangeEntireColumnRequest request = new WorkbookRangeEntireColumnRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

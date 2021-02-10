@@ -54,13 +54,11 @@ public class WorkbookFunctionsYieldMatRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsYieldMatRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsYieldMatRequest request = new WorkbookFunctionsYieldMatRequest(
+        final WorkbookFunctionsYieldMatRequest request = new WorkbookFunctionsYieldMatRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

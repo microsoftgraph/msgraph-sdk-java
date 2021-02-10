@@ -54,13 +54,11 @@ public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public GroupValidatePropertiesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupValidatePropertiesRequest request = new GroupValidatePropertiesRequest(
+        final GroupValidatePropertiesRequest request = new GroupValidatePropertiesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsGaussRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsGaussRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsGaussRequest request = new WorkbookFunctionsGaussRequest(
+        final WorkbookFunctionsGaussRequest request = new WorkbookFunctionsGaussRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsT_InvRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsT_InvRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsT_InvRequest request = new WorkbookFunctionsT_InvRequest(
+        final WorkbookFunctionsT_InvRequest request = new WorkbookFunctionsT_InvRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

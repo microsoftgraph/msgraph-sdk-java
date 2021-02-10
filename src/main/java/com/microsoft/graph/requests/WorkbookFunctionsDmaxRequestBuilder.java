@@ -54,13 +54,11 @@ public class WorkbookFunctionsDmaxRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsDmaxRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDmaxRequest request = new WorkbookFunctionsDmaxRequest(
+        final WorkbookFunctionsDmaxRequest request = new WorkbookFunctionsDmaxRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

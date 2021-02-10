@@ -54,13 +54,11 @@ public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionReque
      */
     @Nonnull
     public WorkbookFilterApplyIconFilterRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFilterApplyIconFilterRequest request = new WorkbookFilterApplyIconFilterRequest(
+        final WorkbookFilterApplyIconFilterRequest request = new WorkbookFilterApplyIconFilterRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

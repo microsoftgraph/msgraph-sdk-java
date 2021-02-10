@@ -54,13 +54,11 @@ public class CallRedirectRequestBuilder extends BaseActionRequestBuilder<Call> {
      */
     @Nonnull
     public CallRedirectRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallRedirectRequest request = new CallRedirectRequest(
+        final CallRedirectRequest request = new CallRedirectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

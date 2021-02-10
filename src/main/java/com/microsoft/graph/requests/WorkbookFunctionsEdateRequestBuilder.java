@@ -54,13 +54,11 @@ public class WorkbookFunctionsEdateRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsEdateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsEdateRequest request = new WorkbookFunctionsEdateRequest(
+        final WorkbookFunctionsEdateRequest request = new WorkbookFunctionsEdateRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

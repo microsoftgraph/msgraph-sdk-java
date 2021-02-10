@@ -54,13 +54,11 @@ public class WorkbookFunctionsFindBRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsFindBRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsFindBRequest request = new WorkbookFunctionsFindBRequest(
+        final WorkbookFunctionsFindBRequest request = new WorkbookFunctionsFindBRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

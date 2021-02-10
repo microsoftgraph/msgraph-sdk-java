@@ -50,12 +50,10 @@ public class GroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder<
      */
     @Nonnull
     public GroupRemoveFavoriteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupRemoveFavoriteRequest request = new GroupRemoveFavoriteRequest(
+        final GroupRemoveFavoriteRequest request = new GroupRemoveFavoriteRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

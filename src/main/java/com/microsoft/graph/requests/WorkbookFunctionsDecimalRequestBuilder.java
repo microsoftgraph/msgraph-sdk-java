@@ -54,13 +54,11 @@ public class WorkbookFunctionsDecimalRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsDecimalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDecimalRequest request = new WorkbookFunctionsDecimalRequest(
+        final WorkbookFunctionsDecimalRequest request = new WorkbookFunctionsDecimalRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

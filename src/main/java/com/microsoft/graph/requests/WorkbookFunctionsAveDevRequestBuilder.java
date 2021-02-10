@@ -54,13 +54,11 @@ public class WorkbookFunctionsAveDevRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsAveDevRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsAveDevRequest request = new WorkbookFunctionsAveDevRequest(
+        final WorkbookFunctionsAveDevRequest request = new WorkbookFunctionsAveDevRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

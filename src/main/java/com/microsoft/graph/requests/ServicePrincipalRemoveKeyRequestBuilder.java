@@ -54,13 +54,11 @@ public class ServicePrincipalRemoveKeyRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public ServicePrincipalRemoveKeyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ServicePrincipalRemoveKeyRequest request = new ServicePrincipalRemoveKeyRequest(
+        final ServicePrincipalRemoveKeyRequest request = new ServicePrincipalRemoveKeyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

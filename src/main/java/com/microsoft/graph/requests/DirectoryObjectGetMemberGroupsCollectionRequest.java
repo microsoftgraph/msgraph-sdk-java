@@ -30,7 +30,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseActionC
 
     /** The body for the method */
     @Nullable
-    protected DirectoryObjectGetMemberGroupsParameterSet body;
+    public DirectoryObjectGetMemberGroupsParameterSet body;
 
 
     /**
@@ -39,11 +39,9 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseActionC
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters the parameters for the service method
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetMemberGroupsParameterSet parameters) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionResponse.class, DirectoryObjectGetMemberGroupsCollectionPage.class, DirectoryObjectGetMemberGroupsCollectionRequestBuilder.class);
-        body = parameters;
     }
 
 

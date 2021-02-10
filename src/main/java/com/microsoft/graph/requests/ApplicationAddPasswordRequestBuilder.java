@@ -54,13 +54,11 @@ public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public ApplicationAddPasswordRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ApplicationAddPasswordRequest request = new ApplicationAddPasswordRequest(
+        final ApplicationAddPasswordRequest request = new ApplicationAddPasswordRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

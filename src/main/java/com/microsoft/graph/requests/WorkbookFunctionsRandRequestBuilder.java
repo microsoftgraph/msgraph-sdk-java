@@ -50,12 +50,10 @@ public class WorkbookFunctionsRandRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsRandRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsRandRequest request = new WorkbookFunctionsRandRequest(
+        final WorkbookFunctionsRandRequest request = new WorkbookFunctionsRandRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

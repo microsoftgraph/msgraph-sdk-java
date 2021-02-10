@@ -54,13 +54,11 @@ public class WorkbookFunctionsBesselJRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsBesselJRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsBesselJRequest request = new WorkbookFunctionsBesselJRequest(
+        final WorkbookFunctionsBesselJRequest request = new WorkbookFunctionsBesselJRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

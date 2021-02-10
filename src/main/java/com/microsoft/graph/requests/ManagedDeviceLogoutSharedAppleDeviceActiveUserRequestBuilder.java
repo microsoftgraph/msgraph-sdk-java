@@ -50,12 +50,10 @@ public class ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder extend
      */
     @Nonnull
     public ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest request = new ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest(
+        final ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest request = new ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class WindowsInformationProtectionAssignRequestBuilder extends BaseAction
      */
     @Nonnull
     public WindowsInformationProtectionAssignRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WindowsInformationProtectionAssignRequest request = new WindowsInformationProtectionAssignRequest(
+        final WindowsInformationProtectionAssignRequest request = new WindowsInformationProtectionAssignRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

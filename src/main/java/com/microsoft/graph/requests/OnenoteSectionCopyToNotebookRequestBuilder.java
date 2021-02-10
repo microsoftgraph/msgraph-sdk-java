@@ -54,13 +54,11 @@ public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public OnenoteSectionCopyToNotebookRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        OnenoteSectionCopyToNotebookRequest request = new OnenoteSectionCopyToNotebookRequest(
+        final OnenoteSectionCopyToNotebookRequest request = new OnenoteSectionCopyToNotebookRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActionRe
      */
     @Nonnull
     public WorkbookFunctionsCeiling_PreciseRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCeiling_PreciseRequest request = new WorkbookFunctionsCeiling_PreciseRequest(
+        final WorkbookFunctionsCeiling_PreciseRequest request = new WorkbookFunctionsCeiling_PreciseRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

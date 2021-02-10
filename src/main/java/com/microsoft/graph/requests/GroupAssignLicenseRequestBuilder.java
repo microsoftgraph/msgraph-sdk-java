@@ -54,13 +54,11 @@ public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder<G
      */
     @Nonnull
     public GroupAssignLicenseRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupAssignLicenseRequest request = new GroupAssignLicenseRequest(
+        final GroupAssignLicenseRequest request = new GroupAssignLicenseRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

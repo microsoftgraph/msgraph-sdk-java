@@ -54,13 +54,11 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
      */
     @Nonnull
     public SiteGetByPathRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        SiteGetByPathRequest request = new SiteGetByPathRequest(
+        final SiteGetByPathRequest request = new SiteGetByPathRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

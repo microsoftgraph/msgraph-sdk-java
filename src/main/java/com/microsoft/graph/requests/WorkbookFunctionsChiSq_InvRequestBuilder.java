@@ -54,13 +54,11 @@ public class WorkbookFunctionsChiSq_InvRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsChiSq_InvRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsChiSq_InvRequest request = new WorkbookFunctionsChiSq_InvRequest(
+        final WorkbookFunctionsChiSq_InvRequest request = new WorkbookFunctionsChiSq_InvRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -50,12 +50,10 @@ public class ManagedDeviceResetPasscodeRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public ManagedDeviceResetPasscodeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceResetPasscodeRequest request = new ManagedDeviceResetPasscodeRequest(
+        final ManagedDeviceResetPasscodeRequest request = new ManagedDeviceResetPasscodeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

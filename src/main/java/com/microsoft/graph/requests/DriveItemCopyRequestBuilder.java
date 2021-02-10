@@ -54,13 +54,11 @@ public class DriveItemCopyRequestBuilder extends BaseActionRequestBuilder<DriveI
      */
     @Nonnull
     public DriveItemCopyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemCopyRequest request = new DriveItemCopyRequest(
+        final DriveItemCopyRequest request = new DriveItemCopyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

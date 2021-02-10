@@ -54,13 +54,11 @@ public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookFunctionsCountBlankRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCountBlankRequest request = new WorkbookFunctionsCountBlankRequest(
+        final WorkbookFunctionsCountBlankRequest request = new WorkbookFunctionsCountBlankRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

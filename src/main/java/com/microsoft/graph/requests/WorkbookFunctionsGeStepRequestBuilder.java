@@ -54,13 +54,11 @@ public class WorkbookFunctionsGeStepRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsGeStepRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsGeStepRequest request = new WorkbookFunctionsGeStepRequest(
+        final WorkbookFunctionsGeStepRequest request = new WorkbookFunctionsGeStepRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsBitandRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsBitandRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsBitandRequest request = new WorkbookFunctionsBitandRequest(
+        final WorkbookFunctionsBitandRequest request = new WorkbookFunctionsBitandRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

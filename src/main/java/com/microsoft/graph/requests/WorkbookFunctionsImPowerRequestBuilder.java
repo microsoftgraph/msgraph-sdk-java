@@ -54,13 +54,11 @@ public class WorkbookFunctionsImPowerRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsImPowerRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsImPowerRequest request = new WorkbookFunctionsImPowerRequest(
+        final WorkbookFunctionsImPowerRequest request = new WorkbookFunctionsImPowerRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

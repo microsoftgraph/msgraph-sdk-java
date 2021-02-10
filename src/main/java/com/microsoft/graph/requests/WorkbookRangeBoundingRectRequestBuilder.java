@@ -54,13 +54,11 @@ public class WorkbookRangeBoundingRectRequestBuilder extends BaseFunctionRequest
      */
     @Nonnull
     public WorkbookRangeBoundingRectRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeBoundingRectRequest request = new WorkbookRangeBoundingRectRequest(
+        final WorkbookRangeBoundingRectRequest request = new WorkbookRangeBoundingRectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

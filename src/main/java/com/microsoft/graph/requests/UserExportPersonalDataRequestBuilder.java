@@ -54,13 +54,11 @@ public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public UserExportPersonalDataRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        UserExportPersonalDataRequest request = new UserExportPersonalDataRequest(
+        final UserExportPersonalDataRequest request = new UserExportPersonalDataRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

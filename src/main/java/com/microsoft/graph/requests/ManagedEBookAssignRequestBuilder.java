@@ -54,13 +54,11 @@ public class ManagedEBookAssignRequestBuilder extends BaseActionRequestBuilder<M
      */
     @Nonnull
     public ManagedEBookAssignRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedEBookAssignRequest request = new ManagedEBookAssignRequest(
+        final ManagedEBookAssignRequest request = new ManagedEBookAssignRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

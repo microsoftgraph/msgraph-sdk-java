@@ -54,13 +54,11 @@ public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionReque
      */
     @Nonnull
     public NotebookGetNotebookFromWebUrlRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        NotebookGetNotebookFromWebUrlRequest request = new NotebookGetNotebookFromWebUrlRequest(
+        final NotebookGetNotebookFromWebUrlRequest request = new NotebookGetNotebookFromWebUrlRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

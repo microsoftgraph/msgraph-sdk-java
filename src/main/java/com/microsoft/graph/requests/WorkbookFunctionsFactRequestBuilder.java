@@ -54,13 +54,11 @@ public class WorkbookFunctionsFactRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsFactRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsFactRequest request = new WorkbookFunctionsFactRequest(
+        final WorkbookFunctionsFactRequest request = new WorkbookFunctionsFactRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -55,13 +55,11 @@ public class ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder extends 
      */
     @Nonnull
     public ReportRootGetYammerGroupsActivityGroupCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetYammerGroupsActivityGroupCountsRequest request = new ReportRootGetYammerGroupsActivityGroupCountsRequest(
+        final ReportRootGetYammerGroupsActivityGroupCountsRequest request = new ReportRootGetYammerGroupsActivityGroupCountsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

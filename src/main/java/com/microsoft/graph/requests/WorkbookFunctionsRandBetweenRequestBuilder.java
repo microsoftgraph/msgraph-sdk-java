@@ -54,13 +54,11 @@ public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public WorkbookFunctionsRandBetweenRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsRandBetweenRequest request = new WorkbookFunctionsRandBetweenRequest(
+        final WorkbookFunctionsRandBetweenRequest request = new WorkbookFunctionsRandBetweenRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

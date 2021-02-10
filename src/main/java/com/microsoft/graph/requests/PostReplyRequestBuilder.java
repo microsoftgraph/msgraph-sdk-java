@@ -54,13 +54,11 @@ public class PostReplyRequestBuilder extends BaseActionRequestBuilder<Post> {
      */
     @Nonnull
     public PostReplyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        PostReplyRequest request = new PostReplyRequest(
+        final PostReplyRequest request = new PostReplyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

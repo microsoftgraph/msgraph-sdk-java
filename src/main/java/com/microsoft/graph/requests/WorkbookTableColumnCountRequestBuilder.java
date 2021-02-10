@@ -50,12 +50,10 @@ public class WorkbookTableColumnCountRequestBuilder extends BaseFunctionRequestB
      */
     @Nonnull
     public WorkbookTableColumnCountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableColumnCountRequest request = new WorkbookTableColumnCountRequest(
+        final WorkbookTableColumnCountRequest request = new WorkbookTableColumnCountRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

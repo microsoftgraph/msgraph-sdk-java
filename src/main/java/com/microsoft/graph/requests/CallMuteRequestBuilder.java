@@ -54,13 +54,11 @@ public class CallMuteRequestBuilder extends BaseActionRequestBuilder<MutePartici
      */
     @Nonnull
     public CallMuteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallMuteRequest request = new CallMuteRequest(
+        final CallMuteRequest request = new CallMuteRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

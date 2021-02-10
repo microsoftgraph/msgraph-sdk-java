@@ -54,13 +54,11 @@ public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionReq
      */
     @Nonnull
     public WorkbookFilterApplyCustomFilterRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFilterApplyCustomFilterRequest request = new WorkbookFilterApplyCustomFilterRequest(
+        final WorkbookFilterApplyCustomFilterRequest request = new WorkbookFilterApplyCustomFilterRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

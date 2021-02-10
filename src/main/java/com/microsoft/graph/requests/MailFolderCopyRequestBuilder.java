@@ -53,13 +53,11 @@ public class MailFolderCopyRequestBuilder extends BaseActionRequestBuilder<MailF
      */
     @Nonnull
     public MailFolderCopyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        MailFolderCopyRequest request = new MailFolderCopyRequest(
+        final MailFolderCopyRequest request = new MailFolderCopyRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

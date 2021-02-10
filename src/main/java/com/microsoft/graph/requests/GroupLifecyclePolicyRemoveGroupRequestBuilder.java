@@ -54,13 +54,11 @@ public class GroupLifecyclePolicyRemoveGroupRequestBuilder extends BaseActionReq
      */
     @Nonnull
     public GroupLifecyclePolicyRemoveGroupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupLifecyclePolicyRemoveGroupRequest request = new GroupLifecyclePolicyRemoveGroupRequest(
+        final GroupLifecyclePolicyRemoveGroupRequest request = new GroupLifecyclePolicyRemoveGroupRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

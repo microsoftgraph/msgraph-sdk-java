@@ -54,13 +54,11 @@ public class WorkbookFunctionsIpmtRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsIpmtRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIpmtRequest request = new WorkbookFunctionsIpmtRequest(
+        final WorkbookFunctionsIpmtRequest request = new WorkbookFunctionsIpmtRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

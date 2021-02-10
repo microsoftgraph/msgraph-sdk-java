@@ -50,12 +50,10 @@ public class WorkbookTableConvertToRangeRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public WorkbookTableConvertToRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookTableConvertToRangeRequest request = new WorkbookTableConvertToRangeRequest(
+        final WorkbookTableConvertToRangeRequest request = new WorkbookTableConvertToRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

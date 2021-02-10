@@ -54,13 +54,11 @@ public class WorkbookFunctionsYearFracRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsYearFracRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsYearFracRequest request = new WorkbookFunctionsYearFracRequest(
+        final WorkbookFunctionsYearFracRequest request = new WorkbookFunctionsYearFracRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsLenRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookFunctionsLenRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsLenRequest request = new WorkbookFunctionsLenRequest(
+        final WorkbookFunctionsLenRequest request = new WorkbookFunctionsLenRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

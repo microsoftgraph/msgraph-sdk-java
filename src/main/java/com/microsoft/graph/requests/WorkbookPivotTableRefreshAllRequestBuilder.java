@@ -50,12 +50,10 @@ public class WorkbookPivotTableRefreshAllRequestBuilder extends BaseActionReques
      */
     @Nonnull
     public WorkbookPivotTableRefreshAllRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookPivotTableRefreshAllRequest request = new WorkbookPivotTableRefreshAllRequest(
+        final WorkbookPivotTableRefreshAllRequest request = new WorkbookPivotTableRefreshAllRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

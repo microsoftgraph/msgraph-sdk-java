@@ -54,13 +54,11 @@ public class WorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBuilde
      */
     @Nonnull
     public WorkbookFunctionsXirrRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsXirrRequest request = new WorkbookFunctionsXirrRequest(
+        final WorkbookFunctionsXirrRequest request = new WorkbookFunctionsXirrRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

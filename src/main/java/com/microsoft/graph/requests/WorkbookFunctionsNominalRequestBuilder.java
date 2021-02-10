@@ -54,13 +54,11 @@ public class WorkbookFunctionsNominalRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsNominalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsNominalRequest request = new WorkbookFunctionsNominalRequest(
+        final WorkbookFunctionsNominalRequest request = new WorkbookFunctionsNominalRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

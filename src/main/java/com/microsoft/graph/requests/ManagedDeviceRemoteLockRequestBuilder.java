@@ -50,12 +50,10 @@ public class ManagedDeviceRemoteLockRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public ManagedDeviceRemoteLockRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedDeviceRemoteLockRequest request = new ManagedDeviceRemoteLockRequest(
+        final ManagedDeviceRemoteLockRequest request = new ManagedDeviceRemoteLockRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionReque
      */
     @Nonnull
     public WorkbookFunctionsWorkDay_IntlRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsWorkDay_IntlRequest request = new WorkbookFunctionsWorkDay_IntlRequest(
+        final WorkbookFunctionsWorkDay_IntlRequest request = new WorkbookFunctionsWorkDay_IntlRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -54,13 +54,11 @@ public class WorkbookFunctionsEffectRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsEffectRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsEffectRequest request = new WorkbookFunctionsEffectRequest(
+        final WorkbookFunctionsEffectRequest request = new WorkbookFunctionsEffectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

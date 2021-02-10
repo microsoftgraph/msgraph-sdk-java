@@ -54,13 +54,11 @@ public class WorkbookFunctionsIsEvenRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsIsEvenRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIsEvenRequest request = new WorkbookFunctionsIsEvenRequest(
+        final WorkbookFunctionsIsEvenRequest request = new WorkbookFunctionsIsEvenRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

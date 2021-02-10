@@ -54,13 +54,11 @@ public class WorkbookFunctionsRoundRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsRoundRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsRoundRequest request = new WorkbookFunctionsRoundRequest(
+        final WorkbookFunctionsRoundRequest request = new WorkbookFunctionsRoundRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

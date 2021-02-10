@@ -50,12 +50,10 @@ public class DriveItemUnfollowRequestBuilder extends BaseActionRequestBuilder<Dr
      */
     @Nonnull
     public DriveItemUnfollowRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        DriveItemUnfollowRequest request = new DriveItemUnfollowRequest(
+        final DriveItemUnfollowRequest request = new DriveItemUnfollowRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

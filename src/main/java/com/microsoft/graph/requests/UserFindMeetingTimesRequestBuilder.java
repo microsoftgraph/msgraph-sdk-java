@@ -57,13 +57,11 @@ public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public UserFindMeetingTimesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        UserFindMeetingTimesRequest request = new UserFindMeetingTimesRequest(
+        final UserFindMeetingTimesRequest request = new UserFindMeetingTimesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

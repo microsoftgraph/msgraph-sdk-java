@@ -54,13 +54,11 @@ public class WorkbookFunctionsGeoMeanRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsGeoMeanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsGeoMeanRequest request = new WorkbookFunctionsGeoMeanRequest(
+        final WorkbookFunctionsGeoMeanRequest request = new WorkbookFunctionsGeoMeanRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

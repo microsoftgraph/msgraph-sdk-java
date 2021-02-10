@@ -54,13 +54,11 @@ public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public CallChangeScreenSharingRoleRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        CallChangeScreenSharingRoleRequest request = new CallChangeScreenSharingRoleRequest(
+        final CallChangeScreenSharingRoleRequest request = new CallChangeScreenSharingRoleRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

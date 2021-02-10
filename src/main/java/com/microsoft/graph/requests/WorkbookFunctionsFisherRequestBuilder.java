@@ -54,13 +54,11 @@ public class WorkbookFunctionsFisherRequestBuilder extends BaseActionRequestBuil
      */
     @Nonnull
     public WorkbookFunctionsFisherRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsFisherRequest request = new WorkbookFunctionsFisherRequest(
+        final WorkbookFunctionsFisherRequest request = new WorkbookFunctionsFisherRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

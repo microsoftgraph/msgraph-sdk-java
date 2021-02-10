@@ -50,12 +50,10 @@ public class WorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public WorkbookRangeUnmergeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeUnmergeRequest request = new WorkbookRangeUnmergeRequest(
+        final WorkbookRangeUnmergeRequest request = new WorkbookRangeUnmergeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

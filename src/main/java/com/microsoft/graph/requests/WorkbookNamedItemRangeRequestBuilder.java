@@ -50,12 +50,10 @@ public class WorkbookNamedItemRangeRequestBuilder extends BaseFunctionRequestBui
      */
     @Nonnull
     public WorkbookNamedItemRangeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookNamedItemRangeRequest request = new WorkbookNamedItemRangeRequest(
+        final WorkbookNamedItemRangeRequest request = new WorkbookNamedItemRangeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 

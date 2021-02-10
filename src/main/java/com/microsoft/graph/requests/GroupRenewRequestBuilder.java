@@ -50,12 +50,10 @@ public class GroupRenewRequestBuilder extends BaseActionRequestBuilder<Group> {
      */
     @Nonnull
     public GroupRenewRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        GroupRenewRequest request = new GroupRenewRequest(
+        final GroupRenewRequest request = new GroupRenewRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

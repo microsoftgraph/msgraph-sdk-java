@@ -49,12 +49,10 @@ public class VppTokenSyncLicensesRequestBuilder extends BaseActionRequestBuilder
      */
     @Nonnull
     public VppTokenSyncLicensesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        VppTokenSyncLicensesRequest request = new VppTokenSyncLicensesRequest(
+        final VppTokenSyncLicensesRequest request = new VppTokenSyncLicensesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

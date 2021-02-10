@@ -54,13 +54,11 @@ public class WorkbookFunctionsHarMeanRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsHarMeanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsHarMeanRequest request = new WorkbookFunctionsHarMeanRequest(
+        final WorkbookFunctionsHarMeanRequest request = new WorkbookFunctionsHarMeanRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

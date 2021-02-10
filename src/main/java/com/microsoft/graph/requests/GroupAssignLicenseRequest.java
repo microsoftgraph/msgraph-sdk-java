@@ -27,16 +27,14 @@ public class GroupAssignLicenseRequest extends BaseRequest<Group> {
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public GroupAssignLicenseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupAssignLicenseParameterSet parameters) {
+    public GroupAssignLicenseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Group.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected GroupAssignLicenseParameterSet body;
+    public GroupAssignLicenseParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

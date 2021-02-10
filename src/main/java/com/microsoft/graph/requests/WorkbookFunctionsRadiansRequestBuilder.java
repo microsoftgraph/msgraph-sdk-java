@@ -54,13 +54,11 @@ public class WorkbookFunctionsRadiansRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsRadiansRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsRadiansRequest request = new WorkbookFunctionsRadiansRequest(
+        final WorkbookFunctionsRadiansRequest request = new WorkbookFunctionsRadiansRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

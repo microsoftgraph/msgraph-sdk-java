@@ -54,13 +54,11 @@ public class ServicePrincipalAddPasswordRequestBuilder extends BaseActionRequest
      */
     @Nonnull
     public ServicePrincipalAddPasswordRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ServicePrincipalAddPasswordRequest request = new ServicePrincipalAddPasswordRequest(
+        final ServicePrincipalAddPasswordRequest request = new ServicePrincipalAddPasswordRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

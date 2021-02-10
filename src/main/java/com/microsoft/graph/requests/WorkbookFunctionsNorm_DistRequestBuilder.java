@@ -54,13 +54,11 @@ public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsNorm_DistRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsNorm_DistRequest request = new WorkbookFunctionsNorm_DistRequest(
+        final WorkbookFunctionsNorm_DistRequest request = new WorkbookFunctionsNorm_DistRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -55,13 +55,11 @@ public class ReportRootGetSharePointSiteUsagePagesRequestBuilder extends BaseFun
      */
     @Nonnull
     public ReportRootGetSharePointSiteUsagePagesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootGetSharePointSiteUsagePagesRequest request = new ReportRootGetSharePointSiteUsagePagesRequest(
+        final ReportRootGetSharePointSiteUsagePagesRequest request = new ReportRootGetSharePointSiteUsagePagesRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
-            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                requestOptions);
+        for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
         }
         return request;

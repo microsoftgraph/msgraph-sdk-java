@@ -54,13 +54,11 @@ public class WorkbookFunctionsIsNonTextRequestBuilder extends BaseActionRequestB
      */
     @Nonnull
     public WorkbookFunctionsIsNonTextRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsIsNonTextRequest request = new WorkbookFunctionsIsNonTextRequest(
+        final WorkbookFunctionsIsNonTextRequest request = new WorkbookFunctionsIsNonTextRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

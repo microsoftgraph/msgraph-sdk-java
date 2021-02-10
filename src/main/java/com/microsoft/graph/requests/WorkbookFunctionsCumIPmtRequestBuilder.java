@@ -54,13 +54,11 @@ public class WorkbookFunctionsCumIPmtRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsCumIPmtRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCumIPmtRequest request = new WorkbookFunctionsCumIPmtRequest(
+        final WorkbookFunctionsCumIPmtRequest request = new WorkbookFunctionsCumIPmtRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

@@ -50,12 +50,10 @@ public class ReportRootDeviceConfigurationUserActivityRequestBuilder extends Bas
      */
     @Nonnull
     public ReportRootDeviceConfigurationUserActivityRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ReportRootDeviceConfigurationUserActivityRequest request = new ReportRootDeviceConfigurationUserActivityRequest(
+        final ReportRootDeviceConfigurationUserActivityRequest request = new ReportRootDeviceConfigurationUserActivityRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions
-        );
-
+                requestOptions);
         return request;
     }
 }

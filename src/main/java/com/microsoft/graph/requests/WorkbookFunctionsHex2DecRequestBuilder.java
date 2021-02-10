@@ -54,13 +54,11 @@ public class WorkbookFunctionsHex2DecRequestBuilder extends BaseActionRequestBui
      */
     @Nonnull
     public WorkbookFunctionsHex2DecRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsHex2DecRequest request = new WorkbookFunctionsHex2DecRequest(
+        final WorkbookFunctionsHex2DecRequest request = new WorkbookFunctionsHex2DecRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

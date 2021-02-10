@@ -54,13 +54,11 @@ public class WorkbookFunctionsCleanRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsCleanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsCleanRequest request = new WorkbookFunctionsCleanRequest(
+        final WorkbookFunctionsCleanRequest request = new WorkbookFunctionsCleanRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

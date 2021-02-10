@@ -28,16 +28,14 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest<KeyCredential> {
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param parameters     the parameters for the service method
      */
-    public ServicePrincipalAddKeyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ServicePrincipalAddKeyParameterSet parameters) {
+    public ServicePrincipalAddKeyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, KeyCredential.class);
-        body = parameters;
     }
 
 	/** The body for the method */
     @Nullable
-    protected ServicePrincipalAddKeyParameterSet body;
+    public ServicePrincipalAddKeyParameterSet body;
     /**
      * Invokes the method and returns a future with the result
      * @return a future with the result

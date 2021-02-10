@@ -54,13 +54,11 @@ public class WorkbookFunctionsDevSqRequestBuilder extends BaseActionRequestBuild
      */
     @Nonnull
     public WorkbookFunctionsDevSqRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsDevSqRequest request = new WorkbookFunctionsDevSqRequest(
+        final WorkbookFunctionsDevSqRequest request = new WorkbookFunctionsDevSqRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

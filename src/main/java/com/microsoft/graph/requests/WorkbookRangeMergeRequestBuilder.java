@@ -54,13 +54,11 @@ public class WorkbookRangeMergeRequestBuilder extends BaseActionRequestBuilder<W
      */
     @Nonnull
     public WorkbookRangeMergeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookRangeMergeRequest request = new WorkbookRangeMergeRequest(
+        final WorkbookRangeMergeRequest request = new WorkbookRangeMergeRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

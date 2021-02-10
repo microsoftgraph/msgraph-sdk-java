@@ -54,13 +54,11 @@ public class ManagedAppProtectionTargetAppsRequestBuilder extends BaseActionRequ
      */
     @Nonnull
     public ManagedAppProtectionTargetAppsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        ManagedAppProtectionTargetAppsRequest request = new ManagedAppProtectionTargetAppsRequest(
+        final ManagedAppProtectionTargetAppsRequest request = new ManagedAppProtectionTargetAppsRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

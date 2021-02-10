@@ -54,13 +54,11 @@ public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseAction
      */
     @Nonnull
     public WorkbookWorksheetProtectionProtectRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookWorksheetProtectionProtectRequest request = new WorkbookWorksheetProtectionProtectRequest(
+        final WorkbookWorksheetProtectionProtectRequest request = new WorkbookWorksheetProtectionProtectRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }

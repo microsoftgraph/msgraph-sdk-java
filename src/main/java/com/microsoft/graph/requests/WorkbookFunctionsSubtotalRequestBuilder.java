@@ -54,13 +54,11 @@ public class WorkbookFunctionsSubtotalRequestBuilder extends BaseActionRequestBu
      */
     @Nonnull
     public WorkbookFunctionsSubtotalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        WorkbookFunctionsSubtotalRequest request = new WorkbookFunctionsSubtotalRequest(
+        final WorkbookFunctionsSubtotalRequest request = new WorkbookFunctionsSubtotalRequest(
                 getRequestUrl(),
                 getClient(),
-                requestOptions,
-                this.body
-        );
-
-            return request;
+                requestOptions);
+        request.body = this.body;
+        return request;
     }
 }
