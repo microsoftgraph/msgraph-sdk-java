@@ -107,9 +107,9 @@ import okhttp3.Request;
 
 /**
  * The class for the Graph Service Client.
- * @param <NativeRequestType> type of a request for the native http client
+ * @param <nativeRequestType> type of a request for the native http client
  */
-public class GraphServiceClient<NativeRequestType> extends BaseClient<NativeRequestType> implements IBaseClient<NativeRequestType> {
+public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequestType> implements IBaseClient<nativeRequestType> {
     /**
      * Restricted constructor
      */
@@ -150,9 +150,9 @@ public class GraphServiceClient<NativeRequestType> extends BaseClient<NativeRequ
     }
     /**
      * Builder to help configure the Graph service client
-     * @param <NativeRequestType> type of a request for the native http client
+     * @param <nativeRequestType> type of a request for the native http client
      */
-    public static class Builder<httpClientType, NativeRequestType> extends BaseClient.Builder<httpClientType, NativeRequestType> {
+    public static class Builder<httpClientType, nativeRequestType> extends BaseClient.Builder<httpClientType, nativeRequestType> {
         /**
          * Sets the serializer.
          *
@@ -162,7 +162,7 @@ public class GraphServiceClient<NativeRequestType> extends BaseClient<NativeRequ
          */
         @Nonnull
         @Override
-        public Builder<httpClientType, NativeRequestType> serializer(@Nonnull final ISerializer serializer) {
+        public Builder<httpClientType, nativeRequestType> serializer(@Nonnull final ISerializer serializer) {
             super.serializer(serializer);
             return this;
         }
@@ -176,7 +176,7 @@ public class GraphServiceClient<NativeRequestType> extends BaseClient<NativeRequ
          */
         @Nonnull
         @Override
-        public Builder<httpClientType, NativeRequestType> httpProvider(@Nonnull final IHttpProvider httpProvider) {
+        public Builder<httpClientType, nativeRequestType> httpProvider(@Nonnull final IHttpProvider httpProvider) {
             super.httpProvider(httpProvider);
             return this;
         }
@@ -190,7 +190,7 @@ public class GraphServiceClient<NativeRequestType> extends BaseClient<NativeRequ
          */
         @Nonnull
         @Override
-        public Builder<httpClientType, NativeRequestType> logger(@Nonnull final ILogger logger) {
+        public Builder<httpClientType, nativeRequestType> logger(@Nonnull final ILogger logger) {
             super.logger(logger);
             return this;
         }
@@ -204,7 +204,7 @@ public class GraphServiceClient<NativeRequestType> extends BaseClient<NativeRequ
          */
         @Nonnull
         @Override
-        public Builder<httpClientType, NativeRequestType> httpClient(@Nonnull final httpClientType client) {
+        public Builder<httpClientType, nativeRequestType> httpClient(@Nonnull final httpClientType client) {
             super.httpClient(client);
             return this;
         }
@@ -217,7 +217,7 @@ public class GraphServiceClient<NativeRequestType> extends BaseClient<NativeRequ
          */
         @Nonnull
         @Override
-        public Builder<httpClientType, NativeRequestType> authenticationProvider(@Nonnull final IAuthenticationProvider auth) {
+        public Builder<httpClientType, nativeRequestType> authenticationProvider(@Nonnull final IAuthenticationProvider auth) {
             super.authenticationProvider(auth);
             return this;
         }
