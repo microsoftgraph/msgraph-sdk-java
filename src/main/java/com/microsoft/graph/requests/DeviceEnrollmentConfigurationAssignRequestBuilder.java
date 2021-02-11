@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActionRequestBuilder<DeviceEnrollmentConfiguration> {
 
+    /**
+     * The request builder for this DeviceEnrollmentConfigurationAssign
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public DeviceEnrollmentConfigurationAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private DeviceEnrollmentConfigurationAssignParameterSet body;
     /**
      * The request builder for this DeviceEnrollmentConfigurationAssign

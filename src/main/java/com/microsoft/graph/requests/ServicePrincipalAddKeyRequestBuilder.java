@@ -22,6 +22,16 @@ import javax.annotation.Nonnull;
  */
 public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuilder<KeyCredential> {
 
+    /**
+     * The request builder for this ServicePrincipalAddKey
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public ServicePrincipalAddKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private ServicePrincipalAddKeyParameterSet body;
     /**
      * The request builder for this ServicePrincipalAddKey

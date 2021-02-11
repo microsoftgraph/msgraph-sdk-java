@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseActionRequestBuilder<WorkbookWorksheetProtection> {
 
+    /**
+     * The request builder for this WorkbookWorksheetProtectionProtect
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public WorkbookWorksheetProtectionProtectRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private WorkbookWorksheetProtectionProtectParameterSet body;
     /**
      * The request builder for this WorkbookWorksheetProtectionProtect

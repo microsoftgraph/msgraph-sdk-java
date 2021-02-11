@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class PostReplyRequestBuilder extends BaseActionRequestBuilder<Post> {
 
+    /**
+     * The request builder for this PostReply
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public PostReplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private PostReplyParameterSet body;
     /**
      * The request builder for this PostReply

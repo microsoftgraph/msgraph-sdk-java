@@ -28,6 +28,16 @@ import com.microsoft.graph.http.BaseActionCollectionRequestBuilder;
  */
 public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder extends BaseActionCollectionRequestBuilder<ExtensionProperty, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder, DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse, DirectoryObjectGetAvailableExtensionPropertiesCollectionPage, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest> {
 
+    /**
+     * The request builder for this collection of DirectoryObject
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest.class);
+    }
     private DirectoryObjectGetAvailableExtensionPropertiesParameterSet body;
     /**
      * The request builder for this collection of DirectoryObject

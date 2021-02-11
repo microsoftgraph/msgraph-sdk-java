@@ -27,6 +27,16 @@ public class ReportRootGetOffice365GroupsActivityStorageRequestBuilder extends B
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     */
+    public ReportRootGetOffice365GroupsActivityStorageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
+    /**
+     * The request builder for this ReportRootGetOffice365GroupsActivityStorage
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
     public ReportRootGetOffice365GroupsActivityStorageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ReportRootGetOffice365GroupsActivityStorageParameterSet parameters) {

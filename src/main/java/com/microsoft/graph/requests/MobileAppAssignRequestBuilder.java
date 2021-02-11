@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class MobileAppAssignRequestBuilder extends BaseActionRequestBuilder<MobileApp> {
 
+    /**
+     * The request builder for this MobileAppAssign
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public MobileAppAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private MobileAppAssignParameterSet body;
     /**
      * The request builder for this MobileAppAssign

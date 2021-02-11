@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class TargetedManagedAppProtectionAssignRequestBuilder extends BaseActionRequestBuilder<TargetedManagedAppProtection> {
 
+    /**
+     * The request builder for this TargetedManagedAppProtectionAssign
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public TargetedManagedAppProtectionAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private TargetedManagedAppProtectionAssignParameterSet body;
     /**
      * The request builder for this TargetedManagedAppProtectionAssign

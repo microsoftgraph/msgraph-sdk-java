@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class PostForwardRequestBuilder extends BaseActionRequestBuilder<Post> {
 
+    /**
+     * The request builder for this PostForward
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public PostForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private PostForwardParameterSet body;
     /**
      * The request builder for this PostForward

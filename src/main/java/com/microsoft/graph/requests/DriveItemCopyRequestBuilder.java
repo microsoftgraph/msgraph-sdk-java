@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class DriveItemCopyRequestBuilder extends BaseActionRequestBuilder<DriveItem> {
 
+    /**
+     * The request builder for this DriveItemCopy
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public DriveItemCopyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private DriveItemCopyParameterSet body;
     /**
      * The request builder for this DriveItemCopy

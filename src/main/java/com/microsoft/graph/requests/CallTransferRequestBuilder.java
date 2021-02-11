@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class CallTransferRequestBuilder extends BaseActionRequestBuilder<Call> {
 
+    /**
+     * The request builder for this CallTransfer
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public CallTransferRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private CallTransferParameterSet body;
     /**
      * The request builder for this CallTransfer

@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class EventTentativelyAcceptRequestBuilder extends BaseActionRequestBuilder<Event> {
 
+    /**
+     * The request builder for this EventTentativelyAccept
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public EventTentativelyAcceptRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private EventTentativelyAcceptParameterSet body;
     /**
      * The request builder for this EventTentativelyAccept

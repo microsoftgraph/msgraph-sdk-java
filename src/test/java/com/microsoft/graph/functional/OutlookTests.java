@@ -65,6 +65,7 @@ import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.CalendarGetScheduleParameterSet;
+import com.microsoft.graph.requests.CalendarGetScheduleCollectionPage;
 @Disabled
 public class OutlookTests {
 
@@ -396,7 +397,8 @@ public class OutlookTests {
                                     .withStartTime(startTime)
                                     .withAvailabilityViewInterval(60)
                                     .build();
-        testBase.graphClient.me().calendar().getSchedule(paramSet)
+        final CalendarGetScheduleCollectionPage resultPage = testBase.graphClient.me().calendar().getSchedule(paramSet)
                     .buildRequest().post();
+        assertNotNull(resultPage);
     }
 }

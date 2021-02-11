@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class CallUnmuteRequestBuilder extends BaseActionRequestBuilder<UnmuteParticipantOperation> {
 
+    /**
+     * The request builder for this CallUnmute
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public CallUnmuteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private CallUnmuteParameterSet body;
     /**
      * The request builder for this CallUnmute

@@ -21,6 +21,16 @@ import javax.annotation.Nonnull;
  */
 public class EventForwardRequestBuilder extends BaseActionRequestBuilder<Event> {
 
+    /**
+     * The request builder for this EventForward
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     */
+    public EventForwardRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
     private EventForwardParameterSet body;
     /**
      * The request builder for this EventForward
