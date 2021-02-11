@@ -148,7 +148,7 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * @return builder to start configuring the client
      */
     @Nonnull
-    public static <nativeClient, nativeRequest> Builder<nativeClient, nativeRequest> builder(Class<nativeClient> nativeClientClass, Class<nativeRequest> nativeRequestClass) {
+    public static <nativeClient, nativeRequest> Builder<nativeClient, nativeRequest> builder(@Nonnull final Class<nativeClient> nativeClientClass, @Nonnull final Class<nativeRequest> nativeRequestClass) {
         return new Builder<>();
     }
     /**
