@@ -35,7 +35,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest<WorkbookRangeFormat>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeFormat.class);
     }
 

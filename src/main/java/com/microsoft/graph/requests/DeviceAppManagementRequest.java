@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationCollectio
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationRequestBuilder;
 import com.microsoft.graph.requests.MobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.MobileAppRequestBuilder;
+import com.microsoft.graph.requests.MobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.ManagedMobileLobAppRequestBuilder;
 import com.microsoft.graph.requests.VppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.VppTokenRequestBuilder;
 import com.microsoft.graph.requests.AndroidManagedAppProtectionCollectionRequestBuilder;
@@ -58,7 +60,7 @@ public class DeviceAppManagementRequest extends BaseRequest<DeviceAppManagement>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAppManagementRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAppManagementRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAppManagement.class);
     }
 

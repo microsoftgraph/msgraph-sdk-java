@@ -35,7 +35,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseEntityCollection
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosUpdateDeviceStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosUpdateDeviceStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosUpdateDeviceStatusCollectionResponse.class, IosUpdateDeviceStatusCollectionPage.class, IosUpdateDeviceStatusCollectionRequestBuilder.class);
     }
 

@@ -35,7 +35,7 @@ public class ShiftCollectionRequest extends BaseEntityCollectionRequest<Shift, S
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ShiftCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ShiftCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ShiftCollectionResponse.class, ShiftCollectionPage.class, ShiftCollectionRequestBuilder.class);
     }
 

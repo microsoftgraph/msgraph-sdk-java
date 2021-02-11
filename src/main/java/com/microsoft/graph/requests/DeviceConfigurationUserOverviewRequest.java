@@ -30,7 +30,7 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest<DeviceCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationUserOverviewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationUserOverviewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationUserOverview.class);
     }
 

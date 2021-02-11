@@ -31,7 +31,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest<WorkbookCha
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxisTitleFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxisTitleFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartAxisTitleFormat.class);
     }
 

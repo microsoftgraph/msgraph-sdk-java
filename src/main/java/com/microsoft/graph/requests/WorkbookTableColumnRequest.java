@@ -32,7 +32,7 @@ public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableColumn.class);
     }
 

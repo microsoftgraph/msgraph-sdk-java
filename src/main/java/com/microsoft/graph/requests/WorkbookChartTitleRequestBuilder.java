@@ -30,7 +30,7 @@ public class WorkbookChartTitleRequestBuilder extends BaseRequestBuilder<Workboo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartTitleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartTitleRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -12,9 +12,9 @@ import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -37,7 +37,7 @@ public class ContactRequest extends BaseRequest<Contact> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Contact.class);
     }
 

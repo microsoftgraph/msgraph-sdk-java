@@ -30,7 +30,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Created Date Time.
-     * Created date time in UTC of the device enrollment configuration
+     * Not yet documented
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Description.
-     * The description of the device enrollment configuration
+     * Not yet documented
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -48,7 +48,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Display Name.
-     * The display name of the device enrollment configuration
+     * Not yet documented
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Last Modified Date Time.
-     * Last modified date time in UTC of the device enrollment configuration
+     * Not yet documented
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Priority.
-     * Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
+     * Not yet documented
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -75,7 +75,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Version.
-     * The version of the device enrollment configuration
+     * Not yet documented
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -84,7 +84,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
     /**
      * The Assignments.
-     * The list of group assignments for the device configuration profile
+     * The list of group assignments for the device configuration profile.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

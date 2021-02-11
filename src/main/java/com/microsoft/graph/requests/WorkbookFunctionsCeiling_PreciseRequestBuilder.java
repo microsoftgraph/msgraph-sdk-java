@@ -30,7 +30,7 @@ public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActionRe
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsCeiling_PreciseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCeiling_PreciseParameterSet parameters) {
+    public WorkbookFunctionsCeiling_PreciseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCeiling_PreciseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

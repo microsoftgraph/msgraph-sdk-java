@@ -35,7 +35,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseEntityCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeBorderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeBorderCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeBorderCollectionResponse.class, WorkbookRangeBorderCollectionPage.class, WorkbookRangeBorderCollectionRequestBuilder.class);
     }
 

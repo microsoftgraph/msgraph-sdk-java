@@ -34,7 +34,7 @@ public class GroupSettingTemplateCollectionRequest extends BaseEntityCollectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingTemplateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingTemplateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupSettingTemplateCollectionResponse.class, GroupSettingTemplateCollectionPage.class, GroupSettingTemplateCollectionRequestBuilder.class);
     }
 

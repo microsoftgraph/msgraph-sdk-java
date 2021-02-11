@@ -30,7 +30,7 @@ public class DeviceEnrollmentConfigurationSetPriorityRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DeviceEnrollmentConfigurationSetPriorityRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceEnrollmentConfigurationSetPriorityParameterSet parameters) {
+    public DeviceEnrollmentConfigurationSetPriorityRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DeviceEnrollmentConfigurationSetPriorityParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

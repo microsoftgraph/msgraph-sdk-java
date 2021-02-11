@@ -30,7 +30,7 @@ public class ApplicationRemoveKeyRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ApplicationRemoveKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ApplicationRemoveKeyParameterSet parameters) {
+    public ApplicationRemoveKeyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ApplicationRemoveKeyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

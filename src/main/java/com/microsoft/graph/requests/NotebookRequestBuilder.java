@@ -37,7 +37,7 @@ public class NotebookRequestBuilder extends BaseRequestBuilder<Notebook> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

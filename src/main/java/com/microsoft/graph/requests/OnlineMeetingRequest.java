@@ -32,7 +32,7 @@ public class OnlineMeetingRequest extends BaseRequest<OnlineMeeting> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnlineMeetingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnlineMeetingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnlineMeeting.class);
     }
 

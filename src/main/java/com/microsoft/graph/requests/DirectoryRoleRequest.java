@@ -8,8 +8,14 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DirectoryRole;
-import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.UserRequestBuilder;
+import com.microsoft.graph.requests.GroupRequestBuilder;
+import com.microsoft.graph.requests.ApplicationRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.DeviceRequestBuilder;
+import com.microsoft.graph.requests.OrgContactRequestBuilder;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.ScopedRoleMembershipRequestBuilder;
 import java.util.Arrays;
@@ -34,7 +40,7 @@ public class DirectoryRoleRequest extends BaseRequest<DirectoryRole> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRoleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRoleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryRole.class);
     }
 

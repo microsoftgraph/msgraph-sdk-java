@@ -36,7 +36,7 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionCollec
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserReminderViewCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserReminderViewParameterSet parameters) {
+    public UserReminderViewCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserReminderViewParameterSet parameters) {
         super(requestUrl, client, requestOptions, UserReminderViewCollectionRequestBuilder.class, UserReminderViewCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

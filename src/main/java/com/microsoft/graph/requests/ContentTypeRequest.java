@@ -32,7 +32,7 @@ public class ContentTypeRequest extends BaseRequest<ContentType> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContentTypeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContentTypeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContentType.class);
     }
 

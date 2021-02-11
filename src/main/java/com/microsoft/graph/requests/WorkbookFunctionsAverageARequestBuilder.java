@@ -30,7 +30,7 @@ public class WorkbookFunctionsAverageARequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsAverageARequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAverageAParameterSet parameters) {
+    public WorkbookFunctionsAverageARequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAverageAParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

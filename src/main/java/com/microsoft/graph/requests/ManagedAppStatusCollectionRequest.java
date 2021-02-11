@@ -35,7 +35,7 @@ public class ManagedAppStatusCollectionRequest extends BaseEntityCollectionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppStatusCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppStatusCollectionResponse.class, ManagedAppStatusCollectionPage.class, ManagedAppStatusCollectionRequestBuilder.class);
     }
 

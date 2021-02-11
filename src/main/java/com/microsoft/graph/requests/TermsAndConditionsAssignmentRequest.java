@@ -30,7 +30,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest<TermsAndCon
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsAssignment.class);
     }
 

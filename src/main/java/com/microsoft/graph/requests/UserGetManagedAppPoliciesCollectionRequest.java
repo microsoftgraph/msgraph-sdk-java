@@ -35,7 +35,7 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseFunctionColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserGetManagedAppPoliciesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserGetManagedAppPoliciesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionResponse.class, UserGetManagedAppPoliciesCollectionPage.class, UserGetManagedAppPoliciesCollectionRequestBuilder.class);
     }
 

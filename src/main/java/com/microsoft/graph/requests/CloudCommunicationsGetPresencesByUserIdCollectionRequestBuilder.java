@@ -37,7 +37,7 @@ public class CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CloudCommunicationsGetPresencesByUserIdParameterSet parameters) {
+    public CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CloudCommunicationsGetPresencesByUserIdParameterSet parameters) {
         super(requestUrl, client, requestOptions, CloudCommunicationsGetPresencesByUserIdCollectionRequestBuilder.class, CloudCommunicationsGetPresencesByUserIdCollectionRequest.class);
         this.body = parameters;
     }

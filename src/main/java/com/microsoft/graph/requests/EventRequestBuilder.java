@@ -12,6 +12,7 @@ import com.microsoft.graph.models.Recipient;
 import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.requests.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.AttachmentRequestBuilder;
+import com.microsoft.graph.requests.CalendarRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.EventCollectionRequestBuilder;
@@ -20,7 +21,6 @@ import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyCollectionRe
 import com.microsoft.graph.requests.MultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.CalendarRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -48,7 +48,7 @@ public class EventRequestBuilder extends BaseRequestBuilder<Event> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -34,7 +34,7 @@ public class SubscriptionCollectionRequest extends BaseEntityCollectionRequest<S
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscriptionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscriptionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SubscriptionCollectionResponse.class, SubscriptionCollectionPage.class, SubscriptionCollectionRequestBuilder.class);
     }
 

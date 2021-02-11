@@ -34,7 +34,7 @@ public class PermissionGrantPolicyCollectionRequestBuilder extends BaseCollectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionGrantPolicyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantPolicyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PermissionGrantPolicyRequestBuilder.class, PermissionGrantPolicyCollectionRequest.class);
     }
 

@@ -35,7 +35,7 @@ public class TodoTaskCollectionRequest extends BaseEntityCollectionRequest<TodoT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskCollectionResponse.class, TodoTaskCollectionPage.class, TodoTaskCollectionRequestBuilder.class);
     }
 

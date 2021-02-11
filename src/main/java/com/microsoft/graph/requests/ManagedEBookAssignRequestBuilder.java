@@ -30,7 +30,7 @@ public class ManagedEBookAssignRequestBuilder extends BaseActionRequestBuilder<M
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedEBookAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedEBookAssignParameterSet parameters) {
+    public ManagedEBookAssignRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedEBookAssignParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

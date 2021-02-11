@@ -30,7 +30,7 @@ public class TokenIssuancePolicyWithReferenceRequestBuilder extends BaseWithRefe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenIssuancePolicyWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TokenIssuancePolicyWithReferenceRequest.class, TokenIssuancePolicyReferenceRequestBuilder.class);
     }
 }

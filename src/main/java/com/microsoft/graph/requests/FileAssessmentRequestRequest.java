@@ -30,7 +30,7 @@ public class FileAssessmentRequestRequest extends BaseRequest<FileAssessmentRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FileAssessmentRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FileAssessmentRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, FileAssessmentRequest.class);
     }
 

@@ -35,7 +35,7 @@ public class PersonCollectionRequest extends BaseEntityCollectionRequest<Person,
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonCollectionResponse.class, PersonCollectionPage.class, PersonCollectionRequestBuilder.class);
     }
 

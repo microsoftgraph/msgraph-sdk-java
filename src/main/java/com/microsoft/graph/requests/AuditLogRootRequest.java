@@ -36,7 +36,7 @@ public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuditLogRootRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuditLogRootRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AuditLogRoot.class);
     }
 

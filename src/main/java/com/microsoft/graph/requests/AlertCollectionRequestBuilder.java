@@ -34,7 +34,7 @@ public class AlertCollectionRequestBuilder extends BaseCollectionRequestBuilder<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AlertCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AlertCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AlertRequestBuilder.class, AlertCollectionRequest.class);
     }
 

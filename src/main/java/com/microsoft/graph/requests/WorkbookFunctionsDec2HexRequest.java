@@ -29,7 +29,7 @@ public class WorkbookFunctionsDec2HexRequest extends BaseRequest<WorkbookFunctio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsDec2HexRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDec2HexRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
     }
 

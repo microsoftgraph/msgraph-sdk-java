@@ -35,7 +35,7 @@ public class ProfilePhotoCollectionRequest extends BaseEntityCollectionRequest<P
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProfilePhotoCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProfilePhotoCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProfilePhotoCollectionResponse.class, ProfilePhotoCollectionPage.class, ProfilePhotoCollectionRequestBuilder.class);
     }
 

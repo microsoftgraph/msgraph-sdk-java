@@ -33,7 +33,7 @@ public class WorkbookRangeViewRequest extends BaseRequest<WorkbookRangeView> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeViewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeViewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeView.class);
     }
 

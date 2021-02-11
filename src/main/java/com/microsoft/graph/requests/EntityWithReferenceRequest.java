@@ -33,7 +33,7 @@ public class EntityWithReferenceRequest extends BaseWithReferenceRequest<Entity>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EntityWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EntityWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Entity.class);
     }
 

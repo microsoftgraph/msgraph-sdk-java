@@ -30,7 +30,7 @@ public class WorkbookFunctionsNetworkDays_IntlRequestBuilder extends BaseActionR
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsNetworkDays_IntlRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsNetworkDays_IntlParameterSet parameters) {
+    public WorkbookFunctionsNetworkDays_IntlRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsNetworkDays_IntlParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

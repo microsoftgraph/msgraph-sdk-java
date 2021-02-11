@@ -30,7 +30,7 @@ public class WorkbookFunctionsRank_EqRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsRank_EqRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRank_EqParameterSet parameters) {
+    public WorkbookFunctionsRank_EqRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsRank_EqParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

@@ -35,7 +35,7 @@ public class NamedLocationCollectionRequest extends BaseEntityCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NamedLocationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NamedLocationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NamedLocationCollectionResponse.class, NamedLocationCollectionPage.class, NamedLocationCollectionRequestBuilder.class);
     }
 

@@ -9,19 +9,21 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.models.ItemActivityStat;
+import com.microsoft.graph.requests.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.DriveRequestBuilder;
+import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.BaseItemRequestBuilder;
 import com.microsoft.graph.requests.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.ListRequestBuilder;
+import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.PermissionRequestBuilder;
 import com.microsoft.graph.requests.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteRequestBuilder;
-import com.microsoft.graph.requests.ItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -45,7 +47,7 @@ public class SiteRequest extends BaseRequest<Site> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
     }
 

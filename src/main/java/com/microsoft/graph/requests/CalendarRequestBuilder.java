@@ -42,7 +42,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder<Calendar> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

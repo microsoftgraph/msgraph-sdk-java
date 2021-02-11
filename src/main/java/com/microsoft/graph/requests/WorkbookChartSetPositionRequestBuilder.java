@@ -30,7 +30,7 @@ public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookChartSetPositionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartSetPositionParameterSet parameters) {
+    public WorkbookChartSetPositionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookChartSetPositionParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

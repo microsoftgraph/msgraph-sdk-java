@@ -31,7 +31,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest<WorkbookCha
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartGridlinesFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartGridlinesFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartGridlinesFormat.class);
     }
 

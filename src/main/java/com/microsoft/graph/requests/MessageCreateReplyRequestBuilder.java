@@ -29,7 +29,7 @@ public class MessageCreateReplyRequestBuilder extends BaseActionRequestBuilder<M
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public MessageCreateReplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCreateReplyParameterSet parameters) {
+    public MessageCreateReplyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final MessageCreateReplyParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

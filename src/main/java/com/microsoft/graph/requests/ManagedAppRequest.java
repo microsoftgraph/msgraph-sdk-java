@@ -32,7 +32,7 @@ public class ManagedAppRequest extends BaseRequest<ManagedApp> {
      * @param responseClass  the class of the response
      */
     public ManagedAppRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends ManagedApp> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -45,7 +45,7 @@ public class ManagedAppRequest extends BaseRequest<ManagedApp> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedApp.class);
     }
 

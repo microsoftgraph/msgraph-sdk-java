@@ -9,8 +9,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Workbook;
 import com.microsoft.graph.models.WorkbookSessionInfo;
+import com.microsoft.graph.requests.WorkbookApplicationRequestBuilder;
 import com.microsoft.graph.requests.WorkbookCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookCommentRequestBuilder;
+import com.microsoft.graph.requests.WorkbookFunctionsRequestBuilder;
 import com.microsoft.graph.requests.WorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.WorkbookOperationCollectionRequestBuilder;
@@ -19,8 +21,6 @@ import com.microsoft.graph.requests.WorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.WorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookWorksheetRequestBuilder;
-import com.microsoft.graph.requests.WorkbookApplicationRequestBuilder;
-import com.microsoft.graph.requests.WorkbookFunctionsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -43,7 +43,7 @@ public class WorkbookRequest extends BaseRequest<Workbook> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Workbook.class);
     }
 

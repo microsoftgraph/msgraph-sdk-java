@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.PolicyRoot;
+import com.microsoft.graph.models.ConditionalAccessRoot;
 import com.microsoft.graph.models.ConditionalAccessPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -35,7 +35,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseEntityCollecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConditionalAccessPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConditionalAccessPolicyCollectionResponse.class, ConditionalAccessPolicyCollectionPage.class, ConditionalAccessPolicyCollectionRequestBuilder.class);
     }
 

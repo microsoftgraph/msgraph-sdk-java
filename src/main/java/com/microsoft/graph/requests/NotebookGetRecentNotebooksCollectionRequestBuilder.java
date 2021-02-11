@@ -36,7 +36,7 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public NotebookGetRecentNotebooksCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookGetRecentNotebooksParameterSet parameters) {
+    public NotebookGetRecentNotebooksCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final NotebookGetRecentNotebooksParameterSet parameters) {
         super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionRequestBuilder.class, NotebookGetRecentNotebooksCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

@@ -33,7 +33,7 @@ public class GroupSettingCollectionRequestBuilder extends BaseCollectionRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupSettingRequestBuilder.class, GroupSettingCollectionRequest.class);
     }
 

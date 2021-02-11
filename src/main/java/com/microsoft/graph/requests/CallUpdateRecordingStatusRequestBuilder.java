@@ -31,7 +31,7 @@ public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallUpdateRecordingStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallUpdateRecordingStatusParameterSet parameters) {
+    public CallUpdateRecordingStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallUpdateRecordingStatusParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

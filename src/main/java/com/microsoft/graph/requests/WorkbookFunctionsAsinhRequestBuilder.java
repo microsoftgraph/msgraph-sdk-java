@@ -30,7 +30,7 @@ public class WorkbookFunctionsAsinhRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsAsinhRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAsinhParameterSet parameters) {
+    public WorkbookFunctionsAsinhRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsAsinhParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

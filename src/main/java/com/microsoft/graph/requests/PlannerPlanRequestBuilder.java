@@ -10,9 +10,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PlannerPlan;
 import com.microsoft.graph.requests.PlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.PlannerBucketRequestBuilder;
+import com.microsoft.graph.requests.PlannerPlanDetailsRequestBuilder;
 import com.microsoft.graph.requests.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.PlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.PlannerPlanDetailsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerPlanRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerPlanRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

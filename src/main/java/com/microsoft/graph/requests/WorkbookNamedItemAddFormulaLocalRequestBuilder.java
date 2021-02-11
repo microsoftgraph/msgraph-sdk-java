@@ -29,7 +29,7 @@ public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRe
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookNamedItemAddFormulaLocalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookNamedItemAddFormulaLocalParameterSet parameters) {
+    public WorkbookNamedItemAddFormulaLocalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookNamedItemAddFormulaLocalParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

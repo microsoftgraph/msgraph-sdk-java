@@ -35,7 +35,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseDeltaCollec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionResponse.class, OAuth2PermissionGrantDeltaCollectionPage.class, OAuth2PermissionGrantDeltaCollectionRequestBuilder.class);
     }
 

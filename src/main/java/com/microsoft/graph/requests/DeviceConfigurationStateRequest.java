@@ -30,7 +30,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest<DeviceConfigura
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationState.class);
     }
 

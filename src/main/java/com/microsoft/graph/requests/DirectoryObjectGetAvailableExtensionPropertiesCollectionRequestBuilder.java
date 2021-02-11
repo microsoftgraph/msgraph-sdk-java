@@ -37,7 +37,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetAvailableExtensionPropertiesParameterSet parameters) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectGetAvailableExtensionPropertiesParameterSet parameters) {
         super(requestUrl, client, requestOptions, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder.class, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest.class);
         this.body = parameters;
     }

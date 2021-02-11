@@ -36,7 +36,7 @@ public class ApplicationCollectionRequest extends BaseEntityCollectionRequest<Ap
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, ApplicationCollectionPage.class, ApplicationCollectionRequestBuilder.class);
     }
 

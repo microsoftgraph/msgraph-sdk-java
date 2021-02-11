@@ -35,7 +35,7 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseFunctionCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteGetActivitiesByIntervalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteGetActivitiesByIntervalCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteGetActivitiesByIntervalCollectionResponse.class, SiteGetActivitiesByIntervalCollectionPage.class, SiteGetActivitiesByIntervalCollectionRequestBuilder.class);
     }
 

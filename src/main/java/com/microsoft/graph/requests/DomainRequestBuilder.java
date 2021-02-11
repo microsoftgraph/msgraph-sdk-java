@@ -8,8 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Domain;
-import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;
@@ -34,7 +34,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

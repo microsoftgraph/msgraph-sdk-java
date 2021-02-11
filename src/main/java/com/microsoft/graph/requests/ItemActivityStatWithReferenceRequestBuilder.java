@@ -32,7 +32,7 @@ public class ItemActivityStatWithReferenceRequestBuilder extends BaseWithReferen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityStatWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityStatWithReferenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivityStatWithReferenceRequest.class, ItemActivityStatReferenceRequestBuilder.class);
     }
 }

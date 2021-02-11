@@ -37,7 +37,7 @@ public class SiteAddCollectionRequestBuilder extends BaseActionCollectionRequest
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public SiteAddCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteAddParameterSet parameters) {
+    public SiteAddCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SiteAddParameterSet parameters) {
         super(requestUrl, client, requestOptions, SiteAddCollectionRequestBuilder.class, SiteAddCollectionRequest.class);
         this.body = parameters;
     }

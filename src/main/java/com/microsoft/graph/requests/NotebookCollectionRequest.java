@@ -38,7 +38,7 @@ public class NotebookCollectionRequest extends BaseEntityCollectionRequest<Noteb
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotebookCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NotebookCollectionResponse.class, NotebookCollectionPage.class, NotebookCollectionRequestBuilder.class);
     }
 

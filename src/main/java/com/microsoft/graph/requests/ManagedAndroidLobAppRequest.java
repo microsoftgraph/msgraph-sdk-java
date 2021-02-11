@@ -30,7 +30,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest<ManagedAndroidLobAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAndroidLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAndroidLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAndroidLobApp.class);
     }
 

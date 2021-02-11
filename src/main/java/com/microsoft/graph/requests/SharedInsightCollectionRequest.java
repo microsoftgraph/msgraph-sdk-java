@@ -35,7 +35,7 @@ public class SharedInsightCollectionRequest extends BaseEntityCollectionRequest<
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedInsightCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedInsightCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharedInsightCollectionResponse.class, SharedInsightCollectionPage.class, SharedInsightCollectionRequestBuilder.class);
     }
 

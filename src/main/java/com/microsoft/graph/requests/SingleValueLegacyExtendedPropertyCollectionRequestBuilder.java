@@ -34,7 +34,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequestBuilder extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyRequestBuilder.class, SingleValueLegacyExtendedPropertyCollectionRequest.class);
     }
 

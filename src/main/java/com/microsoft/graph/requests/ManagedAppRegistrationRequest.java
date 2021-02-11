@@ -36,7 +36,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @param responseClass  the class of the response
      */
     public ManagedAppRegistrationRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends ManagedAppRegistration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -49,7 +49,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistration.class);
     }
 

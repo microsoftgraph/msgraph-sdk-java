@@ -32,7 +32,7 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest<OnenoteEntityBase
      * @param responseClass  the class of the response
      */
     public OnenoteEntityBaseModelRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends OnenoteEntityBaseModel> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -45,7 +45,7 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest<OnenoteEntityBase
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteEntityBaseModelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteEntityBaseModelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteEntityBaseModel.class);
     }
 

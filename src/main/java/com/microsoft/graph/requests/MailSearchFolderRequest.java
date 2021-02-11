@@ -30,7 +30,7 @@ public class MailSearchFolderRequest extends BaseRequest<MailSearchFolder> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailSearchFolderRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailSearchFolderRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailSearchFolder.class);
     }
 

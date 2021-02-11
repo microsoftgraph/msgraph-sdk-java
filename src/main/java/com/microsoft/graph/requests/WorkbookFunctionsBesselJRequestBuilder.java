@@ -30,7 +30,7 @@ public class WorkbookFunctionsBesselJRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsBesselJRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBesselJParameterSet parameters) {
+    public WorkbookFunctionsBesselJRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsBesselJParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

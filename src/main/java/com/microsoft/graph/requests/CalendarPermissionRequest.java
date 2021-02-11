@@ -30,7 +30,7 @@ public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarPermissionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarPermissionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CalendarPermission.class);
     }
 

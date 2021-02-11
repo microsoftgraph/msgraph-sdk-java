@@ -8,7 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoleAssignment;
-import com.microsoft.graph.requests.RoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.RoleDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * @param responseClass  the class of the response
      */
     public RoleAssignmentRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends RoleAssignment> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -46,7 +46,7 @@ public class RoleAssignmentRequest extends BaseRequest<RoleAssignment> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleAssignment.class);
     }
 

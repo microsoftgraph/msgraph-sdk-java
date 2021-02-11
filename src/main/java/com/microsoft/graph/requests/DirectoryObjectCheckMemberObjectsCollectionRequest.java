@@ -40,7 +40,7 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseActi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectCheckMemberObjectsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionResponse.class, DirectoryObjectCheckMemberObjectsCollectionPage.class, DirectoryObjectCheckMemberObjectsCollectionRequestBuilder.class);
     }
 

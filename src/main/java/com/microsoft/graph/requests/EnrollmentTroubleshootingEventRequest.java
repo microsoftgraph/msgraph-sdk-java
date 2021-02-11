@@ -30,7 +30,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest<Enrollmen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnrollmentTroubleshootingEventRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentTroubleshootingEventRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EnrollmentTroubleshootingEvent.class);
     }
 

@@ -30,7 +30,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest<Manage
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppPolicyDeploymentSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyDeploymentSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppPolicyDeploymentSummary.class);
     }
 

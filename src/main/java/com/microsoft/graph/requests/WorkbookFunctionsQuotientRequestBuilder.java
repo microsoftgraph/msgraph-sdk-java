@@ -30,7 +30,7 @@ public class WorkbookFunctionsQuotientRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsQuotientRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsQuotientParameterSet parameters) {
+    public WorkbookFunctionsQuotientRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsQuotientParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

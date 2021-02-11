@@ -30,7 +30,7 @@ public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionR
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DirectoryObjectValidatePropertiesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectValidatePropertiesParameterSet parameters) {
+    public DirectoryObjectValidatePropertiesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DirectoryObjectValidatePropertiesParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

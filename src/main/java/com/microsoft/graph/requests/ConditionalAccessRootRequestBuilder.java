@@ -33,7 +33,7 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConditionalAccessRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

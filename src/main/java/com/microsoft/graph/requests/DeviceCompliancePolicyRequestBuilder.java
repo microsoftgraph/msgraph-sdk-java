@@ -16,11 +16,11 @@ import com.microsoft.graph.requests.SettingStateDeviceSummaryCollectionRequestBu
 import com.microsoft.graph.requests.SettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.DeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceScheduledActionForRuleRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceUserStatusRequestBuilder;
-import com.microsoft.graph.requests.DeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.DeviceComplianceUserOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -45,7 +45,7 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder<Dev
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

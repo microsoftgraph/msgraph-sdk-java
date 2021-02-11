@@ -8,8 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Organization;
-import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.CertificateBasedAuthConfigurationRequestBuilder;
+import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import java.util.Arrays;
@@ -33,7 +33,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

@@ -35,7 +35,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseEnt
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppPolicyAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppPolicyAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignmentCollectionResponse.class, TargetedManagedAppPolicyAssignmentCollectionPage.class, TargetedManagedAppPolicyAssignmentCollectionRequestBuilder.class);
     }
 

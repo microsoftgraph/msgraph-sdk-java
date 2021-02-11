@@ -30,7 +30,7 @@ public class UserChangePasswordRequestBuilder extends BaseActionRequestBuilder<U
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserChangePasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserChangePasswordParameterSet parameters) {
+    public UserChangePasswordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserChangePasswordParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

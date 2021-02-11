@@ -28,7 +28,7 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceDeleteUserFromSharedAppleDeviceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceDeleteUserFromSharedAppleDeviceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
     }
 

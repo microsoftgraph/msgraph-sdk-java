@@ -30,7 +30,7 @@ public class ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder extends BaseA
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceUpdateWindowsDeviceAccountParameterSet parameters) {
+    public ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceUpdateWindowsDeviceAccountParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

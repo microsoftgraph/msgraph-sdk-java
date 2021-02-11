@@ -35,7 +35,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseEntityColl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotificationMessageTemplateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotificationMessageTemplateCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NotificationMessageTemplateCollectionResponse.class, NotificationMessageTemplateCollectionPage.class, NotificationMessageTemplateCollectionRequestBuilder.class);
     }
 

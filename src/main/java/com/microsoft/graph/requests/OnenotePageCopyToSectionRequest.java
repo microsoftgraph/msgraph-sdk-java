@@ -29,7 +29,7 @@ public class OnenotePageCopyToSectionRequest extends BaseRequest<OnenoteOperatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenotePageCopyToSectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenotePageCopyToSectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
     }
 

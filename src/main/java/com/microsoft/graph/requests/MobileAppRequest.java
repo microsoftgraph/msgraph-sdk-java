@@ -11,8 +11,8 @@ import com.microsoft.graph.models.MobileApp;
 import com.microsoft.graph.models.MobileAppAssignment;
 import com.microsoft.graph.requests.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.MobileAppAssignmentRequestBuilder;
-import com.microsoft.graph.requests.MobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.MobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.MobileAppCategoryWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -37,7 +37,7 @@ public class MobileAppRequest extends BaseRequest<MobileApp> {
      * @param responseClass  the class of the response
      */
     public MobileAppRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends MobileApp> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -50,7 +50,7 @@ public class MobileAppRequest extends BaseRequest<MobileApp> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileApp.class);
     }
 

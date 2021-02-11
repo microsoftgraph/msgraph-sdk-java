@@ -33,7 +33,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param responseClass  the class of the response
      */
     public EventMessageRequest(@Nonnull final String requestUrl,
-            @Nonnull final IBaseClient client,
+            @Nonnull final IBaseClient<?> client,
             @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
             @Nonnull final Class<? extends EventMessage> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
@@ -46,7 +46,7 @@ public class EventMessageRequest extends BaseRequest<EventMessage> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventMessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventMessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EventMessage.class);
     }
 

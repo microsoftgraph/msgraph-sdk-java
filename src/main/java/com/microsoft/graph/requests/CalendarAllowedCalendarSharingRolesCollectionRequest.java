@@ -35,7 +35,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseFu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarAllowedCalendarSharingRolesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarAllowedCalendarSharingRolesCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CalendarAllowedCalendarSharingRolesCollectionResponse.class, CalendarAllowedCalendarSharingRolesCollectionPage.class, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder.class);
     }
 

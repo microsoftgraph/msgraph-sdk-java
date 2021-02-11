@@ -35,7 +35,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionRequestBuilder.class, DriveItemGetActivitiesByIntervalCollectionRequest.class);
     }
     /**
@@ -46,7 +46,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemGetActivitiesByIntervalParameterSet parameters) {
+    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final DriveItemGetActivitiesByIntervalParameterSet parameters) {
         super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionRequestBuilder.class, DriveItemGetActivitiesByIntervalCollectionRequest.class);
         if(parameters != null) {
             functionOptions = parameters.getFunctionOptions();

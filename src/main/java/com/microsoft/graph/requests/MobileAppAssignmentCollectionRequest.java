@@ -35,7 +35,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseEntityCollectionRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppAssignmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppAssignmentCollectionResponse.class, MobileAppAssignmentCollectionPage.class, MobileAppAssignmentCollectionRequestBuilder.class);
     }
 

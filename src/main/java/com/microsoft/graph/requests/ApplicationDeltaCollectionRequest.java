@@ -35,7 +35,7 @@ public class ApplicationDeltaCollectionRequest extends BaseDeltaCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationDeltaCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationDeltaCollectionResponse.class, ApplicationDeltaCollectionPage.class, ApplicationDeltaCollectionRequestBuilder.class);
     }
 

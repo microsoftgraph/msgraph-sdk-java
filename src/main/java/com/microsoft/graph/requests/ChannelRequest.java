@@ -8,13 +8,13 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabRequestBuilder;
-import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -37,7 +37,7 @@ public class ChannelRequest extends BaseRequest<Channel> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChannelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChannelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Channel.class);
     }
 

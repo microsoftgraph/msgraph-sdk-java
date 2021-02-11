@@ -12,11 +12,11 @@ import com.microsoft.graph.requests.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.ContentTypeRequestBuilder;
+import com.microsoft.graph.requests.DriveRequestBuilder;
 import com.microsoft.graph.requests.ListItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.ListItemRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionRequestBuilder;
-import com.microsoft.graph.requests.DriveRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -38,7 +38,7 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

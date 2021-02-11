@@ -29,7 +29,7 @@ public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder<ColumnDef
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ColumnDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ColumnDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

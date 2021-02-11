@@ -65,7 +65,7 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
 
     /**
      * The Scoped Members.
-     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "scopedMembers", alternate = {"ScopedMembers"})
     @Expose

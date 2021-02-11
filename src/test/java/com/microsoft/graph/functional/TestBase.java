@@ -30,7 +30,7 @@ public class TestBase {
     private String tokenEndpoint = "https://login.microsoftonline.com/"+ Constants.TENANTID +"/oauth2/v2.0/token";
     private String resourceId = "https%3A%2F%2Fgraph.microsoft.com%2F.default";
 
-    public GraphServiceClient graphClient = null;
+    public GraphServiceClient<Request> graphClient = null;
 
     public TestBase(){
         this(true);

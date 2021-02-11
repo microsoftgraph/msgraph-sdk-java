@@ -32,7 +32,7 @@ public class PlannerGroupRequest extends BaseRequest<PlannerGroup> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerGroup.class);
     }
 

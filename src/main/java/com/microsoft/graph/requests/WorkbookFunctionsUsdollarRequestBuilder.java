@@ -30,7 +30,7 @@ public class WorkbookFunctionsUsdollarRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsUsdollarRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsUsdollarParameterSet parameters) {
+    public WorkbookFunctionsUsdollarRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsUsdollarParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

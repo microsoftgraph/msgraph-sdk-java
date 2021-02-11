@@ -34,7 +34,7 @@ public class DefaultManagedAppProtectionCollectionRequestBuilder extends BaseCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DefaultManagedAppProtectionCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DefaultManagedAppProtectionCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DefaultManagedAppProtectionRequestBuilder.class, DefaultManagedAppProtectionCollectionRequest.class);
     }
 

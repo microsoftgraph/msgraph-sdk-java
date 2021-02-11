@@ -12,17 +12,17 @@ import com.microsoft.graph.models.TeamVisibilityType;
 import com.microsoft.graph.models.ClonableTeamParts;
 import java.util.EnumSet;
 import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.requests.ScheduleRequestBuilder;
 import com.microsoft.graph.requests.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChannelRequestBuilder;
+import com.microsoft.graph.requests.GroupWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
-import com.microsoft.graph.requests.ScheduleRequestBuilder;
-import com.microsoft.graph.requests.GroupRequestBuilder;
-import com.microsoft.graph.requests.TeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.TeamsTemplateWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -45,7 +45,7 @@ public class TeamRequest extends BaseRequest<Team> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Team.class);
     }
 

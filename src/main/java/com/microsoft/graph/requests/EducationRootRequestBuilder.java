@@ -10,10 +10,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationRoot;
 import com.microsoft.graph.requests.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.EducationClassRequestBuilder;
+import com.microsoft.graph.requests.EducationUserRequestBuilder;
 import com.microsoft.graph.requests.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.EducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.EducationUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -35,7 +35,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 

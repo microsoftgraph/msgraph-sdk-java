@@ -35,7 +35,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseEntityColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActivityBasedTimeoutPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityBasedTimeoutPolicyCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicyCollectionResponse.class, ActivityBasedTimeoutPolicyCollectionPage.class, ActivityBasedTimeoutPolicyCollectionRequestBuilder.class);
     }
 

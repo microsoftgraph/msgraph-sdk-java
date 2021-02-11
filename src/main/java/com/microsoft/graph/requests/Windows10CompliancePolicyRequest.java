@@ -30,7 +30,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest<Windows10Compl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10CompliancePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10CompliancePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10CompliancePolicy.class);
     }
 

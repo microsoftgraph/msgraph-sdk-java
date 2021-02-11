@@ -30,7 +30,7 @@ public class ManagedDeviceWindowsDefenderScanRequestBuilder extends BaseActionRe
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedDeviceWindowsDefenderScanRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceWindowsDefenderScanParameterSet parameters) {
+    public ManagedDeviceWindowsDefenderScanRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedDeviceWindowsDefenderScanParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

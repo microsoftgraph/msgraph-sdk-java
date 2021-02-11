@@ -34,7 +34,7 @@ public class SegmentCollectionRequestBuilder extends BaseCollectionRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SegmentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SegmentCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SegmentRequestBuilder.class, SegmentCollectionRequest.class);
     }
 

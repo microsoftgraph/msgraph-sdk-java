@@ -34,7 +34,7 @@ public class InvitationCollectionRequest extends BaseEntityCollectionRequest<Inv
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InvitationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InvitationCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, InvitationCollectionResponse.class, InvitationCollectionPage.class, InvitationCollectionRequestBuilder.class);
     }
 

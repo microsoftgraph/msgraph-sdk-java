@@ -30,7 +30,7 @@ public class UserAssignLicenseRequestBuilder extends BaseActionRequestBuilder<Us
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public UserAssignLicenseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserAssignLicenseParameterSet parameters) {
+    public UserAssignLicenseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final UserAssignLicenseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

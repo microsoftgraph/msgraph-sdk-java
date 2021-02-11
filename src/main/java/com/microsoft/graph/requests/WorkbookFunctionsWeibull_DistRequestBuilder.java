@@ -30,7 +30,7 @@ public class WorkbookFunctionsWeibull_DistRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsWeibull_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsWeibull_DistParameterSet parameters) {
+    public WorkbookFunctionsWeibull_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsWeibull_DistParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

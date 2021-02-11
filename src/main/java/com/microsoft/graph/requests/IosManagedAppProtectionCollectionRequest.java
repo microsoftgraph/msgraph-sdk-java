@@ -35,7 +35,7 @@ public class IosManagedAppProtectionCollectionRequest extends BaseEntityCollecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosManagedAppProtectionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosManagedAppProtectionCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosManagedAppProtectionCollectionResponse.class, IosManagedAppProtectionCollectionPage.class, IosManagedAppProtectionCollectionRequestBuilder.class);
     }
 

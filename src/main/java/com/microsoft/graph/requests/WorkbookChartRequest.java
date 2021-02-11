@@ -8,12 +8,12 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WorkbookChart;
-import com.microsoft.graph.requests.WorkbookChartSeriesCollectionRequestBuilder;
-import com.microsoft.graph.requests.WorkbookChartSeriesRequestBuilder;
 import com.microsoft.graph.requests.WorkbookChartAxesRequestBuilder;
 import com.microsoft.graph.requests.WorkbookChartDataLabelsRequestBuilder;
 import com.microsoft.graph.requests.WorkbookChartAreaFormatRequestBuilder;
 import com.microsoft.graph.requests.WorkbookChartLegendRequestBuilder;
+import com.microsoft.graph.requests.WorkbookChartSeriesCollectionRequestBuilder;
+import com.microsoft.graph.requests.WorkbookChartSeriesRequestBuilder;
 import com.microsoft.graph.requests.WorkbookChartTitleRequestBuilder;
 import com.microsoft.graph.requests.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
@@ -38,7 +38,7 @@ public class WorkbookChartRequest extends BaseRequest<WorkbookChart> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChart.class);
     }
 

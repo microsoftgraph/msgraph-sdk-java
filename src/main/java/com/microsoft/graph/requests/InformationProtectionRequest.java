@@ -32,7 +32,7 @@ public class InformationProtectionRequest extends BaseRequest<InformationProtect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InformationProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, InformationProtection.class);
     }
 

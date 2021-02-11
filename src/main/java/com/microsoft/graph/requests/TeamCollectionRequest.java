@@ -38,7 +38,7 @@ public class TeamCollectionRequest extends BaseEntityCollectionRequest<Team, Tea
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamCollectionResponse.class, TeamCollectionPage.class, TeamCollectionRequestBuilder.class);
     }
 

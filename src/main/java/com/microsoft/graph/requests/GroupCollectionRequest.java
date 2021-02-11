@@ -36,7 +36,7 @@ public class GroupCollectionRequest extends BaseEntityCollectionRequest<Group, G
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class, GroupCollectionRequestBuilder.class);
     }
 

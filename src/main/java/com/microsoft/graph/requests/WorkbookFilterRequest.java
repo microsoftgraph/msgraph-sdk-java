@@ -32,7 +32,7 @@ public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFilterRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFilter.class);
     }
 

@@ -15,9 +15,9 @@ import com.microsoft.graph.requests.WorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.WorkbookPivotTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookPivotTableRequestBuilder;
+import com.microsoft.graph.requests.WorkbookWorksheetProtectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookTableRequestBuilder;
-import com.microsoft.graph.requests.WorkbookWorksheetProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -40,7 +40,7 @@ public class WorkbookWorksheetRequest extends BaseRequest<WorkbookWorksheet> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookWorksheet.class);
     }
 

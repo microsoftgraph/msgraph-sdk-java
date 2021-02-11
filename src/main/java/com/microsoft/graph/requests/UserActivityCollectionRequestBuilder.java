@@ -35,7 +35,7 @@ public class UserActivityCollectionRequestBuilder extends BaseCollectionRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserActivityRequestBuilder.class, UserActivityCollectionRequest.class);
     }
 

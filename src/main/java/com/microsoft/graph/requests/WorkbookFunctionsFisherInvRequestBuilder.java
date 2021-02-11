@@ -30,7 +30,7 @@ public class WorkbookFunctionsFisherInvRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsFisherInvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFisherInvParameterSet parameters) {
+    public WorkbookFunctionsFisherInvRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsFisherInvParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

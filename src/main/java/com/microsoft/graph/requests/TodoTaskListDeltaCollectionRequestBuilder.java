@@ -34,7 +34,7 @@ public class TodoTaskListDeltaCollectionRequestBuilder extends BaseFunctionColle
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListDeltaCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskListDeltaCollectionRequestBuilder.class, TodoTaskListDeltaCollectionRequest.class);
     }
     /**

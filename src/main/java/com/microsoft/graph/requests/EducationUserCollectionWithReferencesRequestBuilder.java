@@ -31,7 +31,7 @@ public class EducationUserCollectionWithReferencesRequestBuilder extends BaseCol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationUserCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserCollectionWithReferencesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationUserReferenceRequestBuilder.class, EducationUserCollectionReferenceRequest.class, EducationUserCollectionReferenceRequestBuilder.class);
     }
 }

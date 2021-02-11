@@ -35,7 +35,7 @@ public class DirectoryObjectReferenceRequest extends BaseReferenceRequest<Direct
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryObjectReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 

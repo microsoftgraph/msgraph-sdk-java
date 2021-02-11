@@ -30,7 +30,7 @@ public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsCeiling_MathRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCeiling_MathParameterSet parameters) {
+    public WorkbookFunctionsCeiling_MathRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsCeiling_MathParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

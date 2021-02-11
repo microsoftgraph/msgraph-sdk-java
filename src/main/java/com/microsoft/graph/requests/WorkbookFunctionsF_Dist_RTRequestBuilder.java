@@ -30,7 +30,7 @@ public class WorkbookFunctionsF_Dist_RTRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsF_Dist_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsF_Dist_RTParameterSet parameters) {
+    public WorkbookFunctionsF_Dist_RTRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsF_Dist_RTParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

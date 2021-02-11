@@ -30,7 +30,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest<UpdateRec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UpdateRecordingStatusOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UpdateRecordingStatusOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UpdateRecordingStatusOperation.class);
     }
 

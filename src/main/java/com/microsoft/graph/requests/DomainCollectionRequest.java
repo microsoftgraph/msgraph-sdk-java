@@ -34,7 +34,7 @@ public class DomainCollectionRequest extends BaseEntityCollectionRequest<Domain,
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainCollectionResponse.class, DomainCollectionPage.class, DomainCollectionRequestBuilder.class);
     }
 

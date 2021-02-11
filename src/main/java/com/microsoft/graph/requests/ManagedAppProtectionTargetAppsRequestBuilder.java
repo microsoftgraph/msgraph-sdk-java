@@ -30,7 +30,7 @@ public class ManagedAppProtectionTargetAppsRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public ManagedAppProtectionTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedAppProtectionTargetAppsParameterSet parameters) {
+    public ManagedAppProtectionTargetAppsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final ManagedAppProtectionTargetAppsParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

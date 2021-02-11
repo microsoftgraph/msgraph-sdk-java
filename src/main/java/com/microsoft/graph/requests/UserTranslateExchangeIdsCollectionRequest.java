@@ -42,7 +42,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseActionCollect
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserTranslateExchangeIdsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserTranslateExchangeIdsCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionResponse.class, UserTranslateExchangeIdsCollectionPage.class, UserTranslateExchangeIdsCollectionRequestBuilder.class);
     }
 

@@ -30,7 +30,7 @@ public class WorkbookFunctionsZ_TestRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsZ_TestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsZ_TestParameterSet parameters) {
+    public WorkbookFunctionsZ_TestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsZ_TestParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

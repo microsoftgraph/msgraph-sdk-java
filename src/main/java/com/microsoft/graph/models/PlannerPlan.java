@@ -70,7 +70,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Buckets.
-     * Collection of buckets in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of buckets in the plan.
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
@@ -79,7 +79,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Details.
-     * Additional details about the plan. Read-only. Nullable.
+     * Read-only. Nullable. Additional details about the plan.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -88,7 +88,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * Collection of tasks in the plan. Read-only. Nullable.
+     * Read-only. Nullable. Collection of tasks in the plan.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

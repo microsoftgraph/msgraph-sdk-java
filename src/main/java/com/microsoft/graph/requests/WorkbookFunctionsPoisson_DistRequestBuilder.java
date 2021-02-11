@@ -30,7 +30,7 @@ public class WorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public WorkbookFunctionsPoisson_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPoisson_DistParameterSet parameters) {
+    public WorkbookFunctionsPoisson_DistRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final WorkbookFunctionsPoisson_DistParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }

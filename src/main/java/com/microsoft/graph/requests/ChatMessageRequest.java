@@ -34,7 +34,7 @@ public class ChatMessageRequest extends BaseRequest<ChatMessage> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChatMessage.class);
     }
 

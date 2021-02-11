@@ -37,7 +37,7 @@ public class AttachmentCollectionRequest extends BaseEntityCollectionRequest<Att
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AttachmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttachmentCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AttachmentCollectionResponse.class, AttachmentCollectionPage.class, AttachmentCollectionRequestBuilder.class);
     }
 

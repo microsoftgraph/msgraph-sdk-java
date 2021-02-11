@@ -34,7 +34,7 @@ public class LinkedResourceCollectionRequestBuilder extends BaseCollectionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LinkedResourceCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LinkedResourceCollectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LinkedResourceRequestBuilder.class, LinkedResourceCollectionRequest.class);
     }
 

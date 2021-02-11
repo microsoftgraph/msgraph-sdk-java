@@ -30,7 +30,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest<DomainDnsSrvRecord> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsSrvRecordRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainDnsSrvRecordRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainDnsSrvRecord.class);
     }
 

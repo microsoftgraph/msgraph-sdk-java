@@ -12,29 +12,35 @@ import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.UserRequestBuilder;
+import com.microsoft.graph.requests.GroupRequestBuilder;
+import com.microsoft.graph.requests.ApplicationRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.DeviceRequestBuilder;
+import com.microsoft.graph.requests.OrgContactRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.GroupSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupSettingRequestBuilder;
+import com.microsoft.graph.requests.CalendarRequestBuilder;
 import com.microsoft.graph.requests.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.EventRequestBuilder;
 import com.microsoft.graph.requests.ConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationRequestBuilder;
-import com.microsoft.graph.requests.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationThreadRequestBuilder;
-import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.DriveRequestBuilder;
+import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupLifecyclePolicyRequestBuilder;
-import com.microsoft.graph.requests.CalendarRequestBuilder;
 import com.microsoft.graph.requests.PlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.OnenoteRequestBuilder;
 import com.microsoft.graph.requests.TeamRequestBuilder;
@@ -64,7 +70,7 @@ public class GroupReferenceRequest extends BaseReferenceRequest<Group> {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Group.class);
     }
 

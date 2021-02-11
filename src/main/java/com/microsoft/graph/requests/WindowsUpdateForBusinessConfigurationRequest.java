@@ -30,7 +30,7 @@ public class WindowsUpdateForBusinessConfigurationRequest extends BaseRequest<Wi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsUpdateForBusinessConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsUpdateForBusinessConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsUpdateForBusinessConfiguration.class);
     }
 

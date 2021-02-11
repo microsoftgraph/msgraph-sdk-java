@@ -28,7 +28,7 @@ public class WorkbookTableTotalRowRangeRequest extends BaseRequest<WorkbookRange
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableTotalRowRangeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableTotalRowRangeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
     }
 

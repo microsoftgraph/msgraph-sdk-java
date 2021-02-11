@@ -31,7 +31,7 @@ public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder<R
      * @param requestOptions the options for this request
      * @param parameters     the parameters for the service method
      */
-    public CallRecordResponseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRecordResponseParameterSet parameters) {
+    public CallRecordResponseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final CallRecordResponseParameterSet parameters) {
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }
