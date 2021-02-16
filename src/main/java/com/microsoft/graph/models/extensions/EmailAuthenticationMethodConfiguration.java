@@ -28,7 +28,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
 
     /**
      * The Allow External Id To Use Email Otp.
-     * 
+     * Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who did not use public preview will automatically have email OTP enabled beginning in March 2021.
      */
     @SerializedName(value = "allowExternalIdToUseEmailOtp", alternate = {"AllowExternalIdToUseEmailOtp"})
     @Expose
@@ -36,7 +36,7 @@ public class EmailAuthenticationMethodConfiguration extends AuthenticationMethod
 
     /**
      * The Include Targets.
-     * 
+     * A collection of users or groups who are enabled to use the authentication method.
      */
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose

@@ -35,7 +35,7 @@ public class PlannerPlanDetails extends Entity implements IJsonBackedObject {
 
     /**
      * The Shared With.
-     * Set of user ids that this plan is shared with. If you are leveraging Microsoft 365 groups, use the Groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection though it is not required for them to access the plan owned by the group.
+     * The set of user IDs that this plan is shared with. If you are using Microsoft 365 groups, use the groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required in order for them to access the plan owned by the group.
      */
     @SerializedName(value = "sharedWith", alternate = {"SharedWith"})
     @Expose

@@ -34,7 +34,7 @@ public class LicenseAssignmentState implements IJsonBackedObject {
 
     /**
      * The Assigned By Group.
-     * 
+     * The id of the group that assigns this license. If the assignment is a direct-assigned license, this field will be Null. Read-Only.
      */
     @SerializedName(value = "assignedByGroup", alternate = {"AssignedByGroup"})
     @Expose
@@ -42,7 +42,7 @@ public class LicenseAssignmentState implements IJsonBackedObject {
 
     /**
      * The Disabled Plans.
-     * 
+     * The service plans that are disabled in this assignment. Read-Only.
      */
     @SerializedName(value = "disabledPlans", alternate = {"DisabledPlans"})
     @Expose
@@ -50,7 +50,7 @@ public class LicenseAssignmentState implements IJsonBackedObject {
 
     /**
      * The Error.
-     * 
+     * License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. Possible values: CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Others. For more information on how to identify and resolve license assignment errors see here.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -58,7 +58,7 @@ public class LicenseAssignmentState implements IJsonBackedObject {
 
     /**
      * The Sku Id.
-     * 
+     * The unique identifier for the SKU. Read-Only.
      */
     @SerializedName(value = "skuId", alternate = {"SkuId"})
     @Expose
@@ -66,7 +66,7 @@ public class LicenseAssignmentState implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Indicate the current state of this assignment. Read-Only. Possible values: Active, ActiveWithError, Disabled and Error.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

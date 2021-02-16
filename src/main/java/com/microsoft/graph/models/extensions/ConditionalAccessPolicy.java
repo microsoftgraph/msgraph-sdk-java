@@ -45,7 +45,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
 
     /**
      * The Description.
-     * 
+     * Not used.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

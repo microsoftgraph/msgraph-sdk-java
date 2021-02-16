@@ -35,7 +35,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Email Address.
-     * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (&amp;lt; &amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+     * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
      */
     @SerializedName(value = "invitedUserEmailAddress", alternate = {"InvitedUserEmailAddress"})
     @Expose
@@ -51,7 +51,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Type.
-     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
+     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator.
      */
     @SerializedName(value = "invitedUserType", alternate = {"InvitedUserType"})
     @Expose
@@ -59,7 +59,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invite Redeem Url.
-     * The URL the user can use to redeem their invitation. Read-only
+     * The URL the user can use to redeem their invitation. Read-only.
      */
     @SerializedName(value = "inviteRedeemUrl", alternate = {"InviteRedeemUrl"})
     @Expose
@@ -67,7 +67,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invite Redirect Url.
-     * The URL the user should be redirected to once the invitation is redeemed. Required.
+     * The URL user should be redirected to once the invitation is redeemed. Required.
      */
     @SerializedName(value = "inviteRedirectUrl", alternate = {"InviteRedirectUrl"})
     @Expose

@@ -26,7 +26,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Aa Guid.
-     * 
+     * Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
      */
     @SerializedName(value = "aaGuid", alternate = {"AaGuid"})
     @Expose
@@ -34,7 +34,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Attestation Certificates.
-     * 
+     * The attestation certificate(s) attached to this security key.
      */
     @SerializedName(value = "attestationCertificates", alternate = {"AttestationCertificates"})
     @Expose
@@ -42,7 +42,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Attestation Level.
-     * 
+     * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
      */
     @SerializedName(value = "attestationLevel", alternate = {"AttestationLevel"})
     @Expose
@@ -58,7 +58,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Display Name.
-     * 
+     * The display name of the key as given by the user.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -66,7 +66,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Model.
-     * 
+     * The manufacturer-assigned model of the FIDO2 security key.
      */
     @SerializedName(value = "model", alternate = {"Model"})
     @Expose

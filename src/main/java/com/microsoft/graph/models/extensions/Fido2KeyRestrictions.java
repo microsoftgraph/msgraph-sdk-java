@@ -35,7 +35,7 @@ public class Fido2KeyRestrictions implements IJsonBackedObject {
 
     /**
      * The Aa Guids.
-     * 
+     * A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
      */
     @SerializedName(value = "aaGuids", alternate = {"AaGuids"})
     @Expose
@@ -43,7 +43,7 @@ public class Fido2KeyRestrictions implements IJsonBackedObject {
 
     /**
      * The Enforcement Type.
-     * 
+     * Enforcement type. Possible values are: allow, block.
      */
     @SerializedName(value = "enforcementType", alternate = {"EnforcementType"})
     @Expose
@@ -51,7 +51,7 @@ public class Fido2KeyRestrictions implements IJsonBackedObject {
 
     /**
      * The Is Enforced.
-     * 
+     * Determines if the configured key enforcement is enabled.
      */
     @SerializedName(value = "isEnforced", alternate = {"IsEnforced"})
     @Expose
