@@ -50,7 +50,7 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
 
     /**
      * The Include User Actions.
-     * User actions to include. For example, urn:user:registersecurityinfo
+     * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
      */
     @SerializedName(value = "includeUserActions", alternate = {"IncludeUserActions"})
     @Expose

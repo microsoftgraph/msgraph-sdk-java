@@ -26,7 +26,7 @@ public class AuthenticationMethodTarget extends Entity implements IJsonBackedObj
 
     /**
      * The Is Registration Required.
-     * 
+     * Determines if the user is enforced to register the authentication method.
      */
     @SerializedName(value = "isRegistrationRequired", alternate = {"IsRegistrationRequired"})
     @Expose
@@ -34,7 +34,7 @@ public class AuthenticationMethodTarget extends Entity implements IJsonBackedObj
 
     /**
      * The Target Type.
-     * 
+     * Possible values are: user, group.
      */
     @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose

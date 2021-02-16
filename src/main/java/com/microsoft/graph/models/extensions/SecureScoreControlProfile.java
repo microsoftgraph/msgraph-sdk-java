@@ -52,7 +52,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Compliance Information.
-     * 
+     * The collection of compliance information associated with secure score control
      */
     @SerializedName(value = "complianceInformation", alternate = {"ComplianceInformation"})
     @Expose
@@ -60,7 +60,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Control Category.
-     * Control action category (Identity, Data, Device, Apps, Infrastructure).
+     * Control action category (Account, Data, Device, Apps, Infrastructure).
      */
     @SerializedName(value = "controlCategory", alternate = {"ControlCategory"})
     @Expose
@@ -68,7 +68,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Control State Updates.
-     * 
+     * Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
      */
     @SerializedName(value = "controlStateUpdates", alternate = {"ControlStateUpdates"})
     @Expose
@@ -100,7 +100,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Max Score.
-     * max attainable score for the control.
+     * Current obtained max score on specified date.
      */
     @SerializedName(value = "maxScore", alternate = {"MaxScore"})
     @Expose
@@ -140,7 +140,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Threats.
-     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
+     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
      */
     @SerializedName(value = "threats", alternate = {"Threats"})
     @Expose
@@ -148,7 +148,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Tier.
-     * 
+     * Control tier (Core, Defense in Depth, Advanced.)
      */
     @SerializedName(value = "tier", alternate = {"Tier"})
     @Expose
@@ -164,7 +164,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The User Impact.
-     * 
+     * User impact of implementing control (low, moderate, high).
      */
     @SerializedName(value = "userImpact", alternate = {"UserImpact"})
     @Expose

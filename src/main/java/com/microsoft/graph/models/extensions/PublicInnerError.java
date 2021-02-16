@@ -35,7 +35,7 @@ public class PublicInnerError implements IJsonBackedObject {
 
     /**
      * The Code.
-     * 
+     * The error code.
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -43,7 +43,7 @@ public class PublicInnerError implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * A collection of error details.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -51,7 +51,7 @@ public class PublicInnerError implements IJsonBackedObject {
 
     /**
      * The Message.
-     * 
+     * The error message.
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -59,7 +59,7 @@ public class PublicInnerError implements IJsonBackedObject {
 
     /**
      * The Target.
-     * 
+     * The target of the error.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

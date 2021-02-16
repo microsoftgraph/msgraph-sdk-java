@@ -42,7 +42,7 @@ public class Operation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The current status of the operation: notStarted, running, completed, failed
+     * Possible values are: notStarted, running, completed, failed. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

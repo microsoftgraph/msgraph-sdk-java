@@ -156,7 +156,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Value Types.
-     * Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
+     * Represents the type of data of each cell. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      */
     @SerializedName(value = "valueTypes", alternate = {"ValueTypes"})
     @Expose

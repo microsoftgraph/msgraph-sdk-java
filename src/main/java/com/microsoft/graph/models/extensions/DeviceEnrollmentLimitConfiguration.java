@@ -25,7 +25,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
 
     /**
      * The Limit.
-     * Not yet documented
+     * The maximum number of devices that a user can enroll
      */
     @SerializedName(value = "limit", alternate = {"Limit"})
     @Expose
