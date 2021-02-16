@@ -27,7 +27,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time that this Windows Hello for Business key was registered.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -35,7 +35,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
 
     /**
      * The Display Name.
-     * 
+     * The name of the device on which Windows Hello for Business is registered
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -43,7 +43,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
 
     /**
      * The Key Strength.
-     * 
+     * Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
      */
     @SerializedName(value = "keyStrength", alternate = {"KeyStrength"})
     @Expose
@@ -51,7 +51,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
 
     /**
      * The Device.
-     * 
+     * The registered device on which this Windows Hello for Business key resides.
      */
     @SerializedName(value = "device", alternate = {"Device"})
     @Expose

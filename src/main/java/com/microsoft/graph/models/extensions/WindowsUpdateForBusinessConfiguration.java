@@ -30,7 +30,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Automatic Update Mode.
-     * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
+     * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
      */
     @SerializedName(value = "automaticUpdateMode", alternate = {"AutomaticUpdateMode"})
     @Expose

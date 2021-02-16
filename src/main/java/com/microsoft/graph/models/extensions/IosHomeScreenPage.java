@@ -43,7 +43,7 @@ public class IosHomeScreenPage implements IJsonBackedObject {
 
     /**
      * The Icons.
-     * A list of apps and folders to appear on a page. This collection can contain a maximum of 500 elements.
+     * A list of apps, folders, and web clips to appear on a page. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "icons", alternate = {"Icons"})
     @Expose

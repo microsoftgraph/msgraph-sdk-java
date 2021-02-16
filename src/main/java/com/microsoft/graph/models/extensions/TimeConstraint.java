@@ -36,7 +36,7 @@ public class TimeConstraint implements IJsonBackedObject {
 
     /**
      * The Activity Domain.
-     * The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
+     * The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
      */
     @SerializedName(value = "activityDomain", alternate = {"ActivityDomain"})
     @Expose

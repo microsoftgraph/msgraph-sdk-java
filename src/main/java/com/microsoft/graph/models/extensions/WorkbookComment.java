@@ -27,7 +27,7 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
 
     /**
      * The Content.
-     * The content of comment.
+     * The content of the comment.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose

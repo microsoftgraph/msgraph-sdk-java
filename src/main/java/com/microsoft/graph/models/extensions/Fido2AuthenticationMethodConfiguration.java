@@ -28,7 +28,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
 
     /**
      * The Is Attestation Enforced.
-     * 
+     * Determines whether attestation must be enforced for FIDO2 security key registration.
      */
     @SerializedName(value = "isAttestationEnforced", alternate = {"IsAttestationEnforced"})
     @Expose
@@ -36,7 +36,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
 
     /**
      * The Is Self Service Registration Allowed.
-     * 
+     * Determines if users can register new FIDO2 security keys.
      */
     @SerializedName(value = "isSelfServiceRegistrationAllowed", alternate = {"IsSelfServiceRegistrationAllowed"})
     @Expose
@@ -44,7 +44,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
 
     /**
      * The Key Restrictions.
-     * 
+     * Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
      */
     @SerializedName(value = "keyRestrictions", alternate = {"KeyRestrictions"})
     @Expose
@@ -52,7 +52,7 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
 
     /**
      * The Include Targets.
-     * 
+     * A collection of users or groups who are enabled to use the authentication method.
      */
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose

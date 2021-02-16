@@ -44,7 +44,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Edit.
-     * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
      */
     @SerializedName(value = "canEdit", alternate = {"CanEdit"})
     @Expose
@@ -52,7 +52,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Share.
-     * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
      */
     @SerializedName(value = "canShare", alternate = {"CanShare"})
     @Expose
@@ -60,7 +60,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can View Private Items.
-     * True if the user can read calendar items that have been marked private, false otherwise.
+     * True if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
      */
     @SerializedName(value = "canViewPrivateItems", alternate = {"CanViewPrivateItems"})
     @Expose
@@ -92,7 +92,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Hex Color.
-     * The calendar color, expressed in a hex color code of three hexidecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
+     * The calendar color, expressed in a hex color code of three hexidecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
      */
     @SerializedName(value = "hexColor", alternate = {"HexColor"})
     @Expose
@@ -132,7 +132,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user. Read-only.
      */
     @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose

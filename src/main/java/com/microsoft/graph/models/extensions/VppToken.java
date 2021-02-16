@@ -68,7 +68,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Sync Date Time.
-     * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
+     * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
      */
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
@@ -92,7 +92,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
+     * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

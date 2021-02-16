@@ -70,7 +70,7 @@ public class Location implements IJsonBackedObject {
 
     /**
      * The Location Type.
-     * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      */
     @SerializedName(value = "locationType", alternate = {"LocationType"})
     @Expose
