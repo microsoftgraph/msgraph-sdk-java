@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IInvitationCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IInvitationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
@@ -134,6 +136,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the Users object
      */
     IUserRequestBuilder users(final String id);
+
+    /**
+     * Gets the collection of ApplicationTemplates objects
+     *
+     * @return the request builder for the collection of ApplicationTemplates objects
+     */
+    IApplicationTemplateCollectionRequestBuilder applicationTemplates();
+
+    /**
+     * Gets a single ApplicationTemplates
+     *
+     * @param id the id of the ApplicationTemplates to retrieve
+     * @return the request builder for the ApplicationTemplates object
+     */
+    IApplicationTemplateRequestBuilder applicationTemplates(final String id);
 
     /**
      * Gets the collection of AuthenticationMethodConfigurations objects
@@ -733,7 +750,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return the Security
      */
-    ISecurityRequestBuilder Security();
+    ISecurityRequestBuilder security();
 
     /**
      * Gets the GraphServiceRequestBuilder

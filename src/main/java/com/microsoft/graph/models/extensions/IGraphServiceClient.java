@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IInvitationCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IInvitationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;

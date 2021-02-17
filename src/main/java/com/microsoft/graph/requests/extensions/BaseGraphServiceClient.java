@@ -16,6 +16,10 @@ import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodConfigurationCollectionRequestBuilder;
@@ -251,6 +255,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IUserRequestBuilder users(final String id) {
         return new UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of ApplicationTemplates objects
+     *
+     * @return the request builder for the collection of ApplicationTemplates objects
+     */
+    public IApplicationTemplateCollectionRequestBuilder applicationTemplates() {
+        return new ApplicationTemplateCollectionRequestBuilder(getServiceRoot() + "/applicationTemplates", this, null);
+    }
+
+    /**
+     * Gets a single ApplicationTemplates
+     *
+     * @param id the id of the ApplicationTemplates to retrieve
+     * @return the request builder for the ApplicationTemplates object
+     */
+    public IApplicationTemplateRequestBuilder applicationTemplates(final String id) {
+        return new ApplicationTemplateRequestBuilder(getServiceRoot() + "/applicationTemplates/" + id, this, null);
     }
 
     /**
@@ -1011,7 +1034,7 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Security
      */
-    public ISecurityRequestBuilder Security() {
+    public ISecurityRequestBuilder security() {
         return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
     }
 
