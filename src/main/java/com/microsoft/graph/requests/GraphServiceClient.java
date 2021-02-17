@@ -11,6 +11,8 @@ import com.microsoft.graph.requests.InvitationCollectionRequestBuilder;
 import com.microsoft.graph.requests.InvitationRequestBuilder;
 import com.microsoft.graph.requests.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;
+import com.microsoft.graph.requests.ApplicationTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.ApplicationTemplateRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderCollectionRequestBuilder;
@@ -279,6 +281,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public UserRequestBuilder users(@Nonnull final String id) {
         return new UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of ApplicationTemplates objects
+     *
+     * @return the request builder for the collection of ApplicationTemplates objects
+     */
+    @Nonnull
+    public ApplicationTemplateCollectionRequestBuilder applicationTemplates() {
+        return new ApplicationTemplateCollectionRequestBuilder(getServiceRoot() + "/applicationTemplates", this, null);
+    }
+
+    /**
+     * Gets a single ApplicationTemplates
+     *
+     * @param id the id of the ApplicationTemplates to retrieve
+     * @return the request builder for the ApplicationTemplates object
+     */
+    @Nonnull
+    public ApplicationTemplateRequestBuilder applicationTemplates(@Nonnull final String id) {
+        return new ApplicationTemplateRequestBuilder(getServiceRoot() + "/applicationTemplates/" + id, this, null);
     }
 
     /**

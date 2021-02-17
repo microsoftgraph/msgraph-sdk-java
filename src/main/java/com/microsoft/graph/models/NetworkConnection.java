@@ -42,7 +42,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Application Name.
-     * Name of the application managing the network connection (for example, Facebook or SMTP).
+     * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
      */
     @SerializedName(value = "applicationName", alternate = {"ApplicationName"})
     @Expose

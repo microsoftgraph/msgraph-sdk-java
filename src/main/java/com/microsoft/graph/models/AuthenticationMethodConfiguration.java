@@ -28,7 +28,7 @@ public class AuthenticationMethodConfiguration extends Entity implements IJsonBa
 
     /**
      * The State.
-     * 
+     * The state of the policy. Possible values are: enabled, disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

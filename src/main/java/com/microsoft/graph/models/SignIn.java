@@ -37,7 +37,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The App Display Name.
-     * App name displayed in the Azure Portal.
+     * The application name displayed in the Azure Portal.
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * Unique GUID representing the app ID in the Azure Active Directory.
+     * The application identifier in Azure Active Directory.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -55,7 +55,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Applied Conditional Access Policies.
-     * 
+     * A list of conditional access policies that are triggered by the corresponding sign-in activity.
      */
     @SerializedName(value = "appliedConditionalAccessPolicies", alternate = {"AppliedConditionalAccessPolicies"})
     @Expose
@@ -64,7 +64,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Client App Used.
-     * Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP.
+     * The legacy client used for sign-in activity. For example, Browser, Exchange Active Sync,Modern clients, IMAP, MAPI, SMTP, or POP.
      */
     @SerializedName(value = "clientAppUsed", alternate = {"ClientAppUsed"})
     @Expose
@@ -73,7 +73,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Conditional Access Status.
-     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.
+     * The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.
      */
     @SerializedName(value = "conditionalAccessStatus", alternate = {"ConditionalAccessStatus"})
     @Expose
@@ -82,7 +82,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Correlation Id.
-     * The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity.
+     * The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support.
      */
     @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
@@ -91,7 +91,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as '2014-01-01T00:00:00Z'.
+     * The date and time the sign-in was initiated. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -100,7 +100,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Detail.
-     * Device information from where the sign-in occurred; includes device ID, operating system, and browser.
+     * The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser.
      */
     @SerializedName(value = "deviceDetail", alternate = {"DeviceDetail"})
     @Expose
@@ -109,7 +109,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * IP address of the client used to sign in.
+     * The IP address of the client from where the sign-in occurred.
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -118,7 +118,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Interactive.
-     * Indicates if a sign-in is interactive or not.
+     * Indicates whether a sign-in is interactive or not.
      */
     @SerializedName(value = "isInteractive", alternate = {"IsInteractive"})
     @Expose
@@ -127,7 +127,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Location.
-     * Provides the city, state, and country code where the sign-in originated.
+     * The city, state, and 2 letter country code from where the sign-in occurred.
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -136,7 +136,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Display Name.
-     * Name of the resource the user signed into.
+     * The name of the resource that the user signed in to.
      */
     @SerializedName(value = "resourceDisplayName", alternate = {"ResourceDisplayName"})
     @Expose
@@ -145,7 +145,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * ID of the resource that the user signed into.
+     * The identifier of the resource that the user signed in to.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -154,7 +154,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
+     * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -163,7 +163,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Event Types.
-     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.
+     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
      */
     @SerializedName(value = "riskEventTypes", alternate = {"RiskEventTypes"})
     @Expose
@@ -181,7 +181,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level Aggregated.
-     * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+     * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      */
     @SerializedName(value = "riskLevelAggregated", alternate = {"RiskLevelAggregated"})
     @Expose
@@ -190,7 +190,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level During Sign In.
-     * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
+     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
      */
     @SerializedName(value = "riskLevelDuringSignIn", alternate = {"RiskLevelDuringSignIn"})
     @Expose
@@ -199,7 +199,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk State.
-     * Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue.
      */
     @SerializedName(value = "riskState", alternate = {"RiskState"})
     @Expose
@@ -208,7 +208,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
+     * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -217,7 +217,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * Display name of the user that initiated the sign-in.
+     * The display name of the user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -226,7 +226,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * ID of the user that initiated the sign-in.
+     * The identifier of the user.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -235,7 +235,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * User principal name of the user that initiated the sign-in.
+     * The UPN of the user.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

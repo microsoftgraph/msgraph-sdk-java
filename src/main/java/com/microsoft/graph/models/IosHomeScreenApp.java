@@ -27,7 +27,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements IJsonBackedOb
 
     /**
      * The Bundle ID.
-     * BundleID of app
+     * BundleID of the app if isWebClip is false or the URL of a web clip if isWebClip is true.
      */
     @SerializedName(value = "bundleID", alternate = {"BundleID"})
     @Expose

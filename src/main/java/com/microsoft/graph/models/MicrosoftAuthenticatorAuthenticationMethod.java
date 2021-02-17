@@ -28,7 +28,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
 
     /**
      * The Device Tag.
-     * 
+     * Tags containing app metadata.
      */
     @SerializedName(value = "deviceTag", alternate = {"DeviceTag"})
     @Expose
@@ -46,7 +46,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
 
     /**
      * The Display Name.
-     * 
+     * The name of the device on which this app is registered.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -55,7 +55,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
 
     /**
      * The Phone App Version.
-     * 
+     * Numerical version of this instance of the Authenticator app.
      */
     @SerializedName(value = "phoneAppVersion", alternate = {"PhoneAppVersion"})
     @Expose
@@ -64,7 +64,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
 
     /**
      * The Device.
-     * 
+     * The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
      */
     @SerializedName(value = "device", alternate = {"Device"})
     @Expose
