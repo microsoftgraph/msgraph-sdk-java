@@ -27,7 +27,7 @@ public class PlannerPlanDetails extends Entity implements IJsonBackedObject {
 
     /**
      * The Category Descriptions.
-     * An object that specifies the descriptions of the six categories that can be associated with tasks in the plan
+     * An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan
      */
     @SerializedName(value = "categoryDescriptions", alternate = {"CategoryDescriptions"})
     @Expose
