@@ -60,7 +60,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Control Category.
-     * Control action category (Account, Data, Device, Apps, Infrastructure).
+     * Control action category (Identity, Data, Device, Apps, Infrastructure).
      */
     @SerializedName(value = "controlCategory", alternate = {"ControlCategory"})
     @Expose
@@ -100,7 +100,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Max Score.
-     * Current obtained max score on specified date.
+     * max attainable score for the control.
      */
     @SerializedName(value = "maxScore", alternate = {"MaxScore"})
     @Expose
@@ -140,7 +140,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Threats.
-     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+     * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
      */
     @SerializedName(value = "threats", alternate = {"Threats"})
     @Expose

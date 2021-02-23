@@ -35,7 +35,7 @@ public class ConditionalAccessPlatforms implements IJsonBackedObject {
 
     /**
      * The Exclude Platforms.
-     * Possible values are: android, iOS, windows, windowsPhone, macOS.
+     * Possible values are: android, iOS, windows, windowsPhone, macOS, unknownFutureValue.
      */
     @SerializedName(value = "excludePlatforms", alternate = {"ExcludePlatforms"})
     @Expose
@@ -43,7 +43,7 @@ public class ConditionalAccessPlatforms implements IJsonBackedObject {
 
     /**
      * The Include Platforms.
-     * Possible values are: android, iOS, windows, windowsPhone, macOS, all.
+     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
      */
     @SerializedName(value = "includePlatforms", alternate = {"IncludePlatforms"})
     @Expose

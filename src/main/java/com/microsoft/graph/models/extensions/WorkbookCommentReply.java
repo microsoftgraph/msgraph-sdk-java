@@ -25,7 +25,7 @@ public class WorkbookCommentReply extends Entity implements IJsonBackedObject {
 
     /**
      * The Content.
-     * The content of replied comment.
+     * The content of a comment reply.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -33,7 +33,7 @@ public class WorkbookCommentReply extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * Indicates the type for the replied comment.
+     * Indicates the type for the comment reply.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose

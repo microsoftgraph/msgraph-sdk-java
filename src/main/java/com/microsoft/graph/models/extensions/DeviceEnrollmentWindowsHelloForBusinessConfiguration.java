@@ -27,7 +27,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Enhanced Biometrics State.
-     * Controls the ability to use the anti-spoofing features for facial recognition on devices which support it. If set to disabled, anti-spoofing features are not allowed. If set to Not Configured, the user can choose whether they want to use anti-spoofing. Possible values are: notConfigured, enabled, disabled.
+     * Not yet documented. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "enhancedBiometricsState", alternate = {"EnhancedBiometricsState"})
     @Expose
@@ -35,7 +35,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Expiration In Days.
-     * Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
+     * Not yet documented
      */
     @SerializedName(value = "pinExpirationInDays", alternate = {"PinExpirationInDays"})
     @Expose
@@ -43,7 +43,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Lowercase Characters Usage.
-     * Controls the ability to use lowercase letters in the Windows Hello for Business PIN.  Allowed permits the use of lowercase letter(s), whereas Required ensures they are present. If set to Not Allowed, lowercase letters will not be permitted. Possible values are: allowed, required, disallowed.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
      */
     @SerializedName(value = "pinLowercaseCharactersUsage", alternate = {"PinLowercaseCharactersUsage"})
     @Expose
@@ -51,7 +51,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Maximum Length.
-     * Controls the maximum number of characters allowed for the Windows Hello for Business PIN. This value must be between 4 and 127, inclusive. This value must be greater than or equal to the value set for the minimum PIN.
+     * Not yet documented
      */
     @SerializedName(value = "pinMaximumLength", alternate = {"PinMaximumLength"})
     @Expose
@@ -59,7 +59,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Minimum Length.
-     * Controls the minimum number of characters required for the Windows Hello for Business PIN.  This value must be between 4 and 127, inclusive, and less than or equal to the value set for the maximum PIN.
+     * Not yet documented
      */
     @SerializedName(value = "pinMinimumLength", alternate = {"PinMinimumLength"})
     @Expose
@@ -67,7 +67,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Previous Block Count.
-     * Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset.
+     * Not yet documented
      */
     @SerializedName(value = "pinPreviousBlockCount", alternate = {"PinPreviousBlockCount"})
     @Expose
@@ -75,7 +75,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Special Characters Usage.
-     * Controls the ability to use special characters in the Windows Hello for Business PIN.  Allowed permits the use of special character(s), whereas Required ensures they are present. If set to Not Allowed, special character(s) will not be permitted. Possible values are: allowed, required, disallowed.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
      */
     @SerializedName(value = "pinSpecialCharactersUsage", alternate = {"PinSpecialCharactersUsage"})
     @Expose
@@ -83,7 +83,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Uppercase Characters Usage.
-     * Controls the ability to use uppercase letters in the Windows Hello for Business PIN.  Allowed permits the use of uppercase letter(s), whereas Required ensures they are present. If set to Not Allowed, uppercase letters will not be permitted. Possible values are: allowed, required, disallowed.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
      */
     @SerializedName(value = "pinUppercaseCharactersUsage", alternate = {"PinUppercaseCharactersUsage"})
     @Expose
@@ -91,7 +91,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Remote Passport Enabled.
-     * Controls the use of Remote Windows Hello for Business. Remote Windows Hello for Business provides the ability for a portable, registered device to be usable as a companion for desktop authentication. The desktop must be Azure AD joined and the companion device must have a Windows Hello for Business PIN.
+     * Not yet documented
      */
     @SerializedName(value = "remotePassportEnabled", alternate = {"RemotePassportEnabled"})
     @Expose
@@ -99,7 +99,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Security Device Required.
-     * Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
+     * Not yet documented
      */
     @SerializedName(value = "securityDeviceRequired", alternate = {"SecurityDeviceRequired"})
     @Expose
@@ -107,7 +107,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The State.
-     * Controls whether to allow the device to be configured for Windows Hello for Business. If set to disabled, the user cannot provision Windows Hello for Business except on Azure Active Directory joined mobile phones if otherwise required. If set to Not Configured, Intune will not override client defaults. Possible values are: notConfigured, enabled, disabled.
+     * Not yet documented. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -115,7 +115,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Unlock With Biometrics Enabled.
-     * Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
+     * Not yet documented
      */
     @SerializedName(value = "unlockWithBiometricsEnabled", alternate = {"UnlockWithBiometricsEnabled"})
     @Expose

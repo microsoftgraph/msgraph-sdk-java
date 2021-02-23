@@ -108,7 +108,7 @@ public class MessageRuleActions implements IJsonBackedObject {
 
     /**
      * The Redirect To.
-     * The email address to which a message should be redirected.
+     * The email addresses to which a message should be redirected.
      */
     @SerializedName(value = "redirectTo", alternate = {"RedirectTo"})
     @Expose

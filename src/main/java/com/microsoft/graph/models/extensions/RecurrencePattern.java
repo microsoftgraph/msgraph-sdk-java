@@ -45,7 +45,7 @@ public class RecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Days Of Week.
-     * A collection of the days of the week on which the event occurs. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
+     * A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
      */
     @SerializedName(value = "daysOfWeek", alternate = {"DaysOfWeek"})
     @Expose
@@ -53,7 +53,7 @@ public class RecurrencePattern implements IJsonBackedObject {
 
     /**
      * The First Day Of Week.
-     * The first day of the week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
+     * The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
      */
     @SerializedName(value = "firstDayOfWeek", alternate = {"FirstDayOfWeek"})
     @Expose
@@ -61,7 +61,7 @@ public class RecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Index.
-     * Specifies on which instance of the allowed days specified in daysOfsWeek the event occurs, counted from the first instance in the month. Possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
+     * Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
      */
     @SerializedName(value = "index", alternate = {"Index"})
     @Expose

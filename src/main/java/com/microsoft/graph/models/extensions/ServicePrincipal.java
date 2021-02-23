@@ -217,7 +217,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Preferred Single Sign On Mode.
-     * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.
+     * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
      */
     @SerializedName(value = "preferredSingleSignOnMode", alternate = {"PreferredSingleSignOnMode"})
     @Expose
@@ -289,7 +289,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Role Assigned To.
-     * Principals (users, groups, and service principals) that are assigned to this service principal. Read-only.
+     * App role assignments for this app or service, granted to users, groups, and other service principals.
      */
     @SerializedName(value = "appRoleAssignedTo", alternate = {"AppRoleAssignedTo"})
     @Expose
@@ -297,7 +297,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Role Assignments.
-     * Applications that this service principal is assigned to. Read-only. Nullable.
+     * App role assignment for another app or service, granted to this service principal.
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose

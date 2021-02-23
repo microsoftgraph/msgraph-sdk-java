@@ -43,7 +43,7 @@ public class WorkbookOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The current status of the operation. Possible values are: notStarted, running, succeeded, failed.
+     * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
