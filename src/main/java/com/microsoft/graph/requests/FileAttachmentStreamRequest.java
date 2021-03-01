@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.FileAttachment;
+import com.microsoft.graph.models.AttachmentItem;
+import com.microsoft.graph.models.UploadSession;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -57,7 +57,7 @@ public class TeamMemberSettings implements IJsonBackedObject {
 
     /**
      * The Allow Create Update Channels.
-     * If set to true, members can add and update any channels.
+     * If set to true, members can add and update channels.
      */
     @SerializedName(value = "allowCreateUpdateChannels", alternate = {"AllowCreateUpdateChannels"})
     @Expose

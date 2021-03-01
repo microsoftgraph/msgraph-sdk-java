@@ -11,6 +11,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyRequestBuilder;

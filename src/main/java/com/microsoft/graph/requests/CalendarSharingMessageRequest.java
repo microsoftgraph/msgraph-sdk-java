@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CalendarSharingMessage;
 import com.microsoft.graph.models.Calendar;
+import com.microsoft.graph.models.Recipient;
+import com.microsoft.graph.models.Message;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

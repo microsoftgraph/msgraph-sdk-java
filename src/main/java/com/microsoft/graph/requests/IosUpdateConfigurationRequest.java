@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IosUpdateConfiguration;
+import com.microsoft.graph.models.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

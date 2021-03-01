@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;

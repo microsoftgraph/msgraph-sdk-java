@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AdministrativeUnit;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;

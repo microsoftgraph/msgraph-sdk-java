@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.MobileLobApp;
+import com.microsoft.graph.models.MobileAppAssignment;
 import com.microsoft.graph.requests.MobileAppContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.MobileAppContentRequestBuilder;
 import java.util.Arrays;

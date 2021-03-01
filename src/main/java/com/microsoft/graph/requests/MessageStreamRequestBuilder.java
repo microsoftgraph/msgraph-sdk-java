@@ -158,8 +158,8 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public MessageForwardRequestBuilder forward(@Nonnull final MessageForwardParameterSet parameters) {
         return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, parameters);
@@ -168,8 +168,8 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public MessageCopyRequestBuilder copy(@Nonnull final MessageCopyParameterSet parameters) {
         return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, parameters);
@@ -178,8 +178,8 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public MessageMoveRequestBuilder move(@Nonnull final MessageMoveParameterSet parameters) {
         return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, parameters);
@@ -188,8 +188,8 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public MessageCreateForwardRequestBuilder createForward(@Nonnull final MessageCreateForwardParameterSet parameters) {
         return new MessageCreateForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createForward"), getClient(), null, parameters);
@@ -198,8 +198,8 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public MessageCreateReplyRequestBuilder createReply(@Nonnull final MessageCreateReplyParameterSet parameters) {
         return new MessageCreateReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReply"), getClient(), null, parameters);
@@ -208,8 +208,8 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public MessageCreateReplyAllRequestBuilder createReplyAll(@Nonnull final MessageCreateReplyAllParameterSet parameters) {
         return new MessageCreateReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReplyAll"), getClient(), null, parameters);
@@ -218,8 +218,8 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public MessageReplyRequestBuilder reply(@Nonnull final MessageReplyParameterSet parameters) {
         return new MessageReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, parameters);
@@ -228,8 +228,8 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          * @param parameters the parameters for the service method
-          */
+     * @param parameters the parameters for the service method
+     */
     @Nonnull
     public MessageReplyAllRequestBuilder replyAll(@Nonnull final MessageReplyAllParameterSet parameters) {
         return new MessageReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replyAll"), getClient(), null, parameters);
@@ -238,19 +238,9 @@ public class MessageStreamRequestBuilder extends BaseRequestBuilder<InputStream>
     /**
      * Gets a builder to execute the method
      * @return the request builder
-          */
+     */
     @Nonnull
     public MessageSendRequestBuilder send() {
         return new MessageSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-          */
-    @Nonnull
-    public MessageDeltaCollectionRequestBuilder delta() {
-        return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
-    }
-
 }

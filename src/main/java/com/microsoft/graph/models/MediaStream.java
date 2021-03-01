@@ -68,7 +68,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Server Muted.
-     * Indicates whether the media is muted by the server.
+     * If the media is muted by the server.
      */
     @SerializedName(value = "serverMuted", alternate = {"ServerMuted"})
     @Expose

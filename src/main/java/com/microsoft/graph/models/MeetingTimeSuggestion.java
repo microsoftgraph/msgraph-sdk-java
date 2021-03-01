@@ -89,7 +89,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Organizer Availability.
-     * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
     @SerializedName(value = "organizerAvailability", alternate = {"OrganizerAvailability"})
     @Expose

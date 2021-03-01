@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServicePrincipal;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
