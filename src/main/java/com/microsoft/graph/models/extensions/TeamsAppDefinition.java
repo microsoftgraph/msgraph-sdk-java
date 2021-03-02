@@ -8,6 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.TeamsAppPublishingState;
+import com.microsoft.graph.models.extensions.TeamworkBot;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -24,12 +27,52 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Created By.
+     * 
+     */
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
+    @Expose
+    public IdentitySet createdBy;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName(value = "description", alternate = {"Description"})
+    @Expose
+    public String description;
+
+    /**
      * The Display Name.
      * The name of the app provided by the app developer.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
+
+    /**
+     * The Last Modified Date Time.
+     * 
+     */
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Publishing State.
+     * The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+     */
+    @SerializedName(value = "publishingState", alternate = {"PublishingState"})
+    @Expose
+    public TeamsAppPublishingState publishingState;
+
+    /**
+     * The Short Description.
+     * 
+     */
+    @SerializedName(value = "shortDescription", alternate = {"ShortDescription"})
+    @Expose
+    public String shortDescription;
 
     /**
      * The Teams App Id.
@@ -46,6 +89,14 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
+
+    /**
+     * The Bot.
+     * The details of the bot specified in the Teams App manifest.
+     */
+    @SerializedName(value = "bot", alternate = {"Bot"})
+    @Expose
+    public TeamworkBot bot;
 
 
     /**

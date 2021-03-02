@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Call;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
@@ -17,7 +18,6 @@ import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
 import com.microsoft.graph.models.extensions.RecordOperation;
-import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.generated.RejectReason;
 import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
@@ -61,6 +61,7 @@ public interface ICallRequestBuilder extends IRequestBuilder {
     IParticipantCollectionRequestBuilder participants();
 
     IParticipantRequestBuilder participants(final String id);
+    ICallRedirectRequestBuilder redirect(final java.util.List<InvitationParticipantInfo> targets, final Integer timeout, final String callbackUri);
     ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities);
     ICallCancelMediaProcessingRequestBuilder cancelMediaProcessing(final String clientContext);
     ICallChangeScreenSharingRoleRequestBuilder changeScreenSharingRole(final ScreenSharingRole role);
@@ -68,7 +69,6 @@ public interface ICallRequestBuilder extends IRequestBuilder {
     ICallMuteRequestBuilder mute(final String clientContext);
     ICallPlayPromptRequestBuilder playPrompt(final java.util.List<Prompt> prompts, final String clientContext);
     ICallRecordResponseRequestBuilder recordResponse(final java.util.List<Prompt> prompts, final Boolean bargeInAllowed, final Integer initialSilenceTimeoutInSeconds, final Integer maxSilenceTimeoutInSeconds, final Integer maxRecordDurationInSeconds, final Boolean playBeep, final java.util.List<String> stopTones, final String clientContext);
-    ICallRedirectRequestBuilder redirect(final java.util.List<InvitationParticipantInfo> targets, final Integer timeout, final String callbackUri);
     ICallRejectRequestBuilder reject(final RejectReason reason, final String callbackUri);
     ICallSubscribeToToneRequestBuilder subscribeToTone(final String clientContext);
     ICallTransferRequestBuilder transfer(final InvitationParticipantInfo transferTarget);

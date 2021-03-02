@@ -8,7 +8,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.Channel;
+import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ConversationMember;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class ConversationMemberCollectionRequestBuilder extends BaseRequestBuilder implements IConversationMemberCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of Channel
+     * The request builder for this collection of Chat
      *
      * @param requestUrl     the request URL
      * @param client         the service client

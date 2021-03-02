@@ -13,6 +13,7 @@ import com.microsoft.graph.models.extensions.PrivacyProfile;
 import com.microsoft.graph.models.extensions.ProvisionedPlan;
 import com.microsoft.graph.models.extensions.VerifiedDomain;
 import com.microsoft.graph.models.generated.MdmAuthority;
+import com.microsoft.graph.models.extensions.OrganizationalBranding;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.DirectoryObject;
@@ -207,6 +208,14 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "mobileDeviceManagementAuthority", alternate = {"MobileDeviceManagementAuthority"})
     @Expose
     public MdmAuthority mobileDeviceManagementAuthority;
+
+    /**
+     * The Branding.
+     * 
+     */
+    @SerializedName(value = "branding", alternate = {"Branding"})
+    @Expose
+    public OrganizationalBranding branding;
 
     /**
      * The Certificate Based Auth Configuration.

@@ -8,7 +8,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.OrgContact;
+import com.microsoft.graph.models.extensions.PrinterShare;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;

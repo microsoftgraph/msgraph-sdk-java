@@ -111,6 +111,10 @@ import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementAcceptanceWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementAcceptanceWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;

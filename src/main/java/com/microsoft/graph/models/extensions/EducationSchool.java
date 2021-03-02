@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationOrganization;
@@ -116,6 +117,14 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
     @SerializedName(value = "schoolNumber", alternate = {"SchoolNumber"})
     @Expose
     public String schoolNumber;
+
+    /**
+     * The Administrative Unit.
+     * 
+     */
+    @SerializedName(value = "administrativeUnit", alternate = {"AdministrativeUnit"})
+    @Expose
+    public AdministrativeUnit administrativeUnit;
 
     /**
      * The Classes.

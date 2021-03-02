@@ -111,6 +111,10 @@ import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementAcceptanceWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementAcceptanceWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
@@ -584,6 +588,13 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
 
     public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
+    public IAgreementAcceptanceCollectionWithReferencesRequestBuilder agreementAcceptances() {
+        return new AgreementAcceptanceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances"), getClient(), null);
+    }
+
+    public IAgreementAcceptanceWithReferenceRequestBuilder agreementAcceptances(final String id) {
+        return new AgreementAcceptanceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
     }
     public IManagedDeviceCollectionRequestBuilder managedDevices() {
         return new ManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);

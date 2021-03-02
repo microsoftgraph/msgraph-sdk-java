@@ -10,6 +10,15 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ArchivedPrintJob;
+import com.microsoft.graph.requests.extensions.IPrintUsageByPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUsageByPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUsageByUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintUsageByUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -54,6 +63,34 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
     }
 
 
+    public IPrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageByPrinter() {
+        return new PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter"), getClient(), null);
+    }
+
+    public IPrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter(final String id) {
+        return new PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByPrinter") + "/" + id, getClient(), null);
+    }
+    public IPrintUsageByUserCollectionRequestBuilder dailyPrintUsageByUser() {
+        return new PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser"), getClient(), null);
+    }
+
+    public IPrintUsageByUserRequestBuilder dailyPrintUsageByUser(final String id) {
+        return new PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("dailyPrintUsageByUser") + "/" + id, getClient(), null);
+    }
+    public IPrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageByPrinter() {
+        return new PrintUsageByPrinterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter"), getClient(), null);
+    }
+
+    public IPrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter(final String id) {
+        return new PrintUsageByPrinterRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByPrinter") + "/" + id, getClient(), null);
+    }
+    public IPrintUsageByUserCollectionRequestBuilder monthlyPrintUsageByUser() {
+        return new PrintUsageByUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser"), getClient(), null);
+    }
+
+    public IPrintUsageByUserRequestBuilder monthlyPrintUsageByUser(final String id) {
+        return new PrintUsageByUserRequestBuilder(getRequestUrlWithAdditionalSegment("monthlyPrintUsageByUser") + "/" + id, getClient(), null);
+    }
 
     public IReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity() {
         return new ReportRootDeviceConfigurationDeviceActivityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceConfigurationDeviceActivity"), getClient(), null);
@@ -409,5 +446,17 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
 
     public IReportRootGetYammerGroupsActivityGroupCountsRequestBuilder getYammerGroupsActivityGroupCounts(final String period) {
         return new ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityGroupCounts"), getClient(), null, period);
+    }
+
+    public IReportRootGetGroupArchivedPrintJobsCollectionRequestBuilder getGroupArchivedPrintJobs(final String groupId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime) {
+        return new ReportRootGetGroupArchivedPrintJobsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getGroupArchivedPrintJobs"), getClient(), null, groupId, startDateTime, endDateTime);
+    }
+
+    public IReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder getPrinterArchivedPrintJobs(final String printerId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime) {
+        return new ReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getPrinterArchivedPrintJobs"), getClient(), null, printerId, startDateTime, endDateTime);
+    }
+
+    public IReportRootGetUserArchivedPrintJobsCollectionRequestBuilder getUserArchivedPrintJobs(final String userId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime) {
+        return new ReportRootGetUserArchivedPrintJobsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserArchivedPrintJobs"), getClient(), null, userId, startDateTime, endDateTime);
     }
 }

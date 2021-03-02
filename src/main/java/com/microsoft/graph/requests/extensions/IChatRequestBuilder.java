@@ -10,6 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,5 +41,17 @@ public interface IChatRequestBuilder extends IRequestBuilder {
      */
     IChatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    ITeamsAppInstallationCollectionRequestBuilder installedApps();
+
+    ITeamsAppInstallationRequestBuilder installedApps(final String id);
+
+    IConversationMemberCollectionRequestBuilder members();
+
+    IConversationMemberRequestBuilder members(final String id);
+
+    ITeamsTabCollectionRequestBuilder tabs();
+
+    ITeamsTabRequestBuilder tabs(final String id);
 
 }

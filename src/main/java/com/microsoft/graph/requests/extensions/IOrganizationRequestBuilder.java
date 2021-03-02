@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
@@ -38,6 +39,13 @@ public interface IOrganizationRequestBuilder extends IRequestBuilder {
      */
     IOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for OrganizationalBranding
+     *
+     * @return the IOrganizationalBrandingRequestBuilder instance
+     */
+    IOrganizationalBrandingRequestBuilder branding();
 
     ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration();
 

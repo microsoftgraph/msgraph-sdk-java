@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.EducationCourse;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.EducationExternalSource;
 import com.microsoft.graph.models.extensions.EducationTerm;
@@ -38,6 +39,14 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     @SerializedName(value = "classCode", alternate = {"ClassCode"})
     @Expose
     public String classCode;
+
+    /**
+     * The Course.
+     * Course information for the class
+     */
+    @SerializedName(value = "course", alternate = {"Course"})
+    @Expose
+    public EducationCourse course;
 
     /**
      * The Created By.
@@ -86,6 +95,22 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
     public EducationExternalSource externalSource;
+
+    /**
+     * The External Source Detail.
+     * The name of the external source this resources was generated from.
+     */
+    @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
+    @Expose
+    public String externalSourceDetail;
+
+    /**
+     * The Grade.
+     * Grade level of the class.
+     */
+    @SerializedName(value = "grade", alternate = {"Grade"})
+    @Expose
+    public String grade;
 
     /**
      * The Mail Nickname.

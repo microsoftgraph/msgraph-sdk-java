@@ -77,6 +77,13 @@ public class EducationUserRequestBuilder extends BaseRequestBuilder implements I
     public IEducationSchoolWithReferenceRequestBuilder schools(final String id) {
         return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
+    public IEducationClassCollectionWithReferencesRequestBuilder taughtClasses() {
+        return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("taughtClasses"), getClient(), null);
+    }
+
+    public IEducationClassWithReferenceRequestBuilder taughtClasses(final String id) {
+        return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("taughtClasses") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for User
