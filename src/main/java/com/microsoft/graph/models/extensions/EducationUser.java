@@ -13,6 +13,7 @@ import com.microsoft.graph.models.extensions.AssignedPlan;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.EducationExternalSource;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
+import com.microsoft.graph.models.extensions.EducationOnPremisesInfo;
 import com.microsoft.graph.models.extensions.PasswordProfile;
 import com.microsoft.graph.models.generated.EducationUserRole;
 import com.microsoft.graph.models.extensions.ProvisionedPlan;
@@ -103,6 +104,14 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public EducationExternalSource externalSource;
 
     /**
+     * The External Source Detail.
+     * The name of the external source this resources was generated from.
+     */
+    @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
+    @Expose
+    public String externalSourceDetail;
+
+    /**
      * The Given Name.
      * The given name (first name) of the user. Supports /$filter.
      */
@@ -157,6 +166,14 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
     public String officeLocation;
+
+    /**
+     * The On Premises Info.
+     * Additional information used to associate the AAD user with it's Active Directory counterpart.
+     */
+    @SerializedName(value = "onPremisesInfo", alternate = {"OnPremisesInfo"})
+    @Expose
+    public EducationOnPremisesInfo onPremisesInfo;
 
     /**
      * The Password Policies.
@@ -283,6 +300,12 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public EducationSchoolCollectionPage schools;
 
     /**
+     * The Taught Classes.
+     * Classes for which the user is a teacher.
+     */
+    public EducationClassCollectionPage taughtClasses;
+
+    /**
      * The User.
      * The directory user corresponding to this user.
      */
@@ -336,6 +359,10 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
         if (json.has("schools")) {
             schools = serializer.deserializeObject(json.get("schools").toString(), EducationSchoolCollectionPage.class);
+        }
+
+        if (json.has("taughtClasses")) {
+            taughtClasses = serializer.deserializeObject(json.get("taughtClasses").toString(), EducationClassCollectionPage.class);
         }
     }
 }

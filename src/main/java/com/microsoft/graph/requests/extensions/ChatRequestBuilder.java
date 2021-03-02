@@ -10,6 +10,18 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -54,4 +66,25 @@ public class ChatRequestBuilder extends BaseRequestBuilder implements IChatReque
     }
 
 
+    public ITeamsAppInstallationCollectionRequestBuilder installedApps() {
+        return new TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
+    }
+
+    public ITeamsAppInstallationRequestBuilder installedApps(final String id) {
+        return new TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
+    }
+    public IConversationMemberCollectionRequestBuilder members() {
+        return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    }
+
+    public IConversationMemberRequestBuilder members(final String id) {
+        return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    }
+    public ITeamsTabCollectionRequestBuilder tabs() {
+        return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
+    }
+
+    public ITeamsTabRequestBuilder tabs(final String id) {
+        return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
+    }
 }

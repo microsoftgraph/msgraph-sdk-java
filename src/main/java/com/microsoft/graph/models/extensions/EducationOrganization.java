@@ -48,6 +48,14 @@ public class EducationOrganization extends Entity implements IJsonBackedObject {
     @Expose
     public EducationExternalSource externalSource;
 
+    /**
+     * The External Source Detail.
+     * 
+     */
+    @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
+    @Expose
+    public String externalSourceDetail;
+
 
     /**
      * The raw representation of this class

@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
+import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
@@ -61,6 +63,15 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder implements IO
     }
 
 
+
+    /**
+     * Gets the request builder for OrganizationalBranding
+     *
+     * @return the IOrganizationalBrandingRequestBuilder instance
+     */
+    public IOrganizationalBrandingRequestBuilder branding() {
+        return new OrganizationalBrandingRequestBuilder(getRequestUrlWithAdditionalSegment("branding"), getClient(), null);
+    }
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration() {
         return new CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration"), getClient(), null);
     }

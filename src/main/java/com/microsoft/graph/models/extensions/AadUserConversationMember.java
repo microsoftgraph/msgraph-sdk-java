@@ -33,6 +33,14 @@ public class AadUserConversationMember extends ConversationMember implements IJs
     public String email;
 
     /**
+     * The Tenant Id.
+     * TenantId which the Azure AD user belongs to.
+     */
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
+    @Expose
+    public String tenantId;
+
+    /**
      * The User Id.
      * The GUID of the user.
      */

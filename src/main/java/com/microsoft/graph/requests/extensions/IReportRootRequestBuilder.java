@@ -10,6 +10,11 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ReportRoot;
 import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.ArchivedPrintJob;
+import com.microsoft.graph.requests.extensions.IPrintUsageByPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -35,6 +40,22 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
      */
     IReportRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    IPrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageByPrinter();
+
+    IPrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter(final String id);
+
+    IPrintUsageByUserCollectionRequestBuilder dailyPrintUsageByUser();
+
+    IPrintUsageByUserRequestBuilder dailyPrintUsageByUser(final String id);
+
+    IPrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageByPrinter();
+
+    IPrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter(final String id);
+
+    IPrintUsageByUserCollectionRequestBuilder monthlyPrintUsageByUser();
+
+    IPrintUsageByUserRequestBuilder monthlyPrintUsageByUser(final String id);
     IReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity();
     IReportRootDeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity();
     IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails();
@@ -124,5 +145,11 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
     IReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(final com.microsoft.graph.models.extensions.DateOnly date);
     IReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(final String period);
     IReportRootGetYammerGroupsActivityGroupCountsRequestBuilder getYammerGroupsActivityGroupCounts(final String period);
+
+    IReportRootGetGroupArchivedPrintJobsCollectionRequestBuilder getGroupArchivedPrintJobs(final String groupId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime);
+
+    IReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder getPrinterArchivedPrintJobs(final String printerId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime);
+
+    IReportRootGetUserArchivedPrintJobsCollectionRequestBuilder getUserArchivedPrintJobs(final String userId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime);
 
 }

@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSchool;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserCollectionWithReferencesRequestBuilder;
@@ -38,6 +39,13 @@ public interface IEducationSchoolRequestBuilder extends IRequestBuilder {
      */
     IEducationSchoolRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for AdministrativeUnit
+     *
+     * @return the IAdministrativeUnitWithReferenceRequestBuilder instance
+     */
+    IAdministrativeUnitWithReferenceRequestBuilder administrativeUnit();
 
     IEducationClassCollectionWithReferencesRequestBuilder classes();
 

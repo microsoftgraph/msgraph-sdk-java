@@ -16,6 +16,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequest;
+import com.microsoft.graph.requests.extensions.IEducationUserDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -62,4 +63,12 @@ public class EducationUserCollectionRequestBuilder extends BaseRequestBuilder im
     }
 
 
+
+    public IEducationUserDeltaCollectionRequestBuilder delta() {
+        return new EducationUserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public IEducationUserDeltaCollectionRequestBuilder delta(final String deltaLink) {
+        return new EducationUserDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
 }

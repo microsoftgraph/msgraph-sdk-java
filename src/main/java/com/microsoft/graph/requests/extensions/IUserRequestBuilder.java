@@ -67,6 +67,8 @@ import com.microsoft.graph.requests.extensions.ISiteCollectionWithReferencesRequ
 import com.microsoft.graph.requests.extensions.ISiteWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementAcceptanceWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionWithReferencesRequestBuilder;
@@ -346,6 +348,10 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     IExtensionCollectionRequestBuilder extensions();
 
     IExtensionRequestBuilder extensions(final String id);
+
+    IAgreementAcceptanceCollectionWithReferencesRequestBuilder agreementAcceptances();
+
+    IAgreementAcceptanceWithReferenceRequestBuilder agreementAcceptances(final String id);
 
     IManagedDeviceCollectionRequestBuilder managedDevices();
 
