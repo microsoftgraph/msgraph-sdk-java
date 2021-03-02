@@ -224,6 +224,36 @@ This new version improves the Java API provided to developers. To upgrade your a
 
 > Note: the `DeltaCollectionPage` also offers a `getNextPage` method which simplifies iterating through results and removes the need for consumers to directly handle the next link themselves.
 
+### ChunkedUploadProvider renamed to LargeFileUploadTask
+
+The chunked upload provider has been renamed to larg file upload task and moved from the concurrency package to the tasks package in order to align with SDK design specifications and to clarify the intent of the class. To upgrade your application do the following.
+
+- Replace any of the following
+
+    ```Java
+    import com.microsoft.graph.concurrency.ChunkedUploadProvider;
+    ```
+
+    By
+
+    ```Java
+    import com.microsoft.graph.tasks.LargeFileUploadTask;
+    ```
+
+- Replace any of the following
+
+    ```Java
+    final DriveItem result = chunkedUploadProvider.upload();
+    ```
+
+    By
+
+    ```Java
+    final LargeFileUploadResult<DriveItem> result = largeFileUploadTask.upload();
+    ```
+
+> Note: The **LargeFileUploadTask** now also provides an **uploadAsync** method to perform uploads in the background.
+
 ## Upgrade guide for non-breaking improvments
 
 This section lists out other improvements which are not considered as breaking changes. SDK users are strongly encouraged to take advantage of those new improvements to simplify their code.

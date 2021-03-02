@@ -14,8 +14,9 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.concurrency.ChunkedUploadProvider;
-import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.tasks.LargeFileUploadTask;
+import com.microsoft.graph.tasks.LargeFileUploadResult;
+import com.microsoft.graph.tasks.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.models.DriveItem;
@@ -60,14 +61,14 @@ public class OneDriveTests {
 				.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(new DriveItemUploadableProperties()).build())
 				.buildRequest()
 				.post();
-		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
+		LargeFileUploadTask<DriveItem> chunkedUploadProvider = new LargeFileUploadTask<DriveItem>(
 				uploadSession,
 				testBase.graphClient,
 				uploadFile,
 				fileSize,
 				DriveItem.class);
 
-        final DriveItem result = chunkedUploadProvider.upload(0, null, callback);
+        final LargeFileUploadResult<DriveItem> result = chunkedUploadProvider.upload(0, null, callback);
         assertNotNull(result);
 	}
 	@Test
@@ -95,14 +96,14 @@ public class OneDriveTests {
 			.buildRequest()
 			.post();
 
-		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
+		LargeFileUploadTask<DriveItem> chunkedUploadProvider = new LargeFileUploadTask<DriveItem>(
 				session,
 				testBase.graphClient,
 				uploadFile,
 				fileSize,
 				DriveItem.class);
 
-		final DriveItem result = chunkedUploadProvider.upload(0, null, callback);
+		final LargeFileUploadResult<DriveItem> result = chunkedUploadProvider.upload(0, null, callback);
         assertNotNull(result);
 
 		final InputStream stream = testBase.graphClient.me()

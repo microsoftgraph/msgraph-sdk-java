@@ -27,8 +27,9 @@ import org.junit.jupiter.api.Test;
 
 import com.google.gson.JsonObject;
 
-import com.microsoft.graph.concurrency.ChunkedUploadProvider;
-import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.tasks.LargeFileUploadTask;
+import com.microsoft.graph.tasks.LargeFileUploadResult;
+import com.microsoft.graph.tasks.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Attachment;
@@ -320,11 +321,11 @@ public class OutlookTests {
 									.buildRequest()
 									.post();
 
-		ChunkedUploadProvider<AttachmentItem> chunkedUploadProvider = new ChunkedUploadProvider<>(uploadSession, testBase.graphClient, fileStream,
+		LargeFileUploadTask<AttachmentItem> chunkedUploadProvider = new LargeFileUploadTask<>(uploadSession, testBase.graphClient, fileStream,
 				streamSize, AttachmentItem.class);
 
 		// Do the upload
-        final AttachmentItem result = chunkedUploadProvider.upload(0, null, callback);
+        final LargeFileUploadResult<AttachmentItem> result = chunkedUploadProvider.upload(0, null, callback);
         assertNotNull(result);
 
     	//Send the drafted message

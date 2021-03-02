@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Upload Session.
  */
-public class UploadSession implements IJsonBackedObject, com.microsoft.graph.concurrency.IUploadSession {
+public class UploadSession implements IJsonBackedObject, com.microsoft.graph.tasks.IUploadSession {
 
     /** the OData type of the object as returned by the service */
     @SerializedName("@odata.type")
