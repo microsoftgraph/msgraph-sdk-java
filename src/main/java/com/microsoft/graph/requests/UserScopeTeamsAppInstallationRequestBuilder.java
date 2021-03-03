@@ -87,4 +87,13 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
     public ChatWithReferenceRequestBuilder chat() {
         return new ChatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("chat"), getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public TeamsAppInstallationUpgradeRequestBuilder upgrade() {
+        return new TeamsAppInstallationUpgradeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.upgrade"), getClient(), null);
+    }
 }

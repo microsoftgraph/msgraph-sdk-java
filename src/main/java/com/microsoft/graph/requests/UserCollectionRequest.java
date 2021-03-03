@@ -22,6 +22,8 @@ import com.microsoft.graph.models.ConvertIdResult;
 import com.microsoft.graph.models.Reminder;
 import com.microsoft.graph.models.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.ManagedAppPolicy;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

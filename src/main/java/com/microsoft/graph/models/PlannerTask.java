@@ -179,7 +179,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Preview Type.
-     * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      */
     @SerializedName(value = "previewType", alternate = {"PreviewType"})
     @Expose

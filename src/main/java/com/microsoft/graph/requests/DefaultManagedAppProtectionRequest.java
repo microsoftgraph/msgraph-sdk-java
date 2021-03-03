@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DefaultManagedAppProtection;
+import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.ManagedAppPolicyDeploymentSummaryRequestBuilder;

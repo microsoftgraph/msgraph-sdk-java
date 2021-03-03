@@ -11,6 +11,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServicePrincipal;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
+import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;

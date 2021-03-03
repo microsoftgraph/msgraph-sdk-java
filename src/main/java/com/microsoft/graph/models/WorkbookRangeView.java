@@ -120,7 +120,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Value Types.
-     * Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     * Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      */
     @SerializedName(value = "valueTypes", alternate = {"ValueTypes"})
     @Expose
