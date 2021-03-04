@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.EducationCourse;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationExternalSource;
 import com.microsoft.graph.models.EducationTerm;
@@ -42,6 +43,15 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String classCode;
+
+    /**
+     * The Course.
+     * Course information for the class
+     */
+    @SerializedName(value = "course", alternate = {"Course"})
+    @Expose
+	@Nullable
+    public EducationCourse course;
 
     /**
      * The Created By.
@@ -90,12 +100,30 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source.
-     * How this class was created. The possible values are: sis, manual, unknownFutureValue.
+     * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      */
     @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
 	@Nullable
     public EducationExternalSource externalSource;
+
+    /**
+     * The External Source Detail.
+     * The name of the external source this resources was generated from.
+     */
+    @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
+    @Expose
+	@Nullable
+    public String externalSourceDetail;
+
+    /**
+     * The Grade.
+     * Grade level of the class.
+     */
+    @SerializedName(value = "grade", alternate = {"Grade"})
+    @Expose
+	@Nullable
+    public String grade;
 
     /**
      * The Mail Nickname.
@@ -108,7 +136,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Term.
-     * Term for this class.
+     * Term for the class.
      */
     @SerializedName(value = "term", alternate = {"Term"})
     @Expose

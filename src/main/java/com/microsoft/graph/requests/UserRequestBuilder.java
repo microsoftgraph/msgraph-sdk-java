@@ -67,6 +67,8 @@ import com.microsoft.graph.requests.SiteCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.SiteWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.AgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.AgreementAcceptanceWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.ManagedAppRegistrationCollectionWithReferencesRequestBuilder;
@@ -1167,6 +1169,26 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AgreementAcceptance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgreementAcceptanceCollectionWithReferencesRequestBuilder agreementAcceptances() {
+        return new AgreementAcceptanceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AgreementAcceptance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgreementAcceptanceWithReferenceRequestBuilder agreementAcceptances(@Nonnull final String id) {
+        return new AgreementAcceptanceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDevice collection

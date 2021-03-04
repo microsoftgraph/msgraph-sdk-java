@@ -8,7 +8,15 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ChatType;
+import com.microsoft.graph.models.TeamsAppInstallation;
+import com.microsoft.graph.models.ConversationMember;
+import com.microsoft.graph.models.TeamsTab;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
+import com.microsoft.graph.requests.ConversationMemberCollectionPage;
+import com.microsoft.graph.requests.TeamsTabCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -25,6 +33,69 @@ import javax.annotation.Nonnull;
 public class Chat extends Entity implements IJsonBackedObject {
 
 
+    /**
+     * The Chat Type.
+     * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
+     */
+    @SerializedName(value = "chatType", alternate = {"ChatType"})
+    @Expose
+	@Nullable
+    public ChatType chatType;
+
+    /**
+     * The Created Date Time.
+     * Date and time at which the chat was created. Read-only.
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
+     * The Last Updated Date Time.
+     * Date and time at which the chat was renamed or list of members were last changed. Read-only.
+     */
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastUpdatedDateTime;
+
+    /**
+     * The Topic.
+     * (Optional) Subject or topic for the chat. Only available for group chats.
+     */
+    @SerializedName(value = "topic", alternate = {"Topic"})
+    @Expose
+	@Nullable
+    public String topic;
+
+    /**
+     * The Installed Apps.
+     * A collection of all the apps in the chat. Nullable.
+     */
+    @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
+    @Expose
+	@Nullable
+    public TeamsAppInstallationCollectionPage installedApps;
+
+    /**
+     * The Members.
+     * A collection of all the members in the chat. Nullable.
+     */
+    @SerializedName(value = "members", alternate = {"Members"})
+    @Expose
+	@Nullable
+    public ConversationMemberCollectionPage members;
+
+    /**
+     * The Tabs.
+     * 
+     */
+    @SerializedName(value = "tabs", alternate = {"Tabs"})
+    @Expose
+	@Nullable
+    public TeamsTabCollectionPage tabs;
+
 
     /**
      * Sets the raw JSON object
@@ -34,5 +105,17 @@ public class Chat extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("installedApps")) {
+            installedApps = serializer.deserializeObject(json.get("installedApps"), TeamsAppInstallationCollectionPage.class);
+        }
+
+        if (json.has("members")) {
+            members = serializer.deserializeObject(json.get("members"), ConversationMemberCollectionPage.class);
+        }
+
+        if (json.has("tabs")) {
+            tabs = serializer.deserializeObject(json.get("tabs"), TeamsTabCollectionPage.class);
+        }
     }
 }

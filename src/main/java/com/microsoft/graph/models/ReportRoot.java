@@ -8,7 +8,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.PrintUsageByPrinter;
+import com.microsoft.graph.models.PrintUsageByUser;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.PrintUsageByPrinterCollectionPage;
+import com.microsoft.graph.requests.PrintUsageByUserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -25,6 +30,42 @@ import javax.annotation.Nonnull;
 public class ReportRoot extends Entity implements IJsonBackedObject {
 
 
+    /**
+     * The Daily Print Usage By Printer.
+     * 
+     */
+    @SerializedName(value = "dailyPrintUsageByPrinter", alternate = {"DailyPrintUsageByPrinter"})
+    @Expose
+	@Nullable
+    public PrintUsageByPrinterCollectionPage dailyPrintUsageByPrinter;
+
+    /**
+     * The Daily Print Usage By User.
+     * 
+     */
+    @SerializedName(value = "dailyPrintUsageByUser", alternate = {"DailyPrintUsageByUser"})
+    @Expose
+	@Nullable
+    public PrintUsageByUserCollectionPage dailyPrintUsageByUser;
+
+    /**
+     * The Monthly Print Usage By Printer.
+     * 
+     */
+    @SerializedName(value = "monthlyPrintUsageByPrinter", alternate = {"MonthlyPrintUsageByPrinter"})
+    @Expose
+	@Nullable
+    public PrintUsageByPrinterCollectionPage monthlyPrintUsageByPrinter;
+
+    /**
+     * The Monthly Print Usage By User.
+     * 
+     */
+    @SerializedName(value = "monthlyPrintUsageByUser", alternate = {"MonthlyPrintUsageByUser"})
+    @Expose
+	@Nullable
+    public PrintUsageByUserCollectionPage monthlyPrintUsageByUser;
+
 
     /**
      * Sets the raw JSON object
@@ -34,5 +75,21 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("dailyPrintUsageByPrinter")) {
+            dailyPrintUsageByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageByPrinter"), PrintUsageByPrinterCollectionPage.class);
+        }
+
+        if (json.has("dailyPrintUsageByUser")) {
+            dailyPrintUsageByUser = serializer.deserializeObject(json.get("dailyPrintUsageByUser"), PrintUsageByUserCollectionPage.class);
+        }
+
+        if (json.has("monthlyPrintUsageByPrinter")) {
+            monthlyPrintUsageByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageByPrinter"), PrintUsageByPrinterCollectionPage.class);
+        }
+
+        if (json.has("monthlyPrintUsageByUser")) {
+            monthlyPrintUsageByUser = serializer.deserializeObject(json.get("monthlyPrintUsageByUser"), PrintUsageByUserCollectionPage.class);
+        }
     }
 }

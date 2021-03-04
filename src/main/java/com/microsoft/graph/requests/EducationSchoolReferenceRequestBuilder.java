@@ -9,6 +9,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationSchool;
+import com.microsoft.graph.requests.AdministrativeUnitWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.EducationClassCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.EducationClassWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.EducationUserCollectionWithReferencesRequestBuilder;

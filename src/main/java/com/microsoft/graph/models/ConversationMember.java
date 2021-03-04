@@ -44,6 +44,15 @@ public class ConversationMember extends Entity implements IJsonBackedObject {
 	@Nullable
     public java.util.List<String> roles;
 
+    /**
+     * The Visible History Start Date Time.
+     * The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+     */
+    @SerializedName(value = "visibleHistoryStartDateTime", alternate = {"VisibleHistoryStartDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime visibleHistoryStartDateTime;
+
 
     /**
      * Sets the raw JSON object

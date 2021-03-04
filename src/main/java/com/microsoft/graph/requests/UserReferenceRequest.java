@@ -67,6 +67,8 @@ import com.microsoft.graph.requests.SiteCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.SiteWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.AgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.AgreementAcceptanceWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.ManagedAppRegistrationCollectionWithReferencesRequestBuilder;
@@ -139,5 +141,31 @@ public class UserReferenceRequest extends BaseReferenceRequest<User> {
     public UserReferenceRequest expand(@Nonnull final String value) {
         addExpandOption(value);
         return this;
+    }
+    /**
+     * Puts the User
+     *
+     * @param srcUser the User reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<User> putAsync(@Nonnull final User srcUser) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/users/" + srcUser.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the User
+     *
+     * @param srcUser the User reference to PUT
+     * @return the User
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public User put(@Nonnull final User srcUser) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/users/" + srcUser.id));
+        return send(HttpMethod.PUT, payload);
     }
 }

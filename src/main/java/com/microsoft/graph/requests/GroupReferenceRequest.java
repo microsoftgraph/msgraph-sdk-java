@@ -99,4 +99,30 @@ public class GroupReferenceRequest extends BaseReferenceRequest<Group> {
         addExpandOption(value);
         return this;
     }
+    /**
+     * Puts the Group
+     *
+     * @param srcGroup the Group reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<Group> putAsync(@Nonnull final Group srcGroup) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/groups/" + srcGroup.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the Group
+     *
+     * @param srcGroup the Group reference to PUT
+     * @return the Group
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public Group put(@Nonnull final Group srcGroup) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/groups/" + srcGroup.id));
+        return send(HttpMethod.PUT, payload);
+    }
 }

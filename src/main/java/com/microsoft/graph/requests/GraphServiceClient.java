@@ -43,6 +43,8 @@ import com.microsoft.graph.requests.GroupSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupSettingRequestBuilder;
 import com.microsoft.graph.requests.GroupSettingTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupSettingTemplateRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalBrandingLocalizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalBrandingLocalizationRequestBuilder;
 import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.OAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.OrganizationCollectionRequestBuilder;
@@ -69,6 +71,10 @@ import com.microsoft.graph.requests.SchemaExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.SchemaExtensionRequestBuilder;
 import com.microsoft.graph.requests.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.AgreementAcceptanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.AgreementAcceptanceRequestBuilder;
+import com.microsoft.graph.requests.AgreementCollectionRequestBuilder;
+import com.microsoft.graph.requests.AgreementRequestBuilder;
 import com.microsoft.graph.requests.DataPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.DataPolicyOperationRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
@@ -82,15 +88,18 @@ import com.microsoft.graph.requests.TeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.IdentityContainerRequestBuilder;
+import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.PolicyRootRequestBuilder;
 import com.microsoft.graph.requests.EducationRootRequestBuilder;
 import com.microsoft.graph.requests.CloudCommunicationsRequestBuilder;
+import com.microsoft.graph.requests.IdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
+import com.microsoft.graph.requests.PrintRequestBuilder;
 import com.microsoft.graph.requests.SecurityRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.TeamworkRequestBuilder;
@@ -620,6 +629,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
+     * Gets the collection of Localizations objects
+     *
+     * @return the request builder for the collection of Localizations objects
+     */
+    @Nonnull
+    public OrganizationalBrandingLocalizationCollectionRequestBuilder localizations() {
+        return new OrganizationalBrandingLocalizationCollectionRequestBuilder(getServiceRoot() + "/localizations", this, null);
+    }
+
+    /**
+     * Gets a single Localizations
+     *
+     * @param id the id of the Localizations to retrieve
+     * @return the request builder for the Localizations object
+     */
+    @Nonnull
+    public OrganizationalBrandingLocalizationRequestBuilder localizations(@Nonnull final String id) {
+        return new OrganizationalBrandingLocalizationRequestBuilder(getServiceRoot() + "/localizations/" + id, this, null);
+    }
+
+    /**
      * Gets the collection of Oauth2PermissionGrants objects
      *
      * @return the request builder for the collection of Oauth2PermissionGrants objects
@@ -893,6 +923,48 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
+     * Gets the collection of AgreementAcceptances objects
+     *
+     * @return the request builder for the collection of AgreementAcceptances objects
+     */
+    @Nonnull
+    public AgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
+        return new AgreementAcceptanceCollectionRequestBuilder(getServiceRoot() + "/agreementAcceptances", this, null);
+    }
+
+    /**
+     * Gets a single AgreementAcceptances
+     *
+     * @param id the id of the AgreementAcceptances to retrieve
+     * @return the request builder for the AgreementAcceptances object
+     */
+    @Nonnull
+    public AgreementAcceptanceRequestBuilder agreementAcceptances(@Nonnull final String id) {
+        return new AgreementAcceptanceRequestBuilder(getServiceRoot() + "/agreementAcceptances/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of Agreements objects
+     *
+     * @return the request builder for the collection of Agreements objects
+     */
+    @Nonnull
+    public AgreementCollectionRequestBuilder agreements() {
+        return new AgreementCollectionRequestBuilder(getServiceRoot() + "/agreements", this, null);
+    }
+
+    /**
+     * Gets a single Agreements
+     *
+     * @param id the id of the Agreements to retrieve
+     * @return the request builder for the Agreements object
+     */
+    @Nonnull
+    public AgreementRequestBuilder agreements(@Nonnull final String id) {
+        return new AgreementRequestBuilder(getServiceRoot() + "/agreements/" + id, this, null);
+    }
+
+    /**
      * Gets the collection of DataPolicyOperations objects
      *
      * @return the request builder for the collection of DataPolicyOperations objects
@@ -1030,6 +1102,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the OrganizationalBranding
+     */
+    @Nonnull
+    public OrganizationalBrandingRequestBuilder branding() {
+        return new OrganizationalBrandingRequestBuilder(getServiceRoot() + "/branding", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Directory
      */
     @Nonnull
@@ -1090,6 +1172,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the IdentityGovernance
+     */
+    @Nonnull
+    public IdentityGovernanceRequestBuilder identityGovernance() {
+        return new IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the DeviceAppManagement
      */
     @Nonnull
@@ -1135,6 +1227,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public PlannerRequestBuilder planner() {
         return new PlannerRequestBuilder(getServiceRoot() + "/planner", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Print
+     */
+    @Nonnull
+    public PrintRequestBuilder print() {
+        return new PrintRequestBuilder(getServiceRoot() + "/print", this, null);
     }
 
     /**

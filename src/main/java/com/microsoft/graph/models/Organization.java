@@ -14,6 +14,7 @@ import com.microsoft.graph.models.PrivacyProfile;
 import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.VerifiedDomain;
 import com.microsoft.graph.models.MdmAuthority;
+import com.microsoft.graph.models.OrganizationalBranding;
 import com.microsoft.graph.models.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.DirectoryObject;
@@ -46,7 +47,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Business Phones.
-     * Telephone number for the organization. NOTE: Although this is a string collection, only one number can be set for this property.
+     * Telephone number for the organization. Note: Although this is a string collection, only one number can be set for this property.
      */
     @SerializedName(value = "businessPhones", alternate = {"BusinessPhones"})
     @Expose
@@ -109,7 +110,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -234,15 +235,24 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     public MdmAuthority mobileDeviceManagementAuthority;
 
     /**
+     * The Branding.
+     * 
+     */
+    @SerializedName(value = "branding", alternate = {"Branding"})
+    @Expose
+	@Nullable
+    public OrganizationalBranding branding;
+
+    /**
      * The Certificate Based Auth Configuration.
-     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     * Navigation property to manage  certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
 	@Nullable
     public CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the organization. Read-only. Nullable.
+     * The collection of open extensions defined for the organization resource. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose

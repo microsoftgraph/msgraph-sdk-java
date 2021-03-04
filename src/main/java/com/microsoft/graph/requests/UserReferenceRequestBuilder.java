@@ -68,6 +68,8 @@ import com.microsoft.graph.requests.SiteCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.SiteWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.AgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.AgreementAcceptanceWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.ManagedAppRegistrationCollectionWithReferencesRequestBuilder;

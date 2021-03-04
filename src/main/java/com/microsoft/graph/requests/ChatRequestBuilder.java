@@ -9,6 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Chat;
 import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.requests.TeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.TeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.TeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -57,4 +63,64 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
     }
 
 
+    /**
+     *  Gets a request builder for the TeamsAppInstallation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TeamsAppInstallationCollectionRequestBuilder installedApps() {
+        return new TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TeamsAppInstallation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TeamsAppInstallationRequestBuilder installedApps(@Nonnull final String id) {
+        return new TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ConversationMember collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConversationMemberCollectionRequestBuilder members() {
+        return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ConversationMember item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConversationMemberRequestBuilder members(@Nonnull final String id) {
+        return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TeamsTab collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TeamsTabCollectionRequestBuilder tabs() {
+        return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TeamsTab item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TeamsTabRequestBuilder tabs(@Nonnull final String id) {
+        return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
+    }
 }

@@ -101,6 +101,26 @@ public class EducationUserRequestBuilder extends BaseRequestBuilder<EducationUse
     public EducationSchoolWithReferenceRequestBuilder schools(@Nonnull final String id) {
         return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the EducationClass collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EducationClassCollectionWithReferencesRequestBuilder taughtClasses() {
+        return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("taughtClasses"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EducationClass item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EducationClassWithReferenceRequestBuilder taughtClasses(@Nonnull final String id) {
+        return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("taughtClasses") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for User

@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.Chat;
 import com.microsoft.graph.models.TeamsTab;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class TeamsTabCollectionRequestBuilder extends BaseCollectionRequestBuilder<TeamsTab, TeamsTabRequestBuilder, TeamsTabCollectionResponse, TeamsTabCollectionPage, TeamsTabCollectionRequest> {
 
     /**
-     * The request builder for this collection of Channel
+     * The request builder for this collection of Chat
      *
      * @param requestUrl     the request URL
      * @param client         the service client

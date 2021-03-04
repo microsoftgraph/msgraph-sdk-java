@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Call;
+import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.MediaConfig;
 import com.microsoft.graph.models.Modality;
 import com.microsoft.graph.models.CancelMediaProcessingOperation;
@@ -16,7 +17,6 @@ import com.microsoft.graph.models.MuteParticipantOperation;
 import com.microsoft.graph.models.Prompt;
 import com.microsoft.graph.models.PlayPromptOperation;
 import com.microsoft.graph.models.RecordOperation;
-import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.RejectReason;
 import com.microsoft.graph.models.SubscribeToToneOperation;
 import com.microsoft.graph.models.UnmuteParticipantOperation;
@@ -33,13 +33,13 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.CallRedirectParameterSet;
 import com.microsoft.graph.models.CallAnswerParameterSet;
 import com.microsoft.graph.models.CallCancelMediaProcessingParameterSet;
 import com.microsoft.graph.models.CallChangeScreenSharingRoleParameterSet;
 import com.microsoft.graph.models.CallMuteParameterSet;
 import com.microsoft.graph.models.CallPlayPromptParameterSet;
 import com.microsoft.graph.models.CallRecordResponseParameterSet;
-import com.microsoft.graph.models.CallRedirectParameterSet;
 import com.microsoft.graph.models.CallRejectParameterSet;
 import com.microsoft.graph.models.CallSubscribeToToneParameterSet;
 import com.microsoft.graph.models.CallTransferParameterSet;
@@ -134,6 +134,16 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public CallRedirectRequestBuilder redirect(@Nonnull final CallRedirectParameterSet parameters) {
+        return new CallRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public CallAnswerRequestBuilder answer(@Nonnull final CallAnswerParameterSet parameters) {
         return new CallAnswerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.answer"), getClient(), null, parameters);
     }
@@ -195,16 +205,6 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
     @Nonnull
     public CallRecordResponseRequestBuilder recordResponse(@Nonnull final CallRecordResponseParameterSet parameters) {
         return new CallRecordResponseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recordResponse"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public CallRedirectRequestBuilder redirect(@Nonnull final CallRedirectParameterSet parameters) {
-        return new CallRedirectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.redirect"), getClient(), null, parameters);
     }
 
     /**

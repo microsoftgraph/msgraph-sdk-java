@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsAppDefinition;
+import com.microsoft.graph.requests.TeamworkBotRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -56,4 +57,14 @@ public class TeamsAppDefinitionRequestBuilder extends BaseRequestBuilder<TeamsAp
     }
 
 
+
+    /**
+     * Gets the request builder for TeamworkBot
+     *
+     * @return the TeamworkBotRequestBuilder instance
+     */
+    @Nonnull
+    public TeamworkBotRequestBuilder bot() {
+        return new TeamworkBotRequestBuilder(getRequestUrlWithAdditionalSegment("bot"), getClient(), null);
+    }
 }

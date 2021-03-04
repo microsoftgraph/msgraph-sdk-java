@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationSchool;
+import com.microsoft.graph.requests.AdministrativeUnitWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.EducationClassCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.EducationClassWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.EducationUserCollectionWithReferencesRequestBuilder;
@@ -60,6 +61,16 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder<EducationS
     }
 
 
+
+    /**
+     * Gets the request builder for AdministrativeUnit
+     *
+     * @return the AdministrativeUnitWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public AdministrativeUnitWithReferenceRequestBuilder administrativeUnit() {
+        return new AdministrativeUnitWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnit"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the EducationClass collection
      *

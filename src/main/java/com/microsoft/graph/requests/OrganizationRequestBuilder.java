@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Organization;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
+import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
@@ -66,6 +67,16 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
     }
 
 
+
+    /**
+     * Gets the request builder for OrganizationalBranding
+     *
+     * @return the OrganizationalBrandingRequestBuilder instance
+     */
+    @Nonnull
+    public OrganizationalBrandingRequestBuilder branding() {
+        return new OrganizationalBrandingRequestBuilder(getRequestUrlWithAdditionalSegment("branding"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the CertificateBasedAuthConfiguration collection
      *

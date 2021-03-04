@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PhysicalAddress;
 import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.EducationClass;
 import com.microsoft.graph.models.EducationUser;
 import com.microsoft.graph.models.EducationOrganization;
@@ -130,6 +131,15 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
     @Expose
 	@Nullable
     public String schoolNumber;
+
+    /**
+     * The Administrative Unit.
+     * 
+     */
+    @SerializedName(value = "administrativeUnit", alternate = {"AdministrativeUnit"})
+    @Expose
+	@Nullable
+    public AdministrativeUnit administrativeUnit;
 
     /**
      * The Classes.
