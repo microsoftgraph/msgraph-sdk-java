@@ -31,7 +31,7 @@ public class GraphServiceExceptionTests {
         assertTrue(message.indexOf("truncated") > 0);
         assertEquals(error,exception.getServiceError());
     }
-	
+
 	@Test
 	public void testVerboseError() {
 		GraphErrorResponse errorResponse = new GraphErrorResponse();
@@ -82,7 +82,7 @@ public class GraphServiceExceptionTests {
         assertTrue(message.indexOf("Error code: Unable to parse error response message") == 0);
         assertTrue(message.indexOf("http://localhost") > 0);
     }
-	
+
 	@Test
 	public void testNullConnection() {
 		DefaultLogger logger = new DefaultLogger();
@@ -124,5 +124,24 @@ public class GraphServiceExceptionTests {
         assertTrue(message.indexOf("Error code: Unable to parse error response message") == 0);
         assertTrue(message.indexOf("http://localhost") > 0);
     }
-
+    @Test
+    public void requestPayloadShouldNotBePartOfMessageWhenNotVerbose(){
+        final GraphErrorResponse errorResponse = new GraphErrorResponse();
+        final GraphError error = new GraphError();
+        error.code = GraphErrorCodes.UNAUTHENTICATED.toString();
+        errorResponse.error = error;
+        final GraphServiceException exception = new GraphServiceException(null,null,new ArrayList<String>(),"requestPayload",401,"Unauthorized",new ArrayList<String>(),errorResponse, false);
+        final String message = exception.getMessage();
+        assertFalse(message.indexOf("requestPayload") > 0);
+    }
+    @Test
+    public void requestPayloadShouldBePartOfMessageWhenVerbose(){
+        final GraphErrorResponse errorResponse = new GraphErrorResponse();
+        final GraphError error = new GraphError();
+        error.code = GraphErrorCodes.UNAUTHENTICATED.toString();
+        errorResponse.error = error;
+        final GraphServiceException exception = new GraphServiceException(null,null,new ArrayList<String>(),"requestPayload",401,"Unauthorized",new ArrayList<String>(),errorResponse, true);
+        final String message = exception.getMessage();
+        assertTrue(message.indexOf("requestPayload") > 0);
+    }
 }

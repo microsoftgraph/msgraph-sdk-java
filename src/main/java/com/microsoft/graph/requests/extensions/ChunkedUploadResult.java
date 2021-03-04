@@ -66,7 +66,7 @@ public class ChunkedUploadResult<UploadType> {
      * @param exception The exception received from server.
      */
     public ChunkedUploadResult(GraphServiceException exception) {
-        this(new ClientException(exception.getMessage(/* verbose */ true), exception));
+        this(new ClientException(exception.getMessage(), exception));
     }
 
     /**
