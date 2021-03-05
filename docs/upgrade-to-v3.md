@@ -20,7 +20,7 @@ To upgrade your application do the following.
 - Replace any reference to `com.microsoft.graph.models.generated` and `com.microsoft.graph.models.extensions` by `com.microsoft.graph.models`.
 - Replace any reference to `com.microsoft.graph.requests.extensions` by `com.microsoft.graph.requests`.
 
-### Cleanup of unecessary interfaces
+### Cleanup of unnecessary interfaces
 
 To provide a cleaner API surface and avoid shipping potentially breaking changes when properties are added, some interfaces have been removed. To upgrade your application do the following.
 
