@@ -226,7 +226,7 @@ This new version improves the Java API provided to developers. To upgrade your a
 
 ### ChunkedUploadProvider renamed to LargeFileUploadTask
 
-The chunked upload provider has been renamed to larg file upload task and moved from the concurrency package to the tasks package in order to align with SDK design specifications and to clarify the intent of the class. To upgrade your application do the following.
+The chunked upload provider has been renamed to large file upload task and moved from the concurrency package to the tasks package in order to align with SDK design specifications and to clarify the intent of the class. To upgrade your application do the following.
 
 - Replace any of the following
 
