@@ -178,7 +178,7 @@ The object model for JSON batching has been improved to provide a cleaner API su
     ```Java
     final BatchRequestContent batchRequestContent = new BatchRequestContent();
     final String meGetId = batchRequestContent.addbatchRequestStep(graphClient.me().buildRequest().getHttpRequest());
-    final BatchResponseContent batchResponseContent = graphClient.batch().buildRequest().post(graphClient);
+    final BatchResponseContent batchResponseContent = graphClient.batch().buildRequest().post(batchRequestContent);
     final User me = batchResponseContent.getResponseById(meGetId).getDeserializedBody(User.class);
     ```
 
