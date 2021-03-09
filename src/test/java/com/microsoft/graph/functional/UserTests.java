@@ -3,6 +3,7 @@ package com.microsoft.graph.functional;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -160,7 +161,7 @@ public class UserTests {
 		IUsedInsightCollectionPage usedInsightCollectionPage = graphServiceClient.me().insights().used().buildRequest().get();
 		assertNotNull(usedInsightCollectionPage);
 	}
-	
+
 	@Test
 	public void mailFoldertest() {
 		//GET me/mailFolders
@@ -172,7 +173,7 @@ public class UserTests {
 			assertNotNull(messageCollectionPage);
 		}
 	}
-	
+
 	@Test
 	public void meMemberof() {
 		IDirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
@@ -201,7 +202,7 @@ public class UserTests {
 	}
 
 	@Test
-	public void emptyPostContentType() {
+	public void emptyPostContentTypeIsNotReset() {
 		final String contentTypeValue = "application/json";
 		final HeaderOption ctype = new HeaderOption("Content-Type", contentTypeValue);
         final ArrayList<Option> options = new ArrayList<>();
@@ -211,7 +212,16 @@ public class UserTests {
                                             .buildRequest(options)
                                             .withHttpMethod(HttpMethod.POST)
                                             .getHttpRequest();
-		assertEquals(contentTypeValue, request.body().contentType().toString());					
+		assertEquals(contentTypeValue, request.body().contentType().toString());
+	}
+    @Test
+	public void emptyPostContentTypeIsNotSet() {
+        final Request request = graphServiceClient.me()
+                                            .revokeSignInSessions()
+                                            .buildRequest()
+                                            .withHttpMethod(HttpMethod.POST)
+                                            .getHttpRequest();
+		assertNull(request.body().contentType());
 	}
 	@Test
 	public void castTest() {
