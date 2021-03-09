@@ -10,7 +10,7 @@ import com.microsoft.graph.logger.ILogger;
 
 public class EdmNativeTypeSerializer {
     public static <T> T deserialize(final JsonElement json, final Class<T> type, final ILogger logger) throws JsonParseException {
-        if (json == null || !(type instanceof Class)) {
+        if (json == null || type == null) {
 			return null;
         } else if(json.isJsonPrimitive()) {
             return getPrimitiveValue(json, type);
