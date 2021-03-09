@@ -33,6 +33,14 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
     public java.util.Calendar createdDateTime;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
+    @Expose
+    public String displayName;
+
+    /**
      * The File Data.
      * 
      */
