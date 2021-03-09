@@ -63,7 +63,7 @@ public class Print implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * The list of print long running operations.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -95,7 +95,7 @@ public class Print implements IJsonBackedObject {
 
     /**
      * The Task Definitions.
-     * 
+     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
      */
     @SerializedName(value = "taskDefinitions", alternate = {"TaskDefinitions"})
     @Expose

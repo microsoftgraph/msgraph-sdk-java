@@ -73,7 +73,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Description.
-     * 
+     * The description exposed by the associated application.
      */
     @SerializedName(value = "appDescription", alternate = {"AppDescription"})
     @Expose
@@ -129,7 +129,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Description.
-     * 
+     * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -185,7 +185,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Notes.
-     * 
+     * Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
