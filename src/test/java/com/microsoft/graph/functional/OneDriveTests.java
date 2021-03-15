@@ -1,58 +1,48 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.concurrency.ChunkedUploadProvider;
-import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.tasks.LargeFileUploadTask;
+import com.microsoft.graph.tasks.LargeFileUploadResult;
+import com.microsoft.graph.tasks.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.http.CoreHttpProvider;
-import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
-import com.microsoft.graph.models.extensions.UploadSession;
+import com.microsoft.graph.models.DriveItem;
+import com.microsoft.graph.models.DriveItemUploadableProperties;
+import com.microsoft.graph.models.UploadSession;
+import com.microsoft.graph.models.DriveItemCreateUploadSessionParameterSet;
 
-@Ignore
+@Disabled
 public class OneDriveTests {
 	private TestBase testBase;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 	   testBase = new TestBase();
 	}
-	
-	IProgressCallback<DriveItem> callback = new IProgressCallback<DriveItem> () {
+
+	final IProgressCallback callback = new IProgressCallback () {
 		@Override
 		public void progress(final long current, final long max) {
 			//Check progress
 		}
-		@Override
-		public void success(final DriveItem result) {
-			//Handle the successful response
-			String finishedItemId = result.id;
-			Assert.assertNotNull(finishedItemId);
-		}
-		
-		@Override
-		public void failure(final ClientException ex) {
-			//Handle the failed upload
-			Assert.fail("Upload session failed");
-		}
 	};
 	/**
-	 * Test large file upload. 
+	 * Test large file upload.
 	 * https://github.com/OneDrive/onedrive-sdk-csharp/blob/master/docs/chunked-uploads.md
-	 * 
+	 *
 	 * @throws IOException if the input file is not found
 	 * @throws InterruptedException if the chunked upload fails
 	 */
@@ -61,30 +51,31 @@ public class OneDriveTests {
 		//Get resource file from file system
 		InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("largefile10M.blob");
 		long fileSize = (long) uploadFile.available();
-		
+
 		UploadSession uploadSession = testBase
 				.graphClient
 				.me()
 				.drive()
 				.root()
 				.itemWithPath("largefile10M.blob")
-				.createUploadSession(new DriveItemUploadableProperties())
+				.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(new DriveItemUploadableProperties()).build())
 				.buildRequest()
 				.post();
-		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
-				uploadSession, 
-				testBase.graphClient, 
-				uploadFile, 
-				fileSize, 
+		LargeFileUploadTask<DriveItem> chunkedUploadProvider = new LargeFileUploadTask<DriveItem>(
+				uploadSession,
+				testBase.graphClient,
+				uploadFile,
+				fileSize,
 				DriveItem.class);
-		
-		chunkedUploadProvider.upload(callback);
+
+        final LargeFileUploadResult<DriveItem> result = chunkedUploadProvider.upload(0, null, callback);
+        assertNotNull(result);
 	}
 	@Test
 	public void testDownloadWithCustomRequest() throws IOException {
 		final String testDownloadFileId = "01RWFXFJG3UYRHE75RZVFYWKNUEBB53H7A";
 		try (final InputStream stream = testBase.graphClient.customRequest("/me/drive/items/"+testDownloadFileId+"/content", InputStream.class).buildRequest().get()) {
-		   assertFalse("stream should not be empty", stream.read() == -1);
+		   assertFalse(stream.read() == -1, "stream should not be empty");
 		}
 	}
 	@Test
@@ -101,19 +92,20 @@ public class OneDriveTests {
 			.drive()
 			.root()
 			.itemWithPath(item.name)
-			.createUploadSession(item)
+			.createUploadSession(DriveItemCreateUploadSessionParameterSet.newBuilder().withItem(item).build())
 			.buildRequest()
 			.post();
 
-		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
-				session, 
-				testBase.graphClient, 
-				uploadFile, 
-				fileSize, 
+		LargeFileUploadTask<DriveItem> chunkedUploadProvider = new LargeFileUploadTask<DriveItem>(
+				session,
+				testBase.graphClient,
+				uploadFile,
+				fileSize,
 				DriveItem.class);
-		
-		chunkedUploadProvider.upload(callback);
-		
+
+		final LargeFileUploadResult<DriveItem> result = chunkedUploadProvider.upload(0, null, callback);
+        assertNotNull(result);
+
 		final InputStream stream = testBase.graphClient.me()
 			.drive()
 			.root()

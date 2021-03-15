@@ -1,10 +1,10 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -18,40 +18,46 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import com.microsoft.graph.models.extensions.Multipart;
-import com.microsoft.graph.models.extensions.Notebook;
-import com.microsoft.graph.models.extensions.OnenoteOperation;
-import com.microsoft.graph.models.extensions.OnenotePage;
-import com.microsoft.graph.models.extensions.OnenotePagePreview;
-import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
-import com.microsoft.graph.models.extensions.OnenoteSection;
-import com.microsoft.graph.models.extensions.SectionGroup;
-import com.microsoft.graph.models.generated.OnenotePatchActionType;
-import com.microsoft.graph.models.generated.OnenotePatchInsertPosition;
+import com.microsoft.graph.core.Multipart;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.Notebook;
+import com.microsoft.graph.models.OnenoteOperation;
+import com.microsoft.graph.models.OnenotePage;
+import com.microsoft.graph.models.OnenotePagePreview;
+import com.microsoft.graph.models.OnenotePatchContentCommand;
+import com.microsoft.graph.models.OnenoteSection;
+import com.microsoft.graph.models.RecentNotebook;
+import com.microsoft.graph.models.SectionGroup;
+import com.microsoft.graph.models.OnenotePatchActionType;
+import com.microsoft.graph.models.OnenotePatchInsertPosition;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.requests.extensions.INotebookCollectionPage;
-import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionPage;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionPage;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequest;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionPage;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequest;
+import com.microsoft.graph.requests.OnenotePageCollectionRequest;
+import com.microsoft.graph.requests.OnenotePageCollectionRequestBuilder;
+import com.microsoft.graph.requests.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.OnenotePageCollectionPage;
+import com.microsoft.graph.requests.OnenoteSectionCollectionPage;
+import com.microsoft.graph.requests.NotebookGetRecentNotebooksCollectionPage;
+import com.microsoft.graph.requests.SectionGroupCollectionPage;
+import com.microsoft.graph.requests.NotebookCollectionPage;
+import com.microsoft.graph.models.NotebookGetRecentNotebooksParameterSet;
+import com.microsoft.graph.models.OnenoteSectionCopyToSectionGroupParameterSet;
+import com.microsoft.graph.models.OnenoteSectionCopyToNotebookParameterSet;
+import com.microsoft.graph.models.OnenotePageCopyToSectionParameterSet;
+import com.microsoft.graph.models.OnenotePageOnenotePatchContentParameterSet;
 
 /**
  * Tests for OneNote API functionality
  */
-@Ignore
+@Disabled
 public class OneNoteTests {
 
-	private IOnenoteRequestBuilder orb;
+	private OnenoteRequestBuilder orb;
     private Notebook testNotebook;
     private Notebook testNotebook2;
     private OnenotePage testPage;
@@ -59,17 +65,17 @@ public class OneNoteTests {
     private SectionGroup testSectionGroup2;
     private final String HTML_ENCODING= "US-ASCII";
 
-    @Before
+    @BeforeEach
     public void setUp() {
         TestBase testBase = new TestBase();
         orb = testBase.graphClient.me().onenote();
-        
+
         // Get a pre-made notebook (notebooks cannot currently be deleted)
         testNotebook = orb
         		.notebooks("1-21b1f1d4-7e43-41e8-9acf-7e0b241eeab2")
         		.buildRequest()
         		.get();
-        
+
         // Get the first section in the test notebook
         testSection = orb
         		.notebooks(testNotebook.id)
@@ -78,7 +84,7 @@ public class OneNoteTests {
         		.get()
         		.getCurrentPage()
         		.get(0);
-        
+
         // Get the first page in the test notebook
         testPage = orb
         		.pages()
@@ -92,7 +98,7 @@ public class OneNoteTests {
         		.notebooks("1-b929a992-3d48-45e4-80db-793995ce452e")
         		.buildRequest()
         		.get();
-        
+
         testSectionGroup2 = orb
         		.notebooks(testNotebook2.id)
         		.sectionGroups()
@@ -108,21 +114,21 @@ public class OneNoteTests {
     @Test
     public void testGetNotebookData() {
     	// Get notebooks
-        INotebookCollectionPage books = orb
+        NotebookCollectionPage books = orb
         		.notebooks()
         		.buildRequest()
         		.get();
         assertNotNull(books);
 
         // Get pages from the OneNote object
-        IOnenotePageCollectionPage pages = orb
+        OnenotePageCollectionPage pages = orb
         		.pages()
         		.buildRequest()
         		.get();
         assertNotNull(pages);
 
         // Get sections from a specific notebook
-        IOnenoteSectionCollectionPage notebookSections = orb
+        OnenoteSectionCollectionPage notebookSections = orb
         		.notebooks(testNotebook.id)
         		.sections()
         		.buildRequest()
@@ -130,14 +136,14 @@ public class OneNoteTests {
         assertNotNull(notebookSections);
 
         // Get sections from the OneNote object
-        IOnenoteSectionCollectionPage sections = orb
+        OnenoteSectionCollectionPage sections = orb
         		.sections()
         		.buildRequest()
         		.get();
         assertNotNull(sections);
 
         // Get section groups from a specific notebook
-        ISectionGroupCollectionPage notebookGroups = orb
+        SectionGroupCollectionPage notebookGroups = orb
         		.notebooks(testNotebook.id)
         		.sectionGroups()
         		.buildRequest()
@@ -145,14 +151,14 @@ public class OneNoteTests {
         assertNotNull(notebookGroups);
 
         // Get section groups from the OneNote object
-        ISectionGroupCollectionPage groups = orb
+        SectionGroupCollectionPage groups = orb
         		.sectionGroups()
         		.buildRequest()
         		.get();
         assertNotNull(groups);
 
         // Get pages from a specific section
-        IOnenotePageCollectionPage sectionPages = orb
+        OnenotePageCollectionPage sectionPages = orb
         		.sections(sections.getCurrentPage().get(0).id)
         		.pages()
         		.buildRequest()
@@ -166,14 +172,14 @@ public class OneNoteTests {
     @Test
     public void testODataQueries() {
         // Test Filter
-        INotebookCollectionPage filteredBooks = orb
+        NotebookCollectionPage filteredBooks = orb
         		.notebooks()
                 .buildRequest()
                 .filter("isDefault eq true")
                 .get();
         assertTrue(filteredBooks.getCurrentPage().size() == 0);
     	// Test Expand
-        INotebookCollectionPage books = orb
+        NotebookCollectionPage books = orb
         		.notebooks()
         		.buildRequest()
         		.expand("sections")
@@ -182,7 +188,7 @@ public class OneNoteTests {
         assertNotNull(book.sections);
 
         // Test Select on notebook
-        INotebookCollectionPage idBooks = orb
+        NotebookCollectionPage idBooks = orb
         		.notebooks()
         		.buildRequest()
         		.select("id")
@@ -191,7 +197,7 @@ public class OneNoteTests {
         assertNotNull(idBook.id);
 
         // Test Select on page
-        IOnenotePageCollectionPage pages = orb
+        OnenotePageCollectionPage pages = orb
         		.pages()
         		.buildRequest()
         		.select("title")
@@ -202,16 +208,16 @@ public class OneNoteTests {
         // Test Count on notebooks
         List<Option> options = new ArrayList<Option>();
         options.add(new QueryOption("count", "true"));
-        INotebookCollectionPage countedBooks = orb
+        NotebookCollectionPage countedBooks = orb
         		.notebooks()
         		.buildRequest(options)
         		.get();
-        assert(countedBooks.getRawObject().get("@odata.count").getAsInt() > 0);
+        assert(countedBooks.getCount() > 0);
 
         // Test PageLevel on pages
         List<QueryOption> pageLevelOptions = new ArrayList<QueryOption>();
         pageLevelOptions.add(new QueryOption("pagelevel", "true"));
-        IOnenotePageCollectionPage pageLevelPages = orb
+        OnenotePageCollectionPage pageLevelPages = orb
         		.sections(testSection.id)
         		.pages()
         		.buildRequest(pageLevelOptions)
@@ -224,16 +230,16 @@ public class OneNoteTests {
      */
     @Test
     public void testRecentNotebooks() {
-        INotebookGetRecentNotebooksCollectionPage books = orb
+        NotebookGetRecentNotebooksCollectionPage books = orb
         		.notebooks()
-        		.getRecentNotebooks(true)
+        		.getRecentNotebooks(NotebookGetRecentNotebooksParameterSet.newBuilder().withIncludePersonalNotebooks(true).build())
         		.buildRequest()
         		.get();
         assertNotNull(books);
 
-        INotebookGetRecentNotebooksCollectionPage noPersonalBooks = orb
+        NotebookGetRecentNotebooksCollectionPage noPersonalBooks = orb
         		.notebooks()
-        		.getRecentNotebooks(false)
+        		.getRecentNotebooks(NotebookGetRecentNotebooksParameterSet.newBuilder().withIncludePersonalNotebooks(false).build())
         		.buildRequest()
         		.get();
         assertNotNull(noPersonalBooks);
@@ -267,7 +273,7 @@ public class OneNoteTests {
 
         // Hard coding for now since it requires parsing out of the page
         String resourceId = "1-ea3e97bf6a5c4dff9e8126014b205298!1-756de5a1-cfe7-4306-bf28-27282cad173b";
-        
+
         // Get the page stream data
         InputStream resourceStream = orb
         		.resources(resourceId)
@@ -309,7 +315,7 @@ public class OneNoteTests {
     @Test
     public void testPostToNotebook() throws InterruptedException, UnsupportedEncodingException {
         SectionGroup sectionGroupData = new SectionGroup();
-        
+
         // Currently, there is no way to delete sections or section groups, so let's create a random one
         int randInt = Integer.MIN_VALUE + (int)(Math.random() * ((Integer.MAX_VALUE- Integer.MIN_VALUE) + 1000));
         sectionGroupData.displayName = "Test Section Group" + randInt;
@@ -347,7 +353,7 @@ public class OneNoteTests {
 
         //Ensure that the page exists before we delete it
         Thread.sleep(2000);
-        
+
         // Clean up after the test
         orb.pages(page.id).buildRequest().delete();
     }
@@ -356,17 +362,17 @@ public class OneNoteTests {
      * Test copy operations
      * TODO: Accessing header data from successful calls is currently not supported
      */
-    @Ignore
+    @Disabled
     @Test
     public void testCopyTo(){
     	// Test copy to notebook
         OnenoteOperation notebookCopy = orb
         		.sections(testSection.id)
-        		.copyToNotebook(testNotebook2.id, null, null, "TODOsiteCollectionId", "TODOsiteId")
+        		.copyToNotebook(OnenoteSectionCopyToNotebookParameterSet.newBuilder().withId(testNotebook2.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
         		.buildRequest()
         		.post();
         assertNotNull(notebookCopy);
-        
+
         // Test status update
         notebookCopy = orb
         		.operations(notebookCopy.id)
@@ -377,7 +383,7 @@ public class OneNoteTests {
         // Test copy to section group
         OnenoteOperation copySectionGroup = orb
         		.sections(testSection.id)
-        		.copyToSectionGroup(testSectionGroup2.id, null, null, "TODOsiteCollectionId", "TODOsiteId")
+        		.copyToSectionGroup(OnenoteSectionCopyToSectionGroupParameterSet.newBuilder().withGroupId(testSectionGroup2.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
         		.buildRequest()
         		.post();
         assertNotNull(copySectionGroup);
@@ -385,16 +391,16 @@ public class OneNoteTests {
         // Test copy to section
         OnenoteSection sectionData = new OnenoteSection();
         sectionData.displayName = "Test Copy Section";
-        
+
         OnenoteSection section = orb
         		.notebooks(testNotebook2.id)
         		.sections()
         		.buildRequest()
         		.post(sectionData);
-        
+
         OnenoteOperation copySection = orb
         		.pages(testPage.id)
-        		.copyToSection(section.id, null, "TODOsiteCollectionId", "TODOsiteId")
+        		.copyToSection(OnenotePageCopyToSectionParameterSet.newBuilder().withId(section.id).withSiteCollectionId("TODOsiteCollectionId").withSiteId("TODOsiteId").build())
         		.buildRequest()
         		.post();
         assertNotNull(copySection);
@@ -407,7 +413,7 @@ public class OneNoteTests {
     public void testMultipartPost(){
         try {
         	Multipart multipart = new Multipart();
-        	
+
         	String htmlContent = "<!DOCTYPE html>\r\n" +
                     "<html lang=\"en-US\">\r\n" +
                     "<head>\r\n" +
@@ -425,15 +431,15 @@ public class OneNoteTests {
                     "</html>";
         	File imgFile = new File("src/test/resources/hamilton.jpg");
         	File pdfFile = new File("src/test/resources/document.pdf");
-        	
+
         	multipart.addHtmlPart("Presentation", htmlContent.getBytes(HTML_ENCODING));
         	multipart.addFilePart("hamilton", "image/jpg", imgFile);
         	multipart.addFilePart("metadata", "application/pdf", pdfFile);
-        	
+
             // Add multipart request header
             List<Option> options = new ArrayList<Option>();
             options.add(multipart.header());
-            
+
             // Post the multipart content
             OnenotePage page = orb
             		.sections(testSection.id)
@@ -445,7 +451,7 @@ public class OneNoteTests {
             fail("Unable to write to output stream");
         }
     }
-    
+
     /**
      * Test posting multipart content to a page
      */
@@ -487,22 +493,22 @@ public class OneNoteTests {
     	options.add(multipart.header());
 
     	// Post the multipart content
-    	IOnenotePageCollectionRequestBuilder pageReq = orb
+    	OnenotePageCollectionRequestBuilder pageReq = orb
     			.sections(testSection.id)
     			.pages();
     	String expectedRequestUrl = "https://graph.microsoft.com/v1.0/me/onenote/sections/"+testSection.id+"/pages";
     	assertEquals(expectedRequestUrl, pageReq.getRequestUrl());
-    	IOnenotePageCollectionRequest request = pageReq.buildRequest(options);
+    	OnenotePageCollectionRequest request = pageReq.buildRequest(options);
     	assertNotNull(request);
-    	
+
     	OnenotePageCollectionRequest pageCollectionReq = (OnenotePageCollectionRequest)request;
     	List<HeaderOption> headeroption = pageCollectionReq.getHeaders();
     	assertEquals("Content-Type", headeroption.get(0).getName());
-    	
+
     	String expectedHeaderValue = "multipart/form-data; boundary=\""+multipart.getBoundary()+"\"";
     	assertEquals(expectedHeaderValue, headeroption.get(0).getValue().toString());
     	assertNotNull(multipart.content());
-    	
+
     	OnenotePage page = request.post(multipart.content());
     	assertNotNull(page);
     }
@@ -522,7 +528,7 @@ public class OneNoteTests {
         commands.add(command);
         orb
         .pages(testPage.id)
-        .onenotePatchContent(commands)
+        .onenotePatchContent(OnenotePageOnenotePatchContentParameterSet.newBuilder().withCommands(commands).build())
         .buildRequest()
         .post();
     }

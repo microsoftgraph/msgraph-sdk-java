@@ -1,0 +1,70 @@
+buildscript {
+    repositories {
+        google()
+        gradlePluginPortal()
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+    }
+
+    dependencies {
+        classpath "com.gradle:gradle-enterprise-gradle-plugin:3.5"
+        classpath "com.android.tools.build:gradle:4.0.1"
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.36.0"
+    }
+}
+
+repositories {
+    google()
+    gradlePluginPortal()
+}
+
+apply plugin: "com.android.library"
+apply plugin: "com.github.ben-manes.versions"
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+        minSdkVersion 26
+        targetSdkVersion 30
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        textOutput "stdout"
+        checkAllWarnings true
+        warningsAsErrors true
+        disable "UnusedResources"              // Unused will be removed on release
+        disable "IconExpectedSize"             // Using the material icons provided from Google
+        disable "GoogleAppIndexingApiWarning"  // We might want to index our app later
+        disable "InvalidPackage"               // Butterknife, Okio and Realm
+        disable "ResourceType"                 // Annotation binding
+        disable "GradleDependency"
+        disable "NewerVersionAvailable"
+    }
+	sourceSets {
+		main {
+			java.srcDirs = ['../src/main/java']
+			res.srcDirs = ['../src/main/java']
+			manifest.srcFile 'AndroidManifest.xml'
+		}
+		androidTest {
+			setRoot '../src/test'
+		}
+	}
+}
+
+apply from: "../gradle/dependencies.gradle"

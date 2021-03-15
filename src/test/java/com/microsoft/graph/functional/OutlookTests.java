@@ -1,8 +1,11 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+import static org.mockito.Mockito.mock;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -10,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,41 +22,52 @@ import java.util.UUID;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import com.microsoft.graph.concurrency.ChunkedUploadProvider;
-import com.microsoft.graph.concurrency.IProgressCallback;
+import com.google.gson.JsonObject;
+
+import com.microsoft.graph.tasks.LargeFileUploadTask;
+import com.microsoft.graph.tasks.LargeFileUploadResult;
+import com.microsoft.graph.tasks.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.extensions.AttachmentItem;
-import com.microsoft.graph.models.extensions.Attendee;
-import com.microsoft.graph.models.extensions.AttendeeBase;
-import com.microsoft.graph.models.extensions.Contact;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.models.extensions.EmailAddress;
-import com.microsoft.graph.models.extensions.Event;
-import com.microsoft.graph.models.extensions.FileAttachment;
-import com.microsoft.graph.models.extensions.ItemAttachment;
-import com.microsoft.graph.models.extensions.ItemBody;
-import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
-import com.microsoft.graph.models.extensions.UploadSession;
-import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.generated.AttachmentType;
-import com.microsoft.graph.models.generated.BodyType;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
-import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
-import com.microsoft.graph.requests.extensions.IUserCollectionPage;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.IEventCollectionPage;
-
-@Ignore
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.Attachment;
+import com.microsoft.graph.models.AttachmentItem;
+import com.microsoft.graph.models.Attendee;
+import com.microsoft.graph.models.AttendeeBase;
+import com.microsoft.graph.models.Contact;
+import com.microsoft.graph.models.DateTimeTimeZone;
+import com.microsoft.graph.models.EmailAddress;
+import com.microsoft.graph.models.Event;
+import com.microsoft.graph.models.FileAttachment;
+import com.microsoft.graph.models.ItemAttachment;
+import com.microsoft.graph.models.ItemBody;
+import com.microsoft.graph.models.MeetingTimeSuggestionsResult;
+import com.microsoft.graph.models.Message;
+import com.microsoft.graph.models.Recipient;
+import com.microsoft.graph.models.SingleValueLegacyExtendedProperty;
+import com.microsoft.graph.models.UploadSession;
+import com.microsoft.graph.models.User;
+import com.microsoft.graph.models.AttachmentType;
+import com.microsoft.graph.models.BodyType;
+import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.AttachmentCollectionResponse;
+import com.microsoft.graph.requests.AttachmentCollectionPage;
+import com.microsoft.graph.requests.MessageCollectionPage;
+import com.microsoft.graph.requests.EventCollectionPage;
+import com.microsoft.graph.requests.UserCollectionPage;
+import com.microsoft.graph.requests.SingleValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.models.UserSendMailParameterSet;
+import com.microsoft.graph.options.HeaderOption;
+import com.microsoft.graph.models.AttachmentCreateUploadSessionParameterSet;
+import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;
+import com.microsoft.graph.serializer.DefaultSerializer;
+import com.microsoft.graph.logger.ILogger;
+import com.microsoft.graph.models.CalendarGetScheduleParameterSet;
+import com.microsoft.graph.requests.CalendarGetScheduleCollectionPage;
+@Disabled
 public class OutlookTests {
 
     @Test
@@ -69,7 +84,7 @@ public class OutlookTests {
         ArrayList<Recipient> recipients = new ArrayList<Recipient>();
         recipients.add(r);
         message.toRecipients = recipients;
-        testBase.graphClient.me().sendMail(message, true).buildRequest().post();
+        testBase.graphClient.me().sendMail(UserSendMailParameterSet.newBuilder().withMessage(message).withSaveToSentItems(true).build()).buildRequest().post();
     }
 
     @Test
@@ -78,7 +93,7 @@ public class OutlookTests {
 
         // Get the first user in the tenant
         User me = testBase.graphClient.me().buildRequest().get();
-        IUserCollectionPage users = testBase.graphClient.users().buildRequest().get();
+        UserCollectionPage users = testBase.graphClient.users().buildRequest().get();
         User tenantUser = users.getCurrentPage().get(0);
 
         //Ensure that the user grabbed is not the logged-in user
@@ -95,27 +110,36 @@ public class OutlookTests {
         try {
         	DatatypeFactory.newInstance().newDuration("PT30M");
             Duration duration = DatatypeFactory.newInstance().newDuration("PT30M");
-            MeetingTimeSuggestionsResult result = testBase.graphClient.me().findMeetingTimes(attendees, null, null, duration, 10, true, false, 10.0).buildRequest().post();
+            MeetingTimeSuggestionsResult result = testBase.graphClient.me()
+                                                    .findMeetingTimes(UserFindMeetingTimesParameterSet.newBuilder()
+                                                                        .withAttendees(attendees)
+                                                                        .withMeetingDuration(duration)
+                                                                        .withMaxCandidates(10)
+                                                                        .withReturnSuggestionReasons(true)
+                                                                        .withMinimumAttendeePercentage(10.0)
+                                                                        .build())
+                                                    .buildRequest()
+                                                    .post();
             assertNotNull(result);
         } catch (Exception e) {
-            Assert.fail("Duration could not be created from String");
+            fail("Duration could not be created from String");
         }
 
     }
-    
+
     @Test
     public void testSendDraft() {
     	TestBase testBase = new TestBase();
-    	
+
     	//Attempt to identify the sent message via randomly generated subject
     	String draftSubject = "Draft Test Message " + Double.toString(Math.random()*1000);
     	Message newMessage = createDraftMessage(testBase, draftSubject);
-        
+
     	//Send the drafted message
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
-    	
+
     	//Check that the sent message exists on the server
-    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
+    	MessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
     	assertFalse(mcp.getCurrentPage().isEmpty());
     }
     private Message createDraftMessage(TestBase testBase, String draftSubject) {
@@ -130,7 +154,7 @@ public class OutlookTests {
         recipients.add(r);
         message.toRecipients = recipients;
         message.isDraft = true;
-        
+
         //Save the message as a draft
         return testBase.graphClient.me().messages().buildRequest().post(message);
 	}
@@ -142,7 +166,7 @@ public class OutlookTests {
     	AttachmentCollectionResponse response = new AttachmentCollectionResponse();
     	response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
 		message.attachments = new AttachmentCollectionPage(response, null);
-		testBase.graphClient.me().sendMail(message, true).buildRequest().post();
+		testBase.graphClient.me().sendMail(UserSendMailParameterSet.newBuilder().withMessage(message).withSaveToSentItems(true).build()).buildRequest().post();
     }
 
     @Test
@@ -162,7 +186,7 @@ public class OutlookTests {
 		event.hasAttachments = true;
 		AttachmentCollectionResponse response = new AttachmentCollectionResponse();
 		response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithContact());
-		event.attachments = new AttachmentCollectionPage(response, null); 
+		event.attachments = new AttachmentCollectionPage(response, null);
 		Event eventResponse = testBase.graphClient.me().events().buildRequest().post(event);
 		assertNotNull(eventResponse);
     }
@@ -264,27 +288,16 @@ public class OutlookTests {
 		return null;
 	}
 
-	IProgressCallback<AttachmentItem> callback = new IProgressCallback<AttachmentItem> () {
+	final IProgressCallback callback = new IProgressCallback () {
 		@Override
 		public void progress(final long current, final long max) {
 			//Check progress
 		}
-		@Override
-		public void success(final AttachmentItem result) {
-			//Handle the successful response
-			Assert.assertNotNull(result);
-		}
-		
-		@Override
-		public void failure(final ClientException ex) {
-			//Handle the failed upload
-			Assert.fail("Upload session failed");
-		}
 	};
-	@Test
+    @Test
     public void testSendDraftWithLargeAttachements() throws FileNotFoundException, IOException {
     	TestBase testBase = new TestBase();
-    	
+
     	//Attempt to identify the sent message via randomly generated subject
     	String draftSubject = "Draft Test Message " + Double.toString(Math.random()*1000);
     	Message newMessage = createDraftMessage(testBase, draftSubject);
@@ -304,23 +317,24 @@ public class OutlookTests {
 		UploadSession uploadSession = testBase.graphClient.me()
 									.messages(newMessage.id)
 									.attachments()
-									.createUploadSession(attachmentItem)
+									.createUploadSession(AttachmentCreateUploadSessionParameterSet.newBuilder().withAttachmentItem(attachmentItem).build())
 									.buildRequest()
 									.post();
 
-		ChunkedUploadProvider<AttachmentItem> chunkedUploadProvider = new ChunkedUploadProvider<>(uploadSession, testBase.graphClient, fileStream,
+		LargeFileUploadTask<AttachmentItem> chunkedUploadProvider = new LargeFileUploadTask<>(uploadSession, testBase.graphClient, fileStream,
 				streamSize, AttachmentItem.class);
-		
+
 		// Do the upload
-		chunkedUploadProvider.upload(callback);
+        final LargeFileUploadResult<AttachmentItem> result = chunkedUploadProvider.upload(0, null, callback);
+        assertNotNull(result);
 
     	//Send the drafted message
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
 	}
-	@Test
+    @Test
 	public void testSingleValuesExtendedProperties() {
     	final TestBase testBase = new TestBase();
-		final IEventCollectionPage arrangePage = testBase.graphClient.me().events().buildRequest().top(1).get();
+		final EventCollectionPage arrangePage = testBase.graphClient.me().events().buildRequest().top(1).get();
 		final String eventId = arrangePage.getCurrentPage().get(0).id;
 		final Event updatedEvent = new Event();
 		final String uuid = UUID.randomUUID().toString();
@@ -333,7 +347,7 @@ public class OutlookTests {
 		updatedEvent.singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(null, null, null));
 
 		testBase.graphClient.me().events(eventId).buildRequest().patch(updatedEvent);
-		final IEventCollectionPage page = testBase.graphClient.me()
+		final EventCollectionPage page = testBase.graphClient.me()
 										.events()
 										.buildRequest()
 										.expand("singleValueExtendedProperties")
@@ -344,5 +358,48 @@ public class OutlookTests {
 		final List<Event> events = page.getCurrentPage();
 		assertTrue(events.size() == 1);
 		assertNotNull(events.get(0).singleValueExtendedProperties);
-	}
+    }
+    @Test
+    public void testAttachments() throws Exception {
+        final TestBase testBase = new TestBase();
+        final AttachmentCollectionPage page = testBase.graphClient
+                                                        .me()
+                                                        .messages("AAMkADc5NmMyYjUxLTQ0ZDEtNGM3Yi1iY2JkLTgyZWYwZjgzNDI3NwBGAAAAAADVwiXSJFUqQrTdi_SlUV7QBwCD0ThbORwuS5hfVs_PIdoqAAAAAAENAACD0ThbORwuS5hfVs_PIdoqAAZ6u3D_AAA=")
+                                                        .attachments()
+                                                        .buildRequest()
+                                                        .get();
+        final List<Attachment> attchs = page.getCurrentPage();
+        assertEquals(1, attchs.size());
+        assertTrue(attchs.get(0) instanceof FileAttachment);
+    }
+    @Test
+    public void testGetSchedule() throws Exception {
+        final TestBase testBase = new TestBase();
+        final User me = testBase.graphClient.me().buildRequest().select("userPrincipalName").get();
+        final UserCollectionPage usersPage = testBase.graphClient
+                                                    .users()
+                                                    .buildRequest(new HeaderOption("ConsistencyLevel", "eventual"))
+                                                    .top(1)
+                                                    .select("userPrincipalName")
+                                                    .filter("userPrincipalName ne '" + me.userPrincipalName + "'")
+                                                    .count()
+                                                    .get();
+        final List<User> users = usersPage.getCurrentPage();
+        final DateTimeTimeZone endTime = new DateTimeTimeZone();
+        endTime.dateTime = OffsetDateTime.now().plusDays(1).plusHours(8).toLocalDateTime().toString();
+        endTime.timeZone = "Eastern Standard Time";
+        final DateTimeTimeZone startTime = new DateTimeTimeZone();
+        startTime.dateTime = OffsetDateTime.now().plusDays(1).toLocalDateTime().toString();
+        startTime.timeZone = "Eastern Standard Time";
+        final CalendarGetScheduleParameterSet paramSet = CalendarGetScheduleParameterSet
+                                    .newBuilder()
+                                    .withSchedules(Arrays.asList(me.userPrincipalName, users.get(0).userPrincipalName))
+                                    .withEndTime(endTime)
+                                    .withStartTime(startTime)
+                                    .withAvailabilityViewInterval(60)
+                                    .build();
+        final CalendarGetScheduleCollectionPage resultPage = testBase.graphClient.me().calendar().getSchedule(paramSet)
+                    .buildRequest().post();
+        assertNotNull(resultPage);
+    }
 }

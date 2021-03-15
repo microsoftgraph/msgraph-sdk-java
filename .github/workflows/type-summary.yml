@@ -17,6 +17,8 @@ jobs:
     - name: Add execution right to the script
       run: chmod +x gradlew
       working-directory: ./typesummary
+    - name: Build SDK
+      run: ./gradlew --no-daemon build
     - name: Build and run type summary project
       run: ./gradlew --no-daemon run --args='-o ${{ github.workspace }}/typeSummary.txt'
       working-directory: ./typesummary

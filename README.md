@@ -19,7 +19,9 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:2.10.0'
+    implementation 'com.microsoft.graph:microsoft-graph:3.0.0'
+    // Uncomment the line below if you are building an android application
+    //implementation 'com.google.guava:guava:29.0-android'
 }
 ```
 
@@ -31,7 +33,7 @@ Add the dependency in `dependencies` in pom.xml
 <dependency>
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>2.10.0</version>
+  <version>3.0.0</version>
 </dependency>
 ```
 
@@ -49,14 +51,14 @@ Register your application by following the steps at [Register your app with the 
 
 An instance of the **GraphServiceClient** class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this class, you need to provide an instance of `IAuthenticationProvider`, which can authenticate requests to Microsoft Graph.
 
-For an example of authentication in a Java desktop client or server application, see the [Preview msgraph-sdk-java-auth](https://github.com/microsoftgraph/msgraph-sdk-java-auth) and for an Android application see [Preview msgraph-sdk-android-auth](https://github.com/microsoftgraph/msgraph-sdk-android-auth).
+For an example of how to get an authentication provider, see [choose a Microsoft Graph authentication provider](https://docs.microsoft.com/graph/sdks/choose-authentication-providers?tabs=Java).
 
 ### 2.3 Get a GraphServiceClient object
 
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-IGraphServiceClient graphClient = 
+GraphServiceClient graphClient = 
   GraphServiceClient
     .builder()
     .authenticationProvider(authenticationProvider)
@@ -72,17 +74,24 @@ After you have a GraphServiceClient that is authenticated, you can begin making 
 To retrieve the user's drive:
 
 ```java
+final Drive result = graphClient
+  .me()
+  .drive()
+  .buildRequest()
+  .get();
+System.out.println("Found Drive " + result.id);
+```
+
+Or with the asynchronous API.
+
+```java
 graphClient
   .me()
   .drive()
   .buildRequest()
-  .get(new ICallback<Drive>() {
-     @Override
-     public void success(final Drive result) {
-        System.out.println("Found Drive " + result.id);
-     }
-     ...
-     // Handle failure case
+  .futureGet()
+  .thenApply(result -> {
+    System.out.println("Found Drive " + result.id);
   });
 ```
 
@@ -106,7 +115,9 @@ The Microsoft Graph SDK is open for contribution. To contribute to this project,
 
 ## 7. Supported Java versions
 
-The Microsoft Graph SDK for Java library is supported at runtime for Java 7+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
+The Microsoft Graph SDK for Java library is supported at runtime for Java 8+ and [Android API revision 26](http://source.android.com/source/build-numbers.html) and greater.
+
+Android developers targeting lower android API levels can do so by [enabling desugaring](https://developer.android.com/studio/write/java8-support#library-desugaring) in their project.
 
 ## 8. License
 
@@ -115,11 +126,3 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
-
-
-
-
-
-
-
-
