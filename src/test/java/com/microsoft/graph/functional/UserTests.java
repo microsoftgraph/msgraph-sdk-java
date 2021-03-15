@@ -3,6 +3,7 @@ package com.microsoft.graph.functional;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -206,8 +207,8 @@ public class UserTests {
 		}
 	}
 
-    @Test
-	public void emptyPostContentType() {
+	@Test
+	public void emptyPostContentTypeIsNotReset() {
 		final String contentTypeValue = "application/json";
 		final HeaderOption ctype = new HeaderOption("Content-Type", contentTypeValue);
         final ArrayList<Option> options = new ArrayList<>();
@@ -218,6 +219,15 @@ public class UserTests {
                                             .withHttpMethod(HttpMethod.POST)
                                             .getHttpRequest();
 		assertEquals(contentTypeValue, request.body().contentType().toString());
+	}
+    @Test
+	public void emptyPostContentTypeIsNotSet() {
+        final Request request = graphServiceClient.me()
+                                            .revokeSignInSessions()
+                                            .buildRequest()
+                                            .withHttpMethod(HttpMethod.POST)
+                                            .getHttpRequest();
+		assertNull(request.body().contentType());
 	}
     @Test
 	public void castTest() {
