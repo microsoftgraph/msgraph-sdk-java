@@ -36,7 +36,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements IJs
 
     /**
      * The Payload File Name.
-     * Payload file name (.mobileconfig
+     * Payload file name (.mobileconfig | .xml).
      */
     @SerializedName(value = "payloadFileName", alternate = {"PayloadFileName"})
     @Expose

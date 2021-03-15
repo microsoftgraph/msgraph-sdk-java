@@ -39,7 +39,7 @@ public class AudioConferencing implements IJsonBackedObject {
 
     /**
      * The Conference Id.
-     * 
+     * The conference id of the online meeting.
      */
     @SerializedName(value = "conferenceId", alternate = {"ConferenceId"})
     @Expose

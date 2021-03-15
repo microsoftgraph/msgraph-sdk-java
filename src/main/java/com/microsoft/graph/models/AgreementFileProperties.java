@@ -36,6 +36,15 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
+    @Expose
+	@Nullable
+    public String displayName;
+
+    /**
      * The File Data.
      * 
      */

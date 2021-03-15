@@ -27,7 +27,7 @@ public class PrintUsageByUser extends PrintUsage implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The UPN of the user represented by these statistics.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

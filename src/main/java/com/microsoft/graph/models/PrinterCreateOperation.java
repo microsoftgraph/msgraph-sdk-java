@@ -37,7 +37,7 @@ public class PrinterCreateOperation extends PrintOperation implements IJsonBacke
 
     /**
      * The Printer.
-     * 
+     * The created printer entity. Read-only.
      */
     @SerializedName(value = "printer", alternate = {"Printer"})
     @Expose

@@ -91,7 +91,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Single Sign On Modes.
-     * The list of single sign-on modes supported by this application. The supported values are password, saml, external, and oidc.
+     * The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
      */
     @SerializedName(value = "supportedSingleSignOnModes", alternate = {"SupportedSingleSignOnModes"})
     @Expose
