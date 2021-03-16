@@ -54,6 +54,7 @@ android {
         disable "ResourceType"                 // Annotation binding
         disable "GradleDependency"
         disable "NewerVersionAvailable"
+        disable "KotlinPropertyAccess" // getting false positives because of odata actions & functions (getOrder setOrder)
     }
 	sourceSets {
 		main {
