@@ -8,7 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.TeamworkHostedContent;
 
 
 import com.google.gson.JsonObject;
@@ -22,7 +22,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Chat Message Hosted Content.
  */
-public class ChatMessageHostedContent extends Entity implements IJsonBackedObject {
+public class ChatMessageHostedContent extends TeamworkHostedContent implements IJsonBackedObject {
 
 
 

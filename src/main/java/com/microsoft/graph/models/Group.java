@@ -59,7 +59,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Labels.
-     * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
+     * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
      */
     @SerializedName(value = "assignedLabels", alternate = {"AssignedLabels"})
     @Expose
@@ -86,7 +86,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -113,7 +113,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -131,7 +131,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Has Members With License Errors.
-     * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true).
+     * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
      */
     @SerializedName(value = "hasMembersWithLicenseErrors", alternate = {"HasMembersWithLicenseErrors"})
     @Expose
@@ -140,7 +140,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The License Processing State.
-     * Indicates status of the group license assignment to all members of the group. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete. Returned only on $select. Read-only.
+     * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
      */
     @SerializedName(value = "licenseProcessingState", alternate = {"LicenseProcessingState"})
     @Expose
@@ -185,7 +185,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Membership Rule Processing State.
-     * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
+     * Indicates whether the dynamic membership processing is on or paused. Possible values are On or Paused. Returned by default.
      */
     @SerializedName(value = "membershipRuleProcessingState", alternate = {"MembershipRuleProcessingState"})
     @Expose
@@ -203,7 +203,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
+     * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter.
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -266,7 +266,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
+     * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
      */
     @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
@@ -275,7 +275,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Proxy Addresses.
-     * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required for filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
+     * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required to filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
      */
     @SerializedName(value = "proxyAddresses", alternate = {"ProxyAddresses"})
     @Expose
@@ -284,7 +284,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Renewed Date Time.
-     * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only.
      */
     @SerializedName(value = "renewedDateTime", alternate = {"RenewedDateTime"})
     @Expose
@@ -311,7 +311,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Theme.
-     * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+     * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
      */
     @SerializedName(value = "theme", alternate = {"Theme"})
     @Expose
@@ -347,7 +347,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hide From Address Lists.
-     * True if the group is not displayed in certain parts of the Outlook user interface: in the Address Book, in address lists for selecting message recipients, and in the Browse Groups dialog for searching groups; false otherwise. Default value is false. Returned only on $select.
+     * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID})
      */
     @SerializedName(value = "hideFromAddressLists", alternate = {"HideFromAddressLists"})
     @Expose
@@ -356,7 +356,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hide From Outlook Clients.
-     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select.
+     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID})
      */
     @SerializedName(value = "hideFromOutlookClients", alternate = {"HideFromOutlookClients"})
     @Expose
@@ -374,7 +374,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Unseen Count.
-     * Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select.
+     * Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select.
      */
     @SerializedName(value = "unseenCount", alternate = {"UnseenCount"})
     @Expose
@@ -401,7 +401,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created On Behalf Of.
-     * The user (or application) that created the group. Note: This is not set if the user is an administrator. Read-only.
+     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
      */
     @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose
@@ -410,14 +410,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Member Of.
-     * Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Members.
-     * Users, contacts, and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
+     * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage members;
@@ -431,7 +431,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. HTTP Methods: GET (supported for all groups), POST (supported for security groups and mail-enabled security groups), DELETE (supported only for security groups) Read-only. Nullable.
+     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage owners;
@@ -447,7 +447,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Read-only. Nullable.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -504,7 +504,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Events.
-     * The group's events.
+     * The group's calendar events.
      */
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
@@ -513,7 +513,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Photo.
-     * The group's profile photo.
+     * The group's profile photo
      */
     @SerializedName(value = "photo", alternate = {"Photo"})
     @Expose
@@ -592,7 +592,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Planner.
-     * Selective Planner services available to the group. Read-only. Nullable.
+     * Entry-point to Planner resource that might exist for a Unified Group.
      */
     @SerializedName(value = "planner", alternate = {"Planner"})
     @Expose

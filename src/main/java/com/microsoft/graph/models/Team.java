@@ -53,6 +53,15 @@ public class Team extends Entity implements IJsonBackedObject {
     public String classification;
 
     /**
+     * The Created Date Time.
+     * Read only. Timestamp at which the team was created.
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
      * The Description.
      * An optional description for the team.
      */

@@ -37,7 +37,7 @@ public class OnenoteOperation extends Operation implements IJsonBackedObject {
 
     /**
      * The Percent Complete.
-     * The operation percent complete if the operation is still in running status
+     * The operation percent complete if the operation is still in running status.
      */
     @SerializedName(value = "percentComplete", alternate = {"PercentComplete"})
     @Expose

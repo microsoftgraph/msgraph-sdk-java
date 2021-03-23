@@ -28,7 +28,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Agreement File Id.
-     * ID of the agreement file accepted by the user.
+     * The identifier of the agreement file accepted by the user.
      */
     @SerializedName(value = "agreementFileId", alternate = {"AgreementFileId"})
     @Expose
@@ -37,7 +37,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Agreement Id.
-     * ID of the agreement.
+     * The identifier of the agreement.
      */
     @SerializedName(value = "agreementId", alternate = {"AgreementId"})
     @Expose
@@ -64,7 +64,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Device OSType.
-     * The operating system used for accepting the agreement.
+     * The operating system used to accept the agreement.
      */
     @SerializedName(value = "deviceOSType", alternate = {"DeviceOSType"})
     @Expose
@@ -73,7 +73,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Device OSVersion.
-     * The operating system version of the device used for accepting the agreement.
+     * The operating system version of the device used to accept the agreement.
      */
     @SerializedName(value = "deviceOSVersion", alternate = {"DeviceOSVersion"})
     @Expose
@@ -100,7 +100,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Possible values are: accepted, declined.
+     * The state of the agreement acceptance. Possible values are: accepted, declined.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -127,7 +127,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * ID of the user who accepted the agreement.
+     * The identifier of the user who accepted the agreement.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

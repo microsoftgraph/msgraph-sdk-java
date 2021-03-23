@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityGovernance;
+import com.microsoft.graph.requests.AppConsentApprovalRouteRequestBuilder;
 import com.microsoft.graph.requests.TermsOfUseContainerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -57,6 +58,16 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
     }
 
 
+
+    /**
+     * Gets the request builder for AppConsentApprovalRoute
+     *
+     * @return the AppConsentApprovalRouteRequestBuilder instance
+     */
+    @Nonnull
+    public AppConsentApprovalRouteRequestBuilder appConsent() {
+        return new AppConsentApprovalRouteRequestBuilder(getRequestUrlWithAdditionalSegment("appConsent"), getClient(), null);
+    }
 
     /**
      * Gets the request builder for TermsOfUseContainer

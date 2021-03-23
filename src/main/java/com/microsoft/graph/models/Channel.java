@@ -35,6 +35,15 @@ public class Channel extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Created Date Time.
+     * Read only. Timestamp at which the channel was created.
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
      * The Description.
      * Optional textual description for the channel.
      */
@@ -72,7 +81,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Membership Type.
-     * The type of the channel. Can be set during creation and cannot be changed. Default: standard.
+     * The type of the channel. Can be set during creation and cannot be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
      */
     @SerializedName(value = "membershipType", alternate = {"MembershipType"})
     @Expose

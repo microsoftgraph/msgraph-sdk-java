@@ -39,7 +39,7 @@ public class AssignedPlan implements IJsonBackedObject {
 
     /**
      * The Assigned Date Time.
-     * The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "assignedDateTime", alternate = {"AssignedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class AssignedPlan implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut.
+     * Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.
      */
     @SerializedName(value = "capabilityStatus", alternate = {"CapabilityStatus"})
     @Expose

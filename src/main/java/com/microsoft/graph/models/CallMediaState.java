@@ -40,7 +40,7 @@ public class CallMediaState implements IJsonBackedObject {
 
     /**
      * The Audio.
-     * The audio media state. Possible values are: active, inactive.
+     * The audio media state. Possible values are: active, inactive, unknownFutureValue.
      */
     @SerializedName(value = "audio", alternate = {"Audio"})
     @Expose

@@ -46,7 +46,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Birthday.
-     * The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
@@ -334,7 +334,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the contact. Nullable.
+     * The collection of open extensions defined for the contact. Read-only. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
