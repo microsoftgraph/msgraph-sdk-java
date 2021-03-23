@@ -58,7 +58,7 @@ public class WorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Data Option.
-     * Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
+     * Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
      */
     @SerializedName(value = "dataOption", alternate = {"DataOption"})
     @Expose
@@ -85,7 +85,7 @@ public class WorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Sort On.
-     * Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
+     * Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
      */
     @SerializedName(value = "sortOn", alternate = {"SortOn"})
     @Expose

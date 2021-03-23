@@ -51,6 +51,15 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
     public Boolean isShared;
 
     /**
+     * The Last Seen Date Time.
+     * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
+     */
+    @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastSeenDateTime;
+
+    /**
      * The Registered Date Time.
      * The DateTimeOffset when the printer was registered. Read-only.
      */

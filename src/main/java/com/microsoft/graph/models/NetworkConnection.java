@@ -42,7 +42,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Application Name.
-     * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+     * Name of the application managing the network connection (for example, Facebook or SMTP).
      */
     @SerializedName(value = "applicationName", alternate = {"ApplicationName"})
     @Expose
@@ -105,7 +105,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Domain Registered Date Time.
-     * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "domainRegisteredDateTime", alternate = {"DomainRegisteredDateTime"})
     @Expose

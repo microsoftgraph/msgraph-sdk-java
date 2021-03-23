@@ -27,7 +27,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
 
     /**
      * The Recipient Action Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "recipientActionDateTime", alternate = {"RecipientActionDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
 
     /**
      * The Recipient User Id.
-     * User id of the recipient of the offer shift request.
+     * User ID of the recipient of the offer shift request.
      */
     @SerializedName(value = "recipientUserId", alternate = {"RecipientUserId"})
     @Expose
@@ -54,7 +54,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
 
     /**
      * The Sender Shift Id.
-     * User id of the sender of the offer shift request.
+     * User ID of the sender of the offer shift request.
      */
     @SerializedName(value = "senderShiftId", alternate = {"SenderShiftId"})
     @Expose

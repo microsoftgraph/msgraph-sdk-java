@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AppConsentApprovalRoute;
 import com.microsoft.graph.models.TermsOfUseContainer;
 
 
@@ -37,6 +38,15 @@ public class IdentityGovernance implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The App Consent.
+     * 
+     */
+    @SerializedName(value = "appConsent", alternate = {"AppConsent"})
+    @Expose
+	@Nullable
+    public AppConsentApprovalRoute appConsent;
 
     /**
      * The Terms Of Use.
