@@ -10,10 +10,12 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DirectoryAudit;
+import com.microsoft.graph.models.ProvisioningObjectSummary;
 import com.microsoft.graph.models.RestrictedSignIn;
 import com.microsoft.graph.models.SignIn;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DirectoryAuditCollectionPage;
+import com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionPage;
 import com.microsoft.graph.requests.RestrictedSignInCollectionPage;
 import com.microsoft.graph.requests.SignInCollectionPage;
 
@@ -40,6 +42,15 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DirectoryAuditCollectionPage directoryAudits;
+
+    /**
+     * The Provisioning.
+     * 
+     */
+    @SerializedName(value = "provisioning", alternate = {"Provisioning"})
+    @Expose
+	@Nullable
+    public ProvisioningObjectSummaryCollectionPage provisioning;
 
     /**
      * The Restricted Sign Ins.
@@ -71,6 +82,10 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
         if (json.has("directoryAudits")) {
             directoryAudits = serializer.deserializeObject(json.get("directoryAudits"), DirectoryAuditCollectionPage.class);
+        }
+
+        if (json.has("provisioning")) {
+            provisioning = serializer.deserializeObject(json.get("provisioning"), ProvisioningObjectSummaryCollectionPage.class);
         }
 
         if (json.has("restrictedSignIns")) {

@@ -12,10 +12,12 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatType;
 import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.graph.models.ConversationMember;
+import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.models.TeamsTab;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
+import com.microsoft.graph.requests.ChatMessageCollectionPage;
 import com.microsoft.graph.requests.TeamsTabCollectionPage;
 
 
@@ -88,6 +90,15 @@ public class Chat extends Entity implements IJsonBackedObject {
     public ConversationMemberCollectionPage members;
 
     /**
+     * The Messages.
+     * A collection of all the messages in the chat. Nullable.
+     */
+    @SerializedName(value = "messages", alternate = {"Messages"})
+    @Expose
+	@Nullable
+    public ChatMessageCollectionPage messages;
+
+    /**
      * The Tabs.
      * 
      */
@@ -112,6 +123,10 @@ public class Chat extends Entity implements IJsonBackedObject {
 
         if (json.has("members")) {
             members = serializer.deserializeObject(json.get("members"), ConversationMemberCollectionPage.class);
+        }
+
+        if (json.has("messages")) {
+            messages = serializer.deserializeObject(json.get("messages"), ChatMessageCollectionPage.class);
         }
 
         if (json.has("tabs")) {

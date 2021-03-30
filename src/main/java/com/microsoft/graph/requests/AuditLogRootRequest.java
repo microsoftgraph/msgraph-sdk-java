@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AuditLogRoot;
 import com.microsoft.graph.requests.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryAuditRequestBuilder;
+import com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.ProvisioningObjectSummaryRequestBuilder;
 import com.microsoft.graph.requests.RestrictedSignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.RestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.SignInCollectionRequestBuilder;

@@ -92,6 +92,7 @@ import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.PolicyRootRequestBuilder;
 import com.microsoft.graph.requests.EducationRootRequestBuilder;
+import com.microsoft.graph.requests.RoleManagementRequestBuilder;
 import com.microsoft.graph.requests.CloudCommunicationsRequestBuilder;
 import com.microsoft.graph.requests.IdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.DeviceAppManagementRequestBuilder;
@@ -1147,6 +1148,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public EducationRootRequestBuilder education() {
         return new EducationRootRequestBuilder(getServiceRoot() + "/education", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the RoleManagement
+     */
+    @Nonnull
+    public RoleManagementRequestBuilder roleManagement() {
+        return new RoleManagementRequestBuilder(getServiceRoot() + "/roleManagement", this, null);
     }
 
     /**

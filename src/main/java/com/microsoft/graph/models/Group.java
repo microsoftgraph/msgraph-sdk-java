@@ -329,7 +329,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Allow External Senders.
-     * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select.
+     * Indicates if people external to the organization can send messages to the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "allowExternalSenders", alternate = {"AllowExternalSenders"})
     @Expose
@@ -338,7 +338,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Auto Subscribe New Members.
-     * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select.
+     * Indicates if new members added to the group will be auto-subscribed to receive email notifications. You can set this property in a PATCH request for the group; do not set it in the initial POST request that creates the group. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "autoSubscribeNewMembers", alternate = {"AutoSubscribeNewMembers"})
     @Expose
@@ -347,7 +347,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hide From Address Lists.
-     * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID})
+     * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "hideFromAddressLists", alternate = {"HideFromAddressLists"})
     @Expose
@@ -356,7 +356,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hide From Outlook Clients.
-     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID})
+     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "hideFromOutlookClients", alternate = {"HideFromOutlookClients"})
     @Expose
@@ -365,7 +365,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Subscribed By Mail.
-     * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select.
+     * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "isSubscribedByMail", alternate = {"IsSubscribedByMail"})
     @Expose
@@ -374,7 +374,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Unseen Count.
-     * Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select.
+     * Count of conversations that have received new posts since the signed-in user last visited the group. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      */
     @SerializedName(value = "unseenCount", alternate = {"UnseenCount"})
     @Expose
