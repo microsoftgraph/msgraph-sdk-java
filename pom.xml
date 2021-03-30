@@ -24,7 +24,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
-			<artifactId>gson</artifactId>
+			<artifactId>okhttp</artifactId>
 			<version>4.9.1</version>
 		</dependency>
 		<dependency>
