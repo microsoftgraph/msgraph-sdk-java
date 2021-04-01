@@ -28,7 +28,7 @@ public class ApprovalStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Assigned To Me.
-     * 
+     * Indicates whether the stage is assigned to the calling user to review. Read-only.
      */
     @SerializedName(value = "assignedToMe", alternate = {"AssignedToMe"})
     @Expose
@@ -37,7 +37,7 @@ public class ApprovalStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The label provided by the policy creator to identify an approval stage. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class ApprovalStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Justification.
-     * 
+     * The justification associated with the approval stage decision.
      */
     @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
@@ -55,7 +55,7 @@ public class ApprovalStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewed By.
-     * 
+     * The identifier of the reviewer. Read-only.
      */
     @SerializedName(value = "reviewedBy", alternate = {"ReviewedBy"})
     @Expose
@@ -64,7 +64,7 @@ public class ApprovalStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewed Date Time.
-     * 
+     * The date and time when a decision was recorded. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "reviewedDateTime", alternate = {"ReviewedDateTime"})
     @Expose
@@ -73,7 +73,7 @@ public class ApprovalStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Review Result.
-     * 
+     * The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
      */
     @SerializedName(value = "reviewResult", alternate = {"ReviewResult"})
     @Expose
@@ -82,7 +82,7 @@ public class ApprovalStage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The stage status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

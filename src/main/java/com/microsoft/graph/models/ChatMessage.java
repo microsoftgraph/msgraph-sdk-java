@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatMessageAttachment;
 import com.microsoft.graph.models.ItemBody;
+import com.microsoft.graph.models.ChannelIdentity;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.ChatMessageImportance;
 import com.microsoft.graph.models.ChatMessageMention;
@@ -55,6 +56,24 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ItemBody body;
+
+    /**
+     * The Channel Identity.
+     * The identity of the channel in which the message was posted.
+     */
+    @SerializedName(value = "channelIdentity", alternate = {"ChannelIdentity"})
+    @Expose
+	@Nullable
+    public ChannelIdentity channelIdentity;
+
+    /**
+     * The Chat Id.
+     * The identity of the chat in which the message was posted.
+     */
+    @SerializedName(value = "chatId", alternate = {"ChatId"})
+    @Expose
+	@Nullable
+    public String chatId;
 
     /**
      * The Created Date Time.

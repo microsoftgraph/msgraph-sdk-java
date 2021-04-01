@@ -54,7 +54,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Read only. Timestamp at which the team was created.
+     * Timestamp at which the team was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose

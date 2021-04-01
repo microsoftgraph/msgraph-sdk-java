@@ -7,6 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.models.Chat;
 import com.microsoft.graph.models.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +29,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class ChatMessageCollectionRequestBuilder extends BaseCollectionRequestBuilder<ChatMessage, ChatMessageRequestBuilder, ChatMessageCollectionResponse, ChatMessageCollectionPage, ChatMessageCollectionRequest> {
 
     /**
-     * The request builder for this collection of ChatMessage
+     * The request builder for this collection of Chat
      *
      * @param requestUrl     the request URL
      * @param client         the service client
