@@ -302,7 +302,7 @@ The SDK now produces methods to include the count of items included in collectio
 
 > Note: support for `filter`, `orderBy`, `top`, `skip`, `skipToken`, and `expand` was also added in the last 2.X versions, if you are upgrading from an older version you might want to consider updating the use of query options by these new methods.
 
-## Support for inherited OData methods
+### Support for inherited OData methods
 
 The SDK now produces methods in child request builder types for the parents' OData methods (actions & functions). This change allows you to write more specific requests reducing the permissions required for your application.
 
