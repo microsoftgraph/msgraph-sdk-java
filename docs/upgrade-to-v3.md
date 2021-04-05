@@ -254,7 +254,7 @@ The service library (microsoft-graph) was designed to contain only code that has
 - Replace any reference to `ChunkUploadProvider` as showed above.
 - Replace any reference to `CustomRequestBuilder`, `DateOnly`, `TimeOfDay`, and `Multipart` from `com.microsoft.graph.(models|requests).extensions` to `com.microsoft.graph.core`.
 
-## Upgrade guide for non-breaking improvments
+## Upgrade guide for non-breaking improvements
 
 This section lists out other improvements which are not considered as breaking changes. SDK users are strongly encouraged to take advantage of those new improvements to simplify their code.
 
