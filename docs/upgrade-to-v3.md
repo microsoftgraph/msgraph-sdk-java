@@ -116,13 +116,6 @@ To provide a standard and modern way of executing requests asynchronuously to SD
     });
     ```
 
-### Non-generated code moved to the core library
-
-The service library (microsoft-graph) was designed to contain only code that has been generated automatically from the API metadata. All code that has been manually handcrafted should live in the core library (microsoft-graph-core). This principle makes reusability of code easier for consumers and it was not respected until this new version of the SDK. All the code living under anything but `com.microsoft.graph.models` or `com.microsoft.graph.requests` have been moved to the same package name in the core asset. This move should be transparent to consumers, except for the following that needs to be updated. To upgrade your application do the following.
-
-- Replace any reference to `ChunkUploadProvider` from `com.microsoft.graph.requests.extensions` to `com.microsoft.graph.concurrency`.
-- Replace any reference to `CustomRequestBuilder`, `DateOnly`, `TimeOfDay`, and `Multipart` from `com.microsoft.graph.(models|requests).extensions` to `com.microsoft.graph.core`.
-
 ### Removal of connection configuration
 
 As the connection configuration evolved over time, the connection configuration infrastructure had become redundant with the native library configuration capabilities. To upgrade your application do the following.
@@ -231,7 +224,7 @@ The chunked upload provider has been renamed to large file upload task and moved
 - Replace any of the following
 
     ```Java
-    import com.microsoft.graph.concurrency.ChunkedUploadProvider;
+    import com.microsoft.graph.requests.extensions.ChunkedUploadProvider;
     ```
 
     By
@@ -253,6 +246,13 @@ The chunked upload provider has been renamed to large file upload task and moved
     ```
 
 > Note: The **LargeFileUploadTask** now also provides an **uploadAsync** method to perform uploads in the background.
+
+### Non-generated code moved to the core library
+
+The service library (microsoft-graph) was designed to contain only code that has been generated automatically from the API metadata. All code that has been manually handcrafted should live in the core library (microsoft-graph-core). This principle makes reusability of code easier for consumers and it was not respected until this new version of the SDK. All the code living under anything but `com.microsoft.graph.models` or `com.microsoft.graph.requests` have been moved to the same package name in the core asset. This move should be transparent to consumers, except for the following that needs to be updated. To upgrade your application do the following.
+
+- Replace any reference to `ChunkUploadProvider` as showed above.
+- Replace any reference to `CustomRequestBuilder`, `DateOnly`, `TimeOfDay`, and `Multipart` from `com.microsoft.graph.(models|requests).extensions` to `com.microsoft.graph.core`.
 
 ## Upgrade guide for non-breaking improvments
 
