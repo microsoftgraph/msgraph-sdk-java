@@ -145,7 +145,7 @@ To simplify the object model of the SDK, `BaseGraphServiceClient` has been merge
 
 Requests, request builders, and responses have been refactored to take advantage of generic types. This maximizes code reusability improving performances, binary size and more. These changes should be transparent to most SDK consumers but it's possible to impact developers calling the SDK using reflection techniques.
 
-## Batch object model improvements
+### Batch object model improvements
 
 The object model for JSON batching has been improved to provide a cleaner API surface to SDK users. To upgrade your application do the following.
 
