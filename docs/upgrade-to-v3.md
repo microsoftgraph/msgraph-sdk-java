@@ -116,13 +116,6 @@ To provide a standard and modern way of executing requests asynchronuously to SD
     });
     ```
 
-### Non-generated code moved to the core library
-
-The service library (microsoft-graph) was designed to contain only code that has been generated automatically from the API metadata. All code that has been manually handcrafted should live in the core library (microsoft-graph-core). This principle makes reusability of code easier for consumers and it was not respected until this new version of the SDK. All the code living under anything but `com.microsoft.graph.models` or `com.microsoft.graph.requests` have been moved to the same package name in the core asset. This move should be transparent to consumers, except for the following that needs to be updated. To upgrade your application do the following.
-
-- Replace any reference to `ChunkUploadProvider` from `com.microsoft.graph.requests.extensions` to `com.microsoft.graph.concurrency`.
-- Replace any reference to `CustomRequestBuilder`, `DateOnly`, `TimeOfDay`, and `Multipart` from `com.microsoft.graph.(models|requests).extensions` to `com.microsoft.graph.core`.
-
 ### Removal of connection configuration
 
 As the connection configuration evolved over time, the connection configuration infrastructure had become redundant with the native library configuration capabilities. To upgrade your application do the following.
@@ -152,7 +145,7 @@ To simplify the object model of the SDK, `BaseGraphServiceClient` has been merge
 
 Requests, request builders, and responses have been refactored to take advantage of generic types. This maximizes code reusability improving performances, binary size and more. These changes should be transparent to most SDK consumers but it's possible to impact developers calling the SDK using reflection techniques.
 
-## Batch object model improvements
+### Batch object model improvements
 
 The object model for JSON batching has been improved to provide a cleaner API surface to SDK users. To upgrade your application do the following.
 
@@ -231,7 +224,7 @@ The chunked upload provider has been renamed to large file upload task and moved
 - Replace any of the following
 
     ```Java
-    import com.microsoft.graph.concurrency.ChunkedUploadProvider;
+    import com.microsoft.graph.requests.extensions.ChunkedUploadProvider;
     ```
 
     By
@@ -254,7 +247,14 @@ The chunked upload provider has been renamed to large file upload task and moved
 
 > Note: The **LargeFileUploadTask** now also provides an **uploadAsync** method to perform uploads in the background.
 
-## Upgrade guide for non-breaking improvments
+### Non-generated code moved to the core library
+
+The service library (microsoft-graph) was designed to contain only code that has been generated automatically from the API metadata. All code that has been manually handcrafted should live in the core library (microsoft-graph-core). This principle makes reusability of code easier for consumers and it was not respected until this new version of the SDK. All the code living under anything but `com.microsoft.graph.models` or `com.microsoft.graph.requests` have been moved to the same package name in the core asset. This move should be transparent to consumers, except for the following that needs to be updated. To upgrade your application do the following.
+
+- Replace any reference to `ChunkUploadProvider` as showed above.
+- Replace any reference to `CustomRequestBuilder`, `DateOnly`, `TimeOfDay`, and `Multipart` from `com.microsoft.graph.(models|requests).extensions` to `com.microsoft.graph.core`.
+
+## Upgrade guide for non-breaking improvements
 
 This section lists out other improvements which are not considered as breaking changes. SDK users are strongly encouraged to take advantage of those new improvements to simplify their code.
 
@@ -302,7 +302,7 @@ The SDK now produces methods to include the count of items included in collectio
 
 > Note: support for `filter`, `orderBy`, `top`, `skip`, `skipToken`, and `expand` was also added in the last 2.X versions, if you are upgrading from an older version you might want to consider updating the use of query options by these new methods.
 
-## Support for inherited OData methods
+### Support for inherited OData methods
 
 The SDK now produces methods in child request builder types for the parents' OData methods (actions & functions). This change allows you to write more specific requests reducing the permissions required for your application.
 
