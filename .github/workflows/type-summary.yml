@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-java@v1
+    - uses: actions/setup-java@v2
       with:
+        distribution: 'adopt'
         java-version: 16
     - name: Add execution right to the script
       run: chmod +x gradlew
@@ -28,7 +29,7 @@ jobs:
         echo "CURRENT_BRANCH=${branchName}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append
       shell: pwsh
     - name: push
-      uses: github-actions-x/commit@v2.7
+      uses: github-actions-x/commit@v2.8
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: ${{ env.CURRENT_BRANCH }}

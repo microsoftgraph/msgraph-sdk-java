@@ -7,6 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.models.Chat;
 import com.microsoft.graph.models.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -16,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageCollectionRequest;
+import com.microsoft.graph.requests.ChatMessageDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class ChatMessageCollectionRequestBuilder extends BaseCollectionRequestBuilder<ChatMessage, ChatMessageRequestBuilder, ChatMessageCollectionResponse, ChatMessageCollectionPage, ChatMessageCollectionRequest> {
 
     /**
-     * The request builder for this collection of ChatMessage
+     * The request builder for this collection of Chat
      *
      * @param requestUrl     the request URL
      * @param client         the service client
@@ -38,6 +40,15 @@ public class ChatMessageCollectionRequestBuilder extends BaseCollectionRequestBu
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public ChatMessageDeltaCollectionRequestBuilder delta() {
+        return new ChatMessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
 
     /**
      * Gets the raw count request for the collection

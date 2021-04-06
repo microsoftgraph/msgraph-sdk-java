@@ -133,4 +133,13 @@ public class ChannelRequestBuilder extends BaseRequestBuilder<Channel> {
     public TeamsTabRequestBuilder tabs(@Nonnull final String id) {
         return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ChannelCompleteMigrationRequestBuilder completeMigration() {
+        return new ChannelCompleteMigrationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeMigration"), getClient(), null);
+    }
 }

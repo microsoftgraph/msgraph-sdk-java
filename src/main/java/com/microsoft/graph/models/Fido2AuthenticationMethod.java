@@ -56,7 +56,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Created Date Time.
-     * 
+     * The timestamp when this key was registered to the user.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose

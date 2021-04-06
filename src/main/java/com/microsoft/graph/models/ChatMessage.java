@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatMessageAttachment;
 import com.microsoft.graph.models.ItemBody;
+import com.microsoft.graph.models.ChannelIdentity;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.ChatMessageImportance;
 import com.microsoft.graph.models.ChatMessageMention;
@@ -55,6 +56,24 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ItemBody body;
+
+    /**
+     * The Channel Identity.
+     * The identity of the channel in which the message was posted.
+     */
+    @SerializedName(value = "channelIdentity", alternate = {"ChannelIdentity"})
+    @Expose
+	@Nullable
+    public ChannelIdentity channelIdentity;
+
+    /**
+     * The Chat Id.
+     * The identity of the chat in which the message was posted.
+     */
+    @SerializedName(value = "chatId", alternate = {"ChatId"})
+    @Expose
+	@Nullable
+    public String chatId;
 
     /**
      * The Created Date Time.
@@ -103,7 +122,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Edited Date Time.
-     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
+     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Microsoft Teams UI. If no edits are made the value is null.
      */
     @SerializedName(value = "lastEditedDateTime", alternate = {"LastEditedDateTime"})
     @Expose
@@ -112,7 +131,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
+     * Read only. Timestamp when the chat message is created (initial setting) or edited, including when a reaction is added or removed.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -166,7 +185,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reply To Id.
-     * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+     * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels not chats)
      */
     @SerializedName(value = "replyToId", alternate = {"ReplyToId"})
     @Expose

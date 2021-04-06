@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AuditLogRoot;
 import com.microsoft.graph.requests.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryAuditRequestBuilder;
+import com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.ProvisioningObjectSummaryRequestBuilder;
 import com.microsoft.graph.requests.RestrictedSignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.RestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.SignInCollectionRequestBuilder;
@@ -81,6 +83,26 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder<AuditLogRoot>
     @Nonnull
     public DirectoryAuditRequestBuilder directoryAudits(@Nonnull final String id) {
         return new DirectoryAuditRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ProvisioningObjectSummary collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ProvisioningObjectSummaryCollectionRequestBuilder provisioning() {
+        return new ProvisioningObjectSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ProvisioningObjectSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ProvisioningObjectSummaryRequestBuilder provisioning(@Nonnull final String id) {
+        return new ProvisioningObjectSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("provisioning") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the RestrictedSignIn collection

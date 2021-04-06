@@ -27,7 +27,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Id.
-     * The client ID for the application obtained when registering the application with the identity provider. This is a required field.
+     * The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
@@ -36,7 +36,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Secret.
-     * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return '****'. This is a required field.
+     * The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return ****. This is a required field. Required. Not nullable.
      */
     @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose
@@ -45,7 +45,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The display name of the identity provider.
+     * The display name of the identity provider. Not nullable.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -54,7 +54,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The identity provider type is a required field.For B2B scenario:GoogleFacebookFor B2C scenario:MicrosoftGoogleAmazonLinkedInFacebookGitHubTwitterWeiboQQWeChatOpenIDConnect
+     * The identity provider type is a required field. For B2B scenario: Google, Facebook. For B2C scenario: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo,QQ, WeChat, OpenIDConnect. Not nullable.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

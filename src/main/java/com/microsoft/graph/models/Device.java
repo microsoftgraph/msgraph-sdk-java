@@ -32,7 +32,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
-     * true if the account is enabled; otherwise, false. default is true.
+     * true if the account is enabled; otherwise, false. Required.
      */
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
@@ -50,7 +50,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Approximate Last Sign In Date Time.
-     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "approximateLastSignInDateTime", alternate = {"ApproximateLastSignInDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Compliance Expiration Date Time.
-     * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "complianceExpirationDateTime", alternate = {"ComplianceExpirationDateTime"})
     @Expose
@@ -131,7 +131,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+     * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only.
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -158,7 +158,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
-     * Operating system version of the device. Required.
+     * The version of the operating system on the device. Required.
      */
     @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
@@ -176,7 +176,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Profile Type.
-     * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
+     * The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
      */
     @SerializedName(value = "profileType", alternate = {"ProfileType"})
     @Expose
@@ -194,7 +194,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Trust Type.
-     * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
+     * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
      */
     @SerializedName(value = "trustType", alternate = {"TrustType"})
     @Expose
