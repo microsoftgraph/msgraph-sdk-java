@@ -30,7 +30,7 @@ public class Approval extends Entity implements IJsonBackedObject {
 
     /**
      * The Stages.
-     * A collection of stages in the approval decision.
+     * Used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage.
      */
     @SerializedName(value = "stages", alternate = {"Stages"})
     @Expose

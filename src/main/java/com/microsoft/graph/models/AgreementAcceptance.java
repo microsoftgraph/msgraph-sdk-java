@@ -28,7 +28,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Agreement File Id.
-     * The identifier of the agreement file accepted by the user.
+     * ID of the agreement file accepted by the user.
      */
     @SerializedName(value = "agreementFileId", alternate = {"AgreementFileId"})
     @Expose
@@ -37,7 +37,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Agreement Id.
-     * The identifier of the agreement.
+     * ID of the agreement.
      */
     @SerializedName(value = "agreementId", alternate = {"AgreementId"})
     @Expose
@@ -64,7 +64,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Device OSType.
-     * The operating system used to accept the agreement.
+     * The operating system used for accepting the agreement.
      */
     @SerializedName(value = "deviceOSType", alternate = {"DeviceOSType"})
     @Expose
@@ -73,7 +73,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Device OSVersion.
-     * The operating system version of the device used to accept the agreement.
+     * The operating system version of the device used for accepting the agreement.
      */
     @SerializedName(value = "deviceOSVersion", alternate = {"DeviceOSVersion"})
     @Expose
@@ -82,7 +82,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -91,7 +91,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The Recorded Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "recordedDateTime", alternate = {"RecordedDateTime"})
     @Expose
@@ -100,7 +100,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * The state of the agreement acceptance. Possible values are: accepted, declined.
+     * Possible values are: accepted, declined.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -127,7 +127,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The identifier of the user who accepted the agreement.
+     * ID of the user who accepted the agreement.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

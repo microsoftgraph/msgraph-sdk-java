@@ -45,7 +45,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
 
     /**
      * The Recipient User Id.
-     * User ID of the recipient of the offer shift request.
+     * User id of the recipient of the offer shift request.
      */
     @SerializedName(value = "recipientUserId", alternate = {"RecipientUserId"})
     @Expose
@@ -54,7 +54,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
 
     /**
      * The Sender Shift Id.
-     * User ID of the sender of the offer shift request.
+     * User id of the sender of the offer shift request.
      */
     @SerializedName(value = "senderShiftId", alternate = {"SenderShiftId"})
     @Expose

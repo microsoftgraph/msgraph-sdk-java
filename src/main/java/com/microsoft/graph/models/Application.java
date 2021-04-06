@@ -67,7 +67,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
+     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -121,7 +121,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Membership Claims.
-     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
      */
     @SerializedName(value = "groupMembershipClaims", alternate = {"GroupMembershipClaims"})
     @Expose
@@ -130,7 +130,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Identifier Uris.
-     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information, see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
      */
     @SerializedName(value = "identifierUris", alternate = {"IdentifierUris"})
     @Expose
@@ -139,7 +139,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Info.
-     * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+     * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose
@@ -157,7 +157,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Fallback Public Client.
-     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
      */
     @SerializedName(value = "isFallbackPublicClient", alternate = {"IsFallbackPublicClient"})
     @Expose
@@ -229,7 +229,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Publisher Domain.
-     * The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain.
+     * The verified publisher domain for the application. Read-only.
      */
     @SerializedName(value = "publisherDomain", alternate = {"PublisherDomain"})
     @Expose
