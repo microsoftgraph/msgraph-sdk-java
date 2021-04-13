@@ -13,7 +13,7 @@ import com.microsoft.graph.info.Constants;
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.httpcore.HttpClients;
-import com.microsoft.graph.authentication.IAuthenticationProvider;
+import com.microsoft.graph.authentication.BaseAuthenticationProvider;
 import com.microsoft.graph.requests.GraphServiceClient;
 
 import okhttp3.OkHttpClient;
@@ -58,20 +58,24 @@ public class TestBase {
             }
         }
     }
-    public IAuthenticationProvider getUnauthenticationProvider() {
-        return new IAuthenticationProvider() {
+    public BaseAuthenticationProvider getUnauthenticationProvider() {
+        return new BaseAuthenticationProvider() {
             @Override
             public CompletableFuture<String> getAuthorizationTokenAsync(final URL requestUrl) {
                 return CompletableFuture.completedFuture((String)null);
             }
         };
     }
-    public IAuthenticationProvider getAuthenticationProvider() {
+    public BaseAuthenticationProvider getAuthenticationProvider() {
         final String accessToken = GetAccessToken().replace("\"", "");
-        return new IAuthenticationProvider() {
+        return new BaseAuthenticationProvider() {
             @Override
             public CompletableFuture<String> getAuthorizationTokenAsync(final URL requestUrl) {
-                return CompletableFuture.completedFuture(accessToken);
+                if(this.shouldAuthenticateRequestWithUrl(requestUrl)) {
+                    return CompletableFuture.completedFuture(accessToken);
+                } else {
+                    return CompletableFuture.completedFuture(null);
+                }
             }
         };
     }
