@@ -27,7 +27,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Client App Id.
-     * 
+     * ID of the service principal of the Azure AD app that has been granted access. Read-only.
      */
     @SerializedName(value = "clientAppId", alternate = {"ClientAppId"})
     @Expose
@@ -36,7 +36,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Client Id.
-     * 
+     * ID of the Azure AD app that has been granted access. Read-only.
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
@@ -45,7 +45,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Permission.
-     * 
+     * The name of the permission. Read-only.
      */
     @SerializedName(value = "permission", alternate = {"Permission"})
     @Expose
@@ -54,7 +54,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Permission Type.
-     * 
+     * The type of permission. Possible values are: Application,Delegated. Read-only.
      */
     @SerializedName(value = "permissionType", alternate = {"PermissionType"})
     @Expose
@@ -63,7 +63,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Resource App Id.
-     * 
+     * ID of the Azure AD app that is hosting the resource. Read-only.
      */
     @SerializedName(value = "resourceAppId", alternate = {"ResourceAppId"})
     @Expose
