@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: 15
+          java-version: 16
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
       - name: Add execution right to the script
