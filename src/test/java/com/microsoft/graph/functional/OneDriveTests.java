@@ -1,5 +1,6 @@
 package com.microsoft.graph.functional;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -24,13 +26,13 @@ import com.microsoft.graph.models.DriveItemUploadableProperties;
 import com.microsoft.graph.models.UploadSession;
 import com.microsoft.graph.models.DriveItemCreateUploadSessionParameterSet;
 
-@Disabled
 public class OneDriveTests {
 	private TestBase testBase;
 
-	@BeforeEach
 	public void setUp() {
-	   testBase = new TestBase();
+        if(testBase == null) {
+	        testBase = new TestBase();
+        }
 	}
 
 	final IProgressCallback callback = new IProgressCallback () {
@@ -39,6 +41,17 @@ public class OneDriveTests {
 			//Check progress
 		}
 	};
+    /**
+     * Tests that paths are properly encoded acording to ODSP's expectations
+     * - everything is encoded to the application/x-www-form-urlencoded MIME format
+     * - spaces are encoded with %20
+     */
+    @Test
+    public void itemWithPathEncodesSpecialCharacters() {
+        final URL requestURL = new TestBase(false).graphClient.me().drive().root().itemWithPath("some folder/some name with a + and a #777.docx").buildRequest().getRequestUrl();
+        assertEquals("/me/drive/root:/some%20folder%2Fsome%20name%20with%20a%20%2B%20and%20a%20%23777.docx:", requestURL.getPath().replace("/v1.0", "").replace("/beta", ""));
+        // version replacement so the test is version agnostic
+    }
 	/**
 	 * Test large file upload.
 	 * https://github.com/OneDrive/onedrive-sdk-csharp/blob/master/docs/chunked-uploads.md
@@ -47,8 +60,10 @@ public class OneDriveTests {
 	 * @throws InterruptedException if the chunked upload fails
 	 */
 	@Test
+    @Disabled
 	public void testLargeFileUpload() throws IOException, InterruptedException {
-		//Get resource file from file system
+		setUp();
+        //Get resource file from file system
 		InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("largefile10M.blob");
 		long fileSize = (long) uploadFile.available();
 
@@ -72,14 +87,18 @@ public class OneDriveTests {
         assertNotNull(result);
 	}
 	@Test
+    @Disabled
 	public void testDownloadWithCustomRequest() throws IOException {
+        setUp();
 		final String testDownloadFileId = "01RWFXFJG3UYRHE75RZVFYWKNUEBB53H7A";
 		try (final InputStream stream = testBase.graphClient.customRequest("/me/drive/items/"+testDownloadFileId+"/content", InputStream.class).buildRequest().get()) {
 		   assertFalse(stream.read() == -1, "stream should not be empty");
 		}
 	}
 	@Test
+    @Disabled
 	public void downloadJsonFileFromOneDrive() throws Exception {
+        setUp();
 		final DriveItemUploadableProperties item = new DriveItemUploadableProperties();
 		item.name = "test.json";
 		item.additionalDataManager().put("@microsoft.graph.conflictBehavior", new JsonPrimitive("replace"));
