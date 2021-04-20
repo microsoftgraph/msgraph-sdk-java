@@ -28,7 +28,7 @@ public class TargetedManagedAppPolicyAssignment extends Entity implements IJsonB
 
     /**
      * The Target.
-     * Identifier for deployment of a group or app
+     * Identifier for deployment to a group or app
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

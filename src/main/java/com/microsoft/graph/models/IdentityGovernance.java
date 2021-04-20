@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.models.AppConsentApprovalRoute;
 import com.microsoft.graph.models.TermsOfUseContainer;
 
@@ -38,6 +39,15 @@ public class IdentityGovernance implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Access Reviews.
+     * 
+     */
+    @SerializedName(value = "accessReviews", alternate = {"AccessReviews"})
+    @Expose
+	@Nullable
+    public AccessReviewSet accessReviews;
 
     /**
      * The App Consent.
