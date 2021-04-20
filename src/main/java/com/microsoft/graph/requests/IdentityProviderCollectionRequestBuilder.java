@@ -16,6 +16,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderCollectionRequest;
+import com.microsoft.graph.requests.IdentityProviderAvailableProviderTypesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -38,6 +39,15 @@ public class IdentityProviderCollectionRequestBuilder extends BaseCollectionRequ
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public IdentityProviderAvailableProviderTypesCollectionRequestBuilder availableProviderTypes() {
+        return new IdentityProviderAvailableProviderTypesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.availableProviderTypes"), getClient(), null);
+    }
 
     /**
      * Gets the raw count request for the collection

@@ -31,7 +31,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Custom Browser Display Name.
-     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Friendly name of the preferred custom browser to open weblink on Android.
      */
     @SerializedName(value = "customBrowserDisplayName", alternate = {"CustomBrowserDisplayName"})
     @Expose
@@ -40,7 +40,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Custom Browser Package Id.
-     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Unique identifier of a custom browser to open weblink on Android.
      */
     @SerializedName(value = "customBrowserPackageId", alternate = {"CustomBrowserPackageId"})
     @Expose

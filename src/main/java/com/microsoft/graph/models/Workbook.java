@@ -76,7 +76,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+     * The status of Workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only. Nullable.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose

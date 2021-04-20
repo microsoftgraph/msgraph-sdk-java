@@ -9,6 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityContainer;
 import com.microsoft.graph.requests.ConditionalAccessRootRequestBuilder;
+import com.microsoft.graph.requests.IdentityApiConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.IdentityApiConnectorRequestBuilder;
+import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionRequestBuilder;
+import com.microsoft.graph.requests.B2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBuilder;
+import com.microsoft.graph.requests.IdentityUserFlowAttributeRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -66,5 +72,65 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
     @Nonnull
     public ConditionalAccessRootRequestBuilder conditionalAccess() {
         return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the IdentityApiConnector collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public IdentityApiConnectorCollectionRequestBuilder apiConnectors() {
+        return new IdentityApiConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the IdentityApiConnector item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public IdentityApiConnectorRequestBuilder apiConnectors(@Nonnull final String id) {
+        return new IdentityApiConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the B2xIdentityUserFlow collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public B2xIdentityUserFlowCollectionRequestBuilder b2xUserFlows() {
+        return new B2xIdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the B2xIdentityUserFlow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public B2xIdentityUserFlowRequestBuilder b2xUserFlows(@Nonnull final String id) {
+        return new B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the IdentityUserFlowAttribute collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public IdentityUserFlowAttributeCollectionRequestBuilder userFlowAttributes() {
+        return new IdentityUserFlowAttributeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the IdentityUserFlowAttribute item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public IdentityUserFlowAttributeRequestBuilder userFlowAttributes(@Nonnull final String id) {
+        return new IdentityUserFlowAttributeRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes") + "/" + id, getClient(), null);
     }
 }

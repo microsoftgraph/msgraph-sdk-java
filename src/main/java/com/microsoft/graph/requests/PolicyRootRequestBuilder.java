@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PolicyRoot;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder;
 import com.microsoft.graph.requests.AuthorizationPolicyRequestBuilder;
@@ -85,6 +86,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodsPolicy"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AuthenticationFlowsPolicy
+     *
+     * @return the AuthenticationFlowsPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public AuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
+        return new AuthenticationFlowsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationFlowsPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ActivityBasedTimeoutPolicy collection
