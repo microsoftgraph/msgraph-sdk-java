@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityGovernance;
+import com.microsoft.graph.requests.AccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.AppConsentApprovalRouteRequestBuilder;
 import com.microsoft.graph.requests.TermsOfUseContainerRequestBuilder;
 import java.util.Arrays;
@@ -58,6 +59,16 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
     }
 
 
+
+    /**
+     * Gets the request builder for AccessReviewSet
+     *
+     * @return the AccessReviewSetRequestBuilder instance
+     */
+    @Nonnull
+    public AccessReviewSetRequestBuilder accessReviews() {
+        return new AccessReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("accessReviews"), getClient(), null);
+    }
 
     /**
      * Gets the request builder for AppConsentApprovalRoute

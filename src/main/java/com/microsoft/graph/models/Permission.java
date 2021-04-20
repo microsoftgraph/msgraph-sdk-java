@@ -104,7 +104,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Share Id.
-     * A unique token that can be used to access this shared item via the **shares** API. Read-only.
+     * A unique token that can be used to access this shared item via the [shares API][]. Read-only.
      */
     @SerializedName(value = "shareId", alternate = {"ShareId"})
     @Expose

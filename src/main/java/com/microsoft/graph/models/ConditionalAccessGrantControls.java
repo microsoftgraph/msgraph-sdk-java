@@ -50,7 +50,7 @@ public class ConditionalAccessGrantControls implements IJsonBackedObject {
 
     /**
      * The Custom Authentication Factors.
-     * List of custom controls IDs required by the policy. For more information, see Custom controls.
+     * List of custom controls IDs required by the policy. Learn more about custom controls here: https://docs.microsoft.com/azure/active-directory/conditional-access/controls#custom-controls-preview
      */
     @SerializedName(value = "customAuthenticationFactors", alternate = {"CustomAuthenticationFactors"})
     @Expose

@@ -93,14 +93,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder<DriveItem> {
      */
     @Nonnull
     public DriveItemRequestBuilder itemWithPath(@Nonnull final String path) {
-        String value = path;
-        try {
-            value = java.net.URLEncoder.encode(path, java.nio.charset.StandardCharsets.UTF_8.toString()).replace("+", "%20");
-            //ODSP doesn't respect application/x-www-form-urlencoded MIME format and expects spaces with %20
-        } catch (java.io.UnsupportedEncodingException ex) {
-            throw new ClientException("unsupported encoding", ex);
-        }
-        return new DriveItemRequestBuilder(getRequestUrl() + ":/" + value + ":", getClient(), null);
+        return new DriveItemRequestBuilder(getRequestUrl() + ":/" + path + ":", getClient(), null);
     }
 
 

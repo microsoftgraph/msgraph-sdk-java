@@ -8,8 +8,15 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ConditionalAccessRoot;
+import com.microsoft.graph.models.IdentityApiConnector;
+import com.microsoft.graph.models.B2xIdentityUserFlow;
+import com.microsoft.graph.models.IdentityUserFlowAttribute;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.IdentityApiConnectorCollectionPage;
+import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionPage;
+import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,6 +42,33 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
 	@Nullable
     public ConditionalAccessRoot conditionalAccess;
 
+    /**
+     * The Api Connectors.
+     * 
+     */
+    @SerializedName(value = "apiConnectors", alternate = {"ApiConnectors"})
+    @Expose
+	@Nullable
+    public IdentityApiConnectorCollectionPage apiConnectors;
+
+    /**
+     * The B2x User Flows.
+     * 
+     */
+    @SerializedName(value = "b2xUserFlows", alternate = {"B2xUserFlows"})
+    @Expose
+	@Nullable
+    public B2xIdentityUserFlowCollectionPage b2xUserFlows;
+
+    /**
+     * The User Flow Attributes.
+     * 
+     */
+    @SerializedName(value = "userFlowAttributes", alternate = {"UserFlowAttributes"})
+    @Expose
+	@Nullable
+    public IdentityUserFlowAttributeCollectionPage userFlowAttributes;
+
 
     /**
      * Sets the raw JSON object
@@ -44,5 +78,17 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("apiConnectors")) {
+            apiConnectors = serializer.deserializeObject(json.get("apiConnectors"), IdentityApiConnectorCollectionPage.class);
+        }
+
+        if (json.has("b2xUserFlows")) {
+            b2xUserFlows = serializer.deserializeObject(json.get("b2xUserFlows"), B2xIdentityUserFlowCollectionPage.class);
+        }
+
+        if (json.has("userFlowAttributes")) {
+            userFlowAttributes = serializer.deserializeObject(json.get("userFlowAttributes"), IdentityUserFlowAttributeCollectionPage.class);
+        }
     }
 }

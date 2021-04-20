@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PolicyRoot;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder;
 import com.microsoft.graph.requests.AuthorizationPolicyRequestBuilder;

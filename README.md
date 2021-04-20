@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:3.2.0'
+    implementation 'com.microsoft.graph:microsoft-graph:3.3.0'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:29.0-android'
 }
@@ -33,7 +33,7 @@ Add the dependency in `dependencies` in pom.xml
 <dependency>
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>3.2.0</version>
+  <version>3.3.0</version>
 </dependency>
 ```
 
@@ -126,5 +126,6 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
+
 
 
