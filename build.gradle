@@ -54,7 +54,6 @@ def pomConfig = {
 //Publishing tasks-
 //Maven Central Snapshot: publishSnapshotPublicationToMavenRepository
 //Maven Central Release: publishMavenCentralReleasePublicationToMaven2Repository
-//Bintray Snapshot: publishSnapshotPublicationToMaven3Repository
 
 tasks.jar {
     manifest {
