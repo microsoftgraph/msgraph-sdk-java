@@ -175,7 +175,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Media Sizes.
-     * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
+     * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
      */
     @SerializedName(value = "mediaSizes", alternate = {"MediaSizes"})
     @Expose
@@ -184,7 +184,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Media Types.
-     * The media types supported by the printer. Valid values are described in the following table.
+     * The media types supported by the printer.
      */
     @SerializedName(value = "mediaTypes", alternate = {"MediaTypes"})
     @Expose

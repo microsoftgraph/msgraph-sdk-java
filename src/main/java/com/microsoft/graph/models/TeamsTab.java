@@ -56,7 +56,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App.
-     * The application that is linked to the tab.
+     * The application that is linked to the tab. This cannot be changed after tab creation.
      */
     @SerializedName(value = "teamsApp", alternate = {"TeamsApp"})
     @Expose
