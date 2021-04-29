@@ -1,0 +1,6 @@
+languages:
+- java
+extensions:
+  services:
+  - Microsoft Graph
+dependencyFile: /gradle/dependencies.gradle

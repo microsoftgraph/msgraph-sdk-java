@@ -21,7 +21,7 @@ dependencies {
     // Include the sdk as a dependency
     implementation 'com.microsoft.graph:microsoft-graph:3.3.0'
     // Uncomment the line below if you are building an android application
-    //implementation 'com.google.guava:guava:29.0-android'
+    //implementation 'com.google.guava:guava:30.1.1-android'
 }
 ```
 
