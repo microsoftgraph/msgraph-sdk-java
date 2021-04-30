@@ -12,7 +12,7 @@ Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft 
 
 Add the repository and a compile dependency for `microsoft-graph` to your project's `build.gradle`:
 
-```gradle
+```groovy
 repositories {
     mavenCentral()
 }
@@ -22,6 +22,8 @@ dependencies {
     implementation 'com.microsoft.graph:microsoft-graph:3.3.0'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
+    // This dependency is only needed if you are using the TokenCrendentialAuthProvider
+    implementation 'com.azure:azure-identity:1.2.5'
 }
 ```
 
@@ -31,9 +33,14 @@ Add the dependency in `dependencies` in pom.xml
 
 ```xml
 <dependency>
+  <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
   <version>3.3.0</version>
+  <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
+  <groupId>com.azure</groupId>
+  <artifactId>azure-identity</artifactId>
+  <version>1.2.5</version>
 </dependency>
 ```
 
