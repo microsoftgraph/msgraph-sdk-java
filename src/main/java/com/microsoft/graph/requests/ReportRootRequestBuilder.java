@@ -214,7 +214,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Metadata for the device configuration device activity report
      * @return the request builder
      */
     @Nonnull
@@ -223,7 +223,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Metadata for the device configuration user activity report
      * @return the request builder
      */
     @Nonnull

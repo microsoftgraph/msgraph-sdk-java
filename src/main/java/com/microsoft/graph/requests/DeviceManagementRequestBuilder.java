@@ -41,6 +41,10 @@ import com.microsoft.graph.requests.DetectedAppRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceOverviewWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceRequestBuilder;
+import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityRequestBuilder;
+import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.NotificationMessageTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.NotificationMessageTemplateRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationCollectionRequestBuilder;
@@ -430,6 +434,46 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new ManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the ImportedWindowsAutopilotDeviceIdentity collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder importedWindowsAutopilotDeviceIdentities() {
+        return new ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("importedWindowsAutopilotDeviceIdentities"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ImportedWindowsAutopilotDeviceIdentity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ImportedWindowsAutopilotDeviceIdentityRequestBuilder importedWindowsAutopilotDeviceIdentities(@Nonnull final String id) {
+        return new ImportedWindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("importedWindowsAutopilotDeviceIdentities") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsAutopilotDeviceIdentity collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WindowsAutopilotDeviceIdentityCollectionRequestBuilder windowsAutopilotDeviceIdentities() {
+        return new WindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsAutopilotDeviceIdentities"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsAutopilotDeviceIdentity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WindowsAutopilotDeviceIdentityRequestBuilder windowsAutopilotDeviceIdentities(@Nonnull final String id) {
+        return new WindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("windowsAutopilotDeviceIdentities") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the NotificationMessageTemplate collection
      *
      * @return the collection request builder
@@ -621,7 +665,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     }
 
     /**
-     * Gets a builder to execute the method
+     * Retrieves the effective permissions of the currently authenticated user
      * @return the request builder collection
      * @param parameters the parameters for the service method
      */

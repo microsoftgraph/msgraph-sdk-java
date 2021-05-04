@@ -58,7 +58,7 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder<Re
 
 
     /**
-     * Gets a builder to execute the method
+     * A request to start onboarding.  Must be coupled with the appropriate TeamViewer account information
      * @return the request builder
      */
     @Nonnull
@@ -67,7 +67,7 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder<Re
     }
 
     /**
-     * Gets a builder to execute the method
+     * A request to remove the active TeamViewer connector
      * @return the request builder
      */
     @Nonnull

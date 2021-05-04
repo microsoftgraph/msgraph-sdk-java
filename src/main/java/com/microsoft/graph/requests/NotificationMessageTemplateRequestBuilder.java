@@ -80,7 +80,7 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Gets a builder to execute the method
+     * Sends test message using the specified notificationMessageTemplate in the default locale
      * @return the request builder
      */
     @Nonnull

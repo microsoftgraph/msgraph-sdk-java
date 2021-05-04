@@ -41,7 +41,7 @@ public class RolePermission implements IJsonBackedObject {
 
     /**
      * The Resource Actions.
-     * Resource Actions each containing a set of allowed and not allowed permissions.
+     * Actions
      */
     @SerializedName(value = "resourceActions", alternate = {"ResourceActions"})
     @Expose

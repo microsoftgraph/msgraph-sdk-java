@@ -128,7 +128,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Media Size.
-     * The default media size to use. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
+     * The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
      */
     @SerializedName(value = "mediaSize", alternate = {"MediaSize"})
     @Expose
@@ -137,7 +137,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Media Type.
-     * The default media (such as paper) type to print the document on. Valid values are described in the following table.
+     * The default media (such as paper) type to print the document on.
      */
     @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose
