@@ -51,7 +51,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Group Type.
-     * When type is set to Group, this indicates the group type.  Possible values are: unifiedGroups, azureAD, and unknownFutureValue
+     * When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      */
     @SerializedName(value = "groupType", alternate = {"GroupType"})
     @Expose

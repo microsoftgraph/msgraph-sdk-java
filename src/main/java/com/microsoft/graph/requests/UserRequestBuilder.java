@@ -85,6 +85,8 @@ import com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.OnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.PresenceRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationRequestBuilder;
+import com.microsoft.graph.requests.ChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.ChatRequestBuilder;
 import com.microsoft.graph.requests.TeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamRequestBuilder;
 import com.microsoft.graph.requests.UserTeamworkRequestBuilder;
@@ -1351,6 +1353,26 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
         return new AuthenticationRequestBuilder(getRequestUrlWithAdditionalSegment("authentication"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the Chat collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ChatCollectionRequestBuilder chats() {
+        return new ChatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("chats"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Chat item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ChatRequestBuilder chats(@Nonnull final String id) {
+        return new ChatRequestBuilder(getRequestUrlWithAdditionalSegment("chats") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the Team collection
      *
      * @return the collection request builder
@@ -1470,7 +1492,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Retire all devices from management for this user
      * @return the request builder
      */
     @Nonnull
@@ -1479,7 +1501,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Issues a wipe operation on an app registration with specified device tag.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -1509,7 +1531,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Gets diagnostics validation status for a given user.
      * @return the request builder collection
      */
     @Nonnull
@@ -1518,7 +1540,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Gets app restrictions for a given user.
      * @return the request builder collection
      */
     @Nonnull

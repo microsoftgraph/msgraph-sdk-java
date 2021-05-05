@@ -58,7 +58,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
 
 
     /**
-     * Gets a builder to execute the method
+     * Download Apple push notification certificate signing request
      * @return the request builder
      */
     @Nonnull

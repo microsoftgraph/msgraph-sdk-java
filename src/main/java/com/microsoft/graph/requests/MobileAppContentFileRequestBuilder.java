@@ -60,7 +60,7 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder<Mobil
 
 
     /**
-     * Gets a builder to execute the method
+     * Commits a file of a given app.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -70,7 +70,7 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder<Mobil
     }
 
     /**
-     * Gets a builder to execute the method
+     * Renews the SAS URI for an application file upload.
      * @return the request builder
      */
     @Nonnull

@@ -28,7 +28,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
 
     /**
      * The Cloud App Security Type.
-     * Possible values are: mcasConfigured, monitorOnly, blockDownloads. Learn more about these values here: https://docs.microsoft.com/cloud-app-security/proxy-deployment-aad#step-1-create-an-azure-ad-conditional-access-test-policy-
+     * Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
      */
     @SerializedName(value = "cloudAppSecurityType", alternate = {"CloudAppSecurityType"})
     @Expose

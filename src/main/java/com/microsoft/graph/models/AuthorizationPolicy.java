@@ -65,7 +65,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Block Msol Power Shell.
-     * To disable the use of MSOL PowerShell set this property to true. Setting to true will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
+     * To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
      */
     @SerializedName(value = "blockMsolPowerShell", alternate = {"BlockMsolPowerShell"})
     @Expose

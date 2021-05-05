@@ -119,7 +119,7 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
     }
 
     /**
-     * Gets a builder to execute the method
+     * Set mobile device management authority
      * @return the request builder
      */
     @Nonnull

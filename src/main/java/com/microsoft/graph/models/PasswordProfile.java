@@ -39,7 +39,7 @@ public class PasswordProfile implements IJsonBackedObject {
 
     /**
      * The Force Change Password Next Sign In.
-     * If true, at next sign-in, the user must change their password. After a password change, this property will be automatically reset to false. If not set, default is false.
+     * true if the user must change her password on the next login; otherwise false.
      */
     @SerializedName(value = "forceChangePasswordNextSignIn", alternate = {"ForceChangePasswordNextSignIn"})
     @Expose

@@ -119,7 +119,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Bypass activation lock
      * @return the request builder
      */
     @Nonnull
@@ -128,7 +128,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Clean Windows device
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -138,7 +138,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Delete user from shared Apple device
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -148,7 +148,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Disable lost mode
      * @return the request builder
      */
     @Nonnull
@@ -157,7 +157,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Locate a device
      * @return the request builder
      */
     @Nonnull
@@ -166,7 +166,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Logout shared Apple device active user
      * @return the request builder
      */
     @Nonnull
@@ -175,7 +175,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Reboot device
      * @return the request builder
      */
     @Nonnull
@@ -184,7 +184,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Recover passcode
      * @return the request builder
      */
     @Nonnull
@@ -193,7 +193,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Remote lock
      * @return the request builder
      */
     @Nonnull
@@ -202,7 +202,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Request remote assistance
      * @return the request builder
      */
     @Nonnull
@@ -211,7 +211,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Reset passcode
      * @return the request builder
      */
     @Nonnull
@@ -220,7 +220,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Retire a device
      * @return the request builder
      */
     @Nonnull
@@ -229,7 +229,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Shut down device
      * @return the request builder
      */
     @Nonnull
@@ -276,7 +276,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Wipe a device
      * @return the request builder
      * @param parameters the parameters for the service method
      */
