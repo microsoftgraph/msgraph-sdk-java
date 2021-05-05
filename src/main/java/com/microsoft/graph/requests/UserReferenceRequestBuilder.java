@@ -86,6 +86,8 @@ import com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.OnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.PresenceRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationRequestBuilder;
+import com.microsoft.graph.requests.ChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.ChatRequestBuilder;
 import com.microsoft.graph.requests.TeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamRequestBuilder;
 import com.microsoft.graph.requests.UserTeamworkRequestBuilder;

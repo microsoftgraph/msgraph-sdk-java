@@ -133,7 +133,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The App Store Blocked.
-     * Indicates whether or not to block the user from using the App Store. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block the user from using the App Store.
      */
     @SerializedName(value = "appStoreBlocked", alternate = {"AppStoreBlocked"})
     @Expose
@@ -196,7 +196,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Camera Blocked.
-     * Indicates whether or not to block the user from accessing the camera of the device. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block the user from accessing the camera of the device.
      */
     @SerializedName(value = "cameraBlocked", alternate = {"CameraBlocked"})
     @Expose
@@ -394,7 +394,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Enterprise App Block Trust Modification.
-     * [Deprecated] Configuring this setting and setting the value to 'true' has no effect on the device.
+     * Indicates whether or not to block the user from modifying the enterprise app trust settings.
      */
     @SerializedName(value = "enterpriseAppBlockTrustModification", alternate = {"EnterpriseAppBlockTrustModification"})
     @Expose
@@ -403,7 +403,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Face Time Blocked.
-     * Indicates whether or not to block the user from using FaceTime. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block the user from using FaceTime.
      */
     @SerializedName(value = "faceTimeBlocked", alternate = {"FaceTimeBlocked"})
     @Expose
@@ -412,7 +412,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Find My Friends Blocked.
-     * Indicates whether or not to block changes to Find My Friends when the device is in supervised mode.
+     * Indicates whether or not to block Find My Friends when the device is in supervised mode.
      */
     @SerializedName(value = "findMyFriendsBlocked", alternate = {"FindMyFriendsBlocked"})
     @Expose
@@ -430,7 +430,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Gaming Block Game Center Friends.
-     * Indicates whether or not to block the user from having friends in Game Center. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block the user from having friends in Game Center.
      */
     @SerializedName(value = "gamingBlockGameCenterFriends", alternate = {"GamingBlockGameCenterFriends"})
     @Expose
@@ -439,7 +439,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Gaming Block Multiplayer.
-     * Indicates whether or not to block the user from using multiplayer gaming. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block the user from using multiplayer gaming.
      */
     @SerializedName(value = "gamingBlockMultiplayer", alternate = {"GamingBlockMultiplayer"})
     @Expose
@@ -484,7 +484,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The ICloud Block Backup.
-     * Indicates whether or not to block iCloud backup. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block iCloud backup.
      */
     @SerializedName(value = "iCloudBlockBackup", alternate = {"ICloudBlockBackup"})
     @Expose
@@ -493,7 +493,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The ICloud Block Document Sync.
-     * Indicates whether or not to block iCloud document sync. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block iCloud document sync.
      */
     @SerializedName(value = "iCloudBlockDocumentSync", alternate = {"ICloudBlockDocumentSync"})
     @Expose
@@ -547,7 +547,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The ITunes Block Explicit Content.
-     * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store.
      */
     @SerializedName(value = "iTunesBlockExplicitContent", alternate = {"ITunesBlockExplicitContent"})
     @Expose
@@ -637,7 +637,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Kiosk Mode Allow Auto Lock.
-     * Indicates whether or not to allow device auto lock while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockAutoLock instead.
+     * Indicates whether or not to allow device auto lock while in kiosk mode.
      */
     @SerializedName(value = "kioskModeAllowAutoLock", alternate = {"KioskModeAllowAutoLock"})
     @Expose
@@ -655,7 +655,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Kiosk Mode Allow Ringer Switch.
-     * Indicates whether or not to allow use of the ringer switch while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockRingerSwitch instead.
+     * Indicates whether or not to allow use of the ringer switch while in kiosk mode.
      */
     @SerializedName(value = "kioskModeAllowRingerSwitch", alternate = {"KioskModeAllowRingerSwitch"})
     @Expose
@@ -664,7 +664,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Kiosk Mode Allow Screen Rotation.
-     * Indicates whether or not to allow screen rotation while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockScreenRotation instead.
+     * Indicates whether or not to allow screen rotation while in kiosk mode.
      */
     @SerializedName(value = "kioskModeAllowScreenRotation", alternate = {"KioskModeAllowScreenRotation"})
     @Expose
@@ -673,7 +673,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Kiosk Mode Allow Sleep Button.
-     * Indicates whether or not to allow use of the sleep button while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockSleepButton instead.
+     * Indicates whether or not to allow use of the sleep button while in kiosk mode.
      */
     @SerializedName(value = "kioskModeAllowSleepButton", alternate = {"KioskModeAllowSleepButton"})
     @Expose
@@ -682,7 +682,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Kiosk Mode Allow Touchscreen.
-     * Indicates whether or not to allow use of the touchscreen while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockTouchscreen instead.
+     * Indicates whether or not to allow use of the touchscreen while in kiosk mode.
      */
     @SerializedName(value = "kioskModeAllowTouchscreen", alternate = {"KioskModeAllowTouchscreen"})
     @Expose
@@ -700,7 +700,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Kiosk Mode Allow Volume Buttons.
-     * Indicates whether or not to allow use of the volume buttons while in kiosk mode. This property's functionality is redundant with the OS default and is deprecated. Use KioskModeBlockVolumeButtons instead.
+     * Indicates whether or not to allow use of the volume buttons while in kiosk mode.
      */
     @SerializedName(value = "kioskModeAllowVolumeButtons", alternate = {"KioskModeAllowVolumeButtons"})
     @Expose
@@ -1051,7 +1051,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Passcode Sign In Failure Count Before Wipe.
-     * Number of sign in failures allowed before wiping the device. Valid values 2 to 11
+     * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
      */
     @SerializedName(value = "passcodeSignInFailureCountBeforeWipe", alternate = {"PasscodeSignInFailureCountBeforeWipe"})
     @Expose
@@ -1069,7 +1069,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Safari Block Autofill.
-     * Indicates whether or not to block the user from using Auto fill in Safari. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block the user from using Auto fill in Safari.
      */
     @SerializedName(value = "safariBlockAutofill", alternate = {"SafariBlockAutofill"})
     @Expose
@@ -1078,7 +1078,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Safari Blocked.
-     * Indicates whether or not to block the user from using Safari. Requires a supervised device for iOS 13 and later.
+     * Indicates whether or not to block the user from using Safari.
      */
     @SerializedName(value = "safariBlocked", alternate = {"SafariBlocked"})
     @Expose

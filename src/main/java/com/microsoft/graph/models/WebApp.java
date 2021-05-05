@@ -27,7 +27,7 @@ public class WebApp extends MobileApp implements IJsonBackedObject {
 
     /**
      * The App Url.
-     * The web app URL. This property cannot be PATCHed.
+     * The web app URL.
      */
     @SerializedName(value = "appUrl", alternate = {"AppUrl"})
     @Expose

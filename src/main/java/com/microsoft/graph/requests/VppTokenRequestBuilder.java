@@ -58,7 +58,7 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder<VppToken> {
 
 
     /**
-     * Gets a builder to execute the method
+     * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
      * @return the request builder
      */
     @Nonnull

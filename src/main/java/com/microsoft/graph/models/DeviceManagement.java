@@ -31,6 +31,8 @@ import com.microsoft.graph.models.ApplePushNotificationCertificate;
 import com.microsoft.graph.models.DetectedApp;
 import com.microsoft.graph.models.ManagedDeviceOverview;
 import com.microsoft.graph.models.ManagedDevice;
+import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
+import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
 import com.microsoft.graph.models.NotificationMessageTemplate;
 import com.microsoft.graph.models.ResourceOperation;
 import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
@@ -54,6 +56,8 @@ import com.microsoft.graph.requests.DeviceManagementExchangeConnectorCollectionP
 import com.microsoft.graph.requests.MobileThreatDefenseConnectorCollectionPage;
 import com.microsoft.graph.requests.DetectedAppCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
+import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage;
+import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.NotificationMessageTemplateCollectionPage;
 import com.microsoft.graph.requests.ResourceOperationCollectionPage;
 import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionPage;
@@ -108,7 +112,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscription State.
-     * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
      */
     @SerializedName(value = "subscriptionState", alternate = {"SubscriptionState"})
     @Expose
@@ -287,6 +291,24 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public ManagedDeviceCollectionPage managedDevices;
 
     /**
+     * The Imported Windows Autopilot Device Identities.
+     * Collection of imported Windows autopilot devices.
+     */
+    @SerializedName(value = "importedWindowsAutopilotDeviceIdentities", alternate = {"ImportedWindowsAutopilotDeviceIdentities"})
+    @Expose
+	@Nullable
+    public ImportedWindowsAutopilotDeviceIdentityCollectionPage importedWindowsAutopilotDeviceIdentities;
+
+    /**
+     * The Windows Autopilot Device Identities.
+     * The Windows autopilot device identities contained collection.
+     */
+    @SerializedName(value = "windowsAutopilotDeviceIdentities", alternate = {"WindowsAutopilotDeviceIdentities"})
+    @Expose
+	@Nullable
+    public WindowsAutopilotDeviceIdentityCollectionPage windowsAutopilotDeviceIdentities;
+
+    /**
      * The Notification Message Templates.
      * The Notification Message Templates.
      */
@@ -427,6 +449,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("managedDevices")) {
             managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
+        }
+
+        if (json.has("importedWindowsAutopilotDeviceIdentities")) {
+            importedWindowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("importedWindowsAutopilotDeviceIdentities"), ImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
+        }
+
+        if (json.has("windowsAutopilotDeviceIdentities")) {
+            windowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("windowsAutopilotDeviceIdentities"), WindowsAutopilotDeviceIdentityCollectionPage.class);
         }
 
         if (json.has("notificationMessageTemplates")) {

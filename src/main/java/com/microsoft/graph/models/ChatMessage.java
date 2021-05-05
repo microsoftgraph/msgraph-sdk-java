@@ -185,7 +185,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reply To Id.
-     * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+     * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
      */
     @SerializedName(value = "replyToId", alternate = {"ReplyToId"})
     @Expose
