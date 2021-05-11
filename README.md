@@ -19,11 +19,11 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:3.4.0'
+    implementation 'com.microsoft.graph:microsoft-graph:3.5.0'
     // Uncomment the line below if you are building an android application
-    //implementation 'com.google.guava:guava:30.1.1-android'
+    //implementation 'com.google.guava:guava:3.5.0-android'
     // This dependency is only needed if you are using the TokenCrendentialAuthProvider
-    implementation 'com.azure:azure-identity:1.2.5'
+    implementation 'com.azure:azure-identity:3.5.0'
 }
 ```
 
@@ -36,11 +36,11 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>3.4.0</version>
+  <version>3.5.0</version>
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
   <groupId>com.azure</groupId>
   <artifactId>azure-identity</artifactId>
-  <version>1.2.5</version>
+  <version>3.5.0</version>
 </dependency>
 ```
 
@@ -133,6 +133,7 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
+
 
 
 

@@ -49,7 +49,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Pending Scopes.
-     * A list of pending scopes waiting for approval. Required.
+     * A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
      */
     @SerializedName(value = "pendingScopes", alternate = {"PendingScopes"})
     @Expose

@@ -27,7 +27,7 @@ public class OmaSettingBase64 extends OmaSetting implements IJsonBackedObject {
 
     /**
      * The File Name.
-     * File name associated with the Value property (.cer | .crt | .p7b | .bin).
+     * File name associated with the Value property (.cer
      */
     @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose

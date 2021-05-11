@@ -99,7 +99,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Provisioning Action.
-     * 
+     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
      */
     @SerializedName(value = "provisioningAction", alternate = {"ProvisioningAction"})
     @Expose
@@ -108,7 +108,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Provisioning Status Info.
-     * 
+     * Details of provisioning status.
      */
     @SerializedName(value = "provisioningStatusInfo", alternate = {"ProvisioningStatusInfo"})
     @Expose

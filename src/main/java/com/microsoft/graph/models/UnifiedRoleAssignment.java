@@ -30,7 +30,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The App Scope Id.
-     * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
+     * Identifier of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
      */
     @SerializedName(value = "appScopeId", alternate = {"AppScopeId"})
     @Expose
@@ -48,7 +48,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Directory Scope Id.
-     * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      */
     @SerializedName(value = "directoryScopeId", alternate = {"DirectoryScopeId"})
     @Expose
@@ -57,7 +57,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Principal Id.
-     * Objectid of the principal to which the assignment is granted.
+     * Identifier of the principal to which the assignment is granted. Supports $filter (eq operator only).
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -66,7 +66,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definition Id.
-     * ID of the unifiedRoleDefinition the assignment is for. Read only.
+     * Identifier of the unifiedRoleDefinition the assignment is for. Read-only. Supports $filter (eq operator only).
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -75,7 +75,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The App Scope.
-     * 
+     * Details of the app specific scope when the assignment scope is app specific. Containment entity.
      */
     @SerializedName(value = "appScope", alternate = {"AppScope"})
     @Expose
@@ -84,7 +84,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Directory Scope.
-     * 
+     * The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
      */
     @SerializedName(value = "directoryScope", alternate = {"DirectoryScope"})
     @Expose
@@ -93,7 +93,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Principal.
-     * 
+     * The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
      */
     @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose
@@ -102,7 +102,7 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definition.
-     * 
+     * The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
      */
     @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose

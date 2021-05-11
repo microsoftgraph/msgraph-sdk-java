@@ -40,7 +40,7 @@ public class ProvisioningErrorInfo implements IJsonBackedObject {
 
     /**
      * The Additional Details.
-     * 
+     * Additional details in case of error.
      */
     @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose
@@ -49,7 +49,7 @@ public class ProvisioningErrorInfo implements IJsonBackedObject {
 
     /**
      * The Error Category.
-     * 
+     * Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
      */
     @SerializedName(value = "errorCategory", alternate = {"ErrorCategory"})
     @Expose
@@ -58,7 +58,7 @@ public class ProvisioningErrorInfo implements IJsonBackedObject {
 
     /**
      * The Error Code.
-     * 
+     * Unique error code if any occurred. Learn more
      */
     @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
@@ -67,7 +67,7 @@ public class ProvisioningErrorInfo implements IJsonBackedObject {
 
     /**
      * The Reason.
-     * 
+     * Summarizes the status and describes why the status happened.
      */
     @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
@@ -76,7 +76,7 @@ public class ProvisioningErrorInfo implements IJsonBackedObject {
 
     /**
      * The Recommended Action.
-     * 
+     * Provides the resolution for the corresponding error.
      */
     @SerializedName(value = "recommendedAction", alternate = {"RecommendedAction"})
     @Expose

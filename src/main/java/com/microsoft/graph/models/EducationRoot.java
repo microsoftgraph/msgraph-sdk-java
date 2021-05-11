@@ -12,7 +12,6 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.EducationClass;
 import com.microsoft.graph.models.EducationUser;
 import com.microsoft.graph.models.EducationSchool;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EducationClassCollectionPage;
 import com.microsoft.graph.requests.EducationSchoolCollectionPage;
 import com.microsoft.graph.requests.EducationUserCollectionPage;
@@ -29,12 +28,25 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Education Root.
  */
-public class EducationRoot extends Entity implements IJsonBackedObject {
+public class EducationRoot implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Classes.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "classes", alternate = {"Classes"})
     @Expose
@@ -43,7 +55,7 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Me.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "me", alternate = {"Me"})
     @Expose
@@ -52,7 +64,7 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Schools.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "schools", alternate = {"Schools"})
     @Expose
@@ -61,7 +73,7 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Users.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "users", alternate = {"Users"})
     @Expose

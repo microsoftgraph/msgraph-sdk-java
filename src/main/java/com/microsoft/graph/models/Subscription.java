@@ -36,7 +36,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Type.
-     * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
+     * Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Required. Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
      */
     @SerializedName(value = "changeType", alternate = {"ChangeType"})
     @Expose
@@ -45,7 +45,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Client State.
-     * Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
+     * Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification. Optional.
      */
     @SerializedName(value = "clientState", alternate = {"ClientState"})
     @Expose
@@ -54,7 +54,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Creator Id.
-     * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
+     * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.
      */
     @SerializedName(value = "creatorId", alternate = {"CreatorId"})
     @Expose
@@ -72,7 +72,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Encryption Certificate Id.
-     * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
+     * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional. Required when includeResourceData is true.
      */
     @SerializedName(value = "encryptionCertificateId", alternate = {"EncryptionCertificateId"})
     @Expose
@@ -81,7 +81,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
+     * Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time. Required.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -126,7 +126,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Url.
-     * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+     * The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Required.
      */
     @SerializedName(value = "notificationUrl", alternate = {"NotificationUrl"})
     @Expose
@@ -135,7 +135,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
+     * Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource. Required.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose

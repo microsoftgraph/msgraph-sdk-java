@@ -29,7 +29,7 @@ public class InferenceClassificationOverride extends Entity implements IJsonBack
 
     /**
      * The Classify As.
-     * Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
+     * Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other.
      */
     @SerializedName(value = "classifyAs", alternate = {"ClassifyAs"})
     @Expose

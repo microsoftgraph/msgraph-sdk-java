@@ -40,7 +40,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
+     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith operators only).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Built In.
-     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
+     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq operator only).
      */
     @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
@@ -67,7 +67,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Scopes.
-     * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
+     * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
      */
     @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
     @Expose
@@ -103,7 +103,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Inherits Permissions From.
-     * 
+     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
      */
     @SerializedName(value = "inheritsPermissionsFrom", alternate = {"InheritsPermissionsFrom"})
     @Expose

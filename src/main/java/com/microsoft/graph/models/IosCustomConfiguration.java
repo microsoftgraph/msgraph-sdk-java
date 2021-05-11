@@ -36,7 +36,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements IJson
 
     /**
      * The Payload File Name.
-     * Payload file name (.mobileconfig | .xml).
+     * Payload file name (.mobileconfig
      */
     @SerializedName(value = "payloadFileName", alternate = {"PayloadFileName"})
     @Expose
