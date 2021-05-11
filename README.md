@@ -21,9 +21,9 @@ dependencies {
     // Include the sdk as a dependency
     implementation 'com.microsoft.graph:microsoft-graph:3.5.0'
     // Uncomment the line below if you are building an android application
-    //implementation 'com.google.guava:guava:3.5.0-android'
+    //implementation 'com.google.guava:guava:30.1.1-android'
     // This dependency is only needed if you are using the TokenCrendentialAuthProvider
-    implementation 'com.azure:azure-identity:3.5.0'
+    implementation 'com.azure:azure-identity:1.2.5'
 }
 ```
 
@@ -40,7 +40,7 @@ Add the dependency in `dependencies` in pom.xml
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
   <groupId>com.azure</groupId>
   <artifactId>azure-identity</artifactId>
-  <version>3.5.0</version>
+  <version>1.2.5</version>
 </dependency>
 ```
 
