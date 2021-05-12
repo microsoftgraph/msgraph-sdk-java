@@ -37,6 +37,8 @@ Add the dependency in `dependencies` in pom.xml
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
   <version>3.5.0</version>
+</dependency>
+<dependency>
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
   <groupId>com.azure</groupId>
   <artifactId>azure-identity</artifactId>
