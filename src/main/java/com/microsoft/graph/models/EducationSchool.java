@@ -134,7 +134,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Administrative Unit.
-     * 
+     * The underlying administrativeUnit for this school.
      */
     @SerializedName(value = "administrativeUnit", alternate = {"AdministrativeUnit"})
     @Expose

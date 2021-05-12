@@ -28,7 +28,7 @@ public class Initiator extends Identity implements IJsonBackedObject {
 
     /**
      * The Initiator Type.
-     * Type of initiator. Possible values are: user, app, system, unknownFutureValue.
+     * Type of initiator. Possible values are: user, application, system, unknownFutureValue.
      */
     @SerializedName(value = "initiatorType", alternate = {"InitiatorType"})
     @Expose

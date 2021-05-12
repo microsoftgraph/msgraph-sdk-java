@@ -28,7 +28,7 @@ public class AuthenticationFlowsPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Description.
-     * Inherited property. A description of the policy. Optional. Read-only.
+     * Inherited property. A description of the policy. This property is not a key. Optional. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -37,7 +37,7 @@ public class AuthenticationFlowsPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * Inherited property. The human-readable name of the policy. Optional. Read-only.
+     * Inherited property. The human-readable name of the policy. This property is not a key. Optional. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class AuthenticationFlowsPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Self Service Sign Up.
-     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. Optional. Read-only.
+     * Contains selfServiceSignUpAuthenticationFlowConfiguration settings that convey whether self-service sign-up is enabled or disabled. This property is not a key. Optional. Read-only.
      */
     @SerializedName(value = "selfServiceSignUp", alternate = {"SelfServiceSignUp"})
     @Expose

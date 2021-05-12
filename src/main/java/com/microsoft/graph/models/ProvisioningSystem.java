@@ -28,7 +28,7 @@ public class ProvisioningSystem extends Identity implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * Details of the system.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose

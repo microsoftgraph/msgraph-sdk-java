@@ -35,7 +35,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Api Connector Configuration.
-     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      */
     @SerializedName(value = "apiConnectorConfiguration", alternate = {"ApiConnectorConfiguration"})
     @Expose
@@ -51,7 +51,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Languages.
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
      */
     @SerializedName(value = "languages", alternate = {"Languages"})
     @Expose
