@@ -55,6 +55,15 @@ public class MailFolder extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Is Hidden.
+     * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
+     */
+    @SerializedName(value = "isHidden", alternate = {"IsHidden"})
+    @Expose
+	@Nullable
+    public Boolean isHidden;
+
+    /**
      * The Parent Folder Id.
      * The unique identifier for the mailFolder's parent mailFolder.
      */

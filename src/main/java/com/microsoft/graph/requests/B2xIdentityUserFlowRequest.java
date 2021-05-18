@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionReque
 import com.microsoft.graph.requests.UserFlowLanguageConfigurationRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

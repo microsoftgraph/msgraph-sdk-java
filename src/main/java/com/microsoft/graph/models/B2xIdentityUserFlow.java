@@ -13,10 +13,12 @@ import com.microsoft.graph.models.UserFlowApiConnectorConfiguration;
 import com.microsoft.graph.models.IdentityProvider;
 import com.microsoft.graph.models.UserFlowLanguageConfiguration;
 import com.microsoft.graph.models.IdentityUserFlowAttributeAssignment;
+import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.IdentityUserFlow;
 import com.microsoft.graph.requests.IdentityProviderCollectionPage;
 import com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionPage;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionPage;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -67,6 +69,13 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 	@Nullable
     public IdentityUserFlowAttributeAssignmentCollectionPage userAttributeAssignments;
 
+    /**
+     * The User Flow Identity Providers.
+     * 
+     */
+	@Nullable
+    public IdentityProviderBaseCollectionPage userFlowIdentityProviders;
+
 
     /**
      * Sets the raw JSON object
@@ -87,6 +96,10 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
         if (json.has("userAttributeAssignments")) {
             userAttributeAssignments = serializer.deserializeObject(json.get("userAttributeAssignments"), IdentityUserFlowAttributeAssignmentCollectionPage.class);
+        }
+
+        if (json.has("userFlowIdentityProviders")) {
+            userFlowIdentityProviders = serializer.deserializeObject(json.get("userFlowIdentityProviders"), IdentityProviderBaseCollectionPage.class);
         }
     }
 }

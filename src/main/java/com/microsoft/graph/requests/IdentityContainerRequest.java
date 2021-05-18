@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.IdentityApiConnectorCollectionRequestBuilder
 import com.microsoft.graph.requests.IdentityApiConnectorRequestBuilder;
 import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.B2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeRequestBuilder;
 import java.util.Arrays;

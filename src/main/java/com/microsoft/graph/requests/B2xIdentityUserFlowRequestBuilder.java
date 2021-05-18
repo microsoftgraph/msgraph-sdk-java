@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionReque
 import com.microsoft.graph.requests.UserFlowLanguageConfigurationRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -121,5 +123,25 @@ public class B2xIdentityUserFlowRequestBuilder extends BaseRequestBuilder<B2xIde
     @Nonnull
     public IdentityUserFlowAttributeAssignmentRequestBuilder userAttributeAssignments(@Nonnull final String id) {
         return new IdentityUserFlowAttributeAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("userAttributeAssignments") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the IdentityProviderBase collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public IdentityProviderBaseCollectionWithReferencesRequestBuilder userFlowIdentityProviders() {
+        return new IdentityProviderBaseCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowIdentityProviders"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the IdentityProviderBase item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public IdentityProviderBaseWithReferenceRequestBuilder userFlowIdentityProviders(@Nonnull final String id) {
+        return new IdentityProviderBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowIdentityProviders") + "/" + id, getClient(), null);
     }
 }
