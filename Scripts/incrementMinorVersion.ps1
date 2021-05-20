@@ -15,9 +15,8 @@
 
 function Update-ReadmeVersion([string]$readmeFilePath, [version]$version) {
 	$readmeFileContent = Get-Content -Path $readmeFilePath -Raw
-	$gradlePrefix = "graph"
-	$readmeFileContent = $readmeFileContent -replace "$($gradlePrefix):\d{1,}\.\d{1,}\.\d{1,}", "$($gradlePrefix):$($version.ToString())"
-	$gradleLineNumber = Select-String -Path $readmeFilePath -Pattern "```xml" | Select-Object -ExpandProperty LineNumber;
+	$readmeFileContent = $readmeFileContent -replace "graph(\-beta)?:\d{1,}\.\d{1,}\.\d{1,}", "graph`$1:$($version.ToString())"
+	$gradleLineNumber = Select-String -Path $readmeFilePath -Pattern "```xml" | Select-Object -First 1 -ExpandProperty LineNumber;
 	$gradleLineNumber+= 4 # skipping triple tick, block open, comment, groupid, artifactid
 	$readmeLines = $readmeFileContent -split "`n"
 	$readmeLines[$gradleLineNumber] = $readmeLines[$gradleLineNumber] -replace "\d{1,}\.\d{1,}\.\d{1,}", $version.ToString()
