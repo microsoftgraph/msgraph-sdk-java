@@ -27,7 +27,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements IJsonBa
 
     /**
      * The Query.
-     * The query representing what will be reviewed in an access review. Examples of this include /groups/{id}/members?$filter=…
+     * The query representing what will be reviewed in an access review.
      */
     @SerializedName(value = "query", alternate = {"Query"})
     @Expose

@@ -52,6 +52,18 @@ public enum DeviceEnrollmentType
     */
     WINDOWS_CO_MANAGEMENT,
     /**
+    * windows Azure ADJoin Using Device Auth
+    */
+    WINDOWS_AZURE_AD_JOIN_USING_DEVICE_AUTH,
+    /**
+    * apple User Enrollment
+    */
+    APPLE_USER_ENROLLMENT,
+    /**
+    * apple User Enrollment With Service Account
+    */
+    APPLE_USER_ENROLLMENT_WITH_SERVICE_ACCOUNT,
+    /**
     * For DeviceEnrollmentType values that were not expected from the service
     */
     UNEXPECTED_VALUE

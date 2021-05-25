@@ -47,6 +47,15 @@ public class ManagedDeviceWipeParameterSet {
 	@Nullable
     public String macOsUnlockCode;
 
+    /**
+     * The persist Esim Data Plan.
+     * 
+     */
+    @SerializedName(value = "persistEsimDataPlan", alternate = {"PersistEsimDataPlan"})
+    @Expose
+	@Nullable
+    public Boolean persistEsimDataPlan;
+
 
     /**
      * Instiaciates a new ManagedDeviceWipeParameterSet
@@ -60,6 +69,7 @@ public class ManagedDeviceWipeParameterSet {
         this.keepEnrollmentData = builder.keepEnrollmentData;
         this.keepUserData = builder.keepUserData;
         this.macOsUnlockCode = builder.macOsUnlockCode;
+        this.persistEsimDataPlan = builder.persistEsimDataPlan;
     }
     /**
      * Gets a new builder for the body
@@ -119,6 +129,21 @@ public class ManagedDeviceWipeParameterSet {
             return this;
         }
         /**
+         * The persistEsimDataPlan parameter value
+         */
+        @Nullable
+        protected Boolean persistEsimDataPlan;
+        /**
+         * Sets the PersistEsimDataPlan
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagedDeviceWipeParameterSetBuilder withPersistEsimDataPlan(@Nullable final Boolean val) {
+            this.persistEsimDataPlan = val;
+            return this;
+        }
+        /**
          * Instanciates a new ManagedDeviceWipeParameterSetBuilder
          */
         @Nullable
@@ -147,6 +172,9 @@ public class ManagedDeviceWipeParameterSet {
         }
         if(this.macOsUnlockCode != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("macOsUnlockCode", macOsUnlockCode));
+        }
+        if(this.persistEsimDataPlan != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("persistEsimDataPlan", persistEsimDataPlan));
         }
         return result;
     }
