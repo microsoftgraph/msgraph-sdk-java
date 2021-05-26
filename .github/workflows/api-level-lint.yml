@@ -19,7 +19,7 @@ jobs:
           distribution: 'adopt'
           java-version: 16
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v2.0.6
+        uses: android-actions/setup-android@v2.0.7
       - name: Add execution right to the script
         run: chmod +x gradlew
         working-directory: ./android
