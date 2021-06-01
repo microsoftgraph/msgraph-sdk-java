@@ -41,7 +41,7 @@ public class PatternedRecurrence implements IJsonBackedObject {
 
     /**
      * The Pattern.
-     * The frequency of an event.
+     * The frequency of an event. Do not specify for a one-time access review.
      */
     @SerializedName(value = "pattern", alternate = {"Pattern"})
     @Expose

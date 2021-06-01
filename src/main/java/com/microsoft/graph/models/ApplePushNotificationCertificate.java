@@ -44,6 +44,15 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
     public String certificate;
 
     /**
+     * The Certificate Serial Number.
+     * Certificate serial number. This property is read-only.
+     */
+    @SerializedName(value = "certificateSerialNumber", alternate = {"CertificateSerialNumber"})
+    @Expose
+	@Nullable
+    public String certificateSerialNumber;
+
+    /**
      * The Expiration Date Time.
      * The expiration date and time for Apple push notification certificate.
      */
