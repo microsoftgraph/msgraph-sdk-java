@@ -205,6 +205,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime enrolledDateTime;
 
     /**
+     * The Ethernet Mac Address.
+     * Ethernet MAC. This property is read-only.
+     */
+    @SerializedName(value = "ethernetMacAddress", alternate = {"EthernetMacAddress"})
+    @Expose
+	@Nullable
+    public String ethernetMacAddress;
+
+    /**
      * The Exchange Access State.
      * The Access State of the device in Exchange. This property is read-only. Possible values are: none, unknown, allowed, blocked, quarantined.
      */
@@ -239,6 +248,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Long freeStorageSpaceInBytes;
+
+    /**
+     * The Iccid.
+     * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. This property is read-only.
+     */
+    @SerializedName(value = "iccid", alternate = {"Iccid"})
+    @Expose
+	@Nullable
+    public String iccid;
 
     /**
      * The Imei.
@@ -305,7 +323,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Agent.
-     * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense.
+     * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
      */
     @SerializedName(value = "managementAgent", alternate = {"ManagementAgent"})
     @Expose
@@ -338,6 +356,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String model;
+
+    /**
+     * The Notes.
+     * Notes on the device created by IT Admin
+     */
+    @SerializedName(value = "notes", alternate = {"Notes"})
+    @Expose
+	@Nullable
+    public String notes;
 
     /**
      * The Operating System.
@@ -374,6 +401,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String phoneNumber;
+
+    /**
+     * The Physical Memory In Bytes.
+     * Total Memory in Bytes. This property is read-only.
+     */
+    @SerializedName(value = "physicalMemoryInBytes", alternate = {"PhysicalMemoryInBytes"})
+    @Expose
+	@Nullable
+    public Long physicalMemoryInBytes;
 
     /**
      * The Remote Assistance Session Error Details.
@@ -419,6 +455,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Long totalStorageSpaceInBytes;
+
+    /**
+     * The Udid.
+     * Unique Device Identifier for iOS and macOS devices. This property is read-only.
+     */
+    @SerializedName(value = "udid", alternate = {"Udid"})
+    @Expose
+	@Nullable
+    public String udid;
 
     /**
      * The User Display Name.

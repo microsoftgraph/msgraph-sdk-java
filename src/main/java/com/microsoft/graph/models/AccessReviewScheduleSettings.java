@@ -51,7 +51,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Auto Apply Decisions Enabled.
-     * Flag to indicate whether auto-apply feature is enabled.
+     * Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.
      */
     @SerializedName(value = "autoApplyDecisionsEnabled", alternate = {"AutoApplyDecisionsEnabled"})
     @Expose
@@ -60,7 +60,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Default Decision.
-     * Decision chosen if defaultDecisionEnabled is enabled. Can be one of 'Approve', 'Deny', or 'Recommendation'.
+     * Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
      */
     @SerializedName(value = "defaultDecision", alternate = {"DefaultDecision"})
     @Expose
@@ -69,7 +69,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Default Decision Enabled.
-     * Flag to indicate whether default decision is enabled/disabled when reviewers do not respond.
+     * Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.
      */
     @SerializedName(value = "defaultDecisionEnabled", alternate = {"DefaultDecisionEnabled"})
     @Expose
@@ -87,7 +87,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Justification Required On Approval.
-     * Flag to indicate whether reviewers are required to provide justification with their decision.
+     * Indicates whether reviewers are required to provide justification with their decision. Default value is false.
      */
     @SerializedName(value = "justificationRequiredOnApproval", alternate = {"JustificationRequiredOnApproval"})
     @Expose
@@ -96,7 +96,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Mail Notifications Enabled.
-     * Flag to indicate whether emails are enabled/disabled.
+     * Indicates whether emails are enabled or disabled. Default value is false.
      */
     @SerializedName(value = "mailNotificationsEnabled", alternate = {"MailNotificationsEnabled"})
     @Expose
@@ -105,7 +105,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recommendations Enabled.
-     * Flag to indicate whether decision recommendations are enabled/disabled.
+     * Indicates whether decision recommendations are enabled/disabled.
      */
     @SerializedName(value = "recommendationsEnabled", alternate = {"RecommendationsEnabled"})
     @Expose
@@ -114,7 +114,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * Detailed settings for recurrence. Using standard Outlook recurrence object. Note that dayOfMonth is not supported - use property startDate on recurrenceRange to determine the day the review will start on.
+     * Detailed settings for recurrence using the standard Outlook recurrence object. Only weekly and absoluteMonthly on recurrencePattern are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
@@ -123,7 +123,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Reminder Notifications Enabled.
-     * Flag to indicate whether reminders are enabled/disabled.
+     * Indicates whether reminders are enabled or disabled. Default value is false.
      */
     @SerializedName(value = "reminderNotificationsEnabled", alternate = {"ReminderNotificationsEnabled"})
     @Expose

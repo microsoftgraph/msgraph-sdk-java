@@ -63,7 +63,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * An optional description for the team.
+     * An optional description for the team. Maximum length: 1024 characters.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
