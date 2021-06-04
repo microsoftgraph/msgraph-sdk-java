@@ -4,7 +4,7 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
-    testImplementation 'org.mockito:mockito-inline:3.10.0'
+    testImplementation 'org.mockito:mockito-inline:3.11.0'
     
     api 'com.google.code.gson:gson:2.8.7'
     
