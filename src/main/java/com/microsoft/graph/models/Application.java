@@ -111,6 +111,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public String description;
 
     /**
+     * The Disabled By Microsoft Status.
+     * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).
+     */
+    @SerializedName(value = "disabledByMicrosoftStatus", alternate = {"DisabledByMicrosoftStatus"})
+    @Expose
+	@Nullable
+    public String disabledByMicrosoftStatus;
+
+    /**
      * The Display Name.
      * The display name for the application.
      */
