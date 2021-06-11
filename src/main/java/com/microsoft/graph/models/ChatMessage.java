@@ -221,7 +221,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Hosted Contents.
-     * Content in a message hosted by Microsoft Teams e.g., images, code snippets etc.
+     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
      */
     @SerializedName(value = "hostedContents", alternate = {"HostedContents"})
     @Expose
