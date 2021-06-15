@@ -87,7 +87,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Entry Exit Announced.
-     * Whether or not to announce when callers join or leave.
+     * Indicates whether to announce when callers join or leave.
      */
     @SerializedName(value = "isEntryExitAnnounced", alternate = {"IsEntryExitAnnounced"})
     @Expose

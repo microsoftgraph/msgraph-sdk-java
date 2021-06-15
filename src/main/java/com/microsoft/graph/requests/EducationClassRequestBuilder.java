@@ -8,6 +8,12 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationClass;
+import com.microsoft.graph.requests.EducationCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.EducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.EducationAssignmentDefaultsRequestBuilder;
+import com.microsoft.graph.requests.EducationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.EducationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.EducationAssignmentSettingsRequestBuilder;
 import com.microsoft.graph.requests.GroupWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.EducationUserCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.EducationUserWithReferenceRequestBuilder;
@@ -61,6 +67,66 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder<EducationCl
     }
 
 
+    /**
+     *  Gets a request builder for the EducationCategory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EducationCategoryCollectionRequestBuilder assignmentCategories() {
+        return new EducationCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentCategories"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EducationCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EducationCategoryRequestBuilder assignmentCategories(@Nonnull final String id) {
+        return new EducationCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentCategories") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for EducationAssignmentDefaults
+     *
+     * @return the EducationAssignmentDefaultsRequestBuilder instance
+     */
+    @Nonnull
+    public EducationAssignmentDefaultsRequestBuilder assignmentDefaults() {
+        return new EducationAssignmentDefaultsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentDefaults"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the EducationAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EducationAssignmentCollectionRequestBuilder assignments() {
+        return new EducationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EducationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EducationAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new EducationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for EducationAssignmentSettings
+     *
+     * @return the EducationAssignmentSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public EducationAssignmentSettingsRequestBuilder assignmentSettings() {
+        return new EducationAssignmentSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentSettings"), getClient(), null);
+    }
 
     /**
      * Gets the request builder for Group

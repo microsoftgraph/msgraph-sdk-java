@@ -13,10 +13,16 @@ import com.microsoft.graph.models.EducationCourse;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EducationExternalSource;
 import com.microsoft.graph.models.EducationTerm;
+import com.microsoft.graph.models.EducationCategory;
+import com.microsoft.graph.models.EducationAssignmentDefaults;
+import com.microsoft.graph.models.EducationAssignment;
+import com.microsoft.graph.models.EducationAssignmentSettings;
 import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.EducationUser;
 import com.microsoft.graph.models.EducationSchool;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.EducationCategoryCollectionPage;
+import com.microsoft.graph.requests.EducationAssignmentCollectionPage;
 import com.microsoft.graph.requests.EducationUserCollectionPage;
 import com.microsoft.graph.requests.EducationSchoolCollectionPage;
 
@@ -144,6 +150,42 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     public EducationTerm term;
 
     /**
+     * The Assignment Categories.
+     * 
+     */
+    @SerializedName(value = "assignmentCategories", alternate = {"AssignmentCategories"})
+    @Expose
+	@Nullable
+    public EducationCategoryCollectionPage assignmentCategories;
+
+    /**
+     * The Assignment Defaults.
+     * 
+     */
+    @SerializedName(value = "assignmentDefaults", alternate = {"AssignmentDefaults"})
+    @Expose
+	@Nullable
+    public EducationAssignmentDefaults assignmentDefaults;
+
+    /**
+     * The Assignments.
+     * All assignments associated with this class. Nullable.
+     */
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
+    @Expose
+	@Nullable
+    public EducationAssignmentCollectionPage assignments;
+
+    /**
+     * The Assignment Settings.
+     * 
+     */
+    @SerializedName(value = "assignmentSettings", alternate = {"AssignmentSettings"})
+    @Expose
+	@Nullable
+    public EducationAssignmentSettings assignmentSettings;
+
+    /**
      * The Group.
      * The underlying Microsoft 365 group object.
      */
@@ -182,6 +224,14 @@ public class EducationClass extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("assignmentCategories")) {
+            assignmentCategories = serializer.deserializeObject(json.get("assignmentCategories"), EducationCategoryCollectionPage.class);
+        }
+
+        if (json.has("assignments")) {
+            assignments = serializer.deserializeObject(json.get("assignments"), EducationAssignmentCollectionPage.class);
+        }
 
         if (json.has("members")) {
             members = serializer.deserializeObject(json.get("members"), EducationUserCollectionPage.class);

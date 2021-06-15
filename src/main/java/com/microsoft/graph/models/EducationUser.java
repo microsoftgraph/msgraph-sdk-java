@@ -20,10 +20,12 @@ import com.microsoft.graph.models.EducationUserRole;
 import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.EducationStudent;
 import com.microsoft.graph.models.EducationTeacher;
+import com.microsoft.graph.models.EducationRubric;
 import com.microsoft.graph.models.EducationClass;
 import com.microsoft.graph.models.EducationSchool;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.EducationRubricCollectionPage;
 import com.microsoft.graph.requests.EducationClassCollectionPage;
 import com.microsoft.graph.requests.EducationSchoolCollectionPage;
 
@@ -322,6 +324,15 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public String userType;
 
     /**
+     * The Rubrics.
+     * 
+     */
+    @SerializedName(value = "rubrics", alternate = {"Rubrics"})
+    @Expose
+	@Nullable
+    public EducationRubricCollectionPage rubrics;
+
+    /**
      * The Classes.
      * Classes to which the user belongs. Nullable.
      */
@@ -360,6 +371,10 @@ public class EducationUser extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("rubrics")) {
+            rubrics = serializer.deserializeObject(json.get("rubrics"), EducationRubricCollectionPage.class);
+        }
 
         if (json.has("classes")) {
             classes = serializer.deserializeObject(json.get("classes"), EducationClassCollectionPage.class);

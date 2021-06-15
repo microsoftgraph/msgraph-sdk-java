@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.Event;
+import com.microsoft.graph.models.TimeSlot;
 import com.microsoft.graph.models.Recipient;
 import com.microsoft.graph.models.DateTimeTimeZone;
 import java.util.Arrays;
