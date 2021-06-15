@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.EventDeclineRequest;
 import com.microsoft.graph.models.Event;
-
+import com.microsoft.graph.models.TimeSlot;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.models.EventDeclineParameterSet;
 import com.microsoft.graph.core.IBaseClient;

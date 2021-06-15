@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationUser;
+import com.microsoft.graph.requests.EducationRubricCollectionRequestBuilder;
+import com.microsoft.graph.requests.EducationRubricRequestBuilder;
 import com.microsoft.graph.requests.EducationClassCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.EducationClassWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.EducationSchoolCollectionWithReferencesRequestBuilder;
@@ -61,6 +63,26 @@ public class EducationUserRequestBuilder extends BaseRequestBuilder<EducationUse
     }
 
 
+    /**
+     *  Gets a request builder for the EducationRubric collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EducationRubricCollectionRequestBuilder rubrics() {
+        return new EducationRubricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rubrics"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EducationRubric item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EducationRubricRequestBuilder rubrics(@Nonnull final String id) {
+        return new EducationRubricRequestBuilder(getRequestUrlWithAdditionalSegment("rubrics") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the EducationClass collection
      *

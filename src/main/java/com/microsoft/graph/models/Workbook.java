@@ -67,7 +67,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
     /**
      * The Names.
-     * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
+     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      */
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose

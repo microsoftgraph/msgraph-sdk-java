@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.models;
 
-
+import com.microsoft.graph.models.TimeSlot;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -38,6 +38,15 @@ public class EventTentativelyAcceptParameterSet {
 	@Nullable
     public Boolean sendResponse;
 
+    /**
+     * The proposed New Time.
+     * 
+     */
+    @SerializedName(value = "proposedNewTime", alternate = {"ProposedNewTime"})
+    @Expose
+	@Nullable
+    public TimeSlot proposedNewTime;
+
 
     /**
      * Instiaciates a new EventTentativelyAcceptParameterSet
@@ -50,6 +59,7 @@ public class EventTentativelyAcceptParameterSet {
     protected EventTentativelyAcceptParameterSet(@Nonnull final EventTentativelyAcceptParameterSetBuilder builder) {
         this.comment = builder.comment;
         this.sendResponse = builder.sendResponse;
+        this.proposedNewTime = builder.proposedNewTime;
     }
     /**
      * Gets a new builder for the body
@@ -94,6 +104,21 @@ public class EventTentativelyAcceptParameterSet {
             return this;
         }
         /**
+         * The proposedNewTime parameter value
+         */
+        @Nullable
+        protected TimeSlot proposedNewTime;
+        /**
+         * Sets the ProposedNewTime
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public EventTentativelyAcceptParameterSetBuilder withProposedNewTime(@Nullable final TimeSlot val) {
+            this.proposedNewTime = val;
+            return this;
+        }
+        /**
          * Instanciates a new EventTentativelyAcceptParameterSetBuilder
          */
         @Nullable
@@ -119,6 +144,9 @@ public class EventTentativelyAcceptParameterSet {
         }
         if(this.sendResponse != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("sendResponse", sendResponse));
+        }
+        if(this.proposedNewTime != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("proposedNewTime", proposedNewTime));
         }
         return result;
     }
