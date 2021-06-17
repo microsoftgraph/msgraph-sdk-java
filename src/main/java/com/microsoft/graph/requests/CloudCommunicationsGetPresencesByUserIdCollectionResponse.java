@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Cloud Communications Get Presences By User Id Collection Response.
  */
 public class CloudCommunicationsGetPresencesByUserIdCollectionResponse extends BaseCollectionResponse<Presence> {
-
 }

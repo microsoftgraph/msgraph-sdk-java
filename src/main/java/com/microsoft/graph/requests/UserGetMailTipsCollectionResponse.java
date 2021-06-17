@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Get Mail Tips Collection Response.
  */
 public class UserGetMailTipsCollectionResponse extends BaseCollectionResponse<MailTips> {
-
 }

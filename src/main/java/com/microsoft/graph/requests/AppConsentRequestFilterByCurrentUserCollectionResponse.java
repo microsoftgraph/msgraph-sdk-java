@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the App Consent Request Filter By Current User Collection Response.
  */
 public class AppConsentRequestFilterByCurrentUserCollectionResponse extends BaseCollectionResponse<AppConsentRequest> {
-
 }

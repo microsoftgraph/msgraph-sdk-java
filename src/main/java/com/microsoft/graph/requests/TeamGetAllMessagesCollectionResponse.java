@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Team Get All Messages Collection Response.
  */
 public class TeamGetAllMessagesCollectionResponse extends BaseCollectionResponse<ChatMessage> {
-
 }

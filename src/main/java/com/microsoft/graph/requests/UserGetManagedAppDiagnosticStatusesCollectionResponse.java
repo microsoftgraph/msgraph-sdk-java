@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Get Managed App Diagnostic Statuses Collection Response.
  */
 public class UserGetManagedAppDiagnosticStatusesCollectionResponse extends BaseCollectionResponse<ManagedAppDiagnosticStatus> {
-
 }

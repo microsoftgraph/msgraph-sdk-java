@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Management Get Effective Permissions Collection Response.
  */
 public class DeviceManagementGetEffectivePermissionsCollectionResponse extends BaseCollectionResponse<RolePermission> {
-
 }

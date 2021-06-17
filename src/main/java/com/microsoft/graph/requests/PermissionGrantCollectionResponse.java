@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Permission Grant Collection Response.
  */
 public class PermissionGrantCollectionResponse extends BaseCollectionResponse<Permission> {
-
 }

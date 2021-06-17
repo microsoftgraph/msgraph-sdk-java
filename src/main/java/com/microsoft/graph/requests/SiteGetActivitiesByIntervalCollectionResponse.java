@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Site Get Activities By Interval Collection Response.
  */
 public class SiteGetActivitiesByIntervalCollectionResponse extends BaseCollectionResponse<ItemActivityStat> {
-
 }

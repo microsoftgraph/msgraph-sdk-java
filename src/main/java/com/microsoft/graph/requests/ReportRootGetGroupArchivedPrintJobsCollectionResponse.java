@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Group Archived Print Jobs Collection Response.
  */
 public class ReportRootGetGroupArchivedPrintJobsCollectionResponse extends BaseCollectionResponse<ArchivedPrintJob> {
-
 }

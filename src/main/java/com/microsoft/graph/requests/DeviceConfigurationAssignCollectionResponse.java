@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Configuration Assign Collection Response.
  */
 public class DeviceConfigurationAssignCollectionResponse extends BaseCollectionResponse<DeviceConfigurationAssignment> {
-
 }

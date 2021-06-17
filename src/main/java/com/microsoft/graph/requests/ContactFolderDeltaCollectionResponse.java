@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Contact Folder Delta Collection Response.
  */
 public class ContactFolderDeltaCollectionResponse extends BaseCollectionResponse<ContactFolder> {
-
 }

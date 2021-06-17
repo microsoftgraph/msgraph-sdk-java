@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the OAuth2Permission Grant Delta Collection Response.
  */
 public class OAuth2PermissionGrantDeltaCollectionResponse extends BaseCollectionResponse<OAuth2PermissionGrant> {
-
 }

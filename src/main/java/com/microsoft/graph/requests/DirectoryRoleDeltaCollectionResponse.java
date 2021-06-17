@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Directory Role Delta Collection Response.
  */
 public class DirectoryRoleDeltaCollectionResponse extends BaseCollectionResponse<DirectoryRole> {
-
 }

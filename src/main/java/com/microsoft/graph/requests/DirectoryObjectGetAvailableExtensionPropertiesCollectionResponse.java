@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Directory Object Get Available Extension Properties Collection Response.
  */
 public class DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse extends BaseCollectionResponse<ExtensionProperty> {
-
 }

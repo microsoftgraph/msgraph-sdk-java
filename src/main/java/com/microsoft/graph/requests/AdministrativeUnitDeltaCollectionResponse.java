@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Administrative Unit Delta Collection Response.
  */
 public class AdministrativeUnitDeltaCollectionResponse extends BaseCollectionResponse<AdministrativeUnit> {
-
 }

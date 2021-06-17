@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Access Review Instance Decision Item Filter By Current User Collection Response.
  */
 public class AccessReviewInstanceDecisionItemFilterByCurrentUserCollectionResponse extends BaseCollectionResponse<AccessReviewInstanceDecisionItem> {
-
 }

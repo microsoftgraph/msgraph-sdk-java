@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Drive Item Delta Collection Response.
  */
 public class DriveItemDeltaCollectionResponse extends BaseCollectionResponse<DriveItem> {
-
 }

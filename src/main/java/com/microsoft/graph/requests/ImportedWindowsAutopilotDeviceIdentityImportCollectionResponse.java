@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Imported Windows Autopilot Device Identity Import Collection Response.
  */
 public class ImportedWindowsAutopilotDeviceIdentityImportCollectionResponse extends BaseCollectionResponse<ImportedWindowsAutopilotDeviceIdentity> {
-
 }

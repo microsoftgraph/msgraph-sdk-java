@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Todo Task List Delta Collection Response.
  */
 public class TodoTaskListDeltaCollectionResponse extends BaseCollectionResponse<TodoTaskList> {
-
 }

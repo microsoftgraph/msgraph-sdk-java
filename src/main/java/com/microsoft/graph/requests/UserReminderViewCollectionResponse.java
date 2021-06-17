@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Reminder View Collection Response.
  */
 public class UserReminderViewCollectionResponse extends BaseCollectionResponse<Reminder> {
-
 }
