@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Notebook Get Recent Notebooks Collection Response.
  */
 public class NotebookGetRecentNotebooksCollectionResponse extends BaseCollectionResponse<RecentNotebook> {
-
 }

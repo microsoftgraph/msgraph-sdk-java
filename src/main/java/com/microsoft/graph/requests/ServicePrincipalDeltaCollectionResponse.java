@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Service Principal Delta Collection Response.
  */
 public class ServicePrincipalDeltaCollectionResponse extends BaseCollectionResponse<ServicePrincipal> {
-
 }

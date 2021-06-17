@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Drive Shared With Me Collection Response.
  */
 public class DriveSharedWithMeCollectionResponse extends BaseCollectionResponse<DriveItem> {
-
 }

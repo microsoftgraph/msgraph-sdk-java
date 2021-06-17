@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Drive Item Get Activities By Interval Collection Response.
  */
 public class DriveItemGetActivitiesByIntervalCollectionResponse extends BaseCollectionResponse<ItemActivityStat> {
-
 }

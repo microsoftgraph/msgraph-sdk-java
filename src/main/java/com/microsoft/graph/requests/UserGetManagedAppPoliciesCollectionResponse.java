@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Get Managed App Policies Collection Response.
  */
 public class UserGetManagedAppPoliciesCollectionResponse extends BaseCollectionResponse<ManagedAppPolicy> {
-
 }

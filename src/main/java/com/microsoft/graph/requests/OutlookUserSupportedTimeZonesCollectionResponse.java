@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Outlook User Supported Time Zones Collection Response.
  */
 public class OutlookUserSupportedTimeZonesCollectionResponse extends BaseCollectionResponse<TimeZoneInformation> {
-
 }

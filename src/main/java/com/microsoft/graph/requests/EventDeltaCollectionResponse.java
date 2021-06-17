@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Event Delta Collection Response.
  */
 public class EventDeltaCollectionResponse extends BaseCollectionResponse<Event> {
-
 }

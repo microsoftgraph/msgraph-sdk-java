@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Calendar Get Schedule Collection Response.
  */
 public class CalendarGetScheduleCollectionResponse extends BaseCollectionResponse<ScheduleInformation> {
-
 }

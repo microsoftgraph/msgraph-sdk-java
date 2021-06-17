@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Group Delta Collection Response.
  */
 public class GroupDeltaCollectionResponse extends BaseCollectionResponse<Group> {
-
 }

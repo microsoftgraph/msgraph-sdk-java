@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Search Entity Query Collection Response.
  */
 public class SearchEntityQueryCollectionResponse extends BaseCollectionResponse<SearchResponse> {
-
 }

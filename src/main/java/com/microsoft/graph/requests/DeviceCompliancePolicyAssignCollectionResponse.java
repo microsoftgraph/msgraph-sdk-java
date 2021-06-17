@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Compliance Policy Assign Collection Response.
  */
 public class DeviceCompliancePolicyAssignCollectionResponse extends BaseCollectionResponse<DeviceCompliancePolicyAssignment> {
-
 }

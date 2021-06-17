@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Site Remove Collection Response.
  */
 public class SiteRemoveCollectionResponse extends BaseCollectionResponse<Site> {
-
 }

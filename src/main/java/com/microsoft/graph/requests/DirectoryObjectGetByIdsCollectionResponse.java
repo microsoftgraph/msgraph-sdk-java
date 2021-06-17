@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Directory Object Get By Ids Collection Response.
  */
 public class DirectoryObjectGetByIdsCollectionResponse extends BaseCollectionResponse<DirectoryObject> {
-
 }

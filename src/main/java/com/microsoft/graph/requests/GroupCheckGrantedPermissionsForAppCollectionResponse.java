@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Group Check Granted Permissions For App Collection Response.
  */
 public class GroupCheckGrantedPermissionsForAppCollectionResponse extends BaseCollectionResponse<ResourceSpecificPermissionGrant> {
-
 }

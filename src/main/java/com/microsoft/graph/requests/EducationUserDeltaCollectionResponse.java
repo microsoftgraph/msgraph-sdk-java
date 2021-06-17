@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Education User Delta Collection Response.
  */
 public class EducationUserDeltaCollectionResponse extends BaseCollectionResponse<EducationUser> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Drive Recent Collection Response.
  */
 public class DriveRecentCollectionResponse extends BaseCollectionResponse<DriveItem> {
-
 }

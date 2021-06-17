@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Drive Item Invite Collection Response.
  */
 public class DriveItemInviteCollectionResponse extends BaseCollectionResponse<Permission> {
-
 }

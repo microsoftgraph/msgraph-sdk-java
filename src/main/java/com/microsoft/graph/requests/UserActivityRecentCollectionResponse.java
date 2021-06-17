@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Activity Recent Collection Response.
  */
 public class UserActivityRecentCollectionResponse extends BaseCollectionResponse<UserActivity> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Translate Exchange Ids Collection Response.
  */
 public class UserTranslateExchangeIdsCollectionResponse extends BaseCollectionResponse<ConvertIdResult> {
-
 }

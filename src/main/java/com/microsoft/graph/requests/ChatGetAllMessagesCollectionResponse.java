@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Chat Get All Messages Collection Response.
  */
 public class ChatGetAllMessagesCollectionResponse extends BaseCollectionResponse<ChatMessage> {
-
 }

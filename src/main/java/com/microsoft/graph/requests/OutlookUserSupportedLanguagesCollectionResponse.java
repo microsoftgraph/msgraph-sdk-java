@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Outlook User Supported Languages Collection Response.
  */
 public class OutlookUserSupportedLanguagesCollectionResponse extends BaseCollectionResponse<LocaleInfo> {
-
 }

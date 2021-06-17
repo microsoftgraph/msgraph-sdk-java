@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Drive Item Search Collection Response.
  */
 public class DriveItemSearchCollectionResponse extends BaseCollectionResponse<DriveItem> {
-
 }

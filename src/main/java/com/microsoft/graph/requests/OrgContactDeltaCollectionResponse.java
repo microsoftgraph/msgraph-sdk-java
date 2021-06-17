@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Org Contact Delta Collection Response.
  */
 public class OrgContactDeltaCollectionResponse extends BaseCollectionResponse<OrgContact> {
-
 }

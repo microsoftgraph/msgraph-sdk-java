@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Access Review Schedule Definition Filter By Current User Collection Response.
  */
 public class AccessReviewScheduleDefinitionFilterByCurrentUserCollectionResponse extends BaseCollectionResponse<AccessReviewScheduleDefinition> {
-
 }
