@@ -46,7 +46,7 @@ public class ThreatAssessmentResult extends Entity implements IJsonBackedObject 
 
     /**
      * The Result Type.
-     * The threat assessment result type. Possible values are: checkPolicy (only for mail assessment), rescan.
+     * The threat assessment result type. Possible values are: checkPolicy, rescan.
      */
     @SerializedName(value = "resultType", alternate = {"ResultType"})
     @Expose

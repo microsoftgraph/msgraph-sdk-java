@@ -8,7 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.ChatMessageReactionIdentitySet;
 
 
 import com.google.gson.JsonObject;
@@ -63,7 +63,7 @@ public class ChatMessageReaction implements IJsonBackedObject {
     @SerializedName(value = "user", alternate = {"User"})
     @Expose
 	@Nullable
-    public IdentitySet user;
+    public ChatMessageReactionIdentitySet user;
 
 
     /**
