@@ -25,7 +25,7 @@ import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.DriveItemCreateUploadSessionParameterSet;
 import com.microsoft.graph.models.DriveItemUploadableProperties;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.ChatMessageMentionedIdentitySet;
 import com.microsoft.graph.models.PlannerAssignment;
 import com.microsoft.graph.models.PlannerAssignments;
 import com.microsoft.graph.models.PlannerTask;
@@ -162,7 +162,7 @@ public class AdditionalDataTests {
 		final ChatMessage chatMessage = new ChatMessage();
 		final ChatMessageMention chatMessageMention = new ChatMessageMention();
 		chatMessageMention.additionalDataManager().put("helloWorld", new JsonPrimitive("3.141516"));
-		final IdentitySet identitySet = new IdentitySet();
+		final ChatMessageMentionedIdentitySet identitySet = new ChatMessageMentionedIdentitySet();
 		identitySet.additionalDataManager().put("identitySetKey", new JsonPrimitive("identitySetValue"));
 		chatMessageMention.mentioned = identitySet;
 		chatMessage.mentions = Collections.singletonList(chatMessageMention);
