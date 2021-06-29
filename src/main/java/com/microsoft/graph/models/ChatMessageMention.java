@@ -8,7 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.ChatMessageMentionedIdentitySet;
 
 
 import com.google.gson.JsonObject;
@@ -54,7 +54,7 @@ public class ChatMessageMention implements IJsonBackedObject {
     @SerializedName(value = "mentioned", alternate = {"Mentioned"})
     @Expose
 	@Nullable
-    public IdentitySet mentioned;
+    public ChatMessageMentionedIdentitySet mentioned;
 
     /**
      * The Mention Text.

@@ -12,7 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatMessageAttachment;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.ChannelIdentity;
-import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.ChatMessageFromIdentitySet;
 import com.microsoft.graph.models.ChatMessageImportance;
 import com.microsoft.graph.models.ChatMessageMention;
 import com.microsoft.graph.models.ChatMessageType;
@@ -109,7 +109,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @SerializedName(value = "from", alternate = {"From"})
     @Expose
 	@Nullable
-    public IdentitySet from;
+    public ChatMessageFromIdentitySet from;
 
     /**
      * The Importance.
@@ -185,7 +185,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reply To Id.
-     * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
+     * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
      */
     @SerializedName(value = "replyToId", alternate = {"ReplyToId"})
     @Expose

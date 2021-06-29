@@ -38,7 +38,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Allowed Accounts.
-     * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+     * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
      */
     @SerializedName(value = "allowedAccounts", alternate = {"AllowedAccounts"})
     @Expose
