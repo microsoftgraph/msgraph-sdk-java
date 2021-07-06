@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -17,6 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChannelRequestBuilder;
 import com.microsoft.graph.requests.ChannelCollectionRequest;
+import com.microsoft.graph.requests.ChannelGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -39,6 +41,15 @@ public class ChannelCollectionRequestBuilder extends BaseCollectionRequestBuilde
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public ChannelGetAllMessagesCollectionRequestBuilder getAllMessages() {
+        return new ChannelGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);
+    }
 
     /**
      * Gets the raw count request for the collection
