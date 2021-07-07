@@ -48,7 +48,7 @@ public class AlertTrigger implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Type of the property in the key:value pair for interpretation. For example, String, Boolean, etc.
+     * Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
