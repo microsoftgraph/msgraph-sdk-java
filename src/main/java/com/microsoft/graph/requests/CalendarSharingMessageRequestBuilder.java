@@ -149,6 +149,15 @@ public class CalendarSharingMessageRequestBuilder extends BaseRequestBuilder<Cal
     }
 
     /**
+     * Gets a request builder to get the binary value of the object
+     * @return the stream request builder
+     */
+    @Nonnull
+    public CalendarSharingMessageStreamRequestBuilder content() {
+        return new CalendarSharingMessageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
+    }
+
+    /**
      * Gets a builder to execute the method
      * @return the request builder
      */

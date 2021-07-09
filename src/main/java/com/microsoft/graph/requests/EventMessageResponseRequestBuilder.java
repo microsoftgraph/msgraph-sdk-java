@@ -158,6 +158,15 @@ public class EventMessageResponseRequestBuilder extends BaseRequestBuilder<Event
     }
 
     /**
+     * Gets a request builder to get the binary value of the object
+     * @return the stream request builder
+     */
+    @Nonnull
+    public EventMessageResponseStreamRequestBuilder content() {
+        return new EventMessageResponseStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
+    }
+
+    /**
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
