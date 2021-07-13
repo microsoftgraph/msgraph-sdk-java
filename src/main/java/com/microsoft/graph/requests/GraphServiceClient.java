@@ -79,6 +79,8 @@ import com.microsoft.graph.requests.DataPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.DataPolicyOperationRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ExternalConnectionRequestBuilder;
 import com.microsoft.graph.requests.ChatCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChatRequestBuilder;
 import com.microsoft.graph.requests.TeamCollectionRequestBuilder;
@@ -102,6 +104,7 @@ import com.microsoft.graph.requests.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
 import com.microsoft.graph.requests.PrintRequestBuilder;
 import com.microsoft.graph.requests.SecurityRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ExternalRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.TeamworkRequestBuilder;
 import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
@@ -1008,6 +1011,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
+     * Gets the collection of Connections objects
+     *
+     * @return the request builder for the collection of Connections objects
+     */
+    @Nonnull
+    public ExternalConnectionCollectionRequestBuilder connections() {
+        return new ExternalConnectionCollectionRequestBuilder(getServiceRoot() + "/connections", this, null);
+    }
+
+    /**
+     * Gets a single Connections
+     *
+     * @param id the id of the Connections to retrieve
+     * @return the request builder for the Connections object
+     */
+    @Nonnull
+    public ExternalConnectionRequestBuilder connections(@Nonnull final String id) {
+        return new ExternalConnectionRequestBuilder(getServiceRoot() + "/connections/" + id, this, null);
+    }
+
+    /**
      * Gets the collection of Chats objects
      *
      * @return the request builder for the collection of Chats objects
@@ -1258,6 +1282,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the External
+     */
+    @Nonnull
+    public ExternalRequestBuilder external() {
+        return new ExternalRequestBuilder(getServiceRoot() + "/external", this, null);
     }
 
     /**

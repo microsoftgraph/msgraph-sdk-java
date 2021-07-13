@@ -41,7 +41,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * Name of the company that this organizational contact belong to.
+     * Name of the company that this organizational contact belong to. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
      */
     @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
@@ -50,7 +50,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Department.
-     * The name for the department in which the contact works.
+     * The name for the department in which the contact works. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
      */
     @SerializedName(value = "department", alternate = {"Department"})
     @Expose
@@ -59,7 +59,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name for this organizational contact.
+     * Display name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Given Name.
-     * First name for this organizational contact.
+     * First name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
      */
     @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
@@ -77,7 +77,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * Job title for this organizational contact.
+     * Job title for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
      */
     @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
@@ -86,7 +86,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'.
+     * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
      */
     @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
@@ -95,7 +95,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact.
+     * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
      */
     @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
@@ -104,7 +104,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, NOT, ge, le, in).
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -113,7 +113,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Provisioning Errors.
-     * List of any synchronization provisioning errors for this organizational contact.
+     * List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, NOT).
      */
     @SerializedName(value = "onPremisesProvisioningErrors", alternate = {"OnPremisesProvisioningErrors"})
     @Expose
@@ -131,7 +131,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Phones.
-     * List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection.
+     * List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, NOT, in).
      */
     @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
@@ -140,7 +140,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Proxy Addresses.
-     * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter.
+     * For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, NOT, ge, le, startsWith).
      */
     @SerializedName(value = "proxyAddresses", alternate = {"ProxyAddresses"})
     @Expose
@@ -149,7 +149,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Surname.
-     * Last name for this organizational contact.
+     * Last name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith)
      */
     @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
@@ -158,14 +158,14 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Direct Reports.
-     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable.
+     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage directReports;
 
     /**
      * The Manager.
-     * The user or contact that is this contact's manager. Read-only.
+     * The user or contact that is this contact's manager. Read-only. Supports $expand.
      */
     @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose
@@ -174,7 +174,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Member Of.
-     * Groups that this contact is a member of. Read-only. Nullable.
+     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage memberOf;
