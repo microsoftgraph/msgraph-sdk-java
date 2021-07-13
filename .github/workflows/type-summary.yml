@@ -1,6 +1,7 @@
 name: "update type summary"
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '**/*.java'
