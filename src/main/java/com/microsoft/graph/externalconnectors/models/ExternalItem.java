@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.externalconnectors.models.Acl;
 import com.microsoft.graph.externalconnectors.models.ExternalItemContent;
 import com.microsoft.graph.externalconnectors.models.Properties;
 import com.microsoft.graph.models.Entity;
@@ -26,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class ExternalItem extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Acl.
+     * 
+     */
+    @SerializedName(value = "acl", alternate = {"Acl"})
+    @Expose
+	@Nullable
+    public java.util.List<Acl> acl;
 
     /**
      * The Content.

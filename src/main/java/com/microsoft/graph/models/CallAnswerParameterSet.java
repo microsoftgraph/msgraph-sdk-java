@@ -48,6 +48,15 @@ public class CallAnswerParameterSet {
 	@Nullable
     public java.util.List<Modality> acceptedModalities;
 
+    /**
+     * The participant Capacity.
+     * 
+     */
+    @SerializedName(value = "participantCapacity", alternate = {"ParticipantCapacity"})
+    @Expose
+	@Nullable
+    public Integer participantCapacity;
+
 
     /**
      * Instiaciates a new CallAnswerParameterSet
@@ -61,6 +70,7 @@ public class CallAnswerParameterSet {
         this.callbackUri = builder.callbackUri;
         this.mediaConfig = builder.mediaConfig;
         this.acceptedModalities = builder.acceptedModalities;
+        this.participantCapacity = builder.participantCapacity;
     }
     /**
      * Gets a new builder for the body
@@ -120,6 +130,21 @@ public class CallAnswerParameterSet {
             return this;
         }
         /**
+         * The participantCapacity parameter value
+         */
+        @Nullable
+        protected Integer participantCapacity;
+        /**
+         * Sets the ParticipantCapacity
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public CallAnswerParameterSetBuilder withParticipantCapacity(@Nullable final Integer val) {
+            this.participantCapacity = val;
+            return this;
+        }
+        /**
          * Instanciates a new CallAnswerParameterSetBuilder
          */
         @Nullable
@@ -148,6 +173,9 @@ public class CallAnswerParameterSet {
         }
         if(this.acceptedModalities != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("acceptedModalities", acceptedModalities));
+        }
+        if(this.participantCapacity != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("participantCapacity", participantCapacity));
         }
         return result;
     }

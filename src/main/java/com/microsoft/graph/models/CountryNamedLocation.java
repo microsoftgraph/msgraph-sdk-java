@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CountryLookupMethodType;
 import com.microsoft.graph.models.NamedLocation;
 
 
@@ -34,6 +35,15 @@ public class CountryNamedLocation extends NamedLocation implements IJsonBackedOb
     @Expose
 	@Nullable
     public java.util.List<String> countriesAndRegions;
+
+    /**
+     * The Country Lookup Method.
+     * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps.
+     */
+    @SerializedName(value = "countryLookupMethod", alternate = {"CountryLookupMethod"})
+    @Expose
+	@Nullable
+    public CountryLookupMethodType countryLookupMethod;
 
     /**
      * The Include Unknown Countries And Regions.

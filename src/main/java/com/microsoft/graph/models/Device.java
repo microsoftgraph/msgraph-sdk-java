@@ -32,7 +32,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
-     * true if the account is enabled; otherwise, false. default is true.
+     * true if the account is enabled; otherwise, false. Default is true. Supports $filter (eq, ne, NOT, in).
      */
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
@@ -41,7 +41,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Alternative Security Ids.
-     * For internal use only. Not nullable.
+     * For internal use only. Not nullable. Supports $filter (eq, NOT, ge, le).
      */
     @SerializedName(value = "alternativeSecurityIds", alternate = {"AlternativeSecurityIds"})
     @Expose
@@ -50,7 +50,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Approximate Last Sign In Date Time.
-     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, NOT, ge, le) and $orderBy.
      */
     @SerializedName(value = "approximateLastSignInDateTime", alternate = {"ApproximateLastSignInDateTime"})
     @Expose
@@ -68,7 +68,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * Identifier set by Azure Device Registration Service at the time of registration.
+     * Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -95,7 +95,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the device. Required.
+     * The display name for the device. Required. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -104,7 +104,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Compliant.
-     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
+     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, NOT).
      */
     @SerializedName(value = "isCompliant", alternate = {"IsCompliant"})
     @Expose
@@ -113,7 +113,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Managed.
-     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
+     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, NOT).
      */
     @SerializedName(value = "isManaged", alternate = {"IsManaged"})
     @Expose
@@ -122,7 +122,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mdm App Id.
-     * Application identifier used to register device into MDM. Read-only. Supports $filter.
+     * Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, NOT, startsWith).
      */
     @SerializedName(value = "mdmAppId", alternate = {"MdmAppId"})
     @Expose
@@ -131,7 +131,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only.
+     * The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, NOT, ge, le, in).
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -140,7 +140,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only.
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, NOT, in).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -149,7 +149,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System.
-     * The type of operating system on the device. Required.
+     * The type of operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
      */
     @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
@@ -158,7 +158,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
-     * Operating system version of the device. Required.
+     * Operating system version of the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
      */
     @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
@@ -167,7 +167,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Physical Ids.
-     * For internal use only. Not nullable.
+     * For internal use only. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
      */
     @SerializedName(value = "physicalIds", alternate = {"PhysicalIds"})
     @Expose
@@ -203,28 +203,28 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Member Of.
-     * Groups that this device is a member of. Read-only. Nullable.
+     * Groups that this device is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Registered Owners.
-     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable.
+     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage registeredOwners;
 
     /**
      * The Registered Users.
-     * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable.
+     * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage registeredUsers;
 
     /**
      * The Transitive Member Of.
-     * Groups that this device is a member of. This operation is transitive.
+     * Groups that this device is a member of. This operation is transitive. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMemberOf;
