@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AccessReviewReviewerScope;
 import com.microsoft.graph.models.AccessReviewScope;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.Entity;
@@ -37,6 +38,24 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime endDateTime;
+
+    /**
+     * The Fallback Reviewers.
+     * 
+     */
+    @SerializedName(value = "fallbackReviewers", alternate = {"FallbackReviewers"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewReviewerScope> fallbackReviewers;
+
+    /**
+     * The Reviewers.
+     * 
+     */
+    @SerializedName(value = "reviewers", alternate = {"Reviewers"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewReviewerScope> reviewers;
 
     /**
      * The Scope.

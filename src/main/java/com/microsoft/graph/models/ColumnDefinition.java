@@ -200,7 +200,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Required.
-     * Specifies whether the column value is not optional.
+     * Specifies whether the column value isn't optional.
      */
     @SerializedName(value = "required", alternate = {"Required"})
     @Expose

@@ -57,8 +57,6 @@ import com.microsoft.graph.requests.ServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.ServicePrincipalRequestBuilder;
 import com.microsoft.graph.requests.SubscribedSkuCollectionRequestBuilder;
 import com.microsoft.graph.requests.SubscribedSkuRequestBuilder;
-import com.microsoft.graph.requests.DriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.PlaceCollectionRequestBuilder;
 import com.microsoft.graph.requests.PlaceRequestBuilder;
 import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
@@ -79,6 +77,8 @@ import com.microsoft.graph.requests.DataPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.DataPolicyOperationRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ExternalConnectionRequestBuilder;
 import com.microsoft.graph.requests.ChatCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChatRequestBuilder;
 import com.microsoft.graph.requests.TeamCollectionRequestBuilder;
@@ -102,6 +102,7 @@ import com.microsoft.graph.requests.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
 import com.microsoft.graph.requests.PrintRequestBuilder;
 import com.microsoft.graph.requests.SecurityRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ExternalRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.TeamworkRequestBuilder;
 import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
@@ -777,27 +778,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
-     * Gets the collection of Workbooks objects
-     *
-     * @return the request builder for the collection of Workbooks objects
-     */
-    @Nonnull
-    public DriveItemCollectionRequestBuilder workbooks() {
-        return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", this, null);
-    }
-
-    /**
-     * Gets a single Workbooks
-     *
-     * @param id the id of the Workbooks to retrieve
-     * @return the request builder for the Workbooks object
-     */
-    @Nonnull
-    public DriveItemRequestBuilder workbooks(@Nonnull final String id) {
-        return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, this, null);
-    }
-
-    /**
      * Gets the collection of Places objects
      *
      * @return the request builder for the collection of Places objects
@@ -1005,6 +985,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
         return new SubscriptionRequestBuilder(getServiceRoot() + "/subscriptions/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of Connections objects
+     *
+     * @return the request builder for the collection of Connections objects
+     */
+    @Nonnull
+    public ExternalConnectionCollectionRequestBuilder connections() {
+        return new ExternalConnectionCollectionRequestBuilder(getServiceRoot() + "/connections", this, null);
+    }
+
+    /**
+     * Gets a single Connections
+     *
+     * @param id the id of the Connections to retrieve
+     * @return the request builder for the Connections object
+     */
+    @Nonnull
+    public ExternalConnectionRequestBuilder connections(@Nonnull final String id) {
+        return new ExternalConnectionRequestBuilder(getServiceRoot() + "/connections/" + id, this, null);
     }
 
     /**
@@ -1258,6 +1259,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the External
+     */
+    @Nonnull
+    public ExternalRequestBuilder external() {
+        return new ExternalRequestBuilder(getServiceRoot() + "/external", this, null);
     }
 
     /**
