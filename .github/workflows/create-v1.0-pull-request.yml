@@ -39,7 +39,7 @@ jobs:
         MESSAGE_TITLE: Generated v1.0 models and request builders using Typewriter
         MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR."
         REVIEWERS: peombwa,ddyett,zengin,nikithauc,baywet
-        ASSIGNEDTO: baywet
+        ASSIGNEDTO: ramsessanchez
         LABELS: generated
         BASE: dev
       run: |
