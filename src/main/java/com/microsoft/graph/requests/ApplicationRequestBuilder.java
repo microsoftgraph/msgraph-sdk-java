@@ -32,6 +32,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.ApplicationSetVerifiedPublisherParameterSet;
 import com.microsoft.graph.models.ApplicationAddKeyParameterSet;
 import com.microsoft.graph.models.ApplicationAddPasswordParameterSet;
 import com.microsoft.graph.models.ApplicationRemoveKeyParameterSet;
@@ -281,6 +282,25 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
     @Nonnull
     public ApplicationLogoStreamRequestBuilder logo() {
         return new ApplicationLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("logo"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ApplicationSetVerifiedPublisherRequestBuilder setVerifiedPublisher(@Nonnull final ApplicationSetVerifiedPublisherParameterSet parameters) {
+        return new ApplicationSetVerifiedPublisherRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setVerifiedPublisher"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ApplicationUnsetVerifiedPublisherRequestBuilder unsetVerifiedPublisher() {
+        return new ApplicationUnsetVerifiedPublisherRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsetVerifiedPublisher"), getClient(), null);
     }
 
     /**

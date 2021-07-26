@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Approval;
+import com.microsoft.graph.models.ApprovalFilterByCurrentUserOptions;
 import com.microsoft.graph.requests.ApprovalStageCollectionRequestBuilder;
 import com.microsoft.graph.requests.ApprovalStageRequestBuilder;
 import java.util.Arrays;

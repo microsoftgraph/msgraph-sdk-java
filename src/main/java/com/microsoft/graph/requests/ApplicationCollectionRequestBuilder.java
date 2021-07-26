@@ -27,6 +27,7 @@ import com.microsoft.graph.requests.DirectoryObjectGetByIdsCollectionRequestBuil
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
+import com.microsoft.graph.models.ApplicationSetVerifiedPublisherParameterSet;
 import com.microsoft.graph.models.ApplicationAddKeyParameterSet;
 import com.microsoft.graph.models.ApplicationAddPasswordParameterSet;
 import com.microsoft.graph.models.ApplicationRemoveKeyParameterSet;

@@ -430,7 +430,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Provisioning Errors.
-     * Errors when using Microsoft synchronization product during provisioning.
+     * Errors when using Microsoft synchronization product during provisioning.  Supports $filter (eq, NOT, ge, le).
      */
     @SerializedName(value = "onPremisesProvisioningErrors", alternate = {"OnPremisesProvisioningErrors"})
     @Expose
@@ -448,7 +448,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
-     * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Supports $filter (eq, ne, NOT, in).
+     * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
      */
     @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose
@@ -484,7 +484,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Policies.
-     * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.Supports $filter (eq, ne, NOT).
+     * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, NOT).
      */
     @SerializedName(value = "passwordPolicies", alternate = {"PasswordPolicies"})
     @Expose
@@ -493,7 +493,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Profile.
-     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.
+     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon. Supports $filter (eq, ne, NOT, in).
      */
     @SerializedName(value = "passwordProfile", alternate = {"PasswordProfile"})
     @Expose
@@ -520,7 +520,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Provisioned Plans.
-     * The plans that are provisioned for the user. Read-only. Not nullable.
+     * The plans that are provisioned for the user. Read-only. Not nullable. Supports $filter (eq, NOT, ge, le).
      */
     @SerializedName(value = "provisionedPlans", alternate = {"ProvisionedPlans"})
     @Expose
@@ -601,7 +601,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, NOT, in, startsWith, endsWith).
+     * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, NOT, in,).
      */
     @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose
@@ -718,7 +718,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Role Assignments.
-     * Represents the app roles a user has been granted for an application.
+     * Represents the app roles a user has been granted for an application. Supports $expand.
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
@@ -734,7 +734,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Direct Reports.
-     * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable.
+     * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage directReports;
@@ -750,7 +750,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Manager.
-     * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
+     * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
      */
     @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose
@@ -759,7 +759,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Member Of.
-     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable.
+     * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage memberOf;
@@ -773,21 +773,21 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owned Devices.
-     * Devices that are owned by the user. Read-only. Nullable.
+     * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage ownedDevices;
 
     /**
      * The Owned Objects.
-     * Directory objects that are owned by the user. Read-only. Nullable.
+     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The Registered Devices.
-     * Devices that are registered for the user. Read-only. Nullable.
+     * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage registeredDevices;

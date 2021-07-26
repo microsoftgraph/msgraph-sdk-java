@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.externalconnectors.models.Acl;
 import com.microsoft.graph.externalconnectors.models.ExternalItemContent;
 import com.microsoft.graph.externalconnectors.models.Properties;
 import com.microsoft.graph.models.Entity;
@@ -28,8 +30,17 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Acl.
+     * An array of access control entries. Each entry specifies the access granted to a user or group. Required.
+     */
+    @SerializedName(value = "acl", alternate = {"Acl"})
+    @Expose
+	@Nullable
+    public java.util.List<Acl> acl;
+
+    /**
      * The Content.
-     * 
+     * A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -38,7 +49,7 @@ public class ExternalItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Properties.
-     * 
+     * A property bag with the properties of the item. The properties MUST conform to the schema defined for the externalConnection. Required.
      */
     @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
