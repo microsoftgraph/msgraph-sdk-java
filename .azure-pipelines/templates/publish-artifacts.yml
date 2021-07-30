@@ -1,0 +1,22 @@
+steps: 
+  - task: CopyFiles@2
+    inputs:
+      SourceFolder: '$(system.defaultworkingdirectory)'
+      Contents: |
+        **/libs/*
+        build/generated-pom.xml
+        build/generated-pom.xml.asc
+        build.gradle
+        gradlew
+        gradlew.bat
+        settings.gradle
+        gradle.properties
+        **/gradle/**
+        Scripts/getLatestVersion.ps1
+      TargetFolder: '$(build.artifactstagingdirectory)/'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(build.artifactstagingdirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container' 
