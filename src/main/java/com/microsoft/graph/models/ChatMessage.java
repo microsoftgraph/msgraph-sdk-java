@@ -158,7 +158,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Message Type.
-     * The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
+     * The type of chat message. The possible values are: message, chatEvent, typing, unknownFutureValue, systemEventMessage. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: systemEventMessage.
      */
     @SerializedName(value = "messageType", alternate = {"MessageType"})
     @Expose

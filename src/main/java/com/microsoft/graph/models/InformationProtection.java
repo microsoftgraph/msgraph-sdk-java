@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.Bitlocker;
 import com.microsoft.graph.models.ThreatAssessmentRequest;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ThreatAssessmentRequestCollectionPage;
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class InformationProtection extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Bitlocker.
+     * 
+     */
+    @SerializedName(value = "bitlocker", alternate = {"Bitlocker"})
+    @Expose
+	@Nullable
+    public Bitlocker bitlocker;
 
     /**
      * The Threat Assessment Requests.

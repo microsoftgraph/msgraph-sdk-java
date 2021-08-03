@@ -66,7 +66,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Operation Type.
-     * Denotes which type of operation is being described.
+     * Denotes the type of operation being described.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
