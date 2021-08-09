@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.InformationProtection;
+import com.microsoft.graph.requests.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.ThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.ThreatAssessmentRequestRequestBuilder;
 import java.util.Arrays;
@@ -58,6 +59,16 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder<Info
     }
 
 
+
+    /**
+     * Gets the request builder for Bitlocker
+     *
+     * @return the BitlockerRequestBuilder instance
+     */
+    @Nonnull
+    public BitlockerRequestBuilder bitlocker() {
+        return new BitlockerRequestBuilder(getRequestUrlWithAdditionalSegment("bitlocker"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the ThreatAssessmentRequest collection
      *

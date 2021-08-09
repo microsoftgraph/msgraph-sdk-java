@@ -31,7 +31,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Cc Recipients.
-     * The Cc: recipients for the thread.
+     * The Cc: recipients for the thread. Returned only on $select.
      */
     @SerializedName(value = "ccRecipients", alternate = {"CcRecipients"})
     @Expose
@@ -40,7 +40,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * Indicates whether any of the posts within this thread has at least one attachment.
+     * Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -49,7 +49,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Locked.
-     * Indicates if the thread is locked.
+     * Indicates if the thread is locked. Returned by default.
      */
     @SerializedName(value = "isLocked", alternate = {"IsLocked"})
     @Expose
@@ -58,7 +58,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Delivered Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default.
      */
     @SerializedName(value = "lastDeliveredDateTime", alternate = {"LastDeliveredDateTime"})
     @Expose
@@ -67,7 +67,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Preview.
-     * A short summary from the body of the latest post in this conversation.
+     * A short summary from the body of the latest post in this conversation. Returned by default.
      */
     @SerializedName(value = "preview", alternate = {"Preview"})
     @Expose
@@ -76,7 +76,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Topic.
-     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
+     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated. Returned by default.
      */
     @SerializedName(value = "topic", alternate = {"Topic"})
     @Expose
@@ -85,7 +85,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The To Recipients.
-     * The To: recipients for the thread.
+     * The To: recipients for the thread. Returned only on $select.
      */
     @SerializedName(value = "toRecipients", alternate = {"ToRecipients"})
     @Expose
@@ -94,7 +94,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Unique Senders.
-     * All the users that sent a message to this thread.
+     * All the users that sent a message to this thread. Returned by default.
      */
     @SerializedName(value = "uniqueSenders", alternate = {"UniqueSenders"})
     @Expose

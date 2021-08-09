@@ -98,6 +98,7 @@ import com.microsoft.graph.requests.IdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.ReportRootRequestBuilder;
+import com.microsoft.graph.requests.AdminRequestBuilder;
 import com.microsoft.graph.requests.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
 import com.microsoft.graph.requests.PrintRequestBuilder;
@@ -1219,6 +1220,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public ReportRootRequestBuilder reports() {
         return new ReportRootRequestBuilder(getServiceRoot() + "/reports", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Admin
+     */
+    @Nonnull
+    public AdminRequestBuilder admin() {
+        return new AdminRequestBuilder(getServiceRoot() + "/admin", this, null);
     }
 
     /**
