@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.RbacApplication;
 
 
 import com.google.gson.JsonObject;
@@ -36,6 +37,15 @@ public class RoleManagement implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Directory.
+     * 
+     */
+    @SerializedName(value = "directory", alternate = {"Directory"})
+    @Expose
+	@Nullable
+    public RbacApplication directory;
 
 
     /**

@@ -11,10 +11,12 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.externalconnectors.models.Configuration;
 import com.microsoft.graph.externalconnectors.models.ConnectionState;
+import com.microsoft.graph.externalconnectors.models.ExternalGroup;
 import com.microsoft.graph.externalconnectors.models.ExternalItem;
 import com.microsoft.graph.externalconnectors.models.ConnectionOperation;
 import com.microsoft.graph.externalconnectors.models.Schema;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionPage;
 import com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionPage;
 import com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionPage;
 
@@ -70,6 +72,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     public ConnectionState state;
 
     /**
+     * The Groups.
+     * 
+     */
+    @SerializedName(value = "groups", alternate = {"Groups"})
+    @Expose
+	@Nullable
+    public ExternalGroupCollectionPage groups;
+
+    /**
      * The Items.
      * Read-only. Nullable.
      */
@@ -105,6 +116,10 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("groups")) {
+            groups = serializer.deserializeObject(json.get("groups"), ExternalGroupCollectionPage.class);
+        }
 
         if (json.has("items")) {
             items = serializer.deserializeObject(json.get("items"), ExternalItemCollectionPage.class);

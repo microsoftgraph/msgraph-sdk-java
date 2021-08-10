@@ -55,6 +55,7 @@ import com.microsoft.graph.requests.RoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.RoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionRequestBuilder;

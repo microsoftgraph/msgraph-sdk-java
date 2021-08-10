@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.SettingSourceType;
 
 
 import com.google.gson.JsonObject;
@@ -54,6 +55,15 @@ public class SettingSource implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String id;
+
+    /**
+     * The Source Type.
+     * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+     */
+    @SerializedName(value = "sourceType", alternate = {"SourceType"})
+    @Expose
+	@Nullable
+    public SettingSourceType sourceType;
 
 
     /**

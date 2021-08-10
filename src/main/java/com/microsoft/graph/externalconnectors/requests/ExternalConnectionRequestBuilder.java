@@ -8,6 +8,8 @@ package com.microsoft.graph.externalconnectors.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.externalconnectors.models.ExternalConnection;
+import com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ExternalGroupRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalItemRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionRequestBuilder;
@@ -61,6 +63,26 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<Externa
     }
 
 
+    /**
+     *  Gets a request builder for the ExternalGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ExternalGroupCollectionRequestBuilder groups() {
+        return new ExternalGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groups"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ExternalGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ExternalGroupRequestBuilder groups(@Nonnull final String id) {
+        return new ExternalGroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the ExternalItem collection
      *

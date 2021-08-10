@@ -20,6 +20,10 @@ public enum ManagedAppDataStorageLocation
     */
     SHARE_POINT,
     /**
+    * box
+    */
+    BOX,
+    /**
     * local Storage
     */
     LOCAL_STORAGE,

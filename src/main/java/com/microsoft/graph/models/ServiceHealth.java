@@ -31,7 +31,7 @@ public class ServiceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Service.
-     * The service name.
+     * The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose

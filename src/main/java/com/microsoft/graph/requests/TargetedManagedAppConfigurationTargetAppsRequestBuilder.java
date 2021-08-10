@@ -7,6 +7,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.TargetedManagedAppConfigurationTargetAppsRequest;
 import com.microsoft.graph.models.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.ManagedMobileApp;
+import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.models.TargetedManagedAppConfigurationTargetAppsParameterSet;
 import com.microsoft.graph.core.IBaseClient;

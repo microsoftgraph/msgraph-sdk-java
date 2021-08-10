@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.RoleManagement;
+import com.microsoft.graph.requests.RbacApplicationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -56,4 +57,14 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
     }
 
 
+
+    /**
+     * Gets the request builder for RbacApplication
+     *
+     * @return the RbacApplicationRequestBuilder instance
+     */
+    @Nonnull
+    public RbacApplicationRequestBuilder directory() {
+        return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("directory"), getClient(), null);
+    }
 }

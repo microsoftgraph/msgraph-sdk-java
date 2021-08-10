@@ -8,6 +8,8 @@ package com.microsoft.graph.externalconnectors.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.externalconnectors.models.ExternalConnection;
+import com.microsoft.graph.externalconnectors.requests.ExternalGroupCollectionRequestBuilder;
+import com.microsoft.graph.externalconnectors.requests.ExternalGroupRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalItemRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ConnectionOperationCollectionRequestBuilder;

@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AndroidManagedAppProtection;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedMobileApp;
+import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.ManagedAppPolicyDeploymentSummaryRequestBuilder;
@@ -20,6 +21,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.TargetedManagedAppProtectionAssignParameterSet;
+import com.microsoft.graph.models.TargetedManagedAppProtectionTargetAppsParameterSet;
 import com.microsoft.graph.models.ManagedAppProtectionTargetAppsParameterSet;
 import com.microsoft.graph.models.ManagedAppPolicyTargetAppsParameterSet;
 
@@ -131,7 +133,7 @@ public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ManagedAppProtectionTargetAppsRequestBuilder targetApps(@Nonnull final ManagedAppProtectionTargetAppsParameterSet parameters) {
-        return new ManagedAppProtectionTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, parameters);
+    public TargetedManagedAppProtectionTargetAppsRequestBuilder targetApps(@Nonnull final TargetedManagedAppProtectionTargetAppsParameterSet parameters) {
+        return new TargetedManagedAppProtectionTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, parameters);
     }
 }

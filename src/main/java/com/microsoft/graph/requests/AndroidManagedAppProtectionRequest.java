@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AndroidManagedAppProtection;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedMobileApp;
+import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import com.microsoft.graph.requests.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.ManagedAppPolicyDeploymentSummaryRequestBuilder;
