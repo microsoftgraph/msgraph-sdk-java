@@ -4,7 +4,7 @@
         as the dependency graph is not compatible with gradle https://docs.github.com/en/free-pro-team@latest/github/visualizing-repository-data-with-graphs/about-the-dependency-graph#supported-package-ecosystems
         build.gradle is the source of truth
     -->
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>5.0.0</modelVersion>
 
     <groupId>com.microsoft.graph</groupId>
     <artifactId>microsoft-graph</artifactId>
