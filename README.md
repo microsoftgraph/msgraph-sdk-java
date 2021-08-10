@@ -135,16 +135,3 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
-
-
-
-
-
-
-
-
-
-
-
-
-
