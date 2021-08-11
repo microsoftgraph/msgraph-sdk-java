@@ -6,9 +6,7 @@
 trigger:
   branches:
     include:
-    - dev 
-    - main
-    - feature/v3
+    - dev
   paths: 
     include:
       - src/*
