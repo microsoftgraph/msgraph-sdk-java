@@ -38,6 +38,7 @@ import com.microsoft.graph.models.ResourceOperation;
 import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
 import com.microsoft.graph.models.RoleDefinition;
 import com.microsoft.graph.models.RemoteAssistancePartner;
+import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.TelecomExpenseManagementPartner;
 import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
 import com.microsoft.graph.models.WindowsInformationProtectionAppLearningSummary;
@@ -352,6 +353,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
+
+    /**
+     * The Reports.
+     * Reports singleton
+     */
+    @SerializedName(value = "reports", alternate = {"Reports"})
+    @Expose
+	@Nullable
+    public DeviceManagementReports reports;
 
     /**
      * The Telecom Expense Management Partners.

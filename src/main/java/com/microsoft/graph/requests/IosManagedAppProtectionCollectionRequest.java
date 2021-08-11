@@ -11,6 +11,7 @@ import com.microsoft.graph.models.DeviceAppManagement;
 import com.microsoft.graph.models.IosManagedAppProtection;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedMobileApp;
+import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

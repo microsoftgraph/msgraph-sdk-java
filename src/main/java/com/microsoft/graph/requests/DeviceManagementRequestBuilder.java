@@ -55,6 +55,7 @@ import com.microsoft.graph.requests.RoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.RoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
@@ -572,6 +573,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public RemoteAssistancePartnerRequestBuilder remoteAssistancePartners(@Nonnull final String id) {
         return new RemoteAssistancePartnerRequestBuilder(getRequestUrlWithAdditionalSegment("remoteAssistancePartners") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for DeviceManagementReports
+     *
+     * @return the DeviceManagementReportsRequestBuilder instance
+     */
+    @Nonnull
+    public DeviceManagementReportsRequestBuilder reports() {
+        return new DeviceManagementReportsRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
     }
     /**
      *  Gets a request builder for the TelecomExpenseManagementPartner collection

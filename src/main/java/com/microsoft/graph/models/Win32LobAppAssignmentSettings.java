@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.Win32LobAppDeliveryOptimizationPriority;
 import com.microsoft.graph.models.MobileAppInstallTimeSettings;
 import com.microsoft.graph.models.Win32LobAppNotification;
 import com.microsoft.graph.models.Win32LobAppRestartSettings;
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements IJsonBackedObject {
 
+
+    /**
+     * The Delivery Optimization Priority.
+     * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
+     */
+    @SerializedName(value = "deliveryOptimizationPriority", alternate = {"DeliveryOptimizationPriority"})
+    @Expose
+	@Nullable
+    public Win32LobAppDeliveryOptimizationPriority deliveryOptimizationPriority;
 
     /**
      * The Install Time Settings.

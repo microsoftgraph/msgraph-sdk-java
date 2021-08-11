@@ -6,6 +6,7 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.ManagedMobileApp;
+import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -29,6 +30,15 @@ public class TargetedManagedAppConfigurationTargetAppsParameterSet {
 	@Nullable
     public java.util.List<ManagedMobileApp> apps;
 
+    /**
+     * The app Group Type.
+     * 
+     */
+    @SerializedName(value = "appGroupType", alternate = {"AppGroupType"})
+    @Expose
+	@Nullable
+    public TargetedManagedAppGroupType appGroupType;
+
 
     /**
      * Instiaciates a new TargetedManagedAppConfigurationTargetAppsParameterSet
@@ -40,6 +50,7 @@ public class TargetedManagedAppConfigurationTargetAppsParameterSet {
      */
     protected TargetedManagedAppConfigurationTargetAppsParameterSet(@Nonnull final TargetedManagedAppConfigurationTargetAppsParameterSetBuilder builder) {
         this.apps = builder.apps;
+        this.appGroupType = builder.appGroupType;
     }
     /**
      * Gets a new builder for the body
@@ -69,6 +80,21 @@ public class TargetedManagedAppConfigurationTargetAppsParameterSet {
             return this;
         }
         /**
+         * The appGroupType parameter value
+         */
+        @Nullable
+        protected TargetedManagedAppGroupType appGroupType;
+        /**
+         * Sets the AppGroupType
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public TargetedManagedAppConfigurationTargetAppsParameterSetBuilder withAppGroupType(@Nullable final TargetedManagedAppGroupType val) {
+            this.appGroupType = val;
+            return this;
+        }
+        /**
          * Instanciates a new TargetedManagedAppConfigurationTargetAppsParameterSetBuilder
          */
         @Nullable
@@ -91,6 +117,9 @@ public class TargetedManagedAppConfigurationTargetAppsParameterSet {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
         if(this.apps != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("apps", apps));
+        }
+        if(this.appGroupType != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("appGroupType", appGroupType));
         }
         return result;
     }
