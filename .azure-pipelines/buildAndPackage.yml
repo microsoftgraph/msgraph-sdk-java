@@ -20,15 +20,53 @@ trigger:
       - THIRD PARTY NOTICES
       - README.md
 
-pr: none
+pr: dev
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
-steps: 
-- template: templates/secure-files.yml
-- template: templates/build-and-coverage.yml
-- template: templates/publish-artifacts.yml
-- template: templates/alert-failure.yml
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    steps: 
+    - template: templates/build-stage/checkout-and-credscan.yml
+    - template: templates/build-stage/install-java.yml
+    - template: templates/build-stage/secure-files.yml
+    - template: templates/build-stage/build-and-coverage.yml
+    - template: templates/build-stage/publish-artifacts.yml
+    - template: templates/alert-failure.yml
+
+- stage: Maven-Preview
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+  jobs: 
+  - job: Maven-Preview
+    steps: 
+    - template:
+
+- stage: Maven-Release-And-Git-Release
+  dependsOn: []
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  jobs:
+  - deployment: Maven-Release
+    environment: 'MSGraph SDK Development - Java'
+    pool:
+      vmImage: windows-latest
+    strategy:
+     runOnce:
+      deploy:
+        steps:
+        - template: 
+
+  - deployment: Github-Release
+    dependsOn: Maven-Release
+    environment: 'MSGraph SDK Development - Java'
+    pool:
+      vmImage: windows-latest
+    strategy: 
+     runOnce:
+      deploy:
+      steps: 
+        - template:
 
 

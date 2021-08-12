@@ -15,8 +15,6 @@ steps:
         Scripts/getLatestVersion.ps1
       TargetFolder: '$(build.artifactstagingdirectory)/'
 
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: '$(build.artifactstagingdirectory)'
-      ArtifactName: 'drop'
-      publishLocation: 'Container' 
+  - publish: $(Build.ArtifactStagingDirectory)
+    artifact: Drop 
+    displayName: Publish Build Artifact
