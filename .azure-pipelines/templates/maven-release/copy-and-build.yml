@@ -3,12 +3,12 @@ steps:
   inputs:
     SourceFolder: '$(Agent.TempDirectory)'
     Contents: '**'
-    TargetFolder: '$(System.DefaultWorkingDirectory)/_msgraph-sdk-java build and packaging/drop/'
+    TargetFolder: '$(DROP_PATH)/'
 
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: '$(System.DefaultWorkingDirectory)/_msgraph-sdk-java build and packaging/drop/gradlew'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/_msgraph-sdk-java build and packaging/drop/'
+    gradleWrapperFile: '$(DROP_PATH)/gradlew'
+    workingDirectory: '$(DROP_PATH)/'
     options: '-x jar -x javadoc -x javadocJar -x compileJava -x processResources -x classes -x sourceJar'
     tasks: 'publishMavenCentralReleasePublicationToSonatypeRepository'
     publishJUnitResults: true
