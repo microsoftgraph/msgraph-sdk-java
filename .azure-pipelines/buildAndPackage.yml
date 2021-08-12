@@ -20,7 +20,8 @@ trigger:
       - THIRD PARTY NOTICES
       - README.md
 
-pr: dev
+pr: 
+- dev
 
 pool:
   vmImage: windows-latest
