@@ -1,0 +1,19 @@
+steps:
+- task: PowerShell@2
+  inputs:
+    filePath: '$(System.DefaultWorkingDirectory)/_msgraph-sdk-java build and packaging/drop/Scripts/getLatestVersion.ps1'
+    arguments: '-propertiesPath "$(PROPERTIES_PATH)"'
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'ramsessanchez'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'userSpecifiedTag'
+    tag: '$(VERSION_STRING)'
+    assets: |
+      !**/**
+      $(Build.ArtifactStagingDirectory)/*
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'

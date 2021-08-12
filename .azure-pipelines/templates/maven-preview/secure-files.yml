@@ -1,0 +1,5 @@
+steps:
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: local.properties
+    retryCount: 5

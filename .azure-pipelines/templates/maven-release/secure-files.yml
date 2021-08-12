@@ -1,0 +1,15 @@
+steps:
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: local.properties
+    retryCount: 5
+
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: secring.gpg
+    retryCount: 5
+
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: secring.gpg.lock
+    retryCount: 5
