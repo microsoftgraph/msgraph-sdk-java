@@ -1,3 +1,8 @@
+parameters:
+- name: task
+  type: string
+  default: ''
+
 steps:
 - task: CopyFiles@2
   inputs:
@@ -10,7 +15,7 @@ steps:
     gradleWrapperFile: '$(DROP_PATH)/gradlew'
     workingDirectory: '$(DROP_PATH)/'
     options: '-x jar -x javadoc -x javadocJar -x compileJava -x processResources -x classes -x sourceJar'
-    tasks: 'publishSnapshotPublicationToSonatypeSnapshotRepository'
+    tasks: ${{ parameters.task }}
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
