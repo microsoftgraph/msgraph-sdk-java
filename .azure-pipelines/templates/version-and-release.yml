@@ -1,3 +1,8 @@
+parameters:
+- name: gitConnection
+  type: string
+  default: ''
+
 steps:
 - task: PowerShell@2
   inputs:
@@ -6,7 +11,7 @@ steps:
 
 - task: GitHubRelease@1
   inputs:
-    gitHubConnection: 'ramsessanchez'
+    gitHubConnection: ${{ parameters.gitConnection }}
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'

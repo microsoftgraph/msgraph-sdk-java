@@ -73,5 +73,7 @@ stages:
      runOnce:
       deploy:
         steps: 
-        - template: templates/github-release-stage/version-and-release.yml
+        - template: templates/version-and-release.yml
+          parameters:
+            gitConnection: 'ramsessanchez'
         - template: templates/alert-failure.yml
