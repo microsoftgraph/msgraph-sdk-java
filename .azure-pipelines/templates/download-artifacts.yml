@@ -1,6 +1,0 @@
-steps: 
-  - task: DownloadPipelineArtifact@2
-    inputs:
-    buildType: 'current'
-    artifactName: 'Drop'
-    targetPath: '$(Pipeline.Workspace)'
