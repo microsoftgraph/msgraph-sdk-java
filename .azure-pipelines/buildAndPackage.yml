@@ -43,14 +43,20 @@ stages:
 - stage: Maven-Preview
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
   jobs: 
-  - job: Maven-Preview
-    steps: 
-    - template: templates/download-artifacts.yml
-    - template: templates/secure-files.yml
-    - template: templates/maven-preview/copy-and-build.yml
-      parameters:
-        task: 'publishSnapshotPublicationToSonatypeSnapshotRepository'
-    - template: templates/alert-failure.yml
+  - deployment: Maven-Preview
+    environment: 'MSGraph SDK Development - Java'
+    pool:
+      vmImage: windows-latest
+    strategy:
+     runOnce:
+      deploy:
+        steps:
+        - template: templates/download-artifacts.yml
+        - template: templates/secure-files.yml
+        - template: templates/maven-preview/copy-and-build.yml
+          parameters:
+            task: 'publishSnapshotPublicationToSonatypeSnapshotRepository'
+        - template: templates/alert-failure.yml
 
 - stage: Maven-Release-And-Github-Release
   dependsOn: []
