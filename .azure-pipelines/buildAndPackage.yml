@@ -6,9 +6,7 @@
 trigger:
   branches:
     include:
-    - dev 
-    - main
-    - feature/v3
+    - dev
   paths: 
     include:
       - src/*
@@ -22,15 +20,74 @@ trigger:
       - THIRD PARTY NOTICES
       - README.md
 
-pr: none
+pr: 
+- dev
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
-steps: 
-- template: templates/secure-files.yml
-- template: templates/build-and-coverage.yml
-- template: templates/publish-artifacts.yml
-- template: templates/alert-failure.yml
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    steps: 
+    - template: templates/build/checkout-and-credscan.yml
+    - template: templates/build/install-java.yml
+    - template: templates/secure-files.yml
+      parameters:
+        stageID: 'build'
+    - template: templates/build/build-and-coverage.yml
+    - template: templates/build/publish-artifacts.yml
+    - template: templates/alert-failure.yml
 
+- stage: Maven-Preview
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+  jobs: 
+  - deployment: Maven-Preview
+    environment: 'MSGraph SDK Development - Java'
+    pool:
+      vmImage: windows-latest
+    strategy:
+     runOnce:
+      deploy:
+        steps:
+        - template: templates/download-artifacts.yml
+        - template: templates/secure-files.yml
+        - template: templates/maven-preview/copy-and-build.yml
+          parameters:
+            task: 'publishSnapshotPublicationToSonatypeSnapshotRepository'
+        - template: templates/alert-failure.yml
 
+- stage: Maven-Release-And-Github-Release
+  dependsOn: []
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+  jobs:
+  - deployment: Maven-Release
+    environment: 'MSGraph SDK Development - Java'
+    pool:
+      vmImage: windows-latest
+    strategy:
+     runOnce:
+      deploy:
+        steps:
+        - template: templates/secure-files.yml
+          parameters:
+            stageID: 'release'
+        - template: templates/maven-release/copy-and-build.yml
+          parameters:
+            task: 'publishMavenCentralReleasePublicationToSonatypeRepository'
+        - template: templates/alert-failure.yml
+
+  - deployment: Github-Release
+    dependsOn: Maven-Release
+    environment: 'MSGraph SDK Development - Java'
+    pool:
+      vmImage: windows-latest
+    strategy: 
+     runOnce:
+      deploy:
+        steps: 
+        - template: templates/version-and-release.yml
+          parameters:
+            gitConnection: 'ramsessanchez'
+        - template: templates/alert-failure.yml

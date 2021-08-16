@@ -1,0 +1,24 @@
+parameters:
+- name: gitConnection
+  type: string
+  default: ''
+
+steps:
+- task: PowerShell@2
+  inputs:
+    filePath: '$(DROP_PATH)/Scripts/getLatestVersion.ps1'
+    arguments: '-propertiesPath "$(PROPERTIES_PATH)"'
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: ${{ parameters.gitConnection }}
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'userSpecifiedTag'
+    tag: '$(VERSION_STRING)'
+    assets: |
+      !**/**
+      $(Build.ArtifactStagingDirectory)/*
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
