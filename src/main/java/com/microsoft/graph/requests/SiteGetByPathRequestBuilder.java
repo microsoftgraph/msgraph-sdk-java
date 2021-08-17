@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.SiteGetByPathRequest;
 import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
-import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
+import com.microsoft.graph.termstore.requests.StoreCollectionRequestBuilder;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.SiteGetByPathParameterSet;
