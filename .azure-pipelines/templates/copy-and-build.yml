@@ -8,12 +8,12 @@ steps:
   inputs:
     SourceFolder: '$(Agent.TempDirectory)'
     Contents: '**'
-    TargetFolder: '$(DROP_PATH)/'
+    TargetFolder: '$(Agent.BuildDirectory)/'
 
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: '$(DROP_PATH)/gradlew'
-    workingDirectory: '$(DROP_PATH)/'
+    gradleWrapperFile: '$(Agent.BuildDirectory)/gradlew'
+    workingDirectory: '$(Agent.BuildDirectory)/'
     options: '-x jar -x javadoc -x javadocJar -x compileJava -x processResources -x classes -x sourceJar'
     tasks: ${{ parameters.task }}
     publishJUnitResults: true
