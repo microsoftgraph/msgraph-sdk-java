@@ -1,9 +1,0 @@
-steps: 
-  - task: O365PostMessageRelease@0
-    inputs:
-      addressType: 'serviceEndpoint'
-      messageType: 'message'
-      title: '$(Build.DefinitionName) failure notification'
-      text: 'This pipeline has failed. View the build details for further information. This is a blocking failure.'
-      includeLink: true
-      linkText: 'View Release Detail'

@@ -7,3 +7,5 @@ steps:
   displayName: 'Run CredScan'
   inputs:
     debugMode: false
+    toolMajorVersion: V2
+    
