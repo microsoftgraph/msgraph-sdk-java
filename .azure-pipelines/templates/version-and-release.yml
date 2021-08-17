@@ -8,6 +8,7 @@ steps:
   inputs:
     filePath: '$(DROP_PATH)/Scripts/getLatestVersion.ps1'
     arguments: '-propertiesPath "$(PROPERTIES_PATH)"'
+    pwsh: true
 
 - task: GitHubRelease@1
   inputs:
