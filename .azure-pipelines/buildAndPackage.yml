@@ -51,7 +51,7 @@ stages:
       deploy:
         steps:
         - template: templates/secure-files.yml
-        - template: templates/maven-preview/copy-and-build.yml
+        - template: templates/copy-and-build.yml
           parameters:
             task: 'publishSnapshotPublicationToSonatypeSnapshotRepository'
 
@@ -70,7 +70,7 @@ stages:
         - template: templates/secure-files.yml
           parameters:
             stageID: 'release'
-        - template: templates/maven-release/copy-and-build.yml
+        - template: templates/copy-and-build.yml
           parameters:
             task: 'publishMavenCentralReleasePublicationToSonatypeRepository'
 
