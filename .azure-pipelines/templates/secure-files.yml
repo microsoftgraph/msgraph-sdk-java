@@ -9,7 +9,7 @@ steps:
     secureFile: 'local.properties'
     retryCount: '5'
 
-- ${{ if or(eq(parameters.stageID, 'build'), eq(parameters.stageID, 'release') }}:
+- ${{ if or(eq(parameters.stageID, 'build'), eq(parameters.stageID, 'release')) }}:
   - task: DownloadSecureFile@1
     inputs:
       secureFile: 'secring.gpg'
