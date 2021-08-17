@@ -134,6 +134,15 @@ public class Subscription extends Entity implements IJsonBackedObject {
     public String notificationUrl;
 
     /**
+     * The Notification Url App Id.
+     * 
+     */
+    @SerializedName(value = "notificationUrlAppId", alternate = {"NotificationUrlAppId"})
+    @Expose
+	@Nullable
+    public String notificationUrlAppId;
+
+    /**
      * The Resource.
      * Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource. Required.
      */

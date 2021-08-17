@@ -83,7 +83,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Send Invitation Message.
-     * Indicates whether an email should be sent to the user being invited or not. The default is false.
+     * Indicates whether an email should be sent to the user being invited. The default is false.
      */
     @SerializedName(value = "sendInvitationMessage", alternate = {"SendInvitationMessage"})
     @Expose

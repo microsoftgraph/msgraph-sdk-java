@@ -57,6 +57,15 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
     public java.util.List<String> includeApplications;
 
     /**
+     * The Include Authentication Context Class References.
+     * Authentication context class references include. Supported values are c1 through c25.
+     */
+    @SerializedName(value = "includeAuthenticationContextClassReferences", alternate = {"IncludeAuthenticationContextClassReferences"})
+    @Expose
+	@Nullable
+    public java.util.List<String> includeAuthenticationContextClassReferences;
+
+    /**
      * The Include User Actions.
      * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
      */

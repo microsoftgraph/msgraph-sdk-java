@@ -24,6 +24,8 @@ import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.PermissionRequestBuilder;
 import com.microsoft.graph.requests.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteRequestBuilder;
+import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
+import com.microsoft.graph.termstore.requests.StoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

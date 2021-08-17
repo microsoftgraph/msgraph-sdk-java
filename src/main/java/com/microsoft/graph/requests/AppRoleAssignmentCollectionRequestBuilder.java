@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.Device;
 import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
@@ -40,7 +40,7 @@ import com.microsoft.graph.models.DirectoryObjectGetByIdsParameterSet;
 public class AppRoleAssignmentCollectionRequestBuilder extends BaseCollectionRequestBuilder<AppRoleAssignment, AppRoleAssignmentRequestBuilder, AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage, AppRoleAssignmentCollectionRequest> {
 
     /**
-     * The request builder for this collection of Group
+     * The request builder for this collection of Device
      *
      * @param requestUrl     the request URL
      * @param client         the service client
