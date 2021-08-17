@@ -50,7 +50,6 @@ stages:
      runOnce:
       deploy:
         steps:
-        - template: templates/download-artifacts.yml
         - template: templates/secure-files.yml
         - template: templates/maven-preview/copy-and-build.yml
           parameters:
