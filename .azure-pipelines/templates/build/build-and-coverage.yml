@@ -1,7 +1,7 @@
 steps:
   - task: Gradle@2
     inputs:
-      gradleWrapperFile: '$(Agent.BuildDirectory)/gradlew'
+      gradleWrapperFile: '$(Build.SourcesDirectory)/gradlew'
       tasks: 'build'
       publishJUnitResults: true
       testResultsFiles: '**/TEST-*.xml'
