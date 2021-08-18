@@ -36,7 +36,7 @@ stages:
     - template: templates/secure-files.yml
       parameters:
         stageID: 'build'
-    - template: templates/build/build-and-coverage.yml
+    - template: templates/build/pipeline-build.yml
     - template: templates/build/publish-artifacts.yml
 
 - stage: Maven_Preview
@@ -50,6 +50,7 @@ stages:
      runOnce:
       deploy:
         steps:
+        - template: templates/download-artifacts.yml
         - template: templates/install-java.yml
         - template: templates/secure-files.yml
         - template: templates/copy-and-build.yml
@@ -68,6 +69,7 @@ stages:
      runOnce:
       deploy:
         steps:
+        - template: templates/download-artifacts.yml
         - template: templates/install-java.yml
         - template: templates/secure-files.yml
           parameters:
@@ -85,7 +87,7 @@ stages:
      runOnce:
       deploy:
         steps: 
-        - template: templates/install-java.yml
+        - template: templates/download-artifacts.yml
         - template: templates/version-and-release.yml
           parameters:
             gitConnection: 'microsoftgraphrelease'
