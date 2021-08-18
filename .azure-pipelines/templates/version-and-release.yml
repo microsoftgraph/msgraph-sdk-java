@@ -7,7 +7,7 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: '$(DROP_PATH)/Scripts/getLatestVersion.ps1'
-    arguments: '-propertiesPath "$(PROPERTIES_PATH)"'
+    arguments: '-propertiesPath "$(DROP_PATH)/gradle.properties"'
     pwsh: true
 
 - task: GitHubRelease@1
