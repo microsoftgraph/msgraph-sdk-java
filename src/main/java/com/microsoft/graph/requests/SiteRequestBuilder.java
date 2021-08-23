@@ -24,6 +24,8 @@ import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.PermissionRequestBuilder;
 import com.microsoft.graph.requests.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteRequestBuilder;
+import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
+import com.microsoft.graph.termstore.requests.StoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -254,6 +256,36 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
     @Nonnull
     public SiteRequestBuilder sites(@Nonnull final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Store
+     *
+     * @return the StoreRequestBuilder instance
+     */
+    @Nonnull
+    public StoreRequestBuilder termStore() {
+        return new StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStore"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Store collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public StoreCollectionRequestBuilder termStores() {
+        return new StoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("termStores"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Store item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public StoreRequestBuilder termStores(@Nonnull final String id) {
+        return new StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStores") + "/" + id, getClient(), null);
     }
 
     /**

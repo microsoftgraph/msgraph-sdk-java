@@ -5,6 +5,8 @@
 
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.SiteGetByPathRequest;
+import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
+import com.microsoft.graph.termstore.requests.StoreCollectionRequestBuilder;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.SiteGetByPathParameterSet;
@@ -252,6 +254,36 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
     @Nonnull
     public SiteRequestBuilder sites(@Nonnull final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Store
+     *
+     * @return the StoreRequestBuilder instance
+     */
+    @Nonnull
+    public StoreRequestBuilder termStore() {
+        return new StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStore"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Store collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public StoreCollectionRequestBuilder termStores() {
+        return new StoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("termStores"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Store item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public StoreRequestBuilder termStores(@Nonnull final String id) {
+        return new StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStores") + "/" + id, getClient(), null);
     }
 
     /**

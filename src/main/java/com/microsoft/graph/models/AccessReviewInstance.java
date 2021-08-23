@@ -41,7 +41,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Fallback Reviewers.
-     * 
+     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. Supports $select.
      */
     @SerializedName(value = "fallbackReviewers", alternate = {"FallbackReviewers"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewers.
-     * 
+     * This collection of access review scopes is used to define who the reviewers are. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose

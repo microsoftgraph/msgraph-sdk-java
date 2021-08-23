@@ -28,7 +28,7 @@ public class EducationAssignmentResource extends Entity implements IJsonBackedOb
 
     /**
      * The Distribute For Student Work.
-     * Indicates whether this resource should be copied to each student submission for modification and submission.
+     * Indicates whether this resource should be copied to each student submission for modification and submission. Required
      */
     @SerializedName(value = "distributeForStudentWork", alternate = {"DistributeForStudentWork"})
     @Expose

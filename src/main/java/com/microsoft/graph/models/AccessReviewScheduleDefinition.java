@@ -115,7 +115,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Scope.
-     * Defines scope of resources to review. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
+     * Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose

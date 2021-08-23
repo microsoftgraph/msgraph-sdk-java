@@ -21,6 +21,7 @@ import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.models.List;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.Site;
+import com.microsoft.graph.termstore.models.Store;
 import com.microsoft.graph.models.Onenote;
 import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
 import com.microsoft.graph.requests.ContentTypeCollectionPage;
@@ -29,6 +30,7 @@ import com.microsoft.graph.requests.BaseItemCollectionPage;
 import com.microsoft.graph.requests.ListCollectionPage;
 import com.microsoft.graph.requests.PermissionCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
+import com.microsoft.graph.termstore.requests.StoreCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -172,6 +174,24 @@ public class Site extends BaseItem implements IJsonBackedObject {
     public SiteCollectionPage sites;
 
     /**
+     * The Term Store.
+     * The termStore under this site.
+     */
+    @SerializedName(value = "termStore", alternate = {"TermStore"})
+    @Expose
+	@Nullable
+    public Store termStore;
+
+    /**
+     * The Term Stores.
+     * 
+     */
+    @SerializedName(value = "termStores", alternate = {"TermStores"})
+    @Expose
+	@Nullable
+    public StoreCollectionPage termStores;
+
+    /**
      * The Onenote.
      * Calls the OneNote service for notebook related operations.
      */
@@ -216,6 +236,10 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
         if (json.has("sites")) {
             sites = serializer.deserializeObject(json.get("sites"), SiteCollectionPage.class);
+        }
+
+        if (json.has("termStores")) {
+            termStores = serializer.deserializeObject(json.get("termStores"), StoreCollectionPage.class);
         }
     }
 }

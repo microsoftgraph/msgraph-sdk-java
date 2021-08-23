@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.Device;
 import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
