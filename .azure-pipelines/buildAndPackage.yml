@@ -54,11 +54,14 @@ stages:
       deploy:
         steps:
         - template: templates/download-artifacts.yml
+          parameters:
+            directoryPath: $(DROP_PATH)
         - template: templates/install-java.yml
         - template: templates/secure-files.yml
         - template: templates/copy-and-build.yml
           parameters:
             task: 'publishSnapshotPublicationToSonatypeSnapshotRepository'
+            directoryPath: $(DROP_PATH)
 
 - stage: Maven_Release_And_Github_Release
   dependsOn: Build
@@ -73,6 +76,8 @@ stages:
       deploy:
         steps:
         - template: templates/download-artifacts.yml
+          parameters:
+            directoryPath: $(DROP_PATH)
         - template: templates/install-java.yml
         - template: templates/secure-files.yml
           parameters:
@@ -91,6 +96,9 @@ stages:
       deploy:
         steps: 
         - template: templates/download-artifacts.yml
+          parameters:
+            directoryPath: $(DROP_PATH)
         - template: templates/version-and-release.yml
           parameters:
             gitConnection: 'microsoftgraphrelease'
+            directoryPath: $(DROP_PATH)
