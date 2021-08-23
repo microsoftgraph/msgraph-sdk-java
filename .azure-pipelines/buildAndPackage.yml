@@ -25,6 +25,9 @@ pr:
 
 pool:
   vmImage: windows-latest
+  
+variables: 
+  DROP_PATH: '$(Agent.BuildDirectory)/Drop'
 
 stages:
 - stage: Build
