@@ -85,6 +85,7 @@ stages:
         - template: templates/copy-and-build.yml
           parameters:
             task: 'publishMavenCentralReleasePublicationToSonatypeRepository'
+            directoryPath: $(DROP_PATH)
 
   - deployment: Github_Release
     dependsOn: Maven_Release
