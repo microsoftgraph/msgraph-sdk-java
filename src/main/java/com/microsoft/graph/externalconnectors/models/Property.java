@@ -42,7 +42,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Aliases.
-     * A set of aliases or a friendly names for the property. Maximum 32 characters. Each string must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `
+     * A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `, ^. Optional.
      */
     @SerializedName(value = "aliases", alternate = {"Aliases"})
     @Expose
@@ -96,7 +96,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name of the property. Maximum 32 characters. Must not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `
+     * The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `, ^.  Required.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
