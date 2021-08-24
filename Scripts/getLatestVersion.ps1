@@ -21,9 +21,10 @@ $file = get-item $propertiesPath
 $findVersions = $file | Select-String -Pattern "mavenMajorVersion" -Context 0,2
 $findVersions = $findVersions -split "`r`n"
 
-$majorVersion = $findVersions[0].Substring($findVersions[0].Length-1)
-$minorVersion = $findVersions[1].Substring($findVersions[1].Length-1)
-$patchVersion = $findVersions[2].Substring($findVersions[2].Length-1)
+$versionIndex = $findVersions[0].IndexOf("=")
+$majorVersion = $findVersions[0].Substring($versionIndex+2)
+$minorVersion = $findVersions[1].Substring($versionIndex+2)
+$patchVersion = $findVersions[2].Substring($versionIndex+2)
 $version = "$majorVersion.$minorVersion.$patchVersion"
 
 #Update the VERSION_STRING env variable and inform the user
