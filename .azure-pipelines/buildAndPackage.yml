@@ -25,6 +25,9 @@ pr:
 
 pool:
   vmImage: windows-latest
+  
+variables: 
+  DROP_PATH: '$(Agent.BuildDirectory)/Drop'
 
 stages:
 - stage: Build
@@ -51,11 +54,14 @@ stages:
       deploy:
         steps:
         - template: templates/download-artifacts.yml
+          parameters:
+            directoryPath: $(DROP_PATH)
         - template: templates/install-java.yml
         - template: templates/secure-files.yml
         - template: templates/copy-and-build.yml
           parameters:
             task: 'publishSnapshotPublicationToSonatypeSnapshotRepository'
+            directoryPath: $(DROP_PATH)
 
 - stage: Maven_Release_And_Github_Release
   dependsOn: Build
@@ -70,6 +76,8 @@ stages:
       deploy:
         steps:
         - template: templates/download-artifacts.yml
+          parameters:
+            directoryPath: $(DROP_PATH)
         - template: templates/install-java.yml
         - template: templates/secure-files.yml
           parameters:
@@ -77,6 +85,7 @@ stages:
         - template: templates/copy-and-build.yml
           parameters:
             task: 'publishMavenCentralReleasePublicationToSonatypeRepository'
+            directoryPath: $(DROP_PATH)
 
   - deployment: Github_Release
     dependsOn: Maven_Release
@@ -88,6 +97,9 @@ stages:
       deploy:
         steps: 
         - template: templates/download-artifacts.yml
+          parameters:
+            directoryPath: $(DROP_PATH)
         - template: templates/version-and-release.yml
           parameters:
             gitConnection: 'microsoftgraphrelease'
+            directoryPath: $(DROP_PATH)

@@ -1,3 +1,7 @@
+parameters:
+- name: directoryPath
+  type: string
+
 steps: 
 - download: none
 - task: DownloadPipelineArtifact@2
@@ -7,4 +11,4 @@ steps:
     itemPattern: |
       **
       *
-    targetPath: '$(Agent.BuildDirectory)/Drop/'
+    targetPath: '${{ parameters.directoryPath }}/'
