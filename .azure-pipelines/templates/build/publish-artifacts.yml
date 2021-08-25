@@ -1,5 +1,6 @@
 steps: 
   - task: CopyFiles@2
+    condition: ne(variables['Build.Reason'], 'PullRequest')
     inputs:
       SourceFolder: '$(system.defaultworkingdirectory)'
       Contents: |
@@ -16,5 +17,6 @@ steps:
       TargetFolder: '$(build.artifactstagingdirectory)/'
 
   - publish: $(Build.ArtifactStagingDirectory)
+    condition: ne(variables['Build.Reason'], 'PullRequest')
     artifact: Drop 
     displayName: Publish Build Artifact
