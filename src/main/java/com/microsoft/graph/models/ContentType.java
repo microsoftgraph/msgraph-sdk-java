@@ -9,11 +9,17 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.DocumentSet;
+import com.microsoft.graph.models.DocumentSetContent;
 import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.models.ContentTypeOrder;
+import com.microsoft.graph.models.ContentType;
 import com.microsoft.graph.models.ColumnLink;
+import com.microsoft.graph.models.ColumnDefinition;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.ColumnLinkCollectionPage;
+import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -31,6 +37,15 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Associated Hubs Urls.
+     * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     */
+    @SerializedName(value = "associatedHubsUrls", alternate = {"AssociatedHubsUrls"})
+    @Expose
+	@Nullable
+    public java.util.List<String> associatedHubsUrls;
+
+    /**
      * The Description.
      * The descriptive text for the item.
      */
@@ -38,6 +53,24 @@ public class ContentType extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String description;
+
+    /**
+     * The Document Set.
+     * Document Set metadata.
+     */
+    @SerializedName(value = "documentSet", alternate = {"DocumentSet"})
+    @Expose
+	@Nullable
+    public DocumentSet documentSet;
+
+    /**
+     * The Document Template.
+     * Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
+     */
+    @SerializedName(value = "documentTemplate", alternate = {"DocumentTemplate"})
+    @Expose
+	@Nullable
+    public DocumentSetContent documentTemplate;
 
     /**
      * The Group.
@@ -67,6 +100,15 @@ public class ContentType extends Entity implements IJsonBackedObject {
     public ItemReference inheritedFrom;
 
     /**
+     * The Is Built In.
+     * Specifies if a content type is a built-in content type.
+     */
+    @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
+    @Expose
+	@Nullable
+    public Boolean isBuiltIn;
+
+    /**
      * The Name.
      * The name of the content type.
      */
@@ -94,6 +136,15 @@ public class ContentType extends Entity implements IJsonBackedObject {
     public String parentId;
 
     /**
+     * The Propagate Changes.
+     * If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
+     */
+    @SerializedName(value = "propagateChanges", alternate = {"PropagateChanges"})
+    @Expose
+	@Nullable
+    public Boolean propagateChanges;
+
+    /**
      * The Read Only.
      * If true, the content type cannot be modified unless this value is first set to false.
      */
@@ -112,6 +163,22 @@ public class ContentType extends Entity implements IJsonBackedObject {
     public Boolean sealed;
 
     /**
+     * The Base.
+     * Parent contentType from which this content type is derived.
+     */
+    @SerializedName(value = "base", alternate = {"Base"})
+    @Expose
+	@Nullable
+    public ContentType base;
+
+    /**
+     * The Base Types.
+     * The collection of content types that are ancestors of this content type.
+     */
+	@Nullable
+    public ContentTypeCollectionPage baseTypes;
+
+    /**
      * The Column Links.
      * The collection of columns that are required by this content type
      */
@@ -119,6 +186,22 @@ public class ContentType extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ColumnLinkCollectionPage columnLinks;
+
+    /**
+     * The Column Positions.
+     * Column order information in a content type.
+     */
+	@Nullable
+    public ColumnDefinitionCollectionPage columnPositions;
+
+    /**
+     * The Columns.
+     * The collection of column definitions for this contentType.
+     */
+    @SerializedName(value = "columns", alternate = {"Columns"})
+    @Expose
+	@Nullable
+    public ColumnDefinitionCollectionPage columns;
 
 
     /**
@@ -130,8 +213,20 @@ public class ContentType extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
+        if (json.has("baseTypes")) {
+            baseTypes = serializer.deserializeObject(json.get("baseTypes"), ContentTypeCollectionPage.class);
+        }
+
         if (json.has("columnLinks")) {
             columnLinks = serializer.deserializeObject(json.get("columnLinks"), ColumnLinkCollectionPage.class);
+        }
+
+        if (json.has("columnPositions")) {
+            columnPositions = serializer.deserializeObject(json.get("columnPositions"), ColumnDefinitionCollectionPage.class);
+        }
+
+        if (json.has("columns")) {
+            columns = serializer.deserializeObject(json.get("columns"), ColumnDefinitionCollectionPage.class);
         }
     }
 }

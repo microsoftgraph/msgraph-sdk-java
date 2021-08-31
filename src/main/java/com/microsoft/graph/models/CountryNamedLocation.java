@@ -38,7 +38,7 @@ public class CountryNamedLocation extends NamedLocation implements IJsonBackedOb
 
     /**
      * The Country Lookup Method.
-     * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps.
+     * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      */
     @SerializedName(value = "countryLookupMethod", alternate = {"CountryLookupMethod"})
     @Expose

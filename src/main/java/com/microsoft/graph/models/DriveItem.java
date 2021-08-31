@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Audio;
+import com.microsoft.graph.models.Bundle;
 import com.microsoft.graph.models.Deleted;
 import com.microsoft.graph.models.File;
 import com.microsoft.graph.models.FileSystemInfo;
@@ -64,6 +65,15 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Audio audio;
+
+    /**
+     * The Bundle.
+     * 
+     */
+    @SerializedName(value = "bundle", alternate = {"Bundle"})
+    @Expose
+	@Nullable
+    public Bundle bundle;
 
     /**
      * The CTag.
