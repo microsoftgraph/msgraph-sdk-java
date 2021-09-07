@@ -44,9 +44,9 @@ public enum EntityType
     */
     DRIVE,
     /**
-    * unknownfuturevalue
+    * unknown Future Value
     */
-    UNKNOWNFUTUREVALUE,
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For EntityType values that were not expected from the service
     */

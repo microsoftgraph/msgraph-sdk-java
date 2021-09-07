@@ -257,7 +257,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Audience.
-     * Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).
+     * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, NOT).
      */
     @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose

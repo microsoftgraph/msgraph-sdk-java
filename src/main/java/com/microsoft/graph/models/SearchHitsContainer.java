@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.SearchAggregation;
 import com.microsoft.graph.models.SearchHit;
 
 
@@ -38,6 +39,15 @@ public class SearchHitsContainer implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Aggregations.
+     * Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
+     */
+    @SerializedName(value = "aggregations", alternate = {"Aggregations"})
+    @Expose
+	@Nullable
+    public java.util.List<SearchAggregation> aggregations;
 
     /**
      * The Hits.

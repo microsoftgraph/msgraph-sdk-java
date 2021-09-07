@@ -28,7 +28,7 @@ public class Request extends Entity implements IJsonBackedObject {
 
     /**
      * The Approval Id.
-     * 
+     * The identifier of the approval of the request.
      */
     @SerializedName(value = "approvalId", alternate = {"ApprovalId"})
     @Expose
@@ -37,7 +37,7 @@ public class Request extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * The request completion date time.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class Request extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The user who created this request.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -55,7 +55,7 @@ public class Request extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The request creation date time.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class Request extends Entity implements IJsonBackedObject {
 
     /**
      * The Custom Data.
-     * 
+     * Free text field to define any custom data for the request. Not used.
      */
     @SerializedName(value = "customData", alternate = {"CustomData"})
     @Expose
@@ -73,7 +73,7 @@ public class Request extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the request. Not nullable. The possible values are: Canceled, Denied, Failed, Granted, PendingAdminDecision, PendingApproval, PendingProvisioning, PendingScheduleCreation, Provisioned, Revoked, and ScheduleCreated. Not nullable.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

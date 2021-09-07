@@ -30,7 +30,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * Indicates whether any of the posts within this Conversation has at least one attachment.
+     * Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -39,7 +39,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Delivered Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, le, ge).
      */
     @SerializedName(value = "lastDeliveredDateTime", alternate = {"LastDeliveredDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Preview.
-     * A short summary from the body of the latest post in this converstaion.
+     * A short summary from the body of the latest post in this conversation.
      */
     @SerializedName(value = "preview", alternate = {"Preview"})
     @Expose

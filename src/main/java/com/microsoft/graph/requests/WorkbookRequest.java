@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Workbook;
 import com.microsoft.graph.models.WorkbookSessionInfo;
+import com.microsoft.graph.models.WorkbookTableRow;
 import com.microsoft.graph.requests.WorkbookApplicationRequestBuilder;
 import com.microsoft.graph.requests.WorkbookCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.WorkbookCommentRequestBuilder;

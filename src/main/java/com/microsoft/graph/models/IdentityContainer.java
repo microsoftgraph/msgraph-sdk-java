@@ -46,7 +46,7 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Api Connectors.
-     * 
+     * Represents entry point for API connectors.
      */
     @SerializedName(value = "apiConnectors", alternate = {"ApiConnectors"})
     @Expose
@@ -55,7 +55,7 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The B2x User Flows.
-     * 
+     * Represents entry point for B2X and self-service sign-up identity userflows.
      */
     @SerializedName(value = "b2xUserFlows", alternate = {"B2xUserFlows"})
     @Expose
@@ -64,7 +64,7 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Identity Providers.
-     * 
+     * Represents entry point for identity provider base.
      */
     @SerializedName(value = "identityProviders", alternate = {"IdentityProviders"})
     @Expose
@@ -73,7 +73,7 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The User Flow Attributes.
-     * 
+     * Represents entry point for identity userflow attributes.
      */
     @SerializedName(value = "userFlowAttributes", alternate = {"UserFlowAttributes"})
     @Expose

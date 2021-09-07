@@ -32,7 +32,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Administrative Units.
-     * 
+     * Conceptual container for user and group directory objects.
      */
     @SerializedName(value = "administrativeUnits", alternate = {"AdministrativeUnits"})
     @Expose

@@ -138,6 +138,13 @@ public class Site extends BaseItem implements IJsonBackedObject {
     public DriveCollectionPage drives;
 
     /**
+     * The External Columns.
+     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     */
+	@Nullable
+    public ColumnDefinitionCollectionPage externalColumns;
+
+    /**
      * The Items.
      * Used to address any item contained in this site. This collection cannot be enumerated.
      */
@@ -184,7 +191,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Term Stores.
-     * 
+     * The collection of termStores under this site.
      */
     @SerializedName(value = "termStores", alternate = {"TermStores"})
     @Expose
@@ -220,6 +227,10 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
         if (json.has("drives")) {
             drives = serializer.deserializeObject(json.get("drives"), DriveCollectionPage.class);
+        }
+
+        if (json.has("externalColumns")) {
+            externalColumns = serializer.deserializeObject(json.get("externalColumns"), ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("items")) {
