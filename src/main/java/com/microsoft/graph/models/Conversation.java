@@ -30,7 +30,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * Indicates whether any of the posts within this Conversation has at least one attachment.
+     * Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -48,7 +48,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Preview.
-     * A short summary from the body of the latest post in this converstaion.
+     * A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
      */
     @SerializedName(value = "preview", alternate = {"Preview"})
     @Expose

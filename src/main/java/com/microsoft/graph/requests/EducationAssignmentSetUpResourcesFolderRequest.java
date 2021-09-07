@@ -32,24 +32,22 @@ public class EducationAssignmentSetUpResourcesFolderRequest extends BaseRequest<
     }
 
     /**
-     * Gets the EducationAssignment
-     *
+     * Invokes the method and returns a future with the result
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<EducationAssignment> getAsync() {
-        return sendAsync(HttpMethod.GET, null);
+    public java.util.concurrent.CompletableFuture<EducationAssignment> postAsync() {
+        return sendAsync(HttpMethod.POST, null);
     }
 
     /**
-     * Gets the EducationAssignment
-     *
-     * @return the EducationAssignment
+     * Invokes the method and returns the result
+     * @return result of the method invocation
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
-    public EducationAssignment get() throws ClientException {
-       return send(HttpMethod.GET, null);
+    public EducationAssignment post() throws ClientException {
+       return send(HttpMethod.POST, null);
     }
 
     /**

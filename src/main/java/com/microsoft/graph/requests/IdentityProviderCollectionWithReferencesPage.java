@@ -27,7 +27,9 @@ import com.microsoft.graph.http.BaseCollectionPage;
 
 /**
  * The class for the Identity Provider Collection With References Page.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class IdentityProviderCollectionWithReferencesPage extends BaseCollectionPage<IdentityProvider, IdentityProviderCollectionWithReferencesRequestBuilder> {
 
     /**

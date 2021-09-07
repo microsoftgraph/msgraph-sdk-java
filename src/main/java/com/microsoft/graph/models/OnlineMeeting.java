@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.OnlineMeetingPresenters;
 import com.microsoft.graph.models.MeetingChatMode;
 import com.microsoft.graph.models.AudioConferencing;
+import com.microsoft.graph.models.BroadcastMeetingSettings;
 import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.LobbyBypassSettings;
@@ -52,7 +53,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Presenters.
-     * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
      */
     @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
     @Expose
@@ -70,7 +71,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Teamwork Reactions.
-     * Indicates if Teams reactions are enabled for the meeting.
+     * Indicates whether Teams reactions are enabled for the meeting.
      */
     @SerializedName(value = "allowTeamworkReactions", alternate = {"AllowTeamworkReactions"})
     @Expose
@@ -85,6 +86,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AudioConferencing audioConferencing;
+
+    /**
+     * The Broadcast Settings.
+     * Settings related to a live event.
+     */
+    @SerializedName(value = "broadcastSettings", alternate = {"BroadcastSettings"})
+    @Expose
+	@Nullable
+    public BroadcastMeetingSettings broadcastSettings;
 
     /**
      * The Chat Info.
@@ -123,6 +133,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public String externalId;
 
     /**
+     * The Is Broadcast.
+     * Indicates if this is a live event.
+     */
+    @SerializedName(value = "isBroadcast", alternate = {"IsBroadcast"})
+    @Expose
+	@Nullable
+    public Boolean isBroadcast;
+
+    /**
      * The Is Entry Exit Announced.
      * Indicates whether to announce when callers join or leave.
      */
@@ -133,7 +152,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Information.
-     * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      */
     @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
     @Expose
@@ -151,7 +170,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Lobby Bypass Settings.
-     * Specifies which participants can bypass the meeting lobby.
+     * Specifies which participants can bypass the meeting   lobby.
      */
     @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
     @Expose
@@ -160,7 +179,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * The participants associated with the online meeting. This includes the organizer and the attendees.
+     * The participants associated with the online meeting.  This includes the organizer and the attendees.
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose

@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.List;
 import com.microsoft.graph.models.ContentType;
+import com.microsoft.graph.models.ItemReference;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

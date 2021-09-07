@@ -41,7 +41,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * Attached files. Attachments are currently read-only – sending attachments is not supported.
+     * References to attached objects like files, tabs, meetings etc.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
@@ -104,7 +104,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The From.
-     * Read only. Details of the sender of the chat message.
+     * Details of the sender of the chat message. Can only be set during migration.
      */
     @SerializedName(value = "from", alternate = {"From"})
     @Expose
@@ -149,7 +149,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Mentions.
-     * List of entities mentioned in the chat message. Currently supports user, bot, team, channel.
+     * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
      */
     @SerializedName(value = "mentions", alternate = {"Mentions"})
     @Expose

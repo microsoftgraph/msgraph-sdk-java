@@ -40,7 +40,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Call Duration Source.
-     * 
+     * The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
      */
     @SerializedName(value = "callDurationSource", alternate = {"CallDurationSource"})
     @Expose
@@ -49,7 +49,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Callee Number.
-     * 
+     * Number dialed in E.164 format.
      */
     @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
@@ -58,7 +58,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Caller Number.
-     * 
+     * Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
      */
     @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
@@ -67,7 +67,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Call Id.
-     * 
+     * Call identifier. Not guaranteed to be unique.
      */
     @SerializedName(value = "callId", alternate = {"CallId"})
     @Expose
@@ -76,7 +76,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Call Type.
-     * 
+     * Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
      */
     @SerializedName(value = "callType", alternate = {"CallType"})
     @Expose
@@ -85,7 +85,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Charge.
-     * 
+     * Amount of money or cost of the call that is charged to your account.
      */
     @SerializedName(value = "charge", alternate = {"Charge"})
     @Expose
@@ -94,7 +94,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Conference Id.
-     * 
+     * ID of the audio conference.
      */
     @SerializedName(value = "conferenceId", alternate = {"ConferenceId"})
     @Expose
@@ -103,7 +103,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Connection Charge.
-     * 
+     * Connection fee price.
      */
     @SerializedName(value = "connectionCharge", alternate = {"ConnectionCharge"})
     @Expose
@@ -112,7 +112,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Currency.
-     * 
+     * Type of currency used to calculate the cost of the call (ISO 4217).
      */
     @SerializedName(value = "currency", alternate = {"Currency"})
     @Expose
@@ -121,7 +121,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Destination Context.
-     * 
+     * Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
      */
     @SerializedName(value = "destinationContext", alternate = {"DestinationContext"})
     @Expose
@@ -130,7 +130,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Destination Name.
-     * 
+     * Country or region dialed.
      */
     @SerializedName(value = "destinationName", alternate = {"DestinationName"})
     @Expose
@@ -139,7 +139,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Duration.
-     * 
+     * How long the call was connected, in seconds.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -148,7 +148,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * Call end time.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -157,7 +157,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Unique call identifier. GUID.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -166,7 +166,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Inventory Type.
-     * 
+     * User's phone number type, such as a service of toll-free number.
      */
     @SerializedName(value = "inventoryType", alternate = {"InventoryType"})
     @Expose
@@ -175,7 +175,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The License Capability.
-     * 
+     * The license used for the call.
      */
     @SerializedName(value = "licenseCapability", alternate = {"LicenseCapability"})
     @Expose
@@ -184,7 +184,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Operator.
-     * 
+     * The telecommunications operator which provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
@@ -193,7 +193,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * Call start time.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -202,7 +202,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Tenant Country Code.
-     * 
+     * Country code of the tenant, ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "tenantCountryCode", alternate = {"TenantCountryCode"})
     @Expose
@@ -211,7 +211,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Usage Country Code.
-     * 
+     * Country code of the user, ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "usageCountryCode", alternate = {"UsageCountryCode"})
     @Expose
@@ -220,7 +220,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * Display name of the user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -229,7 +229,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -238,7 +238,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

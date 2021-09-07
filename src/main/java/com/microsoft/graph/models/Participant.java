@@ -66,8 +66,17 @@ public class Participant extends Entity implements IJsonBackedObject {
     public java.util.List<MediaStream> mediaStreams;
 
     /**
+     * The Metadata.
+     * A blob of data provided by the participant in the roster.
+     */
+    @SerializedName(value = "metadata", alternate = {"Metadata"})
+    @Expose
+	@Nullable
+    public String metadata;
+
+    /**
      * The Recording Info.
-     * Information on whether the participant has recording capability.
+     * Information about whether the participant has recording capability.
      */
     @SerializedName(value = "recordingInfo", alternate = {"RecordingInfo"})
     @Expose

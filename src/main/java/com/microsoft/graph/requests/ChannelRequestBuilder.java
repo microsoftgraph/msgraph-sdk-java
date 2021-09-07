@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.ProvisionChannelEmailResult;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
@@ -142,5 +143,23 @@ public class ChannelRequestBuilder extends BaseRequestBuilder<Channel> {
     @Nonnull
     public ChannelCompleteMigrationRequestBuilder completeMigration() {
         return new ChannelCompleteMigrationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeMigration"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ChannelProvisionEmailRequestBuilder provisionEmail() {
+        return new ChannelProvisionEmailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.provisionEmail"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ChannelRemoveEmailRequestBuilder removeEmail() {
+        return new ChannelRemoveEmailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeEmail"), getClient(), null);
     }
 }

@@ -9,8 +9,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AggregationOption;
 import com.microsoft.graph.models.EntityType;
 import com.microsoft.graph.models.SearchQuery;
+import com.microsoft.graph.models.SortProperty;
 
 
 import com.google.gson.JsonObject;
@@ -39,6 +41,24 @@ public class SearchRequest implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Aggregation Filters.
+     * Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+     */
+    @SerializedName(value = "aggregationFilters", alternate = {"AggregationFilters"})
+    @Expose
+	@Nullable
+    public java.util.List<String> aggregationFilters;
+
+    /**
+     * The Aggregations.
+     * Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+     */
+    @SerializedName(value = "aggregations", alternate = {"Aggregations"})
+    @Expose
+	@Nullable
+    public java.util.List<AggregationOption> aggregations;
 
     /**
      * The Content Sources.
@@ -102,6 +122,15 @@ public class SearchRequest implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Integer size;
+
+    /**
+     * The Sort Properties.
+     * Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+     */
+    @SerializedName(value = "sortProperties", alternate = {"SortProperties"})
+    @Expose
+	@Nullable
+    public java.util.List<SortProperty> sortProperties;
 
 
     /**

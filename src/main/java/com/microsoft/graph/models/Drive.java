@@ -79,6 +79,15 @@ public class Drive extends BaseItem implements IJsonBackedObject {
     public SystemFacet system;
 
     /**
+     * The Bundles.
+     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     */
+    @SerializedName(value = "bundles", alternate = {"Bundles"})
+    @Expose
+	@Nullable
+    public DriveItemCollectionPage bundles;
+
+    /**
      * The Following.
      * The list of items the user is following. Only in OneDrive for Business.
      */
@@ -132,6 +141,10 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("bundles")) {
+            bundles = serializer.deserializeObject(json.get("bundles"), DriveItemCollectionPage.class);
+        }
 
         if (json.has("following")) {
             following = serializer.deserializeObject(json.get("following"), DriveItemCollectionPage.class);

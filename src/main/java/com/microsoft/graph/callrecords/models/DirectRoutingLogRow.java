@@ -39,7 +39,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Callee Number.
-     * 
+     * Number of the user or bot who received the call. E.164 format, but may include additional data.
      */
     @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
@@ -48,7 +48,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Call End Sub Reason.
-     * 
+     * In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
      */
     @SerializedName(value = "callEndSubReason", alternate = {"CallEndSubReason"})
     @Expose
@@ -57,7 +57,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Caller Number.
-     * 
+     * Number of the user or bot who made the call. E.164 format, but may include additional data.
      */
     @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
@@ -66,7 +66,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Call Type.
-     * 
+     * Call type and direction.
      */
     @SerializedName(value = "callType", alternate = {"CallType"})
     @Expose
@@ -75,7 +75,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Correlation Id.
-     * 
+     * Identifier for the call that you can use when calling Microsoft Support. GUID.
      */
     @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
@@ -84,7 +84,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Duration.
-     * 
+     * Duration of the call in seconds.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -93,7 +93,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * Only exists for successful (fully established) calls. Time when call ended.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -102,7 +102,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Failure Date Time.
-     * 
+     * Only exists for failed (not fully established) calls.
      */
     @SerializedName(value = "failureDateTime", alternate = {"FailureDateTime"})
     @Expose
@@ -111,7 +111,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Final Sip Code.
-     * 
+     * The code with which the call ended, RFC 3261.
      */
     @SerializedName(value = "finalSipCode", alternate = {"FinalSipCode"})
     @Expose
@@ -120,7 +120,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Final Sip Code Phrase.
-     * 
+     * Description of the SIP code and Microsoft subcode.
      */
     @SerializedName(value = "finalSipCodePhrase", alternate = {"FinalSipCodePhrase"})
     @Expose
@@ -129,7 +129,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Unique call identifier. GUID.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -138,7 +138,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Invite Date Time.
-     * 
+     * When the initial invite was sent.
      */
     @SerializedName(value = "inviteDateTime", alternate = {"InviteDateTime"})
     @Expose
@@ -147,7 +147,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Media Bypass Enabled.
-     * 
+     * Indicates if the trunk was enabled for media bypass or not.
      */
     @SerializedName(value = "mediaBypassEnabled", alternate = {"MediaBypassEnabled"})
     @Expose
@@ -156,7 +156,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Media Path Location.
-     * 
+     * The datacenter used for media path in non-bypass call.
      */
     @SerializedName(value = "mediaPathLocation", alternate = {"MediaPathLocation"})
     @Expose
@@ -165,7 +165,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Signaling Location.
-     * 
+     * The datacenter used for signaling for both bypass and non-bypass calls.
      */
     @SerializedName(value = "signalingLocation", alternate = {"SignalingLocation"})
     @Expose
@@ -174,7 +174,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -183,7 +183,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Successful Call.
-     * 
+     * Success or attempt.
      */
     @SerializedName(value = "successfulCall", alternate = {"SuccessfulCall"})
     @Expose
@@ -192,7 +192,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Trunk Fully Qualified Domain Name.
-     * 
+     * Fully qualified domain name of the session border controller.
      */
     @SerializedName(value = "trunkFullyQualifiedDomainName", alternate = {"TrunkFullyQualifiedDomainName"})
     @Expose
@@ -201,7 +201,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * Display name of the user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -210,7 +210,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -219,7 +219,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

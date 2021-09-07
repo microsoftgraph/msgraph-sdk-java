@@ -11,14 +11,21 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.BooleanColumn;
 import com.microsoft.graph.models.CalculatedColumn;
 import com.microsoft.graph.models.ChoiceColumn;
+import com.microsoft.graph.models.ContentApprovalStatusColumn;
 import com.microsoft.graph.models.CurrencyColumn;
 import com.microsoft.graph.models.DateTimeColumn;
 import com.microsoft.graph.models.DefaultColumnValue;
 import com.microsoft.graph.models.GeolocationColumn;
+import com.microsoft.graph.models.HyperlinkOrPictureColumn;
 import com.microsoft.graph.models.LookupColumn;
 import com.microsoft.graph.models.NumberColumn;
 import com.microsoft.graph.models.PersonOrGroupColumn;
+import com.microsoft.graph.models.TermColumn;
 import com.microsoft.graph.models.TextColumn;
+import com.microsoft.graph.models.ThumbnailColumn;
+import com.microsoft.graph.models.ColumnTypes;
+import com.microsoft.graph.models.ColumnValidation;
+import com.microsoft.graph.models.ColumnDefinition;
 import com.microsoft.graph.models.Entity;
 
 
@@ -71,6 +78,15 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String columnGroup;
+
+    /**
+     * The Content Approval Status.
+     * This column stores content approval status.
+     */
+    @SerializedName(value = "contentApprovalStatus", alternate = {"ContentApprovalStatus"})
+    @Expose
+	@Nullable
+    public ContentApprovalStatusColumn contentApprovalStatus;
 
     /**
      * The Currency.
@@ -145,13 +161,49 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     public Boolean hidden;
 
     /**
+     * The Hyperlink Or Picture.
+     * This column stores hyperlink or picture values.
+     */
+    @SerializedName(value = "hyperlinkOrPicture", alternate = {"HyperlinkOrPicture"})
+    @Expose
+	@Nullable
+    public HyperlinkOrPictureColumn hyperlinkOrPicture;
+
+    /**
      * The Indexed.
-     * Specifies whether the column values can used for sorting and searching.
+     * Specifies whether the column values can be used for sorting and searching.
      */
     @SerializedName(value = "indexed", alternate = {"Indexed"})
     @Expose
 	@Nullable
     public Boolean indexed;
+
+    /**
+     * The Is Deletable.
+     * Indicates whether this column can be deleted.
+     */
+    @SerializedName(value = "isDeletable", alternate = {"IsDeletable"})
+    @Expose
+	@Nullable
+    public Boolean isDeletable;
+
+    /**
+     * The Is Reorderable.
+     * Indicates whether values in the column can be reordered. Read-only.
+     */
+    @SerializedName(value = "isReorderable", alternate = {"IsReorderable"})
+    @Expose
+	@Nullable
+    public Boolean isReorderable;
+
+    /**
+     * The Is Sealed.
+     * Specifies whether the column can be changed.
+     */
+    @SerializedName(value = "isSealed", alternate = {"IsSealed"})
+    @Expose
+	@Nullable
+    public Boolean isSealed;
 
     /**
      * The Lookup.
@@ -190,6 +242,15 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     public PersonOrGroupColumn personOrGroup;
 
     /**
+     * The Propagate Changes.
+     * If 'true', changes to this column will be propagated to lists that implement the column.
+     */
+    @SerializedName(value = "propagateChanges", alternate = {"PropagateChanges"})
+    @Expose
+	@Nullable
+    public Boolean propagateChanges;
+
+    /**
      * The Read Only.
      * Specifies whether the column values can be modified.
      */
@@ -208,6 +269,15 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     public Boolean required;
 
     /**
+     * The Term.
+     * This column stores taxonomy terms.
+     */
+    @SerializedName(value = "term", alternate = {"Term"})
+    @Expose
+	@Nullable
+    public TermColumn term;
+
+    /**
      * The Text.
      * This column stores text values.
      */
@@ -215,6 +285,42 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TextColumn text;
+
+    /**
+     * The Thumbnail.
+     * This column stores thumbnail values.
+     */
+    @SerializedName(value = "thumbnail", alternate = {"Thumbnail"})
+    @Expose
+	@Nullable
+    public ThumbnailColumn thumbnail;
+
+    /**
+     * The Type.
+     * For site columns, the type of column. Read-only.
+     */
+    @SerializedName(value = "type", alternate = {"Type"})
+    @Expose
+	@Nullable
+    public ColumnTypes type;
+
+    /**
+     * The Validation.
+     * This column stores validation formula and message for the column.
+     */
+    @SerializedName(value = "validation", alternate = {"Validation"})
+    @Expose
+	@Nullable
+    public ColumnValidation validation;
+
+    /**
+     * The Source Column.
+     * The source column for the content type column.
+     */
+    @SerializedName(value = "sourceColumn", alternate = {"SourceColumn"})
+    @Expose
+	@Nullable
+    public ColumnDefinition sourceColumn;
 
 
     /**

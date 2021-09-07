@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ColumnDefinition;
+import com.microsoft.graph.requests.ColumnDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -56,4 +57,14 @@ public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder<ColumnDef
     }
 
 
+
+    /**
+     * Gets the request builder for ColumnDefinition
+     *
+     * @return the ColumnDefinitionWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public ColumnDefinitionWithReferenceRequestBuilder sourceColumn() {
+        return new ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sourceColumn"), getClient(), null);
+    }
 }

@@ -87,6 +87,26 @@ public class DriveRequestBuilder extends BaseRequestBuilder<Drive> {
      * @return the collection request builder
      */
     @Nonnull
+    public DriveItemCollectionRequestBuilder bundles() {
+        return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bundles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DriveItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DriveItemRequestBuilder bundles(@Nonnull final String id) {
+        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("bundles") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DriveItem collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
     public DriveItemCollectionRequestBuilder following() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("following"), getClient(), null);
     }
