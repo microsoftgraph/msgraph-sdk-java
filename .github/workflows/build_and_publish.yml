@@ -46,12 +46,12 @@ jobs:
           java-version: '16'
           distribution: 'adopt'
           cache: gradle
-      - run: .\scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
         env: 
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
           OUPUT_PATH: .\local.properties
-      - run: .\scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
         env: 
           ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
@@ -96,7 +96,7 @@ jobs:
         uses: actions/download-artifact@v2.0.10
         with: 
           name: drop 
-      - run: .\scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
+      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
@@ -126,12 +126,12 @@ jobs:
         uses: actions/download-artifact@v2.0.10
         with: 
           name: drop 
-      - run: .\scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
+      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
           OUTPUT_PATH: .\local.properties 
-      - run: .\scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
+      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
