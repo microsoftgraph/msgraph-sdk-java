@@ -34,6 +34,14 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
+      - name: Upload Test Unit Results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: UnitTests
+          path: |
+            build/reports/tests/test/**
+            build/test-results/**
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
