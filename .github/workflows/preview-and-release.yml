@@ -23,7 +23,6 @@ env:
 
 jobs:
   maven_Preview:
-    needs: build
     environment: 
       name: maven_central_snapshot
     runs-on: ubuntu-latest
@@ -51,9 +50,16 @@ jobs:
         run: chmod +x gradlew
       - name: Publish
         run: ./gradlew $PREVIEW_TASK
+      - name: Upload Test Unit Results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: UnitTests
+          path: |
+            build/reports/tests/test/**
+            build/test-results/**      
   
   maven_Release:
-    needs: build
     environment:
       name: maven_central_release
     runs-on: ubuntu-latest
@@ -81,6 +87,14 @@ jobs:
         run: chmod +x gradlew
       - name: Publish
         run: ./gradlew $PUBLISH_TASK
+      - name: Upload Test Unit Results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: UnitTests
+          path: |
+            build/reports/tests/test/**
+            build/test-results/**
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
