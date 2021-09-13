@@ -1,9 +1,0 @@
-steps:
-- task: Gradle@2
-  inputs:
-    gradleWrapperFile: '$(Build.SourcesDirectory)/gradlew' 
-    tasks: 'build'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    sonarQubeRunAnalysis: false
