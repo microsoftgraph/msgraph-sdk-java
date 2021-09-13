@@ -49,15 +49,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Publish
-        run: ./gradlew $PREVIEW_TASK
-      - name: Upload Test Unit Results
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          name: UnitTests
-          path: |
-            build/reports/tests/test/**
-            build/test-results/**      
+        run: ./gradlew $PREVIEW_TASK 
   
   maven_Release:
     environment:
@@ -87,14 +79,6 @@ jobs:
         run: chmod +x gradlew
       - name: Publish
         run: ./gradlew $PUBLISH_TASK
-      - name: Upload Test Unit Results
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          name: UnitTests
-          path: |
-            build/reports/tests/test/**
-            build/test-results/**
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
