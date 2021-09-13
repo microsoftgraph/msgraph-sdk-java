@@ -29,15 +29,15 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v2
-      - name: Easy detect-secrets
-        uses: RobertFischer/detect-secrets-action@v2.0.0
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           java-version: '16'
           distribution: 'adopt'
           cache: gradle
-      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
+      - name: Easy detect-secrets
+        uses: RobertFischer/detect-secrets-action@v2.0.0
+      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
@@ -59,15 +59,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Easy detect-secrets
-        uses: RobertFischer/detect-secrets-action@v2.0.0
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           java-version: '16'
           distribution: 'adopt'
           cache: gradle
-      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
+      - name: Easy detect-secrets
+        uses: RobertFischer/detect-secrets-action@v2.0.0
+      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
@@ -107,8 +107,14 @@ jobs:
         with: 
           name: drop
           path: drop        
-      - name: GitHub Releases
-        uses: fnkr/github-action-ghr@v1.3
+      - name: Github Release
+        uses: anton-yurchenko/git-release@v4.1
         env:
-          GHR_PATH: current/working/directory/drop/
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+          DRAFT_RELEASE: "false"
+          PRE_RELEASE: "false"
+          CHANGELOG_FILE: "CHANGELOG.md"
+          ALLOW_EMPTY_CHANGELOG: "true"
+        with:
+          args: |
+            drop/**
