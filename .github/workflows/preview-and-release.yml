@@ -40,12 +40,12 @@ jobs:
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
-          OUTPUT_PATH: .\local.properties
+          OUTPUT_PATH: '.\local.properties'
       - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
         env:
           ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
-          OUPUT_PATH: .\secring.gpg
+          OUPUT_PATH: '.\secring.gpg'
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Publish
@@ -69,12 +69,12 @@ jobs:
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
-          OUTPUT_PATH: .\local.properties 
+          OUTPUT_PATH: '.\local.properties' 
       - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
-          OUTPUT_PATH: .\secring.gpg 
+          OUTPUT_PATH: '.\secring.gpg'
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Publish
