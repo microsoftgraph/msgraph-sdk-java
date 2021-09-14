@@ -60,7 +60,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Default Decision.
-     * Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
+     * Decision chosen if defaultDecisionEnabled is true. Can be one of Approve, Deny, or Recommendation.
      */
     @SerializedName(value = "defaultDecision", alternate = {"DefaultDecision"})
     @Expose
@@ -105,7 +105,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recommendations Enabled.
-     * Indicates whether decision recommendations are enabled/disabled.
+     * Indicates whether decision recommendations are enabled or disabled.
      */
     @SerializedName(value = "recommendationsEnabled", alternate = {"RecommendationsEnabled"})
     @Expose

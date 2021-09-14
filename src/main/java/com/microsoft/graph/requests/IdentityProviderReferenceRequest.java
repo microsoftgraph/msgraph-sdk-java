@@ -24,7 +24,9 @@ import com.google.gson.JsonObject;
 
 /**
  * The class for the Identity Provider Reference Request.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class IdentityProviderReferenceRequest extends BaseReferenceRequest<IdentityProvider> {
 
     /**

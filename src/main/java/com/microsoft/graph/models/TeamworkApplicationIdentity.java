@@ -28,7 +28,7 @@ public class TeamworkApplicationIdentity extends Identity implements IJsonBacked
 
     /**
      * The Application Identity Type.
-     * Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, and outgoingWebhook.
+     * Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      */
     @SerializedName(value = "applicationIdentityType", alternate = {"ApplicationIdentityType"})
     @Expose

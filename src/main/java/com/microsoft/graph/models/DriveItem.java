@@ -17,6 +17,7 @@ import com.microsoft.graph.models.FileSystemInfo;
 import com.microsoft.graph.models.Folder;
 import com.microsoft.graph.models.Image;
 import com.microsoft.graph.models.GeoCoordinates;
+import com.microsoft.graph.models.Malware;
 import com.microsoft.graph.models.PendingOperations;
 import com.microsoft.graph.models.Photo;
 import com.microsoft.graph.models.PublicationFacet;
@@ -139,6 +140,15 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     public GeoCoordinates location;
 
     /**
+     * The Malware.
+     * Malware metadata, if the item was detected to contain malware. Read-only.
+     */
+    @SerializedName(value = "malware", alternate = {"Malware"})
+    @Expose
+	@Nullable
+    public Malware malware;
+
+    /**
      * The Package.
      * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      */
@@ -149,7 +159,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Pending Operations.
-     * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      */
     @SerializedName(value = "pendingOperations", alternate = {"PendingOperations"})
     @Expose

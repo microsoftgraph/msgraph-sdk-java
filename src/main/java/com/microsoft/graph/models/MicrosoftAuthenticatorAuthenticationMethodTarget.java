@@ -29,7 +29,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
 
     /**
      * The Authentication Mode.
-     * Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
+     * Determines which types of notifications can be used for sign-in. Possible values are: any, deviceBasedPush (passwordless only), push.
      */
     @SerializedName(value = "authenticationMode", alternate = {"AuthenticationMode"})
     @Expose
@@ -38,7 +38,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
 
     /**
      * The Feature Settings.
-     * Determines what additional settings should be applied to Microsoft Authenticator. The possible values are: requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications). Nullable.
+     * Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).
      */
     @SerializedName(value = "featureSettings", alternate = {"FeatureSettings"})
     @Expose

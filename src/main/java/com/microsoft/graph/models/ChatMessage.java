@@ -149,7 +149,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Mentions.
-     * List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
+     * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
      */
     @SerializedName(value = "mentions", alternate = {"Mentions"})
     @Expose

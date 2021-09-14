@@ -24,7 +24,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the Identity Provider Collection Request Builder.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class IdentityProviderCollectionRequestBuilder extends BaseCollectionRequestBuilder<IdentityProvider, IdentityProviderRequestBuilder, IdentityProviderCollectionResponse, IdentityProviderCollectionPage, IdentityProviderCollectionRequest> {
 
     /**
@@ -43,7 +45,9 @@ public class IdentityProviderCollectionRequestBuilder extends BaseCollectionRequ
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
      */
+    @Deprecated
     @Nonnull
     public IdentityProviderAvailableProviderTypesCollectionRequestBuilder availableProviderTypes() {
         return new IdentityProviderAvailableProviderTypesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.availableProviderTypes"), getClient(), null);

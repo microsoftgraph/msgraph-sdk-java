@@ -43,7 +43,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Created Date Time.
-     * Timestamp when the access review series was created. Supports $select. Read-only.
+     * Timestamp when the access review series was created. Supports $select and $orderBy. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -61,7 +61,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Description For Reviewers.
-     * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Supports $select.
+     * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review. Email notifications support up to 256 characters. Supports $select.
      */
     @SerializedName(value = "descriptionForReviewers", alternate = {"DescriptionForReviewers"})
     @Expose
@@ -115,7 +115,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Scope.
-     * Defines the entities whose access is reviewed. For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
+     * Defines the entities whose access is reviewed.  For supported scopes, see accessReviewScope. Required on create. Supports $select and $filter (contains only). For examples of options for configuring scope, see Configure the scope of your access review definition using the Microsoft Graph API.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -142,7 +142,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Instances.
-     * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there is an instance for each recurrence.
+     * If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.
      */
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose

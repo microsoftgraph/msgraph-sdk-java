@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Identity Provider Available Provider Types Parameter Set.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class IdentityProviderAvailableProviderTypesParameterSet {
 
     /**

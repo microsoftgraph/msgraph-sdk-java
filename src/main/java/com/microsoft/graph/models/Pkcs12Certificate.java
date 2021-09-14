@@ -27,7 +27,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
 
     /**
      * The Password.
-     * This is the password for the pfx file. Required. If no password is used, must still provide a value of ''.
+     * The password for the pfx file. Required. If no password is used, you must still provide a value of ''.
      */
     @SerializedName(value = "password", alternate = {"Password"})
     @Expose
@@ -36,7 +36,7 @@ public class Pkcs12Certificate extends ApiAuthenticationConfigurationBase implem
 
     /**
      * The Pkcs12Value.
-     * This is the field for sending pfx content. The value should be a base-64 encoded version of the actual certificate content. Required.
+     * Represents the pfx content that is sent. The value should be a base-64 encoded version of the actual certificate content. Required.
      */
     @SerializedName(value = "pkcs12Value", alternate = {"Pkcs12Value"})
     @Expose

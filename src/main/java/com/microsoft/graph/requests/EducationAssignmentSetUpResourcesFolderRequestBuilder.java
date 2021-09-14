@@ -6,7 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.EducationAssignmentSetUpResourcesFolderRequest;
 import com.microsoft.graph.models.EducationAssignment;
-import com.microsoft.graph.http.BaseFunctionRequestBuilder;
+import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Education Assignment Set Up Resources Folder Request Builder.
  */
-public class EducationAssignmentSetUpResourcesFolderRequestBuilder extends BaseFunctionRequestBuilder<EducationAssignment> {
+public class EducationAssignmentSetUpResourcesFolderRequestBuilder extends BaseActionRequestBuilder<EducationAssignment> {
 
     /**
      * The request builder for this EducationAssignmentSetUpResourcesFolder

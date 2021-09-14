@@ -16,6 +16,8 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Identity Provider Available Provider Types Collection Response.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class IdentityProviderAvailableProviderTypesCollectionResponse extends BaseCollectionResponse<String> {
 }

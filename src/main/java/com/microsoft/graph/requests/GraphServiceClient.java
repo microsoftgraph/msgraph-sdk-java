@@ -342,7 +342,9 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * Gets the collection of IdentityProviders objects
      *
      * @return the request builder for the collection of IdentityProviders objects
+     * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
      */
+    @Deprecated
     @Nonnull
     public IdentityProviderCollectionRequestBuilder identityProviders() {
         return new IdentityProviderCollectionRequestBuilder(getServiceRoot() + "/identityProviders", this, null);
@@ -353,7 +355,9 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      *
      * @param id the id of the IdentityProviders to retrieve
      * @return the request builder for the IdentityProviders object
+     * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
      */
+    @Deprecated
     @Nonnull
     public IdentityProviderRequestBuilder identityProviders(@Nonnull final String id) {
         return new IdentityProviderRequestBuilder(getServiceRoot() + "/identityProviders/" + id, this, null);

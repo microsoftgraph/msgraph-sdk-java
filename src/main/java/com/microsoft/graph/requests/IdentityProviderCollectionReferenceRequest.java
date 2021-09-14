@@ -30,7 +30,9 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 
 /**
  * The class for the Identity Provider Collection Reference Request.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class IdentityProviderCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<IdentityProvider, IdentityProviderWithReferenceRequest, IdentityProviderReferenceRequestBuilder, IdentityProviderWithReferenceRequestBuilder, IdentityProviderCollectionResponse, IdentityProviderCollectionWithReferencesPage, IdentityProviderCollectionWithReferencesRequest> {
 
     /**

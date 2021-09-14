@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.ProvisionChannelEmailResult;
 import com.microsoft.graph.models.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
