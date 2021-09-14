@@ -23,6 +23,7 @@ env:
 
 jobs:
   maven_Preview:
+    if: ${{ github.ref == 'refs/heads/dev' }}
     environment: 
       name: maven_central_snapshot
     runs-on: ubuntu-latest
@@ -45,13 +46,14 @@ jobs:
         shell: pwsh
         env:
           ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
-          OUPUT_PATH: '.\secring.gpg'
+          OUTPUT_PATH: '.\secring.gpg'
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Publish
         run: ./gradlew $PREVIEW_TASK 
   
   maven_Release:
+    if: ${{ github.ref == 'refs/heads/dev' }}
     environment:
       name: maven_central_release
     runs-on: ubuntu-latest
