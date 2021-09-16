@@ -34,12 +34,14 @@ jobs:
           cache: gradle
       - name: Easy detect-secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
-      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
           OUTPUT_PATH: '.\local.properties'
-      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
         env:
           ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
@@ -64,12 +66,14 @@ jobs:
           cache: gradle
       - name: Easy detect-secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
-      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
           OUTPUT_PATH: '.\local.properties' 
-      - run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
         shell: pwsh
         env:  
           ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
