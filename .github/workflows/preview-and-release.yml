@@ -106,9 +106,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Get Version
+        id: GetVersion
         run: .\Scripts\getLatestVersion.ps1
         shell: pwsh
       - name: Create tag
         uses: rickstaa/action-create-tag@v1.2.0
         with:
-          tag: "v$RELEASE_TAG"
+          tag: ${{ steps.GetVersion.outputs.tag }}
+      - name: Queue Git Release
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: Git Release
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          ref: ${{ steps.GetVersion.outputs.tag }}
