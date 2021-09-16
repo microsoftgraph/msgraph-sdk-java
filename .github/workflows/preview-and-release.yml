@@ -1,6 +1,3 @@
-# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
-
 name: Maven Preview/Release and Github Release
 
 on:
@@ -96,25 +93,18 @@ jobs:
             gradle.properties
             **/gradle/**
             Scripts/**
-  
-  github_Release:
+
+  create_Tag:
     needs: maven_Release
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+    env:
+      RELEASE_TAG: ""
     steps:
       - uses: actions/checkout@v2
-      - name: Download Build Artifact
-        uses: actions/download-artifact@v2.0.10
-        with: 
-          name: drop
-          path: drop        
-      - name: Github Release
-        uses: anton-yurchenko/git-release@v4.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
-          DRAFT_RELEASE: "false"
-          PRE_RELEASE: "false"
-          CHANGELOG_FILE: "CHANGELOG.md"
-          ALLOW_EMPTY_CHANGELOG: "true"
+      - name: Get Version
+        run: .\Scripts\getLatestVersion.ps1
+        shell: pwsh
+      - name: Create tag
+        uses: rickstaa/action-create-tag@v1.2.0
         with:
-          args: |
-            drop/**
+          tag: ${{ env.RELEASE_TAG }}

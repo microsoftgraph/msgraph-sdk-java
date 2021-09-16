@@ -27,6 +27,5 @@ $minorVersion = $findVersions[1].Substring($versionIndex+2)
 $patchVersion = $findVersions[2].Substring($versionIndex+2)
 $version = "$majorVersion.$minorVersion.$patchVersion"
 
-#Update the VERSION_STRING env variable and inform the user
-Write-Host "##vso[task.setVariable variable=VERSION_STRING]$($version)";
-Write-Host "Updated the VERSION_STRING enviornment variable with the current Gradle.Properties, $version"
+#Set Enviornment variable for use to create tag
+echo "RELEASE_TAG=$version" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append

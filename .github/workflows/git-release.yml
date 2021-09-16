@@ -1,0 +1,32 @@
+name: Git Release
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
+
+jobs:
+  Git_Release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download Build Artifact
+        uses: dawidd6/action-download-artifact@v2.14.1
+        with:
+          workflow: preview-and-release.yml
+          workflow_conclusion: success
+          branch: dev
+          event: push
+          name: drop
+      - name: Github Release
+        uses: anton-yurchenko/git-release@v4.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+          DRAFT_RELEASE: "false"
+          PRE_RELEASE: "false"
+          CHANGELOG_FILE: "CHANGELOG.md"
+          ALLOW_EMPTY_CHANGELOG: "true"
+        with:
+          args: |
+            drop/**
