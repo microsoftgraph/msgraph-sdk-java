@@ -6,9 +6,11 @@
     Retrieve the latest version of the library
 .Description 
     Retrieves the latest version specified in the Gradle.Properties file
-    Uses the retrieved values to update the enviornment variable VERSION_STRING
+    Uses the retrieved values to update the environment variable VERSION_STRING
 .Parameter propertiesPath
+    The path pointing to the gradle.properties file.
 #>
+
 Param(
     [string]$propertiesPath
 )
@@ -19,13 +21,17 @@ if($propertiesPath -eq "" -or $null -eq $propertiesPath) {
 }
 $file = get-item $propertiesPath
 $findVersions = $file | Select-String -Pattern "mavenMajorVersion" -Context 0,2
-$findVersions = $findVersions -split "`r`n"
+$content = Get-Content $propertiesPath
 
-$versionIndex = $findVersions[0].IndexOf("=")
-$majorVersion = $findVersions[0].Substring($versionIndex+2)
-$minorVersion = $findVersions[1].Substring($versionIndex+2)
-$patchVersion = $findVersions[2].Substring($versionIndex+2)
+$lineNumber = $findVersions.LineNumber - 1
+$versionIndex = $content[$lineNumber].IndexOf("=")
+$versionIndex += 2 # skipping =[space]
+$majorVersion = $content[$lineNumber].Substring($versionIndex)
+$lineNumber++
+$minorVersion = $content[$lineNumber].Substring($versionIndex)
+$lineNumber++
+$patchVersion = $content[$lineNumber].Substring($versionIndex)
 $version = "$majorVersion.$minorVersion.$patchVersion"
 
-#Set Enviornment variable for use to create tag
-echo "RELEASE_TAG=$version" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
+#Set Task output to create tag
+Write-Output "::set-output name=tag::v${version}"
