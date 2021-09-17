@@ -100,7 +100,7 @@ jobs:
 
   create_Tag:
     needs: maven_Release
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       RELEASE_TAG: ""
     steps:
