@@ -30,4 +30,4 @@ jobs:
           ALLOW_EMPTY_CHANGELOG: "true"
         with:
           args: |
-            drop/build/**/*.jar
+              drop/build/**/*.jar
