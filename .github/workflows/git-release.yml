@@ -19,6 +19,7 @@ jobs:
           branch: dev
           event: push
           name: drop
+          path: drop
       - name: Github Release
         uses: anton-yurchenko/git-release@v4.1
         env:
@@ -29,4 +30,4 @@ jobs:
           ALLOW_EMPTY_CHANGELOG: "true"
         with:
           args: |
-            drop/**
+            drop/build/**/*.jar
