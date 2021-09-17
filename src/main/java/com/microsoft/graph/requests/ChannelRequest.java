@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Channel;
+import com.microsoft.graph.models.ProvisionChannelEmailResult;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;

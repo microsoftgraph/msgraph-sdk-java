@@ -27,7 +27,7 @@ public class IPv4CidrRange extends IpRange implements IJsonBackedObject {
 
     /**
      * The Cidr Address.
-     * IPv4 address in CIDR notation
+     * IPv4 address in CIDR notation. Not nullable.
      */
     @SerializedName(value = "cidrAddress", alternate = {"CidrAddress"})
     @Expose

@@ -32,7 +32,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
-     * true if the account is enabled; otherwise, false. Default is true. Supports $filter (eq, ne, NOT, in).
+     * true if the account is enabled; otherwise, false. Required. Default is true. Supports $filter (eq, ne, NOT, in).
      */
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
@@ -68,7 +68,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).
+     * Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, NOT, startsWith).
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -158,7 +158,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
-     * Operating system version of the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
+     * The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
      */
     @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
@@ -194,7 +194,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Trust Type.
-     * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
      */
     @SerializedName(value = "trustType", alternate = {"TrustType"})
     @Expose
@@ -224,7 +224,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Member Of.
-     * Groups that this device is a member of. This operation is transitive. Supports $expand.
+     * Groups that the device is a member of. This operation is transitive. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMemberOf;

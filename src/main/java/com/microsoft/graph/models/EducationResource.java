@@ -40,7 +40,7 @@ public class EducationResource implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Who created the resource.
+     * The individual who created the resource.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -49,7 +49,7 @@ public class EducationResource implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Moment in time when the resource was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -67,7 +67,7 @@ public class EducationResource implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * Who was the last user to modify the resource.
+     * The last user to modify the resource.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -76,7 +76,7 @@ public class EducationResource implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

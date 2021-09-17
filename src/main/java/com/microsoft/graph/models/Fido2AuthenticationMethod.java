@@ -47,7 +47,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Attestation Level.
-     * The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
+     * The attestation level of this FIDO2 security key. Possible values are: attested, or notAttested.
      */
     @SerializedName(value = "attestationLevel", alternate = {"AttestationLevel"})
     @Expose

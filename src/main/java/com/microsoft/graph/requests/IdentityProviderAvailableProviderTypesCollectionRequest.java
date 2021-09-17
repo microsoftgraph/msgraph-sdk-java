@@ -23,7 +23,9 @@ import com.microsoft.graph.http.BaseFunctionCollectionRequest;
 
 /**
  * The class for the Identity Provider Available Provider Types Collection Request.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class IdentityProviderAvailableProviderTypesCollectionRequest extends BaseFunctionCollectionRequest<String, IdentityProviderAvailableProviderTypesCollectionResponse, IdentityProviderAvailableProviderTypesCollectionPage> {
 
 

@@ -32,7 +32,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Assignments.
-     * 
+     * Resource to grant access to users or groups.
      */
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
@@ -41,7 +41,7 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definitions.
-     * 
+     * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
      */
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose

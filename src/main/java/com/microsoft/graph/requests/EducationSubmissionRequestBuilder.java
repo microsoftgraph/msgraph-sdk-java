@@ -126,6 +126,15 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
      * @return the request builder
      */
     @Nonnull
+    public EducationSubmissionSetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
+        return new EducationSubmissionSetUpResourcesFolderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setUpResourcesFolder"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public EducationSubmissionReturnRequestBuilder msgraphReturn() {
         return new EducationSubmissionReturnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.return"), getClient(), null);
     }
@@ -146,14 +155,5 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
     @Nonnull
     public EducationSubmissionUnsubmitRequestBuilder unsubmit() {
         return new EducationSubmissionUnsubmitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsubmit"), getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public EducationSubmissionSetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
-        return new EducationSubmissionSetUpResourcesFolderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setUpResourcesFolder"), getClient(), null);
     }
 }

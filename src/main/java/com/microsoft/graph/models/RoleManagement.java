@@ -40,7 +40,7 @@ public class RoleManagement implements IJsonBackedObject {
 
     /**
      * The Directory.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "directory", alternate = {"Directory"})
     @Expose

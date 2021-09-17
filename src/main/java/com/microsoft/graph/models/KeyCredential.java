@@ -66,7 +66,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Key.
-     * Value for the key credential. Should be a base 64 encoded value.
+     * The certificate's raw data in byte array converted to Base64 string; for example, [System.Convert]::ToBase64String($Cert.GetRawCertData()).
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -75,7 +75,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Key Id.
-     * The unique identifier for the key.
+     * The unique identifier (GUID) for the key.
      */
     @SerializedName(value = "keyId", alternate = {"KeyId"})
     @Expose

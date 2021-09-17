@@ -23,7 +23,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 
 /**
  * The class for the Identity Provider With Reference Request.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class IdentityProviderWithReferenceRequest extends BaseWithReferenceRequest<IdentityProvider> {
 
     /**

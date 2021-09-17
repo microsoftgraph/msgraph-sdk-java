@@ -30,7 +30,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
 
     /**
      * The Rule Name.
-     * Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired.
+     * Name of the rule which this scheduled action applies to.
      */
     @SerializedName(value = "ruleName", alternate = {"RuleName"})
     @Expose
@@ -39,7 +39,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
 
     /**
      * The Scheduled Action Configurations.
-     * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
+     * The list of scheduled action configurations for this compliance policy.
      */
     @SerializedName(value = "scheduledActionConfigurations", alternate = {"ScheduledActionConfigurations"})
     @Expose
