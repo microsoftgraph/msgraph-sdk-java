@@ -1,0 +1,121 @@
+name: Maven Preview/Release and Github Release
+
+on:
+  push:
+    branches: [ dev ]
+    paths:
+     - 'src/**'
+     - '.github/**'
+     - '!.gradle/wrapper'
+     - '!.gitignore'
+     - '!LICENSE'
+     - '!THIRD PARTY NOTICES'
+     - '!*.md'
+     - '*.gradle'
+  workflow_dispatch: 
+
+env: 
+  PREVIEW_TASK: publishSnapshotPublicationToSonatypeSnapshotRepository
+  PUBLISH_TASK:  publishMavenCentralReleasePublicationToSonatypeRepository
+
+jobs:
+  maven_Preview:
+    if: ${{ github.ref == 'refs/heads/dev' }}
+    environment: 
+      name: maven_central_snapshot
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '16'
+          distribution: 'adopt'
+          cache: gradle
+      - name: Easy detect-secrets
+        uses: RobertFischer/detect-secrets-action@v2.0.0
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+        shell: pwsh
+        env:  
+          ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
+          OUTPUT_PATH: '.\local.properties'
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+        shell: pwsh
+        env:
+          ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
+          OUTPUT_PATH: '.\secring.gpg'
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Publish
+        run: ./gradlew $PREVIEW_TASK 
+  
+  maven_Release:
+    if: ${{ github.ref == 'refs/heads/dev' }}
+    environment:
+      name: maven_central_release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '16'
+          distribution: 'adopt'
+          cache: gradle
+      - name: Easy detect-secrets
+        uses: RobertFischer/detect-secrets-action@v2.0.0
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+        shell: pwsh
+        env:  
+          ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
+          OUTPUT_PATH: '.\local.properties' 
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH  
+        shell: pwsh
+        env:  
+          ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
+          OUTPUT_PATH: '.\secring.gpg'
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Publish
+        run: ./gradlew $PUBLISH_TASK
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: drop
+          path: |
+            **/libs/*
+            build/generated-pom.xml
+            build/generated-pom.xml.asc
+            build.gradle
+            gradlew
+            gradlew.bat
+            settings.gradle
+            gradle.properties
+            **/gradle/**
+            Scripts/**
+
+  create_Tag:
+    needs: maven_Release
+    runs-on: ubuntu-latest
+    env:
+      RELEASE_TAG: ""
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get Version
+        id: GetVersion
+        run: .\Scripts\getLatestVersion.ps1
+        shell: pwsh
+      - name: Create tag
+        uses: rickstaa/action-create-tag@v1.2.0
+        with:
+          tag: ${{ steps.GetVersion.outputs.tag }}
+      - name: Queue Git Release
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: Git Release
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          ref: ${{ steps.GetVersion.outputs.tag }}

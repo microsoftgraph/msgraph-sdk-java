@@ -1,9 +1,0 @@
-steps:
-- checkout: self
-  clean: true
-  fetchDepth: 1
-
-- task: securedevelopmentteam.vss-secure-development-tools.build-task-credscan.CredScan@3
-  displayName: 'Run CredScan'
-  inputs:
-    debugMode: false
