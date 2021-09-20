@@ -3,15 +3,12 @@ name: Maven Preview/Release and Github Release
 on:
   push:
     branches: [ dev ]
-    paths:
-     - 'src/**'
-     - '.github/**'
-     - '!.gradle/wrapper'
-     - '!.gitignore'
-     - '!LICENSE'
-     - '!THIRD PARTY NOTICES'
-     - '!*.md'
-     - '*.gradle'
+    paths-ignore:
+     - '.gradle/wrapper'
+     - '.gitignore'
+     - 'LICENSE'
+     - 'THIRD PARTY NOTICES'
+     - '*.md'
   workflow_dispatch: 
 
 env: 

@@ -3,15 +3,12 @@ name: Java CI with Gradle
 on:
   pull_request:
     branches: [ dev ]
-    paths:
-      - 'src/**'
-      - '.github/**'
-      - '!.gradle/wrapper'
-      - '!.gitignore'
-      - '!LICENSE'
-      - '!THIRD PARTY NOTICES'
-      - '!*.md'
-      - '*.gradle'
+    paths-ignore:
+      - '.gradle/wrapper'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'THIRD PARTY NOTICES'
+      - '*.md'
   workflow_dispatch:
 
 jobs:
