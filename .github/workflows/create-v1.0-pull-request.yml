@@ -61,13 +61,13 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: "CodeQL"
-          toke: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.PERSONAL_TOKEN }}
           ref: ${{ github.event.pull_request.head.ref }}
       - name: Queue Java CI
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Java CI with Gradle
-          toke: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.PERSONAL_TOKEN }}
           ref: ${{ github.event.pull_request.head.ref }}
       
 # References
