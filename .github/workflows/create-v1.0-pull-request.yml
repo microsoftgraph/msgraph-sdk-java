@@ -50,6 +50,7 @@ jobs:
     needs: create-pull-request
     runs-on: ubuntu-latest
     steps: 
+      - uses: actions/checkout@v2.3.4
       - name: Queue Api Level Lint
         uses: benc-uk/workflow-dispatch@v1
         with:
