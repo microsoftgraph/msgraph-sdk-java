@@ -35,7 +35,7 @@ jobs:
     - name: Create PR using the GitHub REST API via hub
       shell: bash
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         MESSAGE_TITLE: Generated v1.0 models and request builders using Typewriter
         MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR."
         REVIEWERS: peombwa,ddyett,zengin,nikithauc,baywet
@@ -45,30 +45,6 @@ jobs:
       run: |
         curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
         bin/hub pull-request -b "$BASE" -h "$GITHUB_REF" -m "$MESSAGE_TITLE" -m "$MESSAGE_BODY" -r "$REVIEWERS" -a "$ASSIGNEDTO" -l "$LABELS"
-    
-  queue-workflows:
-    needs: create-pull-request
-    runs-on: ubuntu-latest
-    steps: 
-      - uses: actions/checkout@v2.3.4
-      - name: Queue Api Level Lint
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: "Checks the SDK only using APIs from the targeted API level"
-          token: ${{ secrets.PERSONAL_TOKEN }} 
-          ref: ${{ github.event.pull_request.head.ref }}
-      - name: Queue Code QL
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: "CodeQL"
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          ref: ${{ github.event.pull_request.head.ref }}
-      - name: Queue Java CI
-        uses: benc-uk/workflow-dispatch@v1
-        with:
-          workflow: Java CI with Gradle
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          ref: ${{ github.event.pull_request.head.ref }}
       
 # References
 # [0] https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables
