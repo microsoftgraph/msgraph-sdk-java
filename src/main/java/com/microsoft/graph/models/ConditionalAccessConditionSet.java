@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ConditionalAccessApplications;
 import com.microsoft.graph.models.ConditionalAccessClientApp;
+import com.microsoft.graph.models.ConditionalAccessDevices;
 import com.microsoft.graph.models.ConditionalAccessLocations;
 import com.microsoft.graph.models.ConditionalAccessPlatforms;
 import com.microsoft.graph.models.RiskLevel;
@@ -61,6 +62,15 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<ConditionalAccessClientApp> clientAppTypes;
+
+    /**
+     * The Devices.
+     * Devices in the policy.
+     */
+    @SerializedName(value = "devices", alternate = {"Devices"})
+    @Expose
+	@Nullable
+    public ConditionalAccessDevices devices;
 
     /**
      * The Locations.
