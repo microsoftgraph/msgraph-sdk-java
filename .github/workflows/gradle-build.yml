@@ -51,3 +51,42 @@ jobs:
             gradle.properties
             **/gradle/**
             Scripts/**
+  
+  compage-packages:
+    needs: build
+    runs-on: ubuntu-latest
+    env: 
+      CURRENT_PKG_DIFF: ./artifacts/current/build/libs/msgraph-sdk-java.jar 
+      PRIOR_PKG_DIFF: ./artifacts/previous/build/libs/msgraph-sdk-java.jar
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '16'
+          distribution: 'adopt'
+          cache: gradle
+      - name: Download Current Build
+        uses: actions/download-artifact@v2
+        with: 
+          name: drop
+          path: artifacts/current/
+      - name: Download Last Successful Build
+        uses: dawidd6/action-download-artifact@v2.14.1
+        with: 
+          workflow: preview-and-release.yml
+          workflow_conclusion: success
+          branch: dev
+          event: push
+          name: drop
+          path: artifacts/previous/
+      - name: Run PKG Diff 
+        run: |
+            sudo apt install pkgdiff 
+            pkgdiff -hide-unchanged ${{ env.CURRENT_PKG_DIFF }} ${{ env.PRIOR_PKG_DIFF }}
+      - name: Upload Diff Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: diff
+          path: |
+              ./pkgdiff_reports/**
