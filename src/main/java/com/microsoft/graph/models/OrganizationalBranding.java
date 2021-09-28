@@ -30,7 +30,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
 
     /**
      * The Localizations.
-     * 
+     * Add different branding based on a locale.
      */
     @SerializedName(value = "localizations", alternate = {"Localizations"})
     @Expose

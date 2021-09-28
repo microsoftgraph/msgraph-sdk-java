@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SearchEntity;
 import com.microsoft.graph.models.SearchRequest;
+import com.microsoft.graph.models.SearchAlterationOptions;
 import com.microsoft.graph.models.SearchResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -62,11 +63,11 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder<SearchEntity>
 
     /**
      * Gets a builder to execute the method
-     * @return the request builder collection
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public SearchEntityQueryCollectionRequestBuilder query(@Nonnull final SearchEntityQueryParameterSet parameters) {
-        return new SearchEntityQueryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.query"), getClient(), null, parameters);
+    public SearchEntityQueryRequestBuilder query(@Nonnull final SearchEntityQueryParameterSet parameters) {
+        return new SearchEntityQueryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.query"), getClient(), null, parameters);
     }
 }

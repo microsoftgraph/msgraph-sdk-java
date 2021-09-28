@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SearchEntity;
 import com.microsoft.graph.models.SearchRequest;
+import com.microsoft.graph.models.SearchAlterationOptions;
 import com.microsoft.graph.models.SearchResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
