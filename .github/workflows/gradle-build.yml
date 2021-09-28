@@ -80,15 +80,6 @@ jobs:
           event: push
           name: drop
           path: artifacts/previous/
-      
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: artifacts/previous/
-        
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: artifacts/current/
-      
       - name: Run PKG Diff 
         run: |
             sudo apt install pkgdiff 
