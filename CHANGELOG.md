@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.5.0] - 2021-09-28
+
+### Added
+
+### Changed
+
+- Removed AuthenticatorAppFeatureSettings
+- Removed SearchEntityQuery
+- Properties changed in SearchEntityRequestBuilder
+- Properties changed in SearchResponse
+- Properties changed in MicrosoftAuthenticatorAuthenticationMethodTarget
+
 ## [5.4.0] - 2021-09-24
 
 ### Added
