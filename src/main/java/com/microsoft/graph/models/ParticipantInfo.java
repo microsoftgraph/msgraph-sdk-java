@@ -76,6 +76,15 @@ public class ParticipantInfo implements IJsonBackedObject {
     public String languageId;
 
     /**
+     * The Participant Id.
+     * 
+     */
+    @SerializedName(value = "participantId", alternate = {"ParticipantId"})
+    @Expose
+	@Nullable
+    public String participantId;
+
+    /**
      * The Region.
      * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      */

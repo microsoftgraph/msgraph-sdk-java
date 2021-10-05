@@ -7,16 +7,20 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Authenticator App Feature Settings.
+ * The Enum Search Alteration Type.
 */
-public enum AuthenticatorAppFeatureSettings
+public enum SearchAlterationType
 {
     /**
-    * require Number Matching
+    * suggestion
     */
-    REQUIRE_NUMBER_MATCHING,
+    SUGGESTION,
     /**
-    * For AuthenticatorAppFeatureSettings values that were not expected from the service
+    * modification
+    */
+    MODIFICATION,
+    /**
+    * For SearchAlterationType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

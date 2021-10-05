@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.SharePointIdentitySet;
 import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.models.SharingInvitation;
 import com.microsoft.graph.models.SharingLink;
@@ -42,7 +43,9 @@ public class Permission extends Entity implements IJsonBackedObject {
     /**
      * The Granted To.
      * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
+     * @deprecated The grantedTo property is deprecated. Please refer to grantedToV2
      */
+    @Deprecated
     @SerializedName(value = "grantedTo", alternate = {"GrantedTo"})
     @Expose
 	@Nullable
@@ -51,11 +54,31 @@ public class Permission extends Entity implements IJsonBackedObject {
     /**
      * The Granted To Identities.
      * For link type permissions, the details of the users to whom permission was granted. Read-only.
+     * @deprecated The grantedToIdentities property is deprecated. Please refer to grantedToIdentitiesV2
      */
+    @Deprecated
     @SerializedName(value = "grantedToIdentities", alternate = {"GrantedToIdentities"})
     @Expose
 	@Nullable
     public java.util.List<IdentitySet> grantedToIdentities;
+
+    /**
+     * The Granted To Identities V2.
+     * 
+     */
+    @SerializedName(value = "grantedToIdentitiesV2", alternate = {"GrantedToIdentitiesV2"})
+    @Expose
+	@Nullable
+    public java.util.List<SharePointIdentitySet> grantedToIdentitiesV2;
+
+    /**
+     * The Granted To V2.
+     * 
+     */
+    @SerializedName(value = "grantedToV2", alternate = {"GrantedToV2"})
+    @Expose
+	@Nullable
+    public SharePointIdentitySet grantedToV2;
 
     /**
      * The Has Password.

@@ -7,6 +7,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.CallTransferRequest;
 import com.microsoft.graph.models.Call;
 import com.microsoft.graph.models.InvitationParticipantInfo;
+import com.microsoft.graph.models.ParticipantInfo;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.models.CallTransferParameterSet;
 import com.microsoft.graph.core.IBaseClient;

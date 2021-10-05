@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AggregationOption;
 import com.microsoft.graph.models.EntityType;
 import com.microsoft.graph.models.SearchQuery;
+import com.microsoft.graph.models.ResultTemplateOption;
 import com.microsoft.graph.models.SortProperty;
 
 
@@ -113,6 +114,15 @@ public class SearchRequest implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SearchQuery query;
+
+    /**
+     * The Result Template Options.
+     * Provides the search result templates options for rendering connectors search results.
+     */
+    @SerializedName(value = "resultTemplateOptions", alternate = {"ResultTemplateOptions"})
+    @Expose
+	@Nullable
+    public ResultTemplateOption resultTemplateOptions;
 
     /**
      * The Size.
