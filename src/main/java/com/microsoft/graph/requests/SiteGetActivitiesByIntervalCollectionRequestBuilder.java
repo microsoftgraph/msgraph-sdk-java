@@ -62,6 +62,9 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
     @Nonnull
     public SiteGetActivitiesByIntervalCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final SiteGetActivitiesByIntervalCollectionRequest request = super.buildRequest(requestOptions);
+          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+            request.addFunctionOption(option);
+      }
         return request;
     }
 }
