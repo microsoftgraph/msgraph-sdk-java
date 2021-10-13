@@ -56,6 +56,18 @@ public enum ManagementAgentType
     */
     GOOGLE_CLOUD_DEVICE_POLICY_CONTROLLER,
     /**
+    * microsoft365Managed Mdm
+    */
+    MICROSOFT365_MANAGED_MDM,
+    /**
+    * ms Sense
+    */
+    MS_SENSE,
+    /**
+    * intune Aosp
+    */
+    INTUNE_AOSP,
+    /**
     * For ManagementAgentType values that were not expected from the service
     */
     UNEXPECTED_VALUE

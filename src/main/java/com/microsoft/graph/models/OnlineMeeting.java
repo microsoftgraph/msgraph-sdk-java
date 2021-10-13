@@ -187,6 +187,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public MeetingParticipants participants;
 
     /**
+     * The Record Automatically.
+     * Indicates whether to record the meeting automatically.
+     */
+    @SerializedName(value = "recordAutomatically", alternate = {"RecordAutomatically"})
+    @Expose
+	@Nullable
+    public Boolean recordAutomatically;
+
+    /**
      * The Start Date Time.
      * The meeting start time in UTC.
      */

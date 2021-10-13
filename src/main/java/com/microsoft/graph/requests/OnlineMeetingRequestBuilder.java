@@ -58,4 +58,14 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     }
 
 
+
+    /**
+     * Gets the request builder for attendeeReport
+     *
+     * @return the OnlineMeetingAttendeeReportStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OnlineMeetingAttendeeReportStreamRequestBuilder attendeeReport() {
+        return new OnlineMeetingAttendeeReportStreamRequestBuilder(getRequestUrlWithAdditionalSegment("attendeeReport"), getClient(), null);
+    }
 }

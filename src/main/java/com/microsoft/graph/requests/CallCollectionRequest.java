@@ -20,6 +20,7 @@ import com.microsoft.graph.models.PlayPromptOperation;
 import com.microsoft.graph.models.RecordOperation;
 import com.microsoft.graph.models.RejectReason;
 import com.microsoft.graph.models.SubscribeToToneOperation;
+import com.microsoft.graph.models.ParticipantInfo;
 import com.microsoft.graph.models.UnmuteParticipantOperation;
 import com.microsoft.graph.models.RecordingStatus;
 import com.microsoft.graph.models.UpdateRecordingStatusOperation;
