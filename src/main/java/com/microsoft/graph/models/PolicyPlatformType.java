@@ -16,6 +16,10 @@ public enum PolicyPlatformType
     */
     ANDROID,
     /**
+    * android For Work
+    */
+    ANDROID_FOR_WORK,
+    /**
     * i OS
     */
     I_OS,
@@ -35,10 +39,6 @@ public enum PolicyPlatformType
     * windows10And Later
     */
     WINDOWS10_AND_LATER,
-    /**
-    * android Work Profile
-    */
-    ANDROID_WORK_PROFILE,
     /**
     * all
     */

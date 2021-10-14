@@ -49,7 +49,7 @@ public class LobbyBypassSettings implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Possible values are listed in the following table. Optional.
+     * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose

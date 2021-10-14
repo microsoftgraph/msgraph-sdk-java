@@ -7,6 +7,8 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.requests.DriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.InvitationCollectionRequestBuilder;
 import com.microsoft.graph.requests.InvitationRequestBuilder;
 import com.microsoft.graph.requests.UserCollectionRequestBuilder;
@@ -252,6 +254,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
         public GraphServiceClient<nativeRequestType> buildClient() throws ClientException {
             return buildClient(new GraphServiceClient<>());
         }
+    }
+
+    /**
+     * Gets the collection of Workbooks objects
+     *
+     * @return the request builder for the collection of Workbooks objects
+     */
+    @Nonnull
+    public DriveItemCollectionRequestBuilder workbooks() {
+        return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", this, null);
+    }
+
+    /**
+     * Gets a single Workbooks
+     *
+     * @param id the id of the Workbooks to retrieve
+     * @return the request builder for the Workbooks object
+     */
+    @Nonnull
+    public DriveItemRequestBuilder workbooks(@Nonnull final String id) {
+        return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, this, null);
     }
 
     /**

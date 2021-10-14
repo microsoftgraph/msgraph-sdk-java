@@ -23,6 +23,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetComplianceSettingNon
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyNonComplianceSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingNonComplianceReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementIntentPerSettingContributingProfilesParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementIntentSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetHistoricalReportParameterSet;
@@ -162,6 +163,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetConfigurationSettingNonComplianceReportRequestBuilder getConfigurationSettingNonComplianceReport(@Nonnull final DeviceManagementReportsGetConfigurationSettingNonComplianceReportParameterSet parameters) {
         return new DeviceManagementReportsGetConfigurationSettingNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationSettingNonComplianceReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder getDeviceManagementIntentPerSettingContributingProfiles(@Nonnull final DeviceManagementReportsGetDeviceManagementIntentPerSettingContributingProfilesParameterSet parameters) {
+        return new DeviceManagementReportsGetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDeviceManagementIntentPerSettingContributingProfiles"), getClient(), null, parameters);
     }
 
     /**

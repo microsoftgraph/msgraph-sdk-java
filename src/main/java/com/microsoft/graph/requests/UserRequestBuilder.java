@@ -59,8 +59,6 @@ import com.microsoft.graph.requests.MessageRequestBuilder;
 import com.microsoft.graph.requests.OutlookUserRequestBuilder;
 import com.microsoft.graph.requests.PersonCollectionRequestBuilder;
 import com.microsoft.graph.requests.PersonRequestBuilder;
-import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.DriveRequestBuilder;
 import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteCollectionWithReferencesRequestBuilder;
@@ -79,6 +77,8 @@ import com.microsoft.graph.requests.PlannerUserRequestBuilder;
 import com.microsoft.graph.requests.OfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.UserSettingsRequestBuilder;
 import com.microsoft.graph.requests.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserActivityRequestBuilder;
 import com.microsoft.graph.requests.OnlineMeetingCollectionRequestBuilder;
@@ -1074,36 +1074,6 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets the request builder for ProfilePhoto
-     *
-     * @return the ProfilePhotoRequestBuilder instance
-     */
-    @Nonnull
-    public ProfilePhotoRequestBuilder photo() {
-        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the ProfilePhoto collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public ProfilePhotoCollectionRequestBuilder photos() {
-        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the ProfilePhoto item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public ProfilePhotoRequestBuilder photos(@Nonnull final String id) {
-        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
-    }
-
-    /**
      * Gets the request builder for Drive
      *
      * @return the DriveRequestBuilder instance
@@ -1291,6 +1261,36 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ProfilePhoto
+     *
+     * @return the ProfilePhotoRequestBuilder instance
+     */
+    @Nonnull
+    public ProfilePhotoRequestBuilder photo() {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ProfilePhoto collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ProfilePhotoCollectionRequestBuilder photos() {
+        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ProfilePhoto item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ProfilePhotoRequestBuilder photos(@Nonnull final String id) {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserActivity collection

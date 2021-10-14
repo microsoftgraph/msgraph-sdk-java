@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -57,7 +58,7 @@ public class AudioConferencing implements IJsonBackedObject {
 
     /**
      * The Toll Free Number.
-     * The toll-free number that connects to the Audio Conference Provider.
+     * 
      */
     @SerializedName(value = "tollFreeNumber", alternate = {"TollFreeNumber"})
     @Expose
@@ -65,13 +66,31 @@ public class AudioConferencing implements IJsonBackedObject {
     public String tollFreeNumber;
 
     /**
+     * The Toll Free Numbers.
+     * List of toll-free numbers that are displayed in the meeting invite.
+     */
+    @SerializedName(value = "tollFreeNumbers", alternate = {"TollFreeNumbers"})
+    @Expose
+	@Nullable
+    public java.util.List<String> tollFreeNumbers;
+
+    /**
      * The Toll Number.
-     * The toll number that connects to the Audio Conference Provider.
+     * 
      */
     @SerializedName(value = "tollNumber", alternate = {"TollNumber"})
     @Expose
 	@Nullable
     public String tollNumber;
+
+    /**
+     * The Toll Numbers.
+     * List of toll numbers that are displayed in the meeting invite.
+     */
+    @SerializedName(value = "tollNumbers", alternate = {"TollNumbers"})
+    @Expose
+	@Nullable
+    public java.util.List<String> tollNumbers;
 
 
     /**

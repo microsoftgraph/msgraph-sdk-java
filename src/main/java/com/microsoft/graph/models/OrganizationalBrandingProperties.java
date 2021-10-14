@@ -27,7 +27,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Background Color.
-     * Color that will appear in place of the background image in low-bandwidth connections. The primary color of your banner logo or your organization color is recommended to be used here. Specify this in hexadecimal (for example, white is #FFFFFF).
+     * Color that will appear in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF.
      */
     @SerializedName(value = "backgroundColor", alternate = {"BackgroundColor"})
     @Expose
@@ -45,7 +45,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Username Hint Text.
-     * String that shows as the hint in the username textbox on the sign in screen. This text must be Unicode, without links or code, and can't exceed 64 characters.
+     * String that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can't exceed 64 characters.
      */
     @SerializedName(value = "usernameHintText", alternate = {"UsernameHintText"})
     @Expose
