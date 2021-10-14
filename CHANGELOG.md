@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.5.0] - 2021-10-14
+
+### Added
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter
+- Hotfix: Android_Work_Profile changed to Android_For_Work in PolicyPlatformType.java
+
 ## [5.4.0] - 2021-09-24
 
 ### Added
