@@ -42,7 +42,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Apply Actions.
-     * Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.
+     * Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.
      */
     @SerializedName(value = "applyActions", alternate = {"ApplyActions"})
     @Expose
@@ -51,7 +51,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Auto Apply Decisions Enabled.
-     * Indicates whether decisions are automatically applied. When set to false, a user must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.
+     * Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.
      */
     @SerializedName(value = "autoApplyDecisionsEnabled", alternate = {"AutoApplyDecisionsEnabled"})
     @Expose
