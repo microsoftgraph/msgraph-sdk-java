@@ -62,9 +62,11 @@ public class ReportRootGetGroupArchivedPrintJobsCollectionRequestBuilder extends
     @Nonnull
     public ReportRootGetGroupArchivedPrintJobsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final ReportRootGetGroupArchivedPrintJobsCollectionRequest request = super.buildRequest(requestOptions);
-          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }
