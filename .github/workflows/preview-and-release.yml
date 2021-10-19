@@ -22,11 +22,11 @@ jobs:
       name: maven_central_snapshot
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.5
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '16'
+          java-version: '17'
           distribution: 'adopt'
           cache: gradle
       - name: Easy detect-secrets
@@ -54,11 +54,11 @@ jobs:
       name: maven_central_release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.5
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '16'
+          java-version: '17'
           distribution: 'adopt'
           cache: gradle
       - name: Easy detect-secrets
@@ -101,7 +101,7 @@ jobs:
     env:
       RELEASE_TAG: ""
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.5
       - name: Get Version
         id: GetVersion
         run: .\Scripts\getLatestVersion.ps1

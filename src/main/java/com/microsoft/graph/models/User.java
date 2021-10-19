@@ -34,7 +34,6 @@ import com.microsoft.graph.models.MailFolder;
 import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.OutlookUser;
 import com.microsoft.graph.models.Person;
-import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.models.Extension;
@@ -46,6 +45,7 @@ import com.microsoft.graph.models.PlannerUser;
 import com.microsoft.graph.models.OfficeGraphInsights;
 import com.microsoft.graph.models.UserSettings;
 import com.microsoft.graph.models.Onenote;
+import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.UserActivity;
 import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.models.Presence;
@@ -67,7 +67,6 @@ import com.microsoft.graph.requests.ContactCollectionPage;
 import com.microsoft.graph.requests.MailFolderCollectionPage;
 import com.microsoft.graph.requests.MessageCollectionPage;
 import com.microsoft.graph.requests.PersonCollectionPage;
-import com.microsoft.graph.requests.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.DriveCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
@@ -75,6 +74,7 @@ import com.microsoft.graph.requests.AgreementAcceptanceCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
 import com.microsoft.graph.requests.ManagedAppRegistrationCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.UserActivityCollectionPage;
 import com.microsoft.graph.requests.OnlineMeetingCollectionPage;
 import com.microsoft.graph.requests.ChatCollectionPage;
@@ -322,7 +322,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Last Password Change Date Time.
-     * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
+     * The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
      */
     @SerializedName(value = "lastPasswordChangeDateTime", alternate = {"LastPasswordChangeDateTime"})
     @Expose
@@ -601,7 +601,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).
+     * A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
      */
     @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose
@@ -917,24 +917,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public PersonCollectionPage people;
 
     /**
-     * The Photo.
-     * The user's profile photo. Read-only.
-     */
-    @SerializedName(value = "photo", alternate = {"Photo"})
-    @Expose
-	@Nullable
-    public ProfilePhoto photo;
-
-    /**
-     * The Photos.
-     * Read-only. Nullable.
-     */
-    @SerializedName(value = "photos", alternate = {"Photos"})
-    @Expose
-	@Nullable
-    public ProfilePhotoCollectionPage photos;
-
-    /**
      * The Drive.
      * The user's OneDrive. Read-only.
      */
@@ -1035,6 +1017,24 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Onenote onenote;
+
+    /**
+     * The Photo.
+     * The user's profile photo. Read-only.
+     */
+    @SerializedName(value = "photo", alternate = {"Photo"})
+    @Expose
+	@Nullable
+    public ProfilePhoto photo;
+
+    /**
+     * The Photos.
+     * Read-only. Nullable.
+     */
+    @SerializedName(value = "photos", alternate = {"Photos"})
+    @Expose
+	@Nullable
+    public ProfilePhotoCollectionPage photos;
 
     /**
      * The Activities.
@@ -1198,10 +1198,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             people = serializer.deserializeObject(json.get("people"), PersonCollectionPage.class);
         }
 
-        if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos"), ProfilePhotoCollectionPage.class);
-        }
-
         if (json.has("drives")) {
             drives = serializer.deserializeObject(json.get("drives"), DriveCollectionPage.class);
         }
@@ -1228,6 +1224,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("deviceManagementTroubleshootingEvents")) {
             deviceManagementTroubleshootingEvents = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents"), DeviceManagementTroubleshootingEventCollectionPage.class);
+        }
+
+        if (json.has("photos")) {
+            photos = serializer.deserializeObject(json.get("photos"), ProfilePhotoCollectionPage.class);
         }
 
         if (json.has("activities")) {

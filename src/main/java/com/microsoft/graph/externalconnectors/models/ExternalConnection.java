@@ -73,7 +73,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Groups.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose

@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMode;
-import com.microsoft.graph.models.AuthenticatorAppFeatureSettings;
 import com.microsoft.graph.models.AuthenticationMethodTarget;
 
 
@@ -35,15 +34,6 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     @Expose
 	@Nullable
     public MicrosoftAuthenticatorAuthenticationMode authenticationMode;
-
-    /**
-     * The Feature Settings.
-     * Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).
-     */
-    @SerializedName(value = "featureSettings", alternate = {"FeatureSettings"})
-    @Expose
-	@Nullable
-    public EnumSet<AuthenticatorAppFeatureSettings> featureSettings;
 
 
     /**

@@ -123,7 +123,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
-     * The importance of the message. The possible values are: low, normal, and high.
+     * 
      */
     @SerializedName(value = "importance", alternate = {"Importance"})
     @Expose
@@ -132,7 +132,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Inference Classification.
-     * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. The possible values are: focused or other.
+     * 
      */
     @SerializedName(value = "inferenceClassification", alternate = {"InferenceClassification"})
     @Expose
@@ -141,7 +141,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Internet Message Headers.
-     * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.  Returned only on applying a $select query option. Read-only.
+     * 
      */
     @SerializedName(value = "internetMessageHeaders", alternate = {"InternetMessageHeaders"})
     @Expose
@@ -150,7 +150,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Internet Message Id.
-     * The message ID in the format specified by RFC2822.
+     * 
      */
     @SerializedName(value = "internetMessageId", alternate = {"InternetMessageId"})
     @Expose
@@ -159,7 +159,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Delivery Receipt Requested.
-     * Indicates whether a read receipt is requested for the message.
+     * 
      */
     @SerializedName(value = "isDeliveryReceiptRequested", alternate = {"IsDeliveryReceiptRequested"})
     @Expose
@@ -168,7 +168,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Draft.
-     * Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
+     * 
      */
     @SerializedName(value = "isDraft", alternate = {"IsDraft"})
     @Expose
@@ -177,7 +177,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Read.
-     * Indicates whether the message has been read.
+     * 
      */
     @SerializedName(value = "isRead", alternate = {"IsRead"})
     @Expose
@@ -186,7 +186,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Read Receipt Requested.
-     * Indicates whether a read receipt is requested for the message.
+     * 
      */
     @SerializedName(value = "isReadReceiptRequested", alternate = {"IsReadReceiptRequested"})
     @Expose
@@ -195,7 +195,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
-     * The unique identifier for the message's parent mailFolder.
+     * 
      */
     @SerializedName(value = "parentFolderId", alternate = {"ParentFolderId"})
     @Expose
@@ -204,7 +204,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Received Date Time.
-     * The date and time the message was received.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "receivedDateTime", alternate = {"ReceivedDateTime"})
     @Expose
@@ -213,7 +213,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Reply To.
-     * The email addresses to use when replying.
+     * 
      */
     @SerializedName(value = "replyTo", alternate = {"ReplyTo"})
     @Expose
@@ -222,7 +222,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sender.
-     * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     * 
      */
     @SerializedName(value = "sender", alternate = {"Sender"})
     @Expose
@@ -231,7 +231,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sent Date Time.
-     * The date and time the message was sent.  The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "sentDateTime", alternate = {"SentDateTime"})
     @Expose
@@ -240,7 +240,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * The subject of the message.
+     * 
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -249,7 +249,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The To Recipients.
-     * The To: recipients for the message.
+     * 
      */
     @SerializedName(value = "toRecipients", alternate = {"ToRecipients"})
     @Expose
@@ -258,7 +258,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Unique Body.
-     * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
+     * 
      */
     @SerializedName(value = "uniqueBody", alternate = {"UniqueBody"})
     @Expose
@@ -267,7 +267,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Web Link.
-     * The URL to open the message in Outlook on the web.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook on the web review pane.The message will open in the browser if you are logged in to your mailbox via Outlook on the web. You will be prompted to login if you are not already logged in with the browser.This URL cannot be accessed from within an iFrame.
+     * 
      */
     @SerializedName(value = "webLink", alternate = {"WebLink"})
     @Expose

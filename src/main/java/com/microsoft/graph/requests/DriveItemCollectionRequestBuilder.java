@@ -7,7 +7,6 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.SharedDriveItem;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.models.DriveItemUploadableProperties;
@@ -46,7 +45,7 @@ import com.microsoft.graph.models.DriveItemSearchParameterSet;
 public class DriveItemCollectionRequestBuilder extends BaseCollectionRequestBuilder<DriveItem, DriveItemRequestBuilder, DriveItemCollectionResponse, DriveItemCollectionPage, DriveItemCollectionRequest> {
 
     /**
-     * The request builder for this collection of SharedDriveItem
+     * The request builder for this collection of DriveItem
      *
      * @param requestUrl     the request URL
      * @param client         the service client

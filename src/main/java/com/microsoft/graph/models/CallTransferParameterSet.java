@@ -6,6 +6,7 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.InvitationParticipantInfo;
+import com.microsoft.graph.models.ParticipantInfo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -29,6 +30,15 @@ public class CallTransferParameterSet {
 	@Nullable
     public InvitationParticipantInfo transferTarget;
 
+    /**
+     * The transferee.
+     * 
+     */
+    @SerializedName(value = "transferee", alternate = {"Transferee"})
+    @Expose
+	@Nullable
+    public ParticipantInfo transferee;
+
 
     /**
      * Instiaciates a new CallTransferParameterSet
@@ -40,6 +50,7 @@ public class CallTransferParameterSet {
      */
     protected CallTransferParameterSet(@Nonnull final CallTransferParameterSetBuilder builder) {
         this.transferTarget = builder.transferTarget;
+        this.transferee = builder.transferee;
     }
     /**
      * Gets a new builder for the body
@@ -69,6 +80,21 @@ public class CallTransferParameterSet {
             return this;
         }
         /**
+         * The transferee parameter value
+         */
+        @Nullable
+        protected ParticipantInfo transferee;
+        /**
+         * Sets the Transferee
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public CallTransferParameterSetBuilder withTransferee(@Nullable final ParticipantInfo val) {
+            this.transferee = val;
+            return this;
+        }
+        /**
          * Instanciates a new CallTransferParameterSetBuilder
          */
         @Nullable
@@ -91,6 +117,9 @@ public class CallTransferParameterSet {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
         if(this.transferTarget != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("transferTarget", transferTarget));
+        }
+        if(this.transferee != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("transferee", transferee));
         }
         return result;
     }
