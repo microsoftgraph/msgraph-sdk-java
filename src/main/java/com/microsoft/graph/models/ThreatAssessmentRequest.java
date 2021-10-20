@@ -81,7 +81,7 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
 
     /**
      * The Request Source.
-     * The source of the threat assessment request. Possible values are: user, administrator.
+     * The source of the threat assessment request. Possible values are: administrator.
      */
     @SerializedName(value = "requestSource", alternate = {"RequestSource"})
     @Expose

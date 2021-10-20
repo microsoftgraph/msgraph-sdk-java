@@ -40,7 +40,7 @@ public class Admin implements IJsonBackedObject {
 
     /**
      * The Service Announcement.
-     * 
+     * A container for service communications resources. Read-only.
      */
     @SerializedName(value = "serviceAnnouncement", alternate = {"ServiceAnnouncement"})
     @Expose
