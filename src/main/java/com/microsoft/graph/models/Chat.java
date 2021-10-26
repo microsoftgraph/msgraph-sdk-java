@@ -37,7 +37,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Type.
-     * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
+     * Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
      */
     @SerializedName(value = "chatType", alternate = {"ChatType"})
     @Expose

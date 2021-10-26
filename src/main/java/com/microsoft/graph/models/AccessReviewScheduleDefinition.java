@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AccessReviewNotificationRecipientItem;
 import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.AccessReviewReviewerScope;
 import com.microsoft.graph.models.AccessReviewScope;
@@ -31,6 +32,15 @@ import javax.annotation.Nonnull;
  */
 public class AccessReviewScheduleDefinition extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Additional Notification Recipients.
+     * Defines the list of additional users or group members to be notified of the access review progress.
+     */
+    @SerializedName(value = "additionalNotificationRecipients", alternate = {"AdditionalNotificationRecipients"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewNotificationRecipientItem> additionalNotificationRecipients;
 
     /**
      * The Created By.

@@ -15,13 +15,13 @@ import com.microsoft.graph.models.TeamMemberSettings;
 import com.microsoft.graph.models.TeamMessagingSettings;
 import com.microsoft.graph.models.TeamSpecialization;
 import com.microsoft.graph.models.TeamVisibilityType;
-import com.microsoft.graph.models.Schedule;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.TeamsAsyncOperation;
 import com.microsoft.graph.models.TeamsTemplate;
+import com.microsoft.graph.models.Schedule;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ChannelCollectionPage;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
@@ -161,15 +161,6 @@ public class Team extends Entity implements IJsonBackedObject {
     public String webUrl;
 
     /**
-     * The Schedule.
-     * The schedule of shifts for this team.
-     */
-    @SerializedName(value = "schedule", alternate = {"Schedule"})
-    @Expose
-	@Nullable
-    public Schedule schedule;
-
-    /**
      * The Channels.
      * The collection of channels &amp; messages associated with the team.
      */
@@ -231,6 +222,15 @@ public class Team extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TeamsTemplate template;
+
+    /**
+     * The Schedule.
+     * The schedule of shifts for this team.
+     */
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
+    @Expose
+	@Nullable
+    public Schedule schedule;
 
 
     /**

@@ -63,9 +63,11 @@ public class AccessReviewInstanceFilterByCurrentUserCollectionRequestBuilder ext
     @Nonnull
     public AccessReviewInstanceFilterByCurrentUserCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final AccessReviewInstanceFilterByCurrentUserCollectionRequest request = super.buildRequest(requestOptions);
-          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }

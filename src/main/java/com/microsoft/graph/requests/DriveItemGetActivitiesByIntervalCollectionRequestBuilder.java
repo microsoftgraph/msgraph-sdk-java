@@ -62,6 +62,11 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
     @Nonnull
     public DriveItemGetActivitiesByIntervalCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DriveItemGetActivitiesByIntervalCollectionRequest request = super.buildRequest(requestOptions);
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }
