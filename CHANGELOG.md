@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.6.0] - 2021-10-27
+
+### Added
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter
+- Correcting enum mistake in ManagementAgentType. 
+
 ## [5.5.0] - 2021-10-14
 
 ### Added

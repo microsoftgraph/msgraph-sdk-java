@@ -62,6 +62,11 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionCollecti
     @Nonnull
     public DriveItemDeltaCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final DriveItemDeltaCollectionRequest request = super.buildRequest(requestOptions);
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }

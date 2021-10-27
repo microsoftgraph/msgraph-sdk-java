@@ -50,7 +50,7 @@ public class RequiredResourceAccess implements IJsonBackedObject {
 
     /**
      * The Resource App Id.
-     * The unique identifier for the resource that the application requires access to.  This should be equal to the appId declared on the target resource application.
+     * The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
      */
     @SerializedName(value = "resourceAppId", alternate = {"ResourceAppId"})
     @Expose

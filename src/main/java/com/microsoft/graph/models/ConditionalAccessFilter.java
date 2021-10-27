@@ -49,7 +49,7 @@ public class ConditionalAccessFilter implements IJsonBackedObject {
 
     /**
      * The Rule.
-     * Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions
+     * Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
      */
     @SerializedName(value = "rule", alternate = {"Rule"})
     @Expose

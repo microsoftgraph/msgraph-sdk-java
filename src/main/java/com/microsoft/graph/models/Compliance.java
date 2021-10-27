@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.ediscovery.models.Ediscoveryroot;
 
 
 import com.google.gson.JsonObject;
@@ -36,6 +37,15 @@ public class Compliance implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Ediscovery.
+     * 
+     */
+    @SerializedName(value = "ediscovery", alternate = {"Ediscovery"})
+    @Expose
+	@Nullable
+    public Ediscoveryroot ediscovery;
 
 
     /**

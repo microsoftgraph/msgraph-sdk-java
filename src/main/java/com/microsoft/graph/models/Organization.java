@@ -74,7 +74,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country Letter Code.
-     * Country/region abbreviation for the organization.
+     * Country or region abbreviation for the organization in ISO 3166-2 format.
      */
     @SerializedName(value = "countryLetterCode", alternate = {"CountryLetterCode"})
     @Expose
