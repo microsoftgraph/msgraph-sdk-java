@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.ediscovery.models.DataSourceScopes;
 import com.microsoft.graph.ediscovery.models.DataSource;
+import com.microsoft.graph.ediscovery.models.AddToReviewSetOperation;
 import com.microsoft.graph.ediscovery.models.EstimateStatisticsOperation;
 import com.microsoft.graph.ediscovery.models.NoncustodialDataSource;
 import com.microsoft.graph.models.Entity;
@@ -35,7 +36,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Query.
-     * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery.  You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016
+     * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016.
      */
     @SerializedName(value = "contentQuery", alternate = {"ContentQuery"})
     @Expose
@@ -62,7 +63,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Data Source Scopes.
-     * When specified, the collection will span across a service for an entire workload. Possible values are: none,allTenantMailboxes,allTenantSites,allCaseCustodians,allCaseNoncustodialDataSources.
+     * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      */
     @SerializedName(value = "dataSourceScopes", alternate = {"DataSourceScopes"})
     @Expose
@@ -71,7 +72,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description of the sourceCollection
+     * The description of the sourceCollection.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -80,7 +81,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the sourceCollection
+     * The display name of the sourceCollection.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -113,6 +114,15 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DataSourceCollectionPage additionalSources;
+
+    /**
+     * The Add To Review Set Operation.
+     * Adds the results of the sourceCollection to the specified reviewSet.
+     */
+    @SerializedName(value = "addToReviewSetOperation", alternate = {"AddToReviewSetOperation"})
+    @Expose
+	@Nullable
+    public AddToReviewSetOperation addToReviewSetOperation;
 
     /**
      * The Custodian Sources.

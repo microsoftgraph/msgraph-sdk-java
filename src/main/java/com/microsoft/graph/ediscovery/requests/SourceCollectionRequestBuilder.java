@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.SourceCollection;
 import com.microsoft.graph.ediscovery.requests.DataSourceCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.DataSourceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.AddToReviewSetOperationWithReferenceRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.DataSourceWithReferenceRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.EstimateStatisticsOperationWithReferenceRequestBuilder;
@@ -82,6 +83,16 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
     @Nonnull
     public DataSourceRequestBuilder additionalSources(@Nonnull final String id) {
         return new DataSourceRequestBuilder(getRequestUrlWithAdditionalSegment("additionalSources") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AddToReviewSetOperation
+     *
+     * @return the AddToReviewSetOperationWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public AddToReviewSetOperationWithReferenceRequestBuilder addToReviewSetOperation() {
+        return new AddToReviewSetOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("addToReviewSetOperation"), getClient(), null);
     }
     /**
      *  Gets a request builder for the DataSource collection
