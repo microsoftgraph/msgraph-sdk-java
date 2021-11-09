@@ -11,6 +11,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.SourceCollection;
 import com.microsoft.graph.ediscovery.requests.DataSourceCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.DataSourceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.AddToReviewSetOperationWithReferenceRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.DataSourceWithReferenceRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.EstimateStatisticsOperationWithReferenceRequestBuilder;

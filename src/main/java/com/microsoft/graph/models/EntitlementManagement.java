@@ -10,8 +10,19 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Approval;
+import com.microsoft.graph.models.AccessPackage;
+import com.microsoft.graph.models.AccessPackageAssignmentRequest;
+import com.microsoft.graph.models.AccessPackageAssignment;
+import com.microsoft.graph.models.AccessPackageCatalog;
+import com.microsoft.graph.models.ConnectedOrganization;
+import com.microsoft.graph.models.EntitlementManagementSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApprovalCollectionPage;
+import com.microsoft.graph.requests.AccessPackageCollectionPage;
+import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionPage;
+import com.microsoft.graph.requests.AccessPackageAssignmentCollectionPage;
+import com.microsoft.graph.requests.AccessPackageCatalogCollectionPage;
+import com.microsoft.graph.requests.ConnectedOrganizationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -37,6 +48,60 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 	@Nullable
     public ApprovalCollectionPage accessPackageAssignmentApprovals;
 
+    /**
+     * The Access Packages.
+     * 
+     */
+    @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
+    @Expose
+	@Nullable
+    public AccessPackageCollectionPage accessPackages;
+
+    /**
+     * The Assignment Requests.
+     * 
+     */
+    @SerializedName(value = "assignmentRequests", alternate = {"AssignmentRequests"})
+    @Expose
+	@Nullable
+    public AccessPackageAssignmentRequestCollectionPage assignmentRequests;
+
+    /**
+     * The Assignments.
+     * 
+     */
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
+    @Expose
+	@Nullable
+    public AccessPackageAssignmentCollectionPage assignments;
+
+    /**
+     * The Catalogs.
+     * 
+     */
+    @SerializedName(value = "catalogs", alternate = {"Catalogs"})
+    @Expose
+	@Nullable
+    public AccessPackageCatalogCollectionPage catalogs;
+
+    /**
+     * The Connected Organizations.
+     * 
+     */
+    @SerializedName(value = "connectedOrganizations", alternate = {"ConnectedOrganizations"})
+    @Expose
+	@Nullable
+    public ConnectedOrganizationCollectionPage connectedOrganizations;
+
+    /**
+     * The Settings.
+     * 
+     */
+    @SerializedName(value = "settings", alternate = {"Settings"})
+    @Expose
+	@Nullable
+    public EntitlementManagementSettings settings;
+
 
     /**
      * Sets the raw JSON object
@@ -49,6 +114,26 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("accessPackageAssignmentApprovals")) {
             accessPackageAssignmentApprovals = serializer.deserializeObject(json.get("accessPackageAssignmentApprovals"), ApprovalCollectionPage.class);
+        }
+
+        if (json.has("accessPackages")) {
+            accessPackages = serializer.deserializeObject(json.get("accessPackages"), AccessPackageCollectionPage.class);
+        }
+
+        if (json.has("assignmentRequests")) {
+            assignmentRequests = serializer.deserializeObject(json.get("assignmentRequests"), AccessPackageAssignmentRequestCollectionPage.class);
+        }
+
+        if (json.has("assignments")) {
+            assignments = serializer.deserializeObject(json.get("assignments"), AccessPackageAssignmentCollectionPage.class);
+        }
+
+        if (json.has("catalogs")) {
+            catalogs = serializer.deserializeObject(json.get("catalogs"), AccessPackageCatalogCollectionPage.class);
+        }
+
+        if (json.has("connectedOrganizations")) {
+            connectedOrganizations = serializer.deserializeObject(json.get("connectedOrganizations"), ConnectedOrganizationCollectionPage.class);
         }
     }
 }

@@ -32,6 +32,14 @@ public enum LobbyBypassScope
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * invited
+    */
+    INVITED,
+    /**
+    * organization Excluding Guests
+    */
+    ORGANIZATION_EXCLUDING_GUESTS,
+    /**
     * For LobbyBypassScope values that were not expected from the service
     */
     UNEXPECTED_VALUE

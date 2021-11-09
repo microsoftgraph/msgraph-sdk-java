@@ -10,8 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.IdentityGovernance;
 import com.microsoft.graph.requests.AccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.AppConsentApprovalRouteRequestBuilder;
-import com.microsoft.graph.requests.EntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.TermsOfUseContainerRequestBuilder;
+import com.microsoft.graph.requests.EntitlementManagementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -82,16 +82,6 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
     }
 
     /**
-     * Gets the request builder for EntitlementManagement
-     *
-     * @return the EntitlementManagementRequestBuilder instance
-     */
-    @Nonnull
-    public EntitlementManagementRequestBuilder entitlementManagement() {
-        return new EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for TermsOfUseContainer
      *
      * @return the TermsOfUseContainerRequestBuilder instance
@@ -99,5 +89,15 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
     @Nonnull
     public TermsOfUseContainerRequestBuilder termsOfUse() {
         return new TermsOfUseContainerRequestBuilder(getRequestUrlWithAdditionalSegment("termsOfUse"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for EntitlementManagement
+     *
+     * @return the EntitlementManagementRequestBuilder instance
+     */
+    @Nonnull
+    public EntitlementManagementRequestBuilder entitlementManagement() {
+        return new EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
     }
 }

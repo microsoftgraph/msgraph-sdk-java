@@ -47,6 +47,15 @@ public class RoleManagement implements IJsonBackedObject {
 	@Nullable
     public RbacApplication directory;
 
+    /**
+     * The Entitlement Management.
+     * The RbacApplication for Entitlement Management
+     */
+    @SerializedName(value = "entitlementManagement", alternate = {"EntitlementManagement"})
+    @Expose
+	@Nullable
+    public RbacApplication entitlementManagement;
+
 
     /**
      * Sets the raw JSON object
