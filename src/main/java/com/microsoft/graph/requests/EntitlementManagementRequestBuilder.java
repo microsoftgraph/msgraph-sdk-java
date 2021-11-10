@@ -10,6 +10,17 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EntitlementManagement;
 import com.microsoft.graph.requests.ApprovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.ApprovalRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageCatalogCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.ConnectedOrganizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.ConnectedOrganizationRequestBuilder;
+import com.microsoft.graph.requests.EntitlementManagementSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -77,5 +88,115 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
     @Nonnull
     public ApprovalRequestBuilder accessPackageAssignmentApprovals(@Nonnull final String id) {
         return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageCollectionRequestBuilder accessPackages() {
+        return new AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
+        return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageAssignmentRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentRequestCollectionRequestBuilder assignmentRequests() {
+        return new AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentRequests"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageAssignmentRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentRequestRequestBuilder assignmentRequests(@Nonnull final String id) {
+        return new AccessPackageAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentRequests") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentCollectionRequestBuilder assignments() {
+        return new AccessPackageAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentRequestBuilder assignments(@Nonnull final String id) {
+        return new AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageCatalog collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageCatalogCollectionRequestBuilder catalogs() {
+        return new AccessPackageCatalogCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("catalogs"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageCatalog item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageCatalogRequestBuilder catalogs(@Nonnull final String id) {
+        return new AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("catalogs") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ConnectedOrganization collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConnectedOrganizationCollectionRequestBuilder connectedOrganizations() {
+        return new ConnectedOrganizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ConnectedOrganization item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConnectedOrganizationRequestBuilder connectedOrganizations(@Nonnull final String id) {
+        return new ConnectedOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for EntitlementManagementSettings
+     *
+     * @return the EntitlementManagementSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public EntitlementManagementSettingsRequestBuilder settings() {
+        return new EntitlementManagementSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 }

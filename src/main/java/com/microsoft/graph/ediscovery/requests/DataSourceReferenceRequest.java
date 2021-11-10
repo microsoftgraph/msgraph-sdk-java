@@ -70,7 +70,7 @@ public class DataSourceReferenceRequest extends BaseReferenceRequest<DataSource>
     @Nonnull
     public java.util.concurrent.CompletableFuture<DataSource> putAsync(@Nonnull final DataSource srcDataSource) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/compliance/ediscovery/{id}/cases/{id}/sourceCollections/{id}/additionalSources/" + srcDataSource.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/sourceCollection/{id}/addToReviewSetOperation/{id}/sourceCollection/{id}/addToReviewSetOperation/{id}/sourceCollection/{id}/addToReviewSetOperation/{id}/sourceCollection/{id}/addToReviewSetOperation/{id}/sourceCollection/{id}/additionalSources/" + srcDataSource.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class DataSourceReferenceRequest extends BaseReferenceRequest<DataSource>
     @Nullable
     public DataSource put(@Nonnull final DataSource srcDataSource) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/compliance/ediscovery/{id}/cases/{id}/sourceCollections/{id}/additionalSources/" + srcDataSource.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/sourceCollection/{id}/addToReviewSetOperation/{id}/sourceCollection/{id}/addToReviewSetOperation/{id}/sourceCollection/{id}/addToReviewSetOperation/{id}/sourceCollection/{id}/addToReviewSetOperation/{id}/sourceCollection/{id}/additionalSources/" + srcDataSource.id));
         return send(HttpMethod.PUT, payload);
     }
 }

@@ -24,6 +24,8 @@ import com.microsoft.graph.models.UnmuteParticipantOperation;
 import com.microsoft.graph.models.RecordingStatus;
 import com.microsoft.graph.models.UpdateRecordingStatusOperation;
 import com.microsoft.graph.models.TeleconferenceDeviceQuality;
+import com.microsoft.graph.requests.AudioRoutingGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.AudioRoutingGroupRequestBuilder;
 import com.microsoft.graph.requests.CommsOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.CommsOperationRequestBuilder;
 import com.microsoft.graph.requests.ParticipantCollectionRequestBuilder;
@@ -88,6 +90,26 @@ public class CallRequestBuilder extends BaseRequestBuilder<Call> {
     }
 
 
+    /**
+     *  Gets a request builder for the AudioRoutingGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AudioRoutingGroupCollectionRequestBuilder audioRoutingGroups() {
+        return new AudioRoutingGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("audioRoutingGroups"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AudioRoutingGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AudioRoutingGroupRequestBuilder audioRoutingGroups(@Nonnull final String id) {
+        return new AudioRoutingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("audioRoutingGroups") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the CommsOperation collection
      *

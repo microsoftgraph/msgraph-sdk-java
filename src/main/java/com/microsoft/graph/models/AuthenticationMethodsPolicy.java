@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.RegistrationEnforcement;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage;
@@ -72,6 +73,15 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public Integer reconfirmationInDays;
+
+    /**
+     * The Registration Enforcement.
+     * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
+     */
+    @SerializedName(value = "registrationEnforcement", alternate = {"RegistrationEnforcement"})
+    @Expose
+	@Nullable
+    public RegistrationEnforcement registrationEnforcement;
 
     /**
      * The Authentication Method Configurations.

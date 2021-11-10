@@ -24,9 +24,11 @@ import com.microsoft.graph.models.CallState;
 import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.ToneInfo;
 import com.microsoft.graph.models.CallTranscriptionInfo;
+import com.microsoft.graph.models.AudioRoutingGroup;
 import com.microsoft.graph.models.CommsOperation;
 import com.microsoft.graph.models.Participant;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AudioRoutingGroupCollectionPage;
 import com.microsoft.graph.requests.CommsOperationCollectionPage;
 import com.microsoft.graph.requests.ParticipantCollectionPage;
 
@@ -226,6 +228,15 @@ public class Call extends Entity implements IJsonBackedObject {
     public CallTranscriptionInfo transcription;
 
     /**
+     * The Audio Routing Groups.
+     * Read-only. Nullable.
+     */
+    @SerializedName(value = "audioRoutingGroups", alternate = {"AudioRoutingGroups"})
+    @Expose
+	@Nullable
+    public AudioRoutingGroupCollectionPage audioRoutingGroups;
+
+    /**
      * The Operations.
      * Read-only. Nullable.
      */
@@ -252,6 +263,10 @@ public class Call extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("audioRoutingGroups")) {
+            audioRoutingGroups = serializer.deserializeObject(json.get("audioRoutingGroups"), AudioRoutingGroupCollectionPage.class);
+        }
 
         if (json.has("operations")) {
             operations = serializer.deserializeObject(json.get("operations"), CommsOperationCollectionPage.class);

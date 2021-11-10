@@ -28,6 +28,10 @@ public enum ChatMessageType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * system Event Message
+    */
+    SYSTEM_EVENT_MESSAGE,
+    /**
     * For ChatMessageType values that were not expected from the service
     */
     UNEXPECTED_VALUE

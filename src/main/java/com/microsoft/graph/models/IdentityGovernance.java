@@ -10,8 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.models.AppConsentApprovalRoute;
-import com.microsoft.graph.models.EntitlementManagement;
 import com.microsoft.graph.models.TermsOfUseContainer;
+import com.microsoft.graph.models.EntitlementManagement;
 
 
 import com.google.gson.JsonObject;
@@ -60,15 +60,6 @@ public class IdentityGovernance implements IJsonBackedObject {
     public AppConsentApprovalRoute appConsent;
 
     /**
-     * The Entitlement Management.
-     * 
-     */
-    @SerializedName(value = "entitlementManagement", alternate = {"EntitlementManagement"})
-    @Expose
-	@Nullable
-    public EntitlementManagement entitlementManagement;
-
-    /**
      * The Terms Of Use.
      * 
      */
@@ -76,6 +67,15 @@ public class IdentityGovernance implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TermsOfUseContainer termsOfUse;
+
+    /**
+     * The Entitlement Management.
+     * 
+     */
+    @SerializedName(value = "entitlementManagement", alternate = {"EntitlementManagement"})
+    @Expose
+	@Nullable
+    public EntitlementManagement entitlementManagement;
 
 
     /**

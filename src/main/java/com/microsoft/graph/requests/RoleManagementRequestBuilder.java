@@ -67,4 +67,14 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
     public RbacApplicationRequestBuilder directory() {
         return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("directory"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for RbacApplication
+     *
+     * @return the RbacApplicationRequestBuilder instance
+     */
+    @Nonnull
+    public RbacApplicationRequestBuilder entitlementManagement() {
+        return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
+    }
 }

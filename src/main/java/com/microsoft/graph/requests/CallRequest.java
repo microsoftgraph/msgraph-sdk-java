@@ -24,6 +24,8 @@ import com.microsoft.graph.models.UnmuteParticipantOperation;
 import com.microsoft.graph.models.RecordingStatus;
 import com.microsoft.graph.models.UpdateRecordingStatusOperation;
 import com.microsoft.graph.models.TeleconferenceDeviceQuality;
+import com.microsoft.graph.requests.AudioRoutingGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.AudioRoutingGroupRequestBuilder;
 import com.microsoft.graph.requests.CommsOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.CommsOperationRequestBuilder;
 import com.microsoft.graph.requests.ParticipantCollectionRequestBuilder;
