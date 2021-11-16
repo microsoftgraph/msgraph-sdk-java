@@ -142,7 +142,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The City.
-     * The city in which the user is located. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The city in which the user is located. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "city", alternate = {"City"})
     @Expose
@@ -151,7 +151,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 characters.Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 characters.Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
@@ -169,7 +169,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country.
-     * The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "country", alternate = {"Country"})
     @Expose
@@ -178,7 +178,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The created date of the user object. Read-only. Returned only on $select. Supports $filter (eq, ne, NOT , ge, le, and in operators).
+     * The created date of the user object. Read-only. Returned only on $select. Supports $filter (eq, ne, NOT , ge, le, in).
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -187,7 +187,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Creation Type.
-     * Indicates whether the user account was created through one of the following methods:  As a regular school or work account (null). As an external account (Invitation). As a local account for an Azure Active Directory B2C tenant (LocalAccount). Through self-service sign-up by an internal user using email verification (EmailVerified). Through self-service sign-up by an external user signing up through a link that is part of a user flow (SelfServiceSignUp). Read-only.Returned only on $select. Supports $filter (eq, ne, NOT, and in).
+     * Indicates whether the user account was created through one of the following methods:  As a regular school or work account (null). As an external account (Invitation). As a local account for an Azure Active Directory B2C tenant (LocalAccount). Through self-service sign-up by an internal user using email verification (EmailVerified). Through self-service sign-up by an external user signing up through a link that is part of a user flow (SelfServiceSignUp). Read-only.Returned only on $select. Supports $filter (eq, ne, NOT, in).
      */
     @SerializedName(value = "creationType", alternate = {"CreationType"})
     @Expose
@@ -196,7 +196,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Department.
-     * The name for the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, NOT , ge, le, and in operators).
+     * The name for the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, NOT , ge, le, in, and eq on null values).
      */
     @SerializedName(value = "department", alternate = {"Department"})
     @Expose
@@ -205,7 +205,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, NOT , ge, le, in, startsWith), $orderBy, and $search.
+     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, NOT , ge, le, in, startsWith, and eq on null values), $orderBy, and $search.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -223,7 +223,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Id.
-     * The employee identifier assigned to the user by the organization. Returned only on $select. Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+     * The employee identifier assigned to the user by the organization. Returned only on $select. Supports $filter (eq, ne, NOT , ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "employeeId", alternate = {"EmployeeId"})
     @Expose
@@ -268,7 +268,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Fax Number.
-     * The fax number of the user. Returned only on $select. Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+     * The fax number of the user. Returned only on $select. Supports $filter (eq, ne, NOT , ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "faxNumber", alternate = {"FaxNumber"})
     @Expose
@@ -277,7 +277,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Given Name.
-     * The given name (first name) of the user. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+     * The given name (first name) of the user. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, NOT , ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
@@ -286,7 +286,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Identities.
-     * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Returned only on $select. Supports $filter (eq) only where the signInType is not userPrincipalName.
+     * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Returned only on $select. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
      */
     @SerializedName(value = "identities", alternate = {"Identities"})
     @Expose
@@ -313,7 +313,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+     * The user's job title. Maximum length is 128 characters. Returned by default. Supports $filter (eq, ne, NOT , ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
@@ -349,7 +349,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com.Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith).
+     * The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com.Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith, and eq on null values).
      */
     @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
@@ -358,7 +358,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The mail alias for the user. This property must be specified when a user is created. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
@@ -367,7 +367,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mobile Phone.
-     * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "mobilePhone", alternate = {"MobilePhone"})
     @Expose
@@ -376,7 +376,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Office Location.
-     * The office location in the user's place of business. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The office location in the user's place of business. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
@@ -403,7 +403,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Extension Attributes.
-     * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select. Supports $filter (eq, NOT, ge, le, in).
+     * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select. Supports $filter (eq, NOT, ge, le, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesExtensionAttributes", alternate = {"OnPremisesExtensionAttributes"})
     @Expose
@@ -448,7 +448,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
-     * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Returned only on $select.
+     * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq) on null values only.
      */
     @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose
@@ -457,7 +457,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Returned only on $select. Supports $filter (eq, ne, NOT, in).
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Returned only on $select. Supports $filter (eq, ne, NOT, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -484,7 +484,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Policies.
-     * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. Returned only on $select. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, NOT).
+     * Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword. Returned only on $select. For more information on the default password policies, see Azure AD pasword policies. Supports $filter (ne, NOT, and eq on null values).
      */
     @SerializedName(value = "passwordPolicies", alternate = {"PasswordPolicies"})
     @Expose
@@ -493,7 +493,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Profile.
-     * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.Returned only on $select. Supports $filter (eq, ne, NOT, in).
+     * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. NOTE: For Azure B2C tenants, the forceChangePasswordNextSignIn property should be set to false and instead use custom policies and user flows to force password reset at first logon. See Force password reset at first logon.Returned only on $select. Supports $filter (eq, ne, NOT, in, and eq on null values).
      */
     @SerializedName(value = "passwordProfile", alternate = {"PasswordProfile"})
     @Expose
@@ -502,7 +502,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Postal Code.
-     * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code. Maximum length is 40 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "postalCode", alternate = {"PostalCode"})
     @Expose
@@ -511,7 +511,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * The preferred language for the user. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith)
+     * The preferred language for the user. Should follow ISO 639-1 Code; for example en-US. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values)
      */
     @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
@@ -556,7 +556,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The State.
-     * The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -565,7 +565,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Street Address.
-     * The street address of the user's place of business. Maximum length is 1024 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The street address of the user's place of business. Maximum length is 1024 characters. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "streetAddress", alternate = {"StreetAddress"})
     @Expose
@@ -574,7 +574,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Surname.
-     * The user's surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The user's surname (family name or last name). Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
@@ -583,7 +583,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Usage Location.
-     * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Returned only on $select. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "usageLocation", alternate = {"UsageLocation"})
     @Expose
@@ -601,7 +601,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
+     * A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
      */
     @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.RelatedContact;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AssignedPlan;
 import com.microsoft.graph.models.IdentitySet;
@@ -43,6 +44,15 @@ import javax.annotation.Nonnull;
  */
 public class EducationUser extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Related Contacts.
+     * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+     */
+    @SerializedName(value = "relatedContacts", alternate = {"RelatedContacts"})
+    @Expose
+	@Nullable
+    public java.util.List<RelatedContact> relatedContacts;
 
     /**
      * The Account Enabled.
