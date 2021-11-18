@@ -11,9 +11,9 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WindowsInformationProtectionDataRecoveryCertificate;
 import com.microsoft.graph.models.WindowsInformationProtectionEnforcementLevel;
-import com.microsoft.graph.models.WindowsInformationProtectionResourceCollection;
-import com.microsoft.graph.models.WindowsInformationProtectionIPRangeCollection;
-import com.microsoft.graph.models.WindowsInformationProtectionProxiedDomainCollection;
+import com.microsoft.graph.models.WindowsInformationProtectionResourceCollectionObject;
+import com.microsoft.graph.models.WindowsInformationProtectionIPRangeCollectionObject;
+import com.microsoft.graph.models.WindowsInformationProtectionProxiedDomainCollectionObject;
 import com.microsoft.graph.models.WindowsInformationProtectionApp;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.WindowsInformationProtectionAppLockerFile;
@@ -79,7 +79,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "enterpriseInternalProxyServers", alternate = {"EnterpriseInternalProxyServers"})
     @Expose
 	@Nullable
-    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseInternalProxyServers;
+    public java.util.List<WindowsInformationProtectionResourceCollectionObject> enterpriseInternalProxyServers;
 
     /**
      * The Enterprise IPRanges.
@@ -88,7 +88,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "enterpriseIPRanges", alternate = {"EnterpriseIPRanges"})
     @Expose
 	@Nullable
-    public java.util.List<WindowsInformationProtectionIPRangeCollection> enterpriseIPRanges;
+    public java.util.List<WindowsInformationProtectionIPRangeCollectionObject> enterpriseIPRanges;
 
     /**
      * The Enterprise IPRanges Are Authoritative.
@@ -106,7 +106,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "enterpriseNetworkDomainNames", alternate = {"EnterpriseNetworkDomainNames"})
     @Expose
 	@Nullable
-    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseNetworkDomainNames;
+    public java.util.List<WindowsInformationProtectionResourceCollectionObject> enterpriseNetworkDomainNames;
 
     /**
      * The Enterprise Protected Domain Names.
@@ -115,7 +115,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "enterpriseProtectedDomainNames", alternate = {"EnterpriseProtectedDomainNames"})
     @Expose
 	@Nullable
-    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseProtectedDomainNames;
+    public java.util.List<WindowsInformationProtectionResourceCollectionObject> enterpriseProtectedDomainNames;
 
     /**
      * The Enterprise Proxied Domains.
@@ -124,7 +124,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "enterpriseProxiedDomains", alternate = {"EnterpriseProxiedDomains"})
     @Expose
 	@Nullable
-    public java.util.List<WindowsInformationProtectionProxiedDomainCollection> enterpriseProxiedDomains;
+    public java.util.List<WindowsInformationProtectionProxiedDomainCollectionObject> enterpriseProxiedDomains;
 
     /**
      * The Enterprise Proxy Servers.
@@ -133,7 +133,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "enterpriseProxyServers", alternate = {"EnterpriseProxyServers"})
     @Expose
 	@Nullable
-    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseProxyServers;
+    public java.util.List<WindowsInformationProtectionResourceCollectionObject> enterpriseProxyServers;
 
     /**
      * The Enterprise Proxy Servers Are Authoritative.
@@ -187,7 +187,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "neutralDomainResources", alternate = {"NeutralDomainResources"})
     @Expose
 	@Nullable
-    public java.util.List<WindowsInformationProtectionResourceCollection> neutralDomainResources;
+    public java.util.List<WindowsInformationProtectionResourceCollectionObject> neutralDomainResources;
 
     /**
      * The Protected Apps.
@@ -232,7 +232,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     @SerializedName(value = "smbAutoEncryptedFileExtensions", alternate = {"SmbAutoEncryptedFileExtensions"})
     @Expose
 	@Nullable
-    public java.util.List<WindowsInformationProtectionResourceCollection> smbAutoEncryptedFileExtensions;
+    public java.util.List<WindowsInformationProtectionResourceCollectionObject> smbAutoEncryptedFileExtensions;
 
     /**
      * The Assignments.
