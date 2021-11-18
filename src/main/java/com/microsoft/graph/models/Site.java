@@ -12,7 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PublicError;
 import com.microsoft.graph.models.Root;
 import com.microsoft.graph.models.SharepointIds;
-import com.microsoft.graph.models.SiteCollection;
+import com.microsoft.graph.models.SiteCollectionObject;
 import com.microsoft.graph.models.ItemAnalytics;
 import com.microsoft.graph.models.ColumnDefinition;
 import com.microsoft.graph.models.ContentType;
@@ -90,7 +90,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName(value = "siteCollection", alternate = {"SiteCollection"})
     @Expose
 	@Nullable
-    public SiteCollection siteCollection;
+    public SiteCollectionObject siteCollection;
 
     /**
      * The Analytics.

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 
 
@@ -35,6 +36,33 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
     public String backgroundColor;
 
     /**
+     * The Background Image Relative Url.
+     * A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+     */
+    @SerializedName(value = "backgroundImageRelativeUrl", alternate = {"BackgroundImageRelativeUrl"})
+    @Expose
+	@Nullable
+    public String backgroundImageRelativeUrl;
+
+    /**
+     * The Banner Logo Relative Url.
+     * A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
+     */
+    @SerializedName(value = "bannerLogoRelativeUrl", alternate = {"BannerLogoRelativeUrl"})
+    @Expose
+	@Nullable
+    public String bannerLogoRelativeUrl;
+
+    /**
+     * The Cdn List.
+     * A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.
+     */
+    @SerializedName(value = "cdnList", alternate = {"CdnList"})
+    @Expose
+	@Nullable
+    public java.util.List<String> cdnList;
+
+    /**
      * The Sign In Page Text.
      * Text that appears at the bottom of the sign-in box. You can use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be Unicode and not exceed 1024 characters.
      */
@@ -42,6 +70,15 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
     @Expose
 	@Nullable
     public String signInPageText;
+
+    /**
+     * The Square Logo Relative Url.
+     * A relative url for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+     */
+    @SerializedName(value = "squareLogoRelativeUrl", alternate = {"SquareLogoRelativeUrl"})
+    @Expose
+	@Nullable
+    public String squareLogoRelativeUrl;
 
     /**
      * The Username Hint Text.
