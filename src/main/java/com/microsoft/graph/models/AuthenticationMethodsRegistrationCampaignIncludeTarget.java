@@ -40,7 +40,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements I
 
     /**
      * The Id.
-     * The object identifier of an Azure AD user or group.
+     * The object identifier of an Azure Active Directory user or group.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

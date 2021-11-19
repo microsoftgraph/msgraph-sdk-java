@@ -3,44 +3,48 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.ediscovery.models;
+package com.microsoft.graph.models;
 
 
 /**
- * The Enum Case Action.
+ * The Enum Contact Relationship.
 */
-public enum CaseAction
+public enum ContactRelationship
 {
     /**
-    * content Export
+    * parent
     */
-    CONTENT_EXPORT,
+    PARENT,
     /**
-    * apply Tags
+    * relative
     */
-    APPLY_TAGS,
+    RELATIVE,
     /**
-    * convert To Pdf
+    * aide
     */
-    CONVERT_TO_PDF,
+    AIDE,
     /**
-    * index
+    * doctor
     */
-    INDEX,
+    DOCTOR,
     /**
-    * estimate Statistics
+    * guardian
     */
-    ESTIMATE_STATISTICS,
+    GUARDIAN,
     /**
-    * add To Review Set
+    * child
     */
-    ADD_TO_REVIEW_SET,
+    CHILD,
+    /**
+    * other
+    */
+    OTHER,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For CaseAction values that were not expected from the service
+    * For ContactRelationship values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

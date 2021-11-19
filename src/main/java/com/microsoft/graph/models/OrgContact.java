@@ -41,7 +41,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * Name of the company that this organizational contact belong to. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * Name of the company that this organizational contact belong to. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
@@ -50,7 +50,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Department.
-     * The name for the department in which the contact works. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The name for the department in which the contact works. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "department", alternate = {"Department"})
     @Expose
@@ -59,7 +59,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
+     * Display name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Given Name.
-     * First name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * First name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
@@ -77,7 +77,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * Job title for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * Job title for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
@@ -86,7 +86,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
@@ -95,7 +95,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+     * Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values).
      */
     @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
@@ -122,7 +122,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, NOT, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -149,7 +149,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Surname.
-     * Last name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith)
+     * Last name for this organizational contact. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values)
      */
     @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose

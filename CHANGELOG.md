@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.8.0] - 2021-11-19
+
+### Added
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter
+- Removed classes pertaining to eDiscovery as they were included prematurley. The API is not functional yet and will be added at a later time. 
+- Report API was broken, methods returning a report now return a java.io.InputStream. 
+
 ## [5.7.0] - 2021-11-09
 
 ### Added

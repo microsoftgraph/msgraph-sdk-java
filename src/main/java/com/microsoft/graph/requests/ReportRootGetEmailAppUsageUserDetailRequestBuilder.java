@@ -6,8 +6,7 @@
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ReportRootGetEmailAppUsageUserDetailRequest;
 import com.microsoft.graph.models.ReportRoot;
-import com.microsoft.graph.models.Report;
-import com.microsoft.graph.models.Report;
+
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ReportRootGetEmailAppUsageUserDetailParameterSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -20,7 +19,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Report Root Get Email App Usage User Detail Request Builder.
  */
-public class ReportRootGetEmailAppUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder<Report> {
+public class ReportRootGetEmailAppUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder<java.io.InputStream> {
 
     /**
      * The request builder for this ReportRootGetEmailAppUsageUserDetail
