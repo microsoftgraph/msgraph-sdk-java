@@ -31,7 +31,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
     /**
      * The Expired Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "expiredDateTime", alternate = {"ExpiredDateTime"})
     @Expose
@@ -49,7 +49,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
     /**
      * The State.
-     * 
+     * The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -58,7 +58,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * 
+     * More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

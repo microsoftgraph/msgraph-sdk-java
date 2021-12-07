@@ -29,7 +29,7 @@ public class SharePointIdentitySet extends IdentitySet implements IJsonBackedObj
 
     /**
      * The Group.
-     * 
+     * The group associated with this action. Optional.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose
@@ -38,7 +38,7 @@ public class SharePointIdentitySet extends IdentitySet implements IJsonBackedObj
 
     /**
      * The Site Group.
-     * 
+     * The SharePoint group associated with this action. Optional.
      */
     @SerializedName(value = "siteGroup", alternate = {"SiteGroup"})
     @Expose
@@ -47,7 +47,7 @@ public class SharePointIdentitySet extends IdentitySet implements IJsonBackedObj
 
     /**
      * The Site User.
-     * 
+     * The SharePoint user associated with this action. Optional.
      */
     @SerializedName(value = "siteUser", alternate = {"SiteUser"})
     @Expose

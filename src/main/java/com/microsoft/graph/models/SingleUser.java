@@ -36,7 +36,7 @@ public class SingleUser extends SubjectSet implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * The ID of the user in Azure AD.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

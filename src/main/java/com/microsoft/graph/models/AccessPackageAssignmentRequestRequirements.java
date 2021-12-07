@@ -40,7 +40,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Allow Custom Assignment Schedule.
-     * 
+     * Indicates whether the requestor is allowed to set a custom schedule.
      */
     @SerializedName(value = "allowCustomAssignmentSchedule", alternate = {"AllowCustomAssignmentSchedule"})
     @Expose
@@ -49,7 +49,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Is Approval Required For Add.
-     * 
+     * Indicates whether a request to add must be approved by an approver.
      */
     @SerializedName(value = "isApprovalRequiredForAdd", alternate = {"IsApprovalRequiredForAdd"})
     @Expose
@@ -58,7 +58,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Is Approval Required For Update.
-     * 
+     * Indicates whether a request to update must be approved by an approver.
      */
     @SerializedName(value = "isApprovalRequiredForUpdate", alternate = {"IsApprovalRequiredForUpdate"})
     @Expose

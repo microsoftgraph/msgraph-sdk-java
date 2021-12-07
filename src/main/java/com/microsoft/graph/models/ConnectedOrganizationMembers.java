@@ -27,7 +27,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements IJsonBac
 
     /**
      * The Connected Organization Id.
-     * 
+     * The ID of the connected organization in entitlement management.
      */
     @SerializedName(value = "connectedOrganizationId", alternate = {"ConnectedOrganizationId"})
     @Expose
@@ -36,7 +36,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements IJsonBac
 
     /**
      * The Description.
-     * The name of the connected organization. Read only.
+     * The name of the connected organization.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
