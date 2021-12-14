@@ -39,6 +39,15 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
     }
 
     /**
+     * The Hidden.
+     * 
+     */
+    @SerializedName(value = "hidden", alternate = {"Hidden"})
+    @Expose
+	@Nullable
+    public Boolean hidden;
+
+    /**
      * The Identity.
      * The identitySet associated with this invitation.
      */
@@ -46,6 +55,24 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
     @Expose
 	@Nullable
     public IdentitySet identity;
+
+    /**
+     * The Participant Id.
+     * 
+     */
+    @SerializedName(value = "participantId", alternate = {"ParticipantId"})
+    @Expose
+	@Nullable
+    public String participantId;
+
+    /**
+     * The Remove From Default Audio Routing Group.
+     * 
+     */
+    @SerializedName(value = "removeFromDefaultAudioRoutingGroup", alternate = {"RemoveFromDefaultAudioRoutingGroup"})
+    @Expose
+	@Nullable
+    public Boolean removeFromDefaultAudioRoutingGroup;
 
     /**
      * The Replaces Call Id.

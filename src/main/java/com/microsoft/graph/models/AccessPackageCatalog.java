@@ -32,7 +32,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog Type.
-     * One of UserManaged or ServiceDefault.
+     * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
      */
     @SerializedName(value = "catalogType", alternate = {"CatalogType"})
     @Expose
@@ -86,7 +86,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

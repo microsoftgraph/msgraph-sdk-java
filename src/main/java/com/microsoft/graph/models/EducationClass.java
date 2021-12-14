@@ -52,7 +52,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Course.
-     * Course information for the class
+     * Course information for the class.
      */
     @SerializedName(value = "course", alternate = {"Course"})
     @Expose

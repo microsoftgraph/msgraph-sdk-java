@@ -37,6 +37,15 @@ public class CallOptions implements IJsonBackedObject {
         return additionalDataManager;
     }
 
+    /**
+     * The Hide Bot After Escalation.
+     * 
+     */
+    @SerializedName(value = "hideBotAfterEscalation", alternate = {"HideBotAfterEscalation"})
+    @Expose
+	@Nullable
+    public Boolean hideBotAfterEscalation;
+
 
     /**
      * Sets the raw JSON object
