@@ -73,7 +73,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "catalog", alternate = {"Catalog"})
     @Expose

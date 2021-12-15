@@ -36,7 +36,7 @@ public class GroupMembers extends SubjectSet implements IJsonBackedObject {
 
     /**
      * The Group Id.
-     * 
+     * The ID of the group in Azure AD.
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose

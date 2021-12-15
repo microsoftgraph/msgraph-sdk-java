@@ -33,7 +33,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Description.
-     * An optional description for the administrative unit.
+     * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith).
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -42,7 +42,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * Display name for the administrative unit.
+     * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -60,14 +60,14 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Members.
-     * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
+     * Users and groups that are members of this administrative unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
      */
 	@Nullable
     public DirectoryObjectCollectionPage members;
 
     /**
      * The Scoped Role Members.
-     * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
+     * Scoped-role members of this administrative unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
      */
     @SerializedName(value = "scopedRoleMembers", alternate = {"ScopedRoleMembers"})
     @Expose
@@ -76,7 +76,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for this Administrative Unit. Nullable.
+     * The collection of open extensions defined for this administrative unit. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose

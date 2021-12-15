@@ -72,6 +72,15 @@ public class Chat extends Entity implements IJsonBackedObject {
     public String topic;
 
     /**
+     * The Web Url.
+     * A hyperlink that will go to the chat in Microsoft Teams. This URL should be treated as an opaque blob, and not parsed. Read-only.
+     */
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
+    @Expose
+	@Nullable
+    public String webUrl;
+
+    /**
      * The Installed Apps.
      * A collection of all the apps in the chat. Nullable.
      */

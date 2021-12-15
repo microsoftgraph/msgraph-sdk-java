@@ -27,7 +27,7 @@ public class SharePointIdentity extends Identity implements IJsonBackedObject {
 
     /**
      * The Login Name.
-     * 
+     * The sign in name of the SharePoint identity.
      */
     @SerializedName(value = "loginName", alternate = {"LoginName"})
     @Expose

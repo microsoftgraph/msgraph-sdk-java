@@ -42,7 +42,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Granted To.
-     * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
+     * 
      * @deprecated The grantedTo property is deprecated. Please refer to grantedToV2
      */
     @Deprecated
@@ -53,7 +53,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Granted To Identities.
-     * For link type permissions, the details of the users to whom permission was granted. Read-only.
+     * 
      * @deprecated The grantedToIdentities property is deprecated. Please refer to grantedToIdentitiesV2
      */
     @Deprecated
@@ -64,7 +64,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Granted To Identities V2.
-     * 
+     * For link type permissions, the details of the users to whom permission was granted. Read-only.
      */
     @SerializedName(value = "grantedToIdentitiesV2", alternate = {"GrantedToIdentitiesV2"})
     @Expose
@@ -73,7 +73,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Granted To V2.
-     * 
+     * For user type permissions, the details of the users and applications for this permission. Read-only.
      */
     @SerializedName(value = "grantedToV2", alternate = {"GrantedToV2"})
     @Expose
@@ -82,7 +82,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Password.
-     * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
+     * Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only..
      */
     @SerializedName(value = "hasPassword", alternate = {"HasPassword"})
     @Expose
@@ -118,7 +118,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * The type of permission, e.g. read. See below for the full list of roles. Read-only.
+     * The type of permission, for example, read. See below for the full list of roles. Read-only.
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose

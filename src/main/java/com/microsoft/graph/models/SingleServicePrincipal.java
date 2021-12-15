@@ -27,7 +27,7 @@ public class SingleServicePrincipal extends SubjectSet implements IJsonBackedObj
 
     /**
      * The Description.
-     * 
+     * Description of this service principal.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class SingleServicePrincipal extends SubjectSet implements IJsonBackedObj
 
     /**
      * The Service Principal Id.
-     * 
+     * ID of the servicePrincipal.
      */
     @SerializedName(value = "servicePrincipalId", alternate = {"ServicePrincipalId"})
     @Expose
