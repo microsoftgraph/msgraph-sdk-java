@@ -32,6 +32,10 @@ public enum EducationSubmissionStatus
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * reassigned
+    */
+    REASSIGNED,
+    /**
     * For EducationSubmissionStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

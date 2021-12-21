@@ -32,6 +32,10 @@ public enum ProductFamily
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * azure Communication Services
+    */
+    AZURE_COMMUNICATION_SERVICES,
+    /**
     * For ProductFamily values that were not expected from the service
     */
     UNEXPECTED_VALUE

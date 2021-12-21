@@ -89,6 +89,7 @@ import com.microsoft.graph.requests.TeamsTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.SolutionsRootRequestBuilder;
 import com.microsoft.graph.requests.PrivacyRequestBuilder;
 import com.microsoft.graph.requests.ComplianceRequestBuilder;
 import com.microsoft.graph.requests.IdentityContainerRequestBuilder;
@@ -1119,6 +1120,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(getServiceRoot() + "/authenticationMethodsPolicy", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the SolutionsRoot
+     */
+    @Nonnull
+    public SolutionsRootRequestBuilder solutions() {
+        return new SolutionsRootRequestBuilder(getServiceRoot() + "/solutions", this, null);
     }
 
     /**

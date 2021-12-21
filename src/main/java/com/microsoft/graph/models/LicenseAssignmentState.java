@@ -66,6 +66,15 @@ public class LicenseAssignmentState implements IJsonBackedObject {
     public String error;
 
     /**
+     * The Last Updated Date Time.
+     * The timestamp when the state of the license assignment was last updated.
+     */
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastUpdatedDateTime;
+
+    /**
      * The Sku Id.
      * The unique identifier for the SKU. Read-Only.
      */

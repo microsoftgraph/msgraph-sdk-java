@@ -170,6 +170,15 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     */
+    @Nonnull
+    public ContentTypeUnpublishRequestBuilder unpublish() {
+        return new ContentTypeUnpublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unpublish"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
@@ -185,15 +194,6 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder<ContentType> {
     @Nonnull
     public ContentTypeCopyToDefaultContentLocationRequestBuilder copyToDefaultContentLocation(@Nonnull final ContentTypeCopyToDefaultContentLocationParameterSet parameters) {
         return new ContentTypeCopyToDefaultContentLocationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToDefaultContentLocation"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public ContentTypeUnpublishRequestBuilder unpublish() {
-        return new ContentTypeUnpublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unpublish"), getClient(), null);
     }
 
     /**
