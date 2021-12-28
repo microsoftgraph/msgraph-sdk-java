@@ -32,6 +32,10 @@ public enum StagedFeatureName
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * certificate Based Authentication
+    */
+    CERTIFICATE_BASED_AUTHENTICATION,
+    /**
     * For StagedFeatureName values that were not expected from the service
     */
     UNEXPECTED_VALUE
