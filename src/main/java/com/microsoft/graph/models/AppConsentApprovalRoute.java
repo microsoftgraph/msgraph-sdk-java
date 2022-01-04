@@ -30,7 +30,7 @@ public class AppConsentApprovalRoute extends Entity implements IJsonBackedObject
 
     /**
      * The App Consent Requests.
-     * 
+     * A collection of userConsentRequest objects for a specific application.
      */
     @SerializedName(value = "appConsentRequests", alternate = {"AppConsentRequests"})
     @Expose

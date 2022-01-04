@@ -46,7 +46,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the access package.
+     * The display name of the access package. Supports $filter (eq, contains).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

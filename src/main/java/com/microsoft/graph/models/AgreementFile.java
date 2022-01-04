@@ -30,7 +30,7 @@ public class AgreementFile extends AgreementFileProperties implements IJsonBacke
 
     /**
      * The Localizations.
-     * 
+     * The localized version of the terms of use agreement files attached to the agreement.
      */
     @SerializedName(value = "localizations", alternate = {"Localizations"})
     @Expose

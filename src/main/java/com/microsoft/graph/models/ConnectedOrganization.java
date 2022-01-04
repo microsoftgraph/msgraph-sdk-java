@@ -50,7 +50,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the connected organization.
+     * The display name of the connected organization. Supports $filter (eq).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

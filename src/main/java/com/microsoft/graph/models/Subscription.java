@@ -36,7 +36,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Type.
-     * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
+     * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
      */
     @SerializedName(value = "changeType", alternate = {"ChangeType"})
     @Expose
@@ -63,7 +63,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Encryption Certificate.
-     * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
+     * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
      */
     @SerializedName(value = "encryptionCertificate", alternate = {"EncryptionCertificate"})
     @Expose
@@ -72,7 +72,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Encryption Certificate Id.
-     * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
+     * Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data.
      */
     @SerializedName(value = "encryptionCertificateId", alternate = {"EncryptionCertificateId"})
     @Expose
@@ -81,7 +81,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
+     * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -90,7 +90,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Include Resource Data.
-     * When set to true, change notifications include resource data (such as content of a chat message). Optional.
+     * Optional. When set to true, change notifications include resource data (such as content of a chat message).
      */
     @SerializedName(value = "includeResourceData", alternate = {"IncludeResourceData"})
     @Expose
@@ -108,7 +108,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Lifecycle Notification Url.
-     * The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol. Optional. Read more about how Outlook resources use lifecycle notifications.
+     * Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol.
      */
     @SerializedName(value = "lifecycleNotificationUrl", alternate = {"LifecycleNotificationUrl"})
     @Expose
@@ -117,7 +117,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Query Options.
-     * OData Query Options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property eg  when the print job is completed, when a print job resource isFetchable property value becomes true etc.
+     * OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.
      */
     @SerializedName(value = "notificationQueryOptions", alternate = {"NotificationQueryOptions"})
     @Expose

@@ -114,7 +114,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * Detailed settings for recurrence using the standard Outlook recurrence object. Only weekly and absoluteMonthly on recurrencePattern are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
+     * Detailed settings for recurrence using the standard Outlook recurrence object.  Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose

@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.EducationUser;
+import com.microsoft.graph.requests.EducationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.EducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.EducationRubricCollectionRequestBuilder;
 import com.microsoft.graph.requests.EducationRubricRequestBuilder;
 import com.microsoft.graph.requests.EducationClassCollectionWithReferencesRequestBuilder;
