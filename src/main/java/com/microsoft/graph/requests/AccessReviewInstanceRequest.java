@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewInstance;
 import com.microsoft.graph.models.AccessReviewInstanceFilterByCurrentUserOptions;
+import com.microsoft.graph.requests.AccessReviewReviewerCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder;
 import java.util.Arrays;

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnlineMeetingPresenters;
 import com.microsoft.graph.models.MeetingChatMode;
 import com.microsoft.graph.models.AudioConferencing;
@@ -16,7 +17,9 @@ import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -222,6 +225,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 	@Nullable
     public String videoTeleconferenceId;
 
+    /**
+     * The Attendance Reports.
+     * The attendance reports of an online meeting. Read-only.
+     */
+    @SerializedName(value = "attendanceReports", alternate = {"AttendanceReports"})
+    @Expose
+	@Nullable
+    public MeetingAttendanceReportCollectionPage attendanceReports;
+
 
     /**
      * Sets the raw JSON object
@@ -231,5 +243,9 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("attendanceReports")) {
+            attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), MeetingAttendanceReportCollectionPage.class);
+        }
     }
 }

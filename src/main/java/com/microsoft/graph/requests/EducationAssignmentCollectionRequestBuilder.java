@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.EducationClass;
+import com.microsoft.graph.models.EducationUser;
 import com.microsoft.graph.models.EducationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class EducationAssignmentCollectionRequestBuilder extends BaseCollectionRequestBuilder<EducationAssignment, EducationAssignmentRequestBuilder, EducationAssignmentCollectionResponse, EducationAssignmentCollectionPage, EducationAssignmentCollectionRequest> {
 
     /**
-     * The request builder for this collection of EducationClass
+     * The request builder for this collection of EducationUser
      *
      * @param requestUrl     the request URL
      * @param client         the service client

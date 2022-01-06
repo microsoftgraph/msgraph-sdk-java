@@ -30,7 +30,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
     /**
      * The Definitions.
-     * 
+     * Represents the template and scheduling for an access review.
      */
     @SerializedName(value = "definitions", alternate = {"Definitions"})
     @Expose

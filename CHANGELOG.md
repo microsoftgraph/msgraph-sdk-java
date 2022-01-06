@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.10.0] - 2022-01-05
+
+### Added
+
+- Plenty of Models relating to Education and Booking added in this update. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter 
+- First Update of 2022! 
+
 ## [5.9.0] - 2021-12-15
 
 ### Added

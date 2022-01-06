@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.requests.MeetingAttendanceReportCollectionRequestBuilder;
+import com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -58,6 +60,26 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     }
 
 
+    /**
+     *  Gets a request builder for the MeetingAttendanceReport collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MeetingAttendanceReportCollectionRequestBuilder attendanceReports() {
+        return new MeetingAttendanceReportCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceReports"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MeetingAttendanceReport item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MeetingAttendanceReportRequestBuilder attendanceReports(@Nonnull final String id) {
+        return new MeetingAttendanceReportRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceReports") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for attendeeReport

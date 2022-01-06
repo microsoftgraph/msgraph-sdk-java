@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.EducationSubmissionRecipient;
 import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.EducationSubmissionRecipient;
 import com.microsoft.graph.models.EducationSubmissionStatus;
 import com.microsoft.graph.models.EducationOutcome;
 import com.microsoft.graph.models.EducationSubmissionResource;
@@ -32,6 +32,24 @@ import javax.annotation.Nonnull;
  */
 public class EducationSubmission extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Reassigned By.
+     * User who moved the status of this submission to reassigned.
+     */
+    @SerializedName(value = "reassignedBy", alternate = {"ReassignedBy"})
+    @Expose
+	@Nullable
+    public IdentitySet reassignedBy;
+
+    /**
+     * The Reassigned Date Time.
+     * Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     */
+    @SerializedName(value = "reassignedDateTime", alternate = {"ReassignedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime reassignedDateTime;
 
     /**
      * The Recipient.
@@ -71,7 +89,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Read-Only. Possible values are: working, submitted, released, returned.
+     * Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

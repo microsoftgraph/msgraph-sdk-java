@@ -135,6 +135,15 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
      * @return the request builder
      */
     @Nonnull
+    public EducationSubmissionReassignRequestBuilder reassign() {
+        return new EducationSubmissionReassignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reassign"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public EducationSubmissionReturnRequestBuilder msgraphReturn() {
         return new EducationSubmissionReturnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.return"), getClient(), null);
     }

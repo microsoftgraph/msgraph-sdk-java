@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewInstance;
 import com.microsoft.graph.models.AccessReviewInstanceFilterByCurrentUserOptions;
+import com.microsoft.graph.requests.AccessReviewReviewerCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder;
 import java.util.Arrays;
@@ -60,6 +62,26 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder<Acces
     }
 
 
+    /**
+     *  Gets a request builder for the AccessReviewReviewer collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessReviewReviewerCollectionRequestBuilder contactedReviewers() {
+        return new AccessReviewReviewerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contactedReviewers"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessReviewReviewer item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessReviewReviewerRequestBuilder contactedReviewers(@Nonnull final String id) {
+        return new AccessReviewReviewerRequestBuilder(getRequestUrlWithAdditionalSegment("contactedReviewers") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the AccessReviewInstanceDecisionItem collection
      *

@@ -49,7 +49,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
     /**
      * The State.
-     * The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only.
+     * The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -67,7 +67,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
     /**
      * The Access Package.
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose
@@ -76,7 +76,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
     /**
      * The Target.
-     * The subject of the access package assignment. Read-only. Nullable.
+     * The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

@@ -28,7 +28,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The Created Date Time.
-     * 
+     * The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The Display Name.
-     * 
+     * Localized display name of the policy file of an agreement. The localized display name is shown to end users who view the agreement.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The File Data.
-     * 
+     * Data that represents the terms of use PDF document. Read-only.
      */
     @SerializedName(value = "fileData", alternate = {"FileData"})
     @Expose
@@ -55,7 +55,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The File Name.
-     * 
+     * Name of the agreement file (for example, TOU.pdf). Read-only.
      */
     @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
@@ -64,7 +64,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The Is Default.
-     * 
+     * If none of the languages matches the client preference, indicates whether this is the default agreement file . If none of the files are marked as default, the first one is treated as the default. Read-only.
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
@@ -73,7 +73,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The Is Major Version.
-     * 
+     * Indicates whether the agreement file is a major version update. Major version updates invalidate the agreement's acceptances on the corresponding language.
      */
     @SerializedName(value = "isMajorVersion", alternate = {"IsMajorVersion"})
     @Expose
@@ -82,7 +82,7 @@ public class AgreementFileProperties extends Entity implements IJsonBackedObject
 
     /**
      * The Language.
-     * 
+     * The language of the agreement file in the format 'languagecode2-country/regioncode2'. 'languagecode2' is a lowercase two-letter code derived from ISO 639-1, while 'country/regioncode2' is derived from ISO 3166 and usually consists of two uppercase letters, or a BCP-47 language tag. For example, U.S. English is en-US. Read-only.
      */
     @SerializedName(value = "language", alternate = {"Language"})
     @Expose

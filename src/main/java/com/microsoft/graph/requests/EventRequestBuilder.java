@@ -28,8 +28,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.models.EventAcceptParameterSet;
 import com.microsoft.graph.models.EventCancelParameterSet;
+import com.microsoft.graph.models.EventAcceptParameterSet;
 import com.microsoft.graph.models.EventDeclineParameterSet;
 import com.microsoft.graph.models.EventForwardParameterSet;
 import com.microsoft.graph.models.EventSnoozeReminderParameterSet;
@@ -193,8 +193,8 @@ public class EventRequestBuilder extends BaseRequestBuilder<Event> {
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public EventAcceptRequestBuilder accept(@Nonnull final EventAcceptParameterSet parameters) {
-        return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, parameters);
+    public EventCancelRequestBuilder cancel(@Nonnull final EventCancelParameterSet parameters) {
+        return new EventCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null, parameters);
     }
 
     /**
@@ -203,8 +203,8 @@ public class EventRequestBuilder extends BaseRequestBuilder<Event> {
      * @param parameters the parameters for the service method
      */
     @Nonnull
-    public EventCancelRequestBuilder cancel(@Nonnull final EventCancelParameterSet parameters) {
-        return new EventCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null, parameters);
+    public EventAcceptRequestBuilder accept(@Nonnull final EventAcceptParameterSet parameters) {
+        return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, parameters);
     }
 
     /**

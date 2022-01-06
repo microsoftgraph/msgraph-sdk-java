@@ -97,7 +97,7 @@ public class RecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
+     * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required. For more information, see values of type property.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

@@ -50,7 +50,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Packages.
-     * Access packages.
+     * Represents access package objects.
      */
     @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose
@@ -59,7 +59,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Requests.
-     * Access package assignment requests.
+     * Represents access package assignment requests created by or on behalf of a user.
      */
     @SerializedName(value = "assignmentRequests", alternate = {"AssignmentRequests"})
     @Expose
@@ -68,7 +68,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * Access package assignments.
+     * Represents the grant of an access package to a subject (user or group).
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
@@ -77,7 +77,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalogs.
-     * Access package catalogs.
+     * Represents a group of access packages.
      */
     @SerializedName(value = "catalogs", alternate = {"Catalogs"})
     @Expose
@@ -86,7 +86,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Connected Organizations.
-     * Connected organizations.
+     * Represents references to a directory or domain of another organization whose users can request access.
      */
     @SerializedName(value = "connectedOrganizations", alternate = {"ConnectedOrganizations"})
     @Expose
@@ -95,7 +95,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * Entitlement management settings.
+     * Represents the settings that control the behavior of Azure AD entitlement management.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
