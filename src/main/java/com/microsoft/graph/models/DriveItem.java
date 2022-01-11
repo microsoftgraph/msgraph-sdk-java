@@ -60,7 +60,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Audio.
-     * Audio metadata, if the item is an audio file. Read-only.
+     * Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
      */
     @SerializedName(value = "audio", alternate = {"Audio"})
     @Expose

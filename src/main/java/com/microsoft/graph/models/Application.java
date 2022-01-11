@@ -293,7 +293,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Verified Publisher.
-     * Specifies the verified publisher of the application.
+     * Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
      */
     @SerializedName(value = "verifiedPublisher", alternate = {"VerifiedPublisher"})
     @Expose
