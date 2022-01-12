@@ -100,6 +100,7 @@ import com.microsoft.graph.requests.EducationRootRequestBuilder;
 import com.microsoft.graph.requests.RoleManagementRequestBuilder;
 import com.microsoft.graph.requests.CloudCommunicationsRequestBuilder;
 import com.microsoft.graph.requests.IdentityGovernanceRequestBuilder;
+import com.microsoft.graph.requests.IdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.ReportRootRequestBuilder;
@@ -1250,6 +1251,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public IdentityGovernanceRequestBuilder identityGovernance() {
         return new IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the IdentityProtectionRoot
+     */
+    @Nonnull
+    public IdentityProtectionRootRequestBuilder identityProtection() {
+        return new IdentityProtectionRootRequestBuilder(getServiceRoot() + "/identityProtection", this, null);
     }
 
     /**
