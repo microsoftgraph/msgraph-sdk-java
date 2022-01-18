@@ -41,7 +41,7 @@ public class BookingBusiness extends Entity implements IJsonBackedObject {
 
     /**
      * The Address.
-     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
+     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose

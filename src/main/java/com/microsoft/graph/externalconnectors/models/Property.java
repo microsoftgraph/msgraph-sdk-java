@@ -78,7 +78,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Is Searchable.
-     * Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
+     * Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
      */
     @SerializedName(value = "isSearchable", alternate = {"IsSearchable"})
     @Expose
@@ -87,7 +87,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Labels.
-     * Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
+     * Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.
      */
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
@@ -105,7 +105,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue.
+     * The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

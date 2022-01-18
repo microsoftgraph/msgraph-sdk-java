@@ -48,7 +48,7 @@ public class AccessReviewInstanceDecisionItemResource implements IJsonBackedObje
 
     /**
      * The Id.
-     * Identifier of the resource
+     * Resource ID
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

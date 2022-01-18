@@ -59,7 +59,7 @@ public class ColumnValidation implements IJsonBackedObject {
 
     /**
      * The Formula.
-     * The formula to validate column value. For examples, see Examples of common formulas in lists.
+     * The formula to validate column value. For examples, see Examples of common formulas in lists
      */
     @SerializedName(value = "formula", alternate = {"Formula"})
     @Expose

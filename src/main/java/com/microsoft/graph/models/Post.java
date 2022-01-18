@@ -111,7 +111,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * Read-only. Nullable. Supports $expand.
+     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
@@ -129,7 +129,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The In Reply To.
-     * Read-only. Supports $expand.
+     * The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
      */
     @SerializedName(value = "inReplyTo", alternate = {"InReplyTo"})
     @Expose

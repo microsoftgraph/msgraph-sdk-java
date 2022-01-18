@@ -29,7 +29,7 @@ public class CountryNamedLocation extends NamedLocation implements IJsonBackedOb
 
     /**
      * The Countries And Regions.
-     * List of countries and/or regions in two-letter format specified by ISO 3166-2. Required.
+     * List of countries and/or regions in two-letter format specified by ISO 3166-2.
      */
     @SerializedName(value = "countriesAndRegions", alternate = {"CountriesAndRegions"})
     @Expose
@@ -38,7 +38,7 @@ public class CountryNamedLocation extends NamedLocation implements IJsonBackedOb
 
     /**
      * The Country Lookup Method.
-     * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress(default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
+     * Determines what method is used to decide which country the user is located in. Possible values are clientIpAddress (default) and authenticatorAppGps. Note: authenticatorAppGps is not yet supported in the Microsoft Cloud for US Government.
      */
     @SerializedName(value = "countryLookupMethod", alternate = {"CountryLookupMethod"})
     @Expose

@@ -48,7 +48,7 @@ public class VerifiedPublisher implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The verified publisher name from the app publisher's Partner Center account.
+     * The verified publisher name from the app publisher's Microsoft Partner Network (MPN) account.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

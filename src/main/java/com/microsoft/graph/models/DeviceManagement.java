@@ -86,7 +86,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Intune Account Id.
-     * Intune Account Id for given tenant
+     * Intune Account ID for given tenant
      */
     @SerializedName(value = "intuneAccountId", alternate = {"IntuneAccountId"})
     @Expose

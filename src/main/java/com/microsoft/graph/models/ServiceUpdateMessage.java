@@ -13,7 +13,9 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.ServiceUpdateCategory;
 import com.microsoft.graph.models.ServiceUpdateSeverity;
 import com.microsoft.graph.models.ServiceUpdateMessageViewpoint;
+import com.microsoft.graph.models.ServiceAnnouncementAttachment;
 import com.microsoft.graph.models.ServiceAnnouncementBase;
+import com.microsoft.graph.requests.ServiceAnnouncementAttachmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -56,6 +58,15 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
     @Expose
 	@Nullable
     public ServiceUpdateCategory category;
+
+    /**
+     * The Has Attachments.
+     * 
+     */
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
+    @Expose
+	@Nullable
+    public Boolean hasAttachments;
 
     /**
      * The Is Major Change.
@@ -102,6 +113,15 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 	@Nullable
     public ServiceUpdateMessageViewpoint viewPoint;
 
+    /**
+     * The Attachments.
+     * 
+     */
+    @SerializedName(value = "attachments", alternate = {"Attachments"})
+    @Expose
+	@Nullable
+    public ServiceAnnouncementAttachmentCollectionPage attachments;
+
 
     /**
      * Sets the raw JSON object
@@ -111,5 +131,9 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("attachments")) {
+            attachments = serializer.deserializeObject(json.get("attachments"), ServiceAnnouncementAttachmentCollectionPage.class);
+        }
     }
 }

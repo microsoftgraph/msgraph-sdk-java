@@ -60,6 +60,15 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
     public CloudAppSecuritySessionControl cloudAppSecurity;
 
     /**
+     * The Disable Resilience Defaults.
+     * Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
+     */
+    @SerializedName(value = "disableResilienceDefaults", alternate = {"DisableResilienceDefaults"})
+    @Expose
+	@Nullable
+    public Boolean disableResilienceDefaults;
+
+    /**
      * The Persistent Browser.
      * Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
      */
