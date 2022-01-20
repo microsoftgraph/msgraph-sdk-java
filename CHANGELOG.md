@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.12.0] - 2022-01-20
+
+### Added
+
+- ServiceAnnouncementAttachment Model
+- Requests related to ServiceAnnouncementAttachment
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+
 ## [5.11.0] - 2022-01-11
 
 ### Added
