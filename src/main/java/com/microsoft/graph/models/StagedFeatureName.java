@@ -36,6 +36,10 @@ public enum StagedFeatureName
     */
     CERTIFICATE_BASED_AUTHENTICATION,
     /**
+    * multi Factor Authentication
+    */
+    MULTI_FACTOR_AUTHENTICATION,
+    /**
     * For StagedFeatureName values that were not expected from the service
     */
     UNEXPECTED_VALUE

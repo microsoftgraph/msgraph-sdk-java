@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServiceUpdateMessage;
+import com.microsoft.graph.requests.ServiceAnnouncementAttachmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.ServiceAnnouncementAttachmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -56,4 +58,34 @@ public class ServiceUpdateMessageRequestBuilder extends BaseRequestBuilder<Servi
     }
 
 
+    /**
+     *  Gets a request builder for the ServiceAnnouncementAttachment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ServiceAnnouncementAttachmentCollectionRequestBuilder attachments() {
+        return new ServiceAnnouncementAttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServiceAnnouncementAttachment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ServiceAnnouncementAttachmentRequestBuilder attachments(@Nonnull final String id) {
+        return new ServiceAnnouncementAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for attachmentsArchive
+     *
+     * @return the ServiceUpdateMessageAttachmentsArchiveStreamRequestBuilder instance
+     */
+    @Nonnull
+    public ServiceUpdateMessageAttachmentsArchiveStreamRequestBuilder attachmentsArchive() {
+        return new ServiceUpdateMessageAttachmentsArchiveStreamRequestBuilder(getRequestUrlWithAdditionalSegment("attachmentsArchive"), getClient(), null);
+    }
 }

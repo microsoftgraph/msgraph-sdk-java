@@ -39,7 +39,7 @@ public class EducationTeacher implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * ID of the teacher in the source system.
+     * Id of the Teacher in external source system.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose

@@ -28,7 +28,7 @@ public class TeamworkUserIdentity extends Identity implements IJsonBackedObject 
 
     /**
      * The User Identity Type.
-     * Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, and unknownFutureValue.
+     * Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, and phoneUser.
      */
     @SerializedName(value = "userIdentityType", alternate = {"UserIdentityType"})
     @Expose

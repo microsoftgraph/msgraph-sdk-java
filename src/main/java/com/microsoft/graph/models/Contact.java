@@ -334,7 +334,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the contact. Read-only. Nullable.
+     * The collection of open extensions defined for the contact. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose

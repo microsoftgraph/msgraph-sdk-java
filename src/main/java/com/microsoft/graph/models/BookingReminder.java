@@ -58,7 +58,7 @@ public class BookingReminder implements IJsonBackedObject {
 
     /**
      * The Recipients.
-     * The persons who should receive the reminder. Possible values are: allAttendees, staff, customer, unknownFutureValue.
+     * The persons who should receive the reminder. Possible values are: allAttendees, staff, customer and unknownFutureValue.
      */
     @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose

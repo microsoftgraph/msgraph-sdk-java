@@ -123,7 +123,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Person Type.
-     * The type of person.
+     * The type of person, for example distribution list.
      */
     @SerializedName(value = "personType", alternate = {"PersonType"})
     @Expose

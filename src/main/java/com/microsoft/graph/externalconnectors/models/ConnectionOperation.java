@@ -38,7 +38,7 @@ public class ConnectionOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed, unknownFutureValue.
+     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -32,7 +32,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog Type.
-     * Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
+     * One of UserManaged or ServiceDefault.
      */
     @SerializedName(value = "catalogType", alternate = {"CatalogType"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the access package catalog.
+     * The display name of the access package catalog. Supports $filter (eq, contains).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -95,7 +95,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Packages.
-     * The access packages in this catalog. Read-only. Nullable.
+     * The access packages in this catalog. Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose

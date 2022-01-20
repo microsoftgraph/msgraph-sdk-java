@@ -115,7 +115,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Owner Organization Id.
-     * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
+     * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
      */
     @SerializedName(value = "appOwnerOrganizationId", alternate = {"AppOwnerOrganizationId"})
     @Expose
@@ -241,7 +241,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Password Credentials.
-     * The collection of password credentials associated with the application. Not nullable.
+     * The collection of password credentials associated with the service principal. Not nullable.
      */
     @SerializedName(value = "passwordCredentials", alternate = {"PasswordCredentials"})
     @Expose
@@ -295,7 +295,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Service Principal Type.
-     * Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.
+     * Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use.
      */
     @SerializedName(value = "servicePrincipalType", alternate = {"ServicePrincipalType"})
     @Expose
@@ -331,7 +331,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Role Assigned To.
-     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
+     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
      */
     @SerializedName(value = "appRoleAssignedTo", alternate = {"AppRoleAssignedTo"})
     @Expose
@@ -416,14 +416,14 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Token Issuance Policies.
-     * The tokenIssuancePolicies assigned to this service principal.
+     * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
     public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
-     * The tokenLifetimePolicies assigned to this service principal.
+     * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;

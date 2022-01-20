@@ -55,7 +55,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
 
     /**
      * The Enrollment State.
-     * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted.
+     * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
      */
     @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose

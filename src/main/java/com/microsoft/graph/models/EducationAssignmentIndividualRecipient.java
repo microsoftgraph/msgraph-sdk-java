@@ -28,7 +28,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
 
     /**
      * The Recipients.
-     * A collection of IDs of the recipients.
+     * A collection of ids of the recipients.
      */
     @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose

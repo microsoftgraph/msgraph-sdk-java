@@ -64,7 +64,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
+     * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

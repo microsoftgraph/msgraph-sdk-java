@@ -61,7 +61,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Entity who created the class
+     * Entity who created the class.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -106,7 +106,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source.
-     * How this class was created. Possible values are: sis, manual.
+     * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      */
     @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
@@ -142,7 +142,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Term.
-     * Term for this class.
+     * Term for the class.
      */
     @SerializedName(value = "term", alternate = {"Term"})
     @Expose

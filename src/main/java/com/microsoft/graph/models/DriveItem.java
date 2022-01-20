@@ -159,7 +159,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Pending Operations.
-     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+     * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
      */
     @SerializedName(value = "pendingOperations", alternate = {"PendingOperations"})
     @Expose
