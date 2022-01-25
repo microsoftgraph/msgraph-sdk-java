@@ -61,7 +61,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Has Attachments.
-     * 
+     * Indicates whether the message has any attachment.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -97,7 +97,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Tags.
-     * A collection of tags for the service message.
+     * A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -106,7 +106,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The View Point.
-     * Represents user view points data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
+     * Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
      */
     @SerializedName(value = "viewPoint", alternate = {"ViewPoint"})
     @Expose
@@ -115,7 +115,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Attachments.
-     * 
+     * A collection of serviceAnnouncementAttachments.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose

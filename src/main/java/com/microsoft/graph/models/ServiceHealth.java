@@ -40,7 +40,7 @@ public class ServiceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Show the overral service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
+     * Show the overall service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -49,7 +49,7 @@ public class ServiceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Issues.
-     * A collection of issues happened on the service, with detailed information for each issue.
+     * A collection of issues that happened on the service, with detailed information for each issue.
      */
     @SerializedName(value = "issues", alternate = {"Issues"})
     @Expose

@@ -44,7 +44,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
 
     /**
      * The Risk Detections.
-     * 
+     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
      */
     @SerializedName(value = "riskDetections", alternate = {"RiskDetections"})
     @Expose
@@ -53,7 +53,7 @@ public class IdentityProtectionRoot implements IJsonBackedObject {
 
     /**
      * The Risky Users.
-     * 
+     * Users that are flagged as at-risk by Azure AD Identity Protection.
      */
     @SerializedName(value = "riskyUsers", alternate = {"RiskyUsers"})
     @Expose
