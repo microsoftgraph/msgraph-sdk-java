@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.13.0] - 2022-01-27
+
+### Added
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- DriveItemCreateLinkParameterSet model and builder-model. 
+- DriveItemInviteParameterSe model and builder-model.
+
 ## [5.12.0] - 2022-01-20
 
 ### Added
