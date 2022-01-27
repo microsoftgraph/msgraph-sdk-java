@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
 
     /**
      * The Scope.
-     * 
+     * Details of the scope this role is associated with.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose

@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
 
     /**
      * The Access Package Display Name.
-     * 
+     * Display name of the access package to which access has been granted.
      */
     @SerializedName(value = "accessPackageDisplayName", alternate = {"AccessPackageDisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
 
     /**
      * The Access Package Id.
-     * 
+     * Identifier of the access package to which access has been granted.
      */
     @SerializedName(value = "accessPackageId", alternate = {"AccessPackageId"})
     @Expose

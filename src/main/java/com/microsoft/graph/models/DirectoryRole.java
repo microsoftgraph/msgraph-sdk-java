@@ -31,7 +31,7 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
 
     /**
      * The Description.
-     * The description for the directory role. Read-only.
+     * The description for the directory role. Read-only. Supports $filter (eq), $search, $select.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -40,7 +40,7 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
 
     /**
      * The Display Name.
-     * The display name for the directory role. Read-only.
+     * The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
 
     /**
      * The Role Template Id.
-     * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.
+     * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.
      */
     @SerializedName(value = "roleTemplateId", alternate = {"RoleTemplateId"})
     @Expose
@@ -58,7 +58,7 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
 
     /**
      * The Members.
-     * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
+     * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage members;

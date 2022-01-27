@@ -33,7 +33,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Description.
-     * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith).
+     * An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -60,14 +60,14 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Members.
-     * Users and groups that are members of this administrative unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
+     * Users and groups that are members of this administrative unit. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage members;
 
     /**
      * The Scoped Role Members.
-     * Scoped-role members of this administrative unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
+     * Scoped-role members of this administrative unit.
      */
     @SerializedName(value = "scopedRoleMembers", alternate = {"ScopedRoleMembers"})
     @Expose

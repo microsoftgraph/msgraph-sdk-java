@@ -67,6 +67,15 @@ public class DriveItemInviteParameterSet {
     public java.util.List<DriveRecipient> recipients;
 
     /**
+     * The retain Inherited Permissions.
+     * 
+     */
+    @SerializedName(value = "retainInheritedPermissions", alternate = {"RetainInheritedPermissions"})
+    @Expose
+	@Nullable
+    public Boolean retainInheritedPermissions;
+
+    /**
      * The expiration Date Time.
      * 
      */
@@ -99,6 +108,7 @@ public class DriveItemInviteParameterSet {
         this.sendInvitation = builder.sendInvitation;
         this.message = builder.message;
         this.recipients = builder.recipients;
+        this.retainInheritedPermissions = builder.retainInheritedPermissions;
         this.expirationDateTime = builder.expirationDateTime;
         this.password = builder.password;
     }
@@ -190,6 +200,21 @@ public class DriveItemInviteParameterSet {
             return this;
         }
         /**
+         * The retainInheritedPermissions parameter value
+         */
+        @Nullable
+        protected Boolean retainInheritedPermissions;
+        /**
+         * Sets the RetainInheritedPermissions
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DriveItemInviteParameterSetBuilder withRetainInheritedPermissions(@Nullable final Boolean val) {
+            this.retainInheritedPermissions = val;
+            return this;
+        }
+        /**
          * The expirationDateTime parameter value
          */
         @Nullable
@@ -254,6 +279,9 @@ public class DriveItemInviteParameterSet {
         }
         if(this.recipients != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("recipients", recipients));
+        }
+        if(this.retainInheritedPermissions != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("retainInheritedPermissions", retainInheritedPermissions));
         }
         if(this.expirationDateTime != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("expirationDateTime", expirationDateTime));
