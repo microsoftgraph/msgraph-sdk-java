@@ -85,7 +85,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Authentication Method Configurations.
-     * Represents the settings for each authentication method.
+     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      */
     @SerializedName(value = "authenticationMethodConfigurations", alternate = {"AuthenticationMethodConfigurations"})
     @Expose
