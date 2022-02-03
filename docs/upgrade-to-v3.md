@@ -170,9 +170,15 @@ The object model for JSON batching has been improved to provide a cleaner API su
 
     ```Java
     final BatchRequestContent batchRequestContent = new BatchRequestContent();
-    final String meGetId = batchRequestContent.addbatchRequestStep(graphClient.me().buildRequest().getHttpRequest());
+    final String meGetId = batchRequestContent.addBatchRequestStep(graphClient.me().buildRequest(), HttpMethod.GET);
     final BatchResponseContent batchResponseContent = graphClient.batch().buildRequest().post(batchRequestContent);
     final User me = batchResponseContent.getResponseById(meGetId).getDeserializedBody(User.class);
+    ```
+    
+    Requests with POST body should have the body object added to the `addBatchRequestStep` like so:
+    ```Java
+    IHttpRequest request = graphClient.me().contacts().buildRequest();
+    batchRequestContent.addBatchRequestStep(request, HttpMethod.POST, body);
     ```
 
 ### IJsonBackedObject interface
