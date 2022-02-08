@@ -12,6 +12,7 @@ import com.microsoft.graph.models.Call;
 import com.microsoft.graph.models.InvitationParticipantInfo;
 import com.microsoft.graph.models.MediaConfig;
 import com.microsoft.graph.models.Modality;
+import com.microsoft.graph.models.IncomingCallOptions;
 import com.microsoft.graph.models.CancelMediaProcessingOperation;
 import com.microsoft.graph.models.ScreenSharingRole;
 import com.microsoft.graph.models.MuteParticipantOperation;

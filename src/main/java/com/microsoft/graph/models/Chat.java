@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatType;
+import com.microsoft.graph.models.TeamworkOnlineMeetingInfo;
 import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.ChatMessage;
@@ -61,6 +62,24 @@ public class Chat extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastUpdatedDateTime;
+
+    /**
+     * The Online Meeting Info.
+     * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+     */
+    @SerializedName(value = "onlineMeetingInfo", alternate = {"OnlineMeetingInfo"})
+    @Expose
+	@Nullable
+    public TeamworkOnlineMeetingInfo onlineMeetingInfo;
+
+    /**
+     * The Tenant Id.
+     * The identifier of the tenant in which the chat was created. Read-only.
+     */
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
+    @Expose
+	@Nullable
+    public String tenantId;
 
     /**
      * The Topic.

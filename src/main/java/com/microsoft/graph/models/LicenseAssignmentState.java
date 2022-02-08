@@ -58,7 +58,7 @@ public class LicenseAssignmentState implements IJsonBackedObject {
 
     /**
      * The Error.
-     * License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. Possible values: CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Others. For more information on how to identify and resolve license assignment errors see here.
+     * License assignment failure error. If the license is assigned successfully, this field will be Null. Read-Only. The possible values are CountViolation, MutuallyExclusiveViolation, DependencyViolation, ProhibitedInUsageLocationViolation, UniquenessViolation, and Other. For more information on how to identify and resolve license assignment errors see here.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -85,7 +85,7 @@ public class LicenseAssignmentState implements IJsonBackedObject {
 
     /**
      * The State.
-     * Indicate the current state of this assignment. Read-Only. Possible values: Active, ActiveWithError, Disabled and Error.
+     * Indicate the current state of this assignment. Read-Only. The possible values are Active, ActiveWithError, Disabled, and Error.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

@@ -77,7 +77,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not.  The possible values are: configured, proposed, unknownFutureValue.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

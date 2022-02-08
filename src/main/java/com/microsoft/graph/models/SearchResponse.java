@@ -10,6 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SearchHitsContainer;
+import com.microsoft.graph.models.AlterationResponse;
+import com.microsoft.graph.models.ResultTemplateDictionary;
 
 
 import com.google.gson.JsonObject;
@@ -47,6 +49,24 @@ public class SearchResponse implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<SearchHitsContainer> hitsContainers;
+
+    /**
+     * The Query Alteration Response.
+     * Provides details of query alteration response for spelling correction.
+     */
+    @SerializedName(value = "queryAlterationResponse", alternate = {"QueryAlterationResponse"})
+    @Expose
+	@Nullable
+    public AlterationResponse queryAlterationResponse;
+
+    /**
+     * The Result Templates.
+     * A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
+     */
+    @SerializedName(value = "resultTemplates", alternate = {"ResultTemplates"})
+    @Expose
+	@Nullable
+    public ResultTemplateDictionary resultTemplates;
 
     /**
      * The Search Terms.

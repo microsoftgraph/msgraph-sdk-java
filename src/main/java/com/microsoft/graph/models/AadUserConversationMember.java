@@ -46,7 +46,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
 
     /**
      * The User Id.
-     * The GUID of the user.
+     * The guid of the user.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

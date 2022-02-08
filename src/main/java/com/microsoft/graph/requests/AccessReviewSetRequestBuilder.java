@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewHistoryDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -77,5 +79,25 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder<AccessRevi
     @Nonnull
     public AccessReviewScheduleDefinitionRequestBuilder definitions(@Nonnull final String id) {
         return new AccessReviewScheduleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("definitions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessReviewHistoryDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessReviewHistoryDefinitionCollectionRequestBuilder historyDefinitions() {
+        return new AccessReviewHistoryDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("historyDefinitions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessReviewHistoryDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessReviewHistoryDefinitionRequestBuilder historyDefinitions(@Nonnull final String id) {
+        return new AccessReviewHistoryDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("historyDefinitions") + "/" + id, getClient(), null);
     }
 }

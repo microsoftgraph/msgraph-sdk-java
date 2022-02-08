@@ -45,7 +45,7 @@ public class AccessReviewReviewer extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * User principal name of the user.
+     * User principal name of the reviewer.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

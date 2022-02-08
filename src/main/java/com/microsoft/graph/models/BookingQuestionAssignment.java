@@ -39,7 +39,7 @@ public class BookingQuestionAssignment implements IJsonBackedObject {
 
     /**
      * The Is Required.
-     * Indicates whether it is mandatory to answer the custom question.
+     * The ID of the custom question.
      */
     @SerializedName(value = "isRequired", alternate = {"IsRequired"})
     @Expose
@@ -48,7 +48,7 @@ public class BookingQuestionAssignment implements IJsonBackedObject {
 
     /**
      * The Question Id.
-     * If it is mandatory to answer the custom question.
+     * Indicates whether it is mandatory to answer the custom question.
      */
     @SerializedName(value = "questionId", alternate = {"QuestionId"})
     @Expose

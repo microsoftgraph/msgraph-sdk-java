@@ -41,7 +41,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Policies.
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
+     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
      */
     @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose

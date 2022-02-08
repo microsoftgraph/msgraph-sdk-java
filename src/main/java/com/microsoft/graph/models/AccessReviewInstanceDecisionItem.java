@@ -93,7 +93,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Principal Link.
-     * Link to the principal object. For example: https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
+     * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      */
     @SerializedName(value = "principalLink", alternate = {"PrincipalLink"})
     @Expose
