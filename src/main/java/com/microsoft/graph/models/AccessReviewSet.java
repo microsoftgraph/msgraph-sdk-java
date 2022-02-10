@@ -10,8 +10,10 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
+import com.microsoft.graph.models.AccessReviewHistoryDefinition;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionPage;
+import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -37,6 +39,15 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 	@Nullable
     public AccessReviewScheduleDefinitionCollectionPage definitions;
 
+    /**
+     * The History Definitions.
+     * Represents a collection of access review history data and the scopes used to collect that data.
+     */
+    @SerializedName(value = "historyDefinitions", alternate = {"HistoryDefinitions"})
+    @Expose
+	@Nullable
+    public AccessReviewHistoryDefinitionCollectionPage historyDefinitions;
+
 
     /**
      * Sets the raw JSON object
@@ -49,6 +60,10 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
         if (json.has("definitions")) {
             definitions = serializer.deserializeObject(json.get("definitions"), AccessReviewScheduleDefinitionCollectionPage.class);
+        }
+
+        if (json.has("historyDefinitions")) {
+            historyDefinitions = serializer.deserializeObject(json.get("historyDefinitions"), AccessReviewHistoryDefinitionCollectionPage.class);
         }
     }
 }

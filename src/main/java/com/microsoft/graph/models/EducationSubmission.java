@@ -89,7 +89,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Read-only. Possible values are: working, submitted, released, returned, unknownFutureValue and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
+     * Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

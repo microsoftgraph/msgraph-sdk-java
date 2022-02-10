@@ -28,7 +28,7 @@ public class TeamworkConversationIdentity extends Identity implements IJsonBacke
 
     /**
      * The Conversation Identity Type.
-     * Type of conversation. Possible values are: team, channel, and chat.
+     * Type of conversation. Possible values are: team, channel, chat, and unknownFutureValue.
      */
     @SerializedName(value = "conversationIdentityType", alternate = {"ConversationIdentityType"})
     @Expose

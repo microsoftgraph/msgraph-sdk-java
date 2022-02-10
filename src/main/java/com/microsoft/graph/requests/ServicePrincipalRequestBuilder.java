@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.ServicePrincipal;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
+import com.microsoft.graph.models.SelfSignedCertificate;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
@@ -46,6 +47,7 @@ import com.microsoft.graph.models.ServicePrincipalAddKeyParameterSet;
 import com.microsoft.graph.models.ServicePrincipalAddPasswordParameterSet;
 import com.microsoft.graph.models.ServicePrincipalRemoveKeyParameterSet;
 import com.microsoft.graph.models.ServicePrincipalRemovePasswordParameterSet;
+import com.microsoft.graph.models.ServicePrincipalAddTokenSigningCertificateParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberObjectsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectGetMemberGroupsParameterSet;
@@ -851,6 +853,16 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
     @Nonnull
     public ServicePrincipalRemovePasswordRequestBuilder removePassword(@Nonnull final ServicePrincipalRemovePasswordParameterSet parameters) {
         return new ServicePrincipalRemovePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removePassword"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ServicePrincipalAddTokenSigningCertificateRequestBuilder addTokenSigningCertificate(@Nonnull final ServicePrincipalAddTokenSigningCertificateParameterSet parameters) {
+        return new ServicePrincipalAddTokenSigningCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addTokenSigningCertificate"), getClient(), null, parameters);
     }
 
     /**

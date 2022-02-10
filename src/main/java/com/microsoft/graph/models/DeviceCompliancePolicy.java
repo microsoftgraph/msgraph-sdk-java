@@ -121,7 +121,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
 
     /**
      * The Scheduled Actions For Rule.
-     * The list of scheduled action for this rule
+     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      */
     @SerializedName(value = "scheduledActionsForRule", alternate = {"ScheduledActionsForRule"})
     @Expose

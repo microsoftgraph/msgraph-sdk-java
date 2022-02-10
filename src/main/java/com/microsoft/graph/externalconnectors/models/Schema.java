@@ -29,7 +29,7 @@ public class Schema extends Entity implements IJsonBackedObject {
 
     /**
      * The Base Type.
-     * Must be set to microsoft.graph.externalItem. Required.
+     * Must be set to microsoft.graph.externalConnector.externalItem. Required.
      */
     @SerializedName(value = "baseType", alternate = {"BaseType"})
     @Expose

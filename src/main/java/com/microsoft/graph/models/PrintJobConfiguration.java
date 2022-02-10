@@ -140,7 +140,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Media Size.
-     * The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
+     * The media size to use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values listed in the printerCapabilities topic.
      */
     @SerializedName(value = "mediaSize", alternate = {"MediaSize"})
     @Expose

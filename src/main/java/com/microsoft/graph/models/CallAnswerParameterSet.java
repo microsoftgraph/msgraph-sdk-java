@@ -7,6 +7,7 @@ package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.MediaConfig;
 import com.microsoft.graph.models.Modality;
+import com.microsoft.graph.models.IncomingCallOptions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -57,6 +58,15 @@ public class CallAnswerParameterSet {
 	@Nullable
     public Integer participantCapacity;
 
+    /**
+     * The call Options.
+     * 
+     */
+    @SerializedName(value = "callOptions", alternate = {"CallOptions"})
+    @Expose
+	@Nullable
+    public IncomingCallOptions callOptions;
+
 
     /**
      * Instiaciates a new CallAnswerParameterSet
@@ -71,6 +81,7 @@ public class CallAnswerParameterSet {
         this.mediaConfig = builder.mediaConfig;
         this.acceptedModalities = builder.acceptedModalities;
         this.participantCapacity = builder.participantCapacity;
+        this.callOptions = builder.callOptions;
     }
     /**
      * Gets a new builder for the body
@@ -145,6 +156,21 @@ public class CallAnswerParameterSet {
             return this;
         }
         /**
+         * The callOptions parameter value
+         */
+        @Nullable
+        protected IncomingCallOptions callOptions;
+        /**
+         * Sets the CallOptions
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public CallAnswerParameterSetBuilder withCallOptions(@Nullable final IncomingCallOptions val) {
+            this.callOptions = val;
+            return this;
+        }
+        /**
          * Instanciates a new CallAnswerParameterSetBuilder
          */
         @Nullable
@@ -176,6 +202,9 @@ public class CallAnswerParameterSet {
         }
         if(this.participantCapacity != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("participantCapacity", participantCapacity));
+        }
+        if(this.callOptions != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("callOptions", callOptions));
         }
         return result;
     }

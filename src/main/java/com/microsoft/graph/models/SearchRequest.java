@@ -12,6 +12,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AggregationOption;
 import com.microsoft.graph.models.EntityType;
 import com.microsoft.graph.models.SearchQuery;
+import com.microsoft.graph.models.SearchAlterationOptions;
+import com.microsoft.graph.models.ResultTemplateOption;
 import com.microsoft.graph.models.SortProperty;
 
 
@@ -113,6 +115,24 @@ public class SearchRequest implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SearchQuery query;
+
+    /**
+     * The Query Alteration Options.
+     * Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
+     */
+    @SerializedName(value = "queryAlterationOptions", alternate = {"QueryAlterationOptions"})
+    @Expose
+	@Nullable
+    public SearchAlterationOptions queryAlterationOptions;
+
+    /**
+     * The Result Template Options.
+     * Provides the search result templates options for rendering connectors search results.
+     */
+    @SerializedName(value = "resultTemplateOptions", alternate = {"ResultTemplateOptions"})
+    @Expose
+	@Nullable
+    public ResultTemplateOption resultTemplateOptions;
 
     /**
      * The Size.

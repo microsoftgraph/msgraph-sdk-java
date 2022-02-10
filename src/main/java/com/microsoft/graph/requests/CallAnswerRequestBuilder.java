@@ -8,6 +8,7 @@ import com.microsoft.graph.requests.CallAnswerRequest;
 import com.microsoft.graph.models.Call;
 import com.microsoft.graph.models.MediaConfig;
 import com.microsoft.graph.models.Modality;
+import com.microsoft.graph.models.IncomingCallOptions;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.models.CallAnswerParameterSet;
 import com.microsoft.graph.core.IBaseClient;
