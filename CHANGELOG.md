@@ -11,6 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.14.0] - 2022-02-10
+
+### Added
+
+- AccessReviewHistory(DecisionFilter, Definition, Instance, and etc) models
+- AccessReviewHistory(DecisionFilter, Definition, Instance, and etc) requests and requestBuilders.   
+- Dictionary, IncomingCallOptions, ResultTemplate(Dictionary/Option), and SearchAlteration(Options/Type) models. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- SearchHit, SearchResponse, and SearchRequest models. 
+- AccessReviewSet, CallAnswerParameterSet, Chat models. 
+
+
 ## [5.13.0] - 2022-01-27
 
 ### Added
