@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.AutomaticRepliesSetting;
 import com.microsoft.graph.models.DelegateMeetingMessageDeliveryOptions;
 import com.microsoft.graph.models.LocaleInfo;
+import com.microsoft.graph.models.UserPurpose;
 import com.microsoft.graph.models.WorkingHours;
 
 
@@ -103,6 +104,15 @@ public class MailboxSettings implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String timeZone;
+
+    /**
+     * The User Purpose.
+     * The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
+     */
+    @SerializedName(value = "userPurpose", alternate = {"UserPurpose"})
+    @Expose
+	@Nullable
+    public UserPurpose userPurpose;
 
     /**
      * The Working Hours.

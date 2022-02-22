@@ -162,7 +162,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Channels.
-     * The collection of channels &amp; messages associated with the team.
+     * The collection of channels and messages associated with the team.
      */
     @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose
