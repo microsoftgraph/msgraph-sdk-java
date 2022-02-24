@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.15.0] - 2022-02-24
+
+### Added
+
+- UserPurpose model.  
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+ 
 ## [5.14.0] - 2022-02-10
 
 ### Added
