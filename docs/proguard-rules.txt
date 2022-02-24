@@ -1,4 +1,5 @@
--keep class com.microsoft.** { *; }
+# Keep the names of JSON-serializable objects.
+-keepnames public class * implements com.microsoft.graph.serializer.IJsonBackedObject
 
 ## GSON 2.2.4 specific rules ##
 # Source: https://github.com/google/gson/blob/master/examples/android-proguard-example/proguard.cfg
