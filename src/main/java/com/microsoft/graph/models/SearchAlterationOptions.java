@@ -39,7 +39,7 @@ public class SearchAlterationOptions implements IJsonBackedObject {
 
     /**
      * The Enable Modification.
-     * Indicates whether spelling modifications are enabled. If enabled, user will get the search results for corrected query when there are no results for the original query with typos and get the spelling modification information in queryAlterationResponse property of the response. Optional.
+     * Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional.
      */
     @SerializedName(value = "enableModification", alternate = {"EnableModification"})
     @Expose
@@ -48,7 +48,7 @@ public class SearchAlterationOptions implements IJsonBackedObject {
 
     /**
      * The Enable Suggestion.
-     * Indicates whether spelling suggestions are enabled. If enabled, user will get the search results for original search query and suggesting spelling correction in queryAlterationResponse property of the response for typos in query. Optional.
+     * Indicates whether spelling suggestions are enabled. If enabled, the user will get the search results for the original search query and suggestions for spelling correction in the queryAlterationResponse property of the response for the typos in the query. Optional.
      */
     @SerializedName(value = "enableSuggestion", alternate = {"EnableSuggestion"})
     @Expose

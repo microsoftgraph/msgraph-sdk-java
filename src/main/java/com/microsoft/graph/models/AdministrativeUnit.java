@@ -51,7 +51,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Visibility.
-     * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose

@@ -67,7 +67,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique role identifier inside the appRoles collection. When creating a new app role, a new Guid identifier must be provided.
+     * Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

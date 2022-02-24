@@ -57,7 +57,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * The date and time at which the credential expires.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Key.
-     * The certificate's raw data in byte array converted to Base64 string; for example, [System.Convert]::ToBase64String($Cert.GetRawCertData()).
+     * The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -93,7 +93,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of key credential; for example, Symmetric.
+     * The type of key credential; for example, Symmetric, AsymmetricX509Cert.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
