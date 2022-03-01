@@ -34,7 +34,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
+     * Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -52,7 +52,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Additional Info.
-     * Additional information associated with the risk detection in JSON format.
+     * Additional information associated with the risk detection in JSON format. For example, '[{/'Key/':/'userAgent/',/'Value/':/'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36/'}]'. Possible keys in the additionalInfo JSON string are: userAgent, alertUrl, relatedEventTimeInUtc, relatedUserAgent, deviceInformation, relatedLocation, requestId, correlationId, lastActivityTimeInUtc, malwareName, clientLocation, clientIp, riskReasons. For more information about riskReasons and possible values, see riskReasons values.
      */
     @SerializedName(value = "additionalInfo", alternate = {"AdditionalInfo"})
     @Expose
@@ -70,7 +70,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Detected Date Time.
-     * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
+     * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "detectedDateTime", alternate = {"DetectedDateTime"})
     @Expose
@@ -133,7 +133,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Event Type.
-     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
+     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, passwordSpray, impossibleTravel, newCountry, anomalousToken, tokenIssuerAnomaly,suspiciousBrowser, riskyIPAddress, mcasSuspiciousInboxManipulationRules, suspiciousInboxForwarding, and unknownFutureValue. If the risk detection is a premium detection, will show generic. For more information about each value, see riskEventType values.
      */
     @SerializedName(value = "riskEventType", alternate = {"RiskEventType"})
     @Expose
