@@ -456,7 +456,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * Read-only. Nullable.
+     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose

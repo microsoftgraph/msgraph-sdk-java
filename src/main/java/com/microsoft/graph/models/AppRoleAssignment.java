@@ -36,7 +36,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Created Date Time.
-     * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -54,7 +54,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Principal Id.
-     * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
+     * The unique identifier (id) for the user, group, or service principal being granted the app role. Required on create.
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -63,7 +63,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Principal Type.
-     * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
+     * The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.
      */
     @SerializedName(value = "principalType", alternate = {"PrincipalType"})
     @Expose

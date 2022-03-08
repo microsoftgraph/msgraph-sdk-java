@@ -128,7 +128,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Tabs.
-     * 
+     * A collection of all the tabs in the chat. Nullable.
      */
     @SerializedName(value = "tabs", alternate = {"Tabs"})
     @Expose
