@@ -11,6 +11,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.16.0] - 2022-03-10
+
+### Added
+
+- ResourceSpecificPermission and SubscriptionReauthorizeParameterSet models
+- SubscriptionReauthorizeParameterSet related requests.
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- ServicePrincipal model.
+- SubscriptionRequestBuilder request.
+
 ## [5.15.0] - 2022-02-24
 
 ### Added
