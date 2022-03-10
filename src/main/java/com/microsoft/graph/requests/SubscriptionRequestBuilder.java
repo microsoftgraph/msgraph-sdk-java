@@ -56,4 +56,13 @@ public class SubscriptionRequestBuilder extends BaseRequestBuilder<Subscription>
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SubscriptionReauthorizeRequestBuilder reauthorize() {
+        return new SubscriptionReauthorizeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reauthorize"), getClient(), null);
+    }
 }

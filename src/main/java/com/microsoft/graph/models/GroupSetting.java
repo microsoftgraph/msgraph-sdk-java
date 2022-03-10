@@ -38,7 +38,7 @@ public class GroupSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Template Id.
-     * Unique identifier for the template used to create this group of settings. Read-only.
+     * Unique identifier for the tenant-level groupSettingTemplates object that's been customized for this group-level settings object. Read-only.
      */
     @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
@@ -47,7 +47,7 @@ public class GroupSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-     * Collection of name value pairs. Must contain and set all the settings defined in the template.
+     * Collection of name-value pairs corresponding to the name and defaultValue properties in the referenced groupSettingTemplates object.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose

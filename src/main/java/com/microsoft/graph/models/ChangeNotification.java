@@ -79,7 +79,7 @@ public class ChangeNotification implements IJsonBackedObject {
 
     /**
      * The Lifecycle Event.
-     * The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, subscriptionRemoved, reauthorizationRequired.
+     * The type of lifecycle notification if the current notification is a lifecycle notification. Optional. Supported values are missed, subscriptionRemoved, reauthorizationRequired. Optional.
      */
     @SerializedName(value = "lifecycleEvent", alternate = {"LifecycleEvent"})
     @Expose
@@ -97,7 +97,7 @@ public class ChangeNotification implements IJsonBackedObject {
 
     /**
      * The Resource Data.
-     * The content of this property depends on the type of resource being subscribed to. Required.
+     * The content of this property depends on the type of resource being subscribed to. Optional.
      */
     @SerializedName(value = "resourceData", alternate = {"ResourceData"})
     @Expose
@@ -115,7 +115,7 @@ public class ChangeNotification implements IJsonBackedObject {
 
     /**
      * The Subscription Id.
-     * The unique identifier of the subscription that generated the notification.
+     * The unique identifier of the subscription that generated the notification.Required.
      */
     @SerializedName(value = "subscriptionId", alternate = {"SubscriptionId"})
     @Expose
@@ -124,7 +124,7 @@ public class ChangeNotification implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * The unique identifier of the tenant from which the change notification originated.
+     * The unique identifier of the tenant from which the change notification originated. Required.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

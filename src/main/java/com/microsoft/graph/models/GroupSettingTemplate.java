@@ -38,7 +38,7 @@ public class GroupSettingTemplate extends DirectoryObject implements IJsonBacked
 
     /**
      * The Display Name.
-     * Display name of the template.
+     * Display name of the template. The template named Group.Unified can be used to configure tenant-wide Microsoft 365 group settings, while the template named Group.Unified.Guest can be used to configure group-specific settings.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

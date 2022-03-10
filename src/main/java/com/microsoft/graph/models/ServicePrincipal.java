@@ -15,6 +15,7 @@ import com.microsoft.graph.models.InformationalUrl;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PermissionScope;
 import com.microsoft.graph.models.PasswordCredential;
+import com.microsoft.graph.models.ResourceSpecificPermission;
 import com.microsoft.graph.models.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.ClaimsMappingPolicy;
@@ -274,6 +275,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     @Expose
 	@Nullable
     public java.util.List<String> replyUrls;
+
+    /**
+     * The Resource Specific Application Permissions.
+     * The resource-specific application permissions exposed by this application. Currently, resource-specific permissions are only supported for Teams apps accessing to specific chats and teams using Microsoft Graph. Read-only.
+     */
+    @SerializedName(value = "resourceSpecificApplicationPermissions", alternate = {"ResourceSpecificApplicationPermissions"})
+    @Expose
+	@Nullable
+    public java.util.List<ResourceSpecificPermission> resourceSpecificApplicationPermissions;
 
     /**
      * The Saml Single Sign On Settings.

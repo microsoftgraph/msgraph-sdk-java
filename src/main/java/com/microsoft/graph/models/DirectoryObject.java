@@ -27,7 +27,7 @@ public class DirectoryObject extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Date Time.
-     * 
+     * Date and time when this object was deleted. Always null when the object hasn't been deleted.
      */
     @SerializedName(value = "deletedDateTime", alternate = {"DeletedDateTime"})
     @Expose

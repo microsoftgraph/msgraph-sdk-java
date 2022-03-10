@@ -57,7 +57,7 @@ public class AssignedPlan implements IJsonBackedObject {
 
     /**
      * The Service.
-     * The name of the service; for example, 'Exchange'.
+     * The name of the service; for example, exchange.
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose
@@ -66,7 +66,7 @@ public class AssignedPlan implements IJsonBackedObject {
 
     /**
      * The Service Plan Id.
-     * A GUID that identifies the service plan.
+     * A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.
      */
     @SerializedName(value = "servicePlanId", alternate = {"ServicePlanId"})
     @Expose

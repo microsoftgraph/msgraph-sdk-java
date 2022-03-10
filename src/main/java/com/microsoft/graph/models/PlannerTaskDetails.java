@@ -39,7 +39,7 @@ public class PlannerTaskDetails extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the task
+     * Description of the task.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
