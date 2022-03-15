@@ -11,6 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.17.0] - 2022-03-17
+
+### Added
+
+- AccessPackageApprovalStage, TargetApplicationOwners, AllowedTargetScope, & TargetManager models.
+- AccessPackageAssignment(AprovalSettings, Policy, ReviewSettings, and etc) models.
+- AccessPackageAssignment related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Dependencies in AccessPackageAssignment and it's related classes. 
+- Dependencies in EntitlementManagement and it's request builder. 
+
 ## [5.16.0] - 2022-03-10
 
 ### Added
