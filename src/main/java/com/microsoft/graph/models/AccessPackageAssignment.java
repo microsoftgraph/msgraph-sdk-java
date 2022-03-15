@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.EntitlementManagementSchedule;
 import com.microsoft.graph.models.AccessPackageAssignmentState;
 import com.microsoft.graph.models.AccessPackage;
+import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.AccessPackageSubject;
 import com.microsoft.graph.models.Entity;
 
@@ -73,6 +74,15 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public AccessPackage accessPackage;
+
+    /**
+     * The Assignment Policy.
+     * 
+     */
+    @SerializedName(value = "assignmentPolicy", alternate = {"AssignmentPolicy"})
+    @Expose
+	@Nullable
+    public AccessPackageAssignmentPolicy assignmentPolicy;
 
     /**
      * The Target.

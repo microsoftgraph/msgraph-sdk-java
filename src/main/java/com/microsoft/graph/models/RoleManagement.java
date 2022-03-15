@@ -49,7 +49,7 @@ public class RoleManagement implements IJsonBackedObject {
 
     /**
      * The Entitlement Management.
-     * Container for all entitlement management resources in Azure AD identity governance.
+     * Container for roles and assignments for entitlement management resources.
      */
     @SerializedName(value = "entitlementManagement", alternate = {"EntitlementManagement"})
     @Expose

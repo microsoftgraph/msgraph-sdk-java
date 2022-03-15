@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageAssignment;
 import com.microsoft.graph.models.AccessPackageAssignmentFilterByCurrentUserOptions;
 import com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageSubjectWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageAssignmentRequestRequirements;
 import com.microsoft.graph.models.AccessPackageFilterByCurrentUserOptions;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageCatalogWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -59,6 +61,26 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder<AccessPackag
     }
 
 
+    /**
+     *  Gets a request builder for the AccessPackageAssignmentPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyCollectionRequestBuilder assignmentPolicies() {
+        return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageAssignmentPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyRequestBuilder assignmentPolicies(@Nonnull final String id) {
+        return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicies") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for AccessPackageCatalog

@@ -8,8 +8,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -72,6 +75,15 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime modifiedDateTime;
 
     /**
+     * The Assignment Policies.
+     * 
+     */
+    @SerializedName(value = "assignmentPolicies", alternate = {"AssignmentPolicies"})
+    @Expose
+	@Nullable
+    public AccessPackageAssignmentPolicyCollectionPage assignmentPolicies;
+
+    /**
      * The Catalog.
      * Read-only. Nullable.
      */
@@ -89,5 +101,9 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("assignmentPolicies")) {
+            assignmentPolicies = serializer.deserializeObject(json.get("assignmentPolicies"), AccessPackageAssignmentPolicyCollectionPage.class);
+        }
     }
 }

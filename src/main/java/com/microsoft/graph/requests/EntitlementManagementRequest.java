@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.ApprovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.ApprovalRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder;
