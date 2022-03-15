@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.ApprovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.ApprovalRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageAssignmentCollectionRequestBuilder;
@@ -108,6 +110,26 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<Enti
     @Nonnull
     public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
         return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackageAssignmentPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyCollectionRequestBuilder assignmentPolicies() {
+        return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackageAssignmentPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyRequestBuilder assignmentPolicies(@Nonnull final String id) {
+        return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the AccessPackageAssignmentRequest collection

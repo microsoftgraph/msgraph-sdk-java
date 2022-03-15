@@ -100,7 +100,7 @@ public class AgreementAcceptance extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * The state of the agreement acceptance. Possible values are: accepted, declined.
+     * The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

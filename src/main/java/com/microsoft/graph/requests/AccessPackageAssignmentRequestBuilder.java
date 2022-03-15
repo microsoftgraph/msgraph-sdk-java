@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageAssignment;
 import com.microsoft.graph.models.AccessPackageAssignmentFilterByCurrentUserOptions;
 import com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageSubjectWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -68,6 +69,16 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
     @Nonnull
     public AccessPackageWithReferenceRequestBuilder accessPackage() {
         return new AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AccessPackageAssignmentPolicy
+     *
+     * @return the AccessPackageAssignmentPolicyWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyWithReferenceRequestBuilder assignmentPolicy() {
+        return new AccessPackageAssignmentPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentPolicy"), getClient(), null);
     }
 
     /**

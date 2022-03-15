@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.AccessPackage;
+import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
 import com.microsoft.graph.models.AccessPackageAssignmentRequest;
 import com.microsoft.graph.models.AccessPackageAssignment;
 import com.microsoft.graph.models.AccessPackageCatalog;
@@ -19,6 +20,7 @@ import com.microsoft.graph.models.EntitlementManagementSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ApprovalCollectionPage;
 import com.microsoft.graph.requests.AccessPackageCollectionPage;
+import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionPage;
 import com.microsoft.graph.requests.AccessPackageAssignmentRequestCollectionPage;
 import com.microsoft.graph.requests.AccessPackageAssignmentCollectionPage;
 import com.microsoft.graph.requests.AccessPackageCatalogCollectionPage;
@@ -41,7 +43,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Assignment Approvals.
-     * 
+     * Approval stages for assignment requests.
      */
     @SerializedName(value = "accessPackageAssignmentApprovals", alternate = {"AccessPackageAssignmentApprovals"})
     @Expose
@@ -56,6 +58,15 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AccessPackageCollectionPage accessPackages;
+
+    /**
+     * The Assignment Policies.
+     * 
+     */
+    @SerializedName(value = "assignmentPolicies", alternate = {"AssignmentPolicies"})
+    @Expose
+	@Nullable
+    public AccessPackageAssignmentPolicyCollectionPage assignmentPolicies;
 
     /**
      * The Assignment Requests.
@@ -118,6 +129,10 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("accessPackages")) {
             accessPackages = serializer.deserializeObject(json.get("accessPackages"), AccessPackageCollectionPage.class);
+        }
+
+        if (json.has("assignmentPolicies")) {
+            assignmentPolicies = serializer.deserializeObject(json.get("assignmentPolicies"), AccessPackageAssignmentPolicyCollectionPage.class);
         }
 
         if (json.has("assignmentRequests")) {
