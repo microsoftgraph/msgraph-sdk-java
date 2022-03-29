@@ -71,7 +71,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Should Prefix Name To File.
-     * Add the name of the document set to each file name.
+     * Indicates whether to add the name of the document set to each file name.
      */
     @SerializedName(value = "shouldPrefixNameToFile", alternate = {"ShouldPrefixNameToFile"})
     @Expose

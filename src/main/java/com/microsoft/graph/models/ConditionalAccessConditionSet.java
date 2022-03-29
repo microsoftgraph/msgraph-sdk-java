@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ConditionalAccessApplications;
+import com.microsoft.graph.models.ConditionalAccessClientApplications;
 import com.microsoft.graph.models.ConditionalAccessClientApp;
 import com.microsoft.graph.models.ConditionalAccessDevices;
 import com.microsoft.graph.models.ConditionalAccessLocations;
@@ -53,6 +54,15 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ConditionalAccessApplications applications;
+
+    /**
+     * The Client Applications.
+     * Client applications (service principals and workload identities) included in and excluded from the policy. Either users or clientApplications is required.
+     */
+    @SerializedName(value = "clientApplications", alternate = {"ClientApplications"})
+    @Expose
+	@Nullable
+    public ConditionalAccessClientApplications clientApplications;
 
     /**
      * The Client App Types.

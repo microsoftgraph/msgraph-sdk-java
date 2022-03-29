@@ -39,7 +39,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The Custom Key Identifier.
-     * 
+     * Custom key identifier.
      */
     @SerializedName(value = "customKeyIdentifier", alternate = {"CustomKeyIdentifier"})
     @Expose
@@ -48,7 +48,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The friendly name for the key.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The date and time at which the credential expires. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * The value for the key credential. Should be a base-64 encoded value.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -75,7 +75,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The Key Id.
-     * 
+     * The unique identifier (GUID) for the key.
      */
     @SerializedName(value = "keyId", alternate = {"KeyId"})
     @Expose
@@ -84,7 +84,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The date and time at which the credential becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -93,7 +93,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The Thumbprint.
-     * 
+     * The thumbprint value for the key.
      */
     @SerializedName(value = "thumbprint", alternate = {"Thumbprint"})
     @Expose
@@ -102,7 +102,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of key credential. 'AsymmetricX509Cert'.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -111,7 +111,7 @@ public class SelfSignedCertificate implements IJsonBackedObject {
 
     /**
      * The Usage.
-     * 
+     * A string that describes the purpose for which the key can be used. For example, 'Verify'.
      */
     @SerializedName(value = "usage", alternate = {"Usage"})
     @Expose
