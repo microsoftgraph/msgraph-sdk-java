@@ -85,6 +85,7 @@ jobs:
             sudo apt install pkgdiff 
             pkgdiff -hide-unchanged ${{ env.CURRENT_PKG_DIFF }} ${{ env.PRIOR_PKG_DIFF }}
       - name: Upload Diff Artifact
+        if: ${{ always() }}
         uses: actions/upload-artifact@v2.2.4
         with:
           name: diff
