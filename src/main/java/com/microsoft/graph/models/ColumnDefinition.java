@@ -20,6 +20,7 @@ import com.microsoft.graph.models.HyperlinkOrPictureColumn;
 import com.microsoft.graph.models.LookupColumn;
 import com.microsoft.graph.models.NumberColumn;
 import com.microsoft.graph.models.PersonOrGroupColumn;
+import com.microsoft.graph.models.ContentTypeInfo;
 import com.microsoft.graph.models.TermColumn;
 import com.microsoft.graph.models.TextColumn;
 import com.microsoft.graph.models.ThumbnailColumn;
@@ -267,6 +268,15 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean required;
+
+    /**
+     * The Source Content Type.
+     * ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     */
+    @SerializedName(value = "sourceContentType", alternate = {"SourceContentType"})
+    @Expose
+	@Nullable
+    public ContentTypeInfo sourceContentType;
 
     /**
      * The Term.

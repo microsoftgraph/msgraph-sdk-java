@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.18.0] - 2022-03-30
+
+### Added
+
+- ConditionalAccessClientApplications model removed.
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- ColumnDefinition, ConditionalAccessConditionSet, & ConditionalAccessDevicePlatform models changed.  
+
 ## [5.17.0] - 2022-03-17
 
 ### Added

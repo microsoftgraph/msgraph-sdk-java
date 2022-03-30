@@ -40,6 +40,10 @@ public enum ConditionalAccessDevicePlatform
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * linux
+    */
+    LINUX,
+    /**
     * For ConditionalAccessDevicePlatform values that were not expected from the service
     */
     UNEXPECTED_VALUE

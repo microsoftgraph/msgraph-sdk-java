@@ -1065,7 +1065,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Authentication.
-     * 
+     * The authentication methods that are supported for the user.
      */
     @SerializedName(value = "authentication", alternate = {"Authentication"})
     @Expose
