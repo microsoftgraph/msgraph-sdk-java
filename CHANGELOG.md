@@ -11,6 +11,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.19.0] - 2022-04-05
+
+### Added
+
+- AccessPackageAssignmentRequestReprocessParameterSet model and related requests.
+- AccessPackageAssignmentReprocessParameterSet model and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- AccessPackageAssignmentRequestBuilder & AccessPackageAssignmentRequestRequestBuilder requests. 
+- User model. 
+
 ## [5.18.0] - 2022-03-30
 
 ### Added
