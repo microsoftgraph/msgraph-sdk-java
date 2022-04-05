@@ -49,7 +49,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Related Contacts.
-     * Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
+     * Related records associated with the user. Read-only.
      */
     @SerializedName(value = "relatedContacts", alternate = {"RelatedContacts"})
     @Expose
@@ -94,7 +94,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Entity who created the user.
+     * The entity who created the user.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -130,7 +130,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source Detail.
-     * The name of the external source this resources was generated from.
+     * The name of the external source this resource was generated from.
      */
     @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
     @Expose
@@ -148,7 +148,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user; for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
+     * The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
      */
     @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
@@ -157,7 +157,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Mailing Address.
-     * Mail address of user.
+     * The mail address of the user.
      */
     @SerializedName(value = "mailingAddress", alternate = {"MailingAddress"})
     @Expose
@@ -175,7 +175,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Middle Name.
-     * The middle name of user.
+     * The middle name of the user.
      */
     @SerializedName(value = "middleName", alternate = {"MiddleName"})
     @Expose
@@ -202,7 +202,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Info.
-     * Additional information used to associate the Azure AD user with its Active Directory counterpart.
+     * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      */
     @SerializedName(value = "onPremisesInfo", alternate = {"OnPremisesInfo"})
     @Expose
@@ -229,7 +229,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+     * The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
      */
     @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
@@ -265,7 +265,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Residence Address.
-     * Address where user lives.
+     * The address where the user lives.
      */
     @SerializedName(value = "residenceAddress", alternate = {"ResidenceAddress"})
     @Expose
@@ -274,7 +274,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Show In Address List.
-     * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
+     * True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
      */
     @SerializedName(value = "showInAddressList", alternate = {"ShowInAddressList"})
     @Expose
@@ -310,7 +310,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Usage Location.
-     * A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: 'US', 'JP', and 'GB'. Not nullable. Supports $filter.
+     * A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
      */
     @SerializedName(value = "usageLocation", alternate = {"UsageLocation"})
     @Expose
@@ -319,7 +319,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
+     * The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -328,7 +328,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports $filter.
+     * A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
      */
     @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose
@@ -337,7 +337,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * Assignments belonging to the user.
+     * Assignments that belongs to the user.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
@@ -376,7 +376,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User.
-     * The directory user corresponding to this user.
+     * The directory user that corresponds to this user.
      */
     @SerializedName(value = "user", alternate = {"User"})
     @Expose

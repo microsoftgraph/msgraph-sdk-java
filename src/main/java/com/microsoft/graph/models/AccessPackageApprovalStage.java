@@ -41,7 +41,7 @@ public class AccessPackageApprovalStage implements IJsonBackedObject {
 
     /**
      * The Duration Before Automatic Denial.
-     * 
+     * The number of days that a request can be pending a response before it is automatically denied.
      */
     @SerializedName(value = "durationBeforeAutomaticDenial", alternate = {"DurationBeforeAutomaticDenial"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessPackageApprovalStage implements IJsonBackedObject {
 
     /**
      * The Duration Before Escalation.
-     * 
+     * If escalation is required, the time a request can be pending a response from a primary approver.
      */
     @SerializedName(value = "durationBeforeEscalation", alternate = {"DurationBeforeEscalation"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessPackageApprovalStage implements IJsonBackedObject {
 
     /**
      * The Escalation Approvers.
-     * 
+     * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
      */
     @SerializedName(value = "escalationApprovers", alternate = {"EscalationApprovers"})
     @Expose
@@ -68,7 +68,7 @@ public class AccessPackageApprovalStage implements IJsonBackedObject {
 
     /**
      * The Fallback Escalation Approvers.
-     * 
+     * The subjects, typically users, who are the fallback escalation approvers.
      */
     @SerializedName(value = "fallbackEscalationApprovers", alternate = {"FallbackEscalationApprovers"})
     @Expose
@@ -77,7 +77,7 @@ public class AccessPackageApprovalStage implements IJsonBackedObject {
 
     /**
      * The Fallback Primary Approvers.
-     * 
+     * The subjects, typically users, who are the fallback primary approvers.
      */
     @SerializedName(value = "fallbackPrimaryApprovers", alternate = {"FallbackPrimaryApprovers"})
     @Expose
@@ -86,7 +86,7 @@ public class AccessPackageApprovalStage implements IJsonBackedObject {
 
     /**
      * The Is Approver Justification Required.
-     * 
+     * Indicates whether the approver is required to provide a justification for approving a request.
      */
     @SerializedName(value = "isApproverJustificationRequired", alternate = {"IsApproverJustificationRequired"})
     @Expose
@@ -95,7 +95,7 @@ public class AccessPackageApprovalStage implements IJsonBackedObject {
 
     /**
      * The Is Escalation Enabled.
-     * 
+     * If true, then one or more escalationApprovers are configured in this approval stage.
      */
     @SerializedName(value = "isEscalationEnabled", alternate = {"IsEscalationEnabled"})
     @Expose
@@ -104,7 +104,7 @@ public class AccessPackageApprovalStage implements IJsonBackedObject {
 
     /**
      * The Primary Approvers.
-     * 
+     * The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
      */
     @SerializedName(value = "primaryApprovers", alternate = {"PrimaryApprovers"})
     @Expose

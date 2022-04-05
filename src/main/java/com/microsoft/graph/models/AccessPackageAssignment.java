@@ -77,7 +77,7 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
 
     /**
      * The Assignment Policy.
-     * 
+     * Read-only. Supports $filter (eq) on the id property and $expand query parameters.
      */
     @SerializedName(value = "assignmentPolicy", alternate = {"AssignmentPolicy"})
     @Expose

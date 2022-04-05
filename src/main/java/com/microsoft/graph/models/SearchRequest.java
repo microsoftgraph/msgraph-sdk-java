@@ -118,7 +118,7 @@ public class SearchRequest implements IJsonBackedObject {
 
     /**
      * The Query Alteration Options.
-     * Query alteration options formatted in a JSON blob that contains two optional flags related to spelling correction. Optional.
+     * Provides query alteration options formatted as a JSON blob that contains two optional flags related to spelling correction. Optional.
      */
     @SerializedName(value = "queryAlterationOptions", alternate = {"QueryAlterationOptions"})
     @Expose

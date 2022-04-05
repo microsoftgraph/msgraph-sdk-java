@@ -43,7 +43,7 @@ public class AccessPackageAssignmentReviewSettings implements IJsonBackedObject 
 
     /**
      * The Expiration Behavior.
-     * 
+     * The default decision to apply if the access is not reviewed. The possible values are: keepAccess, removeAccess, acceptAccessRecommendation, unknownFutureValue.
      */
     @SerializedName(value = "expirationBehavior", alternate = {"ExpirationBehavior"})
     @Expose
@@ -52,7 +52,7 @@ public class AccessPackageAssignmentReviewSettings implements IJsonBackedObject 
 
     /**
      * The Fallback Reviewers.
-     * 
+     * This collection specifies the users who will be the fallback reviewers when the primary reviewers don't respond.
      */
     @SerializedName(value = "fallbackReviewers", alternate = {"FallbackReviewers"})
     @Expose
@@ -61,7 +61,7 @@ public class AccessPackageAssignmentReviewSettings implements IJsonBackedObject 
 
     /**
      * The Is Enabled.
-     * 
+     * If true, access reviews are required for assignments through this policy.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentReviewSettings implements IJsonBackedObject 
 
     /**
      * The Is Recommendation Enabled.
-     * 
+     * Specifies whether to display recommendations to the reviewer. The default value is true.
      */
     @SerializedName(value = "isRecommendationEnabled", alternate = {"IsRecommendationEnabled"})
     @Expose
@@ -79,7 +79,7 @@ public class AccessPackageAssignmentReviewSettings implements IJsonBackedObject 
 
     /**
      * The Is Reviewer Justification Required.
-     * 
+     * Specifies whether the reviewer must provide justification for the approval. The default value is true.
      */
     @SerializedName(value = "isReviewerJustificationRequired", alternate = {"IsReviewerJustificationRequired"})
     @Expose
@@ -88,7 +88,7 @@ public class AccessPackageAssignmentReviewSettings implements IJsonBackedObject 
 
     /**
      * The Is Self Review.
-     * 
+     * Specifies whether the principals can review their own assignments.
      */
     @SerializedName(value = "isSelfReview", alternate = {"IsSelfReview"})
     @Expose
@@ -97,7 +97,7 @@ public class AccessPackageAssignmentReviewSettings implements IJsonBackedObject 
 
     /**
      * The Primary Reviewers.
-     * 
+     * This collection specifies the users or group of users who will review the access package assignments.
      */
     @SerializedName(value = "primaryReviewers", alternate = {"PrimaryReviewers"})
     @Expose
@@ -106,7 +106,7 @@ public class AccessPackageAssignmentReviewSettings implements IJsonBackedObject 
 
     /**
      * The Schedule.
-     * 
+     * When the first review should start and how often it should recur.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
