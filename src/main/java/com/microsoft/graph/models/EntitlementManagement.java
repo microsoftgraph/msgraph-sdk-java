@@ -61,7 +61,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Policies.
-     * 
+     * Access package assignment policies.
      */
     @SerializedName(value = "assignmentPolicies", alternate = {"AssignmentPolicies"})
     @Expose
@@ -88,7 +88,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalogs.
-     * Represents a group of access packages.
+     * Represents a collection of access packages.
      */
     @SerializedName(value = "catalogs", alternate = {"Catalogs"})
     @Expose

@@ -99,4 +99,13 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
     public AccessPackageAssignmentRequestCancelRequestBuilder cancel() {
         return new AccessPackageAssignmentRequestCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentRequestReprocessRequestBuilder reprocess() {
+        return new AccessPackageAssignmentRequestReprocessRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprocess"), getClient(), null);
+    }
 }

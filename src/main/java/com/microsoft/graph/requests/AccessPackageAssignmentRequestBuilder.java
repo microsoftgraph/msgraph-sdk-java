@@ -90,4 +90,13 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder<Ac
     public AccessPackageSubjectWithReferenceRequestBuilder target() {
         return new AccessPackageSubjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("target"), getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentReprocessRequestBuilder reprocess() {
+        return new AccessPackageAssignmentReprocessRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprocess"), getClient(), null);
+    }
 }

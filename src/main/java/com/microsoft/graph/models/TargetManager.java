@@ -27,7 +27,7 @@ public class TargetManager extends SubjectSet implements IJsonBackedObject {
 
     /**
      * The Manager Level.
-     * 
+     * Manager level, between 1 and 4. The direct manager is 1.
      */
     @SerializedName(value = "managerLevel", alternate = {"ManagerLevel"})
     @Expose

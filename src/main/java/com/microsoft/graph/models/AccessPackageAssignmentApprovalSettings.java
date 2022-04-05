@@ -41,7 +41,7 @@ public class AccessPackageAssignmentApprovalSettings implements IJsonBackedObjec
 
     /**
      * The Is Approval Required For Add.
-     * 
+     * If false, then approval is not required for new requests in this policy.
      */
     @SerializedName(value = "isApprovalRequiredForAdd", alternate = {"IsApprovalRequiredForAdd"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessPackageAssignmentApprovalSettings implements IJsonBackedObjec
 
     /**
      * The Is Approval Required For Update.
-     * 
+     * If false, then approval is not required for updates to requests in this policy.
      */
     @SerializedName(value = "isApprovalRequiredForUpdate", alternate = {"IsApprovalRequiredForUpdate"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessPackageAssignmentApprovalSettings implements IJsonBackedObjec
 
     /**
      * The Stages.
-     * 
+     * If approval is required, the one, two or three elements of this collection define each of the stages of approval. An empty array is present if no approval is required.
      */
     @SerializedName(value = "stages", alternate = {"Stages"})
     @Expose
