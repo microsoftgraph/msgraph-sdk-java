@@ -80,7 +80,7 @@ jobs:
       - name: Publish
         run: ./gradlew $PUBLISH_TASK
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v3
         with:
           name: drop
           path: |

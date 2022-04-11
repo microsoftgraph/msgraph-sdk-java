@@ -30,7 +30,7 @@ jobs:
         working-directory: ./android
       - name: Upload linting results
         if: failure() && steps.lint.outcome == 'failure'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: lint-report
           path: ./android/build/reports
