@@ -67,7 +67,7 @@ jobs:
           distribution: 'adopt'
           cache: gradle
       - name: Download Current Build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with: 
           name: drop
           path: artifacts/current/
