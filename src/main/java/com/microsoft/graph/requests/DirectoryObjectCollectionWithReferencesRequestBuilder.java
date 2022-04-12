@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.OrgContact;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyRuleTarget;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
 import java.util.Arrays;
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<DirectoryObject, DirectoryObjectWithReferenceRequest, DirectoryObjectReferenceRequestBuilder, DirectoryObjectWithReferenceRequestBuilder, DirectoryObjectCollectionResponse, DirectoryObjectCollectionWithReferencesPage, DirectoryObjectCollectionReferenceRequest, DirectoryObjectCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of OrgContact
+     * The request builder for this collection of UnifiedRoleManagementPolicyRuleTarget
      *
      * @param requestUrl     the request URL
      * @param client         the service client

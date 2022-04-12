@@ -22,6 +22,8 @@ import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.ConditionalAccessPolicy;
 import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
+import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
@@ -31,6 +33,8 @@ import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage;
+import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionPage;
+import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -164,6 +168,24 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 	@Nullable
     public IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
 
+    /**
+     * The Role Management Policies.
+     * Represents the role management policies.
+     */
+    @SerializedName(value = "roleManagementPolicies", alternate = {"RoleManagementPolicies"})
+    @Expose
+	@Nullable
+    public UnifiedRoleManagementPolicyCollectionPage roleManagementPolicies;
+
+    /**
+     * The Role Management Policy Assignments.
+     * Represents the role management policy assignments.
+     */
+    @SerializedName(value = "roleManagementPolicyAssignments", alternate = {"RoleManagementPolicyAssignments"})
+    @Expose
+	@Nullable
+    public UnifiedRoleManagementPolicyAssignmentCollectionPage roleManagementPolicyAssignments;
+
 
     /**
      * Sets the raw JSON object
@@ -204,6 +226,14 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
 
         if (json.has("conditionalAccessPolicies")) {
             conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies"), ConditionalAccessPolicyCollectionPage.class);
+        }
+
+        if (json.has("roleManagementPolicies")) {
+            roleManagementPolicies = serializer.deserializeObject(json.get("roleManagementPolicies"), UnifiedRoleManagementPolicyCollectionPage.class);
+        }
+
+        if (json.has("roleManagementPolicyAssignments")) {
+            roleManagementPolicyAssignments = serializer.deserializeObject(json.get("roleManagementPolicyAssignments"), UnifiedRoleManagementPolicyAssignmentCollectionPage.class);
         }
     }
 }

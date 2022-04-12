@@ -29,6 +29,10 @@ import com.microsoft.graph.requests.AdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -286,5 +290,45 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UnifiedRoleManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleManagementPolicyCollectionRequestBuilder roleManagementPolicies() {
+        return new UnifiedRoleManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleManagementPolicyRequestBuilder roleManagementPolicies(@Nonnull final String id) {
+        return new UnifiedRoleManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UnifiedRoleManagementPolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder roleManagementPolicyAssignments() {
+        return new UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicyAssignments"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleManagementPolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleManagementPolicyAssignmentRequestBuilder roleManagementPolicyAssignments(@Nonnull final String id) {
+        return new UnifiedRoleManagementPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicyAssignments") + "/" + id, getClient(), null);
     }
 }

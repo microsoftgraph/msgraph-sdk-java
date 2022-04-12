@@ -11,6 +11,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.20.0] - 2022-04-12
+
+### Added
+
+- ApprovalSettings model.
+- RequestSchedule model.
+- TicketInfo model.
+- UnifiedApprovalStage model. 
+- UnifiedRoleScheduleRequestActions model. 
+- AppScopeReference and AppScopeWithReference requests.  
+- RoleAssignmentSchedule models and related requests. 
+- RoleEligibilitySchedule models and related requests. 
+- UnifiedRoleAssignmentSchedule models and related requests. 
+- UnifiedRoleEligibilitySchedule models and related requests. 
+- UnifiedRoleManagementPolicy models and related requests. 
+- UnifiedRoleSchedule models and related requests.  
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- PolicyRoot model and request builder.  
+- RbacApplication model and request builder.  
+
 ## [5.19.0] - 2022-04-05
 
 ### Added
