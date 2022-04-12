@@ -151,7 +151,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Categories.
-     * 
+     * All categories associated with this class. Nullable.
      */
     @SerializedName(value = "assignmentCategories", alternate = {"AssignmentCategories"})
     @Expose
@@ -160,7 +160,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Defaults.
-     * 
+     * Specifies class-level defaults respected by new assignments created in the class.
      */
     @SerializedName(value = "assignmentDefaults", alternate = {"AssignmentDefaults"})
     @Expose
@@ -178,7 +178,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Settings.
-     * 
+     * Specifies class-level assignments settings.
      */
     @SerializedName(value = "assignmentSettings", alternate = {"AssignmentSettings"})
     @Expose

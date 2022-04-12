@@ -12,6 +12,18 @@ import com.microsoft.graph.requests.UnifiedRoleAssignmentCollectionRequestBuilde
 import com.microsoft.graph.requests.UnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleInstanceRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleRequestRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleInstanceRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleRequestRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.UnifiedRoleEligibilityScheduleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -99,5 +111,125 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder<RbacApplic
     @Nonnull
     public UnifiedRoleDefinitionRequestBuilder roleDefinitions(@Nonnull final String id) {
         return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UnifiedRoleAssignmentScheduleInstance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder roleAssignmentScheduleInstances() {
+        return new UnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentScheduleInstances"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleAssignmentScheduleInstance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentScheduleInstanceRequestBuilder roleAssignmentScheduleInstances(@Nonnull final String id) {
+        return new UnifiedRoleAssignmentScheduleInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentScheduleInstances") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UnifiedRoleAssignmentScheduleRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentScheduleRequestCollectionRequestBuilder roleAssignmentScheduleRequests() {
+        return new UnifiedRoleAssignmentScheduleRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentScheduleRequests"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleAssignmentScheduleRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentScheduleRequestRequestBuilder roleAssignmentScheduleRequests(@Nonnull final String id) {
+        return new UnifiedRoleAssignmentScheduleRequestRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentScheduleRequests") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UnifiedRoleAssignmentSchedule collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentScheduleCollectionRequestBuilder roleAssignmentSchedules() {
+        return new UnifiedRoleAssignmentScheduleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentSchedules"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleAssignmentSchedule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentScheduleRequestBuilder roleAssignmentSchedules(@Nonnull final String id) {
+        return new UnifiedRoleAssignmentScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentSchedules") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UnifiedRoleEligibilityScheduleInstance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleEligibilityScheduleInstanceCollectionRequestBuilder roleEligibilityScheduleInstances() {
+        return new UnifiedRoleEligibilityScheduleInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilityScheduleInstances"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleEligibilityScheduleInstance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleEligibilityScheduleInstanceRequestBuilder roleEligibilityScheduleInstances(@Nonnull final String id) {
+        return new UnifiedRoleEligibilityScheduleInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilityScheduleInstances") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UnifiedRoleEligibilityScheduleRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleEligibilityScheduleRequestCollectionRequestBuilder roleEligibilityScheduleRequests() {
+        return new UnifiedRoleEligibilityScheduleRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilityScheduleRequests"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleEligibilityScheduleRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleEligibilityScheduleRequestRequestBuilder roleEligibilityScheduleRequests(@Nonnull final String id) {
+        return new UnifiedRoleEligibilityScheduleRequestRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilityScheduleRequests") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UnifiedRoleEligibilitySchedule collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleEligibilityScheduleCollectionRequestBuilder roleEligibilitySchedules() {
+        return new UnifiedRoleEligibilityScheduleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilitySchedules"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UnifiedRoleEligibilitySchedule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleEligibilityScheduleRequestBuilder roleEligibilitySchedules(@Nonnull final String id) {
+        return new UnifiedRoleEligibilityScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilitySchedules") + "/" + id, getClient(), null);
     }
 }

@@ -337,7 +337,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * Assignments that belongs to the user.
+     * Assignments belonging to the user.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
@@ -346,7 +346,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Rubrics.
-     * 
+     * When set, the grading rubric attached to the assignment.
      */
     @SerializedName(value = "rubrics", alternate = {"Rubrics"})
     @Expose
