@@ -89,7 +89,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Schedule Settings.
-     * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined.
+     * The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
      */
     @SerializedName(value = "scheduleSettings", alternate = {"ScheduleSettings"})
     @Expose

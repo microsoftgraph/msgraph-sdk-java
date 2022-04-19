@@ -50,7 +50,7 @@ public class EntitlementManagementSchedule implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * For recurring access. Not used at present.
+     * For recurring access reviews.  Not used in access requests.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose

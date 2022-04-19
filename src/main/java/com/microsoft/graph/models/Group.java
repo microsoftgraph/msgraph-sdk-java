@@ -619,7 +619,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Team.
-     * 
+     * The team associated with this group.
      */
     @SerializedName(value = "team", alternate = {"Team"})
     @Expose
