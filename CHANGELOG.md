@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.21.0] - 2022-04-22
+
+### Added
+
+### Changed
+
+- Bump dependency on Graph-Core to 2.0.12 
+
 ## [5.20.0] - 2022-04-12
 
 ### Added
