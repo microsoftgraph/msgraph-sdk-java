@@ -44,6 +44,10 @@ public enum TeamworkUserIdentityType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * email User
+    */
+    EMAIL_USER,
+    /**
     * For TeamworkUserIdentityType values that were not expected from the service
     */
     UNEXPECTED_VALUE

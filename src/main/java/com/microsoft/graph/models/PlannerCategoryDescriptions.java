@@ -47,6 +47,96 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
     public String category1;
 
     /**
+     * The Category10.
+     * The label associated with Category 10
+     */
+    @SerializedName(value = "category10", alternate = {"Category10"})
+    @Expose
+	@Nullable
+    public String category10;
+
+    /**
+     * The Category11.
+     * The label associated with Category 11
+     */
+    @SerializedName(value = "category11", alternate = {"Category11"})
+    @Expose
+	@Nullable
+    public String category11;
+
+    /**
+     * The Category12.
+     * The label associated with Category 12
+     */
+    @SerializedName(value = "category12", alternate = {"Category12"})
+    @Expose
+	@Nullable
+    public String category12;
+
+    /**
+     * The Category13.
+     * The label associated with Category 13
+     */
+    @SerializedName(value = "category13", alternate = {"Category13"})
+    @Expose
+	@Nullable
+    public String category13;
+
+    /**
+     * The Category14.
+     * The label associated with Category 14
+     */
+    @SerializedName(value = "category14", alternate = {"Category14"})
+    @Expose
+	@Nullable
+    public String category14;
+
+    /**
+     * The Category15.
+     * The label associated with Category 15
+     */
+    @SerializedName(value = "category15", alternate = {"Category15"})
+    @Expose
+	@Nullable
+    public String category15;
+
+    /**
+     * The Category16.
+     * The label associated with Category 16
+     */
+    @SerializedName(value = "category16", alternate = {"Category16"})
+    @Expose
+	@Nullable
+    public String category16;
+
+    /**
+     * The Category17.
+     * The label associated with Category 17
+     */
+    @SerializedName(value = "category17", alternate = {"Category17"})
+    @Expose
+	@Nullable
+    public String category17;
+
+    /**
+     * The Category18.
+     * The label associated with Category 18
+     */
+    @SerializedName(value = "category18", alternate = {"Category18"})
+    @Expose
+	@Nullable
+    public String category18;
+
+    /**
+     * The Category19.
+     * The label associated with Category 19
+     */
+    @SerializedName(value = "category19", alternate = {"Category19"})
+    @Expose
+	@Nullable
+    public String category19;
+
+    /**
      * The Category2.
      * The label associated with Category 2
      */
@@ -54,6 +144,60 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String category2;
+
+    /**
+     * The Category20.
+     * The label associated with Category 20
+     */
+    @SerializedName(value = "category20", alternate = {"Category20"})
+    @Expose
+	@Nullable
+    public String category20;
+
+    /**
+     * The Category21.
+     * The label associated with Category 21
+     */
+    @SerializedName(value = "category21", alternate = {"Category21"})
+    @Expose
+	@Nullable
+    public String category21;
+
+    /**
+     * The Category22.
+     * The label associated with Category 22
+     */
+    @SerializedName(value = "category22", alternate = {"Category22"})
+    @Expose
+	@Nullable
+    public String category22;
+
+    /**
+     * The Category23.
+     * The label associated with Category 23
+     */
+    @SerializedName(value = "category23", alternate = {"Category23"})
+    @Expose
+	@Nullable
+    public String category23;
+
+    /**
+     * The Category24.
+     * The label associated with Category 24
+     */
+    @SerializedName(value = "category24", alternate = {"Category24"})
+    @Expose
+	@Nullable
+    public String category24;
+
+    /**
+     * The Category25.
+     * The label associated with Category 25
+     */
+    @SerializedName(value = "category25", alternate = {"Category25"})
+    @Expose
+	@Nullable
+    public String category25;
 
     /**
      * The Category3.
@@ -90,6 +234,33 @@ public class PlannerCategoryDescriptions implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String category6;
+
+    /**
+     * The Category7.
+     * The label associated with Category 7
+     */
+    @SerializedName(value = "category7", alternate = {"Category7"})
+    @Expose
+	@Nullable
+    public String category7;
+
+    /**
+     * The Category8.
+     * The label associated with Category 8
+     */
+    @SerializedName(value = "category8", alternate = {"Category8"})
+    @Expose
+	@Nullable
+    public String category8;
+
+    /**
+     * The Category9.
+     * The label associated with Category 9
+     */
+    @SerializedName(value = "category9", alternate = {"Category9"})
+    @Expose
+	@Nullable
+    public String category9;
 
 
     /**
