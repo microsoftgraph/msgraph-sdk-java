@@ -55,7 +55,11 @@ public class WorkbookWorksheetRangeRequestBuilder extends BaseFunctionRequestBui
      */
     @Nonnull
     public WorkbookWorksheetRangeRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
-        return buildRequest(getOptions(requestOptions));
+        WorkbookWorksheetRangeRequest request = buildRequest(getOptions(requestOptions));
+         for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+            request.addFunctionOption(option);
+        }
+        return request;
     }
 
     /**
