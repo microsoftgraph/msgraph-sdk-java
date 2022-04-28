@@ -95,7 +95,7 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Operation Type.
-     * 
+     * Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose

@@ -67,7 +67,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Call Options.
-     * 
+     * Contains the optional features for the call.
      */
     @SerializedName(value = "callOptions", alternate = {"CallOptions"})
     @Expose

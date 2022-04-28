@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.PlannerPlanContainer;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.PlannerBucket;
 import com.microsoft.graph.models.PlannerPlanDetails;
@@ -33,6 +34,15 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Container.
+     * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     */
+    @SerializedName(value = "container", alternate = {"Container"})
+    @Expose
+	@Nullable
+    public PlannerPlanContainer container;
+
+    /**
      * The Created By.
      * Read-only. The user who created the plan.
      */
@@ -53,7 +63,9 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
     /**
      * The Owner.
      * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
+     * @deprecated Owner property is deprecated and will be removed in April 2024. Please use the container property instead.
      */
+    @Deprecated
     @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
 	@Nullable
