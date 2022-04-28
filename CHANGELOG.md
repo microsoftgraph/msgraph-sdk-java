@@ -15,16 +15,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- PlannerContainerType model.
+- PlannerPlanContainer model. 
+
 ### Changed
 
 - Generated v1.0 models and request builders using Typewriter.
-- Removed PlannerContainerType and PlannerPlanContainer models. 
-- Removed RequestSchedule model. 
-- Removed TicketInfo model.
-- Removed UnifiedApprovalStage model. 
-- Removed AccessPackageAssignment models and related requests. 
-- Removed UnifiedRole models and related requests.
-- Changed dependencies of models and requests which relied on removed models and requests.  
+- PlannerCategroyDescriptions model. 
+- PlannerTask model. 
+- TeamworkUserIdentityType model. 
 
 ## [5.21.0] - 2022-04-22
 
