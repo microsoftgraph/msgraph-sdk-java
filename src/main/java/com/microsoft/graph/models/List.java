@@ -16,11 +16,13 @@ import com.microsoft.graph.models.ColumnDefinition;
 import com.microsoft.graph.models.ContentType;
 import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.ListItem;
+import com.microsoft.graph.models.RichLongRunningOperation;
 import com.microsoft.graph.models.Subscription;
 import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
 import com.microsoft.graph.requests.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.ListItemCollectionPage;
+import com.microsoft.graph.requests.RichLongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.SubscriptionCollectionPage;
 
 
@@ -111,6 +113,15 @@ public class List extends BaseItem implements IJsonBackedObject {
     public ListItemCollectionPage items;
 
     /**
+     * The Operations.
+     * The collection of long running operations for the list.
+     */
+    @SerializedName(value = "operations", alternate = {"Operations"})
+    @Expose
+	@Nullable
+    public RichLongRunningOperationCollectionPage operations;
+
+    /**
      * The Subscriptions.
      * The set of subscriptions on the list.
      */
@@ -139,6 +150,10 @@ public class List extends BaseItem implements IJsonBackedObject {
 
         if (json.has("items")) {
             items = serializer.deserializeObject(json.get("items"), ListItemCollectionPage.class);
+        }
+
+        if (json.has("operations")) {
+            operations = serializer.deserializeObject(json.get("operations"), RichLongRunningOperationCollectionPage.class);
         }
 
         if (json.has("subscriptions")) {

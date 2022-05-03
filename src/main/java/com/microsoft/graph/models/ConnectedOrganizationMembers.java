@@ -36,7 +36,7 @@ public class ConnectedOrganizationMembers extends SubjectSet implements IJsonBac
 
     /**
      * The Description.
-     * The name of the connected organization.
+     * The name of the connected organization. Read only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

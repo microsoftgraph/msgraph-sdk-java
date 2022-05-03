@@ -40,7 +40,7 @@ public class ExternalItemContent implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of content in the value property. Possible values are: text, html, unknownFutureValue. These are the content types that the indexer supports, and not the file extension types allowed.
+     * The type of content in the value property. Possible values are text and html. These are the content types that the indexer supports, and not the file extension types allowed. Required.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

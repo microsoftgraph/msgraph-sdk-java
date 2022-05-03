@@ -236,6 +236,26 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the RichLongRunningOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public RichLongRunningOperationCollectionRequestBuilder operations() {
+        return new RichLongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the RichLongRunningOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public RichLongRunningOperationRequestBuilder operations(@Nonnull final String id) {
+        return new RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the Permission collection
      *
      * @return the collection request builder

@@ -41,7 +41,7 @@ public class UnifiedApprovalStage implements IJsonBackedObject {
 
     /**
      * The Approval Stage Time Out In Days.
-     * 
+     * The number of days that a request can be pending a response before it is automatically denied.
      */
     @SerializedName(value = "approvalStageTimeOutInDays", alternate = {"ApprovalStageTimeOutInDays"})
     @Expose
@@ -50,7 +50,7 @@ public class UnifiedApprovalStage implements IJsonBackedObject {
 
     /**
      * The Escalation Approvers.
-     * 
+     * The escalation approvers for this stage when the primary approvers don't respond.
      */
     @SerializedName(value = "escalationApprovers", alternate = {"EscalationApprovers"})
     @Expose
@@ -59,7 +59,7 @@ public class UnifiedApprovalStage implements IJsonBackedObject {
 
     /**
      * The Escalation Time In Minutes.
-     * 
+     * The time a request can be pending a response from a primary approver before it can be escalated to the escalation approvers.
      */
     @SerializedName(value = "escalationTimeInMinutes", alternate = {"EscalationTimeInMinutes"})
     @Expose
@@ -68,7 +68,7 @@ public class UnifiedApprovalStage implements IJsonBackedObject {
 
     /**
      * The Is Approver Justification Required.
-     * 
+     * Indicates whether the approver must provide justification for their reponse.
      */
     @SerializedName(value = "isApproverJustificationRequired", alternate = {"IsApproverJustificationRequired"})
     @Expose
@@ -77,7 +77,7 @@ public class UnifiedApprovalStage implements IJsonBackedObject {
 
     /**
      * The Is Escalation Enabled.
-     * 
+     * Indicates whether escalation if enabled.
      */
     @SerializedName(value = "isEscalationEnabled", alternate = {"IsEscalationEnabled"})
     @Expose
@@ -86,7 +86,7 @@ public class UnifiedApprovalStage implements IJsonBackedObject {
 
     /**
      * The Primary Approvers.
-     * 
+     * The primary approvers of this stage.
      */
     @SerializedName(value = "primaryApprovers", alternate = {"PrimaryApprovers"})
     @Expose

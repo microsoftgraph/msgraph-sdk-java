@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.ContentTypeRequestBuilder;
 import com.microsoft.graph.requests.DriveRequestBuilder;
 import com.microsoft.graph.requests.ListItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.ListItemRequestBuilder;
+import com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionRequestBuilder;
 import java.util.Arrays;
@@ -154,6 +156,26 @@ public class ListRequestBuilder extends BaseRequestBuilder<List> {
     @Nonnull
     public ListItemRequestBuilder items(@Nonnull final String id) {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the RichLongRunningOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public RichLongRunningOperationCollectionRequestBuilder operations() {
+        return new RichLongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the RichLongRunningOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public RichLongRunningOperationRequestBuilder operations(@Nonnull final String id) {
+        return new RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Subscription collection

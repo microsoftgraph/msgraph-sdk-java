@@ -27,7 +27,7 @@ public class EducationExternalResource extends EducationResource implements IJso
 
     /**
      * The Web Url.
-     * Location of the resource. Required
+     * Location of the resource. Required.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

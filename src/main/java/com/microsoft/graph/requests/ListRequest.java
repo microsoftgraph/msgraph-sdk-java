@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.ContentTypeRequestBuilder;
 import com.microsoft.graph.requests.DriveRequestBuilder;
 import com.microsoft.graph.requests.ListItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.ListItemRequestBuilder;
+import com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionRequestBuilder;
 import java.util.Arrays;

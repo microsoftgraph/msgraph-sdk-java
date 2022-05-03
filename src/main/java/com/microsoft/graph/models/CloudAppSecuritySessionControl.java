@@ -28,7 +28,7 @@ public class CloudAppSecuritySessionControl extends ConditionalAccessSessionCont
 
     /**
      * The Cloud App Security Type.
-     * Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
+     * Possible values are: mcasConfigured, monitorOnly, blockDownloads. To learn more about these values, Deploy Conditional Access App Control for featured apps.
      */
     @SerializedName(value = "cloudAppSecurityType", alternate = {"CloudAppSecurityType"})
     @Expose

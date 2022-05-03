@@ -23,6 +23,8 @@ import com.microsoft.graph.requests.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.BaseItemRequestBuilder;
 import com.microsoft.graph.requests.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.ListRequestBuilder;
+import com.microsoft.graph.requests.RichLongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.RichLongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.PermissionRequestBuilder;
 import com.microsoft.graph.requests.SiteCollectionRequestBuilder;
@@ -240,6 +242,26 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
     @Nonnull
     public ListRequestBuilder lists(@Nonnull final String id) {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the RichLongRunningOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public RichLongRunningOperationCollectionRequestBuilder operations() {
+        return new RichLongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the RichLongRunningOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public RichLongRunningOperationRequestBuilder operations(@Nonnull final String id) {
+        return new RichLongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Permission collection

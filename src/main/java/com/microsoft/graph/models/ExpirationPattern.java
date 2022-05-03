@@ -58,7 +58,7 @@ public class ExpirationPattern implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The requestor's desired expiration pattern type. The possible values are: notSpecified, noExpiration, afterDateTime, afterDuration.
+     * The requestor's desired expiration pattern type.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

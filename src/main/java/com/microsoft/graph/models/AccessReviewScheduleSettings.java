@@ -60,7 +60,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Default Decision.
-     * Decision chosen if defaultDecisionEnabled is true. Can be one of Approve, Deny, or Recommendation.
+     * Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
      */
     @SerializedName(value = "defaultDecision", alternate = {"DefaultDecision"})
     @Expose
@@ -78,7 +78,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Instance Duration In Days.
-     * Duration of each recurrence of review (accessReviewInstance) in number of days.
+     * Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
      */
     @SerializedName(value = "instanceDurationInDays", alternate = {"InstanceDurationInDays"})
     @Expose
@@ -105,7 +105,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recommendations Enabled.
-     * Indicates whether decision recommendations are enabled or disabled.
+     * Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.
      */
     @SerializedName(value = "recommendationsEnabled", alternate = {"RecommendationsEnabled"})
     @Expose
@@ -114,7 +114,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * Detailed settings for recurrence using the standard Outlook recurrence object.  Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
+     * Detailed settings for recurrence using the standard Outlook recurrence object. Note: Only dayOfMonth, interval, and type (weekly, absoluteMonthly) properties are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose

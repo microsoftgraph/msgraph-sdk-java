@@ -39,7 +39,7 @@ public class AgreementFileData implements IJsonBackedObject {
 
     /**
      * The Data.
-     * Data that represents the terms of use PDF document. Read-only.
+     * Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'your_file_path' -Encoding byte)).
      */
     @SerializedName(value = "data", alternate = {"Data"})
     @Expose
