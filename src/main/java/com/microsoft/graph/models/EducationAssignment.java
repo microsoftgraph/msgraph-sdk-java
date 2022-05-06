@@ -60,7 +60,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Late Submissions.
-     * Identifies whether students can submit after the due date. If this property isn't specified during create, it defaults to true.
+     * Identifies whether students can submit after the due date. If this property is not specified during create, it defaults to true.
      */
     @SerializedName(value = "allowLateSubmissions", alternate = {"AllowLateSubmissions"})
     @Expose
@@ -78,7 +78,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Assign Date Time.
-     * The date when the assignment should become active.  If in the future, the assignment isn't shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * The date when the assignment should become active.  If in the future, the assignment is not shown to the student until this date.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "assignDateTime", alternate = {"AssignDateTime"})
     @Expose
@@ -195,7 +195,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Channel Url.
-     * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl isn't allowed after the assignment has been published.
+     * Optional field to specify the URL of the channel to post the assignment publish notification. If not specified or null, defaults to the General channel. This field only applies to assignments where the assignTo value is educationAssignmentClassRecipient. Updating the notificationChannelUrl is not allowed after the assignment has been published.
      */
     @SerializedName(value = "notificationChannelUrl", alternate = {"NotificationChannelUrl"})
     @Expose
@@ -213,7 +213,7 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Status of the Assignment.  You can't PATCH this value.  Possible values are: draft, scheduled, published, assigned.
+     * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

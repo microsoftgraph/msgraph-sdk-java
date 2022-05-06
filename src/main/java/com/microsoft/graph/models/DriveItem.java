@@ -60,7 +60,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Audio.
-     * Audio metadata, if the item is an audio file. Read-only. Read-only. Only on OneDrive Personal.
+     * Audio metadata, if the item is an audio file. Read-only. Only on OneDrive Personal.
      */
     @SerializedName(value = "audio", alternate = {"Audio"})
     @Expose
@@ -159,7 +159,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Pending Operations.
-     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+     * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
      */
     @SerializedName(value = "pendingOperations", alternate = {"PendingOperations"})
     @Expose

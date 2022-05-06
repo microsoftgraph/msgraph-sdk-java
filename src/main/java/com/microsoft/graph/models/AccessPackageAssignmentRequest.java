@@ -51,7 +51,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Request Type.
-     * The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd, unknownFutureValue. A request from the user themselves would have requestType of UserAdd or UserRemove. This property cannot be changed once set.
+     * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
@@ -60,7 +60,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Schedule.
-     * The range of dates that access is to be assigned to the requestor. This property cannot be changed once set.
+     * The range of dates that access is to be assigned to the requestor. Read-only.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Access Package.
-     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
+     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose

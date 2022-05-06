@@ -37,7 +37,7 @@ public class EntitlementManagementSettings extends Entity implements IJsonBacked
 
     /**
      * The External User Lifecycle Action.
-     * Automatic action that the service should take when an external user's last access package assignment is removed. The possible values are: none, blockSignIn, blockSignInAndDelete, unknownFutureValue.
+     * One of None, BlockSignIn, or BlockSignInAndDelete.
      */
     @SerializedName(value = "externalUserLifecycleAction", alternate = {"ExternalUserLifecycleAction"})
     @Expose

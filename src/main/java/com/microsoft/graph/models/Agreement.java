@@ -43,7 +43,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Per Device Acceptance Required.
-     * Indicates whether end users are required to accept this agreement on every device that they access it from. The end user is required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
+     * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so. Supports $filter (eq).
      */
     @SerializedName(value = "isPerDeviceAcceptanceRequired", alternate = {"IsPerDeviceAcceptanceRequired"})
     @Expose
@@ -61,7 +61,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Terms Expiration.
-     * Expiration schedule and frequency of agreement for all users. Supports $filter (eq).
+     * Expiration schedule and frequency of agreement for all users.  Supports $filter (eq).
      */
     @SerializedName(value = "termsExpiration", alternate = {"TermsExpiration"})
     @Expose
@@ -70,7 +70,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The User Reaccept Required Frequency.
-     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations. Supports $filter (eq).
+     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "userReacceptRequiredFrequency", alternate = {"UserReacceptRequiredFrequency"})
     @Expose
@@ -97,7 +97,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Files.
-     * PDFs linked to this agreement. This property is in the process of being deprecated. Use the  file property instead. Supports $expand.
+     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
      */
     @SerializedName(value = "files", alternate = {"Files"})
     @Expose

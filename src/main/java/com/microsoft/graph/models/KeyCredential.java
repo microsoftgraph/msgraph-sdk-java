@@ -66,7 +66,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Key.
-     * The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
+     * Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -75,7 +75,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Key Id.
-     * The unique identifier (GUID) for the key.
+     * The unique identifier for the key.
      */
     @SerializedName(value = "keyId", alternate = {"KeyId"})
     @Expose

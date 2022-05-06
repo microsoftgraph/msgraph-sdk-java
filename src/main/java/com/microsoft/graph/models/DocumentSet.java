@@ -62,7 +62,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Propagate Welcome Page Changes.
-     * Specifies whether to push welcome page changes to inherited content types.
+     * Indicates whether to add the name of the document set to each file name.
      */
     @SerializedName(value = "propagateWelcomePageChanges", alternate = {"PropagateWelcomePageChanges"})
     @Expose
@@ -71,7 +71,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Should Prefix Name To File.
-     * Indicates whether to add the name of the document set to each file name.
+     * Add the name of the Document Set to each file name.
      */
     @SerializedName(value = "shouldPrefixNameToFile", alternate = {"ShouldPrefixNameToFile"})
     @Expose

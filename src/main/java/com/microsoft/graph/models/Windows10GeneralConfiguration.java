@@ -423,7 +423,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender System Scan Schedule.
-     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
      */
     @SerializedName(value = "defenderSystemScanSchedule", alternate = {"DefenderSystemScanSchedule"})
     @Expose

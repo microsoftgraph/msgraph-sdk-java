@@ -172,7 +172,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Indexed.
-     * Specifies whether the column values can be used for sorting and searching.
+     * Specifies whether the column values can used for sorting and searching.
      */
     @SerializedName(value = "indexed", alternate = {"Indexed"})
     @Expose
@@ -244,7 +244,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Propagate Changes.
-     * If 'true', changes to this column will be propagated to lists that implement the column.
+     * If true, changes to this column will be propagated to lists that implement the column.
      */
     @SerializedName(value = "propagateChanges", alternate = {"PropagateChanges"})
     @Expose
@@ -271,7 +271,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Source Content Type.
-     * ContentType from which this column is inherited from. Present only in contentTypes columns response. Read-only.
+     * ContentType from which this column is inherited from. Used only to fetch contentTypes columns.
      */
     @SerializedName(value = "sourceContentType", alternate = {"SourceContentType"})
     @Expose
@@ -325,7 +325,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Source Column.
-     * The source column for the content type column.
+     * The source column for content type column.
      */
     @SerializedName(value = "sourceColumn", alternate = {"SourceColumn"})
     @Expose

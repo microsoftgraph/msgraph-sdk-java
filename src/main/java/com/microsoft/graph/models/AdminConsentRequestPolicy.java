@@ -65,7 +65,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Reviewers.
-     * The list of reviewers for the admin consent. Required.
+     * Required.
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose

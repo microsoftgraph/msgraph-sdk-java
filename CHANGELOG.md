@@ -11,6 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.23.0] - 2022-05-06
+
+### Added
+
+- ContentTypeAddCopyFromContentTypeHubParameterSet models and related requests.  
+- ContentTypeGetCompatibleHubContentTypesParameterSet models and related requests.   
+- LongRunningOperation model and related requests.
+- LongRunningOperationStatus model and related requests.
+- RichLongRunningOperation model and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Added refrences to the added models in related models and requests. 
+
 ## [5.22.0] - 2022-04-28
 
 ### Added

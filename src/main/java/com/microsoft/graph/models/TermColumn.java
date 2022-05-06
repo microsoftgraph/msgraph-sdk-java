@@ -41,7 +41,7 @@ public class TermColumn implements IJsonBackedObject {
 
     /**
      * The Allow Multiple Values.
-     * Specifies whether the column will allow more than one value.
+     * Specifies whether the column will allow more than one value
      */
     @SerializedName(value = "allowMultipleValues", alternate = {"AllowMultipleValues"})
     @Expose

@@ -58,7 +58,7 @@ public class RelatedContact implements IJsonBackedObject {
 
     /**
      * The Email Address.
-     * Primary email address of the contact. Required.
+     * Email address of the contact.
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose

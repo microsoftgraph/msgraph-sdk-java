@@ -44,7 +44,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description that gives details on the term usage.
+     * Description giving details on the term usage.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

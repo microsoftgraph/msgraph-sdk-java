@@ -45,7 +45,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Created Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -63,7 +63,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Display Name.
-     * The display name of the policy.
+     * The display name of the policy. Supports $filter (eq).
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -81,7 +81,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Modified Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -90,7 +90,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Request Approval Settings.
-     * Specifies the settings for approval of requests for an access package assignment through this policy. For example, if approval is required for new requests.
+     * Who must approve requests for access package in this policy.
      */
     @SerializedName(value = "requestApprovalSettings", alternate = {"RequestApprovalSettings"})
     @Expose
@@ -99,7 +99,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Requestor Settings.
-     * Provides additional settings to select who can create a request for an access package assignment through this policy, and what they can include in their request.
+     * Who can request this access package from this policy.
      */
     @SerializedName(value = "requestorSettings", alternate = {"RequestorSettings"})
     @Expose
@@ -126,7 +126,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Access Package.
-     * Access package containing this policy. Read-only.
+     * The access package with this policy. Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose

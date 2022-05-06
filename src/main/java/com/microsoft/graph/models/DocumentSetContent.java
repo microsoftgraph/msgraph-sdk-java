@@ -49,7 +49,7 @@ public class DocumentSetContent implements IJsonBackedObject {
 
     /**
      * The File Name.
-     * Name of the file in resource folder that should be added as a default content or a template in the document set.
+     * Name of the file in resource folder that should be added as a default content or a template in the document set
      */
     @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose

@@ -51,7 +51,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     * The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -69,7 +69,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level.
-     * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Level of the detected risky user. The possible values are low, medium, high, hidden, none, unknownFutureValue.
      */
     @SerializedName(value = "riskLevel", alternate = {"RiskLevel"})
     @Expose

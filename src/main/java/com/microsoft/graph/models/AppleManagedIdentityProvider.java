@@ -27,7 +27,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
 
     /**
      * The Certificate Data.
-     * The certificate data, which is a long string of text from the certificate. Can be null.
+     * The certificate data which is a long string of text from the certificate, can be null.
      */
     @SerializedName(value = "certificateData", alternate = {"CertificateData"})
     @Expose

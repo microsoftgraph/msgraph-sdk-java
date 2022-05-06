@@ -37,7 +37,7 @@ public class AuthenticationMethodTarget extends Entity implements IJsonBackedObj
 
     /**
      * The Target Type.
-     * Possible values are: user, group.
+     * Possible values are: user, group, and unknownFutureValue.
      */
     @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose
