@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Install Intent.
-*/
-public enum InstallIntent
-{
-    /**
-    * available
-    */
-    AVAILABLE,
-    /**
-    * required
-    */
-    REQUIRED,
-    /**
-    * uninstall
-    */
-    UNINSTALL,
-    /**
-    * available Without Enrollment
-    */
-    AVAILABLE_WITHOUT_ENROLLMENT,
-    /**
-    * For InstallIntent values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton.  */
+public enum InstallIntent implements ValuedEnum {
+    Available("available"),
+    Required("required"),
+    Uninstall("uninstall"),
+    AvailableWithoutEnrollment("availableWithoutEnrollment");
+    public final String value;
+    InstallIntent(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static InstallIntent forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "available": return Available;
+            case "required": return Required;
+            case "uninstall": return Uninstall;
+            case "availableWithoutEnrollment": return AvailableWithoutEnrollment;
+            default: return null;
+        }
+    }
 }

@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Giphy Rating Type.
-*/
-public enum GiphyRatingType
-{
-    /**
-    * strict
-    */
-    STRICT,
-    /**
-    * moderate
-    */
-    MODERATE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For GiphyRatingType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum GiphyRatingType implements ValuedEnum {
+    Strict("strict"),
+    Moderate("moderate"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    GiphyRatingType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static GiphyRatingType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "strict": return Strict;
+            case "moderate": return Moderate;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

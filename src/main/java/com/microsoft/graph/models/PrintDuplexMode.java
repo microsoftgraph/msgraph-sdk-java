@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Print Duplex Mode.
-*/
-public enum PrintDuplexMode
-{
-    /**
-    * flip On Long Edge
-    */
-    FLIP_ON_LONG_EDGE,
-    /**
-    * flip On Short Edge
-    */
-    FLIP_ON_SHORT_EDGE,
-    /**
-    * one Sided
-    */
-    ONE_SIDED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For PrintDuplexMode values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the print singleton.  */
+public enum PrintDuplexMode implements ValuedEnum {
+    FlipOnLongEdge("flipOnLongEdge"),
+    FlipOnShortEdge("flipOnShortEdge"),
+    OneSided("oneSided"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PrintDuplexMode(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PrintDuplexMode forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "flipOnLongEdge": return FlipOnLongEdge;
+            case "flipOnShortEdge": return FlipOnShortEdge;
+            case "oneSided": return OneSided;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

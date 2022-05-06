@@ -1,58 +1,41 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Phone Type.
-*/
-public enum PhoneType
-{
-    /**
-    * home
-    */
-    HOME,
-    /**
-    * business
-    */
-    BUSINESS,
-    /**
-    * mobile
-    */
-    MOBILE,
-    /**
-    * other
-    */
-    OTHER,
-    /**
-    * assistant
-    */
-    ASSISTANT,
-    /**
-    * home Fax
-    */
-    HOME_FAX,
-    /**
-    * business Fax
-    */
-    BUSINESS_FAX,
-    /**
-    * other Fax
-    */
-    OTHER_FAX,
-    /**
-    * pager
-    */
-    PAGER,
-    /**
-    * radio
-    */
-    RADIO,
-    /**
-    * For PhoneType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of orgContact entities.  */
+public enum PhoneType implements ValuedEnum {
+    Home("home"),
+    Business("business"),
+    Mobile("mobile"),
+    Other("other"),
+    Assistant("assistant"),
+    HomeFax("homeFax"),
+    BusinessFax("businessFax"),
+    OtherFax("otherFax"),
+    Pager("pager"),
+    Radio("radio");
+    public final String value;
+    PhoneType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PhoneType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "home": return Home;
+            case "business": return Business;
+            case "mobile": return Mobile;
+            case "other": return Other;
+            case "assistant": return Assistant;
+            case "homeFax": return HomeFax;
+            case "businessFax": return BusinessFax;
+            case "otherFax": return OtherFax;
+            case "pager": return Pager;
+            case "radio": return Radio;
+            default: return null;
+        }
+    }
 }

@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Chat Message Policy Violation User Action Types.
-*/
-public enum ChatMessagePolicyViolationUserActionTypes
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * override
-    */
-    OVERRIDE,
-    /**
-    * report False Positive
-    */
-    REPORT_FALSE_POSITIVE,
-    /**
-    * For ChatMessagePolicyViolationUserActionTypes values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of chat entities.  */
+public enum ChatMessagePolicyViolationUserActionTypes implements ValuedEnum {
+    None("none"),
+    Override("override"),
+    ReportFalsePositive("reportFalsePositive");
+    public final String value;
+    ChatMessagePolicyViolationUserActionTypes(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ChatMessagePolicyViolationUserActionTypes forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "override": return Override;
+            case "reportFalsePositive": return ReportFalsePositive;
+            default: return null;
+        }
+    }
 }

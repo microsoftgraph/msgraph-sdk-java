@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Registration State.
-*/
-public enum DeviceRegistrationState
-{
-    /**
-    * not Registered
-    */
-    NOT_REGISTERED,
-    /**
-    * registered
-    */
-    REGISTERED,
-    /**
-    * revoked
-    */
-    REVOKED,
-    /**
-    * key Conflict
-    */
-    KEY_CONFLICT,
-    /**
-    * approval Pending
-    */
-    APPROVAL_PENDING,
-    /**
-    * certificate Reset
-    */
-    CERTIFICATE_RESET,
-    /**
-    * not Registered Pending Enrollment
-    */
-    NOT_REGISTERED_PENDING_ENROLLMENT,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * For DeviceRegistrationState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum DeviceRegistrationState implements ValuedEnum {
+    NotRegistered("notRegistered"),
+    Registered("registered"),
+    Revoked("revoked"),
+    KeyConflict("keyConflict"),
+    ApprovalPending("approvalPending"),
+    CertificateReset("certificateReset"),
+    NotRegisteredPendingEnrollment("notRegisteredPendingEnrollment"),
+    Unknown("unknown");
+    public final String value;
+    DeviceRegistrationState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceRegistrationState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notRegistered": return NotRegistered;
+            case "registered": return Registered;
+            case "revoked": return Revoked;
+            case "keyConflict": return KeyConflict;
+            case "approvalPending": return ApprovalPending;
+            case "certificateReset": return CertificateReset;
+            case "notRegisteredPendingEnrollment": return NotRegisteredPendingEnrollment;
+            case "unknown": return Unknown;
+            default: return null;
+        }
+    }
 }

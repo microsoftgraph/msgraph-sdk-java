@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Subject Rights Request Stage.
-*/
-public enum SubjectRightsRequestStage
-{
-    /**
-    * content Retrieval
-    */
-    CONTENT_RETRIEVAL,
-    /**
-    * content Review
-    */
-    CONTENT_REVIEW,
-    /**
-    * generate Report
-    */
-    GENERATE_REPORT,
-    /**
-    * content Deletion
-    */
-    CONTENT_DELETION,
-    /**
-    * case Resolved
-    */
-    CASE_RESOLVED,
-    /**
-    * content Estimate
-    */
-    CONTENT_ESTIMATE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For SubjectRightsRequestStage values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the privacy singleton.  */
+public enum SubjectRightsRequestStage implements ValuedEnum {
+    ContentRetrieval("contentRetrieval"),
+    ContentReview("contentReview"),
+    GenerateReport("generateReport"),
+    ContentDeletion("contentDeletion"),
+    CaseResolved("caseResolved"),
+    ContentEstimate("contentEstimate"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    SubjectRightsRequestStage(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static SubjectRightsRequestStage forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "contentRetrieval": return ContentRetrieval;
+            case "contentReview": return ContentReview;
+            case "generateReport": return GenerateReport;
+            case "contentDeletion": return ContentDeletion;
+            case "caseResolved": return CaseResolved;
+            case "contentEstimate": return ContentEstimate;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed App Data Storage Location.
-*/
-public enum ManagedAppDataStorageLocation
-{
-    /**
-    * one Drive For Business
-    */
-    ONE_DRIVE_FOR_BUSINESS,
-    /**
-    * share Point
-    */
-    SHARE_POINT,
-    /**
-    * box
-    */
-    BOX,
-    /**
-    * local Storage
-    */
-    LOCAL_STORAGE,
-    /**
-    * For ManagedAppDataStorageLocation values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton.  */
+public enum ManagedAppDataStorageLocation implements ValuedEnum {
+    OneDriveForBusiness("oneDriveForBusiness"),
+    SharePoint("sharePoint"),
+    Box("box"),
+    LocalStorage("localStorage");
+    public final String value;
+    ManagedAppDataStorageLocation(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedAppDataStorageLocation forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "oneDriveForBusiness": return OneDriveForBusiness;
+            case "sharePoint": return SharePoint;
+            case "box": return Box;
+            case "localStorage": return LocalStorage;
+            default: return null;
+        }
+    }
 }

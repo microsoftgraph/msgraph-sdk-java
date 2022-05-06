@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Targeted Managed App Group Type.
-*/
-public enum TargetedManagedAppGroupType
-{
-    /**
-    * selected Public Apps
-    */
-    SELECTED_PUBLIC_APPS,
-    /**
-    * all Core Microsoft Apps
-    */
-    ALL_CORE_MICROSOFT_APPS,
-    /**
-    * all Microsoft Apps
-    */
-    ALL_MICROSOFT_APPS,
-    /**
-    * all Apps
-    */
-    ALL_APPS,
-    /**
-    * For TargetedManagedAppGroupType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the targetApps method.  */
+public enum TargetedManagedAppGroupType implements ValuedEnum {
+    SelectedPublicApps("selectedPublicApps"),
+    AllCoreMicrosoftApps("allCoreMicrosoftApps"),
+    AllMicrosoftApps("allMicrosoftApps"),
+    AllApps("allApps");
+    public final String value;
+    TargetedManagedAppGroupType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TargetedManagedAppGroupType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "selectedPublicApps": return SelectedPublicApps;
+            case "allCoreMicrosoftApps": return AllCoreMicrosoftApps;
+            case "allMicrosoftApps": return AllMicrosoftApps;
+            case "allApps": return AllApps;
+            default: return null;
+        }
+    }
 }

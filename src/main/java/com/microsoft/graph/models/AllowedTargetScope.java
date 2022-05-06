@@ -1,58 +1,41 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Allowed Target Scope.
-*/
-public enum AllowedTargetScope
-{
-    /**
-    * not Specified
-    */
-    NOT_SPECIFIED,
-    /**
-    * specific Directory Users
-    */
-    SPECIFIC_DIRECTORY_USERS,
-    /**
-    * specific Connected Organization Users
-    */
-    SPECIFIC_CONNECTED_ORGANIZATION_USERS,
-    /**
-    * specific Directory Service Principals
-    */
-    SPECIFIC_DIRECTORY_SERVICE_PRINCIPALS,
-    /**
-    * all Member Users
-    */
-    ALL_MEMBER_USERS,
-    /**
-    * all Directory Users
-    */
-    ALL_DIRECTORY_USERS,
-    /**
-    * all Directory Service Principals
-    */
-    ALL_DIRECTORY_SERVICE_PRINCIPALS,
-    /**
-    * all Configured Connected Organization Users
-    */
-    ALL_CONFIGURED_CONNECTED_ORGANIZATION_USERS,
-    /**
-    * all External Users
-    */
-    ALL_EXTERNAL_USERS,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AllowedTargetScope values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityGovernance singleton.  */
+public enum AllowedTargetScope implements ValuedEnum {
+    NotSpecified("notSpecified"),
+    SpecificDirectoryUsers("specificDirectoryUsers"),
+    SpecificConnectedOrganizationUsers("specificConnectedOrganizationUsers"),
+    SpecificDirectoryServicePrincipals("specificDirectoryServicePrincipals"),
+    AllMemberUsers("allMemberUsers"),
+    AllDirectoryUsers("allDirectoryUsers"),
+    AllDirectoryServicePrincipals("allDirectoryServicePrincipals"),
+    AllConfiguredConnectedOrganizationUsers("allConfiguredConnectedOrganizationUsers"),
+    AllExternalUsers("allExternalUsers"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AllowedTargetScope(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AllowedTargetScope forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notSpecified": return NotSpecified;
+            case "specificDirectoryUsers": return SpecificDirectoryUsers;
+            case "specificConnectedOrganizationUsers": return SpecificConnectedOrganizationUsers;
+            case "specificDirectoryServicePrincipals": return SpecificDirectoryServicePrincipals;
+            case "allMemberUsers": return AllMemberUsers;
+            case "allDirectoryUsers": return AllDirectoryUsers;
+            case "allDirectoryServicePrincipals": return AllDirectoryServicePrincipals;
+            case "allConfiguredConnectedOrganizationUsers": return AllConfiguredConnectedOrganizationUsers;
+            case "allExternalUsers": return AllExternalUsers;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

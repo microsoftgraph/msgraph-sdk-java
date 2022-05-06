@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Service Update Category.
-*/
-public enum ServiceUpdateCategory
-{
-    /**
-    * prevent Or Fix Issue
-    */
-    PREVENT_OR_FIX_ISSUE,
-    /**
-    * plan For Change
-    */
-    PLAN_FOR_CHANGE,
-    /**
-    * stay Informed
-    */
-    STAY_INFORMED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ServiceUpdateCategory values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the admin singleton.  */
+public enum ServiceUpdateCategory implements ValuedEnum {
+    PreventOrFixIssue("preventOrFixIssue"),
+    PlanForChange("planForChange"),
+    StayInformed("stayInformed"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ServiceUpdateCategory(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ServiceUpdateCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "preventOrFixIssue": return PreventOrFixIssue;
+            case "planForChange": return PlanForChange;
+            case "stayInformed": return StayInformed;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

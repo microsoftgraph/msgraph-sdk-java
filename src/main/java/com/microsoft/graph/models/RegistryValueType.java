@@ -1,70 +1,47 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Registry Value Type.
-*/
-public enum RegistryValueType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * binary
-    */
-    BINARY,
-    /**
-    * dword
-    */
-    DWORD,
-    /**
-    * dword Little Endian
-    */
-    DWORD_LITTLE_ENDIAN,
-    /**
-    * dword Big Endian
-    */
-    DWORD_BIG_ENDIAN,
-    /**
-    * expand Sz
-    */
-    EXPAND_SZ,
-    /**
-    * link
-    */
-    LINK,
-    /**
-    * multi Sz
-    */
-    MULTI_SZ,
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * qword
-    */
-    QWORD,
-    /**
-    * qwordlittle Endian
-    */
-    QWORDLITTLE_ENDIAN,
-    /**
-    * sz
-    */
-    SZ,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For RegistryValueType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the security singleton.  */
+public enum RegistryValueType implements ValuedEnum {
+    Unknown("unknown"),
+    Binary("binary"),
+    Dword("dword"),
+    DwordLittleEndian("dwordLittleEndian"),
+    DwordBigEndian("dwordBigEndian"),
+    ExpandSz("expandSz"),
+    Link("link"),
+    MultiSz("multiSz"),
+    None("none"),
+    Qword("qword"),
+    QwordlittleEndian("qwordlittleEndian"),
+    Sz("sz"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    RegistryValueType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RegistryValueType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "binary": return Binary;
+            case "dword": return Dword;
+            case "dwordLittleEndian": return DwordLittleEndian;
+            case "dwordBigEndian": return DwordBigEndian;
+            case "expandSz": return ExpandSz;
+            case "link": return Link;
+            case "multiSz": return MultiSz;
+            case "none": return None;
+            case "qword": return Qword;
+            case "qwordlittleEndian": return QwordlittleEndian;
+            case "sz": return Sz;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

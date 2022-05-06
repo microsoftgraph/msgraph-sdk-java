@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed App Data Encryption Type.
-*/
-public enum ManagedAppDataEncryptionType
-{
-    /**
-    * use Device Settings
-    */
-    USE_DEVICE_SETTINGS,
-    /**
-    * after Device Restart
-    */
-    AFTER_DEVICE_RESTART,
-    /**
-    * when Device Locked Except Open Files
-    */
-    WHEN_DEVICE_LOCKED_EXCEPT_OPEN_FILES,
-    /**
-    * when Device Locked
-    */
-    WHEN_DEVICE_LOCKED,
-    /**
-    * For ManagedAppDataEncryptionType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton.  */
+public enum ManagedAppDataEncryptionType implements ValuedEnum {
+    UseDeviceSettings("useDeviceSettings"),
+    AfterDeviceRestart("afterDeviceRestart"),
+    WhenDeviceLockedExceptOpenFiles("whenDeviceLockedExceptOpenFiles"),
+    WhenDeviceLocked("whenDeviceLocked");
+    public final String value;
+    ManagedAppDataEncryptionType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedAppDataEncryptionType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "useDeviceSettings": return UseDeviceSettings;
+            case "afterDeviceRestart": return AfterDeviceRestart;
+            case "whenDeviceLockedExceptOpenFiles": return WhenDeviceLockedExceptOpenFiles;
+            case "whenDeviceLocked": return WhenDeviceLocked;
+            default: return null;
+        }
+    }
 }

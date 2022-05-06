@@ -1,90 +1,57 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Service Health Status.
-*/
-public enum ServiceHealthStatus
-{
-    /**
-    * service Operational
-    */
-    SERVICE_OPERATIONAL,
-    /**
-    * investigating
-    */
-    INVESTIGATING,
-    /**
-    * restoring Service
-    */
-    RESTORING_SERVICE,
-    /**
-    * verifying Service
-    */
-    VERIFYING_SERVICE,
-    /**
-    * service Restored
-    */
-    SERVICE_RESTORED,
-    /**
-    * post Incident Review Published
-    */
-    POST_INCIDENT_REVIEW_PUBLISHED,
-    /**
-    * service Degradation
-    */
-    SERVICE_DEGRADATION,
-    /**
-    * service Interruption
-    */
-    SERVICE_INTERRUPTION,
-    /**
-    * extended Recovery
-    */
-    EXTENDED_RECOVERY,
-    /**
-    * false Positive
-    */
-    FALSE_POSITIVE,
-    /**
-    * investigation Suspended
-    */
-    INVESTIGATION_SUSPENDED,
-    /**
-    * resolved
-    */
-    RESOLVED,
-    /**
-    * mitigated External
-    */
-    MITIGATED_EXTERNAL,
-    /**
-    * mitigated
-    */
-    MITIGATED,
-    /**
-    * resolved External
-    */
-    RESOLVED_EXTERNAL,
-    /**
-    * confirmed
-    */
-    CONFIRMED,
-    /**
-    * reported
-    */
-    REPORTED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ServiceHealthStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the admin singleton.  */
+public enum ServiceHealthStatus implements ValuedEnum {
+    ServiceOperational("serviceOperational"),
+    Investigating("investigating"),
+    RestoringService("restoringService"),
+    VerifyingService("verifyingService"),
+    ServiceRestored("serviceRestored"),
+    PostIncidentReviewPublished("postIncidentReviewPublished"),
+    ServiceDegradation("serviceDegradation"),
+    ServiceInterruption("serviceInterruption"),
+    ExtendedRecovery("extendedRecovery"),
+    FalsePositive("falsePositive"),
+    InvestigationSuspended("investigationSuspended"),
+    Resolved("resolved"),
+    MitigatedExternal("mitigatedExternal"),
+    Mitigated("mitigated"),
+    ResolvedExternal("resolvedExternal"),
+    Confirmed("confirmed"),
+    Reported("reported"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ServiceHealthStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ServiceHealthStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "serviceOperational": return ServiceOperational;
+            case "investigating": return Investigating;
+            case "restoringService": return RestoringService;
+            case "verifyingService": return VerifyingService;
+            case "serviceRestored": return ServiceRestored;
+            case "postIncidentReviewPublished": return PostIncidentReviewPublished;
+            case "serviceDegradation": return ServiceDegradation;
+            case "serviceInterruption": return ServiceInterruption;
+            case "extendedRecovery": return ExtendedRecovery;
+            case "falsePositive": return FalsePositive;
+            case "investigationSuspended": return InvestigationSuspended;
+            case "resolved": return Resolved;
+            case "mitigatedExternal": return MitigatedExternal;
+            case "mitigated": return Mitigated;
+            case "resolvedExternal": return ResolvedExternal;
+            case "confirmed": return Confirmed;
+            case "reported": return Reported;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

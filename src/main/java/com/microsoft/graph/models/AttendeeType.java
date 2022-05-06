@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Attendee Type.
-*/
-public enum AttendeeType
-{
-    /**
-    * required
-    */
-    REQUIRED,
-    /**
-    * optional
-    */
-    OPTIONAL,
-    /**
-    * resource
-    */
-    RESOURCE,
-    /**
-    * For AttendeeType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum AttendeeType implements ValuedEnum {
+    Required("required"),
+    Optional("optional"),
+    Resource("resource");
+    public final String value;
+    AttendeeType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AttendeeType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "required": return Required;
+            case "optional": return Optional;
+            case "resource": return Resource;
+            default: return null;
+        }
+    }
 }

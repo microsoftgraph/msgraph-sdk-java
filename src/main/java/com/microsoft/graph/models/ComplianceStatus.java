@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Compliance Status.
-*/
-public enum ComplianceStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * not Applicable
-    */
-    NOT_APPLICABLE,
-    /**
-    * compliant
-    */
-    COMPLIANT,
-    /**
-    * remediated
-    */
-    REMEDIATED,
-    /**
-    * non Compliant
-    */
-    NON_COMPLIANT,
-    /**
-    * error
-    */
-    ERROR,
-    /**
-    * conflict
-    */
-    CONFLICT,
-    /**
-    * not Assigned
-    */
-    NOT_ASSIGNED,
-    /**
-    * For ComplianceStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum ComplianceStatus implements ValuedEnum {
+    Unknown("unknown"),
+    NotApplicable("notApplicable"),
+    Compliant("compliant"),
+    Remediated("remediated"),
+    NonCompliant("nonCompliant"),
+    Error("error"),
+    Conflict("conflict"),
+    NotAssigned("notAssigned");
+    public final String value;
+    ComplianceStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ComplianceStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "notApplicable": return NotApplicable;
+            case "compliant": return Compliant;
+            case "remediated": return Remediated;
+            case "nonCompliant": return NonCompliant;
+            case "error": return Error;
+            case "conflict": return Conflict;
+            case "notAssigned": return NotAssigned;
+            default: return null;
+        }
+    }
 }

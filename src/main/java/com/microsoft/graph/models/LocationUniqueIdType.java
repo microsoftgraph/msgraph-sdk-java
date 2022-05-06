@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Location Unique Id Type.
-*/
-public enum LocationUniqueIdType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * location Store
-    */
-    LOCATION_STORE,
-    /**
-    * directory
-    */
-    DIRECTORY,
-    /**
-    * private
-    */
-    PRIVATE,
-    /**
-    * bing
-    */
-    BING,
-    /**
-    * For LocationUniqueIdType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum LocationUniqueIdType implements ValuedEnum {
+    Unknown("unknown"),
+    LocationStore("locationStore"),
+    Directory("directory"),
+    Private_escaped("private_escaped"),
+    Bing("bing");
+    public final String value;
+    LocationUniqueIdType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static LocationUniqueIdType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "locationStore": return LocationStore;
+            case "directory": return Directory;
+            case "private_escaped": return Private_escaped;
+            case "bing": return Bing;
+            default: return null;
+        }
+    }
 }

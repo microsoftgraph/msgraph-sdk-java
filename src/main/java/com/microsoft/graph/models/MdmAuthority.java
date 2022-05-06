@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Mdm Authority.
-*/
-public enum MdmAuthority
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * intune
-    */
-    INTUNE,
-    /**
-    * sccm
-    */
-    SCCM,
-    /**
-    * office365
-    */
-    OFFICE365,
-    /**
-    * For MdmAuthority values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of organization entities.  */
+public enum MdmAuthority implements ValuedEnum {
+    Unknown("unknown"),
+    Intune("intune"),
+    Sccm("sccm"),
+    Office365("office365");
+    public final String value;
+    MdmAuthority(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MdmAuthority forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "intune": return Intune;
+            case "sccm": return Sccm;
+            case "office365": return Office365;
+            default: return null;
+        }
+    }
 }

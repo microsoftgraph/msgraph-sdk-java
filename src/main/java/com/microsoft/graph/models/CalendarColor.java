@@ -1,62 +1,43 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Calendar Color.
-*/
-public enum CalendarColor
-{
-    /**
-    * auto
-    */
-    AUTO,
-    /**
-    * light Blue
-    */
-    LIGHT_BLUE,
-    /**
-    * light Green
-    */
-    LIGHT_GREEN,
-    /**
-    * light Orange
-    */
-    LIGHT_ORANGE,
-    /**
-    * light Gray
-    */
-    LIGHT_GRAY,
-    /**
-    * light Yellow
-    */
-    LIGHT_YELLOW,
-    /**
-    * light Teal
-    */
-    LIGHT_TEAL,
-    /**
-    * light Pink
-    */
-    LIGHT_PINK,
-    /**
-    * light Brown
-    */
-    LIGHT_BROWN,
-    /**
-    * light Red
-    */
-    LIGHT_RED,
-    /**
-    * max Color
-    */
-    MAX_COLOR,
-    /**
-    * For CalendarColor values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum CalendarColor implements ValuedEnum {
+    Auto("auto"),
+    LightBlue("lightBlue"),
+    LightGreen("lightGreen"),
+    LightOrange("lightOrange"),
+    LightGray("lightGray"),
+    LightYellow("lightYellow"),
+    LightTeal("lightTeal"),
+    LightPink("lightPink"),
+    LightBrown("lightBrown"),
+    LightRed("lightRed"),
+    MaxColor("maxColor");
+    public final String value;
+    CalendarColor(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CalendarColor forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "auto": return Auto;
+            case "lightBlue": return LightBlue;
+            case "lightGreen": return LightGreen;
+            case "lightOrange": return LightOrange;
+            case "lightGray": return LightGray;
+            case "lightYellow": return LightYellow;
+            case "lightTeal": return LightTeal;
+            case "lightPink": return LightPink;
+            case "lightBrown": return LightBrown;
+            case "lightRed": return LightRed;
+            case "maxColor": return MaxColor;
+            default: return null;
+        }
+    }
 }

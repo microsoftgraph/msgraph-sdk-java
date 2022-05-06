@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Service Health Origin.
-*/
-public enum ServiceHealthOrigin
-{
-    /**
-    * microsoft
-    */
-    MICROSOFT,
-    /**
-    * third Party
-    */
-    THIRD_PARTY,
-    /**
-    * customer
-    */
-    CUSTOMER,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ServiceHealthOrigin values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the admin singleton.  */
+public enum ServiceHealthOrigin implements ValuedEnum {
+    Microsoft("microsoft"),
+    ThirdParty("thirdParty"),
+    Customer("customer"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ServiceHealthOrigin(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ServiceHealthOrigin forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "microsoft": return Microsoft;
+            case "thirdParty": return ThirdParty;
+            case "customer": return Customer;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

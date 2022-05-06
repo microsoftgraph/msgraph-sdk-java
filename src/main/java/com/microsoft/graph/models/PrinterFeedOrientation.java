@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Printer Feed Orientation.
-*/
-public enum PrinterFeedOrientation
-{
-    /**
-    * long Edge First
-    */
-    LONG_EDGE_FIRST,
-    /**
-    * short Edge First
-    */
-    SHORT_EDGE_FIRST,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For PrinterFeedOrientation values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the print singleton.  */
+public enum PrinterFeedOrientation implements ValuedEnum {
+    LongEdgeFirst("longEdgeFirst"),
+    ShortEdgeFirst("shortEdgeFirst"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PrinterFeedOrientation(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PrinterFeedOrientation forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "longEdgeFirst": return LongEdgeFirst;
+            case "shortEdgeFirst": return ShortEdgeFirst;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

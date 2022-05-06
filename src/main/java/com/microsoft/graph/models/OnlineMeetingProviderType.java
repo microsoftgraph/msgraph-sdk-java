@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Online Meeting Provider Type.
-*/
-public enum OnlineMeetingProviderType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * skype For Business
-    */
-    SKYPE_FOR_BUSINESS,
-    /**
-    * skype For Consumer
-    */
-    SKYPE_FOR_CONSUMER,
-    /**
-    * teams For Business
-    */
-    TEAMS_FOR_BUSINESS,
-    /**
-    * For OnlineMeetingProviderType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum OnlineMeetingProviderType implements ValuedEnum {
+    Unknown("unknown"),
+    SkypeForBusiness("skypeForBusiness"),
+    SkypeForConsumer("skypeForConsumer"),
+    TeamsForBusiness("teamsForBusiness");
+    public final String value;
+    OnlineMeetingProviderType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static OnlineMeetingProviderType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "skypeForBusiness": return SkypeForBusiness;
+            case "skypeForConsumer": return SkypeForConsumer;
+            case "teamsForBusiness": return TeamsForBusiness;
+            default: return null;
+        }
+    }
 }

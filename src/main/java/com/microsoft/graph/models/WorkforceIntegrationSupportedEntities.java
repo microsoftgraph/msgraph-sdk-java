@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Workforce Integration Supported Entities.
-*/
-public enum WorkforceIntegrationSupportedEntities
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * shift
-    */
-    SHIFT,
-    /**
-    * swap Request
-    */
-    SWAP_REQUEST,
-    /**
-    * user Shift Preferences
-    */
-    USER_SHIFT_PREFERENCES,
-    /**
-    * open Shift
-    */
-    OPEN_SHIFT,
-    /**
-    * open Shift Request
-    */
-    OPEN_SHIFT_REQUEST,
-    /**
-    * offer Shift Request
-    */
-    OFFER_SHIFT_REQUEST,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For WorkforceIntegrationSupportedEntities values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the teamwork singleton.  */
+public enum WorkforceIntegrationSupportedEntities implements ValuedEnum {
+    None("none"),
+    Shift("shift"),
+    SwapRequest("swapRequest"),
+    UserShiftPreferences("userShiftPreferences"),
+    OpenShift("openShift"),
+    OpenShiftRequest("openShiftRequest"),
+    OfferShiftRequest("offerShiftRequest"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    WorkforceIntegrationSupportedEntities(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WorkforceIntegrationSupportedEntities forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "shift": return Shift;
+            case "swapRequest": return SwapRequest;
+            case "userShiftPreferences": return UserShiftPreferences;
+            case "openShift": return OpenShift;
+            case "openShiftRequest": return OpenShiftRequest;
+            case "offerShiftRequest": return OfferShiftRequest;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

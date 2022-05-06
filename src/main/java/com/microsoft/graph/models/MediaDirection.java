@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Media Direction.
-*/
-public enum MediaDirection
-{
-    /**
-    * inactive
-    */
-    INACTIVE,
-    /**
-    * send Only
-    */
-    SEND_ONLY,
-    /**
-    * receive Only
-    */
-    RECEIVE_ONLY,
-    /**
-    * send Receive
-    */
-    SEND_RECEIVE,
-    /**
-    * For MediaDirection values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the cloudCommunications singleton.  */
+public enum MediaDirection implements ValuedEnum {
+    Inactive("inactive"),
+    SendOnly("sendOnly"),
+    ReceiveOnly("receiveOnly"),
+    SendReceive("sendReceive");
+    public final String value;
+    MediaDirection(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MediaDirection forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "inactive": return Inactive;
+            case "sendOnly": return SendOnly;
+            case "receiveOnly": return ReceiveOnly;
+            case "sendReceive": return SendReceive;
+            default: return null;
+        }
+    }
 }

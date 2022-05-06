@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Alert Severity.
-*/
-public enum AlertSeverity
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * informational
-    */
-    INFORMATIONAL,
-    /**
-    * low
-    */
-    LOW,
-    /**
-    * medium
-    */
-    MEDIUM,
-    /**
-    * high
-    */
-    HIGH,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AlertSeverity values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the security singleton.  */
+public enum AlertSeverity implements ValuedEnum {
+    Unknown("unknown"),
+    Informational("informational"),
+    Low("low"),
+    Medium("medium"),
+    High("high"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AlertSeverity(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AlertSeverity forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "informational": return Informational;
+            case "low": return Low;
+            case "medium": return Medium;
+            case "high": return High;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

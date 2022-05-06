@@ -1,94 +1,59 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Column Types.
-*/
-public enum ColumnTypes
-{
-    /**
-    * note
-    */
-    NOTE,
-    /**
-    * text
-    */
-    TEXT,
-    /**
-    * choice
-    */
-    CHOICE,
-    /**
-    * multichoice
-    */
-    MULTICHOICE,
-    /**
-    * number
-    */
-    NUMBER,
-    /**
-    * currency
-    */
-    CURRENCY,
-    /**
-    * date Time
-    */
-    DATE_TIME,
-    /**
-    * lookup
-    */
-    LOOKUP,
-    /**
-    * boolean
-    */
-    BOOLEAN,
-    /**
-    * user
-    */
-    USER,
-    /**
-    * url
-    */
-    URL,
-    /**
-    * calculated
-    */
-    CALCULATED,
-    /**
-    * location
-    */
-    LOCATION,
-    /**
-    * geolocation
-    */
-    GEOLOCATION,
-    /**
-    * term
-    */
-    TERM,
-    /**
-    * multiterm
-    */
-    MULTITERM,
-    /**
-    * thumbnail
-    */
-    THUMBNAIL,
-    /**
-    * approval Status
-    */
-    APPROVAL_STATUS,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ColumnTypes values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum ColumnTypes implements ValuedEnum {
+    Note("note"),
+    Text("text"),
+    Choice("choice"),
+    Multichoice("multichoice"),
+    Number("number"),
+    Currency("currency"),
+    DateTime("dateTime"),
+    Lookup("lookup"),
+    Boolean_escaped("boolean_escaped"),
+    User("user"),
+    Url("url"),
+    Calculated("calculated"),
+    Location("location"),
+    Geolocation("geolocation"),
+    Term("term"),
+    Multiterm("multiterm"),
+    Thumbnail("thumbnail"),
+    ApprovalStatus("approvalStatus"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ColumnTypes(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ColumnTypes forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "note": return Note;
+            case "text": return Text;
+            case "choice": return Choice;
+            case "multichoice": return Multichoice;
+            case "number": return Number;
+            case "currency": return Currency;
+            case "dateTime": return DateTime;
+            case "lookup": return Lookup;
+            case "boolean_escaped": return Boolean_escaped;
+            case "user": return User;
+            case "url": return Url;
+            case "calculated": return Calculated;
+            case "location": return Location;
+            case "geolocation": return Geolocation;
+            case "term": return Term;
+            case "multiterm": return Multiterm;
+            case "thumbnail": return Thumbnail;
+            case "approvalStatus": return ApprovalStatus;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

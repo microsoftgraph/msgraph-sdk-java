@@ -1,78 +1,51 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Risk Event Type.
-*/
-public enum RiskEventType
-{
-    /**
-    * unlikely Travel
-    */
-    UNLIKELY_TRAVEL,
-    /**
-    * anonymized IPAddress
-    */
-    ANONYMIZED_IP_ADDRESS,
-    /**
-    * malicious IPAddress
-    */
-    MALICIOUS_IP_ADDRESS,
-    /**
-    * unfamiliar Features
-    */
-    UNFAMILIAR_FEATURES,
-    /**
-    * malware Infected IPAddress
-    */
-    MALWARE_INFECTED_IP_ADDRESS,
-    /**
-    * suspicious IPAddress
-    */
-    SUSPICIOUS_IP_ADDRESS,
-    /**
-    * leaked Credentials
-    */
-    LEAKED_CREDENTIALS,
-    /**
-    * investigations Threat Intelligence
-    */
-    INVESTIGATIONS_THREAT_INTELLIGENCE,
-    /**
-    * generic
-    */
-    GENERIC,
-    /**
-    * admin Confirmed User Compromised
-    */
-    ADMIN_CONFIRMED_USER_COMPROMISED,
-    /**
-    * mcas Impossible Travel
-    */
-    MCAS_IMPOSSIBLE_TRAVEL,
-    /**
-    * mcas Suspicious Inbox Manipulation Rules
-    */
-    MCAS_SUSPICIOUS_INBOX_MANIPULATION_RULES,
-    /**
-    * investigations Threat Intelligence Signin Linked
-    */
-    INVESTIGATIONS_THREAT_INTELLIGENCE_SIGNIN_LINKED,
-    /**
-    * malicious IPAddress Valid Credentials Blocked IP
-    */
-    MALICIOUS_IP_ADDRESS_VALID_CREDENTIALS_BLOCKED_IP,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For RiskEventType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton.  */
+public enum RiskEventType implements ValuedEnum {
+    UnlikelyTravel("unlikelyTravel"),
+    AnonymizedIPAddress("anonymizedIPAddress"),
+    MaliciousIPAddress("maliciousIPAddress"),
+    UnfamiliarFeatures("unfamiliarFeatures"),
+    MalwareInfectedIPAddress("malwareInfectedIPAddress"),
+    SuspiciousIPAddress("suspiciousIPAddress"),
+    LeakedCredentials("leakedCredentials"),
+    InvestigationsThreatIntelligence("investigationsThreatIntelligence"),
+    Generic("generic"),
+    AdminConfirmedUserCompromised("adminConfirmedUserCompromised"),
+    McasImpossibleTravel("mcasImpossibleTravel"),
+    McasSuspiciousInboxManipulationRules("mcasSuspiciousInboxManipulationRules"),
+    InvestigationsThreatIntelligenceSigninLinked("investigationsThreatIntelligenceSigninLinked"),
+    MaliciousIPAddressValidCredentialsBlockedIP("maliciousIPAddressValidCredentialsBlockedIP"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    RiskEventType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RiskEventType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unlikelyTravel": return UnlikelyTravel;
+            case "anonymizedIPAddress": return AnonymizedIPAddress;
+            case "maliciousIPAddress": return MaliciousIPAddress;
+            case "unfamiliarFeatures": return UnfamiliarFeatures;
+            case "malwareInfectedIPAddress": return MalwareInfectedIPAddress;
+            case "suspiciousIPAddress": return SuspiciousIPAddress;
+            case "leakedCredentials": return LeakedCredentials;
+            case "investigationsThreatIntelligence": return InvestigationsThreatIntelligence;
+            case "generic": return Generic;
+            case "adminConfirmedUserCompromised": return AdminConfirmedUserCompromised;
+            case "mcasImpossibleTravel": return McasImpossibleTravel;
+            case "mcasSuspiciousInboxManipulationRules": return McasSuspiciousInboxManipulationRules;
+            case "investigationsThreatIntelligenceSigninLinked": return InvestigationsThreatIntelligenceSigninLinked;
+            case "maliciousIPAddressValidCredentialsBlockedIP": return MaliciousIPAddressValidCredentialsBlockedIP;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

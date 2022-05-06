@@ -1,70 +1,47 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Management Agent Type.
-*/
-public enum ManagementAgentType
-{
-    /**
-    * eas
-    */
-    EAS,
-    /**
-    * mdm
-    */
-    MDM,
-    /**
-    * eas Mdm
-    */
-    EAS_MDM,
-    /**
-    * intune Client
-    */
-    INTUNE_CLIENT,
-    /**
-    * eas Intune Client
-    */
-    EAS_INTUNE_CLIENT,
-    /**
-    * configuration Manager Client
-    */
-    CONFIGURATION_MANAGER_CLIENT,
-    /**
-    * configuration Manager Client Mdm
-    */
-    CONFIGURATION_MANAGER_CLIENT_MDM,
-    /**
-    * configuration Manager Client Mdm Eas
-    */
-    CONFIGURATION_MANAGER_CLIENT_MDM_EAS,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * jamf
-    */
-    JAMF,
-    /**
-    * google Cloud Device Policy Controller
-    */
-    GOOGLE_CLOUD_DEVICE_POLICY_CONTROLLER,
-    /**
-    * microsoft365Managed Mdm
-    */
-    MICROSOFT365_MANAGED_MDM,
-    /**
-    * ms Sense
-    */
-    MS_SENSE,
-    /**
-    * For ManagementAgentType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum ManagementAgentType implements ValuedEnum {
+    Eas("eas"),
+    Mdm("mdm"),
+    EasMdm("easMdm"),
+    IntuneClient("intuneClient"),
+    EasIntuneClient("easIntuneClient"),
+    ConfigurationManagerClient("configurationManagerClient"),
+    ConfigurationManagerClientMdm("configurationManagerClientMdm"),
+    ConfigurationManagerClientMdmEas("configurationManagerClientMdmEas"),
+    Unknown("unknown"),
+    Jamf("jamf"),
+    GoogleCloudDevicePolicyController("googleCloudDevicePolicyController"),
+    Microsoft365ManagedMdm("microsoft365ManagedMdm"),
+    MsSense("msSense");
+    public final String value;
+    ManagementAgentType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagementAgentType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "eas": return Eas;
+            case "mdm": return Mdm;
+            case "easMdm": return EasMdm;
+            case "intuneClient": return IntuneClient;
+            case "easIntuneClient": return EasIntuneClient;
+            case "configurationManagerClient": return ConfigurationManagerClient;
+            case "configurationManagerClientMdm": return ConfigurationManagerClientMdm;
+            case "configurationManagerClientMdmEas": return ConfigurationManagerClientMdmEas;
+            case "unknown": return Unknown;
+            case "jamf": return Jamf;
+            case "googleCloudDevicePolicyController": return GoogleCloudDevicePolicyController;
+            case "microsoft365ManagedMdm": return Microsoft365ManagedMdm;
+            case "msSense": return MsSense;
+            default: return null;
+        }
+    }
 }

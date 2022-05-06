@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Week Index.
-*/
-public enum WeekIndex
-{
-    /**
-    * first
-    */
-    FIRST,
-    /**
-    * second
-    */
-    SECOND,
-    /**
-    * third
-    */
-    THIRD,
-    /**
-    * fourth
-    */
-    FOURTH,
-    /**
-    * last
-    */
-    LAST,
-    /**
-    * For WeekIndex values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum WeekIndex implements ValuedEnum {
+    First("first"),
+    Second("second"),
+    Third("third"),
+    Fourth("fourth"),
+    Last("last");
+    public final String value;
+    WeekIndex(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WeekIndex forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "first": return First;
+            case "second": return Second;
+            case "third": return Third;
+            case "fourth": return Fourth;
+            case "last": return Last;
+            default: return null;
+        }
+    }
 }

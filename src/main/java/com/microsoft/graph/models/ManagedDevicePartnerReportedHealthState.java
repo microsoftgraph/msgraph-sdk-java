@@ -1,58 +1,41 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed Device Partner Reported Health State.
-*/
-public enum ManagedDevicePartnerReportedHealthState
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * activated
-    */
-    ACTIVATED,
-    /**
-    * deactivated
-    */
-    DEACTIVATED,
-    /**
-    * secured
-    */
-    SECURED,
-    /**
-    * low Severity
-    */
-    LOW_SEVERITY,
-    /**
-    * medium Severity
-    */
-    MEDIUM_SEVERITY,
-    /**
-    * high Severity
-    */
-    HIGH_SEVERITY,
-    /**
-    * unresponsive
-    */
-    UNRESPONSIVE,
-    /**
-    * compromised
-    */
-    COMPROMISED,
-    /**
-    * misconfigured
-    */
-    MISCONFIGURED,
-    /**
-    * For ManagedDevicePartnerReportedHealthState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum ManagedDevicePartnerReportedHealthState implements ValuedEnum {
+    Unknown("unknown"),
+    Activated("activated"),
+    Deactivated("deactivated"),
+    Secured("secured"),
+    LowSeverity("lowSeverity"),
+    MediumSeverity("mediumSeverity"),
+    HighSeverity("highSeverity"),
+    Unresponsive("unresponsive"),
+    Compromised("compromised"),
+    Misconfigured("misconfigured");
+    public final String value;
+    ManagedDevicePartnerReportedHealthState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedDevicePartnerReportedHealthState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "activated": return Activated;
+            case "deactivated": return Deactivated;
+            case "secured": return Secured;
+            case "lowSeverity": return LowSeverity;
+            case "mediumSeverity": return MediumSeverity;
+            case "highSeverity": return HighSeverity;
+            case "unresponsive": return Unresponsive;
+            case "compromised": return Compromised;
+            case "misconfigured": return Misconfigured;
+            default: return null;
+        }
+    }
 }

@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Identity User Flow Attribute Type.
-*/
-public enum IdentityUserFlowAttributeType
-{
-    /**
-    * built In
-    */
-    BUILT_IN,
-    /**
-    * custom
-    */
-    CUSTOM,
-    /**
-    * required
-    */
-    REQUIRED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For IdentityUserFlowAttributeType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityContainer singleton.  */
+public enum IdentityUserFlowAttributeType implements ValuedEnum {
+    BuiltIn("builtIn"),
+    Custom("custom"),
+    Required("required"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    IdentityUserFlowAttributeType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static IdentityUserFlowAttributeType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "builtIn": return BuiltIn;
+            case "custom": return Custom;
+            case "required": return Required;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

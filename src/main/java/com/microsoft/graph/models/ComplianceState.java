@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Compliance State.
-*/
-public enum ComplianceState
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * compliant
-    */
-    COMPLIANT,
-    /**
-    * noncompliant
-    */
-    NONCOMPLIANT,
-    /**
-    * conflict
-    */
-    CONFLICT,
-    /**
-    * error
-    */
-    ERROR,
-    /**
-    * in Grace Period
-    */
-    IN_GRACE_PERIOD,
-    /**
-    * config Manager
-    */
-    CONFIG_MANAGER,
-    /**
-    * For ComplianceState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton.  */
+public enum ComplianceState implements ValuedEnum {
+    Unknown("unknown"),
+    Compliant("compliant"),
+    Noncompliant("noncompliant"),
+    Conflict("conflict"),
+    Error("error"),
+    InGracePeriod("inGracePeriod"),
+    ConfigManager("configManager");
+    public final String value;
+    ComplianceState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ComplianceState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "compliant": return Compliant;
+            case "noncompliant": return Noncompliant;
+            case "conflict": return Conflict;
+            case "error": return Error;
+            case "inGracePeriod": return InGracePeriod;
+            case "configManager": return ConfigManager;
+            default: return null;
+        }
+    }
 }

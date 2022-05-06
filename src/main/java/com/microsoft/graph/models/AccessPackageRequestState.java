@@ -1,58 +1,41 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Access Package Request State.
-*/
-public enum AccessPackageRequestState
-{
-    /**
-    * submitted
-    */
-    SUBMITTED,
-    /**
-    * pending Approval
-    */
-    PENDING_APPROVAL,
-    /**
-    * delivering
-    */
-    DELIVERING,
-    /**
-    * delivered
-    */
-    DELIVERED,
-    /**
-    * delivery Failed
-    */
-    DELIVERY_FAILED,
-    /**
-    * denied
-    */
-    DENIED,
-    /**
-    * scheduled
-    */
-    SCHEDULED,
-    /**
-    * canceled
-    */
-    CANCELED,
-    /**
-    * partially Delivered
-    */
-    PARTIALLY_DELIVERED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AccessPackageRequestState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityGovernance singleton.  */
+public enum AccessPackageRequestState implements ValuedEnum {
+    Submitted("submitted"),
+    PendingApproval("pendingApproval"),
+    Delivering("delivering"),
+    Delivered("delivered"),
+    DeliveryFailed("deliveryFailed"),
+    Denied("denied"),
+    Scheduled("scheduled"),
+    Canceled("canceled"),
+    PartiallyDelivered("partiallyDelivered"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AccessPackageRequestState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AccessPackageRequestState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "submitted": return Submitted;
+            case "pendingApproval": return PendingApproval;
+            case "delivering": return Delivering;
+            case "delivered": return Delivered;
+            case "deliveryFailed": return DeliveryFailed;
+            case "denied": return Denied;
+            case "scheduled": return Scheduled;
+            case "canceled": return Canceled;
+            case "partiallyDelivered": return PartiallyDelivered;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

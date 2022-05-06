@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Schedule Change Request Actor.
-*/
-public enum ScheduleChangeRequestActor
-{
-    /**
-    * sender
-    */
-    SENDER,
-    /**
-    * recipient
-    */
-    RECIPIENT,
-    /**
-    * manager
-    */
-    MANAGER,
-    /**
-    * system
-    */
-    SYSTEM,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ScheduleChangeRequestActor values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum ScheduleChangeRequestActor implements ValuedEnum {
+    Sender("sender"),
+    Recipient("recipient"),
+    Manager("manager"),
+    System("system"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ScheduleChangeRequestActor(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ScheduleChangeRequestActor forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "sender": return Sender;
+            case "recipient": return Recipient;
+            case "manager": return Manager;
+            case "system": return System;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

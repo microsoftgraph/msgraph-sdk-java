@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Filter Mode.
-*/
-public enum FilterMode
-{
-    /**
-    * include
-    */
-    INCLUDE,
-    /**
-    * exclude
-    */
-    EXCLUDE,
-    /**
-    * For FilterMode values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityContainer singleton.  */
+public enum FilterMode implements ValuedEnum {
+    Include("include"),
+    Exclude("exclude");
+    public final String value;
+    FilterMode(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static FilterMode forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "include": return Include;
+            case "exclude": return Exclude;
+            default: return null;
+        }
+    }
 }

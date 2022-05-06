@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Call Direction.
-*/
-public enum CallDirection
-{
-    /**
-    * incoming
-    */
-    INCOMING,
-    /**
-    * outgoing
-    */
-    OUTGOING,
-    /**
-    * For CallDirection values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the cloudCommunications singleton.  */
+public enum CallDirection implements ValuedEnum {
+    Incoming("incoming"),
+    Outgoing("outgoing");
+    public final String value;
+    CallDirection(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CallDirection forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "incoming": return Incoming;
+            case "outgoing": return Outgoing;
+            default: return null;
+        }
+    }
 }

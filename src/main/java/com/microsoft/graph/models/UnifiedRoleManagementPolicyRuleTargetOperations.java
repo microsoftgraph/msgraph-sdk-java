@@ -1,54 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Unified Role Management Policy Rule Target Operations.
-*/
-public enum UnifiedRoleManagementPolicyRuleTargetOperations
-{
-    /**
-    * all
-    */
-    ALL,
-    /**
-    * activate
-    */
-    ACTIVATE,
-    /**
-    * deactivate
-    */
-    DEACTIVATE,
-    /**
-    * assign
-    */
-    ASSIGN,
-    /**
-    * update
-    */
-    UPDATE,
-    /**
-    * remove
-    */
-    REMOVE,
-    /**
-    * extend
-    */
-    EXTEND,
-    /**
-    * renew
-    */
-    RENEW,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For UnifiedRoleManagementPolicyRuleTargetOperations values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the policyRoot singleton.  */
+public enum UnifiedRoleManagementPolicyRuleTargetOperations implements ValuedEnum {
+    All("all"),
+    Activate("activate"),
+    Deactivate("deactivate"),
+    Assign("assign"),
+    Update("update"),
+    Remove("remove"),
+    Extend("extend"),
+    Renew("renew"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    UnifiedRoleManagementPolicyRuleTargetOperations(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static UnifiedRoleManagementPolicyRuleTargetOperations forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "all": return All;
+            case "activate": return Activate;
+            case "deactivate": return Deactivate;
+            case "assign": return Assign;
+            case "update": return Update;
+            case "remove": return Remove;
+            case "extend": return Extend;
+            case "renew": return Renew;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

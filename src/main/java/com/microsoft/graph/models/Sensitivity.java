@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Sensitivity.
-*/
-public enum Sensitivity
-{
-    /**
-    * normal
-    */
-    NORMAL,
-    /**
-    * personal
-    */
-    PERSONAL,
-    /**
-    * private
-    */
-    PRIVATE,
-    /**
-    * confidential
-    */
-    CONFIDENTIAL,
-    /**
-    * For Sensitivity values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum Sensitivity implements ValuedEnum {
+    Normal("normal"),
+    Personal("personal"),
+    Private_escaped("private_escaped"),
+    Confidential("confidential");
+    public final String value;
+    Sensitivity(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static Sensitivity forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "normal": return Normal;
+            case "personal": return Personal;
+            case "private_escaped": return Private_escaped;
+            case "confidential": return Confidential;
+            default: return null;
+        }
+    }
 }

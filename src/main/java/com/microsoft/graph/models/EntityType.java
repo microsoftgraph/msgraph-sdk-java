@@ -1,54 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Entity Type.
-*/
-public enum EntityType
-{
-    /**
-    * event
-    */
-    EVENT,
-    /**
-    * message
-    */
-    MESSAGE,
-    /**
-    * drive Item
-    */
-    DRIVE_ITEM,
-    /**
-    * external Item
-    */
-    EXTERNAL_ITEM,
-    /**
-    * site
-    */
-    SITE,
-    /**
-    * list
-    */
-    LIST,
-    /**
-    * list Item
-    */
-    LIST_ITEM,
-    /**
-    * drive
-    */
-    DRIVE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For EntityType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the query method.  */
+public enum EntityType implements ValuedEnum {
+    Event("event"),
+    Message("message"),
+    DriveItem("driveItem"),
+    ExternalItem("externalItem"),
+    Site("site"),
+    List("list"),
+    ListItem("listItem"),
+    Drive("drive"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    EntityType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static EntityType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "event": return Event;
+            case "message": return Message;
+            case "driveItem": return DriveItem;
+            case "externalItem": return ExternalItem;
+            case "site": return Site;
+            case "list": return List;
+            case "listItem": return ListItem;
+            case "drive": return Drive;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Response Type.
-*/
-public enum ResponseType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * organizer
-    */
-    ORGANIZER,
-    /**
-    * tentatively Accepted
-    */
-    TENTATIVELY_ACCEPTED,
-    /**
-    * accepted
-    */
-    ACCEPTED,
-    /**
-    * declined
-    */
-    DECLINED,
-    /**
-    * not Responded
-    */
-    NOT_RESPONDED,
-    /**
-    * For ResponseType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton.  */
+public enum ResponseType implements ValuedEnum {
+    None("none"),
+    Organizer("organizer"),
+    TentativelyAccepted("tentativelyAccepted"),
+    Accepted("accepted"),
+    Declined("declined"),
+    NotResponded("notResponded");
+    public final String value;
+    ResponseType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ResponseType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "organizer": return Organizer;
+            case "tentativelyAccepted": return TentativelyAccepted;
+            case "accepted": return Accepted;
+            case "declined": return Declined;
+            case "notResponded": return NotResponded;
+            default: return null;
+        }
+    }
 }

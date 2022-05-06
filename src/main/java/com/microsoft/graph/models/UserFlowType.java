@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum User Flow Type.
-*/
-public enum UserFlowType
-{
-    /**
-    * sign Up
-    */
-    SIGN_UP,
-    /**
-    * sign In
-    */
-    SIGN_IN,
-    /**
-    * sign Up Or Sign In
-    */
-    SIGN_UP_OR_SIGN_IN,
-    /**
-    * password Reset
-    */
-    PASSWORD_RESET,
-    /**
-    * profile Update
-    */
-    PROFILE_UPDATE,
-    /**
-    * resource Owner
-    */
-    RESOURCE_OWNER,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For UserFlowType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityContainer singleton.  */
+public enum UserFlowType implements ValuedEnum {
+    SignUp("signUp"),
+    SignIn("signIn"),
+    SignUpOrSignIn("signUpOrSignIn"),
+    PasswordReset("passwordReset"),
+    ProfileUpdate("profileUpdate"),
+    ResourceOwner("resourceOwner"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    UserFlowType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static UserFlowType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "signUp": return SignUp;
+            case "signIn": return SignIn;
+            case "signUpOrSignIn": return SignUpOrSignIn;
+            case "passwordReset": return PasswordReset;
+            case "profileUpdate": return ProfileUpdate;
+            case "resourceOwner": return ResourceOwner;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

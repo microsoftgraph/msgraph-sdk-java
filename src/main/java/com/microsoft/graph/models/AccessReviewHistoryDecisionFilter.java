@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Access Review History Decision Filter.
-*/
-public enum AccessReviewHistoryDecisionFilter
-{
-    /**
-    * approve
-    */
-    APPROVE,
-    /**
-    * deny
-    */
-    DENY,
-    /**
-    * not Reviewed
-    */
-    NOT_REVIEWED,
-    /**
-    * dont Know
-    */
-    DONT_KNOW,
-    /**
-    * not Notified
-    */
-    NOT_NOTIFIED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AccessReviewHistoryDecisionFilter values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityGovernance singleton.  */
+public enum AccessReviewHistoryDecisionFilter implements ValuedEnum {
+    Approve("approve"),
+    Deny("deny"),
+    NotReviewed("notReviewed"),
+    DontKnow("dontKnow"),
+    NotNotified("notNotified"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AccessReviewHistoryDecisionFilter(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AccessReviewHistoryDecisionFilter forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "approve": return Approve;
+            case "deny": return Deny;
+            case "notReviewed": return NotReviewed;
+            case "dontKnow": return DontKnow;
+            case "notNotified": return NotNotified;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

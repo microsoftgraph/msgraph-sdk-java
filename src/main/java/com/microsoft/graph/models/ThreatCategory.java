@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Threat Category.
-*/
-public enum ThreatCategory
-{
-    /**
-    * undefined
-    */
-    UNDEFINED,
-    /**
-    * spam
-    */
-    SPAM,
-    /**
-    * phishing
-    */
-    PHISHING,
-    /**
-    * malware
-    */
-    MALWARE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ThreatCategory values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the informationProtection singleton.  */
+public enum ThreatCategory implements ValuedEnum {
+    Undefined("undefined"),
+    Spam("spam"),
+    Phishing("phishing"),
+    Malware("malware"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ThreatCategory(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ThreatCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "undefined": return Undefined;
+            case "spam": return Spam;
+            case "phishing": return Phishing;
+            case "malware": return Malware;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

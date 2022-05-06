@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Provisioning Status Error Category.
-*/
-public enum ProvisioningStatusErrorCategory
-{
-    /**
-    * failure
-    */
-    FAILURE,
-    /**
-    * non Service Failure
-    */
-    NON_SERVICE_FAILURE,
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ProvisioningStatusErrorCategory values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton.  */
+public enum ProvisioningStatusErrorCategory implements ValuedEnum {
+    Failure("failure"),
+    NonServiceFailure("nonServiceFailure"),
+    Success("success"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ProvisioningStatusErrorCategory(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ProvisioningStatusErrorCategory forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "failure": return Failure;
+            case "nonServiceFailure": return NonServiceFailure;
+            case "success": return Success;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

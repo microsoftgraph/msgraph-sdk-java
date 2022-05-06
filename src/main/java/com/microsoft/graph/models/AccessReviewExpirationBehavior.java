@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Access Review Expiration Behavior.
-*/
-public enum AccessReviewExpirationBehavior
-{
-    /**
-    * keep Access
-    */
-    KEEP_ACCESS,
-    /**
-    * remove Access
-    */
-    REMOVE_ACCESS,
-    /**
-    * accept Access Recommendation
-    */
-    ACCEPT_ACCESS_RECOMMENDATION,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AccessReviewExpirationBehavior values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityGovernance singleton.  */
+public enum AccessReviewExpirationBehavior implements ValuedEnum {
+    KeepAccess("keepAccess"),
+    RemoveAccess("removeAccess"),
+    AcceptAccessRecommendation("acceptAccessRecommendation"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AccessReviewExpirationBehavior(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AccessReviewExpirationBehavior forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "keepAccess": return KeepAccess;
+            case "removeAccess": return RemoveAccess;
+            case "acceptAccessRecommendation": return AcceptAccessRecommendation;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }
