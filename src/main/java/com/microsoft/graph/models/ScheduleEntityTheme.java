@@ -1,70 +1,47 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Schedule Entity Theme.
-*/
-public enum ScheduleEntityTheme
-{
-    /**
-    * white
-    */
-    WHITE,
-    /**
-    * blue
-    */
-    BLUE,
-    /**
-    * green
-    */
-    GREEN,
-    /**
-    * purple
-    */
-    PURPLE,
-    /**
-    * pink
-    */
-    PINK,
-    /**
-    * yellow
-    */
-    YELLOW,
-    /**
-    * gray
-    */
-    GRAY,
-    /**
-    * dark Blue
-    */
-    DARK_BLUE,
-    /**
-    * dark Green
-    */
-    DARK_GREEN,
-    /**
-    * dark Purple
-    */
-    DARK_PURPLE,
-    /**
-    * dark Pink
-    */
-    DARK_PINK,
-    /**
-    * dark Yellow
-    */
-    DARK_YELLOW,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ScheduleEntityTheme values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum ScheduleEntityTheme implements ValuedEnum {
+    White("white"),
+    Blue("blue"),
+    Green("green"),
+    Purple("purple"),
+    Pink("pink"),
+    Yellow("yellow"),
+    Gray("gray"),
+    DarkBlue("darkBlue"),
+    DarkGreen("darkGreen"),
+    DarkPurple("darkPurple"),
+    DarkPink("darkPink"),
+    DarkYellow("darkYellow"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ScheduleEntityTheme(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ScheduleEntityTheme forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "white": return White;
+            case "blue": return Blue;
+            case "green": return Green;
+            case "purple": return Purple;
+            case "pink": return Pink;
+            case "yellow": return Yellow;
+            case "gray": return Gray;
+            case "darkBlue": return DarkBlue;
+            case "darkGreen": return DarkGreen;
+            case "darkPurple": return DarkPurple;
+            case "darkPink": return DarkPink;
+            case "darkYellow": return DarkYellow;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

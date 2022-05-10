@@ -1,26 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed App Pin Character Set.
-*/
-public enum ManagedAppPinCharacterSet
-{
-    /**
-    * numeric
-    */
-    NUMERIC,
-    /**
-    * alphanumeric And Symbol
-    */
-    ALPHANUMERIC_AND_SYMBOL,
-    /**
-    * For ManagedAppPinCharacterSet values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum ManagedAppPinCharacterSet implements ValuedEnum {
+    /** Numeric characters */
+    Numeric("numeric"),
+    /** Alphanumeric and symbolic characters */
+    AlphanumericAndSymbol("alphanumericAndSymbol");
+    public final String value;
+    ManagedAppPinCharacterSet(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedAppPinCharacterSet forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "numeric": return Numeric;
+            case "alphanumericAndSymbol": return AlphanumericAndSymbol;
+            default: return null;
+        }
+    }
 }

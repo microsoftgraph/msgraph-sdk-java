@@ -1,54 +1,47 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Booking Price Type.
-*/
-public enum BookingPriceType
-{
-    /**
-    * undefined
-    */
-    UNDEFINED,
-    /**
-    * fixed Price
-    */
-    FIXED_PRICE,
-    /**
-    * starting At
-    */
-    STARTING_AT,
-    /**
-    * hourly
-    */
-    HOURLY,
-    /**
-    * free
-    */
-    FREE,
-    /**
-    * price Varies
-    */
-    PRICE_VARIES,
-    /**
-    * call Us
-    */
-    CALL_US,
-    /**
-    * not Set
-    */
-    NOT_SET,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For BookingPriceType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the solutionsRoot singleton. */
+public enum BookingPriceType implements ValuedEnum {
+    /** The price of the service is not defined. */
+    Undefined("undefined"),
+    /** The price of the service is fixed. */
+    FixedPrice("fixedPrice"),
+    /** The price of the service starts with a particular value, but can be higher based on the final services performed. */
+    StartingAt("startingAt"),
+    /** The price of the service depends on the number of hours a staff member works on the service. */
+    Hourly("hourly"),
+    /** The service is free. */
+    Free("free"),
+    /** The price of the service varies. */
+    PriceVaries("priceVaries"),
+    /** The price of the service is not listed. */
+    CallUs("callUs"),
+    /** The price of the service is not set. */
+    NotSet("notSet"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    BookingPriceType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static BookingPriceType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "undefined": return Undefined;
+            case "fixedPrice": return FixedPrice;
+            case "startingAt": return StartingAt;
+            case "hourly": return Hourly;
+            case "free": return Free;
+            case "priceVaries": return PriceVaries;
+            case "callUs": return CallUs;
+            case "notSet": return NotSet;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

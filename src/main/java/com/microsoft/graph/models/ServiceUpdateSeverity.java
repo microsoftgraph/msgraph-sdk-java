@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Service Update Severity.
-*/
-public enum ServiceUpdateSeverity
-{
-    /**
-    * normal
-    */
-    NORMAL,
-    /**
-    * high
-    */
-    HIGH,
-    /**
-    * critical
-    */
-    CRITICAL,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ServiceUpdateSeverity values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the admin singleton. */
+public enum ServiceUpdateSeverity implements ValuedEnum {
+    Normal("normal"),
+    High("high"),
+    Critical("critical"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ServiceUpdateSeverity(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ServiceUpdateSeverity forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "normal": return Normal;
+            case "high": return High;
+            case "critical": return Critical;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

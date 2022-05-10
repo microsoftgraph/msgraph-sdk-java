@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Calendar Role Type.
-*/
-public enum CalendarRoleType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * free Busy Read
-    */
-    FREE_BUSY_READ,
-    /**
-    * limited Read
-    */
-    LIMITED_READ,
-    /**
-    * read
-    */
-    READ,
-    /**
-    * write
-    */
-    WRITE,
-    /**
-    * delegate Without Private Event Access
-    */
-    DELEGATE_WITHOUT_PRIVATE_EVENT_ACCESS,
-    /**
-    * delegate With Private Event Access
-    */
-    DELEGATE_WITH_PRIVATE_EVENT_ACCESS,
-    /**
-    * custom
-    */
-    CUSTOM,
-    /**
-    * For CalendarRoleType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum CalendarRoleType implements ValuedEnum {
+    None("none"),
+    FreeBusyRead("freeBusyRead"),
+    LimitedRead("limitedRead"),
+    Read("read"),
+    Write("write"),
+    DelegateWithoutPrivateEventAccess("delegateWithoutPrivateEventAccess"),
+    DelegateWithPrivateEventAccess("delegateWithPrivateEventAccess"),
+    Custom("custom");
+    public final String value;
+    CalendarRoleType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static CalendarRoleType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "freeBusyRead": return FreeBusyRead;
+            case "limitedRead": return LimitedRead;
+            case "read": return Read;
+            case "write": return Write;
+            case "delegateWithoutPrivateEventAccess": return DelegateWithoutPrivateEventAccess;
+            case "delegateWithPrivateEventAccess": return DelegateWithPrivateEventAccess;
+            case "custom": return Custom;
+            default: return null;
+        }
+    }
 }

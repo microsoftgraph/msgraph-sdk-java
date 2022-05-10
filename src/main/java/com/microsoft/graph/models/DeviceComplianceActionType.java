@@ -1,46 +1,42 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Compliance Action Type.
-*/
-public enum DeviceComplianceActionType
-{
-    /**
-    * no Action
-    */
-    NO_ACTION,
-    /**
-    * notification
-    */
-    NOTIFICATION,
-    /**
-    * block
-    */
-    BLOCK,
-    /**
-    * retire
-    */
-    RETIRE,
-    /**
-    * wipe
-    */
-    WIPE,
-    /**
-    * remove Resource Access Profiles
-    */
-    REMOVE_RESOURCE_ACCESS_PROFILES,
-    /**
-    * push Notification
-    */
-    PUSH_NOTIFICATION,
-    /**
-    * For DeviceComplianceActionType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum DeviceComplianceActionType implements ValuedEnum {
+    /** No Action */
+    NoAction("noAction"),
+    /** Send Notification */
+    Notification("notification"),
+    /** Block the device in AAD */
+    Block("block"),
+    /** Retire the device */
+    Retire("retire"),
+    /** Wipe the device */
+    Wipe("wipe"),
+    /** Remove Resource Access Profiles from the device */
+    RemoveResourceAccessProfiles("removeResourceAccessProfiles"),
+    /** Send push notification to device */
+    PushNotification("pushNotification");
+    public final String value;
+    DeviceComplianceActionType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceComplianceActionType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "noAction": return NoAction;
+            case "notification": return Notification;
+            case "block": return Block;
+            case "retire": return Retire;
+            case "wipe": return Wipe;
+            case "removeResourceAccessProfiles": return RemoveResourceAccessProfiles;
+            case "pushNotification": return PushNotification;
+            default: return null;
+        }
+    }
 }

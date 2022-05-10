@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Allow Invites From.
-*/
-public enum AllowInvitesFrom
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * admins And Guest Inviters
-    */
-    ADMINS_AND_GUEST_INVITERS,
-    /**
-    * admins Guest Inviters And All Members
-    */
-    ADMINS_GUEST_INVITERS_AND_ALL_MEMBERS,
-    /**
-    * everyone
-    */
-    EVERYONE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AllowInvitesFrom values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the policyRoot singleton. */
+public enum AllowInvitesFrom implements ValuedEnum {
+    None("none"),
+    AdminsAndGuestInviters("adminsAndGuestInviters"),
+    AdminsGuestInvitersAndAllMembers("adminsGuestInvitersAndAllMembers"),
+    Everyone("everyone"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AllowInvitesFrom(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AllowInvitesFrom forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "adminsAndGuestInviters": return AdminsAndGuestInviters;
+            case "adminsGuestInvitersAndAllMembers": return AdminsGuestInvitersAndAllMembers;
+            case "everyone": return Everyone;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

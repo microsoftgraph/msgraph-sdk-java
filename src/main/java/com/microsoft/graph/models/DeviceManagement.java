@@ -1,508 +1,748 @@
-// Template Source: BaseEntity.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
-import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.serializer.IJsonBackedObject;
-import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.DeviceManagementSettings;
-import com.microsoft.graph.models.IntuneBrand;
-import com.microsoft.graph.models.DeviceManagementSubscriptionState;
-import com.microsoft.graph.models.TermsAndConditions;
-import com.microsoft.graph.models.DeviceCompliancePolicy;
-import com.microsoft.graph.models.DeviceCompliancePolicyDeviceStateSummary;
-import com.microsoft.graph.models.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.models.DeviceConfigurationDeviceStateSummary;
-import com.microsoft.graph.models.DeviceConfiguration;
-import com.microsoft.graph.models.IosUpdateDeviceStatus;
-import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
-import com.microsoft.graph.models.ComplianceManagementPartner;
-import com.microsoft.graph.models.OnPremisesConditionalAccessSettings;
-import com.microsoft.graph.models.DeviceCategory;
-import com.microsoft.graph.models.DeviceEnrollmentConfiguration;
-import com.microsoft.graph.models.DeviceManagementPartner;
-import com.microsoft.graph.models.DeviceManagementExchangeConnector;
-import com.microsoft.graph.models.MobileThreatDefenseConnector;
-import com.microsoft.graph.models.ApplePushNotificationCertificate;
-import com.microsoft.graph.models.DetectedApp;
-import com.microsoft.graph.models.ManagedDeviceOverview;
-import com.microsoft.graph.models.ManagedDevice;
-import com.microsoft.graph.models.ImportedWindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
-import com.microsoft.graph.models.NotificationMessageTemplate;
-import com.microsoft.graph.models.ResourceOperation;
-import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
-import com.microsoft.graph.models.RoleDefinition;
-import com.microsoft.graph.models.RemoteAssistancePartner;
-import com.microsoft.graph.models.DeviceManagementReports;
-import com.microsoft.graph.models.TelecomExpenseManagementPartner;
-import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
-import com.microsoft.graph.models.WindowsInformationProtectionAppLearningSummary;
-import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummary;
-import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.TermsAndConditionsCollectionPage;
-import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionPage;
-import com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage;
-import com.microsoft.graph.requests.DeviceConfigurationCollectionPage;
-import com.microsoft.graph.requests.IosUpdateDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionPage;
-import com.microsoft.graph.requests.DeviceCategoryCollectionPage;
-import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementPartnerCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementExchangeConnectorCollectionPage;
-import com.microsoft.graph.requests.MobileThreatDefenseConnectorCollectionPage;
-import com.microsoft.graph.requests.DetectedAppCollectionPage;
-import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
-import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage;
-import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage;
-import com.microsoft.graph.requests.NotificationMessageTemplateCollectionPage;
-import com.microsoft.graph.requests.ResourceOperationCollectionPage;
-import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionPage;
-import com.microsoft.graph.requests.RoleDefinitionCollectionPage;
-import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionPage;
-import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage;
-import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSummaryCollectionPage;
-import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
-
-
-import com.google.gson.JsonObject;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.annotations.Expose;
-import javax.annotation.Nullable;
-import javax.annotation.Nonnull;
-
-// **NOTE** This file was generated by a tool and any changes will be overwritten.
-
-/**
- * The class for the Device Management.
- */
-public class DeviceManagement extends Entity implements IJsonBackedObject {
-
-
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+/** Singleton entity that acts as a container for all device management functionality. */
+public class DeviceManagement extends Entity implements Parsable {
+    /** Apple push notification certificate. */
+    private ApplePushNotificationCertificate _applePushNotificationCertificate;
+    /** The list of Compliance Management Partners configured by the tenant. */
+    private java.util.List<ComplianceManagementPartner> _complianceManagementPartners;
+    /** The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access */
+    private OnPremisesConditionalAccessSettings _conditionalAccessSettings;
+    /** The list of detected apps associated with a device. */
+    private java.util.List<DetectedApp> _detectedApps;
+    /** The list of device categories with the tenant. */
+    private java.util.List<DeviceCategory> _deviceCategories;
+    /** The device compliance policies. */
+    private java.util.List<DeviceCompliancePolicy> _deviceCompliancePolicies;
+    /** The device compliance state summary for this account. */
+    private DeviceCompliancePolicyDeviceStateSummary _deviceCompliancePolicyDeviceStateSummary;
+    /** The summary states of compliance policy settings for this account. */
+    private java.util.List<DeviceCompliancePolicySettingStateSummary> _deviceCompliancePolicySettingStateSummaries;
+    /** The device configuration device state summary for this account. */
+    private DeviceConfigurationDeviceStateSummary _deviceConfigurationDeviceStateSummaries;
+    /** The device configurations. */
+    private java.util.List<DeviceConfiguration> _deviceConfigurations;
+    /** The list of device enrollment configurations */
+    private java.util.List<DeviceEnrollmentConfiguration> _deviceEnrollmentConfigurations;
+    /** The list of Device Management Partners configured by the tenant. */
+    private java.util.List<DeviceManagementPartner> _deviceManagementPartners;
+    /** The list of Exchange Connectors configured by the tenant. */
+    private java.util.List<DeviceManagementExchangeConnector> _exchangeConnectors;
+    /** Collection of imported Windows autopilot devices. */
+    private java.util.List<ImportedWindowsAutopilotDeviceIdentity> _importedWindowsAutopilotDeviceIdentities;
+    /** Intune Account ID for given tenant */
+    private String _intuneAccountId;
+    /** intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal. */
+    private IntuneBrand _intuneBrand;
+    /** The IOS software update installation statuses for this account. */
+    private java.util.List<IosUpdateDeviceStatus> _iosUpdateStatuses;
+    /** Device overview */
+    private ManagedDeviceOverview _managedDeviceOverview;
+    /** The list of managed devices. */
+    private java.util.List<ManagedDevice> _managedDevices;
+    /** The list of Mobile threat Defense connectors configured by the tenant. */
+    private java.util.List<MobileThreatDefenseConnector> _mobileThreatDefenseConnectors;
+    /** The Notification Message Templates. */
+    private java.util.List<NotificationMessageTemplate> _notificationMessageTemplates;
+    /** The remote assist partners. */
+    private java.util.List<RemoteAssistancePartner> _remoteAssistancePartners;
+    /** Reports singleton */
+    private DeviceManagementReports _reports;
+    /** The Resource Operations. */
+    private java.util.List<ResourceOperation> _resourceOperations;
+    /** The Role Assignments. */
+    private java.util.List<DeviceAndAppManagementRoleAssignment> _roleAssignments;
+    /** The Role Definitions. */
+    private java.util.List<RoleDefinition> _roleDefinitions;
+    /** Account level settings. */
+    private DeviceManagementSettings _settings;
+    /** The software update status summary. */
+    private SoftwareUpdateStatusSummary _softwareUpdateStatusSummary;
+    /** Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut. */
+    private DeviceManagementSubscriptionState _subscriptionState;
+    /** The telecom expense management partners. */
+    private java.util.List<TelecomExpenseManagementPartner> _telecomExpenseManagementPartners;
+    /** The terms and conditions associated with device management of the company. */
+    private java.util.List<TermsAndConditions> _termsAndConditions;
+    /** The list of troubleshooting events for the tenant. */
+    private java.util.List<DeviceManagementTroubleshootingEvent> _troubleshootingEvents;
+    /** The Windows autopilot device identities contained collection. */
+    private java.util.List<WindowsAutopilotDeviceIdentity> _windowsAutopilotDeviceIdentities;
+    /** The windows information protection app learning summaries. */
+    private java.util.List<WindowsInformationProtectionAppLearningSummary> _windowsInformationProtectionAppLearningSummaries;
+    /** The windows information protection network learning summaries. */
+    private java.util.List<WindowsInformationProtectionNetworkLearningSummary> _windowsInformationProtectionNetworkLearningSummaries;
     /**
-     * The Intune Account Id.
-     * Intune Account Id for given tenant
+     * Instantiates a new deviceManagement and sets the default values.
+     * @return a void
      */
-    @SerializedName(value = "intuneAccountId", alternate = {"IntuneAccountId"})
-    @Expose
-	@Nullable
-    public java.util.UUID intuneAccountId;
-
+    public DeviceManagement() {
+        super();
+    }
     /**
-     * The Settings.
-     * Account level settings.
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a deviceManagement
      */
-    @SerializedName(value = "settings", alternate = {"Settings"})
-    @Expose
-	@Nullable
-    public DeviceManagementSettings settings;
-
+    @javax.annotation.Nonnull
+    public static DeviceManagement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new DeviceManagement();
+    }
     /**
-     * The Intune Brand.
-     * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+     * Gets the applePushNotificationCertificate property value. Apple push notification certificate.
+     * @return a applePushNotificationCertificate
      */
-    @SerializedName(value = "intuneBrand", alternate = {"IntuneBrand"})
-    @Expose
-	@Nullable
-    public IntuneBrand intuneBrand;
-
+    @javax.annotation.Nullable
+    public ApplePushNotificationCertificate getApplePushNotificationCertificate() {
+        return this._applePushNotificationCertificate;
+    }
     /**
-     * The Subscription State.
-     * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Gets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
+     * @return a complianceManagementPartner
      */
-    @SerializedName(value = "subscriptionState", alternate = {"SubscriptionState"})
-    @Expose
-	@Nullable
-    public DeviceManagementSubscriptionState subscriptionState;
-
+    @javax.annotation.Nullable
+    public java.util.List<ComplianceManagementPartner> getComplianceManagementPartners() {
+        return this._complianceManagementPartners;
+    }
     /**
-     * The Terms And Conditions.
-     * The terms and conditions associated with device management of the company.
+     * Gets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     * @return a onPremisesConditionalAccessSettings
      */
-    @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
-    @Expose
-	@Nullable
-    public TermsAndConditionsCollectionPage termsAndConditions;
-
+    @javax.annotation.Nullable
+    public OnPremisesConditionalAccessSettings getConditionalAccessSettings() {
+        return this._conditionalAccessSettings;
+    }
     /**
-     * The Device Compliance Policies.
-     * The device compliance policies.
+     * Gets the detectedApps property value. The list of detected apps associated with a device.
+     * @return a detectedApp
      */
-    @SerializedName(value = "deviceCompliancePolicies", alternate = {"DeviceCompliancePolicies"})
-    @Expose
-	@Nullable
-    public DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
-
+    @javax.annotation.Nullable
+    public java.util.List<DetectedApp> getDetectedApps() {
+        return this._detectedApps;
+    }
     /**
-     * The Device Compliance Policy Device State Summary.
-     * The device compliance state summary for this account.
+     * Gets the deviceCategories property value. The list of device categories with the tenant.
+     * @return a deviceCategory
      */
-    @SerializedName(value = "deviceCompliancePolicyDeviceStateSummary", alternate = {"DeviceCompliancePolicyDeviceStateSummary"})
-    @Expose
-	@Nullable
-    public DeviceCompliancePolicyDeviceStateSummary deviceCompliancePolicyDeviceStateSummary;
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceCategory> getDeviceCategories() {
+        return this._deviceCategories;
+    }
     /**
-     * The Device Compliance Policy Setting State Summaries.
-     * The summary states of compliance policy settings for this account.
+     * Gets the deviceCompliancePolicies property value. The device compliance policies.
+     * @return a deviceCompliancePolicy
      */
-    @SerializedName(value = "deviceCompliancePolicySettingStateSummaries", alternate = {"DeviceCompliancePolicySettingStateSummaries"})
-    @Expose
-	@Nullable
-    public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceCompliancePolicy> getDeviceCompliancePolicies() {
+        return this._deviceCompliancePolicies;
+    }
     /**
-     * The Device Configuration Device State Summaries.
-     * The device configuration device state summary for this account.
+     * Gets the deviceCompliancePolicyDeviceStateSummary property value. The device compliance state summary for this account.
+     * @return a deviceCompliancePolicyDeviceStateSummary
      */
-    @SerializedName(value = "deviceConfigurationDeviceStateSummaries", alternate = {"DeviceConfigurationDeviceStateSummaries"})
-    @Expose
-	@Nullable
-    public DeviceConfigurationDeviceStateSummary deviceConfigurationDeviceStateSummaries;
-
+    @javax.annotation.Nullable
+    public DeviceCompliancePolicyDeviceStateSummary getDeviceCompliancePolicyDeviceStateSummary() {
+        return this._deviceCompliancePolicyDeviceStateSummary;
+    }
     /**
-     * The Device Configurations.
-     * The device configurations.
+     * Gets the deviceCompliancePolicySettingStateSummaries property value. The summary states of compliance policy settings for this account.
+     * @return a deviceCompliancePolicySettingStateSummary
      */
-    @SerializedName(value = "deviceConfigurations", alternate = {"DeviceConfigurations"})
-    @Expose
-	@Nullable
-    public DeviceConfigurationCollectionPage deviceConfigurations;
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceCompliancePolicySettingStateSummary> getDeviceCompliancePolicySettingStateSummaries() {
+        return this._deviceCompliancePolicySettingStateSummaries;
+    }
     /**
-     * The Ios Update Statuses.
-     * The IOS software update installation statuses for this account.
+     * Gets the deviceConfigurationDeviceStateSummaries property value. The device configuration device state summary for this account.
+     * @return a deviceConfigurationDeviceStateSummary
      */
-    @SerializedName(value = "iosUpdateStatuses", alternate = {"IosUpdateStatuses"})
-    @Expose
-	@Nullable
-    public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
-
+    @javax.annotation.Nullable
+    public DeviceConfigurationDeviceStateSummary getDeviceConfigurationDeviceStateSummaries() {
+        return this._deviceConfigurationDeviceStateSummaries;
+    }
     /**
-     * The Software Update Status Summary.
-     * The software update status summary.
+     * Gets the deviceConfigurations property value. The device configurations.
+     * @return a deviceConfiguration
      */
-    @SerializedName(value = "softwareUpdateStatusSummary", alternate = {"SoftwareUpdateStatusSummary"})
-    @Expose
-	@Nullable
-    public SoftwareUpdateStatusSummary softwareUpdateStatusSummary;
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceConfiguration> getDeviceConfigurations() {
+        return this._deviceConfigurations;
+    }
     /**
-     * The Compliance Management Partners.
-     * The list of Compliance Management Partners configured by the tenant.
+     * Gets the deviceEnrollmentConfigurations property value. The list of device enrollment configurations
+     * @return a deviceEnrollmentConfiguration
      */
-    @SerializedName(value = "complianceManagementPartners", alternate = {"ComplianceManagementPartners"})
-    @Expose
-	@Nullable
-    public ComplianceManagementPartnerCollectionPage complianceManagementPartners;
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceEnrollmentConfiguration> getDeviceEnrollmentConfigurations() {
+        return this._deviceEnrollmentConfigurations;
+    }
     /**
-     * The Conditional Access Settings.
-     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     * Gets the deviceManagementPartners property value. The list of Device Management Partners configured by the tenant.
+     * @return a deviceManagementPartner
      */
-    @SerializedName(value = "conditionalAccessSettings", alternate = {"ConditionalAccessSettings"})
-    @Expose
-	@Nullable
-    public OnPremisesConditionalAccessSettings conditionalAccessSettings;
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementPartner> getDeviceManagementPartners() {
+        return this._deviceManagementPartners;
+    }
     /**
-     * The Device Categories.
-     * The list of device categories with the tenant.
+     * Gets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
+     * @return a deviceManagementExchangeConnector
      */
-    @SerializedName(value = "deviceCategories", alternate = {"DeviceCategories"})
-    @Expose
-	@Nullable
-    public DeviceCategoryCollectionPage deviceCategories;
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementExchangeConnector> getExchangeConnectors() {
+        return this._exchangeConnectors;
+    }
     /**
-     * The Device Enrollment Configurations.
-     * The list of device enrollment configurations
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
      */
-    @SerializedName(value = "deviceEnrollmentConfigurations", alternate = {"DeviceEnrollmentConfigurations"})
-    @Expose
-	@Nullable
-    public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
-
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final DeviceManagement currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("applePushNotificationCertificate", (n) -> { currentObject.setApplePushNotificationCertificate(n.getObjectValue(ApplePushNotificationCertificate::createFromDiscriminatorValue)); });
+            this.put("complianceManagementPartners", (n) -> { currentObject.setComplianceManagementPartners(n.getCollectionOfObjectValues(ComplianceManagementPartner::createFromDiscriminatorValue)); });
+            this.put("conditionalAccessSettings", (n) -> { currentObject.setConditionalAccessSettings(n.getObjectValue(OnPremisesConditionalAccessSettings::createFromDiscriminatorValue)); });
+            this.put("detectedApps", (n) -> { currentObject.setDetectedApps(n.getCollectionOfObjectValues(DetectedApp::createFromDiscriminatorValue)); });
+            this.put("deviceCategories", (n) -> { currentObject.setDeviceCategories(n.getCollectionOfObjectValues(DeviceCategory::createFromDiscriminatorValue)); });
+            this.put("deviceCompliancePolicies", (n) -> { currentObject.setDeviceCompliancePolicies(n.getCollectionOfObjectValues(DeviceCompliancePolicy::createFromDiscriminatorValue)); });
+            this.put("deviceCompliancePolicyDeviceStateSummary", (n) -> { currentObject.setDeviceCompliancePolicyDeviceStateSummary(n.getObjectValue(DeviceCompliancePolicyDeviceStateSummary::createFromDiscriminatorValue)); });
+            this.put("deviceCompliancePolicySettingStateSummaries", (n) -> { currentObject.setDeviceCompliancePolicySettingStateSummaries(n.getCollectionOfObjectValues(DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue)); });
+            this.put("deviceConfigurationDeviceStateSummaries", (n) -> { currentObject.setDeviceConfigurationDeviceStateSummaries(n.getObjectValue(DeviceConfigurationDeviceStateSummary::createFromDiscriminatorValue)); });
+            this.put("deviceConfigurations", (n) -> { currentObject.setDeviceConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
+            this.put("deviceEnrollmentConfigurations", (n) -> { currentObject.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
+            this.put("deviceManagementPartners", (n) -> { currentObject.setDeviceManagementPartners(n.getCollectionOfObjectValues(DeviceManagementPartner::createFromDiscriminatorValue)); });
+            this.put("exchangeConnectors", (n) -> { currentObject.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
+            this.put("importedWindowsAutopilotDeviceIdentities", (n) -> { currentObject.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
+            this.put("intuneAccountId", (n) -> { currentObject.setIntuneAccountId(n.getStringValue()); });
+            this.put("intuneBrand", (n) -> { currentObject.setIntuneBrand(n.getObjectValue(IntuneBrand::createFromDiscriminatorValue)); });
+            this.put("iosUpdateStatuses", (n) -> { currentObject.setIosUpdateStatuses(n.getCollectionOfObjectValues(IosUpdateDeviceStatus::createFromDiscriminatorValue)); });
+            this.put("managedDeviceOverview", (n) -> { currentObject.setManagedDeviceOverview(n.getObjectValue(ManagedDeviceOverview::createFromDiscriminatorValue)); });
+            this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+            this.put("mobileThreatDefenseConnectors", (n) -> { currentObject.setMobileThreatDefenseConnectors(n.getCollectionOfObjectValues(MobileThreatDefenseConnector::createFromDiscriminatorValue)); });
+            this.put("notificationMessageTemplates", (n) -> { currentObject.setNotificationMessageTemplates(n.getCollectionOfObjectValues(NotificationMessageTemplate::createFromDiscriminatorValue)); });
+            this.put("remoteAssistancePartners", (n) -> { currentObject.setRemoteAssistancePartners(n.getCollectionOfObjectValues(RemoteAssistancePartner::createFromDiscriminatorValue)); });
+            this.put("reports", (n) -> { currentObject.setReports(n.getObjectValue(DeviceManagementReports::createFromDiscriminatorValue)); });
+            this.put("resourceOperations", (n) -> { currentObject.setResourceOperations(n.getCollectionOfObjectValues(ResourceOperation::createFromDiscriminatorValue)); });
+            this.put("roleAssignments", (n) -> { currentObject.setRoleAssignments(n.getCollectionOfObjectValues(DeviceAndAppManagementRoleAssignment::createFromDiscriminatorValue)); });
+            this.put("roleDefinitions", (n) -> { currentObject.setRoleDefinitions(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });
+            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(DeviceManagementSettings::createFromDiscriminatorValue)); });
+            this.put("softwareUpdateStatusSummary", (n) -> { currentObject.setSoftwareUpdateStatusSummary(n.getObjectValue(SoftwareUpdateStatusSummary::createFromDiscriminatorValue)); });
+            this.put("subscriptionState", (n) -> { currentObject.setSubscriptionState(n.getEnumValue(DeviceManagementSubscriptionState.class)); });
+            this.put("telecomExpenseManagementPartners", (n) -> { currentObject.setTelecomExpenseManagementPartners(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
+            this.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getCollectionOfObjectValues(TermsAndConditions::createFromDiscriminatorValue)); });
+            this.put("troubleshootingEvents", (n) -> { currentObject.setTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
+            this.put("windowsAutopilotDeviceIdentities", (n) -> { currentObject.setWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
+            this.put("windowsInformationProtectionAppLearningSummaries", (n) -> { currentObject.setWindowsInformationProtectionAppLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue)); });
+            this.put("windowsInformationProtectionNetworkLearningSummaries", (n) -> { currentObject.setWindowsInformationProtectionNetworkLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionNetworkLearningSummary::createFromDiscriminatorValue)); });
+        }};
+    }
     /**
-     * The Device Management Partners.
-     * The list of Device Management Partners configured by the tenant.
+     * Gets the importedWindowsAutopilotDeviceIdentities property value. Collection of imported Windows autopilot devices.
+     * @return a importedWindowsAutopilotDeviceIdentity
      */
-    @SerializedName(value = "deviceManagementPartners", alternate = {"DeviceManagementPartners"})
-    @Expose
-	@Nullable
-    public DeviceManagementPartnerCollectionPage deviceManagementPartners;
-
+    @javax.annotation.Nullable
+    public java.util.List<ImportedWindowsAutopilotDeviceIdentity> getImportedWindowsAutopilotDeviceIdentities() {
+        return this._importedWindowsAutopilotDeviceIdentities;
+    }
     /**
-     * The Exchange Connectors.
-     * The list of Exchange Connectors configured by the tenant.
+     * Gets the intuneAccountId property value. Intune Account ID for given tenant
+     * @return a string
      */
-    @SerializedName(value = "exchangeConnectors", alternate = {"ExchangeConnectors"})
-    @Expose
-	@Nullable
-    public DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
-
+    @javax.annotation.Nullable
+    public String getIntuneAccountId() {
+        return this._intuneAccountId;
+    }
     /**
-     * The Mobile Threat Defense Connectors.
-     * The list of Mobile threat Defense connectors configured by the tenant.
+     * Gets the intuneBrand property value. intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+     * @return a intuneBrand
      */
-    @SerializedName(value = "mobileThreatDefenseConnectors", alternate = {"MobileThreatDefenseConnectors"})
-    @Expose
-	@Nullable
-    public MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
-
+    @javax.annotation.Nullable
+    public IntuneBrand getIntuneBrand() {
+        return this._intuneBrand;
+    }
     /**
-     * The Apple Push Notification Certificate.
-     * Apple push notification certificate.
+     * Gets the iosUpdateStatuses property value. The IOS software update installation statuses for this account.
+     * @return a iosUpdateDeviceStatus
      */
-    @SerializedName(value = "applePushNotificationCertificate", alternate = {"ApplePushNotificationCertificate"})
-    @Expose
-	@Nullable
-    public ApplePushNotificationCertificate applePushNotificationCertificate;
-
+    @javax.annotation.Nullable
+    public java.util.List<IosUpdateDeviceStatus> getIosUpdateStatuses() {
+        return this._iosUpdateStatuses;
+    }
     /**
-     * The Detected Apps.
-     * The list of detected apps associated with a device.
+     * Gets the managedDeviceOverview property value. Device overview
+     * @return a managedDeviceOverview
      */
-    @SerializedName(value = "detectedApps", alternate = {"DetectedApps"})
-    @Expose
-	@Nullable
-    public DetectedAppCollectionPage detectedApps;
-
+    @javax.annotation.Nullable
+    public ManagedDeviceOverview getManagedDeviceOverview() {
+        return this._managedDeviceOverview;
+    }
     /**
-     * The Managed Device Overview.
-     * Device overview
+     * Gets the managedDevices property value. The list of managed devices.
+     * @return a managedDevice
      */
-    @SerializedName(value = "managedDeviceOverview", alternate = {"ManagedDeviceOverview"})
-    @Expose
-	@Nullable
-    public ManagedDeviceOverview managedDeviceOverview;
-
+    @javax.annotation.Nullable
+    public java.util.List<ManagedDevice> getManagedDevices() {
+        return this._managedDevices;
+    }
     /**
-     * The Managed Devices.
-     * The list of managed devices.
+     * Gets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
+     * @return a mobileThreatDefenseConnector
      */
-    @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
-    @Expose
-	@Nullable
-    public ManagedDeviceCollectionPage managedDevices;
-
+    @javax.annotation.Nullable
+    public java.util.List<MobileThreatDefenseConnector> getMobileThreatDefenseConnectors() {
+        return this._mobileThreatDefenseConnectors;
+    }
     /**
-     * The Imported Windows Autopilot Device Identities.
-     * Collection of imported Windows autopilot devices.
+     * Gets the notificationMessageTemplates property value. The Notification Message Templates.
+     * @return a notificationMessageTemplate
      */
-    @SerializedName(value = "importedWindowsAutopilotDeviceIdentities", alternate = {"ImportedWindowsAutopilotDeviceIdentities"})
-    @Expose
-	@Nullable
-    public ImportedWindowsAutopilotDeviceIdentityCollectionPage importedWindowsAutopilotDeviceIdentities;
-
+    @javax.annotation.Nullable
+    public java.util.List<NotificationMessageTemplate> getNotificationMessageTemplates() {
+        return this._notificationMessageTemplates;
+    }
     /**
-     * The Windows Autopilot Device Identities.
-     * The Windows autopilot device identities contained collection.
+     * Gets the remoteAssistancePartners property value. The remote assist partners.
+     * @return a remoteAssistancePartner
      */
-    @SerializedName(value = "windowsAutopilotDeviceIdentities", alternate = {"WindowsAutopilotDeviceIdentities"})
-    @Expose
-	@Nullable
-    public WindowsAutopilotDeviceIdentityCollectionPage windowsAutopilotDeviceIdentities;
-
+    @javax.annotation.Nullable
+    public java.util.List<RemoteAssistancePartner> getRemoteAssistancePartners() {
+        return this._remoteAssistancePartners;
+    }
     /**
-     * The Notification Message Templates.
-     * The Notification Message Templates.
+     * Gets the reports property value. Reports singleton
+     * @return a deviceManagementReports
      */
-    @SerializedName(value = "notificationMessageTemplates", alternate = {"NotificationMessageTemplates"})
-    @Expose
-	@Nullable
-    public NotificationMessageTemplateCollectionPage notificationMessageTemplates;
-
+    @javax.annotation.Nullable
+    public DeviceManagementReports getReports() {
+        return this._reports;
+    }
     /**
-     * The Resource Operations.
-     * The Resource Operations.
+     * Gets the resourceOperations property value. The Resource Operations.
+     * @return a resourceOperation
      */
-    @SerializedName(value = "resourceOperations", alternate = {"ResourceOperations"})
-    @Expose
-	@Nullable
-    public ResourceOperationCollectionPage resourceOperations;
-
+    @javax.annotation.Nullable
+    public java.util.List<ResourceOperation> getResourceOperations() {
+        return this._resourceOperations;
+    }
     /**
-     * The Role Assignments.
-     * The Role Assignments.
+     * Gets the roleAssignments property value. The Role Assignments.
+     * @return a deviceAndAppManagementRoleAssignment
      */
-    @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
-    @Expose
-	@Nullable
-    public DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceAndAppManagementRoleAssignment> getRoleAssignments() {
+        return this._roleAssignments;
+    }
     /**
-     * The Role Definitions.
-     * The Role Definitions.
+     * Gets the roleDefinitions property value. The Role Definitions.
+     * @return a roleDefinition
      */
-    @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
-    @Expose
-	@Nullable
-    public RoleDefinitionCollectionPage roleDefinitions;
-
+    @javax.annotation.Nullable
+    public java.util.List<RoleDefinition> getRoleDefinitions() {
+        return this._roleDefinitions;
+    }
     /**
-     * The Remote Assistance Partners.
-     * The remote assist partners.
+     * Gets the settings property value. Account level settings.
+     * @return a deviceManagementSettings
      */
-    @SerializedName(value = "remoteAssistancePartners", alternate = {"RemoteAssistancePartners"})
-    @Expose
-	@Nullable
-    public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
-
+    @javax.annotation.Nullable
+    public DeviceManagementSettings getSettings() {
+        return this._settings;
+    }
     /**
-     * The Reports.
-     * Reports singleton
+     * Gets the softwareUpdateStatusSummary property value. The software update status summary.
+     * @return a softwareUpdateStatusSummary
      */
-    @SerializedName(value = "reports", alternate = {"Reports"})
-    @Expose
-	@Nullable
-    public DeviceManagementReports reports;
-
+    @javax.annotation.Nullable
+    public SoftwareUpdateStatusSummary getSoftwareUpdateStatusSummary() {
+        return this._softwareUpdateStatusSummary;
+    }
     /**
-     * The Telecom Expense Management Partners.
-     * The telecom expense management partners.
+     * Gets the subscriptionState property value. Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * @return a deviceManagementSubscriptionState
      */
-    @SerializedName(value = "telecomExpenseManagementPartners", alternate = {"TelecomExpenseManagementPartners"})
-    @Expose
-	@Nullable
-    public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
-
+    @javax.annotation.Nullable
+    public DeviceManagementSubscriptionState getSubscriptionState() {
+        return this._subscriptionState;
+    }
     /**
-     * The Troubleshooting Events.
-     * The list of troubleshooting events for the tenant.
+     * Gets the telecomExpenseManagementPartners property value. The telecom expense management partners.
+     * @return a telecomExpenseManagementPartner
      */
-    @SerializedName(value = "troubleshootingEvents", alternate = {"TroubleshootingEvents"})
-    @Expose
-	@Nullable
-    public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
-
+    @javax.annotation.Nullable
+    public java.util.List<TelecomExpenseManagementPartner> getTelecomExpenseManagementPartners() {
+        return this._telecomExpenseManagementPartners;
+    }
     /**
-     * The Windows Information Protection App Learning Summaries.
-     * The windows information protection app learning summaries.
+     * Gets the termsAndConditions property value. The terms and conditions associated with device management of the company.
+     * @return a termsAndConditions
      */
-    @SerializedName(value = "windowsInformationProtectionAppLearningSummaries", alternate = {"WindowsInformationProtectionAppLearningSummaries"})
-    @Expose
-	@Nullable
-    public WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
-
+    @javax.annotation.Nullable
+    public java.util.List<TermsAndConditions> getTermsAndConditions() {
+        return this._termsAndConditions;
+    }
     /**
-     * The Windows Information Protection Network Learning Summaries.
-     * The windows information protection network learning summaries.
+     * Gets the troubleshootingEvents property value. The list of troubleshooting events for the tenant.
+     * @return a deviceManagementTroubleshootingEvent
      */
-    @SerializedName(value = "windowsInformationProtectionNetworkLearningSummaries", alternate = {"WindowsInformationProtectionNetworkLearningSummaries"})
-    @Expose
-	@Nullable
-    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
-
-
+    @javax.annotation.Nullable
+    public java.util.List<DeviceManagementTroubleshootingEvent> getTroubleshootingEvents() {
+        return this._troubleshootingEvents;
+    }
     /**
-     * Sets the raw JSON object
-     *
-     * @param serializer the serializer
-     * @param json the JSON object to set this object to
+     * Gets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
+     * @return a windowsAutopilotDeviceIdentity
      */
-    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
-
-
-        if (json.has("termsAndConditions")) {
-            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), TermsAndConditionsCollectionPage.class);
-        }
-
-        if (json.has("deviceCompliancePolicies")) {
-            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies"), DeviceCompliancePolicyCollectionPage.class);
-        }
-
-        if (json.has("deviceCompliancePolicySettingStateSummaries")) {
-            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries"), DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
-        }
-
-        if (json.has("deviceConfigurations")) {
-            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations"), DeviceConfigurationCollectionPage.class);
-        }
-
-        if (json.has("iosUpdateStatuses")) {
-            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses"), IosUpdateDeviceStatusCollectionPage.class);
-        }
-
-        if (json.has("complianceManagementPartners")) {
-            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners"), ComplianceManagementPartnerCollectionPage.class);
-        }
-
-        if (json.has("deviceCategories")) {
-            deviceCategories = serializer.deserializeObject(json.get("deviceCategories"), DeviceCategoryCollectionPage.class);
-        }
-
-        if (json.has("deviceEnrollmentConfigurations")) {
-            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations"), DeviceEnrollmentConfigurationCollectionPage.class);
-        }
-
-        if (json.has("deviceManagementPartners")) {
-            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners"), DeviceManagementPartnerCollectionPage.class);
-        }
-
-        if (json.has("exchangeConnectors")) {
-            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors"), DeviceManagementExchangeConnectorCollectionPage.class);
-        }
-
-        if (json.has("mobileThreatDefenseConnectors")) {
-            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors"), MobileThreatDefenseConnectorCollectionPage.class);
-        }
-
-        if (json.has("detectedApps")) {
-            detectedApps = serializer.deserializeObject(json.get("detectedApps"), DetectedAppCollectionPage.class);
-        }
-
-        if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices"), ManagedDeviceCollectionPage.class);
-        }
-
-        if (json.has("importedWindowsAutopilotDeviceIdentities")) {
-            importedWindowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("importedWindowsAutopilotDeviceIdentities"), ImportedWindowsAutopilotDeviceIdentityCollectionPage.class);
-        }
-
-        if (json.has("windowsAutopilotDeviceIdentities")) {
-            windowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("windowsAutopilotDeviceIdentities"), WindowsAutopilotDeviceIdentityCollectionPage.class);
-        }
-
-        if (json.has("notificationMessageTemplates")) {
-            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates"), NotificationMessageTemplateCollectionPage.class);
-        }
-
-        if (json.has("resourceOperations")) {
-            resourceOperations = serializer.deserializeObject(json.get("resourceOperations"), ResourceOperationCollectionPage.class);
-        }
-
-        if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments"), DeviceAndAppManagementRoleAssignmentCollectionPage.class);
-        }
-
-        if (json.has("roleDefinitions")) {
-            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), RoleDefinitionCollectionPage.class);
-        }
-
-        if (json.has("remoteAssistancePartners")) {
-            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners"), RemoteAssistancePartnerCollectionPage.class);
-        }
-
-        if (json.has("telecomExpenseManagementPartners")) {
-            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners"), TelecomExpenseManagementPartnerCollectionPage.class);
-        }
-
-        if (json.has("troubleshootingEvents")) {
-            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents"), DeviceManagementTroubleshootingEventCollectionPage.class);
-        }
-
-        if (json.has("windowsInformationProtectionAppLearningSummaries")) {
-            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries"), WindowsInformationProtectionAppLearningSummaryCollectionPage.class);
-        }
-
-        if (json.has("windowsInformationProtectionNetworkLearningSummaries")) {
-            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries"), WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
-        }
+    @javax.annotation.Nullable
+    public java.util.List<WindowsAutopilotDeviceIdentity> getWindowsAutopilotDeviceIdentities() {
+        return this._windowsAutopilotDeviceIdentities;
+    }
+    /**
+     * Gets the windowsInformationProtectionAppLearningSummaries property value. The windows information protection app learning summaries.
+     * @return a windowsInformationProtectionAppLearningSummary
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsInformationProtectionAppLearningSummary> getWindowsInformationProtectionAppLearningSummaries() {
+        return this._windowsInformationProtectionAppLearningSummaries;
+    }
+    /**
+     * Gets the windowsInformationProtectionNetworkLearningSummaries property value. The windows information protection network learning summaries.
+     * @return a windowsInformationProtectionNetworkLearningSummary
+     */
+    @javax.annotation.Nullable
+    public java.util.List<WindowsInformationProtectionNetworkLearningSummary> getWindowsInformationProtectionNetworkLearningSummaries() {
+        return this._windowsInformationProtectionNetworkLearningSummaries;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeObjectValue("applePushNotificationCertificate", this.getApplePushNotificationCertificate());
+        writer.writeCollectionOfObjectValues("complianceManagementPartners", this.getComplianceManagementPartners());
+        writer.writeObjectValue("conditionalAccessSettings", this.getConditionalAccessSettings());
+        writer.writeCollectionOfObjectValues("detectedApps", this.getDetectedApps());
+        writer.writeCollectionOfObjectValues("deviceCategories", this.getDeviceCategories());
+        writer.writeCollectionOfObjectValues("deviceCompliancePolicies", this.getDeviceCompliancePolicies());
+        writer.writeObjectValue("deviceCompliancePolicyDeviceStateSummary", this.getDeviceCompliancePolicyDeviceStateSummary());
+        writer.writeCollectionOfObjectValues("deviceCompliancePolicySettingStateSummaries", this.getDeviceCompliancePolicySettingStateSummaries());
+        writer.writeObjectValue("deviceConfigurationDeviceStateSummaries", this.getDeviceConfigurationDeviceStateSummaries());
+        writer.writeCollectionOfObjectValues("deviceConfigurations", this.getDeviceConfigurations());
+        writer.writeCollectionOfObjectValues("deviceEnrollmentConfigurations", this.getDeviceEnrollmentConfigurations());
+        writer.writeCollectionOfObjectValues("deviceManagementPartners", this.getDeviceManagementPartners());
+        writer.writeCollectionOfObjectValues("exchangeConnectors", this.getExchangeConnectors());
+        writer.writeCollectionOfObjectValues("importedWindowsAutopilotDeviceIdentities", this.getImportedWindowsAutopilotDeviceIdentities());
+        writer.writeStringValue("intuneAccountId", this.getIntuneAccountId());
+        writer.writeObjectValue("intuneBrand", this.getIntuneBrand());
+        writer.writeCollectionOfObjectValues("iosUpdateStatuses", this.getIosUpdateStatuses());
+        writer.writeObjectValue("managedDeviceOverview", this.getManagedDeviceOverview());
+        writer.writeCollectionOfObjectValues("managedDevices", this.getManagedDevices());
+        writer.writeCollectionOfObjectValues("mobileThreatDefenseConnectors", this.getMobileThreatDefenseConnectors());
+        writer.writeCollectionOfObjectValues("notificationMessageTemplates", this.getNotificationMessageTemplates());
+        writer.writeCollectionOfObjectValues("remoteAssistancePartners", this.getRemoteAssistancePartners());
+        writer.writeObjectValue("reports", this.getReports());
+        writer.writeCollectionOfObjectValues("resourceOperations", this.getResourceOperations());
+        writer.writeCollectionOfObjectValues("roleAssignments", this.getRoleAssignments());
+        writer.writeCollectionOfObjectValues("roleDefinitions", this.getRoleDefinitions());
+        writer.writeObjectValue("settings", this.getSettings());
+        writer.writeObjectValue("softwareUpdateStatusSummary", this.getSoftwareUpdateStatusSummary());
+        writer.writeEnumValue("subscriptionState", this.getSubscriptionState());
+        writer.writeCollectionOfObjectValues("telecomExpenseManagementPartners", this.getTelecomExpenseManagementPartners());
+        writer.writeCollectionOfObjectValues("termsAndConditions", this.getTermsAndConditions());
+        writer.writeCollectionOfObjectValues("troubleshootingEvents", this.getTroubleshootingEvents());
+        writer.writeCollectionOfObjectValues("windowsAutopilotDeviceIdentities", this.getWindowsAutopilotDeviceIdentities());
+        writer.writeCollectionOfObjectValues("windowsInformationProtectionAppLearningSummaries", this.getWindowsInformationProtectionAppLearningSummaries());
+        writer.writeCollectionOfObjectValues("windowsInformationProtectionNetworkLearningSummaries", this.getWindowsInformationProtectionNetworkLearningSummaries());
+    }
+    /**
+     * Sets the applePushNotificationCertificate property value. Apple push notification certificate.
+     * @param value Value to set for the applePushNotificationCertificate property.
+     * @return a void
+     */
+    public void setApplePushNotificationCertificate(@javax.annotation.Nullable final ApplePushNotificationCertificate value) {
+        this._applePushNotificationCertificate = value;
+    }
+    /**
+     * Sets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
+     * @param value Value to set for the complianceManagementPartners property.
+     * @return a void
+     */
+    public void setComplianceManagementPartners(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartner> value) {
+        this._complianceManagementPartners = value;
+    }
+    /**
+     * Sets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     * @param value Value to set for the conditionalAccessSettings property.
+     * @return a void
+     */
+    public void setConditionalAccessSettings(@javax.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
+        this._conditionalAccessSettings = value;
+    }
+    /**
+     * Sets the detectedApps property value. The list of detected apps associated with a device.
+     * @param value Value to set for the detectedApps property.
+     * @return a void
+     */
+    public void setDetectedApps(@javax.annotation.Nullable final java.util.List<DetectedApp> value) {
+        this._detectedApps = value;
+    }
+    /**
+     * Sets the deviceCategories property value. The list of device categories with the tenant.
+     * @param value Value to set for the deviceCategories property.
+     * @return a void
+     */
+    public void setDeviceCategories(@javax.annotation.Nullable final java.util.List<DeviceCategory> value) {
+        this._deviceCategories = value;
+    }
+    /**
+     * Sets the deviceCompliancePolicies property value. The device compliance policies.
+     * @param value Value to set for the deviceCompliancePolicies property.
+     * @return a void
+     */
+    public void setDeviceCompliancePolicies(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicy> value) {
+        this._deviceCompliancePolicies = value;
+    }
+    /**
+     * Sets the deviceCompliancePolicyDeviceStateSummary property value. The device compliance state summary for this account.
+     * @param value Value to set for the deviceCompliancePolicyDeviceStateSummary property.
+     * @return a void
+     */
+    public void setDeviceCompliancePolicyDeviceStateSummary(@javax.annotation.Nullable final DeviceCompliancePolicyDeviceStateSummary value) {
+        this._deviceCompliancePolicyDeviceStateSummary = value;
+    }
+    /**
+     * Sets the deviceCompliancePolicySettingStateSummaries property value. The summary states of compliance policy settings for this account.
+     * @param value Value to set for the deviceCompliancePolicySettingStateSummaries property.
+     * @return a void
+     */
+    public void setDeviceCompliancePolicySettingStateSummaries(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingStateSummary> value) {
+        this._deviceCompliancePolicySettingStateSummaries = value;
+    }
+    /**
+     * Sets the deviceConfigurationDeviceStateSummaries property value. The device configuration device state summary for this account.
+     * @param value Value to set for the deviceConfigurationDeviceStateSummaries property.
+     * @return a void
+     */
+    public void setDeviceConfigurationDeviceStateSummaries(@javax.annotation.Nullable final DeviceConfigurationDeviceStateSummary value) {
+        this._deviceConfigurationDeviceStateSummaries = value;
+    }
+    /**
+     * Sets the deviceConfigurations property value. The device configurations.
+     * @param value Value to set for the deviceConfigurations property.
+     * @return a void
+     */
+    public void setDeviceConfigurations(@javax.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
+        this._deviceConfigurations = value;
+    }
+    /**
+     * Sets the deviceEnrollmentConfigurations property value. The list of device enrollment configurations
+     * @param value Value to set for the deviceEnrollmentConfigurations property.
+     * @return a void
+     */
+    public void setDeviceEnrollmentConfigurations(@javax.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
+        this._deviceEnrollmentConfigurations = value;
+    }
+    /**
+     * Sets the deviceManagementPartners property value. The list of Device Management Partners configured by the tenant.
+     * @param value Value to set for the deviceManagementPartners property.
+     * @return a void
+     */
+    public void setDeviceManagementPartners(@javax.annotation.Nullable final java.util.List<DeviceManagementPartner> value) {
+        this._deviceManagementPartners = value;
+    }
+    /**
+     * Sets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
+     * @param value Value to set for the exchangeConnectors property.
+     * @return a void
+     */
+    public void setExchangeConnectors(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeConnector> value) {
+        this._exchangeConnectors = value;
+    }
+    /**
+     * Sets the importedWindowsAutopilotDeviceIdentities property value. Collection of imported Windows autopilot devices.
+     * @param value Value to set for the importedWindowsAutopilotDeviceIdentities property.
+     * @return a void
+     */
+    public void setImportedWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
+        this._importedWindowsAutopilotDeviceIdentities = value;
+    }
+    /**
+     * Sets the intuneAccountId property value. Intune Account ID for given tenant
+     * @param value Value to set for the intuneAccountId property.
+     * @return a void
+     */
+    public void setIntuneAccountId(@javax.annotation.Nullable final String value) {
+        this._intuneAccountId = value;
+    }
+    /**
+     * Sets the intuneBrand property value. intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+     * @param value Value to set for the intuneBrand property.
+     * @return a void
+     */
+    public void setIntuneBrand(@javax.annotation.Nullable final IntuneBrand value) {
+        this._intuneBrand = value;
+    }
+    /**
+     * Sets the iosUpdateStatuses property value. The IOS software update installation statuses for this account.
+     * @param value Value to set for the iosUpdateStatuses property.
+     * @return a void
+     */
+    public void setIosUpdateStatuses(@javax.annotation.Nullable final java.util.List<IosUpdateDeviceStatus> value) {
+        this._iosUpdateStatuses = value;
+    }
+    /**
+     * Sets the managedDeviceOverview property value. Device overview
+     * @param value Value to set for the managedDeviceOverview property.
+     * @return a void
+     */
+    public void setManagedDeviceOverview(@javax.annotation.Nullable final ManagedDeviceOverview value) {
+        this._managedDeviceOverview = value;
+    }
+    /**
+     * Sets the managedDevices property value. The list of managed devices.
+     * @param value Value to set for the managedDevices property.
+     * @return a void
+     */
+    public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
+        this._managedDevices = value;
+    }
+    /**
+     * Sets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
+     * @param value Value to set for the mobileThreatDefenseConnectors property.
+     * @return a void
+     */
+    public void setMobileThreatDefenseConnectors(@javax.annotation.Nullable final java.util.List<MobileThreatDefenseConnector> value) {
+        this._mobileThreatDefenseConnectors = value;
+    }
+    /**
+     * Sets the notificationMessageTemplates property value. The Notification Message Templates.
+     * @param value Value to set for the notificationMessageTemplates property.
+     * @return a void
+     */
+    public void setNotificationMessageTemplates(@javax.annotation.Nullable final java.util.List<NotificationMessageTemplate> value) {
+        this._notificationMessageTemplates = value;
+    }
+    /**
+     * Sets the remoteAssistancePartners property value. The remote assist partners.
+     * @param value Value to set for the remoteAssistancePartners property.
+     * @return a void
+     */
+    public void setRemoteAssistancePartners(@javax.annotation.Nullable final java.util.List<RemoteAssistancePartner> value) {
+        this._remoteAssistancePartners = value;
+    }
+    /**
+     * Sets the reports property value. Reports singleton
+     * @param value Value to set for the reports property.
+     * @return a void
+     */
+    public void setReports(@javax.annotation.Nullable final DeviceManagementReports value) {
+        this._reports = value;
+    }
+    /**
+     * Sets the resourceOperations property value. The Resource Operations.
+     * @param value Value to set for the resourceOperations property.
+     * @return a void
+     */
+    public void setResourceOperations(@javax.annotation.Nullable final java.util.List<ResourceOperation> value) {
+        this._resourceOperations = value;
+    }
+    /**
+     * Sets the roleAssignments property value. The Role Assignments.
+     * @param value Value to set for the roleAssignments property.
+     * @return a void
+     */
+    public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementRoleAssignment> value) {
+        this._roleAssignments = value;
+    }
+    /**
+     * Sets the roleDefinitions property value. The Role Definitions.
+     * @param value Value to set for the roleDefinitions property.
+     * @return a void
+     */
+    public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<RoleDefinition> value) {
+        this._roleDefinitions = value;
+    }
+    /**
+     * Sets the settings property value. Account level settings.
+     * @param value Value to set for the settings property.
+     * @return a void
+     */
+    public void setSettings(@javax.annotation.Nullable final DeviceManagementSettings value) {
+        this._settings = value;
+    }
+    /**
+     * Sets the softwareUpdateStatusSummary property value. The software update status summary.
+     * @param value Value to set for the softwareUpdateStatusSummary property.
+     * @return a void
+     */
+    public void setSoftwareUpdateStatusSummary(@javax.annotation.Nullable final SoftwareUpdateStatusSummary value) {
+        this._softwareUpdateStatusSummary = value;
+    }
+    /**
+     * Sets the subscriptionState property value. Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * @param value Value to set for the subscriptionState property.
+     * @return a void
+     */
+    public void setSubscriptionState(@javax.annotation.Nullable final DeviceManagementSubscriptionState value) {
+        this._subscriptionState = value;
+    }
+    /**
+     * Sets the telecomExpenseManagementPartners property value. The telecom expense management partners.
+     * @param value Value to set for the telecomExpenseManagementPartners property.
+     * @return a void
+     */
+    public void setTelecomExpenseManagementPartners(@javax.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
+        this._telecomExpenseManagementPartners = value;
+    }
+    /**
+     * Sets the termsAndConditions property value. The terms and conditions associated with device management of the company.
+     * @param value Value to set for the termsAndConditions property.
+     * @return a void
+     */
+    public void setTermsAndConditions(@javax.annotation.Nullable final java.util.List<TermsAndConditions> value) {
+        this._termsAndConditions = value;
+    }
+    /**
+     * Sets the troubleshootingEvents property value. The list of troubleshooting events for the tenant.
+     * @param value Value to set for the troubleshootingEvents property.
+     * @return a void
+     */
+    public void setTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
+        this._troubleshootingEvents = value;
+    }
+    /**
+     * Sets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
+     * @param value Value to set for the windowsAutopilotDeviceIdentities property.
+     * @return a void
+     */
+    public void setWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeviceIdentity> value) {
+        this._windowsAutopilotDeviceIdentities = value;
+    }
+    /**
+     * Sets the windowsInformationProtectionAppLearningSummaries property value. The windows information protection app learning summaries.
+     * @param value Value to set for the windowsInformationProtectionAppLearningSummaries property.
+     * @return a void
+     */
+    public void setWindowsInformationProtectionAppLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLearningSummary> value) {
+        this._windowsInformationProtectionAppLearningSummaries = value;
+    }
+    /**
+     * Sets the windowsInformationProtectionNetworkLearningSummaries property value. The windows information protection network learning summaries.
+     * @param value Value to set for the windowsInformationProtectionNetworkLearningSummaries property.
+     * @return a void
+     */
+    public void setWindowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionNetworkLearningSummary> value) {
+        this._windowsInformationProtectionNetworkLearningSummaries = value;
     }
 }

@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Partner App Type.
-*/
-public enum DeviceManagementPartnerAppType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * single Tenant App
-    */
-    SINGLE_TENANT_APP,
-    /**
-    * multi Tenant App
-    */
-    MULTI_TENANT_APP,
-    /**
-    * For DeviceManagementPartnerAppType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum DeviceManagementPartnerAppType implements ValuedEnum {
+    /** Partner App type is unknown. */
+    Unknown("unknown"),
+    /** Partner App is Single tenant in AAD. */
+    SingleTenantApp("singleTenantApp"),
+    /** Partner App is Multi tenant in AAD. */
+    MultiTenantApp("multiTenantApp");
+    public final String value;
+    DeviceManagementPartnerAppType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementPartnerAppType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "singleTenantApp": return SingleTenantApp;
+            case "multiTenantApp": return MultiTenantApp;
+            default: return null;
+        }
+    }
 }

@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Mobile App Publishing State.
-*/
-public enum MobileAppPublishingState
-{
-    /**
-    * not Published
-    */
-    NOT_PUBLISHED,
-    /**
-    * processing
-    */
-    PROCESSING,
-    /**
-    * published
-    */
-    PUBLISHED,
-    /**
-    * For MobileAppPublishingState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum MobileAppPublishingState implements ValuedEnum {
+    /** The app is not yet published. */
+    NotPublished("notPublished"),
+    /** The app is pending service-side processing. */
+    Processing("processing"),
+    /** The app is published. */
+    Published("published");
+    public final String value;
+    MobileAppPublishingState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MobileAppPublishingState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notPublished": return NotPublished;
+            case "processing": return Processing;
+            case "published": return Published;
+            default: return null;
+        }
+    }
 }

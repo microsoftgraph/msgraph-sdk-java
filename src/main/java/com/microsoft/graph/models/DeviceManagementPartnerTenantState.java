@@ -1,42 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Partner Tenant State.
-*/
-public enum DeviceManagementPartnerTenantState
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * unavailable
-    */
-    UNAVAILABLE,
-    /**
-    * enabled
-    */
-    ENABLED,
-    /**
-    * terminated
-    */
-    TERMINATED,
-    /**
-    * rejected
-    */
-    REJECTED,
-    /**
-    * unresponsive
-    */
-    UNRESPONSIVE,
-    /**
-    * For DeviceManagementPartnerTenantState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum DeviceManagementPartnerTenantState implements ValuedEnum {
+    /** Partner state is unknown. */
+    Unknown("unknown"),
+    /** Partner is unavailable. */
+    Unavailable("unavailable"),
+    /** Partner is enabled. */
+    Enabled("enabled"),
+    /** Partner connection is terminated. */
+    Terminated("terminated"),
+    /** Partner messages are rejected. */
+    Rejected("rejected"),
+    /** Partner is unresponsive. */
+    Unresponsive("unresponsive");
+    public final String value;
+    DeviceManagementPartnerTenantState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementPartnerTenantState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "unavailable": return Unavailable;
+            case "enabled": return Enabled;
+            case "terminated": return Terminated;
+            case "rejected": return Rejected;
+            case "unresponsive": return Unresponsive;
+            default: return null;
+        }
+    }
 }

@@ -1,34 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Windows Information Protection Enforcement Level.
-*/
-public enum WindowsInformationProtectionEnforcementLevel
-{
-    /**
-    * no Protection
-    */
-    NO_PROTECTION,
-    /**
-    * encrypt And Audit Only
-    */
-    ENCRYPT_AND_AUDIT_ONLY,
-    /**
-    * encrypt Audit And Prompt
-    */
-    ENCRYPT_AUDIT_AND_PROMPT,
-    /**
-    * encrypt Audit And Block
-    */
-    ENCRYPT_AUDIT_AND_BLOCK,
-    /**
-    * For WindowsInformationProtectionEnforcementLevel values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum WindowsInformationProtectionEnforcementLevel implements ValuedEnum {
+    /** No protection enforcement */
+    NoProtection("noProtection"),
+    /** Encrypt and Audit only */
+    EncryptAndAuditOnly("encryptAndAuditOnly"),
+    /** Encrypt, Audit and Prompt */
+    EncryptAuditAndPrompt("encryptAuditAndPrompt"),
+    /** Encrypt, Audit and Block */
+    EncryptAuditAndBlock("encryptAuditAndBlock");
+    public final String value;
+    WindowsInformationProtectionEnforcementLevel(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsInformationProtectionEnforcementLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "noProtection": return NoProtection;
+            case "encryptAndAuditOnly": return EncryptAndAuditOnly;
+            case "encryptAuditAndPrompt": return EncryptAuditAndPrompt;
+            case "encryptAuditAndBlock": return EncryptAuditAndBlock;
+            default: return null;
+        }
+    }
 }

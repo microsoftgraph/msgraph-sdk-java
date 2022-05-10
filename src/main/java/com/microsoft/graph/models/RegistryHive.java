@@ -1,54 +1,39 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Registry Hive.
-*/
-public enum RegistryHive
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * current Config
-    */
-    CURRENT_CONFIG,
-    /**
-    * current User
-    */
-    CURRENT_USER,
-    /**
-    * local Machine Sam
-    */
-    LOCAL_MACHINE_SAM,
-    /**
-    * local Machine Security
-    */
-    LOCAL_MACHINE_SECURITY,
-    /**
-    * local Machine Software
-    */
-    LOCAL_MACHINE_SOFTWARE,
-    /**
-    * local Machine System
-    */
-    LOCAL_MACHINE_SYSTEM,
-    /**
-    * users Default
-    */
-    USERS_DEFAULT,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For RegistryHive values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the security singleton. */
+public enum RegistryHive implements ValuedEnum {
+    Unknown("unknown"),
+    CurrentConfig("currentConfig"),
+    CurrentUser("currentUser"),
+    LocalMachineSam("localMachineSam"),
+    LocalMachineSecurity("localMachineSecurity"),
+    LocalMachineSoftware("localMachineSoftware"),
+    LocalMachineSystem("localMachineSystem"),
+    UsersDefault("usersDefault"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    RegistryHive(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RegistryHive forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "currentConfig": return CurrentConfig;
+            case "currentUser": return CurrentUser;
+            case "localMachineSam": return LocalMachineSam;
+            case "localMachineSecurity": return LocalMachineSecurity;
+            case "localMachineSoftware": return LocalMachineSoftware;
+            case "localMachineSystem": return LocalMachineSystem;
+            case "usersDefault": return UsersDefault;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

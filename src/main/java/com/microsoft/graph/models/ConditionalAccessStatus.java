@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Conditional Access Status.
-*/
-public enum ConditionalAccessStatus
-{
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * failure
-    */
-    FAILURE,
-    /**
-    * not Applied
-    */
-    NOT_APPLIED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ConditionalAccessStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the auditLogRoot singleton. */
+public enum ConditionalAccessStatus implements ValuedEnum {
+    Success("success"),
+    Failure("failure"),
+    NotApplied("notApplied"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ConditionalAccessStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ConditionalAccessStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "success": return Success;
+            case "failure": return Failure;
+            case "notApplied": return NotApplied;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

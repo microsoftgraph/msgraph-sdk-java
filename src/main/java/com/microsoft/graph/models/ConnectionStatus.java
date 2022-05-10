@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Connection Status.
-*/
-public enum ConnectionStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * attempted
-    */
-    ATTEMPTED,
-    /**
-    * succeeded
-    */
-    SUCCEEDED,
-    /**
-    * blocked
-    */
-    BLOCKED,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ConnectionStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the security singleton. */
+public enum ConnectionStatus implements ValuedEnum {
+    Unknown("unknown"),
+    Attempted("attempted"),
+    Succeeded("succeeded"),
+    Blocked("blocked"),
+    Failed("failed"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ConnectionStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ConnectionStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "attempted": return Attempted;
+            case "succeeded": return Succeeded;
+            case "blocked": return Blocked;
+            case "failed": return Failed;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

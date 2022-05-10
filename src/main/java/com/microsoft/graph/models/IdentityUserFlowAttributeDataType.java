@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Identity User Flow Attribute Data Type.
-*/
-public enum IdentityUserFlowAttributeDataType
-{
-    /**
-    * string
-    */
-    STRING,
-    /**
-    * boolean
-    */
-    BOOLEAN,
-    /**
-    * int64
-    */
-    INT64,
-    /**
-    * string Collection
-    */
-    STRING_COLLECTION,
-    /**
-    * date Time
-    */
-    DATE_TIME,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For IdentityUserFlowAttributeDataType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityContainer singleton. */
+public enum IdentityUserFlowAttributeDataType implements ValuedEnum {
+    String("string"),
+    Boolean_escaped("boolean_escaped"),
+    Int64("int64"),
+    StringCollection("stringCollection"),
+    DateTime("dateTime"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    IdentityUserFlowAttributeDataType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static IdentityUserFlowAttributeDataType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "string": return String;
+            case "boolean": return Boolean_escaped;
+            case "int64": return Int64;
+            case "stringCollection": return StringCollection;
+            case "dateTime": return DateTime;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

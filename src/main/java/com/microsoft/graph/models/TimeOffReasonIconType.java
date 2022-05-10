@@ -1,106 +1,65 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Time Off Reason Icon Type.
-*/
-public enum TimeOffReasonIconType
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * car
-    */
-    CAR,
-    /**
-    * calendar
-    */
-    CALENDAR,
-    /**
-    * running
-    */
-    RUNNING,
-    /**
-    * plane
-    */
-    PLANE,
-    /**
-    * first Aid
-    */
-    FIRST_AID,
-    /**
-    * doctor
-    */
-    DOCTOR,
-    /**
-    * not Working
-    */
-    NOT_WORKING,
-    /**
-    * clock
-    */
-    CLOCK,
-    /**
-    * jury Duty
-    */
-    JURY_DUTY,
-    /**
-    * globe
-    */
-    GLOBE,
-    /**
-    * cup
-    */
-    CUP,
-    /**
-    * phone
-    */
-    PHONE,
-    /**
-    * weather
-    */
-    WEATHER,
-    /**
-    * umbrella
-    */
-    UMBRELLA,
-    /**
-    * piggy Bank
-    */
-    PIGGY_BANK,
-    /**
-    * dog
-    */
-    DOG,
-    /**
-    * cake
-    */
-    CAKE,
-    /**
-    * traffic Cone
-    */
-    TRAFFIC_CONE,
-    /**
-    * pin
-    */
-    PIN,
-    /**
-    * sunny
-    */
-    SUNNY,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TimeOffReasonIconType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum TimeOffReasonIconType implements ValuedEnum {
+    None("none"),
+    Car("car"),
+    Calendar("calendar"),
+    Running("running"),
+    Plane("plane"),
+    FirstAid("firstAid"),
+    Doctor("doctor"),
+    NotWorking("notWorking"),
+    Clock("clock"),
+    JuryDuty("juryDuty"),
+    Globe("globe"),
+    Cup("cup"),
+    Phone("phone"),
+    Weather("weather"),
+    Umbrella("umbrella"),
+    PiggyBank("piggyBank"),
+    Dog("dog"),
+    Cake("cake"),
+    TrafficCone("trafficCone"),
+    Pin("pin"),
+    Sunny("sunny"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TimeOffReasonIconType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TimeOffReasonIconType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "car": return Car;
+            case "calendar": return Calendar;
+            case "running": return Running;
+            case "plane": return Plane;
+            case "firstAid": return FirstAid;
+            case "doctor": return Doctor;
+            case "notWorking": return NotWorking;
+            case "clock": return Clock;
+            case "juryDuty": return JuryDuty;
+            case "globe": return Globe;
+            case "cup": return Cup;
+            case "phone": return Phone;
+            case "weather": return Weather;
+            case "umbrella": return Umbrella;
+            case "piggyBank": return PiggyBank;
+            case "dog": return Dog;
+            case "cake": return Cake;
+            case "trafficCone": return TrafficCone;
+            case "pin": return Pin;
+            case "sunny": return Sunny;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

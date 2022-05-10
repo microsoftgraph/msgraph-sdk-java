@@ -1,34 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Exchange Connector Type.
-*/
-public enum DeviceManagementExchangeConnectorType
-{
-    /**
-    * on Premises
-    */
-    ON_PREMISES,
-    /**
-    * hosted
-    */
-    HOSTED,
-    /**
-    * service To Service
-    */
-    SERVICE_TO_SERVICE,
-    /**
-    * dedicated
-    */
-    DEDICATED,
-    /**
-    * For DeviceManagementExchangeConnectorType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum DeviceManagementExchangeConnectorType implements ValuedEnum {
+    /** Connects to on-premises Exchange Environment. */
+    OnPremises("onPremises"),
+    /** Connects to O365 multi-tenant Exchange environment */
+    Hosted("hosted"),
+    /** Intune Service connects directly to O365 multi-tenant Exchange environment */
+    ServiceToService("serviceToService"),
+    /** Connects to O365 Dedicated Exchange environment. */
+    Dedicated("dedicated");
+    public final String value;
+    DeviceManagementExchangeConnectorType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementExchangeConnectorType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "onPremises": return OnPremises;
+            case "hosted": return Hosted;
+            case "serviceToService": return ServiceToService;
+            case "dedicated": return Dedicated;
+            default: return null;
+        }
+    }
 }

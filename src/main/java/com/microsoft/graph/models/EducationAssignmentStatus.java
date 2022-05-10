@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Education Assignment Status.
-*/
-public enum EducationAssignmentStatus
-{
-    /**
-    * draft
-    */
-    DRAFT,
-    /**
-    * published
-    */
-    PUBLISHED,
-    /**
-    * assigned
-    */
-    ASSIGNED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For EducationAssignmentStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the educationRoot singleton. */
+public enum EducationAssignmentStatus implements ValuedEnum {
+    Draft("draft"),
+    Published("published"),
+    Assigned("assigned"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    EducationAssignmentStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static EducationAssignmentStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "draft": return Draft;
+            case "published": return Published;
+            case "assigned": return Assigned;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

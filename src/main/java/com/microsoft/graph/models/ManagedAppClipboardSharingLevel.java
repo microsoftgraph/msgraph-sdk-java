@@ -1,34 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Managed App Clipboard Sharing Level.
-*/
-public enum ManagedAppClipboardSharingLevel
-{
-    /**
-    * all Apps
-    */
-    ALL_APPS,
-    /**
-    * managed Apps With Paste In
-    */
-    MANAGED_APPS_WITH_PASTE_IN,
-    /**
-    * managed Apps
-    */
-    MANAGED_APPS,
-    /**
-    * blocked
-    */
-    BLOCKED,
-    /**
-    * For ManagedAppClipboardSharingLevel values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum ManagedAppClipboardSharingLevel implements ValuedEnum {
+    /** Sharing is allowed between all apps, managed or not */
+    AllApps("allApps"),
+    /** Sharing is allowed between all managed apps with paste in enabled */
+    ManagedAppsWithPasteIn("managedAppsWithPasteIn"),
+    /** Sharing is allowed between all managed apps */
+    ManagedApps("managedApps"),
+    /** Sharing between apps is disabled */
+    Blocked("blocked");
+    public final String value;
+    ManagedAppClipboardSharingLevel(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ManagedAppClipboardSharingLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "allApps": return AllApps;
+            case "managedAppsWithPasteIn": return ManagedAppsWithPasteIn;
+            case "managedApps": return ManagedApps;
+            case "blocked": return Blocked;
+            default: return null;
+        }
+    }
 }

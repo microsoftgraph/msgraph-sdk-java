@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Chat Message Policy Violation Verdict Details Types.
-*/
-public enum ChatMessagePolicyViolationVerdictDetailsTypes
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * allow False Positive Override
-    */
-    ALLOW_FALSE_POSITIVE_OVERRIDE,
-    /**
-    * allow Override Without Justification
-    */
-    ALLOW_OVERRIDE_WITHOUT_JUSTIFICATION,
-    /**
-    * allow Override With Justification
-    */
-    ALLOW_OVERRIDE_WITH_JUSTIFICATION,
-    /**
-    * For ChatMessagePolicyViolationVerdictDetailsTypes values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the collection of chat entities. */
+public enum ChatMessagePolicyViolationVerdictDetailsTypes implements ValuedEnum {
+    None("none"),
+    AllowFalsePositiveOverride("allowFalsePositiveOverride"),
+    AllowOverrideWithoutJustification("allowOverrideWithoutJustification"),
+    AllowOverrideWithJustification("allowOverrideWithJustification");
+    public final String value;
+    ChatMessagePolicyViolationVerdictDetailsTypes(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ChatMessagePolicyViolationVerdictDetailsTypes forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "allowFalsePositiveOverride": return AllowFalsePositiveOverride;
+            case "allowOverrideWithoutJustification": return AllowOverrideWithoutJustification;
+            case "allowOverrideWithJustification": return AllowOverrideWithJustification;
+            default: return null;
+        }
+    }
 }

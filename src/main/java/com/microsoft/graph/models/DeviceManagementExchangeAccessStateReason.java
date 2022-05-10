@@ -1,82 +1,69 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Management Exchange Access State Reason.
-*/
-public enum DeviceManagementExchangeAccessStateReason
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * exchange Global Rule
-    */
-    EXCHANGE_GLOBAL_RULE,
-    /**
-    * exchange Individual Rule
-    */
-    EXCHANGE_INDIVIDUAL_RULE,
-    /**
-    * exchange Device Rule
-    */
-    EXCHANGE_DEVICE_RULE,
-    /**
-    * exchange Upgrade
-    */
-    EXCHANGE_UPGRADE,
-    /**
-    * exchange Mailbox Policy
-    */
-    EXCHANGE_MAILBOX_POLICY,
-    /**
-    * other
-    */
-    OTHER,
-    /**
-    * compliant
-    */
-    COMPLIANT,
-    /**
-    * not Compliant
-    */
-    NOT_COMPLIANT,
-    /**
-    * not Enrolled
-    */
-    NOT_ENROLLED,
-    /**
-    * unknown Location
-    */
-    UNKNOWN_LOCATION,
-    /**
-    * mfa Required
-    */
-    MFA_REQUIRED,
-    /**
-    * azure ADBlock Due To Access Policy
-    */
-    AZURE_AD_BLOCK_DUE_TO_ACCESS_POLICY,
-    /**
-    * compromised Password
-    */
-    COMPROMISED_PASSWORD,
-    /**
-    * device Not Known With Managed App
-    */
-    DEVICE_NOT_KNOWN_WITH_MANAGED_APP,
-    /**
-    * For DeviceManagementExchangeAccessStateReason values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum DeviceManagementExchangeAccessStateReason implements ValuedEnum {
+    /** No access state reason discovered from Exchange */
+    None("none"),
+    /** Unknown access state reason */
+    Unknown("unknown"),
+    /** Access state determined by Exchange Global rule */
+    ExchangeGlobalRule("exchangeGlobalRule"),
+    /** Access state determined by Exchange Individual rule */
+    ExchangeIndividualRule("exchangeIndividualRule"),
+    /** Access state determined by Exchange Device rule */
+    ExchangeDeviceRule("exchangeDeviceRule"),
+    /** Access state due to Exchange upgrade */
+    ExchangeUpgrade("exchangeUpgrade"),
+    /** Access state determined by Exchange Mailbox Policy */
+    ExchangeMailboxPolicy("exchangeMailboxPolicy"),
+    /** Access state determined by Exchange */
+    Other("other"),
+    /** Access state granted by compliance challenge */
+    Compliant("compliant"),
+    /** Access state revoked by compliance challenge */
+    NotCompliant("notCompliant"),
+    /** Access state revoked by management challenge */
+    NotEnrolled("notEnrolled"),
+    /** Access state due to unknown location */
+    UnknownLocation("unknownLocation"),
+    /** Access state due to MFA challenge */
+    MfaRequired("mfaRequired"),
+    /** Access State revoked by AAD Access Policy */
+    AzureADBlockDueToAccessPolicy("azureADBlockDueToAccessPolicy"),
+    /** Access State revoked by compromised password */
+    CompromisedPassword("compromisedPassword"),
+    /** Access state revoked by managed application challenge */
+    DeviceNotKnownWithManagedApp("deviceNotKnownWithManagedApp");
+    public final String value;
+    DeviceManagementExchangeAccessStateReason(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceManagementExchangeAccessStateReason forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "unknown": return Unknown;
+            case "exchangeGlobalRule": return ExchangeGlobalRule;
+            case "exchangeIndividualRule": return ExchangeIndividualRule;
+            case "exchangeDeviceRule": return ExchangeDeviceRule;
+            case "exchangeUpgrade": return ExchangeUpgrade;
+            case "exchangeMailboxPolicy": return ExchangeMailboxPolicy;
+            case "other": return Other;
+            case "compliant": return Compliant;
+            case "notCompliant": return NotCompliant;
+            case "notEnrolled": return NotEnrolled;
+            case "unknownLocation": return UnknownLocation;
+            case "mfaRequired": return MfaRequired;
+            case "azureADBlockDueToAccessPolicy": return AzureADBlockDueToAccessPolicy;
+            case "compromisedPassword": return CompromisedPassword;
+            case "deviceNotKnownWithManagedApp": return DeviceNotKnownWithManagedApp;
+            default: return null;
+        }
+    }
 }

@@ -1,62 +1,43 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Message Action Flag.
-*/
-public enum MessageActionFlag
-{
-    /**
-    * any
-    */
-    ANY,
-    /**
-    * call
-    */
-    CALL,
-    /**
-    * do Not Forward
-    */
-    DO_NOT_FORWARD,
-    /**
-    * follow Up
-    */
-    FOLLOW_UP,
-    /**
-    * fyi
-    */
-    FYI,
-    /**
-    * forward
-    */
-    FORWARD,
-    /**
-    * no Response Necessary
-    */
-    NO_RESPONSE_NECESSARY,
-    /**
-    * read
-    */
-    READ,
-    /**
-    * reply
-    */
-    REPLY,
-    /**
-    * reply To All
-    */
-    REPLY_TO_ALL,
-    /**
-    * review
-    */
-    REVIEW,
-    /**
-    * For MessageActionFlag values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum MessageActionFlag implements ValuedEnum {
+    Any("any"),
+    Call("call"),
+    DoNotForward("doNotForward"),
+    FollowUp("followUp"),
+    Fyi("fyi"),
+    Forward("forward"),
+    NoResponseNecessary("noResponseNecessary"),
+    Read("read"),
+    Reply("reply"),
+    ReplyToAll("replyToAll"),
+    Review("review");
+    public final String value;
+    MessageActionFlag(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static MessageActionFlag forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "any": return Any;
+            case "call": return Call;
+            case "doNotForward": return DoNotForward;
+            case "followUp": return FollowUp;
+            case "fyi": return Fyi;
+            case "forward": return Forward;
+            case "noResponseNecessary": return NoResponseNecessary;
+            case "read": return Read;
+            case "reply": return Reply;
+            case "replyToAll": return ReplyToAll;
+            case "review": return Review;
+            default: return null;
+        }
+    }
 }

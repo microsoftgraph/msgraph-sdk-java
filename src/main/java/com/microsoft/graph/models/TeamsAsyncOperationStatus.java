@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Teams Async Operation Status.
-*/
-public enum TeamsAsyncOperationStatus
-{
-    /**
-    * invalid
-    */
-    INVALID,
-    /**
-    * not Started
-    */
-    NOT_STARTED,
-    /**
-    * in Progress
-    */
-    IN_PROGRESS,
-    /**
-    * succeeded
-    */
-    SUCCEEDED,
-    /**
-    * failed
-    */
-    FAILED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TeamsAsyncOperationStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum TeamsAsyncOperationStatus implements ValuedEnum {
+    Invalid("invalid"),
+    NotStarted("notStarted"),
+    InProgress("inProgress"),
+    Succeeded("succeeded"),
+    Failed("failed"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TeamsAsyncOperationStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamsAsyncOperationStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "invalid": return Invalid;
+            case "notStarted": return NotStarted;
+            case "inProgress": return InProgress;
+            case "succeeded": return Succeeded;
+            case "failed": return Failed;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

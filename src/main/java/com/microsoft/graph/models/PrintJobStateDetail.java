@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Print Job State Detail.
-*/
-public enum PrintJobStateDetail
-{
-    /**
-    * upload Pending
-    */
-    UPLOAD_PENDING,
-    /**
-    * transforming
-    */
-    TRANSFORMING,
-    /**
-    * completed Successfully
-    */
-    COMPLETED_SUCCESSFULLY,
-    /**
-    * completed With Warnings
-    */
-    COMPLETED_WITH_WARNINGS,
-    /**
-    * completed With Errors
-    */
-    COMPLETED_WITH_ERRORS,
-    /**
-    * release Wait
-    */
-    RELEASE_WAIT,
-    /**
-    * interpreting
-    */
-    INTERPRETING,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For PrintJobStateDetail values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the print singleton. */
+public enum PrintJobStateDetail implements ValuedEnum {
+    UploadPending("uploadPending"),
+    Transforming("transforming"),
+    CompletedSuccessfully("completedSuccessfully"),
+    CompletedWithWarnings("completedWithWarnings"),
+    CompletedWithErrors("completedWithErrors"),
+    ReleaseWait("releaseWait"),
+    Interpreting("interpreting"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PrintJobStateDetail(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PrintJobStateDetail forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "uploadPending": return UploadPending;
+            case "transforming": return Transforming;
+            case "completedSuccessfully": return CompletedSuccessfully;
+            case "completedWithWarnings": return CompletedWithWarnings;
+            case "completedWithErrors": return CompletedWithErrors;
+            case "releaseWait": return ReleaseWait;
+            case "interpreting": return Interpreting;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

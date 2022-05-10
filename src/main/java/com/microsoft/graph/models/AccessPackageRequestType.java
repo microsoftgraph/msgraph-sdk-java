@@ -1,66 +1,45 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Access Package Request Type.
-*/
-public enum AccessPackageRequestType
-{
-    /**
-    * not Specified
-    */
-    NOT_SPECIFIED,
-    /**
-    * user Add
-    */
-    USER_ADD,
-    /**
-    * user Update
-    */
-    USER_UPDATE,
-    /**
-    * user Remove
-    */
-    USER_REMOVE,
-    /**
-    * admin Add
-    */
-    ADMIN_ADD,
-    /**
-    * admin Update
-    */
-    ADMIN_UPDATE,
-    /**
-    * admin Remove
-    */
-    ADMIN_REMOVE,
-    /**
-    * system Add
-    */
-    SYSTEM_ADD,
-    /**
-    * system Update
-    */
-    SYSTEM_UPDATE,
-    /**
-    * system Remove
-    */
-    SYSTEM_REMOVE,
-    /**
-    * on Behalf Add
-    */
-    ON_BEHALF_ADD,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AccessPackageRequestType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityGovernance singleton. */
+public enum AccessPackageRequestType implements ValuedEnum {
+    NotSpecified("notSpecified"),
+    UserAdd("userAdd"),
+    UserUpdate("userUpdate"),
+    UserRemove("userRemove"),
+    AdminAdd("adminAdd"),
+    AdminUpdate("adminUpdate"),
+    AdminRemove("adminRemove"),
+    SystemAdd("systemAdd"),
+    SystemUpdate("systemUpdate"),
+    SystemRemove("systemRemove"),
+    OnBehalfAdd("onBehalfAdd"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AccessPackageRequestType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AccessPackageRequestType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notSpecified": return NotSpecified;
+            case "userAdd": return UserAdd;
+            case "userUpdate": return UserUpdate;
+            case "userRemove": return UserRemove;
+            case "adminAdd": return AdminAdd;
+            case "adminUpdate": return AdminUpdate;
+            case "adminRemove": return AdminRemove;
+            case "systemAdd": return SystemAdd;
+            case "systemUpdate": return SystemUpdate;
+            case "systemRemove": return SystemRemove;
+            case "onBehalfAdd": return OnBehalfAdd;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

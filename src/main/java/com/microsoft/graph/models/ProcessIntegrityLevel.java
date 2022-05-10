@@ -1,46 +1,35 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Process Integrity Level.
-*/
-public enum ProcessIntegrityLevel
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * untrusted
-    */
-    UNTRUSTED,
-    /**
-    * low
-    */
-    LOW,
-    /**
-    * medium
-    */
-    MEDIUM,
-    /**
-    * high
-    */
-    HIGH,
-    /**
-    * system
-    */
-    SYSTEM,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ProcessIntegrityLevel values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the security singleton. */
+public enum ProcessIntegrityLevel implements ValuedEnum {
+    Unknown("unknown"),
+    Untrusted("untrusted"),
+    Low("low"),
+    Medium("medium"),
+    High("high"),
+    System("system"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ProcessIntegrityLevel(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ProcessIntegrityLevel forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "untrusted": return Untrusted;
+            case "low": return Low;
+            case "medium": return Medium;
+            case "high": return High;
+            case "system": return System;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }
