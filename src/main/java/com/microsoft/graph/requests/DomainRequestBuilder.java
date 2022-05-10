@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Domain;
 import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.InternalDomainFederationCollectionRequestBuilder;
+import com.microsoft.graph.requests.InternalDomainFederationRequestBuilder;
 import com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;
@@ -80,6 +82,26 @@ public class DomainRequestBuilder extends BaseRequestBuilder<Domain> {
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder domainNameReferences(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the InternalDomainFederation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public InternalDomainFederationCollectionRequestBuilder federationConfiguration() {
+        return new InternalDomainFederationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the InternalDomainFederation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public InternalDomainFederationRequestBuilder federationConfiguration(@Nonnull final String id) {
+        return new InternalDomainFederationRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfiguration") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DomainDnsRecord collection

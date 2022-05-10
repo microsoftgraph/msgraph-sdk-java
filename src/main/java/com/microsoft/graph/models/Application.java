@@ -257,7 +257,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Service Management Reference.
-     * 
+     * References application or service contact information from a Service or Asset Management database. Nullable.
      */
     @SerializedName(value = "serviceManagementReference", alternate = {"ServiceManagementReference"})
     @Expose
