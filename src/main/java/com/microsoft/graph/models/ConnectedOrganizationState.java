@@ -1,30 +1,27 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Connected Organization State.
-*/
-public enum ConnectedOrganizationState
-{
-    /**
-    * configured
-    */
-    CONFIGURED,
-    /**
-    * proposed
-    */
-    PROPOSED,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For ConnectedOrganizationState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityGovernance singleton. */
+public enum ConnectedOrganizationState implements ValuedEnum {
+    Configured("configured"),
+    Proposed("proposed"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    ConnectedOrganizationState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ConnectedOrganizationState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "configured": return Configured;
+            case "proposed": return Proposed;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

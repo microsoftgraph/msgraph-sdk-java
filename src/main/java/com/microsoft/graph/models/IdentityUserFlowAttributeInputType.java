@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Identity User Flow Attribute Input Type.
-*/
-public enum IdentityUserFlowAttributeInputType
-{
-    /**
-    * text Box
-    */
-    TEXT_BOX,
-    /**
-    * date Time Dropdown
-    */
-    DATE_TIME_DROPDOWN,
-    /**
-    * radio Single Select
-    */
-    RADIO_SINGLE_SELECT,
-    /**
-    * dropdown Single Select
-    */
-    DROPDOWN_SINGLE_SELECT,
-    /**
-    * email Box
-    */
-    EMAIL_BOX,
-    /**
-    * checkbox Multi Select
-    */
-    CHECKBOX_MULTI_SELECT,
-    /**
-    * For IdentityUserFlowAttributeInputType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityContainer singleton. */
+public enum IdentityUserFlowAttributeInputType implements ValuedEnum {
+    TextBox("textBox"),
+    DateTimeDropdown("dateTimeDropdown"),
+    RadioSingleSelect("radioSingleSelect"),
+    DropdownSingleSelect("dropdownSingleSelect"),
+    EmailBox("emailBox"),
+    CheckboxMultiSelect("checkboxMultiSelect");
+    public final String value;
+    IdentityUserFlowAttributeInputType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static IdentityUserFlowAttributeInputType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "textBox": return TextBox;
+            case "dateTimeDropdown": return DateTimeDropdown;
+            case "radioSingleSelect": return RadioSingleSelect;
+            case "dropdownSingleSelect": return DropdownSingleSelect;
+            case "emailBox": return EmailBox;
+            case "checkboxMultiSelect": return CheckboxMultiSelect;
+            default: return null;
+        }
+    }
 }

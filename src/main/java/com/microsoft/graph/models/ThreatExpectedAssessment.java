@@ -1,26 +1,25 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Threat Expected Assessment.
-*/
-public enum ThreatExpectedAssessment
-{
-    /**
-    * block
-    */
-    BLOCK,
-    /**
-    * unblock
-    */
-    UNBLOCK,
-    /**
-    * For ThreatExpectedAssessment values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the informationProtection singleton. */
+public enum ThreatExpectedAssessment implements ValuedEnum {
+    Block("block"),
+    Unblock("unblock");
+    public final String value;
+    ThreatExpectedAssessment(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ThreatExpectedAssessment forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "block": return Block;
+            case "unblock": return Unblock;
+            default: return null;
+        }
+    }
 }

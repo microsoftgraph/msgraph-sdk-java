@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Registry Operation.
-*/
-public enum RegistryOperation
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * create
-    */
-    CREATE,
-    /**
-    * modify
-    */
-    MODIFY,
-    /**
-    * delete
-    */
-    DELETE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For RegistryOperation values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the security singleton. */
+public enum RegistryOperation implements ValuedEnum {
+    Unknown("unknown"),
+    Create("create"),
+    Modify("modify"),
+    Delete("delete"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    RegistryOperation(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RegistryOperation forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "create": return Create;
+            case "modify": return Modify;
+            case "delete": return Delete;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

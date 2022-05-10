@@ -1,50 +1,37 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Team Specialization.
-*/
-public enum TeamSpecialization
-{
-    /**
-    * none
-    */
-    NONE,
-    /**
-    * education Standard
-    */
-    EDUCATION_STANDARD,
-    /**
-    * education Class
-    */
-    EDUCATION_CLASS,
-    /**
-    * education Professional Learning Community
-    */
-    EDUCATION_PROFESSIONAL_LEARNING_COMMUNITY,
-    /**
-    * education Staff
-    */
-    EDUCATION_STAFF,
-    /**
-    * healthcare Standard
-    */
-    HEALTHCARE_STANDARD,
-    /**
-    * healthcare Care Coordination
-    */
-    HEALTHCARE_CARE_COORDINATION,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For TeamSpecialization values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum TeamSpecialization implements ValuedEnum {
+    None("none"),
+    EducationStandard("educationStandard"),
+    EducationClass("educationClass"),
+    EducationProfessionalLearningCommunity("educationProfessionalLearningCommunity"),
+    EducationStaff("educationStaff"),
+    HealthcareStandard("healthcareStandard"),
+    HealthcareCareCoordination("healthcareCareCoordination"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    TeamSpecialization(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TeamSpecialization forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "none": return None;
+            case "educationStandard": return EducationStandard;
+            case "educationClass": return EducationClass;
+            case "educationProfessionalLearningCommunity": return EducationProfessionalLearningCommunity;
+            case "educationStaff": return EducationStaff;
+            case "healthcareStandard": return HealthcareStandard;
+            case "healthcareCareCoordination": return HealthcareCareCoordination;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

@@ -1,38 +1,36 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Imported Windows Autopilot Device Identity Import Status.
-*/
-public enum ImportedWindowsAutopilotDeviceIdentityImportStatus
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * pending
-    */
-    PENDING,
-    /**
-    * partial
-    */
-    PARTIAL,
-    /**
-    * complete
-    */
-    COMPLETE,
-    /**
-    * error
-    */
-    ERROR,
-    /**
-    * For ImportedWindowsAutopilotDeviceIdentityImportStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum ImportedWindowsAutopilotDeviceIdentityImportStatus implements ValuedEnum {
+    /** Unknown status. */
+    Unknown("unknown"),
+    /** Pending status. */
+    Pending("pending"),
+    /** Partial status. */
+    Partial("partial"),
+    /** Complete status. */
+    Complete("complete"),
+    /** Error status. */
+    Error("error");
+    public final String value;
+    ImportedWindowsAutopilotDeviceIdentityImportStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static ImportedWindowsAutopilotDeviceIdentityImportStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "pending": return Pending;
+            case "partial": return Partial;
+            case "complete": return Complete;
+            case "error": return Error;
+            default: return null;
+        }
+    }
 }

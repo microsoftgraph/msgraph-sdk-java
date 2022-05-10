@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Print Color Mode.
-*/
-public enum PrintColorMode
-{
-    /**
-    * black And White
-    */
-    BLACK_AND_WHITE,
-    /**
-    * grayscale
-    */
-    GRAYSCALE,
-    /**
-    * color
-    */
-    COLOR,
-    /**
-    * auto
-    */
-    AUTO,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For PrintColorMode values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the print singleton. */
+public enum PrintColorMode implements ValuedEnum {
+    BlackAndWhite("blackAndWhite"),
+    Grayscale("grayscale"),
+    Color("color"),
+    Auto("auto"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PrintColorMode(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PrintColorMode forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "blackAndWhite": return BlackAndWhite;
+            case "grayscale": return Grayscale;
+            case "color": return Color;
+            case "auto": return Auto;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

@@ -1,42 +1,33 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Token Issuer Type.
-*/
-public enum TokenIssuerType
-{
-    /**
-    * Azure AD
-    */
-    AZURE_AD,
-    /**
-    * ADFederation Services
-    */
-    AD_FEDERATION_SERVICES,
-    /**
-    * Unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * Azure ADBackup Auth
-    */
-    AZURE_AD_BACKUP_AUTH,
-    /**
-    * ADFederation Services MFAAdapter
-    */
-    AD_FEDERATION_SERVICES_MFA_ADAPTER,
-    /**
-    * NPSExtension
-    */
-    NPS_EXTENSION,
-    /**
-    * For TokenIssuerType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityProtectionRoot singleton. */
+public enum TokenIssuerType implements ValuedEnum {
+    AzureAD("AzureAD"),
+    ADFederationServices("ADFederationServices"),
+    UnknownFutureValue("UnknownFutureValue"),
+    AzureADBackupAuth("AzureADBackupAuth"),
+    ADFederationServicesMFAAdapter("ADFederationServicesMFAAdapter"),
+    NPSExtension("NPSExtension");
+    public final String value;
+    TokenIssuerType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static TokenIssuerType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "AzureAD": return AzureAD;
+            case "ADFederationServices": return ADFederationServices;
+            case "UnknownFutureValue": return UnknownFutureValue;
+            case "AzureADBackupAuth": return AzureADBackupAuth;
+            case "ADFederationServicesMFAAdapter": return ADFederationServicesMFAAdapter;
+            case "NPSExtension": return NPSExtension;
+            default: return null;
+        }
+    }
 }

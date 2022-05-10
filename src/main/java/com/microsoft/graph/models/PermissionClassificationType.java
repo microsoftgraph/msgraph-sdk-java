@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Permission Classification Type.
-*/
-public enum PermissionClassificationType
-{
-    /**
-    * low
-    */
-    LOW,
-    /**
-    * medium
-    */
-    MEDIUM,
-    /**
-    * high
-    */
-    HIGH,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For PermissionClassificationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to call the instantiate method. */
+public enum PermissionClassificationType implements ValuedEnum {
+    Low("low"),
+    Medium("medium"),
+    High("high"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    PermissionClassificationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PermissionClassificationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "low": return Low;
+            case "medium": return Medium;
+            case "high": return High;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

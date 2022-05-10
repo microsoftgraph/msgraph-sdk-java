@@ -1,30 +1,30 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Remote Assistance Onboarding Status.
-*/
-public enum RemoteAssistanceOnboardingStatus
-{
-    /**
-    * not Onboarded
-    */
-    NOT_ONBOARDED,
-    /**
-    * onboarding
-    */
-    ONBOARDING,
-    /**
-    * onboarded
-    */
-    ONBOARDED,
-    /**
-    * For RemoteAssistanceOnboardingStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum RemoteAssistanceOnboardingStatus implements ValuedEnum {
+    /** The status reported when there is no active TeamViewer connector configured or active */
+    NotOnboarded("notOnboarded"),
+    /** The status reported when the system has initiated a TeamViewer connection, but the service has not yet completed the confirmation of a connector */
+    Onboarding("onboarding"),
+    /** The status reported when the system has successfully exchanged account information with TeamViewer and can now initiate remote assistance sessions with clients */
+    Onboarded("onboarded");
+    public final String value;
+    RemoteAssistanceOnboardingStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RemoteAssistanceOnboardingStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notOnboarded": return NotOnboarded;
+            case "onboarding": return Onboarding;
+            case "onboarded": return Onboarded;
+            default: return null;
+        }
+    }
 }

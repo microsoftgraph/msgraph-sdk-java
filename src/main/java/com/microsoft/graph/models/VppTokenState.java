@@ -1,38 +1,36 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Vpp Token State.
-*/
-public enum VppTokenState
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * valid
-    */
-    VALID,
-    /**
-    * expired
-    */
-    EXPIRED,
-    /**
-    * invalid
-    */
-    INVALID,
-    /**
-    * assigned To External MDM
-    */
-    ASSIGNED_TO_EXTERNAL_MDM,
-    /**
-    * For VppTokenState values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceAppManagement singleton. */
+public enum VppTokenState implements ValuedEnum {
+    /** Default state. */
+    Unknown("unknown"),
+    /** Token is valid. */
+    Valid("valid"),
+    /** Token is expired. */
+    Expired("expired"),
+    /** Token is invalid. */
+    Invalid("invalid"),
+    /** Token is managed by another MDM Service. */
+    AssignedToExternalMDM("assignedToExternalMDM");
+    public final String value;
+    VppTokenState(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static VppTokenState forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "valid": return Valid;
+            case "expired": return Expired;
+            case "invalid": return Invalid;
+            case "assignedToExternalMDM": return AssignedToExternalMDM;
+            default: return null;
+        }
+    }
 }

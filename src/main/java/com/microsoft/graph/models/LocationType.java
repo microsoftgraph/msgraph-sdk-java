@@ -1,58 +1,41 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Location Type.
-*/
-public enum LocationType
-{
-    /**
-    * default
-    */
-    DEFAULT,
-    /**
-    * conference Room
-    */
-    CONFERENCE_ROOM,
-    /**
-    * home Address
-    */
-    HOME_ADDRESS,
-    /**
-    * business Address
-    */
-    BUSINESS_ADDRESS,
-    /**
-    * geo Coordinates
-    */
-    GEO_COORDINATES,
-    /**
-    * street Address
-    */
-    STREET_ADDRESS,
-    /**
-    * hotel
-    */
-    HOTEL,
-    /**
-    * restaurant
-    */
-    RESTAURANT,
-    /**
-    * local Business
-    */
-    LOCAL_BUSINESS,
-    /**
-    * postal Address
-    */
-    POSTAL_ADDRESS,
-    /**
-    * For LocationType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum LocationType implements ValuedEnum {
+    Default_escaped("default_escaped"),
+    ConferenceRoom("conferenceRoom"),
+    HomeAddress("homeAddress"),
+    BusinessAddress("businessAddress"),
+    GeoCoordinates("geoCoordinates"),
+    StreetAddress("streetAddress"),
+    Hotel("hotel"),
+    Restaurant("restaurant"),
+    LocalBusiness("localBusiness"),
+    PostalAddress("postalAddress");
+    public final String value;
+    LocationType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static LocationType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "default": return Default_escaped;
+            case "conferenceRoom": return ConferenceRoom;
+            case "homeAddress": return HomeAddress;
+            case "businessAddress": return BusinessAddress;
+            case "geoCoordinates": return GeoCoordinates;
+            case "streetAddress": return StreetAddress;
+            case "hotel": return Hotel;
+            case "restaurant": return Restaurant;
+            case "localBusiness": return LocalBusiness;
+            case "postalAddress": return PostalAddress;
+            default: return null;
+        }
+    }
 }

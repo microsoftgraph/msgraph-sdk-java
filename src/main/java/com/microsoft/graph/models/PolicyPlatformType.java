@@ -1,50 +1,45 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Policy Platform Type.
-*/
-public enum PolicyPlatformType
-{
-    /**
-    * android
-    */
-    ANDROID,
-    /**
-    * android For Work
-    */
-    ANDROID_FOR_WORK,
-    /**
-    * i OS
-    */
-    I_OS,
-    /**
-    * mac OS
-    */
-    MAC_OS,
-    /**
-    * windows Phone81
-    */
-    WINDOWS_PHONE81,
-    /**
-    * windows81And Later
-    */
-    WINDOWS81_AND_LATER,
-    /**
-    * windows10And Later
-    */
-    WINDOWS10_AND_LATER,
-    /**
-    * all
-    */
-    ALL,
-    /**
-    * For PolicyPlatformType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum PolicyPlatformType implements ValuedEnum {
+    /** Android. */
+    Android("android"),
+    /** AndroidForWork. */
+    AndroidForWork("androidForWork"),
+    /** iOS. */
+    IOS("iOS"),
+    /** MacOS. */
+    MacOS("macOS"),
+    /** WindowsPhone 8.1. */
+    WindowsPhone81("windowsPhone81"),
+    /** Windows 8.1 and later */
+    Windows81AndLater("windows81AndLater"),
+    /** Windows 10 and later. */
+    Windows10AndLater("windows10AndLater"),
+    /** All platforms. */
+    All("all");
+    public final String value;
+    PolicyPlatformType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static PolicyPlatformType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "android": return Android;
+            case "androidForWork": return AndroidForWork;
+            case "iOS": return IOS;
+            case "macOS": return MacOS;
+            case "windowsPhone81": return WindowsPhone81;
+            case "windows81AndLater": return Windows81AndLater;
+            case "windows10AndLater": return Windows10AndLater;
+            case "all": return All;
+            default: return null;
+        }
+    }
 }

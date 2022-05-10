@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Alert Feedback.
-*/
-public enum AlertFeedback
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * true Positive
-    */
-    TRUE_POSITIVE,
-    /**
-    * false Positive
-    */
-    FALSE_POSITIVE,
-    /**
-    * benign Positive
-    */
-    BENIGN_POSITIVE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For AlertFeedback values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the security singleton. */
+public enum AlertFeedback implements ValuedEnum {
+    Unknown("unknown"),
+    TruePositive("truePositive"),
+    FalsePositive("falsePositive"),
+    BenignPositive("benignPositive"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    AlertFeedback(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static AlertFeedback forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "truePositive": return TruePositive;
+            case "falsePositive": return FalsePositive;
+            case "benignPositive": return BenignPositive;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

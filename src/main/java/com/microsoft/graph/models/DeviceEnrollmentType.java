@@ -1,70 +1,60 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Device Enrollment Type.
-*/
-public enum DeviceEnrollmentType
-{
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * user Enrollment
-    */
-    USER_ENROLLMENT,
-    /**
-    * device Enrollment Manager
-    */
-    DEVICE_ENROLLMENT_MANAGER,
-    /**
-    * apple Bulk With User
-    */
-    APPLE_BULK_WITH_USER,
-    /**
-    * apple Bulk Without User
-    */
-    APPLE_BULK_WITHOUT_USER,
-    /**
-    * windows Azure ADJoin
-    */
-    WINDOWS_AZURE_AD_JOIN,
-    /**
-    * windows Bulk Userless
-    */
-    WINDOWS_BULK_USERLESS,
-    /**
-    * windows Auto Enrollment
-    */
-    WINDOWS_AUTO_ENROLLMENT,
-    /**
-    * windows Bulk Azure Domain Join
-    */
-    WINDOWS_BULK_AZURE_DOMAIN_JOIN,
-    /**
-    * windows Co Management
-    */
-    WINDOWS_CO_MANAGEMENT,
-    /**
-    * windows Azure ADJoin Using Device Auth
-    */
-    WINDOWS_AZURE_AD_JOIN_USING_DEVICE_AUTH,
-    /**
-    * apple User Enrollment
-    */
-    APPLE_USER_ENROLLMENT,
-    /**
-    * apple User Enrollment With Service Account
-    */
-    APPLE_USER_ENROLLMENT_WITH_SERVICE_ACCOUNT,
-    /**
-    * For DeviceEnrollmentType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the drive singleton. */
+public enum DeviceEnrollmentType implements ValuedEnum {
+    /** Default value, enrollment type was not collected. */
+    Unknown("unknown"),
+    /** User driven enrollment through BYOD channel. */
+    UserEnrollment("userEnrollment"),
+    /** User enrollment with a device enrollment manager account. */
+    DeviceEnrollmentManager("deviceEnrollmentManager"),
+    /** Apple bulk enrollment with user challenge. (DEP, Apple Configurator) */
+    AppleBulkWithUser("appleBulkWithUser"),
+    /** Apple bulk enrollment without user challenge. (DEP, Apple Configurator, Mobile Config) */
+    AppleBulkWithoutUser("appleBulkWithoutUser"),
+    /** Windows 10 Azure AD Join. */
+    WindowsAzureADJoin("windowsAzureADJoin"),
+    /** Windows 10 Bulk enrollment through ICD with certificate. */
+    WindowsBulkUserless("windowsBulkUserless"),
+    /** Windows 10 automatic enrollment. (Add work account) */
+    WindowsAutoEnrollment("windowsAutoEnrollment"),
+    /** Windows 10 bulk Azure AD Join. */
+    WindowsBulkAzureDomainJoin("windowsBulkAzureDomainJoin"),
+    /** Windows 10 Co-Management triggered by AutoPilot or Group Policy. */
+    WindowsCoManagement("windowsCoManagement"),
+    /** Windows 10 Azure AD Join using Device Auth. */
+    WindowsAzureADJoinUsingDeviceAuth("windowsAzureADJoinUsingDeviceAuth"),
+    /** Device managed by Apple user enrollment */
+    AppleUserEnrollment("appleUserEnrollment"),
+    /** Device managed by Apple user enrollment with service account */
+    AppleUserEnrollmentWithServiceAccount("appleUserEnrollmentWithServiceAccount");
+    public final String value;
+    DeviceEnrollmentType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static DeviceEnrollmentType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "unknown": return Unknown;
+            case "userEnrollment": return UserEnrollment;
+            case "deviceEnrollmentManager": return DeviceEnrollmentManager;
+            case "appleBulkWithUser": return AppleBulkWithUser;
+            case "appleBulkWithoutUser": return AppleBulkWithoutUser;
+            case "windowsAzureADJoin": return WindowsAzureADJoin;
+            case "windowsBulkUserless": return WindowsBulkUserless;
+            case "windowsAutoEnrollment": return WindowsAutoEnrollment;
+            case "windowsBulkAzureDomainJoin": return WindowsBulkAzureDomainJoin;
+            case "windowsCoManagement": return WindowsCoManagement;
+            case "windowsAzureADJoinUsingDeviceAuth": return WindowsAzureADJoinUsingDeviceAuth;
+            case "appleUserEnrollment": return AppleUserEnrollment;
+            case "appleUserEnrollmentWithServiceAccount": return AppleUserEnrollmentWithServiceAccount;
+            default: return null;
+        }
+    }
 }

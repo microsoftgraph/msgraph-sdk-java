@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Volume Type.
-*/
-public enum VolumeType
-{
-    /**
-    * operating System Volume
-    */
-    OPERATING_SYSTEM_VOLUME,
-    /**
-    * fixed Data Volume
-    */
-    FIXED_DATA_VOLUME,
-    /**
-    * removable Data Volume
-    */
-    REMOVABLE_DATA_VOLUME,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For VolumeType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the informationProtection singleton. */
+public enum VolumeType implements ValuedEnum {
+    OperatingSystemVolume("operatingSystemVolume"),
+    FixedDataVolume("fixedDataVolume"),
+    RemovableDataVolume("removableDataVolume"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    VolumeType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static VolumeType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "operatingSystemVolume": return OperatingSystemVolume;
+            case "fixedDataVolume": return FixedDataVolume;
+            case "removableDataVolume": return RemovableDataVolume;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

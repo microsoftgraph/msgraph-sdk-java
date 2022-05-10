@@ -1,38 +1,31 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Risk Detection Timing Type.
-*/
-public enum RiskDetectionTimingType
-{
-    /**
-    * not Defined
-    */
-    NOT_DEFINED,
-    /**
-    * realtime
-    */
-    REALTIME,
-    /**
-    * near Realtime
-    */
-    NEAR_REALTIME,
-    /**
-    * offline
-    */
-    OFFLINE,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For RiskDetectionTimingType values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the identityProtectionRoot singleton. */
+public enum RiskDetectionTimingType implements ValuedEnum {
+    NotDefined("notDefined"),
+    Realtime("realtime"),
+    NearRealtime("nearRealtime"),
+    Offline("offline"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    RiskDetectionTimingType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static RiskDetectionTimingType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "notDefined": return NotDefined;
+            case "realtime": return Realtime;
+            case "nearRealtime": return NearRealtime;
+            case "offline": return Offline;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

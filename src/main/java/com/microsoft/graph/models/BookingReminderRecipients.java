@@ -1,34 +1,29 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Booking Reminder Recipients.
-*/
-public enum BookingReminderRecipients
-{
-    /**
-    * all Attendees
-    */
-    ALL_ATTENDEES,
-    /**
-    * staff
-    */
-    STAFF,
-    /**
-    * customer
-    */
-    CUSTOMER,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
-    * For BookingReminderRecipients values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the solutionsRoot singleton. */
+public enum BookingReminderRecipients implements ValuedEnum {
+    AllAttendees("allAttendees"),
+    Staff("staff"),
+    Customer("customer"),
+    UnknownFutureValue("unknownFutureValue");
+    public final String value;
+    BookingReminderRecipients(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static BookingReminderRecipients forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "allAttendees": return AllAttendees;
+            case "staff": return Staff;
+            case "customer": return Customer;
+            case "unknownFutureValue": return UnknownFutureValue;
+            default: return null;
+        }
+    }
 }

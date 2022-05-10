@@ -1,90 +1,57 @@
-// Template Source: Enum.java.tt
-// ------------------------------------------------------------------------------
-// Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
-// ------------------------------------------------------------------------------
+package microsoft.graph.models;
 
-package com.microsoft.graph.models;
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
 
-
-/**
- * The Enum Ios Updates Install Status.
-*/
-public enum IosUpdatesInstallStatus
-{
-    /**
-    * device Os Higher Than Desired Os Version
-    */
-    DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION,
-    /**
-    * shared Device User Logged In Error
-    */
-    SHARED_DEVICE_USER_LOGGED_IN_ERROR,
-    /**
-    * not Supported Operation
-    */
-    NOT_SUPPORTED_OPERATION,
-    /**
-    * install Failed
-    */
-    INSTALL_FAILED,
-    /**
-    * install Phone Call In Progress
-    */
-    INSTALL_PHONE_CALL_IN_PROGRESS,
-    /**
-    * install Insufficient Power
-    */
-    INSTALL_INSUFFICIENT_POWER,
-    /**
-    * install Insufficient Space
-    */
-    INSTALL_INSUFFICIENT_SPACE,
-    /**
-    * installing
-    */
-    INSTALLING,
-    /**
-    * download Insufficient Network
-    */
-    DOWNLOAD_INSUFFICIENT_NETWORK,
-    /**
-    * download Insufficient Power
-    */
-    DOWNLOAD_INSUFFICIENT_POWER,
-    /**
-    * download Insufficient Space
-    */
-    DOWNLOAD_INSUFFICIENT_SPACE,
-    /**
-    * download Requires Computer
-    */
-    DOWNLOAD_REQUIRES_COMPUTER,
-    /**
-    * download Failed
-    */
-    DOWNLOAD_FAILED,
-    /**
-    * downloading
-    */
-    DOWNLOADING,
-    /**
-    * success
-    */
-    SUCCESS,
-    /**
-    * available
-    */
-    AVAILABLE,
-    /**
-    * idle
-    */
-    IDLE,
-    /**
-    * unknown
-    */
-    UNKNOWN,
-    /**
-    * For IosUpdatesInstallStatus values that were not expected from the service
-    */
-    UNEXPECTED_VALUE
+/** Provides operations to manage the deviceManagement singleton. */
+public enum IosUpdatesInstallStatus implements ValuedEnum {
+    DeviceOsHigherThanDesiredOsVersion("deviceOsHigherThanDesiredOsVersion"),
+    SharedDeviceUserLoggedInError("sharedDeviceUserLoggedInError"),
+    NotSupportedOperation("notSupportedOperation"),
+    InstallFailed("installFailed"),
+    InstallPhoneCallInProgress("installPhoneCallInProgress"),
+    InstallInsufficientPower("installInsufficientPower"),
+    InstallInsufficientSpace("installInsufficientSpace"),
+    Installing("installing"),
+    DownloadInsufficientNetwork("downloadInsufficientNetwork"),
+    DownloadInsufficientPower("downloadInsufficientPower"),
+    DownloadInsufficientSpace("downloadInsufficientSpace"),
+    DownloadRequiresComputer("downloadRequiresComputer"),
+    DownloadFailed("downloadFailed"),
+    Downloading("downloading"),
+    Success("success"),
+    Available("available"),
+    Idle("idle"),
+    Unknown("unknown");
+    public final String value;
+    IosUpdatesInstallStatus(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static IosUpdatesInstallStatus forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "deviceOsHigherThanDesiredOsVersion": return DeviceOsHigherThanDesiredOsVersion;
+            case "sharedDeviceUserLoggedInError": return SharedDeviceUserLoggedInError;
+            case "notSupportedOperation": return NotSupportedOperation;
+            case "installFailed": return InstallFailed;
+            case "installPhoneCallInProgress": return InstallPhoneCallInProgress;
+            case "installInsufficientPower": return InstallInsufficientPower;
+            case "installInsufficientSpace": return InstallInsufficientSpace;
+            case "installing": return Installing;
+            case "downloadInsufficientNetwork": return DownloadInsufficientNetwork;
+            case "downloadInsufficientPower": return DownloadInsufficientPower;
+            case "downloadInsufficientSpace": return DownloadInsufficientSpace;
+            case "downloadRequiresComputer": return DownloadRequiresComputer;
+            case "downloadFailed": return DownloadFailed;
+            case "downloading": return Downloading;
+            case "success": return Success;
+            case "available": return Available;
+            case "idle": return Idle;
+            case "unknown": return Unknown;
+            default: return null;
+        }
+    }
 }
