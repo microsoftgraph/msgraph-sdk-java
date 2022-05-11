@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Domain;
 import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.InternalDomainFederationCollectionRequestBuilder;
+import com.microsoft.graph.requests.InternalDomainFederationRequestBuilder;
 import com.microsoft.graph.requests.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;

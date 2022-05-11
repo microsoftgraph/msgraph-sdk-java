@@ -45,7 +45,7 @@ public class DomainDnsRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Record Type.
-     * Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, TxtKey
+     * Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, Txt.
      */
     @SerializedName(value = "recordType", alternate = {"RecordType"})
     @Expose
@@ -54,7 +54,7 @@ public class DomainDnsRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Service.
-     * Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune
+     * Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune.
      */
     @SerializedName(value = "supportedService", alternate = {"SupportedService"})
     @Expose
@@ -63,7 +63,7 @@ public class DomainDnsRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Ttl.
-     * Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable
+     * Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable.
      */
     @SerializedName(value = "ttl", alternate = {"Ttl"})
     @Expose

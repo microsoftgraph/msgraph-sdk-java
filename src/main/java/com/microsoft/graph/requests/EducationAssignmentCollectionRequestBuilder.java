@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.EducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.EducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.EducationAssignmentCollectionRequest;
+import com.microsoft.graph.requests.EducationAssignmentDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -39,6 +40,15 @@ public class EducationAssignmentCollectionRequestBuilder extends BaseCollectionR
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public EducationAssignmentDeltaCollectionRequestBuilder delta() {
+        return new EducationAssignmentDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
 
     /**
      * Gets the raw count request for the collection

@@ -240,7 +240,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Replies.
-     * Replies for a specified message.
+     * Replies for a specified message. Supports $expand for channel messages.
      */
     @SerializedName(value = "replies", alternate = {"Replies"})
     @Expose
