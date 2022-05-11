@@ -81,9 +81,10 @@ jobs:
           name: drop
           path: artifacts/previous/
       - name: Run PKG Diff 
+        continue-on-error: true
         run: |
             sudo apt install pkgdiff 
-            pkgdiff -hide-unchanged ${{ env.CURRENT_PKG_DIFF }} ${{ env.PRIOR_PKG_DIFF }}
+            pkgdiff -hide-unchanged ${{ env.PRIOR_PKG_DIFF }} ${{ env.CURRENT_PKG_DIFF }}
       - name: Upload Diff Artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
