@@ -52,7 +52,7 @@ jobs:
             **/gradle/**
             Scripts/**
   
-  compage-packages:
+  compare-packages:
     needs: build
     runs-on: ubuntu-latest
     env: 
