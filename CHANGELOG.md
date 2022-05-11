@@ -11,6 +11,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.24.0] - 2022-05-06
+
+### Added
+
+- AuthenticationProtocol model.
+- FederatedIdpMfaBehavior model.
+- PromptLoginBehavior model.  
+- SigningCertificateUpdateStatus model. 
+- EducationAssignmentDeltaParameterSet models and related requests. 
+- EducationCategoryDeltaParameterSet models and related requests.
+- ExternalDomainName model and related requests. 
+- InternalDomainFederation model and related requests. 
+- SamlOrWsFedExternalDomainFederation model and related requests. 
+- SamlOrWsFedProvider model and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Added refrences to the added models in related models and requests. 
+
 ## [5.23.0] - 2022-05-06
 
 ### Added
