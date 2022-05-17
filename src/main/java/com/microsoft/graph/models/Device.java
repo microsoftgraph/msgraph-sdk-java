@@ -167,7 +167,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Physical Ids.
-     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      */
     @SerializedName(value = "physicalIds", alternate = {"PhysicalIds"})
     @Expose
@@ -185,7 +185,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The System Labels.
-     * List of labels applied to the device by the system.
+     * List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
      */
     @SerializedName(value = "systemLabels", alternate = {"SystemLabels"})
     @Expose
