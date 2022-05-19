@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.25.0] - 2022-05-19
+
+### Added
+
+- ChecklistItem model and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Model and requests related to the added CheckListItem model, ie: TodoTask & TodoTaskRequestBuilder. 
+
 ## [5.24.0] - 2022-05-11
 
 ### Added
