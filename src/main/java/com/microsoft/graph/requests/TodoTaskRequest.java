@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TodoTask;
+import com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.ChecklistItemRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.LinkedResourceCollectionRequestBuilder;

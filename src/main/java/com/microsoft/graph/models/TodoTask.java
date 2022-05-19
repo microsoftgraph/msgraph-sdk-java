@@ -14,9 +14,11 @@ import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.Importance;
 import com.microsoft.graph.models.PatternedRecurrence;
 import com.microsoft.graph.models.TaskStatus;
+import com.microsoft.graph.models.ChecklistItem;
 import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.LinkedResource;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.ChecklistItemCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.LinkedResourceCollectionPage;
 
@@ -52,6 +54,15 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime bodyLastModifiedDateTime;
+
+    /**
+     * The Categories.
+     * 
+     */
+    @SerializedName(value = "categories", alternate = {"Categories"})
+    @Expose
+	@Nullable
+    public java.util.List<String> categories;
 
     /**
      * The Completed Date Time.
@@ -144,6 +155,15 @@ public class TodoTask extends Entity implements IJsonBackedObject {
     public String title;
 
     /**
+     * The Checklist Items.
+     * 
+     */
+    @SerializedName(value = "checklistItems", alternate = {"ChecklistItems"})
+    @Expose
+	@Nullable
+    public ChecklistItemCollectionPage checklistItems;
+
+    /**
      * The Extensions.
      * The collection of open extensions defined for the task. Nullable.
      */
@@ -170,6 +190,10 @@ public class TodoTask extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("checklistItems")) {
+            checklistItems = serializer.deserializeObject(json.get("checklistItems"), ChecklistItemCollectionPage.class);
+        }
 
         if (json.has("extensions")) {
             extensions = serializer.deserializeObject(json.get("extensions"), ExtensionCollectionPage.class);

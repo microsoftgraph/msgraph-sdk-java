@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TodoTask;
+import com.microsoft.graph.requests.ChecklistItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.ChecklistItemRequestBuilder;
 import com.microsoft.graph.requests.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.LinkedResourceCollectionRequestBuilder;
@@ -60,6 +62,26 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
     }
 
 
+    /**
+     *  Gets a request builder for the ChecklistItem collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ChecklistItemCollectionRequestBuilder checklistItems() {
+        return new ChecklistItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ChecklistItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ChecklistItemRequestBuilder checklistItems(@Nonnull final String id) {
+        return new ChecklistItemRequestBuilder(getRequestUrlWithAdditionalSegment("checklistItems") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the Extension collection
      *

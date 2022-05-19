@@ -329,7 +329,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
