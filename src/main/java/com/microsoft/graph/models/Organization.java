@@ -236,7 +236,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Branding.
-     * 
+     * Resource to manage the default branding for the organization. Nullable.
      */
     @SerializedName(value = "branding", alternate = {"Branding"})
     @Expose

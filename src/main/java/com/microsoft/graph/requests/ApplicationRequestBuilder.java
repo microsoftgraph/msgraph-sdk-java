@@ -18,10 +18,6 @@ import com.microsoft.graph.requests.ExtensionPropertyRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.EndpointRequestBuilder;
-import com.microsoft.graph.requests.ServicePrincipalRequestBuilder;
-import com.microsoft.graph.requests.UserRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesRequestBuilder;
@@ -152,86 +148,6 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
     @Nonnull
     public DirectoryObjectWithReferenceRequestBuilder owners(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the AppRoleAssignment collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public AppRoleAssignmentCollectionRequestBuilder ownersAsAppRoleAssignment() {
-        return new AppRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.appRoleAssignment", getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the AppRoleAssignment item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public AppRoleAssignmentRequestBuilder ownersAsAppRoleAssignment(@Nonnull final String id) {
-        return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the Endpoint collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public EndpointCollectionRequestBuilder ownersAsEndpoint() {
-        return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.endpoint", getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the Endpoint item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public EndpointRequestBuilder ownersAsEndpoint(@Nonnull final String id) {
-        return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the ServicePrincipal collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public ServicePrincipalCollectionRequestBuilder ownersAsServicePrincipal() {
-        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.servicePrincipal", getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the ServicePrincipal item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public ServicePrincipalRequestBuilder ownersAsServicePrincipal(@Nonnull final String id) {
-        return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the User collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public UserCollectionRequestBuilder ownersAsUser() {
-        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.user", getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the User item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public UserRequestBuilder ownersAsUser(@Nonnull final String id) {
-        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
     /**
      *  Gets a request builder for the TokenIssuancePolicy collection
