@@ -15,6 +15,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+### Changed
+
+- Bumps dependency on Graph-Core to 2.0.13
+
+## [5.25.0] - 2022-05-19
+
+### Added
+
 - ChecklistItem model and related requests. 
 
 ### Changed
