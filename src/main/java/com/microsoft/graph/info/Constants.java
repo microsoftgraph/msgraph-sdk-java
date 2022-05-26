@@ -18,7 +18,7 @@ public final class Constants {
 	/** The client secret to use for unit testing */
 	public static final String CLIENTSECRET = "clientsecret";
 	/** The SDK version */
-	public static final String VERSION_NAME = "5.25.0";
+	public static final String VERSION_NAME = "5.26.0";
 }
 
 
