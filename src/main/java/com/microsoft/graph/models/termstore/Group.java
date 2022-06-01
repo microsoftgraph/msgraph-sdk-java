@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Casts the previous resource to user. */
 public class Group extends Entity implements Parsable {
     /** Date and time of the group creation. Read-only. */
     private OffsetDateTime _createdDateTime;

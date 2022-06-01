@@ -54,7 +54,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder {
      * @param body 
      * @return a CompletableFuture of getAvailableExtensionPropertiesResponse
      */
-    public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, GetAvailableExtensionPropertiesResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +99,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getAvailableExtensionPropertiesResponse
      */
-    public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, GetAvailableExtensionPropertiesResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +114,7 @@ public class GetAvailableExtensionPropertiesRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of getAvailableExtensionPropertiesResponse
      */
-    public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GetAvailableExtensionPropertiesResponse> post(@javax.annotation.Nonnull final GetAvailableExtensionPropertiesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

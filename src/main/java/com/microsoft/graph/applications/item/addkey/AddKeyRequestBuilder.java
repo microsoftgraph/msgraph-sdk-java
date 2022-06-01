@@ -55,7 +55,7 @@ public class AddKeyRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final KeyCredentialRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final KeyCredentialPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class AddKeyRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final KeyCredentialRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddKeyRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final KeyCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddKeyRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -86,7 +86,7 @@ public class AddKeyRequestBuilder {
      * @param body 
      * @return a CompletableFuture of KeyCredential
      */
-    public java.util.concurrent.CompletableFuture<KeyCredential> post(@javax.annotation.Nonnull final KeyCredentialRequestBody body) {
+    public java.util.concurrent.CompletableFuture<KeyCredential> post(@javax.annotation.Nonnull final KeyCredentialPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, KeyCredential::createFromDiscriminatorValue, null, null);
@@ -100,7 +100,7 @@ public class AddKeyRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of KeyCredential
      */
-    public java.util.concurrent.CompletableFuture<KeyCredential> post(@javax.annotation.Nonnull final KeyCredentialRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddKeyRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<KeyCredential> post(@javax.annotation.Nonnull final KeyCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddKeyRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, KeyCredential::createFromDiscriminatorValue, null, null);
@@ -115,7 +115,7 @@ public class AddKeyRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of KeyCredential
      */
-    public java.util.concurrent.CompletableFuture<KeyCredential> post(@javax.annotation.Nonnull final KeyCredentialRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddKeyRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<KeyCredential> post(@javax.annotation.Nonnull final KeyCredentialPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddKeyRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

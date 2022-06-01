@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the getGroupArchivedPrintJobs method. */
+/** Provides operations to manage the print singleton. */
 public enum PrintJobProcessingState implements ValuedEnum {
     Unknown("unknown"),
     Pending("pending"),

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of directoryRoleTemplate entities. */
 public class DirectoryRoleTemplate extends DirectoryObject implements Parsable {
     /** The description to set for the directory role. Read-only. */
     private String _description;

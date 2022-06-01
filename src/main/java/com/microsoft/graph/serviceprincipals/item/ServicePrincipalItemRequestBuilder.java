@@ -239,7 +239,7 @@ public class ServicePrincipalItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete servicePrincipal
+     * Delete a servicePrincipal object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -247,7 +247,7 @@ public class ServicePrincipalItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete servicePrincipal
+     * Delete a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -279,7 +279,7 @@ public class ServicePrincipalItemRequestBuilder {
         return new microsoft.graph.serviceprincipals.item.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get servicePrincipal
+     * Retrieve the properties and relationships of a servicePrincipal object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -287,7 +287,7 @@ public class ServicePrincipalItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get servicePrincipal
+     * Retrieve the properties and relationships of a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -308,7 +308,7 @@ public class ServicePrincipalItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of servicePrincipal object.
      * @param body 
      * @return a RequestInformation
      */
@@ -317,7 +317,7 @@ public class ServicePrincipalItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of servicePrincipal object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -352,7 +352,7 @@ public class ServicePrincipalItemRequestBuilder {
         return new DelegatedPermissionClassificationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Delete servicePrincipal
+     * Delete a servicePrincipal object.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -368,7 +368,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Delete servicePrincipal
+     * Delete a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -385,7 +385,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Delete servicePrincipal
+     * Delete a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -415,7 +415,7 @@ public class ServicePrincipalItemRequestBuilder {
         return new EndpointItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get servicePrincipal
+     * Retrieve the properties and relationships of a servicePrincipal object.
      * @return a CompletableFuture of servicePrincipal
      */
     public java.util.concurrent.CompletableFuture<ServicePrincipal> get() {
@@ -431,7 +431,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Get servicePrincipal
+     * Retrieve the properties and relationships of a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of servicePrincipal
      */
@@ -448,7 +448,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Get servicePrincipal
+     * Retrieve the properties and relationships of a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of servicePrincipal
@@ -526,7 +526,7 @@ public class ServicePrincipalItemRequestBuilder {
         return new microsoft.graph.serviceprincipals.item.owners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of servicePrincipal object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -543,7 +543,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of servicePrincipal object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -561,7 +561,7 @@ public class ServicePrincipalItemRequestBuilder {
         }
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of servicePrincipal object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -631,7 +631,7 @@ public class ServicePrincipalItemRequestBuilder {
         public ServicePrincipalItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get servicePrincipal */
+    /** Retrieve the properties and relationships of a servicePrincipal object. */
     public class ServicePrincipalItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

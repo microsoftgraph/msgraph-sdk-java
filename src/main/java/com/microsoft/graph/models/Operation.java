@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class Operation extends Entity implements Parsable {
     /** The start time of the operation. */
     private OffsetDateTime _createdDateTime;
@@ -30,6 +31,13 @@ public class Operation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static Operation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.operation": return new Operation();
+            }
+        }
         return new Operation();
     }
     /**

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time that this Windows Hello for Business key was registered. */
     private OffsetDateTime _createdDateTime;

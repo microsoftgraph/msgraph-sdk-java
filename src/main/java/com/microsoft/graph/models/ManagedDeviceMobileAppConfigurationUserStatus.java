@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties, inherited properties and actions for an MDM mobile app configuration status for a user. */
 public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implements Parsable {
     /** Devices count for that user. */
     private Integer _devicesCount;

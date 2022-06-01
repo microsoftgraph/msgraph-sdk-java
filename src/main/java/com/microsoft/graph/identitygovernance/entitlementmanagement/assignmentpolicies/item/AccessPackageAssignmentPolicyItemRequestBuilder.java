@@ -92,7 +92,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Access package assignment policies.
+     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Access package assignment policies.
+     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -204,7 +204,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         }
     }
     /**
-     * Access package assignment policies.
+     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @return a CompletableFuture of accessPackageAssignmentPolicy
      */
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> get() {
@@ -220,7 +220,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         }
     }
     /**
-     * Access package assignment policies.
+     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignmentPolicy
      */
@@ -237,7 +237,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         }
     }
     /**
-     * Access package assignment policies.
+     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageAssignmentPolicy
@@ -324,7 +324,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         public AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Access package assignment policies. */
+    /** Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment. */
     public class AccessPackageAssignmentPolicyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

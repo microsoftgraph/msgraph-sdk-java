@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class WorkbookChartFont extends Entity implements Parsable {
     /** Represents the bold status of font. */
     private Boolean _bold;

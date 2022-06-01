@@ -36,9 +36,9 @@ public class GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeR
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getUserArchivedPrintJobs(userId='{userId}',startDateTime='{startDateTime}',endDateTime='{endDateTime}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", endDateTime);
-        urlTplParams.put("", startDateTime);
-        urlTplParams.put("", userId);
+        urlTplParams.put("endDateTime", endDateTime);
+        urlTplParams.put("startDateTime", startDateTime);
+        urlTplParams.put("userId", userId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

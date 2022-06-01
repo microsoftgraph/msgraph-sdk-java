@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Imported windows autopilot devices. */
 public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /** UPN of the user the device will be assigned */
     private String _assignedUserPrincipalName;

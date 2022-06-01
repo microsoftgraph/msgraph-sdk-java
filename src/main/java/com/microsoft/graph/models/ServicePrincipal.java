@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the instantiate method. */
 public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in). */
     private Boolean _accountEnabled;

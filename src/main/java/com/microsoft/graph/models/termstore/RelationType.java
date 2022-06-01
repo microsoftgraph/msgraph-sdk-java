@@ -3,7 +3,7 @@ package microsoft.graph.models.termstore;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the drive singleton. */
+/** Casts the previous resource to user. */
 public enum RelationType implements ValuedEnum {
     Pin("pin"),
     Reuse("reuse"),

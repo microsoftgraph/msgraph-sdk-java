@@ -104,7 +104,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -216,7 +216,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @return a CompletableFuture of accessPackageAssignment
      */
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get() {
@@ -232,7 +232,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignment
      */
@@ -249,7 +249,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         }
     }
     /**
-     * Represents the grant of an access package to a subject (user or group).
+     * The assignment of an access package to a subject for a period of time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageAssignment
@@ -336,7 +336,7 @@ public class AccessPackageAssignmentItemRequestBuilder {
         public AccessPackageAssignmentItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents the grant of an access package to a subject (user or group). */
+    /** The assignment of an access package to a subject for a period of time. */
     public class AccessPackageAssignmentItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

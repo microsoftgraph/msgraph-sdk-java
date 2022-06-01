@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityProtectionRoot singleton. */
 public class RiskDetection extends Entity implements Parsable {
     /** Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue. */
     private ActivityType _activity;

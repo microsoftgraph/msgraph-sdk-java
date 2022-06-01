@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class Event extends OutlookItem implements Parsable {
     /** true if the meeting organizer allows invitees to propose a new time when responding; otherwise false. Optional. Default is true. */
     private Boolean _allowNewTimeProposals;

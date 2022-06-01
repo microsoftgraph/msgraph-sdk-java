@@ -17,6 +17,7 @@ import java.util.Objects;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.serviceprincipals.item.createdobjects.count.CountRequestBuilder;
+import microsoft.graph.serviceprincipals.item.createdobjects.serviceprincipal.ServicePrincipalRequestBuilder;
 /** Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity. */
 public class CreatedObjectsRequestBuilder {
     /** The count property */
@@ -28,6 +29,11 @@ public class CreatedObjectsRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The servicePrincipal property */
+    @javax.annotation.Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipal() {
+        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**

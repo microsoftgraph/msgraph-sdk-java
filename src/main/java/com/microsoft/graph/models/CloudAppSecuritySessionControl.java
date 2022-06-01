@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityContainer singleton. */
 public class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl implements Parsable {
     /** Possible values are: mcasConfigured, monitorOnly, blockDownloads. To learn more about these values, Deploy Conditional Access App Control for featured apps. */
     private CloudAppSecuritySessionControlType _cloudAppSecurityType;

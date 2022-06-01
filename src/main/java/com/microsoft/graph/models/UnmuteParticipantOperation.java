@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the unmute method. */
 public class UnmuteParticipantOperation extends CommsOperation implements Parsable {
     /**
      * Instantiates a new unmuteParticipantOperation and sets the default values.

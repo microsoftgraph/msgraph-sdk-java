@@ -8,10 +8,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of organization entities. */
 public class Organization extends DirectoryObject implements Parsable {
     /** The collection of service plans associated with the tenant. Not nullable. */
     private java.util.List<AssignedPlan> _assignedPlans;
-    /** The branding property */
+    /** Resource to manage the default branding for the organization. Nullable. */
     private OrganizationalBranding _branding;
     /** Telephone number for the organization. Although this is a string collection, only one number can be set for this property. */
     private java.util.List<String> _businessPhones;
@@ -85,7 +86,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this._assignedPlans;
     }
     /**
-     * Gets the branding property value. The branding property
+     * Gets the branding property value. Resource to manage the default branding for the organization. Nullable.
      * @return a organizationalBranding
      */
     @javax.annotation.Nullable
@@ -354,7 +355,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this._assignedPlans = value;
     }
     /**
-     * Sets the branding property value. The branding property
+     * Sets the branding property value. Resource to manage the default branding for the organization. Nullable.
      * @param value Value to set for the branding property.
      * @return a void
      */

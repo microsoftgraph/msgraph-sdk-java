@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy for Windows information protection to configure detailed management settings */
 public class WindowsInformationProtection extends ManagedAppPolicy implements Parsable {
     /** Navigation property to list of security groups targeted for policy. */
     private java.util.List<TargetedManagedAppPolicyAssignment> _assignments;
@@ -73,6 +74,13 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     @javax.annotation.Nonnull
     public static WindowsInformationProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.windowsInformationProtection": return new WindowsInformationProtection();
+            }
+        }
         return new WindowsInformationProtection();
     }
     /**

@@ -558,7 +558,7 @@ public class UserItemRequestBuilder {
         return new ContactItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -566,7 +566,7 @@ public class UserItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -598,7 +598,7 @@ public class UserItemRequestBuilder {
         return new microsoft.graph.users.item.createdobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -606,7 +606,7 @@ public class UserItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -627,7 +627,7 @@ public class UserItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body 
      * @return a RequestInformation
      */
@@ -636,7 +636,7 @@ public class UserItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -659,7 +659,7 @@ public class UserItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -675,7 +675,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -692,7 +692,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -782,7 +782,7 @@ public class UserItemRequestBuilder {
         return new SiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @return a CompletableFuture of user
      */
     public java.util.concurrent.CompletableFuture<User> get() {
@@ -798,7 +798,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of user
      */
@@ -815,7 +815,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Helpers (examples that aren't included in the docs)
+     * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of user
@@ -981,7 +981,7 @@ public class UserItemRequestBuilder {
         return new microsoft.graph.users.item.ownedobjects.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -998,7 +998,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -1016,7 +1016,7 @@ public class UserItemRequestBuilder {
         }
     }
     /**
-     * Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)
+     * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -1122,7 +1122,7 @@ public class UserItemRequestBuilder {
         public UserItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Helpers (examples that aren't included in the docs) */
+    /** Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance. */
     public class UserItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

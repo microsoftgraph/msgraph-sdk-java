@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties, inherited properties and actions for an MDM mobile app configuration status for a device. */
 public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity implements Parsable {
     /** The DateTime when device compliance grace period expires */
     private OffsetDateTime _complianceGracePeriodExpirationDateTime;

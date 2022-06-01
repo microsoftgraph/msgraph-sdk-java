@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Compliance management partner for all platforms */
 public class ComplianceManagementPartner extends Entity implements Parsable {
     /** User groups which enroll Android devices through partner. */
     private java.util.List<ComplianceManagementPartnerAssignment> _androidEnrollmentAssignments;

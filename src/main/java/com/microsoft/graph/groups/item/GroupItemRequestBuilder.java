@@ -356,7 +356,7 @@ public class GroupItemRequestBuilder {
         return new ConversationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Deletes a group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -364,7 +364,7 @@ public class GroupItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Deletes a group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -384,7 +384,7 @@ public class GroupItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get group
+     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** property is an exception and is not returned in the `$select` query. Because the **group** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **group** instance.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -392,7 +392,7 @@ public class GroupItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get group
+     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** property is an exception and is not returned in the `$select` query. Because the **group** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **group** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -413,7 +413,7 @@ public class GroupItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update group
+     * Update the properties of a group object.
      * @param body 
      * @return a RequestInformation
      */
@@ -422,7 +422,7 @@ public class GroupItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update group
+     * Update the properties of a group object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -445,7 +445,7 @@ public class GroupItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Deletes a group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -461,7 +461,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Deletes a group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -478,7 +478,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles
+     * Deletes a group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -532,7 +532,7 @@ public class GroupItemRequestBuilder {
         return new ExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Get group
+     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** property is an exception and is not returned in the `$select` query. Because the **group** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **group** instance.
      * @return a CompletableFuture of group
      */
     public java.util.concurrent.CompletableFuture<Group> get() {
@@ -548,7 +548,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Get group
+     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** property is an exception and is not returned in the `$select` query. Because the **group** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **group** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of group
      */
@@ -565,7 +565,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Get group
+     * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** property is an exception and is not returned in the `$select` query. Because the **group** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **group** instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of group
@@ -643,7 +643,7 @@ public class GroupItemRequestBuilder {
         return new microsoft.graph.groups.item.owners.item.DirectoryObjectItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Update group
+     * Update the properties of a group object.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -660,7 +660,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Update group
+     * Update the properties of a group object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -678,7 +678,7 @@ public class GroupItemRequestBuilder {
         }
     }
     /**
-     * Update group
+     * Update the properties of a group object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -808,7 +808,7 @@ public class GroupItemRequestBuilder {
         public GroupItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get group */
+    /** Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** property is an exception and is not returned in the `$select` query. Because the **group** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **group** instance. */
     public class GroupItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

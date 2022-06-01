@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class Schema extends Entity implements Parsable {
     /** Must be set to microsoft.graph.externalItem. Required. */
     private String _baseType;

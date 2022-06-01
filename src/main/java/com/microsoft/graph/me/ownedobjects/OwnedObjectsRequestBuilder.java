@@ -14,20 +14,38 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.me.ownedobjects.application.ApplicationRequestBuilder;
 import microsoft.graph.me.ownedobjects.count.CountRequestBuilder;
+import microsoft.graph.me.ownedobjects.group.GroupRequestBuilder;
+import microsoft.graph.me.ownedobjects.serviceprincipal.ServicePrincipalRequestBuilder;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the ownedObjects property of the microsoft.graph.user entity. */
 public class OwnedObjectsRequestBuilder {
+    /** The application property */
+    @javax.annotation.Nonnull
+    public ApplicationRequestBuilder application() {
+        return new ApplicationRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The group property */
+    @javax.annotation.Nonnull
+    public GroupRequestBuilder group() {
+        return new GroupRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The servicePrincipal property */
+    @javax.annotation.Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipal() {
+        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**

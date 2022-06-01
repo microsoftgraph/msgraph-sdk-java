@@ -80,7 +80,7 @@ public class AuditLogsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * auditLogRoot resource type
+     * Get auditLogs
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class AuditLogsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * auditLogRoot resource type
+     * Get auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class AuditLogsRequestBuilder {
         return new DirectoryAuditItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * auditLogRoot resource type
+     * Get auditLogs
      * @return a CompletableFuture of auditLogRoot
      */
     public java.util.concurrent.CompletableFuture<AuditLogRoot> get() {
@@ -169,7 +169,7 @@ public class AuditLogsRequestBuilder {
         }
     }
     /**
-     * auditLogRoot resource type
+     * Get auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of auditLogRoot
      */
@@ -186,7 +186,7 @@ public class AuditLogsRequestBuilder {
         }
     }
     /**
-     * auditLogRoot resource type
+     * Get auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of auditLogRoot
@@ -294,7 +294,7 @@ public class AuditLogsRequestBuilder {
         urlTplParams.put("signIn%2Did", id);
         return new SignInItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** auditLogRoot resource type */
+    /** Get auditLogs */
     public class AuditLogsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

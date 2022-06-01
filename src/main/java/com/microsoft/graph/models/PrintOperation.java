@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the print singleton. */
 public class PrintOperation extends Entity implements Parsable {
     /** The DateTimeOffset when the operation was created. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -28,6 +29,13 @@ public class PrintOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static PrintOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.printOperation": return new PrintOperation();
+            }
+        }
         return new PrintOperation();
     }
     /**

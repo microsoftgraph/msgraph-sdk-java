@@ -14,7 +14,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     /** The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly. */
     private Integer _dayOfMonth;
     /** A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly. */
-    private java.util.List<DayOfWeek> _daysOfWeek;
+    private java.util.List<String> _daysOfWeek;
     /** The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly. */
     private DayOfWeek _firstDayOfWeek;
     /** Specifies on which instance of the allowed days specified in daysOfWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly. */
@@ -60,10 +60,10 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the daysOfWeek property value. A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
-     * @return a dayOfWeek
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<DayOfWeek> getDaysOfWeek() {
+    public java.util.List<String> getDaysOfWeek() {
         return this._daysOfWeek;
     }
     /**
@@ -75,7 +75,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
         final RecurrencePattern currentObject = this;
         return new HashMap<>(7) {{
             this.put("dayOfMonth", (n) -> { currentObject.setDayOfMonth(n.getIntegerValue()); });
-            this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
+            this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("firstDayOfWeek", (n) -> { currentObject.setFirstDayOfWeek(n.getEnumValue(DayOfWeek.class)); });
             this.put("index", (n) -> { currentObject.setIndex(n.getEnumValue(WeekIndex.class)); });
             this.put("interval", (n) -> { currentObject.setInterval(n.getIntegerValue()); });
@@ -131,7 +131,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("dayOfMonth", this.getDayOfMonth());
-        writer.writeCollectionOfEnumValues("daysOfWeek", this.getDaysOfWeek());
+        writer.writeCollectionOfPrimitiveValues("daysOfWeek", this.getDaysOfWeek());
         writer.writeEnumValue("firstDayOfWeek", this.getFirstDayOfWeek());
         writer.writeEnumValue("index", this.getIndex());
         writer.writeIntegerValue("interval", this.getInterval());
@@ -160,7 +160,7 @@ public class RecurrencePattern implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the daysOfWeek property.
      * @return a void
      */
-    public void setDaysOfWeek(@javax.annotation.Nullable final java.util.List<DayOfWeek> value) {
+    public void setDaysOfWeek(@javax.annotation.Nullable final java.util.List<String> value) {
         this._daysOfWeek = value;
     }
     /**

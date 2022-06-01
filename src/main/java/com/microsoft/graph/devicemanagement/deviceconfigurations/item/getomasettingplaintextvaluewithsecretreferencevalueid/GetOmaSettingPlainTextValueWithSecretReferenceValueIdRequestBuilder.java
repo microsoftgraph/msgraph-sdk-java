@@ -33,7 +33,7 @@ public class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/microsoft.graph.getOmaSettingPlainTextValue(secretReferenceValueId='{secretReferenceValueId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", secretReferenceValueId);
+        urlTplParams.put("secretReferenceValueId", secretReferenceValueId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.PublicError;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ConnectionOperation extends Entity implements Parsable {
     /** If status is failed, provides more information about the error that caused the failure. */
     private PublicError _error;

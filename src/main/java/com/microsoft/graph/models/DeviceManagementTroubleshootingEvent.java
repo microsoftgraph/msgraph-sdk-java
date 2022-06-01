@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Event representing an general failure. */
 public class DeviceManagementTroubleshootingEvent extends Entity implements Parsable {
     /** Id used for tracing the failure in the service. */
     private String _correlationId;
@@ -28,6 +29,13 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     @javax.annotation.Nonnull
     public static DeviceManagementTroubleshootingEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceManagementTroubleshootingEvent": return new DeviceManagementTroubleshootingEvent();
+            }
+        }
         return new DeviceManagementTroubleshootingEvent();
     }
     /**

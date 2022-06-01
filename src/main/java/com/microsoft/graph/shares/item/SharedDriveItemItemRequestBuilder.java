@@ -123,7 +123,7 @@ public class SharedDriveItemItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Accessing shared DriveItems
+     * Access a shared DriveItem or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -131,7 +131,7 @@ public class SharedDriveItemItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Accessing shared DriveItems
+     * Access a shared DriveItem or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +235,7 @@ public class SharedDriveItemItemRequestBuilder {
         }
     }
     /**
-     * Accessing shared DriveItems
+     * Access a shared DriveItem or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @return a CompletableFuture of sharedDriveItem
      */
     public java.util.concurrent.CompletableFuture<SharedDriveItem> get() {
@@ -251,7 +251,7 @@ public class SharedDriveItemItemRequestBuilder {
         }
     }
     /**
-     * Accessing shared DriveItems
+     * Access a shared DriveItem or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of sharedDriveItem
      */
@@ -268,7 +268,7 @@ public class SharedDriveItemItemRequestBuilder {
         }
     }
     /**
-     * Accessing shared DriveItems
+     * Access a shared DriveItem or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of sharedDriveItem
@@ -367,7 +367,7 @@ public class SharedDriveItemItemRequestBuilder {
         public SharedDriveItemItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Accessing shared DriveItems */
+    /** Access a shared DriveItem or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to transform the URL into a sharing token. */
     public class SharedDriveItemItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -52,7 +52,7 @@ public class GroupSettingItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete a group setting
+     * Delete a tenant-level or group-specific groupSetting object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class GroupSettingItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete a group setting
+     * Delete a tenant-level or group-specific groupSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -80,7 +80,7 @@ public class GroupSettingItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get groupSetting
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class GroupSettingItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get groupSetting
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -109,7 +109,7 @@ public class GroupSettingItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update groupSetting
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body 
      * @return a RequestInformation
      */
@@ -118,7 +118,7 @@ public class GroupSettingItemRequestBuilder {
         return createPatchRequestInformation(body, null);
     }
     /**
-     * Update groupSetting
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -141,7 +141,7 @@ public class GroupSettingItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete a group setting
+     * Delete a tenant-level or group-specific groupSetting object.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -157,7 +157,7 @@ public class GroupSettingItemRequestBuilder {
         }
     }
     /**
-     * Delete a group setting
+     * Delete a tenant-level or group-specific groupSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -174,7 +174,7 @@ public class GroupSettingItemRequestBuilder {
         }
     }
     /**
-     * Delete a group setting
+     * Delete a tenant-level or group-specific groupSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -192,7 +192,7 @@ public class GroupSettingItemRequestBuilder {
         }
     }
     /**
-     * Get groupSetting
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @return a CompletableFuture of groupSetting
      */
     public java.util.concurrent.CompletableFuture<GroupSetting> get() {
@@ -208,7 +208,7 @@ public class GroupSettingItemRequestBuilder {
         }
     }
     /**
-     * Get groupSetting
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSetting
      */
@@ -225,7 +225,7 @@ public class GroupSettingItemRequestBuilder {
         }
     }
     /**
-     * Get groupSetting
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of groupSetting
@@ -243,7 +243,7 @@ public class GroupSettingItemRequestBuilder {
         }
     }
     /**
-     * Update groupSetting
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body 
      * @return a CompletableFuture of void
      */
@@ -260,7 +260,7 @@ public class GroupSettingItemRequestBuilder {
         }
     }
     /**
-     * Update groupSetting
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
@@ -278,7 +278,7 @@ public class GroupSettingItemRequestBuilder {
         }
     }
     /**
-     * Update groupSetting
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -312,7 +312,7 @@ public class GroupSettingItemRequestBuilder {
         public GroupSettingItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get groupSetting */
+    /** Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting. */
     public class GroupSettingItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

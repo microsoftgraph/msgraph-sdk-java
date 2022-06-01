@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the directory singleton. */
 public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /** An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search. */
     private String _description;

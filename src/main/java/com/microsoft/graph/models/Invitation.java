@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of invitation entities. */
 public class Invitation extends Entity implements Parsable {
     /** The user created as part of the invitation creation. Read-Only */
     private User _invitedUser;

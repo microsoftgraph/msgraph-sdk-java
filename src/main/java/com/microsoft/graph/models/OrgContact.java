@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of orgContact entities. */
 public class OrgContact extends DirectoryObject implements Parsable {
     /** Postal addresses for this organizational contact. For now a contact can only have one physical address. */
     private java.util.List<PhysicalOfficeAddress> _addresses;
@@ -39,7 +40,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     private Boolean _onPremisesSyncEnabled;
     /** List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in). */
     private java.util.List<Phone> _phones;
-    /** For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith). */
+    /** For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections). */
     private java.util.List<String> _proxyAddresses;
     /** Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) */
     private String _surname;
@@ -211,7 +212,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         return this._phones;
     }
     /**
-     * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -382,7 +383,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         this._phones = value;
     }
     /**
-     * Sets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class WorkbookChartAxes extends Entity implements Parsable {
     /** Represents the category axis in a chart. Read-only. */
     private WorkbookChartAxis _categoryAxis;

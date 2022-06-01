@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class LicenseDetails extends Entity implements Parsable {
     /** Information about the service plans assigned with the license. Read-only, Not nullable */
     private java.util.List<ServicePlanInfo> _servicePlans;

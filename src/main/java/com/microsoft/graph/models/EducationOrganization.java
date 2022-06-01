@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the educationRoot singleton. */
 public class EducationOrganization extends Entity implements Parsable {
     /** Organization description. */
     private String _description;
@@ -31,6 +32,13 @@ public class EducationOrganization extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static EducationOrganization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.educationOrganization": return new EducationOrganization();
+            }
+        }
         return new EducationOrganization();
     }
     /**

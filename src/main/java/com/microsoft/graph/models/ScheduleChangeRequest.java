@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable {
     /** The assignedTo property */
     private ScheduleChangeRequestActor _assignedTo;
@@ -40,6 +41,13 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     @javax.annotation.Nonnull
     public static ScheduleChangeRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.scheduleChangeRequest": return new ScheduleChangeRequest();
+            }
+        }
         return new ScheduleChangeRequest();
     }
     /**

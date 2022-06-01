@@ -14,22 +14,52 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.approleassignment.AppRoleAssignmentRequestBuilder;
 import microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.count.CountRequestBuilder;
+import microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.endpoint.EndpointRequestBuilder;
+import microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.ref.RefRequestBuilder;
+import microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.serviceprincipal.ServicePrincipalRequestBuilder;
+import microsoft.graph.me.authentication.microsoftauthenticatormethods.item.device.registeredowners.user.UserRequestBuilder;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the registeredOwners property of the microsoft.graph.device entity. */
 public class RegisteredOwnersRequestBuilder {
+    /** The appRoleAssignment property */
+    @javax.annotation.Nonnull
+    public AppRoleAssignmentRequestBuilder appRoleAssignment() {
+        return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The endpoint property */
+    @javax.annotation.Nonnull
+    public EndpointRequestBuilder endpoint() {
+        return new EndpointRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The servicePrincipal property */
+    @javax.annotation.Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipal() {
+        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The user property */
+    @javax.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new RegisteredOwnersRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

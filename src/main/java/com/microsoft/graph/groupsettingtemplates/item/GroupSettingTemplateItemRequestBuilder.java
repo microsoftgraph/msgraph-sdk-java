@@ -110,7 +110,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a group setting template
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -118,7 +118,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get a group setting template
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -222,7 +222,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get a group setting template
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @return a CompletableFuture of groupSettingTemplate
      */
     public java.util.concurrent.CompletableFuture<GroupSettingTemplate> get() {
@@ -238,7 +238,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get a group setting template
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSettingTemplate
      */
@@ -255,7 +255,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get a group setting template
+     * A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of groupSettingTemplate
@@ -342,7 +342,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         public GroupSettingTemplateItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get a group setting template */
+    /** A group setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the groupSettingTemplate object, including the available settings and their defaults. */
     public class GroupSettingTemplateItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

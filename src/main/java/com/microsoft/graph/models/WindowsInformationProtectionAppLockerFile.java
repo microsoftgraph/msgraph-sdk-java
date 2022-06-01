@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Information Protection AppLocker File */
 public class WindowsInformationProtectionAppLockerFile extends Entity implements Parsable {
     /** The friendly name */
     private String _displayName;

@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class Identity extends Entity implements Parsable {
     /** The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system. */
     private IdentityType _type;

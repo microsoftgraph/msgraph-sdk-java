@@ -82,7 +82,7 @@ public class DirectoryObjectItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Delete directoryObject
+     * Delete a directory object, for example, a group, user, application, or service principal.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -90,7 +90,7 @@ public class DirectoryObjectItemRequestBuilder {
         return createDeleteRequestInformation(null);
     }
     /**
-     * Delete directoryObject
+     * Delete a directory object, for example, a group, user, application, or service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -110,7 +110,7 @@ public class DirectoryObjectItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get directoryObject
+     * Retrieve the properties and relationships of a directoryObject object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -118,7 +118,7 @@ public class DirectoryObjectItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get directoryObject
+     * Retrieve the properties and relationships of a directoryObject object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +171,7 @@ public class DirectoryObjectItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Delete directoryObject
+     * Delete a directory object, for example, a group, user, application, or service principal.
      * @return a CompletableFuture of void
      */
     public java.util.concurrent.CompletableFuture<Void> delete() {
@@ -187,7 +187,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Delete directoryObject
+     * Delete a directory object, for example, a group, user, application, or service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
@@ -204,7 +204,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Delete directoryObject
+     * Delete a directory object, for example, a group, user, application, or service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
@@ -222,7 +222,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Get directoryObject
+     * Retrieve the properties and relationships of a directoryObject object.
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -238,7 +238,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Get directoryObject
+     * Retrieve the properties and relationships of a directoryObject object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -255,7 +255,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Get directoryObject
+     * Retrieve the properties and relationships of a directoryObject object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -342,7 +342,7 @@ public class DirectoryObjectItemRequestBuilder {
         public DirectoryObjectItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get directoryObject */
+    /** Retrieve the properties and relationships of a directoryObject object. */
     public class DirectoryObjectItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

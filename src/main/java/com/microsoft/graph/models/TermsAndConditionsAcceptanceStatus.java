@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A termsAndConditionsAcceptanceStatus entity represents the acceptance status of a given Terms and Conditions (T&C) policy by a given user. Users must accept the most up-to-date version of the terms in order to retain access to the Company Portal. */
 public class TermsAndConditionsAcceptanceStatus extends Entity implements Parsable {
     /** DateTime when the terms were last accepted by the user. */
     private OffsetDateTime _acceptedDateTime;

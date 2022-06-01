@@ -20,7 +20,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     /** This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional. */
     private Boolean _enableTopResults;
     /** One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required. */
-    private java.util.List<EntityType> _entityTypes;
+    private java.util.List<String> _entityTypes;
     /** Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional. */
     private java.util.List<String> _fields;
     /** Specifies the offset for the search results. Offset 0 returns the very first result. Optional. */
@@ -94,10 +94,10 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.
-     * @return a entityType
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<EntityType> getEntityTypes() {
+    public java.util.List<String> getEntityTypes() {
         return this._entityTypes;
     }
     /**
@@ -112,7 +112,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
             this.put("aggregations", (n) -> { currentObject.setAggregations(n.getCollectionOfObjectValues(AggregationOption::createFromDiscriminatorValue)); });
             this.put("contentSources", (n) -> { currentObject.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("enableTopResults", (n) -> { currentObject.setEnableTopResults(n.getBooleanValue()); });
-            this.put("entityTypes", (n) -> { currentObject.setEntityTypes(n.getCollectionOfEnumValues(EntityType.class)); });
+            this.put("entityTypes", (n) -> { currentObject.setEntityTypes(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("fields", (n) -> { currentObject.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("from", (n) -> { currentObject.setFrom(n.getIntegerValue()); });
             this.put("query", (n) -> { currentObject.setQuery(n.getObjectValue(SearchQuery::createFromDiscriminatorValue)); });
@@ -189,7 +189,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("aggregations", this.getAggregations());
         writer.writeCollectionOfPrimitiveValues("contentSources", this.getContentSources());
         writer.writeBooleanValue("enableTopResults", this.getEnableTopResults());
-        writer.writeCollectionOfEnumValues("entityTypes", this.getEntityTypes());
+        writer.writeCollectionOfPrimitiveValues("entityTypes", this.getEntityTypes());
         writer.writeCollectionOfPrimitiveValues("fields", this.getFields());
         writer.writeIntegerValue("from", this.getFrom());
         writer.writeObjectValue("query", this.getQuery());
@@ -244,7 +244,7 @@ public class SearchRequest implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the entityTypes property.
      * @return a void
      */
-    public void setEntityTypes(@javax.annotation.Nullable final java.util.List<EntityType> value) {
+    public void setEntityTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._entityTypes = value;
     }
     /**

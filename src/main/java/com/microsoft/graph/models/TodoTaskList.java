@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class TodoTaskList extends Entity implements Parsable {
     /** The name of the task list. */
     private String _displayName;

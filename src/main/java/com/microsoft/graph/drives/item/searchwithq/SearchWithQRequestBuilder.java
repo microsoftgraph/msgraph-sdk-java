@@ -33,7 +33,7 @@ public class SearchWithQRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/drives/{drive%2Did}/microsoft.graph.search(q='{q}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", q);
+        urlTplParams.put("q", q);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

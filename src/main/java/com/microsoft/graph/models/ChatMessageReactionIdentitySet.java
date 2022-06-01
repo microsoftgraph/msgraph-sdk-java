@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of chat entities. */
 public class ChatMessageReactionIdentitySet extends IdentitySet implements Parsable {
     /**
      * Instantiates a new chatMessageReactionIdentitySet and sets the default values.

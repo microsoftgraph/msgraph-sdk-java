@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the privacy singleton. */
 public class AuthoredNote extends Entity implements Parsable {
     /** Identity information about the note's author. */
     private Identity _author;

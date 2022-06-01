@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the cloudCommunications singleton. */
 public class Session extends Entity implements Parsable {
     /** Endpoint that answered the session. */
     private Endpoint _callee;
@@ -19,7 +20,7 @@ public class Session extends Entity implements Parsable {
     /** Failure information associated with the session if the session failed. */
     private FailureInfo _failureInfo;
     /** List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue. */
-    private java.util.List<Modality> _modalities;
+    private java.util.List<String> _modalities;
     /** The list of segments involved in the session. Read-only. Nullable. */
     private java.util.List<Segment> _segments;
     /** UTC fime when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
@@ -85,17 +86,17 @@ public class Session extends Entity implements Parsable {
             this.put("caller", (n) -> { currentObject.setCaller(n.getObjectValue(Endpoint::createFromDiscriminatorValue)); });
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("failureInfo", (n) -> { currentObject.setFailureInfo(n.getObjectValue(FailureInfo::createFromDiscriminatorValue)); });
-            this.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfEnumValues(Modality.class)); });
+            this.put("modalities", (n) -> { currentObject.setModalities(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("segments", (n) -> { currentObject.setSegments(n.getCollectionOfObjectValues(Segment::createFromDiscriminatorValue)); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
         }};
     }
     /**
      * Gets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return a modality
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<Modality> getModalities() {
+    public java.util.List<String> getModalities() {
         return this._modalities;
     }
     /**
@@ -126,7 +127,7 @@ public class Session extends Entity implements Parsable {
         writer.writeObjectValue("caller", this.getCaller());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeObjectValue("failureInfo", this.getFailureInfo());
-        writer.writeCollectionOfEnumValues("modalities", this.getModalities());
+        writer.writeCollectionOfPrimitiveValues("modalities", this.getModalities());
         writer.writeCollectionOfObjectValues("segments", this.getSegments());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
     }
@@ -167,7 +168,7 @@ public class Session extends Entity implements Parsable {
      * @param value Value to set for the modalities property.
      * @return a void
      */
-    public void setModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
+    public void setModalities(@javax.annotation.Nullable final java.util.List<String> value) {
         this._modalities = value;
     }
     /**

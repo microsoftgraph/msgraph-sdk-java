@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable {
     /** ID for the open shift. */
     private String _openShiftId;

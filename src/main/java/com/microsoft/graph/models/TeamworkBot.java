@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the appCatalogs singleton. */
 public class TeamworkBot extends Entity implements Parsable {
     /**
      * Instantiates a new teamworkBot and sets the default values.

@@ -34,8 +34,8 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", endDateTime);
-        urlTplParams.put("", startDateTime);
+        urlTplParams.put("EndDateTime", endDateTime);
+        urlTplParams.put("StartDateTime", startDateTime);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

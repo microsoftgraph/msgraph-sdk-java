@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Singleton entity that acts as a container for all reports functionality. */
 public class DeviceManagementReports extends Entity implements Parsable {
     /** Entity representing a job to export a report */
     private java.util.List<DeviceManagementExportJob> _exportJobs;

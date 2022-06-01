@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** An abstract class containing the base properties for Managed eBook. */
 public class ManagedEBook extends Entity implements Parsable {
     /** The list of assignments for this eBook. */
     private java.util.List<ManagedEBookAssignment> _assignments;
@@ -50,6 +51,13 @@ public class ManagedEBook extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ManagedEBook createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.managedEBook": return new ManagedEBook();
+            }
+        }
         return new ManagedEBook();
     }
     /**

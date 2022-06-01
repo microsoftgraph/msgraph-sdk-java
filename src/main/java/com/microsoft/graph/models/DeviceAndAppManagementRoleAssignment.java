@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Role Assignment resource. Role assignments tie together a role definition with members and scopes. There can be one or more role assignments per role. This applies to custom and built-in roles. */
 public class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Parsable {
     /** The list of ids of role member security groups. These are IDs from Azure Active Directory. */
     private java.util.List<String> _members;

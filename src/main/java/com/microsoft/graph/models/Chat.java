@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of chat entities. */
 public class Chat extends Entity implements Parsable {
     /** Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue. */
     private ChatType _chatType;

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity which represents a connection to an Exchange environment. */
 public class DeviceManagementExchangeConnector extends Entity implements Parsable {
     /** The name of the server hosting the Exchange Connector. */
     private String _connectorServerName;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The identifier for the deployment an app. */
 public class ManagedMobileApp extends Entity implements Parsable {
     /** The identifier for an app with it's operating system type. */
     private MobileAppIdentifier _mobileAppIdentifier;

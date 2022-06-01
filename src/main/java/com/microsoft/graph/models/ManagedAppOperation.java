@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents an operation applied against an app registration. */
 public class ManagedAppOperation extends Entity implements Parsable {
     /** The operation name. */
     private String _displayName;

@@ -8,11 +8,16 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class TodoTask extends Entity implements Parsable {
     /** The task body that typically contains information about the task. */
     private ItemBody _body;
     /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _bodyLastModifiedDateTime;
+    /** The categories property */
+    private java.util.List<String> _categories;
+    /** The checklistItems property */
+    private java.util.List<ChecklistItem> _checklistItems;
     /** The date in the specified time zone that the task was finished. */
     private DateTimeTimeZone _completedDateTime;
     /** The date and time when the task was created. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
@@ -71,6 +76,22 @@ public class TodoTask extends Entity implements Parsable {
         return this._bodyLastModifiedDateTime;
     }
     /**
+     * Gets the categories property value. The categories property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public java.util.List<String> getCategories() {
+        return this._categories;
+    }
+    /**
+     * Gets the checklistItems property value. The checklistItems property
+     * @return a checklistItem
+     */
+    @javax.annotation.Nullable
+    public java.util.List<ChecklistItem> getChecklistItems() {
+        return this._checklistItems;
+    }
+    /**
      * Gets the completedDateTime property value. The date in the specified time zone that the task was finished.
      * @return a dateTimeTimeZone
      */
@@ -112,6 +133,8 @@ public class TodoTask extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
             this.put("bodyLastModifiedDateTime", (n) -> { currentObject.setBodyLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("checklistItems", (n) -> { currentObject.setChecklistItems(n.getCollectionOfObjectValues(ChecklistItem::createFromDiscriminatorValue)); });
             this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
@@ -200,6 +223,8 @@ public class TodoTask extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("body", this.getBody());
         writer.writeOffsetDateTimeValue("bodyLastModifiedDateTime", this.getBodyLastModifiedDateTime());
+        writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
+        writer.writeCollectionOfObjectValues("checklistItems", this.getChecklistItems());
         writer.writeObjectValue("completedDateTime", this.getCompletedDateTime());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("dueDateTime", this.getDueDateTime());
@@ -228,6 +253,22 @@ public class TodoTask extends Entity implements Parsable {
      */
     public void setBodyLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._bodyLastModifiedDateTime = value;
+    }
+    /**
+     * Sets the categories property value. The categories property
+     * @param value Value to set for the categories property.
+     * @return a void
+     */
+    public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
+        this._categories = value;
+    }
+    /**
+     * Sets the checklistItems property value. The checklistItems property
+     * @param value Value to set for the checklistItems property.
+     * @return a void
+     */
+    public void setChecklistItems(@javax.annotation.Nullable final java.util.List<ChecklistItem> value) {
+        this._checklistItems = value;
     }
     /**
      * Sets the completedDateTime property value. The date in the specified time zone that the task was finished.

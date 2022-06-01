@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class OutlookItem extends Entity implements Parsable {
     /** The categories associated with the item */
     private java.util.List<String> _categories;
@@ -32,6 +33,13 @@ public class OutlookItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static OutlookItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.outlookItem": return new OutlookItem();
+            }
+        }
         return new OutlookItem();
     }
     /**

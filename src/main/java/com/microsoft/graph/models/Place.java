@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of place entities. */
 public class Place extends Entity implements Parsable {
     /** The street address of the place. */
     private PhysicalAddress _address;
@@ -31,6 +32,13 @@ public class Place extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static Place createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.place": return new Place();
+            }
+        }
         return new Place();
     }
     /**

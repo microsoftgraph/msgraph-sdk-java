@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.me.directreports.count.CountRequestBuilder;
+import microsoft.graph.me.directreports.orgcontact.OrgContactRequestBuilder;
+import microsoft.graph.me.directreports.user.UserRequestBuilder;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the directReports property of the microsoft.graph.user entity. */
@@ -24,12 +26,22 @@ public class DirectReportsRequestBuilder {
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The orgContact property */
+    @javax.annotation.Nonnull
+    public OrgContactRequestBuilder orgContact() {
+        return new OrgContactRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The user property */
+    @javax.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new DirectReportsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

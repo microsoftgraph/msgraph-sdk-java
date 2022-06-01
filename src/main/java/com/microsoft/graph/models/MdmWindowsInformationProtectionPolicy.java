@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy for Windows information protection with MDM */
 public class MdmWindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable {
     /**
      * Instantiates a new mdmWindowsInformationProtectionPolicy and sets the default values.

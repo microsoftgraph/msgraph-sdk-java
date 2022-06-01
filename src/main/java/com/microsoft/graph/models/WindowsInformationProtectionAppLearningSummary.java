@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Information Protection AppLearning Summary entity. */
 public class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable {
     /** Application Name */
     private String _applicationName;

@@ -99,7 +99,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -107,7 +107,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +211,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         }
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @return a CompletableFuture of accessPackageCatalog
      */
     public java.util.concurrent.CompletableFuture<AccessPackageCatalog> get() {
@@ -227,7 +227,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         }
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageCatalog
      */
@@ -244,7 +244,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         }
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageCatalog
@@ -331,7 +331,7 @@ public class AccessPackageCatalogItemRequestBuilder {
         public AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents a collection of access packages. */
+    /** A container for access packages. */
     public class AccessPackageCatalogItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

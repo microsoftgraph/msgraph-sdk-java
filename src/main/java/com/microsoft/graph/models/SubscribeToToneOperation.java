@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the subscribeToTone method. */
 public class SubscribeToToneOperation extends CommsOperation implements Parsable {
     /**
      * Instantiates a new subscribeToToneOperation and sets the default values.

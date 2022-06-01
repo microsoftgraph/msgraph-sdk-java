@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class TermsOfUseContainer extends Entity implements Parsable {
     /** Represents the current status of a user's response to a company's customizable terms of use agreement. */
     private java.util.List<AgreementAcceptance> _agreementAcceptances;

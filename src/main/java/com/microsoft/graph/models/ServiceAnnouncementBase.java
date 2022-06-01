@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class ServiceAnnouncementBase extends Entity implements Parsable {
     /** Additional details about service event. This property doesn't support filters. */
     private java.util.List<KeyValuePair> _details;
@@ -34,6 +35,13 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ServiceAnnouncementBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.serviceAnnouncementBase": return new ServiceAnnouncementBase();
+            }
+        }
         return new ServiceAnnouncementBase();
     }
     /**

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class PlannerPlanDetails extends Entity implements Parsable {
     /** An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan */
     private PlannerCategoryDescriptions _categoryDescriptions;

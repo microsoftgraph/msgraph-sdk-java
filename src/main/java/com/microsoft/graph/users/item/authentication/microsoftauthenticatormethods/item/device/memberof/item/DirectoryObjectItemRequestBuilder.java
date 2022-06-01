@@ -16,14 +16,50 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.item.application.ApplicationRequestBuilder;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.item.device.DeviceRequestBuilder;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.item.group.GroupRequestBuilder;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.item.orgcontact.OrgContactRequestBuilder;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.memberof.item.user.UserRequestBuilder;
 /** Provides operations to manage the memberOf property of the microsoft.graph.device entity. */
 public class DirectoryObjectItemRequestBuilder {
+    /** The application property */
+    @javax.annotation.Nonnull
+    public ApplicationRequestBuilder application() {
+        return new ApplicationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The device property */
+    @javax.annotation.Nonnull
+    public DeviceRequestBuilder device() {
+        return new DeviceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The group property */
+    @javax.annotation.Nonnull
+    public GroupRequestBuilder group() {
+        return new GroupRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The orgContact property */
+    @javax.annotation.Nonnull
+    public OrgContactRequestBuilder orgContact() {
+        return new OrgContactRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The servicePrincipal property */
+    @javax.annotation.Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipal() {
+        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The user property */
+    @javax.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

@@ -110,7 +110,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get directoryRoleTemplate
+     * Retrieve the properties and relationships of a directoryroletemplate object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -118,7 +118,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get directoryRoleTemplate
+     * Retrieve the properties and relationships of a directoryroletemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -222,7 +222,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get directoryRoleTemplate
+     * Retrieve the properties and relationships of a directoryroletemplate object.
      * @return a CompletableFuture of directoryRoleTemplate
      */
     public java.util.concurrent.CompletableFuture<DirectoryRoleTemplate> get() {
@@ -238,7 +238,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get directoryRoleTemplate
+     * Retrieve the properties and relationships of a directoryroletemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryRoleTemplate
      */
@@ -255,7 +255,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         }
     }
     /**
-     * Get directoryRoleTemplate
+     * Retrieve the properties and relationships of a directoryroletemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryRoleTemplate
@@ -342,7 +342,7 @@ public class DirectoryRoleTemplateItemRequestBuilder {
         public DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get directoryRoleTemplate */
+    /** Retrieve the properties and relationships of a directoryroletemplate object. */
     public class DirectoryRoleTemplateItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

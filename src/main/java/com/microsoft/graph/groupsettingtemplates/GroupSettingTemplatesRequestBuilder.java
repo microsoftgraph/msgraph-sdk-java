@@ -77,7 +77,7 @@ public class GroupSettingTemplatesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List groupSettingTemplates
+     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +85,7 @@ public class GroupSettingTemplatesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List groupSettingTemplates
+     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -138,7 +138,7 @@ public class GroupSettingTemplatesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List groupSettingTemplates
+     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects.
      * @return a CompletableFuture of GroupSettingTemplateCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<GroupSettingTemplateCollectionResponse> get() {
@@ -154,7 +154,7 @@ public class GroupSettingTemplatesRequestBuilder {
         }
     }
     /**
-     * List groupSettingTemplates
+     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of GroupSettingTemplateCollectionResponse
      */
@@ -171,7 +171,7 @@ public class GroupSettingTemplatesRequestBuilder {
         }
     }
     /**
-     * List groupSettingTemplates
+     * Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of GroupSettingTemplateCollectionResponse
@@ -243,7 +243,7 @@ public class GroupSettingTemplatesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List groupSettingTemplates */
+    /** Group setting templates represents a set of templates from which group settings may be created and used within a tenant. This operation retrieves the list of available groupSettingTemplates objects. */
     public class GroupSettingTemplatesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

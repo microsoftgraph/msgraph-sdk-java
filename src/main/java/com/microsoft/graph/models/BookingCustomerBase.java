@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Booking entities that provide a display name. */
 public class BookingCustomerBase extends Entity implements Parsable {
     /**
      * Instantiates a new bookingCustomerBase and sets the default values.
@@ -23,6 +24,13 @@ public class BookingCustomerBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static BookingCustomerBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.bookingCustomerBase": return new BookingCustomerBase();
+            }
+        }
         return new BookingCustomerBase();
     }
     /**

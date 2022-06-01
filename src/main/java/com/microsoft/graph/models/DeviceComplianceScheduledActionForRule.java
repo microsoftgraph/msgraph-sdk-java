@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Scheduled Action for Rule */
 public class DeviceComplianceScheduledActionForRule extends Entity implements Parsable {
     /** Name of the rule which this scheduled action applies to. Currently scheduled actions are created per policy instead of per rule, thus RuleName is always set to default value PasswordRequired. */
     private String _ruleName;

@@ -12,7 +12,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue. */
-    private java.util.List<ConditionalAccessGrantControl> _builtInControls;
+    private java.util.List<String> _builtInControls;
     /** List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview). */
     private java.util.List<String> _customAuthenticationFactors;
     /** Defines the relationship of the grant controls. Possible values: AND, OR. */
@@ -46,10 +46,10 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     }
     /**
      * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
-     * @return a conditionalAccessGrantControl
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<ConditionalAccessGrantControl> getBuiltInControls() {
+    public java.util.List<String> getBuiltInControls() {
         return this._builtInControls;
     }
     /**
@@ -68,7 +68,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessGrantControls currentObject = this;
         return new HashMap<>(4) {{
-            this.put("builtInControls", (n) -> { currentObject.setBuiltInControls(n.getCollectionOfEnumValues(ConditionalAccessGrantControl.class)); });
+            this.put("builtInControls", (n) -> { currentObject.setBuiltInControls(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("customAuthenticationFactors", (n) -> { currentObject.setCustomAuthenticationFactors(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("operator", (n) -> { currentObject.setOperator(n.getStringValue()); });
             this.put("termsOfUse", (n) -> { currentObject.setTermsOfUse(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -97,7 +97,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfEnumValues("builtInControls", this.getBuiltInControls());
+        writer.writeCollectionOfPrimitiveValues("builtInControls", this.getBuiltInControls());
         writer.writeCollectionOfPrimitiveValues("customAuthenticationFactors", this.getCustomAuthenticationFactors());
         writer.writeStringValue("operator", this.getOperator());
         writer.writeCollectionOfPrimitiveValues("termsOfUse", this.getTermsOfUse());
@@ -116,7 +116,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Par
      * @param value Value to set for the builtInControls property.
      * @return a void
      */
-    public void setBuiltInControls(@javax.annotation.Nullable final java.util.List<ConditionalAccessGrantControl> value) {
+    public void setBuiltInControls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._builtInControls = value;
     }
     /**

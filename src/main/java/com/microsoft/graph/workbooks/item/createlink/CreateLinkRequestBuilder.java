@@ -55,7 +55,7 @@ public class CreateLinkRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CreateLinkRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CreateLinkPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class CreateLinkRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CreateLinkRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateLinkRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CreateLinkPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateLinkRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -86,7 +86,7 @@ public class CreateLinkRequestBuilder {
      * @param body 
      * @return a CompletableFuture of permission
      */
-    public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final CreateLinkRequestBody body) {
+    public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final CreateLinkPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, Permission::createFromDiscriminatorValue, null, null);
@@ -100,7 +100,7 @@ public class CreateLinkRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of permission
      */
-    public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final CreateLinkRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateLinkRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final CreateLinkPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateLinkRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, Permission::createFromDiscriminatorValue, null, null);
@@ -115,7 +115,7 @@ public class CreateLinkRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of permission
      */
-    public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final CreateLinkRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateLinkRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<Permission> post(@javax.annotation.Nonnull final CreateLinkPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CreateLinkRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

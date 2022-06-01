@@ -16,8 +16,26 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.users.item.owneddevices.item.approleassignment.AppRoleAssignmentRequestBuilder;
+import microsoft.graph.users.item.owneddevices.item.device.DeviceRequestBuilder;
+import microsoft.graph.users.item.owneddevices.item.endpoint.EndpointRequestBuilder;
 /** Provides operations to manage the ownedDevices property of the microsoft.graph.user entity. */
 public class DirectoryObjectItemRequestBuilder {
+    /** The appRoleAssignment property */
+    @javax.annotation.Nonnull
+    public AppRoleAssignmentRequestBuilder appRoleAssignment() {
+        return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The device property */
+    @javax.annotation.Nonnull
+    public DeviceRequestBuilder device() {
+        return new DeviceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The endpoint property */
+    @javax.annotation.Nonnull
+    public EndpointRequestBuilder endpoint() {
+        return new EndpointRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */

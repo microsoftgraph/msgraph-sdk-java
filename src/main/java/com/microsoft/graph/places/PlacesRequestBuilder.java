@@ -59,7 +59,7 @@ public class PlacesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PlacesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -120,7 +120,7 @@ public class PlacesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @return a CompletableFuture of PlaceCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<PlaceCollectionResponse> get() {
@@ -136,7 +136,7 @@ public class PlacesRequestBuilder {
         }
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of PlaceCollectionResponse
      */
@@ -153,7 +153,7 @@ public class PlacesRequestBuilder {
         }
     }
     /**
-     * Get place
+     * Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of PlaceCollectionResponse
@@ -225,7 +225,7 @@ public class PlacesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get place */
+    /** Get the properties and relationships of a place object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.  */
     public class PlacesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

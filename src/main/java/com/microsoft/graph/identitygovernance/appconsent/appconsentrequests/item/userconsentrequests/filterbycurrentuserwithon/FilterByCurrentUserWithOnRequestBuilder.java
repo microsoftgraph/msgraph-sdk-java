@@ -33,7 +33,7 @@ public class FilterByCurrentUserWithOnRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/identityGovernance/appConsent/appConsentRequests/{appConsentRequest%2Did}/userConsentRequests/microsoft.graph.filterByCurrentUser(on='{on}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", on);
+        urlTplParams.put("on", on);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

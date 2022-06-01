@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties for the installation state for a device. */
 public class DeviceInstallState extends Entity implements Parsable {
     /** Device Id. */
     private String _deviceId;

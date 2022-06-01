@@ -80,7 +80,7 @@ public class DataPolicyOperationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get dataPolicyOperation
+     * Retrieve the properties of the dataPolicyOperation object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class DataPolicyOperationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get dataPolicyOperation
+     * Retrieve the properties of the dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -192,7 +192,7 @@ public class DataPolicyOperationItemRequestBuilder {
         }
     }
     /**
-     * Get dataPolicyOperation
+     * Retrieve the properties of the dataPolicyOperation object.
      * @return a CompletableFuture of dataPolicyOperation
      */
     public java.util.concurrent.CompletableFuture<DataPolicyOperation> get() {
@@ -208,7 +208,7 @@ public class DataPolicyOperationItemRequestBuilder {
         }
     }
     /**
-     * Get dataPolicyOperation
+     * Retrieve the properties of the dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of dataPolicyOperation
      */
@@ -225,7 +225,7 @@ public class DataPolicyOperationItemRequestBuilder {
         }
     }
     /**
-     * Get dataPolicyOperation
+     * Retrieve the properties of the dataPolicyOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of dataPolicyOperation
@@ -312,7 +312,7 @@ public class DataPolicyOperationItemRequestBuilder {
         public DataPolicyOperationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get dataPolicyOperation */
+    /** Retrieve the properties of the dataPolicyOperation object. */
     public class DataPolicyOperationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -33,7 +33,7 @@ public class DeltaWithTokenRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/workbooks/{driveItem%2Did}/microsoft.graph.delta(token='{token}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", token);
+        urlTplParams.put("token", token);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

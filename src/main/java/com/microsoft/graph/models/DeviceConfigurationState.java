@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Configuration State for a given device. */
 public class DeviceConfigurationState extends Entity implements Parsable {
     /** The name of the policy for this policyBase */
     private String _displayName;

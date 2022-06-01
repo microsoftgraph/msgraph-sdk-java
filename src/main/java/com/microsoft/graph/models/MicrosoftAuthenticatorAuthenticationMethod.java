@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In. */
     private OffsetDateTime _createdDateTime;

@@ -14,7 +14,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     /** A human-readable description of the printer's current processing state. Read-only. */
     private String _description;
     /** The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only. */
-    private java.util.List<PrinterProcessingStateDetail> _details;
+    private java.util.List<String> _details;
     /** The current processing state. Valid values are described in the following table. Read-only. */
     private PrinterProcessingState _state;
     /**
@@ -52,10 +52,10 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the details property value. The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
-     * @return a printerProcessingStateDetail
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<PrinterProcessingStateDetail> getDetails() {
+    public java.util.List<String> getDetails() {
         return this._details;
     }
     /**
@@ -67,7 +67,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
         final PrinterStatus currentObject = this;
         return new HashMap<>(3) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrinterProcessingStateDetail.class)); });
+            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrinterProcessingState.class)); });
         }};
     }
@@ -87,7 +87,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
-        writer.writeCollectionOfEnumValues("details", this.getDetails());
+        writer.writeCollectionOfPrimitiveValues("details", this.getDetails());
         writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -112,7 +112,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
-    public void setDetails(@javax.annotation.Nullable final java.util.List<PrinterProcessingStateDetail> value) {
+    public void setDetails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._details = value;
     }
     /**

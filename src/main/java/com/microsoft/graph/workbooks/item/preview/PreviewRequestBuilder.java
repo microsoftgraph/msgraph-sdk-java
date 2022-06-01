@@ -55,7 +55,7 @@ public class PreviewRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PreviewRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PreviewPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class PreviewRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PreviewRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -84,9 +84,9 @@ public class PreviewRequestBuilder {
     /**
      * Invoke action preview
      * @param body 
-     * @return a CompletableFuture of itemPreviewInfo
+     * @return a CompletableFuture of ItemPreviewInfo
      */
-    public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewRequestBody body) {
+    public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, ItemPreviewInfo::createFromDiscriminatorValue, null, null);
@@ -98,9 +98,9 @@ public class PreviewRequestBuilder {
      * Invoke action preview
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPreviewInfo
+     * @return a CompletableFuture of ItemPreviewInfo
      */
-    public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, ItemPreviewInfo::createFromDiscriminatorValue, null, null);
@@ -113,9 +113,9 @@ public class PreviewRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of itemPreviewInfo
+     * @return a CompletableFuture of ItemPreviewInfo
      */
-    public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityProtectionRoot singleton. */
 public class RiskyUser extends Entity implements Parsable {
     /** The activity related to user risk level change */
     private java.util.List<RiskyUserHistoryItem> _history;
@@ -42,6 +43,13 @@ public class RiskyUser extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static RiskyUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.riskyUser": return new RiskyUser();
+            }
+        }
         return new RiskyUser();
     }
     /**

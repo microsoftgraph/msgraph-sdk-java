@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the invite method. */
 public class InviteParticipantsOperation extends CommsOperation implements Parsable {
     /** The participants to invite. */
     private java.util.List<InvitationParticipantInfo> _participants;

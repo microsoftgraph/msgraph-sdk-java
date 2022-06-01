@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.termstore.Store;
+/** Casts the previous resource to user. */
 public class Site extends BaseItem implements Parsable {
     /** Analytics about the view activities that took place in this site. */
     private ItemAnalytics _analytics;

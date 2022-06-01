@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the educationRoot singleton. */
 public class EducationAssignmentDefaults extends Entity implements Parsable {
     /** Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen. */
     private EducationAddedStudentAction _addedStudentAction;

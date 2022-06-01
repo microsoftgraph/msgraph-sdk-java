@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of directoryRole entities. */
 public class DirectoryRole extends DirectoryObject implements Parsable {
     /** The description for the directory role. Read-only. Supports $filter (eq), $search, $select. */
     private String _description;

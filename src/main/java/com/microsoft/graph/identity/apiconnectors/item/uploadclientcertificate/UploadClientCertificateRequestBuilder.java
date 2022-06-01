@@ -55,7 +55,7 @@ public class UploadClientCertificateRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UploadClientCertificateRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UploadClientCertificatePostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class UploadClientCertificateRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UploadClientCertificateRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadClientCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UploadClientCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadClientCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -86,7 +86,7 @@ public class UploadClientCertificateRequestBuilder {
      * @param body 
      * @return a CompletableFuture of identityApiConnector
      */
-    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final UploadClientCertificateRequestBody body) {
+    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final UploadClientCertificatePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, IdentityApiConnector::createFromDiscriminatorValue, null, null);
@@ -100,7 +100,7 @@ public class UploadClientCertificateRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityApiConnector
      */
-    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final UploadClientCertificateRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadClientCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final UploadClientCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadClientCertificateRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, IdentityApiConnector::createFromDiscriminatorValue, null, null);
@@ -115,7 +115,7 @@ public class UploadClientCertificateRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of identityApiConnector
      */
-    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final UploadClientCertificateRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadClientCertificateRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<IdentityApiConnector> post(@javax.annotation.Nonnull final UploadClientCertificatePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UploadClientCertificateRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the answer method. */
 public class IncomingCallOptions extends CallOptions implements Parsable {
     /**
      * Instantiates a new incomingCallOptions and sets the default values.

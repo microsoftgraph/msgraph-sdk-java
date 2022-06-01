@@ -12,9 +12,9 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux. */
-    private java.util.List<ConditionalAccessDevicePlatform> _excludePlatforms;
+    private java.util.List<String> _excludePlatforms;
     /** Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux``. */
-    private java.util.List<ConditionalAccessDevicePlatform> _includePlatforms;
+    private java.util.List<String> _includePlatforms;
     /**
      * Instantiates a new conditionalAccessPlatforms and sets the default values.
      * @return a void
@@ -42,10 +42,10 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux.
-     * @return a conditionalAccessDevicePlatform
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<ConditionalAccessDevicePlatform> getExcludePlatforms() {
+    public java.util.List<String> getExcludePlatforms() {
         return this._excludePlatforms;
     }
     /**
@@ -56,16 +56,16 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessPlatforms currentObject = this;
         return new HashMap<>(2) {{
-            this.put("excludePlatforms", (n) -> { currentObject.setExcludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
-            this.put("includePlatforms", (n) -> { currentObject.setIncludePlatforms(n.getCollectionOfEnumValues(ConditionalAccessDevicePlatform.class)); });
+            this.put("excludePlatforms", (n) -> { currentObject.setExcludePlatforms(n.getCollectionOfPrimitiveValues(String.class)); });
+            this.put("includePlatforms", (n) -> { currentObject.setIncludePlatforms(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
     /**
      * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue,linux``.
-     * @return a conditionalAccessDevicePlatform
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<ConditionalAccessDevicePlatform> getIncludePlatforms() {
+    public java.util.List<String> getIncludePlatforms() {
         return this._includePlatforms;
     }
     /**
@@ -75,8 +75,8 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfEnumValues("excludePlatforms", this.getExcludePlatforms());
-        writer.writeCollectionOfEnumValues("includePlatforms", this.getIncludePlatforms());
+        writer.writeCollectionOfPrimitiveValues("excludePlatforms", this.getExcludePlatforms());
+        writer.writeCollectionOfPrimitiveValues("includePlatforms", this.getIncludePlatforms());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -92,7 +92,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the excludePlatforms property.
      * @return a void
      */
-    public void setExcludePlatforms(@javax.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
+    public void setExcludePlatforms(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludePlatforms = value;
     }
     /**
@@ -100,7 +100,7 @@ public class ConditionalAccessPlatforms implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the includePlatforms property.
      * @return a void
      */
-    public void setIncludePlatforms(@javax.annotation.Nullable final java.util.List<ConditionalAccessDevicePlatform> value) {
+    public void setIncludePlatforms(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includePlatforms = value;
     }
 }

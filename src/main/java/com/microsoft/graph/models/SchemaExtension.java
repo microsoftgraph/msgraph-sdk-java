@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of schemaExtension entities. */
 public class SchemaExtension extends Entity implements Parsable {
     /** Description for the schema extension. Supports $filter (eq). */
     private String _description;

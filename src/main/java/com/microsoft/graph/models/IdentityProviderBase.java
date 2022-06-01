@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the directory singleton. */
 public class IdentityProviderBase extends Entity implements Parsable {
     /** The display name of the identity provider. */
     private String _displayName;
@@ -25,6 +26,13 @@ public class IdentityProviderBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static IdentityProviderBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.identityProviderBase": return new IdentityProviderBase();
+            }
+        }
         return new IdentityProviderBase();
     }
     /**

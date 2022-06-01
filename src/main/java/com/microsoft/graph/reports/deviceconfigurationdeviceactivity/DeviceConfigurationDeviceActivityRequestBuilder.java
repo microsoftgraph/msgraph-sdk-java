@@ -79,7 +79,7 @@ public class DeviceConfigurationDeviceActivityRequestBuilder {
     }
     /**
      * Metadata for the device configuration device activity report
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get() {
         try {
@@ -92,7 +92,7 @@ public class DeviceConfigurationDeviceActivityRequestBuilder {
     /**
      * Metadata for the device configuration device activity report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceConfigurationDeviceActivityRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -106,7 +106,7 @@ public class DeviceConfigurationDeviceActivityRequestBuilder {
      * Metadata for the device configuration device activity report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of report
+     * @return a CompletableFuture of Report
      */
     public java.util.concurrent.CompletableFuture<Report> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceConfigurationDeviceActivityRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

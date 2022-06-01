@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable {
     /** Shift ID for the recipient user with whom the request is to swap. */
     private String _recipientShiftId;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of chat entities. */
 public class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable {
     /** If present, represents a conversation (for example, team or channel) @mentioned in a message. */
     private TeamworkConversationIdentity _conversation;

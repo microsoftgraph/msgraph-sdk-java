@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The ManagedAppPolicy resource represents a base type for platform specific policies. */
 public class ManagedAppPolicy extends Entity implements Parsable {
     /** The date and time the policy was created. */
     private OffsetDateTime _createdDateTime;
@@ -34,6 +35,13 @@ public class ManagedAppPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ManagedAppPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.managedAppPolicy": return new ManagedAppPolicy();
+            }
+        }
         return new ManagedAppPolicy();
     }
     /**

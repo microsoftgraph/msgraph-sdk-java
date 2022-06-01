@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class ServiceAnnouncementAttachment extends Entity implements Parsable {
     /** The attachment content. */
     private byte[] _content;

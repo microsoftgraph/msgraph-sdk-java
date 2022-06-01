@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Base Class of Device Enrollment Configuration */
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the device configuration profile */
     private java.util.List<EnrollmentConfigurationAssignment> _assignments;
@@ -38,6 +39,13 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static DeviceEnrollmentConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.deviceEnrollmentConfiguration": return new DeviceEnrollmentConfiguration();
+            }
+        }
         return new DeviceEnrollmentConfiguration();
     }
     /**

@@ -54,7 +54,7 @@ public class GetScheduleRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetScheduleRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetSchedulePostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class GetScheduleRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetScheduleRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetScheduleRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetSchedulePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetScheduleRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class GetScheduleRequestBuilder {
      * @param body 
      * @return a CompletableFuture of getScheduleResponse
      */
-    public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@javax.annotation.Nonnull final GetScheduleRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@javax.annotation.Nonnull final GetSchedulePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, GetScheduleResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +99,7 @@ public class GetScheduleRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getScheduleResponse
      */
-    public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@javax.annotation.Nonnull final GetScheduleRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetScheduleRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@javax.annotation.Nonnull final GetSchedulePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetScheduleRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, GetScheduleResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +114,7 @@ public class GetScheduleRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of getScheduleResponse
      */
-    public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@javax.annotation.Nonnull final GetScheduleRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetScheduleRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GetScheduleResponse> post(@javax.annotation.Nonnull final GetSchedulePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetScheduleRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

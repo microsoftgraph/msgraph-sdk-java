@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A class containing the properties used for Group Assignment of a Mobile App. */
 public class MobileAppAssignment extends Entity implements Parsable {
     /** The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment. */
     private InstallIntent _intent;

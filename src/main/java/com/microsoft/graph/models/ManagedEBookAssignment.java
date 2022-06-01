@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains properties used to assign a eBook to a group. */
 public class ManagedEBookAssignment extends Entity implements Parsable {
     /** The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment. */
     private InstallIntent _installIntent;
@@ -27,6 +28,13 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static ManagedEBookAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.managedEBookAssignment": return new ManagedEBookAssignment();
+            }
+        }
         return new ManagedEBookAssignment();
     }
     /**

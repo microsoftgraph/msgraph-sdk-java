@@ -59,7 +59,7 @@ public class CatalogsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CatalogsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -120,7 +120,7 @@ public class CatalogsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AccessPackageCatalogCollectionResponse> get() {
@@ -136,7 +136,7 @@ public class CatalogsRequestBuilder {
         }
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
      */
@@ -153,7 +153,7 @@ public class CatalogsRequestBuilder {
         }
     }
     /**
-     * Represents a collection of access packages.
+     * A container for access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AccessPackageCatalogCollectionResponse
@@ -225,7 +225,7 @@ public class CatalogsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Represents a collection of access packages. */
+    /** A container for access packages. */
     public class CatalogsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

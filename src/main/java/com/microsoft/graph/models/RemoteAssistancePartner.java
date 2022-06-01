@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** RemoteAssistPartner resources represent the metadata and status of a given Remote Assistance partner service. */
 public class RemoteAssistancePartner extends Entity implements Parsable {
     /** Display name of the partner. */
     private String _displayName;

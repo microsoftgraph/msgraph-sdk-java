@@ -55,7 +55,7 @@ public class UpdateRecordingStatusRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdateRecordingStatusRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdateRecordingStatusPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class UpdateRecordingStatusRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdateRecordingStatusRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRecordingStatusRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdateRecordingStatusPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRecordingStatusRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -86,7 +86,7 @@ public class UpdateRecordingStatusRequestBuilder {
      * @param body 
      * @return a CompletableFuture of updateRecordingStatusOperation
      */
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> post(@javax.annotation.Nonnull final UpdateRecordingStatusRequestBody body) {
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> post(@javax.annotation.Nonnull final UpdateRecordingStatusPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, UpdateRecordingStatusOperation::createFromDiscriminatorValue, null, null);
@@ -100,7 +100,7 @@ public class UpdateRecordingStatusRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of updateRecordingStatusOperation
      */
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> post(@javax.annotation.Nonnull final UpdateRecordingStatusRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRecordingStatusRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> post(@javax.annotation.Nonnull final UpdateRecordingStatusPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRecordingStatusRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, UpdateRecordingStatusOperation::createFromDiscriminatorValue, null, null);
@@ -115,7 +115,7 @@ public class UpdateRecordingStatusRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of updateRecordingStatusOperation
      */
-    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> post(@javax.annotation.Nonnull final UpdateRecordingStatusRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRecordingStatusRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<UpdateRecordingStatusOperation> post(@javax.annotation.Nonnull final UpdateRecordingStatusPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<UpdateRecordingStatusRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

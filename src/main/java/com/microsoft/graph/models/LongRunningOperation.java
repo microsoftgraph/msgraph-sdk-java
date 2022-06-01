@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class LongRunningOperation extends Entity implements Parsable {
     /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
@@ -34,6 +35,13 @@ public class LongRunningOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static LongRunningOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.longRunningOperation": return new LongRunningOperation();
+            }
+        }
         return new LongRunningOperation();
     }
     /**

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The text content of a Notification Message Template for the specified locale. */
 public class LocalizedNotificationMessage extends Entity implements Parsable {
     /** Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message. */
     private Boolean _isDefault;

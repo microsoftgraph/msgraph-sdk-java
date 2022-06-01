@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the recordResponse method. */
 public class RecordOperation extends CommsOperation implements Parsable {
     /** The access token required to retrieve the recording. */
     private String _recordingAccessToken;

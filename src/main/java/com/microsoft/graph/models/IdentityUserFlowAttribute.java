@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityContainer singleton. */
 public class IdentityUserFlowAttribute extends Entity implements Parsable {
     /** The data type of the user flow attribute. This cannot be modified after the custom user flow attribute is created. The supported values for dataType are: string , boolean , int64 , stringCollection , dateTime. */
     private IdentityUserFlowAttributeDataType _dataType;
@@ -31,6 +32,13 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static IdentityUserFlowAttribute createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.identityUserFlowAttribute": return new IdentityUserFlowAttribute();
+            }
+        }
         return new IdentityUserFlowAttribute();
     }
     /**

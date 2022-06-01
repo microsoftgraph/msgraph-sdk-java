@@ -60,7 +60,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @return a CompletableFuture of ApprovalCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get() {
@@ -147,7 +147,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder {
         }
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ApprovalCollectionResponse
      */
@@ -164,7 +164,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder {
         }
     }
     /**
-     * Approval stages for assignment requests.
+     * Approval stages for decisions associated with access package assignment requests.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ApprovalCollectionResponse
@@ -236,7 +236,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Approval stages for assignment requests. */
+    /** Approval stages for decisions associated with access package assignment requests. */
     public class AccessPackageAssignmentApprovalsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

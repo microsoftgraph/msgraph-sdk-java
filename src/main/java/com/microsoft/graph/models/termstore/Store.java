@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Casts the previous resource to user. */
 public class Store extends Entity implements Parsable {
     /** Default language of the term store. */
     private String _defaultLanguageTag;

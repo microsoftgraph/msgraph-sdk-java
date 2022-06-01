@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on an Android device */
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /** List of apps to which the policy is deployed. */
     private java.util.List<ManagedMobileApp> _apps;

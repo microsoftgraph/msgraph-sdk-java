@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Apple push notification certificate. */
 public class ApplePushNotificationCertificate extends Entity implements Parsable {
     /** Apple Id of the account used to create the MDM push certificate. */
     private String _appleIdentifier;

@@ -54,7 +54,7 @@ public class GetMailTipsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetMailTipsRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetMailTipsPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class GetMailTipsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetMailTipsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMailTipsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetMailTipsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMailTipsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class GetMailTipsRequestBuilder {
      * @param body 
      * @return a CompletableFuture of getMailTipsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetMailTipsResponse> post(@javax.annotation.Nonnull final GetMailTipsRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GetMailTipsResponse> post(@javax.annotation.Nonnull final GetMailTipsPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, GetMailTipsResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +99,7 @@ public class GetMailTipsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getMailTipsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetMailTipsResponse> post(@javax.annotation.Nonnull final GetMailTipsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMailTipsRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetMailTipsResponse> post(@javax.annotation.Nonnull final GetMailTipsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMailTipsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, GetMailTipsResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +114,7 @@ public class GetMailTipsRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of getMailTipsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetMailTipsResponse> post(@javax.annotation.Nonnull final GetMailTipsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMailTipsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GetMailTipsResponse> post(@javax.annotation.Nonnull final GetMailTipsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMailTipsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

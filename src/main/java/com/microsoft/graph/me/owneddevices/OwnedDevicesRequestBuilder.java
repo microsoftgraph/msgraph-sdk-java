@@ -14,15 +14,33 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.me.owneddevices.approleassignment.AppRoleAssignmentRequestBuilder;
 import microsoft.graph.me.owneddevices.count.CountRequestBuilder;
+import microsoft.graph.me.owneddevices.device.DeviceRequestBuilder;
+import microsoft.graph.me.owneddevices.endpoint.EndpointRequestBuilder;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the ownedDevices property of the microsoft.graph.user entity. */
 public class OwnedDevicesRequestBuilder {
+    /** The appRoleAssignment property */
+    @javax.annotation.Nonnull
+    public AppRoleAssignmentRequestBuilder appRoleAssignment() {
+        return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The device property */
+    @javax.annotation.Nonnull
+    public DeviceRequestBuilder device() {
+        return new DeviceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The endpoint property */
+    @javax.annotation.Nonnull
+    public EndpointRequestBuilder endpoint() {
+        return new EndpointRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
