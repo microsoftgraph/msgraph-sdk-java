@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the auditLogRoot singleton. */
 public class ProvisioningServicePrincipal extends Identity implements Parsable {
     /**
      * Instantiates a new provisioningServicePrincipal and sets the default values.

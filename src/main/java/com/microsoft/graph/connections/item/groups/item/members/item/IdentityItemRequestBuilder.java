@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.Identity;
+import microsoft.graph.models.externalconnectors.Identity;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity. */
 public class IdentityItemRequestBuilder {

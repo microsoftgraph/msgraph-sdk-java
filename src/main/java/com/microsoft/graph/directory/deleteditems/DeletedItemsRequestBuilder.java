@@ -14,16 +14,29 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.directory.deleteditems.application.ApplicationRequestBuilder;
 import microsoft.graph.directory.deleteditems.count.CountRequestBuilder;
+import microsoft.graph.directory.deleteditems.group.GroupRequestBuilder;
+import microsoft.graph.directory.deleteditems.user.UserRequestBuilder;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the deletedItems property of the microsoft.graph.directory entity. */
 public class DeletedItemsRequestBuilder {
+    /** The application property */
+    @javax.annotation.Nonnull
+    public ApplicationRequestBuilder application() {
+        return new ApplicationRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The group property */
+    @javax.annotation.Nonnull
+    public GroupRequestBuilder group() {
+        return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -31,6 +44,11 @@ public class DeletedItemsRequestBuilder {
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The user property */
+    @javax.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new DeletedItemsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

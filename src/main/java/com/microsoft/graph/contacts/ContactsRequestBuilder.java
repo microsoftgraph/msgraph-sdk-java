@@ -78,7 +78,7 @@ public class ContactsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List orgContacts
+     * Get the list of organizational contacts for this organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class ContactsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List orgContacts
+     * Get the list of organizational contacts for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -147,7 +147,7 @@ public class ContactsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * List orgContacts
+     * Get the list of organizational contacts for this organization.
      * @return a CompletableFuture of OrgContactCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<OrgContactCollectionResponse> get() {
@@ -163,7 +163,7 @@ public class ContactsRequestBuilder {
         }
     }
     /**
-     * List orgContacts
+     * Get the list of organizational contacts for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OrgContactCollectionResponse
      */
@@ -180,7 +180,7 @@ public class ContactsRequestBuilder {
         }
     }
     /**
-     * List orgContacts
+     * Get the list of organizational contacts for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of OrgContactCollectionResponse
@@ -252,7 +252,7 @@ public class ContactsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List orgContacts */
+    /** Get the list of organizational contacts for this organization. */
     public class ContactsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

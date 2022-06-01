@@ -16,14 +16,38 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.odataerrors.ODataError;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredusers.item.approleassignment.AppRoleAssignmentRequestBuilder;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredusers.item.endpoint.EndpointRequestBuilder;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredusers.item.serviceprincipal.ServicePrincipalRequestBuilder;
+import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.device.registeredusers.item.user.UserRequestBuilder;
 /** Provides operations to manage the registeredUsers property of the microsoft.graph.device entity. */
 public class DirectoryObjectItemRequestBuilder {
+    /** The appRoleAssignment property */
+    @javax.annotation.Nonnull
+    public AppRoleAssignmentRequestBuilder appRoleAssignment() {
+        return new AppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The endpoint property */
+    @javax.annotation.Nonnull
+    public EndpointRequestBuilder endpoint() {
+        return new EndpointRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The servicePrincipal property */
+    @javax.annotation.Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipal() {
+        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The user property */
+    @javax.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

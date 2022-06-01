@@ -85,7 +85,7 @@ public class SecurityRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * security resource type
+     * Get security
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -93,7 +93,7 @@ public class SecurityRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * security resource type
+     * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class SecurityRequestBuilder {
         return requestInfo;
     }
     /**
-     * security resource type
+     * Get security
      * @return a CompletableFuture of security
      */
     public java.util.concurrent.CompletableFuture<Security> get() {
@@ -162,7 +162,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * security resource type
+     * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of security
      */
@@ -179,7 +179,7 @@ public class SecurityRequestBuilder {
         }
     }
     /**
-     * security resource type
+     * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of security
@@ -275,7 +275,7 @@ public class SecurityRequestBuilder {
         urlTplParams.put("secureScore%2Did", id);
         return new SecureScoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** security resource type */
+    /** Get security */
     public class SecurityRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

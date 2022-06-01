@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Contains the properties used to assign an MDM app configuration to a group. */
 public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implements Parsable {
     /** Assignment target that the T&C policy is assigned to. */
     private DeviceAndAppManagementAssignmentTarget _target;

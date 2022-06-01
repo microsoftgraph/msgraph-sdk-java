@@ -55,7 +55,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetNotebookFromWebUrlRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetNotebookFromWebUrlRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetNotebookFromWebUrlRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetNotebookFromWebUrlRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -86,7 +86,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
      * @param body 
      * @return a CompletableFuture of CopyNotebookModel
      */
-    public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlRequestBody body) {
+    public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, CopyNotebookModel::createFromDiscriminatorValue, null, null);
@@ -100,7 +100,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of CopyNotebookModel
      */
-    public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetNotebookFromWebUrlRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetNotebookFromWebUrlRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, CopyNotebookModel::createFromDiscriminatorValue, null, null);
@@ -115,7 +115,7 @@ public class GetNotebookFromWebUrlRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of CopyNotebookModel
      */
-    public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetNotebookFromWebUrlRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<CopyNotebookModel> post(@javax.annotation.Nonnull final GetNotebookFromWebUrlPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetNotebookFromWebUrlRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

@@ -59,7 +59,7 @@ public class DomainsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List domains
+     * Retrieve a list of domain objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DomainsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List domains
+     * Retrieve a list of domain objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class DomainsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create domain
+     * Adds a domain to the tenant. **Important**: You cannot use an associated domain with your Azure AD tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body 
      * @return a RequestInformation
      */
@@ -97,7 +97,7 @@ public class DomainsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create domain
+     * Adds a domain to the tenant. **Important**: You cannot use an associated domain with your Azure AD tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -120,7 +120,7 @@ public class DomainsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List domains
+     * Retrieve a list of domain objects.
      * @return a CompletableFuture of DomainCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DomainCollectionResponse> get() {
@@ -136,7 +136,7 @@ public class DomainsRequestBuilder {
         }
     }
     /**
-     * List domains
+     * Retrieve a list of domain objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DomainCollectionResponse
      */
@@ -153,7 +153,7 @@ public class DomainsRequestBuilder {
         }
     }
     /**
-     * List domains
+     * Retrieve a list of domain objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DomainCollectionResponse
@@ -171,7 +171,7 @@ public class DomainsRequestBuilder {
         }
     }
     /**
-     * Create domain
+     * Adds a domain to the tenant. **Important**: You cannot use an associated domain with your Azure AD tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body 
      * @return a CompletableFuture of domain
      */
@@ -188,7 +188,7 @@ public class DomainsRequestBuilder {
         }
     }
     /**
-     * Create domain
+     * Adds a domain to the tenant. **Important**: You cannot use an associated domain with your Azure AD tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of domain
@@ -206,7 +206,7 @@ public class DomainsRequestBuilder {
         }
     }
     /**
-     * Create domain
+     * Adds a domain to the tenant. **Important**: You cannot use an associated domain with your Azure AD tenant until ownership is verified. See List verificationDnsRecords for details. Root domains require verification. For example, contoso.com requires verification. If a root domain is verified, subdomains of the root domain are automatically verified. For example, subdomain.contoso.com is automatically be verified if contoso.com has been verified.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -225,7 +225,7 @@ public class DomainsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List domains */
+    /** Retrieve a list of domain objects. */
     public class DomainsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

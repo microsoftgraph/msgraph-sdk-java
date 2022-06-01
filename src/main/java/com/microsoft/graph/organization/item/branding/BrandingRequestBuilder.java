@@ -105,7 +105,7 @@ public class BrandingRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get branding from organization
+     * Resource to manage the default branding for the organization. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -113,7 +113,7 @@ public class BrandingRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get branding from organization
+     * Resource to manage the default branding for the organization. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class BrandingRequestBuilder {
         }
     }
     /**
-     * Get branding from organization
+     * Resource to manage the default branding for the organization. Nullable.
      * @return a CompletableFuture of organizationalBranding
      */
     public java.util.concurrent.CompletableFuture<OrganizationalBranding> get() {
@@ -233,7 +233,7 @@ public class BrandingRequestBuilder {
         }
     }
     /**
-     * Get branding from organization
+     * Resource to manage the default branding for the organization. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of organizationalBranding
      */
@@ -250,7 +250,7 @@ public class BrandingRequestBuilder {
         }
     }
     /**
-     * Get branding from organization
+     * Resource to manage the default branding for the organization. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of organizationalBranding
@@ -349,7 +349,7 @@ public class BrandingRequestBuilder {
         public BrandingRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get branding from organization */
+    /** Resource to manage the default branding for the organization. Nullable. */
     public class BrandingRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

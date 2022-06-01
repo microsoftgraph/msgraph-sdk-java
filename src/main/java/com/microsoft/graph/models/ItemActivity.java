@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class ItemActivity extends Entity implements Parsable {
     /** An item was accessed. */
     private AccessAction _access;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class InferenceClassificationOverride extends Entity implements Parsable {
     /** Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other. */
     private InferenceClassificationType _classifyAs;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class GroupLifecyclePolicy extends Entity implements Parsable {
     /** List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon. */
     private String _alternateNotificationEmails;

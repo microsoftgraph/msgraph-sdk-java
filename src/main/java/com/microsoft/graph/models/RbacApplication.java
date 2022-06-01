@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the roleManagement singleton. */
 public class RbacApplication extends Entity implements Parsable {
     /** Resource to grant access to users or groups. */
     private java.util.List<UnifiedRoleAssignment> _roleAssignments;

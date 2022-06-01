@@ -8,13 +8,12 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.models.CalendarRoleType;
 /** Provides operations to call the allowedCalendarSharingRoles method. */
 public class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The value property */
-    private java.util.List<CalendarRoleType> _value;
+    private java.util.List<String> _value;
     /**
      * Instantiates a new allowedCalendarSharingRolesWithUserResponse and sets the default values.
      * @return a void
@@ -48,15 +47,15 @@ public class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDa
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AllowedCalendarSharingRolesWithUserResponse currentObject = this;
         return new HashMap<>(1) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
+            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
         }};
     }
     /**
      * Gets the value property value. The value property
-     * @return a calendarRoleType
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<CalendarRoleType> getValue() {
+    public java.util.List<String> getValue() {
         return this._value;
     }
     /**
@@ -66,7 +65,7 @@ public class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDa
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfEnumValues("value", this.getValue());
+        writer.writeCollectionOfPrimitiveValues("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,7 +81,7 @@ public class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDa
      * @param value Value to set for the value property.
      * @return a void
      */
-    public void setValue(@javax.annotation.Nullable final java.util.List<CalendarRoleType> value) {
+    public void setValue(@javax.annotation.Nullable final java.util.List<String> value) {
         this._value = value;
     }
 }

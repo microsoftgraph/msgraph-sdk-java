@@ -35,7 +35,7 @@ public class GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail(date={date})";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", date);
+        urlTplParams.put("date", date);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

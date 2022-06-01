@@ -54,7 +54,7 @@ public class QueryRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final QueryRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final QueryPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class QueryRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final QueryRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<QueryRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final QueryPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<QueryRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class QueryRequestBuilder {
      * @param body 
      * @return a CompletableFuture of queryResponse
      */
-    public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryRequestBody body) {
+    public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, QueryResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +99,7 @@ public class QueryRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of queryResponse
      */
-    public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<QueryRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<QueryRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, QueryResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +114,7 @@ public class QueryRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of queryResponse
      */
-    public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<QueryRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<QueryResponse> post(@javax.annotation.Nonnull final QueryPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<QueryRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

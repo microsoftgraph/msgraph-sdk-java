@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the educationRoot singleton. */
 public class EducationSchool extends EducationOrganization implements Parsable {
     /** Address of the school. */
     private PhysicalAddress _address;

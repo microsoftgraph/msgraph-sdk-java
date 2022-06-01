@@ -54,7 +54,7 @@ public class GetMemberGroupsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetMemberGroupsRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetMemberGroupsPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class GetMemberGroupsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetMemberGroupsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMemberGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetMemberGroupsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMemberGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class GetMemberGroupsRequestBuilder {
      * @param body 
      * @return a CompletableFuture of getMemberGroupsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetMemberGroupsResponse> post(@javax.annotation.Nonnull final GetMemberGroupsRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GetMemberGroupsResponse> post(@javax.annotation.Nonnull final GetMemberGroupsPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, GetMemberGroupsResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +99,7 @@ public class GetMemberGroupsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getMemberGroupsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetMemberGroupsResponse> post(@javax.annotation.Nonnull final GetMemberGroupsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMemberGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetMemberGroupsResponse> post(@javax.annotation.Nonnull final GetMemberGroupsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMemberGroupsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, GetMemberGroupsResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +114,7 @@ public class GetMemberGroupsRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of getMemberGroupsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetMemberGroupsResponse> post(@javax.annotation.Nonnull final GetMemberGroupsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMemberGroupsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GetMemberGroupsResponse> post(@javax.annotation.Nonnull final GetMemberGroupsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetMemberGroupsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

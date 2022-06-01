@@ -33,7 +33,7 @@ public class SupportedTimeZonesWithTimeZoneStandardRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/me/outlook/microsoft.graph.supportedTimeZones(TimeZoneStandard='{TimeZoneStandard}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", timeZoneStandard);
+        urlTplParams.put("TimeZoneStandard", timeZoneStandard);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

@@ -14,6 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.me.todo.lists.item.tasks.item.checklistitems.ChecklistItemsRequestBuilder;
+import microsoft.graph.me.todo.lists.item.tasks.item.checklistitems.item.ChecklistItemItemRequestBuilder;
 import microsoft.graph.me.todo.lists.item.tasks.item.extensions.ExtensionsRequestBuilder;
 import microsoft.graph.me.todo.lists.item.tasks.item.extensions.item.ExtensionItemRequestBuilder;
 import microsoft.graph.me.todo.lists.item.tasks.item.linkedresources.item.LinkedResourceItemRequestBuilder;
@@ -22,6 +24,11 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.TodoTask;
 /** Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity. */
 public class TodoTaskItemRequestBuilder {
+    /** The checklistItems property */
+    @javax.annotation.Nonnull
+    public ChecklistItemsRequestBuilder checklistItems() {
+        return new ChecklistItemsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The extensions property */
     @javax.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
@@ -38,6 +45,18 @@ public class TodoTaskItemRequestBuilder {
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /**
+     * Gets an item from the Microsoft.Graph.me.todo.lists.item.tasks.item.checklistItems.item collection
+     * @param id Unique identifier of the item
+     * @return a checklistItemItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public ChecklistItemItemRequestBuilder checklistItems(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("checklistItem%2Did", id);
+        return new ChecklistItemItemRequestBuilder(urlTplParams, requestAdapter);
+    }
     /**
      * Instantiates a new TodoTaskItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

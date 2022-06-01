@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class Authentication extends Entity implements Parsable {
     /** Represents the FIDO2 security keys registered to a user for authentication. */
     private java.util.List<Fido2AuthenticationMethod> _fido2Methods;

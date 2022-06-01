@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Describes the resourceOperation resource (entity) of the Microsoft Graph API (REST), which supports Intune workflows related to role-based access control (RBAC). */
 public class ResourceOperation extends Entity implements Parsable {
     /** Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible. */
     private String _actionName;

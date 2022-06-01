@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _recipientActionDateTime;
@@ -32,6 +33,13 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     @javax.annotation.Nonnull
     public static OfferShiftRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
+            }
+        }
         return new OfferShiftRequest();
     }
     /**

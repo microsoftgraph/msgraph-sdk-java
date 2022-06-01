@@ -54,7 +54,7 @@ public class GrantRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GrantRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GrantPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class GrantRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GrantRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GrantRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GrantPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GrantRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class GrantRequestBuilder {
      * @param body 
      * @return a CompletableFuture of grantResponse
      */
-    public java.util.concurrent.CompletableFuture<GrantResponse> post(@javax.annotation.Nonnull final GrantRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GrantResponse> post(@javax.annotation.Nonnull final GrantPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, GrantResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +99,7 @@ public class GrantRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of grantResponse
      */
-    public java.util.concurrent.CompletableFuture<GrantResponse> post(@javax.annotation.Nonnull final GrantRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GrantRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GrantResponse> post(@javax.annotation.Nonnull final GrantPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GrantRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, GrantResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +114,7 @@ public class GrantRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of grantResponse
      */
-    public java.util.concurrent.CompletableFuture<GrantResponse> post(@javax.annotation.Nonnull final GrantRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GrantRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GrantResponse> post(@javax.annotation.Nonnull final GrantPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GrantRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

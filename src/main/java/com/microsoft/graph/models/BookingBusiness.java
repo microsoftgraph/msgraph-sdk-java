@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents a Microsot Bookings Business. */
 public class BookingBusiness extends Entity implements Parsable {
     /** The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. */
     private PhysicalAddress _address;

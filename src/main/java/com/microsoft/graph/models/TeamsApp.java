@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the appCatalogs singleton. */
 public class TeamsApp extends Entity implements Parsable {
     /** The details for each version of the app. */
     private java.util.List<TeamsAppDefinition> _appDefinitions;

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class Request extends Entity implements Parsable {
     /** The identifier of the approval of the request. */
     private String _approvalId;
@@ -36,6 +37,13 @@ public class Request extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static Request createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.request": return new Request();
+            }
+        }
         return new Request();
     }
     /**

@@ -17,6 +17,7 @@ import java.util.Objects;
 import microsoft.graph.models.HomeRealmDiscoveryPolicyCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.count.CountRequestBuilder;
+import microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.ref.RefRequestBuilder;
 /** Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.servicePrincipal entity. */
 public class HomeRealmDiscoveryPoliciesRequestBuilder {
     /** The count property */
@@ -26,6 +27,11 @@ public class HomeRealmDiscoveryPoliciesRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

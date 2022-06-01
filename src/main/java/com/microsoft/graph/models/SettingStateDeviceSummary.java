@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Device Compilance Policy and Configuration for a Setting State summary */
 public class SettingStateDeviceSummary extends Entity implements Parsable {
     /** Device Compliant count for the setting */
     private Integer _compliantDeviceCount;

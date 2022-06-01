@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity which represents a connection to device management partner. */
 public class DeviceManagementPartner extends Entity implements Parsable {
     /** Partner display name */
     private String _displayName;

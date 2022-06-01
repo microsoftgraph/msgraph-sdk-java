@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the educationRoot singleton. */
 public class EducationOutcome extends Entity implements Parsable {
     /** The individual who updated the resource. */
     private IdentitySet _lastModifiedBy;
@@ -28,6 +29,13 @@ public class EducationOutcome extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static EducationOutcome createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.educationOutcome": return new EducationOutcome();
+            }
+        }
         return new EducationOutcome();
     }
     /**

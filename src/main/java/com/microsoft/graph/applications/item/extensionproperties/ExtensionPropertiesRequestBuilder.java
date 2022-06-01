@@ -59,7 +59,7 @@ public class ExtensionPropertiesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ExtensionPropertiesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -120,7 +120,7 @@ public class ExtensionPropertiesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ExtensionPropertyCollectionResponse> get() {
@@ -136,7 +136,7 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
      */
@@ -153,7 +153,7 @@ public class ExtensionPropertiesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ExtensionPropertyCollectionResponse
@@ -225,7 +225,7 @@ public class ExtensionPropertiesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
     public class ExtensionPropertiesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

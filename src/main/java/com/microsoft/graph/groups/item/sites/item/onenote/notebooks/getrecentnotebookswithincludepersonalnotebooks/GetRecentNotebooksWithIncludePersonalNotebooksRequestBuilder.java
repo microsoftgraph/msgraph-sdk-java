@@ -33,7 +33,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks/microsoft.graph.getRecentNotebooks(includePersonalNotebooks={includePersonalNotebooks})";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", includePersonalNotebooks);
+        urlTplParams.put("includePersonalNotebooks", includePersonalNotebooks);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

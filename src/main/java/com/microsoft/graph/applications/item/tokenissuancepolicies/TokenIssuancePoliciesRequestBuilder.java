@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.applications.item.tokenissuancepolicies.count.CountRequestBuilder;
+import microsoft.graph.applications.item.tokenissuancepolicies.ref.RefRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.TokenIssuancePolicyCollectionResponse;
 /** Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.application entity. */
@@ -26,6 +27,11 @@ public class TokenIssuancePoliciesRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

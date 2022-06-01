@@ -17,6 +17,7 @@ import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.UserCollectionResponse;
 import microsoft.graph.print.shares.item.allowedusers.count.CountRequestBuilder;
+import microsoft.graph.print.shares.item.allowedusers.ref.RefRequestBuilder;
 /** Provides operations to manage the allowedUsers property of the microsoft.graph.printerShare entity. */
 public class AllowedUsersRequestBuilder {
     /** The count property */
@@ -26,6 +27,11 @@ public class AllowedUsersRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable {
     /** Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here. */
     private String _orderHint;

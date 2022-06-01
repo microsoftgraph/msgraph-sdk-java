@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The windowsAutopilotDeviceIdentity resource represents a Windows Autopilot Device. */
 public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /** Addressable user name. */
     private String _addressableUserName;

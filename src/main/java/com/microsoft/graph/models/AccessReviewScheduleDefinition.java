@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     /** Defines the list of additional users or group members to be notified of the access review progress. */
     private java.util.List<AccessReviewNotificationRecipientItem> _additionalNotificationRecipients;

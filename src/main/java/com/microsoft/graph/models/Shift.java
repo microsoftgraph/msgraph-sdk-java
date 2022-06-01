@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class Shift extends ChangeTrackedEntity implements Parsable {
     /** The draft version of this shift that is viewable by managers. Required. */
     private ShiftItem _draftShift;

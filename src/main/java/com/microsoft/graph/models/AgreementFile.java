@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class AgreementFile extends AgreementFileProperties implements Parsable {
     /** The localized version of the terms of use agreement files attached to the agreement. */
     private java.util.List<AgreementFileLocalization> _localizations;

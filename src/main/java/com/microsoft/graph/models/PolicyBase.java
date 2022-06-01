@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the instantiate method. */
 public class PolicyBase extends DirectoryObject implements Parsable {
     /** Description for this policy. Required. */
     private String _description;
@@ -27,6 +28,13 @@ public class PolicyBase extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public static PolicyBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.policyBase": return new PolicyBase();
+            }
+        }
         return new PolicyBase();
     }
     /**

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the policyRoot singleton. */
 public class IdentitySecurityDefaultsEnforcementPolicy extends PolicyBase implements Parsable {
     /** If set to true, Azure Active Directory security defaults is enabled for the tenant. */
     private Boolean _isEnabled;

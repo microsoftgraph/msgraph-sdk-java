@@ -16,7 +16,7 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
     /** The previewText property */
     private String _previewText;
     /**
-     * Instantiates a new onenotePagePreview and sets the default values.
+     * Instantiates a new OnenotePagePreview and sets the default values.
      * @return a void
      */
     public OnenotePagePreview() {
@@ -25,7 +25,7 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onenotePagePreview
+     * @return a OnenotePagePreview
      */
     @javax.annotation.Nonnull
     public static OnenotePagePreview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

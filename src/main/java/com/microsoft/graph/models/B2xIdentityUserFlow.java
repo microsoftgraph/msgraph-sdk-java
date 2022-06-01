@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityContainer singleton. */
 public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /** Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration. */
     private UserFlowApiConnectorConfiguration _apiConnectorConfiguration;

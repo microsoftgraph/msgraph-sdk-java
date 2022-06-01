@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Role Assignment resource. Role assignments tie together a role definition with members and scopes. There can be one or more role assignments per role. This applies to custom and built-in roles. */
 public class RoleAssignment extends Entity implements Parsable {
     /** Description of the Role Assignment. */
     private String _description;
@@ -31,6 +32,13 @@ public class RoleAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static RoleAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.roleAssignment": return new RoleAssignment();
+            }
+        }
         return new RoleAssignment();
     }
     /**

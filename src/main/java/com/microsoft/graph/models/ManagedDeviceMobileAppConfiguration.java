@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** An abstract class for Mobile app configuration for enrolled devices. */
 public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable {
     /** The list of group assignemenets for app configration. */
     private java.util.List<ManagedDeviceMobileAppConfigurationAssignment> _assignments;
@@ -46,6 +47,13 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
     @javax.annotation.Nonnull
     public static ManagedDeviceMobileAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.managedDeviceMobileAppConfiguration": return new ManagedDeviceMobileAppConfiguration();
+            }
+        }
         return new ManagedDeviceMobileAppConfiguration();
     }
     /**

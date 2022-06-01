@@ -35,9 +35,9 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/sites/{site%2Did}/microsoft.graph.getActivitiesByInterval(startDateTime='{startDateTime}',endDateTime='{endDateTime}',interval='{interval}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", endDateTime);
-        urlTplParams.put("", interval);
-        urlTplParams.put("", startDateTime);
+        urlTplParams.put("endDateTime", endDateTime);
+        urlTplParams.put("interval", interval);
+        urlTplParams.put("startDateTime", startDateTime);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

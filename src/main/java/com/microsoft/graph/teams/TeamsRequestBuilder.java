@@ -60,7 +60,7 @@ public class TeamsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List teams
+     * List all teams in an organization.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TeamsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List teams
+     * List all teams in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class TeamsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create team
+     * Create a new team.
      * @param body 
      * @return a RequestInformation
      */
@@ -98,7 +98,7 @@ public class TeamsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create team
+     * Create a new team.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -121,7 +121,7 @@ public class TeamsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List teams
+     * List all teams in an organization.
      * @return a CompletableFuture of TeamCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<TeamCollectionResponse> get() {
@@ -137,7 +137,7 @@ public class TeamsRequestBuilder {
         }
     }
     /**
-     * List teams
+     * List all teams in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of TeamCollectionResponse
      */
@@ -154,7 +154,7 @@ public class TeamsRequestBuilder {
         }
     }
     /**
-     * List teams
+     * List all teams in an organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of TeamCollectionResponse
@@ -180,7 +180,7 @@ public class TeamsRequestBuilder {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Create team
+     * Create a new team.
      * @param body 
      * @return a CompletableFuture of team
      */
@@ -197,7 +197,7 @@ public class TeamsRequestBuilder {
         }
     }
     /**
-     * Create team
+     * Create a new team.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of team
@@ -215,7 +215,7 @@ public class TeamsRequestBuilder {
         }
     }
     /**
-     * Create team
+     * Create a new team.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -234,7 +234,7 @@ public class TeamsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List teams */
+    /** List all teams in an organization. */
     public class TeamsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

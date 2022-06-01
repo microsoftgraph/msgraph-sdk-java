@@ -14,16 +14,28 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.contacts.item.directreports.item.orgcontact.OrgContactRequestBuilder;
+import microsoft.graph.contacts.item.directreports.item.user.UserRequestBuilder;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the directReports property of the microsoft.graph.orgContact entity. */
 public class DirectoryObjectItemRequestBuilder {
+    /** The orgContact property */
+    @javax.annotation.Nonnull
+    public OrgContactRequestBuilder orgContact() {
+        return new OrgContactRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The user property */
+    @javax.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

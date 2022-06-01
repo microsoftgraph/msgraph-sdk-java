@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Provides operations to manage the collection of externalConnection entities. */
 public class ExternalConnection extends Entity implements Parsable {
     /** Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional. */
     private Configuration _configuration;

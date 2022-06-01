@@ -54,7 +54,7 @@ public class ChangeScreenSharingRoleRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ChangeScreenSharingRoleRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ChangeScreenSharingRolePostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class ChangeScreenSharingRoleRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ChangeScreenSharingRoleRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final ChangeScreenSharingRolePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class ChangeScreenSharingRoleRequestBuilder {
      * @param body 
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ChangeScreenSharingRoleRequestBody body) {
+    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ChangeScreenSharingRolePostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, null);
@@ -99,7 +99,7 @@ public class ChangeScreenSharingRoleRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ChangeScreenSharingRoleRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ChangeScreenSharingRolePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, null);
@@ -114,7 +114,7 @@ public class ChangeScreenSharingRoleRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ChangeScreenSharingRoleRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<Void> post(@javax.annotation.Nonnull final ChangeScreenSharingRolePostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

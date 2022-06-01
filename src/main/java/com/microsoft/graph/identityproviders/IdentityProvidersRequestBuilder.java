@@ -68,7 +68,7 @@ public class IdentityProvidersRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List identityProviders (deprecated)
+     * Retrieve a list of identityProviders objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -76,7 +76,7 @@ public class IdentityProvidersRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List identityProviders (deprecated)
+     * Retrieve a list of identityProviders objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -97,7 +97,7 @@ public class IdentityProvidersRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create identityProvider (deprecated)
+     * Create a new identityProvider object.
      * @param body 
      * @return a RequestInformation
      */
@@ -106,7 +106,7 @@ public class IdentityProvidersRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create identityProvider (deprecated)
+     * Create a new identityProvider object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -129,7 +129,7 @@ public class IdentityProvidersRequestBuilder {
         return requestInfo;
     }
     /**
-     * List identityProviders (deprecated)
+     * Retrieve a list of identityProviders objects.
      * @return a CompletableFuture of IdentityProviderCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<IdentityProviderCollectionResponse> get() {
@@ -145,7 +145,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * List identityProviders (deprecated)
+     * Retrieve a list of identityProviders objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of IdentityProviderCollectionResponse
      */
@@ -162,7 +162,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * List identityProviders (deprecated)
+     * Retrieve a list of identityProviders objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of IdentityProviderCollectionResponse
@@ -180,7 +180,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Create identityProvider (deprecated)
+     * Create a new identityProvider object.
      * @param body 
      * @return a CompletableFuture of identityProvider
      */
@@ -197,7 +197,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Create identityProvider (deprecated)
+     * Create a new identityProvider object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of identityProvider
@@ -215,7 +215,7 @@ public class IdentityProvidersRequestBuilder {
         }
     }
     /**
-     * Create identityProvider (deprecated)
+     * Create a new identityProvider object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -234,7 +234,7 @@ public class IdentityProvidersRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List identityProviders (deprecated) */
+    /** Retrieve a list of identityProviders objects. */
     public class IdentityProvidersRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -24,7 +24,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     /** The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only. */
     private PrinterFeedOrientation _feedOrientation;
     /** Finishing processes to use when printing. */
-    private java.util.List<PrintFinishing> _finishings;
+    private java.util.List<String> _finishings;
     /** The fitPdfToPage property */
     private Boolean _fitPdfToPage;
     /** The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins. */
@@ -136,7 +136,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
             this.put("dpi", (n) -> { currentObject.setDpi(n.getIntegerValue()); });
             this.put("duplexMode", (n) -> { currentObject.setDuplexMode(n.getEnumValue(PrintDuplexMode.class)); });
             this.put("feedOrientation", (n) -> { currentObject.setFeedOrientation(n.getEnumValue(PrinterFeedOrientation.class)); });
-            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
+            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("fitPdfToPage", (n) -> { currentObject.setFitPdfToPage(n.getBooleanValue()); });
             this.put("inputBin", (n) -> { currentObject.setInputBin(n.getStringValue()); });
             this.put("margin", (n) -> { currentObject.setMargin(n.getObjectValue(PrintMargin::createFromDiscriminatorValue)); });
@@ -153,10 +153,10 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the finishings property value. Finishing processes to use when printing.
-     * @return a printFinishing
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<PrintFinishing> getFinishings() {
+    public java.util.List<String> getFinishings() {
         return this._finishings;
     }
     /**
@@ -268,7 +268,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("dpi", this.getDpi());
         writer.writeEnumValue("duplexMode", this.getDuplexMode());
         writer.writeEnumValue("feedOrientation", this.getFeedOrientation());
-        writer.writeCollectionOfEnumValues("finishings", this.getFinishings());
+        writer.writeCollectionOfPrimitiveValues("finishings", this.getFinishings());
         writer.writeBooleanValue("fitPdfToPage", this.getFitPdfToPage());
         writer.writeStringValue("inputBin", this.getInputBin());
         writer.writeObjectValue("margin", this.getMargin());
@@ -344,7 +344,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the finishings property.
      * @return a void
      */
-    public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    public void setFinishings(@javax.annotation.Nullable final java.util.List<String> value) {
         this._finishings = value;
     }
     /**

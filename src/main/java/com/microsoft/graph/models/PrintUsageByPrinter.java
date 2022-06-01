@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the reportRoot singleton. */
 public class PrintUsageByPrinter extends PrintUsage implements Parsable {
     /** The printerId property */
     private String _printerId;

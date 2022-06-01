@@ -36,9 +36,9 @@ public class GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTim
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getGroupArchivedPrintJobs(groupId='{groupId}',startDateTime='{startDateTime}',endDateTime='{endDateTime}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", endDateTime);
-        urlTplParams.put("", groupId);
-        urlTplParams.put("", startDateTime);
+        urlTplParams.put("endDateTime", endDateTime);
+        urlTplParams.put("groupId", groupId);
+        urlTplParams.put("startDateTime", startDateTime);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

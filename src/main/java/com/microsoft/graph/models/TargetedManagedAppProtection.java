@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy used to configure detailed management settings targeted to specific security groups */
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
     /** Navigation property to list of inclusion and exclusion groups to which the policy is deployed. */
     private java.util.List<TargetedManagedAppPolicyAssignment> _assignments;
@@ -27,6 +28,13 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     @javax.annotation.Nonnull
     public static TargetedManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
+            }
+        }
         return new TargetedManagedAppProtection();
     }
     /**

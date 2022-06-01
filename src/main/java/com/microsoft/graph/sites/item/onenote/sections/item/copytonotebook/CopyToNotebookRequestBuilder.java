@@ -55,7 +55,7 @@ public class CopyToNotebookRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CopyToNotebookRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CopyToNotebookPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class CopyToNotebookRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CopyToNotebookRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CopyToNotebookRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CopyToNotebookPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CopyToNotebookRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -86,7 +86,7 @@ public class CopyToNotebookRequestBuilder {
      * @param body 
      * @return a CompletableFuture of onenoteOperation
      */
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> post(@javax.annotation.Nonnull final CopyToNotebookRequestBody body) {
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> post(@javax.annotation.Nonnull final CopyToNotebookPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, OnenoteOperation::createFromDiscriminatorValue, null, null);
@@ -100,7 +100,7 @@ public class CopyToNotebookRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenoteOperation
      */
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> post(@javax.annotation.Nonnull final CopyToNotebookRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CopyToNotebookRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> post(@javax.annotation.Nonnull final CopyToNotebookPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CopyToNotebookRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, OnenoteOperation::createFromDiscriminatorValue, null, null);
@@ -115,7 +115,7 @@ public class CopyToNotebookRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of onenoteOperation
      */
-    public java.util.concurrent.CompletableFuture<OnenoteOperation> post(@javax.annotation.Nonnull final CopyToNotebookRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CopyToNotebookRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<OnenoteOperation> post(@javax.annotation.Nonnull final CopyToNotebookPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CopyToNotebookRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the roleManagement singleton. */
 public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements Parsable {
     /** If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule. */
     private UnifiedRoleEligibilitySchedule _activatedUsing;

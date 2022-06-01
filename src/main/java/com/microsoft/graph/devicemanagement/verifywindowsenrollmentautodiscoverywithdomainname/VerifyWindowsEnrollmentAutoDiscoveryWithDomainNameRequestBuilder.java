@@ -33,7 +33,7 @@ public class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/microsoft.graph.verifyWindowsEnrollmentAutoDiscovery(domainName='{domainName}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", domainName);
+        urlTplParams.put("domainName", domainName);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the roleManagement singleton. */
 public class UnifiedRoleScheduleBase extends Entity implements Parsable {
     /** Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. */
     private AppScope _appScope;
@@ -48,6 +49,13 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static UnifiedRoleScheduleBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.unifiedRoleScheduleBase": return new UnifiedRoleScheduleBase();
+            }
+        }
         return new UnifiedRoleScheduleBase();
     }
     /**

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The ManagedAppEntity is the base entity type for all other entity types under app management workflow. */
 public class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable {
     /** Not yet documented */
     private Integer _configurationDeployedUserCount;

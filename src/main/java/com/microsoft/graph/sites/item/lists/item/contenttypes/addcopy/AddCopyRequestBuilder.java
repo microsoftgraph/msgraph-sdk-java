@@ -55,7 +55,7 @@ public class AddCopyRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AddCopyRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AddCopyPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class AddCopyRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AddCopyRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddCopyRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AddCopyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddCopyRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -86,7 +86,7 @@ public class AddCopyRequestBuilder {
      * @param body 
      * @return a CompletableFuture of contentType
      */
-    public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final AddCopyRequestBody body) {
+    public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final AddCopyPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, ContentType::createFromDiscriminatorValue, null, null);
@@ -100,7 +100,7 @@ public class AddCopyRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contentType
      */
-    public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final AddCopyRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddCopyRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final AddCopyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddCopyRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, ContentType::createFromDiscriminatorValue, null, null);
@@ -115,7 +115,7 @@ public class AddCopyRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of contentType
      */
-    public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final AddCopyRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddCopyRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<ContentType> post(@javax.annotation.Nonnull final AddCopyPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<AddCopyRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

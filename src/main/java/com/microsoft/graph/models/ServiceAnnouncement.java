@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class ServiceAnnouncement extends Entity implements Parsable {
     /** A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly. */
     private java.util.List<ServiceHealth> _healthOverviews;

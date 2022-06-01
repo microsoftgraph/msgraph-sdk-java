@@ -7,6 +7,7 @@ import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
@@ -54,7 +55,7 @@ public class GetPolicyNonComplianceMetadataRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +65,7 @@ public class GetPolicyNonComplianceMetadataRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -83,12 +84,12 @@ public class GetPolicyNonComplianceMetadataRequestBuilder {
     /**
      * Invoke action getPolicyNonComplianceMetadata
      * @param body 
-     * @return a CompletableFuture of getPolicyNonComplianceMetadataResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetPolicyNonComplianceMetadataResponse> post(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataRequestBody body) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            return this.requestAdapter.sendAsync(requestInfo, GetPolicyNonComplianceMetadataResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -97,12 +98,12 @@ public class GetPolicyNonComplianceMetadataRequestBuilder {
      * Invoke action getPolicyNonComplianceMetadata
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getPolicyNonComplianceMetadataResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetPolicyNonComplianceMetadataResponse> post(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetPolicyNonComplianceMetadataResponse::createFromDiscriminatorValue, null, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
@@ -112,13 +113,13 @@ public class GetPolicyNonComplianceMetadataRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of getPolicyNonComplianceMetadataResponse
+     * @return a CompletableFuture of InputStream
      */
-    public java.util.concurrent.CompletableFuture<GetPolicyNonComplianceMetadataResponse> post(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetPolicyNonComplianceMetadataPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            return this.requestAdapter.sendAsync(requestInfo, GetPolicyNonComplianceMetadataResponse::createFromDiscriminatorValue, responseHandler, null);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, responseHandler, null);
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }

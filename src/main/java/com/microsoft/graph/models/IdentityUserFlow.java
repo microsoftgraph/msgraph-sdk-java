@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityContainer singleton. */
 public class IdentityUserFlow extends Entity implements Parsable {
     /** The userFlowType property */
     private UserFlowType _userFlowType;
@@ -27,6 +28,13 @@ public class IdentityUserFlow extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static IdentityUserFlow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.identityUserFlow": return new IdentityUserFlow();
+            }
+        }
         return new IdentityUserFlow();
     }
     /**

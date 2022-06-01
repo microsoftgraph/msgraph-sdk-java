@@ -55,7 +55,7 @@ public class FindMeetingTimesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final FindMeetingTimesRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final FindMeetingTimesPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class FindMeetingTimesRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final FindMeetingTimesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<FindMeetingTimesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final FindMeetingTimesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<FindMeetingTimesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -84,9 +84,9 @@ public class FindMeetingTimesRequestBuilder {
     /**
      * Invoke action findMeetingTimes
      * @param body 
-     * @return a CompletableFuture of meetingTimeSuggestionsResult
+     * @return a CompletableFuture of MeetingTimeSuggestionsResult
      */
-    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> post(@javax.annotation.Nonnull final FindMeetingTimesRequestBody body) {
+    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> post(@javax.annotation.Nonnull final FindMeetingTimesPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, MeetingTimeSuggestionsResult::createFromDiscriminatorValue, null, null);
@@ -98,9 +98,9 @@ public class FindMeetingTimesRequestBuilder {
      * Invoke action findMeetingTimes
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingTimeSuggestionsResult
+     * @return a CompletableFuture of MeetingTimeSuggestionsResult
      */
-    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> post(@javax.annotation.Nonnull final FindMeetingTimesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<FindMeetingTimesRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> post(@javax.annotation.Nonnull final FindMeetingTimesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<FindMeetingTimesRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, MeetingTimeSuggestionsResult::createFromDiscriminatorValue, null, null);
@@ -113,9 +113,9 @@ public class FindMeetingTimesRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of meetingTimeSuggestionsResult
+     * @return a CompletableFuture of MeetingTimeSuggestionsResult
      */
-    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> post(@javax.annotation.Nonnull final FindMeetingTimesRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<FindMeetingTimesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<MeetingTimeSuggestionsResult> post(@javax.annotation.Nonnull final FindMeetingTimesPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<FindMeetingTimesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

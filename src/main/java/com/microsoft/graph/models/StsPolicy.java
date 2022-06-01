@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the instantiate method. */
 public class StsPolicy extends PolicyBase implements Parsable {
     /** The appliesTo property */
     private java.util.List<DirectoryObject> _appliesTo;
@@ -29,6 +30,13 @@ public class StsPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public static StsPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.stsPolicy": return new StsPolicy();
+            }
+        }
         return new StsPolicy();
     }
     /**

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Represents a booked appointment of a service by a customer in a business. */
 public class BookingAppointment extends Entity implements Parsable {
     /** Additional information that is sent to the customer when an appointment is confirmed. */
     private String _additionalInformation;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Parsable {
     /** The chat between the user and Teams app. */
     private Chat _chat;

@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.count.CountRequestBuilder;
+import microsoft.graph.identity.b2xuserflows.item.userflowidentityproviders.ref.RefRequestBuilder;
 import microsoft.graph.models.IdentityProviderBaseCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the userFlowIdentityProviders property of the microsoft.graph.b2xIdentityUserFlow entity. */
@@ -26,6 +27,11 @@ public class UserFlowIdentityProvidersRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

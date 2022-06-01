@@ -54,7 +54,7 @@ public class CheckMemberObjectsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CheckMemberObjectsRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CheckMemberObjectsPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class CheckMemberObjectsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CheckMemberObjectsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CheckMemberObjectsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final CheckMemberObjectsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CheckMemberObjectsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class CheckMemberObjectsRequestBuilder {
      * @param body 
      * @return a CompletableFuture of checkMemberObjectsResponse
      */
-    public java.util.concurrent.CompletableFuture<CheckMemberObjectsResponse> post(@javax.annotation.Nonnull final CheckMemberObjectsRequestBody body) {
+    public java.util.concurrent.CompletableFuture<CheckMemberObjectsResponse> post(@javax.annotation.Nonnull final CheckMemberObjectsPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, CheckMemberObjectsResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +99,7 @@ public class CheckMemberObjectsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of checkMemberObjectsResponse
      */
-    public java.util.concurrent.CompletableFuture<CheckMemberObjectsResponse> post(@javax.annotation.Nonnull final CheckMemberObjectsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CheckMemberObjectsRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<CheckMemberObjectsResponse> post(@javax.annotation.Nonnull final CheckMemberObjectsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CheckMemberObjectsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, CheckMemberObjectsResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +114,7 @@ public class CheckMemberObjectsRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of checkMemberObjectsResponse
      */
-    public java.util.concurrent.CompletableFuture<CheckMemberObjectsResponse> post(@javax.annotation.Nonnull final CheckMemberObjectsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CheckMemberObjectsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<CheckMemberObjectsResponse> post(@javax.annotation.Nonnull final CheckMemberObjectsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<CheckMemberObjectsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

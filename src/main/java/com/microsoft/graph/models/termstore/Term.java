@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
 import microsoft.graph.models.KeyValue;
+/** Casts the previous resource to user. */
 public class Term extends Entity implements Parsable {
     /** Children of current term. */
     private java.util.List<Term> _children;

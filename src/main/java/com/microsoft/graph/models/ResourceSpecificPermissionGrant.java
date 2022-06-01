@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsable {
     /** ID of the service principal of the Azure AD app that has been granted access. Read-only. */
     private String _clientAppId;

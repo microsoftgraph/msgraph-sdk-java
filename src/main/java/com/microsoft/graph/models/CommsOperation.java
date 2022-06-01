@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the cloudCommunications singleton. */
 public class CommsOperation extends Entity implements Parsable {
     /** Unique Client Context string. Max limit is 256 chars. */
     private String _clientContext;
@@ -29,6 +30,13 @@ public class CommsOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static CommsOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.commsOperation": return new CommsOperation();
+            }
+        }
         return new CommsOperation();
     }
     /**

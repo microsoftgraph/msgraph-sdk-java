@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the educationRoot singleton. */
 public class EducationSubmissionResource extends Entity implements Parsable {
     /** Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource. */
     private String _assignmentResourceUrl;

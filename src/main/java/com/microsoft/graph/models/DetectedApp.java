@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A managed or unmanaged app that is installed on a managed device. Unmanaged apps will only appear for devices marked as corporate owned. */
 public class DetectedApp extends Entity implements Parsable {
     /** The number of devices that have installed this application */
     private Integer _deviceCount;

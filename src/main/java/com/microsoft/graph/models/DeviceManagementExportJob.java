@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity representing a job to export a report */
 public class DeviceManagementExportJob extends Entity implements Parsable {
     /** Time that the exported report expires */
     private OffsetDateTime _expirationDateTime;

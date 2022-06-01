@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** telecomExpenseManagementPartner resources represent the metadata and status of a given TEM service. Once your organization has onboarded with a partner, the partner can be enabled or disabled to switch TEM functionality on or off. */
 public class TelecomExpenseManagementPartner extends Entity implements Parsable {
     /** Whether the partner's AAD app has been authorized to access Intune. */
     private Boolean _appAuthorized;

@@ -8,13 +8,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     /** The createdBy property */
     private UserIdentity _createdBy;
     /** Timestamp when the access review definition was created. */
     private OffsetDateTime _createdDateTime;
     /** Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified. */
-    private java.util.List<AccessReviewHistoryDecisionFilter> _decisions;
+    private java.util.List<String> _decisions;
     /** Name for the access review history data collection. Required. */
     private String _displayName;
     /** If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance. */
@@ -64,10 +65,10 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
-     * @return a accessReviewHistoryDecisionFilter
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<AccessReviewHistoryDecisionFilter> getDecisions() {
+    public java.util.List<String> getDecisions() {
         return this._decisions;
     }
     /**
@@ -88,7 +89,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("decisions", (n) -> { currentObject.setDecisions(n.getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter.class)); });
+            this.put("decisions", (n) -> { currentObject.setDecisions(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("instances", (n) -> { currentObject.setInstances(n.getCollectionOfObjectValues(AccessReviewHistoryInstance::createFromDiscriminatorValue)); });
             this.put("reviewHistoryPeriodEndDateTime", (n) -> { currentObject.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
@@ -156,7 +157,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeCollectionOfEnumValues("decisions", this.getDecisions());
+        writer.writeCollectionOfPrimitiveValues("decisions", this.getDecisions());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("instances", this.getInstances());
         writer.writeOffsetDateTimeValue("reviewHistoryPeriodEndDateTime", this.getReviewHistoryPeriodEndDateTime());
@@ -186,7 +187,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the decisions property.
      * @return a void
      */
-    public void setDecisions(@javax.annotation.Nullable final java.util.List<AccessReviewHistoryDecisionFilter> value) {
+    public void setDecisions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._decisions = value;
     }
     /**

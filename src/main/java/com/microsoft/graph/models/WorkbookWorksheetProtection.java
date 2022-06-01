@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /** Sheet protection options. Read-only. */
     private WorkbookWorksheetProtectionOptions _options;

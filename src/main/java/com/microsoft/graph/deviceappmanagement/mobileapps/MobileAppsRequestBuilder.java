@@ -15,6 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.deviceappmanagement.mobileapps.count.CountRequestBuilder;
+import microsoft.graph.deviceappmanagement.mobileapps.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
+import microsoft.graph.deviceappmanagement.mobileapps.mobilelobapp.MobileLobAppRequestBuilder;
 import microsoft.graph.models.MobileApp;
 import microsoft.graph.models.MobileAppCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -24,6 +26,16 @@ public class MobileAppsRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The managedMobileLobApp property */
+    @javax.annotation.Nonnull
+    public ManagedMobileLobAppRequestBuilder managedMobileLobApp() {
+        return new ManagedMobileLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The mobileLobApp property */
+    @javax.annotation.Nonnull
+    public MobileLobAppRequestBuilder mobileLobApp() {
+        return new MobileLobAppRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;

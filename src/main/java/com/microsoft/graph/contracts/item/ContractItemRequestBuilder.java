@@ -110,7 +110,7 @@ public class ContractItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get Contract
+     * Retrieve the properties and relationships of contract object.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -118,7 +118,7 @@ public class ContractItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get Contract
+     * Retrieve the properties and relationships of contract object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -222,7 +222,7 @@ public class ContractItemRequestBuilder {
         }
     }
     /**
-     * Get Contract
+     * Retrieve the properties and relationships of contract object.
      * @return a CompletableFuture of contract
      */
     public java.util.concurrent.CompletableFuture<Contract> get() {
@@ -238,7 +238,7 @@ public class ContractItemRequestBuilder {
         }
     }
     /**
-     * Get Contract
+     * Retrieve the properties and relationships of contract object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of contract
      */
@@ -255,7 +255,7 @@ public class ContractItemRequestBuilder {
         }
     }
     /**
-     * Get Contract
+     * Retrieve the properties and relationships of contract object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of contract
@@ -342,7 +342,7 @@ public class ContractItemRequestBuilder {
         public ContractItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get Contract */
+    /** Retrieve the properties and relationships of contract object. */
     public class ContractItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

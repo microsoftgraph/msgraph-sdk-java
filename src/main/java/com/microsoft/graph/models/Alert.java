@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the security singleton. */
 public class Alert extends Entity implements Parsable {
     /** Name or alias of the activity group (attacker) this alert is attributed to. */
     private String _activityGroupName;

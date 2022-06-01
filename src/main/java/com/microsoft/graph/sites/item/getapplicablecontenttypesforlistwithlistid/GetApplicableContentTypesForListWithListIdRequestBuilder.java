@@ -33,7 +33,7 @@ public class GetApplicableContentTypesForListWithListIdRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/sites/{site%2Did}/microsoft.graph.getApplicableContentTypesForList(listId='{listId}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", listId);
+        urlTplParams.put("listId", listId);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

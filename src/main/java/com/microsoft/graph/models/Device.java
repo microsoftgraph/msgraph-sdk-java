@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class Device extends DirectoryObject implements Parsable {
     /** true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property. */
     private Boolean _accountEnabled;
@@ -43,7 +44,7 @@ public class Device extends DirectoryObject implements Parsable {
     private String _operatingSystem;
     /** Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
     private String _operatingSystemVersion;
-    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith). */
+    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections). */
     private java.util.List<String> _physicalIds;
     /** The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT. */
     private String _profileType;
@@ -51,7 +52,7 @@ public class Device extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> _registeredOwners;
     /** Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> _registeredUsers;
-    /** List of labels applied to the device by the system. */
+    /** List of labels applied to the device by the system. Supports $filter (eq when counting empty collections). */
     private java.util.List<String> _systemLabels;
     /** Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand. */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
@@ -245,7 +246,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._operatingSystemVersion;
     }
     /**
-     * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -277,7 +278,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._registeredUsers;
     }
     /**
-     * Gets the systemLabels property value. List of labels applied to the device by the system.
+     * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -470,7 +471,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._operatingSystemVersion = value;
     }
     /**
-     * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
      * @param value Value to set for the physicalIds property.
      * @return a void
      */
@@ -502,7 +503,7 @@ public class Device extends DirectoryObject implements Parsable {
         this._registeredUsers = value;
     }
     /**
-     * Sets the systemLabels property value. List of labels applied to the device by the system.
+     * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
      * @param value Value to set for the systemLabels property.
      * @return a void
      */

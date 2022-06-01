@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the stopHoldMusic method. */
 public class StopHoldMusicOperation extends CommsOperation implements Parsable {
     /**
      * Instantiates a new stopHoldMusicOperation and sets the default values.

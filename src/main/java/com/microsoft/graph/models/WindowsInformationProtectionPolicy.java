@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy for Windows information protection without MDM */
 public class WindowsInformationProtectionPolicy extends WindowsInformationProtection implements Parsable {
     /** Offline interval before app data is wiped (days) */
     private Integer _daysWithoutContactBeforeUnenroll;

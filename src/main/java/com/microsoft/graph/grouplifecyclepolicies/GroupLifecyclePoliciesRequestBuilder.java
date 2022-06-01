@@ -59,7 +59,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List groupLifecyclePolicies
+     * List all the groupLifecyclePolicies.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List groupLifecyclePolicies
+     * List all the groupLifecyclePolicies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create groupLifecyclePolicy
+     * Creates a new groupLifecyclePolicy.
      * @param body 
      * @return a RequestInformation
      */
@@ -97,7 +97,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create groupLifecyclePolicy
+     * Creates a new groupLifecyclePolicy.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -120,7 +120,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         return requestInfo;
     }
     /**
-     * List groupLifecyclePolicies
+     * List all the groupLifecyclePolicies.
      * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<GroupLifecyclePolicyCollectionResponse> get() {
@@ -136,7 +136,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         }
     }
     /**
-     * List groupLifecyclePolicies
+     * List all the groupLifecyclePolicies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
      */
@@ -153,7 +153,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         }
     }
     /**
-     * List groupLifecyclePolicies
+     * List all the groupLifecyclePolicies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of GroupLifecyclePolicyCollectionResponse
@@ -171,7 +171,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         }
     }
     /**
-     * Create groupLifecyclePolicy
+     * Creates a new groupLifecyclePolicy.
      * @param body 
      * @return a CompletableFuture of groupLifecyclePolicy
      */
@@ -188,7 +188,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         }
     }
     /**
-     * Create groupLifecyclePolicy
+     * Creates a new groupLifecyclePolicy.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupLifecyclePolicy
@@ -206,7 +206,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
         }
     }
     /**
-     * Create groupLifecyclePolicy
+     * Creates a new groupLifecyclePolicy.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -225,7 +225,7 @@ public class GroupLifecyclePoliciesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List groupLifecyclePolicies */
+    /** List all the groupLifecyclePolicies. */
     public class GroupLifecyclePoliciesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

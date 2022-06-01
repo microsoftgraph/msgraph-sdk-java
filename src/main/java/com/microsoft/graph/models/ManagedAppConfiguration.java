@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Configuration used to deliver a set of custom settings as-is to apps for users to whom the configuration is scoped */
 public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable {
     /** A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service */
     private java.util.List<KeyValuePair> _customSettings;
@@ -25,6 +26,13 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements Parsabl
     @javax.annotation.Nonnull
     public static ManagedAppConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.managedAppConfiguration": return new ManagedAppConfiguration();
+            }
+        }
         return new ManagedAppConfiguration();
     }
     /**

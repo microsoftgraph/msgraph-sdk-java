@@ -85,7 +85,7 @@ public class PlannerRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * planner resource type
+     * Get planner
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -93,7 +93,7 @@ public class PlannerRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * planner resource type
+     * Get planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class PlannerRequestBuilder {
         return requestInfo;
     }
     /**
-     * planner resource type
+     * Get planner
      * @return a CompletableFuture of planner
      */
     public java.util.concurrent.CompletableFuture<Planner> get() {
@@ -162,7 +162,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * planner resource type
+     * Get planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of planner
      */
@@ -179,7 +179,7 @@ public class PlannerRequestBuilder {
         }
     }
     /**
-     * planner resource type
+     * Get planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of planner
@@ -275,7 +275,7 @@ public class PlannerRequestBuilder {
         urlTplParams.put("plannerTask%2Did", id);
         return new PlannerTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** planner resource type */
+    /** Get planner */
     public class PlannerRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /** Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required. */
     private String _downloadUri;

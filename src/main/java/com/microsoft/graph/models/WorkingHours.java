@@ -13,7 +13,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The days of the week on which the user works. */
-    private java.util.List<DayOfWeek> _daysOfWeek;
+    private java.util.List<String> _daysOfWeek;
     /** The time of the day that the user stops working. */
     private LocalTime _endTime;
     /** The time of the day that the user starts working. */
@@ -47,10 +47,10 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the daysOfWeek property value. The days of the week on which the user works.
-     * @return a dayOfWeek
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<DayOfWeek> getDaysOfWeek() {
+    public java.util.List<String> getDaysOfWeek() {
         return this._daysOfWeek;
     }
     /**
@@ -69,7 +69,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkingHours currentObject = this;
         return new HashMap<>(4) {{
-            this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfEnumValues(DayOfWeek.class)); });
+            this.put("daysOfWeek", (n) -> { currentObject.setDaysOfWeek(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
             this.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
             this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getObjectValue(TimeZoneBase::createFromDiscriminatorValue)); });
@@ -98,7 +98,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfEnumValues("daysOfWeek", this.getDaysOfWeek());
+        writer.writeCollectionOfPrimitiveValues("daysOfWeek", this.getDaysOfWeek());
         writer.writeLocalTimeValue("endTime", this.getEndTime());
         writer.writeLocalTimeValue("startTime", this.getStartTime());
         writer.writeObjectValue("timeZone", this.getTimeZone());
@@ -117,7 +117,7 @@ public class WorkingHours implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the daysOfWeek property.
      * @return a void
      */
-    public void setDaysOfWeek(@javax.annotation.Nullable final java.util.List<DayOfWeek> value) {
+    public void setDaysOfWeek(@javax.annotation.Nullable final java.util.List<String> value) {
         this._daysOfWeek = value;
     }
     /**

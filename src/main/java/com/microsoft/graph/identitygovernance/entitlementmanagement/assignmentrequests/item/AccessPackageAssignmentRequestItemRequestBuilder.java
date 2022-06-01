@@ -110,7 +110,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents access package assignment requests created by or on behalf of a user.
+     * Access package assignment requests created by or on behalf of a subject.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -118,7 +118,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Represents access package assignment requests created by or on behalf of a user.
+     * Access package assignment requests created by or on behalf of a subject.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -222,7 +222,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder {
         }
     }
     /**
-     * Represents access package assignment requests created by or on behalf of a user.
+     * Access package assignment requests created by or on behalf of a subject.
      * @return a CompletableFuture of accessPackageAssignmentRequest
      */
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentRequest> get() {
@@ -238,7 +238,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder {
         }
     }
     /**
-     * Represents access package assignment requests created by or on behalf of a user.
+     * Access package assignment requests created by or on behalf of a subject.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignmentRequest
      */
@@ -255,7 +255,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder {
         }
     }
     /**
-     * Represents access package assignment requests created by or on behalf of a user.
+     * Access package assignment requests created by or on behalf of a subject.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageAssignmentRequest
@@ -342,7 +342,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder {
         public AccessPackageAssignmentRequestItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Represents access package assignment requests created by or on behalf of a user. */
+    /** Access package assignment requests created by or on behalf of a subject. */
     public class AccessPackageAssignmentRequestItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

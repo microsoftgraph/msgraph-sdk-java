@@ -18,7 +18,7 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
     /** The postUrl property */
     private String _postUrl;
     /**
-     * Instantiates a new itemPreviewInfo and sets the default values.
+     * Instantiates a new ItemPreviewInfo and sets the default values.
      * @return a void
      */
     public ItemPreviewInfo() {
@@ -27,7 +27,7 @@ public class ItemPreviewInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemPreviewInfo
+     * @return a ItemPreviewInfo
      */
     @javax.annotation.Nonnull
     public static ItemPreviewInfo createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

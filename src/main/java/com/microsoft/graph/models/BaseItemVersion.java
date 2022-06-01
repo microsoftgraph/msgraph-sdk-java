@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class BaseItemVersion extends Entity implements Parsable {
     /** Identity of the user which last modified the version. Read-only. */
     private IdentitySet _lastModifiedBy;
@@ -30,6 +31,13 @@ public class BaseItemVersion extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static BaseItemVersion createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.baseItemVersion": return new BaseItemVersion();
+            }
+        }
         return new BaseItemVersion();
     }
     /**

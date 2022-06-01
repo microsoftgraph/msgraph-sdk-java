@@ -44,6 +44,13 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     @javax.annotation.Nonnull
     public static OrganizationalBrandingProperties createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.organizationalBrandingProperties": return new OrganizationalBrandingProperties();
+            }
+        }
         return new OrganizationalBrandingProperties();
     }
     /**

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the admin singleton. */
 public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable {
     /** The type of service health issue. Possible values are: advisory, incident, unknownFutureValue. */
     private ServiceHealthClassificationType _classification;

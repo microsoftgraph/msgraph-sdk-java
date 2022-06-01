@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the roleManagement singleton. */
 public class UnifiedRoleDefinition extends Entity implements Parsable {
     /** The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true. */
     private String _description;

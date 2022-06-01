@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class Drive extends BaseItem implements Parsable {
     /** Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive. */
     private java.util.List<DriveItem> _bundles;

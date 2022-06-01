@@ -59,7 +59,7 @@ public class GroupSettingsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class GroupSettingsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class GroupSettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @return a RequestInformation
      */
@@ -97,7 +97,7 @@ public class GroupSettingsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -120,7 +120,7 @@ public class GroupSettingsRequestBuilder {
         return requestInfo;
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @return a CompletableFuture of GroupSettingCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<GroupSettingCollectionResponse> get() {
@@ -136,7 +136,7 @@ public class GroupSettingsRequestBuilder {
         }
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of GroupSettingCollectionResponse
      */
@@ -153,7 +153,7 @@ public class GroupSettingsRequestBuilder {
         }
     }
     /**
-     * List settings
+     * Retrieve a list of tenant-level or group-specific group settings objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of GroupSettingCollectionResponse
@@ -171,7 +171,7 @@ public class GroupSettingsRequestBuilder {
         }
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @return a CompletableFuture of groupSetting
      */
@@ -188,7 +188,7 @@ public class GroupSettingsRequestBuilder {
         }
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of groupSetting
@@ -206,7 +206,7 @@ public class GroupSettingsRequestBuilder {
         }
     }
     /**
-     * Create settings
+     * Create a new setting based on the templates available in groupSettingTemplates. These settings can be at the tenant-level or at the group level. Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -225,7 +225,7 @@ public class GroupSettingsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List settings */
+    /** Retrieve a list of tenant-level or group-specific group settings objects. */
     public class GroupSettingsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

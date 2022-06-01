@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class WorkbookTableSort extends Entity implements Parsable {
     /** Represents the current conditions used to last sort the table. Read-only. */
     private java.util.List<WorkbookSortField> _fields;

@@ -55,7 +55,7 @@ public class StopHoldMusicRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StopHoldMusicRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StopHoldMusicPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -65,7 +65,7 @@ public class StopHoldMusicRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StopHoldMusicRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StopHoldMusicRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final StopHoldMusicPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StopHoldMusicRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -86,7 +86,7 @@ public class StopHoldMusicRequestBuilder {
      * @param body 
      * @return a CompletableFuture of stopHoldMusicOperation
      */
-    public java.util.concurrent.CompletableFuture<StopHoldMusicOperation> post(@javax.annotation.Nonnull final StopHoldMusicRequestBody body) {
+    public java.util.concurrent.CompletableFuture<StopHoldMusicOperation> post(@javax.annotation.Nonnull final StopHoldMusicPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, StopHoldMusicOperation::createFromDiscriminatorValue, null, null);
@@ -100,7 +100,7 @@ public class StopHoldMusicRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of stopHoldMusicOperation
      */
-    public java.util.concurrent.CompletableFuture<StopHoldMusicOperation> post(@javax.annotation.Nonnull final StopHoldMusicRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StopHoldMusicRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<StopHoldMusicOperation> post(@javax.annotation.Nonnull final StopHoldMusicPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StopHoldMusicRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, StopHoldMusicOperation::createFromDiscriminatorValue, null, null);
@@ -115,7 +115,7 @@ public class StopHoldMusicRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of stopHoldMusicOperation
      */
-    public java.util.concurrent.CompletableFuture<StopHoldMusicOperation> post(@javax.annotation.Nonnull final StopHoldMusicRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StopHoldMusicRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<StopHoldMusicOperation> post(@javax.annotation.Nonnull final StopHoldMusicPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<StopHoldMusicRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

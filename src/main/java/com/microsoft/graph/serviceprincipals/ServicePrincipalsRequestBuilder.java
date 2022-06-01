@@ -78,7 +78,7 @@ public class ServicePrincipalsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Retrieve a list of servicePrincipal objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -86,7 +86,7 @@ public class ServicePrincipalsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Retrieve a list of servicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -107,7 +107,7 @@ public class ServicePrincipalsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create servicePrincipal
+     * Create a new servicePrincipal object.
      * @param body 
      * @return a RequestInformation
      */
@@ -116,7 +116,7 @@ public class ServicePrincipalsRequestBuilder {
         return createPostRequestInformation(body, null);
     }
     /**
-     * Create servicePrincipal
+     * Create a new servicePrincipal object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -147,7 +147,7 @@ public class ServicePrincipalsRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Retrieve a list of servicePrincipal objects.
      * @return a CompletableFuture of ServicePrincipalCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ServicePrincipalCollectionResponse> get() {
@@ -163,7 +163,7 @@ public class ServicePrincipalsRequestBuilder {
         }
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Retrieve a list of servicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ServicePrincipalCollectionResponse
      */
@@ -180,7 +180,7 @@ public class ServicePrincipalsRequestBuilder {
         }
     }
     /**
-     * Configure required Azure AD Graph permissions for an app registration
+     * Retrieve a list of servicePrincipal objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ServicePrincipalCollectionResponse
@@ -198,7 +198,7 @@ public class ServicePrincipalsRequestBuilder {
         }
     }
     /**
-     * Create servicePrincipal
+     * Create a new servicePrincipal object.
      * @param body 
      * @return a CompletableFuture of servicePrincipal
      */
@@ -215,7 +215,7 @@ public class ServicePrincipalsRequestBuilder {
         }
     }
     /**
-     * Create servicePrincipal
+     * Create a new servicePrincipal object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of servicePrincipal
@@ -233,7 +233,7 @@ public class ServicePrincipalsRequestBuilder {
         }
     }
     /**
-     * Create servicePrincipal
+     * Create a new servicePrincipal object.
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
@@ -252,7 +252,7 @@ public class ServicePrincipalsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Configure required Azure AD Graph permissions for an app registration */
+    /** Retrieve a list of servicePrincipal objects. */
     public class ServicePrincipalsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

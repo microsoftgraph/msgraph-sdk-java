@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the auditLogRoot singleton. */
 public class ProvisionedIdentity extends Identity implements Parsable {
     /** Details of the identity. */
     private DetailsInfo _details;

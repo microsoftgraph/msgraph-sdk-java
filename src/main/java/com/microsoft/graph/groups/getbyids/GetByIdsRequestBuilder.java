@@ -54,7 +54,7 @@ public class GetByIdsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetByIdsRequestBody body) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetByIdsPostRequestBody body) throws URISyntaxException {
         return createPostRequestInformation(body, null);
     }
     /**
@@ -64,7 +64,7 @@ public class GetByIdsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetByIdsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetByIdsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetByIdsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetByIdsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.POST;
@@ -85,7 +85,7 @@ public class GetByIdsRequestBuilder {
      * @param body 
      * @return a CompletableFuture of getByIdsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetByIdsResponse> post(@javax.annotation.Nonnull final GetByIdsRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GetByIdsResponse> post(@javax.annotation.Nonnull final GetByIdsPostRequestBody body) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, null);
             return this.requestAdapter.sendAsync(requestInfo, GetByIdsResponse::createFromDiscriminatorValue, null, null);
@@ -99,7 +99,7 @@ public class GetByIdsRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of getByIdsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetByIdsResponse> post(@javax.annotation.Nonnull final GetByIdsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetByIdsRequestBuilderPostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetByIdsResponse> post(@javax.annotation.Nonnull final GetByIdsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetByIdsRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
             return this.requestAdapter.sendAsync(requestInfo, GetByIdsResponse::createFromDiscriminatorValue, null, null);
@@ -114,7 +114,7 @@ public class GetByIdsRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of getByIdsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetByIdsResponse> post(@javax.annotation.Nonnull final GetByIdsRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetByIdsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<GetByIdsResponse> post(@javax.annotation.Nonnull final GetByIdsPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetByIdsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);

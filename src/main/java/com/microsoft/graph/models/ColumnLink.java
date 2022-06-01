@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class ColumnLink extends Entity implements Parsable {
     /** The name of the column  in this content type. */
     private String _name;

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityGovernance singleton. */
 public class AccessReviewSet extends Entity implements Parsable {
     /** Represents the template and scheduling for an access review. */
     private java.util.List<AccessReviewScheduleDefinition> _definitions;

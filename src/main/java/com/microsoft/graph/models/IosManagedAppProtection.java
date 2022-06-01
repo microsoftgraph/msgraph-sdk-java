@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Policy used to configure detailed management settings targeted to specific security groups and for a specified set of apps on an iOS device */
 public class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /** Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked. */
     private ManagedAppDataEncryptionType _appDataEncryptionType;

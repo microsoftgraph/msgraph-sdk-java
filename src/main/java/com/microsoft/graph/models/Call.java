@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the cloudCommunications singleton. */
 public class Call extends Entity implements Parsable {
     /** Read-only. Nullable. */
     private java.util.List<AudioRoutingGroup> _audioRoutingGroups;
@@ -37,7 +38,7 @@ public class Call extends Entity implements Parsable {
     /** Read-only. Nullable. */
     private java.util.List<Participant> _participants;
     /** The requestedModalities property */
-    private java.util.List<Modality> _requestedModalities;
+    private java.util.List<String> _requestedModalities;
     /** The resultInfo property */
     private ResultInfo _resultInfo;
     /** The source property */
@@ -149,7 +150,7 @@ public class Call extends Entity implements Parsable {
             this.put("myParticipantId", (n) -> { currentObject.setMyParticipantId(n.getStringValue()); });
             this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(CommsOperation::createFromDiscriminatorValue)); });
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
-            this.put("requestedModalities", (n) -> { currentObject.setRequestedModalities(n.getCollectionOfEnumValues(Modality.class)); });
+            this.put("requestedModalities", (n) -> { currentObject.setRequestedModalities(n.getCollectionOfPrimitiveValues(String.class)); });
             this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
             this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
             this.put("state", (n) -> { currentObject.setState(n.getEnumValue(CallState.class)); });
@@ -218,10 +219,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the requestedModalities property value. The requestedModalities property
-     * @return a modality
+     * @return a string
      */
     @javax.annotation.Nullable
-    public java.util.List<Modality> getRequestedModalities() {
+    public java.util.List<String> getRequestedModalities() {
         return this._requestedModalities;
     }
     /**
@@ -310,7 +311,7 @@ public class Call extends Entity implements Parsable {
         writer.writeStringValue("myParticipantId", this.getMyParticipantId());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
-        writer.writeCollectionOfEnumValues("requestedModalities", this.getRequestedModalities());
+        writer.writeCollectionOfPrimitiveValues("requestedModalities", this.getRequestedModalities());
         writer.writeObjectValue("resultInfo", this.getResultInfo());
         writer.writeObjectValue("source", this.getSource());
         writer.writeEnumValue("state", this.getState());
@@ -437,7 +438,7 @@ public class Call extends Entity implements Parsable {
      * @param value Value to set for the requestedModalities property.
      * @return a void
      */
-    public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<Modality> value) {
+    public void setRequestedModalities(@javax.annotation.Nullable final java.util.List<String> value) {
         this._requestedModalities = value;
     }
     /**

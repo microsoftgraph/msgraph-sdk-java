@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.Entity;
+/** Casts the previous resource to user. */
 public class Relation extends Entity implements Parsable {
     /** The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set]. */
     private Term _fromTerm;

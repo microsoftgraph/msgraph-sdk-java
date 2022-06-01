@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Casts the previous resource to user. */
 public class TimeOffItem extends ScheduleEntity implements Parsable {
     /** ID of the timeOffReason for this timeOffItem. Required. */
     private String _timeOffReasonId;

@@ -77,7 +77,7 @@ public class OrganizationRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * List organization
+     * Retrieve a list of organization objects.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -85,7 +85,7 @@ public class OrganizationRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * List organization
+     * Retrieve a list of organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -138,7 +138,7 @@ public class OrganizationRequestBuilder {
         return requestInfo;
     }
     /**
-     * List organization
+     * Retrieve a list of organization objects.
      * @return a CompletableFuture of OrganizationCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<OrganizationCollectionResponse> get() {
@@ -154,7 +154,7 @@ public class OrganizationRequestBuilder {
         }
     }
     /**
-     * List organization
+     * Retrieve a list of organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of OrganizationCollectionResponse
      */
@@ -171,7 +171,7 @@ public class OrganizationRequestBuilder {
         }
     }
     /**
-     * List organization
+     * Retrieve a list of organization objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of OrganizationCollectionResponse
@@ -243,7 +243,7 @@ public class OrganizationRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** List organization */
+    /** Retrieve a list of organization objects. */
     public class OrganizationRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

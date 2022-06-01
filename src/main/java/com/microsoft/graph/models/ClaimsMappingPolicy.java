@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to call the instantiate method. */
 public class ClaimsMappingPolicy extends StsPolicy implements Parsable {
     /**
      * Instantiates a new claimsMappingPolicy and sets the default values.

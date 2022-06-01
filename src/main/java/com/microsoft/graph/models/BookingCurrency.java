@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the solutionsRoot singleton. */
 public class BookingCurrency extends Entity implements Parsable {
     /** The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $. */
     private String _symbol;

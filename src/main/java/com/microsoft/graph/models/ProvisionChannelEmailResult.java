@@ -14,7 +14,7 @@ public class ProvisionChannelEmailResult implements AdditionalDataHolder, Parsab
     /** Represents the provisioned email address. */
     private String _email;
     /**
-     * Instantiates a new provisionChannelEmailResult and sets the default values.
+     * Instantiates a new ProvisionChannelEmailResult and sets the default values.
      * @return a void
      */
     public ProvisionChannelEmailResult() {
@@ -23,7 +23,7 @@ public class ProvisionChannelEmailResult implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a provisionChannelEmailResult
+     * @return a ProvisionChannelEmailResult
      */
     @javax.annotation.Nonnull
     public static ProvisionChannelEmailResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

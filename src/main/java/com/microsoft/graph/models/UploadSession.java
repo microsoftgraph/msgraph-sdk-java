@@ -19,7 +19,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     /** The URL endpoint that accepts PUT requests for byte ranges of the file. */
     private String _uploadUrl;
     /**
-     * Instantiates a new uploadSession and sets the default values.
+     * Instantiates a new UploadSession and sets the default values.
      * @return a void
      */
     public UploadSession() {
@@ -28,7 +28,7 @@ public class UploadSession implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a uploadSession
+     * @return a UploadSession
      */
     @javax.annotation.Nonnull
     public static UploadSession createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

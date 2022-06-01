@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the privacy singleton. */
 public class SubjectRightsRequest extends Entity implements Parsable {
     /** Identity that the request is assigned to. */
     private Identity _assignedTo;
@@ -35,13 +36,13 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     private IdentitySet _lastModifiedBy;
     /** The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** List of notes associcated with the request. */
+    /** List of notes associated with the request. */
     private java.util.List<AuthoredNote> _notes;
     /** List of regulations that this request will fulfill. */
     private java.util.List<String> _regulations;
     /** Information about the different stages for the request. */
     private java.util.List<SubjectRightsRequestStageDetail> _stages;
-    /** The status of the request.. Possible values are: active, closed, unknownFutureValue. */
+    /** The status of the request. Possible values are: active, closed, unknownFutureValue. */
     private SubjectRightsRequestStatus _status;
     /** Information about the Microsoft Teams team that was created for the request. */
     private Team _team;
@@ -198,7 +199,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the notes property value. List of notes associcated with the request.
+     * Gets the notes property value. List of notes associated with the request.
      * @return a authoredNote
      */
     @javax.annotation.Nullable
@@ -222,7 +223,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._stages;
     }
     /**
-     * Gets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @return a subjectRightsRequestStatus
      */
     @javax.annotation.Nullable
@@ -378,7 +379,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the notes property value. List of notes associcated with the request.
+     * Sets the notes property value. List of notes associated with the request.
      * @param value Value to set for the notes property.
      * @return a void
      */
@@ -402,7 +403,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         this._stages = value;
     }
     /**
-     * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
+     * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */

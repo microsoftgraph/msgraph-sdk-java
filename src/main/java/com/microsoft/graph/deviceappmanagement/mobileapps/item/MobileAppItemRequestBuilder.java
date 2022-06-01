@@ -19,6 +19,8 @@ import microsoft.graph.deviceappmanagement.mobileapps.item.assignments.Assignmen
 import microsoft.graph.deviceappmanagement.mobileapps.item.assignments.item.MobileAppAssignmentItemRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.categories.CategoriesRequestBuilder;
 import microsoft.graph.deviceappmanagement.mobileapps.item.categories.item.MobileAppCategoryItemRequestBuilder;
+import microsoft.graph.deviceappmanagement.mobileapps.item.managedmobilelobapp.ManagedMobileLobAppRequestBuilder;
+import microsoft.graph.deviceappmanagement.mobileapps.item.mobilelobapp.MobileLobAppRequestBuilder;
 import microsoft.graph.models.MobileApp;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity. */
@@ -37,6 +39,16 @@ public class MobileAppItemRequestBuilder {
     @javax.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
         return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The managedMobileLobApp property */
+    @javax.annotation.Nonnull
+    public ManagedMobileLobAppRequestBuilder managedMobileLobApp() {
+        return new ManagedMobileLobAppRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The mobileLobApp property */
+    @javax.annotation.Nonnull
+    public MobileLobAppRequestBuilder mobileLobApp() {
+        return new MobileLobAppRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;

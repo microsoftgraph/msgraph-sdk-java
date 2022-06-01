@@ -34,7 +34,7 @@ public class GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/reports/microsoft.graph.getSkypeForBusinessPeerToPeerActivityCounts(period='{period}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", period);
+        urlTplParams.put("period", period);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

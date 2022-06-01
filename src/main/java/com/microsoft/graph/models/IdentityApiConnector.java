@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the identityContainer singleton. */
 public class IdentityApiConnector extends Entity implements Parsable {
     /** The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported. */
     private ApiAuthenticationConfigurationBase _authenticationConfiguration;

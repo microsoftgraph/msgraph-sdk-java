@@ -33,7 +33,7 @@ public class GetEffectivePermissionsWithScopeRequestBuilder {
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/deviceManagement/microsoft.graph.getEffectivePermissions(scope='{scope}')";
         var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("", scope);
+        urlTplParams.put("scope", scope);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }

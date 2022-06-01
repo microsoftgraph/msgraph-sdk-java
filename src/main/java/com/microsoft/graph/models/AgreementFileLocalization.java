@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of agreement entities. */
 public class AgreementFileLocalization extends AgreementFileProperties implements Parsable {
     /** Read-only. Customized versions of the terms of use agreement in the Azure AD tenant. */
     private java.util.List<AgreementFileVersion> _versions;

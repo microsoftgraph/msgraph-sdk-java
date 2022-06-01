@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the educationRoot singleton. */
 public class EducationClass extends Entity implements Parsable {
     /** All categories associated with this class. Nullable. */
     private java.util.List<EducationCategory> _assignmentCategories;

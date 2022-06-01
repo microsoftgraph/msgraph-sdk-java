@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.education.classes.item.assignments.item.categories.count.CountRequestBuilder;
 import microsoft.graph.education.classes.item.assignments.item.categories.delta.DeltaRequestBuilder;
+import microsoft.graph.education.classes.item.assignments.item.categories.ref.RefRequestBuilder;
 import microsoft.graph.models.EducationCategory;
 import microsoft.graph.models.EducationCategoryCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -28,6 +29,11 @@ public class CategoriesRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

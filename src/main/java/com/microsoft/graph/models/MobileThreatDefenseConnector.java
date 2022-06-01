@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity which represents a connection to Mobile threat defense partner. */
 public class MobileThreatDefenseConnector extends Entity implements Parsable {
     /** For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant */
     private Boolean _androidDeviceBlockedOnMissingPartnerData;
