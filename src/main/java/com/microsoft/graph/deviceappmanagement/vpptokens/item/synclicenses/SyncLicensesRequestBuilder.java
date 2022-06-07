@@ -69,6 +69,7 @@ public class SyncLicensesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SyncLicensesRequestBuilderPostRequestConfiguration requestConfig = new SyncLicensesRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

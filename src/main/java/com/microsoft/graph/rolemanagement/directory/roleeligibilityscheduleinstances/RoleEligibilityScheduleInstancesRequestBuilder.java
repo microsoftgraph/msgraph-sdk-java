@@ -79,6 +79,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration requestConfig = new RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class RoleEligibilityScheduleInstancesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RoleEligibilityScheduleInstancesRequestBuilderPostRequestConfiguration requestConfig = new RoleEligibilityScheduleInstancesRequestBuilderPostRequestConfiguration();

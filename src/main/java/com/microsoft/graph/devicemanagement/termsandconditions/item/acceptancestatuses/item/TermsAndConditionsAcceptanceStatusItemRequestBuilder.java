@@ -105,6 +105,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TermsAndConditionsAcceptanceStatusItemRequestBuilderGetRequestConfiguration requestConfig = new TermsAndConditionsAcceptanceStatusItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class SignInItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SignInItemRequestBuilderGetRequestConfiguration requestConfig = new SignInItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

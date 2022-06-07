@@ -99,6 +99,7 @@ public class AgreementFileVersionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AgreementFileVersionItemRequestBuilderGetRequestConfiguration requestConfig = new AgreementFileVersionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

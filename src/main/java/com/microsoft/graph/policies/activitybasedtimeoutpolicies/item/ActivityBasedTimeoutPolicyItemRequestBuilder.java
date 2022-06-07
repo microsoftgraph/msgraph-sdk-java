@@ -99,6 +99,7 @@ public class ActivityBasedTimeoutPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

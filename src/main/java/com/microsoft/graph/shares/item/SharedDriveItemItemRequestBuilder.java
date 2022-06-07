@@ -142,6 +142,7 @@ public class SharedDriveItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SharedDriveItemItemRequestBuilderGetRequestConfiguration requestConfig = new SharedDriveItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class SecureScoreItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SecureScoreItemRequestBuilderGetRequestConfiguration requestConfig = new SecureScoreItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

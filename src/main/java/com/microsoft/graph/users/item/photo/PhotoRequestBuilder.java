@@ -105,6 +105,7 @@ public class PhotoRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PhotoRequestBuilderGetRequestConfiguration requestConfig = new PhotoRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

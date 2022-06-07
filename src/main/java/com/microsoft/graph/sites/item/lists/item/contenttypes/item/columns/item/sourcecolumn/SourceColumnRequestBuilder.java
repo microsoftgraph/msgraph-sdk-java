@@ -71,6 +71,7 @@ public class SourceColumnRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SourceColumnRequestBuilderGetRequestConfiguration requestConfig = new SourceColumnRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

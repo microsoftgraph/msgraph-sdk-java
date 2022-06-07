@@ -99,6 +99,7 @@ public class ResourceSpecificPermissionGrantItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration requestConfig = new ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

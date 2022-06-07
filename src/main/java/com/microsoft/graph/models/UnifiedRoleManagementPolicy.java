@@ -14,17 +14,17 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     private String _description;
     /** Display name for the policy. */
     private String _displayName;
-    /** Not implemented. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. */
+    /** The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand. */
     private java.util.List<UnifiedRoleManagementPolicyRule> _effectiveRules;
-    /** This can only be set to true for a single tenant wide policy which will apply to all scopes and roles. Set the scopeId to '/' and scopeType to Directory. */
+    /** This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne). */
     private Boolean _isOrganizationDefault;
     /** The identity who last modified the role setting. */
     private Identity _lastModifiedBy;
     /** The time when the role setting was last modified. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** The collection of rules like approval rules and expiration rules. */
+    /** The collection of rules like approval rules and expiration rules. Supports $expand. */
     private java.util.List<UnifiedRoleManagementPolicyRule> _rules;
-    /** The id of the scope where the policy is created. Can be / for the tenant or a group ID. Required. */
+    /** The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required. */
     private String _scopeId;
     /** The type of the scope where the policy is created. One of Directory, DirectoryRole. Required. */
     private String _scopeType;
@@ -62,7 +62,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the effectiveRules property value. Not implemented. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval.
+     * Gets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
      * @return a unifiedRoleManagementPolicyRule
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the isOrganizationDefault property value. This can only be set to true for a single tenant wide policy which will apply to all scopes and roles. Set the scopeId to '/' and scopeType to Directory.
+     * Gets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -113,7 +113,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the rules property value. The collection of rules like approval rules and expiration rules.
+     * Gets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
      * @return a unifiedRoleManagementPolicyRule
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
         return this._rules;
     }
     /**
-     * Gets the scopeId property value. The id of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
+     * Gets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the effectiveRules property value. Not implemented. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval.
+     * Sets the effectiveRules property value. The list of effective rules like approval rules and expiration rules evaluated based on inherited referenced rules. For example, if there is a tenant-wide policy to enforce enabling an approval rule, the effective rule will be to enable approval even if the policy has a rule to disable approval. Supports $expand.
      * @param value Value to set for the effectiveRules property.
      * @return a void
      */
@@ -179,7 +179,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
         this._effectiveRules = value;
     }
     /**
-     * Sets the isOrganizationDefault property value. This can only be set to true for a single tenant wide policy which will apply to all scopes and roles. Set the scopeId to '/' and scopeType to Directory.
+     * Sets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
      * @param value Value to set for the isOrganizationDefault property.
      * @return a void
      */
@@ -203,7 +203,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the rules property value. The collection of rules like approval rules and expiration rules.
+     * Sets the rules property value. The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param value Value to set for the rules property.
      * @return a void
      */
@@ -211,7 +211,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
         this._rules = value;
     }
     /**
-     * Sets the scopeId property value. The id of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
+     * Sets the scopeId property value. The identifier of the scope where the policy is created. Can be / for the tenant or a group ID. Required.
      * @param value Value to set for the scopeId property.
      * @return a void
      */

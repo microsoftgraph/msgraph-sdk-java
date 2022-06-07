@@ -173,6 +173,7 @@ public class CalendarItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CalendarItemRequestBuilderGetRequestConfiguration requestConfig = new CalendarItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

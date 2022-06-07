@@ -99,6 +99,7 @@ public class DeviceManagementTroubleshootingEventItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

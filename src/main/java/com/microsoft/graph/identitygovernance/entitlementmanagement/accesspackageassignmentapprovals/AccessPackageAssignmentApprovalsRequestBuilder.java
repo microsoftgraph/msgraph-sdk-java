@@ -79,6 +79,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessPackageAssignmentApprovalsRequestBuilderGetRequestConfiguration requestConfig = new AccessPackageAssignmentApprovalsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration requestConfig = new AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration();

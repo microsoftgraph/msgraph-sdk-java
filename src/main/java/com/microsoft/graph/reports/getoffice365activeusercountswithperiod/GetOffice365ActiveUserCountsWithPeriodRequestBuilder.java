@@ -71,6 +71,7 @@ public class GetOffice365ActiveUserCountsWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365ActiveUserCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365ActiveUserCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

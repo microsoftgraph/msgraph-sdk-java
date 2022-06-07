@@ -99,6 +99,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration requestConfig = new IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -13,6 +13,8 @@ import java.util.Objects;
 public class MediaStream implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRTA, unknownFutureValue. */
+    private AudioCodec _audioCodec;
     /** Average Network Mean Opinion Score degradation for stream. Represents how much the network loss and jitter has impacted the quality of received audio. */
     private Float _averageAudioDegradation;
     /** Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator. */
@@ -61,6 +63,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private MediaStreamDirection _streamDirection;
     /** Unique identifier for the stream. */
     private String _streamId;
+    /** Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue. */
+    private VideoCodec _videoCodec;
     /** True if the media stream bypassed the Mediation Server and went straight between client and PSTN Gateway/PBX, false otherwise. */
     private Boolean _wasMediaBypassed;
     /**
@@ -87,6 +91,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
         return this._additionalData;
+    }
+    /**
+     * Gets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRTA, unknownFutureValue.
+     * @return a audioCodec
+     */
+    @javax.annotation.Nullable
+    public AudioCodec getAudioCodec() {
+        return this._audioCodec;
     }
     /**
      * Gets the averageAudioDegradation property value. Average Network Mean Opinion Score degradation for stream. Represents how much the network loss and jitter has impacted the quality of received audio.
@@ -191,7 +203,8 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<>(25) {{
+        return new HashMap<>(27) {{
+            this.put("audioCodec", (n) -> { currentObject.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
             this.put("averageAudioDegradation", (n) -> { currentObject.setAverageAudioDegradation(n.getFloatValue()); });
             this.put("averageAudioNetworkJitter", (n) -> { currentObject.setAverageAudioNetworkJitter(n.getPeriodValue()); });
             this.put("averageBandwidthEstimate", (n) -> { currentObject.setAverageBandwidthEstimate(n.getLongValue()); });
@@ -216,6 +229,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("streamDirection", (n) -> { currentObject.setStreamDirection(n.getEnumValue(MediaStreamDirection.class)); });
             this.put("streamId", (n) -> { currentObject.setStreamId(n.getStringValue()); });
+            this.put("videoCodec", (n) -> { currentObject.setVideoCodec(n.getEnumValue(VideoCodec.class)); });
             this.put("wasMediaBypassed", (n) -> { currentObject.setWasMediaBypassed(n.getBooleanValue()); });
         }};
     }
@@ -316,6 +330,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         return this._streamId;
     }
     /**
+     * Gets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
+     * @return a videoCodec
+     */
+    @javax.annotation.Nullable
+    public VideoCodec getVideoCodec() {
+        return this._videoCodec;
+    }
+    /**
      * Gets the wasMediaBypassed property value. True if the media stream bypassed the Mediation Server and went straight between client and PSTN Gateway/PBX, false otherwise.
      * @return a boolean
      */
@@ -330,6 +352,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("audioCodec", this.getAudioCodec());
         writer.writeFloatValue("averageAudioDegradation", this.getAverageAudioDegradation());
         writer.writePeriodValue("averageAudioNetworkJitter", this.getAverageAudioNetworkJitter());
         writer.writeLongValue("averageBandwidthEstimate", this.getAverageBandwidthEstimate());
@@ -354,6 +377,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("streamDirection", this.getStreamDirection());
         writer.writeStringValue("streamId", this.getStreamId());
+        writer.writeEnumValue("videoCodec", this.getVideoCodec());
         writer.writeBooleanValue("wasMediaBypassed", this.getWasMediaBypassed());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -364,6 +388,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRTA, unknownFutureValue.
+     * @param value Value to set for the audioCodec property.
+     * @return a void
+     */
+    public void setAudioCodec(@javax.annotation.Nullable final AudioCodec value) {
+        this._audioCodec = value;
     }
     /**
      * Sets the averageAudioDegradation property value. Average Network Mean Opinion Score degradation for stream. Represents how much the network loss and jitter has impacted the quality of received audio.
@@ -556,6 +588,14 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      */
     public void setStreamId(@javax.annotation.Nullable final String value) {
         this._streamId = value;
+    }
+    /**
+     * Sets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
+     * @param value Value to set for the videoCodec property.
+     * @return a void
+     */
+    public void setVideoCodec(@javax.annotation.Nullable final VideoCodec value) {
+        this._videoCodec = value;
     }
     /**
      * Sets the wasMediaBypassed property value. True if the media stream bypassed the Mediation Server and went straight between client and PSTN Gateway/PBX, false otherwise.

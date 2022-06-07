@@ -68,6 +68,7 @@ public class GetManagedAppDiagnosticStatusesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration requestConfig = new GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

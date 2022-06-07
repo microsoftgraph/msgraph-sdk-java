@@ -71,6 +71,7 @@ public class DefinitionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DefinitionRequestBuilderGetRequestConfiguration requestConfig = new DefinitionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class OnenoteOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnenoteOperationItemRequestBuilderGetRequestConfiguration requestConfig = new OnenoteOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

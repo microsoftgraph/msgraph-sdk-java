@@ -72,6 +72,7 @@ public class InviteRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final InviteRequestBuilderPostRequestConfiguration requestConfig = new InviteRequestBuilderPostRequestConfiguration();

@@ -99,6 +99,7 @@ public class SchemaRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SchemaRequestBuilderGetRequestConfiguration requestConfig = new SchemaRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

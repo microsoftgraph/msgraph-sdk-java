@@ -105,6 +105,7 @@ public class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

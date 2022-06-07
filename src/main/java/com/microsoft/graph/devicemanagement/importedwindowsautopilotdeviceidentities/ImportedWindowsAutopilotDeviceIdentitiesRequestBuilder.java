@@ -84,6 +84,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration requestConfig = new ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +117,7 @@ public class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration requestConfig = new ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration();

@@ -85,6 +85,7 @@ public class NotebooksRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NotebooksRequestBuilderGetRequestConfiguration requestConfig = new NotebooksRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -117,6 +118,7 @@ public class NotebooksRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final NotebooksRequestBuilderPostRequestConfiguration requestConfig = new NotebooksRequestBuilderPostRequestConfiguration();

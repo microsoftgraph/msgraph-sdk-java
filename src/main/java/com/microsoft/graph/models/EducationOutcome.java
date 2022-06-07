@@ -12,7 +12,7 @@ import java.util.Objects;
 public class EducationOutcome extends Entity implements Parsable {
     /** The individual who updated the resource. */
     private IdentitySet _lastModifiedBy;
-    /** Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. */
+    /** Moment in time when the resource was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z. */
     private OffsetDateTime _lastModifiedDateTime;
     /**
      * Instantiates a new educationOutcome and sets the default values.
@@ -59,7 +59,7 @@ public class EducationOutcome extends Entity implements Parsable {
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
+     * Gets the lastModifiedDateTime property value. Moment in time when the resource was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class EducationOutcome extends Entity implements Parsable {
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
+     * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */

@@ -202,6 +202,7 @@ public class ReportsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ReportsRequestBuilderGetRequestConfiguration requestConfig = new ReportsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

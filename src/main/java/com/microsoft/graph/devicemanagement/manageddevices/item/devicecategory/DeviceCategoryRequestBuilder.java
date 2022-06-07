@@ -99,6 +99,7 @@ public class DeviceCategoryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceCategoryRequestBuilderGetRequestConfiguration requestConfig = new DeviceCategoryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

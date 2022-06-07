@@ -52,7 +52,7 @@ public class TargetScheduleRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Property indicating the schedule for an eligible role assignment.
+     * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class TargetScheduleRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Property indicating the schedule for an eligible role assignment.
+     * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -71,6 +71,7 @@ public class TargetScheduleRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TargetScheduleRequestBuilderGetRequestConfiguration requestConfig = new TargetScheduleRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -81,7 +82,7 @@ public class TargetScheduleRequestBuilder {
         return requestInfo;
     }
     /**
-     * Property indicating the schedule for an eligible role assignment.
+     * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
      * @return a CompletableFuture of unifiedRoleAssignmentSchedule
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignmentSchedule> get() {
@@ -97,7 +98,7 @@ public class TargetScheduleRequestBuilder {
         }
     }
     /**
-     * Property indicating the schedule for an eligible role assignment.
+     * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleAssignmentSchedule
      */
@@ -114,7 +115,7 @@ public class TargetScheduleRequestBuilder {
         }
     }
     /**
-     * Property indicating the schedule for an eligible role assignment.
+     * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleAssignmentSchedule
@@ -131,7 +132,7 @@ public class TargetScheduleRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Property indicating the schedule for an eligible role assignment. */
+    /** The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand. */
     public class TargetScheduleRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

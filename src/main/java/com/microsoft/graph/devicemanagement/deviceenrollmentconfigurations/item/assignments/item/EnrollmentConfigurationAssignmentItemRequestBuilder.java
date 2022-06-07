@@ -99,6 +99,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

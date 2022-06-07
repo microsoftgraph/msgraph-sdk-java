@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the instantiate method. */
+/** Provides operations to manage the collection of application entities. */
 public class DirectoryObject extends Entity implements Parsable {
     /** Date and time when this object was deleted. Always null when the object hasn't been deleted. */
     private OffsetDateTime _deletedDateTime;

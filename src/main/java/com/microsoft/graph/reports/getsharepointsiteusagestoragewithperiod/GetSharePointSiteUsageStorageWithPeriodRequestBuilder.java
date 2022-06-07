@@ -71,6 +71,7 @@ public class GetSharePointSiteUsageStorageWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSharePointSiteUsageStorageWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetSharePointSiteUsageStorageWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

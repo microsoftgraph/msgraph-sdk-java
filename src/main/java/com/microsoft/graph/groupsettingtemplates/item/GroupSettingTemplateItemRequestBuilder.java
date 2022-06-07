@@ -129,6 +129,7 @@ public class GroupSettingTemplateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupSettingTemplateItemRequestBuilderGetRequestConfiguration requestConfig = new GroupSettingTemplateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

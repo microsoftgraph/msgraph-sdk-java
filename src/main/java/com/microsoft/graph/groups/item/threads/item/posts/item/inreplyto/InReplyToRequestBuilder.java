@@ -151,6 +151,7 @@ public class InReplyToRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InReplyToRequestBuilderGetRequestConfiguration requestConfig = new InReplyToRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -69,6 +69,7 @@ public class VerifyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final VerifyRequestBuilderPostRequestConfiguration requestConfig = new VerifyRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -78,6 +78,7 @@ public class ScheduledActionsForRuleRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ScheduledActionsForRuleRequestBuilderGetRequestConfiguration requestConfig = new ScheduledActionsForRuleRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ScheduledActionsForRuleRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ScheduledActionsForRuleRequestBuilderPostRequestConfiguration requestConfig = new ScheduledActionsForRuleRequestBuilderPostRequestConfiguration();

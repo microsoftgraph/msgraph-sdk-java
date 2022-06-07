@@ -68,6 +68,7 @@ public class AvailableProviderTypesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AvailableProviderTypesRequestBuilderGetRequestConfiguration requestConfig = new AvailableProviderTypesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

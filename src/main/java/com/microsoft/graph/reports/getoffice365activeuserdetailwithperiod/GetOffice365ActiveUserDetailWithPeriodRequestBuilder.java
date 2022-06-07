@@ -71,6 +71,7 @@ public class GetOffice365ActiveUserDetailWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365ActiveUserDetailWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365ActiveUserDetailWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class InternalDomainFederationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InternalDomainFederationItemRequestBuilderGetRequestConfiguration requestConfig = new InternalDomainFederationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

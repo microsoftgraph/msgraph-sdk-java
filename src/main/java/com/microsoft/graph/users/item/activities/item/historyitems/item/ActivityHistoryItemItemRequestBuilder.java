@@ -105,6 +105,7 @@ public class ActivityHistoryItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ActivityHistoryItemItemRequestBuilderGetRequestConfiguration requestConfig = new ActivityHistoryItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

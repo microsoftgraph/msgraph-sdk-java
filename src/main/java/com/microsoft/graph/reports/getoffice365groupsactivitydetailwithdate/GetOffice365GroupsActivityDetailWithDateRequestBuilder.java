@@ -72,6 +72,7 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365GroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365GroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

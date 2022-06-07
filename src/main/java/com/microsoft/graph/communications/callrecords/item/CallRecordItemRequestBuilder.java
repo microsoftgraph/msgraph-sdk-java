@@ -106,6 +106,7 @@ public class CallRecordItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CallRecordItemRequestBuilderGetRequestConfiguration requestConfig = new CallRecordItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

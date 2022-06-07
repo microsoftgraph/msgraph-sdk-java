@@ -113,6 +113,7 @@ public class TermStoreRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TermStoreRequestBuilderGetRequestConfiguration requestConfig = new TermStoreRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

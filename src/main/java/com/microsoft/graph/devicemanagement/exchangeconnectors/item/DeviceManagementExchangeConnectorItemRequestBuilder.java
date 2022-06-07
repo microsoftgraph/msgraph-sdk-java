@@ -105,6 +105,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

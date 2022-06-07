@@ -210,6 +210,7 @@ public class CallItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CallItemRequestBuilderGetRequestConfiguration requestConfig = new CallItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

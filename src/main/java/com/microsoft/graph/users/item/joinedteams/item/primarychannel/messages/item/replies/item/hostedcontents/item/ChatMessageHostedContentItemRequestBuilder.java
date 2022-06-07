@@ -99,6 +99,7 @@ public class ChatMessageHostedContentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration requestConfig = new ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

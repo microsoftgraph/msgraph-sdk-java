@@ -99,6 +99,7 @@ public class DeviceComplianceDeviceStatusItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceComplianceDeviceStatusItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceComplianceDeviceStatusItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

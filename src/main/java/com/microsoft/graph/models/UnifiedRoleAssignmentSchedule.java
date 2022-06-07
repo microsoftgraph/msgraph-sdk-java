@@ -9,13 +9,13 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the roleManagement singleton. */
 public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase implements Parsable {
-    /** If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule. */
+    /** If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand. */
     private UnifiedRoleEligibilitySchedule _activatedUsing;
-    /** Type of the assignment. It can either be Assigned or Activated. */
+    /** Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne). */
     private String _assignmentType;
-    /** Membership type of the assignment. It can either be Inherited, Direct, or Group. */
+    /** How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne). */
     private String _memberType;
-    /** The schedule object of the role assignment request. */
+    /** The period of the role assignment. It can represent a single occurrence or multiple recurrences. */
     private RequestSchedule _scheduleInfo;
     /**
      * Instantiates a new unifiedRoleAssignmentSchedule and sets the default values.
@@ -35,7 +35,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         return new UnifiedRoleAssignmentSchedule();
     }
     /**
-     * Gets the activatedUsing property value. If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
+     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @return a unifiedRoleEligibilitySchedule
      */
     @javax.annotation.Nullable
@@ -43,7 +43,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         return this._activatedUsing;
     }
     /**
-     * Gets the assignmentType property value. Type of the assignment. It can either be Assigned or Activated.
+     * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         }};
     }
     /**
-     * Gets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * Gets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         return this._memberType;
     }
     /**
-     * Gets the scheduleInfo property value. The schedule object of the role assignment request.
+     * Gets the scheduleInfo property value. The period of the role assignment. It can represent a single occurrence or multiple recurrences.
      * @return a requestSchedule
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         writer.writeObjectValue("scheduleInfo", this.getScheduleInfo());
     }
     /**
-     * Sets the activatedUsing property value. If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
+     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @param value Value to set for the activatedUsing property.
      * @return a void
      */
@@ -102,7 +102,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         this._activatedUsing = value;
     }
     /**
-     * Sets the assignmentType property value. Type of the assignment. It can either be Assigned or Activated.
+     * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @param value Value to set for the assignmentType property.
      * @return a void
      */
@@ -110,7 +110,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         this._assignmentType = value;
     }
     /**
-     * Sets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
         this._memberType = value;
     }
     /**
-     * Sets the scheduleInfo property value. The schedule object of the role assignment request.
+     * Sets the scheduleInfo property value. The period of the role assignment. It can represent a single occurrence or multiple recurrences.
      * @param value Value to set for the scheduleInfo property.
      * @return a void
      */

@@ -105,6 +105,7 @@ public class PrintTaskTriggerItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrintTaskTriggerItemRequestBuilderGetRequestConfiguration requestConfig = new PrintTaskTriggerItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

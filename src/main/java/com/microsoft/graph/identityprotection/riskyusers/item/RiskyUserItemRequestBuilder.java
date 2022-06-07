@@ -106,6 +106,7 @@ public class RiskyUserItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RiskyUserItemRequestBuilderGetRequestConfiguration requestConfig = new RiskyUserItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

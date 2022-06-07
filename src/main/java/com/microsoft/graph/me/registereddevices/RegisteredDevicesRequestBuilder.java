@@ -95,6 +95,7 @@ public class RegisteredDevicesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RegisteredDevicesRequestBuilderGetRequestConfiguration requestConfig = new RegisteredDevicesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

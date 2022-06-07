@@ -99,6 +99,7 @@ public class OfferShiftRequestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OfferShiftRequestItemRequestBuilderGetRequestConfiguration requestConfig = new OfferShiftRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class ColumnDefinitionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ColumnDefinitionItemRequestBuilderGetRequestConfiguration requestConfig = new ColumnDefinitionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class AppScopeRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppScopeRequestBuilderGetRequestConfiguration requestConfig = new AppScopeRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

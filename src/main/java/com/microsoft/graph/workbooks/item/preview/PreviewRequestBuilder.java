@@ -72,6 +72,7 @@ public class PreviewRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PreviewRequestBuilderPostRequestConfiguration requestConfig = new PreviewRequestBuilderPostRequestConfiguration();

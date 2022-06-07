@@ -99,6 +99,7 @@ public class TimeOffRequestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TimeOffRequestItemRequestBuilderGetRequestConfiguration requestConfig = new TimeOffRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

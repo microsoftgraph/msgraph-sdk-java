@@ -137,6 +137,7 @@ public class DomainItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DomainItemRequestBuilderGetRequestConfiguration requestConfig = new DomainItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

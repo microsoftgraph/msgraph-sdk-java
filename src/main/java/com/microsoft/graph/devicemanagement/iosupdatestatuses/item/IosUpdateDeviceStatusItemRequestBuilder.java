@@ -99,6 +99,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration requestConfig = new IosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

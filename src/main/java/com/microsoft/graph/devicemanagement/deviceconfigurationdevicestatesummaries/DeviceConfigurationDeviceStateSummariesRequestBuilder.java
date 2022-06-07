@@ -99,6 +99,7 @@ public class DeviceConfigurationDeviceStateSummariesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceConfigurationDeviceStateSummariesRequestBuilderGetRequestConfiguration requestConfig = new DeviceConfigurationDeviceStateSummariesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

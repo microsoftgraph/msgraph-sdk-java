@@ -77,6 +77,7 @@ public class ExternalColumnsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExternalColumnsRequestBuilderGetRequestConfiguration requestConfig = new ExternalColumnsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

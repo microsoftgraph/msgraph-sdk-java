@@ -99,6 +99,7 @@ public class PrintServiceEndpointItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrintServiceEndpointItemRequestBuilderGetRequestConfiguration requestConfig = new PrintServiceEndpointItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

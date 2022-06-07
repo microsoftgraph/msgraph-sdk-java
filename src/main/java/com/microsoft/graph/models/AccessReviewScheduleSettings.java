@@ -15,6 +15,8 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     private java.util.List<AccessReviewApplyAction> _applyActions;
     /** Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false. */
     private Boolean _autoApplyDecisionsEnabled;
+    /** Indicates whether decisions on previous access review stages are available for reviewers on an accessReviewInstance with multiple subsequent stages. If not provided, the default is disabled (false). */
+    private Boolean _decisionHistoriesForReviewersEnabled;
     /** Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation. */
     private String _defaultDecision;
     /** Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false. */
@@ -73,6 +75,14 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         return this._autoApplyDecisionsEnabled;
     }
     /**
+     * Gets the decisionHistoriesForReviewersEnabled property value. Indicates whether decisions on previous access review stages are available for reviewers on an accessReviewInstance with multiple subsequent stages. If not provided, the default is disabled (false).
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getDecisionHistoriesForReviewersEnabled() {
+        return this._decisionHistoriesForReviewersEnabled;
+    }
+    /**
      * Gets the defaultDecision property value. Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
      * @return a string
      */
@@ -95,9 +105,10 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewScheduleSettings currentObject = this;
-        return new HashMap<>(10) {{
+        return new HashMap<>(11) {{
             this.put("applyActions", (n) -> { currentObject.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
             this.put("autoApplyDecisionsEnabled", (n) -> { currentObject.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
+            this.put("decisionHistoriesForReviewersEnabled", (n) -> { currentObject.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
             this.put("defaultDecision", (n) -> { currentObject.setDefaultDecision(n.getStringValue()); });
             this.put("defaultDecisionEnabled", (n) -> { currentObject.setDefaultDecisionEnabled(n.getBooleanValue()); });
             this.put("instanceDurationInDays", (n) -> { currentObject.setInstanceDurationInDays(n.getIntegerValue()); });
@@ -165,6 +176,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("applyActions", this.getApplyActions());
         writer.writeBooleanValue("autoApplyDecisionsEnabled", this.getAutoApplyDecisionsEnabled());
+        writer.writeBooleanValue("decisionHistoriesForReviewersEnabled", this.getDecisionHistoriesForReviewersEnabled());
         writer.writeStringValue("defaultDecision", this.getDefaultDecision());
         writer.writeBooleanValue("defaultDecisionEnabled", this.getDefaultDecisionEnabled());
         writer.writeIntegerValue("instanceDurationInDays", this.getInstanceDurationInDays());
@@ -198,6 +210,14 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     public void setAutoApplyDecisionsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._autoApplyDecisionsEnabled = value;
+    }
+    /**
+     * Sets the decisionHistoriesForReviewersEnabled property value. Indicates whether decisions on previous access review stages are available for reviewers on an accessReviewInstance with multiple subsequent stages. If not provided, the default is disabled (false).
+     * @param value Value to set for the decisionHistoriesForReviewersEnabled property.
+     * @return a void
+     */
+    public void setDecisionHistoriesForReviewersEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._decisionHistoriesForReviewersEnabled = value;
     }
     /**
      * Sets the defaultDecision property value. Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.

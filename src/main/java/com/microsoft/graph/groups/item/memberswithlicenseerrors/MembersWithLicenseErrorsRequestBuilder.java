@@ -113,6 +113,7 @@ public class MembersWithLicenseErrorsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MembersWithLicenseErrorsRequestBuilderGetRequestConfiguration requestConfig = new MembersWithLicenseErrorsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

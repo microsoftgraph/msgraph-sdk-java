@@ -89,6 +89,7 @@ public class DirectReportsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectReportsRequestBuilderGetRequestConfiguration requestConfig = new DirectReportsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

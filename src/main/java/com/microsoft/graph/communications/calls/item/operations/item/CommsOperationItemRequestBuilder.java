@@ -99,6 +99,7 @@ public class CommsOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CommsOperationItemRequestBuilderGetRequestConfiguration requestConfig = new CommsOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

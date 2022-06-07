@@ -71,6 +71,7 @@ public class RefRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RefRequestBuilderGetRequestConfiguration requestConfig = new RefRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -103,6 +104,7 @@ public class RefRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RefRequestBuilderPostRequestConfiguration requestConfig = new RefRequestBuilderPostRequestConfiguration();

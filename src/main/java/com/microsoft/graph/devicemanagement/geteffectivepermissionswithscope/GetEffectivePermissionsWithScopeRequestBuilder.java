@@ -70,6 +70,7 @@ public class GetEffectivePermissionsWithScopeRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration requestConfig = new GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

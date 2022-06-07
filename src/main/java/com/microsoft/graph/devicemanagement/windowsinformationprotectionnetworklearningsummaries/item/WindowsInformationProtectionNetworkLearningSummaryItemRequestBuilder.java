@@ -99,6 +99,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

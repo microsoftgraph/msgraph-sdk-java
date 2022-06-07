@@ -83,6 +83,7 @@ public class AllowedGroupsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AllowedGroupsRequestBuilderGetRequestConfiguration requestConfig = new AllowedGroupsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -130,6 +130,7 @@ public class ManagedAppRegistrationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

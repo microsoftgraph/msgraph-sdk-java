@@ -106,6 +106,7 @@ public class InferenceClassificationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InferenceClassificationRequestBuilderGetRequestConfiguration requestConfig = new InferenceClassificationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

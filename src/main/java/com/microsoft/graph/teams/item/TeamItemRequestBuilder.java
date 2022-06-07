@@ -193,6 +193,7 @@ public class TeamItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamItemRequestBuilderGetRequestConfiguration requestConfig = new TeamItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

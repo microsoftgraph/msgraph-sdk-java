@@ -106,6 +106,7 @@ public class ExternalGroupItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExternalGroupItemRequestBuilderGetRequestConfiguration requestConfig = new ExternalGroupItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

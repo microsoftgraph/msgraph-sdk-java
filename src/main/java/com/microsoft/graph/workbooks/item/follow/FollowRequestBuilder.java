@@ -69,6 +69,7 @@ public class FollowRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FollowRequestBuilderPostRequestConfiguration requestConfig = new FollowRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

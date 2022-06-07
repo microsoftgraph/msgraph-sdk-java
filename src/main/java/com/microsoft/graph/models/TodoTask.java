@@ -14,9 +14,9 @@ public class TodoTask extends Entity implements Parsable {
     private ItemBody _body;
     /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _bodyLastModifiedDateTime;
-    /** The categories property */
+    /** The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined. */
     private java.util.List<String> _categories;
-    /** The checklistItems property */
+    /** A collection of smaller subtasks linked to the more complex parent task. */
     private java.util.List<ChecklistItem> _checklistItems;
     /** The date in the specified time zone that the task was finished. */
     private DateTimeTimeZone _completedDateTime;
@@ -76,7 +76,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._bodyLastModifiedDateTime;
     }
     /**
-     * Gets the categories property value. The categories property
+     * Gets the categories property value. The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._categories;
     }
     /**
-     * Gets the checklistItems property value. The checklistItems property
+     * Gets the checklistItems property value. A collection of smaller subtasks linked to the more complex parent task.
      * @return a checklistItem
      */
     @javax.annotation.Nullable
@@ -255,7 +255,7 @@ public class TodoTask extends Entity implements Parsable {
         this._bodyLastModifiedDateTime = value;
     }
     /**
-     * Sets the categories property value. The categories property
+     * Sets the categories property value. The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      * @param value Value to set for the categories property.
      * @return a void
      */
@@ -263,7 +263,7 @@ public class TodoTask extends Entity implements Parsable {
         this._categories = value;
     }
     /**
-     * Sets the checklistItems property value. The checklistItems property
+     * Sets the checklistItems property value. A collection of smaller subtasks linked to the more complex parent task.
      * @param value Value to set for the checklistItems property.
      * @return a void
      */

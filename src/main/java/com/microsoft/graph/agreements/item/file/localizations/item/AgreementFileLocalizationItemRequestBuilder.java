@@ -106,6 +106,7 @@ public class AgreementFileLocalizationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AgreementFileLocalizationItemRequestBuilderGetRequestConfiguration requestConfig = new AgreementFileLocalizationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

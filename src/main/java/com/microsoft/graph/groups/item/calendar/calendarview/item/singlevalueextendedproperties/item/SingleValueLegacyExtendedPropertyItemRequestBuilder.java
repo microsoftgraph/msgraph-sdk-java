@@ -99,6 +99,7 @@ public class SingleValueLegacyExtendedPropertyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SingleValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration requestConfig = new SingleValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

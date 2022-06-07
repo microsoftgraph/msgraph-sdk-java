@@ -123,6 +123,7 @@ public class PlannerTaskItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PlannerTaskItemRequestBuilderGetRequestConfiguration requestConfig = new PlannerTaskItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

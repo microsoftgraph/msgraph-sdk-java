@@ -99,6 +99,7 @@ public class Fido2AuthenticationMethodItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration requestConfig = new Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

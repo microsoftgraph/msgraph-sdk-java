@@ -99,6 +99,7 @@ public class ConditionalAccessSettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConditionalAccessSettingsRequestBuilderGetRequestConfiguration requestConfig = new ConditionalAccessSettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

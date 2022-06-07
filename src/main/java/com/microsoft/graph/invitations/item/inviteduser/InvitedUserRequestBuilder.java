@@ -71,6 +71,7 @@ public class InvitedUserRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InvitedUserRequestBuilderGetRequestConfiguration requestConfig = new InvitedUserRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

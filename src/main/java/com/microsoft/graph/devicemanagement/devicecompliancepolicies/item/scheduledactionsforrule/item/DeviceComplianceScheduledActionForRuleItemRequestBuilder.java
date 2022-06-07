@@ -106,6 +106,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

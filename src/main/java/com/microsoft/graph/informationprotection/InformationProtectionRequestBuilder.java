@@ -84,6 +84,7 @@ public class InformationProtectionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InformationProtectionRequestBuilderGetRequestConfiguration requestConfig = new InformationProtectionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

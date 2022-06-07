@@ -78,6 +78,7 @@ public class OverridesPagesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OverridesPagesRequestBuilderGetRequestConfiguration requestConfig = new OverridesPagesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class OverridesPagesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final OverridesPagesRequestBuilderPostRequestConfiguration requestConfig = new OverridesPagesRequestBuilderPostRequestConfiguration();

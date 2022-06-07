@@ -99,6 +99,7 @@ public class TargetedManagedAppPolicyAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

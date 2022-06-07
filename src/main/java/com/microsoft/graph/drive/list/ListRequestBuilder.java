@@ -164,6 +164,7 @@ public class ListRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ListRequestBuilderGetRequestConfiguration requestConfig = new ListRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

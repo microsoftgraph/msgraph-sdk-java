@@ -71,6 +71,7 @@ public class ToTermRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ToTermRequestBuilderGetRequestConfiguration requestConfig = new ToTermRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

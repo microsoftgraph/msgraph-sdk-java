@@ -18,6 +18,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Place;
 import microsoft.graph.models.PlaceCollectionResponse;
 import microsoft.graph.places.count.CountRequestBuilder;
+import microsoft.graph.places.room.RoomRequestBuilder;
 /** Provides operations to manage the collection of place entities. */
 public class PlacesRequestBuilder {
     /** The count property */
@@ -29,6 +30,11 @@ public class PlacesRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The room property */
+    @javax.annotation.Nonnull
+    public RoomRequestBuilder room() {
+        return new RoomRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
@@ -78,6 +84,7 @@ public class PlacesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PlacesRequestBuilderGetRequestConfiguration requestConfig = new PlacesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +117,7 @@ public class PlacesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PlacesRequestBuilderPostRequestConfiguration requestConfig = new PlacesRequestBuilderPostRequestConfiguration();

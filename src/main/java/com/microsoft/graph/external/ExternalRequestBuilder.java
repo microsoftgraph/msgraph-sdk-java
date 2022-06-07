@@ -90,6 +90,7 @@ public class ExternalRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExternalRequestBuilderGetRequestConfiguration requestConfig = new ExternalRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

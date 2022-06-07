@@ -111,6 +111,7 @@ public class ConnectedOrganizationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConnectedOrganizationItemRequestBuilderGetRequestConfiguration requestConfig = new ConnectedOrganizationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

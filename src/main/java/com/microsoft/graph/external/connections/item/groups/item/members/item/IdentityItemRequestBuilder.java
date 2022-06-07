@@ -99,6 +99,7 @@ public class IdentityItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IdentityItemRequestBuilderGetRequestConfiguration requestConfig = new IdentityItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

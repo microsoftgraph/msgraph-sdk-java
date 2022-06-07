@@ -84,6 +84,7 @@ public class OnlineMeetingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnlineMeetingsRequestBuilderGetRequestConfiguration requestConfig = new OnlineMeetingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +117,7 @@ public class OnlineMeetingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final OnlineMeetingsRequestBuilderPostRequestConfiguration requestConfig = new OnlineMeetingsRequestBuilderPostRequestConfiguration();

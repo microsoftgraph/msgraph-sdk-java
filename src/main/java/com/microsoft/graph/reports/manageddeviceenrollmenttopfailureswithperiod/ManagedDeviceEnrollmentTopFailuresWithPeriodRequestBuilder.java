@@ -71,6 +71,7 @@ public class ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

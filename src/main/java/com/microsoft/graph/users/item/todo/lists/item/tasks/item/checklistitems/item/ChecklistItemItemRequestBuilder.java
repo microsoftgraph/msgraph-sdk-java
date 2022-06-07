@@ -80,7 +80,7 @@ public class ChecklistItemItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get checklistItems from users
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ChecklistItemItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get checklistItems from users
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,6 +99,7 @@ public class ChecklistItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChecklistItemItemRequestBuilderGetRequestConfiguration requestConfig = new ChecklistItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -192,7 +193,7 @@ public class ChecklistItemItemRequestBuilder {
         }
     }
     /**
-     * Get checklistItems from users
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @return a CompletableFuture of checklistItem
      */
     public java.util.concurrent.CompletableFuture<ChecklistItem> get() {
@@ -208,7 +209,7 @@ public class ChecklistItemItemRequestBuilder {
         }
     }
     /**
-     * Get checklistItems from users
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of checklistItem
      */
@@ -225,7 +226,7 @@ public class ChecklistItemItemRequestBuilder {
         }
     }
     /**
-     * Get checklistItems from users
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of checklistItem
@@ -312,7 +313,7 @@ public class ChecklistItemItemRequestBuilder {
         public ChecklistItemItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Get checklistItems from users */
+    /** A collection of smaller subtasks linked to the more complex parent task. */
     public class ChecklistItemItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

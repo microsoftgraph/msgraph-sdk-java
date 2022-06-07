@@ -77,6 +77,7 @@ public class DriveItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DriveItemItemRequestBuilderGetRequestConfiguration requestConfig = new DriveItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

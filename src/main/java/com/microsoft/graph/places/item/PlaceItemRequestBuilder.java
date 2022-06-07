@@ -16,12 +16,18 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Place;
+import microsoft.graph.places.item.room.RoomRequestBuilder;
 /** Provides operations to manage the collection of place entities. */
 public class PlaceItemRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The room property */
+    @javax.annotation.Nonnull
+    public RoomRequestBuilder room() {
+        return new RoomRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
@@ -99,6 +105,7 @@ public class PlaceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PlaceItemRequestBuilderGetRequestConfiguration requestConfig = new PlaceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

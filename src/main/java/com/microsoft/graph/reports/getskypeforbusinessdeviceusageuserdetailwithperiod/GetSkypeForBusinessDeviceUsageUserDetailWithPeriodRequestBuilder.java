@@ -71,6 +71,7 @@ public class GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

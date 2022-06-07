@@ -99,6 +99,7 @@ public class DataPolicyOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DataPolicyOperationItemRequestBuilderGetRequestConfiguration requestConfig = new DataPolicyOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

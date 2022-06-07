@@ -72,6 +72,7 @@ public class GetSharePointSiteUsageDetailWithDateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration requestConfig = new GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

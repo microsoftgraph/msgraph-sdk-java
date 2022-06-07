@@ -97,6 +97,7 @@ public class ServicePrincipalsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ServicePrincipalsRequestBuilderGetRequestConfiguration requestConfig = new ServicePrincipalsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -129,6 +130,7 @@ public class ServicePrincipalsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ServicePrincipalsRequestBuilderPostRequestConfiguration requestConfig = new ServicePrincipalsRequestBuilderPostRequestConfiguration();

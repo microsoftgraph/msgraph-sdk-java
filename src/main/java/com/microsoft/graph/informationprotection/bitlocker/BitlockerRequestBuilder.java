@@ -106,6 +106,7 @@ public class BitlockerRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BitlockerRequestBuilderGetRequestConfiguration requestConfig = new BitlockerRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

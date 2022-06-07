@@ -106,6 +106,7 @@ public class ThreatAssessmentRequestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration requestConfig = new ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

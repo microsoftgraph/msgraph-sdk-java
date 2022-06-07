@@ -106,6 +106,7 @@ public class PlannerBucketItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PlannerBucketItemRequestBuilderGetRequestConfiguration requestConfig = new PlannerBucketItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -114,6 +114,7 @@ public class SubjectRightsRequestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SubjectRightsRequestItemRequestBuilderGetRequestConfiguration requestConfig = new SubjectRightsRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

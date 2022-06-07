@@ -162,6 +162,7 @@ public class EducationUserItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EducationUserItemRequestBuilderGetRequestConfiguration requestConfig = new EducationUserItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

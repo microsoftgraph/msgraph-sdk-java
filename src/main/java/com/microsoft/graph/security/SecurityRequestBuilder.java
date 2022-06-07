@@ -104,6 +104,7 @@ public class SecurityRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SecurityRequestBuilderGetRequestConfiguration requestConfig = new SecurityRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class AssignedToTaskBoardFormatRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration requestConfig = new AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

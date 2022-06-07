@@ -71,6 +71,7 @@ public class GetSharePointActivityUserCountsWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSharePointActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetSharePointActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

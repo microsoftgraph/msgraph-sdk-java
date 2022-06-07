@@ -99,6 +99,7 @@ public class LinkedResourceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LinkedResourceItemRequestBuilderGetRequestConfiguration requestConfig = new LinkedResourceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class AudioRoutingGroupItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AudioRoutingGroupItemRequestBuilderGetRequestConfiguration requestConfig = new AudioRoutingGroupItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

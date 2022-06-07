@@ -72,6 +72,7 @@ public class GetYammerDeviceUsageUserDetailWithDateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration requestConfig = new GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

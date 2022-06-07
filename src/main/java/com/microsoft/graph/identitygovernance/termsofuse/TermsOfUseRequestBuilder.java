@@ -137,6 +137,7 @@ public class TermsOfUseRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TermsOfUseRequestBuilderGetRequestConfiguration requestConfig = new TermsOfUseRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

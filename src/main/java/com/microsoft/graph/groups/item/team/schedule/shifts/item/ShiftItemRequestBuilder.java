@@ -99,6 +99,7 @@ public class ShiftItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ShiftItemRequestBuilderGetRequestConfiguration requestConfig = new ShiftItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -124,6 +124,7 @@ public class OnlineMeetingItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnlineMeetingItemRequestBuilderGetRequestConfiguration requestConfig = new OnlineMeetingItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

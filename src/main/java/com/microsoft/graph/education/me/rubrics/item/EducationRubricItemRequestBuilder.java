@@ -99,6 +99,7 @@ public class EducationRubricItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EducationRubricItemRequestBuilderGetRequestConfiguration requestConfig = new EducationRubricItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -69,6 +69,7 @@ public class ProvisionEmailRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProvisionEmailRequestBuilderPostRequestConfiguration requestConfig = new ProvisionEmailRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class SchemaExtensionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SchemaExtensionItemRequestBuilderGetRequestConfiguration requestConfig = new SchemaExtensionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

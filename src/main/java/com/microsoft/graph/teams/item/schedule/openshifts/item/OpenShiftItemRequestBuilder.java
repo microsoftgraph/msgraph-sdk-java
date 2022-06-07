@@ -99,6 +99,7 @@ public class OpenShiftItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OpenShiftItemRequestBuilderGetRequestConfiguration requestConfig = new OpenShiftItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

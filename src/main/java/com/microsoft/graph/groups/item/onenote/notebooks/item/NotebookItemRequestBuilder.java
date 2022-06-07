@@ -119,6 +119,7 @@ public class NotebookItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NotebookItemRequestBuilderGetRequestConfiguration requestConfig = new NotebookItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

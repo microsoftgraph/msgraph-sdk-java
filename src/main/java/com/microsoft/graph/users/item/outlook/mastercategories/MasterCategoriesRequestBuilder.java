@@ -78,6 +78,7 @@ public class MasterCategoriesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MasterCategoriesRequestBuilderGetRequestConfiguration requestConfig = new MasterCategoriesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class MasterCategoriesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final MasterCategoriesRequestBuilderPostRequestConfiguration requestConfig = new MasterCategoriesRequestBuilderPostRequestConfiguration();

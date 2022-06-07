@@ -99,6 +99,7 @@ public class RiskyUserHistoryItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RiskyUserHistoryItemItemRequestBuilderGetRequestConfiguration requestConfig = new RiskyUserHistoryItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

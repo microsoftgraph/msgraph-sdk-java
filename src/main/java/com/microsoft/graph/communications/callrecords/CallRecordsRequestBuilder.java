@@ -81,6 +81,7 @@ public class CallRecordsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CallRecordsRequestBuilderGetRequestConfiguration requestConfig = new CallRecordsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -113,6 +114,7 @@ public class CallRecordsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final CallRecordsRequestBuilderPostRequestConfiguration requestConfig = new CallRecordsRequestBuilderPostRequestConfiguration();

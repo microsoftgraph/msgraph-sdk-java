@@ -144,6 +144,7 @@ public class PrimaryChannelRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrimaryChannelRequestBuilderGetRequestConfiguration requestConfig = new PrimaryChannelRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

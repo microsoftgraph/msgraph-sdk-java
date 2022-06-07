@@ -87,6 +87,7 @@ public class FederationConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FederationConfigurationsRequestBuilderGetRequestConfiguration requestConfig = new FederationConfigurationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -119,6 +120,7 @@ public class FederationConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final FederationConfigurationsRequestBuilderPostRequestConfiguration requestConfig = new FederationConfigurationsRequestBuilderPostRequestConfiguration();

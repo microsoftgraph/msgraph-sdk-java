@@ -78,6 +78,7 @@ public class PrivacyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrivacyRequestBuilderGetRequestConfiguration requestConfig = new PrivacyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -69,6 +69,7 @@ public class GetOffice365ActivationCountsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365ActivationCountsRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365ActivationCountsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

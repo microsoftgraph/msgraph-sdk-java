@@ -99,6 +99,7 @@ public class MultiValueLegacyExtendedPropertyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MultiValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration requestConfig = new MultiValueLegacyExtendedPropertyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

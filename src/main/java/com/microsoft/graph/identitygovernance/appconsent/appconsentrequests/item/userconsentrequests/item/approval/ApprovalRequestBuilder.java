@@ -106,6 +106,7 @@ public class ApprovalRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApprovalRequestBuilderGetRequestConfiguration requestConfig = new ApprovalRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

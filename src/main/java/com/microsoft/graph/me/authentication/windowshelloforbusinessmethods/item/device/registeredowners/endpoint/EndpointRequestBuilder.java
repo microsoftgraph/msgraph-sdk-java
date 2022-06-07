@@ -77,6 +77,7 @@ public class EndpointRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EndpointRequestBuilderGetRequestConfiguration requestConfig = new EndpointRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -144,6 +144,7 @@ public class ManagedEBookItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedEBookItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedEBookItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

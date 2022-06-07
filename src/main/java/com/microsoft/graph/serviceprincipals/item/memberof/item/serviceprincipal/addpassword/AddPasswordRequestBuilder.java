@@ -72,6 +72,7 @@ public class AddPasswordRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AddPasswordRequestBuilderPostRequestConfiguration requestConfig = new AddPasswordRequestBuilderPostRequestConfiguration();

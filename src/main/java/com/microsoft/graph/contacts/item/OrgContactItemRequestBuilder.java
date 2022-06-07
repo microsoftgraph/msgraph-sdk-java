@@ -153,6 +153,7 @@ public class OrgContactItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OrgContactItemRequestBuilderGetRequestConfiguration requestConfig = new OrgContactItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

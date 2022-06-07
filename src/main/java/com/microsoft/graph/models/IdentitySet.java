@@ -11,11 +11,11 @@ import java.util.Objects;
 public class IdentitySet implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The Identity of the Application. This property is read-only. */
+    /** Optional. The application associated with this action. */
     private Identity _application;
-    /** The Identity of the Device. This property is read-only. */
+    /** Optional. The device associated with this action. */
     private Identity _device;
-    /** The Identity of the User. This property is read-only. */
+    /** Optional. The user associated with this action. */
     private Identity _user;
     /**
      * Instantiates a new identitySet and sets the default values.
@@ -43,7 +43,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the application property value. The Identity of the Application. This property is read-only.
+     * Gets the application property value. Optional. The application associated with this action.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -51,7 +51,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         return this._application;
     }
     /**
-     * Gets the device property value. The Identity of the Device. This property is read-only.
+     * Gets the device property value. Optional. The device associated with this action.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the user property value. The Identity of the User. This property is read-only.
+     * Gets the user property value. Optional. The user associated with this action.
      * @return a identity
      */
     @javax.annotation.Nullable
@@ -100,7 +100,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the application property value. The Identity of the Application. This property is read-only.
+     * Sets the application property value. Optional. The application associated with this action.
      * @param value Value to set for the application property.
      * @return a void
      */
@@ -108,7 +108,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this._application = value;
     }
     /**
-     * Sets the device property value. The Identity of the Device. This property is read-only.
+     * Sets the device property value. Optional. The device associated with this action.
      * @param value Value to set for the device property.
      * @return a void
      */
@@ -116,7 +116,7 @@ public class IdentitySet implements AdditionalDataHolder, Parsable {
         this._device = value;
     }
     /**
-     * Sets the user property value. The Identity of the User. This property is read-only.
+     * Sets the user property value. Optional. The user associated with this action.
      * @param value Value to set for the user property.
      * @return a void
      */

@@ -105,6 +105,7 @@ public class TrendingItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TrendingItemRequestBuilderGetRequestConfiguration requestConfig = new TrendingItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

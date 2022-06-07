@@ -99,6 +99,7 @@ public class ExternalItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ExternalItemItemRequestBuilderGetRequestConfiguration requestConfig = new ExternalItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

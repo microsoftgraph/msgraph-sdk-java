@@ -78,6 +78,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AuthenticationMethodConfigurationsRequestBuilderGetRequestConfiguration requestConfig = new AuthenticationMethodConfigurationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class AuthenticationMethodConfigurationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AuthenticationMethodConfigurationsRequestBuilderPostRequestConfiguration requestConfig = new AuthenticationMethodConfigurationsRequestBuilderPostRequestConfiguration();

@@ -68,6 +68,7 @@ public class SharedWithMeRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SharedWithMeRequestBuilderGetRequestConfiguration requestConfig = new SharedWithMeRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

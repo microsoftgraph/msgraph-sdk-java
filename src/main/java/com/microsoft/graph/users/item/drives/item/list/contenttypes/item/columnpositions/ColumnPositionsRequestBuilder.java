@@ -77,6 +77,7 @@ public class ColumnPositionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ColumnPositionsRequestBuilderGetRequestConfiguration requestConfig = new ColumnPositionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -105,6 +105,7 @@ public class SubscriptionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SubscriptionItemRequestBuilderGetRequestConfiguration requestConfig = new SubscriptionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -22,6 +22,8 @@ public class AccessReviewInstance extends Entity implements Parsable {
     private java.util.List<AccessReviewReviewerScope> _reviewers;
     /** Created based on scope and instanceEnumerationScope at the accessReviewScheduleDefinition level. Defines the scope of users reviewed in a group. Supports $select and $filter (contains only). Read-only. */
     private AccessReviewScope _scope;
+    /** If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition. */
+    private java.util.List<AccessReviewStage> _stages;
     /** DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only. */
     private OffsetDateTime _startDateTime;
     /** Specifies the status of an accessReview. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $select, $orderby, and $filter (eq only). Read-only. */
@@ -89,6 +91,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
             this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
             this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
             this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
+            this.put("stages", (n) -> { currentObject.setStages(n.getCollectionOfObjectValues(AccessReviewStage::createFromDiscriminatorValue)); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
         }};
@@ -108,6 +111,14 @@ public class AccessReviewInstance extends Entity implements Parsable {
     @javax.annotation.Nullable
     public AccessReviewScope getScope() {
         return this._scope;
+    }
+    /**
+     * Gets the stages property value. If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * @return a accessReviewStage
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessReviewStage> getStages() {
+        return this._stages;
     }
     /**
      * Gets the startDateTime property value. DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.
@@ -139,6 +150,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("fallbackReviewers", this.getFallbackReviewers());
         writer.writeCollectionOfObjectValues("reviewers", this.getReviewers());
         writer.writeObjectValue("scope", this.getScope());
+        writer.writeCollectionOfObjectValues("stages", this.getStages());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("status", this.getStatus());
     }
@@ -189,6 +201,14 @@ public class AccessReviewInstance extends Entity implements Parsable {
      */
     public void setScope(@javax.annotation.Nullable final AccessReviewScope value) {
         this._scope = value;
+    }
+    /**
+     * Sets the stages property value. If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * @param value Value to set for the stages property.
+     * @return a void
+     */
+    public void setStages(@javax.annotation.Nullable final java.util.List<AccessReviewStage> value) {
+        this._stages = value;
     }
     /**
      * Sets the startDateTime property value. DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.

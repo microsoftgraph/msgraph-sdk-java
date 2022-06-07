@@ -106,6 +106,7 @@ public class AppConsentRequestItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppConsentRequestItemRequestBuilderGetRequestConfiguration requestConfig = new AppConsentRequestItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class FromTermRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FromTermRequestBuilderGetRequestConfiguration requestConfig = new FromTermRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

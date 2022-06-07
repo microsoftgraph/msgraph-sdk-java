@@ -77,6 +77,7 @@ public class FilesFolderRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FilesFolderRequestBuilderGetRequestConfiguration requestConfig = new FilesFolderRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -68,6 +68,7 @@ public class GetCompatibleHubContentTypesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetCompatibleHubContentTypesRequestBuilderGetRequestConfiguration requestConfig = new GetCompatibleHubContentTypesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

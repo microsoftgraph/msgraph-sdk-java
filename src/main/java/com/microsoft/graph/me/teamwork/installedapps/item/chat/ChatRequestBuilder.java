@@ -71,6 +71,7 @@ public class ChatRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChatRequestBuilderGetRequestConfiguration requestConfig = new ChatRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

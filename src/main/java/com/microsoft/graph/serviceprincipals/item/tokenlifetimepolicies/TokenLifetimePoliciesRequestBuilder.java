@@ -77,6 +77,7 @@ public class TokenLifetimePoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TokenLifetimePoliciesRequestBuilderGetRequestConfiguration requestConfig = new TokenLifetimePoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

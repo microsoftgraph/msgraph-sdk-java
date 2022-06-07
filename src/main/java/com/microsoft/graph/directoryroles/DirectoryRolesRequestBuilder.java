@@ -97,6 +97,7 @@ public class DirectoryRolesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectoryRolesRequestBuilderGetRequestConfiguration requestConfig = new DirectoryRolesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -129,6 +130,7 @@ public class DirectoryRolesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DirectoryRolesRequestBuilderPostRequestConfiguration requestConfig = new DirectoryRolesRequestBuilderPostRequestConfiguration();

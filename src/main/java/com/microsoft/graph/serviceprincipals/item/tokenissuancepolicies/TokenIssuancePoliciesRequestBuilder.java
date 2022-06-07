@@ -77,6 +77,7 @@ public class TokenIssuancePoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TokenIssuancePoliciesRequestBuilderGetRequestConfiguration requestConfig = new TokenIssuancePoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

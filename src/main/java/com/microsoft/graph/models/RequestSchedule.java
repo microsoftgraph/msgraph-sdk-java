@@ -12,11 +12,11 @@ import java.util.Objects;
 public class RequestSchedule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** When the access should expire. */
+    /** In entitlement management, when the access should expire. */
     private ExpirationPattern _expiration;
-    /** For recurring access. Not used at present. */
+    /** For recurring access, or eligible or active assignment. This property is currently unsupported in both PIM and entitlement management. */
     private PatternedRecurrence _recurrence;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
+    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. In PIM, when the  eligible or active assignment becomes active. */
     private OffsetDateTime _startDateTime;
     /**
      * Instantiates a new requestSchedule and sets the default values.
@@ -44,7 +44,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the expiration property value. When the access should expire.
+     * Gets the expiration property value. In entitlement management, when the access should expire.
      * @return a expirationPattern
      */
     @javax.annotation.Nullable
@@ -65,7 +65,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the recurrence property value. For recurring access. Not used at present.
+     * Gets the recurrence property value. For recurring access, or eligible or active assignment. This property is currently unsupported in both PIM and entitlement management.
      * @return a patternedRecurrence
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
         return this._recurrence;
     }
     /**
-     * Gets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. In PIM, when the  eligible or active assignment becomes active.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the expiration property value. When the access should expire.
+     * Sets the expiration property value. In entitlement management, when the access should expire.
      * @param value Value to set for the expiration property.
      * @return a void
      */
@@ -109,7 +109,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
         this._expiration = value;
     }
     /**
-     * Sets the recurrence property value. For recurring access. Not used at present.
+     * Sets the recurrence property value. For recurring access, or eligible or active assignment. This property is currently unsupported in both PIM and entitlement management.
      * @param value Value to set for the recurrence property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class RequestSchedule implements AdditionalDataHolder, Parsable {
         this._recurrence = value;
     }
     /**
-     * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. In PIM, when the  eligible or active assignment becomes active.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

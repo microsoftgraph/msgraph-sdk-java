@@ -123,6 +123,7 @@ public class ManagedAppPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedAppPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedAppPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

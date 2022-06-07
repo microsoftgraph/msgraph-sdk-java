@@ -111,6 +111,7 @@ public class PrintTaskItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrintTaskItemRequestBuilderGetRequestConfiguration requestConfig = new PrintTaskItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

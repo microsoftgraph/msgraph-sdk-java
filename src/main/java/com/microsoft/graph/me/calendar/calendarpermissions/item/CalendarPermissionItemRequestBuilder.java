@@ -99,6 +99,7 @@ public class CalendarPermissionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CalendarPermissionItemRequestBuilderGetRequestConfiguration requestConfig = new CalendarPermissionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

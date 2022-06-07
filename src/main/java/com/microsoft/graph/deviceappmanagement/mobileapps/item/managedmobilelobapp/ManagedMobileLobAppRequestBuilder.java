@@ -71,6 +71,7 @@ public class ManagedMobileLobAppRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedMobileLobAppRequestBuilderGetRequestConfiguration requestConfig = new ManagedMobileLobAppRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

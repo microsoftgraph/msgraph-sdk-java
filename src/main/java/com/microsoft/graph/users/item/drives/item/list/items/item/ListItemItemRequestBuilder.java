@@ -126,6 +126,7 @@ public class ListItemItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ListItemItemRequestBuilderGetRequestConfiguration requestConfig = new ListItemItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

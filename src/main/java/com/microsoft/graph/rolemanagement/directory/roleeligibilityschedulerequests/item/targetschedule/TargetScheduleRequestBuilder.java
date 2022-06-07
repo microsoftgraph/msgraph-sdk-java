@@ -71,6 +71,7 @@ public class TargetScheduleRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TargetScheduleRequestBuilderGetRequestConfiguration requestConfig = new TargetScheduleRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -155,6 +155,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TargetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration requestConfig = new TargetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

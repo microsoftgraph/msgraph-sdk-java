@@ -99,6 +99,7 @@ public class LocalizedNotificationMessageItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration requestConfig = new LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

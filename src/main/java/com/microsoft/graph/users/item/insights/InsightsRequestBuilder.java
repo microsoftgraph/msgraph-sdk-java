@@ -120,6 +120,7 @@ public class InsightsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InsightsRequestBuilderGetRequestConfiguration requestConfig = new InsightsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

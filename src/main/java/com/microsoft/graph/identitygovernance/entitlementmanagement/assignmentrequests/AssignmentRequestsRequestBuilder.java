@@ -79,6 +79,7 @@ public class AssignmentRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AssignmentRequestsRequestBuilderGetRequestConfiguration requestConfig = new AssignmentRequestsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class AssignmentRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AssignmentRequestsRequestBuilderPostRequestConfiguration requestConfig = new AssignmentRequestsRequestBuilderPostRequestConfiguration();

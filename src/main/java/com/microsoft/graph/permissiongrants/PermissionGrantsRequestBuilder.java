@@ -90,6 +90,7 @@ public class PermissionGrantsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PermissionGrantsRequestBuilderGetRequestConfiguration requestConfig = new PermissionGrantsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -122,6 +123,7 @@ public class PermissionGrantsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PermissionGrantsRequestBuilderPostRequestConfiguration requestConfig = new PermissionGrantsRequestBuilderPostRequestConfiguration();

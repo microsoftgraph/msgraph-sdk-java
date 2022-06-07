@@ -71,6 +71,7 @@ public class DriveRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DriveRequestBuilderGetRequestConfiguration requestConfig = new DriveRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
