@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.AccessReviewReviewerCollectionRequestBuilder
 import com.microsoft.graph.requests.AccessReviewReviewerRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewStageCollectionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewStageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -101,6 +103,26 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder<Acces
     @Nonnull
     public AccessReviewInstanceDecisionItemRequestBuilder decisions(@Nonnull final String id) {
         return new AccessReviewInstanceDecisionItemRequestBuilder(getRequestUrlWithAdditionalSegment("decisions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessReviewStage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessReviewStageCollectionRequestBuilder stages() {
+        return new AccessReviewStageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("stages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessReviewStage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessReviewStageRequestBuilder stages(@Nonnull final String id) {
+        return new AccessReviewStageRequestBuilder(getRequestUrlWithAdditionalSegment("stages") + "/" + id, getClient(), null);
     }
 
     /**

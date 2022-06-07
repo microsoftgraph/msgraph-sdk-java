@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.AccessReviewInstance;
+import com.microsoft.graph.models.AccessReviewStage;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemFilterByCurrentUserOptions;
 import java.util.Arrays;
@@ -31,7 +31,7 @@ import com.microsoft.graph.models.AccessReviewInstanceDecisionItemFilterByCurren
 public class AccessReviewInstanceDecisionItemCollectionRequestBuilder extends BaseCollectionRequestBuilder<AccessReviewInstanceDecisionItem, AccessReviewInstanceDecisionItemRequestBuilder, AccessReviewInstanceDecisionItemCollectionResponse, AccessReviewInstanceDecisionItemCollectionPage, AccessReviewInstanceDecisionItemCollectionRequest> {
 
     /**
-     * The request builder for this collection of AccessReviewInstance
+     * The request builder for this collection of AccessReviewStage
      *
      * @param requestUrl     the request URL
      * @param client         the service client

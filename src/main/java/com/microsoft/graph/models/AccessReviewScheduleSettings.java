@@ -59,6 +59,15 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
     public Boolean autoApplyDecisionsEnabled;
 
     /**
+     * The Decision Histories For Reviewers Enabled.
+     * Indicates whether decisions on previous access review stages are available for reviewers on an accessReviewInstance with multiple subsequent stages. If not provided, the default is disabled (false).
+     */
+    @SerializedName(value = "decisionHistoriesForReviewersEnabled", alternate = {"DecisionHistoriesForReviewersEnabled"})
+    @Expose
+	@Nullable
+    public Boolean decisionHistoriesForReviewersEnabled;
+
+    /**
      * The Default Decision.
      * Decision chosen if defaultDecisionEnabled is enabled. Can be one of Approve, Deny, or Recommendation.
      */

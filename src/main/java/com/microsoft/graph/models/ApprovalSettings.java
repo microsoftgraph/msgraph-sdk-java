@@ -41,7 +41,7 @@ public class ApprovalSettings implements IJsonBackedObject {
 
     /**
      * The Approval Mode.
-     * One of NoApproval, SingleStage or Serial. The NoApproval is used when isApprovalRequired is false.
+     * One of SingleStage, Serial, Parallel, NoApproval (default). NoApproval is used when isApprovalRequired is false.
      */
     @SerializedName(value = "approvalMode", alternate = {"ApprovalMode"})
     @Expose
@@ -59,7 +59,7 @@ public class ApprovalSettings implements IJsonBackedObject {
 
     /**
      * The Is Approval Required.
-     * If false, then approval is not required for requests in this policy.
+     * Indicates whether approval is required for requests in this policy.
      */
     @SerializedName(value = "isApprovalRequired", alternate = {"IsApprovalRequired"})
     @Expose
@@ -68,7 +68,7 @@ public class ApprovalSettings implements IJsonBackedObject {
 
     /**
      * The Is Approval Required For Extension.
-     * If false, then approval is not required for a user who already has an assignment to extend their assignment.
+     * Indicates whether approval is required for a user to extend their assignment.
      */
     @SerializedName(value = "isApprovalRequiredForExtension", alternate = {"IsApprovalRequiredForExtension"})
     @Expose

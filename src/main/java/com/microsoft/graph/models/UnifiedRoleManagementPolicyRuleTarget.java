@@ -43,7 +43,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements IJsonBackedObject 
 
     /**
      * The Caller.
-     * The caller for the policy rule target. Allowed values are: None, Admin, EndUser.
+     * The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      */
     @SerializedName(value = "caller", alternate = {"Caller"})
     @Expose
@@ -52,7 +52,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements IJsonBackedObject 
 
     /**
      * The Enforced Settings.
-     * The list of settings which are enforced and cannot be overridden by child scopes. Use All for all settings.
+     * The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      */
     @SerializedName(value = "enforcedSettings", alternate = {"EnforcedSettings"})
     @Expose
@@ -61,7 +61,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements IJsonBackedObject 
 
     /**
      * The Inheritable Settings.
-     * The list of settings which can be inherited by child scopes. Use All for all settings.
+     * The list of role settings that can be inherited by child scopes. Use All for all settings.
      */
     @SerializedName(value = "inheritableSettings", alternate = {"InheritableSettings"})
     @Expose
@@ -70,7 +70,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements IJsonBackedObject 
 
     /**
      * The Level.
-     * The level for the policy rule target. Allowed values are: Eligibility, Assignment.
+     * The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      */
     @SerializedName(value = "level", alternate = {"Level"})
     @Expose
@@ -79,7 +79,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements IJsonBackedObject 
 
     /**
      * The Operations.
-     * The operations for policy rule target. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
+     * The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose

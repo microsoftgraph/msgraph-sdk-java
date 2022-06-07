@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Fido2AuthenticationMethodConfiguration;
+import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodConfiguration;
 import com.microsoft.graph.models.AuthenticationMethodTarget;
 import java.util.Arrays;
 import java.util.EnumSet;

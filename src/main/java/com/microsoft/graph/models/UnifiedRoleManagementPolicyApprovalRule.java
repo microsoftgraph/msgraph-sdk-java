@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManageme
 
     /**
      * The Setting.
-     * The approval setting for the rule.
+     * The settings for approval of the role assignment.
      */
     @SerializedName(value = "setting", alternate = {"Setting"})
     @Expose

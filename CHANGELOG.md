@@ -11,6 +11,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.26.0] - 2022-06-07
+
+### Added
+
+- AudioCodec model.
+- NetworkTransportProtocol model.
+- TraceRouteHop model. 
+- VideoCodec model. 
+- AccessReview models and related requests. 
+- TemporaryAccessPassAuthenticationMethod models and related requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Models and requests related to the newly added AccessReview models. 
+- Models and requests related to TemporaryAccessPassAuthenticationMethod. 
+
 ## [5.25.0] - 2022-05-19
 
 ### Added
