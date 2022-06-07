@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.AuthenticationMethodCollectionRequestBuilder
 import com.microsoft.graph.requests.AuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodRequestBuilder;
 import java.util.Arrays;
@@ -123,6 +125,26 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
     @Nonnull
     public MicrosoftAuthenticatorAuthenticationMethodRequestBuilder microsoftAuthenticatorMethods(@Nonnull final String id) {
         return new MicrosoftAuthenticatorAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftAuthenticatorMethods") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TemporaryAccessPassAuthenticationMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder temporaryAccessPassMethods() {
+        return new TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TemporaryAccessPassAuthenticationMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TemporaryAccessPassAuthenticationMethodRequestBuilder temporaryAccessPassMethods(@Nonnull final String id) {
+        return new TemporaryAccessPassAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsHelloForBusinessAuthenticationMethod collection

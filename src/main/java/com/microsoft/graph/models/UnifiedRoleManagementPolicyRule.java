@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements IJsonBack
 
     /**
      * The Target.
-     * The target for the policy rule.
+     * Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne).
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

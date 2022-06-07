@@ -57,7 +57,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * The categories associated with the task. Each category corresponds to the displayName property of an outlookCategory that the user has defined.
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -156,7 +156,7 @@ public class TodoTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Checklist Items.
-     * 
+     * A collection of smaller subtasks linked to the more complex parent task.
      */
     @SerializedName(value = "checklistItems", alternate = {"ChecklistItems"})
     @Expose

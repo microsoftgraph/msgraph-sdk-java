@@ -29,7 +29,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
 
     /**
      * The Assignment Type.
-     * Type of the assignment. It can either be Assigned or Activated.
+     * Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      */
     @SerializedName(value = "assignmentType", alternate = {"AssignmentType"})
     @Expose
@@ -38,7 +38,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
 
     /**
      * The Member Type.
-     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -47,7 +47,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
 
     /**
      * The Schedule Info.
-     * The schedule object of the role assignment request.
+     * The period of the role assignment. It can represent a single occurrence or multiple recurrences.
      */
     @SerializedName(value = "scheduleInfo", alternate = {"ScheduleInfo"})
     @Expose
@@ -56,7 +56,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
 
     /**
      * The Activated Using.
-     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
+     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      */
     @SerializedName(value = "activatedUsing", alternate = {"ActivatedUsing"})
     @Expose

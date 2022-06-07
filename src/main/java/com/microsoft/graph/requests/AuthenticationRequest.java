@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.AuthenticationMethodCollectionRequestBuilder
 import com.microsoft.graph.requests.AuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodRequestBuilder;
 import java.util.Arrays;

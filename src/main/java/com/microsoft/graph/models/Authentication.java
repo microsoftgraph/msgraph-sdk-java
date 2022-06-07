@@ -12,11 +12,13 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Fido2AuthenticationMethod;
 import com.microsoft.graph.models.AuthenticationMethod;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.AuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionPage;
 
 
@@ -62,6 +64,15 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
 
     /**
+     * The Temporary Access Pass Methods.
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     */
+    @SerializedName(value = "temporaryAccessPassMethods", alternate = {"TemporaryAccessPassMethods"})
+    @Expose
+	@Nullable
+    public TemporaryAccessPassAuthenticationMethodCollectionPage temporaryAccessPassMethods;
+
+    /**
      * The Windows Hello For Business Methods.
      * Represents the Windows Hello for Business authentication method registered to a user for authentication.
      */
@@ -90,6 +101,10 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
         if (json.has("microsoftAuthenticatorMethods")) {
             microsoftAuthenticatorMethods = serializer.deserializeObject(json.get("microsoftAuthenticatorMethods"), MicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
+        }
+
+        if (json.has("temporaryAccessPassMethods")) {
+            temporaryAccessPassMethods = serializer.deserializeObject(json.get("temporaryAccessPassMethods"), TemporaryAccessPassAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("windowsHelloForBusinessMethods")) {

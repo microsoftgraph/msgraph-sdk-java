@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Fido2AuthenticationMethodConfiguration;
+import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethodConfiguration;
 import com.microsoft.graph.models.AuthenticationMethodTarget;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class AuthenticationMethodTargetCollectionRequestBuilder extends BaseCollectionRequestBuilder<AuthenticationMethodTarget, AuthenticationMethodTargetRequestBuilder, AuthenticationMethodTargetCollectionResponse, AuthenticationMethodTargetCollectionPage, AuthenticationMethodTargetCollectionRequest> {
 
     /**
-     * The request builder for this collection of Fido2AuthenticationMethodConfiguration
+     * The request builder for this collection of TemporaryAccessPassAuthenticationMethodConfiguration
      *
      * @param requestUrl     the request URL
      * @param client         the service client

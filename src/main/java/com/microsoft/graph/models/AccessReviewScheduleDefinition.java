@@ -14,6 +14,7 @@ import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.AccessReviewReviewerScope;
 import com.microsoft.graph.models.AccessReviewScope;
 import com.microsoft.graph.models.AccessReviewScheduleSettings;
+import com.microsoft.graph.models.AccessReviewStageSettings;
 import com.microsoft.graph.models.AccessReviewInstance;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewInstanceCollectionPage;
@@ -140,6 +141,15 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
     @Expose
 	@Nullable
     public AccessReviewScheduleSettings settings;
+
+    /**
+     * The Stage Settings.
+     * Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties.
+     */
+    @SerializedName(value = "stageSettings", alternate = {"StageSettings"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewStageSettings> stageSettings;
 
     /**
      * The Status.

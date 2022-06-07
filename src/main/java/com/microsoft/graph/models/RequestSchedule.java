@@ -41,7 +41,7 @@ public class RequestSchedule implements IJsonBackedObject {
 
     /**
      * The Expiration.
-     * When the access should expire.
+     * In entitlement management, when the access should expire.
      */
     @SerializedName(value = "expiration", alternate = {"Expiration"})
     @Expose
@@ -50,7 +50,7 @@ public class RequestSchedule implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * For recurring access. Not used at present.
+     * For recurring access, or eligible or active assignment. This property is currently unsupported in both PIM and entitlement management.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
@@ -59,7 +59,7 @@ public class RequestSchedule implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. In PIM, when the  eligible or active assignment becomes active.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.callrecords.models.AudioCodec;
 import com.microsoft.graph.callrecords.models.MediaStreamDirection;
+import com.microsoft.graph.callrecords.models.VideoCodec;
 
 
 import com.google.gson.JsonObject;
@@ -37,6 +39,15 @@ public class MediaStream implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Audio Codec.
+     * Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRTA, unknownFutureValue.
+     */
+    @SerializedName(value = "audioCodec", alternate = {"AudioCodec"})
+    @Expose
+	@Nullable
+    public AudioCodec audioCodec;
 
     /**
      * The Average Audio Degradation.
@@ -253,6 +264,15 @@ public class MediaStream implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String streamId;
+
+    /**
+     * The Video Codec.
+     * Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
+     */
+    @SerializedName(value = "videoCodec", alternate = {"VideoCodec"})
+    @Expose
+	@Nullable
+    public VideoCodec videoCodec;
 
     /**
      * The Was Media Bypassed.

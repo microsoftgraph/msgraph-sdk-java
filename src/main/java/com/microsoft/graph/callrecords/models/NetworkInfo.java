@@ -8,7 +8,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.models.NetworkConnectionType;
+import com.microsoft.graph.callrecords.models.NetworkTransportProtocol;
+import com.microsoft.graph.callrecords.models.TraceRouteHop;
 import com.microsoft.graph.callrecords.models.WifiBand;
 import com.microsoft.graph.callrecords.models.WifiRadioType;
 
@@ -113,6 +116,15 @@ public class NetworkInfo implements IJsonBackedObject {
     public String macAddress;
 
     /**
+     * The Network Transport Protocol.
+     * Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue.
+     */
+    @SerializedName(value = "networkTransportProtocol", alternate = {"NetworkTransportProtocol"})
+    @Expose
+	@Nullable
+    public NetworkTransportProtocol networkTransportProtocol;
+
+    /**
      * The Port.
      * Network port number used by media endpoint.
      */
@@ -174,6 +186,15 @@ public class NetworkInfo implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String subnet;
+
+    /**
+     * The Trace Route Hops.
+     * List of network trace route hops collected for this media stream.
+     */
+    @SerializedName(value = "traceRouteHops", alternate = {"TraceRouteHops"})
+    @Expose
+	@Nullable
+    public java.util.List<TraceRouteHop> traceRouteHops;
 
     /**
      * The Wifi Band.
