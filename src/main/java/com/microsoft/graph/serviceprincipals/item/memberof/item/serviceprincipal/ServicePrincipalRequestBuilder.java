@@ -131,6 +131,7 @@ public class ServicePrincipalRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ServicePrincipalRequestBuilderGetRequestConfiguration requestConfig = new ServicePrincipalRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the cloudCommunications singleton. */
+/** Casts the previous resource to user. */
 public enum OnlineMeetingPresenters implements ValuedEnum {
     Everyone("everyone"),
     Organization("organization"),

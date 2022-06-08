@@ -99,6 +99,7 @@ public class NamedLocationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final NamedLocationItemRequestBuilderGetRequestConfiguration requestConfig = new NamedLocationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class GetOneDriveUsageAccountCountsWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOneDriveUsageAccountCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetOneDriveUsageAccountCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

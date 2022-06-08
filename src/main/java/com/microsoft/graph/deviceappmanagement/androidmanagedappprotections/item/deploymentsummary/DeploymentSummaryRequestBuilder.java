@@ -99,6 +99,7 @@ public class DeploymentSummaryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeploymentSummaryRequestBuilderGetRequestConfiguration requestConfig = new DeploymentSummaryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

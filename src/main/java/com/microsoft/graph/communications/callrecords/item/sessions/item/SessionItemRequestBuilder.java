@@ -106,6 +106,7 @@ public class SessionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SessionItemRequestBuilderGetRequestConfiguration requestConfig = new SessionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

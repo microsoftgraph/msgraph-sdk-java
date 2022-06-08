@@ -79,6 +79,7 @@ public class Oauth2PermissionGrantsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration requestConfig = new Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class Oauth2PermissionGrantsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final Oauth2PermissionGrantsRequestBuilderPostRequestConfiguration requestConfig = new Oauth2PermissionGrantsRequestBuilderPostRequestConfiguration();

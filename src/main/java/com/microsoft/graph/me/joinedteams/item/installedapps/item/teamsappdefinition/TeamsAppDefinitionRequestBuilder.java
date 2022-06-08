@@ -71,6 +71,7 @@ public class TeamsAppDefinitionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamsAppDefinitionRequestBuilderGetRequestConfiguration requestConfig = new TeamsAppDefinitionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

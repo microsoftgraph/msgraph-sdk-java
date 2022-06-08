@@ -59,7 +59,7 @@ public class ChecklistItemsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get checklistItems from me
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ChecklistItemsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get checklistItems from me
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class ChecklistItemsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChecklistItemsRequestBuilderGetRequestConfiguration requestConfig = new ChecklistItemsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ChecklistItemsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ChecklistItemsRequestBuilderPostRequestConfiguration requestConfig = new ChecklistItemsRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class ChecklistItemsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get checklistItems from me
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @return a CompletableFuture of ChecklistItemCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ChecklistItemCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class ChecklistItemsRequestBuilder {
         }
     }
     /**
-     * Get checklistItems from me
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ChecklistItemCollectionResponse
      */
@@ -153,7 +155,7 @@ public class ChecklistItemsRequestBuilder {
         }
     }
     /**
-     * Get checklistItems from me
+     * A collection of smaller subtasks linked to the more complex parent task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ChecklistItemCollectionResponse
@@ -225,7 +227,7 @@ public class ChecklistItemsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get checklistItems from me */
+    /** A collection of smaller subtasks linked to the more complex parent task. */
     public class ChecklistItemsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

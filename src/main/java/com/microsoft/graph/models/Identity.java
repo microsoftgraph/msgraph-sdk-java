@@ -11,9 +11,9 @@ import java.util.Objects;
 public class Identity implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta. */
+    /** The display name of the identity. This property is read-only. */
     private String _displayName;
-    /** Unique identifier for the identity. */
+    /** The identifier of the identity. This property is read-only. */
     private String _id;
     /**
      * Instantiates a new identity and sets the default values.
@@ -41,7 +41,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the displayName property value. The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+     * Gets the displayName property value. The display name of the identity. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the id property value. Unique identifier for the identity.
+     * Gets the id property value. The identifier of the identity. This property is read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the displayName property value. The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+     * Sets the displayName property value. The display name of the identity. This property is read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the id property value. Unique identifier for the identity.
+     * Sets the id property value. The identifier of the identity. This property is read-only.
      * @param value Value to set for the id property.
      * @return a void
      */

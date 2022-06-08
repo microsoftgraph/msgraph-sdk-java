@@ -71,6 +71,7 @@ public class GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSharePointSiteUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetSharePointSiteUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

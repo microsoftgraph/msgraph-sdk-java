@@ -105,6 +105,7 @@ public class ServiceAnnouncementAttachmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration requestConfig = new ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

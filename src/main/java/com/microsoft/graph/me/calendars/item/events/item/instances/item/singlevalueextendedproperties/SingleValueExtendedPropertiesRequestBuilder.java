@@ -78,6 +78,7 @@ public class SingleValueExtendedPropertiesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SingleValueExtendedPropertiesRequestBuilderGetRequestConfiguration requestConfig = new SingleValueExtendedPropertiesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class SingleValueExtendedPropertiesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SingleValueExtendedPropertiesRequestBuilderPostRequestConfiguration requestConfig = new SingleValueExtendedPropertiesRequestBuilderPostRequestConfiguration();

@@ -36,6 +36,8 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     private AccessReviewScope _scope;
     /** The settings for an access review series, see type definition below. Supports $select. Required on create. */
     private AccessReviewScheduleSettings _settings;
+    /** Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties. */
+    private java.util.List<AccessReviewStageSettings> _stageSettings;
     /** This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only. */
     private String _status;
     /**
@@ -132,6 +134,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
             this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
             this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
             this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(AccessReviewScheduleSettings::createFromDiscriminatorValue)); });
+            this.put("stageSettings", (n) -> { currentObject.setStageSettings(n.getCollectionOfObjectValues(AccessReviewStageSettings::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
         }};
     }
@@ -184,6 +187,14 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         return this._settings;
     }
     /**
+     * Gets the stageSettings property value. Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties.
+     * @return a accessReviewStageSettings
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AccessReviewStageSettings> getStageSettings() {
+        return this._stageSettings;
+    }
+    /**
      * Gets the status property value. This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only.
      * @return a string
      */
@@ -212,6 +223,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("reviewers", this.getReviewers());
         writer.writeObjectValue("scope", this.getScope());
         writer.writeObjectValue("settings", this.getSettings());
+        writer.writeCollectionOfObjectValues("stageSettings", this.getStageSettings());
         writer.writeStringValue("status", this.getStatus());
     }
     /**
@@ -317,6 +329,14 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      */
     public void setSettings(@javax.annotation.Nullable final AccessReviewScheduleSettings value) {
         this._settings = value;
+    }
+    /**
+     * Sets the stageSettings property value. Required only for a multi-stage access review to define the stages and their settings. You can break down each review instance into up to three sequential stages, where each stage can have a different set of reviewers, fallback reviewers, and settings. Stages will be created sequentially based on the dependsOn property. Optional.  When this property is defined, its settings are used instead of the corresponding settings in the accessReviewScheduleDefinition object and its settings, reviewers, and fallbackReviewers properties.
+     * @param value Value to set for the stageSettings property.
+     * @return a void
+     */
+    public void setStageSettings(@javax.annotation.Nullable final java.util.List<AccessReviewStageSettings> value) {
+        this._stageSettings = value;
     }
     /**
      * Sets the status property value. This read-only field specifies the status of an access review. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Supports $select, $orderby, and $filter (eq only). Read-only.

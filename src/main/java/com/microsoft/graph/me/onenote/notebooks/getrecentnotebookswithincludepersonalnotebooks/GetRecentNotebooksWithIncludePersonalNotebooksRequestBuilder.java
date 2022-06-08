@@ -70,6 +70,7 @@ public class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration requestConfig = new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

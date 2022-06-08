@@ -84,6 +84,7 @@ public class PrintersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrintersRequestBuilderGetRequestConfiguration requestConfig = new PrintersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -116,6 +117,7 @@ public class PrintersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PrintersRequestBuilderPostRequestConfiguration requestConfig = new PrintersRequestBuilderPostRequestConfiguration();

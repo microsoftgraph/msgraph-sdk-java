@@ -136,6 +136,7 @@ public class SetItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SetItemRequestBuilderGetRequestConfiguration requestConfig = new SetItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

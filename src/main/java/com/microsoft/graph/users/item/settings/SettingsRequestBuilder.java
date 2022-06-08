@@ -105,6 +105,7 @@ public class SettingsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SettingsRequestBuilderGetRequestConfiguration requestConfig = new SettingsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

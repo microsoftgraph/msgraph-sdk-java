@@ -99,6 +99,7 @@ public class AdminConsentRequestPolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration requestConfig = new AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

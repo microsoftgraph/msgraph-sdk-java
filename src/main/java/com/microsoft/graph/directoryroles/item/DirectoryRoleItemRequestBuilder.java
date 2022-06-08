@@ -143,6 +143,7 @@ public class DirectoryRoleItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectoryRoleItemRequestBuilderGetRequestConfiguration requestConfig = new DirectoryRoleItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

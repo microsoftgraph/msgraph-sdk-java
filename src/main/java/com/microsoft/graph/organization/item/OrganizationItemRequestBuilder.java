@@ -167,6 +167,7 @@ public class OrganizationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OrganizationItemRequestBuilderGetRequestConfiguration requestConfig = new OrganizationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

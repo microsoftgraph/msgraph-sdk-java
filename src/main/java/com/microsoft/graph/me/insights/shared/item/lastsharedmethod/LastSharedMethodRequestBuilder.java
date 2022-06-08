@@ -71,6 +71,7 @@ public class LastSharedMethodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LastSharedMethodRequestBuilderGetRequestConfiguration requestConfig = new LastSharedMethodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class PrintOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrintOperationItemRequestBuilderGetRequestConfiguration requestConfig = new PrintOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

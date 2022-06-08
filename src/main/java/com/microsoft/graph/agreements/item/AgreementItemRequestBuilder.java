@@ -131,6 +131,7 @@ public class AgreementItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AgreementItemRequestBuilderGetRequestConfiguration requestConfig = new AgreementItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

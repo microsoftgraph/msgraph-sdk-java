@@ -238,6 +238,7 @@ public class EntitlementManagementRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EntitlementManagementRequestBuilderGetRequestConfiguration requestConfig = new EntitlementManagementRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

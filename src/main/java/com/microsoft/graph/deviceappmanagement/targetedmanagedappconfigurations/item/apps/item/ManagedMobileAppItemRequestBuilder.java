@@ -99,6 +99,7 @@ public class ManagedMobileAppItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedMobileAppItemRequestBuilderGetRequestConfiguration requestConfig = new ManagedMobileAppItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

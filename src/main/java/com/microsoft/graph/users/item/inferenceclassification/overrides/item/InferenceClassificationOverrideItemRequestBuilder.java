@@ -99,6 +99,7 @@ public class InferenceClassificationOverrideItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration requestConfig = new InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

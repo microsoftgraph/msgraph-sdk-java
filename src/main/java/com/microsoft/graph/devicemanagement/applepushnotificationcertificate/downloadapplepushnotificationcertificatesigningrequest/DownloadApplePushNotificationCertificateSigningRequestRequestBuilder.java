@@ -68,6 +68,7 @@ public class DownloadApplePushNotificationCertificateSigningRequestRequestBuilde
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DownloadApplePushNotificationCertificateSigningRequestRequestBuilderGetRequestConfiguration requestConfig = new DownloadApplePushNotificationCertificateSigningRequestRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class ConversationMemberItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConversationMemberItemRequestBuilderGetRequestConfiguration requestConfig = new ConversationMemberItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

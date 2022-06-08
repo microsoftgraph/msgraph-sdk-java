@@ -71,6 +71,7 @@ public class GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSkypeForBusinessActivityCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetSkypeForBusinessActivityCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

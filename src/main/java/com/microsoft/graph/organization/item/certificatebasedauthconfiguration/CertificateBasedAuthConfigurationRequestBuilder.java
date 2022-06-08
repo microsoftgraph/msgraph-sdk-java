@@ -77,6 +77,7 @@ public class CertificateBasedAuthConfigurationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CertificateBasedAuthConfigurationRequestBuilderGetRequestConfiguration requestConfig = new CertificateBasedAuthConfigurationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

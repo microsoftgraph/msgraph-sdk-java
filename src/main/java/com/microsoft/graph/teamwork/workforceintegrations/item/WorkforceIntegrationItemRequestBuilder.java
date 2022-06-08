@@ -99,6 +99,7 @@ public class WorkforceIntegrationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WorkforceIntegrationItemRequestBuilderGetRequestConfiguration requestConfig = new WorkforceIntegrationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

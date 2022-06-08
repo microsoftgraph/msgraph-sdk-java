@@ -59,7 +59,7 @@ public class RulesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RulesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -78,6 +78,7 @@ public class RulesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RulesRequestBuilderGetRequestConfiguration requestConfig = new RulesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class RulesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final RulesRequestBuilderPostRequestConfiguration requestConfig = new RulesRequestBuilderPostRequestConfiguration();
@@ -120,7 +122,7 @@ public class RulesRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRuleCollectionResponse> get() {
@@ -136,7 +138,7 @@ public class RulesRequestBuilder {
         }
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
      */
@@ -153,7 +155,7 @@ public class RulesRequestBuilder {
         }
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of UnifiedRoleManagementPolicyRuleCollectionResponse
@@ -225,7 +227,7 @@ public class RulesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The collection of rules like approval rules and expiration rules. */
+    /** The collection of rules like approval rules and expiration rules. Supports $expand. */
     public class RulesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

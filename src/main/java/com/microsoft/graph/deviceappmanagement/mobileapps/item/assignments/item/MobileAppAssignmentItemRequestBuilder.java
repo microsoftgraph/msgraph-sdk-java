@@ -99,6 +99,7 @@ public class MobileAppAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileAppAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new MobileAppAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

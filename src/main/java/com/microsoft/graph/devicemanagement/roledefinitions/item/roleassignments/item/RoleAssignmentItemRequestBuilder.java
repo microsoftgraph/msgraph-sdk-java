@@ -105,6 +105,7 @@ public class RoleAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RoleAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new RoleAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the instantiate method. */
+/** Provides operations to manage the collection of application entities. */
 public class Application extends DirectoryObject implements Parsable {
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on. */
     private java.util.List<AddIn> _addIns;

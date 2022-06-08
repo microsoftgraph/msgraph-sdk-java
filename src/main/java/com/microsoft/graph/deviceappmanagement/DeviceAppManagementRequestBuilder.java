@@ -187,6 +187,7 @@ public class DeviceAppManagementRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceAppManagementRequestBuilderGetRequestConfiguration requestConfig = new DeviceAppManagementRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

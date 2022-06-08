@@ -117,6 +117,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final WindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration requestConfig = new WindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -69,6 +69,7 @@ public class CountRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "text/plain");
         if (requestConfiguration != null) {
             final CountRequestBuilderGetRequestConfiguration requestConfig = new CountRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

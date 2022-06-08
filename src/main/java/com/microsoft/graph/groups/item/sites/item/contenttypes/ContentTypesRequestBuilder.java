@@ -91,6 +91,7 @@ public class ContentTypesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ContentTypesRequestBuilderGetRequestConfiguration requestConfig = new ContentTypesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -123,6 +124,7 @@ public class ContentTypesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ContentTypesRequestBuilderPostRequestConfiguration requestConfig = new ContentTypesRequestBuilderPostRequestConfiguration();

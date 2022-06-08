@@ -72,6 +72,7 @@ public class GetYammerGroupsActivityDetailWithDateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration requestConfig = new GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -78,6 +78,7 @@ public class CustomQuestionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CustomQuestionsRequestBuilderGetRequestConfiguration requestConfig = new CustomQuestionsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class CustomQuestionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final CustomQuestionsRequestBuilderPostRequestConfiguration requestConfig = new CustomQuestionsRequestBuilderPostRequestConfiguration();

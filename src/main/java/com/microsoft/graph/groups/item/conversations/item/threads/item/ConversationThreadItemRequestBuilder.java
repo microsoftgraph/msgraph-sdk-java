@@ -112,6 +112,7 @@ public class ConversationThreadItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConversationThreadItemRequestBuilderGetRequestConfiguration requestConfig = new ConversationThreadItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

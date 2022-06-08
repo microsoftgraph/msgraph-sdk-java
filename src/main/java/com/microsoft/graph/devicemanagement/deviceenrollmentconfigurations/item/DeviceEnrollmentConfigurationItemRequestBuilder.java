@@ -130,6 +130,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

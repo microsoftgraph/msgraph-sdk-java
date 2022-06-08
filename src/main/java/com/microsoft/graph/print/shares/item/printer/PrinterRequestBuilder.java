@@ -71,6 +71,7 @@ public class PrinterRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrinterRequestBuilderGetRequestConfiguration requestConfig = new PrinterRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

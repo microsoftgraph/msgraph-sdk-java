@@ -71,6 +71,7 @@ public class GetSharePointActivityPagesWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSharePointActivityPagesWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetSharePointActivityPagesWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

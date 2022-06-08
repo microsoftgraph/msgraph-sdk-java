@@ -120,6 +120,7 @@ public class ServiceAnnouncementRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ServiceAnnouncementRequestBuilderGetRequestConfiguration requestConfig = new ServiceAnnouncementRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

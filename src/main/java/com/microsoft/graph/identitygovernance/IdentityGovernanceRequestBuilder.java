@@ -95,6 +95,7 @@ public class IdentityGovernanceRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IdentityGovernanceRequestBuilderGetRequestConfiguration requestConfig = new IdentityGovernanceRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -68,6 +68,7 @@ public class GetActivitiesByIntervalRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetActivitiesByIntervalRequestBuilderGetRequestConfiguration requestConfig = new GetActivitiesByIntervalRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

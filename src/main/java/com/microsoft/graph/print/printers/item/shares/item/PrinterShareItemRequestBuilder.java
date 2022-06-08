@@ -71,6 +71,7 @@ public class PrinterShareItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrinterShareItemRequestBuilderGetRequestConfiguration requestConfig = new PrinterShareItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

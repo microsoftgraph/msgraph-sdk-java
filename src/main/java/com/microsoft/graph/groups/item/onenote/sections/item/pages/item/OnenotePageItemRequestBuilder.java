@@ -130,6 +130,7 @@ public class OnenotePageItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnenotePageItemRequestBuilderGetRequestConfiguration requestConfig = new OnenotePageItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -22,6 +22,8 @@ import microsoft.graph.users.item.authentication.methods.item.AuthenticationMeth
 import microsoft.graph.users.item.authentication.methods.MethodsRequestBuilder;
 import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.item.MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
 import microsoft.graph.users.item.authentication.microsoftauthenticatormethods.MicrosoftAuthenticatorMethodsRequestBuilder;
+import microsoft.graph.users.item.authentication.temporaryaccesspassmethods.item.TemporaryAccessPassAuthenticationMethodItemRequestBuilder;
+import microsoft.graph.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
 import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.item.WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
 import microsoft.graph.users.item.authentication.windowshelloforbusinessmethods.WindowsHelloForBusinessMethodsRequestBuilder;
 /** Provides operations to manage the authentication property of the microsoft.graph.user entity. */
@@ -45,6 +47,11 @@ public class AuthenticationRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The temporaryAccessPassMethods property */
+    @javax.annotation.Nonnull
+    public TemporaryAccessPassMethodsRequestBuilder temporaryAccessPassMethods() {
+        return new TemporaryAccessPassMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /** The windowsHelloForBusinessMethods property */
@@ -127,6 +134,7 @@ public class AuthenticationRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AuthenticationRequestBuilderGetRequestConfiguration requestConfig = new AuthenticationRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -360,6 +368,18 @@ public class AuthenticationRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.users.item.authentication.temporaryAccessPassMethods.item collection
+     * @param id Unique identifier of the item
+     * @return a temporaryAccessPassAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public TemporaryAccessPassAuthenticationMethodItemRequestBuilder temporaryAccessPassMethods(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("temporaryAccessPassAuthenticationMethod%2Did", id);
+        return new TemporaryAccessPassAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.users.item.authentication.windowsHelloForBusinessMethods.item collection

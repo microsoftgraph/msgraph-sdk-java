@@ -23,6 +23,8 @@ import microsoft.graph.identitygovernance.accessreviews.definitions.item.instanc
 import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.decisions.item.AccessReviewInstanceDecisionItemItemRequestBuilder;
 import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.resetdecisions.ResetDecisionsRequestBuilder;
 import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.sendreminder.SendReminderRequestBuilder;
+import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.item.AccessReviewStageItemRequestBuilder;
+import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stages.StagesRequestBuilder;
 import microsoft.graph.identitygovernance.accessreviews.definitions.item.instances.item.stop.StopRequestBuilder;
 import microsoft.graph.models.AccessReviewInstance;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -66,6 +68,11 @@ public class AccessReviewInstanceItemRequestBuilder {
     @javax.annotation.Nonnull
     public SendReminderRequestBuilder sendReminder() {
         return new SendReminderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The stages property */
+    @javax.annotation.Nonnull
+    public StagesRequestBuilder stages() {
+        return new StagesRequestBuilder(pathParameters, requestAdapter);
     }
     /** The stop property */
     @javax.annotation.Nonnull
@@ -161,6 +168,7 @@ public class AccessReviewInstanceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessReviewInstanceItemRequestBuilderGetRequestConfiguration requestConfig = new AccessReviewInstanceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -370,6 +378,18 @@ public class AccessReviewInstanceItemRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.identityGovernance.accessReviews.definitions.item.instances.item.stages.item collection
+     * @param id Unique identifier of the item
+     * @return a accessReviewStageItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AccessReviewStageItemRequestBuilder stages(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("accessReviewStage%2Did", id);
+        return new AccessReviewStageItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /** Configuration for the request such as headers, query parameters, and middleware options. */
     public class AccessReviewInstanceItemRequestBuilderDeleteRequestConfiguration {

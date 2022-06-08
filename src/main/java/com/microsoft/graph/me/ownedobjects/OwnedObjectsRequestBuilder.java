@@ -95,6 +95,7 @@ public class OwnedObjectsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OwnedObjectsRequestBuilderGetRequestConfiguration requestConfig = new OwnedObjectsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

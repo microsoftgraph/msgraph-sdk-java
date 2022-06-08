@@ -99,6 +99,7 @@ public class ThumbnailSetItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ThumbnailSetItemRequestBuilderGetRequestConfiguration requestConfig = new ThumbnailSetItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

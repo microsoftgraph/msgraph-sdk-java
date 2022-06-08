@@ -105,6 +105,7 @@ public class TeamsTabItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TeamsTabItemRequestBuilderGetRequestConfiguration requestConfig = new TeamsTabItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

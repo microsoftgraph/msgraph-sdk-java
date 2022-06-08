@@ -83,6 +83,7 @@ public class ClaimsMappingPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration requestConfig = new ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

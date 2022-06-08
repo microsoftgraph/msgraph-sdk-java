@@ -129,6 +129,7 @@ public class CommunicationsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CommunicationsRequestBuilderGetRequestConfiguration requestConfig = new CommunicationsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

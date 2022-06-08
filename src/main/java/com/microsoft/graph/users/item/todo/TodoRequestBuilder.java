@@ -106,6 +106,7 @@ public class TodoRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TodoRequestBuilderGetRequestConfiguration requestConfig = new TodoRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

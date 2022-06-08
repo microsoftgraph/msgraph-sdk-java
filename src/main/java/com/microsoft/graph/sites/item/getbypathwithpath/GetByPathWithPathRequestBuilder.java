@@ -71,6 +71,7 @@ public class GetByPathWithPathRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetByPathWithPathRequestBuilderGetRequestConfiguration requestConfig = new GetByPathWithPathRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

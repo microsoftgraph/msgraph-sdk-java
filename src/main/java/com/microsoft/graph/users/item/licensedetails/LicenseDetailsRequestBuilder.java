@@ -78,6 +78,7 @@ public class LicenseDetailsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LicenseDetailsRequestBuilderGetRequestConfiguration requestConfig = new LicenseDetailsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class LicenseDetailsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final LicenseDetailsRequestBuilderPostRequestConfiguration requestConfig = new LicenseDetailsRequestBuilderPostRequestConfiguration();

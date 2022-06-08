@@ -99,6 +99,7 @@ public class SegmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SegmentItemRequestBuilderGetRequestConfiguration requestConfig = new SegmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

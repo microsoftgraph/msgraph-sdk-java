@@ -118,6 +118,7 @@ public class FeatureRolloutPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FeatureRolloutPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new FeatureRolloutPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

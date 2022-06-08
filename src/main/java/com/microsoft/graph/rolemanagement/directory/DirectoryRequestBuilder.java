@@ -155,6 +155,7 @@ public class DirectoryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectoryRequestBuilderGetRequestConfiguration requestConfig = new DirectoryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

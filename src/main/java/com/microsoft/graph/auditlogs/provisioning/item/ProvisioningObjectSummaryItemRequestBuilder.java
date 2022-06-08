@@ -99,6 +99,7 @@ public class ProvisioningObjectSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ProvisioningObjectSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new ProvisioningObjectSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

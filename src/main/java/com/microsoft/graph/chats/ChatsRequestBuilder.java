@@ -79,6 +79,7 @@ public class ChatsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChatsRequestBuilderGetRequestConfiguration requestConfig = new ChatsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class ChatsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ChatsRequestBuilderPostRequestConfiguration requestConfig = new ChatsRequestBuilderPostRequestConfiguration();

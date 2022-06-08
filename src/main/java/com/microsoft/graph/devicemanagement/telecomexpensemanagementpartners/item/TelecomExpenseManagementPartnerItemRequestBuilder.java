@@ -99,6 +99,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TelecomExpenseManagementPartnerItemRequestBuilderGetRequestConfiguration requestConfig = new TelecomExpenseManagementPartnerItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

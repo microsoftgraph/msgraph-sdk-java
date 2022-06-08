@@ -99,6 +99,7 @@ public class PrintUsageByUserItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PrintUsageByUserItemRequestBuilderGetRequestConfiguration requestConfig = new PrintUsageByUserItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

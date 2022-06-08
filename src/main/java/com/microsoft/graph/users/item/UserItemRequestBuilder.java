@@ -617,6 +617,7 @@ public class UserItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserItemRequestBuilderGetRequestConfiguration requestConfig = new UserItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

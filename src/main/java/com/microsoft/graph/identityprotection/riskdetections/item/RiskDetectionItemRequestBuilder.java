@@ -99,6 +99,7 @@ public class RiskDetectionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RiskDetectionItemRequestBuilderGetRequestConfiguration requestConfig = new RiskDetectionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

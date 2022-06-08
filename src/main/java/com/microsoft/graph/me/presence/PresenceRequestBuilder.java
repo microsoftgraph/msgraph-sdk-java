@@ -111,6 +111,7 @@ public class PresenceRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PresenceRequestBuilderGetRequestConfiguration requestConfig = new PresenceRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -83,6 +83,7 @@ public class CreatedObjectsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final CreatedObjectsRequestBuilderGetRequestConfiguration requestConfig = new CreatedObjectsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

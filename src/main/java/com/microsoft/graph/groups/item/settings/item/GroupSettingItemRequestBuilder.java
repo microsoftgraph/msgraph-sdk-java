@@ -99,6 +99,7 @@ public class GroupSettingItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GroupSettingItemRequestBuilderGetRequestConfiguration requestConfig = new GroupSettingItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

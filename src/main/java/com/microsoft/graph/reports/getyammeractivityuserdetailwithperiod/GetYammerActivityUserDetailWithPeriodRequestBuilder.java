@@ -71,6 +71,7 @@ public class GetYammerActivityUserDetailWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetYammerActivityUserDetailWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetYammerActivityUserDetailWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

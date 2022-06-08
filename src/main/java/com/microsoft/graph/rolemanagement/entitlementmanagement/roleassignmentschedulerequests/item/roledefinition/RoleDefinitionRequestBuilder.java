@@ -52,7 +52,7 @@ public class RoleDefinitionRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
+     * Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class RoleDefinitionRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
+     * Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -71,6 +71,7 @@ public class RoleDefinitionRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RoleDefinitionRequestBuilderGetRequestConfiguration requestConfig = new RoleDefinitionRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -81,7 +82,7 @@ public class RoleDefinitionRequestBuilder {
         return requestInfo;
     }
     /**
-     * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
+     * Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
      * @return a CompletableFuture of unifiedRoleDefinition
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleDefinition> get() {
@@ -97,7 +98,7 @@ public class RoleDefinitionRequestBuilder {
         }
     }
     /**
-     * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
+     * Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleDefinition
      */
@@ -114,7 +115,7 @@ public class RoleDefinitionRequestBuilder {
         }
     }
     /**
-     * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded.
+     * Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleDefinition
@@ -131,7 +132,7 @@ public class RoleDefinitionRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.Id will be auto expanded. */
+    /** Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand. */
     public class RoleDefinitionRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

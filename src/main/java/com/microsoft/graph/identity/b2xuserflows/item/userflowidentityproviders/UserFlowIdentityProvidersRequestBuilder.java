@@ -83,6 +83,7 @@ public class UserFlowIdentityProvidersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserFlowIdentityProvidersRequestBuilderGetRequestConfiguration requestConfig = new UserFlowIdentityProvidersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

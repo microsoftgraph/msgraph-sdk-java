@@ -71,6 +71,7 @@ public class HomeRealmDiscoveryPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

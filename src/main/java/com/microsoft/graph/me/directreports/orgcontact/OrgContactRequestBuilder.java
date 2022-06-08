@@ -77,6 +77,7 @@ public class OrgContactRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OrgContactRequestBuilderGetRequestConfiguration requestConfig = new OrgContactRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

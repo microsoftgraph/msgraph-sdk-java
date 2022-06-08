@@ -99,6 +99,7 @@ public class DeviceManagementExportJobItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceManagementExportJobItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceManagementExportJobItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

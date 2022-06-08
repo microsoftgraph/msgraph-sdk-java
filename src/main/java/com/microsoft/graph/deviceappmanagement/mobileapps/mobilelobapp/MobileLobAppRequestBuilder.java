@@ -77,6 +77,7 @@ public class MobileLobAppRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileLobAppRequestBuilderGetRequestConfiguration requestConfig = new MobileLobAppRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

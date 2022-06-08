@@ -99,6 +99,7 @@ public class AuthoredNoteItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AuthoredNoteItemRequestBuilderGetRequestConfiguration requestConfig = new AuthoredNoteItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

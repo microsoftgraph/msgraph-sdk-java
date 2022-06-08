@@ -99,6 +99,7 @@ public class MessageRuleItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MessageRuleItemRequestBuilderGetRequestConfiguration requestConfig = new MessageRuleItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

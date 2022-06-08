@@ -106,6 +106,7 @@ public class ServiceHealthItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ServiceHealthItemRequestBuilderGetRequestConfiguration requestConfig = new ServiceHealthItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

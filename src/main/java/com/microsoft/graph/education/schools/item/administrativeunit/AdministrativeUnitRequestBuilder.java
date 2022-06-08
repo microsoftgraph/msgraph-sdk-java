@@ -71,6 +71,7 @@ public class AdministrativeUnitRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AdministrativeUnitRequestBuilderGetRequestConfiguration requestConfig = new AdministrativeUnitRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

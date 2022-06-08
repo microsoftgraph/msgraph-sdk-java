@@ -11,15 +11,15 @@ import java.util.Objects;
 public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The caller for the policy rule target. Allowed values are: None, Admin, EndUser. */
+    /** The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser. */
     private String _caller;
-    /** The list of settings which are enforced and cannot be overridden by child scopes. Use All for all settings. */
+    /** The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings. */
     private java.util.List<String> _enforcedSettings;
-    /** The list of settings which can be inherited by child scopes. Use All for all settings. */
+    /** The list of role settings that can be inherited by child scopes. Use All for all settings. */
     private java.util.List<String> _inheritableSettings;
-    /** The level for the policy rule target. Allowed values are: Eligibility, Assignment. */
+    /** The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment. */
     private String _level;
-    /** The operations for policy rule target. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew. */
+    /** The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew. */
     private java.util.List<String> _operations;
     /** The targetObjects property */
     private java.util.List<DirectoryObject> _targetObjects;
@@ -49,7 +49,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         return this._additionalData;
     }
     /**
-     * Gets the caller property value. The caller for the policy rule target. Allowed values are: None, Admin, EndUser.
+     * Gets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         return this._caller;
     }
     /**
-     * Gets the enforcedSettings property value. The list of settings which are enforced and cannot be overridden by child scopes. Use All for all settings.
+     * Gets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -81,7 +81,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         }};
     }
     /**
-     * Gets the inheritableSettings property value. The list of settings which can be inherited by child scopes. Use All for all settings.
+     * Gets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         return this._inheritableSettings;
     }
     /**
-     * Gets the level property value. The level for the policy rule target. Allowed values are: Eligibility, Assignment.
+     * Gets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         return this._level;
     }
     /**
-     * Gets the operations property value. The operations for policy rule target. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
+     * Gets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         this._additionalData = value;
     }
     /**
-     * Sets the caller property value. The caller for the policy rule target. Allowed values are: None, Admin, EndUser.
+     * Sets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
      * @param value Value to set for the caller property.
      * @return a void
      */
@@ -144,7 +144,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         this._caller = value;
     }
     /**
-     * Sets the enforcedSettings property value. The list of settings which are enforced and cannot be overridden by child scopes. Use All for all settings.
+     * Sets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
      * @param value Value to set for the enforcedSettings property.
      * @return a void
      */
@@ -152,7 +152,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         this._enforcedSettings = value;
     }
     /**
-     * Sets the inheritableSettings property value. The list of settings which can be inherited by child scopes. Use All for all settings.
+     * Sets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
      * @param value Value to set for the inheritableSettings property.
      * @return a void
      */
@@ -160,7 +160,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         this._inheritableSettings = value;
     }
     /**
-     * Sets the level property value. The level for the policy rule target. Allowed values are: Eligibility, Assignment.
+     * Sets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
      * @param value Value to set for the level property.
      * @return a void
      */
@@ -168,7 +168,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHold
         this._level = value;
     }
     /**
-     * Sets the operations property value. The operations for policy rule target. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
+     * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
      * @param value Value to set for the operations property.
      * @return a void
      */

@@ -71,6 +71,7 @@ public class GetOneDriveActivityUserDetailWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOneDriveActivityUserDetailWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetOneDriveActivityUserDetailWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

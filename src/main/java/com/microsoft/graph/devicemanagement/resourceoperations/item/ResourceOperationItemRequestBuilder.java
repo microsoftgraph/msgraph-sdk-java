@@ -99,6 +99,7 @@ public class ResourceOperationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ResourceOperationItemRequestBuilderGetRequestConfiguration requestConfig = new ResourceOperationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -79,6 +79,7 @@ public class ContactsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ContactsRequestBuilderGetRequestConfiguration requestConfig = new ContactsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class ContactsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ContactsRequestBuilderPostRequestConfiguration requestConfig = new ContactsRequestBuilderPostRequestConfiguration();

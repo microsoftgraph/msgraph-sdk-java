@@ -99,6 +99,7 @@ public class SchedulingGroupItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SchedulingGroupItemRequestBuilderGetRequestConfiguration requestConfig = new SchedulingGroupItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -71,6 +71,7 @@ public class TemplateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TemplateRequestBuilderGetRequestConfiguration requestConfig = new TemplateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

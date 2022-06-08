@@ -99,6 +99,7 @@ public class BucketTaskBoardFormatRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BucketTaskBoardFormatRequestBuilderGetRequestConfiguration requestConfig = new BucketTaskBoardFormatRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

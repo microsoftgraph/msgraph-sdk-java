@@ -52,7 +52,7 @@ public class ActivatedUsingRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
+     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class ActivatedUsingRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
+     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -71,6 +71,7 @@ public class ActivatedUsingRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ActivatedUsingRequestBuilderGetRequestConfiguration requestConfig = new ActivatedUsingRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -81,7 +82,7 @@ public class ActivatedUsingRequestBuilder {
         return requestInfo;
     }
     /**
-     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
+     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> get() {
@@ -97,7 +98,7 @@ public class ActivatedUsingRequestBuilder {
         }
     }
     /**
-     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
+     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
      */
@@ -114,7 +115,7 @@ public class ActivatedUsingRequestBuilder {
         }
     }
     /**
-     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
+     * If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleEligibilitySchedule
@@ -131,7 +132,7 @@ public class ActivatedUsingRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule. */
+    /** If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand. */
     public class ActivatedUsingRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

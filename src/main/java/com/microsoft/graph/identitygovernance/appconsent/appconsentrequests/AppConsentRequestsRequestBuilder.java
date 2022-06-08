@@ -79,6 +79,7 @@ public class AppConsentRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppConsentRequestsRequestBuilderGetRequestConfiguration requestConfig = new AppConsentRequestsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -111,6 +112,7 @@ public class AppConsentRequestsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final AppConsentRequestsRequestBuilderPostRequestConfiguration requestConfig = new AppConsentRequestsRequestBuilderPostRequestConfiguration();

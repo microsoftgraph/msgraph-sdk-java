@@ -15,6 +15,8 @@ public class Authentication extends Entity implements Parsable {
     private java.util.List<AuthenticationMethod> _methods;
     /** The details of the Microsoft Authenticator app registered to a user for authentication. */
     private java.util.List<MicrosoftAuthenticatorAuthenticationMethod> _microsoftAuthenticatorMethods;
+    /** Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes. */
+    private java.util.List<TemporaryAccessPassAuthenticationMethod> _temporaryAccessPassMethods;
     /** Represents the Windows Hello for Business authentication method registered to a user for authentication. */
     private java.util.List<WindowsHelloForBusinessAuthenticationMethod> _windowsHelloForBusinessMethods;
     /**
@@ -53,6 +55,7 @@ public class Authentication extends Entity implements Parsable {
             this.put("fido2Methods", (n) -> { currentObject.setFido2Methods(n.getCollectionOfObjectValues(Fido2AuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("methods", (n) -> { currentObject.setMethods(n.getCollectionOfObjectValues(AuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("microsoftAuthenticatorMethods", (n) -> { currentObject.setMicrosoftAuthenticatorMethods(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue)); });
+            this.put("temporaryAccessPassMethods", (n) -> { currentObject.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("windowsHelloForBusinessMethods", (n) -> { currentObject.setWindowsHelloForBusinessMethods(n.getCollectionOfObjectValues(WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue)); });
         }};
     }
@@ -73,6 +76,14 @@ public class Authentication extends Entity implements Parsable {
         return this._microsoftAuthenticatorMethods;
     }
     /**
+     * Gets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * @return a temporaryAccessPassAuthenticationMethod
+     */
+    @javax.annotation.Nullable
+    public java.util.List<TemporaryAccessPassAuthenticationMethod> getTemporaryAccessPassMethods() {
+        return this._temporaryAccessPassMethods;
+    }
+    /**
      * Gets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
      * @return a windowsHelloForBusinessAuthenticationMethod
      */
@@ -91,6 +102,7 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("fido2Methods", this.getFido2Methods());
         writer.writeCollectionOfObjectValues("methods", this.getMethods());
         writer.writeCollectionOfObjectValues("microsoftAuthenticatorMethods", this.getMicrosoftAuthenticatorMethods());
+        writer.writeCollectionOfObjectValues("temporaryAccessPassMethods", this.getTemporaryAccessPassMethods());
         writer.writeCollectionOfObjectValues("windowsHelloForBusinessMethods", this.getWindowsHelloForBusinessMethods());
     }
     /**
@@ -116,6 +128,14 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setMicrosoftAuthenticatorMethods(@javax.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value) {
         this._microsoftAuthenticatorMethods = value;
+    }
+    /**
+     * Sets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
+     * @param value Value to set for the temporaryAccessPassMethods property.
+     * @return a void
+     */
+    public void setTemporaryAccessPassMethods(@javax.annotation.Nullable final java.util.List<TemporaryAccessPassAuthenticationMethod> value) {
+        this._temporaryAccessPassMethods = value;
     }
     /**
      * Sets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.

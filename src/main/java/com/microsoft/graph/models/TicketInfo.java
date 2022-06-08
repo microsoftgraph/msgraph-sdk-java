@@ -11,9 +11,9 @@ import java.util.Objects;
 public class TicketInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Ticket number meta data */
+    /** The ticket number. */
     private String _ticketNumber;
-    /** Ticket system meta data */
+    /** The description of the ticket system. */
     private String _ticketSystem;
     /**
      * Instantiates a new ticketInfo and sets the default values.
@@ -53,7 +53,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the ticketNumber property value. Ticket number meta data
+     * Gets the ticketNumber property value. The ticket number.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
         return this._ticketNumber;
     }
     /**
-     * Gets the ticketSystem property value. Ticket system meta data
+     * Gets the ticketSystem property value. The description of the ticket system.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the ticketNumber property value. Ticket number meta data
+     * Sets the ticketNumber property value. The ticket number.
      * @param value Value to set for the ticketNumber property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class TicketInfo implements AdditionalDataHolder, Parsable {
         this._ticketNumber = value;
     }
     /**
-     * Sets the ticketSystem property value. Ticket system meta data
+     * Sets the ticketSystem property value. The description of the ticket system.
      * @param value Value to set for the ticketSystem property.
      * @return a void
      */

@@ -78,6 +78,7 @@ public class LocalizedNotificationMessagesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration requestConfig = new LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class LocalizedNotificationMessagesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final LocalizedNotificationMessagesRequestBuilderPostRequestConfiguration requestConfig = new LocalizedNotificationMessagesRequestBuilderPostRequestConfiguration();

@@ -127,6 +127,7 @@ public class ChatItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ChatItemRequestBuilderGetRequestConfiguration requestConfig = new ChatItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

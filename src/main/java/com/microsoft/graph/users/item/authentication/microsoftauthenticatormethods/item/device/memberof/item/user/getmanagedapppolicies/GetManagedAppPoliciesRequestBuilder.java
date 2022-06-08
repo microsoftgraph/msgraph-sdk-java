@@ -68,6 +68,7 @@ public class GetManagedAppPoliciesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetManagedAppPoliciesRequestBuilderGetRequestConfiguration requestConfig = new GetManagedAppPoliciesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

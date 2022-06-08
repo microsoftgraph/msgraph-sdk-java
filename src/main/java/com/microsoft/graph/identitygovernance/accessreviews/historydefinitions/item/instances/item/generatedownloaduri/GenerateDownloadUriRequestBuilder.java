@@ -69,6 +69,7 @@ public class GenerateDownloadUriRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GenerateDownloadUriRequestBuilderPostRequestConfiguration requestConfig = new GenerateDownloadUriRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

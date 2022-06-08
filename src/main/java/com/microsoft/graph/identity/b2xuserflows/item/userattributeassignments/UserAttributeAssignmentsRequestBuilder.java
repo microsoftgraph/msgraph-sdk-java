@@ -85,6 +85,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserAttributeAssignmentsRequestBuilderGetRequestConfiguration requestConfig = new UserAttributeAssignmentsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -117,6 +118,7 @@ public class UserAttributeAssignmentsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final UserAttributeAssignmentsRequestBuilderPostRequestConfiguration requestConfig = new UserAttributeAssignmentsRequestBuilderPostRequestConfiguration();

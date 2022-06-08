@@ -106,6 +106,7 @@ public class UserActivityItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserActivityItemRequestBuilderGetRequestConfiguration requestConfig = new UserActivityItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

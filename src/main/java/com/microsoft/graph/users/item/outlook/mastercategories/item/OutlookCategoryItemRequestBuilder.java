@@ -99,6 +99,7 @@ public class OutlookCategoryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OutlookCategoryItemRequestBuilderGetRequestConfiguration requestConfig = new OutlookCategoryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

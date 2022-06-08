@@ -113,6 +113,7 @@ public class AccessReviewsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessReviewsRequestBuilderGetRequestConfiguration requestConfig = new AccessReviewsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

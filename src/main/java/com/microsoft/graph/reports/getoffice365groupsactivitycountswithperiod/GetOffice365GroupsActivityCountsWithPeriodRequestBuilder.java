@@ -71,6 +71,7 @@ public class GetOffice365GroupsActivityCountsWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365GroupsActivityCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -78,6 +78,7 @@ public class ComplianceManagementPartnersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ComplianceManagementPartnersRequestBuilderGetRequestConfiguration requestConfig = new ComplianceManagementPartnersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class ComplianceManagementPartnersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final ComplianceManagementPartnersRequestBuilderPostRequestConfiguration requestConfig = new ComplianceManagementPartnersRequestBuilderPostRequestConfiguration();

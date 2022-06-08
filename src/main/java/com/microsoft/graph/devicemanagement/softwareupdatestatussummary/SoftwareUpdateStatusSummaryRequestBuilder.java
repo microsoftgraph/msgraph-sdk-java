@@ -71,6 +71,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration requestConfig = new SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

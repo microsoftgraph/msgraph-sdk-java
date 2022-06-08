@@ -99,6 +99,7 @@ public class MobileThreatDefenseConnectorItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration requestConfig = new MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

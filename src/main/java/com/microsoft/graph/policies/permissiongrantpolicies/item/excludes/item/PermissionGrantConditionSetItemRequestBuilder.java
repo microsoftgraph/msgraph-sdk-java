@@ -99,6 +99,7 @@ public class PermissionGrantConditionSetItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration requestConfig = new PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

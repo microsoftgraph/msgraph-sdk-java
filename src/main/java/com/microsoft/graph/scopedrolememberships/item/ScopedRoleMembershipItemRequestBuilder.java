@@ -99,6 +99,7 @@ public class ScopedRoleMembershipItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration requestConfig = new ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class DeviceInstallStateItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceInstallStateItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceInstallStateItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

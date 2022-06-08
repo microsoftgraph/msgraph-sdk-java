@@ -71,6 +71,7 @@ public class GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder 
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -70,6 +70,7 @@ public class AllowedCalendarSharingRolesWithUserRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration requestConfig = new AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

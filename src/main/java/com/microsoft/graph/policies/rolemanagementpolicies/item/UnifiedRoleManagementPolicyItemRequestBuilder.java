@@ -111,6 +111,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedRoleManagementPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRoleManagementPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

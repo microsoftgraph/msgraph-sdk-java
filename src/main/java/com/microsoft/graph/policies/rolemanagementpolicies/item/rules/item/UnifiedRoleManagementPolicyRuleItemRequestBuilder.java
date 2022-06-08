@@ -80,7 +80,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -99,6 +99,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedRoleManagementPolicyRuleItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRoleManagementPolicyRuleItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -192,7 +193,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         }
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @return a CompletableFuture of unifiedRoleManagementPolicyRule
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyRule> get() {
@@ -208,7 +209,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         }
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementPolicyRule
      */
@@ -225,7 +226,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         }
     }
     /**
-     * The collection of rules like approval rules and expiration rules.
+     * The collection of rules like approval rules and expiration rules. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleManagementPolicyRule
@@ -312,7 +313,7 @@ public class UnifiedRoleManagementPolicyRuleItemRequestBuilder {
         public UnifiedRoleManagementPolicyRuleItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** The collection of rules like approval rules and expiration rules. */
+    /** The collection of rules like approval rules and expiration rules. Supports $expand. */
     public class UnifiedRoleManagementPolicyRuleItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

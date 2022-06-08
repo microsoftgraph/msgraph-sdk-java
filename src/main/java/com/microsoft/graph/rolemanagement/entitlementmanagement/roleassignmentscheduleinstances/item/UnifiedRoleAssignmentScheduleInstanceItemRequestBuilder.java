@@ -105,6 +105,7 @@ public class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

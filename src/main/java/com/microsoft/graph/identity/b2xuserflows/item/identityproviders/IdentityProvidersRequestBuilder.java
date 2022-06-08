@@ -77,6 +77,7 @@ public class IdentityProvidersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IdentityProvidersRequestBuilderGetRequestConfiguration requestConfig = new IdentityProvidersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class BookingCurrencyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BookingCurrencyItemRequestBuilderGetRequestConfiguration requestConfig = new BookingCurrencyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

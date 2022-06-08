@@ -72,6 +72,7 @@ public class SubscribedSkusRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SubscribedSkusRequestBuilderGetRequestConfiguration requestConfig = new SubscribedSkusRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -104,6 +105,7 @@ public class SubscribedSkusRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final SubscribedSkusRequestBuilderPostRequestConfiguration requestConfig = new SubscribedSkusRequestBuilderPostRequestConfiguration();

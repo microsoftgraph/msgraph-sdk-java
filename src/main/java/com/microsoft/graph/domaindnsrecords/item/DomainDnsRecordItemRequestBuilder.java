@@ -99,6 +99,7 @@ public class DomainDnsRecordItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DomainDnsRecordItemRequestBuilderGetRequestConfiguration requestConfig = new DomainDnsRecordItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

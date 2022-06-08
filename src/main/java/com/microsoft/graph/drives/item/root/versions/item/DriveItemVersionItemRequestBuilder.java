@@ -111,6 +111,7 @@ public class DriveItemVersionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DriveItemVersionItemRequestBuilderGetRequestConfiguration requestConfig = new DriveItemVersionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

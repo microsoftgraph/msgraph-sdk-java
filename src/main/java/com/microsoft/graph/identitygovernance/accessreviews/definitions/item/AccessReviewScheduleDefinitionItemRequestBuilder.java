@@ -112,6 +112,7 @@ public class AccessReviewScheduleDefinitionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration requestConfig = new AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

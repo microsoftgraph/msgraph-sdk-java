@@ -78,6 +78,7 @@ public class AppCatalogsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppCatalogsRequestBuilderGetRequestConfiguration requestConfig = new AppCatalogsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

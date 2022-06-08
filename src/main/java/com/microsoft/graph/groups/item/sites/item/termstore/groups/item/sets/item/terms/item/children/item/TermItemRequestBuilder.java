@@ -112,6 +112,7 @@ public class TermItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final TermItemRequestBuilderGetRequestConfiguration requestConfig = new TermItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

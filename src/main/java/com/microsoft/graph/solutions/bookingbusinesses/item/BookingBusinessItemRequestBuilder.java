@@ -175,6 +175,7 @@ public class BookingBusinessItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BookingBusinessItemRequestBuilderGetRequestConfiguration requestConfig = new BookingBusinessItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

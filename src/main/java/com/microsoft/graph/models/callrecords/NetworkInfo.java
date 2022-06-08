@@ -27,6 +27,8 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     private Long _linkSpeed;
     /** The media access control (MAC) address of the media endpoint's network device. */
     private String _macAddress;
+    /** Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue. */
+    private NetworkTransportProtocol _networkTransportProtocol;
     /** Network port number used by media endpoint. */
     private Integer _port;
     /** Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received. */
@@ -41,6 +43,8 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     private Float _sentQualityEventRatio;
     /** Subnet used for media stream by the media endpoint. */
     private String _subnet;
+    /** List of network trace route hops collected for this media stream. */
+    private java.util.List<TraceRouteHop> _traceRouteHops;
     /** WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue. */
     private WifiBand _wifiBand;
     /** Estimated remaining battery charge in percentage reported by the media endpoint. */
@@ -131,7 +135,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkInfo currentObject = this;
-        return new HashMap<>(24) {{
+        return new HashMap<>(26) {{
             this.put("bandwidthLowEventRatio", (n) -> { currentObject.setBandwidthLowEventRatio(n.getFloatValue()); });
             this.put("basicServiceSetIdentifier", (n) -> { currentObject.setBasicServiceSetIdentifier(n.getStringValue()); });
             this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(NetworkConnectionType.class)); });
@@ -140,6 +144,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
             this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
             this.put("linkSpeed", (n) -> { currentObject.setLinkSpeed(n.getLongValue()); });
             this.put("macAddress", (n) -> { currentObject.setMacAddress(n.getStringValue()); });
+            this.put("networkTransportProtocol", (n) -> { currentObject.setNetworkTransportProtocol(n.getEnumValue(NetworkTransportProtocol.class)); });
             this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
             this.put("receivedQualityEventRatio", (n) -> { currentObject.setReceivedQualityEventRatio(n.getFloatValue()); });
             this.put("reflexiveIPAddress", (n) -> { currentObject.setReflexiveIPAddress(n.getStringValue()); });
@@ -147,6 +152,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
             this.put("relayPort", (n) -> { currentObject.setRelayPort(n.getIntegerValue()); });
             this.put("sentQualityEventRatio", (n) -> { currentObject.setSentQualityEventRatio(n.getFloatValue()); });
             this.put("subnet", (n) -> { currentObject.setSubnet(n.getStringValue()); });
+            this.put("traceRouteHops", (n) -> { currentObject.setTraceRouteHops(n.getCollectionOfObjectValues(TraceRouteHop::createFromDiscriminatorValue)); });
             this.put("wifiBand", (n) -> { currentObject.setWifiBand(n.getEnumValue(WifiBand.class)); });
             this.put("wifiBatteryCharge", (n) -> { currentObject.setWifiBatteryCharge(n.getIntegerValue()); });
             this.put("wifiChannel", (n) -> { currentObject.setWifiChannel(n.getIntegerValue()); });
@@ -181,6 +187,14 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getMacAddress() {
         return this._macAddress;
+    }
+    /**
+     * Gets the networkTransportProtocol property value. Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue.
+     * @return a networkTransportProtocol
+     */
+    @javax.annotation.Nullable
+    public NetworkTransportProtocol getNetworkTransportProtocol() {
+        return this._networkTransportProtocol;
     }
     /**
      * Gets the port property value. Network port number used by media endpoint.
@@ -237,6 +251,14 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public String getSubnet() {
         return this._subnet;
+    }
+    /**
+     * Gets the traceRouteHops property value. List of network trace route hops collected for this media stream.
+     * @return a traceRouteHop
+     */
+    @javax.annotation.Nullable
+    public java.util.List<TraceRouteHop> getTraceRouteHops() {
+        return this._traceRouteHops;
     }
     /**
      * Gets the wifiBand property value. WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
@@ -325,6 +347,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeLongValue("linkSpeed", this.getLinkSpeed());
         writer.writeStringValue("macAddress", this.getMacAddress());
+        writer.writeEnumValue("networkTransportProtocol", this.getNetworkTransportProtocol());
         writer.writeIntegerValue("port", this.getPort());
         writer.writeFloatValue("receivedQualityEventRatio", this.getReceivedQualityEventRatio());
         writer.writeStringValue("reflexiveIPAddress", this.getReflexiveIPAddress());
@@ -332,6 +355,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("relayPort", this.getRelayPort());
         writer.writeFloatValue("sentQualityEventRatio", this.getSentQualityEventRatio());
         writer.writeStringValue("subnet", this.getSubnet());
+        writer.writeCollectionOfObjectValues("traceRouteHops", this.getTraceRouteHops());
         writer.writeEnumValue("wifiBand", this.getWifiBand());
         writer.writeIntegerValue("wifiBatteryCharge", this.getWifiBatteryCharge());
         writer.writeIntegerValue("wifiChannel", this.getWifiChannel());
@@ -416,6 +440,14 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         this._macAddress = value;
     }
     /**
+     * Sets the networkTransportProtocol property value. Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue.
+     * @param value Value to set for the networkTransportProtocol property.
+     * @return a void
+     */
+    public void setNetworkTransportProtocol(@javax.annotation.Nullable final NetworkTransportProtocol value) {
+        this._networkTransportProtocol = value;
+    }
+    /**
      * Sets the port property value. Network port number used by media endpoint.
      * @param value Value to set for the port property.
      * @return a void
@@ -470,6 +502,14 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
      */
     public void setSubnet(@javax.annotation.Nullable final String value) {
         this._subnet = value;
+    }
+    /**
+     * Sets the traceRouteHops property value. List of network trace route hops collected for this media stream.
+     * @param value Value to set for the traceRouteHops property.
+     * @return a void
+     */
+    public void setTraceRouteHops(@javax.annotation.Nullable final java.util.List<TraceRouteHop> value) {
+        this._traceRouteHops = value;
     }
     /**
      * Sets the wifiBand property value. WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.

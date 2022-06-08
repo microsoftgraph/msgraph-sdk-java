@@ -78,6 +78,7 @@ public class InternalSponsorsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InternalSponsorsRequestBuilderGetRequestConfiguration requestConfig = new InternalSponsorsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class InternalSponsorsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final InternalSponsorsRequestBuilderPostRequestConfiguration requestConfig = new InternalSponsorsRequestBuilderPostRequestConfiguration();

@@ -99,6 +99,7 @@ public class SettingStateDeviceSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

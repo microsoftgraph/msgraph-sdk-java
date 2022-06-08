@@ -99,6 +99,7 @@ public class ShiftPreferencesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ShiftPreferencesRequestBuilderGetRequestConfiguration requestConfig = new ShiftPreferencesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

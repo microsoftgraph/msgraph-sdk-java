@@ -96,6 +96,7 @@ public class DevicesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DevicesRequestBuilderGetRequestConfiguration requestConfig = new DevicesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -128,6 +129,7 @@ public class DevicesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final DevicesRequestBuilderPostRequestConfiguration requestConfig = new DevicesRequestBuilderPostRequestConfiguration();

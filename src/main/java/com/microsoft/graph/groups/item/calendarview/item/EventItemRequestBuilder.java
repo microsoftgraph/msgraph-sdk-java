@@ -193,6 +193,7 @@ public class EventItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final EventItemRequestBuilderGetRequestConfiguration requestConfig = new EventItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

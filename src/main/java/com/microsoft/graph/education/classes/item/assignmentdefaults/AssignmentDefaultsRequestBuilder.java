@@ -99,6 +99,7 @@ public class AssignmentDefaultsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AssignmentDefaultsRequestBuilderGetRequestConfiguration requestConfig = new AssignmentDefaultsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

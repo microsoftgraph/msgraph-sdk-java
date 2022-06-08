@@ -77,6 +77,7 @@ public class SitesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SitesRequestBuilderGetRequestConfiguration requestConfig = new SitesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -124,6 +124,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration requestConfig = new AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

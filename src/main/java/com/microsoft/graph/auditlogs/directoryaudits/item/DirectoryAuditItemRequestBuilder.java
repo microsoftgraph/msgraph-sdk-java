@@ -99,6 +99,7 @@ public class DirectoryAuditItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DirectoryAuditItemRequestBuilderGetRequestConfiguration requestConfig = new DirectoryAuditItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

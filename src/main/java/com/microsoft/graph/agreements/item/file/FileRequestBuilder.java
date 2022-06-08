@@ -106,6 +106,7 @@ public class FileRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FileRequestBuilderGetRequestConfiguration requestConfig = new FileRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

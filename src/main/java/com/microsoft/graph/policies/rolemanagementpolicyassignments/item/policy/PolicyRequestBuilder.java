@@ -71,6 +71,7 @@ public class PolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final PolicyRequestBuilderGetRequestConfiguration requestConfig = new PolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -99,6 +99,7 @@ public class AttendanceRecordItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AttendanceRecordItemRequestBuilderGetRequestConfiguration requestConfig = new AttendanceRecordItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

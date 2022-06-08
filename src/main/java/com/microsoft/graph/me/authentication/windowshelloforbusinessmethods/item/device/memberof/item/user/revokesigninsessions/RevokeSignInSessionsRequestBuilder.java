@@ -68,6 +68,7 @@ public class RevokeSignInSessionsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RevokeSignInSessionsRequestBuilderPostRequestConfiguration requestConfig = new RevokeSignInSessionsRequestBuilderPostRequestConfiguration();
             requestConfiguration.accept(requestConfig);

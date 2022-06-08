@@ -111,6 +111,7 @@ public class RemoteAssistancePartnerItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RemoteAssistancePartnerItemRequestBuilderGetRequestConfiguration requestConfig = new RemoteAssistancePartnerItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -106,6 +106,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeviceCompliancePolicySettingStateSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new DeviceCompliancePolicySettingStateSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

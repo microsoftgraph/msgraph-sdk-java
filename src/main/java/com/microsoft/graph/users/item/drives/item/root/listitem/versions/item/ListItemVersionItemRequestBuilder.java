@@ -111,6 +111,7 @@ public class ListItemVersionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ListItemVersionItemRequestBuilderGetRequestConfiguration requestConfig = new ListItemVersionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

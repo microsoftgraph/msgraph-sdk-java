@@ -99,6 +99,7 @@ public class ConditionalAccessPolicyItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration requestConfig = new ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

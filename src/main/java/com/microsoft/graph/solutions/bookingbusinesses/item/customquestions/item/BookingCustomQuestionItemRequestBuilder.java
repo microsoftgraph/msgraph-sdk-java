@@ -99,6 +99,7 @@ public class BookingCustomQuestionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BookingCustomQuestionItemRequestBuilderGetRequestConfiguration requestConfig = new BookingCustomQuestionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

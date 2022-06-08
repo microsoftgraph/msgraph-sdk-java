@@ -105,6 +105,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration requestConfig = new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

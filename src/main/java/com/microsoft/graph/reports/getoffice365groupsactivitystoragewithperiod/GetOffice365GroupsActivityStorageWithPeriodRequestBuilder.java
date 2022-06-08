@@ -71,6 +71,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

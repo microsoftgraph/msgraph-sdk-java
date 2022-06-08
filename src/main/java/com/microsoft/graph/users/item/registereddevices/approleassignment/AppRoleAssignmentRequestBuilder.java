@@ -77,6 +77,7 @@ public class AppRoleAssignmentRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AppRoleAssignmentRequestBuilderGetRequestConfiguration requestConfig = new AppRoleAssignmentRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

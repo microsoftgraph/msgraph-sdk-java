@@ -99,6 +99,7 @@ public class ColumnLinkItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ColumnLinkItemRequestBuilderGetRequestConfiguration requestConfig = new ColumnLinkItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

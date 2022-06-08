@@ -105,6 +105,7 @@ public class BookingAppointmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final BookingAppointmentItemRequestBuilderGetRequestConfiguration requestConfig = new BookingAppointmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

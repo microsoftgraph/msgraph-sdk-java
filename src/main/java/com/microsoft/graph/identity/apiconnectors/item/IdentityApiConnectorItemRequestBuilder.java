@@ -105,6 +105,7 @@ public class IdentityApiConnectorItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final IdentityApiConnectorItemRequestBuilderGetRequestConfiguration requestConfig = new IdentityApiConnectorItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

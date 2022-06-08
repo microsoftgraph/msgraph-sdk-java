@@ -99,6 +99,7 @@ public class FieldsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final FieldsRequestBuilderGetRequestConfiguration requestConfig = new FieldsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

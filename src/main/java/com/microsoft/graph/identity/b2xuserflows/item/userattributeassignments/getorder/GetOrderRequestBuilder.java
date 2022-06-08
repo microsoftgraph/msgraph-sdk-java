@@ -69,6 +69,7 @@ public class GetOrderRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetOrderRequestBuilderGetRequestConfiguration requestConfig = new GetOrderRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

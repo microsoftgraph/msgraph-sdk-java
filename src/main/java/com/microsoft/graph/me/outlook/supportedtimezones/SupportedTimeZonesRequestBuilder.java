@@ -68,6 +68,7 @@ public class SupportedTimeZonesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SupportedTimeZonesRequestBuilderGetRequestConfiguration requestConfig = new SupportedTimeZonesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

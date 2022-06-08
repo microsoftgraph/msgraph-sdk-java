@@ -77,6 +77,7 @@ public class ManagedDevicesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDevicesRequestBuilderGetRequestConfiguration requestConfig = new ManagedDevicesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

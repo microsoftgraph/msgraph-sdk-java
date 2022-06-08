@@ -141,6 +141,7 @@ public class OnenoteRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final OnenoteRequestBuilderGetRequestConfiguration requestConfig = new OnenoteRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

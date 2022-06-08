@@ -101,6 +101,7 @@ public class RegisteredUsersRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final RegisteredUsersRequestBuilderGetRequestConfiguration requestConfig = new RegisteredUsersRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

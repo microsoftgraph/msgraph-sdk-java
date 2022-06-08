@@ -71,6 +71,7 @@ public class ComplianceRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ComplianceRequestBuilderGetRequestConfiguration requestConfig = new ComplianceRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

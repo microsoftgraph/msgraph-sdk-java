@@ -99,6 +99,7 @@ public class AuthenticationFlowsPolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration requestConfig = new AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

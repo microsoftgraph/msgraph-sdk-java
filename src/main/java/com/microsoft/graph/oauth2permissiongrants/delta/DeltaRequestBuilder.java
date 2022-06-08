@@ -68,6 +68,7 @@ public class DeltaRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final DeltaRequestBuilderGetRequestConfiguration requestConfig = new DeltaRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

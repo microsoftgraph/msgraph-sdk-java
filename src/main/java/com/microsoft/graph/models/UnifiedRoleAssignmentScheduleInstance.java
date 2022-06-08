@@ -10,19 +10,19 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the roleManagement singleton. */
 public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceBase implements Parsable {
-    /** If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance. */
+    /** If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand. */
     private UnifiedRoleEligibilityScheduleInstance _activatedUsing;
-    /** Type of the assignment. It can either be Assigned or Activated. */
+    /** Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne). */
     private String _assignmentType;
-    /** Time that the roleAssignmentInstance will expire */
+    /** The end date of the schedule instance. */
     private OffsetDateTime _endDateTime;
-    /** Membership type of the assignment. It can either be Inherited, Direct, or Group. */
+    /** How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne). */
     private String _memberType;
-    /** ID of the roleAssignment in the directory */
+    /** The identifier of the role assignment in Azure AD. */
     private String _roleAssignmentOriginId;
-    /** ID of the parent roleAssignmentSchedule for this instance */
+    /** The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created. */
     private String _roleAssignmentScheduleId;
-    /** Time that the roleAssignmentInstance will start */
+    /** When this instance starts. */
     private OffsetDateTime _startDateTime;
     /**
      * Instantiates a new unifiedRoleAssignmentScheduleInstance and sets the default values.
@@ -42,7 +42,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return new UnifiedRoleAssignmentScheduleInstance();
     }
     /**
-     * Gets the activatedUsing property value. If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.
+     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @return a unifiedRoleEligibilityScheduleInstance
      */
     @javax.annotation.Nullable
@@ -50,7 +50,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return this._activatedUsing;
     }
     /**
-     * Gets the assignmentType property value. Type of the assignment. It can either be Assigned or Activated.
+     * Gets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return this._assignmentType;
     }
     /**
-     * Gets the endDateTime property value. Time that the roleAssignmentInstance will expire
+     * Gets the endDateTime property value. The end date of the schedule instance.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -83,7 +83,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         }};
     }
     /**
-     * Gets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * Gets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -91,7 +91,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return this._memberType;
     }
     /**
-     * Gets the roleAssignmentOriginId property value. ID of the roleAssignment in the directory
+     * Gets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -99,7 +99,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return this._roleAssignmentOriginId;
     }
     /**
-     * Gets the roleAssignmentScheduleId property value. ID of the parent roleAssignmentSchedule for this instance
+     * Gets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -107,7 +107,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         return this._roleAssignmentScheduleId;
     }
     /**
-     * Gets the startDateTime property value. Time that the roleAssignmentInstance will start
+     * Gets the startDateTime property value. When this instance starts.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
     }
     /**
-     * Sets the activatedUsing property value. If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.
+     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it is null. Supports $expand.
      * @param value Value to set for the activatedUsing property.
      * @return a void
      */
@@ -139,7 +139,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this._activatedUsing = value;
     }
     /**
-     * Sets the assignmentType property value. Type of the assignment. It can either be Assigned or Activated.
+     * Sets the assignmentType property value. Type of the assignment which can either be Assigned or Activated. Supports $filter (eq, ne).
      * @param value Value to set for the assignmentType property.
      * @return a void
      */
@@ -147,7 +147,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this._assignmentType = value;
     }
     /**
-     * Sets the endDateTime property value. Time that the roleAssignmentInstance will expire
+     * Sets the endDateTime property value. The end date of the schedule instance.
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
@@ -155,7 +155,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this._endDateTime = value;
     }
     /**
-     * Sets the memberType property value. Membership type of the assignment. It can either be Inherited, Direct, or Group.
+     * Sets the memberType property value. How the assignments is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleAssignmentSchedule can be managed by the caller. Supports $filter (eq, ne).
      * @param value Value to set for the memberType property.
      * @return a void
      */
@@ -163,7 +163,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this._memberType = value;
     }
     /**
-     * Sets the roleAssignmentOriginId property value. ID of the roleAssignment in the directory
+     * Sets the roleAssignmentOriginId property value. The identifier of the role assignment in Azure AD.
      * @param value Value to set for the roleAssignmentOriginId property.
      * @return a void
      */
@@ -171,7 +171,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this._roleAssignmentOriginId = value;
     }
     /**
-     * Sets the roleAssignmentScheduleId property value. ID of the parent roleAssignmentSchedule for this instance
+     * Sets the roleAssignmentScheduleId property value. The identifier of the unifiedRoleAssignmentSchedule object from which this instance was created.
      * @param value Value to set for the roleAssignmentScheduleId property.
      * @return a void
      */
@@ -179,7 +179,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
         this._roleAssignmentScheduleId = value;
     }
     /**
-     * Sets the startDateTime property value. Time that the roleAssignmentInstance will start
+     * Sets the startDateTime property value. When this instance starts.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */

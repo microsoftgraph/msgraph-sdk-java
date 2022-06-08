@@ -71,6 +71,7 @@ public class AssignmentPolicyRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final AssignmentPolicyRequestBuilderGetRequestConfiguration requestConfig = new AssignmentPolicyRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

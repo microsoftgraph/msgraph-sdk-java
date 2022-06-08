@@ -124,6 +124,7 @@ public class ServiceUpdateMessageItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ServiceUpdateMessageItemRequestBuilderGetRequestConfiguration requestConfig = new ServiceUpdateMessageItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

@@ -69,6 +69,7 @@ public class ManagedDeviceEnrollmentTopFailuresRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ManagedDeviceEnrollmentTopFailuresRequestBuilderGetRequestConfiguration requestConfig = new ManagedDeviceEnrollmentTopFailuresRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

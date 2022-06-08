@@ -105,6 +105,7 @@ public class UserScopeTeamsAppInstallationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration requestConfig = new UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

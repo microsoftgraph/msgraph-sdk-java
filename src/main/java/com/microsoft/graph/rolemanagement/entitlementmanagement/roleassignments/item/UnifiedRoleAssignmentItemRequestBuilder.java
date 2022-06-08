@@ -123,6 +123,7 @@ public class UnifiedRoleAssignmentItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedRoleAssignmentItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRoleAssignmentItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

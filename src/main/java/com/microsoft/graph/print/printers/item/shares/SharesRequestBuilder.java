@@ -77,6 +77,7 @@ public class SharesRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final SharesRequestBuilderGetRequestConfiguration requestConfig = new SharesRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

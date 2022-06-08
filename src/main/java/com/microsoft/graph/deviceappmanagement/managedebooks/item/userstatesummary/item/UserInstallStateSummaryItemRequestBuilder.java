@@ -106,6 +106,7 @@ public class UserInstallStateSummaryItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UserInstallStateSummaryItemRequestBuilderGetRequestConfiguration requestConfig = new UserInstallStateSummaryItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

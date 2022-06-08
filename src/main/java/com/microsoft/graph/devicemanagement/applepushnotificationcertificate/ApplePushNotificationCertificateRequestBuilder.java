@@ -100,6 +100,7 @@ public class ApplePushNotificationCertificateRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration requestConfig = new ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

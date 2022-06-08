@@ -105,6 +105,7 @@ public class InvitationItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final InvitationItemRequestBuilderGetRequestConfiguration requestConfig = new InvitationItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

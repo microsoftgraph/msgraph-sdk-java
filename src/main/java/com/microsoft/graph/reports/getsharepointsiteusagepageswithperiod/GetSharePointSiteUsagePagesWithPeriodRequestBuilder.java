@@ -71,6 +71,7 @@ public class GetSharePointSiteUsagePagesWithPeriodRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration requestConfig = new GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

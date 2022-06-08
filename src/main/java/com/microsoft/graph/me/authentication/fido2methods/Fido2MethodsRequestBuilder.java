@@ -78,6 +78,7 @@ public class Fido2MethodsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final Fido2MethodsRequestBuilderGetRequestConfiguration requestConfig = new Fido2MethodsRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -110,6 +111,7 @@ public class Fido2MethodsRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final Fido2MethodsRequestBuilderPostRequestConfiguration requestConfig = new Fido2MethodsRequestBuilderPostRequestConfiguration();

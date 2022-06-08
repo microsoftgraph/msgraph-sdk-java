@@ -162,6 +162,7 @@ public class MeRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final MeRequestBuilderGetRequestConfiguration requestConfig = new MeRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);

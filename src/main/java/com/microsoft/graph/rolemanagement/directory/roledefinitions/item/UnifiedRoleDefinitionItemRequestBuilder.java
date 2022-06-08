@@ -105,6 +105,7 @@ public class UnifiedRoleDefinitionItemRequestBuilder {
         }};
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
+        requestInfo.addRequestHeader("Accept", "application/json");
         if (requestConfiguration != null) {
             final UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration requestConfig = new UnifiedRoleDefinitionItemRequestBuilderGetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
