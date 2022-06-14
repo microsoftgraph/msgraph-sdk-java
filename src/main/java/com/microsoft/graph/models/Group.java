@@ -20,6 +20,7 @@ import com.microsoft.graph.models.GroupSetting;
 import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.Event;
 import com.microsoft.graph.models.Conversation;
+import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.ConversationThread;
 import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.models.Site;
@@ -27,7 +28,6 @@ import com.microsoft.graph.models.Extension;
 import com.microsoft.graph.models.GroupLifecyclePolicy;
 import com.microsoft.graph.models.PlannerGroup;
 import com.microsoft.graph.models.Onenote;
-import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.Team;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
@@ -35,12 +35,12 @@ import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPag
 import com.microsoft.graph.requests.GroupSettingCollectionPage;
 import com.microsoft.graph.requests.EventCollectionPage;
 import com.microsoft.graph.requests.ConversationCollectionPage;
+import com.microsoft.graph.requests.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.ConversationThreadCollectionPage;
 import com.microsoft.graph.requests.DriveCollectionPage;
 import com.microsoft.graph.requests.SiteCollectionPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.GroupLifecyclePolicyCollectionPage;
-import com.microsoft.graph.requests.ProfilePhotoCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -521,6 +521,24 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public EventCollectionPage events;
 
     /**
+     * The Photo.
+     * The group's profile photo.
+     */
+    @SerializedName(value = "photo", alternate = {"Photo"})
+    @Expose
+	@Nullable
+    public ProfilePhoto photo;
+
+    /**
+     * The Photos.
+     * The profile photos owned by the group. Read-only. Nullable.
+     */
+    @SerializedName(value = "photos", alternate = {"Photos"})
+    @Expose
+	@Nullable
+    public ProfilePhotoCollectionPage photos;
+
+    /**
      * The Rejected Senders.
      * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      */
@@ -592,30 +610,12 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Onenote.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose
 	@Nullable
     public Onenote onenote;
-
-    /**
-     * The Photo.
-     * The group's profile photo.
-     */
-    @SerializedName(value = "photo", alternate = {"Photo"})
-    @Expose
-	@Nullable
-    public ProfilePhoto photo;
-
-    /**
-     * The Photos.
-     * The profile photos owned by the group. Read-only. Nullable.
-     */
-    @SerializedName(value = "photos", alternate = {"Photos"})
-    @Expose
-	@Nullable
-    public ProfilePhotoCollectionPage photos;
 
     /**
      * The Team.
@@ -688,6 +688,10 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             events = serializer.deserializeObject(json.get("events"), EventCollectionPage.class);
         }
 
+        if (json.has("photos")) {
+            photos = serializer.deserializeObject(json.get("photos"), ProfilePhotoCollectionPage.class);
+        }
+
         if (json.has("rejectedSenders")) {
             rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders"), DirectoryObjectCollectionPage.class);
         }
@@ -710,10 +714,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("groupLifecyclePolicies")) {
             groupLifecyclePolicies = serializer.deserializeObject(json.get("groupLifecyclePolicies"), GroupLifecyclePolicyCollectionPage.class);
-        }
-
-        if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos"), ProfilePhotoCollectionPage.class);
         }
     }
 }

@@ -32,6 +32,8 @@ import com.microsoft.graph.requests.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.EventRequestBuilder;
 import com.microsoft.graph.requests.ConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationRequestBuilder;
+import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationThreadRequestBuilder;
 import com.microsoft.graph.requests.DriveRequestBuilder;
@@ -44,8 +46,6 @@ import com.microsoft.graph.requests.GroupLifecyclePolicyCollectionRequestBuilder
 import com.microsoft.graph.requests.GroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.PlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.OnenoteRequestBuilder;
-import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

@@ -1002,7 +1002,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Insights.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
@@ -1011,7 +1011,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -1020,7 +1020,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Onenote.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose
@@ -1038,7 +1038,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Photos.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
@@ -1074,7 +1074,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Authentication.
-     * TODO: Add Description
+     * The authentication methods that are supported for the user.
      */
     @SerializedName(value = "authentication", alternate = {"Authentication"})
     @Expose

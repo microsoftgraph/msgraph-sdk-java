@@ -229,7 +229,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Audio Routing Groups.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "audioRoutingGroups", alternate = {"AudioRoutingGroups"})
     @Expose
@@ -238,7 +238,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -247,7 +247,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose

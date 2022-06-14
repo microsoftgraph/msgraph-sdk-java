@@ -73,7 +73,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Groups.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
@@ -82,7 +82,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Items.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
@@ -91,7 +91,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -100,7 +100,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Schema.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose
