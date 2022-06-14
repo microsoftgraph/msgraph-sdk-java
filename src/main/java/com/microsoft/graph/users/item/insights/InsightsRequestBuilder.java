@@ -101,7 +101,7 @@ public class InsightsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get insights from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -109,7 +109,7 @@ public class InsightsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get insights from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -214,7 +214,7 @@ public class InsightsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get insights from users
      * @return a CompletableFuture of officeGraphInsights
      */
     public java.util.concurrent.CompletableFuture<OfficeGraphInsights> get() {
@@ -230,7 +230,7 @@ public class InsightsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get insights from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of officeGraphInsights
      */
@@ -247,7 +247,7 @@ public class InsightsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get insights from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of officeGraphInsights
@@ -370,7 +370,7 @@ public class InsightsRequestBuilder {
         public InsightsRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get insights from users */
     public class InsightsRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

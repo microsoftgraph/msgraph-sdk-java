@@ -14,14 +14,44 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.groups.item.permissiongrants.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import microsoft.graph.groups.item.permissiongrants.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import microsoft.graph.groups.item.permissiongrants.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import microsoft.graph.groups.item.permissiongrants.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import microsoft.graph.groups.item.permissiongrants.item.restore.RestoreRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.ResourceSpecificPermissionGrant;
 /** Provides operations to manage the permissionGrants property of the microsoft.graph.group entity. */
 public class ResourceSpecificPermissionGrantItemRequestBuilder {
+    /** The checkMemberGroups property */
+    @javax.annotation.Nonnull
+    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
+        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The checkMemberObjects property */
+    @javax.annotation.Nonnull
+    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
+        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberGroups property */
+    @javax.annotation.Nonnull
+    public GetMemberGroupsRequestBuilder getMemberGroups() {
+        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberObjects property */
+    @javax.annotation.Nonnull
+    public GetMemberObjectsRequestBuilder getMemberObjects() {
+        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The restore property */
+    @javax.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**

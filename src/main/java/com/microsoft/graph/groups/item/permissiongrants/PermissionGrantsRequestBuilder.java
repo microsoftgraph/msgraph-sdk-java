@@ -15,6 +15,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.groups.item.permissiongrants.count.CountRequestBuilder;
+import microsoft.graph.groups.item.permissiongrants.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import microsoft.graph.groups.item.permissiongrants.getbyids.GetByIdsRequestBuilder;
+import microsoft.graph.groups.item.permissiongrants.validateproperties.ValidatePropertiesRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.ResourceSpecificPermissionGrant;
 import microsoft.graph.models.ResourceSpecificPermissionGrantCollectionResponse;
@@ -25,12 +28,27 @@ public class PermissionGrantsRequestBuilder {
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The getAvailableExtensionProperties property */
+    @javax.annotation.Nonnull
+    public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
+        return new GetAvailableExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getByIds property */
+    @javax.annotation.Nonnull
+    public GetByIdsRequestBuilder getByIds() {
+        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The validateProperties property */
+    @javax.annotation.Nonnull
+    public ValidatePropertiesRequestBuilder validateProperties() {
+        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new PermissionGrantsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

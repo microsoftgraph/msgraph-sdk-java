@@ -15,16 +15,32 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.me.drives.item.root.analytics.AnalyticsRequestBuilder;
+import microsoft.graph.me.drives.item.root.checkin.CheckinRequestBuilder;
+import microsoft.graph.me.drives.item.root.checkout.CheckoutRequestBuilder;
 import microsoft.graph.me.drives.item.root.children.ChildrenRequestBuilder;
 import microsoft.graph.me.drives.item.root.children.item.DriveItemItemRequestBuilder;
 import microsoft.graph.me.drives.item.root.content.ContentRequestBuilder;
+import microsoft.graph.me.drives.item.root.copy.CopyRequestBuilder;
+import microsoft.graph.me.drives.item.root.createlink.CreateLinkRequestBuilder;
+import microsoft.graph.me.drives.item.root.createuploadsession.CreateUploadSessionRequestBuilder;
+import microsoft.graph.me.drives.item.root.delta.DeltaRequestBuilder;
+import microsoft.graph.me.drives.item.root.deltawithtoken.DeltaWithTokenRequestBuilder;
+import microsoft.graph.me.drives.item.root.follow.FollowRequestBuilder;
+import microsoft.graph.me.drives.item.root.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
+import microsoft.graph.me.drives.item.root.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import microsoft.graph.me.drives.item.root.invite.InviteRequestBuilder;
 import microsoft.graph.me.drives.item.root.listitem.ListItemRequestBuilder;
 import microsoft.graph.me.drives.item.root.permissions.item.PermissionItemRequestBuilder;
 import microsoft.graph.me.drives.item.root.permissions.PermissionsRequestBuilder;
+import microsoft.graph.me.drives.item.root.preview.PreviewRequestBuilder;
+import microsoft.graph.me.drives.item.root.restore.RestoreRequestBuilder;
+import microsoft.graph.me.drives.item.root.searchwithq.SearchWithQRequestBuilder;
 import microsoft.graph.me.drives.item.root.subscriptions.item.SubscriptionItemRequestBuilder;
 import microsoft.graph.me.drives.item.root.subscriptions.SubscriptionsRequestBuilder;
 import microsoft.graph.me.drives.item.root.thumbnails.item.ThumbnailSetItemRequestBuilder;
 import microsoft.graph.me.drives.item.root.thumbnails.ThumbnailsRequestBuilder;
+import microsoft.graph.me.drives.item.root.unfollow.UnfollowRequestBuilder;
+import microsoft.graph.me.drives.item.root.validatepermission.ValidatePermissionRequestBuilder;
 import microsoft.graph.me.drives.item.root.versions.item.DriveItemVersionItemRequestBuilder;
 import microsoft.graph.me.drives.item.root.versions.VersionsRequestBuilder;
 import microsoft.graph.models.DriveItem;
@@ -36,6 +52,16 @@ public class RootRequestBuilder {
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The checkin property */
+    @javax.annotation.Nonnull
+    public CheckinRequestBuilder checkin() {
+        return new CheckinRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The checkout property */
+    @javax.annotation.Nonnull
+    public CheckoutRequestBuilder checkout() {
+        return new CheckoutRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The children property */
     @javax.annotation.Nonnull
     public ChildrenRequestBuilder children() {
@@ -45,6 +71,31 @@ public class RootRequestBuilder {
     @javax.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The copy property */
+    @javax.annotation.Nonnull
+    public CopyRequestBuilder copy() {
+        return new CopyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The createLink property */
+    @javax.annotation.Nonnull
+    public CreateLinkRequestBuilder createLink() {
+        return new CreateLinkRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The createUploadSession property */
+    @javax.annotation.Nonnull
+    public CreateUploadSessionRequestBuilder createUploadSession() {
+        return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The follow property */
+    @javax.annotation.Nonnull
+    public FollowRequestBuilder follow() {
+        return new FollowRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The invite property */
+    @javax.annotation.Nonnull
+    public InviteRequestBuilder invite() {
+        return new InviteRequestBuilder(pathParameters, requestAdapter);
     }
     /** The listItem property */
     @javax.annotation.Nonnull
@@ -58,8 +109,18 @@ public class RootRequestBuilder {
     public PermissionsRequestBuilder permissions() {
         return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The preview property */
+    @javax.annotation.Nonnull
+    public PreviewRequestBuilder preview() {
+        return new PreviewRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The restore property */
+    @javax.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The subscriptions property */
     @javax.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
@@ -70,8 +131,18 @@ public class RootRequestBuilder {
     public ThumbnailsRequestBuilder thumbnails() {
         return new ThumbnailsRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The unfollow property */
+    @javax.annotation.Nonnull
+    public UnfollowRequestBuilder unfollow() {
+        return new UnfollowRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The validatePermission property */
+    @javax.annotation.Nonnull
+    public ValidatePermissionRequestBuilder validatePermission() {
+        return new ValidatePermissionRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The versions property */
     @javax.annotation.Nonnull
     public VersionsRequestBuilder versions() {
@@ -258,6 +329,24 @@ public class RootRequestBuilder {
         }
     }
     /**
+     * Provides operations to call the delta method.
+     * @return a deltaRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delta method.
+     * @param token Usage: token='{token}'
+     * @return a deltaWithTokenRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DeltaWithTokenRequestBuilder deltaWithToken(@javax.annotation.Nonnull final String token) {
+        Objects.requireNonNull(token);
+        return new DeltaWithTokenRequestBuilder(pathParameters, requestAdapter, token);
+    }
+    /**
      * The root folder of the drive. Read-only.
      * @return a CompletableFuture of driveItem
      */
@@ -307,6 +396,28 @@ public class RootRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @return a getActivitiesByIntervalRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
+        return new GetActivitiesByIntervalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @param endDateTime Usage: endDateTime='{endDateTime}'
+     * @param interval Usage: interval='{interval}'
+     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@javax.annotation.Nonnull final String endDateTime, @javax.annotation.Nonnull final String interval, @javax.annotation.Nonnull final String startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(interval);
+        Objects.requireNonNull(startDateTime);
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
     }
     /**
      * Update the navigation property root in me
@@ -374,6 +485,16 @@ public class RootRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("permission%2Did", id);
         return new PermissionItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to call the search method.
+     * @param q Usage: q='{q}'
+     * @return a searchWithQRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SearchWithQRequestBuilder searchWithQ(@javax.annotation.Nonnull final String q) {
+        Objects.requireNonNull(q);
+        return new SearchWithQRequestBuilder(pathParameters, requestAdapter, q);
     }
     /**
      * Gets an item from the Microsoft.Graph.me.drives.item.root.subscriptions.item collection

@@ -41,7 +41,9 @@ public class Request extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.request": return new Request();
+                case "#microsoft.graph.unifiedRoleAssignmentScheduleRequest": return new UnifiedRoleAssignmentScheduleRequest();
+                case "#microsoft.graph.unifiedRoleEligibilityScheduleRequest": return new UnifiedRoleEligibilityScheduleRequest();
+                case "#microsoft.graph.userConsentRequest": return new UserConsentRequest();
             }
         }
         return new Request();

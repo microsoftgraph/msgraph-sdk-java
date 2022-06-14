@@ -59,7 +59,14 @@ public class MobileApp extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.mobileApp": return new MobileApp();
+                case "#microsoft.graph.androidStoreApp": return new AndroidStoreApp();
+                case "#microsoft.graph.iosStoreApp": return new IosStoreApp();
+                case "#microsoft.graph.iosVppApp": return new IosVppApp();
+                case "#microsoft.graph.macOSOfficeSuiteApp": return new MacOSOfficeSuiteApp();
+                case "#microsoft.graph.managedApp": return new ManagedApp();
+                case "#microsoft.graph.microsoftStoreForBusinessApp": return new MicrosoftStoreForBusinessApp();
+                case "#microsoft.graph.mobileLobApp": return new MobileLobApp();
+                case "#microsoft.graph.webApp": return new WebApp();
             }
         }
         return new MobileApp();

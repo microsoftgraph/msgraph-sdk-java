@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class BaseItemVersion extends Entity implements Parsable {
     /** Identity of the user which last modified the version. Read-only. */
     private IdentitySet _lastModifiedBy;
@@ -35,7 +35,8 @@ public class BaseItemVersion extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.baseItemVersion": return new BaseItemVersion();
+                case "#microsoft.graph.driveItemVersion": return new DriveItemVersion();
+                case "#microsoft.graph.listItemVersion": return new ListItemVersion();
             }
         }
         return new BaseItemVersion();

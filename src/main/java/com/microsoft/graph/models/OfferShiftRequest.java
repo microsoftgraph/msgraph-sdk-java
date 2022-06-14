@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
 public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _recipientActionDateTime;
@@ -19,7 +18,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     /** User id of the sender of the offer shift request. */
     private String _senderShiftId;
     /**
-     * Instantiates a new offerShiftRequest and sets the default values.
+     * Instantiates a new OfferShiftRequest and sets the default values.
      * @return a void
      */
     public OfferShiftRequest() {
@@ -28,7 +27,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a offerShiftRequest
+     * @return a OfferShiftRequest
      */
     @javax.annotation.Nonnull
     public static OfferShiftRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +36,7 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
+                case "#microsoft.graph.swapShiftsChangeRequest": return new SwapShiftsChangeRequest();
             }
         }
         return new OfferShiftRequest();

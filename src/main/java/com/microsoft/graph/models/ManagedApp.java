@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Abstract class that contains properties and inherited properties for apps that you can manage with an Intune app protection policy. */
 public class ManagedApp extends MobileApp implements Parsable {
     /** The Application's availability. Possible values are: global, lineOfBusiness. */
     private ManagedAppAvailability _appAvailability;
     /** The Application's version. */
     private String _version;
     /**
-     * Instantiates a new managedApp and sets the default values.
+     * Instantiates a new ManagedApp and sets the default values.
      * @return a void
      */
     public ManagedApp() {
@@ -23,7 +22,7 @@ public class ManagedApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedApp
+     * @return a ManagedApp
      */
     @javax.annotation.Nonnull
     public static ManagedApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -32,7 +31,9 @@ public class ManagedApp extends MobileApp implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.managedApp": return new ManagedApp();
+                case "#microsoft.graph.managedAndroidStoreApp": return new ManagedAndroidStoreApp();
+                case "#microsoft.graph.managedIOSStoreApp": return new ManagedIOSStoreApp();
+                case "#microsoft.graph.managedMobileLobApp": return new ManagedMobileLobApp();
             }
         }
         return new ManagedApp();

@@ -98,7 +98,7 @@ public class ParticipantItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get participants from communications
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -106,7 +106,7 @@ public class ParticipantItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get participants from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -211,7 +211,7 @@ public class ParticipantItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get participants from communications
      * @return a CompletableFuture of participant
      */
     public java.util.concurrent.CompletableFuture<Participant> get() {
@@ -227,7 +227,7 @@ public class ParticipantItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get participants from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of participant
      */
@@ -244,7 +244,7 @@ public class ParticipantItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get participants from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of participant
@@ -331,7 +331,7 @@ public class ParticipantItemRequestBuilder {
         public ParticipantItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get participants from communications */
     public class ParticipantItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

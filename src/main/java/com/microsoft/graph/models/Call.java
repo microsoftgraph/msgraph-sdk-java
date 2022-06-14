@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the cloudCommunications singleton. */
 public class Call extends Entity implements Parsable {
-    /** Read-only. Nullable. */
+    /** The audioRoutingGroups property */
     private java.util.List<AudioRoutingGroup> _audioRoutingGroups;
     /** The callback URL on which callbacks will be delivered. Must be https. */
     private String _callbackUri;
@@ -33,9 +33,9 @@ public class Call extends Entity implements Parsable {
     private MeetingInfo _meetingInfo;
     /** The myParticipantId property */
     private String _myParticipantId;
-    /** Read-only. Nullable. */
+    /** The operations property */
     private java.util.List<CommsOperation> _operations;
-    /** Read-only. Nullable. */
+    /** The participants property */
     private java.util.List<Participant> _participants;
     /** The requestedModalities property */
     private java.util.List<String> _requestedModalities;
@@ -73,7 +73,7 @@ public class Call extends Entity implements Parsable {
         return new Call();
     }
     /**
-     * Gets the audioRoutingGroups property value. Read-only. Nullable.
+     * Gets the audioRoutingGroups property value. The audioRoutingGroups property
      * @return a audioRoutingGroup
      */
     @javax.annotation.Nullable
@@ -202,7 +202,7 @@ public class Call extends Entity implements Parsable {
         return this._myParticipantId;
     }
     /**
-     * Gets the operations property value. Read-only. Nullable.
+     * Gets the operations property value. The operations property
      * @return a commsOperation
      */
     @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class Call extends Entity implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the participants property value. Read-only. Nullable.
+     * Gets the participants property value. The participants property
      * @return a participant
      */
     @javax.annotation.Nullable
@@ -322,7 +322,7 @@ public class Call extends Entity implements Parsable {
         writer.writeObjectValue("transcription", this.getTranscription());
     }
     /**
-     * Sets the audioRoutingGroups property value. Read-only. Nullable.
+     * Sets the audioRoutingGroups property value. The audioRoutingGroups property
      * @param value Value to set for the audioRoutingGroups property.
      * @return a void
      */
@@ -418,7 +418,7 @@ public class Call extends Entity implements Parsable {
         this._myParticipantId = value;
     }
     /**
-     * Sets the operations property value. Read-only. Nullable.
+     * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      * @return a void
      */
@@ -426,7 +426,7 @@ public class Call extends Entity implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the participants property value. Read-only. Nullable.
+     * Sets the participants property value. The participants property
      * @param value Value to set for the participants property.
      * @return a void
      */

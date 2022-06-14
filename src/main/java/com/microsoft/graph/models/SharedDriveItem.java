@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of sharedDriveItem entities. */
 public class SharedDriveItem extends BaseItem implements Parsable {
     /** Used to access the underlying driveItem */
     private DriveItem _driveItem;
@@ -26,7 +25,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     /** Used to access the underlying site */
     private Site _site;
     /**
-     * Instantiates a new sharedDriveItem and sets the default values.
+     * Instantiates a new SharedDriveItem and sets the default values.
      * @return a void
      */
     public SharedDriveItem() {
@@ -35,7 +34,7 @@ public class SharedDriveItem extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharedDriveItem
+     * @return a SharedDriveItem
      */
     @javax.annotation.Nonnull
     public static SharedDriveItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

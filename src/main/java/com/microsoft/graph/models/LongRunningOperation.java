@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class LongRunningOperation extends Entity implements Parsable {
     /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
@@ -39,7 +39,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.longRunningOperation": return new LongRunningOperation();
+                case "#microsoft.graph.richLongRunningOperation": return new RichLongRunningOperation();
             }
         }
         return new LongRunningOperation();

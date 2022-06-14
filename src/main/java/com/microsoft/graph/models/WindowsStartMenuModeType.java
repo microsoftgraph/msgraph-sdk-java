@@ -1,0 +1,30 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.ValuedEnum;
+import java.util.Objects;
+
+/** Provides operations to manage the deviceManagement singleton. */
+public enum WindowsStartMenuModeType implements ValuedEnum {
+    /** User defined. Default value. */
+    UserDefined("userDefined"),
+    /** Full screen. */
+    FullScreen("fullScreen"),
+    /** Non-full screen. */
+    NonFullScreen("nonFullScreen");
+    public final String value;
+    WindowsStartMenuModeType(final String value) {
+        this.value = value;
+    }
+    @javax.annotation.Nonnull
+    public String getValue() { return this.value; }
+    @javax.annotation.Nullable
+    public static WindowsStartMenuModeType forValue(@javax.annotation.Nonnull final String searchValue) {
+        Objects.requireNonNull(searchValue);
+        switch(searchValue) {
+            case "userDefined": return UserDefined;
+            case "fullScreen": return FullScreen;
+            case "nonFullScreen": return NonFullScreen;
+            default: return null;
+        }
+    }
+}

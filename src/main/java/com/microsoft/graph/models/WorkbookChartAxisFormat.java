@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class WorkbookChartAxisFormat extends Entity implements Parsable {
     /** Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only. */
     private WorkbookChartFont _font;

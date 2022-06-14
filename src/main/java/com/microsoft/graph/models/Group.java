@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class Group extends DirectoryObject implements Parsable {
     /** The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post. */
     private java.util.List<DirectoryObject> _acceptedSenders;
@@ -82,7 +82,7 @@ public class Group extends DirectoryObject implements Parsable {
     private String _membershipRuleProcessingState;
     /** A list of group members with license errors from this group-based license assignment. Read-only. */
     private java.util.List<DirectoryObject> _membersWithLicenseErrors;
-    /** Read-only. */
+    /** The onenote property */
     private Onenote _onenote;
     /** Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only. */
     private String _onPremisesDomainName;
@@ -521,7 +521,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._membersWithLicenseErrors;
     }
     /**
-     * Gets the onenote property value. Read-only.
+     * Gets the onenote property value. The onenote property
      * @return a onenote
      */
     @javax.annotation.Nullable
@@ -1115,7 +1115,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._membersWithLicenseErrors = value;
     }
     /**
-     * Sets the onenote property value. Read-only.
+     * Sets the onenote property value. The onenote property
      * @param value Value to set for the onenote property.
      * @return a void
      */

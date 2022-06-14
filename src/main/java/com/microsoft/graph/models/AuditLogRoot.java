@@ -9,13 +9,13 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the auditLogRoot singleton. */
 public class AuditLogRoot extends Entity implements Parsable {
-    /** Read-only. Nullable. */
+    /** The directoryAudits property */
     private java.util.List<DirectoryAudit> _directoryAudits;
     /** The provisioning property */
     private java.util.List<ProvisioningObjectSummary> _provisioning;
     /** The restrictedSignIns property */
     private java.util.List<RestrictedSignIn> _restrictedSignIns;
-    /** Read-only. Nullable. */
+    /** The signIns property */
     private java.util.List<SignIn> _signIns;
     /**
      * Instantiates a new auditLogRoot and sets the default values.
@@ -35,7 +35,7 @@ public class AuditLogRoot extends Entity implements Parsable {
         return new AuditLogRoot();
     }
     /**
-     * Gets the directoryAudits property value. Read-only. Nullable.
+     * Gets the directoryAudits property value. The directoryAudits property
      * @return a directoryAudit
      */
     @javax.annotation.Nullable
@@ -73,7 +73,7 @@ public class AuditLogRoot extends Entity implements Parsable {
         return this._restrictedSignIns;
     }
     /**
-     * Gets the signIns property value. Read-only. Nullable.
+     * Gets the signIns property value. The signIns property
      * @return a signIn
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class AuditLogRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("signIns", this.getSignIns());
     }
     /**
-     * Sets the directoryAudits property value. Read-only. Nullable.
+     * Sets the directoryAudits property value. The directoryAudits property
      * @param value Value to set for the directoryAudits property.
      * @return a void
      */
@@ -118,7 +118,7 @@ public class AuditLogRoot extends Entity implements Parsable {
         this._restrictedSignIns = value;
     }
     /**
-     * Sets the signIns property value. Read-only. Nullable.
+     * Sets the signIns property value. The signIns property
      * @param value Value to set for the signIns property.
      * @return a void
      */

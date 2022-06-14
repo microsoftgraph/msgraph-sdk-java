@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
 public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In. */
     private OffsetDateTime _createdDateTime;
@@ -21,7 +20,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     /** Numerical version of this instance of the Authenticator app. */
     private String _phoneAppVersion;
     /**
-     * Instantiates a new microsoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      * @return a void
      */
     public MicrosoftAuthenticatorAuthenticationMethod() {
@@ -30,7 +29,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftAuthenticatorAuthenticationMethod
+     * @return a MicrosoftAuthenticatorAuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static MicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

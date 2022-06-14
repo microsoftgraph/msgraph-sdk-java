@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityContainer singleton. */
 public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /** Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration. */
     private UserFlowApiConnectorConfiguration _apiConnectorConfiguration;
@@ -20,7 +19,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /** The userFlowIdentityProviders property */
     private java.util.List<IdentityProviderBase> _userFlowIdentityProviders;
     /**
-     * Instantiates a new b2xIdentityUserFlow and sets the default values.
+     * Instantiates a new B2xIdentityUserFlow and sets the default values.
      * @return a void
      */
     public B2xIdentityUserFlow() {
@@ -29,7 +28,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a b2xIdentityUserFlow
+     * @return a B2xIdentityUserFlow
      */
     @javax.annotation.Nonnull
     public static B2xIdentityUserFlow createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

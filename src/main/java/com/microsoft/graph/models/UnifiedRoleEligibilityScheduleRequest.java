@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the roleManagement singleton. */
 public class UnifiedRoleEligibilityScheduleRequest extends Request implements Parsable {
     /** Represents the type of the operation on the role eligibility assignment. The possible values are: AdminAssign: For administrators to assign role eligibility to users or groups to roles.AdminExtend: For administrators to extend expiring assignments.AdminUpdate: For administrators to change existing role assignments.AdminRenew: For administrators to renew expired assignments.AdminRemove: For administrators to remove users or groups from eligible roles.UserAdd: For users to activate their eligible assignments.UserExtend: For users to request to extend their expiring eligible assignments.UserRemove: For users to deactivate their active eligible assignments.UserRenew: For users to request to renew their expired eligible assignments. */
     private UnifiedRoleScheduleRequestActions _action;
@@ -40,7 +39,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     /** The details of the ticket number and ticket system that is attached to the role assignment request. */
     private TicketInfo _ticketInfo;
     /**
-     * Instantiates a new unifiedRoleEligibilityScheduleRequest and sets the default values.
+     * Instantiates a new UnifiedRoleEligibilityScheduleRequest and sets the default values.
      * @return a void
      */
     public UnifiedRoleEligibilityScheduleRequest() {
@@ -49,7 +48,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleEligibilityScheduleRequest
+     * @return a UnifiedRoleEligibilityScheduleRequest
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleEligibilityScheduleRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -38,7 +38,7 @@ public class RoleDefinition extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.roleDefinition": return new RoleDefinition();
+                case "#microsoft.graph.deviceAndAppManagementRoleDefinition": return new DeviceAndAppManagementRoleDefinition();
             }
         }
         return new RoleDefinition();

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to call the instantiate method. */
 public class PolicyBase extends DirectoryObject implements Parsable {
     /** Description for this policy. Required. */
     private String _description;
@@ -32,7 +32,10 @@ public class PolicyBase extends DirectoryObject implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.policyBase": return new PolicyBase();
+                case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
+                case "#microsoft.graph.identitySecurityDefaultsEnforcementPolicy": return new IdentitySecurityDefaultsEnforcementPolicy();
+                case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
+                case "#microsoft.graph.stsPolicy": return new StsPolicy();
             }
         }
         return new PolicyBase();

@@ -14,100 +14,16 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.groups.item.members.item.group.addfavorite.AddFavoriteRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.assignlicense.AssignLicenseRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.checkgrantedpermissionsforapp.CheckGrantedPermissionsForAppRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.removefavorite.RemoveFavoriteRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.renew.RenewRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.resetunseencount.ResetUnseenCountRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.restore.RestoreRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.subscribebymail.SubscribeByMailRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.unsubscribebymail.UnsubscribeByMailRequestBuilder;
-import microsoft.graph.groups.item.members.item.group.validateproperties.ValidatePropertiesRequestBuilder;
 import microsoft.graph.models.Group;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Casts the previous resource to group. */
 public class GroupRequestBuilder {
-    /** The addFavorite property */
-    @javax.annotation.Nonnull
-    public AddFavoriteRequestBuilder addFavorite() {
-        return new AddFavoriteRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The assignLicense property */
-    @javax.annotation.Nonnull
-    public AssignLicenseRequestBuilder assignLicense() {
-        return new AssignLicenseRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkGrantedPermissionsForApp property */
-    @javax.annotation.Nonnull
-    public CheckGrantedPermissionsForAppRequestBuilder checkGrantedPermissionsForApp() {
-        return new CheckGrantedPermissionsForAppRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberGroups property */
-    @javax.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberObjects property */
-    @javax.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberGroups property */
-    @javax.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberObjects property */
-    @javax.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The removeFavorite property */
-    @javax.annotation.Nonnull
-    public RemoveFavoriteRequestBuilder removeFavorite() {
-        return new RemoveFavoriteRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The renew property */
-    @javax.annotation.Nonnull
-    public RenewRequestBuilder renew() {
-        return new RenewRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
-    /** The resetUnseenCount property */
-    @javax.annotation.Nonnull
-    public ResetUnseenCountRequestBuilder resetUnseenCount() {
-        return new ResetUnseenCountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The restore property */
-    @javax.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The subscribeByMail property */
-    @javax.annotation.Nonnull
-    public SubscribeByMailRequestBuilder subscribeByMail() {
-        return new SubscribeByMailRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The unsubscribeByMail property */
-    @javax.annotation.Nonnull
-    public UnsubscribeByMailRequestBuilder unsubscribeByMail() {
-        return new UnsubscribeByMailRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
-    /** The validateProperties property */
-    @javax.annotation.Nonnull
-    public ValidatePropertiesRequestBuilder validateProperties() {
-        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new GroupRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

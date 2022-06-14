@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class AuthenticationMethod extends Entity implements Parsable {
     /**
      * Instantiates a new authenticationMethod and sets the default values.
@@ -28,7 +28,10 @@ public class AuthenticationMethod extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.authenticationMethod": return new AuthenticationMethod();
+                case "#microsoft.graph.fido2AuthenticationMethod": return new Fido2AuthenticationMethod();
+                case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod": return new MicrosoftAuthenticatorAuthenticationMethod();
+                case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
+                case "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod": return new WindowsHelloForBusinessAuthenticationMethod();
             }
         }
         return new AuthenticationMethod();

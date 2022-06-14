@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class MultiValueLegacyExtendedProperty extends Entity implements Parsable {
     /** A collection of property values. */
     private java.util.List<String> _value;

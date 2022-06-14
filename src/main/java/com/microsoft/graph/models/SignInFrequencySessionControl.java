@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the identityContainer singleton. */
 public class SignInFrequencySessionControl extends ConditionalAccessSessionControl implements Parsable {
-    /** Possible values are: days, hours. */
+    /** Possible values are: days, hours, or null if frequencyInterval is everyTime . */
     private SigninFrequencyType _type;
     /** The number of days or hours. */
     private Integer _value;
@@ -43,7 +43,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         }};
     }
     /**
-     * Gets the type property value. Possible values are: days, hours.
+     * Gets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
      * @return a signinFrequencyType
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         writer.writeIntegerValue("value", this.getValue());
     }
     /**
-     * Sets the type property value. Possible values are: days, hours.
+     * Sets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
      * @param value Value to set for the type property.
      * @return a void
      */

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class WorkbookChartDataLabels extends Entity implements Parsable {
     /** Represents the format of chart data labels, which includes fill and font formatting. Read-only. */
     private WorkbookChartDataLabelFormat _format;

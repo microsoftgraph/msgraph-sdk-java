@@ -122,7 +122,7 @@ public class OnenoteRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only.
+     * Get onenote from users
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -130,7 +130,7 @@ public class OnenoteRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only.
+     * Get onenote from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -235,7 +235,7 @@ public class OnenoteRequestBuilder {
         }
     }
     /**
-     * Read-only.
+     * Get onenote from users
      * @return a CompletableFuture of onenote
      */
     public java.util.concurrent.CompletableFuture<Onenote> get() {
@@ -251,7 +251,7 @@ public class OnenoteRequestBuilder {
         }
     }
     /**
-     * Read-only.
+     * Get onenote from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of onenote
      */
@@ -268,7 +268,7 @@ public class OnenoteRequestBuilder {
         }
     }
     /**
-     * Read-only.
+     * Get onenote from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of onenote
@@ -427,7 +427,7 @@ public class OnenoteRequestBuilder {
         public OnenoteRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. */
+    /** Get onenote from users */
     public class OnenoteRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

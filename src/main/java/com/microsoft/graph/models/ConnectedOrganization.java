@@ -16,11 +16,11 @@ public class ConnectedOrganization extends Entity implements Parsable {
     private String _description;
     /** The display name of the connected organization. Supports $filter (eq). */
     private String _displayName;
-    /** Nullable. */
+    /** The externalSponsors property */
     private java.util.List<DirectoryObject> _externalSponsors;
     /** The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource or externalDomainFederation. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f'). */
     private java.util.List<IdentitySource> _identitySources;
-    /** Nullable. */
+    /** The internalSponsors property */
     private java.util.List<DirectoryObject> _internalSponsors;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _modifiedDateTime;
@@ -68,7 +68,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the externalSponsors property value. Nullable.
+     * Gets the externalSponsors property value. The externalSponsors property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         return this._identitySources;
     }
     /**
-     * Gets the internalSponsors property value. Nullable.
+     * Gets the internalSponsors property value. The internalSponsors property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the externalSponsors property value. Nullable.
+     * Sets the externalSponsors property value. The externalSponsors property
      * @param value Value to set for the externalSponsors property.
      * @return a void
      */
@@ -183,7 +183,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         this._identitySources = value;
     }
     /**
-     * Sets the internalSponsors property value. Nullable.
+     * Sets the internalSponsors property value. The internalSponsors property
      * @param value Value to set for the internalSponsors property.
      * @return a void
      */

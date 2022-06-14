@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class Attachment extends Entity implements Parsable {
     /** The MIME type. */
     private String _contentType;
@@ -39,7 +39,9 @@ public class Attachment extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.attachment": return new Attachment();
+                case "#microsoft.graph.fileAttachment": return new FileAttachment();
+                case "#microsoft.graph.itemAttachment": return new ItemAttachment();
+                case "#microsoft.graph.referenceAttachment": return new ReferenceAttachment();
             }
         }
         return new Attachment();

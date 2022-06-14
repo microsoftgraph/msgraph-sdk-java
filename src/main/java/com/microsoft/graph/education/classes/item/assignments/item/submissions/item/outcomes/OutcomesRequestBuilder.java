@@ -59,7 +59,7 @@ public class OutcomesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-Write. Nullable.
+     * Get outcomes from education
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class OutcomesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-Write. Nullable.
+     * Get outcomes from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class OutcomesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-Write. Nullable.
+     * Get outcomes from education
      * @return a CompletableFuture of EducationOutcomeCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationOutcomeCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class OutcomesRequestBuilder {
         }
     }
     /**
-     * Read-Write. Nullable.
+     * Get outcomes from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationOutcomeCollectionResponse
      */
@@ -155,7 +155,7 @@ public class OutcomesRequestBuilder {
         }
     }
     /**
-     * Read-Write. Nullable.
+     * Get outcomes from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EducationOutcomeCollectionResponse
@@ -227,7 +227,7 @@ public class OutcomesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-Write. Nullable. */
+    /** Get outcomes from education */
     public class OutcomesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

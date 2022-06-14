@@ -80,7 +80,7 @@ public class DirectoryAuditItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get directoryAudits from auditLogs
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class DirectoryAuditItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get directoryAudits from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class DirectoryAuditItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get directoryAudits from auditLogs
      * @return a CompletableFuture of directoryAudit
      */
     public java.util.concurrent.CompletableFuture<DirectoryAudit> get() {
@@ -209,7 +209,7 @@ public class DirectoryAuditItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get directoryAudits from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryAudit
      */
@@ -226,7 +226,7 @@ public class DirectoryAuditItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get directoryAudits from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryAudit
@@ -313,7 +313,7 @@ public class DirectoryAuditItemRequestBuilder {
         public DirectoryAuditItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get directoryAudits from auditLogs */
     public class DirectoryAuditItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

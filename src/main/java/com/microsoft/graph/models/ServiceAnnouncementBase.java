@@ -39,7 +39,8 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.serviceAnnouncementBase": return new ServiceAnnouncementBase();
+                case "#microsoft.graph.serviceHealthIssue": return new ServiceHealthIssue();
+                case "#microsoft.graph.serviceUpdateMessage": return new ServiceUpdateMessage();
             }
         }
         return new ServiceAnnouncementBase();

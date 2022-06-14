@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
 public class Shift extends ChangeTrackedEntity implements Parsable {
     /** The draft version of this shift that is viewable by managers. Required. */
     private ShiftItem _draftShift;
@@ -18,7 +17,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /** ID of the user assigned to the shift. Required. */
     private String _userId;
     /**
-     * Instantiates a new shift and sets the default values.
+     * Instantiates a new Shift and sets the default values.
      * @return a void
      */
     public Shift() {
@@ -27,7 +26,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a shift
+     * @return a Shift
      */
     @javax.annotation.Nonnull
     public static Shift createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

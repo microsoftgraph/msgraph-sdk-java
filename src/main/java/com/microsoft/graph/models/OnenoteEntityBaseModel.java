@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /** The endpoint where you can get details about the page. Read-only. */
     private String _self;
@@ -30,7 +30,8 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.onenoteEntityBaseModel": return new OnenoteEntityBaseModel();
+                case "#microsoft.graph.onenoteEntitySchemaObjectModel": return new OnenoteEntitySchemaObjectModel();
+                case "#microsoft.graph.onenoteResource": return new OnenoteResource();
             }
         }
         return new OnenoteEntityBaseModel();

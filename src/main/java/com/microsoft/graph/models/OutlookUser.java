@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class OutlookUser extends Entity implements Parsable {
     /** A list of categories defined for the user. */
     private java.util.List<OutlookCategory> _masterCategories;

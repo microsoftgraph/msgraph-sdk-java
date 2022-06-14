@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class Schedule extends Entity implements Parsable {
     /** Indicates whether the schedule is enabled for the team. Required. */
     private Boolean _enabled;

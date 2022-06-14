@@ -14,12 +14,19 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.groups.item.sites.add.AddRequestBuilder;
 import microsoft.graph.groups.item.sites.count.CountRequestBuilder;
+import microsoft.graph.groups.item.sites.remove.RemoveRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Site;
 import microsoft.graph.models.SiteCollectionResponse;
 /** Provides operations to manage the sites property of the microsoft.graph.group entity. */
 public class SitesRequestBuilder {
+    /** The add property */
+    @javax.annotation.Nonnull
+    public AddRequestBuilder add() {
+        return new AddRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -27,6 +34,11 @@ public class SitesRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The remove property */
+    @javax.annotation.Nonnull
+    public RemoveRequestBuilder remove() {
+        return new RemoveRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

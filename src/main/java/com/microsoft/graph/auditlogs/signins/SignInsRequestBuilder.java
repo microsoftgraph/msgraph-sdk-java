@@ -59,7 +59,7 @@ public class SignInsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SignInsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class SignInsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @return a CompletableFuture of SignInCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<SignInCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class SignInsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of SignInCollectionResponse
      */
@@ -155,7 +155,7 @@ public class SignInsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of SignInCollectionResponse
@@ -227,7 +227,7 @@ public class SignInsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get signIns from auditLogs */
     public class SignInsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

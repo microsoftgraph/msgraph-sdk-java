@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.me.chats.count.CountRequestBuilder;
+import microsoft.graph.me.chats.getallmessages.GetAllMessagesRequestBuilder;
 import microsoft.graph.models.Chat;
 import microsoft.graph.models.ChatCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -171,6 +172,14 @@ public class ChatsRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getAllMessages method.
+     * @return a getAllMessagesRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetAllMessagesRequestBuilder getAllMessages() {
+        return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Create new navigation property to chats for me

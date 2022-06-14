@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
 public class User extends DirectoryObject implements Parsable {
     /** A freeform text entry field for the user to describe themselves. Returned only on $select. */
     private String _aboutMe;
@@ -26,7 +25,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<AssignedLicense> _assignedLicenses;
     /** The plans that are assigned to the user. Read-only. Not nullable.Supports $filter (eq and not). */
     private java.util.List<AssignedPlan> _assignedPlans;
-    /** TODO: Add Description */
+    /** The authentication methods that are supported for the user. */
     private Authentication _authentication;
     /** The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. */
     private OffsetDateTime _birthday;
@@ -104,7 +103,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<String> _imAddresses;
     /** Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance. */
     private InferenceClassification _inferenceClassification;
-    /** Read-only. Nullable. */
+    /** The insights property */
     private OfficeGraphInsights _insights;
     /** A list for the user to describe their interests. Returned only on $select. */
     private java.util.List<String> _interests;
@@ -148,7 +147,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<OAuth2PermissionGrant> _oauth2PermissionGrants;
     /** The office location in the user's place of business. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
     private String _officeLocation;
-    /** Read-only. */
+    /** The onenote property */
     private Onenote _onenote;
     /** The onlineMeetings property */
     private java.util.List<OnlineMeeting> _onlineMeetings;
@@ -190,7 +189,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<Person> _people;
     /** The user's profile photo. Read-only. */
     private ProfilePhoto _photo;
-    /** Read-only. Nullable. */
+    /** The photos property */
     private java.util.List<ProfilePhoto> _photos;
     /** Selective Planner services available to the user. Read-only. Nullable. */
     private PlannerUser _planner;
@@ -216,7 +215,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<String> _schools;
     /** The scoped-role administrative unit memberships for this user. Read-only. Nullable. */
     private java.util.List<ScopedRoleMembership> _scopedRoleMemberOf;
-    /** Read-only. Nullable. */
+    /** The settings property */
     private UserSettings _settings;
     /** Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue. */
     private Boolean _showInAddressList;
@@ -243,7 +242,7 @@ public class User extends DirectoryObject implements Parsable {
     /** A String value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory? */
     private String _userType;
     /**
-     * Instantiates a new user and sets the default values.
+     * Instantiates a new User and sets the default values.
      * @return a void
      */
     public User() {
@@ -252,7 +251,7 @@ public class User extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a user
+     * @return a User
      */
     @javax.annotation.Nonnull
     public static User createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -324,7 +323,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._assignedPlans;
     }
     /**
-     * Gets the authentication property value. TODO: Add Description
+     * Gets the authentication property value. The authentication methods that are supported for the user.
      * @return a authentication
      */
     @javax.annotation.Nullable
@@ -762,7 +761,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._inferenceClassification;
     }
     /**
-     * Gets the insights property value. Read-only. Nullable.
+     * Gets the insights property value. The insights property
      * @return a officeGraphInsights
      */
     @javax.annotation.Nullable
@@ -938,7 +937,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._officeLocation;
     }
     /**
-     * Gets the onenote property value. Read-only.
+     * Gets the onenote property value. The onenote property
      * @return a onenote
      */
     @javax.annotation.Nullable
@@ -1106,7 +1105,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._photo;
     }
     /**
-     * Gets the photos property value. Read-only. Nullable.
+     * Gets the photos property value. The photos property
      * @return a profilePhoto
      */
     @javax.annotation.Nullable
@@ -1210,7 +1209,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._scopedRoleMemberOf;
     }
     /**
-     * Gets the settings property value. Read-only. Nullable.
+     * Gets the settings property value. The settings property
      * @return a userSettings
      */
     @javax.annotation.Nullable
@@ -1503,7 +1502,7 @@ public class User extends DirectoryObject implements Parsable {
         this._assignedPlans = value;
     }
     /**
-     * Sets the authentication property value. TODO: Add Description
+     * Sets the authentication property value. The authentication methods that are supported for the user.
      * @param value Value to set for the authentication property.
      * @return a void
      */
@@ -1815,7 +1814,7 @@ public class User extends DirectoryObject implements Parsable {
         this._inferenceClassification = value;
     }
     /**
-     * Sets the insights property value. Read-only. Nullable.
+     * Sets the insights property value. The insights property
      * @param value Value to set for the insights property.
      * @return a void
      */
@@ -1991,7 +1990,7 @@ public class User extends DirectoryObject implements Parsable {
         this._officeLocation = value;
     }
     /**
-     * Sets the onenote property value. Read-only.
+     * Sets the onenote property value. The onenote property
      * @param value Value to set for the onenote property.
      * @return a void
      */
@@ -2159,7 +2158,7 @@ public class User extends DirectoryObject implements Parsable {
         this._photo = value;
     }
     /**
-     * Sets the photos property value. Read-only. Nullable.
+     * Sets the photos property value. The photos property
      * @param value Value to set for the photos property.
      * @return a void
      */
@@ -2263,7 +2262,7 @@ public class User extends DirectoryObject implements Parsable {
         this._scopedRoleMemberOf = value;
     }
     /**
-     * Sets the settings property value. Read-only. Nullable.
+     * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      * @return a void
      */

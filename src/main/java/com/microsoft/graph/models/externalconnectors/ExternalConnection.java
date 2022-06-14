@@ -14,15 +14,15 @@ public class ExternalConnection extends Entity implements Parsable {
     private Configuration _configuration;
     /** Description of the connection displayed in the Microsoft 365 admin center. Optional. */
     private String _description;
-    /** Read-only. Nullable. */
+    /** The groups property */
     private java.util.List<ExternalGroup> _groups;
-    /** Read-only. Nullable. */
+    /** The items property */
     private java.util.List<ExternalItem> _items;
     /** The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required. */
     private String _name;
-    /** Read-only. Nullable. */
+    /** The operations property */
     private java.util.List<ConnectionOperation> _operations;
-    /** Read-only. Nullable. */
+    /** The schema property */
     private Schema _schema;
     /** Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required. */
     private ConnectionState _state;
@@ -78,7 +78,7 @@ public class ExternalConnection extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the groups property value. Read-only. Nullable.
+     * Gets the groups property value. The groups property
      * @return a externalGroup
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._groups;
     }
     /**
-     * Gets the items property value. Read-only. Nullable.
+     * Gets the items property value. The items property
      * @return a externalItem
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._name;
     }
     /**
-     * Gets the operations property value. Read-only. Nullable.
+     * Gets the operations property value. The operations property
      * @return a connectionOperation
      */
     @javax.annotation.Nullable
@@ -110,7 +110,7 @@ public class ExternalConnection extends Entity implements Parsable {
         return this._operations;
     }
     /**
-     * Gets the schema property value. Read-only. Nullable.
+     * Gets the schema property value. The schema property
      * @return a schema
      */
     @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the groups property value. Read-only. Nullable.
+     * Sets the groups property value. The groups property
      * @param value Value to set for the groups property.
      * @return a void
      */
@@ -167,7 +167,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._groups = value;
     }
     /**
-     * Sets the items property value. Read-only. Nullable.
+     * Sets the items property value. The items property
      * @param value Value to set for the items property.
      * @return a void
      */
@@ -183,7 +183,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._name = value;
     }
     /**
-     * Sets the operations property value. Read-only. Nullable.
+     * Sets the operations property value. The operations property
      * @param value Value to set for the operations property.
      * @return a void
      */
@@ -191,7 +191,7 @@ public class ExternalConnection extends Entity implements Parsable {
         this._operations = value;
     }
     /**
-     * Sets the schema property value. Read-only. Nullable.
+     * Sets the schema property value. The schema property
      * @param value Value to set for the schema property.
      * @return a void
      */

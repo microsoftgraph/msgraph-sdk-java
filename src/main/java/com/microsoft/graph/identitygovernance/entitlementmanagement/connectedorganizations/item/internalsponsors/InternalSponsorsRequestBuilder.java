@@ -15,6 +15,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.count.CountRequestBuilder;
+import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.getbyids.GetByIdsRequestBuilder;
+import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.ref.RefRequestBuilder;
+import microsoft.graph.identitygovernance.entitlementmanagement.connectedorganizations.item.internalsponsors.validateproperties.ValidatePropertiesRequestBuilder;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -25,12 +29,32 @@ public class InternalSponsorsRequestBuilder {
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The getAvailableExtensionProperties property */
+    @javax.annotation.Nonnull
+    public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
+        return new GetAvailableExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getByIds property */
+    @javax.annotation.Nonnull
+    public GetByIdsRequestBuilder getByIds() {
+        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The ref property */
+    @javax.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The validateProperties property */
+    @javax.annotation.Nonnull
+    public ValidatePropertiesRequestBuilder validateProperties() {
+        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new InternalSponsorsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -59,7 +83,7 @@ public class InternalSponsorsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Nullable.
+     * Get internalSponsors from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +91,7 @@ public class InternalSponsorsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Nullable.
+     * Get internalSponsors from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +146,7 @@ public class InternalSponsorsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Nullable.
+     * Get internalSponsors from identityGovernance
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -138,7 +162,7 @@ public class InternalSponsorsRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get internalSponsors from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
@@ -155,7 +179,7 @@ public class InternalSponsorsRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get internalSponsors from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
@@ -227,7 +251,7 @@ public class InternalSponsorsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Nullable. */
+    /** Get internalSponsors from identityGovernance */
     public class InternalSponsorsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

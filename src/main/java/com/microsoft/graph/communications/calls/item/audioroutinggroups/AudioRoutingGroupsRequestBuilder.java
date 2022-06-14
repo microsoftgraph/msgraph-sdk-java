@@ -59,7 +59,7 @@ public class AudioRoutingGroupsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get audioRoutingGroups from communications
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AudioRoutingGroupsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get audioRoutingGroups from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class AudioRoutingGroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get audioRoutingGroups from communications
      * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<AudioRoutingGroupCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class AudioRoutingGroupsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get audioRoutingGroups from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
      */
@@ -155,7 +155,7 @@ public class AudioRoutingGroupsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get audioRoutingGroups from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of AudioRoutingGroupCollectionResponse
@@ -227,7 +227,7 @@ public class AudioRoutingGroupsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get audioRoutingGroups from communications */
     public class AudioRoutingGroupsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

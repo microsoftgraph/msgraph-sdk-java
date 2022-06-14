@@ -36,7 +36,7 @@ public class RoleAssignment extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.roleAssignment": return new RoleAssignment();
+                case "#microsoft.graph.deviceAndAppManagementRoleAssignment": return new DeviceAndAppManagementRoleAssignment();
             }
         }
         return new RoleAssignment();

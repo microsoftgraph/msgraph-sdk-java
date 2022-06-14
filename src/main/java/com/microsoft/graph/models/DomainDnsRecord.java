@@ -38,7 +38,11 @@ public class DomainDnsRecord extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.domainDnsRecord": return new DomainDnsRecord();
+                case "#microsoft.graph.domainDnsCnameRecord": return new DomainDnsCnameRecord();
+                case "#microsoft.graph.domainDnsMxRecord": return new DomainDnsMxRecord();
+                case "#microsoft.graph.domainDnsSrvRecord": return new DomainDnsSrvRecord();
+                case "#microsoft.graph.domainDnsTxtRecord": return new DomainDnsTxtRecord();
+                case "#microsoft.graph.domainDnsUnavailableRecord": return new DomainDnsUnavailableRecord();
             }
         }
         return new DomainDnsRecord();

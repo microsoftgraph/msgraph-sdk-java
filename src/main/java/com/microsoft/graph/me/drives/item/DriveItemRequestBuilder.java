@@ -18,7 +18,10 @@ import microsoft.graph.me.drives.item.bundles.BundlesRequestBuilder;
 import microsoft.graph.me.drives.item.following.FollowingRequestBuilder;
 import microsoft.graph.me.drives.item.items.ItemsRequestBuilder;
 import microsoft.graph.me.drives.item.list.ListRequestBuilder;
+import microsoft.graph.me.drives.item.recent.RecentRequestBuilder;
 import microsoft.graph.me.drives.item.root.RootRequestBuilder;
+import microsoft.graph.me.drives.item.searchwithq.SearchWithQRequestBuilder;
+import microsoft.graph.me.drives.item.sharedwithme.SharedWithMeRequestBuilder;
 import microsoft.graph.me.drives.item.special.SpecialRequestBuilder;
 import microsoft.graph.models.Drive;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -369,6 +372,32 @@ public class DriveItemRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the recent method.
+     * @return a recentRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public RecentRequestBuilder recent() {
+        return new RecentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the search method.
+     * @param q Usage: q='{q}'
+     * @return a searchWithQRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SearchWithQRequestBuilder searchWithQ(@javax.annotation.Nonnull final String q) {
+        Objects.requireNonNull(q);
+        return new SearchWithQRequestBuilder(pathParameters, requestAdapter, q);
+    }
+    /**
+     * Provides operations to call the sharedWithMe method.
+     * @return a sharedWithMeRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SharedWithMeRequestBuilder sharedWithMe() {
+        return new SharedWithMeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.me.drives.item.special.item collection

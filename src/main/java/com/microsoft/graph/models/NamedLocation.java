@@ -35,7 +35,8 @@ public class NamedLocation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.namedLocation": return new NamedLocation();
+                case "#microsoft.graph.countryNamedLocation": return new CountryNamedLocation();
+                case "#microsoft.graph.ipNamedLocation": return new IpNamedLocation();
             }
         }
         return new NamedLocation();

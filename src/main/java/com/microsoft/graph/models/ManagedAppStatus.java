@@ -32,7 +32,7 @@ public class ManagedAppStatus extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.managedAppStatus": return new ManagedAppStatus();
+                case "#microsoft.graph.managedAppStatusRaw": return new ManagedAppStatusRaw();
             }
         }
         return new ManagedAppStatus();

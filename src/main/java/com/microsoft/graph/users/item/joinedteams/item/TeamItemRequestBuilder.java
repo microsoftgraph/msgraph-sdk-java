@@ -16,8 +16,11 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Team;
+import microsoft.graph.users.item.joinedteams.item.archive.ArchiveRequestBuilder;
 import microsoft.graph.users.item.joinedteams.item.channels.ChannelsRequestBuilder;
 import microsoft.graph.users.item.joinedteams.item.channels.item.ChannelItemRequestBuilder;
+import microsoft.graph.users.item.joinedteams.item.clone.CloneRequestBuilder;
+import microsoft.graph.users.item.joinedteams.item.completemigration.CompleteMigrationRequestBuilder;
 import microsoft.graph.users.item.joinedteams.item.group.GroupRequestBuilder;
 import microsoft.graph.users.item.joinedteams.item.installedapps.InstalledAppsRequestBuilder;
 import microsoft.graph.users.item.joinedteams.item.installedapps.item.TeamsAppInstallationItemRequestBuilder;
@@ -27,13 +30,30 @@ import microsoft.graph.users.item.joinedteams.item.operations.item.TeamsAsyncOpe
 import microsoft.graph.users.item.joinedteams.item.operations.OperationsRequestBuilder;
 import microsoft.graph.users.item.joinedteams.item.primarychannel.PrimaryChannelRequestBuilder;
 import microsoft.graph.users.item.joinedteams.item.schedule.ScheduleRequestBuilder;
+import microsoft.graph.users.item.joinedteams.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import microsoft.graph.users.item.joinedteams.item.template.TemplateRequestBuilder;
+import microsoft.graph.users.item.joinedteams.item.unarchive.UnarchiveRequestBuilder;
 /** Provides operations to manage the joinedTeams property of the microsoft.graph.user entity. */
 public class TeamItemRequestBuilder {
+    /** The archive property */
+    @javax.annotation.Nonnull
+    public ArchiveRequestBuilder archive() {
+        return new ArchiveRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The channels property */
     @javax.annotation.Nonnull
     public ChannelsRequestBuilder channels() {
         return new ChannelsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The clone property */
+    @javax.annotation.Nonnull
+    public CloneRequestBuilder clone() {
+        return new CloneRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The completeMigration property */
+    @javax.annotation.Nonnull
+    public CompleteMigrationRequestBuilder completeMigration() {
+        return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
     }
     /** The group property */
     @javax.annotation.Nonnull
@@ -69,10 +89,20 @@ public class TeamItemRequestBuilder {
     public ScheduleRequestBuilder schedule() {
         return new ScheduleRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The sendActivityNotification property */
+    @javax.annotation.Nonnull
+    public SendActivityNotificationRequestBuilder sendActivityNotification() {
+        return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The template property */
     @javax.annotation.Nonnull
     public TemplateRequestBuilder template() {
         return new TemplateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The unarchive property */
+    @javax.annotation.Nonnull
+    public UnarchiveRequestBuilder unarchive() {
+        return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;

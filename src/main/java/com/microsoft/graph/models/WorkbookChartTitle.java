@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class WorkbookChartTitle extends Entity implements Parsable {
     /** Represents the formatting of a chart title, which includes fill and font formatting. Read-only. */
     private WorkbookChartTitleFormat _format;

@@ -20,6 +20,7 @@ import microsoft.graph.me.chats.item.members.item.ConversationMemberItemRequestB
 import microsoft.graph.me.chats.item.members.MembersRequestBuilder;
 import microsoft.graph.me.chats.item.messages.item.ChatMessageItemRequestBuilder;
 import microsoft.graph.me.chats.item.messages.MessagesRequestBuilder;
+import microsoft.graph.me.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import microsoft.graph.me.chats.item.tabs.item.TeamsTabItemRequestBuilder;
 import microsoft.graph.me.chats.item.tabs.TabsRequestBuilder;
 import microsoft.graph.models.Chat;
@@ -45,6 +46,11 @@ public class ChatItemRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The sendActivityNotification property */
+    @javax.annotation.Nonnull
+    public SendActivityNotificationRequestBuilder sendActivityNotification() {
+        return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The tabs property */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {

@@ -1,0 +1,127 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class EducationRubricOutcome extends EducationOutcome implements Parsable {
+    /** A copy of the rubricQualityFeedback property that is made when the grade is released to the student. */
+    private java.util.List<RubricQualityFeedbackModel> _publishedRubricQualityFeedback;
+    /** A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student. */
+    private java.util.List<RubricQualitySelectedColumnModel> _publishedRubricQualitySelectedLevels;
+    /** A collection of specific feedback for each quality of this rubric. */
+    private java.util.List<RubricQualityFeedbackModel> _rubricQualityFeedback;
+    /** The level that the teacher has selected for each quality while grading this assignment. */
+    private java.util.List<RubricQualitySelectedColumnModel> _rubricQualitySelectedLevels;
+    /**
+     * Instantiates a new EducationRubricOutcome and sets the default values.
+     * @return a void
+     */
+    public EducationRubricOutcome() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a EducationRubricOutcome
+     */
+    @javax.annotation.Nonnull
+    public static EducationRubricOutcome createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new EducationRubricOutcome();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final EducationRubricOutcome currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("publishedRubricQualityFeedback", (n) -> { currentObject.setPublishedRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
+            this.put("publishedRubricQualitySelectedLevels", (n) -> { currentObject.setPublishedRubricQualitySelectedLevels(n.getCollectionOfObjectValues(RubricQualitySelectedColumnModel::createFromDiscriminatorValue)); });
+            this.put("rubricQualityFeedback", (n) -> { currentObject.setRubricQualityFeedback(n.getCollectionOfObjectValues(RubricQualityFeedbackModel::createFromDiscriminatorValue)); });
+            this.put("rubricQualitySelectedLevels", (n) -> { currentObject.setRubricQualitySelectedLevels(n.getCollectionOfObjectValues(RubricQualitySelectedColumnModel::createFromDiscriminatorValue)); });
+        }};
+    }
+    /**
+     * Gets the publishedRubricQualityFeedback property value. A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
+     * @return a rubricQualityFeedbackModel
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RubricQualityFeedbackModel> getPublishedRubricQualityFeedback() {
+        return this._publishedRubricQualityFeedback;
+    }
+    /**
+     * Gets the publishedRubricQualitySelectedLevels property value. A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
+     * @return a rubricQualitySelectedColumnModel
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RubricQualitySelectedColumnModel> getPublishedRubricQualitySelectedLevels() {
+        return this._publishedRubricQualitySelectedLevels;
+    }
+    /**
+     * Gets the rubricQualityFeedback property value. A collection of specific feedback for each quality of this rubric.
+     * @return a rubricQualityFeedbackModel
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RubricQualityFeedbackModel> getRubricQualityFeedback() {
+        return this._rubricQualityFeedback;
+    }
+    /**
+     * Gets the rubricQualitySelectedLevels property value. The level that the teacher has selected for each quality while grading this assignment.
+     * @return a rubricQualitySelectedColumnModel
+     */
+    @javax.annotation.Nullable
+    public java.util.List<RubricQualitySelectedColumnModel> getRubricQualitySelectedLevels() {
+        return this._rubricQualitySelectedLevels;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeCollectionOfObjectValues("publishedRubricQualityFeedback", this.getPublishedRubricQualityFeedback());
+        writer.writeCollectionOfObjectValues("publishedRubricQualitySelectedLevels", this.getPublishedRubricQualitySelectedLevels());
+        writer.writeCollectionOfObjectValues("rubricQualityFeedback", this.getRubricQualityFeedback());
+        writer.writeCollectionOfObjectValues("rubricQualitySelectedLevels", this.getRubricQualitySelectedLevels());
+    }
+    /**
+     * Sets the publishedRubricQualityFeedback property value. A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
+     * @param value Value to set for the publishedRubricQualityFeedback property.
+     * @return a void
+     */
+    public void setPublishedRubricQualityFeedback(@javax.annotation.Nullable final java.util.List<RubricQualityFeedbackModel> value) {
+        this._publishedRubricQualityFeedback = value;
+    }
+    /**
+     * Sets the publishedRubricQualitySelectedLevels property value. A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
+     * @param value Value to set for the publishedRubricQualitySelectedLevels property.
+     * @return a void
+     */
+    public void setPublishedRubricQualitySelectedLevels(@javax.annotation.Nullable final java.util.List<RubricQualitySelectedColumnModel> value) {
+        this._publishedRubricQualitySelectedLevels = value;
+    }
+    /**
+     * Sets the rubricQualityFeedback property value. A collection of specific feedback for each quality of this rubric.
+     * @param value Value to set for the rubricQualityFeedback property.
+     * @return a void
+     */
+    public void setRubricQualityFeedback(@javax.annotation.Nullable final java.util.List<RubricQualityFeedbackModel> value) {
+        this._rubricQualityFeedback = value;
+    }
+    /**
+     * Sets the rubricQualitySelectedLevels property value. The level that the teacher has selected for each quality while grading this assignment.
+     * @param value Value to set for the rubricQualitySelectedLevels property.
+     * @return a void
+     */
+    public void setRubricQualitySelectedLevels(@javax.annotation.Nullable final java.util.List<RubricQualitySelectedColumnModel> value) {
+        this._rubricQualitySelectedLevels = value;
+    }
+}

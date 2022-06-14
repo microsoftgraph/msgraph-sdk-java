@@ -18,6 +18,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Team;
 import microsoft.graph.models.TeamCollectionResponse;
 import microsoft.graph.users.item.joinedteams.count.CountRequestBuilder;
+import microsoft.graph.users.item.joinedteams.getallmessages.GetAllMessagesRequestBuilder;
 /** Provides operations to manage the joinedTeams property of the microsoft.graph.user entity. */
 public class JoinedTeamsRequestBuilder {
     /** The count property */
@@ -171,6 +172,14 @@ public class JoinedTeamsRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getAllMessages method.
+     * @return a getAllMessagesRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetAllMessagesRequestBuilder getAllMessages() {
+        return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Create new navigation property to joinedTeams for users

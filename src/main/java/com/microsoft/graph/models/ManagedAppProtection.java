@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Policy used to configure detailed management settings for a specified set of apps */
 public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /** Data storage locations where a user may store managed data. */
     private java.util.List<String> _allowedDataStorageLocations;
@@ -65,7 +64,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /** Indicates whether simplePin is blocked. */
     private Boolean _simplePinBlocked;
     /**
-     * Instantiates a new managedAppProtection and sets the default values.
+     * Instantiates a new ManagedAppProtection and sets the default values.
      * @return a void
      */
     public ManagedAppProtection() {
@@ -74,7 +73,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAppProtection
+     * @return a ManagedAppProtection
      */
     @javax.annotation.Nonnull
     public static ManagedAppProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +82,8 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.managedAppProtection": return new ManagedAppProtection();
+                case "#microsoft.graph.defaultManagedAppProtection": return new DefaultManagedAppProtection();
+                case "#microsoft.graph.targetedManagedAppProtection": return new TargetedManagedAppProtection();
             }
         }
         return new ManagedAppProtection();

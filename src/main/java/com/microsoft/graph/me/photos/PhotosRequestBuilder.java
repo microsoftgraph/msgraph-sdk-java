@@ -59,7 +59,7 @@ public class PhotosRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get photos from me
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PhotosRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get photos from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class PhotosRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get photos from me
      * @return a CompletableFuture of ProfilePhotoCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ProfilePhotoCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class PhotosRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get photos from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ProfilePhotoCollectionResponse
      */
@@ -155,7 +155,7 @@ public class PhotosRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get photos from me
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ProfilePhotoCollectionResponse
@@ -227,7 +227,7 @@ public class PhotosRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get photos from me */
     public class PhotosRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

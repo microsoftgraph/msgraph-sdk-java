@@ -45,7 +45,10 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.threatAssessmentRequest": return new ThreatAssessmentRequest();
+                case "#microsoft.graph.emailFileAssessmentRequest": return new EmailFileAssessmentRequest();
+                case "#microsoft.graph.fileAssessmentRequest": return new FileAssessmentRequest();
+                case "#microsoft.graph.mailAssessmentRequest": return new MailAssessmentRequest();
+                case "#microsoft.graph.urlAssessmentRequest": return new UrlAssessmentRequest();
             }
         }
         return new ThreatAssessmentRequest();

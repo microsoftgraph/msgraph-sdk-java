@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the roleManagement singleton. */
+/** Provides operations to manage the identityGovernance singleton. */
 public enum UnifiedRoleScheduleRequestActions implements ValuedEnum {
     AdminAssign("adminAssign"),
     AdminUpdate("adminUpdate"),

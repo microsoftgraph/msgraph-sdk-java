@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the roleManagement singleton. */
 public class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable {
     /** Represents the type of the operation on the role assignment request. The possible values are: adminAssign, adminUpdate, adminRemove, selfActivate, selfDeactivate, adminExtend, adminRenew, selfExtend, selfRenew, unknownFutureValue. adminAssign: For administrators to assign roles to principals.adminRemove: For administrators to remove principals from roles. adminUpdate: For administrators to change existing role assignments.adminExtend: For administrators to extend expiring assignments.adminRenew: For administrators to renew expired assignments.selfActivate: For principals to activate their assignments.selfDeactivate: For principals to deactivate their active assignments.selfExtend: For principals to request to extend their expiring assignments.selfRenew: For principals to request to renew their expired assignments. */
     private UnifiedRoleScheduleRequestActions _action;
@@ -42,7 +41,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     /** Ticket details linked to the role assignment request including details of the ticket number and ticket system. */
     private TicketInfo _ticketInfo;
     /**
-     * Instantiates a new unifiedRoleAssignmentScheduleRequest and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentScheduleRequest and sets the default values.
      * @return a void
      */
     public UnifiedRoleAssignmentScheduleRequest() {
@@ -51,7 +50,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleAssignmentScheduleRequest
+     * @return a UnifiedRoleAssignmentScheduleRequest
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleAssignmentScheduleRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

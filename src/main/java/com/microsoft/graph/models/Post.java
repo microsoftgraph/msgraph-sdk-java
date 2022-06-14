@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
 public class Post extends OutlookItem implements Parsable {
     /** The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand. */
     private java.util.List<Attachment> _attachments;
@@ -37,7 +36,7 @@ public class Post extends OutlookItem implements Parsable {
     /** The collection of single-value extended properties defined for the post. Read-only. Nullable. */
     private java.util.List<SingleValueLegacyExtendedProperty> _singleValueExtendedProperties;
     /**
-     * Instantiates a new post and sets the default values.
+     * Instantiates a new Post and sets the default values.
      * @return a void
      */
     public Post() {
@@ -46,7 +45,7 @@ public class Post extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a post
+     * @return a Post
      */
     @javax.annotation.Nonnull
     public static Post createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

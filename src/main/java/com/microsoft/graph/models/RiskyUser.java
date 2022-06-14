@@ -47,7 +47,7 @@ public class RiskyUser extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.riskyUser": return new RiskyUser();
+                case "#microsoft.graph.riskyUserHistoryItem": return new RiskyUserHistoryItem();
             }
         }
         return new RiskyUser();

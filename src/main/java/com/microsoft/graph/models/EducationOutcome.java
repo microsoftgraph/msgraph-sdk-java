@@ -33,7 +33,9 @@ public class EducationOutcome extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.educationOutcome": return new EducationOutcome();
+                case "#microsoft.graph.educationFeedbackOutcome": return new EducationFeedbackOutcome();
+                case "#microsoft.graph.educationPointsOutcome": return new EducationPointsOutcome();
+                case "#microsoft.graph.educationRubricOutcome": return new EducationRubricOutcome();
             }
         }
         return new EducationOutcome();

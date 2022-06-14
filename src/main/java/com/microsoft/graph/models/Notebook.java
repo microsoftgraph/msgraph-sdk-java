@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
 public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     /** Indicates whether this is the user's default notebook. Read-only. */
     private Boolean _isDefault;
@@ -26,7 +25,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     /** Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only. */
     private OnenoteUserRole _userRole;
     /**
-     * Instantiates a new notebook and sets the default values.
+     * Instantiates a new Notebook and sets the default values.
      * @return a void
      */
     public Notebook() {
@@ -35,7 +34,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a notebook
+     * @return a Notebook
      */
     @javax.annotation.Nonnull
     public static Notebook createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

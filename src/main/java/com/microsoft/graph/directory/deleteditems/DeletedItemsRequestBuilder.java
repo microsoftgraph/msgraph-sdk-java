@@ -16,8 +16,11 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.directory.deleteditems.application.ApplicationRequestBuilder;
 import microsoft.graph.directory.deleteditems.count.CountRequestBuilder;
+import microsoft.graph.directory.deleteditems.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import microsoft.graph.directory.deleteditems.getbyids.GetByIdsRequestBuilder;
 import microsoft.graph.directory.deleteditems.group.GroupRequestBuilder;
 import microsoft.graph.directory.deleteditems.user.UserRequestBuilder;
+import microsoft.graph.directory.deleteditems.validateproperties.ValidatePropertiesRequestBuilder;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -32,6 +35,16 @@ public class DeletedItemsRequestBuilder {
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getAvailableExtensionProperties property */
+    @javax.annotation.Nonnull
+    public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
+        return new GetAvailableExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getByIds property */
+    @javax.annotation.Nonnull
+    public GetByIdsRequestBuilder getByIds() {
+        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The group property */
     @javax.annotation.Nonnull
@@ -48,6 +61,11 @@ public class DeletedItemsRequestBuilder {
     @javax.annotation.Nonnull
     public UserRequestBuilder user() {
         return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The validateProperties property */
+    @javax.annotation.Nonnull
+    public ValidatePropertiesRequestBuilder validateProperties() {
+        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new DeletedItemsRequestBuilder and sets the default values.

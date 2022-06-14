@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public enum ChannelMembershipType implements ValuedEnum {
     Standard("standard"),
     Private_escaped("private_escaped"),

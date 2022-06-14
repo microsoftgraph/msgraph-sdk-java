@@ -7,10 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class TokenIssuancePolicy extends StsPolicy implements Parsable {
     /**
-     * Instantiates a new tokenIssuancePolicy and sets the default values.
+     * Instantiates a new TokenIssuancePolicy and sets the default values.
      * @return a void
      */
     public TokenIssuancePolicy() {
@@ -19,7 +18,7 @@ public class TokenIssuancePolicy extends StsPolicy implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tokenIssuancePolicy
+     * @return a TokenIssuancePolicy
      */
     @javax.annotation.Nonnull
     public static TokenIssuancePolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
