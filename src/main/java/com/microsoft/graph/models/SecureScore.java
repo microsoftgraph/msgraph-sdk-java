@@ -85,7 +85,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Enabled Services.
-     * Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     * Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
      */
     @SerializedName(value = "enabledServices", alternate = {"EnabledServices"})
     @Expose

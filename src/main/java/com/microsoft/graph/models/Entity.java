@@ -39,7 +39,7 @@ public class Entity implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

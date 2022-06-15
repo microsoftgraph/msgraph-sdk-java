@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AddIn;
 import com.microsoft.graph.models.ApiApplication;
 import com.microsoft.graph.models.AppRole;
+import com.microsoft.graph.models.Certification;
 import com.microsoft.graph.models.InformationalUrl;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.OptionalClaims;
@@ -92,6 +93,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<AppRole> appRoles;
+
+    /**
+     * The Certification.
+     * Specifies the certification status of the application.
+     */
+    @SerializedName(value = "certification", alternate = {"Certification"})
+    @Expose
+	@Nullable
+    public Certification certification;
 
     /**
      * The Created Date Time.
@@ -320,7 +330,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created On Behalf Of.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose

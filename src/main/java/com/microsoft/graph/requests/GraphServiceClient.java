@@ -92,6 +92,7 @@ import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.SolutionsRootRequestBuilder;
 import com.microsoft.graph.requests.PrivacyRequestBuilder;
 import com.microsoft.graph.requests.ComplianceRequestBuilder;
+import com.microsoft.graph.requests.SecurityRequestBuilder;
 import com.microsoft.graph.requests.IdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRequestBuilder;
@@ -108,7 +109,6 @@ import com.microsoft.graph.requests.AdminRequestBuilder;
 import com.microsoft.graph.requests.SearchEntityRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
 import com.microsoft.graph.requests.PrintRequestBuilder;
-import com.microsoft.graph.requests.SecurityRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.TeamworkRequestBuilder;
@@ -1156,6 +1156,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the Security
+     */
+    @Nonnull
+    public SecurityRequestBuilder security() {
+        return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the IdentityContainer
      */
     @Nonnull
@@ -1331,16 +1341,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public PrintRequestBuilder print() {
         return new PrintRequestBuilder(getServiceRoot() + "/print", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the Security
-     */
-    @Nonnull
-    public SecurityRequestBuilder security() {
-        return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
     }
 
     /**

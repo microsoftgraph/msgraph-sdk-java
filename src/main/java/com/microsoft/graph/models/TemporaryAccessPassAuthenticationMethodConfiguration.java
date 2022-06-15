@@ -30,7 +30,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
 
     /**
      * The Default Length.
-     * 
+     * Default length, in characters, of a temporaryAccessPass, between 8 and 48 characters.
      */
     @SerializedName(value = "defaultLength", alternate = {"DefaultLength"})
     @Expose
@@ -39,7 +39,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
 
     /**
      * The Default Lifetime In Minutes.
-     * 
+     * Default lifetime, in minutes, for a temporaryAccessPass. Value can be between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
      */
     @SerializedName(value = "defaultLifetimeInMinutes", alternate = {"DefaultLifetimeInMinutes"})
     @Expose
@@ -48,7 +48,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
 
     /**
      * The Is Usable Once.
-     * 
+     * If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or multiple time use.
      */
     @SerializedName(value = "isUsableOnce", alternate = {"IsUsableOnce"})
     @Expose
@@ -57,7 +57,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
 
     /**
      * The Maximum Lifetime In Minutes.
-     * 
+     * Maximum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      */
     @SerializedName(value = "maximumLifetimeInMinutes", alternate = {"MaximumLifetimeInMinutes"})
     @Expose
@@ -66,7 +66,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
 
     /**
      * The Minimum Lifetime In Minutes.
-     * 
+     * Minimum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      */
     @SerializedName(value = "minimumLifetimeInMinutes", alternate = {"MinimumLifetimeInMinutes"})
     @Expose
@@ -75,7 +75,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
 
     /**
      * The Include Targets.
-     * 
+     * A collection of users or groups who are enabled to use the authentication method.
      */
     @SerializedName(value = "includeTargets", alternate = {"IncludeTargets"})
     @Expose

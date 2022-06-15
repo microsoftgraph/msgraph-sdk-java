@@ -36,7 +36,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Directory Audits.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "directoryAudits", alternate = {"DirectoryAudits"})
     @Expose
@@ -63,7 +63,7 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Sign Ins.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "signIns", alternate = {"SignIns"})
     @Expose

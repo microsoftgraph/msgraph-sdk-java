@@ -28,7 +28,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
 
     /**
      * The Type.
-     * Possible values are: days, hours.
+     * Possible values are: days, hours, or null if frequencyInterval is everyTime .
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

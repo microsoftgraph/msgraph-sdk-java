@@ -134,7 +134,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Outcomes.
-     * Read-Write. Nullable.
+     * 
      */
     @SerializedName(value = "outcomes", alternate = {"Outcomes"})
     @Expose
@@ -143,7 +143,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources.
-     * Nullable.
+     * 
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
@@ -152,7 +152,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Submitted Resources.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "submittedResources", alternate = {"SubmittedResources"})
     @Expose

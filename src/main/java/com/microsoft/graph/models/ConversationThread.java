@@ -103,7 +103,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Posts.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "posts", alternate = {"Posts"})
     @Expose

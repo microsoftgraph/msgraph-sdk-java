@@ -39,7 +39,7 @@ public class RoomList extends Place implements IJsonBackedObject {
 
     /**
      * The Rooms.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "rooms", alternate = {"Rooms"})
     @Expose

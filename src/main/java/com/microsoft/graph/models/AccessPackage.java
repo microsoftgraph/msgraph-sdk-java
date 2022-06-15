@@ -76,7 +76,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignment Policies.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "assignmentPolicies", alternate = {"AssignmentPolicies"})
     @Expose
@@ -85,7 +85,7 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "catalog", alternate = {"Catalog"})
     @Expose
