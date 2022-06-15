@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class ScopedRoleMembership extends Entity implements Parsable {
     /** Unique identifier for the administrative unit that the directory role is scoped to */
     private String _administrativeUnitId;

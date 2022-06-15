@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the roleManagement singleton. */
+/** Provides operations to manage the identityGovernance singleton. */
 public class UnifiedRoleScheduleBase extends Entity implements Parsable {
     /** Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable. */
     private AppScope _appScope;
@@ -53,7 +53,8 @@ public class UnifiedRoleScheduleBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.unifiedRoleScheduleBase": return new UnifiedRoleScheduleBase();
+                case "#microsoft.graph.unifiedRoleAssignmentSchedule": return new UnifiedRoleAssignmentSchedule();
+                case "#microsoft.graph.unifiedRoleEligibilitySchedule": return new UnifiedRoleEligibilitySchedule();
             }
         }
         return new UnifiedRoleScheduleBase();

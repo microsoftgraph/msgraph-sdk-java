@@ -59,7 +59,7 @@ public class SubmittedResourcesRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SubmittedResourcesRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class SubmittedResourcesRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<EducationSubmissionResourceCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class SubmittedResourcesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
      */
@@ -155,7 +155,7 @@ public class SubmittedResourcesRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of EducationSubmissionResourceCollectionResponse
@@ -227,7 +227,7 @@ public class SubmittedResourcesRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get submittedResources from education */
     public class SubmittedResourcesRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

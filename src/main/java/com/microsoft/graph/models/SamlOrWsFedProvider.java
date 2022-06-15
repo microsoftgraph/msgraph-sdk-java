@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of domain entities. */
 public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable {
     /** Issuer URI of the federation server. */
     private String _issuerUri;
@@ -20,7 +19,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     /** Current certificate used to sign tokens passed to the Microsoft identity platform. The certificate is formatted as a Base64 encoded string of the public portion of the federated IdP's token signing certificate and must be compatible with the X509Certificate2 class.   This property is used in the following scenarios:  if a rollover is required outside of the autorollover update a new federation service is being set up  if the new token signing certificate isn't present in the federation properties after the federation service certificate has been updated.   Azure AD updates certificates via an autorollover process in which it attempts to retrieve a new certificate from the federation service metadata, 30 days before expiry of the current certificate. If a new certificate isn't available, Azure AD monitors the metadata daily and will update the federation settings for the domain when a new certificate is available. */
     private String _signingCertificate;
     /**
-     * Instantiates a new samlOrWsFedProvider and sets the default values.
+     * Instantiates a new SamlOrWsFedProvider and sets the default values.
      * @return a void
      */
     public SamlOrWsFedProvider() {
@@ -29,7 +28,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a samlOrWsFedProvider
+     * @return a SamlOrWsFedProvider
      */
     @javax.annotation.Nonnull
     public static SamlOrWsFedProvider createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +37,8 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.samlOrWsFedProvider": return new SamlOrWsFedProvider();
+                case "#microsoft.graph.internalDomainFederation": return new InternalDomainFederation();
+                case "#microsoft.graph.samlOrWsFedExternalDomainFederation": return new SamlOrWsFedExternalDomainFederation();
             }
         }
         return new SamlOrWsFedProvider();

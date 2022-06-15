@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class WorkbookComment extends Entity implements Parsable {
     /** The content of the comment. */
     private String _content;
     /** Indicates the type for the comment. */
     private String _contentType;
-    /** Read-only. Nullable. */
+    /** The replies property */
     private java.util.List<WorkbookCommentReply> _replies;
     /**
      * Instantiates a new workbookComment and sets the default values.
@@ -62,7 +62,7 @@ public class WorkbookComment extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the replies property value. Read-only. Nullable.
+     * Gets the replies property value. The replies property
      * @return a workbookCommentReply
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class WorkbookComment extends Entity implements Parsable {
         this._contentType = value;
     }
     /**
-     * Sets the replies property value. Read-only. Nullable.
+     * Sets the replies property value. The replies property
      * @param value Value to set for the replies property.
      * @return a void
      */

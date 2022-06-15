@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
 public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable {
     /** The assignedTo property */
     private ScheduleChangeRequestActor _assignedTo;
@@ -27,7 +26,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     /** The state property */
     private ScheduleChangeState _state;
     /**
-     * Instantiates a new scheduleChangeRequest and sets the default values.
+     * Instantiates a new ScheduleChangeRequest and sets the default values.
      * @return a void
      */
     public ScheduleChangeRequest() {
@@ -36,7 +35,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a scheduleChangeRequest
+     * @return a ScheduleChangeRequest
      */
     @javax.annotation.Nonnull
     public static ScheduleChangeRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +44,9 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsab
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.scheduleChangeRequest": return new ScheduleChangeRequest();
+                case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
+                case "#microsoft.graph.openShiftChangeRequest": return new OpenShiftChangeRequest();
+                case "#microsoft.graph.timeOffRequest": return new TimeOffRequest();
             }
         }
         return new ScheduleChangeRequest();

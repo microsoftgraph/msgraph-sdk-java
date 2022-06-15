@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of organization entities. */
 public class Organization extends DirectoryObject implements Parsable {
     /** The collection of service plans associated with the tenant. Not nullable. */
     private java.util.List<AssignedPlan> _assignedPlans;
@@ -61,7 +60,7 @@ public class Organization extends DirectoryObject implements Parsable {
     /** The collection of domains associated with this tenant. Not nullable. */
     private java.util.List<VerifiedDomain> _verifiedDomains;
     /**
-     * Instantiates a new organization and sets the default values.
+     * Instantiates a new Organization and sets the default values.
      * @return a void
      */
     public Organization() {
@@ -70,7 +69,7 @@ public class Organization extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a organization
+     * @return a Organization
      */
     @javax.annotation.Nonnull
     public static Organization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

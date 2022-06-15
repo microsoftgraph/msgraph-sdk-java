@@ -18,13 +18,26 @@ import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.DirectoryObjectCollectionResponse;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.count.CountRequestBuilder;
+import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.getavailableextensionproperties.GetAvailableExtensionPropertiesRequestBuilder;
+import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.getbyids.GetByIdsRequestBuilder;
 import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.ref.RefRequestBuilder;
+import microsoft.graph.policies.featurerolloutpolicies.item.appliesto.validateproperties.ValidatePropertiesRequestBuilder;
 /** Provides operations to manage the appliesTo property of the microsoft.graph.featureRolloutPolicy entity. */
 public class AppliesToRequestBuilder {
     /** The count property */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getAvailableExtensionProperties property */
+    @javax.annotation.Nonnull
+    public GetAvailableExtensionPropertiesRequestBuilder getAvailableExtensionProperties() {
+        return new GetAvailableExtensionPropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getByIds property */
+    @javax.annotation.Nonnull
+    public GetByIdsRequestBuilder getByIds() {
+        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -37,6 +50,11 @@ public class AppliesToRequestBuilder {
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /** The validateProperties property */
+    @javax.annotation.Nonnull
+    public ValidatePropertiesRequestBuilder validateProperties() {
+        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new AppliesToRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

@@ -52,7 +52,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only.
+     * Get createdOnBehalfOf from applications
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only.
+     * Get createdOnBehalfOf from applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only.
+     * Get createdOnBehalfOf from applications
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -98,7 +98,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         }
     }
     /**
-     * Read-only.
+     * Get createdOnBehalfOf from applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -115,7 +115,7 @@ public class CreatedOnBehalfOfRequestBuilder {
         }
     }
     /**
-     * Read-only.
+     * Get createdOnBehalfOf from applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -132,7 +132,7 @@ public class CreatedOnBehalfOfRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. */
+    /** Get createdOnBehalfOf from applications */
     public class CreatedOnBehalfOfRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

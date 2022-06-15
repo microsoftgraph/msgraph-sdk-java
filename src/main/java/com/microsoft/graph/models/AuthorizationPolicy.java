@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the policyRoot singleton. */
 public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /** Indicates whether users can sign up for email based subscriptions. */
     private Boolean _allowedToSignUpEmailBasedSubscriptions;
@@ -24,7 +23,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /** Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b). */
     private String _guestUserRoleId;
     /**
-     * Instantiates a new authorizationPolicy and sets the default values.
+     * Instantiates a new AuthorizationPolicy and sets the default values.
      * @return a void
      */
     public AuthorizationPolicy() {
@@ -33,7 +32,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authorizationPolicy
+     * @return a AuthorizationPolicy
      */
     @javax.annotation.Nonnull
     public static AuthorizationPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

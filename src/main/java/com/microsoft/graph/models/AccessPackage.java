@@ -10,9 +10,9 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the identityGovernance singleton. */
 public class AccessPackage extends Entity implements Parsable {
-    /** Read-only. Nullable. */
+    /** The assignmentPolicies property */
     private java.util.List<AccessPackageAssignmentPolicy> _assignmentPolicies;
-    /** Read-only. Nullable. */
+    /** The catalog property */
     private AccessPackageCatalog _catalog;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -42,7 +42,7 @@ public class AccessPackage extends Entity implements Parsable {
         return new AccessPackage();
     }
     /**
-     * Gets the assignmentPolicies property value. Read-only. Nullable.
+     * Gets the assignmentPolicies property value. The assignmentPolicies property
      * @return a accessPackageAssignmentPolicy
      */
     @javax.annotation.Nullable
@@ -50,7 +50,7 @@ public class AccessPackage extends Entity implements Parsable {
         return this._assignmentPolicies;
     }
     /**
-     * Gets the catalog property value. Read-only. Nullable.
+     * Gets the catalog property value. The catalog property
      * @return a accessPackageCatalog
      */
     @javax.annotation.Nullable
@@ -131,7 +131,7 @@ public class AccessPackage extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
     }
     /**
-     * Sets the assignmentPolicies property value. Read-only. Nullable.
+     * Sets the assignmentPolicies property value. The assignmentPolicies property
      * @param value Value to set for the assignmentPolicies property.
      * @return a void
      */
@@ -139,7 +139,7 @@ public class AccessPackage extends Entity implements Parsable {
         this._assignmentPolicies = value;
     }
     /**
-     * Sets the catalog property value. Read-only. Nullable.
+     * Sets the catalog property value. The catalog property
      * @param value Value to set for the catalog property.
      * @return a void
      */

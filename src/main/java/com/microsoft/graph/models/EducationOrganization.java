@@ -36,7 +36,7 @@ public class EducationOrganization extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.educationOrganization": return new EducationOrganization();
+                case "#microsoft.graph.educationSchool": return new EducationSchool();
             }
         }
         return new EducationOrganization();

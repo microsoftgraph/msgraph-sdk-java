@@ -44,7 +44,8 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.unifiedRoleScheduleInstanceBase": return new UnifiedRoleScheduleInstanceBase();
+                case "#microsoft.graph.unifiedRoleAssignmentScheduleInstance": return new UnifiedRoleAssignmentScheduleInstance();
+                case "#microsoft.graph.unifiedRoleEligibilityScheduleInstance": return new UnifiedRoleEligibilityScheduleInstance();
             }
         }
         return new UnifiedRoleScheduleInstanceBase();

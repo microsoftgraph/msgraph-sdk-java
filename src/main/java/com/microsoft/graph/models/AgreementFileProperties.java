@@ -43,7 +43,9 @@ public class AgreementFileProperties extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.agreementFileProperties": return new AgreementFileProperties();
+                case "#microsoft.graph.agreementFile": return new AgreementFile();
+                case "#microsoft.graph.agreementFileLocalization": return new AgreementFileLocalization();
+                case "#microsoft.graph.agreementFileVersion": return new AgreementFileVersion();
             }
         }
         return new AgreementFileProperties();

@@ -87,7 +87,7 @@ public class ExternalGroupItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ExternalGroupItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -200,7 +200,7 @@ public class ExternalGroupItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @return a CompletableFuture of externalGroup
      */
     public java.util.concurrent.CompletableFuture<ExternalGroup> get() {
@@ -216,7 +216,7 @@ public class ExternalGroupItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of externalGroup
      */
@@ -233,7 +233,7 @@ public class ExternalGroupItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of externalGroup
@@ -332,7 +332,7 @@ public class ExternalGroupItemRequestBuilder {
         public ExternalGroupItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get groups from external */
     public class ExternalGroupItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

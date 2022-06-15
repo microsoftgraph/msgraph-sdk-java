@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class Extension extends Entity implements Parsable {
     /**
      * Instantiates a new extension and sets the default values.
@@ -28,7 +28,7 @@ public class Extension extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.extension": return new Extension();
+                case "#microsoft.graph.openTypeExtension": return new OpenTypeExtension();
             }
         }
         return new Extension();

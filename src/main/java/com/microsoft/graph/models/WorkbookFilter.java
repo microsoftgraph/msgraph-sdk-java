@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class WorkbookFilter extends Entity implements Parsable {
     /** The currently applied filter on the given column. Read-only. */
     private WorkbookFilterCriteria _criteria;

@@ -37,7 +37,8 @@ public class PrintUsage extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.printUsage": return new PrintUsage();
+                case "#microsoft.graph.printUsageByPrinter": return new PrintUsageByPrinter();
+                case "#microsoft.graph.printUsageByUser": return new PrintUsageByUser();
             }
         }
         return new PrintUsage();

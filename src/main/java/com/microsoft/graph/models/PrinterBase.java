@@ -46,7 +46,8 @@ public class PrinterBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.printerBase": return new PrinterBase();
+                case "#microsoft.graph.printer": return new Printer();
+                case "#microsoft.graph.printerShare": return new PrinterShare();
             }
         }
         return new PrinterBase();

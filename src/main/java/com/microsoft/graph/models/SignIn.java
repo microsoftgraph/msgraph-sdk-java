@@ -75,7 +75,7 @@ public class SignIn extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.signIn": return new SignIn();
+                case "#microsoft.graph.restrictedSignIn": return new RestrictedSignIn();
             }
         }
         return new SignIn();

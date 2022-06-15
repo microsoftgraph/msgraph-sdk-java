@@ -33,7 +33,7 @@ public class PrintOperation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.printOperation": return new PrintOperation();
+                case "#microsoft.graph.printerCreateOperation": return new PrinterCreateOperation();
             }
         }
         return new PrintOperation();

@@ -22,6 +22,7 @@ import microsoft.graph.users.item.chats.item.members.item.ConversationMemberItem
 import microsoft.graph.users.item.chats.item.members.MembersRequestBuilder;
 import microsoft.graph.users.item.chats.item.messages.item.ChatMessageItemRequestBuilder;
 import microsoft.graph.users.item.chats.item.messages.MessagesRequestBuilder;
+import microsoft.graph.users.item.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import microsoft.graph.users.item.chats.item.tabs.item.TeamsTabItemRequestBuilder;
 import microsoft.graph.users.item.chats.item.tabs.TabsRequestBuilder;
 /** Provides operations to manage the chats property of the microsoft.graph.user entity. */
@@ -45,6 +46,11 @@ public class ChatItemRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The sendActivityNotification property */
+    @javax.annotation.Nonnull
+    public SendActivityNotificationRequestBuilder sendActivityNotification() {
+        return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The tabs property */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {

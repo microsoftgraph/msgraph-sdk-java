@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of domain entities. */
 public class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable {
     /** URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Azure Active Directory (Azure AD). Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet. */
     private String _activeSignInUri;
@@ -24,7 +23,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     /** URI that clients are redirected to when they sign out of Azure AD services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet. */
     private String _signOutUri;
     /**
-     * Instantiates a new internalDomainFederation and sets the default values.
+     * Instantiates a new InternalDomainFederation and sets the default values.
      * @return a void
      */
     public InternalDomainFederation() {
@@ -33,7 +32,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a internalDomainFederation
+     * @return a InternalDomainFederation
      */
     @javax.annotation.Nonnull
     public static InternalDomainFederation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

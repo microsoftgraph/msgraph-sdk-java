@@ -39,7 +39,9 @@ public class ManagedAppPolicy extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.managedAppPolicy": return new ManagedAppPolicy();
+                case "#microsoft.graph.managedAppConfiguration": return new ManagedAppConfiguration();
+                case "#microsoft.graph.managedAppProtection": return new ManagedAppProtection();
+                case "#microsoft.graph.windowsInformationProtection": return new WindowsInformationProtection();
             }
         }
         return new ManagedAppPolicy();

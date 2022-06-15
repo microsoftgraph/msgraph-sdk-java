@@ -92,7 +92,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get assignmentPolicies from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -100,7 +100,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get assignmentPolicies from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get assignmentPolicies from identityGovernance
      * @return a CompletableFuture of accessPackageAssignmentPolicy
      */
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentPolicy> get() {
@@ -221,7 +221,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get assignmentPolicies from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of accessPackageAssignmentPolicy
      */
@@ -238,7 +238,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get assignmentPolicies from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of accessPackageAssignmentPolicy
@@ -325,7 +325,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder {
         public AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get assignmentPolicies from identityGovernance */
     public class AccessPackageAssignmentPolicyItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

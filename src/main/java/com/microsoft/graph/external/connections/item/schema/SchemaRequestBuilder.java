@@ -80,7 +80,7 @@ public class SchemaRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get schema from external
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SchemaRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get schema from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class SchemaRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get schema from external
      * @return a CompletableFuture of schema
      */
     public java.util.concurrent.CompletableFuture<Schema> get() {
@@ -209,7 +209,7 @@ public class SchemaRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get schema from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of schema
      */
@@ -226,7 +226,7 @@ public class SchemaRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get schema from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of schema
@@ -313,7 +313,7 @@ public class SchemaRequestBuilder {
         public SchemaRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get schema from external */
     public class SchemaRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

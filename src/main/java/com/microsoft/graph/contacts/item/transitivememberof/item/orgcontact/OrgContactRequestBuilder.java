@@ -14,44 +14,14 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.contacts.item.transitivememberof.item.orgcontact.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.contacts.item.transitivememberof.item.orgcontact.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.contacts.item.transitivememberof.item.orgcontact.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.contacts.item.transitivememberof.item.orgcontact.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.contacts.item.transitivememberof.item.orgcontact.restore.RestoreRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.OrgContact;
 /** Casts the previous resource to orgContact. */
 public class OrgContactRequestBuilder {
-    /** The checkMemberGroups property */
-    @javax.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberObjects property */
-    @javax.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberGroups property */
-    @javax.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberObjects property */
-    @javax.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
-    /** The restore property */
-    @javax.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**

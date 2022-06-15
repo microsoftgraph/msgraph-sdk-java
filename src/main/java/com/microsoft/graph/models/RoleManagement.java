@@ -11,7 +11,7 @@ import java.util.Objects;
 public class RoleManagement implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Read-only. Nullable. */
+    /** The directory property */
     private RbacApplication _directory;
     /** Container for roles and assignments for entitlement management resources. */
     private RbacApplication _entitlementManagement;
@@ -41,7 +41,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the directory property value. Read-only. Nullable.
+     * Gets the directory property value. The directory property
      * @return a rbacApplication
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class RoleManagement implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the directory property value. Read-only. Nullable.
+     * Sets the directory property value. The directory property
      * @param value Value to set for the directory property.
      * @return a void
      */

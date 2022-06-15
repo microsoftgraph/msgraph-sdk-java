@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the directory singleton. */
+/** Provides operations to manage the collection of domain entities. */
 public class IdentityProviderBase extends Entity implements Parsable {
     /** The display name of the identity provider. */
     private String _displayName;
@@ -30,7 +30,10 @@ public class IdentityProviderBase extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.identityProviderBase": return new IdentityProviderBase();
+                case "#microsoft.graph.appleManagedIdentityProvider": return new AppleManagedIdentityProvider();
+                case "#microsoft.graph.builtInIdentityProvider": return new BuiltInIdentityProvider();
+                case "#microsoft.graph.samlOrWsFedProvider": return new SamlOrWsFedProvider();
+                case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
             }
         }
         return new IdentityProviderBase();

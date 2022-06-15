@@ -14,12 +14,24 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.groups.item.grouplifecyclepolicies.item.addgroup.AddGroupRequestBuilder;
+import microsoft.graph.groups.item.grouplifecyclepolicies.item.removegroup.RemoveGroupRequestBuilder;
 import microsoft.graph.models.GroupLifecyclePolicy;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity. */
 public class GroupLifecyclePolicyItemRequestBuilder {
+    /** The addGroup property */
+    @javax.annotation.Nonnull
+    public AddGroupRequestBuilder addGroup() {
+        return new AddGroupRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The removeGroup property */
+    @javax.annotation.Nonnull
+    public RemoveGroupRequestBuilder removeGroup() {
+        return new RemoveGroupRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

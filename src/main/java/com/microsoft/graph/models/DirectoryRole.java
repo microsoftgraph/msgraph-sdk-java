@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of directoryRole entities. */
 public class DirectoryRole extends DirectoryObject implements Parsable {
     /** The description for the directory role. Read-only. Supports $filter (eq), $search, $select. */
     private String _description;
@@ -20,7 +19,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
     /** Members of this directory role that are scoped to administrative units. Read-only. Nullable. */
     private java.util.List<ScopedRoleMembership> _scopedMembers;
     /**
-     * Instantiates a new directoryRole and sets the default values.
+     * Instantiates a new DirectoryRole and sets the default values.
      * @return a void
      */
     public DirectoryRole() {
@@ -29,7 +28,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directoryRole
+     * @return a DirectoryRole
      */
     @javax.annotation.Nonnull
     public static DirectoryRole createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -80,7 +80,7 @@ public class ConnectionOperationItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get operations from connections
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class ConnectionOperationItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get operations from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ConnectionOperationItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get operations from connections
      * @return a CompletableFuture of connectionOperation
      */
     public java.util.concurrent.CompletableFuture<ConnectionOperation> get() {
@@ -209,7 +209,7 @@ public class ConnectionOperationItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get operations from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of connectionOperation
      */
@@ -226,7 +226,7 @@ public class ConnectionOperationItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get operations from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of connectionOperation
@@ -313,7 +313,7 @@ public class ConnectionOperationItemRequestBuilder {
         public ConnectionOperationItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get operations from connections */
     public class ConnectionOperationItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

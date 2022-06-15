@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class DriveItem extends BaseItem implements Parsable {
     /** Analytics about the view activities that took place on this item. */
     private ItemAnalytics _analytics;

@@ -7,10 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the unmute method. */
 public class UnmuteParticipantOperation extends CommsOperation implements Parsable {
     /**
-     * Instantiates a new unmuteParticipantOperation and sets the default values.
+     * Instantiates a new UnmuteParticipantOperation and sets the default values.
      * @return a void
      */
     public UnmuteParticipantOperation() {
@@ -19,7 +18,7 @@ public class UnmuteParticipantOperation extends CommsOperation implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unmuteParticipantOperation
+     * @return a UnmuteParticipantOperation
      */
     @javax.annotation.Nonnull
     public static UnmuteParticipantOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

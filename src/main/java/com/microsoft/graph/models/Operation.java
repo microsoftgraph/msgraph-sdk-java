@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class Operation extends Entity implements Parsable {
     /** The start time of the operation. */
     private OffsetDateTime _createdDateTime;
@@ -35,7 +35,7 @@ public class Operation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.operation": return new Operation();
+                case "#microsoft.graph.onenoteOperation": return new OnenoteOperation();
             }
         }
         return new Operation();

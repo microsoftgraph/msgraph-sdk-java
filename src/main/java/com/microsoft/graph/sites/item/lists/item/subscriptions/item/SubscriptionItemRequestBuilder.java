@@ -16,10 +16,16 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Subscription;
+import microsoft.graph.sites.item.lists.item.subscriptions.item.reauthorize.ReauthorizeRequestBuilder;
 /** Provides operations to manage the subscriptions property of the microsoft.graph.list entity. */
 public class SubscriptionItemRequestBuilder {
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The reauthorize property */
+    @javax.annotation.Nonnull
+    public ReauthorizeRequestBuilder reauthorize() {
+        return new ReauthorizeRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */

@@ -22,7 +22,7 @@ public class SecureScore extends Entity implements Parsable {
     private OffsetDateTime _createdDateTime;
     /** Tenant current attained score on specified date. */
     private Double _currentScore;
-    /** Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint). */
+    /** Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint). */
     private java.util.List<String> _enabledServices;
     /** Licensed user count of the given tenant. */
     private Integer _licensedUserCount;
@@ -96,7 +96,7 @@ public class SecureScore extends Entity implements Parsable {
         return this._currentScore;
     }
     /**
-     * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     * Gets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -215,7 +215,7 @@ public class SecureScore extends Entity implements Parsable {
         this._currentScore = value;
     }
     /**
-     * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
+     * Sets the enabledServices property value. Microsoft-provided services for the tenant (for example, Exchange online, Skype, SharePoint).
      * @param value Value to set for the enabledServices property.
      * @return a void
      */

@@ -15,7 +15,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.directory.deleteditems.item.application.ApplicationRequestBuilder;
+import microsoft.graph.directory.deleteditems.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import microsoft.graph.directory.deleteditems.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import microsoft.graph.directory.deleteditems.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import microsoft.graph.directory.deleteditems.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import microsoft.graph.directory.deleteditems.item.group.GroupRequestBuilder;
+import microsoft.graph.directory.deleteditems.item.restore.RestoreRequestBuilder;
 import microsoft.graph.directory.deleteditems.item.user.UserRequestBuilder;
 import microsoft.graph.models.DirectoryObject;
 import microsoft.graph.models.odataerrors.ODataError;
@@ -26,6 +31,26 @@ public class DirectoryObjectItemRequestBuilder {
     public ApplicationRequestBuilder application() {
         return new ApplicationRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The checkMemberGroups property */
+    @javax.annotation.Nonnull
+    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
+        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The checkMemberObjects property */
+    @javax.annotation.Nonnull
+    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
+        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberGroups property */
+    @javax.annotation.Nonnull
+    public GetMemberGroupsRequestBuilder getMemberGroups() {
+        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getMemberObjects property */
+    @javax.annotation.Nonnull
+    public GetMemberObjectsRequestBuilder getMemberObjects() {
+        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The group property */
     @javax.annotation.Nonnull
     public GroupRequestBuilder group() {
@@ -35,6 +60,11 @@ public class DirectoryObjectItemRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The restore property */
+    @javax.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /** The user property */

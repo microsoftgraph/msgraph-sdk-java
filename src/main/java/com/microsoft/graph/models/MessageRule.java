@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class MessageRule extends Entity implements Parsable {
     /** Actions to be taken on a message when the corresponding conditions are fulfilled. */
     private MessageRuleActions _actions;

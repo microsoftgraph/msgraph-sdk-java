@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of chat entities. */
+/** Provides operations to manage the collection of application entities. */
 public class TeamsAppInstallation extends Entity implements Parsable {
     /** The app that is installed. */
     private TeamsApp _teamsApp;
@@ -32,7 +32,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.teamsAppInstallation": return new TeamsAppInstallation();
+                case "#microsoft.graph.userScopeTeamsAppInstallation": return new UserScopeTeamsAppInstallation();
             }
         }
         return new TeamsAppInstallation();

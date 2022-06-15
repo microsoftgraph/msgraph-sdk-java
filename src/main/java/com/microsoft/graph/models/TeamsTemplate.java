@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class TeamsTemplate extends Entity implements Parsable {
     /**
      * Instantiates a new teamsTemplate and sets the default values.

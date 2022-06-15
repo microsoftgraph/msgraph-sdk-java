@@ -14,19 +14,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.managedappprotection.ManagedAppProtectionRequestBuilder;
 import microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.targetapps.TargetAppsRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.targetedmanagedappprotection.TargetedManagedAppProtectionRequestBuilder;
-import microsoft.graph.deviceappmanagement.managedappregistrations.item.intendedpolicies.item.windowsinformationprotection.WindowsInformationProtectionRequestBuilder;
 import microsoft.graph.models.ManagedAppPolicy;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the intendedPolicies property of the microsoft.graph.managedAppRegistration entity. */
 public class ManagedAppPolicyItemRequestBuilder {
-    /** The managedAppProtection property */
-    @javax.annotation.Nonnull
-    public ManagedAppProtectionRequestBuilder managedAppProtection() {
-        return new ManagedAppProtectionRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
@@ -36,18 +28,8 @@ public class ManagedAppPolicyItemRequestBuilder {
     public TargetAppsRequestBuilder targetApps() {
         return new TargetAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The targetedManagedAppProtection property */
-    @javax.annotation.Nonnull
-    public TargetedManagedAppProtectionRequestBuilder targetedManagedAppProtection() {
-        return new TargetedManagedAppProtectionRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
-    /** The windowsInformationProtection property */
-    @javax.annotation.Nonnull
-    public WindowsInformationProtectionRequestBuilder windowsInformationProtection() {
-        return new WindowsInformationProtectionRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new ManagedAppPolicyItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

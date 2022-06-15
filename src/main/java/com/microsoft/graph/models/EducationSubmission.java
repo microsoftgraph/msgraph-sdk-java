@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Provides operations to manage the educationRoot singleton. */
 public class EducationSubmission extends Entity implements Parsable {
-    /** Read-Write. Nullable. */
+    /** The outcomes property */
     private java.util.List<EducationOutcome> _outcomes;
     /** User who moved the status of this submission to reassigned. */
     private IdentitySet _reassignedBy;
@@ -18,7 +18,7 @@ public class EducationSubmission extends Entity implements Parsable {
     private OffsetDateTime _reassignedDateTime;
     /** Who this submission is assigned to. */
     private EducationSubmissionRecipient _recipient;
-    /** Nullable. */
+    /** The resources property */
     private java.util.List<EducationSubmissionResource> _resources;
     /** Folder where all file resources for this submission need to be stored. */
     private String _resourcesFolderUrl;
@@ -32,7 +32,7 @@ public class EducationSubmission extends Entity implements Parsable {
     private IdentitySet _submittedBy;
     /** Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _submittedDateTime;
-    /** Read-only. Nullable. */
+    /** The submittedResources property */
     private java.util.List<EducationSubmissionResource> _submittedResources;
     /** User who moved the resource from submitted into the working state. */
     private IdentitySet _unsubmittedBy;
@@ -80,7 +80,7 @@ public class EducationSubmission extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the outcomes property value. Read-Write. Nullable.
+     * Gets the outcomes property value. The outcomes property
      * @return a educationOutcome
      */
     @javax.annotation.Nullable
@@ -112,7 +112,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this._recipient;
     }
     /**
-     * Gets the resources property value. Nullable.
+     * Gets the resources property value. The resources property
      * @return a educationSubmissionResource
      */
     @javax.annotation.Nullable
@@ -168,7 +168,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this._submittedDateTime;
     }
     /**
-     * Gets the submittedResources property value. Read-only. Nullable.
+     * Gets the submittedResources property value. The submittedResources property
      * @return a educationSubmissionResource
      */
     @javax.annotation.Nullable
@@ -215,7 +215,7 @@ public class EducationSubmission extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("unsubmittedDateTime", this.getUnsubmittedDateTime());
     }
     /**
-     * Sets the outcomes property value. Read-Write. Nullable.
+     * Sets the outcomes property value. The outcomes property
      * @param value Value to set for the outcomes property.
      * @return a void
      */
@@ -247,7 +247,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this._recipient = value;
     }
     /**
-     * Sets the resources property value. Nullable.
+     * Sets the resources property value. The resources property
      * @param value Value to set for the resources property.
      * @return a void
      */
@@ -303,7 +303,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this._submittedDateTime = value;
     }
     /**
-     * Sets the submittedResources property value. Read-only. Nullable.
+     * Sets the submittedResources property value. The submittedResources property
      * @param value Value to set for the submittedResources property.
      * @return a void
      */

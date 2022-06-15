@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to call the instantiate method. */
 public class Application extends DirectoryObject implements Parsable {
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on. */
     private java.util.List<AddIn> _addIns;
@@ -20,9 +20,11 @@ public class Application extends DirectoryObject implements Parsable {
     private String _applicationTemplateId;
     /** The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable. */
     private java.util.List<AppRole> _appRoles;
+    /** Specifies the certification status of the application. */
+    private Certification _certification;
     /** The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy. */
     private OffsetDateTime _createdDateTime;
-    /** Read-only. */
+    /** The createdOnBehalfOf property */
     private DirectoryObject _createdOnBehalfOf;
     /** Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
     private String _description;
@@ -142,6 +144,14 @@ public class Application extends DirectoryObject implements Parsable {
         return this._appRoles;
     }
     /**
+     * Gets the certification property value. Specifies the certification status of the application.
+     * @return a certification
+     */
+    @javax.annotation.Nullable
+    public Certification getCertification() {
+        return this._certification;
+    }
+    /**
      * Gets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
      * @return a OffsetDateTime
      */
@@ -150,7 +160,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the createdOnBehalfOf property value. Read-only.
+     * Gets the createdOnBehalfOf property value. The createdOnBehalfOf property
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -202,6 +212,7 @@ public class Application extends DirectoryObject implements Parsable {
             this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
             this.put("applicationTemplateId", (n) -> { currentObject.setApplicationTemplateId(n.getStringValue()); });
             this.put("appRoles", (n) -> { currentObject.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
+            this.put("certification", (n) -> { currentObject.setCertification(n.getObjectValue(Certification::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("createdOnBehalfOf", (n) -> { currentObject.setCreatedOnBehalfOf(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -457,6 +468,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeStringValue("appId", this.getAppId());
         writer.writeStringValue("applicationTemplateId", this.getApplicationTemplateId());
         writer.writeCollectionOfObjectValues("appRoles", this.getAppRoles());
+        writer.writeObjectValue("certification", this.getCertification());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("createdOnBehalfOf", this.getCreatedOnBehalfOf());
         writer.writeStringValue("description", this.getDescription());
@@ -531,6 +543,14 @@ public class Application extends DirectoryObject implements Parsable {
         this._appRoles = value;
     }
     /**
+     * Sets the certification property value. Specifies the certification status of the application.
+     * @param value Value to set for the certification property.
+     * @return a void
+     */
+    public void setCertification(@javax.annotation.Nullable final Certification value) {
+        this._certification = value;
+    }
+    /**
      * Sets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
      * @param value Value to set for the createdDateTime property.
      * @return a void
@@ -539,7 +559,7 @@ public class Application extends DirectoryObject implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the createdOnBehalfOf property value. Read-only.
+     * Sets the createdOnBehalfOf property value. The createdOnBehalfOf property
      * @param value Value to set for the createdOnBehalfOf property.
      * @return a void
      */

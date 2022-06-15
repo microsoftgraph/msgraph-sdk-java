@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the print singleton. */
 public class Printer extends PrinterBase implements Parsable {
     /** The connectors that are associated with the printer. */
     private java.util.List<PrintConnector> _connectors;
@@ -25,7 +24,7 @@ public class Printer extends PrinterBase implements Parsable {
     /** A list of task triggers that are associated with the printer. */
     private java.util.List<PrintTaskTrigger> _taskTriggers;
     /**
-     * Instantiates a new printer and sets the default values.
+     * Instantiates a new Printer and sets the default values.
      * @return a void
      */
     public Printer() {
@@ -34,7 +33,7 @@ public class Printer extends PrinterBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printer
+     * @return a Printer
      */
     @javax.annotation.Nonnull
     public static Printer createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

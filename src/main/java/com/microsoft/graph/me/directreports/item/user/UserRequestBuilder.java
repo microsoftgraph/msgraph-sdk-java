@@ -14,115 +14,16 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import microsoft.graph.me.directreports.item.user.assignlicense.AssignLicenseRequestBuilder;
-import microsoft.graph.me.directreports.item.user.changepassword.ChangePasswordRequestBuilder;
-import microsoft.graph.me.directreports.item.user.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.me.directreports.item.user.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.me.directreports.item.user.exportpersonaldata.ExportPersonalDataRequestBuilder;
-import microsoft.graph.me.directreports.item.user.findmeetingtimes.FindMeetingTimesRequestBuilder;
-import microsoft.graph.me.directreports.item.user.getmailtips.GetMailTipsRequestBuilder;
-import microsoft.graph.me.directreports.item.user.getmanagedappdiagnosticstatuses.GetManagedAppDiagnosticStatusesRequestBuilder;
-import microsoft.graph.me.directreports.item.user.getmanagedapppolicies.GetManagedAppPoliciesRequestBuilder;
-import microsoft.graph.me.directreports.item.user.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.me.directreports.item.user.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.me.directreports.item.user.reminderviewwithstartdatetimewithenddatetime.ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
-import microsoft.graph.me.directreports.item.user.removealldevicesfrommanagement.RemoveAllDevicesFromManagementRequestBuilder;
-import microsoft.graph.me.directreports.item.user.reprocesslicenseassignment.ReprocessLicenseAssignmentRequestBuilder;
-import microsoft.graph.me.directreports.item.user.restore.RestoreRequestBuilder;
-import microsoft.graph.me.directreports.item.user.revokesigninsessions.RevokeSignInSessionsRequestBuilder;
-import microsoft.graph.me.directreports.item.user.sendmail.SendMailRequestBuilder;
-import microsoft.graph.me.directreports.item.user.translateexchangeids.TranslateExchangeIdsRequestBuilder;
-import microsoft.graph.me.directreports.item.user.wipemanagedappregistrationsbydevicetag.WipeManagedAppRegistrationsByDeviceTagRequestBuilder;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.User;
 /** Casts the previous resource to user. */
 public class UserRequestBuilder {
-    /** The assignLicense property */
-    @javax.annotation.Nonnull
-    public AssignLicenseRequestBuilder assignLicense() {
-        return new AssignLicenseRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The changePassword property */
-    @javax.annotation.Nonnull
-    public ChangePasswordRequestBuilder changePassword() {
-        return new ChangePasswordRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberGroups property */
-    @javax.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberObjects property */
-    @javax.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The exportPersonalData property */
-    @javax.annotation.Nonnull
-    public ExportPersonalDataRequestBuilder exportPersonalData() {
-        return new ExportPersonalDataRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The findMeetingTimes property */
-    @javax.annotation.Nonnull
-    public FindMeetingTimesRequestBuilder findMeetingTimes() {
-        return new FindMeetingTimesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMailTips property */
-    @javax.annotation.Nonnull
-    public GetMailTipsRequestBuilder getMailTips() {
-        return new GetMailTipsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberGroups property */
-    @javax.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberObjects property */
-    @javax.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The removeAllDevicesFromManagement property */
-    @javax.annotation.Nonnull
-    public RemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {
-        return new RemoveAllDevicesFromManagementRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The reprocessLicenseAssignment property */
-    @javax.annotation.Nonnull
-    public ReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment() {
-        return new ReprocessLicenseAssignmentRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
-    /** The restore property */
-    @javax.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The revokeSignInSessions property */
-    @javax.annotation.Nonnull
-    public RevokeSignInSessionsRequestBuilder revokeSignInSessions() {
-        return new RevokeSignInSessionsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The sendMail property */
-    @javax.annotation.Nonnull
-    public SendMailRequestBuilder sendMail() {
-        return new SendMailRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The translateExchangeIds property */
-    @javax.annotation.Nonnull
-    public TranslateExchangeIdsRequestBuilder translateExchangeIds() {
-        return new TranslateExchangeIdsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
-    /** The wipeManagedAppRegistrationsByDeviceTag property */
-    @javax.annotation.Nonnull
-    public WipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag() {
-        return new WipeManagedAppRegistrationsByDeviceTagRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new UserRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -230,34 +131,6 @@ public class UserRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
-    }
-    /**
-     * Provides operations to call the getManagedAppDiagnosticStatuses method.
-     * @return a getManagedAppDiagnosticStatusesRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetManagedAppDiagnosticStatusesRequestBuilder getManagedAppDiagnosticStatuses() {
-        return new GetManagedAppDiagnosticStatusesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getManagedAppPolicies method.
-     * @return a getManagedAppPoliciesRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public GetManagedAppPoliciesRequestBuilder getManagedAppPolicies() {
-        return new GetManagedAppPoliciesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the reminderView method.
-     * @param EndDateTime Usage: EndDateTime='{EndDateTime}'
-     * @param StartDateTime Usage: StartDateTime='{StartDateTime}'
-     * @return a reminderViewWithStartDateTimeWithEndDateTimeRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder reminderViewWithStartDateTimeWithEndDateTime(@javax.annotation.Nonnull final String endDateTime, @javax.annotation.Nonnull final String startDateTime) {
-        Objects.requireNonNull(endDateTime);
-        Objects.requireNonNull(startDateTime);
-        return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /** Get the item of type microsoft.graph.directoryObject as microsoft.graph.user */
     public class UserRequestBuilderGetQueryParameters {

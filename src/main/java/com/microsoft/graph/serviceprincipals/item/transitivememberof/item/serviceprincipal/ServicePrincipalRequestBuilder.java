@@ -16,72 +16,12 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.ServicePrincipal;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.addkey.AddKeyRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.addpassword.AddPasswordRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.addtokensigningcertificate.AddTokenSigningCertificateRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.checkmemberobjects.CheckMemberObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.getmembergroups.GetMemberGroupsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.getmemberobjects.GetMemberObjectsRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.removekey.RemoveKeyRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.removepassword.RemovePasswordRequestBuilder;
-import microsoft.graph.serviceprincipals.item.transitivememberof.item.serviceprincipal.restore.RestoreRequestBuilder;
 /** Casts the previous resource to servicePrincipal. */
 public class ServicePrincipalRequestBuilder {
-    /** The addKey property */
-    @javax.annotation.Nonnull
-    public AddKeyRequestBuilder addKey() {
-        return new AddKeyRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The addPassword property */
-    @javax.annotation.Nonnull
-    public AddPasswordRequestBuilder addPassword() {
-        return new AddPasswordRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The addTokenSigningCertificate property */
-    @javax.annotation.Nonnull
-    public AddTokenSigningCertificateRequestBuilder addTokenSigningCertificate() {
-        return new AddTokenSigningCertificateRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberGroups property */
-    @javax.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The checkMemberObjects property */
-    @javax.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberGroups property */
-    @javax.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The getMemberObjects property */
-    @javax.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
-    /** The removeKey property */
-    @javax.annotation.Nonnull
-    public RemoveKeyRequestBuilder removeKey() {
-        return new RemoveKeyRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The removePassword property */
-    @javax.annotation.Nonnull
-    public RemovePasswordRequestBuilder removePassword() {
-        return new RemovePasswordRequestBuilder(pathParameters, requestAdapter);
-    }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
-    /** The restore property */
-    @javax.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
-    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**

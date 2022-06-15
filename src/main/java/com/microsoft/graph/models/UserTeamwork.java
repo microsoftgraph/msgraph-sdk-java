@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class UserTeamwork extends Entity implements Parsable {
     /** The apps installed in the personal scope of this user. */
     private java.util.List<UserScopeTeamsAppInstallation> _installedApps;

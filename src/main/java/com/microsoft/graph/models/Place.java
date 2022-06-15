@@ -36,7 +36,8 @@ public class Place extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.place": return new Place();
+                case "#microsoft.graph.room": return new Room();
+                case "#microsoft.graph.roomList": return new RoomList();
             }
         }
         return new Place();

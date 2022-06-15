@@ -80,7 +80,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @return a CompletableFuture of educationSubmissionResource
      */
     public java.util.concurrent.CompletableFuture<EducationSubmissionResource> get() {
@@ -209,7 +209,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of educationSubmissionResource
      */
@@ -226,7 +226,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get submittedResources from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of educationSubmissionResource
@@ -313,7 +313,7 @@ public class EducationSubmissionResourceItemRequestBuilder {
         public EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get submittedResources from education */
     public class EducationSubmissionResourceItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

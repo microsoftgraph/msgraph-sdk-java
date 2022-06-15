@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class BaseItem extends Entity implements Parsable {
     /** Identity of the user, device, or application which created the item. Read-only. */
     private IdentitySet _createdBy;
@@ -51,7 +51,12 @@ public class BaseItem extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.baseItem": return new BaseItem();
+                case "#microsoft.graph.drive": return new Drive();
+                case "#microsoft.graph.driveItem": return new DriveItem();
+                case "#microsoft.graph.list": return new List();
+                case "#microsoft.graph.listItem": return new ListItem();
+                case "#microsoft.graph.sharedDriveItem": return new SharedDriveItem();
+                case "#microsoft.graph.site": return new Site();
             }
         }
         return new BaseItem();

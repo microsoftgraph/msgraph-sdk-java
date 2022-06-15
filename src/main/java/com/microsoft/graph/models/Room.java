@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to room. */
 public class Room extends Place implements Parsable {
     /** Specifies the name of the audio device in the room. */
     private String _audioDeviceName;
@@ -36,7 +35,7 @@ public class Room extends Place implements Parsable {
     /** Specifies the name of the video device in the room. */
     private String _videoDeviceName;
     /**
-     * Instantiates a new room and sets the default values.
+     * Instantiates a new Room and sets the default values.
      * @return a void
      */
     public Room() {
@@ -45,7 +44,7 @@ public class Room extends Place implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a room
+     * @return a Room
      */
     @javax.annotation.Nonnull
     public static Room createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Policy for Windows information protection to configure detailed management settings */
 public class WindowsInformationProtection extends ManagedAppPolicy implements Parsable {
     /** Navigation property to list of security groups targeted for policy. */
     private java.util.List<TargetedManagedAppPolicyAssignment> _assignments;
@@ -60,7 +59,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     /** Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary */
     private java.util.List<WindowsInformationProtectionResourceCollection> _smbAutoEncryptedFileExtensions;
     /**
-     * Instantiates a new windowsInformationProtection and sets the default values.
+     * Instantiates a new WindowsInformationProtection and sets the default values.
      * @return a void
      */
     public WindowsInformationProtection() {
@@ -69,7 +68,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtection
+     * @return a WindowsInformationProtection
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +77,8 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.windowsInformationProtection": return new WindowsInformationProtection();
+                case "#microsoft.graph.mdmWindowsInformationProtectionPolicy": return new MdmWindowsInformationProtectionPolicy();
+                case "#microsoft.graph.windowsInformationProtectionPolicy": return new WindowsInformationProtectionPolicy();
             }
         }
         return new WindowsInformationProtection();

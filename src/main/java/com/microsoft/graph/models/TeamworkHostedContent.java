@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of chat entities. */
+/** Provides operations to manage the collection of application entities. */
 public class TeamworkHostedContent extends Entity implements Parsable {
     /** Write only. Bytes for the hosted content (such as images). */
     private byte[] _contentBytes;
@@ -32,7 +32,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
+                case "#microsoft.graph.chatMessageHostedContent": return new ChatMessageHostedContent();
             }
         }
         return new TeamworkHostedContent();

@@ -16,7 +16,6 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.me.messages.item.attachments.AttachmentsRequestBuilder;
 import microsoft.graph.me.messages.item.attachments.item.AttachmentItemRequestBuilder;
-import microsoft.graph.me.messages.item.calendarsharingmessage.CalendarSharingMessageRequestBuilder;
 import microsoft.graph.me.messages.item.copy.CopyRequestBuilder;
 import microsoft.graph.me.messages.item.createforward.CreateForwardRequestBuilder;
 import microsoft.graph.me.messages.item.createreply.CreateReplyRequestBuilder;
@@ -41,11 +40,6 @@ public class MessageItemRequestBuilder {
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The calendarSharingMessage property */
-    @javax.annotation.Nonnull
-    public CalendarSharingMessageRequestBuilder calendarSharingMessage() {
-        return new CalendarSharingMessageRequestBuilder(pathParameters, requestAdapter);
     }
     /** The Content property */
     @javax.annotation.Nonnull

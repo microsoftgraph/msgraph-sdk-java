@@ -12,11 +12,11 @@ import java.util.Objects;
 public class PrintJob extends Entity implements Parsable {
     /** The configuration property */
     private PrintJobConfiguration _configuration;
-    /** Read-only. Nullable. */
+    /** The createdBy property */
     private UserIdentity _createdBy;
     /** The DateTimeOffset when the job was created. Read-only. */
     private OffsetDateTime _createdDateTime;
-    /** Read-only. */
+    /** The documents property */
     private java.util.List<PrintDocument> _documents;
     /** If true, document can be fetched by printer. */
     private Boolean _isFetchable;
@@ -54,7 +54,7 @@ public class PrintJob extends Entity implements Parsable {
         return this._configuration;
     }
     /**
-     * Gets the createdBy property value. Read-only. Nullable.
+     * Gets the createdBy property value. The createdBy property
      * @return a userIdentity
      */
     @javax.annotation.Nullable
@@ -70,7 +70,7 @@ public class PrintJob extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the documents property value. Read-only.
+     * Gets the documents property value. The documents property
      * @return a printDocument
      */
     @javax.annotation.Nullable
@@ -163,7 +163,7 @@ public class PrintJob extends Entity implements Parsable {
         this._configuration = value;
     }
     /**
-     * Sets the createdBy property value. Read-only. Nullable.
+     * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
@@ -179,7 +179,7 @@ public class PrintJob extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the documents property value. Read-only.
+     * Sets the documents property value. The documents property
      * @param value Value to set for the documents property.
      * @return a void
      */

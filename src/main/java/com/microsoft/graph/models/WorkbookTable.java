@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class WorkbookTable extends Entity implements Parsable {
     /** Represents a collection of all the columns in the table. Read-only. */
     private java.util.List<WorkbookTableColumn> _columns;

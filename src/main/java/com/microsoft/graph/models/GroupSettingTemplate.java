@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of groupSettingTemplate entities. */
 public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     /** Description of the template. */
     private String _description;
@@ -16,7 +15,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     /** Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template. */
     private java.util.List<SettingTemplateValue> _values;
     /**
-     * Instantiates a new groupSettingTemplate and sets the default values.
+     * Instantiates a new GroupSettingTemplate and sets the default values.
      * @return a void
      */
     public GroupSettingTemplate() {
@@ -25,7 +24,7 @@ public class GroupSettingTemplate extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupSettingTemplate
+     * @return a GroupSettingTemplate
      */
     @javax.annotation.Nonnull
     public static GroupSettingTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -55,7 +55,7 @@ public class ManagedEBook extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.managedEBook": return new ManagedEBook();
+                case "#microsoft.graph.iosVppEBook": return new IosVppEBook();
             }
         }
         return new ManagedEBook();

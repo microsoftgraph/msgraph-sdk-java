@@ -59,7 +59,7 @@ public class GroupsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class GroupsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class GroupsRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @return a CompletableFuture of ExternalGroupCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ExternalGroupCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class GroupsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExternalGroupCollectionResponse
      */
@@ -155,7 +155,7 @@ public class GroupsRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get groups from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ExternalGroupCollectionResponse
@@ -227,7 +227,7 @@ public class GroupsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only. Nullable. */
+    /** Get groups from external */
     public class GroupsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

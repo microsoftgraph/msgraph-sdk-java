@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class WorkbookWorksheet extends Entity implements Parsable {
     /** Returns collection of charts that are part of the worksheet. Read-only. */
     private java.util.List<WorkbookChart> _charts;

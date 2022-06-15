@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of chat entities. */
+/** Provides operations to manage the collection of application entities. */
 public class TeamworkConversationIdentity extends Identity implements Parsable {
     /** Type of conversation. Possible values are: team, channel, and chat. */
     private TeamworkConversationIdentityType _conversationIdentityType;

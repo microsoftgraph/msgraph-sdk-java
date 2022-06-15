@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class ChangeTrackedEntity extends Entity implements Parsable {
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
@@ -35,7 +35,14 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.changeTrackedEntity": return new ChangeTrackedEntity();
+                case "#microsoft.graph.openShift": return new OpenShift();
+                case "#microsoft.graph.scheduleChangeRequest": return new ScheduleChangeRequest();
+                case "#microsoft.graph.schedulingGroup": return new SchedulingGroup();
+                case "#microsoft.graph.shift": return new Shift();
+                case "#microsoft.graph.shiftPreferences": return new ShiftPreferences();
+                case "#microsoft.graph.timeOff": return new TimeOff();
+                case "#microsoft.graph.timeOffReason": return new TimeOffReason();
+                case "#microsoft.graph.workforceIntegration": return new WorkforceIntegration();
             }
         }
         return new ChangeTrackedEntity();

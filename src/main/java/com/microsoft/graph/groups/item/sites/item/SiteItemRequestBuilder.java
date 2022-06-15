@@ -22,6 +22,10 @@ import microsoft.graph.groups.item.sites.item.drive.DriveRequestBuilder;
 import microsoft.graph.groups.item.sites.item.drives.DrivesRequestBuilder;
 import microsoft.graph.groups.item.sites.item.drives.item.DriveItemRequestBuilder;
 import microsoft.graph.groups.item.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
+import microsoft.graph.groups.item.sites.item.getactivitiesbyinterval.GetActivitiesByIntervalRequestBuilder;
+import microsoft.graph.groups.item.sites.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+import microsoft.graph.groups.item.sites.item.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
+import microsoft.graph.groups.item.sites.item.getbypathwithpath.GetByPathWithPathRequestBuilder;
 import microsoft.graph.groups.item.sites.item.items.item.BaseItemItemRequestBuilder;
 import microsoft.graph.groups.item.sites.item.items.ItemsRequestBuilder;
 import microsoft.graph.groups.item.sites.item.lists.item.ListItemRequestBuilder;
@@ -167,34 +171,6 @@ public class SiteItemRequestBuilder {
         return new ContentTypeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Delete navigation property sites for groups
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation() throws URISyntaxException {
-        return createDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property sites for groups
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createDeleteRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<SiteItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.DELETE;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final SiteItemRequestBuilderDeleteRequestConfiguration requestConfig = new SiteItemRequestBuilderDeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @return a RequestInformation
      */
@@ -255,57 +231,6 @@ public class SiteItemRequestBuilder {
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
-    }
-    /**
-     * Delete navigation property sites for groups
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property sites for groups
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<SiteItemRequestBuilderDeleteRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Delete navigation property sites for groups
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> delete(@javax.annotation.Nullable final java.util.function.Consumer<SiteItemRequestBuilderDeleteRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createDeleteRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
     }
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.drives.item collection
@@ -381,6 +306,48 @@ public class SiteItemRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @return a getActivitiesByIntervalRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetActivitiesByIntervalRequestBuilder getActivitiesByInterval() {
+        return new GetActivitiesByIntervalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @param endDateTime Usage: endDateTime='{endDateTime}'
+     * @param interval Usage: interval='{interval}'
+     * @param startDateTime Usage: startDateTime='{startDateTime}'
+     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@javax.annotation.Nonnull final String endDateTime, @javax.annotation.Nonnull final String interval, @javax.annotation.Nonnull final String startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(interval);
+        Objects.requireNonNull(startDateTime);
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(pathParameters, requestAdapter, endDateTime, interval, startDateTime);
+    }
+    /**
+     * Provides operations to call the getApplicableContentTypesForList method.
+     * @param listId Usage: listId='{listId}'
+     * @return a getApplicableContentTypesForListWithListIdRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetApplicableContentTypesForListWithListIdRequestBuilder getApplicableContentTypesForListWithListId(@javax.annotation.Nonnull final String listId) {
+        Objects.requireNonNull(listId);
+        return new GetApplicableContentTypesForListWithListIdRequestBuilder(pathParameters, requestAdapter, listId);
+    }
+    /**
+     * Provides operations to call the getByPath method.
+     * @param path Usage: path='{path}'
+     * @return a getByPathWithPathRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public GetByPathWithPathRequestBuilder getByPathWithPath(@javax.annotation.Nonnull final String path) {
+        Objects.requireNonNull(path);
+        return new GetByPathWithPathRequestBuilder(pathParameters, requestAdapter, path);
     }
     /**
      * Gets an item from the Microsoft.Graph.groups.item.sites.item.items.item collection
@@ -508,21 +475,6 @@ public class SiteItemRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("store%2Did", id);
         return new StoreItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class SiteItemRequestBuilderDeleteRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new siteItemRequestBuilderDeleteRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public SiteItemRequestBuilderDeleteRequestConfiguration() {
-        }
     }
     /** The list of SharePoint sites in this group. Access the default site with /sites/root. */
     public class SiteItemRequestBuilderGetQueryParameters {

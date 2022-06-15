@@ -52,7 +52,7 @@ public class RefRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Nullable.
+     * Get ref of externalSponsors from identityGovernance
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class RefRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Nullable.
+     * Get ref of externalSponsors from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -115,7 +115,7 @@ public class RefRequestBuilder {
         return requestInfo;
     }
     /**
-     * Nullable.
+     * Get ref of externalSponsors from identityGovernance
      * @return a CompletableFuture of StringCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<StringCollectionResponse> get() {
@@ -131,7 +131,7 @@ public class RefRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get ref of externalSponsors from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringCollectionResponse
      */
@@ -148,7 +148,7 @@ public class RefRequestBuilder {
         }
     }
     /**
-     * Nullable.
+     * Get ref of externalSponsors from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of StringCollectionResponse
@@ -220,7 +220,7 @@ public class RefRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Nullable. */
+    /** Get ref of externalSponsors from identityGovernance */
     public class RefRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

@@ -80,7 +80,7 @@ public class SignInItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -88,7 +88,7 @@ public class SignInItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class SignInItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @return a CompletableFuture of signIn
      */
     public java.util.concurrent.CompletableFuture<SignIn> get() {
@@ -209,7 +209,7 @@ public class SignInItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of signIn
      */
@@ -226,7 +226,7 @@ public class SignInItemRequestBuilder {
         }
     }
     /**
-     * Read-only. Nullable.
+     * Get signIns from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of signIn
@@ -313,7 +313,7 @@ public class SignInItemRequestBuilder {
         public SignInItemRequestBuilderDeleteRequestConfiguration() {
         }
     }
-    /** Read-only. Nullable. */
+    /** Get signIns from auditLogs */
     public class SignInItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

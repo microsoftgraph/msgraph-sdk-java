@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Casts the previous resource to room. */
+/** Provides operations to manage the collection of place entities. */
 public enum BookingType implements ValuedEnum {
     Unknown("unknown"),
     Standard("standard"),

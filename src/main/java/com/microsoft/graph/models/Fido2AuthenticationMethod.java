@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
 public class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator. */
     private String _aaGuid;
@@ -23,7 +22,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     /** The manufacturer-assigned model of the FIDO2 security key. */
     private String _model;
     /**
-     * Instantiates a new fido2AuthenticationMethod and sets the default values.
+     * Instantiates a new Fido2AuthenticationMethod and sets the default values.
      * @return a void
      */
     public Fido2AuthenticationMethod() {
@@ -32,7 +31,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fido2AuthenticationMethod
+     * @return a Fido2AuthenticationMethod
      */
     @javax.annotation.Nonnull
     public static Fido2AuthenticationMethod createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

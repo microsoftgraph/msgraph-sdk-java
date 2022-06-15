@@ -18,7 +18,6 @@ import microsoft.graph.models.Message;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.users.item.mailfolders.item.messages.item.attachments.AttachmentsRequestBuilder;
 import microsoft.graph.users.item.mailfolders.item.messages.item.attachments.item.AttachmentItemRequestBuilder;
-import microsoft.graph.users.item.mailfolders.item.messages.item.calendarsharingmessage.CalendarSharingMessageRequestBuilder;
 import microsoft.graph.users.item.mailfolders.item.messages.item.copy.CopyRequestBuilder;
 import microsoft.graph.users.item.mailfolders.item.messages.item.createforward.CreateForwardRequestBuilder;
 import microsoft.graph.users.item.mailfolders.item.messages.item.createreply.CreateReplyRequestBuilder;
@@ -41,11 +40,6 @@ public class MessageItemRequestBuilder {
     @javax.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The calendarSharingMessage property */
-    @javax.annotation.Nonnull
-    public CalendarSharingMessageRequestBuilder calendarSharingMessage() {
-        return new CalendarSharingMessageRequestBuilder(pathParameters, requestAdapter);
     }
     /** The Content property */
     @javax.annotation.Nonnull

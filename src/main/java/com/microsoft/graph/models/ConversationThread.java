@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Casts the previous resource to user. */
+/** Provides operations to manage the collection of application entities. */
 public class ConversationThread extends Entity implements Parsable {
     /** The Cc: recipients for the thread. Returned only on $select. */
     private java.util.List<Recipient> _ccRecipients;
@@ -18,7 +18,7 @@ public class ConversationThread extends Entity implements Parsable {
     private Boolean _isLocked;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. */
     private OffsetDateTime _lastDeliveredDateTime;
-    /** Read-only. Nullable. */
+    /** The posts property */
     private java.util.List<Post> _posts;
     /** A short summary from the body of the latest post in this conversation. Returned by default. */
     private String _preview;
@@ -97,7 +97,7 @@ public class ConversationThread extends Entity implements Parsable {
         return this._lastDeliveredDateTime;
     }
     /**
-     * Gets the posts property value. Read-only. Nullable.
+     * Gets the posts property value. The posts property
      * @return a post
      */
     @javax.annotation.Nullable
@@ -187,7 +187,7 @@ public class ConversationThread extends Entity implements Parsable {
         this._lastDeliveredDateTime = value;
     }
     /**
-     * Sets the posts property value. Read-only. Nullable.
+     * Sets the posts property value. The posts property
      * @param value Value to set for the posts property.
      * @return a void
      */
