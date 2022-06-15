@@ -11,6 +11,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.27.0] - 2022-06-15
+
+### Added
+
+- Certification model. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Added Certification to Application model. 
+
 ## [5.26.0] - 2022-06-07
 
 ### Added
