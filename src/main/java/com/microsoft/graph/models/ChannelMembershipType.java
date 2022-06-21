@@ -24,6 +24,10 @@ public enum ChannelMembershipType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * shared
+    */
+    SHARED,
+    /**
     * For ChannelMembershipType values that were not expected from the service
     */
     UNEXPECTED_VALUE

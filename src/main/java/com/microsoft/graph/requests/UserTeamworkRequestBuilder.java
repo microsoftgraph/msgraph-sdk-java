@@ -11,6 +11,8 @@ import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.TeamworkActivityTopic;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.requests.AssociatedTeamInfoCollectionRequestBuilder;
+import com.microsoft.graph.requests.AssociatedTeamInfoRequestBuilder;
 import com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserScopeTeamsAppInstallationRequestBuilder;
 import java.util.Arrays;
@@ -62,6 +64,26 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder<UserTeamwork>
     }
 
 
+    /**
+     *  Gets a request builder for the AssociatedTeamInfo collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AssociatedTeamInfoCollectionRequestBuilder associatedTeams() {
+        return new AssociatedTeamInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("associatedTeams"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AssociatedTeamInfo item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AssociatedTeamInfoRequestBuilder associatedTeams(@Nonnull final String id) {
+        return new AssociatedTeamInfoRequestBuilder(getRequestUrlWithAdditionalSegment("associatedTeams") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the UserScopeTeamsAppInstallation collection
      *

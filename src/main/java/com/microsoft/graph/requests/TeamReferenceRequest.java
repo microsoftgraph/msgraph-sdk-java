@@ -16,6 +16,8 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.requests.ChannelCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.ChannelWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChannelRequestBuilder;
 import com.microsoft.graph.requests.GroupWithReferenceRequestBuilder;

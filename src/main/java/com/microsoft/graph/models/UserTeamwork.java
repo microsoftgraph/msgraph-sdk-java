@@ -9,8 +9,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AssociatedTeamInfo;
 import com.microsoft.graph.models.UserScopeTeamsAppInstallation;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AssociatedTeamInfoCollectionPage;
 import com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionPage;
 
 
@@ -27,6 +29,15 @@ import javax.annotation.Nonnull;
  */
 public class UserTeamwork extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Associated Teams.
+     * The list of associatedTeamInfo objects that a user is associated with.
+     */
+    @SerializedName(value = "associatedTeams", alternate = {"AssociatedTeams"})
+    @Expose
+	@Nullable
+    public AssociatedTeamInfoCollectionPage associatedTeams;
 
     /**
      * The Installed Apps.
@@ -46,6 +57,10 @@ public class UserTeamwork extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("associatedTeams")) {
+            associatedTeams = serializer.deserializeObject(json.get("associatedTeams"), AssociatedTeamInfoCollectionPage.class);
+        }
 
         if (json.has("installedApps")) {
             installedApps = serializer.deserializeObject(json.get("installedApps"), UserScopeTeamsAppInstallationCollectionPage.class);
