@@ -11,6 +11,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.28.0] - 2022-06-21
+
+### Added
+
+- AssociatedTeamInfo model and related requests. 
+- ChannelDoesUserHaveAccessParameterSet models and related requets.
+- SharedWithChannelTeamInfo model and related requests. 
+- TeamInfo model and related requests. 
+- ConversationMember requests. 
+- ChannelCollection and ChannelReference requests. 
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Updated the classes with references to the newly added models and requests, ie. UserTeamwork.class, Team.class, Channel.class, etc.
+
 ## [5.27.0] - 2022-06-15
 
 ### Added
