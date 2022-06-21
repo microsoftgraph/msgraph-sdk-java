@@ -13,10 +13,12 @@ import com.microsoft.graph.models.ChannelMembershipType;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.models.SharedWithChannelTeamInfo;
 import com.microsoft.graph.models.TeamsTab;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.ChatMessageCollectionPage;
+import com.microsoft.graph.requests.SharedWithChannelTeamInfoCollectionPage;
 import com.microsoft.graph.requests.TeamsTabCollectionPage;
 
 
@@ -89,6 +91,15 @@ public class Channel extends Entity implements IJsonBackedObject {
     public ChannelMembershipType membershipType;
 
     /**
+     * The Tenant Id.
+     * The ID of the Azure Active Directory tenant.
+     */
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
+    @Expose
+	@Nullable
+    public String tenantId;
+
+    /**
      * The Web Url.
      * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
      */
@@ -125,6 +136,15 @@ public class Channel extends Entity implements IJsonBackedObject {
     public ChatMessageCollectionPage messages;
 
     /**
+     * The Shared With Teams.
+     * A collection of teams with which a channel is shared.
+     */
+    @SerializedName(value = "sharedWithTeams", alternate = {"SharedWithTeams"})
+    @Expose
+	@Nullable
+    public SharedWithChannelTeamInfoCollectionPage sharedWithTeams;
+
+    /**
      * The Tabs.
      * A collection of all the tabs in the channel. A navigation property.
      */
@@ -149,6 +169,10 @@ public class Channel extends Entity implements IJsonBackedObject {
 
         if (json.has("messages")) {
             messages = serializer.deserializeObject(json.get("messages"), ChatMessageCollectionPage.class);
+        }
+
+        if (json.has("sharedWithTeams")) {
+            sharedWithTeams = serializer.deserializeObject(json.get("sharedWithTeams"), SharedWithChannelTeamInfoCollectionPage.class);
         }
 
         if (json.has("tabs")) {

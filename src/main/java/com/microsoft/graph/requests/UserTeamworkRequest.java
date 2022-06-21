@@ -11,6 +11,8 @@ import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.TeamworkActivityTopic;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.requests.AssociatedTeamInfoCollectionRequestBuilder;
+import com.microsoft.graph.requests.AssociatedTeamInfoRequestBuilder;
 import com.microsoft.graph.requests.UserScopeTeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserScopeTeamsAppInstallationRequestBuilder;
 import java.util.Arrays;

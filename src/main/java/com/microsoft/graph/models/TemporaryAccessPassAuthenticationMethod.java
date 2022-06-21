@@ -27,7 +27,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
 
     /**
      * The Created Date Time.
-     * The date and time when the temporaryAccessPass was created.
+     * The date and time when the Temporary Access Pass was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
 
     /**
      * The Is Usable Once.
-     * Determines whether the pass is limited to a one time use. If true, the pass can be used once; if false, the pass can be used multiple times within the temporaryAccessPass lifetime.
+     * Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
      */
     @SerializedName(value = "isUsableOnce", alternate = {"IsUsableOnce"})
     @Expose
@@ -54,7 +54,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
 
     /**
      * The Lifetime In Minutes.
-     * The lifetime of the temporaryAccessPass in minutes starting at startDateTime. Minimum 10, Maximum 43200 (equivalent to 30 days).
+     * The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
      */
     @SerializedName(value = "lifetimeInMinutes", alternate = {"LifetimeInMinutes"})
     @Expose
@@ -63,7 +63,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
 
     /**
      * The Method Usability Reason.
-     * Details about usability state (isUsable). Reasons can include: enabledByPolicy, disabledByPolicy, expired, notYetValid, oneTimeUsed.
+     * Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
      */
     @SerializedName(value = "methodUsabilityReason", alternate = {"MethodUsabilityReason"})
     @Expose
@@ -72,7 +72,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
 
     /**
      * The Start Date Time.
-     * The date and time when the temporaryAccessPass becomes available to use.
+     * The date and time when the Temporary Access Pass becomes available to use and when isUsable is true is enforced.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -81,7 +81,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
 
     /**
      * The Temporary Access Pass.
-     * The temporaryAccessPass used to authenticate. Returned only on creation of a new temporaryAccessPass; returned as NULL with GET.
+     * The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
      */
     @SerializedName(value = "temporaryAccessPass", alternate = {"TemporaryAccessPass"})
     @Expose

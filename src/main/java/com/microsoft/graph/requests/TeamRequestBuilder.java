@@ -16,6 +16,8 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.requests.ChannelCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.ChannelWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChannelRequestBuilder;
 import com.microsoft.graph.requests.GroupWithReferenceRequestBuilder;
@@ -84,6 +86,26 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
      * @return the collection request builder
      */
     @Nonnull
+    public ChannelCollectionWithReferencesRequestBuilder allChannels() {
+        return new ChannelCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("allChannels"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Channel item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ChannelWithReferenceRequestBuilder allChannels(@Nonnull final String id) {
+        return new ChannelWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allChannels") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Channel collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
     public ChannelCollectionRequestBuilder channels() {
         return new ChannelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("channels"), getClient(), null);
     }
@@ -107,6 +129,26 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
     @Nonnull
     public GroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Channel collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ChannelCollectionWithReferencesRequestBuilder incomingChannels() {
+        return new ChannelCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("incomingChannels"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Channel item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ChannelWithReferenceRequestBuilder incomingChannels(@Nonnull final String id) {
+        return new ChannelWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("incomingChannels") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TeamsAppInstallation collection

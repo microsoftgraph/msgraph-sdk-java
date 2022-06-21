@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageRequestBuilder;
+import com.microsoft.graph.requests.SharedWithChannelTeamInfoCollectionRequestBuilder;
+import com.microsoft.graph.requests.SharedWithChannelTeamInfoRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabRequestBuilder;
 import java.util.Arrays;

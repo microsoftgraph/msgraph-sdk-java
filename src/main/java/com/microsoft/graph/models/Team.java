@@ -143,6 +143,15 @@ public class Team extends Entity implements IJsonBackedObject {
     public TeamSpecialization specialization;
 
     /**
+     * The Tenant Id.
+     * The ID of the Azure Active Directory tenant.
+     */
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
+    @Expose
+	@Nullable
+    public String tenantId;
+
+    /**
      * The Visibility.
      * The visibility of the group and team. Defaults to Public.
      */
@@ -161,6 +170,13 @@ public class Team extends Entity implements IJsonBackedObject {
     public String webUrl;
 
     /**
+     * The All Channels.
+     * List of channels either hosted in or shared with the team (incoming channels).
+     */
+	@Nullable
+    public ChannelCollectionPage allChannels;
+
+    /**
      * The Channels.
      * The collection of channels and messages associated with the team.
      */
@@ -177,6 +193,13 @@ public class Team extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Group group;
+
+    /**
+     * The Incoming Channels.
+     * List of channels shared with the team.
+     */
+	@Nullable
+    public ChannelCollectionPage incomingChannels;
 
     /**
      * The Installed Apps.
@@ -242,8 +265,16 @@ public class Team extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
+        if (json.has("allChannels")) {
+            allChannels = serializer.deserializeObject(json.get("allChannels"), ChannelCollectionPage.class);
+        }
+
         if (json.has("channels")) {
             channels = serializer.deserializeObject(json.get("channels"), ChannelCollectionPage.class);
+        }
+
+        if (json.has("incomingChannels")) {
+            incomingChannels = serializer.deserializeObject(json.get("incomingChannels"), ChannelCollectionPage.class);
         }
 
         if (json.has("installedApps")) {
