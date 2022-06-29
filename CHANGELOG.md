@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.29.0] - 2022-06-29
+
+### Added
+
+### Changed
+
+- Generated v1.0 models and request builders using Typewriter.
+- Emun values added to TeamsAsyncOperationType.
+
 ## [5.28.0] - 2022-06-21
 
 ### Added
