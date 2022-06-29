@@ -39,7 +39,7 @@ public class TraceRouteHop implements IJsonBackedObject {
 
     /**
      * The Hop Count.
-     * The network path count of this hop that was used to compute the RTT.
+     * The network path count of this hop that was used to compute the round-trip time.
      */
     @SerializedName(value = "hopCount", alternate = {"HopCount"})
     @Expose

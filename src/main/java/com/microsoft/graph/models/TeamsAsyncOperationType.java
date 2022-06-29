@@ -36,6 +36,14 @@ public enum TeamsAsyncOperationType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * teamify Group
+    */
+    TEAMIFY_GROUP,
+    /**
+    * create Channel
+    */
+    CREATE_CHANNEL,
+    /**
     * For TeamsAsyncOperationType values that were not expected from the service
     */
     UNEXPECTED_VALUE

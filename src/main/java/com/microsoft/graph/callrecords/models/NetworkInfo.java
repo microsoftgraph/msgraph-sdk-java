@@ -189,7 +189,7 @@ public class NetworkInfo implements IJsonBackedObject {
 
     /**
      * The Trace Route Hops.
-     * List of network trace route hops collected for this media stream.
+     * List of network trace route hops collected for this media stream.*
      */
     @SerializedName(value = "traceRouteHops", alternate = {"TraceRouteHops"})
     @Expose
