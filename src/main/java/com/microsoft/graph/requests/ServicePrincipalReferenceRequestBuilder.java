@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionR
 import com.microsoft.graph.requests.DelegatedPermissionClassificationRequestBuilder;
 import com.microsoft.graph.requests.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.EndpointRequestBuilder;
+import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionRequestBuilder;
+import com.microsoft.graph.requests.FederatedIdentityCredentialRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;

@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Security;
+import com.microsoft.graph.security.requests.CasesRootRequestBuilder;
 import com.microsoft.graph.requests.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.AlertRequestBuilder;
 import com.microsoft.graph.requests.SecureScoreControlProfileCollectionRequestBuilder;
@@ -62,6 +63,16 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
     }
 
 
+
+    /**
+     * Gets the request builder for CasesRoot
+     *
+     * @return the CasesRootRequestBuilder instance
+     */
+    @Nonnull
+    public CasesRootRequestBuilder cases() {
+        return new CasesRootRequestBuilder(getRequestUrlWithAdditionalSegment("cases"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the Alert collection
      *

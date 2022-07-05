@@ -12,12 +12,16 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Fido2AuthenticationMethod;
 import com.microsoft.graph.models.AuthenticationMethod;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
+import com.microsoft.graph.models.LongRunningOperation;
+import com.microsoft.graph.models.PasswordAuthenticationMethod;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.AuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.LongRunningOperationCollectionPage;
+import com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionPage;
 
@@ -64,6 +68,24 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
 
     /**
+     * The Operations.
+     * 
+     */
+    @SerializedName(value = "operations", alternate = {"Operations"})
+    @Expose
+	@Nullable
+    public LongRunningOperationCollectionPage operations;
+
+    /**
+     * The Password Methods.
+     * Represents the details of the password authentication method registered to a user for authentication.
+     */
+    @SerializedName(value = "passwordMethods", alternate = {"PasswordMethods"})
+    @Expose
+	@Nullable
+    public PasswordAuthenticationMethodCollectionPage passwordMethods;
+
+    /**
      * The Temporary Access Pass Methods.
      * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      */
@@ -101,6 +123,14 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
         if (json.has("microsoftAuthenticatorMethods")) {
             microsoftAuthenticatorMethods = serializer.deserializeObject(json.get("microsoftAuthenticatorMethods"), MicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
+        }
+
+        if (json.has("operations")) {
+            operations = serializer.deserializeObject(json.get("operations"), LongRunningOperationCollectionPage.class);
+        }
+
+        if (json.has("passwordMethods")) {
+            passwordMethods = serializer.deserializeObject(json.get("passwordMethods"), PasswordAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("temporaryAccessPassMethods")) {

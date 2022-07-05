@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [5.30.0] - 2022-07-05
+
+### Added
+
+- Added new authentication methods.
+- Added password reset operation.
+- Added cross tenant policies and federated identity.
+- Added E-discovery cases and a large set of associated types.
+- Added summary to Team.
+
 ## [5.29.0] - 2022-06-29
 
 ### Added

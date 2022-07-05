@@ -24,6 +24,8 @@ import com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionR
 import com.microsoft.graph.requests.DelegatedPermissionClassificationRequestBuilder;
 import com.microsoft.graph.requests.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.EndpointRequestBuilder;
+import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionRequestBuilder;
+import com.microsoft.graph.requests.FederatedIdentityCredentialRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;
@@ -233,6 +235,26 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
     @Nonnull
     public EndpointRequestBuilder endpoints(@Nonnull final String id) {
         return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the FederatedIdentityCredential collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public FederatedIdentityCredentialCollectionRequestBuilder federatedIdentityCredentials() {
+        return new FederatedIdentityCredentialCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("federatedIdentityCredentials"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the FederatedIdentityCredential item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public FederatedIdentityCredentialRequestBuilder federatedIdentityCredentials(@Nonnull final String id) {
+        return new FederatedIdentityCredentialRequestBuilder(getRequestUrlWithAdditionalSegment("federatedIdentityCredentials") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the HomeRealmDiscoveryPolicy collection

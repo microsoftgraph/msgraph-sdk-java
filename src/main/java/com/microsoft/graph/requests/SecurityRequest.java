@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Security;
+import com.microsoft.graph.security.requests.CasesRootRequestBuilder;
 import com.microsoft.graph.requests.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.AlertRequestBuilder;
 import com.microsoft.graph.requests.SecureScoreControlProfileCollectionRequestBuilder;
