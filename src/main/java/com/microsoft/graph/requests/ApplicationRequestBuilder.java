@@ -15,6 +15,8 @@ import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyRequestBuilder;
+import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionRequestBuilder;
+import com.microsoft.graph.requests.FederatedIdentityCredentialRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;
@@ -112,6 +114,26 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
     @Nonnull
     public ExtensionPropertyRequestBuilder extensionProperties(@Nonnull final String id) {
         return new ExtensionPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("extensionProperties") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the FederatedIdentityCredential collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public FederatedIdentityCredentialCollectionRequestBuilder federatedIdentityCredentials() {
+        return new FederatedIdentityCredentialCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("federatedIdentityCredentials"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the FederatedIdentityCredential item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public FederatedIdentityCredentialRequestBuilder federatedIdentityCredentials(@Nonnull final String id) {
+        return new FederatedIdentityCredentialRequestBuilder(getRequestUrlWithAdditionalSegment("federatedIdentityCredentials") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the HomeRealmDiscoveryPolicy collection

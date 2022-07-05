@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Policy Id.
-     * The id of the policy.
+     * The id of the policy. Inherited from entity.
      */
     @SerializedName(value = "policyId", alternate = {"PolicyId"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Role Definition Id.
-     * The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
+     * The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Scope Id.
-     * The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
+     * The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      */
     @SerializedName(value = "scopeId", alternate = {"ScopeId"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Scope Type.
-     * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
+     * The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
@@ -64,7 +64,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Policy.
-     * The policy for the assignment.
+     * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      */
     @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose

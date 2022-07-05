@@ -14,6 +14,10 @@ import com.microsoft.graph.requests.AuthenticationMethodCollectionRequestBuilder
 import com.microsoft.graph.requests.AuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.LongRunningOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.LongRunningOperationRequestBuilder;
+import com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.PasswordAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
@@ -125,6 +129,46 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
     @Nonnull
     public MicrosoftAuthenticatorAuthenticationMethodRequestBuilder microsoftAuthenticatorMethods(@Nonnull final String id) {
         return new MicrosoftAuthenticatorAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftAuthenticatorMethods") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the LongRunningOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public LongRunningOperationCollectionRequestBuilder operations() {
+        return new LongRunningOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the LongRunningOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public LongRunningOperationRequestBuilder operations(@Nonnull final String id) {
+        return new LongRunningOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the PasswordAuthenticationMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PasswordAuthenticationMethodCollectionRequestBuilder passwordMethods() {
+        return new PasswordAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("passwordMethods"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PasswordAuthenticationMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PasswordAuthenticationMethodRequestBuilder passwordMethods(@Nonnull final String id) {
+        return new PasswordAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("passwordMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TemporaryAccessPassAuthenticationMethod collection

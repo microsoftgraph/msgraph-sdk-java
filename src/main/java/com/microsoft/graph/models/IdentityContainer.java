@@ -9,11 +9,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ConditionalAccessRoot;
 import com.microsoft.graph.models.IdentityApiConnector;
 import com.microsoft.graph.models.B2xIdentityUserFlow;
 import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.IdentityUserFlowAttribute;
+import com.microsoft.graph.models.ConditionalAccessRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.IdentityApiConnectorCollectionPage;
 import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionPage;
@@ -34,15 +34,6 @@ import javax.annotation.Nonnull;
  */
 public class IdentityContainer extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Conditional Access.
-     * the entry point for the Conditional Access (CA) object model.
-     */
-    @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
-    @Expose
-	@Nullable
-    public ConditionalAccessRoot conditionalAccess;
 
     /**
      * The Api Connectors.
@@ -79,6 +70,15 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public IdentityUserFlowAttributeCollectionPage userFlowAttributes;
+
+    /**
+     * The Conditional Access.
+     * the entry point for the Conditional Access (CA) object model.
+     */
+    @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
+    @Expose
+	@Nullable
+    public ConditionalAccessRoot conditionalAccess;
 
 
     /**

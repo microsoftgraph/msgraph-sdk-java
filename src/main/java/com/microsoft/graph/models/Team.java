@@ -14,6 +14,7 @@ import com.microsoft.graph.models.TeamGuestSettings;
 import com.microsoft.graph.models.TeamMemberSettings;
 import com.microsoft.graph.models.TeamMessagingSettings;
 import com.microsoft.graph.models.TeamSpecialization;
+import com.microsoft.graph.models.TeamSummary;
 import com.microsoft.graph.models.TeamVisibilityType;
 import com.microsoft.graph.models.Channel;
 import com.microsoft.graph.models.Group;
@@ -141,6 +142,15 @@ public class Team extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TeamSpecialization specialization;
+
+    /**
+     * The Summary.
+     * Contains summary information about the team, including number of owners, members, and guests.
+     */
+    @SerializedName(value = "summary", alternate = {"Summary"})
+    @Expose
+	@Nullable
+    public TeamSummary summary;
 
     /**
      * The Tenant Id.

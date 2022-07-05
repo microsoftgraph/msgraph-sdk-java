@@ -25,10 +25,12 @@ import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.WebApplication;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
+import com.microsoft.graph.models.FederatedIdentityCredential;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.TokenIssuancePolicy;
 import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionPage;
+import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
@@ -347,6 +349,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public ExtensionPropertyCollectionPage extensionProperties;
 
     /**
+     * The Federated Identity Credentials.
+     * Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     */
+    @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
+    @Expose
+	@Nullable
+    public FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
+
+    /**
      * The Home Realm Discovery Policies.
      * 
      */
@@ -386,6 +397,10 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("extensionProperties")) {
             extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), ExtensionPropertyCollectionPage.class);
+        }
+
+        if (json.has("federatedIdentityCredentials")) {
+            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), FederatedIdentityCredentialCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {

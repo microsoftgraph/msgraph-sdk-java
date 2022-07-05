@@ -28,7 +28,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
 
     /**
      * The Member Type.
-     * Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+     * Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose

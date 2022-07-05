@@ -16,6 +16,8 @@ import com.microsoft.graph.models.ExtensionProperty;
 import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyRequestBuilder;
+import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionRequestBuilder;
+import com.microsoft.graph.requests.FederatedIdentityCredentialRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder;

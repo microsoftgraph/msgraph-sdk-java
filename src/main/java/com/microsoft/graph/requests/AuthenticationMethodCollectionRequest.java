@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Authentication;
 import com.microsoft.graph.models.AuthenticationMethod;
+import com.microsoft.graph.models.PasswordResetResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
