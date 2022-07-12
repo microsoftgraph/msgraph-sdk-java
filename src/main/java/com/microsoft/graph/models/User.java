@@ -812,7 +812,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Member Of.
-     * 
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMemberOf;

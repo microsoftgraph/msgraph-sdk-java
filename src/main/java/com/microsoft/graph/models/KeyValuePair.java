@@ -39,7 +39,7 @@ public class KeyValuePair implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Name for this key-value pair
+     * Name for this key-value pair. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -48,7 +48,7 @@ public class KeyValuePair implements IJsonBackedObject {
 
     /**
      * The Value.
-     * Value for this key-value pair
+     * Value for this key-value pair. Possible result values are 0 (when the validation check passed), 1 (when the validation check failed), or 2 (when the validation check is a warning).
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose
