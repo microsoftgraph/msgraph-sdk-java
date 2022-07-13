@@ -22,15 +22,15 @@ public class VppToken extends Entity implements Parsable {
     private OffsetDateTime _lastModifiedDateTime;
     /** The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token. */
     private OffsetDateTime _lastSyncDateTime;
-    /** Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed. */
+    /** Possible sync statuses associated with an Apple Volume Purchase Program token. */
     private VppTokenSyncStatus _lastSyncStatus;
     /** The organization associated with the Apple Volume Purchase Program Token */
     private String _organizationName;
-    /** Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId. */
+    /** Possible states associated with an Apple Volume Purchase Program token. */
     private VppTokenState _state;
     /** The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program. */
     private String _token;
-    /** The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education. */
+    /** Possible types of an Apple Volume Purchase Program token. */
     private VppTokenAccountType _vppTokenAccountType;
     /**
      * Instantiates a new vppToken and sets the default values.
@@ -119,7 +119,7 @@ public class VppToken extends Entity implements Parsable {
         return this._lastSyncDateTime;
     }
     /**
-     * Gets the lastSyncStatus property value. Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
+     * Gets the lastSyncStatus property value. Possible sync statuses associated with an Apple Volume Purchase Program token.
      * @return a vppTokenSyncStatus
      */
     @javax.annotation.Nullable
@@ -135,7 +135,7 @@ public class VppToken extends Entity implements Parsable {
         return this._organizationName;
     }
     /**
-     * Gets the state property value. Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
+     * Gets the state property value. Possible states associated with an Apple Volume Purchase Program token.
      * @return a vppTokenState
      */
     @javax.annotation.Nullable
@@ -151,7 +151,7 @@ public class VppToken extends Entity implements Parsable {
         return this._token;
     }
     /**
-     * Gets the vppTokenAccountType property value. The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+     * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      * @return a vppTokenAccountType
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class VppToken extends Entity implements Parsable {
         this._lastSyncDateTime = value;
     }
     /**
-     * Sets the lastSyncStatus property value. Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
+     * Sets the lastSyncStatus property value. Possible sync statuses associated with an Apple Volume Purchase Program token.
      * @param value Value to set for the lastSyncStatus property.
      * @return a void
      */
@@ -243,7 +243,7 @@ public class VppToken extends Entity implements Parsable {
         this._organizationName = value;
     }
     /**
-     * Sets the state property value. Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM, duplicateLocationId.
+     * Sets the state property value. Possible states associated with an Apple Volume Purchase Program token.
      * @param value Value to set for the state property.
      * @return a void
      */
@@ -259,7 +259,7 @@ public class VppToken extends Entity implements Parsable {
         this._token = value;
     }
     /**
-     * Sets the vppTokenAccountType property value. The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+     * Sets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      * @param value Value to set for the vppTokenAccountType property.
      * @return a void
      */

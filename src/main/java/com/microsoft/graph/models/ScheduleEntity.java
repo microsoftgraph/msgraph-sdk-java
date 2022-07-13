@@ -18,12 +18,15 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _startDateTime;
     /** The theme property */
     private ScheduleEntityTheme _theme;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new scheduleEntity and sets the default values.
      * @return a void
      */
     public ScheduleEntity() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.scheduleEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,6 +36,14 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static ScheduleEntity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.shiftItem": return new ShiftItem();
+                case "#microsoft.graph.timeOffItem": return new TimeOffItem();
+            }
+        }
         return new ScheduleEntity();
     }
     /**
@@ -58,10 +69,11 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScheduleEntity currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
             this.put("theme", (n) -> { currentObject.setTheme(n.getEnumValue(ScheduleEntityTheme.class)); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,6 +93,14 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
         return this._theme;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +110,7 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeEnumValue("theme", this.getTheme());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +144,13 @@ public class ScheduleEntity implements AdditionalDataHolder, Parsable {
      */
     public void setTheme(@javax.annotation.Nullable final ScheduleEntityTheme value) {
         this._theme = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

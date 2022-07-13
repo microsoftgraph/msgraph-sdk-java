@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The resource that represents an instance of Enrollment Failure Reports. */
 public class ReportRoot extends Entity implements Parsable {
     /** The dailyPrintUsageByPrinter property */
     private java.util.List<PrintUsageByPrinter> _dailyPrintUsageByPrinter;
@@ -18,7 +17,7 @@ public class ReportRoot extends Entity implements Parsable {
     /** The monthlyPrintUsageByUser property */
     private java.util.List<PrintUsageByUser> _monthlyPrintUsageByUser;
     /**
-     * Instantiates a new reportRoot and sets the default values.
+     * Instantiates a new ReportRoot and sets the default values.
      * @return a void
      */
     public ReportRoot() {
@@ -27,7 +26,7 @@ public class ReportRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a reportRoot
+     * @return a ReportRoot
      */
     @javax.annotation.Nonnull
     public static ReportRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

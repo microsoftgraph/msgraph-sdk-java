@@ -7,14 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
 public class AccessReviewSet extends Entity implements Parsable {
     /** Represents the template and scheduling for an access review. */
     private java.util.List<AccessReviewScheduleDefinition> _definitions;
     /** Represents a collection of access review history data and the scopes used to collect that data. */
     private java.util.List<AccessReviewHistoryDefinition> _historyDefinitions;
     /**
-     * Instantiates a new accessReviewSet and sets the default values.
+     * Instantiates a new AccessReviewSet and sets the default values.
      * @return a void
      */
     public AccessReviewSet() {
@@ -23,7 +22,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewSet
+     * @return a AccessReviewSet
      */
     @javax.annotation.Nonnull
     public static AccessReviewSet createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

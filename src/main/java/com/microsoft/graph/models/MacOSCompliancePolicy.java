@@ -10,7 +10,7 @@ import java.util.Objects;
 public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /** Require that devices have enabled device threat protection. */
     private Boolean _deviceThreatProtectionEnabled;
-    /** Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. */
+    /** Device threat protection levels for the Device Threat Protection API. */
     private DeviceThreatProtectionLevel _deviceThreatProtectionRequiredSecurityLevel;
     /** Corresponds to the 'Block all incoming connections' option. */
     private Boolean _firewallBlockAllIncoming;
@@ -36,7 +36,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     private Integer _passwordPreviousPasswordBlockCount;
     /** Whether or not to require a password. */
     private Boolean _passwordRequired;
-    /** The required password type. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /** Require encryption on Mac OS devices. */
     private Boolean _storageRequireEncryption;
@@ -68,7 +68,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         return this._deviceThreatProtectionEnabled;
     }
     /**
-     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -257,7 +257,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         this._deviceThreatProtectionEnabled = value;
     }
     /**
-     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
@@ -361,7 +361,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */

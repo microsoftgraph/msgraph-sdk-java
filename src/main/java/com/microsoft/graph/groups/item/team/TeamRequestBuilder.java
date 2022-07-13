@@ -14,18 +14,20 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.groups.item.team.allchannels.AllChannelsRequestBuilder;
 import microsoft.graph.groups.item.team.archive.ArchiveRequestBuilder;
 import microsoft.graph.groups.item.team.channels.ChannelsRequestBuilder;
-import microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder;
 import microsoft.graph.groups.item.team.clone.CloneRequestBuilder;
 import microsoft.graph.groups.item.team.completemigration.CompleteMigrationRequestBuilder;
 import microsoft.graph.groups.item.team.group.GroupRequestBuilder;
+import microsoft.graph.groups.item.team.incomingchannels.IncomingChannelsRequestBuilder;
 import microsoft.graph.groups.item.team.installedapps.InstalledAppsRequestBuilder;
 import microsoft.graph.groups.item.team.installedapps.item.TeamsAppInstallationItemRequestBuilder;
 import microsoft.graph.groups.item.team.members.item.ConversationMemberItemRequestBuilder;
 import microsoft.graph.groups.item.team.members.MembersRequestBuilder;
 import microsoft.graph.groups.item.team.operations.item.TeamsAsyncOperationItemRequestBuilder;
 import microsoft.graph.groups.item.team.operations.OperationsRequestBuilder;
+import microsoft.graph.groups.item.team.photo.PhotoRequestBuilder;
 import microsoft.graph.groups.item.team.primarychannel.PrimaryChannelRequestBuilder;
 import microsoft.graph.groups.item.team.schedule.ScheduleRequestBuilder;
 import microsoft.graph.groups.item.team.sendactivitynotification.SendActivityNotificationRequestBuilder;
@@ -35,6 +37,11 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Team;
 /** Provides operations to manage the team property of the microsoft.graph.group entity. */
 public class TeamRequestBuilder {
+    /** The allChannels property */
+    @javax.annotation.Nonnull
+    public AllChannelsRequestBuilder allChannels() {
+        return new AllChannelsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The archive property */
     @javax.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
@@ -60,6 +67,11 @@ public class TeamRequestBuilder {
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
     }
+    /** The incomingChannels property */
+    @javax.annotation.Nonnull
+    public IncomingChannelsRequestBuilder incomingChannels() {
+        return new IncomingChannelsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The installedApps property */
     @javax.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
@@ -77,6 +89,11 @@ public class TeamRequestBuilder {
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
+    /** The photo property */
+    @javax.annotation.Nonnull
+    public PhotoRequestBuilder photo() {
+        return new PhotoRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The primaryChannel property */
     @javax.annotation.Nonnull
     public PrimaryChannelRequestBuilder primaryChannel() {
@@ -107,16 +124,28 @@ public class TeamRequestBuilder {
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**
+     * Gets an item from the Microsoft.Graph.groups.item.team.allChannels.item collection
+     * @param id Unique identifier of the item
+     * @return a channelItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder allChannels(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("channel%2Did", id);
+        return new microsoft.graph.groups.item.team.allchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
      * Gets an item from the Microsoft.Graph.groups.item.team.channels.item collection
      * @param id Unique identifier of the item
      * @return a channelItemRequestBuilder
      */
     @javax.annotation.Nonnull
-    public ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
+    public microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder channels(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("channel%2Did", id);
-        return new ChannelItemRequestBuilder(urlTplParams, requestAdapter);
+        return new microsoft.graph.groups.item.team.channels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new TeamRequestBuilder and sets the default values.
@@ -336,6 +365,18 @@ public class TeamRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.groups.item.team.incomingChannels.item collection
+     * @param id Unique identifier of the item
+     * @return a channelItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder incomingChannels(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("channel%2Did", id);
+        return new microsoft.graph.groups.item.team.incomingchannels.item.ChannelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.installedApps.item collection

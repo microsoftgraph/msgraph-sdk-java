@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class TodoTask extends Entity implements Parsable {
     /** The task body that typically contains information about the task. */
     private ItemBody _body;
@@ -26,7 +26,7 @@ public class TodoTask extends Entity implements Parsable {
     private DateTimeTimeZone _dueDateTime;
     /** The collection of open extensions defined for the task. Nullable. */
     private java.util.List<Extension> _extensions;
-    /** The importance of the task. Possible values are: low, normal, high. */
+    /** The importance property */
     private Importance _importance;
     /** Set to true if an alert is set to remind the user of the task. */
     private Boolean _isReminderOn;
@@ -38,7 +38,7 @@ public class TodoTask extends Entity implements Parsable {
     private PatternedRecurrence _recurrence;
     /** The date and time for a reminder alert of the task to occur. */
     private DateTimeTimeZone _reminderDateTime;
-    /** Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred. */
+    /** The status property */
     private TaskStatus _status;
     /** A brief description of the task. */
     private String _title;
@@ -150,7 +150,7 @@ public class TodoTask extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the importance property value. The importance of the task. Possible values are: low, normal, high.
+     * Gets the importance property value. The importance property
      * @return a importance
      */
     @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class TodoTask extends Entity implements Parsable {
         return this._reminderDateTime;
     }
     /**
-     * Gets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * Gets the status property value. The status property
      * @return a taskStatus
      */
     @javax.annotation.Nullable
@@ -303,7 +303,7 @@ public class TodoTask extends Entity implements Parsable {
         this._extensions = value;
     }
     /**
-     * Sets the importance property value. The importance of the task. Possible values are: low, normal, high.
+     * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      * @return a void
      */
@@ -351,7 +351,7 @@ public class TodoTask extends Entity implements Parsable {
         this._reminderDateTime = value;
     }
     /**
-     * Sets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

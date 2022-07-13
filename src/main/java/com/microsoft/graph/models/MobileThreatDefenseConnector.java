@@ -20,7 +20,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     private Boolean _iosEnabled;
     /** DateTime of last Heartbeat recieved from the Data Sync Partner */
     private OffsetDateTime _lastHeartbeatDateTime;
-    /** Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive. */
+    /** Partner state of this tenant. */
     private MobileThreatPartnerTenantState _partnerState;
     /** Get or Set days the per tenant tolerance to unresponsiveness for this partner integration */
     private Integer _partnerUnresponsivenessThresholdInDays;
@@ -102,7 +102,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         return this._lastHeartbeatDateTime;
     }
     /**
-     * Gets the partnerState property value. Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
+     * Gets the partnerState property value. Partner state of this tenant.
      * @return a mobileThreatPartnerTenantState
      */
     @javax.annotation.Nullable
@@ -183,7 +183,7 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         this._lastHeartbeatDateTime = value;
     }
     /**
-     * Sets the partnerState property value. Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
+     * Sets the partnerState property value. Partner state of this tenant.
      * @param value Value to set for the partnerState property.
      * @return a void
      */

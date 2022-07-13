@@ -15,7 +15,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     private String _description;
     /** The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only. */
     private java.util.List<String> _details;
-    /** The current processing state. Valid values are described in the following table. Read-only. */
+    /** The state property */
     private PrinterProcessingState _state;
     /**
      * Instantiates a new printerStatus and sets the default values.
@@ -72,7 +72,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the state property value. The current processing state. Valid values are described in the following table. Read-only.
+     * Gets the state property value. The state property
      * @return a printerProcessingState
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
         this._details = value;
     }
     /**
-     * Sets the state property value. The current processing state. Valid values are described in the following table. Read-only.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

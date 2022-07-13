@@ -12,7 +12,7 @@ import java.util.Objects;
 public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none. */
+    /** Notification Settings Alert Type. */
     private IosNotificationAlertType _alertType;
     /** Application name to be associated with the bundleID. */
     private String _appName;
@@ -56,7 +56,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the alertType property value. Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
+     * Gets the alertType property value. Notification Settings Alert Type.
      * @return a iosNotificationAlertType
      */
     @javax.annotation.Nullable
@@ -173,7 +173,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the alertType property value. Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
+     * Sets the alertType property value. Notification Settings Alert Type.
      * @param value Value to set for the alertType property.
      * @return a void
      */

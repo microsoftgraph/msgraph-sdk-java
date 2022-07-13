@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class Attachment extends Entity implements Parsable {
     /** The MIME type. */
     private String _contentType;
@@ -26,6 +26,7 @@ public class Attachment extends Entity implements Parsable {
      */
     public Attachment() {
         super();
+        this.setType("#microsoft.graph.attachment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

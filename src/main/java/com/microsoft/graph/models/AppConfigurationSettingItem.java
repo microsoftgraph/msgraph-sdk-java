@@ -14,7 +14,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
     private Map<String, Object> _additionalData;
     /** app configuration key. */
     private String _appConfigKey;
-    /** app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType. */
+    /** App configuration key types. */
     private MdmAppConfigKeyType _appConfigKeyType;
     /** app configuration key value. */
     private String _appConfigKeyValue;
@@ -52,7 +52,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
         return this._appConfigKey;
     }
     /**
-     * Gets the appConfigKeyType property value. app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType.
+     * Gets the appConfigKeyType property value. App configuration key types.
      * @return a mdmAppConfigKeyType
      */
     @javax.annotation.Nullable
@@ -109,7 +109,7 @@ public class AppConfigurationSettingItem implements AdditionalDataHolder, Parsab
         this._appConfigKey = value;
     }
     /**
-     * Sets the appConfigKeyType property value. app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType.
+     * Sets the appConfigKeyType property value. App configuration key types.
      * @param value Value to set for the appConfigKeyType property.
      * @return a void
      */

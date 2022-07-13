@@ -15,12 +15,15 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     private String _applicationVersion;
     /** User-agent header value reported by this endpoint. */
     private String _headerValue;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new userAgent and sets the default values.
      * @return a void
      */
     public UserAgent() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.callRecords.userAgent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,6 +33,14 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static UserAgent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.callRecords.clientUserAgent": return new ClientUserAgent();
+                case "#microsoft.graph.callRecords.serviceUserAgent": return new ServiceUserAgent();
+            }
+        }
         return new UserAgent();
     }
     /**
@@ -55,9 +66,10 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAgent currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("applicationVersion", (n) -> { currentObject.setApplicationVersion(n.getStringValue()); });
             this.put("headerValue", (n) -> { currentObject.setHeaderValue(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -69,6 +81,14 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
         return this._headerValue;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -77,6 +97,7 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationVersion", this.getApplicationVersion());
         writer.writeStringValue("headerValue", this.getHeaderValue());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -102,5 +123,13 @@ public class UserAgent implements AdditionalDataHolder, Parsable {
      */
     public void setHeaderValue(@javax.annotation.Nullable final String value) {
         this._headerValue = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

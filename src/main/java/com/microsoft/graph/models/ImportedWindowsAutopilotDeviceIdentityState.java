@@ -15,7 +15,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
     private Integer _deviceErrorCode;
     /** Device error name reported by Device Directory Service(DDS). */
     private String _deviceErrorName;
-    /** Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error. */
+    /** The deviceImportStatus property */
     private ImportedWindowsAutopilotDeviceIdentityImportStatus _deviceImportStatus;
     /** Device Registration ID for successfully added device reported by Device Directory Service(DDS). */
     private String _deviceRegistrationId;
@@ -61,7 +61,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
         return this._deviceErrorName;
     }
     /**
-     * Gets the deviceImportStatus property value. Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
+     * Gets the deviceImportStatus property value. The deviceImportStatus property
      * @return a importedWindowsAutopilotDeviceIdentityImportStatus
      */
     @javax.annotation.Nullable
@@ -128,7 +128,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
         this._deviceErrorName = value;
     }
     /**
-     * Sets the deviceImportStatus property value. Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
+     * Sets the deviceImportStatus property value. The deviceImportStatus property
      * @param value Value to set for the deviceImportStatus property.
      * @return a void
      */

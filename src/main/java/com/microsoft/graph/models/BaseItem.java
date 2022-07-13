@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class BaseItem extends Entity implements Parsable {
     /** Identity of the user, device, or application which created the item. Read-only. */
     private IdentitySet _createdBy;
@@ -38,6 +37,7 @@ public class BaseItem extends Entity implements Parsable {
      */
     public BaseItem() {
         super();
+        this.setType("#microsoft.graph.baseItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

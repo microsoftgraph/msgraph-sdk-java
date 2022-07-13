@@ -11,7 +11,7 @@ import java.util.Objects;
 public class SharedPCConfiguration extends DeviceConfiguration implements Parsable {
     /** Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false. */
     private SharedPCAccountManagerPolicy _accountManagerPolicy;
-    /** Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain. */
+    /** Type of accounts that are allowed to share the PC. */
     private SharedPCAllowedAccountType _allowedAccounts;
     /** Specifies whether local storage is allowed on a shared PC. */
     private Boolean _allowLocalStorage;
@@ -59,7 +59,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         return this._accountManagerPolicy;
     }
     /**
-     * Gets the allowedAccounts property value. Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+     * Gets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
      * @return a sharedPCAllowedAccountType
      */
     @javax.annotation.Nullable
@@ -198,7 +198,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
         this._accountManagerPolicy = value;
     }
     /**
-     * Sets the allowedAccounts property value. Indicates which type of accounts are allowed to use on a shared PC. Possible values are: notConfigured, guest, domain.
+     * Sets the allowedAccounts property value. Type of accounts that are allowed to share the PC.
      * @param value Value to set for the allowedAccounts property.
      * @return a void
      */

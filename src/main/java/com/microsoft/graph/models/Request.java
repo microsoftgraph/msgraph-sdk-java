@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
+/** Provides operations to manage the admin singleton. */
 public class Request extends Entity implements Parsable {
     /** The identifier of the approval of the request. */
     private String _approvalId;
@@ -28,6 +28,7 @@ public class Request extends Entity implements Parsable {
      */
     public Request() {
         super();
+        this.setType("#microsoft.graph.request");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of domain entities. */
 public class Domain extends Entity implements Parsable {
     /** Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. This property is read-only and is not nullable. */
     private String _authenticationType;
@@ -44,7 +43,7 @@ public class Domain extends Entity implements Parsable {
     /** DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable. Supports $expand. */
     private java.util.List<DomainDnsRecord> _verificationDnsRecords;
     /**
-     * Instantiates a new domain and sets the default values.
+     * Instantiates a new Domain and sets the default values.
      * @return a void
      */
     public Domain() {
@@ -53,7 +52,7 @@ public class Domain extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a domain
+     * @return a Domain
      */
     @javax.annotation.Nonnull
     public static Domain createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

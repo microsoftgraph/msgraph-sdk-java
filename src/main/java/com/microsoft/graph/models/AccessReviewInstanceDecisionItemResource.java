@@ -32,6 +32,15 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     @javax.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource": return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
+                case "#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource": return new AccessReviewInstanceDecisionItemAzureRoleResource();
+                case "#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource": return new AccessReviewInstanceDecisionItemServicePrincipalResource();
+            }
+        }
         return new AccessReviewInstanceDecisionItemResource();
     }
     /**

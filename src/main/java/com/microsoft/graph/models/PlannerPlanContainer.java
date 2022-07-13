@@ -13,7 +13,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The identifier of the resource that contains the plan. */
     private String _containerId;
-    /** The type of the resource that contains the plan. See the previous table for supported types. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster. */
+    /** The type property */
     private PlannerContainerType _type;
     /** The full canonical URL of the container. */
     private String _url;
@@ -64,7 +64,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the type property value. The type of the resource that contains the plan. See the previous table for supported types. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * Gets the type property value. The type property
      * @return a plannerContainerType
      */
     @javax.annotation.Nullable
@@ -108,7 +108,7 @@ public class PlannerPlanContainer implements AdditionalDataHolder, Parsable {
         this._containerId = value;
     }
     /**
-     * Sets the type property value. The type of the resource that contains the plan. See the previous table for supported types. Possible values are: group, unknownFutureValue, roster. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: roster.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

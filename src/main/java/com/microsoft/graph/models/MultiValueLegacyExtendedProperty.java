@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class MultiValueLegacyExtendedProperty extends Entity implements Parsable {
     /** A collection of property values. */
     private java.util.List<String> _value;

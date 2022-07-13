@@ -52,7 +52,7 @@ public class AppScopeRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.
+     * Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class AppScopeRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.
+     * Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class AppScopeRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.
+     * Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
      * @return a CompletableFuture of appScope
      */
     public java.util.concurrent.CompletableFuture<AppScope> get() {
@@ -98,7 +98,7 @@ public class AppScopeRequestBuilder {
         }
     }
     /**
-     * Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.
+     * Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appScope
      */
@@ -115,7 +115,7 @@ public class AppScopeRequestBuilder {
         }
     }
     /**
-     * Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity.
+     * Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of appScope
@@ -132,7 +132,7 @@ public class AppScopeRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Read-only property with details of the app-specific scope when the assignment scope is app-specific. Containment entity. */
+    /** Read-only property with details of the app-specific scope when the role eligibility is scoped to an app. Nullable. Supports $expand. */
     public class AppScopeRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

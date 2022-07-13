@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class Group extends DirectoryObject implements Parsable {
     /** The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post. */
     private java.util.List<DirectoryObject> _acceptedSenders;
@@ -36,7 +35,7 @@ public class Group extends DirectoryObject implements Parsable {
     private DirectoryObject _createdOnBehalfOf;
     /** An optional description for the group. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search. */
     private String _description;
-    /** The display name for the group. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
+    /** The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy. */
     private String _displayName;
     /** The group's default drive. Read-only. */
     private Drive _drive;
@@ -58,7 +57,7 @@ public class Group extends DirectoryObject implements Parsable {
     private Boolean _hideFromAddressLists;
     /** true if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web, false otherwise. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). */
     private Boolean _hideFromOutlookClients;
-    /** When a group is associated with a team, this property determines whether the team is in read-only mode. */
+    /** When a group is associated with a team, this property determines whether the team is in read-only mode. To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs. */
     private Boolean _isArchived;
     /** Indicates whether this group can be assigned to an Azure Active Directory role. Optional. This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership). Only callers in Global administrator and Privileged role administrator roles can set this property. The caller must be assigned the RoleManagement.ReadWrite.Directory permission to set this property or update the membership of such groups. For more, see Using a group to manage Azure AD role assignmentsReturned by default. Supports $filter (eq, ne, not). */
     private Boolean _isAssignableToRole;
@@ -74,7 +73,7 @@ public class Group extends DirectoryObject implements Parsable {
     private String _mailNickname;
     /** Groups and administrative units that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand. */
     private java.util.List<DirectoryObject> _memberOf;
-    /** Members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName). */
+    /** Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName). */
     private java.util.List<DirectoryObject> _members;
     /** The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith). */
     private String _membershipRule;
@@ -132,13 +131,13 @@ public class Group extends DirectoryObject implements Parsable {
     private String _theme;
     /** The group's conversation threads. Nullable. */
     private java.util.List<ConversationThread> _threads;
-    /** The transitiveMemberOf property */
+    /** The groups that a group is a member of, either directly and through nested membership. Nullable. */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
-    /** The transitiveMembers property */
+    /** The direct and transitive members of a group. Nullable. */
     private java.util.List<DirectoryObject> _transitiveMembers;
     /** Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Returned only on $select. Supported only on the Get group API (GET /groups/{ID}). */
     private Integer _unseenCount;
-    /** Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable. */
+    /** Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable. */
     private String _visibility;
     /**
      * Instantiates a new group and sets the default values.
@@ -262,7 +261,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The display name for the group. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Gets the displayName property value. The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -425,7 +424,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._hideFromOutlookClients;
     }
     /**
-     * Gets the isArchived property value. When a group is associated with a team, this property determines whether the team is in read-only mode.
+     * Gets the isArchived property value. When a group is associated with a team, this property determines whether the team is in read-only mode. To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -489,7 +488,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._memberOf;
     }
     /**
-     * Gets the members property value. Members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
+     * Gets the members property value. Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -721,7 +720,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._threads;
     }
     /**
-     * Gets the transitiveMemberOf property value. The transitiveMemberOf property
+     * Gets the transitiveMemberOf property value. The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -729,7 +728,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._transitiveMemberOf;
     }
     /**
-     * Gets the transitiveMembers property value. The transitiveMembers property
+     * Gets the transitiveMembers property value. The direct and transitive members of a group. Nullable.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -745,7 +744,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this._unseenCount;
     }
     /**
-     * Gets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+     * Gets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -931,7 +930,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The display name for the group. Required. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Sets the displayName property value. The display name for the group. Required. Maximum length is 256 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -1019,7 +1018,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._hideFromOutlookClients = value;
     }
     /**
-     * Sets the isArchived property value. When a group is associated with a team, this property determines whether the team is in read-only mode.
+     * Sets the isArchived property value. When a group is associated with a team, this property determines whether the team is in read-only mode. To read this property, use the /group/{groupId}/team endpoint or the Get team API. To update this property, use the archiveTeam and unarchiveTeam APIs.
      * @param value Value to set for the isArchived property.
      * @return a void
      */
@@ -1083,7 +1082,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._memberOf = value;
     }
     /**
-     * Sets the members property value. Members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
+     * Sets the members property value. Direct members of this group, who can be users, devices, other groups, or service principals. Supports the List members, Add member, and Remove member operations. Nullable. Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=members($select=id,userPrincipalName,displayName).
      * @param value Value to set for the members property.
      * @return a void
      */
@@ -1315,7 +1314,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._threads = value;
     }
     /**
-     * Sets the transitiveMemberOf property value. The transitiveMemberOf property
+     * Sets the transitiveMemberOf property value. The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
@@ -1323,7 +1322,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._transitiveMemberOf = value;
     }
     /**
-     * Sets the transitiveMembers property value. The transitiveMembers property
+     * Sets the transitiveMembers property value. The direct and transitive members of a group. Nullable.
      * @param value Value to set for the transitiveMembers property.
      * @return a void
      */
@@ -1339,7 +1338,7 @@ public class Group extends DirectoryObject implements Parsable {
         this._unseenCount = value;
     }
     /**
-     * Sets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or Hiddenmembership. Hiddenmembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
+     * Sets the visibility property value. Specifies the group join policy and group content visibility for groups. Possible values are: Private, Public, or HiddenMembership. HiddenMembership can be set only for Microsoft 365 groups, when the groups are created. It can't be updated later. Other values of visibility can be updated after group creation. If visibility value is not specified during group creation on Microsoft Graph, a security group is created as Private by default and Microsoft 365 group is Public. Groups assignable to roles are always Private. See group visibility options to learn more. Returned by default. Nullable.
      * @param value Value to set for the visibility property.
      * @return a void
      */

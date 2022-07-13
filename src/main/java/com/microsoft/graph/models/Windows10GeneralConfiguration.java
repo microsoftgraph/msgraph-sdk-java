@@ -13,7 +13,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _accountsBlockAddingNonMicrosoftAccountEmail;
     /** Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only). */
     private Boolean _antiTheftModeBlocked;
-    /** Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed. */
+    /** State Management Setting. */
     private StateManagementSetting _appsAllowTrustedAppsSideloading;
     /** Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded. */
     private Boolean _appsBlockWindowsStoreOriginatedApps;
@@ -45,7 +45,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _cortanaBlocked;
     /** Whether or not to block end user access to Defender. */
     private Boolean _defenderBlockEndUserAccess;
-    /** Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance. */
+    /** Possible values of Cloud Block Level */
     private DefenderCloudBlockLevelType _defenderCloudBlockLevel;
     /** Number of days before deleting quarantined malware. Valid values 0 to 90 */
     private Integer _defenderDaysBeforeDeletingQuarantinedMalware;
@@ -55,11 +55,11 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private java.util.List<String> _defenderFileExtensionsToExclude;
     /** Files and folder to exclude from scans and real time protection. */
     private java.util.List<String> _defenderFilesAndFoldersToExclude;
-    /** Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly. */
+    /** Possible values for monitoring file activity. */
     private DefenderMonitorFileActivity _defenderMonitorFileActivity;
     /** Processes to exclude from scans and real time protection. */
     private java.util.List<String> _defenderProcessesToExclude;
-    /** The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting. */
+    /** Possible values for prompting user for samples submission. */
     private DefenderPromptForSampleSubmission _defenderPromptForSampleSubmission;
     /** Indicates whether or not to require behavior monitoring. */
     private Boolean _defenderRequireBehaviorMonitoring;
@@ -85,7 +85,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _defenderScanRemovableDrivesDuringFullScan;
     /** Indicates whether or not to scan scripts loaded in Internet Explorer browser. */
     private Boolean _defenderScanScriptsLoadedInInternetExplorer;
-    /** The defender system scan type. Possible values are: userDefined, disabled, quick, full. */
+    /** Possible values for system scan type. */
     private DefenderScanType _defenderScanType;
     /** The time to perform a daily quick scan. */
     private LocalTime _defenderScheduledQuickScanTime;
@@ -93,15 +93,15 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private LocalTime _defenderScheduledScanTime;
     /** The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24 */
     private Integer _defenderSignatureUpdateIntervalInHours;
-    /** Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan. */
+    /** Possible values for a weekly schedule. */
     private WeeklySchedule _defenderSystemScanSchedule;
-    /** Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed. */
+    /** State Management Setting. */
     private StateManagementSetting _developerUnlockSetting;
     /** Indicates whether or not to Block the user from resetting their phone. */
     private Boolean _deviceManagementBlockFactoryResetOnMobile;
     /** Indicates whether or not to Block the user from doing manual un-enrollment from device management. */
     private Boolean _deviceManagementBlockManualUnenroll;
-    /** Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full. */
+    /** Allow the device to send diagnostic and usage telemetry data, such as Watson. */
     private DiagnosticDataSubmissionMode _diagnosticsDataSubmissionMode;
     /** Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge. */
     private Boolean _edgeAllowStartPagesModification;
@@ -137,7 +137,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _edgeBlockSendingIntranetTrafficToInternetExplorer;
     /** Clear browsing data on exiting Microsoft Edge. */
     private Boolean _edgeClearBrowsingDataOnExit;
-    /** Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll. */
+    /** Possible values to specify which cookies are allowed in Microsoft Edge. */
     private EdgeCookiePolicy _edgeCookiePolicy;
     /** Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page. */
     private Boolean _edgeDisableFirstRunPage;
@@ -221,7 +221,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Integer _passwordPreviousPasswordBlockCount;
     /** Indicates whether or not to require the user to have a password. */
     private Boolean _passwordRequired;
-    /** The required password type. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /** Indicates whether or not to require a password upon resuming from an idle state. */
     private Boolean _passwordRequireWhenResumeFromIdleState;
@@ -231,7 +231,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private String _personalizationDesktopImageUrl;
     /** A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image. */
     private String _personalizationLockScreenImageUrl;
-    /** Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed. */
+    /** State Management Setting. */
     private StateManagementSetting _privacyAdvertisingId;
     /** Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps. */
     private Boolean _privacyAutoAcceptPairingAndConsentPrompts;
@@ -239,7 +239,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _privacyBlockInputPersonalization;
     /** Indicates whether or not to Block the user from reset protection mode. */
     private Boolean _resetProtectionModeBlocked;
-    /** Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate. */
+    /** Specifies what level of safe search (filtering adult content) is required */
     private SafeSearchFilterType _safeSearchFilter;
     /** Indicates whether or not to Block the user from taking Screenshots. */
     private Boolean _screenCaptureBlocked;
@@ -305,7 +305,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _smartScreenEnableAppInstallControl;
     /** Indicates whether or not to block the user from unpinning apps from taskbar. */
     private Boolean _startBlockUnpinningAppsFromTaskbar;
-    /** Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp. */
+    /** Type of start menu app list visibility. */
     private WindowsStartMenuAppListVisibilityType _startMenuAppListVisibility;
     /** Enabling this policy hides the change account setting from appearing in the user tile in the start menu. */
     private Boolean _startMenuHideChangeAccountSettings;
@@ -337,27 +337,27 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private byte[] _startMenuLayoutEdgeAssetsXml;
     /** Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format. */
     private byte[] _startMenuLayoutXml;
-    /** Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen. */
+    /** Type of display modes for the start menu. */
     private WindowsStartMenuModeType _startMenuMode;
-    /** Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderDocuments;
-    /** Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderDownloads;
-    /** Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderFileExplorer;
-    /** Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderHomeGroup;
-    /** Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderMusic;
-    /** Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderNetwork;
-    /** Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderPersonalFolder;
-    /** Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderPictures;
-    /** Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderSettings;
-    /** Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show. */
+    /** Generic visibility state. */
     private VisibilitySetting _startMenuPinnedFolderVideos;
     /** Indicates whether or not to Block the user from using removable storage. */
     private Boolean _storageBlockRemovableStorage;
@@ -397,7 +397,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _windowsSpotlightBlockWelcomeExperience;
     /** Allows IT admins to turn off the popup of Windows Tips. */
     private Boolean _windowsSpotlightBlockWindowsTips;
-    /** Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled. */
+    /** Allows IT admind to set a predefined default search engine for MDM-Controlled devices */
     private WindowsSpotlightEnablementSettings _windowsSpotlightConfigureOnLockScreen;
     /** Indicates whether or not to block automatic update of apps from Windows Store. */
     private Boolean _windowsStoreBlockAutoUpdate;
@@ -445,7 +445,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._antiTheftModeBlocked;
     }
     /**
-     * Gets the appsAllowTrustedAppsSideloading property value. Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
+     * Gets the appsAllowTrustedAppsSideloading property value. State Management Setting.
      * @return a stateManagementSetting
      */
     @javax.annotation.Nullable
@@ -573,7 +573,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderBlockEndUserAccess;
     }
     /**
-     * Gets the defenderCloudBlockLevel property value. Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Gets the defenderCloudBlockLevel property value. Possible values of Cloud Block Level
      * @return a defenderCloudBlockLevelType
      */
     @javax.annotation.Nullable
@@ -613,7 +613,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderFilesAndFoldersToExclude;
     }
     /**
-     * Gets the defenderMonitorFileActivity property value. Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * Gets the defenderMonitorFileActivity property value. Possible values for monitoring file activity.
      * @return a defenderMonitorFileActivity
      */
     @javax.annotation.Nullable
@@ -629,7 +629,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderProcessesToExclude;
     }
     /**
-     * Gets the defenderPromptForSampleSubmission property value. The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
+     * Gets the defenderPromptForSampleSubmission property value. Possible values for prompting user for samples submission.
      * @return a defenderPromptForSampleSubmission
      */
     @javax.annotation.Nullable
@@ -733,7 +733,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderScanScriptsLoadedInInternetExplorer;
     }
     /**
-     * Gets the defenderScanType property value. The defender system scan type. Possible values are: userDefined, disabled, quick, full.
+     * Gets the defenderScanType property value. Possible values for system scan type.
      * @return a defenderScanType
      */
     @javax.annotation.Nullable
@@ -765,7 +765,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderSignatureUpdateIntervalInHours;
     }
     /**
-     * Gets the defenderSystemScanSchedule property value. Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * Gets the defenderSystemScanSchedule property value. Possible values for a weekly schedule.
      * @return a weeklySchedule
      */
     @javax.annotation.Nullable
@@ -773,7 +773,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderSystemScanSchedule;
     }
     /**
-     * Gets the developerUnlockSetting property value. Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
+     * Gets the developerUnlockSetting property value. State Management Setting.
      * @return a stateManagementSetting
      */
     @javax.annotation.Nullable
@@ -797,7 +797,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._deviceManagementBlockManualUnenroll;
     }
     /**
-     * Gets the diagnosticsDataSubmissionMode property value. Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
+     * Gets the diagnosticsDataSubmissionMode property value. Allow the device to send diagnostic and usage telemetry data, such as Watson.
      * @return a diagnosticDataSubmissionMode
      */
     @javax.annotation.Nullable
@@ -941,7 +941,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._edgeClearBrowsingDataOnExit;
     }
     /**
-     * Gets the edgeCookiePolicy property value. Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     * Gets the edgeCookiePolicy property value. Possible values to specify which cookies are allowed in Microsoft Edge.
      * @return a edgeCookiePolicy
      */
     @javax.annotation.Nullable
@@ -1488,7 +1488,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -1528,7 +1528,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._personalizationLockScreenImageUrl;
     }
     /**
-     * Gets the privacyAdvertisingId property value. Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
+     * Gets the privacyAdvertisingId property value. State Management Setting.
      * @return a stateManagementSetting
      */
     @javax.annotation.Nullable
@@ -1560,7 +1560,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._resetProtectionModeBlocked;
     }
     /**
-     * Gets the safeSearchFilter property value. Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
+     * Gets the safeSearchFilter property value. Specifies what level of safe search (filtering adult content) is required
      * @return a safeSearchFilterType
      */
     @javax.annotation.Nullable
@@ -1824,7 +1824,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startBlockUnpinningAppsFromTaskbar;
     }
     /**
-     * Gets the startMenuAppListVisibility property value. Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
+     * Gets the startMenuAppListVisibility property value. Type of start menu app list visibility.
      * @return a windowsStartMenuAppListVisibilityType
      */
     @javax.annotation.Nullable
@@ -1952,7 +1952,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuLayoutXml;
     }
     /**
-     * Gets the startMenuMode property value. Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
+     * Gets the startMenuMode property value. Type of display modes for the start menu.
      * @return a windowsStartMenuModeType
      */
     @javax.annotation.Nullable
@@ -1960,7 +1960,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuMode;
     }
     /**
-     * Gets the startMenuPinnedFolderDocuments property value. Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderDocuments property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -1968,7 +1968,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderDocuments;
     }
     /**
-     * Gets the startMenuPinnedFolderDownloads property value. Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderDownloads property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -1976,7 +1976,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderDownloads;
     }
     /**
-     * Gets the startMenuPinnedFolderFileExplorer property value. Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderFileExplorer property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -1984,7 +1984,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderFileExplorer;
     }
     /**
-     * Gets the startMenuPinnedFolderHomeGroup property value. Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderHomeGroup property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -1992,7 +1992,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderHomeGroup;
     }
     /**
-     * Gets the startMenuPinnedFolderMusic property value. Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderMusic property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -2000,7 +2000,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderMusic;
     }
     /**
-     * Gets the startMenuPinnedFolderNetwork property value. Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderNetwork property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -2008,7 +2008,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderNetwork;
     }
     /**
-     * Gets the startMenuPinnedFolderPersonalFolder property value. Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderPersonalFolder property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -2016,7 +2016,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderPersonalFolder;
     }
     /**
-     * Gets the startMenuPinnedFolderPictures property value. Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderPictures property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -2024,7 +2024,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderPictures;
     }
     /**
-     * Gets the startMenuPinnedFolderSettings property value. Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderSettings property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -2032,7 +2032,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._startMenuPinnedFolderSettings;
     }
     /**
-     * Gets the startMenuPinnedFolderVideos property value. Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Gets the startMenuPinnedFolderVideos property value. Generic visibility state.
      * @return a visibilitySetting
      */
     @javax.annotation.Nullable
@@ -2192,7 +2192,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._windowsSpotlightBlockWindowsTips;
     }
     /**
-     * Gets the windowsSpotlightConfigureOnLockScreen property value. Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
+     * Gets the windowsSpotlightConfigureOnLockScreen property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      * @return a windowsSpotlightEnablementSettings
      */
     @javax.annotation.Nullable
@@ -2474,7 +2474,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._antiTheftModeBlocked = value;
     }
     /**
-     * Sets the appsAllowTrustedAppsSideloading property value. Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
+     * Sets the appsAllowTrustedAppsSideloading property value. State Management Setting.
      * @param value Value to set for the appsAllowTrustedAppsSideloading property.
      * @return a void
      */
@@ -2602,7 +2602,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderBlockEndUserAccess = value;
     }
     /**
-     * Sets the defenderCloudBlockLevel property value. Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Sets the defenderCloudBlockLevel property value. Possible values of Cloud Block Level
      * @param value Value to set for the defenderCloudBlockLevel property.
      * @return a void
      */
@@ -2642,7 +2642,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderFilesAndFoldersToExclude = value;
     }
     /**
-     * Sets the defenderMonitorFileActivity property value. Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * Sets the defenderMonitorFileActivity property value. Possible values for monitoring file activity.
      * @param value Value to set for the defenderMonitorFileActivity property.
      * @return a void
      */
@@ -2658,7 +2658,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderProcessesToExclude = value;
     }
     /**
-     * Sets the defenderPromptForSampleSubmission property value. The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
+     * Sets the defenderPromptForSampleSubmission property value. Possible values for prompting user for samples submission.
      * @param value Value to set for the defenderPromptForSampleSubmission property.
      * @return a void
      */
@@ -2762,7 +2762,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderScanScriptsLoadedInInternetExplorer = value;
     }
     /**
-     * Sets the defenderScanType property value. The defender system scan type. Possible values are: userDefined, disabled, quick, full.
+     * Sets the defenderScanType property value. Possible values for system scan type.
      * @param value Value to set for the defenderScanType property.
      * @return a void
      */
@@ -2794,7 +2794,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderSignatureUpdateIntervalInHours = value;
     }
     /**
-     * Sets the defenderSystemScanSchedule property value. Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * Sets the defenderSystemScanSchedule property value. Possible values for a weekly schedule.
      * @param value Value to set for the defenderSystemScanSchedule property.
      * @return a void
      */
@@ -2802,7 +2802,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._defenderSystemScanSchedule = value;
     }
     /**
-     * Sets the developerUnlockSetting property value. Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
+     * Sets the developerUnlockSetting property value. State Management Setting.
      * @param value Value to set for the developerUnlockSetting property.
      * @return a void
      */
@@ -2826,7 +2826,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._deviceManagementBlockManualUnenroll = value;
     }
     /**
-     * Sets the diagnosticsDataSubmissionMode property value. Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
+     * Sets the diagnosticsDataSubmissionMode property value. Allow the device to send diagnostic and usage telemetry data, such as Watson.
      * @param value Value to set for the diagnosticsDataSubmissionMode property.
      * @return a void
      */
@@ -2970,7 +2970,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._edgeClearBrowsingDataOnExit = value;
     }
     /**
-     * Sets the edgeCookiePolicy property value. Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     * Sets the edgeCookiePolicy property value. Possible values to specify which cookies are allowed in Microsoft Edge.
      * @param value Value to set for the edgeCookiePolicy property.
      * @return a void
      */
@@ -3306,7 +3306,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
@@ -3346,7 +3346,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._personalizationLockScreenImageUrl = value;
     }
     /**
-     * Sets the privacyAdvertisingId property value. Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
+     * Sets the privacyAdvertisingId property value. State Management Setting.
      * @param value Value to set for the privacyAdvertisingId property.
      * @return a void
      */
@@ -3378,7 +3378,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._resetProtectionModeBlocked = value;
     }
     /**
-     * Sets the safeSearchFilter property value. Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
+     * Sets the safeSearchFilter property value. Specifies what level of safe search (filtering adult content) is required
      * @param value Value to set for the safeSearchFilter property.
      * @return a void
      */
@@ -3642,7 +3642,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startBlockUnpinningAppsFromTaskbar = value;
     }
     /**
-     * Sets the startMenuAppListVisibility property value. Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
+     * Sets the startMenuAppListVisibility property value. Type of start menu app list visibility.
      * @param value Value to set for the startMenuAppListVisibility property.
      * @return a void
      */
@@ -3770,7 +3770,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuLayoutXml = value;
     }
     /**
-     * Sets the startMenuMode property value. Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
+     * Sets the startMenuMode property value. Type of display modes for the start menu.
      * @param value Value to set for the startMenuMode property.
      * @return a void
      */
@@ -3778,7 +3778,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuMode = value;
     }
     /**
-     * Sets the startMenuPinnedFolderDocuments property value. Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderDocuments property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderDocuments property.
      * @return a void
      */
@@ -3786,7 +3786,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderDocuments = value;
     }
     /**
-     * Sets the startMenuPinnedFolderDownloads property value. Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderDownloads property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderDownloads property.
      * @return a void
      */
@@ -3794,7 +3794,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderDownloads = value;
     }
     /**
-     * Sets the startMenuPinnedFolderFileExplorer property value. Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderFileExplorer property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderFileExplorer property.
      * @return a void
      */
@@ -3802,7 +3802,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderFileExplorer = value;
     }
     /**
-     * Sets the startMenuPinnedFolderHomeGroup property value. Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderHomeGroup property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderHomeGroup property.
      * @return a void
      */
@@ -3810,7 +3810,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderHomeGroup = value;
     }
     /**
-     * Sets the startMenuPinnedFolderMusic property value. Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderMusic property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderMusic property.
      * @return a void
      */
@@ -3818,7 +3818,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderMusic = value;
     }
     /**
-     * Sets the startMenuPinnedFolderNetwork property value. Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderNetwork property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderNetwork property.
      * @return a void
      */
@@ -3826,7 +3826,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderNetwork = value;
     }
     /**
-     * Sets the startMenuPinnedFolderPersonalFolder property value. Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderPersonalFolder property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderPersonalFolder property.
      * @return a void
      */
@@ -3834,7 +3834,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderPersonalFolder = value;
     }
     /**
-     * Sets the startMenuPinnedFolderPictures property value. Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderPictures property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderPictures property.
      * @return a void
      */
@@ -3842,7 +3842,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderPictures = value;
     }
     /**
-     * Sets the startMenuPinnedFolderSettings property value. Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderSettings property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderSettings property.
      * @return a void
      */
@@ -3850,7 +3850,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._startMenuPinnedFolderSettings = value;
     }
     /**
-     * Sets the startMenuPinnedFolderVideos property value. Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Sets the startMenuPinnedFolderVideos property value. Generic visibility state.
      * @param value Value to set for the startMenuPinnedFolderVideos property.
      * @return a void
      */
@@ -4010,7 +4010,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this._windowsSpotlightBlockWindowsTips = value;
     }
     /**
-     * Sets the windowsSpotlightConfigureOnLockScreen property value. Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
+     * Sets the windowsSpotlightConfigureOnLockScreen property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
      * @param value Value to set for the windowsSpotlightConfigureOnLockScreen property.
      * @return a void
      */

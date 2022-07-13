@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.groups.item.team.channels.item.completemigration.CompleteMigrationRequestBuilder;
+import microsoft.graph.groups.item.team.channels.item.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname.DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
 import microsoft.graph.groups.item.team.channels.item.filesfolder.FilesFolderRequestBuilder;
 import microsoft.graph.groups.item.team.channels.item.members.item.ConversationMemberItemRequestBuilder;
 import microsoft.graph.groups.item.team.channels.item.members.MembersRequestBuilder;
@@ -22,6 +23,8 @@ import microsoft.graph.groups.item.team.channels.item.messages.item.ChatMessageI
 import microsoft.graph.groups.item.team.channels.item.messages.MessagesRequestBuilder;
 import microsoft.graph.groups.item.team.channels.item.provisionemail.ProvisionEmailRequestBuilder;
 import microsoft.graph.groups.item.team.channels.item.removeemail.RemoveEmailRequestBuilder;
+import microsoft.graph.groups.item.team.channels.item.sharedwithteams.item.SharedWithChannelTeamInfoItemRequestBuilder;
+import microsoft.graph.groups.item.team.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
 import microsoft.graph.groups.item.team.channels.item.tabs.item.TeamsTabItemRequestBuilder;
 import microsoft.graph.groups.item.team.channels.item.tabs.TabsRequestBuilder;
 import microsoft.graph.models.Channel;
@@ -62,6 +65,11 @@ public class ChannelItemRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The sharedWithTeams property */
+    @javax.annotation.Nonnull
+    public SharedWithTeamsRequestBuilder sharedWithTeams() {
+        return new SharedWithTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The tabs property */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {
@@ -238,6 +246,14 @@ public class ChannelItemRequestBuilder {
         }
     }
     /**
+     * Provides operations to call the doesUserHaveAccess method.
+     * @return a doesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder doesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalName() {
+        return new DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * The collection of channels and messages associated with the team.
      * @return a CompletableFuture of channel
      */
@@ -366,6 +382,18 @@ public class ChannelItemRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.groups.item.team.channels.item.sharedWithTeams.item collection
+     * @param id Unique identifier of the item
+     * @return a sharedWithChannelTeamInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SharedWithChannelTeamInfoItemRequestBuilder sharedWithTeams(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("sharedWithChannelTeamInfo%2Did", id);
+        return new SharedWithChannelTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.groups.item.team.channels.item.tabs.item collection

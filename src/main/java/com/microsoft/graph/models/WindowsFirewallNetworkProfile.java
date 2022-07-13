@@ -16,7 +16,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
     private Boolean _authorizedApplicationRulesFromGroupPolicyMerged;
     /** Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority. */
     private Boolean _connectionSecurityRulesFromGroupPolicyMerged;
-    /** Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed. */
+    /** State Management Setting. */
     private StateManagementSetting _firewallEnabled;
     /** Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority. */
     private Boolean _globalPortRulesFromGroupPolicyMerged;
@@ -100,7 +100,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
         }};
     }
     /**
-     * Gets the firewallEnabled property value. Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
+     * Gets the firewallEnabled property value. State Management Setting.
      * @return a stateManagementSetting
      */
     @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
         this._connectionSecurityRulesFromGroupPolicyMerged = value;
     }
     /**
-     * Sets the firewallEnabled property value. Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
+     * Sets the firewallEnabled property value. State Management Setting.
      * @param value Value to set for the firewallEnabled property.
      * @return a void
      */

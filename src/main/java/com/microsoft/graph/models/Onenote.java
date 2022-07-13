@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class Onenote extends Entity implements Parsable {
     /** The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable. */
     private java.util.List<Notebook> _notebooks;

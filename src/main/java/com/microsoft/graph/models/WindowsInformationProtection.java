@@ -14,7 +14,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     private Boolean _azureRightsManagementServicesAllowed;
     /** Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS) */
     private WindowsInformationProtectionDataRecoveryCertificate _dataRecoveryCertificate;
-    /** WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock. */
+    /** Possible values for WIP Protection enforcement levels */
     private WindowsInformationProtectionEnforcementLevel _enforcementLevel;
     /** Primary enterprise domain */
     private String _enterpriseDomain;
@@ -64,6 +64,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      */
     public WindowsInformationProtection() {
         super();
+        this.setType("#microsoft.graph.windowsInformationProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -108,7 +109,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         return this._dataRecoveryCertificate;
     }
     /**
-     * Gets the enforcementLevel property value. WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock.
+     * Gets the enforcementLevel property value. Possible values for WIP Protection enforcement levels
      * @return a windowsInformationProtectionEnforcementLevel
      */
     @javax.annotation.Nullable
@@ -377,7 +378,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
         this._dataRecoveryCertificate = value;
     }
     /**
-     * Sets the enforcementLevel property value. WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock.
+     * Sets the enforcementLevel property value. Possible values for WIP Protection enforcement levels
      * @param value Value to set for the enforcementLevel property.
      * @return a void
      */

@@ -20,7 +20,7 @@ public class BookingService extends Entity implements Parsable {
     private Location _defaultLocation;
     /** The default monetary price for the service. */
     private Double _defaultPrice;
-    /** The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue. */
+    /** Represents the type of pricing of a booking service. */
     private BookingPriceType _defaultPriceType;
     /** The default set of reminders for an appointment of this service. The value of this property is available only when reading this bookingService by its ID. */
     private java.util.List<BookingReminder> _defaultReminders;
@@ -106,7 +106,7 @@ public class BookingService extends Entity implements Parsable {
         return this._defaultPrice;
     }
     /**
-     * Gets the defaultPriceType property value. The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Gets the defaultPriceType property value. Represents the type of pricing of a booking service.
      * @return a bookingPriceType
      */
     @javax.annotation.Nullable
@@ -315,7 +315,7 @@ public class BookingService extends Entity implements Parsable {
         this._defaultPrice = value;
     }
     /**
-     * Sets the defaultPriceType property value. The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Sets the defaultPriceType property value. Represents the type of pricing of a booking service.
      * @param value Value to set for the defaultPriceType property.
      * @return a void
      */

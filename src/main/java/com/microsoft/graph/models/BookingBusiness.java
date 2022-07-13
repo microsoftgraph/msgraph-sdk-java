@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents a Microsot Bookings Business. */
 public class BookingBusiness extends Entity implements Parsable {
     /** The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page. */
     private PhysicalAddress _address;
@@ -44,7 +43,7 @@ public class BookingBusiness extends Entity implements Parsable {
     /** The URL of the business web site. The webSiteUrl property, together with address, phone, appear in the footer of a business scheduling page. */
     private String _webSiteUrl;
     /**
-     * Instantiates a new bookingBusiness and sets the default values.
+     * Instantiates a new BookingBusiness and sets the default values.
      * @return a void
      */
     public BookingBusiness() {
@@ -53,7 +52,7 @@ public class BookingBusiness extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingBusiness
+     * @return a BookingBusiness
      */
     @javax.annotation.Nonnull
     public static BookingBusiness createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

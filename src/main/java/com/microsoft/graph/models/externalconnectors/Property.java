@@ -25,7 +25,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _labels;
     /** The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required. */
     private String _name;
-    /** The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required. */
+    /** The type property */
     private PropertyType _type;
     /**
      * Instantiates a new property and sets the default values.
@@ -127,7 +127,7 @@ public class Property implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the type property value. The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.
+     * Gets the type property value. The type property
      * @return a propertyType
      */
     @javax.annotation.Nullable
@@ -216,7 +216,7 @@ public class Property implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the type property value. The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

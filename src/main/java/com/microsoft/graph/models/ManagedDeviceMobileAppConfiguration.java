@@ -38,6 +38,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements Parsa
      */
     public ManagedDeviceMobileAppConfiguration() {
         super();
+        this.setType("#microsoft.graph.managedDeviceMobileAppConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

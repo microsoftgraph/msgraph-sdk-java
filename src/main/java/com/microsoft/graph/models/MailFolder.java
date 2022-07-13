@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class MailFolder extends Entity implements Parsable {
     /** The number of immediate child mailFolders in the current mailFolder. */
     private Integer _childFolderCount;
@@ -37,6 +37,7 @@ public class MailFolder extends Entity implements Parsable {
      */
     public MailFolder() {
         super();
+        this.setType("#microsoft.graph.mailFolder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

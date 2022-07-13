@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the policyRoot singleton. */
+/** Provides operations to manage the admin singleton. */
 public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable {
     /** Not implemented. Defines details of scope that's targeted by role management policy rule. The details can include the principal type, the role assignment type, and actions affecting a role. Supports $filter (eq, ne). */
     private UnifiedRoleManagementPolicyRuleTarget _target;
@@ -17,6 +17,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements Parsable 
      */
     public UnifiedRoleManagementPolicyRule() {
         super();
+        this.setType("#microsoft.graph.unifiedRoleManagementPolicyRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityContainer singleton. */
+/** Provides operations to manage the admin singleton. */
 public class IdentityUserFlowAttributeAssignment extends Entity implements Parsable {
     /** The display name of the identityUserFlowAttribute within a user flow. */
     private String _displayName;
@@ -19,7 +19,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
     private IdentityUserFlowAttribute _userAttribute;
     /** The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect. */
     private java.util.List<UserAttributeValuesItem> _userAttributeValues;
-    /** The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect. */
+    /** The userInputType property */
     private IdentityUserFlowAttributeInputType _userInputType;
     /**
      * Instantiates a new identityUserFlowAttributeAssignment and sets the default values.
@@ -95,7 +95,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
         return this._userAttributeValues;
     }
     /**
-     * Gets the userInputType property value. The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
+     * Gets the userInputType property value. The userInputType property
      * @return a identityUserFlowAttributeInputType
      */
     @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements Parsa
         this._userAttributeValues = value;
     }
     /**
-     * Sets the userInputType property value. The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
+     * Sets the userInputType property value. The userInputType property
      * @param value Value to set for the userInputType property.
      * @return a void
      */

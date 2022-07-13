@@ -20,6 +20,10 @@ import microsoft.graph.me.authentication.methods.item.AuthenticationMethodItemRe
 import microsoft.graph.me.authentication.methods.MethodsRequestBuilder;
 import microsoft.graph.me.authentication.microsoftauthenticatormethods.item.MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
 import microsoft.graph.me.authentication.microsoftauthenticatormethods.MicrosoftAuthenticatorMethodsRequestBuilder;
+import microsoft.graph.me.authentication.operations.item.LongRunningOperationItemRequestBuilder;
+import microsoft.graph.me.authentication.operations.OperationsRequestBuilder;
+import microsoft.graph.me.authentication.passwordmethods.item.PasswordAuthenticationMethodItemRequestBuilder;
+import microsoft.graph.me.authentication.passwordmethods.PasswordMethodsRequestBuilder;
 import microsoft.graph.me.authentication.temporaryaccesspassmethods.item.TemporaryAccessPassAuthenticationMethodItemRequestBuilder;
 import microsoft.graph.me.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
 import microsoft.graph.me.authentication.windowshelloforbusinessmethods.item.WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
@@ -42,6 +46,16 @@ public class AuthenticationRequestBuilder {
     @javax.annotation.Nonnull
     public MicrosoftAuthenticatorMethodsRequestBuilder microsoftAuthenticatorMethods() {
         return new MicrosoftAuthenticatorMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The operations property */
+    @javax.annotation.Nonnull
+    public OperationsRequestBuilder operations() {
+        return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The passwordMethods property */
+    @javax.annotation.Nonnull
+    public PasswordMethodsRequestBuilder passwordMethods() {
+        return new PasswordMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;
@@ -313,6 +327,30 @@ public class AuthenticationRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("microsoftAuthenticatorAuthenticationMethod%2Did", id);
         return new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.me.authentication.operations.item collection
+     * @param id Unique identifier of the item
+     * @return a longRunningOperationItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public LongRunningOperationItemRequestBuilder operations(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("longRunningOperation%2Did", id);
+        return new LongRunningOperationItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.me.authentication.passwordMethods.item collection
+     * @param id Unique identifier of the item
+     * @return a passwordAuthenticationMethodItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public PasswordAuthenticationMethodItemRequestBuilder passwordMethods(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("passwordAuthenticationMethod%2Did", id);
+        return new PasswordAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update the navigation property authentication in me

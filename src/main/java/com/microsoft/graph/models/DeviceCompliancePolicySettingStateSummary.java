@@ -21,7 +21,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     private Integer _nonCompliantDeviceCount;
     /** Number of not applicable devices */
     private Integer _notApplicableDeviceCount;
-    /** Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all. */
+    /** Supported platform types for policies. */
     private PolicyPlatformType _platformType;
     /** Number of remediated devices */
     private Integer _remediatedDeviceCount;
@@ -118,7 +118,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
         return this._notApplicableDeviceCount;
     }
     /**
-     * Gets the platformType property value. Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
+     * Gets the platformType property value. Supported platform types for policies.
      * @return a policyPlatformType
      */
     @javax.annotation.Nullable
@@ -226,7 +226,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
         this._notApplicableDeviceCount = value;
     }
     /**
-     * Sets the platformType property value. Setting platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
+     * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      * @return a void
      */

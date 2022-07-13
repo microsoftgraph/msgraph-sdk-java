@@ -11,16 +11,19 @@ import java.util.Objects;
 public class Identity implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The display name of the identity. This property is read-only. */
+    /** The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta. */
     private String _displayName;
-    /** The identifier of the identity. This property is read-only. */
+    /** Unique identifier for the identity. */
     private String _id;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new identity and sets the default values.
      * @return a void
      */
     public Identity() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.identity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,6 +33,23 @@ public class Identity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static Identity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.initiator": return new Initiator();
+                case "#microsoft.graph.provisionedIdentity": return new ProvisionedIdentity();
+                case "#microsoft.graph.provisioningServicePrincipal": return new ProvisioningServicePrincipal();
+                case "#microsoft.graph.provisioningSystem": return new ProvisioningSystem();
+                case "#microsoft.graph.servicePrincipalIdentity": return new ServicePrincipalIdentity();
+                case "#microsoft.graph.sharePointIdentity": return new SharePointIdentity();
+                case "#microsoft.graph.teamworkApplicationIdentity": return new TeamworkApplicationIdentity();
+                case "#microsoft.graph.teamworkConversationIdentity": return new TeamworkConversationIdentity();
+                case "#microsoft.graph.teamworkTagIdentity": return new TeamworkTagIdentity();
+                case "#microsoft.graph.teamworkUserIdentity": return new TeamworkUserIdentity();
+                case "#microsoft.graph.userIdentity": return new UserIdentity();
+            }
+        }
         return new Identity();
     }
     /**
@@ -41,7 +61,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the displayName property value. The display name of the identity. This property is read-only.
+     * Gets the displayName property value. The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -55,18 +75,27 @@ public class Identity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Identity currentObject = this;
-        return new HashMap<>(2) {{
+        return new HashMap<>(3) {{
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
-     * Gets the id property value. The identifier of the identity. This property is read-only.
+     * Gets the id property value. Unique identifier for the identity.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getId() {
         return this._id;
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -77,6 +106,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -88,7 +118,7 @@ public class Identity implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the displayName property value. The display name of the identity. This property is read-only.
+     * Sets the displayName property value. The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
      * @param value Value to set for the displayName property.
      * @return a void
      */
@@ -96,11 +126,19 @@ public class Identity implements AdditionalDataHolder, Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the id property value. The identifier of the identity. This property is read-only.
+     * Sets the id property value. Unique identifier for the identity.
      * @param value Value to set for the id property.
      * @return a void
      */
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

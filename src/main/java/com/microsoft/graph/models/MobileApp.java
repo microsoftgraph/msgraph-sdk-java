@@ -38,7 +38,7 @@ public class MobileApp extends Entity implements Parsable {
     private String _privacyInformationUrl;
     /** The publisher of the app. */
     private String _publisher;
-    /** The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published. */
+    /** Indicates the publishing state of an app. */
     private MobileAppPublishingState _publishingState;
     /**
      * Instantiates a new mobileApp and sets the default values.
@@ -46,6 +46,7 @@ public class MobileApp extends Entity implements Parsable {
      */
     public MobileApp() {
         super();
+        this.setType("#microsoft.graph.mobileApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -209,7 +210,7 @@ public class MobileApp extends Entity implements Parsable {
         return this._publisher;
     }
     /**
-     * Gets the publishingState property value. The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+     * Gets the publishingState property value. Indicates the publishing state of an app.
      * @return a mobileAppPublishingState
      */
     @javax.annotation.Nullable
@@ -353,7 +354,7 @@ public class MobileApp extends Entity implements Parsable {
         this._publisher = value;
     }
     /**
-     * Sets the publishingState property value. The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+     * Sets the publishingState property value. Indicates the publishing state of an app.
      * @param value Value to set for the publishingState property.
      * @return a void
      */

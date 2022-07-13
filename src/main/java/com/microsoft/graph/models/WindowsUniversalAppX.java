@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
-    /** The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64. */
+    /** Contains properties for Windows architecture. */
     private WindowsArchitecture _applicableArchitectures;
-    /** The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team. */
+    /** Contains properties for Windows device type. */
     private WindowsDeviceType _applicableDeviceTypes;
     /** The Identity Name. */
     private String _identityName;
@@ -42,7 +42,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return new WindowsUniversalAppX();
     }
     /**
-     * Gets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
     @javax.annotation.Nullable
@@ -50,7 +50,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return this._applicableArchitectures;
     }
     /**
-     * Gets the applicableDeviceTypes property value. The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+     * Gets the applicableDeviceTypes property value. Contains properties for Windows device type.
      * @return a windowsDeviceType
      */
     @javax.annotation.Nullable
@@ -141,7 +141,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
     }
     /**
-     * Sets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
      * @return a void
      */
@@ -149,7 +149,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         this._applicableArchitectures = value;
     }
     /**
-     * Sets the applicableDeviceTypes property value. The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+     * Sets the applicableDeviceTypes property value. Contains properties for Windows device type.
      * @param value Value to set for the applicableDeviceTypes property.
      * @return a void
      */

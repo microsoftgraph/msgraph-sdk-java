@@ -22,6 +22,7 @@ import microsoft.graph.solutions.bookingbusinesses.item.customers.CustomersReque
 import microsoft.graph.solutions.bookingbusinesses.item.customers.item.BookingCustomerBaseItemRequestBuilder;
 import microsoft.graph.solutions.bookingbusinesses.item.customquestions.CustomQuestionsRequestBuilder;
 import microsoft.graph.solutions.bookingbusinesses.item.customquestions.item.BookingCustomQuestionItemRequestBuilder;
+import microsoft.graph.solutions.bookingbusinesses.item.getstaffavailability.GetStaffAvailabilityRequestBuilder;
 import microsoft.graph.solutions.bookingbusinesses.item.publish.PublishRequestBuilder;
 import microsoft.graph.solutions.bookingbusinesses.item.services.item.BookingServiceItemRequestBuilder;
 import microsoft.graph.solutions.bookingbusinesses.item.services.ServicesRequestBuilder;
@@ -49,6 +50,11 @@ public class BookingBusinessItemRequestBuilder {
     @javax.annotation.Nonnull
     public CustomQuestionsRequestBuilder customQuestions() {
         return new CustomQuestionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The getStaffAvailability property */
+    @javax.annotation.Nonnull
+    public GetStaffAvailabilityRequestBuilder getStaffAvailability() {
+        return new GetStaffAvailabilityRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;

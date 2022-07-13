@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class PlannerPlanDetails extends Entity implements Parsable {
     /** An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan */
     private PlannerCategoryDescriptions _categoryDescriptions;

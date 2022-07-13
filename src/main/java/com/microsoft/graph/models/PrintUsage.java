@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the reportRoot singleton. */
+/** Provides operations to manage the admin singleton. */
 public class PrintUsage extends Entity implements Parsable {
     /** The completedBlackAndWhiteJobCount property */
     private Long _completedBlackAndWhiteJobCount;
@@ -24,6 +24,7 @@ public class PrintUsage extends Entity implements Parsable {
      */
     public PrintUsage() {
         super();
+        this.setType("#microsoft.graph.printUsage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

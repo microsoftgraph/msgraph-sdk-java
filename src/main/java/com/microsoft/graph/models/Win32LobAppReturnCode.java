@@ -14,7 +14,7 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Return code. */
     private Integer _returnCode;
-    /** The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry. */
+    /** Indicates the type of return code. */
     private Win32LobAppReturnCodeType _type;
     /**
      * Instantiates a new win32LobAppReturnCode and sets the default values.
@@ -62,7 +62,7 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
         return this._returnCode;
     }
     /**
-     * Gets the type property value. The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry.
+     * Gets the type property value. Indicates the type of return code.
      * @return a win32LobAppReturnCodeType
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
         this._returnCode = value;
     }
     /**
-     * Sets the type property value. The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry.
+     * Sets the type property value. Indicates the type of return code.
      * @param value Value to set for the type property.
      * @return a void
      */

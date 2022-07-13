@@ -13,7 +13,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The name of the strongly typed property defined as part of a schema extension. */
     private String _name;
-    /** The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details. */
+    /** The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details. */
     private String _type;
     /**
      * Instantiates a new extensionSchemaProperty and sets the default values.
@@ -61,7 +61,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
+     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class ExtensionSchemaProperty implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
+     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table below for more details.
      * @param value Value to set for the type property.
      * @return a void
      */

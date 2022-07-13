@@ -24,6 +24,7 @@ public class SamlOrWsFedProvider extends IdentityProviderBase implements Parsabl
      */
     public SamlOrWsFedProvider() {
         super();
+        this.setType("#microsoft.graph.samlOrWsFedProvider");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

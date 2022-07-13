@@ -15,6 +15,7 @@ public class BookingStaffMemberBase extends Entity implements Parsable {
      */
     public BookingStaffMemberBase() {
         super();
+        this.setType("#microsoft.graph.bookingStaffMemberBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

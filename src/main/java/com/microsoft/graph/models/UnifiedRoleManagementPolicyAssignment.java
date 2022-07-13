@@ -7,17 +7,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the policyRoot singleton. */
+/** Provides operations to manage the admin singleton. */
 public class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable {
-    /** The policy for the assignment. */
+    /** The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy. */
     private UnifiedRoleManagementPolicy _policy;
-    /** The id of the policy. */
+    /** The id of the policy. Inherited from entity. */
     private String _policyId;
-    /** The id of the role definition where the policy applies. If not specified, the policy applies to all roles. */
+    /** The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq). */
     private String _roleDefinitionId;
-    /** The id of the scope where the policy is assigned. E.g. '/', groupId, etc. */
+    /** The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required. */
     private String _scopeId;
-    /** The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group. */
+    /** The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required. */
     private String _scopeType;
     /**
      * Instantiates a new unifiedRoleManagementPolicyAssignment and sets the default values.
@@ -52,7 +52,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         }};
     }
     /**
-     * Gets the policy property value. The policy for the assignment.
+     * Gets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @return a unifiedRoleManagementPolicy
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return this._policy;
     }
     /**
-     * Gets the policyId property value. The id of the policy.
+     * Gets the policyId property value. The id of the policy. Inherited from entity.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -68,7 +68,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return this._policyId;
     }
     /**
-     * Gets the roleDefinitionId property value. The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
+     * Gets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return this._roleDefinitionId;
     }
     /**
-     * Gets the scopeId property value. The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
+     * Gets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         return this._scopeId;
     }
     /**
-     * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
+     * Gets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -106,7 +106,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         writer.writeStringValue("scopeType", this.getScopeType());
     }
     /**
-     * Sets the policy property value. The policy for the assignment.
+     * Sets the policy property value. The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @param value Value to set for the policy property.
      * @return a void
      */
@@ -114,7 +114,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         this._policy = value;
     }
     /**
-     * Sets the policyId property value. The id of the policy.
+     * Sets the policyId property value. The id of the policy. Inherited from entity.
      * @param value Value to set for the policyId property.
      * @return a void
      */
@@ -122,7 +122,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         this._policyId = value;
     }
     /**
-     * Sets the roleDefinitionId property value. The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
+     * Sets the roleDefinitionId property value. The identifier of the role definition object where the policy applies. If not specified, the policy applies to all roles. Supports $filter (eq).
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
@@ -130,7 +130,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         this._roleDefinitionId = value;
     }
     /**
-     * Sets the scopeId property value. The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
+     * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
      * @param value Value to set for the scopeId property.
      * @return a void
      */
@@ -138,7 +138,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements Par
         this._scopeId = value;
     }
     /**
-     * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
+     * Sets the scopeType property value. The type of the scope where the policy is assigned. One of Directory, DirectoryRole. Required.
      * @param value Value to set for the scopeType property.
      * @return a void
      */

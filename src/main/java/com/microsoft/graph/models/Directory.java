@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the directory singleton. */
 public class Directory extends Entity implements Parsable {
     /** Conceptual container for user and group directory objects. */
     private java.util.List<AdministrativeUnit> _administrativeUnits;
@@ -16,7 +15,7 @@ public class Directory extends Entity implements Parsable {
     /** Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol. */
     private java.util.List<IdentityProviderBase> _federationConfigurations;
     /**
-     * Instantiates a new directory and sets the default values.
+     * Instantiates a new Directory and sets the default values.
      * @return a void
      */
     public Directory() {
@@ -25,7 +24,7 @@ public class Directory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directory
+     * @return a Directory
      */
     @javax.annotation.Nonnull
     public static Directory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

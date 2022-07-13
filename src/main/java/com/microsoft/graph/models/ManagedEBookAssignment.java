@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** Contains properties used to assign a eBook to a group. */
 public class ManagedEBookAssignment extends Entity implements Parsable {
-    /** The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment. */
+    /** Possible values for the install intent chosen by the admin. */
     private InstallIntent _installIntent;
     /** The assignment target for eBook. */
     private DeviceAndAppManagementAssignmentTarget _target;
@@ -19,6 +19,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      */
     public ManagedEBookAssignment() {
         super();
+        this.setType("#microsoft.graph.managedEBookAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +51,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the installIntent property value. The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Gets the installIntent property value. Possible values for the install intent chosen by the admin.
      * @return a installIntent
      */
     @javax.annotation.Nullable
@@ -77,7 +78,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the installIntent property value. The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Sets the installIntent property value. Possible values for the install intent chosen by the admin.
      * @param value Value to set for the installIntent property.
      * @return a void
      */

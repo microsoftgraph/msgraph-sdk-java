@@ -16,9 +16,9 @@ public class DeviceManagementPartner extends Entity implements Parsable {
     private Boolean _isConfigured;
     /** Timestamp of last heartbeat after admin enabled option Connect to Device management Partner */
     private OffsetDateTime _lastHeartbeatDateTime;
-    /** Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp. */
+    /** Partner App Type. */
     private DeviceManagementPartnerAppType _partnerAppType;
-    /** Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive. */
+    /** Partner state of this tenant. */
     private DeviceManagementPartnerTenantState _partnerState;
     /** Partner Single tenant App id */
     private String _singleTenantAppId;
@@ -86,7 +86,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
         return this._lastHeartbeatDateTime;
     }
     /**
-     * Gets the partnerAppType property value. Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
+     * Gets the partnerAppType property value. Partner App Type.
      * @return a deviceManagementPartnerAppType
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
         return this._partnerAppType;
     }
     /**
-     * Gets the partnerState property value. Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+     * Gets the partnerState property value. Partner state of this tenant.
      * @return a deviceManagementPartnerTenantState
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
         this._lastHeartbeatDateTime = value;
     }
     /**
-     * Sets the partnerAppType property value. Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
+     * Sets the partnerAppType property value. Partner App Type.
      * @param value Value to set for the partnerAppType property.
      * @return a void
      */
@@ -175,7 +175,7 @@ public class DeviceManagementPartner extends Entity implements Parsable {
         this._partnerAppType = value;
     }
     /**
-     * Sets the partnerState property value. Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+     * Sets the partnerState property value. Partner state of this tenant.
      * @param value Value to set for the partnerState property.
      * @return a void
      */

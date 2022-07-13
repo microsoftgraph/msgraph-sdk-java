@@ -18,12 +18,15 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** OMA. */
     private String _omaUri;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new omaSetting and sets the default values.
      * @return a void
      */
     public OmaSetting() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.omaSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,6 +36,19 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static OmaSetting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.omaSettingBase64": return new OmaSettingBase64();
+                case "#microsoft.graph.omaSettingBoolean": return new OmaSettingBoolean();
+                case "#microsoft.graph.omaSettingDateTime": return new OmaSettingDateTime();
+                case "#microsoft.graph.omaSettingFloatingPoint": return new OmaSettingFloatingPoint();
+                case "#microsoft.graph.omaSettingInteger": return new OmaSettingInteger();
+                case "#microsoft.graph.omaSettingString": return new OmaSettingString();
+                case "#microsoft.graph.omaSettingStringXml": return new OmaSettingStringXml();
+            }
+        }
         return new OmaSetting();
     }
     /**
@@ -66,10 +82,11 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OmaSetting currentObject = this;
-        return new HashMap<>(3) {{
+        return new HashMap<>(4) {{
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("omaUri", (n) -> { currentObject.setOmaUri(n.getStringValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -81,6 +98,14 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
         return this._omaUri;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,6 +115,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("omaUri", this.getOmaUri());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -123,5 +149,13 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      */
     public void setOmaUri(@javax.annotation.Nullable final String value) {
         this._omaUri = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

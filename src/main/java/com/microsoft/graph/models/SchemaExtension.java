@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of schemaExtension entities. */
 public class SchemaExtension extends Entity implements Parsable {
     /** Description for the schema extension. Supports $filter (eq). */
     private String _description;
@@ -15,12 +14,12 @@ public class SchemaExtension extends Entity implements Parsable {
     private String _owner;
     /** The collection of property names and types that make up the schema extension definition. */
     private java.util.List<ExtensionSchemaProperty> _properties;
-    /** The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors. Supports $filter (eq). */
+    /** The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. For more information about the possible state transitions and behaviors, see Schema extensions lifecycle. Supports $filter (eq). */
     private String _status;
-    /** Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user. */
+    /** Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user. */
     private java.util.List<String> _targetTypes;
     /**
-     * Instantiates a new schemaExtension and sets the default values.
+     * Instantiates a new SchemaExtension and sets the default values.
      * @return a void
      */
     public SchemaExtension() {
@@ -29,7 +28,7 @@ public class SchemaExtension extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a schemaExtension
+     * @return a SchemaExtension
      */
     @javax.annotation.Nonnull
     public static SchemaExtension createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +75,7 @@ public class SchemaExtension extends Entity implements Parsable {
         return this._properties;
     }
     /**
-     * Gets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors. Supports $filter (eq).
+     * Gets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. For more information about the possible state transitions and behaviors, see Schema extensions lifecycle. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,7 +83,7 @@ public class SchemaExtension extends Entity implements Parsable {
         return this._status;
     }
     /**
-     * Gets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
+     * Gets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -130,7 +129,7 @@ public class SchemaExtension extends Entity implements Parsable {
         this._properties = value;
     }
     /**
-     * Sets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors. Supports $filter (eq).
+     * Sets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. For more information about the possible state transitions and behaviors, see Schema extensions lifecycle. Supports $filter (eq).
      * @param value Value to set for the status property.
      * @return a void
      */
@@ -138,7 +137,7 @@ public class SchemaExtension extends Entity implements Parsable {
         this._status = value;
     }
     /**
-     * Sets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, or user.
+     * Sets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user.
      * @param value Value to set for the targetTypes property.
      * @return a void
      */

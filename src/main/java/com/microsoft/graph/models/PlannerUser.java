@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class PlannerUser extends Entity implements Parsable {
     /** Read-only. Nullable. Returns the plannerTasks assigned to the user. */
     private java.util.List<PlannerPlan> _plans;

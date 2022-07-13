@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class GroupLifecyclePolicy extends Entity implements Parsable {
     /** List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon. */
     private String _alternateNotificationEmails;

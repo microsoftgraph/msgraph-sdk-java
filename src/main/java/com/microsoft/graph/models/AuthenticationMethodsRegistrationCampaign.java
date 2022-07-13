@@ -17,7 +17,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     private java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> _includeTargets;
     /** Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt. */
     private Integer _snoozeDurationInDays;
-    /** Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled. */
+    /** The state property */
     private AdvancedConfigState _state;
     /**
      * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
@@ -83,7 +83,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         return this._snoozeDurationInDays;
     }
     /**
-     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Gets the state property value. The state property
      * @return a advancedConfigState
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         this._snoozeDurationInDays = value;
     }
     /**
-     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

@@ -88,7 +88,7 @@ public class DirectoryObjectItemRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get transitiveMemberOf from me
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -96,7 +96,7 @@ public class DirectoryObjectItemRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get transitiveMemberOf from me
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -118,7 +118,7 @@ public class DirectoryObjectItemRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get transitiveMemberOf from me
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -134,7 +134,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Get transitiveMemberOf from me
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -151,7 +151,7 @@ public class DirectoryObjectItemRequestBuilder {
         }
     }
     /**
-     * Get transitiveMemberOf from me
+     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -168,7 +168,7 @@ public class DirectoryObjectItemRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get transitiveMemberOf from me */
+    /** The groups, including nested groups, and directory roles that a user is a member of. Nullable. */
     public class DirectoryObjectItemRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

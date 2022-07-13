@@ -18,7 +18,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     private java.util.List<DirectoryObject> _members;
     /** Scoped-role members of this administrative unit. */
     private java.util.List<ScopedRoleMembership> _scopedRoleMembers;
-    /** Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit. */
+    /** Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit. */
     private String _visibility;
     /**
      * Instantiates a new AdministrativeUnit and sets the default values.
@@ -94,7 +94,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this._scopedRoleMembers;
     }
     /**
-     * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -157,7 +157,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this._scopedRoleMembers = value;
     }
     /**
-     * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
      * @param value Value to set for the visibility property.
      * @return a void
      */

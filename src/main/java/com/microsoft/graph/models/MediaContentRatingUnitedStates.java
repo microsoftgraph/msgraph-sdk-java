@@ -11,9 +11,9 @@ import java.util.Objects;
 public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Movies rating selected for United States. Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults. */
+    /** Movies rating labels in United States */
     private RatingUnitedStatesMoviesType _movieRating;
-    /** TV rating selected for United States. Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults. */
+    /** TV content rating labels in United States */
     private RatingUnitedStatesTelevisionType _tvRating;
     /**
      * Instantiates a new mediaContentRatingUnitedStates and sets the default values.
@@ -53,7 +53,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Par
         }};
     }
     /**
-     * Gets the movieRating property value. Movies rating selected for United States. Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
+     * Gets the movieRating property value. Movies rating labels in United States
      * @return a ratingUnitedStatesMoviesType
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Par
         return this._movieRating;
     }
     /**
-     * Gets the tvRating property value. TV rating selected for United States. Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
+     * Gets the tvRating property value. TV content rating labels in United States
      * @return a ratingUnitedStatesTelevisionType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Par
         this._additionalData = value;
     }
     /**
-     * Sets the movieRating property value. Movies rating selected for United States. Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
+     * Sets the movieRating property value. Movies rating labels in United States
      * @param value Value to set for the movieRating property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class MediaContentRatingUnitedStates implements AdditionalDataHolder, Par
         this._movieRating = value;
     }
     /**
-     * Sets the tvRating property value. TV rating selected for United States. Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
+     * Sets the tvRating property value. TV content rating labels in United States
      * @param value Value to set for the tvRating property.
      * @return a void
      */

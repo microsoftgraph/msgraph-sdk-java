@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class AuthenticationMethod extends Entity implements Parsable {
     /**
      * Instantiates a new authenticationMethod and sets the default values.
@@ -15,6 +15,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
      */
     public AuthenticationMethod() {
         super();
+        this.setType("#microsoft.graph.authenticationMethod");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,6 +31,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.fido2AuthenticationMethod": return new Fido2AuthenticationMethod();
                 case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod": return new MicrosoftAuthenticatorAuthenticationMethod();
+                case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
                 case "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod": return new WindowsHelloForBusinessAuthenticationMethod();
             }

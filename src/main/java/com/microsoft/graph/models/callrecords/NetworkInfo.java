@@ -15,7 +15,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     private Float _bandwidthLowEventRatio;
     /** The wireless LAN basic service set identifier of the media endpoint used to connect to the network. */
     private String _basicServiceSetIdentifier;
-    /** Type of network used by the media endpoint. Possible values are: unknown, wired, wifi, mobile, tunnel, unknownFutureValue. */
+    /** The connectionType property */
     private NetworkConnectionType _connectionType;
     /** Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication. */
     private Float _delayEventRatio;
@@ -27,7 +27,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     private Long _linkSpeed;
     /** The media access control (MAC) address of the media endpoint's network device. */
     private String _macAddress;
-    /** Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue. */
+    /** The networkTransportProtocol property */
     private NetworkTransportProtocol _networkTransportProtocol;
     /** Network port number used by media endpoint. */
     private Integer _port;
@@ -43,9 +43,9 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     private Float _sentQualityEventRatio;
     /** Subnet used for media stream by the media endpoint. */
     private String _subnet;
-    /** List of network trace route hops collected for this media stream. */
+    /** List of network trace route hops collected for this media stream.* */
     private java.util.List<TraceRouteHop> _traceRouteHops;
-    /** WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue. */
+    /** The wifiBand property */
     private WifiBand _wifiBand;
     /** Estimated remaining battery charge in percentage reported by the media endpoint. */
     private Integer _wifiBatteryCharge;
@@ -55,7 +55,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
     private String _wifiMicrosoftDriver;
     /** Version of the Microsoft WiFi driver used by the media endpoint. */
     private String _wifiMicrosoftDriverVersion;
-    /** Type of WiFi radio used by the media endpoint. Possible values are: unknown, wifi80211a, wifi80211b, wifi80211g, wifi80211n, wifi80211ac, wifi80211ax, unknownFutureValue. */
+    /** The wifiRadioType property */
     private WifiRadioType _wifiRadioType;
     /** WiFi signal strength in percentage reported by the media endpoint. */
     private Integer _wifiSignalStrength;
@@ -105,7 +105,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         return this._basicServiceSetIdentifier;
     }
     /**
-     * Gets the connectionType property value. Type of network used by the media endpoint. Possible values are: unknown, wired, wifi, mobile, tunnel, unknownFutureValue.
+     * Gets the connectionType property value. The connectionType property
      * @return a networkConnectionType
      */
     @javax.annotation.Nullable
@@ -189,7 +189,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         return this._macAddress;
     }
     /**
-     * Gets the networkTransportProtocol property value. Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue.
+     * Gets the networkTransportProtocol property value. The networkTransportProtocol property
      * @return a networkTransportProtocol
      */
     @javax.annotation.Nullable
@@ -253,7 +253,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         return this._subnet;
     }
     /**
-     * Gets the traceRouteHops property value. List of network trace route hops collected for this media stream.
+     * Gets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
      * @return a traceRouteHop
      */
     @javax.annotation.Nullable
@@ -261,7 +261,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         return this._traceRouteHops;
     }
     /**
-     * Gets the wifiBand property value. WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
+     * Gets the wifiBand property value. The wifiBand property
      * @return a wifiBand
      */
     @javax.annotation.Nullable
@@ -301,7 +301,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         return this._wifiMicrosoftDriverVersion;
     }
     /**
-     * Gets the wifiRadioType property value. Type of WiFi radio used by the media endpoint. Possible values are: unknown, wifi80211a, wifi80211b, wifi80211g, wifi80211n, wifi80211ac, wifi80211ax, unknownFutureValue.
+     * Gets the wifiRadioType property value. The wifiRadioType property
      * @return a wifiRadioType
      */
     @javax.annotation.Nullable
@@ -392,7 +392,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         this._basicServiceSetIdentifier = value;
     }
     /**
-     * Sets the connectionType property value. Type of network used by the media endpoint. Possible values are: unknown, wired, wifi, mobile, tunnel, unknownFutureValue.
+     * Sets the connectionType property value. The connectionType property
      * @param value Value to set for the connectionType property.
      * @return a void
      */
@@ -440,7 +440,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         this._macAddress = value;
     }
     /**
-     * Sets the networkTransportProtocol property value. Network protocol used for the transmission of stream. Possible values are: unknown, udp, tcp, unknownFutureValue.
+     * Sets the networkTransportProtocol property value. The networkTransportProtocol property
      * @param value Value to set for the networkTransportProtocol property.
      * @return a void
      */
@@ -504,7 +504,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         this._subnet = value;
     }
     /**
-     * Sets the traceRouteHops property value. List of network trace route hops collected for this media stream.
+     * Sets the traceRouteHops property value. List of network trace route hops collected for this media stream.*
      * @param value Value to set for the traceRouteHops property.
      * @return a void
      */
@@ -512,7 +512,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         this._traceRouteHops = value;
     }
     /**
-     * Sets the wifiBand property value. WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
+     * Sets the wifiBand property value. The wifiBand property
      * @param value Value to set for the wifiBand property.
      * @return a void
      */
@@ -552,7 +552,7 @@ public class NetworkInfo implements AdditionalDataHolder, Parsable {
         this._wifiMicrosoftDriverVersion = value;
     }
     /**
-     * Sets the wifiRadioType property value. Type of WiFi radio used by the media endpoint. Possible values are: unknown, wifi80211a, wifi80211b, wifi80211g, wifi80211n, wifi80211ac, wifi80211ax, unknownFutureValue.
+     * Sets the wifiRadioType property value. The wifiRadioType property
      * @param value Value to set for the wifiRadioType property.
      * @return a void
      */

@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class WorkbookOperation extends Entity implements Parsable {
     /** The error returned by the operation. */
     private WorkbookOperationError _error;
     /** The resource URI for the result. */
     private String _resourceLocation;
-    /** The current status of the operation. Possible values are: notStarted, running, succeeded, failed. */
+    /** The status property */
     private WorkbookOperationStatus _status;
     /**
      * Instantiates a new workbookOperation and sets the default values.
@@ -62,7 +62,7 @@ public class WorkbookOperation extends Entity implements Parsable {
         return this._resourceLocation;
     }
     /**
-     * Gets the status property value. The current status of the operation. Possible values are: notStarted, running, succeeded, failed.
+     * Gets the status property value. The status property
      * @return a workbookOperationStatus
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class WorkbookOperation extends Entity implements Parsable {
         this._resourceLocation = value;
     }
     /**
-     * Sets the status property value. The current status of the operation. Possible values are: notStarted, running, succeeded, failed.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

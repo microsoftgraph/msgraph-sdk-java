@@ -11,11 +11,11 @@ import java.util.Objects;
 public class MediaStream implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive. */
+    /** The direction property */
     private MediaDirection _direction;
     /** The media stream label. */
     private String _label;
-    /** The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data. */
+    /** The mediaType property */
     private Modality _mediaType;
     /** Indicates whether the media is muted by the server. */
     private Boolean _serverMuted;
@@ -47,7 +47,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the direction property value. The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
+     * Gets the direction property value. The direction property
      * @return a mediaDirection
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         return this._label;
     }
     /**
-     * Gets the mediaType property value. The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * Gets the mediaType property value. The mediaType property
      * @return a modality
      */
     @javax.annotation.Nullable
@@ -124,7 +124,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the direction property value. The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
+     * Sets the direction property value. The direction property
      * @param value Value to set for the direction property.
      * @return a void
      */
@@ -140,7 +140,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         this._label = value;
     }
     /**
-     * Sets the mediaType property value. The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * Sets the mediaType property value. The mediaType property
      * @param value Value to set for the mediaType property.
      * @return a void
      */

@@ -17,6 +17,7 @@ public class OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel imple
      */
     public OnenoteEntitySchemaObjectModel() {
         super();
+        this.setType("#microsoft.graph.onenoteEntitySchemaObjectModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class Chat extends Entity implements Parsable {
-    /** Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue. */
+    /** The chatType property */
     private ChatType _chatType;
     /** Date and time at which the chat was created. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -50,7 +50,7 @@ public class Chat extends Entity implements Parsable {
         return new Chat();
     }
     /**
-     * Gets the chatType property value. Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
+     * Gets the chatType property value. The chatType property
      * @return a chatType
      */
     @javax.annotation.Nullable
@@ -179,7 +179,7 @@ public class Chat extends Entity implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the chatType property value. Specifies the type of chat. Possible values are: group, oneOnOne, meeting, unknownFutureValue.
+     * Sets the chatType property value. The chatType property
      * @param value Value to set for the chatType property.
      * @return a void
      */

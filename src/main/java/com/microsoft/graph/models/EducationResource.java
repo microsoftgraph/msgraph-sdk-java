@@ -22,12 +22,15 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
     private IdentitySet _lastModifiedBy;
     /** Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _lastModifiedDateTime;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new educationResource and sets the default values.
      * @return a void
      */
     public EducationResource() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.educationResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,6 +40,20 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static EducationResource createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.educationExcelResource": return new EducationExcelResource();
+                case "#microsoft.graph.educationExternalResource": return new EducationExternalResource();
+                case "#microsoft.graph.educationFileResource": return new EducationFileResource();
+                case "#microsoft.graph.educationLinkResource": return new EducationLinkResource();
+                case "#microsoft.graph.educationMediaResource": return new EducationMediaResource();
+                case "#microsoft.graph.educationPowerPointResource": return new EducationPowerPointResource();
+                case "#microsoft.graph.educationTeamsAppResource": return new EducationTeamsAppResource();
+                case "#microsoft.graph.educationWordResource": return new EducationWordResource();
+            }
+        }
         return new EducationResource();
     }
     /**
@@ -78,12 +95,13 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationResource currentObject = this;
-        return new HashMap<>(5) {{
+        return new HashMap<>(6) {{
             this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
             this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -103,6 +121,14 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         return this._lastModifiedDateTime;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -114,6 +140,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -163,5 +190,13 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
      */
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

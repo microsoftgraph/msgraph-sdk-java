@@ -7,10 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the auditLogRoot singleton. */
 public class ProvisioningServicePrincipal extends Identity implements Parsable {
     /**
-     * Instantiates a new provisioningServicePrincipal and sets the default values.
+     * Instantiates a new ProvisioningServicePrincipal and sets the default values.
      * @return a void
      */
     public ProvisioningServicePrincipal() {
@@ -19,7 +18,7 @@ public class ProvisioningServicePrincipal extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a provisioningServicePrincipal
+     * @return a ProvisioningServicePrincipal
      */
     @javax.annotation.Nonnull
     public static ProvisioningServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

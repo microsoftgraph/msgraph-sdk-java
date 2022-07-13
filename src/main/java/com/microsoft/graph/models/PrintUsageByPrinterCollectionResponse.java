@@ -48,7 +48,7 @@ public class PrintUsageByPrinterCollectionResponse implements AdditionalDataHold
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintUsageByPrinterCollectionResponse currentObject = this;
         return new HashMap<>(2) {{
-            this.put("@odata.nextLink", (n) -> { currentObject.setOdatanextLink(n.getStringValue()); });
+            this.put("@odata.nextLink", (n) -> { currentObject.setNextLink(n.getStringValue()); });
             this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         }};
     }
@@ -57,7 +57,7 @@ public class PrintUsageByPrinterCollectionResponse implements AdditionalDataHold
      * @return a string
      */
     @javax.annotation.Nullable
-    public String getOdatanextLink() {
+    public String getNextLink() {
         return this._nextLink;
     }
     /**
@@ -75,7 +75,7 @@ public class PrintUsageByPrinterCollectionResponse implements AdditionalDataHold
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.nextLink", this.getOdatanextLink());
+        writer.writeStringValue("@odata.nextLink", this.getNextLink());
         writer.writeCollectionOfObjectValues("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -92,7 +92,7 @@ public class PrintUsageByPrinterCollectionResponse implements AdditionalDataHold
      * @param value Value to set for the nextLink property.
      * @return a void
      */
-    public void setOdatanextLink(@javax.annotation.Nullable final String value) {
+    public void setNextLink(@javax.annotation.Nullable final String value) {
         this._nextLink = value;
     }
     /**

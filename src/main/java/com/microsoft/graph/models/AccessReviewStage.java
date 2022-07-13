@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
+/** Provides operations to manage the admin singleton. */
 public class AccessReviewStage extends Entity implements Parsable {
     /** Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed. */
     private java.util.List<AccessReviewInstanceDecisionItem> _decisions;

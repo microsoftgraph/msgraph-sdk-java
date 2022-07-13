@@ -81,7 +81,7 @@ public class GetOrderRequestBuilder {
     }
     /**
      * Invoke function getOrder
-     * @return a CompletableFuture of AssignmentOrder
+     * @return a CompletableFuture of assignmentOrder
      */
     public java.util.concurrent.CompletableFuture<AssignmentOrder> get() {
         try {
@@ -98,7 +98,7 @@ public class GetOrderRequestBuilder {
     /**
      * Invoke function getOrder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of AssignmentOrder
+     * @return a CompletableFuture of assignmentOrder
      */
     public java.util.concurrent.CompletableFuture<AssignmentOrder> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOrderRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class GetOrderRequestBuilder {
      * Invoke function getOrder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of AssignmentOrder
+     * @return a CompletableFuture of assignmentOrder
      */
     public java.util.concurrent.CompletableFuture<AssignmentOrder> get(@javax.annotation.Nullable final java.util.function.Consumer<GetOrderRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

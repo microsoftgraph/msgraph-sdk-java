@@ -54,12 +54,15 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     private String _remoteIPAddress;
     /** The remote media port. */
     private Integer _remotePort;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new teleconferenceDeviceMediaQuality and sets the default values.
      * @return a void
      */
     public TeleconferenceDeviceMediaQuality() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.teleconferenceDeviceMediaQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,6 +72,14 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public static TeleconferenceDeviceMediaQuality createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.teleconferenceDeviceAudioQuality": return new TeleconferenceDeviceAudioQuality();
+                case "#microsoft.graph.teleconferenceDeviceVideoQuality": return new TeleconferenceDeviceVideoQuality();
+            }
+        }
         return new TeleconferenceDeviceMediaQuality();
     }
     /**
@@ -142,7 +153,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeleconferenceDeviceMediaQuality currentObject = this;
-        return new HashMap<>(21) {{
+        return new HashMap<>(22) {{
             this.put("averageInboundJitter", (n) -> { currentObject.setAverageInboundJitter(n.getPeriodValue()); });
             this.put("averageInboundPacketLossRateInPercentage", (n) -> { currentObject.setAverageInboundPacketLossRateInPercentage(n.getDoubleValue()); });
             this.put("averageInboundRoundTripDelay", (n) -> { currentObject.setAverageInboundRoundTripDelay(n.getPeriodValue()); });
@@ -164,6 +175,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
             this.put("outboundPackets", (n) -> { currentObject.setOutboundPackets(n.getLongValue()); });
             this.put("remoteIPAddress", (n) -> { currentObject.setRemoteIPAddress(n.getStringValue()); });
             this.put("remotePort", (n) -> { currentObject.setRemotePort(n.getIntegerValue()); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -279,6 +291,14 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         return this._remotePort;
     }
     /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -306,6 +326,7 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
         writer.writeLongValue("outboundPackets", this.getOutboundPackets());
         writer.writeStringValue("remoteIPAddress", this.getRemoteIPAddress());
         writer.writeIntegerValue("remotePort", this.getRemotePort());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -483,5 +504,13 @@ public class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, P
      */
     public void setRemotePort(@javax.annotation.Nullable final Integer value) {
         this._remotePort = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class OnenoteEntityBaseModel extends Entity implements Parsable {
     /** The endpoint where you can get details about the page. Read-only. */
     private String _self;
@@ -17,6 +17,7 @@ public class OnenoteEntityBaseModel extends Entity implements Parsable {
      */
     public OnenoteEntityBaseModel() {
         super();
+        this.setType("#microsoft.graph.onenoteEntityBaseModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

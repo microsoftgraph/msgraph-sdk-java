@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the print singleton. */
 public class PrintService extends Entity implements Parsable {
     /** Endpoints that can be used to access the service. Read-only. Nullable. */
     private java.util.List<PrintServiceEndpoint> _endpoints;
     /**
-     * Instantiates a new printService and sets the default values.
+     * Instantiates a new PrintService and sets the default values.
      * @return a void
      */
     public PrintService() {
@@ -21,7 +20,7 @@ public class PrintService extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printService
+     * @return a PrintService
      */
     @javax.annotation.Nonnull
     public static PrintService createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

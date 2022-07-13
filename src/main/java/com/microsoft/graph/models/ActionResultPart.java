@@ -13,12 +13,15 @@ public class ActionResultPart implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The error that occurred, if any, during the course of the bulk operation. */
     private PublicError _error;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new actionResultPart and sets the default values.
      * @return a void
      */
     public ActionResultPart() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.actionResultPart");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -28,6 +31,13 @@ public class ActionResultPart implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static ActionResultPart createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.aadUserConversationMemberResult": return new AadUserConversationMemberResult();
+            }
+        }
         return new ActionResultPart();
     }
     /**
@@ -53,9 +63,18 @@ public class ActionResultPart implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActionResultPart currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -65,6 +84,7 @@ public class ActionResultPart implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("error", this.getError());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +102,13 @@ public class ActionResultPart implements AdditionalDataHolder, Parsable {
      */
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

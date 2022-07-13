@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The MSI package type. Possible values are: perMachine, perUser, dualPurpose. */
+    /** Indicates the package type of an MSI Win32LobApp. */
     private Win32LobAppMsiPackageType _packageType;
     /** The MSI product code. */
     private String _productCode;
@@ -69,7 +69,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the packageType property value. The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
+     * Gets the packageType property value. Indicates the package type of an MSI Win32LobApp.
      * @return a win32LobAppMsiPackageType
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the packageType property value. The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
+     * Sets the packageType property value. Indicates the package type of an MSI Win32LobApp.
      * @param value Value to set for the packageType property.
      * @return a void
      */

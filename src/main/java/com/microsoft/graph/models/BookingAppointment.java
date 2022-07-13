@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents a booked appointment of a service by a customer in a business. */
 public class BookingAppointment extends Entity implements Parsable {
     /** Additional information that is sent to the customer when an appointment is confirmed. */
     private String _additionalInformation;
@@ -36,7 +35,7 @@ public class BookingAppointment extends Entity implements Parsable {
     private Period _preBuffer;
     /** The regular price for an appointment for the specified bookingService. */
     private Double _price;
-    /** A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue. */
+    /** Represents the type of pricing of a booking service. */
     private BookingPriceType _priceType;
     /** The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID. */
     private java.util.List<BookingReminder> _reminders;
@@ -57,7 +56,7 @@ public class BookingAppointment extends Entity implements Parsable {
     /** The startDateTime property */
     private DateTimeTimeZone _startDateTime;
     /**
-     * Instantiates a new bookingAppointment and sets the default values.
+     * Instantiates a new BookingAppointment and sets the default values.
      * @return a void
      */
     public BookingAppointment() {
@@ -66,7 +65,7 @@ public class BookingAppointment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingAppointment
+     * @return a BookingAppointment
      */
     @javax.annotation.Nonnull
     public static BookingAppointment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -211,7 +210,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this._price;
     }
     /**
-     * Gets the priceType property value. A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Gets the priceType property value. Represents the type of pricing of a booking service.
      * @return a bookingPriceType
      */
     @javax.annotation.Nullable
@@ -427,7 +426,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this._price = value;
     }
     /**
-     * Sets the priceType property value. A setting to provide flexibility for the pricing structure of services. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet, unknownFutureValue.
+     * Sets the priceType property value. Represents the type of pricing of a booking service.
      * @param value Value to set for the priceType property.
      * @return a void
      */

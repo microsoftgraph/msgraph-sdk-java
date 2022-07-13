@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class OutlookCategory extends Entity implements Parsable {
     /** A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below. */
     private CategoryColor _color;

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of invitation entities. */
 public class Invitation extends Entity implements Parsable {
     /** The user created as part of the invitation creation. Read-Only */
     private User _invitedUser;
@@ -28,7 +27,7 @@ public class Invitation extends Entity implements Parsable {
     /** The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error */
     private String _status;
     /**
-     * Instantiates a new invitation and sets the default values.
+     * Instantiates a new Invitation and sets the default values.
      * @return a void
      */
     public Invitation() {
@@ -37,7 +36,7 @@ public class Invitation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invitation
+     * @return a Invitation
      */
     @javax.annotation.Nonnull
     public static Invitation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

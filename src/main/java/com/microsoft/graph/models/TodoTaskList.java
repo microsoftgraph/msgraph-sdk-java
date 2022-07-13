@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class TodoTaskList extends Entity implements Parsable {
     /** The name of the task list. */
     private String _displayName;
@@ -19,7 +19,7 @@ public class TodoTaskList extends Entity implements Parsable {
     private Boolean _isShared;
     /** The tasks in this task list. Read-only. Nullable. */
     private java.util.List<TodoTask> _tasks;
-    /** Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue. */
+    /** The wellknownListName property */
     private WellknownListName _wellknownListName;
     /**
      * Instantiates a new todoTaskList and sets the default values.
@@ -95,7 +95,7 @@ public class TodoTaskList extends Entity implements Parsable {
         return this._tasks;
     }
     /**
-     * Gets the wellknownListName property value. Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
+     * Gets the wellknownListName property value. The wellknownListName property
      * @return a wellknownListName
      */
     @javax.annotation.Nullable
@@ -158,7 +158,7 @@ public class TodoTaskList extends Entity implements Parsable {
         this._tasks = value;
     }
     /**
-     * Sets the wellknownListName property value. Property indicating the list name if the given list is a well-known list. Possible values are: none, defaultList, flaggedEmails, unknownFutureValue.
+     * Sets the wellknownListName property value. The wellknownListName property
      * @param value Value to set for the wellknownListName property.
      * @return a void
      */

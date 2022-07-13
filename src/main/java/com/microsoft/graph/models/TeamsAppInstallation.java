@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class TeamsAppInstallation extends Entity implements Parsable {
     /** The app that is installed. */
     private TeamsApp _teamsApp;
@@ -19,6 +19,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      */
     public TeamsAppInstallation() {
         super();
+        this.setType("#microsoft.graph.teamsAppInstallation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

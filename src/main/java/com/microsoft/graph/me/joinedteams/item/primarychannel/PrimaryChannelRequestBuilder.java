@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.me.joinedteams.item.primarychannel.completemigration.CompleteMigrationRequestBuilder;
+import microsoft.graph.me.joinedteams.item.primarychannel.doesuserhaveaccesswithuseridwithtenantidwithuserprincipalname.DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder;
 import microsoft.graph.me.joinedteams.item.primarychannel.filesfolder.FilesFolderRequestBuilder;
 import microsoft.graph.me.joinedteams.item.primarychannel.members.item.ConversationMemberItemRequestBuilder;
 import microsoft.graph.me.joinedteams.item.primarychannel.members.MembersRequestBuilder;
@@ -22,6 +23,8 @@ import microsoft.graph.me.joinedteams.item.primarychannel.messages.item.ChatMess
 import microsoft.graph.me.joinedteams.item.primarychannel.messages.MessagesRequestBuilder;
 import microsoft.graph.me.joinedteams.item.primarychannel.provisionemail.ProvisionEmailRequestBuilder;
 import microsoft.graph.me.joinedteams.item.primarychannel.removeemail.RemoveEmailRequestBuilder;
+import microsoft.graph.me.joinedteams.item.primarychannel.sharedwithteams.item.SharedWithChannelTeamInfoItemRequestBuilder;
+import microsoft.graph.me.joinedteams.item.primarychannel.sharedwithteams.SharedWithTeamsRequestBuilder;
 import microsoft.graph.me.joinedteams.item.primarychannel.tabs.item.TeamsTabItemRequestBuilder;
 import microsoft.graph.me.joinedteams.item.primarychannel.tabs.TabsRequestBuilder;
 import microsoft.graph.models.Channel;
@@ -62,6 +65,11 @@ public class PrimaryChannelRequestBuilder {
     }
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The sharedWithTeams property */
+    @javax.annotation.Nonnull
+    public SharedWithTeamsRequestBuilder sharedWithTeams() {
+        return new SharedWithTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The tabs property */
     @javax.annotation.Nonnull
     public TabsRequestBuilder tabs() {
@@ -238,6 +246,14 @@ public class PrimaryChannelRequestBuilder {
         }
     }
     /**
+     * Provides operations to call the doesUserHaveAccess method.
+     * @return a doesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder doesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalName() {
+        return new DoesUserHaveAccessWithUserIdWithTenantIdWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * The general channel for the team.
      * @return a CompletableFuture of channel
      */
@@ -366,6 +382,18 @@ public class PrimaryChannelRequestBuilder {
         } catch (URISyntaxException ex) {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.me.joinedTeams.item.primaryChannel.sharedWithTeams.item collection
+     * @param id Unique identifier of the item
+     * @return a sharedWithChannelTeamInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public SharedWithChannelTeamInfoItemRequestBuilder sharedWithTeams(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("sharedWithChannelTeamInfo%2Did", id);
+        return new SharedWithChannelTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Gets an item from the Microsoft.Graph.me.joinedTeams.item.primaryChannel.tabs.item collection

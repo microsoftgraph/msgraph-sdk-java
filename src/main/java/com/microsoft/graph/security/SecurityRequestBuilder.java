@@ -18,6 +18,7 @@ import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.Security;
 import microsoft.graph.security.alerts.AlertsRequestBuilder;
 import microsoft.graph.security.alerts.item.AlertItemRequestBuilder;
+import microsoft.graph.security.cases.CasesRequestBuilder;
 import microsoft.graph.security.securescorecontrolprofiles.item.SecureScoreControlProfileItemRequestBuilder;
 import microsoft.graph.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import microsoft.graph.security.securescores.item.SecureScoreItemRequestBuilder;
@@ -28,6 +29,11 @@ public class SecurityRequestBuilder {
     @javax.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The cases property */
+    @javax.annotation.Nonnull
+    public CasesRequestBuilder cases() {
+        return new CasesRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
     private final HashMap<String, Object> pathParameters;

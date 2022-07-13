@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the instantiate method. */
 public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in). */
     private Boolean _accountEnabled;
@@ -47,6 +46,8 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private String _displayName;
     /** Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences. */
     private java.util.List<Endpoint> _endpoints;
+    /** The federatedIdentityCredentials property */
+    private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
     /** Home page or landing page of the application. */
     private String _homepage;
     /** The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand. */
@@ -271,6 +272,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._endpoints;
     }
     /**
+     * Gets the federatedIdentityCredentials property value. The federatedIdentityCredentials property
+     * @return a federatedIdentityCredential
+     */
+    @javax.annotation.Nullable
+    public java.util.List<FederatedIdentityCredential> getFederatedIdentityCredentials() {
+        return this._federatedIdentityCredentials;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -297,6 +306,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
             this.put("disabledByMicrosoftStatus", (n) -> { currentObject.setDisabledByMicrosoftStatus(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("endpoints", (n) -> { currentObject.setEndpoints(n.getCollectionOfObjectValues(Endpoint::createFromDiscriminatorValue)); });
+            this.put("federatedIdentityCredentials", (n) -> { currentObject.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
             this.put("homepage", (n) -> { currentObject.setHomepage(n.getStringValue()); });
             this.put("homeRealmDiscoveryPolicies", (n) -> { currentObject.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
             this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
@@ -569,6 +579,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeStringValue("disabledByMicrosoftStatus", this.getDisabledByMicrosoftStatus());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("endpoints", this.getEndpoints());
+        writer.writeCollectionOfObjectValues("federatedIdentityCredentials", this.getFederatedIdentityCredentials());
         writer.writeStringValue("homepage", this.getHomepage());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeObjectValue("info", this.getInfo());
@@ -748,6 +759,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setEndpoints(@javax.annotation.Nullable final java.util.List<Endpoint> value) {
         this._endpoints = value;
+    }
+    /**
+     * Sets the federatedIdentityCredentials property value. The federatedIdentityCredentials property
+     * @param value Value to set for the federatedIdentityCredentials property.
+     * @return a void
+     */
+    public void setFederatedIdentityCredentials(@javax.annotation.Nullable final java.util.List<FederatedIdentityCredential> value) {
+        this._federatedIdentityCredentials = value;
     }
     /**
      * Sets the homepage property value. Home page or landing page of the application.

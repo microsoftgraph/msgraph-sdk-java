@@ -31,7 +31,7 @@ public class Organization extends DirectoryObject implements Parsable {
     private java.util.List<Extension> _extensions;
     /** Not nullable. */
     private java.util.List<String> _marketingNotificationEmails;
-    /** Mobile device management authority. Possible values are: unknown, intune, sccm, office365. */
+    /** Mobile device management authority. */
     private MdmAuthority _mobileDeviceManagementAuthority;
     /** The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _onPremisesLastSyncDateTime;
@@ -200,7 +200,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this._marketingNotificationEmails;
     }
     /**
-     * Gets the mobileDeviceManagementAuthority property value. Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+     * Gets the mobileDeviceManagementAuthority property value. Mobile device management authority.
      * @return a mdmAuthority
      */
     @javax.annotation.Nullable
@@ -434,7 +434,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this._marketingNotificationEmails = value;
     }
     /**
-     * Sets the mobileDeviceManagementAuthority property value. Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+     * Sets the mobileDeviceManagementAuthority property value. Mobile device management authority.
      * @param value Value to set for the mobileDeviceManagementAuthority property.
      * @return a void
      */

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
-    /** Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any. */
+    /** The authenticationMode property */
     private MicrosoftAuthenticatorAuthenticationMode _authenticationMode;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodTarget and sets the default values.
@@ -28,7 +28,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         return new MicrosoftAuthenticatorAuthenticationMethodTarget();
     }
     /**
-     * Gets the authenticationMode property value. Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
+     * Gets the authenticationMode property value. The authenticationMode property
      * @return a microsoftAuthenticatorAuthenticationMode
      */
     @javax.annotation.Nullable
@@ -57,7 +57,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         writer.writeEnumValue("authenticationMode", this.getAuthenticationMode());
     }
     /**
-     * Sets the authenticationMode property value. Determines which types of notifications can be used for sign-in. The possible values are: deviceBasedPush (passwordless only), push, and any.
+     * Sets the authenticationMode property value. The authenticationMode property
      * @param value Value to set for the authenticationMode property.
      * @return a void
      */

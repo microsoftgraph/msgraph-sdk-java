@@ -17,7 +17,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     private byte[] _attachmentsArchive;
     /** The body property */
     private ItemBody _body;
-    /** The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue. */
+    /** The category property */
     private ServiceUpdateCategory _category;
     /** Indicates whether the message has any attachment. */
     private Boolean _hasAttachments;
@@ -25,7 +25,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     private Boolean _isMajorChange;
     /** The affected services by the service message. */
     private java.util.List<String> _services;
-    /** The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue. */
+    /** The severity property */
     private ServiceUpdateSeverity _severity;
     /** A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on. */
     private java.util.List<String> _tags;
@@ -81,7 +81,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         return this._body;
     }
     /**
-     * Gets the category property value. The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
+     * Gets the category property value. The category property
      * @return a serviceUpdateCategory
      */
     @javax.annotation.Nullable
@@ -134,7 +134,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         return this._services;
     }
     /**
-     * Gets the severity property value. The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
+     * Gets the severity property value. The severity property
      * @return a serviceUpdateSeverity
      */
     @javax.annotation.Nullable
@@ -210,7 +210,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         this._body = value;
     }
     /**
-     * Sets the category property value. The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
+     * Sets the category property value. The category property
      * @param value Value to set for the category property.
      * @return a void
      */
@@ -242,7 +242,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
         this._services = value;
     }
     /**
-     * Sets the severity property value. The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
+     * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      * @return a void
      */

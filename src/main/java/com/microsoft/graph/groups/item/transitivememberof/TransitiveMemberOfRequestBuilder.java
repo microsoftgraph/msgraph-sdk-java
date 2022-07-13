@@ -94,7 +94,7 @@ public class TransitiveMemberOfRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Get transitiveMemberOf from groups
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -102,7 +102,7 @@ public class TransitiveMemberOfRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Get transitiveMemberOf from groups
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -124,7 +124,7 @@ public class TransitiveMemberOfRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get transitiveMemberOf from groups
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<DirectoryObjectCollectionResponse> get() {
@@ -140,7 +140,7 @@ public class TransitiveMemberOfRequestBuilder {
         }
     }
     /**
-     * Get transitiveMemberOf from groups
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
      */
@@ -157,7 +157,7 @@ public class TransitiveMemberOfRequestBuilder {
         }
     }
     /**
-     * Get transitiveMemberOf from groups
+     * The groups that a group is a member of, either directly and through nested membership. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of DirectoryObjectCollectionResponse
@@ -174,7 +174,7 @@ public class TransitiveMemberOfRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Get transitiveMemberOf from groups */
+    /** The groups that a group is a member of, either directly and through nested membership. Nullable. */
     public class TransitiveMemberOfRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

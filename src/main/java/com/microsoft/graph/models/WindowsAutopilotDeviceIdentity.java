@@ -16,7 +16,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     private String _azureActiveDirectoryDeviceId;
     /** Display Name */
     private String _displayName;
-    /** Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked. */
+    /** The enrollmentState property */
     private EnrollmentState _enrollmentState;
     /** Group Tag of the Windows autopilot device. */
     private String _groupTag;
@@ -84,7 +84,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the enrollmentState property value. Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Gets the enrollmentState property value. The enrollmentState property
      * @return a enrollmentState
      */
     @javax.annotation.Nullable
@@ -263,7 +263,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the enrollmentState property value. Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */

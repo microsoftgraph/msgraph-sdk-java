@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
-    /** List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant. */
+    /** Possible values of the compliance app list. */
     private AppListType _compliantAppListType;
     /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
     private java.util.List<AppListItem> _compliantAppsList;
@@ -30,7 +30,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     private Integer _passwordPreviousPasswordBlockCount;
     /** Whether or not to require a password. */
     private Boolean _passwordRequired;
-    /** Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /**
      * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.
@@ -50,7 +50,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         return new MacOSGeneralDeviceConfiguration();
     }
     /**
-     * Gets the compliantAppListType property value. List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
     @javax.annotation.Nullable
@@ -160,7 +160,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -189,7 +189,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         writer.writeEnumValue("passwordRequiredType", this.getPasswordRequiredType());
     }
     /**
-     * Sets the compliantAppListType property value. List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
@@ -277,7 +277,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */

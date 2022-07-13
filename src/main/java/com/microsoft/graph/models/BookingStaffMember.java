@@ -14,7 +14,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
     private String _displayName;
     /** The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required. */
     private String _emailAddress;
-    /** The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required. */
+    /** The role property */
     private BookingStaffRole _role;
     /** The time zone of the staff member. For a list of possible values, see dateTimeTimeZone. */
     private String _timeZone;
@@ -81,7 +81,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         }};
     }
     /**
-     * Gets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+     * Gets the role property value. The role property
      * @return a bookingStaffRole
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class BookingStaffMember extends BookingStaffMemberBase implements Parsab
         this._emailAddress = value;
     }
     /**
-     * Sets the role property value. The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest and unknownFutureValue. Required.
+     * Sets the role property value. The role property
      * @param value Value to set for the role property.
      * @return a void
      */

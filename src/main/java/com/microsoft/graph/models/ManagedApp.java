@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedApp extends MobileApp implements Parsable {
-    /** The Application's availability. Possible values are: global, lineOfBusiness. */
+    /** A managed (MAM) application's availability. */
     private ManagedAppAvailability _appAvailability;
     /** The Application's version. */
     private String _version;
@@ -18,6 +18,7 @@ public class ManagedApp extends MobileApp implements Parsable {
      */
     public ManagedApp() {
         super();
+        this.setType("#microsoft.graph.managedApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +40,7 @@ public class ManagedApp extends MobileApp implements Parsable {
         return new ManagedApp();
     }
     /**
-     * Gets the appAvailability property value. The Application's availability. Possible values are: global, lineOfBusiness.
+     * Gets the appAvailability property value. A managed (MAM) application's availability.
      * @return a managedAppAvailability
      */
     @javax.annotation.Nullable
@@ -78,7 +79,7 @@ public class ManagedApp extends MobileApp implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the appAvailability property value. The Application's availability. Possible values are: global, lineOfBusiness.
+     * Sets the appAvailability property value. A managed (MAM) application's availability.
      * @param value Value to set for the appAvailability property.
      * @return a void
      */

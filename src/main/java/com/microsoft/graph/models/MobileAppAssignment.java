@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 /** A class containing the properties used for Group Assignment of a Mobile App. */
 public class MobileAppAssignment extends Entity implements Parsable {
-    /** The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment. */
+    /** Possible values for the install intent chosen by the admin. */
     private InstallIntent _intent;
     /** The settings for target assignment defined by the admin. */
     private MobileAppAssignmentSettings _settings;
@@ -46,7 +46,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the intent property value. The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Gets the intent property value. Possible values for the install intent chosen by the admin.
      * @return a installIntent
      */
     @javax.annotation.Nullable
@@ -82,7 +82,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the intent property value. The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
+     * Sets the intent property value. Possible values for the install intent chosen by the admin.
      * @param value Value to set for the intent property.
      * @return a void
      */

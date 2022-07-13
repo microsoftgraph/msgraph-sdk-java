@@ -25,7 +25,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     private LocalTime _maintenanceWindowStartTime;
     /** Indicates whether or not to Block wireless projection. */
     private Boolean _miracastBlocked;
-    /** The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive. */
+    /** Possible values for Miracast channel. */
     private MiracastChannel _miracastChannel;
     /** Indicates whether or not to require a pin for wireless projection. */
     private Boolean _miracastRequirePin;
@@ -47,7 +47,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     private String _welcomeScreenBackgroundImageUrl;
     /** Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room. */
     private Boolean _welcomeScreenBlockAutomaticWakeUp;
-    /** The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject. */
+    /** Possible values for welcome screen meeting information. */
     private WelcomeScreenMeetingInformation _welcomeScreenMeetingInformation;
     /**
      * Instantiates a new Windows10TeamGeneralConfiguration and sets the default values.
@@ -161,7 +161,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
         return this._miracastBlocked;
     }
     /**
-     * Gets the miracastChannel property value. The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
+     * Gets the miracastChannel property value. Possible values for Miracast channel.
      * @return a miracastChannel
      */
     @javax.annotation.Nullable
@@ -249,7 +249,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
         return this._welcomeScreenBlockAutomaticWakeUp;
     }
     /**
-     * Gets the welcomeScreenMeetingInformation property value. The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
+     * Gets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
      * @return a welcomeScreenMeetingInformation
      */
     @javax.annotation.Nullable
@@ -350,7 +350,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
         this._miracastBlocked = value;
     }
     /**
-     * Sets the miracastChannel property value. The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
+     * Sets the miracastChannel property value. Possible values for Miracast channel.
      * @param value Value to set for the miracastChannel property.
      * @return a void
      */
@@ -438,7 +438,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
         this._welcomeScreenBlockAutomaticWakeUp = value;
     }
     /**
-     * Sets the welcomeScreenMeetingInformation property value. The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
+     * Sets the welcomeScreenMeetingInformation property value. Possible values for welcome screen meeting information.
      * @param value Value to set for the welcomeScreenMeetingInformation property.
      * @return a void
      */

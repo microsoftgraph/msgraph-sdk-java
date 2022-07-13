@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the identityGovernance singleton. */
+/** Provides operations to manage the admin singleton. */
 public enum AccessPackageCatalogType implements ValuedEnum {
     UserManaged("userManaged"),
     ServiceDefault("serviceDefault"),

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the roleManagement singleton. */
+/** Provides operations to manage the admin singleton. */
 public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable {
     /** Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable. */
     private AppScope _appScope;
@@ -31,6 +31,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements Parsable 
      */
     public UnifiedRoleScheduleInstanceBase() {
         super();
+        this.setType("#microsoft.graph.unifiedRoleScheduleInstanceBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityContainer singleton. */
 public class ConditionalAccessRoot extends Entity implements Parsable {
     /** Read-only. Nullable. Returns a collection of the specified named locations. */
     private java.util.List<NamedLocation> _namedLocations;

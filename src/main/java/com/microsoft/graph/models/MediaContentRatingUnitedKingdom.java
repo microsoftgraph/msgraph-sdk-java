@@ -11,9 +11,9 @@ import java.util.Objects;
 public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Movies rating selected for United Kingdom. Possible values are: allAllowed, allBlocked, general, universalChildren, parentalGuidance, agesAbove12Video, agesAbove12Cinema, agesAbove15, adults. */
+    /** Movies rating labels in United Kingdom */
     private RatingUnitedKingdomMoviesType _movieRating;
-    /** TV rating selected for United Kingdom. Possible values are: allAllowed, allBlocked, caution. */
+    /** TV content rating labels in United Kingdom */
     private RatingUnitedKingdomTelevisionType _tvRating;
     /**
      * Instantiates a new mediaContentRatingUnitedKingdom and sets the default values.
@@ -53,7 +53,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
         }};
     }
     /**
-     * Gets the movieRating property value. Movies rating selected for United Kingdom. Possible values are: allAllowed, allBlocked, general, universalChildren, parentalGuidance, agesAbove12Video, agesAbove12Cinema, agesAbove15, adults.
+     * Gets the movieRating property value. Movies rating labels in United Kingdom
      * @return a ratingUnitedKingdomMoviesType
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
         return this._movieRating;
     }
     /**
-     * Gets the tvRating property value. TV rating selected for United Kingdom. Possible values are: allAllowed, allBlocked, caution.
+     * Gets the tvRating property value. TV content rating labels in United Kingdom
      * @return a ratingUnitedKingdomTelevisionType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
         this._additionalData = value;
     }
     /**
-     * Sets the movieRating property value. Movies rating selected for United Kingdom. Possible values are: allAllowed, allBlocked, general, universalChildren, parentalGuidance, agesAbove12Video, agesAbove12Cinema, agesAbove15, adults.
+     * Sets the movieRating property value. Movies rating labels in United Kingdom
      * @param value Value to set for the movieRating property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
         this._movieRating = value;
     }
     /**
-     * Sets the tvRating property value. TV rating selected for United Kingdom. Possible values are: allAllowed, allBlocked, caution.
+     * Sets the tvRating property value. TV content rating labels in United Kingdom
      * @param value Value to set for the tvRating property.
      * @return a void
      */

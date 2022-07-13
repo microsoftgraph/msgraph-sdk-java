@@ -13,7 +13,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The object identifier of an Azure AD user or group. */
     private String _id;
-    /** The type of the authentication method target. Possible values are: user, group, unknownFutureValue. */
+    /** The targetType property */
     private AuthenticationMethodTargetType _targetType;
     /**
      * Instantiates a new excludeTarget and sets the default values.
@@ -61,7 +61,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
         return this._id;
     }
     /**
-     * Gets the targetType property value. The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * Gets the targetType property value. The targetType property
      * @return a authenticationMethodTargetType
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
         this._id = value;
     }
     /**
-     * Sets the targetType property value. The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * Sets the targetType property value. The targetType property
      * @param value Value to set for the targetType property.
      * @return a void
      */

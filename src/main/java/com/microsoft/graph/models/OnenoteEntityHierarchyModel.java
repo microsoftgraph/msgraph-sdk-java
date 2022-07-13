@@ -23,6 +23,7 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
      */
     public OnenoteEntityHierarchyModel() {
         super();
+        this.setType("#microsoft.graph.onenoteEntityHierarchyModel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

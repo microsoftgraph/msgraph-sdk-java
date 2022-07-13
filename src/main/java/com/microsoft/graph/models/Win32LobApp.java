@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Win32LobApp extends MobileLobApp implements Parsable {
-    /** The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64. */
+    /** Contains properties for Windows architecture. */
     private WindowsArchitecture _applicableArchitectures;
     /** The command line to install this app */
     private String _installCommandLine;
@@ -52,7 +52,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return new Win32LobApp();
     }
     /**
-     * Gets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @return a windowsArchitecture
      */
     @javax.annotation.Nullable
@@ -201,7 +201,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         writer.writeStringValue("uninstallCommandLine", this.getUninstallCommandLine());
     }
     /**
-     * Sets the applicableArchitectures property value. The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * Sets the applicableArchitectures property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitectures property.
      * @return a void
      */

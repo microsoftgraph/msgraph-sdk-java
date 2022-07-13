@@ -13,7 +13,7 @@ public class ToneInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** An incremental identifier used for ordering DTMF events. */
     private Long _sequenceId;
-    /** Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound, a, b, c, d, flash. */
+    /** The tone property */
     private Tone _tone;
     /**
      * Instantiates a new toneInfo and sets the default values.
@@ -61,7 +61,7 @@ public class ToneInfo implements AdditionalDataHolder, Parsable {
         return this._sequenceId;
     }
     /**
-     * Gets the tone property value. Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound, a, b, c, d, flash.
+     * Gets the tone property value. The tone property
      * @return a tone
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class ToneInfo implements AdditionalDataHolder, Parsable {
         this._sequenceId = value;
     }
     /**
-     * Sets the tone property value. Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound, a, b, c, d, flash.
+     * Sets the tone property value. The tone property
      * @param value Value to set for the tone property.
      * @return a void
      */

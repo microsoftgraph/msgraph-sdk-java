@@ -28,7 +28,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
     private String _id;
     /** The printer ID that the job was queued for. Read-only. */
     private String _printerId;
-    /** The print job's final processing state. Read-only. */
+    /** The processingState property */
     private PrintJobProcessingState _processingState;
     /**
      * Instantiates a new archivedPrintJob and sets the default values.
@@ -139,7 +139,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
         return this._printerId;
     }
     /**
-     * Gets the processingState property value. The print job's final processing state. Read-only.
+     * Gets the processingState property value. The processingState property
      * @return a printJobProcessingState
      */
     @javax.annotation.Nullable
@@ -237,7 +237,7 @@ public class ArchivedPrintJob implements AdditionalDataHolder, Parsable {
         this._printerId = value;
     }
     /**
-     * Sets the processingState property value. The print job's final processing state. Read-only.
+     * Sets the processingState property value. The processingState property
      * @param value Value to set for the processingState property.
      * @return a void
      */

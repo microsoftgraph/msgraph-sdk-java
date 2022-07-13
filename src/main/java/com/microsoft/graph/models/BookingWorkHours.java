@@ -12,7 +12,7 @@ import java.util.Objects;
 public class BookingWorkHours implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. */
+    /** The day property */
     private DayOfWeek _day;
     /** A list of start/end times during a day. */
     private java.util.List<BookingWorkTimeSlot> _timeSlots;
@@ -42,7 +42,7 @@ public class BookingWorkHours implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the day property value. The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Gets the day property value. The day property
      * @return a dayOfWeek
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class BookingWorkHours implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the day property value. The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Sets the day property value. The day property
      * @param value Value to set for the day property.
      * @return a void
      */

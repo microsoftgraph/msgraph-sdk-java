@@ -26,7 +26,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
     private Integer _passwordPreviousPasswordBlockCount;
     /** Require a password to unlock Windows device. */
     private Boolean _passwordRequired;
-    /** The required password type. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /** Indicates whether or not to require encryption on a windows 8.1 device. */
     private Boolean _storageRequireEncryption;
@@ -141,7 +141,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -249,7 +249,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */

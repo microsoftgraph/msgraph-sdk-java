@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class WorkbookWorksheetProtection extends Entity implements Parsable {
     /** Sheet protection options. Read-only. */
     private WorkbookWorksheetProtectionOptions _options;

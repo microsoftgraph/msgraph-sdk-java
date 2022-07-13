@@ -10,11 +10,11 @@ import java.util.Objects;
 public class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable {
     /** Edition Upgrade License File Content. */
     private String _license;
-    /** Edition Upgrade License Type. Possible values are: productKey, licenseFile, notConfigured. */
+    /** Edition Upgrade License type */
     private EditionUpgradeLicenseType _licenseType;
     /** Edition Upgrade Product Key. */
     private String _productKey;
-    /** Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN, notConfigured, windows10Home, windows10HomeChina, windows10HomeN, windows10HomeSingleLanguage, windows10Mobile, windows10IoTCore, windows10IoTCoreCommercial. */
+    /** Windows 10 Edition type. */
     private Windows10EditionType _targetEdition;
     /**
      * Instantiates a new EditionUpgradeConfiguration and sets the default values.
@@ -56,7 +56,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
         return this._license;
     }
     /**
-     * Gets the licenseType property value. Edition Upgrade License Type. Possible values are: productKey, licenseFile, notConfigured.
+     * Gets the licenseType property value. Edition Upgrade License type
      * @return a editionUpgradeLicenseType
      */
     @javax.annotation.Nullable
@@ -72,7 +72,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
         return this._productKey;
     }
     /**
-     * Gets the targetEdition property value. Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN, notConfigured, windows10Home, windows10HomeChina, windows10HomeN, windows10HomeSingleLanguage, windows10Mobile, windows10IoTCore, windows10IoTCoreCommercial.
+     * Gets the targetEdition property value. Windows 10 Edition type.
      * @return a windows10EditionType
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
         this._license = value;
     }
     /**
-     * Sets the licenseType property value. Edition Upgrade License Type. Possible values are: productKey, licenseFile, notConfigured.
+     * Sets the licenseType property value. Edition Upgrade License type
      * @param value Value to set for the licenseType property.
      * @return a void
      */
@@ -117,7 +117,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
         this._productKey = value;
     }
     /**
-     * Sets the targetEdition property value. Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN, notConfigured, windows10Home, windows10HomeChina, windows10HomeN, windows10HomeSingleLanguage, windows10Mobile, windows10IoTCore, windows10IoTCoreCommercial.
+     * Sets the targetEdition property value. Windows 10 Edition type.
      * @param value Value to set for the targetEdition property.
      * @return a void
      */

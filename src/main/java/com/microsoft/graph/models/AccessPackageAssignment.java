@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
 public class AccessPackageAssignment extends Entity implements Parsable {
     /** Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters. */
     private AccessPackage _accessPackage;

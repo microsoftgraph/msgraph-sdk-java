@@ -14,7 +14,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     private String _connectorServerName;
     /** An alias assigned to the Exchange server */
     private String _exchangeAlias;
-    /** The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated. */
+    /** The type of Exchange Connector. */
     private DeviceManagementExchangeConnectorType _exchangeConnectorType;
     /** Exchange Organization to the Exchange server */
     private String _exchangeOrganization;
@@ -24,7 +24,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
     private String _primarySmtpAddress;
     /** The name of the Exchange server. */
     private String _serverName;
-    /** Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected. */
+    /** The current status of the Exchange Connector. */
     private DeviceManagementExchangeConnectorStatus _status;
     /** The version of the ExchangeConnectorAgent */
     private String _version;
@@ -62,7 +62,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
         return this._exchangeAlias;
     }
     /**
-     * Gets the exchangeConnectorType property value. The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
+     * Gets the exchangeConnectorType property value. The type of Exchange Connector.
      * @return a deviceManagementExchangeConnectorType
      */
     @javax.annotation.Nullable
@@ -121,7 +121,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
         return this._serverName;
     }
     /**
-     * Gets the status property value. Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
+     * Gets the status property value. The current status of the Exchange Connector.
      * @return a deviceManagementExchangeConnectorStatus
      */
     @javax.annotation.Nullable
@@ -171,7 +171,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
         this._exchangeAlias = value;
     }
     /**
-     * Sets the exchangeConnectorType property value. The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
+     * Sets the exchangeConnectorType property value. The type of Exchange Connector.
      * @param value Value to set for the exchangeConnectorType property.
      * @return a void
      */
@@ -211,7 +211,7 @@ public class DeviceManagementExchangeConnector extends Entity implements Parsabl
         this._serverName = value;
     }
     /**
-     * Sets the status property value. Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
+     * Sets the status property value. The current status of the Exchange Connector.
      * @param value Value to set for the status property.
      * @return a void
      */

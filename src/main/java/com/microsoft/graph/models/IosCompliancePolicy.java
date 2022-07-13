@@ -10,7 +10,7 @@ import java.util.Objects;
 public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /** Require that devices have enabled device threat protection . */
     private Boolean _deviceThreatProtectionEnabled;
-    /** Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. */
+    /** Device threat protection levels for the Device Threat Protection API. */
     private DeviceThreatProtectionLevel _deviceThreatProtectionRequiredSecurityLevel;
     /** Indicates whether or not to require a managed email profile. */
     private Boolean _managedEmailProfileRequired;
@@ -32,7 +32,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
     private Integer _passcodePreviousPasscodeBlockCount;
     /** Indicates whether or not to require a passcode. */
     private Boolean _passcodeRequired;
-    /** The required passcode type. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passcodeRequiredType;
     /** Devices must not be jailbroken or rooted. */
     private Boolean _securityBlockJailbrokenDevices;
@@ -62,7 +62,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
         return this._deviceThreatProtectionEnabled;
     }
     /**
-     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @return a deviceThreatProtectionLevel
      */
     @javax.annotation.Nullable
@@ -174,7 +174,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
         return this._passcodeRequired;
     }
     /**
-     * Gets the passcodeRequiredType property value. The required passcode type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passcodeRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -221,7 +221,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
         this._deviceThreatProtectionEnabled = value;
     }
     /**
-     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
@@ -309,7 +309,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
         this._passcodeRequired = value;
     }
     /**
-     * Sets the passcodeRequiredType property value. The required passcode type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passcodeRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passcodeRequiredType property.
      * @return a void
      */

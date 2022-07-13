@@ -59,7 +59,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     private Float _postForwardErrorCorrectionPacketLossRate;
     /** UTC time when the stream started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _startDateTime;
-    /** Indicates the direction of the media stream. Possible values are: callerToCallee, calleeToCaller. */
+    /** The streamDirection property */
     private MediaStreamDirection _streamDirection;
     /** Unique identifier for the stream. */
     private String _streamId;
@@ -314,7 +314,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         return this._startDateTime;
     }
     /**
-     * Gets the streamDirection property value. Indicates the direction of the media stream. Possible values are: callerToCallee, calleeToCaller.
+     * Gets the streamDirection property value. The streamDirection property
      * @return a mediaStreamDirection
      */
     @javax.annotation.Nullable
@@ -574,7 +574,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
         this._startDateTime = value;
     }
     /**
-     * Sets the streamDirection property value. Indicates the direction of the media stream. Possible values are: callerToCallee, calleeToCaller.
+     * Sets the streamDirection property value. The streamDirection property
      * @param value Value to set for the streamDirection property.
      * @return a void
      */

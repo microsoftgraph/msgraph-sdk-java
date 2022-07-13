@@ -8,11 +8,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class ConversationMember extends Entity implements Parsable {
     /** The display name of the user. */
     private String _displayName;
-    /** The roles for that user. */
+    /** The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. */
     private java.util.List<String> _roles;
     /** The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat. */
     private OffsetDateTime _visibleHistoryStartDateTime;
@@ -22,6 +22,7 @@ public class ConversationMember extends Entity implements Parsable {
      */
     public ConversationMember() {
         super();
+        this.setType("#microsoft.graph.conversationMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +63,7 @@ public class ConversationMember extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the roles property value. The roles for that user.
+     * Gets the roles property value. The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -98,7 +99,7 @@ public class ConversationMember extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the roles property value. The roles for that user.
+     * Sets the roles property value. The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.
      * @param value Value to set for the roles property.
      * @return a void
      */

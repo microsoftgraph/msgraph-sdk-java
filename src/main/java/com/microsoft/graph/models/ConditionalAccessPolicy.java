@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityContainer singleton. */
+/** Provides operations to manage the admin singleton. */
 public class ConditionalAccessPolicy extends Entity implements Parsable {
     /** The conditions property */
     private ConditionalAccessConditionSet _conditions;
@@ -24,7 +24,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     private OffsetDateTime _modifiedDateTime;
     /** Specifies the session controls that are enforced after sign-in. */
     private ConditionalAccessSessionControls _sessionControls;
-    /** Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. */
+    /** The state property */
     private ConditionalAccessPolicyState _state;
     /**
      * Instantiates a new conditionalAccessPolicy and sets the default values.
@@ -118,7 +118,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         return this._sessionControls;
     }
     /**
-     * Gets the state property value. Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required.
+     * Gets the state property value. The state property
      * @return a conditionalAccessPolicyState
      */
     @javax.annotation.Nullable
@@ -199,7 +199,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
         this._sessionControls = value;
     }
     /**
-     * Sets the state property value. Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
