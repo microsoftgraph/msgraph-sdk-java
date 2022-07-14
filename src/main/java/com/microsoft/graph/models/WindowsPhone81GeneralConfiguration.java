@@ -18,7 +18,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     private Boolean _cameraBlocked;
     /** Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked. */
     private Boolean _cellularBlockWifiTethering;
-    /** List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant. */
+    /** Possible values of the compliance app list. */
     private AppListType _compliantAppListType;
     /** List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements. */
     private java.util.List<AppListItem> _compliantAppsList;
@@ -46,7 +46,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     private Integer _passwordPreviousPasswordBlockCount;
     /** Indicates whether or not to require a password. */
     private Boolean _passwordRequired;
-    /** Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /** Number of sign in failures allowed before factory reset. */
     private Integer _passwordSignInFailureCountBeforeFactoryReset;
@@ -124,7 +124,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
         return this._cellularBlockWifiTethering;
     }
     /**
-     * Gets the compliantAppListType property value. List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Gets the compliantAppListType property value. Possible values of the compliance app list.
      * @return a appListType
      */
     @javax.annotation.Nullable
@@ -275,7 +275,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -433,7 +433,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
         this._cellularBlockWifiTethering = value;
     }
     /**
-     * Sets the compliantAppListType property value. List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Sets the compliantAppListType property value. Possible values of the compliance app list.
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
@@ -545,7 +545,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */

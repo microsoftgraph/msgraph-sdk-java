@@ -13,7 +13,7 @@ import microsoft.graph.models.DeviceManagementExchangeConnectorSyncType;
 public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The syncType property */
+    /** The type of Exchange Connector sync requested. */
     private DeviceManagementExchangeConnectorSyncType _syncType;
     /**
      * Instantiates a new syncPostRequestBody and sets the default values.
@@ -52,7 +52,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the syncType property value. The syncType property
+     * Gets the syncType property value. The type of Exchange Connector sync requested.
      * @return a deviceManagementExchangeConnectorSyncType
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class SyncPostRequestBody implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the syncType property value. The syncType property
+     * Sets the syncType property value. The type of Exchange Connector sync requested.
      * @param value Value to set for the syncType property.
      * @return a void
      */

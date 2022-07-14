@@ -65,7 +65,7 @@ public class DeviceManagement extends Entity implements Parsable {
     private DeviceManagementSettings _settings;
     /** The software update status summary. */
     private SoftwareUpdateStatusSummary _softwareUpdateStatusSummary;
-    /** Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut. */
+    /** Tenant mobile device management subscription state. */
     private DeviceManagementSubscriptionState _subscriptionState;
     /** The telecom expense management partners. */
     private java.util.List<TelecomExpenseManagementPartner> _telecomExpenseManagementPartners;
@@ -366,7 +366,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this._softwareUpdateStatusSummary;
     }
     /**
-     * Gets the subscriptionState property value. Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Gets the subscriptionState property value. Tenant mobile device management subscription state.
      * @return a deviceManagementSubscriptionState
      */
     @javax.annotation.Nullable
@@ -690,7 +690,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this._softwareUpdateStatusSummary = value;
     }
     /**
-     * Sets the subscriptionState property value. Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Sets the subscriptionState property value. Tenant mobile device management subscription state.
      * @param value Value to set for the subscriptionState property.
      * @return a void
      */

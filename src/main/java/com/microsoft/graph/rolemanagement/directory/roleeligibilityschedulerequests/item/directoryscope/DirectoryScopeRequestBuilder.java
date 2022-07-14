@@ -52,7 +52,7 @@ public class DirectoryScopeRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
+     * The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class DirectoryScopeRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
+     * The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class DirectoryScopeRequestBuilder {
         return requestInfo;
     }
     /**
-     * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
+     * The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -98,7 +98,7 @@ public class DirectoryScopeRequestBuilder {
         }
     }
     /**
-     * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
+     * The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -115,7 +115,7 @@ public class DirectoryScopeRequestBuilder {
         }
     }
     /**
-     * Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only.
+     * The directory object that is the scope of the role eligibility. Read-only. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -132,7 +132,7 @@ public class DirectoryScopeRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Property referencing the directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. */
+    /** The directory object that is the scope of the role eligibility. Read-only. Supports $expand. */
     public class DirectoryScopeRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

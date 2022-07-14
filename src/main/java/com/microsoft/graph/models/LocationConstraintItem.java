@@ -7,12 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the findMeetingTimes method. */
 public class LocationConstraintItem extends Location implements Parsable {
     /** If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true. */
     private Boolean _resolveAvailability;
     /**
-     * Instantiates a new locationConstraintItem and sets the default values.
+     * Instantiates a new LocationConstraintItem and sets the default values.
      * @return a void
      */
     public LocationConstraintItem() {
@@ -21,7 +20,7 @@ public class LocationConstraintItem extends Location implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a locationConstraintItem
+     * @return a LocationConstraintItem
      */
     @javax.annotation.Nonnull
     public static LocationConstraintItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

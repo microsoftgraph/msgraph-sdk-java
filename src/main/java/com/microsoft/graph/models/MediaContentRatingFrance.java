@@ -11,9 +11,9 @@ import java.util.Objects;
 public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Movies rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18. */
+    /** Movies rating labels in France */
     private RatingFranceMoviesType _movieRating;
-    /** TV rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18. */
+    /** TV content rating labels in France */
     private RatingFranceTelevisionType _tvRating;
     /**
      * Instantiates a new mediaContentRatingFrance and sets the default values.
@@ -53,7 +53,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
         }};
     }
     /**
-     * Gets the movieRating property value. Movies rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
+     * Gets the movieRating property value. Movies rating labels in France
      * @return a ratingFranceMoviesType
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
         return this._movieRating;
     }
     /**
-     * Gets the tvRating property value. TV rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
+     * Gets the tvRating property value. TV content rating labels in France
      * @return a ratingFranceTelevisionType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
         this._additionalData = value;
     }
     /**
-     * Sets the movieRating property value. Movies rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
+     * Sets the movieRating property value. Movies rating labels in France
      * @param value Value to set for the movieRating property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class MediaContentRatingFrance implements AdditionalDataHolder, Parsable 
         this._movieRating = value;
     }
     /**
-     * Sets the tvRating property value. TV rating selected for France. Possible values are: allAllowed, allBlocked, agesAbove10, agesAbove12, agesAbove16, agesAbove18.
+     * Sets the tvRating property value. TV content rating labels in France
      * @param value Value to set for the tvRating property.
      * @return a void
      */

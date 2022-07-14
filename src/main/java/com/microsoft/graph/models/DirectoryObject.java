@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class DirectoryObject extends Entity implements Parsable {
     /** Date and time when this object was deleted. Always null when the object hasn't been deleted. */
     private OffsetDateTime _deletedDateTime;
@@ -18,6 +17,7 @@ public class DirectoryObject extends Entity implements Parsable {
      */
     public DirectoryObject() {
         super();
+        this.setType("#microsoft.graph.directoryObject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

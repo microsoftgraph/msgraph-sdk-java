@@ -12,9 +12,9 @@ import java.util.Objects;
 public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Device restart behavior. Possible values are: basedOnReturnCode, allow, suppress, force. */
+    /** Indicates the type of restart action. */
     private Win32LobAppRestartBehavior _deviceRestartBehavior;
-    /** Indicates the type of execution context the app runs in. Possible values are: system, user. */
+    /** Indicates the type of execution context the app runs in. */
     private RunAsAccountType _runAsAccount;
     /**
      * Instantiates a new win32LobAppInstallExperience and sets the default values.
@@ -42,7 +42,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
         return this._additionalData;
     }
     /**
-     * Gets the deviceRestartBehavior property value. Device restart behavior. Possible values are: basedOnReturnCode, allow, suppress, force.
+     * Gets the deviceRestartBehavior property value. Indicates the type of restart action.
      * @return a win32LobAppRestartBehavior
      */
     @javax.annotation.Nullable
@@ -62,7 +62,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
         }};
     }
     /**
-     * Gets the runAsAccount property value. Indicates the type of execution context the app runs in. Possible values are: system, user.
+     * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @return a runAsAccountType
      */
     @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
         this._additionalData = value;
     }
     /**
-     * Sets the deviceRestartBehavior property value. Device restart behavior. Possible values are: basedOnReturnCode, allow, suppress, force.
+     * Sets the deviceRestartBehavior property value. Indicates the type of restart action.
      * @param value Value to set for the deviceRestartBehavior property.
      * @return a void
      */
@@ -97,7 +97,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
         this._deviceRestartBehavior = value;
     }
     /**
-     * Sets the runAsAccount property value. Indicates the type of execution context the app runs in. Possible values are: system, user.
+     * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */

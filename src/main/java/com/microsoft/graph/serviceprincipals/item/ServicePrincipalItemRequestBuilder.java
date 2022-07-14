@@ -30,6 +30,8 @@ import microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications
 import microsoft.graph.serviceprincipals.item.delegatedpermissionclassifications.item.DelegatedPermissionClassificationItemRequestBuilder;
 import microsoft.graph.serviceprincipals.item.endpoints.EndpointsRequestBuilder;
 import microsoft.graph.serviceprincipals.item.endpoints.item.EndpointItemRequestBuilder;
+import microsoft.graph.serviceprincipals.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
+import microsoft.graph.serviceprincipals.item.federatedidentitycredentials.item.FederatedIdentityCredentialItemRequestBuilder;
 import microsoft.graph.serviceprincipals.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import microsoft.graph.serviceprincipals.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import microsoft.graph.serviceprincipals.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -103,6 +105,11 @@ public class ServicePrincipalItemRequestBuilder {
     @javax.annotation.Nonnull
     public EndpointsRequestBuilder endpoints() {
         return new EndpointsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The federatedIdentityCredentials property */
+    @javax.annotation.Nonnull
+    public FederatedIdentityCredentialsRequestBuilder federatedIdentityCredentials() {
+        return new FederatedIdentityCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
     /** The getMemberGroups property */
     @javax.annotation.Nonnull
@@ -414,6 +421,18 @@ public class ServicePrincipalItemRequestBuilder {
         var urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("endpoint%2Did", id);
         return new EndpointItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Gets an item from the Microsoft.Graph.servicePrincipals.item.federatedIdentityCredentials.item collection
+     * @param id Unique identifier of the item
+     * @return a federatedIdentityCredentialItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public FederatedIdentityCredentialItemRequestBuilder federatedIdentityCredentials(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("federatedIdentityCredential%2Did", id);
+        return new FederatedIdentityCredentialItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.

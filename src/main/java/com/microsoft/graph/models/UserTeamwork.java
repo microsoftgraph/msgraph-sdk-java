@@ -7,8 +7,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class UserTeamwork extends Entity implements Parsable {
+    /** The list of associatedTeamInfo objects that a user is associated with. */
+    private java.util.List<AssociatedTeamInfo> _associatedTeams;
     /** The apps installed in the personal scope of this user. */
     private java.util.List<UserScopeTeamsAppInstallation> _installedApps;
     /**
@@ -29,6 +30,14 @@ public class UserTeamwork extends Entity implements Parsable {
         return new UserTeamwork();
     }
     /**
+     * Gets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
+     * @return a associatedTeamInfo
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AssociatedTeamInfo> getAssociatedTeams() {
+        return this._associatedTeams;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -36,6 +45,7 @@ public class UserTeamwork extends Entity implements Parsable {
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTeamwork currentObject = this;
         return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("associatedTeams", (n) -> { currentObject.setAssociatedTeams(n.getCollectionOfObjectValues(AssociatedTeamInfo::createFromDiscriminatorValue)); });
             this.put("installedApps", (n) -> { currentObject.setInstalledApps(n.getCollectionOfObjectValues(UserScopeTeamsAppInstallation::createFromDiscriminatorValue)); });
         }};
     }
@@ -55,7 +65,16 @@ public class UserTeamwork extends Entity implements Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("associatedTeams", this.getAssociatedTeams());
         writer.writeCollectionOfObjectValues("installedApps", this.getInstalledApps());
+    }
+    /**
+     * Sets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
+     * @param value Value to set for the associatedTeams property.
+     * @return a void
+     */
+    public void setAssociatedTeams(@javax.annotation.Nullable final java.util.List<AssociatedTeamInfo> value) {
+        this._associatedTeams = value;
     }
     /**
      * Sets the installedApps property value. The apps installed in the personal scope of this user.

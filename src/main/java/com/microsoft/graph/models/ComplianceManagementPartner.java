@@ -26,7 +26,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     private java.util.List<ComplianceManagementPartnerAssignment> _macOsEnrollmentAssignments;
     /** Partner onboarded for Mac devices. */
     private Boolean _macOsOnboarded;
-    /** Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive. */
+    /** Partner state of this tenant. */
     private DeviceManagementPartnerTenantState _partnerState;
     /**
      * Instantiates a new complianceManagementPartner and sets the default values.
@@ -129,7 +129,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
         return this._macOsOnboarded;
     }
     /**
-     * Gets the partnerState property value. Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+     * Gets the partnerState property value. Partner state of this tenant.
      * @return a deviceManagementPartnerTenantState
      */
     @javax.annotation.Nullable
@@ -219,7 +219,7 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
         this._macOsOnboarded = value;
     }
     /**
-     * Sets the partnerState property value. Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+     * Sets the partnerState property value. Partner state of this tenant.
      * @param value Value to set for the partnerState property.
      * @return a void
      */

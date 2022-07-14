@@ -11,13 +11,13 @@ import java.util.Objects;
 public class DeviceConfigurationState extends Entity implements Parsable {
     /** The name of the policy for this policyBase */
     private String _displayName;
-    /** Platform type that the policy applies to */
+    /** Supported platform types for policies. */
     private PolicyPlatformType _platformType;
     /** Count of how many setting a policy holds */
     private Integer _settingCount;
     /** The settingStates property */
     private java.util.List<DeviceConfigurationSettingState> _settingStates;
-    /** The compliance state of the policy */
+    /** The state property */
     private ComplianceStatus _state;
     /** The version of the policy */
     private Integer _version;
@@ -63,7 +63,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the platformType property value. Platform type that the policy applies to
+     * Gets the platformType property value. Supported platform types for policies.
      * @return a policyPlatformType
      */
     @javax.annotation.Nullable
@@ -87,7 +87,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
         return this._settingStates;
     }
     /**
-     * Gets the state property value. The compliance state of the policy
+     * Gets the state property value. The state property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -126,7 +126,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the platformType property value. Platform type that the policy applies to
+     * Sets the platformType property value. Supported platform types for policies.
      * @param value Value to set for the platformType property.
      * @return a void
      */
@@ -150,7 +150,7 @@ public class DeviceConfigurationState extends Entity implements Parsable {
         this._settingStates = value;
     }
     /**
-     * Sets the state property value. The compliance state of the policy
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

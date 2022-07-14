@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Address to the proxy server. Specify an address in the format <server>[':'<port>] */
+    /** Address to the proxy server. Specify an address in the format [':'] */
     private String _address;
     /** Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node. */
     private java.util.List<String> _exceptions;
@@ -44,7 +44,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
         return this._additionalData;
     }
     /**
-     * Gets the address property value. Address to the proxy server. Specify an address in the format <server>[':'<port>]
+     * Gets the address property value. Address to the proxy server. Specify an address in the format [':']
      * @return a string
      */
     @javax.annotation.Nullable
@@ -101,7 +101,7 @@ public class Windows10NetworkProxyServer implements AdditionalDataHolder, Parsab
         this._additionalData = value;
     }
     /**
-     * Sets the address property value. Address to the proxy server. Specify an address in the format <server>[':'<port>]
+     * Sets the address property value. Address to the proxy server. Specify an address in the format [':']
      * @param value Value to set for the address property.
      * @return a void
      */

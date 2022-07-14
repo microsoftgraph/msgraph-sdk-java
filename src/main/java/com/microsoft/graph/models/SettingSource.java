@@ -15,7 +15,7 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** Not yet documented */
     private String _id;
-    /** Not yet documented. Possible values are: deviceConfiguration, deviceIntent. */
+    /** The sourceType property */
     private SettingSourceType _sourceType;
     /**
      * Instantiates a new settingSource and sets the default values.
@@ -72,7 +72,7 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
         return this._id;
     }
     /**
-     * Gets the sourceType property value. Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+     * Gets the sourceType property value. The sourceType property
      * @return a settingSourceType
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class SettingSource implements AdditionalDataHolder, Parsable {
         this._id = value;
     }
     /**
-     * Sets the sourceType property value. Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+     * Sets the sourceType property value. The sourceType property
      * @param value Value to set for the sourceType property.
      * @return a void
      */

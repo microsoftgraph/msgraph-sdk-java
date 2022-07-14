@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityContainer singleton. */
 public class IdentityApiConnector extends Entity implements Parsable {
     /** The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported. */
     private ApiAuthenticationConfigurationBase _authenticationConfiguration;
@@ -16,7 +15,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     /** The URL of the API endpoint to call. */
     private String _targetUrl;
     /**
-     * Instantiates a new identityApiConnector and sets the default values.
+     * Instantiates a new IdentityApiConnector and sets the default values.
      * @return a void
      */
     public IdentityApiConnector() {
@@ -25,7 +24,7 @@ public class IdentityApiConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityApiConnector
+     * @return a IdentityApiConnector
      */
     @javax.annotation.Nonnull
     public static IdentityApiConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class PlannerBucketTaskBoardTaskFormat extends Entity implements Parsable {
     /** Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here. */
     private String _orderHint;

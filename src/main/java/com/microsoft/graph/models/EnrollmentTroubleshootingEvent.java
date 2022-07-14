@@ -10,9 +10,9 @@ import java.util.Objects;
 public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable {
     /** Azure AD device identifier. */
     private String _deviceId;
-    /** Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile. */
+    /** Possible ways of adding a mobile device to management. */
     private DeviceEnrollmentType _enrollmentType;
-    /** Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected, userAbandonment. */
+    /** Top level failure categories for enrollment. */
     private DeviceEnrollmentFailureReason _failureCategory;
     /** Detailed failure reason. */
     private String _failureReason;
@@ -50,7 +50,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
         return this._deviceId;
     }
     /**
-     * Gets the enrollmentType property value. Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
+     * Gets the enrollmentType property value. Possible ways of adding a mobile device to management.
      * @return a deviceEnrollmentType
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
         return this._enrollmentType;
     }
     /**
-     * Gets the failureCategory property value. Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected, userAbandonment.
+     * Gets the failureCategory property value. Top level failure categories for enrollment.
      * @return a deviceEnrollmentFailureReason
      */
     @javax.annotation.Nullable
@@ -149,7 +149,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
         this._deviceId = value;
     }
     /**
-     * Sets the enrollmentType property value. Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount, azureAdJoinUsingAzureVmExtension, androidEnterpriseDedicatedDevice, androidEnterpriseFullyManaged, androidEnterpriseCorporateWorkProfile.
+     * Sets the enrollmentType property value. Possible ways of adding a mobile device to management.
      * @param value Value to set for the enrollmentType property.
      * @return a void
      */
@@ -157,7 +157,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
         this._enrollmentType = value;
     }
     /**
-     * Sets the failureCategory property value. Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected, userAbandonment.
+     * Sets the failureCategory property value. Top level failure categories for enrollment.
      * @param value Value to set for the failureCategory property.
      * @return a void
      */

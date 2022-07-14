@@ -52,7 +52,7 @@ public class PolicyRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The policy for the assignment.
+     * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class PolicyRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The policy for the assignment.
+     * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class PolicyRequestBuilder {
         return requestInfo;
     }
     /**
-     * The policy for the assignment.
+     * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @return a CompletableFuture of unifiedRoleManagementPolicy
      */
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> get() {
@@ -98,7 +98,7 @@ public class PolicyRequestBuilder {
         }
     }
     /**
-     * The policy for the assignment.
+     * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of unifiedRoleManagementPolicy
      */
@@ -115,7 +115,7 @@ public class PolicyRequestBuilder {
         }
     }
     /**
-     * The policy for the assignment.
+     * The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of unifiedRoleManagementPolicy
@@ -132,7 +132,7 @@ public class PolicyRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The policy for the assignment. */
+    /** The policy that's associated with a policy assignment. Supports $expand and a nested $expand of the rules and effectiveRules relationships for the policy. */
     public class PolicyRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

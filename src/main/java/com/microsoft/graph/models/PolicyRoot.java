@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the policyRoot singleton. */
 public class PolicyRoot extends Entity implements Parsable {
     /** The policy that controls the idle time out for web sessions for applications. */
     private java.util.List<ActivityBasedTimeoutPolicy> _activityBasedTimeoutPolicies;
@@ -23,6 +22,8 @@ public class PolicyRoot extends Entity implements Parsable {
     private java.util.List<ClaimsMappingPolicy> _claimsMappingPolicies;
     /** The custom rules that define an access scenario. */
     private java.util.List<ConditionalAccessPolicy> _conditionalAccessPolicies;
+    /** The custom rules that define an access scenario when interacting with external Azure AD tenants. */
+    private CrossTenantAccessPolicy _crossTenantAccessPolicy;
     /** The feature rollout policy associated with a directory object. */
     private java.util.List<FeatureRolloutPolicy> _featureRolloutPolicies;
     /** The policy to control Azure AD authentication behavior for federated users. */
@@ -40,7 +41,7 @@ public class PolicyRoot extends Entity implements Parsable {
     /** The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD. */
     private java.util.List<TokenLifetimePolicy> _tokenLifetimePolicies;
     /**
-     * Instantiates a new policyRoot and sets the default values.
+     * Instantiates a new PolicyRoot and sets the default values.
      * @return a void
      */
     public PolicyRoot() {
@@ -49,7 +50,7 @@ public class PolicyRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policyRoot
+     * @return a PolicyRoot
      */
     @javax.annotation.Nonnull
     public static PolicyRoot createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -113,6 +114,14 @@ public class PolicyRoot extends Entity implements Parsable {
         return this._conditionalAccessPolicies;
     }
     /**
+     * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * @return a crossTenantAccessPolicy
+     */
+    @javax.annotation.Nullable
+    public CrossTenantAccessPolicy getCrossTenantAccessPolicy() {
+        return this._crossTenantAccessPolicy;
+    }
+    /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
      * @return a featureRolloutPolicy
      */
@@ -135,6 +144,7 @@ public class PolicyRoot extends Entity implements Parsable {
             this.put("authorizationPolicy", (n) -> { currentObject.setAuthorizationPolicy(n.getObjectValue(AuthorizationPolicy::createFromDiscriminatorValue)); });
             this.put("claimsMappingPolicies", (n) -> { currentObject.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
             this.put("conditionalAccessPolicies", (n) -> { currentObject.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
+            this.put("crossTenantAccessPolicy", (n) -> { currentObject.setCrossTenantAccessPolicy(n.getObjectValue(CrossTenantAccessPolicy::createFromDiscriminatorValue)); });
             this.put("featureRolloutPolicies", (n) -> { currentObject.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
             this.put("homeRealmDiscoveryPolicies", (n) -> { currentObject.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
             this.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { currentObject.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
@@ -216,6 +226,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeObjectValue("authorizationPolicy", this.getAuthorizationPolicy());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
         writer.writeCollectionOfObjectValues("conditionalAccessPolicies", this.getConditionalAccessPolicies());
+        writer.writeObjectValue("crossTenantAccessPolicy", this.getCrossTenantAccessPolicy());
         writer.writeCollectionOfObjectValues("featureRolloutPolicies", this.getFeatureRolloutPolicies());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeObjectValue("identitySecurityDefaultsEnforcementPolicy", this.getIdentitySecurityDefaultsEnforcementPolicy());
@@ -280,6 +291,14 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setConditionalAccessPolicies(@javax.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
         this._conditionalAccessPolicies = value;
+    }
+    /**
+     * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * @param value Value to set for the crossTenantAccessPolicy property.
+     * @return a void
+     */
+    public void setCrossTenantAccessPolicy(@javax.annotation.Nullable final CrossTenantAccessPolicy value) {
+        this._crossTenantAccessPolicy = value;
     }
     /**
      * Sets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.

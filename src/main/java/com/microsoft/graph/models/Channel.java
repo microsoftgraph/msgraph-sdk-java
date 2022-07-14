@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class Channel extends Entity implements Parsable {
     /** Read only. Timestamp at which the channel was created. */
     private OffsetDateTime _createdDateTime;
@@ -28,8 +28,12 @@ public class Channel extends Entity implements Parsable {
     private ChannelMembershipType _membershipType;
     /** A collection of all the messages in the channel. A navigation property. Nullable. */
     private java.util.List<ChatMessage> _messages;
+    /** A collection of teams with which a channel is shared. */
+    private java.util.List<SharedWithChannelTeamInfo> _sharedWithTeams;
     /** A collection of all the tabs in the channel. A navigation property. */
     private java.util.List<TeamsTab> _tabs;
+    /** The ID of the Azure Active Directory tenant. */
+    private String _tenantId;
     /** A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only. */
     private String _webUrl;
     /**
@@ -98,7 +102,9 @@ public class Channel extends Entity implements Parsable {
             this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
             this.put("membershipType", (n) -> { currentObject.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
             this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
+            this.put("sharedWithTeams", (n) -> { currentObject.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
             this.put("tabs", (n) -> { currentObject.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
+            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
             this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
         }};
     }
@@ -143,12 +149,28 @@ public class Channel extends Entity implements Parsable {
         return this._messages;
     }
     /**
+     * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
+     * @return a sharedWithChannelTeamInfo
+     */
+    @javax.annotation.Nullable
+    public java.util.List<SharedWithChannelTeamInfo> getSharedWithTeams() {
+        return this._sharedWithTeams;
+    }
+    /**
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @return a teamsTab
      */
     @javax.annotation.Nullable
     public java.util.List<TeamsTab> getTabs() {
         return this._tabs;
+    }
+    /**
+     * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getTenantId() {
+        return this._tenantId;
     }
     /**
      * Gets the webUrl property value. A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
@@ -175,7 +197,9 @@ public class Channel extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeEnumValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
+        writer.writeCollectionOfObjectValues("sharedWithTeams", this.getSharedWithTeams());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
+        writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
@@ -251,12 +275,28 @@ public class Channel extends Entity implements Parsable {
         this._messages = value;
     }
     /**
+     * Sets the sharedWithTeams property value. A collection of teams with which a channel is shared.
+     * @param value Value to set for the sharedWithTeams property.
+     * @return a void
+     */
+    public void setSharedWithTeams(@javax.annotation.Nullable final java.util.List<SharedWithChannelTeamInfo> value) {
+        this._sharedWithTeams = value;
+    }
+    /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @param value Value to set for the tabs property.
      * @return a void
      */
     public void setTabs(@javax.annotation.Nullable final java.util.List<TeamsTab> value) {
         this._tabs = value;
+    }
+    /**
+     * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
+     * @param value Value to set for the tenantId property.
+     * @return a void
+     */
+    public void setTenantId(@javax.annotation.Nullable final String value) {
+        this._tenantId = value;
     }
     /**
      * Sets the webUrl property value. A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.

@@ -11,9 +11,9 @@ import java.util.Objects;
 public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Movies rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults. */
+    /** Movies rating labels in Germany */
     private RatingGermanyMoviesType _movieRating;
-    /** TV rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults. */
+    /** TV content rating labels in Germany */
     private RatingGermanyTelevisionType _tvRating;
     /**
      * Instantiates a new mediaContentRatingGermany and sets the default values.
@@ -53,7 +53,7 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the movieRating property value. Movies rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * Gets the movieRating property value. Movies rating labels in Germany
      * @return a ratingGermanyMoviesType
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
         return this._movieRating;
     }
     /**
-     * Gets the tvRating property value. TV rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * Gets the tvRating property value. TV content rating labels in Germany
      * @return a ratingGermanyTelevisionType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the movieRating property value. Movies rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * Sets the movieRating property value. Movies rating labels in Germany
      * @param value Value to set for the movieRating property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class MediaContentRatingGermany implements AdditionalDataHolder, Parsable
         this._movieRating = value;
     }
     /**
-     * Sets the tvRating property value. TV rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
+     * Sets the tvRating property value. TV content rating labels in Germany
      * @param value Value to set for the tvRating property.
      * @return a void
      */

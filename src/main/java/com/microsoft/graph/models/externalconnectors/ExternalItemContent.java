@@ -11,7 +11,7 @@ import java.util.Objects;
 public class ExternalItemContent implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The type of content in the value property. Possible values are text and html. These are the content types that the indexer supports, and not the file extension types allowed. Required. */
+    /** The type property */
     private ExternalItemContentType _type;
     /** The content for the externalItem. Required. */
     private String _value;
@@ -53,7 +53,7 @@ public class ExternalItemContent implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the type property value. The type of content in the value property. Possible values are text and html. These are the content types that the indexer supports, and not the file extension types allowed. Required.
+     * Gets the type property value. The type property
      * @return a externalItemContentType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class ExternalItemContent implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the type property value. The type of content in the value property. Possible values are text and html. These are the content types that the indexer supports, and not the file extension types allowed. Required.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

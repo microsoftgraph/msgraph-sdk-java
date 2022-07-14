@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
-import microsoft.graph.models.ReferenceUpdateSchema;
+import microsoft.graph.models.ReferenceUpdate;
 /** Provides operations to manage the collection of educationRoot entities. */
 public class RefRequestBuilder {
     /** Path parameters for the request */
@@ -113,7 +113,7 @@ public class RefRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPutRequestInformation(@javax.annotation.Nonnull final ReferenceUpdateSchema body) throws URISyntaxException {
+    public RequestInformation createPutRequestInformation(@javax.annotation.Nonnull final ReferenceUpdate body) throws URISyntaxException {
         return createPutRequestInformation(body, null);
     }
     /**
@@ -123,7 +123,7 @@ public class RefRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPutRequestInformation(@javax.annotation.Nonnull final ReferenceUpdateSchema body, @javax.annotation.Nullable final java.util.function.Consumer<RefRequestBuilderPutRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation createPutRequestInformation(@javax.annotation.Nonnull final ReferenceUpdate body, @javax.annotation.Nullable final java.util.function.Consumer<RefRequestBuilderPutRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation() {{
             httpMethod = HttpMethod.PUT;
@@ -246,7 +246,7 @@ public class RefRequestBuilder {
      * @param body 
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdateSchema body) {
+    public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdate body) {
         try {
             final RequestInformation requestInfo = createPutRequestInformation(body, null);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
@@ -264,7 +264,7 @@ public class RefRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdateSchema body, @javax.annotation.Nullable final java.util.function.Consumer<RefRequestBuilderPutRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdate body, @javax.annotation.Nullable final java.util.function.Consumer<RefRequestBuilderPutRequestConfiguration> requestConfiguration) {
         try {
             final RequestInformation requestInfo = createPutRequestInformation(body, requestConfiguration);
             final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
@@ -283,7 +283,7 @@ public class RefRequestBuilder {
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of void
      */
-    public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdateSchema body, @javax.annotation.Nullable final java.util.function.Consumer<RefRequestBuilderPutRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    public java.util.concurrent.CompletableFuture<Void> put(@javax.annotation.Nonnull final ReferenceUpdate body, @javax.annotation.Nullable final java.util.function.Consumer<RefRequestBuilderPutRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);
         try {
             final RequestInformation requestInfo = createPutRequestInformation(body, requestConfiguration);

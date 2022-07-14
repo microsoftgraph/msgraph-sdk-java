@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the educationRoot singleton. */
 public class EducationRubric extends Entity implements Parsable {
     /** The user who created this resource. */
     private IdentitySet _createdBy;

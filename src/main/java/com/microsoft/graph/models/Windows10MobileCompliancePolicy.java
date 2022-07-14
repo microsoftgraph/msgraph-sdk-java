@@ -32,7 +32,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
     private Integer _passwordPreviousPasswordBlockCount;
     /** Require a password to unlock Windows Phone device. */
     private Boolean _passwordRequired;
-    /** The required password type. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /** Require a password to unlock an idle device. */
     private Boolean _passwordRequireToUnlockFromIdle;
@@ -180,7 +180,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
         return this._passwordRequired;
     }
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -333,7 +333,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
         this._passwordRequired = value;
     }
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */

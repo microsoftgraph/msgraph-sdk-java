@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implements Parsable {
-    /** Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault. */
+    /** Possible values for automatic update mode. */
     private AutomaticUpdateMode _automaticUpdateMode;
-    /** Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease. */
+    /** Which branch devices will receive their updates from */
     private WindowsUpdateType _businessReadyUpdatesOnly;
-    /** Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode. */
+    /** Delivery optimization mode for peer distribution */
     private WindowsDeliveryOptimizationMode _deliveryOptimizationMode;
     /** Exclude Windows update Drivers */
     private Boolean _driversExcluded;
@@ -27,7 +27,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     private WindowsUpdateInstallScheduleType _installationSchedule;
     /** Allow Microsoft Update Service */
     private Boolean _microsoftUpdateServiceAllowed;
-    /** The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed. */
+    /** Possible values for pre-release features. */
     private PrereleaseFeatures _prereleaseFeatures;
     /** Defer Quality Updates by these many days */
     private Integer _qualityUpdatesDeferralPeriodInDays;
@@ -53,7 +53,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return new WindowsUpdateForBusinessConfiguration();
     }
     /**
-     * Gets the automaticUpdateMode property value. Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+     * Gets the automaticUpdateMode property value. Possible values for automatic update mode.
      * @return a automaticUpdateMode
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._automaticUpdateMode;
     }
     /**
-     * Gets the businessReadyUpdatesOnly property value. Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * Gets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
      * @return a windowsUpdateType
      */
     @javax.annotation.Nullable
@@ -69,7 +69,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._businessReadyUpdatesOnly;
     }
     /**
-     * Gets the deliveryOptimizationMode property value. Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @return a windowsDeliveryOptimizationMode
      */
     @javax.annotation.Nullable
@@ -148,7 +148,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         return this._microsoftUpdateServiceAllowed;
     }
     /**
-     * Gets the prereleaseFeatures property value. The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     * Gets the prereleaseFeatures property value. Possible values for pre-release features.
      * @return a prereleaseFeatures
      */
     @javax.annotation.Nullable
@@ -202,7 +202,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         writer.writeOffsetDateTimeValue("qualityUpdatesPauseExpiryDateTime", this.getQualityUpdatesPauseExpiryDateTime());
     }
     /**
-     * Sets the automaticUpdateMode property value. Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl, windowsDefault.
+     * Sets the automaticUpdateMode property value. Possible values for automatic update mode.
      * @param value Value to set for the automaticUpdateMode property.
      * @return a void
      */
@@ -210,7 +210,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._automaticUpdateMode = value;
     }
     /**
-     * Sets the businessReadyUpdatesOnly property value. Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * Sets the businessReadyUpdatesOnly property value. Which branch devices will receive their updates from
      * @param value Value to set for the businessReadyUpdatesOnly property.
      * @return a void
      */
@@ -218,7 +218,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._businessReadyUpdatesOnly = value;
     }
     /**
-     * Sets the deliveryOptimizationMode property value. Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Sets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
      * @param value Value to set for the deliveryOptimizationMode property.
      * @return a void
      */
@@ -274,7 +274,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
         this._microsoftUpdateServiceAllowed = value;
     }
     /**
-     * Sets the prereleaseFeatures property value. The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     * Sets the prereleaseFeatures property value. Possible values for pre-release features.
      * @param value Value to set for the prereleaseFeatures property.
      * @return a void
      */

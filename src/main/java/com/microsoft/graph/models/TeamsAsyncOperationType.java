@@ -3,14 +3,16 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public enum TeamsAsyncOperationType implements ValuedEnum {
     Invalid("invalid"),
     CloneTeam("cloneTeam"),
     ArchiveTeam("archiveTeam"),
     UnarchiveTeam("unarchiveTeam"),
     CreateTeam("createTeam"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    TeamifyGroup("teamifyGroup"),
+    CreateChannel("createChannel");
     public final String value;
     TeamsAsyncOperationType(final String value) {
         this.value = value;
@@ -27,6 +29,8 @@ public enum TeamsAsyncOperationType implements ValuedEnum {
             case "unarchiveTeam": return UnarchiveTeam;
             case "createTeam": return CreateTeam;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "teamifyGroup": return TeamifyGroup;
+            case "createChannel": return CreateChannel;
             default: return null;
         }
     }

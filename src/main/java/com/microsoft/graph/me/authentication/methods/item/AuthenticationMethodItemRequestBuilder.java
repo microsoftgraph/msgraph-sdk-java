@@ -14,6 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import microsoft.graph.me.authentication.methods.item.resetpassword.ResetPasswordRequestBuilder;
 import microsoft.graph.models.AuthenticationMethod;
 import microsoft.graph.models.odataerrors.ODataError;
 /** Provides operations to manage the methods property of the microsoft.graph.authentication entity. */
@@ -22,6 +23,11 @@ public class AuthenticationMethodItemRequestBuilder {
     private final HashMap<String, Object> pathParameters;
     /** The request adapter to use to execute the requests. */
     private final RequestAdapter requestAdapter;
+    /** The resetPassword property */
+    @javax.annotation.Nonnull
+    public ResetPasswordRequestBuilder resetPassword() {
+        return new ResetPasswordRequestBuilder(pathParameters, requestAdapter);
+    }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
     /**

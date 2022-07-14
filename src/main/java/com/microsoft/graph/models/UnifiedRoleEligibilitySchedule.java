@@ -7,9 +7,8 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
 public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements Parsable {
-    /** Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. */
+    /** Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq). */
     private String _memberType;
     /** The schedule object of the eligible role assignment request. */
     private RequestSchedule _scheduleInfo;
@@ -43,7 +42,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
         }};
     }
     /**
-     * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+     * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -70,7 +69,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
         writer.writeObjectValue("scheduleInfo", this.getScheduleInfo());
     }
     /**
-     * Sets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group.
+     * Sets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
      * @param value Value to set for the memberType property.
      * @return a void
      */

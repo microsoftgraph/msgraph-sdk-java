@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class ChatMessage extends Entity implements Parsable {
     /** References to attached objects like files, tabs, meetings etc. */
     private java.util.List<ChatMessageAttachment> _attachments;
@@ -30,7 +30,7 @@ public class ChatMessage extends Entity implements Parsable {
     private ChatMessageFromIdentitySet _from;
     /** Content in a message hosted by Microsoft Teams - for example, images or code snippets. */
     private java.util.List<ChatMessageHostedContent> _hostedContents;
-    /** The importance of the chat message. The possible values are: normal, high, urgent. */
+    /** The importance property */
     private ChatMessageImportance _importance;
     /** Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null. */
     private OffsetDateTime _lastEditedDateTime;
@@ -40,7 +40,7 @@ public class ChatMessage extends Entity implements Parsable {
     private String _locale;
     /** List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag. */
     private java.util.List<ChatMessageMention> _mentions;
-    /** The type of chat message. The possible values are: message, chatEvent, typing, unknownFutureValue, systemEventMessage. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: systemEventMessage. */
+    /** The messageType property */
     private ChatMessageType _messageType;
     /** Defines the properties of a policy violation set by a data loss prevention (DLP) application. */
     private ChatMessagePolicyViolation _policyViolation;
@@ -187,7 +187,7 @@ public class ChatMessage extends Entity implements Parsable {
         return this._hostedContents;
     }
     /**
-     * Gets the importance property value. The importance of the chat message. The possible values are: normal, high, urgent.
+     * Gets the importance property value. The importance property
      * @return a chatMessageImportance
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class ChatMessage extends Entity implements Parsable {
         return this._mentions;
     }
     /**
-     * Gets the messageType property value. The type of chat message. The possible values are: message, chatEvent, typing, unknownFutureValue, systemEventMessage. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: systemEventMessage.
+     * Gets the messageType property value. The messageType property
      * @return a chatMessageType
      */
     @javax.annotation.Nullable
@@ -403,7 +403,7 @@ public class ChatMessage extends Entity implements Parsable {
         this._hostedContents = value;
     }
     /**
-     * Sets the importance property value. The importance of the chat message. The possible values are: normal, high, urgent.
+     * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      * @return a void
      */
@@ -443,7 +443,7 @@ public class ChatMessage extends Entity implements Parsable {
         this._mentions = value;
     }
     /**
-     * Sets the messageType property value. The type of chat message. The possible values are: message, chatEvent, typing, unknownFutureValue, systemEventMessage. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: systemEventMessage.
+     * Sets the messageType property value. The messageType property
      * @param value Value to set for the messageType property.
      * @return a void
      */

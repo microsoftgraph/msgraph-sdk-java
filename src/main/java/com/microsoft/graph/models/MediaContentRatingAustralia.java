@@ -11,9 +11,9 @@ import java.util.Objects;
 public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Movies rating selected for Australia. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove15, agesAbove18. */
+    /** Movies rating labels in Australia */
     private RatingAustraliaMoviesType _movieRating;
-    /** TV rating selected for Australia. Possible values are: allAllowed, allBlocked, preschoolers, children, general, parentalGuidance, mature, agesAbove15, agesAbove15AdultViolence. */
+    /** TV content rating labels in Australia */
     private RatingAustraliaTelevisionType _tvRating;
     /**
      * Instantiates a new mediaContentRatingAustralia and sets the default values.
@@ -53,7 +53,7 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
         }};
     }
     /**
-     * Gets the movieRating property value. Movies rating selected for Australia. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove15, agesAbove18.
+     * Gets the movieRating property value. Movies rating labels in Australia
      * @return a ratingAustraliaMoviesType
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
         return this._movieRating;
     }
     /**
-     * Gets the tvRating property value. TV rating selected for Australia. Possible values are: allAllowed, allBlocked, preschoolers, children, general, parentalGuidance, mature, agesAbove15, agesAbove15AdultViolence.
+     * Gets the tvRating property value. TV content rating labels in Australia
      * @return a ratingAustraliaTelevisionType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
         this._additionalData = value;
     }
     /**
-     * Sets the movieRating property value. Movies rating selected for Australia. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove15, agesAbove18.
+     * Sets the movieRating property value. Movies rating labels in Australia
      * @param value Value to set for the movieRating property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class MediaContentRatingAustralia implements AdditionalDataHolder, Parsab
         this._movieRating = value;
     }
     /**
-     * Sets the tvRating property value. TV rating selected for Australia. Possible values are: allAllowed, allBlocked, preschoolers, children, general, parentalGuidance, mature, agesAbove15, agesAbove15AdultViolence.
+     * Sets the tvRating property value. TV content rating labels in Australia
      * @param value Value to set for the tvRating property.
      * @return a void
      */

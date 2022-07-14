@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the policyRoot singleton. */
+/** Provides operations to manage the admin singleton. */
 public class FeatureRolloutPolicy extends Entity implements Parsable {
     /** Nullable. Specifies a list of directoryObjects that feature is enabled for. */
     private java.util.List<DirectoryObject> _appliesTo;
@@ -15,7 +15,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
     private String _description;
     /** The display name for this  feature rollout policy. */
     private String _displayName;
-    /** Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue. */
+    /** The feature property */
     private StagedFeatureName _feature;
     /** Indicates whether this feature rollout policy should be applied to the entire organization. */
     private Boolean _isAppliedToOrganization;
@@ -63,7 +63,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
         return this._displayName;
     }
     /**
-     * Gets the feature property value. Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
+     * Gets the feature property value. The feature property
      * @return a stagedFeatureName
      */
     @javax.annotation.Nullable
@@ -142,7 +142,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
         this._displayName = value;
     }
     /**
-     * Sets the feature property value. Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
+     * Sets the feature property value. The feature property
      * @param value Value to set for the feature property.
      * @return a void
      */

@@ -16,7 +16,7 @@ public class DeviceInstallState extends Entity implements Parsable {
     private String _deviceName;
     /** The error code for install failures. */
     private String _errorCode;
-    /** The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown. */
+    /** Possible values for install state. */
     private InstallState _installState;
     /** Last sync date and time. */
     private OffsetDateTime _lastSyncDateTime;
@@ -86,7 +86,7 @@ public class DeviceInstallState extends Entity implements Parsable {
         }};
     }
     /**
-     * Gets the installState property value. The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
+     * Gets the installState property value. Possible values for install state.
      * @return a installState
      */
     @javax.annotation.Nullable
@@ -167,7 +167,7 @@ public class DeviceInstallState extends Entity implements Parsable {
         this._errorCode = value;
     }
     /**
-     * Sets the installState property value. The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
+     * Sets the installState property value. Possible values for install state.
      * @param value Value to set for the installState property.
      * @return a void
      */

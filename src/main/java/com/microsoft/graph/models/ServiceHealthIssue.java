@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable {
-    /** The type of service health issue. Possible values are: advisory, incident, unknownFutureValue. */
+    /** The classification property */
     private ServiceHealthClassificationType _classification;
     /** The feature name of the service issue. */
     private String _feature;
@@ -18,13 +18,13 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
     private String _impactDescription;
     /** Indicates whether the issue is resolved. */
     private Boolean _isResolved;
-    /** Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue. */
+    /** The origin property */
     private ServiceHealthOrigin _origin;
     /** Collection of historical posts for the service issue. */
     private java.util.List<ServiceHealthIssuePost> _posts;
     /** Indicates the service affected by the issue. */
     private String _service;
-    /** The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values. */
+    /** The status property */
     private ServiceHealthStatus _status;
     /**
      * Instantiates a new ServiceHealthIssue and sets the default values.
@@ -44,7 +44,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
         return new ServiceHealthIssue();
     }
     /**
-     * Gets the classification property value. The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
+     * Gets the classification property value. The classification property
      * @return a serviceHealthClassificationType
      */
     @javax.annotation.Nullable
@@ -103,7 +103,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
         return this._isResolved;
     }
     /**
-     * Gets the origin property value. Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
+     * Gets the origin property value. The origin property
      * @return a serviceHealthOrigin
      */
     @javax.annotation.Nullable
@@ -127,7 +127,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
         return this._service;
     }
     /**
-     * Gets the status property value. The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
+     * Gets the status property value. The status property
      * @return a serviceHealthStatus
      */
     @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the classification property value. The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
+     * Sets the classification property value. The classification property
      * @param value Value to set for the classification property.
      * @return a void
      */
@@ -193,7 +193,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
         this._isResolved = value;
     }
     /**
-     * Sets the origin property value. Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
+     * Sets the origin property value. The origin property
      * @param value Value to set for the origin property.
      * @return a void
      */
@@ -217,7 +217,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsa
         this._service = value;
     }
     /**
-     * Sets the status property value. The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

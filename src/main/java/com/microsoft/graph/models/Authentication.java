@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class Authentication extends Entity implements Parsable {
     /** Represents the FIDO2 security keys registered to a user for authentication. */
     private java.util.List<Fido2AuthenticationMethod> _fido2Methods;
@@ -15,6 +14,10 @@ public class Authentication extends Entity implements Parsable {
     private java.util.List<AuthenticationMethod> _methods;
     /** The details of the Microsoft Authenticator app registered to a user for authentication. */
     private java.util.List<MicrosoftAuthenticatorAuthenticationMethod> _microsoftAuthenticatorMethods;
+    /** The operations property */
+    private java.util.List<LongRunningOperation> _operations;
+    /** Represents the details of the password authentication method registered to a user for authentication. */
+    private java.util.List<PasswordAuthenticationMethod> _passwordMethods;
     /** Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes. */
     private java.util.List<TemporaryAccessPassAuthenticationMethod> _temporaryAccessPassMethods;
     /** Represents the Windows Hello for Business authentication method registered to a user for authentication. */
@@ -55,6 +58,8 @@ public class Authentication extends Entity implements Parsable {
             this.put("fido2Methods", (n) -> { currentObject.setFido2Methods(n.getCollectionOfObjectValues(Fido2AuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("methods", (n) -> { currentObject.setMethods(n.getCollectionOfObjectValues(AuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("microsoftAuthenticatorMethods", (n) -> { currentObject.setMicrosoftAuthenticatorMethods(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue)); });
+            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(LongRunningOperation::createFromDiscriminatorValue)); });
+            this.put("passwordMethods", (n) -> { currentObject.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("temporaryAccessPassMethods", (n) -> { currentObject.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
             this.put("windowsHelloForBusinessMethods", (n) -> { currentObject.setWindowsHelloForBusinessMethods(n.getCollectionOfObjectValues(WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue)); });
         }};
@@ -74,6 +79,22 @@ public class Authentication extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<MicrosoftAuthenticatorAuthenticationMethod> getMicrosoftAuthenticatorMethods() {
         return this._microsoftAuthenticatorMethods;
+    }
+    /**
+     * Gets the operations property value. The operations property
+     * @return a longRunningOperation
+     */
+    @javax.annotation.Nullable
+    public java.util.List<LongRunningOperation> getOperations() {
+        return this._operations;
+    }
+    /**
+     * Gets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
+     * @return a passwordAuthenticationMethod
+     */
+    @javax.annotation.Nullable
+    public java.util.List<PasswordAuthenticationMethod> getPasswordMethods() {
+        return this._passwordMethods;
     }
     /**
      * Gets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
@@ -102,6 +123,8 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("fido2Methods", this.getFido2Methods());
         writer.writeCollectionOfObjectValues("methods", this.getMethods());
         writer.writeCollectionOfObjectValues("microsoftAuthenticatorMethods", this.getMicrosoftAuthenticatorMethods());
+        writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeCollectionOfObjectValues("passwordMethods", this.getPasswordMethods());
         writer.writeCollectionOfObjectValues("temporaryAccessPassMethods", this.getTemporaryAccessPassMethods());
         writer.writeCollectionOfObjectValues("windowsHelloForBusinessMethods", this.getWindowsHelloForBusinessMethods());
     }
@@ -128,6 +151,22 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setMicrosoftAuthenticatorMethods(@javax.annotation.Nullable final java.util.List<MicrosoftAuthenticatorAuthenticationMethod> value) {
         this._microsoftAuthenticatorMethods = value;
+    }
+    /**
+     * Sets the operations property value. The operations property
+     * @param value Value to set for the operations property.
+     * @return a void
+     */
+    public void setOperations(@javax.annotation.Nullable final java.util.List<LongRunningOperation> value) {
+        this._operations = value;
+    }
+    /**
+     * Sets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
+     * @param value Value to set for the passwordMethods property.
+     * @return a void
+     */
+    public void setPasswordMethods(@javax.annotation.Nullable final java.util.List<PasswordAuthenticationMethod> value) {
+        this._passwordMethods = value;
     }
     /**
      * Sets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.

@@ -11,9 +11,9 @@ import java.util.Objects;
 public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Movies rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove12, agesAbove15, agesAbove16, adults. */
+    /** Movies rating labels in Ireland */
     private RatingIrelandMoviesType _movieRating;
-    /** TV rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, children, youngAdults, parentalSupervision, mature. */
+    /** TV content rating labels in Ireland */
     private RatingIrelandTelevisionType _tvRating;
     /**
      * Instantiates a new mediaContentRatingIreland and sets the default values.
@@ -53,7 +53,7 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
         }};
     }
     /**
-     * Gets the movieRating property value. Movies rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove12, agesAbove15, agesAbove16, adults.
+     * Gets the movieRating property value. Movies rating labels in Ireland
      * @return a ratingIrelandMoviesType
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
         return this._movieRating;
     }
     /**
-     * Gets the tvRating property value. TV rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, children, youngAdults, parentalSupervision, mature.
+     * Gets the tvRating property value. TV content rating labels in Ireland
      * @return a ratingIrelandTelevisionType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
         this._additionalData = value;
     }
     /**
-     * Sets the movieRating property value. Movies rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove12, agesAbove15, agesAbove16, adults.
+     * Sets the movieRating property value. Movies rating labels in Ireland
      * @param value Value to set for the movieRating property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class MediaContentRatingIreland implements AdditionalDataHolder, Parsable
         this._movieRating = value;
     }
     /**
-     * Sets the tvRating property value. TV rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, children, youngAdults, parentalSupervision, mature.
+     * Sets the tvRating property value. TV content rating labels in Ireland
      * @param value Value to set for the tvRating property.
      * @return a void
      */

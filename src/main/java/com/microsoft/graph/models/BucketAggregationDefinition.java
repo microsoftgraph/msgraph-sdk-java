@@ -19,7 +19,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
     private String _prefixFilter;
     /** Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional. */
     private java.util.List<BucketAggregationRange> _ranges;
-    /** The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required. */
+    /** The sortBy property */
     private BucketAggregationSortProperty _sortBy;
     /**
      * Instantiates a new bucketAggregationDefinition and sets the default values.
@@ -94,7 +94,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         return this._ranges;
     }
     /**
-     * Gets the sortBy property value. The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
+     * Gets the sortBy property value. The sortBy property
      * @return a bucketAggregationSortProperty
      */
     @javax.annotation.Nullable
@@ -156,7 +156,7 @@ public class BucketAggregationDefinition implements AdditionalDataHolder, Parsab
         this._ranges = value;
     }
     /**
-     * Sets the sortBy property value. The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
+     * Sets the sortBy property value. The sortBy property
      * @param value Value to set for the sortBy property.
      * @return a void
      */

@@ -30,9 +30,9 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _browserBlockSingleWordEntryOnIntranetSites;
     /** The enterprise mode site list location. Could be a local file, local network or http location. */
     private String _browserEnterpriseModeSiteListLocation;
-    /** The internet security level. Possible values are: userDefined, medium, mediumHigh, high. */
+    /** Possible values for internet site security level. */
     private InternetSiteSecurityLevel _browserInternetSecurityLevel;
-    /** The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high. */
+    /** Possible values for site security level. */
     private SiteSecurityLevel _browserIntranetSecurityLevel;
     /** The logging report location. */
     private String _browserLoggingReportLocation;
@@ -44,7 +44,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _browserRequireHighSecurityForRestrictedSites;
     /** Indicates whether or not to require the user to use the smart screen filter. */
     private Boolean _browserRequireSmartScreen;
-    /** The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high. */
+    /** Possible values for site security level. */
     private SiteSecurityLevel _browserTrustedSitesSecurityLevel;
     /** Indicates whether or not to block data roaming. */
     private Boolean _cellularBlockDataRoaming;
@@ -62,7 +62,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     private Integer _passwordMinutesOfInactivityBeforeScreenTimeout;
     /** The number of previous passwords to prevent re-use of. Valid values 0 to 24 */
     private Integer _passwordPreviousPasswordBlockCount;
-    /** The required password type. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /** The number of sign in failures before factory reset. */
     private Integer _passwordSignInFailureCountBeforeFactoryReset;
@@ -70,7 +70,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _storageRequireDeviceEncryption;
     /** Indicates whether or not to require automatic updates. */
     private Boolean _updatesRequireAutomaticUpdates;
-    /** The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify. */
+    /** Possible values for Windows user account control settings. */
     private WindowsUserAccountControlSettings _userAccountControlSettings;
     /** The work folders url. */
     private String _workFoldersUrl;
@@ -180,7 +180,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         return this._browserEnterpriseModeSiteListLocation;
     }
     /**
-     * Gets the browserInternetSecurityLevel property value. The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
+     * Gets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      * @return a internetSiteSecurityLevel
      */
     @javax.annotation.Nullable
@@ -188,7 +188,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         return this._browserInternetSecurityLevel;
     }
     /**
-     * Gets the browserIntranetSecurityLevel property value. The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * Gets the browserIntranetSecurityLevel property value. Possible values for site security level.
      * @return a siteSecurityLevel
      */
     @javax.annotation.Nullable
@@ -236,7 +236,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         return this._browserRequireSmartScreen;
     }
     /**
-     * Gets the browserTrustedSitesSecurityLevel property value. The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * Gets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      * @return a siteSecurityLevel
      */
     @javax.annotation.Nullable
@@ -351,7 +351,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         return this._passwordPreviousPasswordBlockCount;
     }
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -383,7 +383,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         return this._updatesRequireAutomaticUpdates;
     }
     /**
-     * Gets the userAccountControlSettings property value. The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
+     * Gets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      * @return a windowsUserAccountControlSettings
      */
     @javax.annotation.Nullable
@@ -529,7 +529,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         this._browserEnterpriseModeSiteListLocation = value;
     }
     /**
-     * Sets the browserInternetSecurityLevel property value. The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
+     * Sets the browserInternetSecurityLevel property value. Possible values for internet site security level.
      * @param value Value to set for the browserInternetSecurityLevel property.
      * @return a void
      */
@@ -537,7 +537,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         this._browserInternetSecurityLevel = value;
     }
     /**
-     * Sets the browserIntranetSecurityLevel property value. The Intranet security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * Sets the browserIntranetSecurityLevel property value. Possible values for site security level.
      * @param value Value to set for the browserIntranetSecurityLevel property.
      * @return a void
      */
@@ -585,7 +585,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         this._browserRequireSmartScreen = value;
     }
     /**
-     * Sets the browserTrustedSitesSecurityLevel property value. The trusted sites security level. Possible values are: userDefined, low, mediumLow, medium, mediumHigh, high.
+     * Sets the browserTrustedSitesSecurityLevel property value. Possible values for site security level.
      * @param value Value to set for the browserTrustedSitesSecurityLevel property.
      * @return a void
      */
@@ -657,7 +657,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         this._passwordPreviousPasswordBlockCount = value;
     }
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
@@ -689,7 +689,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
         this._updatesRequireAutomaticUpdates = value;
     }
     /**
-     * Sets the userAccountControlSettings property value. The user account control settings. Possible values are: userDefined, alwaysNotify, notifyOnAppChanges, notifyOnAppChangesWithoutDimming, neverNotify.
+     * Sets the userAccountControlSettings property value. Possible values for Windows user account control settings.
      * @param value Value to set for the userAccountControlSettings property.
      * @return a void
      */

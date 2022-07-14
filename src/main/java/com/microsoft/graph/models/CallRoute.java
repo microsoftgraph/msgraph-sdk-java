@@ -15,7 +15,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
     private IdentitySet _final_escaped;
     /** The original property */
     private IdentitySet _original;
-    /** Possible values are: forwarded, lookup, selfFork. */
+    /** The routingType property */
     private RoutingType _routingType;
     /**
      * Instantiates a new callRoute and sets the default values.
@@ -72,7 +72,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
         return this._original;
     }
     /**
-     * Gets the routingType property value. Possible values are: forwarded, lookup, selfFork.
+     * Gets the routingType property value. The routingType property
      * @return a routingType
      */
     @javax.annotation.Nullable
@@ -116,7 +116,7 @@ public class CallRoute implements AdditionalDataHolder, Parsable {
         this._original = value;
     }
     /**
-     * Sets the routingType property value. Possible values are: forwarded, lookup, selfFork.
+     * Sets the routingType property value. The routingType property
      * @param value Value to set for the routingType property.
      * @return a void
      */

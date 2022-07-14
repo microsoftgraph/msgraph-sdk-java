@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class ShiftItem extends ScheduleEntity implements Parsable {
     /** An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required. */
     private java.util.List<ShiftActivity> _activities;
@@ -16,20 +15,28 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
     /** The shift notes for the shiftItem. */
     private String _notes;
     /**
-     * Instantiates a new shiftItem and sets the default values.
+     * Instantiates a new ShiftItem and sets the default values.
      * @return a void
      */
     public ShiftItem() {
         super();
+        this.setType("#microsoft.graph.shiftItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a shiftItem
+     * @return a ShiftItem
      */
     @javax.annotation.Nonnull
     public static ShiftItem createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.openShiftItem": return new OpenShiftItem();
+            }
+        }
         return new ShiftItem();
     }
     /**

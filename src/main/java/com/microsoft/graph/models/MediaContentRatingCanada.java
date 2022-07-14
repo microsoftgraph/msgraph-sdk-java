@@ -11,9 +11,9 @@ import java.util.Objects;
 public class MediaContentRatingCanada implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Movies rating selected for Canada. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove14, agesAbove18, restricted. */
+    /** Movies rating labels in Canada */
     private RatingCanadaMoviesType _movieRating;
-    /** TV rating selected for Canada. Possible values are: allAllowed, allBlocked, children, childrenAbove8, general, parentalGuidance, agesAbove14, agesAbove18. */
+    /** TV content rating labels in Canada */
     private RatingCanadaTelevisionType _tvRating;
     /**
      * Instantiates a new mediaContentRatingCanada and sets the default values.
@@ -53,7 +53,7 @@ public class MediaContentRatingCanada implements AdditionalDataHolder, Parsable 
         }};
     }
     /**
-     * Gets the movieRating property value. Movies rating selected for Canada. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove14, agesAbove18, restricted.
+     * Gets the movieRating property value. Movies rating labels in Canada
      * @return a ratingCanadaMoviesType
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class MediaContentRatingCanada implements AdditionalDataHolder, Parsable 
         return this._movieRating;
     }
     /**
-     * Gets the tvRating property value. TV rating selected for Canada. Possible values are: allAllowed, allBlocked, children, childrenAbove8, general, parentalGuidance, agesAbove14, agesAbove18.
+     * Gets the tvRating property value. TV content rating labels in Canada
      * @return a ratingCanadaTelevisionType
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class MediaContentRatingCanada implements AdditionalDataHolder, Parsable 
         this._additionalData = value;
     }
     /**
-     * Sets the movieRating property value. Movies rating selected for Canada. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove14, agesAbove18, restricted.
+     * Sets the movieRating property value. Movies rating labels in Canada
      * @param value Value to set for the movieRating property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class MediaContentRatingCanada implements AdditionalDataHolder, Parsable 
         this._movieRating = value;
     }
     /**
-     * Sets the tvRating property value. TV rating selected for Canada. Possible values are: allAllowed, allBlocked, children, childrenAbove8, general, parentalGuidance, agesAbove14, agesAbove18.
+     * Sets the tvRating property value. TV content rating labels in Canada
      * @param value Value to set for the tvRating property.
      * @return a void
      */

@@ -17,7 +17,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     private java.util.List<String> _details;
     /** True if the job was acknowledged by a printer; false otherwise. Read-only. */
     private Boolean _isAcquiredByPrinter;
-    /** The print job's current processing state. Valid values are described in the following table. Read-only. */
+    /** The state property */
     private PrintJobProcessingState _state;
     /**
      * Instantiates a new printJobStatus and sets the default values.
@@ -83,7 +83,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
         return this._isAcquiredByPrinter;
     }
     /**
-     * Gets the state property value. The print job's current processing state. Valid values are described in the following table. Read-only.
+     * Gets the state property value. The state property
      * @return a printJobProcessingState
      */
     @javax.annotation.Nullable
@@ -136,7 +136,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
         this._isAcquiredByPrinter = value;
     }
     /**
-     * Sets the state property value. The print job's current processing state. Valid values are described in the following table. Read-only.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

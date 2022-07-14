@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
-    /** Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked. */
+    /** Represents the level to which app data is encrypted for managed apps */
     private ManagedAppDataEncryptionType _appDataEncryptionType;
     /** List of apps to which the policy is deployed. */
     private java.util.List<ManagedMobileApp> _apps;
@@ -40,7 +40,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return new IosManagedAppProtection();
     }
     /**
-     * Gets the appDataEncryptionType property value. Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+     * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      * @return a managedAppDataEncryptionType
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         writer.writeStringValue("minimumRequiredSdkVersion", this.getMinimumRequiredSdkVersion());
     }
     /**
-     * Sets the appDataEncryptionType property value. Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+     * Sets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
      * @param value Value to set for the appDataEncryptionType property.
      * @return a void
      */

@@ -14,7 +14,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
     private String _displayName;
     /** Timestamp of the last request sent to Intune by the TEM partner. */
     private OffsetDateTime _lastConnectionDateTime;
-    /** A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded. */
+    /** The current TeamViewer connector status */
     private RemoteAssistanceOnboardingStatus _onboardingStatus;
     /** URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service. */
     private String _onboardingUrl;
@@ -66,7 +66,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
         return this._lastConnectionDateTime;
     }
     /**
-     * Gets the onboardingStatus property value. A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
+     * Gets the onboardingStatus property value. The current TeamViewer connector status
      * @return a remoteAssistanceOnboardingStatus
      */
     @javax.annotation.Nullable
@@ -111,7 +111,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
         this._lastConnectionDateTime = value;
     }
     /**
-     * Sets the onboardingStatus property value. A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
+     * Sets the onboardingStatus property value. The current TeamViewer connector status
      * @param value Value to set for the onboardingStatus property.
      * @return a void
      */

@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the informationProtection singleton. */
+/** Provides operations to manage the admin singleton. */
 public enum ThreatAssessmentStatus implements ValuedEnum {
     Pending("pending"),
     Completed("completed");

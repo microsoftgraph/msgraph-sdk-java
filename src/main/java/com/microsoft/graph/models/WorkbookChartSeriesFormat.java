@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     /** Represents the fill format of a chart series, which includes background formating information. Read-only. */
     private WorkbookChartFill _fill;

@@ -11,9 +11,9 @@ import java.util.Objects;
 public class KeyValuePair implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Name for this key-value pair */
+    /** Name for this key-value pair. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult. */
     private String _name;
-    /** Value for this key-value pair */
+    /** Value for this key-value pair. Possible result values are 0 (when the validation check passed), 1 (when the validation check failed), or 2 (when the validation check is a warning). */
     private String _value;
     /**
      * Instantiates a new keyValuePair and sets the default values.
@@ -53,7 +53,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the name property value. Name for this key-value pair
+     * Gets the name property value. Name for this key-value pair. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         return this._name;
     }
     /**
-     * Gets the value property value. Value for this key-value pair
+     * Gets the value property value. Value for this key-value pair. Possible result values are 0 (when the validation check passed), 1 (when the validation check failed), or 2 (when the validation check is a warning).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the name property value. Name for this key-value pair
+     * Sets the name property value. Name for this key-value pair. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult.
      * @param value Value to set for the name property.
      * @return a void
      */
@@ -96,7 +96,7 @@ public class KeyValuePair implements AdditionalDataHolder, Parsable {
         this._name = value;
     }
     /**
-     * Sets the value property value. Value for this key-value pair
+     * Sets the value property value. Value for this key-value pair. Possible result values are 0 (when the validation check passed), 1 (when the validation check failed), or 2 (when the validation check is a warning).
      * @param value Value to set for the value property.
      * @return a void
      */

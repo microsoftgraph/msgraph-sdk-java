@@ -19,6 +19,7 @@ public class ManagedAppStatus extends Entity implements Parsable {
      */
     public ManagedAppStatus() {
         super();
+        this.setType("#microsoft.graph.managedAppStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

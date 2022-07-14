@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
+/** Provides operations to manage the admin singleton. */
 public class AccessReviewInstanceDecisionItem extends Entity implements Parsable {
     /** The identifier of the accessReviewInstance parent. Supports $select. Read-only. */
     private String _accessReviewId;

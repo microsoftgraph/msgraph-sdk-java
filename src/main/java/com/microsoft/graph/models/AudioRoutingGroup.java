@@ -11,7 +11,7 @@ import java.util.Objects;
 public class AudioRoutingGroup extends Entity implements Parsable {
     /** List of receiving participant ids. */
     private java.util.List<String> _receivers;
-    /** Routing group mode.  Possible values are: oneToOne, multicast. */
+    /** The routingMode property */
     private RoutingMode _routingMode;
     /** List of source participant ids. */
     private java.util.List<String> _sources;
@@ -54,7 +54,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         return this._receivers;
     }
     /**
-     * Gets the routingMode property value. Routing group mode.  Possible values are: oneToOne, multicast.
+     * Gets the routingMode property value. The routingMode property
      * @return a routingMode
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
         this._receivers = value;
     }
     /**
-     * Sets the routingMode property value. Routing group mode.  Possible values are: oneToOne, multicast.
+     * Sets the routingMode property value. The routingMode property
      * @param value Value to set for the routingMode property.
      * @return a void
      */

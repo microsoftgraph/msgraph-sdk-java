@@ -1,0 +1,67 @@
+package microsoft.graph.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.function.Consumer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+public class AadUserConversationMemberResult extends ActionResultPart implements Parsable {
+    /** The user object ID of the Azure AD user that was being added as part of the bulk operation. */
+    private String _userId;
+    /**
+     * Instantiates a new AadUserConversationMemberResult and sets the default values.
+     * @return a void
+     */
+    public AadUserConversationMemberResult() {
+        super();
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a AadUserConversationMemberResult
+     */
+    @javax.annotation.Nonnull
+    public static AadUserConversationMemberResult createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new AadUserConversationMemberResult();
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a Map<String, Consumer<ParseNode>>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
+        final AadUserConversationMemberResult currentObject = this;
+        return new HashMap<>(super.getFieldDeserializers()) {{
+            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        }};
+    }
+    /**
+     * Gets the userId property value. The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getUserId() {
+        return this._userId;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     * @return a void
+     */
+    public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeStringValue("userId", this.getUserId());
+    }
+    /**
+     * Sets the userId property value. The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * @param value Value to set for the userId property.
+     * @return a void
+     */
+    public void setUserId(@javax.annotation.Nullable final String value) {
+        this._userId = value;
+    }
+}

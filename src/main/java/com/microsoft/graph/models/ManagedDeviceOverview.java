@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Summary data for managed devices */
 public class ManagedDeviceOverview extends Entity implements Parsable {
     /** Distribution of Exchange Access State in Intune */
     private DeviceExchangeAccessStateSummary _deviceExchangeAccessStateSummary;

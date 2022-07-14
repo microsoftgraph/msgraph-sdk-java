@@ -16,11 +16,18 @@ import java.util.Map;
 import java.util.Objects;
 import microsoft.graph.models.odataerrors.ODataError;
 import microsoft.graph.models.UserTeamwork;
+import microsoft.graph.users.item.teamwork.associatedteams.AssociatedTeamsRequestBuilder;
+import microsoft.graph.users.item.teamwork.associatedteams.item.AssociatedTeamInfoItemRequestBuilder;
 import microsoft.graph.users.item.teamwork.installedapps.InstalledAppsRequestBuilder;
 import microsoft.graph.users.item.teamwork.installedapps.item.UserScopeTeamsAppInstallationItemRequestBuilder;
 import microsoft.graph.users.item.teamwork.sendactivitynotification.SendActivityNotificationRequestBuilder;
 /** Provides operations to manage the teamwork property of the microsoft.graph.user entity. */
 public class TeamworkRequestBuilder {
+    /** The associatedTeams property */
+    @javax.annotation.Nonnull
+    public AssociatedTeamsRequestBuilder associatedTeams() {
+        return new AssociatedTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
     /** The installedApps property */
     @javax.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
@@ -37,6 +44,18 @@ public class TeamworkRequestBuilder {
     }
     /** Url template to use to build the URL for the current request builder */
     private final String urlTemplate;
+    /**
+     * Gets an item from the Microsoft.Graph.users.item.teamwork.associatedTeams.item collection
+     * @param id Unique identifier of the item
+     * @return a associatedTeamInfoItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public AssociatedTeamInfoItemRequestBuilder associatedTeams(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("associatedTeamInfo%2Did", id);
+        return new AssociatedTeamInfoItemRequestBuilder(urlTplParams, requestAdapter);
+    }
     /**
      * Instantiates a new TeamworkRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request

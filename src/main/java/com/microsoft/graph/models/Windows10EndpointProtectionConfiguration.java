@@ -18,9 +18,9 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private Boolean _applicationGuardAllowPrintToPDF;
     /** Allow printing to XPS from Container */
     private Boolean _applicationGuardAllowPrintToXPS;
-    /** Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone. */
+    /** Possible values for applicationGuardBlockClipboardSharingType */
     private ApplicationGuardBlockClipboardSharingType _applicationGuardBlockClipboardSharing;
-    /** Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile. */
+    /** Possible values for applicationGuardBlockFileTransfer */
     private ApplicationGuardBlockFileTransferType _applicationGuardBlockFileTransfer;
     /** Block enterprise sites to load non-enterprise content, such as third party plug-ins */
     private Boolean _applicationGuardBlockNonEnterpriseContent;
@@ -28,7 +28,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private Boolean _applicationGuardEnabled;
     /** Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.) */
     private Boolean _applicationGuardForceAuditing;
-    /** Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker. */
+    /** Possible values of AppLocker Application Control Types */
     private AppLockerApplicationControlType _appLockerApplicationControl;
     /** Allows the Admin to disable the warning prompt for other disk encryption on the user machines. */
     private Boolean _bitLockerDisableWarningForOtherDiskEncryption;
@@ -52,7 +52,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private Boolean _defenderSecurityCenterBlockExploitProtectionOverride;
     /** Blocks stateful FTP connections to the device */
     private Boolean _firewallBlockStatefulFTP;
-    /** Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require. */
+    /** Possible values for firewallCertificateRevocationListCheckMethod */
     private FirewallCertificateRevocationListCheckMethodType _firewallCertificateRevocationListCheckMethod;
     /** Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600 */
     private Integer _firewallIdleTimeoutForSecurityAssociationInSeconds;
@@ -66,9 +66,9 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private Boolean _firewallIPSecExemptionsAllowRouterDiscovery;
     /** If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set */
     private Boolean _firewallMergeKeyingModuleSettings;
-    /** Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth. */
+    /** Possible values for firewallPacketQueueingMethod */
     private FirewallPacketQueueingMethodType _firewallPacketQueueingMethod;
-    /** Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8. */
+    /** Possible values for firewallPreSharedKeyEncodingMethod */
     private FirewallPreSharedKeyEncodingMethodType _firewallPreSharedKeyEncodingMethod;
     /** Configures the firewall profile settings for domain networks */
     private WindowsFirewallNetworkProfile _firewallProfileDomain;
@@ -138,7 +138,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._applicationGuardAllowPrintToXPS;
     }
     /**
-     * Gets the applicationGuardBlockClipboardSharing property value. Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
+     * Gets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
      * @return a applicationGuardBlockClipboardSharingType
      */
     @javax.annotation.Nullable
@@ -146,7 +146,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._applicationGuardBlockClipboardSharing;
     }
     /**
-     * Gets the applicationGuardBlockFileTransfer property value. Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+     * Gets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
      * @return a applicationGuardBlockFileTransferType
      */
     @javax.annotation.Nullable
@@ -178,7 +178,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._applicationGuardForceAuditing;
     }
     /**
-     * Gets the appLockerApplicationControl property value. Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
+     * Gets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
      * @return a appLockerApplicationControlType
      */
     @javax.annotation.Nullable
@@ -320,7 +320,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._firewallBlockStatefulFTP;
     }
     /**
-     * Gets the firewallCertificateRevocationListCheckMethod property value. Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
+     * Gets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
      * @return a firewallCertificateRevocationListCheckMethodType
      */
     @javax.annotation.Nullable
@@ -376,7 +376,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._firewallMergeKeyingModuleSettings;
     }
     /**
-     * Gets the firewallPacketQueueingMethod property value. Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+     * Gets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
      * @return a firewallPacketQueueingMethodType
      */
     @javax.annotation.Nullable
@@ -384,7 +384,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._firewallPacketQueueingMethod;
     }
     /**
-     * Gets the firewallPreSharedKeyEncodingMethod property value. Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
+     * Gets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
      * @return a firewallPreSharedKeyEncodingMethodType
      */
     @javax.annotation.Nullable
@@ -517,7 +517,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._applicationGuardAllowPrintToXPS = value;
     }
     /**
-     * Sets the applicationGuardBlockClipboardSharing property value. Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
+     * Sets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
      * @param value Value to set for the applicationGuardBlockClipboardSharing property.
      * @return a void
      */
@@ -525,7 +525,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._applicationGuardBlockClipboardSharing = value;
     }
     /**
-     * Sets the applicationGuardBlockFileTransfer property value. Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+     * Sets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
      * @param value Value to set for the applicationGuardBlockFileTransfer property.
      * @return a void
      */
@@ -557,7 +557,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._applicationGuardForceAuditing = value;
     }
     /**
-     * Sets the appLockerApplicationControl property value. Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
+     * Sets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
      * @param value Value to set for the appLockerApplicationControl property.
      * @return a void
      */
@@ -653,7 +653,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._firewallBlockStatefulFTP = value;
     }
     /**
-     * Sets the firewallCertificateRevocationListCheckMethod property value. Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
+     * Sets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
      * @param value Value to set for the firewallCertificateRevocationListCheckMethod property.
      * @return a void
      */
@@ -709,7 +709,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._firewallMergeKeyingModuleSettings = value;
     }
     /**
-     * Sets the firewallPacketQueueingMethod property value. Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+     * Sets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
      * @param value Value to set for the firewallPacketQueueingMethod property.
      * @return a void
      */
@@ -717,7 +717,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this._firewallPacketQueueingMethod = value;
     }
     /**
-     * Sets the firewallPreSharedKeyEncodingMethod property value. Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
+     * Sets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
      * @param value Value to set for the firewallPreSharedKeyEncodingMethod property.
      * @return a void
      */

@@ -22,7 +22,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
     private String _setting;
     /** The Setting Name that is being reported */
     private String _settingName;
-    /** The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned. */
+    /** The state property */
     private ComplianceStatus _state;
     /** The User email address that is being reported */
     private String _userEmail;
@@ -119,7 +119,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
         return this._settingName;
     }
     /**
-     * Gets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Gets the state property value. The state property
      * @return a complianceStatus
      */
     @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class DeviceComplianceSettingState extends Entity implements Parsable {
         this._settingName = value;
     }
     /**
-     * Sets the state property value. The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

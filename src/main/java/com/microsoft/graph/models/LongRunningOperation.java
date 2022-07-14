@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class LongRunningOperation extends Entity implements Parsable {
     /** The createdDateTime property */
     private OffsetDateTime _createdDateTime;
@@ -26,6 +26,7 @@ public class LongRunningOperation extends Entity implements Parsable {
      */
     public LongRunningOperation() {
         super();
+        this.setType("#microsoft.graph.longRunningOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

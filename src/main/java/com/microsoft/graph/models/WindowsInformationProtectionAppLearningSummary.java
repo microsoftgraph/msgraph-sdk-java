@@ -11,7 +11,7 @@ import java.util.Objects;
 public class WindowsInformationProtectionAppLearningSummary extends Entity implements Parsable {
     /** Application Name */
     private String _applicationName;
-    /** Application Type. Possible values are: universal, desktop. */
+    /** Possible types of Application */
     private ApplicationType _applicationType;
     /** Device Count */
     private Integer _deviceCount;
@@ -41,7 +41,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
         return this._applicationName;
     }
     /**
-     * Gets the applicationType property value. Application Type. Possible values are: universal, desktop.
+     * Gets the applicationType property value. Possible types of Application
      * @return a applicationType
      */
     @javax.annotation.Nullable
@@ -90,7 +90,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
         this._applicationName = value;
     }
     /**
-     * Sets the applicationType property value. Application Type. Possible values are: universal, desktop.
+     * Sets the applicationType property value. Possible types of Application
      * @param value Value to set for the applicationType property.
      * @return a void
      */

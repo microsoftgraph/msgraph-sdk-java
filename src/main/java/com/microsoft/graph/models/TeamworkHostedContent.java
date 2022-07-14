@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class TeamworkHostedContent extends Entity implements Parsable {
     /** Write only. Bytes for the hosted content (such as images). */
     private byte[] _contentBytes;
@@ -19,6 +19,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
      */
     public TeamworkHostedContent() {
         super();
+        this.setType("#microsoft.graph.teamworkHostedContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

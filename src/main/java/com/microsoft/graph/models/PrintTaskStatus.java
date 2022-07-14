@@ -13,7 +13,7 @@ public class PrintTaskStatus implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** A human-readable description of the current processing state of the printTask. */
     private String _description;
-    /** The current processing state of the printTask. Valid values are described in the following table. */
+    /** The state property */
     private PrintTaskProcessingState _state;
     /**
      * Instantiates a new printTaskStatus and sets the default values.
@@ -61,7 +61,7 @@ public class PrintTaskStatus implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the state property value. The current processing state of the printTask. Valid values are described in the following table.
+     * Gets the state property value. The state property
      * @return a printTaskProcessingState
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class PrintTaskStatus implements AdditionalDataHolder, Parsable {
         this._description = value;
     }
     /**
-     * Sets the state property value. The current processing state of the printTask. Valid values are described in the following table.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

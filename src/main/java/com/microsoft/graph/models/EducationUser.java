@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the educationRoot singleton. */
+/** Provides operations to manage the admin singleton. */
 public class EducationUser extends Entity implements Parsable {
     /** True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter. */
     private Boolean _accountEnabled;
@@ -54,7 +54,7 @@ public class EducationUser extends Entity implements Parsable {
     private PasswordProfile _passwordProfile;
     /** The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'. */
     private String _preferredLanguage;
-    /** Default role for a user. The user's role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter. */
+    /** The primaryRole property */
     private EducationUserRole _primaryRole;
     /** The plans that are provisioned for the user. Read-only. Not nullable. */
     private java.util.List<ProvisionedPlan> _provisionedPlans;
@@ -328,7 +328,7 @@ public class EducationUser extends Entity implements Parsable {
         return this._preferredLanguage;
     }
     /**
-     * Gets the primaryRole property value. Default role for a user. The user's role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter.
+     * Gets the primaryRole property value. The primaryRole property
      * @return a educationUserRole
      */
     @javax.annotation.Nullable
@@ -679,7 +679,7 @@ public class EducationUser extends Entity implements Parsable {
         this._preferredLanguage = value;
     }
     /**
-     * Sets the primaryRole property value. Default role for a user. The user's role might be different in an individual class. Possible values are: student, teacher, faculty. Supports /$filter.
+     * Sets the primaryRole property value. The primaryRole property
      * @param value Value to set for the primaryRole property.
      * @return a void
      */

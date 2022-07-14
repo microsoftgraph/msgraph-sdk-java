@@ -26,6 +26,7 @@ import microsoft.graph.policies.claimsmappingpolicies.ClaimsMappingPoliciesReque
 import microsoft.graph.policies.claimsmappingpolicies.item.ClaimsMappingPolicyItemRequestBuilder;
 import microsoft.graph.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
 import microsoft.graph.policies.conditionalaccesspolicies.item.ConditionalAccessPolicyItemRequestBuilder;
+import microsoft.graph.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
 import microsoft.graph.policies.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
 import microsoft.graph.policies.featurerolloutpolicies.item.FeatureRolloutPolicyItemRequestBuilder;
 import microsoft.graph.policies.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -77,6 +78,11 @@ public class PoliciesRequestBuilder {
     @javax.annotation.Nonnull
     public ConditionalAccessPoliciesRequestBuilder conditionalAccessPolicies() {
         return new ConditionalAccessPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** The crossTenantAccessPolicy property */
+    @javax.annotation.Nonnull
+    public CrossTenantAccessPolicyRequestBuilder crossTenantAccessPolicy() {
+        return new CrossTenantAccessPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /** The featureRolloutPolicies property */
     @javax.annotation.Nonnull

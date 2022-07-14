@@ -8,17 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TemporaryAccessPassAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
-    /** Default length, in characters, of a temporaryAccessPass, between 8 and 48 characters. */
+    /** Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters. */
     private Integer _defaultLength;
-    /** Default lifetime, in minutes, for a temporaryAccessPass. Value can be between the minimumLifetimeInMinutes and maximumLifetimeInMinutes. */
+    /** Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes. */
     private Integer _defaultLifetimeInMinutes;
     /** A collection of users or groups who are enabled to use the authentication method. */
     private java.util.List<AuthenticationMethodTarget> _includeTargets;
-    /** If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or multiple time use. */
+    /** If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable. */
     private Boolean _isUsableOnce;
-    /** Maximum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days). */
+    /** Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days). */
     private Integer _maximumLifetimeInMinutes;
-    /** Minimum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days). */
+    /** Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days). */
     private Integer _minimumLifetimeInMinutes;
     /**
      * Instantiates a new TemporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
@@ -38,7 +38,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         return new TemporaryAccessPassAuthenticationMethodConfiguration();
     }
     /**
-     * Gets the defaultLength property value. Default length, in characters, of a temporaryAccessPass, between 8 and 48 characters.
+     * Gets the defaultLength property value. Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -46,7 +46,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         return this._defaultLength;
     }
     /**
-     * Gets the defaultLifetimeInMinutes property value. Default lifetime, in minutes, for a temporaryAccessPass. Value can be between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
+     * Gets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         return this._includeTargets;
     }
     /**
-     * Gets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or multiple time use.
+     * Gets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         return this._isUsableOnce;
     }
     /**
-     * Gets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * Gets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -94,7 +94,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         return this._maximumLifetimeInMinutes;
     }
     /**
-     * Gets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * Gets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -117,7 +117,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         writer.writeIntegerValue("minimumLifetimeInMinutes", this.getMinimumLifetimeInMinutes());
     }
     /**
-     * Sets the defaultLength property value. Default length, in characters, of a temporaryAccessPass, between 8 and 48 characters.
+     * Sets the defaultLength property value. Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters.
      * @param value Value to set for the defaultLength property.
      * @return a void
      */
@@ -125,7 +125,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         this._defaultLength = value;
     }
     /**
-     * Sets the defaultLifetimeInMinutes property value. Default lifetime, in minutes, for a temporaryAccessPass. Value can be between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
+     * Sets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
      * @param value Value to set for the defaultLifetimeInMinutes property.
      * @return a void
      */
@@ -141,7 +141,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         this._includeTargets = value;
     }
     /**
-     * Sets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or multiple time use.
+     * Sets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
      * @param value Value to set for the isUsableOnce property.
      * @return a void
      */
@@ -149,7 +149,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         this._isUsableOnce = value;
     }
     /**
-     * Sets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * Sets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @param value Value to set for the maximumLifetimeInMinutes property.
      * @return a void
      */
@@ -157,7 +157,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
         this._maximumLifetimeInMinutes = value;
     }
     /**
-     * Sets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any temporaryAccessPass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
+     * Sets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @param value Value to set for the minimumLifetimeInMinutes property.
      * @return a void
      */

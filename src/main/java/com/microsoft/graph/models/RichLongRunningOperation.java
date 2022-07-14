@@ -14,8 +14,6 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     private Integer _percentageComplete;
     /** A unique identifier for the result. */
     private String _resourceId;
-    /** Type of the operation. */
-    private String _type;
     /**
      * Instantiates a new RichLongRunningOperation and sets the default values.
      * @return a void
@@ -52,7 +50,6 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
             this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
             this.put("percentageComplete", (n) -> { currentObject.setPercentageComplete(n.getIntegerValue()); });
             this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
     }
     /**
@@ -72,14 +69,6 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         return this._resourceId;
     }
     /**
-     * Gets the type property value. Type of the operation.
-     * @return a string
-     */
-    @javax.annotation.Nullable
-    public String getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -90,7 +79,6 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
         writer.writeObjectValue("error", this.getError());
         writer.writeIntegerValue("percentageComplete", this.getPercentageComplete());
         writer.writeStringValue("resourceId", this.getResourceId());
-        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the error property value. Error due to which the operation failed.
@@ -115,13 +103,5 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      */
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
-    }
-    /**
-     * Sets the type property value. Type of the operation.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
     }
 }

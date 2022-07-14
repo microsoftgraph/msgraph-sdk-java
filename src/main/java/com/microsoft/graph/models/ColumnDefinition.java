@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class ColumnDefinition extends Entity implements Parsable {
     /** This column stores boolean values. */
     private BooleanColumn _boolean_escaped;
@@ -69,8 +69,6 @@ public class ColumnDefinition extends Entity implements Parsable {
     private TextColumn _text;
     /** This column stores thumbnail values. */
     private ThumbnailColumn _thumbnail;
-    /** For site columns, the type of column. Read-only. */
-    private ColumnTypes _type;
     /** This column stores validation formula and message for the column. */
     private ColumnValidation _validation;
     /**
@@ -216,7 +214,6 @@ public class ColumnDefinition extends Entity implements Parsable {
             this.put("term", (n) -> { currentObject.setTerm(n.getObjectValue(TermColumn::createFromDiscriminatorValue)); });
             this.put("text", (n) -> { currentObject.setText(n.getObjectValue(TextColumn::createFromDiscriminatorValue)); });
             this.put("thumbnail", (n) -> { currentObject.setThumbnail(n.getObjectValue(ThumbnailColumn::createFromDiscriminatorValue)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(ColumnTypes.class)); });
             this.put("validation", (n) -> { currentObject.setValidation(n.getObjectValue(ColumnValidation::createFromDiscriminatorValue)); });
         }};
     }
@@ -373,14 +370,6 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this._thumbnail;
     }
     /**
-     * Gets the type property value. For site columns, the type of column. Read-only.
-     * @return a columnTypes
-     */
-    @javax.annotation.Nullable
-    public ColumnTypes getType() {
-        return this._type;
-    }
-    /**
      * Gets the validation property value. This column stores validation formula and message for the column.
      * @return a columnValidation
      */
@@ -426,7 +415,6 @@ public class ColumnDefinition extends Entity implements Parsable {
         writer.writeObjectValue("term", this.getTerm());
         writer.writeObjectValue("text", this.getText());
         writer.writeObjectValue("thumbnail", this.getThumbnail());
-        writer.writeEnumValue("type", this.getType());
         writer.writeObjectValue("validation", this.getValidation());
     }
     /**
@@ -668,14 +656,6 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     public void setThumbnail(@javax.annotation.Nullable final ThumbnailColumn value) {
         this._thumbnail = value;
-    }
-    /**
-     * Sets the type property value. For site columns, the type of column. Read-only.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final ColumnTypes value) {
-        this._type = value;
     }
     /**
      * Sets the validation property value. This column stores validation formula and message for the column.

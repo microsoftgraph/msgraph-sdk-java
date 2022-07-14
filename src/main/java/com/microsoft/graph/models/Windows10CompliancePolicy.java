@@ -38,7 +38,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     private Boolean _passwordRequired;
     /** Require a password to unlock an idle device. */
     private Boolean _passwordRequiredToUnlockFromIdle;
-    /** The required password type. Possible values are: deviceDefault, alphanumeric, numeric. */
+    /** Possible values of required passwords. */
     private RequiredPasswordType _passwordRequiredType;
     /** Require devices to be reported as healthy by Windows Device Health Attestation. */
     private Boolean _requireHealthyDeviceReport;
@@ -213,7 +213,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         return this._passwordRequiredToUnlockFromIdle;
     }
     /**
-     * Gets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Gets the passwordRequiredType property value. Possible values of required passwords.
      * @return a requiredPasswordType
      */
     @javax.annotation.Nullable
@@ -393,7 +393,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         this._passwordRequiredToUnlockFromIdle = value;
     }
     /**
-     * Sets the passwordRequiredType property value. The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Sets the passwordRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */

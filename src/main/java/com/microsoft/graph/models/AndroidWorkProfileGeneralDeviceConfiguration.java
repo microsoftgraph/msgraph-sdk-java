@@ -20,7 +20,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     private Integer _passwordMinutesOfInactivityBeforeScreenTimeout;
     /** Number of previous passwords to block. Valid values 0 to 24 */
     private Integer _passwordPreviousPasswordBlockCount;
-    /** Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols. */
+    /** Android Work Profile required password type. */
     private AndroidWorkProfileRequiredPasswordType _passwordRequiredType;
     /** Number of sign in failures allowed before factory reset. Valid values 1 to 16 */
     private Integer _passwordSignInFailureCountBeforeFactoryReset;
@@ -42,9 +42,9 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     private Boolean _workProfileBlockScreenCapture;
     /** Allow bluetooth devices to access enterprise contacts. */
     private Boolean _workProfileBluetoothEnableContactSharing;
-    /** Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions. */
+    /** Android Work Profile cross profile data sharing type. */
     private AndroidWorkProfileCrossProfileDataSharingType _workProfileDataSharingType;
-    /** Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny. */
+    /** Android Work Profile default app permission policy type. */
     private AndroidWorkProfileDefaultAppPermissionPolicyType _workProfileDefaultAppPermissionPolicy;
     /** Indicates whether or not to block fingerprint unlock for work profile. */
     private Boolean _workProfilePasswordBlockFingerprintUnlock;
@@ -70,7 +70,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     private Integer _workProfilePasswordMinutesOfInactivityBeforeScreenTimeout;
     /** Number of previous work profile passwords to block. Valid values 0 to 24 */
     private Integer _workProfilePasswordPreviousPasswordBlockCount;
-    /** Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols. */
+    /** Android Work Profile required password type. */
     private AndroidWorkProfileRequiredPasswordType _workProfilePasswordRequiredType;
     /** Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16 */
     private Integer _workProfilePasswordSignInFailureCountBeforeFactoryReset;
@@ -186,7 +186,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         return this._passwordPreviousPasswordBlockCount;
     }
     /**
-     * Gets the passwordRequiredType property value. Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * Gets the passwordRequiredType property value. Android Work Profile required password type.
      * @return a androidWorkProfileRequiredPasswordType
      */
     @javax.annotation.Nullable
@@ -274,7 +274,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         return this._workProfileBluetoothEnableContactSharing;
     }
     /**
-     * Gets the workProfileDataSharingType property value. Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
+     * Gets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
      * @return a androidWorkProfileCrossProfileDataSharingType
      */
     @javax.annotation.Nullable
@@ -282,7 +282,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         return this._workProfileDataSharingType;
     }
     /**
-     * Gets the workProfileDefaultAppPermissionPolicy property value. Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+     * Gets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
      * @return a androidWorkProfileDefaultAppPermissionPolicyType
      */
     @javax.annotation.Nullable
@@ -386,7 +386,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         return this._workProfilePasswordPreviousPasswordBlockCount;
     }
     /**
-     * Gets the workProfilePasswordRequiredType property value. Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * Gets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
      * @return a androidWorkProfileRequiredPasswordType
      */
     @javax.annotation.Nullable
@@ -501,7 +501,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         this._passwordPreviousPasswordBlockCount = value;
     }
     /**
-     * Sets the passwordRequiredType property value. Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * Sets the passwordRequiredType property value. Android Work Profile required password type.
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
@@ -589,7 +589,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         this._workProfileBluetoothEnableContactSharing = value;
     }
     /**
-     * Sets the workProfileDataSharingType property value. Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
+     * Sets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
      * @param value Value to set for the workProfileDataSharingType property.
      * @return a void
      */
@@ -597,7 +597,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         this._workProfileDataSharingType = value;
     }
     /**
-     * Sets the workProfileDefaultAppPermissionPolicy property value. Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+     * Sets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
      * @param value Value to set for the workProfileDefaultAppPermissionPolicy property.
      * @return a void
      */
@@ -701,7 +701,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
         this._workProfilePasswordPreviousPasswordBlockCount = value;
     }
     /**
-     * Sets the workProfilePasswordRequiredType property value. Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
+     * Sets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
      * @param value Value to set for the workProfilePasswordRequiredType property.
      * @return a void
      */

@@ -86,7 +86,7 @@ public class PreviewRequestBuilder {
     /**
      * Invoke action preview
      * @param body 
-     * @return a CompletableFuture of ItemPreviewInfo
+     * @return a CompletableFuture of itemPreviewInfo
      */
     public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewPostRequestBody body) {
         try {
@@ -104,7 +104,7 @@ public class PreviewRequestBuilder {
      * Invoke action preview
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ItemPreviewInfo
+     * @return a CompletableFuture of itemPreviewInfo
      */
     public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration) {
         try {
@@ -123,7 +123,7 @@ public class PreviewRequestBuilder {
      * @param body 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of ItemPreviewInfo
+     * @return a CompletableFuture of itemPreviewInfo
      */
     public java.util.concurrent.CompletableFuture<ItemPreviewInfo> post(@javax.annotation.Nonnull final PreviewPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         Objects.requireNonNull(body);

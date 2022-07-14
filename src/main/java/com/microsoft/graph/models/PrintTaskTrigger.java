@@ -7,11 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the print singleton. */
+/** Provides operations to manage the admin singleton. */
 public class PrintTaskTrigger extends Entity implements Parsable {
     /** The definition property */
     private PrintTaskDefinition _definition;
-    /** The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table. */
+    /** The event property */
     private PrintEvent _event;
     /**
      * Instantiates a new printTaskTrigger and sets the default values.
@@ -39,7 +39,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
         return this._definition;
     }
     /**
-     * Gets the event property value. The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
+     * Gets the event property value. The event property
      * @return a printEvent
      */
     @javax.annotation.Nullable
@@ -78,7 +78,7 @@ public class PrintTaskTrigger extends Entity implements Parsable {
         this._definition = value;
     }
     /**
-     * Sets the event property value. The Universal Print event that will cause a new printTask to be triggered. Valid values are described in the following table.
+     * Sets the event property value. The event property
      * @param value Value to set for the event property.
      * @return a void
      */

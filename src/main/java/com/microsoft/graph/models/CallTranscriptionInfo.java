@@ -14,7 +14,7 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The state modified time in UTC. */
     private OffsetDateTime _lastModifiedDateTime;
-    /** Possible values are: notStarted, active, inactive. */
+    /** The state property */
     private CallTranscriptionState _state;
     /**
      * Instantiates a new callTranscriptionInfo and sets the default values.
@@ -62,7 +62,7 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
         return this._lastModifiedDateTime;
     }
     /**
-     * Gets the state property value. Possible values are: notStarted, active, inactive.
+     * Gets the state property value. The state property
      * @return a callTranscriptionState
      */
     @javax.annotation.Nullable
@@ -97,7 +97,7 @@ public class CallTranscriptionInfo implements AdditionalDataHolder, Parsable {
         this._lastModifiedDateTime = value;
     }
     /**
-     * Sets the state property value. Possible values are: notStarted, active, inactive.
+     * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */

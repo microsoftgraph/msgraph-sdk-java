@@ -23,7 +23,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     private Integer _totalLicenseCount;
     /** The number of VPP licenses in use. */
     private Integer _usedLicenseCount;
-    /** The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education. */
+    /** Possible types of an Apple Volume Purchase Program token. */
     private VppTokenAccountType _vppTokenAccountType;
     /** The Apple Id associated with the given Apple Volume Purchase Program Token. */
     private String _vppTokenAppleId;
@@ -123,7 +123,7 @@ public class IosVppApp extends MobileApp implements Parsable {
         return this._usedLicenseCount;
     }
     /**
-     * Gets the vppTokenAccountType property value. The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+     * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      * @return a vppTokenAccountType
      */
     @javax.annotation.Nullable
@@ -222,7 +222,7 @@ public class IosVppApp extends MobileApp implements Parsable {
         this._usedLicenseCount = value;
     }
     /**
-     * Sets the vppTokenAccountType property value. The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
+     * Sets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
      * @param value Value to set for the vppTokenAccountType property.
      * @return a void
      */

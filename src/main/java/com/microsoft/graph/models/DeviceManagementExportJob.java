@@ -14,9 +14,9 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     private OffsetDateTime _expirationDateTime;
     /** Filters applied on the report */
     private String _filter;
-    /** Format of the exported report. Possible values are: csv, pdf. */
+    /** Possible values for the file format of a report */
     private DeviceManagementReportFileFormat _format;
-    /** Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues. */
+    /** Configures how the requested export job is localized */
     private DeviceManagementExportJobLocalizationType _localizationType;
     /** Name of the report */
     private String _reportName;
@@ -26,7 +26,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     private java.util.List<String> _select;
     /** A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. */
     private String _snapshotId;
-    /** Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed. */
+    /** Possible statuses associated with a generated report */
     private DeviceManagementReportStatus _status;
     /** Temporary location of the exported report */
     private String _url;
@@ -84,7 +84,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this._filter;
     }
     /**
-     * Gets the format property value. Format of the exported report. Possible values are: csv, pdf.
+     * Gets the format property value. Possible values for the file format of a report
      * @return a deviceManagementReportFileFormat
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this._format;
     }
     /**
-     * Gets the localizationType property value. Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
+     * Gets the localizationType property value. Configures how the requested export job is localized
      * @return a deviceManagementExportJobLocalizationType
      */
     @javax.annotation.Nullable
@@ -132,7 +132,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this._snapshotId;
     }
     /**
-     * Gets the status property value. Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * Gets the status property value. Possible statuses associated with a generated report
      * @return a deviceManagementReportStatus
      */
     @javax.annotation.Nullable
@@ -183,7 +183,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         this._filter = value;
     }
     /**
-     * Sets the format property value. Format of the exported report. Possible values are: csv, pdf.
+     * Sets the format property value. Possible values for the file format of a report
      * @param value Value to set for the format property.
      * @return a void
      */
@@ -191,7 +191,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         this._format = value;
     }
     /**
-     * Sets the localizationType property value. Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
+     * Sets the localizationType property value. Configures how the requested export job is localized
      * @param value Value to set for the localizationType property.
      * @return a void
      */
@@ -231,7 +231,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         this._snapshotId = value;
     }
     /**
-     * Sets the status property value. Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * Sets the status property value. Possible statuses associated with a generated report
      * @param value Value to set for the status property.
      * @return a void
      */

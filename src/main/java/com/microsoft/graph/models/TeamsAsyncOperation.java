@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public class TeamsAsyncOperation extends Entity implements Parsable {
     /** Number of times the operation was attempted before being marked successful or failed. */
     private Integer _attemptsCount;
@@ -18,9 +18,9 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
     private OperationError _error;
     /** Time when the async operation was last updated. */
     private OffsetDateTime _lastActionDateTime;
-    /** Denotes the type of operation being described. */
+    /** The operationType property */
     private TeamsAsyncOperationType _operationType;
-    /** Operation status. */
+    /** The status property */
     private TeamsAsyncOperationStatus _status;
     /** The ID of the object that's created or modified as result of this async operation, typically a team. */
     private String _targetResourceId;
@@ -94,7 +94,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
         return this._lastActionDateTime;
     }
     /**
-     * Gets the operationType property value. Denotes the type of operation being described.
+     * Gets the operationType property value. The operationType property
      * @return a teamsAsyncOperationType
      */
     @javax.annotation.Nullable
@@ -102,7 +102,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
         return this._operationType;
     }
     /**
-     * Gets the status property value. Operation status.
+     * Gets the status property value. The status property
      * @return a teamsAsyncOperationStatus
      */
     @javax.annotation.Nullable
@@ -175,7 +175,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
         this._lastActionDateTime = value;
     }
     /**
-     * Sets the operationType property value. Denotes the type of operation being described.
+     * Sets the operationType property value. The operationType property
      * @param value Value to set for the operationType property.
      * @return a void
      */
@@ -183,7 +183,7 @@ public class TeamsAsyncOperation extends Entity implements Parsable {
         this._operationType = value;
     }
     /**
-     * Sets the status property value. Operation status.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

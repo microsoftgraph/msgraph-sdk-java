@@ -8,9 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the informationProtection singleton. */
+/** Provides operations to manage the admin singleton. */
 public class ThreatAssessmentRequest extends Entity implements Parsable {
-    /** The threat category. Possible values are: spam, phishing, malware. */
+    /** The category property */
     private ThreatCategory _category;
     /** The content type of threat assessment. Possible values are: mail, url, file. */
     private ThreatAssessmentContentType _contentType;
@@ -18,7 +18,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
     private IdentitySet _createdBy;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
-    /** The expected assessment from submitter. Possible values are: block, unblock. */
+    /** The expectedAssessment property */
     private ThreatExpectedAssessment _expectedAssessment;
     /** The source of the threat assessment request. Possible values are: user, administrator. */
     private ThreatAssessmentRequestSource _requestSource;
@@ -32,6 +32,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
      */
     public ThreatAssessmentRequest() {
         super();
+        this.setType("#microsoft.graph.threatAssessmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +55,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         return new ThreatAssessmentRequest();
     }
     /**
-     * Gets the category property value. The threat category. Possible values are: spam, phishing, malware.
+     * Gets the category property value. The category property
      * @return a threatCategory
      */
     @javax.annotation.Nullable
@@ -86,7 +87,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the expectedAssessment property value. The expected assessment from submitter. Possible values are: block, unblock.
+     * Gets the expectedAssessment property value. The expectedAssessment property
      * @return a threatExpectedAssessment
      */
     @javax.annotation.Nullable
@@ -153,7 +154,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the category property value. The threat category. Possible values are: spam, phishing, malware.
+     * Sets the category property value. The category property
      * @param value Value to set for the category property.
      * @return a void
      */
@@ -185,7 +186,7 @@ public class ThreatAssessmentRequest extends Entity implements Parsable {
         this._createdDateTime = value;
     }
     /**
-     * Sets the expectedAssessment property value. The expected assessment from submitter. Possible values are: block, unblock.
+     * Sets the expectedAssessment property value. The expectedAssessment property
      * @param value Value to set for the expectedAssessment property.
      * @return a void
      */

@@ -59,7 +59,7 @@ public class ExtensionsRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ExtensionsRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -122,7 +122,7 @@ public class ExtensionsRequestBuilder {
         return requestInfo;
     }
     /**
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      * @return a CompletableFuture of ExtensionCollectionResponse
      */
     public java.util.concurrent.CompletableFuture<ExtensionCollectionResponse> get() {
@@ -138,7 +138,7 @@ public class ExtensionsRequestBuilder {
         }
     }
     /**
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of ExtensionCollectionResponse
      */
@@ -155,7 +155,7 @@ public class ExtensionsRequestBuilder {
         }
     }
     /**
-     * The collection of open extensions defined for the user. Nullable.
+     * The collection of open extensions defined for the user. Supports $expand. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of ExtensionCollectionResponse
@@ -227,7 +227,7 @@ public class ExtensionsRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** The collection of open extensions defined for the user. Nullable. */
+    /** The collection of open extensions defined for the user. Supports $expand. Nullable. */
     public class ExtensionsRequestBuilderGetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")

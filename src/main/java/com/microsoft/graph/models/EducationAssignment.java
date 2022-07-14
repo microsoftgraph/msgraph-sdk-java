@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the educationRoot singleton. */
 public class EducationAssignment extends Entity implements Parsable {
     /** Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen. */
     private EducationAddedStudentAction _addedStudentAction;
@@ -61,7 +60,7 @@ public class EducationAssignment extends Entity implements Parsable {
     /** The deep link URL for the given assignment. */
     private String _webUrl;
     /**
-     * Instantiates a new educationAssignment and sets the default values.
+     * Instantiates a new EducationAssignment and sets the default values.
      * @return a void
      */
     public EducationAssignment() {
@@ -70,7 +69,7 @@ public class EducationAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationAssignment
+     * @return a EducationAssignment
      */
     @javax.annotation.Nonnull
     public static EducationAssignment createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

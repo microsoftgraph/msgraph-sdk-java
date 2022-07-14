@@ -81,7 +81,7 @@ public class PreviewRequestBuilder {
     }
     /**
      * Invoke function preview
-     * @return a CompletableFuture of OnenotePagePreview
+     * @return a CompletableFuture of onenotePagePreview
      */
     public java.util.concurrent.CompletableFuture<OnenotePagePreview> get() {
         try {
@@ -98,7 +98,7 @@ public class PreviewRequestBuilder {
     /**
      * Invoke function preview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of OnenotePagePreview
+     * @return a CompletableFuture of onenotePagePreview
      */
     public java.util.concurrent.CompletableFuture<OnenotePagePreview> get(@javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderGetRequestConfiguration> requestConfiguration) {
         try {
@@ -116,7 +116,7 @@ public class PreviewRequestBuilder {
      * Invoke function preview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of OnenotePagePreview
+     * @return a CompletableFuture of onenotePagePreview
      */
     public java.util.concurrent.CompletableFuture<OnenotePagePreview> get(@javax.annotation.Nullable final java.util.function.Consumer<PreviewRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
         try {

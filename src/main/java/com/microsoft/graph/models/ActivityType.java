@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the identityProtectionRoot singleton. */
+/** Provides operations to manage the admin singleton. */
 public enum ActivityType implements ValuedEnum {
     Signin("signin"),
     User("user"),

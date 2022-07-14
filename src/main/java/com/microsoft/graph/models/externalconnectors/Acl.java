@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Acl implements AdditionalDataHolder, Parsable {
-    /** The access granted to the identity. Possible values are: grant, deny. */
+    /** The accessType property */
     private AccessType _accessType;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external. */
+    /** The type property */
     private AclType _type;
     /** The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup. */
     private String _value;
@@ -35,7 +35,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
         return new Acl();
     }
     /**
-     * Gets the accessType property value. The access granted to the identity. Possible values are: grant, deny.
+     * Gets the accessType property value. The accessType property
      * @return a accessType
      */
     @javax.annotation.Nullable
@@ -64,7 +64,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the type property value. The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external.
+     * Gets the type property value. The type property
      * @return a aclType
      */
     @javax.annotation.Nullable
@@ -92,7 +92,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessType property value. The access granted to the identity. Possible values are: grant, deny.
+     * Sets the accessType property value. The accessType property
      * @param value Value to set for the accessType property.
      * @return a void
      */
@@ -108,7 +108,7 @@ public class Acl implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the type property value. The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsable {
-    /** The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend. */
+    /** The action property */
     private OnenotePatchActionType _action;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -37,7 +37,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
         return new OnenotePatchContentCommand();
     }
     /**
-     * Gets the action property value. The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
+     * Gets the action property value. The action property
      * @return a onenotePatchActionType
      */
     @javax.annotation.Nullable
@@ -104,7 +104,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.
+     * Sets the action property value. The action property
      * @param value Value to set for the action property.
      * @return a void
      */

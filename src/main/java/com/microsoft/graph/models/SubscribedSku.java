@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of subscribedSku entities. */
 public class SubscribedSku extends Entity implements Parsable {
     /** For example, 'User' or 'Company'. */
     private String _appliesTo;
@@ -24,7 +23,7 @@ public class SubscribedSku extends Entity implements Parsable {
     /** The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus. */
     private String _skuPartNumber;
     /**
-     * Instantiates a new subscribedSku and sets the default values.
+     * Instantiates a new SubscribedSku and sets the default values.
      * @return a void
      */
     public SubscribedSku() {
@@ -33,7 +32,7 @@ public class SubscribedSku extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subscribedSku
+     * @return a SubscribedSku
      */
     @javax.annotation.Nonnull
     public static SubscribedSku createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {

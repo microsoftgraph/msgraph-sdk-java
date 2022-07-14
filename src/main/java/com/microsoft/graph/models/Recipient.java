@@ -13,12 +13,15 @@ public class Recipient implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The recipient's email address. */
     private EmailAddress _emailAddress;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new recipient and sets the default values.
      * @return a void
      */
     public Recipient() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.recipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -28,6 +31,13 @@ public class Recipient implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static Recipient createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.attendeeBase": return new AttendeeBase();
+            }
+        }
         return new Recipient();
     }
     /**
@@ -53,9 +63,18 @@ public class Recipient implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Recipient currentObject = this;
-        return new HashMap<>(1) {{
+        return new HashMap<>(2) {{
             this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -65,6 +84,7 @@ public class Recipient implements AdditionalDataHolder, Parsable {
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("emailAddress", this.getEmailAddress());
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -82,5 +102,13 @@ public class Recipient implements AdditionalDataHolder, Parsable {
      */
     public void setEmailAddress(@javax.annotation.Nullable final EmailAddress value) {
         this._emailAddress = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }

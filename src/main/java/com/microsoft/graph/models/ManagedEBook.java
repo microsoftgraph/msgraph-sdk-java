@@ -42,6 +42,7 @@ public class ManagedEBook extends Entity implements Parsable {
      */
     public ManagedEBook() {
         super();
+        this.setType("#microsoft.graph.managedEBook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

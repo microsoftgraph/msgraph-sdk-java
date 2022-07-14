@@ -28,8 +28,6 @@ public class CallRecord extends Entity implements Parsable {
     private java.util.List<Session> _sessions;
     /** UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _startDateTime;
-    /** Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue. */
-    private CallType _type;
     /** Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version. */
     private Long _version;
     /**
@@ -73,7 +71,6 @@ public class CallRecord extends Entity implements Parsable {
             this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
             this.put("sessions", (n) -> { currentObject.setSessions(n.getCollectionOfObjectValues(Session::createFromDiscriminatorValue)); });
             this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(CallType.class)); });
             this.put("version", (n) -> { currentObject.setVersion(n.getLongValue()); });
         }};
     }
@@ -134,14 +131,6 @@ public class CallRecord extends Entity implements Parsable {
         return this._startDateTime;
     }
     /**
-     * Gets the type property value. Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
-     * @return a callType
-     */
-    @javax.annotation.Nullable
-    public CallType getType() {
-        return this._type;
-    }
-    /**
      * Gets the version property value. Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
      * @return a int64
      */
@@ -165,7 +154,6 @@ public class CallRecord extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
-        writer.writeEnumValue("type", this.getType());
         writer.writeLongValue("version", this.getVersion());
     }
     /**
@@ -231,14 +219,6 @@ public class CallRecord extends Entity implements Parsable {
      */
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
-    }
-    /**
-     * Sets the type property value. Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final CallType value) {
-        this._type = value;
     }
     /**
      * Sets the version property value. Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.

@@ -13,7 +13,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** Classification of why a call or portion of a call failed. */
     private String _reason;
-    /** The stage when the failure occurred. Possible values are: unknown, callSetup, midcall, unknownFutureValue. */
+    /** The stage property */
     private FailureStage _stage;
     /**
      * Instantiates a new failureInfo and sets the default values.
@@ -61,7 +61,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
         return this._reason;
     }
     /**
-     * Gets the stage property value. The stage when the failure occurred. Possible values are: unknown, callSetup, midcall, unknownFutureValue.
+     * Gets the stage property value. The stage property
      * @return a failureStage
      */
     @javax.annotation.Nullable
@@ -96,7 +96,7 @@ public class FailureInfo implements AdditionalDataHolder, Parsable {
         this._reason = value;
     }
     /**
-     * Sets the stage property value. The stage when the failure occurred. Possible values are: unknown, callSetup, midcall, unknownFutureValue.
+     * Sets the stage property value. The stage property
      * @param value Value to set for the stage property.
      * @return a void
      */

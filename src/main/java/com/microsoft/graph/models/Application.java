@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the instantiate method. */
+/** Provides operations to manage the collection of application entities. */
 public class Application extends DirectoryObject implements Parsable {
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on. */
     private java.util.List<AddIn> _addIns;
@@ -34,6 +34,8 @@ public class Application extends DirectoryObject implements Parsable {
     private String _displayName;
     /** Read-only. Nullable. Supports $expand and $filter (eq when counting empty collections). */
     private java.util.List<ExtensionProperty> _extensionProperties;
+    /** Federated identities for applications. Supports $expand and $filter (eq when counting empty collections). */
+    private java.util.List<FederatedIdentityCredential> _federatedIdentityCredentials;
     /** Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of). */
     private String _groupMembershipClaims;
     /** The homeRealmDiscoveryPolicies property */
@@ -68,6 +70,8 @@ public class Application extends DirectoryObject implements Parsable {
     private String _publisherDomain;
     /** Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le). */
     private java.util.List<RequiredResourceAccess> _requiredResourceAccess;
+    /** The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable. */
+    private String _samlMetadataUrl;
     /** References application or service contact information from a Service or Asset Management database. Nullable. */
     private String _serviceManagementReference;
     /** Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not). */
@@ -200,6 +204,14 @@ public class Application extends DirectoryObject implements Parsable {
         return this._extensionProperties;
     }
     /**
+     * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * @return a federatedIdentityCredential
+     */
+    @javax.annotation.Nullable
+    public java.util.List<FederatedIdentityCredential> getFederatedIdentityCredentials() {
+        return this._federatedIdentityCredentials;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
@@ -219,6 +231,7 @@ public class Application extends DirectoryObject implements Parsable {
             this.put("disabledByMicrosoftStatus", (n) -> { currentObject.setDisabledByMicrosoftStatus(n.getStringValue()); });
             this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
             this.put("extensionProperties", (n) -> { currentObject.setExtensionProperties(n.getCollectionOfObjectValues(ExtensionProperty::createFromDiscriminatorValue)); });
+            this.put("federatedIdentityCredentials", (n) -> { currentObject.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
             this.put("groupMembershipClaims", (n) -> { currentObject.setGroupMembershipClaims(n.getStringValue()); });
             this.put("homeRealmDiscoveryPolicies", (n) -> { currentObject.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
             this.put("identifierUris", (n) -> { currentObject.setIdentifierUris(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -236,6 +249,7 @@ public class Application extends DirectoryObject implements Parsable {
             this.put("publicClient", (n) -> { currentObject.setPublicClient(n.getObjectValue(PublicClientApplication::createFromDiscriminatorValue)); });
             this.put("publisherDomain", (n) -> { currentObject.setPublisherDomain(n.getStringValue()); });
             this.put("requiredResourceAccess", (n) -> { currentObject.setRequiredResourceAccess(n.getCollectionOfObjectValues(RequiredResourceAccess::createFromDiscriminatorValue)); });
+            this.put("samlMetadataUrl", (n) -> { currentObject.setSamlMetadataUrl(n.getStringValue()); });
             this.put("serviceManagementReference", (n) -> { currentObject.setServiceManagementReference(n.getStringValue()); });
             this.put("signInAudience", (n) -> { currentObject.setSignInAudience(n.getStringValue()); });
             this.put("spa", (n) -> { currentObject.setSpa(n.getObjectValue(SpaApplication::createFromDiscriminatorValue)); });
@@ -384,6 +398,14 @@ public class Application extends DirectoryObject implements Parsable {
         return this._requiredResourceAccess;
     }
     /**
+     * Gets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getSamlMetadataUrl() {
+        return this._samlMetadataUrl;
+    }
+    /**
      * Gets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
      * @return a string
      */
@@ -475,6 +497,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeStringValue("disabledByMicrosoftStatus", this.getDisabledByMicrosoftStatus());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("extensionProperties", this.getExtensionProperties());
+        writer.writeCollectionOfObjectValues("federatedIdentityCredentials", this.getFederatedIdentityCredentials());
         writer.writeStringValue("groupMembershipClaims", this.getGroupMembershipClaims());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeCollectionOfPrimitiveValues("identifierUris", this.getIdentifierUris());
@@ -492,6 +515,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeObjectValue("publicClient", this.getPublicClient());
         writer.writeStringValue("publisherDomain", this.getPublisherDomain());
         writer.writeCollectionOfObjectValues("requiredResourceAccess", this.getRequiredResourceAccess());
+        writer.writeStringValue("samlMetadataUrl", this.getSamlMetadataUrl());
         writer.writeStringValue("serviceManagementReference", this.getServiceManagementReference());
         writer.writeStringValue("signInAudience", this.getSignInAudience());
         writer.writeObjectValue("spa", this.getSpa());
@@ -597,6 +621,14 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setExtensionProperties(@javax.annotation.Nullable final java.util.List<ExtensionProperty> value) {
         this._extensionProperties = value;
+    }
+    /**
+     * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (eq when counting empty collections).
+     * @param value Value to set for the federatedIdentityCredentials property.
+     * @return a void
+     */
+    public void setFederatedIdentityCredentials(@javax.annotation.Nullable final java.util.List<FederatedIdentityCredential> value) {
+        this._federatedIdentityCredentials = value;
     }
     /**
      * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
@@ -733,6 +765,14 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setRequiredResourceAccess(@javax.annotation.Nullable final java.util.List<RequiredResourceAccess> value) {
         this._requiredResourceAccess = value;
+    }
+    /**
+     * Sets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
+     * @param value Value to set for the samlMetadataUrl property.
+     * @return a void
+     */
+    public void setSamlMetadataUrl(@javax.annotation.Nullable final String value) {
+        this._samlMetadataUrl = value;
     }
     /**
      * Sets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.

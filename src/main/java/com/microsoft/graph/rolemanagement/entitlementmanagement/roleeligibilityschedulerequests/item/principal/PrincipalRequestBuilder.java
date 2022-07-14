@@ -52,7 +52,7 @@ public class PrincipalRequestBuilder {
         this.requestAdapter = requestAdapter;
     }
     /**
-     * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
+     * The principal that's getting a role eligibility through the request. Supports $expand.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
@@ -60,7 +60,7 @@ public class PrincipalRequestBuilder {
         return createGetRequestInformation(null);
     }
     /**
-     * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
+     * The principal that's getting a role eligibility through the request. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -82,7 +82,7 @@ public class PrincipalRequestBuilder {
         return requestInfo;
     }
     /**
-     * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
+     * The principal that's getting a role eligibility through the request. Supports $expand.
      * @return a CompletableFuture of directoryObject
      */
     public java.util.concurrent.CompletableFuture<DirectoryObject> get() {
@@ -98,7 +98,7 @@ public class PrincipalRequestBuilder {
         }
     }
     /**
-     * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
+     * The principal that's getting a role eligibility through the request. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of directoryObject
      */
@@ -115,7 +115,7 @@ public class PrincipalRequestBuilder {
         }
     }
     /**
-     * Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only.
+     * The principal that's getting a role eligibility through the request. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @param responseHandler Response handler to use in place of the default response handling provided by the core service
      * @return a CompletableFuture of directoryObject
@@ -132,7 +132,7 @@ public class PrincipalRequestBuilder {
             return java.util.concurrent.CompletableFuture.failedFuture(ex);
         }
     }
-    /** Property referencing the principal that is getting a role assignment through the request. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. */
+    /** The principal that's getting a role eligibility through the request. Supports $expand. */
     public class PrincipalRequestBuilderGetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")

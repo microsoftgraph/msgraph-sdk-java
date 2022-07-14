@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Objects;
 /** SharedPC Account Manager Policy. Only applies when the account manager is enabled. */
 public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsable {
-    /** Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold. */
+    /** Possible values for when accounts are deleted on a shared PC. */
     private SharedPCAccountDeletionPolicyType _accountDeletionPolicy;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -38,7 +38,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
         return new SharedPCAccountManagerPolicy();
     }
     /**
-     * Gets the accountDeletionPolicy property value. Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
+     * Gets the accountDeletionPolicy property value. Possible values for when accounts are deleted on a shared PC.
      * @return a sharedPCAccountDeletionPolicyType
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class SharedPCAccountManagerPolicy implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accountDeletionPolicy property value. Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
+     * Sets the accountDeletionPolicy property value. Possible values for when accounts are deleted on a shared PC.
      * @param value Value to set for the accountDeletionPolicy property.
      * @return a void
      */

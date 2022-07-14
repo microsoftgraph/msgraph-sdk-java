@@ -8,12 +8,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the identityGovernance singleton. */
+/** Provides operations to manage the admin singleton. */
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /** The access package with this policy. Read-only. Nullable. Supports $expand. */
     private AccessPackage _accessPackage;
     /** Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue. */
     private AllowedTargetScope _allowedTargetScope;
+    /** The automaticRequestSettings property */
+    private AccessPackageAutomaticRequestSettings _automaticRequestSettings;
     /** Catalog of the access package containing this policy. Read-only. */
     private AccessPackageCatalog _catalog;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
@@ -68,6 +70,14 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this._allowedTargetScope;
     }
     /**
+     * Gets the automaticRequestSettings property value. The automaticRequestSettings property
+     * @return a accessPackageAutomaticRequestSettings
+     */
+    @javax.annotation.Nullable
+    public AccessPackageAutomaticRequestSettings getAutomaticRequestSettings() {
+        return this._automaticRequestSettings;
+    }
+    /**
      * Gets the catalog property value. Catalog of the access package containing this policy. Read-only.
      * @return a accessPackageCatalog
      */
@@ -117,6 +127,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return new HashMap<>(super.getFieldDeserializers()) {{
             this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
             this.put("allowedTargetScope", (n) -> { currentObject.setAllowedTargetScope(n.getEnumValue(AllowedTargetScope.class)); });
+            this.put("automaticRequestSettings", (n) -> { currentObject.setAutomaticRequestSettings(n.getObjectValue(AccessPackageAutomaticRequestSettings::createFromDiscriminatorValue)); });
             this.put("catalog", (n) -> { currentObject.setCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
             this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
             this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
@@ -179,6 +190,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("accessPackage", this.getAccessPackage());
         writer.writeEnumValue("allowedTargetScope", this.getAllowedTargetScope());
+        writer.writeObjectValue("automaticRequestSettings", this.getAutomaticRequestSettings());
         writer.writeObjectValue("catalog", this.getCatalog());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
@@ -205,6 +217,14 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     public void setAllowedTargetScope(@javax.annotation.Nullable final AllowedTargetScope value) {
         this._allowedTargetScope = value;
+    }
+    /**
+     * Sets the automaticRequestSettings property value. The automaticRequestSettings property
+     * @param value Value to set for the automaticRequestSettings property.
+     * @return a void
+     */
+    public void setAutomaticRequestSettings(@javax.annotation.Nullable final AccessPackageAutomaticRequestSettings value) {
+        this._automaticRequestSettings = value;
     }
     /**
      * Sets the catalog property value. Catalog of the access package containing this policy. Read-only.

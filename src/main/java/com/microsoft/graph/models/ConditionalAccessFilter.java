@@ -11,7 +11,7 @@ import java.util.Objects;
 public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Mode to use for the filter. Possible values are include or exclude. */
+    /** The mode property */
     private FilterMode _mode;
     /** Rule syntax is similar to that used for membership rules for groups in Azure Active Directory. For details, see rules with multiple expressions */
     private String _rule;
@@ -53,7 +53,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
         }};
     }
     /**
-     * Gets the mode property value. Mode to use for the filter. Possible values are include or exclude.
+     * Gets the mode property value. The mode property
      * @return a filterMode
      */
     @javax.annotation.Nullable
@@ -88,7 +88,7 @@ public class ConditionalAccessFilter implements AdditionalDataHolder, Parsable {
         this._additionalData = value;
     }
     /**
-     * Sets the mode property value. Mode to use for the filter. Possible values are include or exclude.
+     * Sets the mode property value. The mode property
      * @param value Value to set for the mode property.
      * @return a void
      */

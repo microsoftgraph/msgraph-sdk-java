@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the privacy singleton. */
 public class SubjectRightsRequest extends Entity implements Parsable {
     /** Identity that the request is assigned to. */
     private Identity _assignedTo;
@@ -46,10 +45,8 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     private SubjectRightsRequestStatus _status;
     /** Information about the Microsoft Teams team that was created for the request. */
     private Team _team;
-    /** The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue. */
-    private SubjectRightsRequestType _type;
     /**
-     * Instantiates a new subjectRightsRequest and sets the default values.
+     * Instantiates a new SubjectRightsRequest and sets the default values.
      * @return a void
      */
     public SubjectRightsRequest() {
@@ -58,7 +55,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subjectRightsRequest
+     * @return a SubjectRightsRequest
      */
     @javax.annotation.Nonnull
     public static SubjectRightsRequest createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -155,7 +152,6 @@ public class SubjectRightsRequest extends Entity implements Parsable {
             this.put("stages", (n) -> { currentObject.setStages(n.getCollectionOfObjectValues(SubjectRightsRequestStageDetail::createFromDiscriminatorValue)); });
             this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SubjectRightsRequestStatus.class)); });
             this.put("team", (n) -> { currentObject.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(SubjectRightsRequestType.class)); });
         }};
     }
     /**
@@ -239,14 +235,6 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return this._team;
     }
     /**
-     * Gets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
-     * @return a subjectRightsRequestType
-     */
-    @javax.annotation.Nullable
-    public SubjectRightsRequestType getType() {
-        return this._type;
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
@@ -272,7 +260,6 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("stages", this.getStages());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeObjectValue("team", this.getTeam());
-        writer.writeEnumValue("type", this.getType());
     }
     /**
      * Sets the assignedTo property value. Identity that the request is assigned to.
@@ -417,13 +404,5 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     public void setTeam(@javax.annotation.Nullable final Team value) {
         this._team = value;
-    }
-    /**
-     * Sets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
-     * @param value Value to set for the type property.
-     * @return a void
-     */
-    public void setType(@javax.annotation.Nullable final SubjectRightsRequestType value) {
-        this._type = value;
     }
 }

@@ -83,7 +83,7 @@ public class User extends DirectoryObject implements Parsable {
     private String _employeeType;
     /** The user's events. Default is to show events under the Default Calendar. Read-only. Nullable. */
     private java.util.List<Event> _events;
-    /** The collection of open extensions defined for the user. Nullable. */
+    /** The collection of open extensions defined for the user. Supports $expand. Nullable. */
     private java.util.List<Extension> _extensions;
     /** For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Supports $filter (eq, ne, not , in). */
     private String _externalUserState;
@@ -121,7 +121,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<LicenseAssignmentState> _licenseAssignmentStates;
     /** A collection of this user's license details. Read-only. */
     private java.util.List<LicenseDetails> _licenseDetails;
-    /** The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values). */
+    /** The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values). */
     private String _mail;
     /** Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select. */
     private MailboxSettings _mailboxSettings;
@@ -155,7 +155,7 @@ public class User extends DirectoryObject implements Parsable {
     private String _onPremisesDistinguishedName;
     /** Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. */
     private String _onPremisesDomainName;
-    /** Contains extensionAttributes1-15 for the user. The individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select. */
+    /** Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in). */
     private OnPremisesExtensionAttributes _onPremisesExtensionAttributes;
     /** This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Note: The $ and _ characters cannot be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in). */
     private String _onPremisesImmutableId;
@@ -171,7 +171,7 @@ public class User extends DirectoryObject implements Parsable {
     private Boolean _onPremisesSyncEnabled;
     /** Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only. Supports $filter (eq, ne, not, ge, le, in, startsWith). */
     private String _onPremisesUserPrincipalName;
-    /** A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, and counting empty collections). */
+    /** A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections). */
     private java.util.List<String> _otherMails;
     /** Selective Outlook services available to the user. Read-only. Nullable. */
     private OutlookUser _outlook;
@@ -233,7 +233,7 @@ public class User extends DirectoryObject implements Parsable {
     private UserTeamwork _teamwork;
     /** Represents the To Do services available to a user. */
     private Todo _todo;
-    /** The transitiveMemberOf property */
+    /** The groups, including nested groups, and directory roles that a user is a member of. Nullable. */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
     /** A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: US, JP, and GB. Not nullable. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
     private String _usageLocation;
@@ -555,7 +555,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._events;
     }
     /**
-     * Gets the extensions property value. The collection of open extensions defined for the user. Nullable.
+     * Gets the extensions property value. The collection of open extensions defined for the user. Supports $expand. Nullable.
      * @return a extension
      */
     @javax.annotation.Nullable
@@ -833,7 +833,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._licenseDetails;
     }
     /**
-     * Gets the mail property value. The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
+     * Gets the mail property value. The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -969,7 +969,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._onPremisesDomainName;
     }
     /**
-     * Gets the onPremisesExtensionAttributes property value. Contains extensionAttributes1-15 for the user. The individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select.
+     * Gets the onPremisesExtensionAttributes property value. Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
      * @return a onPremisesExtensionAttributes
      */
     @javax.annotation.Nullable
@@ -1033,7 +1033,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._onPremisesUserPrincipalName;
     }
     /**
-     * Gets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, and counting empty collections).
+     * Gets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -1281,7 +1281,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._todo;
     }
     /**
-     * Gets the transitiveMemberOf property value. The transitiveMemberOf property
+     * Gets the transitiveMemberOf property value. The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @return a directoryObject
      */
     @javax.annotation.Nullable
@@ -1734,7 +1734,7 @@ public class User extends DirectoryObject implements Parsable {
         this._events = value;
     }
     /**
-     * Sets the extensions property value. The collection of open extensions defined for the user. Nullable.
+     * Sets the extensions property value. The collection of open extensions defined for the user. Supports $expand. Nullable.
      * @param value Value to set for the extensions property.
      * @return a void
      */
@@ -1886,7 +1886,7 @@ public class User extends DirectoryObject implements Parsable {
         this._licenseDetails = value;
     }
     /**
-     * Sets the mail property value. The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. For Azure AD B2C accounts, this property can be updated up to only ten times with unique SMTP addresses. This property cannot contain accent characters.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
+     * Sets the mail property value. The SMTP address for the user, for example, admin@contoso.com. Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address. This property cannot contain accent characters.  NOTE: We do not recommend updating this property for Azure AD B2C user profiles. Use the otherMails property instead.  Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith, and eq on null values).
      * @param value Value to set for the mail property.
      * @return a void
      */
@@ -2022,7 +2022,7 @@ public class User extends DirectoryObject implements Parsable {
         this._onPremisesDomainName = value;
     }
     /**
-     * Sets the onPremisesExtensionAttributes property value. Contains extensionAttributes1-15 for the user. The individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. These extension attributes are also known as Exchange custom attributes 1-15. Returned only on $select.
+     * Sets the onPremisesExtensionAttributes property value. Contains extensionAttributes1-15 for the user. These extension attributes are also known as Exchange custom attributes 1-15. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties can be set during creation or update of a user object.  For a cloud-only user previously synced from on-premises Active Directory, these properties are read-only in Microsoft Graph but can be fully managed through the Exchange Admin Center or the Exchange Online V2 module in PowerShell. Supports $filter (eq, ne, not, in).
      * @param value Value to set for the onPremisesExtensionAttributes property.
      * @return a void
      */
@@ -2086,7 +2086,7 @@ public class User extends DirectoryObject implements Parsable {
         this._onPremisesUserPrincipalName = value;
     }
     /**
-     * Sets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, and counting empty collections).
+     * Sets the otherMails property value. A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
      * @param value Value to set for the otherMails property.
      * @return a void
      */
@@ -2334,7 +2334,7 @@ public class User extends DirectoryObject implements Parsable {
         this._todo = value;
     }
     /**
-     * Sets the transitiveMemberOf property value. The transitiveMemberOf property
+     * Sets the transitiveMemberOf property value. The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */

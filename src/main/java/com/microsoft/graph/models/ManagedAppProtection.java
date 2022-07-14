@@ -11,11 +11,11 @@ import java.util.Objects;
 public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /** Data storage locations where a user may store managed data. */
     private java.util.List<String> _allowedDataStorageLocations;
-    /** Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none. */
+    /** Data can be transferred from/to these classes of apps */
     private ManagedAppDataTransferLevel _allowedInboundDataTransferSources;
-    /** The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked. */
+    /** Represents the level to which the device's clipboard may be shared between apps */
     private ManagedAppClipboardSharingLevel _allowedOutboundClipboardSharingLevel;
-    /** Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none. */
+    /** Data can be transferred from/to these classes of apps */
     private ManagedAppDataTransferLevel _allowedOutboundDataTransferDestinations;
     /** Indicates whether contacts can be synced to the user's device. */
     private Boolean _contactSyncBlocked;
@@ -27,7 +27,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private Boolean _disableAppPinIfDevicePinIsSet;
     /** Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True. */
     private Boolean _fingerprintBlocked;
-    /** Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge. */
+    /** Type of managed browser */
     private ManagedBrowserType _managedBrowser;
     /** Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android) */
     private Boolean _managedBrowserToOpenLinksRequired;
@@ -53,7 +53,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private Period _periodOfflineBeforeWipeIsEnforced;
     /** The period after which access is checked when the device is connected to the internet. */
     private Period _periodOnlineBeforeAccessCheck;
-    /** Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol. */
+    /** Character set which is to be used for a user's app PIN */
     private ManagedAppPinCharacterSet _pinCharacterSet;
     /** Indicates whether an app-level pin is required. */
     private Boolean _pinRequired;
@@ -69,6 +69,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     public ManagedAppProtection() {
         super();
+        this.setType("#microsoft.graph.managedAppProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -97,7 +98,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._allowedDataStorageLocations;
     }
     /**
-     * Gets the allowedInboundDataTransferSources property value. Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
+     * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @return a managedAppDataTransferLevel
      */
     @javax.annotation.Nullable
@@ -105,7 +106,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._allowedInboundDataTransferSources;
     }
     /**
-     * Gets the allowedOutboundClipboardSharingLevel property value. The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
+     * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      * @return a managedAppClipboardSharingLevel
      */
     @javax.annotation.Nullable
@@ -113,7 +114,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._allowedOutboundClipboardSharingLevel;
     }
     /**
-     * Gets the allowedOutboundDataTransferDestinations property value. Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
+     * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      * @return a managedAppDataTransferLevel
      */
     @javax.annotation.Nullable
@@ -198,7 +199,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._fingerprintBlocked;
     }
     /**
-     * Gets the managedBrowser property value. Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+     * Gets the managedBrowser property value. Type of managed browser
      * @return a managedBrowserType
      */
     @javax.annotation.Nullable
@@ -302,7 +303,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._periodOnlineBeforeAccessCheck;
     }
     /**
-     * Gets the pinCharacterSet property value. Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol.
+     * Gets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
      * @return a managedAppPinCharacterSet
      */
     @javax.annotation.Nullable
@@ -386,7 +387,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._allowedDataStorageLocations = value;
     }
     /**
-     * Sets the allowedInboundDataTransferSources property value. Sources from which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
+     * Sets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedInboundDataTransferSources property.
      * @return a void
      */
@@ -394,7 +395,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._allowedInboundDataTransferSources = value;
     }
     /**
-     * Sets the allowedOutboundClipboardSharingLevel property value. The level to which the clipboard may be shared between apps on the managed device. Possible values are: allApps, managedAppsWithPasteIn, managedApps, blocked.
+     * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      * @return a void
      */
@@ -402,7 +403,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._allowedOutboundClipboardSharingLevel = value;
     }
     /**
-     * Sets the allowedOutboundDataTransferDestinations property value. Destinations to which data is allowed to be transferred. Possible values are: allApps, managedApps, none.
+     * Sets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
      * @param value Value to set for the allowedOutboundDataTransferDestinations property.
      * @return a void
      */
@@ -450,7 +451,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._fingerprintBlocked = value;
     }
     /**
-     * Sets the managedBrowser property value. Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+     * Sets the managedBrowser property value. Type of managed browser
      * @param value Value to set for the managedBrowser property.
      * @return a void
      */
@@ -554,7 +555,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this._periodOnlineBeforeAccessCheck = value;
     }
     /**
-     * Sets the pinCharacterSet property value. Character set which may be used for an app-level pin if PinRequired is set to True. Possible values are: numeric, alphanumericAndSymbol.
+     * Sets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
      * @param value Value to set for the pinCharacterSet property.
      * @return a void
      */

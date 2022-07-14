@@ -13,7 +13,7 @@ public class ServiceHealth extends Entity implements Parsable {
     private java.util.List<ServiceHealthIssue> _issues;
     /** The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant. */
     private String _service;
-    /** Show the overall service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values. */
+    /** The status property */
     private ServiceHealthStatus _status;
     /**
      * Instantiates a new serviceHealth and sets the default values.
@@ -62,7 +62,7 @@ public class ServiceHealth extends Entity implements Parsable {
         return this._service;
     }
     /**
-     * Gets the status property value. Show the overall service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
+     * Gets the status property value. The status property
      * @return a serviceHealthStatus
      */
     @javax.annotation.Nullable
@@ -98,7 +98,7 @@ public class ServiceHealth extends Entity implements Parsable {
         this._service = value;
     }
     /**
-     * Sets the status property value. Show the overall service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue. For more details, see serviceHealthStatus values.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */

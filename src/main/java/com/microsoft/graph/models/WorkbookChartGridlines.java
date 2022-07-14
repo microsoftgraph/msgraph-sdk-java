@@ -7,7 +7,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of application entities. */
 public class WorkbookChartGridlines extends Entity implements Parsable {
     /** Represents the formatting of chart gridlines. Read-only. */
     private WorkbookChartGridlinesFormat _format;

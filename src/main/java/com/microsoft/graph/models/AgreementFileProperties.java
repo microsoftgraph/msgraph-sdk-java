@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of agreement entities. */
 public class AgreementFileProperties extends Entity implements Parsable {
     /** The date time representing when the file was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
@@ -30,6 +29,7 @@ public class AgreementFileProperties extends Entity implements Parsable {
      */
     public AgreementFileProperties() {
         super();
+        this.setType("#microsoft.graph.agreementFileProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

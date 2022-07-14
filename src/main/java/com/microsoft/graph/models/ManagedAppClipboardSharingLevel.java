@@ -3,7 +3,7 @@ package microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of application entities. */
+/** Provides operations to manage the admin singleton. */
 public enum ManagedAppClipboardSharingLevel implements ValuedEnum {
     /** Sharing is allowed between all apps, managed or not */
     AllApps("allApps"),

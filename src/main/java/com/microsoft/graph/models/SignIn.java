@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the auditLogRoot singleton. */
+/** Provides operations to manage the admin singleton. */
 public class SignIn extends Entity implements Parsable {
     /** The application name displayed in the Azure Portal. Supports $filter (eq and startsWith operators only). */
     private String _appDisplayName;
@@ -62,6 +62,7 @@ public class SignIn extends Entity implements Parsable {
      */
     public SignIn() {
         super();
+        this.setType("#microsoft.graph.signIn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable {
-    /** The app license type. Possible values are: offline, online. */
+    /** The licenseType property */
     private MicrosoftStoreForBusinessLicenseType _licenseType;
     /** The app package identifier */
     private String _packageIdentityName;
@@ -51,7 +51,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
         }};
     }
     /**
-     * Gets the licenseType property value. The app license type. Possible values are: offline, online.
+     * Gets the licenseType property value. The licenseType property
      * @return a microsoftStoreForBusinessLicenseType
      */
     @javax.annotation.Nullable
@@ -105,7 +105,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
         writer.writeIntegerValue("usedLicenseCount", this.getUsedLicenseCount());
     }
     /**
-     * Sets the licenseType property value. The app license type. Possible values are: offline, online.
+     * Sets the licenseType property value. The licenseType property
      * @param value Value to set for the licenseType property.
      * @return a void
      */

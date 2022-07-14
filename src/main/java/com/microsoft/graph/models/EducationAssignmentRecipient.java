@@ -11,12 +11,15 @@ import java.util.Objects;
 public class EducationAssignmentRecipient implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The type property */
+    private String _type;
     /**
      * Instantiates a new educationAssignmentRecipient and sets the default values.
      * @return a void
      */
     public EducationAssignmentRecipient() {
         this.setAdditionalData(new HashMap<>());
+        this.setType("#microsoft.graph.educationAssignmentRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -26,6 +29,15 @@ public class EducationAssignmentRecipient implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public static EducationAssignmentRecipient createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.educationAssignmentClassRecipient": return new EducationAssignmentClassRecipient();
+                case "#microsoft.graph.educationAssignmentGroupRecipient": return new EducationAssignmentGroupRecipient();
+                case "#microsoft.graph.educationAssignmentIndividualRecipient": return new EducationAssignmentIndividualRecipient();
+            }
+        }
         return new EducationAssignmentRecipient();
     }
     /**
@@ -43,8 +55,17 @@ public class EducationAssignmentRecipient implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentRecipient currentObject = this;
-        return new HashMap<>(0) {{
+        return new HashMap<>(1) {{
+            this.put("@odata.type", (n) -> { currentObject.setType(n.getStringValue()); });
         }};
+    }
+    /**
+     * Gets the @odata.type property value. The type property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getType() {
+        return this._type;
     }
     /**
      * Serializes information the current object
@@ -53,6 +74,7 @@ public class EducationAssignmentRecipient implements AdditionalDataHolder, Parsa
      */
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("@odata.type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -62,5 +84,13 @@ public class EducationAssignmentRecipient implements AdditionalDataHolder, Parsa
      */
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the @odata.type property value. The type property
+     * @param value Value to set for the type property.
+     * @return a void
+     */
+    public void setType(@javax.annotation.Nullable final String value) {
+        this._type = value;
     }
 }
