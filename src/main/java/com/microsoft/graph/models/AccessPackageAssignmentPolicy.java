@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AllowedTargetScope;
+import com.microsoft.graph.models.AccessPackageAutomaticRequestSettings;
 import com.microsoft.graph.models.ExpirationPattern;
 import com.microsoft.graph.models.AccessPackageAssignmentApprovalSettings;
 import com.microsoft.graph.models.AccessPackageAssignmentRequestorSettings;
@@ -42,6 +43,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     @Expose
 	@Nullable
     public AllowedTargetScope allowedTargetScope;
+
+    /**
+     * The Automatic Request Settings.
+     * 
+     */
+    @SerializedName(value = "automaticRequestSettings", alternate = {"AutomaticRequestSettings"})
+    @Expose
+	@Nullable
+    public AccessPackageAutomaticRequestSettings automaticRequestSettings;
 
     /**
      * The Created Date Time.

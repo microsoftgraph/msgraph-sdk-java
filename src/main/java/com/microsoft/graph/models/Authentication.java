@@ -9,19 +9,25 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.EmailAuthenticationMethod;
 import com.microsoft.graph.models.Fido2AuthenticationMethod;
 import com.microsoft.graph.models.AuthenticationMethod;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.LongRunningOperation;
 import com.microsoft.graph.models.PasswordAuthenticationMethod;
+import com.microsoft.graph.models.PhoneAuthenticationMethod;
+import com.microsoft.graph.models.SoftwareOathAuthenticationMethod;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.EmailAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.AuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.MicrosoftAuthenticatorAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.LongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionPage;
 
@@ -39,6 +45,15 @@ import javax.annotation.Nonnull;
  */
 public class Authentication extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Email Methods.
+     * Represents the email addresses registered to a user for authentication.
+     */
+    @SerializedName(value = "emailMethods", alternate = {"EmailMethods"})
+    @Expose
+	@Nullable
+    public EmailAuthenticationMethodCollectionPage emailMethods;
 
     /**
      * The Fido2Methods.
@@ -86,6 +101,24 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public PasswordAuthenticationMethodCollectionPage passwordMethods;
 
     /**
+     * The Phone Methods.
+     * Represents the phone registered to a user for authentication.
+     */
+    @SerializedName(value = "phoneMethods", alternate = {"PhoneMethods"})
+    @Expose
+	@Nullable
+    public PhoneAuthenticationMethodCollectionPage phoneMethods;
+
+    /**
+     * The Software Oath Methods.
+     * 
+     */
+    @SerializedName(value = "softwareOathMethods", alternate = {"SoftwareOathMethods"})
+    @Expose
+	@Nullable
+    public SoftwareOathAuthenticationMethodCollectionPage softwareOathMethods;
+
+    /**
      * The Temporary Access Pass Methods.
      * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      */
@@ -113,6 +146,10 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
+        if (json.has("emailMethods")) {
+            emailMethods = serializer.deserializeObject(json.get("emailMethods"), EmailAuthenticationMethodCollectionPage.class);
+        }
+
         if (json.has("fido2Methods")) {
             fido2Methods = serializer.deserializeObject(json.get("fido2Methods"), Fido2AuthenticationMethodCollectionPage.class);
         }
@@ -131,6 +168,14 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
         if (json.has("passwordMethods")) {
             passwordMethods = serializer.deserializeObject(json.get("passwordMethods"), PasswordAuthenticationMethodCollectionPage.class);
+        }
+
+        if (json.has("phoneMethods")) {
+            phoneMethods = serializer.deserializeObject(json.get("phoneMethods"), PhoneAuthenticationMethodCollectionPage.class);
+        }
+
+        if (json.has("softwareOathMethods")) {
+            softwareOathMethods = serializer.deserializeObject(json.get("softwareOathMethods"), SoftwareOathAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("temporaryAccessPassMethods")) {

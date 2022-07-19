@@ -27,6 +27,7 @@ import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
+import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.TeamsTemplateWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ScheduleRequestBuilder;
 import java.util.Arrays;
@@ -209,6 +210,16 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
     @Nonnull
     public TeamsAsyncOperationRequestBuilder operations(@Nonnull final String id) {
         return new TeamsAsyncOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ProfilePhoto
+     *
+     * @return the ProfilePhotoRequestBuilder instance
+     */
+    @Nonnull
+    public ProfilePhotoRequestBuilder photo() {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
     }
 
     /**

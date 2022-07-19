@@ -38,7 +38,7 @@ public class UnifiedGroupSource extends DataSource implements IJsonBackedObject 
 
     /**
      * The Group.
-     * Represent a group.
+     * Represents a group.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose

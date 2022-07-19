@@ -268,6 +268,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<RequiredResourceAccess> requiredResourceAccess;
 
     /**
+     * The Saml Metadata Url.
+     * The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
+     */
+    @SerializedName(value = "samlMetadataUrl", alternate = {"SamlMetadataUrl"})
+    @Expose
+	@Nullable
+    public String samlMetadataUrl;
+
+    /**
      * The Service Management Reference.
      * References application or service contact information from a Service or Asset Management database. Nullable.
      */

@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.SolutionsRoot;
 import com.microsoft.graph.models.BookingBusiness;
+import com.microsoft.graph.models.DateTimeTimeZone;
+import com.microsoft.graph.models.StaffAvailabilityItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

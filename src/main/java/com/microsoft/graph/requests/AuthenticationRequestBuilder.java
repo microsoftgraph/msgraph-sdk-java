@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Authentication;
+import com.microsoft.graph.requests.EmailAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.EmailAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.Fido2AuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodCollectionRequestBuilder;
@@ -18,6 +20,10 @@ import com.microsoft.graph.requests.LongRunningOperationCollectionRequestBuilder
 import com.microsoft.graph.requests.LongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.PasswordAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.PhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
@@ -70,6 +76,26 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
     }
 
 
+    /**
+     *  Gets a request builder for the EmailAuthenticationMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EmailAuthenticationMethodCollectionRequestBuilder emailMethods() {
+        return new EmailAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("emailMethods"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EmailAuthenticationMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EmailAuthenticationMethodRequestBuilder emailMethods(@Nonnull final String id) {
+        return new EmailAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("emailMethods") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the Fido2AuthenticationMethod collection
      *
@@ -169,6 +195,46 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
     @Nonnull
     public PasswordAuthenticationMethodRequestBuilder passwordMethods(@Nonnull final String id) {
         return new PasswordAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("passwordMethods") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the PhoneAuthenticationMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PhoneAuthenticationMethodCollectionRequestBuilder phoneMethods() {
+        return new PhoneAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PhoneAuthenticationMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PhoneAuthenticationMethodRequestBuilder phoneMethods(@Nonnull final String id) {
+        return new PhoneAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the SoftwareOathAuthenticationMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SoftwareOathAuthenticationMethodCollectionRequestBuilder softwareOathMethods() {
+        return new SoftwareOathAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("softwareOathMethods"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the SoftwareOathAuthenticationMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SoftwareOathAuthenticationMethodRequestBuilder softwareOathMethods(@Nonnull final String id) {
+        return new SoftwareOathAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("softwareOathMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TemporaryAccessPassAuthenticationMethod collection

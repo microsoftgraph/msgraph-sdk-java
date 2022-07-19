@@ -21,6 +21,7 @@ import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.TeamsAsyncOperation;
+import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.TeamsTemplate;
 import com.microsoft.graph.models.Schedule;
 import com.microsoft.graph.models.Entity;
@@ -237,6 +238,15 @@ public class Team extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TeamsAsyncOperationCollectionPage operations;
+
+    /**
+     * The Photo.
+     * The team photo.
+     */
+    @SerializedName(value = "photo", alternate = {"Photo"})
+    @Expose
+	@Nullable
+    public ProfilePhoto photo;
 
     /**
      * The Primary Channel.
